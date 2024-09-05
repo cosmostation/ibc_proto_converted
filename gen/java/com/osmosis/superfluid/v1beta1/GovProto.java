@@ -3048,7 +3048,7 @@ public final class GovProto {
       "\350\240\037\001\312\264-\032cosmos.gov.v1beta1.Content\212\347\260*\037o" +
       "smosis/update-unpool-whitelistB\352\001\n\036com.o" +
       "smosis.superfluid.v1beta1B\010GovProtoZ6git" +
-      "hub.com/osmosis-labs/osmosis/v15/x/super" +
+      "hub.com/osmosis-labs/osmosis/v26/x/super" +
       "fluid/types\242\002\003OSX\252\002\032Osmosis.Superfluid.V" +
       "1beta1\312\002\032Osmosis\\Superfluid\\V1beta1\342\002&Os" +
       "mosis\\Superfluid\\V1beta1\\GPBMetadata\352\002\034O" +

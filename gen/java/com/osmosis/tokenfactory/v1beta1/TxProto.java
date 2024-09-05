@@ -1368,12 +1368,12 @@ public final class TxProto {
     com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder();
 
     /**
-     * <code>string mintToAddress = 3 [json_name = "mintToAddress", (.gogoproto.moretags) = "yaml:&#92;"mint_to_address&#92;""];</code>
+     * <code>string mintToAddress = 3 [json_name = "mintToAddress", (.gogoproto.moretags) = "yaml:&#92;"mint_to_address&#92;"", (.amino.dont_omitempty) = true];</code>
      * @return The mintToAddress.
      */
     java.lang.String getMintToAddress();
     /**
-     * <code>string mintToAddress = 3 [json_name = "mintToAddress", (.gogoproto.moretags) = "yaml:&#92;"mint_to_address&#92;""];</code>
+     * <code>string mintToAddress = 3 [json_name = "mintToAddress", (.gogoproto.moretags) = "yaml:&#92;"mint_to_address&#92;"", (.amino.dont_omitempty) = true];</code>
      * @return The bytes for mintToAddress.
      */
     com.google.protobuf.ByteString
@@ -1382,7 +1382,9 @@ public final class TxProto {
   /**
    * <pre>
    * MsgMint is the sdk.Msg type for allowing an admin account to mint
-   * more of a token.  For now, we only support minting to the sender account
+   * more of a token.
+   * Only the admin of the token factory denom has permission to mint unless
+   * the denom does not have any admin.
    * </pre>
    *
    * Protobuf type {@code osmosis.tokenfactory.v1beta1.MsgMint}
@@ -1490,7 +1492,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object mintToAddress_ = "";
     /**
-     * <code>string mintToAddress = 3 [json_name = "mintToAddress", (.gogoproto.moretags) = "yaml:&#92;"mint_to_address&#92;""];</code>
+     * <code>string mintToAddress = 3 [json_name = "mintToAddress", (.gogoproto.moretags) = "yaml:&#92;"mint_to_address&#92;"", (.amino.dont_omitempty) = true];</code>
      * @return The mintToAddress.
      */
     @java.lang.Override
@@ -1507,7 +1509,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string mintToAddress = 3 [json_name = "mintToAddress", (.gogoproto.moretags) = "yaml:&#92;"mint_to_address&#92;""];</code>
+     * <code>string mintToAddress = 3 [json_name = "mintToAddress", (.gogoproto.moretags) = "yaml:&#92;"mint_to_address&#92;"", (.amino.dont_omitempty) = true];</code>
      * @return The bytes for mintToAddress.
      */
     @java.lang.Override
@@ -1710,7 +1712,9 @@ public final class TxProto {
     /**
      * <pre>
      * MsgMint is the sdk.Msg type for allowing an admin account to mint
-     * more of a token.  For now, we only support minting to the sender account
+     * more of a token.
+     * Only the admin of the token factory denom has permission to mint unless
+     * the denom does not have any admin.
      * </pre>
      *
      * Protobuf type {@code osmosis.tokenfactory.v1beta1.MsgMint}
@@ -2109,7 +2113,7 @@ public final class TxProto {
 
       private java.lang.Object mintToAddress_ = "";
       /**
-       * <code>string mintToAddress = 3 [json_name = "mintToAddress", (.gogoproto.moretags) = "yaml:&#92;"mint_to_address&#92;""];</code>
+       * <code>string mintToAddress = 3 [json_name = "mintToAddress", (.gogoproto.moretags) = "yaml:&#92;"mint_to_address&#92;"", (.amino.dont_omitempty) = true];</code>
        * @return The mintToAddress.
        */
       public java.lang.String getMintToAddress() {
@@ -2125,7 +2129,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string mintToAddress = 3 [json_name = "mintToAddress", (.gogoproto.moretags) = "yaml:&#92;"mint_to_address&#92;""];</code>
+       * <code>string mintToAddress = 3 [json_name = "mintToAddress", (.gogoproto.moretags) = "yaml:&#92;"mint_to_address&#92;"", (.amino.dont_omitempty) = true];</code>
        * @return The bytes for mintToAddress.
        */
       public com.google.protobuf.ByteString
@@ -2142,7 +2146,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string mintToAddress = 3 [json_name = "mintToAddress", (.gogoproto.moretags) = "yaml:&#92;"mint_to_address&#92;""];</code>
+       * <code>string mintToAddress = 3 [json_name = "mintToAddress", (.gogoproto.moretags) = "yaml:&#92;"mint_to_address&#92;"", (.amino.dont_omitempty) = true];</code>
        * @param value The mintToAddress to set.
        * @return This builder for chaining.
        */
@@ -2155,7 +2159,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string mintToAddress = 3 [json_name = "mintToAddress", (.gogoproto.moretags) = "yaml:&#92;"mint_to_address&#92;""];</code>
+       * <code>string mintToAddress = 3 [json_name = "mintToAddress", (.gogoproto.moretags) = "yaml:&#92;"mint_to_address&#92;"", (.amino.dont_omitempty) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearMintToAddress() {
@@ -2165,7 +2169,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string mintToAddress = 3 [json_name = "mintToAddress", (.gogoproto.moretags) = "yaml:&#92;"mint_to_address&#92;""];</code>
+       * <code>string mintToAddress = 3 [json_name = "mintToAddress", (.gogoproto.moretags) = "yaml:&#92;"mint_to_address&#92;"", (.amino.dont_omitempty) = true];</code>
        * @param value The bytes for mintToAddress to set.
        * @return This builder for chaining.
        */
@@ -2671,12 +2675,12 @@ public final class TxProto {
     com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder();
 
     /**
-     * <code>string burnFromAddress = 3 [json_name = "burnFromAddress", (.gogoproto.moretags) = "yaml:&#92;"burn_from_address&#92;""];</code>
+     * <code>string burnFromAddress = 3 [json_name = "burnFromAddress", (.gogoproto.moretags) = "yaml:&#92;"burn_from_address&#92;"", (.amino.dont_omitempty) = true];</code>
      * @return The burnFromAddress.
      */
     java.lang.String getBurnFromAddress();
     /**
-     * <code>string burnFromAddress = 3 [json_name = "burnFromAddress", (.gogoproto.moretags) = "yaml:&#92;"burn_from_address&#92;""];</code>
+     * <code>string burnFromAddress = 3 [json_name = "burnFromAddress", (.gogoproto.moretags) = "yaml:&#92;"burn_from_address&#92;"", (.amino.dont_omitempty) = true];</code>
      * @return The bytes for burnFromAddress.
      */
     com.google.protobuf.ByteString
@@ -2685,7 +2689,9 @@ public final class TxProto {
   /**
    * <pre>
    * MsgBurn is the sdk.Msg type for allowing an admin account to burn
-   * a token.  For now, we only support burning from the sender account.
+   * a token.
+   * Only the admin of the token factory denom has permission to burn unless
+   * the denom does not have any admin.
    * </pre>
    *
    * Protobuf type {@code osmosis.tokenfactory.v1beta1.MsgBurn}
@@ -2793,7 +2799,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object burnFromAddress_ = "";
     /**
-     * <code>string burnFromAddress = 3 [json_name = "burnFromAddress", (.gogoproto.moretags) = "yaml:&#92;"burn_from_address&#92;""];</code>
+     * <code>string burnFromAddress = 3 [json_name = "burnFromAddress", (.gogoproto.moretags) = "yaml:&#92;"burn_from_address&#92;"", (.amino.dont_omitempty) = true];</code>
      * @return The burnFromAddress.
      */
     @java.lang.Override
@@ -2810,7 +2816,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string burnFromAddress = 3 [json_name = "burnFromAddress", (.gogoproto.moretags) = "yaml:&#92;"burn_from_address&#92;""];</code>
+     * <code>string burnFromAddress = 3 [json_name = "burnFromAddress", (.gogoproto.moretags) = "yaml:&#92;"burn_from_address&#92;"", (.amino.dont_omitempty) = true];</code>
      * @return The bytes for burnFromAddress.
      */
     @java.lang.Override
@@ -3013,7 +3019,9 @@ public final class TxProto {
     /**
      * <pre>
      * MsgBurn is the sdk.Msg type for allowing an admin account to burn
-     * a token.  For now, we only support burning from the sender account.
+     * a token.
+     * Only the admin of the token factory denom has permission to burn unless
+     * the denom does not have any admin.
      * </pre>
      *
      * Protobuf type {@code osmosis.tokenfactory.v1beta1.MsgBurn}
@@ -3412,7 +3420,7 @@ public final class TxProto {
 
       private java.lang.Object burnFromAddress_ = "";
       /**
-       * <code>string burnFromAddress = 3 [json_name = "burnFromAddress", (.gogoproto.moretags) = "yaml:&#92;"burn_from_address&#92;""];</code>
+       * <code>string burnFromAddress = 3 [json_name = "burnFromAddress", (.gogoproto.moretags) = "yaml:&#92;"burn_from_address&#92;"", (.amino.dont_omitempty) = true];</code>
        * @return The burnFromAddress.
        */
       public java.lang.String getBurnFromAddress() {
@@ -3428,7 +3436,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string burnFromAddress = 3 [json_name = "burnFromAddress", (.gogoproto.moretags) = "yaml:&#92;"burn_from_address&#92;""];</code>
+       * <code>string burnFromAddress = 3 [json_name = "burnFromAddress", (.gogoproto.moretags) = "yaml:&#92;"burn_from_address&#92;"", (.amino.dont_omitempty) = true];</code>
        * @return The bytes for burnFromAddress.
        */
       public com.google.protobuf.ByteString
@@ -3445,7 +3453,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string burnFromAddress = 3 [json_name = "burnFromAddress", (.gogoproto.moretags) = "yaml:&#92;"burn_from_address&#92;""];</code>
+       * <code>string burnFromAddress = 3 [json_name = "burnFromAddress", (.gogoproto.moretags) = "yaml:&#92;"burn_from_address&#92;"", (.amino.dont_omitempty) = true];</code>
        * @param value The burnFromAddress to set.
        * @return This builder for chaining.
        */
@@ -3458,7 +3466,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string burnFromAddress = 3 [json_name = "burnFromAddress", (.gogoproto.moretags) = "yaml:&#92;"burn_from_address&#92;""];</code>
+       * <code>string burnFromAddress = 3 [json_name = "burnFromAddress", (.gogoproto.moretags) = "yaml:&#92;"burn_from_address&#92;"", (.amino.dont_omitempty) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearBurnFromAddress() {
@@ -3468,7 +3476,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string burnFromAddress = 3 [json_name = "burnFromAddress", (.gogoproto.moretags) = "yaml:&#92;"burn_from_address&#92;""];</code>
+       * <code>string burnFromAddress = 3 [json_name = "burnFromAddress", (.gogoproto.moretags) = "yaml:&#92;"burn_from_address&#92;"", (.amino.dont_omitempty) = true];</code>
        * @param value The bytes for burnFromAddress to set.
        * @return This builder for chaining.
        */
@@ -5236,12 +5244,12 @@ public final class TxProto {
         getDenomBytes();
 
     /**
-     * <code>string cosmwasm_address = 3 [json_name = "cosmwasmAddress", (.gogoproto.moretags) = "yaml:&#92;"cosmwasm_address&#92;""];</code>
+     * <code>string cosmwasm_address = 3 [json_name = "cosmwasmAddress", (.gogoproto.moretags) = "yaml:&#92;"cosmwasm_address&#92;"", (.amino.dont_omitempty) = true];</code>
      * @return The cosmwasmAddress.
      */
     java.lang.String getCosmwasmAddress();
     /**
-     * <code>string cosmwasm_address = 3 [json_name = "cosmwasmAddress", (.gogoproto.moretags) = "yaml:&#92;"cosmwasm_address&#92;""];</code>
+     * <code>string cosmwasm_address = 3 [json_name = "cosmwasmAddress", (.gogoproto.moretags) = "yaml:&#92;"cosmwasm_address&#92;"", (.amino.dont_omitempty) = true];</code>
      * @return The bytes for cosmwasmAddress.
      */
     com.google.protobuf.ByteString
@@ -5372,7 +5380,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object cosmwasmAddress_ = "";
     /**
-     * <code>string cosmwasm_address = 3 [json_name = "cosmwasmAddress", (.gogoproto.moretags) = "yaml:&#92;"cosmwasm_address&#92;""];</code>
+     * <code>string cosmwasm_address = 3 [json_name = "cosmwasmAddress", (.gogoproto.moretags) = "yaml:&#92;"cosmwasm_address&#92;"", (.amino.dont_omitempty) = true];</code>
      * @return The cosmwasmAddress.
      */
     @java.lang.Override
@@ -5389,7 +5397,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string cosmwasm_address = 3 [json_name = "cosmwasmAddress", (.gogoproto.moretags) = "yaml:&#92;"cosmwasm_address&#92;""];</code>
+     * <code>string cosmwasm_address = 3 [json_name = "cosmwasmAddress", (.gogoproto.moretags) = "yaml:&#92;"cosmwasm_address&#92;"", (.amino.dont_omitempty) = true];</code>
      * @return The bytes for cosmwasmAddress.
      */
     @java.lang.Override
@@ -5932,7 +5940,7 @@ public final class TxProto {
 
       private java.lang.Object cosmwasmAddress_ = "";
       /**
-       * <code>string cosmwasm_address = 3 [json_name = "cosmwasmAddress", (.gogoproto.moretags) = "yaml:&#92;"cosmwasm_address&#92;""];</code>
+       * <code>string cosmwasm_address = 3 [json_name = "cosmwasmAddress", (.gogoproto.moretags) = "yaml:&#92;"cosmwasm_address&#92;"", (.amino.dont_omitempty) = true];</code>
        * @return The cosmwasmAddress.
        */
       public java.lang.String getCosmwasmAddress() {
@@ -5948,7 +5956,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string cosmwasm_address = 3 [json_name = "cosmwasmAddress", (.gogoproto.moretags) = "yaml:&#92;"cosmwasm_address&#92;""];</code>
+       * <code>string cosmwasm_address = 3 [json_name = "cosmwasmAddress", (.gogoproto.moretags) = "yaml:&#92;"cosmwasm_address&#92;"", (.amino.dont_omitempty) = true];</code>
        * @return The bytes for cosmwasmAddress.
        */
       public com.google.protobuf.ByteString
@@ -5965,7 +5973,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string cosmwasm_address = 3 [json_name = "cosmwasmAddress", (.gogoproto.moretags) = "yaml:&#92;"cosmwasm_address&#92;""];</code>
+       * <code>string cosmwasm_address = 3 [json_name = "cosmwasmAddress", (.gogoproto.moretags) = "yaml:&#92;"cosmwasm_address&#92;"", (.amino.dont_omitempty) = true];</code>
        * @param value The cosmwasmAddress to set.
        * @return This builder for chaining.
        */
@@ -5978,7 +5986,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string cosmwasm_address = 3 [json_name = "cosmwasmAddress", (.gogoproto.moretags) = "yaml:&#92;"cosmwasm_address&#92;""];</code>
+       * <code>string cosmwasm_address = 3 [json_name = "cosmwasmAddress", (.gogoproto.moretags) = "yaml:&#92;"cosmwasm_address&#92;"", (.amino.dont_omitempty) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearCosmwasmAddress() {
@@ -5988,7 +5996,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string cosmwasm_address = 3 [json_name = "cosmwasmAddress", (.gogoproto.moretags) = "yaml:&#92;"cosmwasm_address&#92;""];</code>
+       * <code>string cosmwasm_address = 3 [json_name = "cosmwasmAddress", (.gogoproto.moretags) = "yaml:&#92;"cosmwasm_address&#92;"", (.amino.dont_omitempty) = true];</code>
        * @param value The bytes for cosmwasmAddress to set.
        * @return This builder for chaining.
        */
@@ -9161,76 +9169,82 @@ public final class TxProto {
       "\034osmosis.tokenfactory.v1beta1\032\024gogoproto" +
       "/gogo.proto\032\021amino/amino.proto\032\036cosmos/b" +
       "ase/v1beta1/coin.proto\032\036cosmos/bank/v1be" +
-      "ta1/bank.proto\"\224\001\n\016MsgCreateDenom\022)\n\006sen" +
-      "der\030\001 \001(\tB\021\362\336\037\ryaml:\"sender\"R\006sender\022/\n\010" +
-      "subdenom\030\002 \001(\tB\023\362\336\037\017yaml:\"subdenom\"R\010sub" +
-      "denom:&\212\347\260*!osmosis/tokenfactory/create-" +
-      "denom\"\\\n\026MsgCreateDenomResponse\022B\n\017new_t" +
-      "oken_denom\030\001 \001(\tB\032\362\336\037\026yaml:\"new_token_de" +
-      "nom\"R\rnewTokenDenom\"\340\001\n\007MsgMint\022)\n\006sende" +
-      "r\030\001 \001(\tB\021\362\336\037\ryaml:\"sender\"R\006sender\022H\n\006am" +
-      "ount\030\002 \001(\0132\031.cosmos.base.v1beta1.CoinB\025\310" +
-      "\336\037\000\362\336\037\ryaml:\"amount\"R\006amount\022@\n\rmintToAd" +
-      "dress\030\003 \001(\tB\032\362\336\037\026yaml:\"mint_to_address\"R" +
-      "\rmintToAddress:\036\212\347\260*\031osmosis/tokenfactor" +
-      "y/mint\"\021\n\017MsgMintResponse\"\346\001\n\007MsgBurn\022)\n" +
-      "\006sender\030\001 \001(\tB\021\362\336\037\ryaml:\"sender\"R\006sender" +
-      "\022H\n\006amount\030\002 \001(\0132\031.cosmos.base.v1beta1.C" +
-      "oinB\025\310\336\037\000\362\336\037\ryaml:\"amount\"R\006amount\022F\n\017bu" +
-      "rnFromAddress\030\003 \001(\tB\034\362\336\037\030yaml:\"burn_from" +
-      "_address\"R\017burnFromAddress:\036\212\347\260*\031osmosis" +
-      "/tokenfactory/burn\"\021\n\017MsgBurnResponse\"\276\001" +
-      "\n\016MsgChangeAdmin\022)\n\006sender\030\001 \001(\tB\021\362\336\037\rya" +
-      "ml:\"sender\"R\006sender\022&\n\005denom\030\002 \001(\tB\020\362\336\037\014" +
-      "yaml:\"denom\"R\005denom\0221\n\tnew_admin\030\003 \001(\tB\024" +
-      "\362\336\037\020yaml:\"new_admin\"R\010newAdmin:&\212\347\260*!osm" +
-      "osis/tokenfactory/change-admin\"\030\n\026MsgCha" +
-      "ngeAdminResponse\"\261\001\n\024MsgSetBeforeSendHoo" +
-      "k\022)\n\006sender\030\001 \001(\tB\021\362\336\037\ryaml:\"sender\"R\006se" +
-      "nder\022&\n\005denom\030\002 \001(\tB\020\362\336\037\014yaml:\"denom\"R\005d" +
-      "enom\022F\n\020cosmwasm_address\030\003 \001(\tB\033\362\336\037\027yaml" +
-      ":\"cosmwasm_address\"R\017cosmwasmAddress\"\036\n\034" +
-      "MsgSetBeforeSendHookResponse\"\224\001\n\023MsgSetD" +
-      "enomMetadata\022)\n\006sender\030\001 \001(\tB\021\362\336\037\ryaml:\"" +
-      "sender\"R\006sender\022R\n\010metadata\030\002 \001(\0132\035.cosm" +
-      "os.bank.v1beta1.MetadataB\027\310\336\037\000\362\336\037\017yaml:\"" +
-      "metadata\"R\010metadata\"\035\n\033MsgSetDenomMetada" +
-      "taResponse\"\251\002\n\020MsgForceTransfer\022)\n\006sende" +
-      "r\030\001 \001(\tB\021\362\336\037\ryaml:\"sender\"R\006sender\022H\n\006am" +
-      "ount\030\002 \001(\0132\031.cosmos.base.v1beta1.CoinB\025\310" +
-      "\336\037\000\362\336\037\ryaml:\"amount\"R\006amount\022R\n\023transfer" +
-      "FromAddress\030\003 \001(\tB \362\336\037\034yaml:\"transfer_fr" +
-      "om_address\"R\023transferFromAddress\022L\n\021tran" +
-      "sferToAddress\030\004 \001(\tB\036\362\336\037\032yaml:\"transfer_" +
-      "to_address\"R\021transferToAddress\"\032\n\030MsgFor" +
-      "ceTransferResponse2\251\006\n\003Msg\022q\n\013CreateDeno" +
-      "m\022,.osmosis.tokenfactory.v1beta1.MsgCrea" +
-      "teDenom\0324.osmosis.tokenfactory.v1beta1.M" +
-      "sgCreateDenomResponse\022\\\n\004Mint\022%.osmosis." +
-      "tokenfactory.v1beta1.MsgMint\032-.osmosis.t" +
-      "okenfactory.v1beta1.MsgMintResponse\022\\\n\004B" +
-      "urn\022%.osmosis.tokenfactory.v1beta1.MsgBu" +
-      "rn\032-.osmosis.tokenfactory.v1beta1.MsgBur" +
-      "nResponse\022q\n\013ChangeAdmin\022,.osmosis.token" +
-      "factory.v1beta1.MsgChangeAdmin\0324.osmosis" +
-      ".tokenfactory.v1beta1.MsgChangeAdminResp" +
-      "onse\022\200\001\n\020SetDenomMetadata\0221.osmosis.toke" +
-      "nfactory.v1beta1.MsgSetDenomMetadata\0329.o" +
-      "smosis.tokenfactory.v1beta1.MsgSetDenomM" +
-      "etadataResponse\022\203\001\n\021SetBeforeSendHook\0222." +
-      "osmosis.tokenfactory.v1beta1.MsgSetBefor" +
-      "eSendHook\032:.osmosis.tokenfactory.v1beta1" +
-      ".MsgSetBeforeSendHookResponse\022w\n\rForceTr" +
-      "ansfer\022..osmosis.tokenfactory.v1beta1.Ms" +
-      "gForceTransfer\0326.osmosis.tokenfactory.v1" +
-      "beta1.MsgForceTransferResponseB\365\001\n com.o" +
-      "smosis.tokenfactory.v1beta1B\007TxProtoZ8gi" +
-      "thub.com/osmosis-labs/osmosis/v15/x/toke" +
-      "nfactory/types\242\002\003OTX\252\002\034Osmosis.Tokenfact" +
-      "ory.V1beta1\312\002\034Osmosis\\Tokenfactory\\V1bet" +
-      "a1\342\002(Osmosis\\Tokenfactory\\V1beta1\\GPBMet" +
-      "adata\352\002\036Osmosis::Tokenfactory::V1beta1b\006" +
-      "proto3"
+      "ta1/bank.proto\032\027cosmos/msg/v1/msg.proto\"" +
+      "\237\001\n\016MsgCreateDenom\022)\n\006sender\030\001 \001(\tB\021\362\336\037\r" +
+      "yaml:\"sender\"R\006sender\022/\n\010subdenom\030\002 \001(\tB" +
+      "\023\362\336\037\017yaml:\"subdenom\"R\010subdenom:1\202\347\260*\006sen" +
+      "der\212\347\260*!osmosis/tokenfactory/create-deno" +
+      "m\"\\\n\026MsgCreateDenomResponse\022B\n\017new_token" +
+      "_denom\030\001 \001(\tB\032\362\336\037\026yaml:\"new_token_denom\"" +
+      "R\rnewTokenDenom\"\360\001\n\007MsgMint\022)\n\006sender\030\001 " +
+      "\001(\tB\021\362\336\037\ryaml:\"sender\"R\006sender\022H\n\006amount" +
+      "\030\002 \001(\0132\031.cosmos.base.v1beta1.CoinB\025\310\336\037\000\362" +
+      "\336\037\ryaml:\"amount\"R\006amount\022E\n\rmintToAddres" +
+      "s\030\003 \001(\tB\037\362\336\037\026yaml:\"mint_to_address\"\250\347\260*\001" +
+      "R\rmintToAddress:)\202\347\260*\006sender\212\347\260*\031osmosis" +
+      "/tokenfactory/mint\"\021\n\017MsgMintResponse\"\366\001" +
+      "\n\007MsgBurn\022)\n\006sender\030\001 \001(\tB\021\362\336\037\ryaml:\"sen" +
+      "der\"R\006sender\022H\n\006amount\030\002 \001(\0132\031.cosmos.ba" +
+      "se.v1beta1.CoinB\025\310\336\037\000\362\336\037\ryaml:\"amount\"R\006" +
+      "amount\022K\n\017burnFromAddress\030\003 \001(\tB!\362\336\037\030yam" +
+      "l:\"burn_from_address\"\250\347\260*\001R\017burnFromAddr" +
+      "ess:)\202\347\260*\006sender\212\347\260*\031osmosis/tokenfactor" +
+      "y/burn\"\021\n\017MsgBurnResponse\"\311\001\n\016MsgChangeA" +
+      "dmin\022)\n\006sender\030\001 \001(\tB\021\362\336\037\ryaml:\"sender\"R" +
+      "\006sender\022&\n\005denom\030\002 \001(\tB\020\362\336\037\014yaml:\"denom\"" +
+      "R\005denom\0221\n\tnew_admin\030\003 \001(\tB\024\362\336\037\020yaml:\"ne" +
+      "w_admin\"R\010newAdmin:1\202\347\260*\006sender\212\347\260*!osmo" +
+      "sis/tokenfactory/change-admin\"\030\n\026MsgChan" +
+      "geAdminResponse\"\356\001\n\024MsgSetBeforeSendHook" +
+      "\022)\n\006sender\030\001 \001(\tB\021\362\336\037\ryaml:\"sender\"R\006sen" +
+      "der\022&\n\005denom\030\002 \001(\tB\020\362\336\037\014yaml:\"denom\"R\005de" +
+      "nom\022K\n\020cosmwasm_address\030\003 \001(\tB \362\336\037\027yaml:" +
+      "\"cosmwasm_address\"\250\347\260*\001R\017cosmwasmAddress" +
+      ":6\202\347\260*\006sender\212\347\260*&osmosis/tokenfactory/s" +
+      "et-bef-send-hook\"\036\n\034MsgSetBeforeSendHook" +
+      "Response\"\315\001\n\023MsgSetDenomMetadata\022)\n\006send" +
+      "er\030\001 \001(\tB\021\362\336\037\ryaml:\"sender\"R\006sender\022R\n\010m" +
+      "etadata\030\002 \001(\0132\035.cosmos.bank.v1beta1.Meta" +
+      "dataB\027\310\336\037\000\362\336\037\017yaml:\"metadata\"R\010metadata:" +
+      "7\202\347\260*\006sender\212\347\260*\'osmosis/tokenfactory/se" +
+      "t-denom-metadata\"\035\n\033MsgSetDenomMetadataR" +
+      "esponse\"\336\002\n\020MsgForceTransfer\022)\n\006sender\030\001" +
+      " \001(\tB\021\362\336\037\ryaml:\"sender\"R\006sender\022H\n\006amoun" +
+      "t\030\002 \001(\0132\031.cosmos.base.v1beta1.CoinB\025\310\336\037\000" +
+      "\362\336\037\ryaml:\"amount\"R\006amount\022R\n\023transferFro" +
+      "mAddress\030\003 \001(\tB \362\336\037\034yaml:\"transfer_from_" +
+      "address\"R\023transferFromAddress\022L\n\021transfe" +
+      "rToAddress\030\004 \001(\tB\036\362\336\037\032yaml:\"transfer_to_" +
+      "address\"R\021transferToAddress:3\202\347\260*\006sender" +
+      "\212\347\260*#osmosis/tokenfactory/force-transfer" +
+      "\"\032\n\030MsgForceTransferResponse2\251\006\n\003Msg\022q\n\013" +
+      "CreateDenom\022,.osmosis.tokenfactory.v1bet" +
+      "a1.MsgCreateDenom\0324.osmosis.tokenfactory" +
+      ".v1beta1.MsgCreateDenomResponse\022\\\n\004Mint\022" +
+      "%.osmosis.tokenfactory.v1beta1.MsgMint\032-" +
+      ".osmosis.tokenfactory.v1beta1.MsgMintRes" +
+      "ponse\022\\\n\004Burn\022%.osmosis.tokenfactory.v1b" +
+      "eta1.MsgBurn\032-.osmosis.tokenfactory.v1be" +
+      "ta1.MsgBurnResponse\022q\n\013ChangeAdmin\022,.osm" +
+      "osis.tokenfactory.v1beta1.MsgChangeAdmin" +
+      "\0324.osmosis.tokenfactory.v1beta1.MsgChang" +
+      "eAdminResponse\022\200\001\n\020SetDenomMetadata\0221.os" +
+      "mosis.tokenfactory.v1beta1.MsgSetDenomMe" +
+      "tadata\0329.osmosis.tokenfactory.v1beta1.Ms" +
+      "gSetDenomMetadataResponse\022\203\001\n\021SetBeforeS" +
+      "endHook\0222.osmosis.tokenfactory.v1beta1.M" +
+      "sgSetBeforeSendHook\032:.osmosis.tokenfacto" +
+      "ry.v1beta1.MsgSetBeforeSendHookResponse\022" +
+      "w\n\rForceTransfer\022..osmosis.tokenfactory." +
+      "v1beta1.MsgForceTransfer\0326.osmosis.token" +
+      "factory.v1beta1.MsgForceTransferResponse" +
+      "B\365\001\n com.osmosis.tokenfactory.v1beta1B\007T" +
+      "xProtoZ8github.com/osmosis-labs/osmosis/" +
+      "v26/x/tokenfactory/types\242\002\003OTX\252\002\034Osmosis" +
+      ".Tokenfactory.V1beta1\312\002\034Osmosis\\Tokenfac" +
+      "tory\\V1beta1\342\002(Osmosis\\Tokenfactory\\V1be" +
+      "ta1\\GPBMetadata\352\002\036Osmosis::Tokenfactory:" +
+      ":V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9239,6 +9253,7 @@ public final class TxProto {
           com.amino.AminoProto.getDescriptor(),
           com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
           com.cosmos.bank.v1beta1.BankProto.getDescriptor(),
+          com.cosmos.msg.v1.MsgProto.getDescriptor(),
         });
     internal_static_osmosis_tokenfactory_v1beta1_MsgCreateDenom_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -9326,7 +9341,9 @@ public final class TxProto {
         new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.amino.AminoProto.dontOmitempty);
     registry.add(com.amino.AminoProto.name);
+    registry.add(com.cosmos.msg.v1.MsgProto.signer);
     registry.add(com.gogoproto.GogoProto.moretags);
     registry.add(com.gogoproto.GogoProto.nullable);
     com.google.protobuf.Descriptors.FileDescriptor
@@ -9335,6 +9352,7 @@ public final class TxProto {
     com.amino.AminoProto.getDescriptor();
     com.cosmos.base.v1beta1.CoinProto.getDescriptor();
     com.cosmos.bank.v1beta1.BankProto.getDescriptor();
+    com.cosmos.msg.v1.MsgProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

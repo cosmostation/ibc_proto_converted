@@ -163,10 +163,26 @@ public final class TxProto {
      * @return The numEpochsPaidOver.
      */
     long getNumEpochsPaidOver();
+
+    /**
+     * <pre>
+     * pool_id is the ID of the pool that the gauge is meant to be associated
+     * with. if pool_id is set, then the "QueryCondition.LockQueryType" must be
+     * "NoLock" with all other fields of the "QueryCondition.LockQueryType" struct
+     * unset, including "QueryCondition.Denom". However, note that, internally,
+     * the empty string in "QueryCondition.Denom" ends up being overwritten with
+     * incentivestypes.NoLockExternalGaugeDenom(&lt;pool-id&gt;) so that the gauges
+     * associated with a pool can be queried by this prefix if needed.
+     * </pre>
+     *
+     * <code>uint64 pool_id = 7 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
   }
   /**
    * <pre>
-   * MsgCreateGauge creates a gague to distribute rewards to users
+   * MsgCreateGauge creates a gauge to distribute rewards to users
    * </pre>
    *
    * Protobuf type {@code osmosis.incentives.MsgCreateGauge}
@@ -427,6 +443,27 @@ public final class TxProto {
       return numEpochsPaidOver_;
     }
 
+    public static final int POOL_ID_FIELD_NUMBER = 7;
+    private long poolId_ = 0L;
+    /**
+     * <pre>
+     * pool_id is the ID of the pool that the gauge is meant to be associated
+     * with. if pool_id is set, then the "QueryCondition.LockQueryType" must be
+     * "NoLock" with all other fields of the "QueryCondition.LockQueryType" struct
+     * unset, including "QueryCondition.Denom". However, note that, internally,
+     * the empty string in "QueryCondition.Denom" ends up being overwritten with
+     * incentivestypes.NoLockExternalGaugeDenom(&lt;pool-id&gt;) so that the gauges
+     * associated with a pool can be queried by this prefix if needed.
+     * </pre>
+     *
+     * <code>uint64 pool_id = 7 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -459,6 +496,9 @@ public final class TxProto {
       if (numEpochsPaidOver_ != 0L) {
         output.writeUInt64(6, numEpochsPaidOver_);
       }
+      if (poolId_ != 0L) {
+        output.writeUInt64(7, poolId_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -490,6 +530,10 @@ public final class TxProto {
       if (numEpochsPaidOver_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(6, numEpochsPaidOver_);
+      }
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(7, poolId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -524,6 +568,8 @@ public final class TxProto {
       }
       if (getNumEpochsPaidOver()
           != other.getNumEpochsPaidOver()) return false;
+      if (getPoolId()
+          != other.getPoolId()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -555,6 +601,9 @@ public final class TxProto {
       hash = (37 * hash) + NUM_EPOCHS_PAID_OVER_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getNumEpochsPaidOver());
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -654,7 +703,7 @@ public final class TxProto {
     }
     /**
      * <pre>
-     * MsgCreateGauge creates a gague to distribute rewards to users
+     * MsgCreateGauge creates a gauge to distribute rewards to users
      * </pre>
      *
      * Protobuf type {@code osmosis.incentives.MsgCreateGauge}
@@ -710,6 +759,7 @@ public final class TxProto {
           startTimeBuilder_ = null;
         }
         numEpochsPaidOver_ = 0L;
+        poolId_ = 0L;
         return this;
       }
 
@@ -774,6 +824,9 @@ public final class TxProto {
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.numEpochsPaidOver_ = numEpochsPaidOver_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.poolId_ = poolId_;
         }
       }
 
@@ -864,6 +917,9 @@ public final class TxProto {
         if (other.getNumEpochsPaidOver() != 0L) {
           setNumEpochsPaidOver(other.getNumEpochsPaidOver());
         }
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -932,6 +988,11 @@ public final class TxProto {
                 bitField0_ |= 0x00000020;
                 break;
               } // case 48
+              case 56: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1771,6 +1832,68 @@ public final class TxProto {
       public Builder clearNumEpochsPaidOver() {
         bitField0_ = (bitField0_ & ~0x00000020);
         numEpochsPaidOver_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long poolId_ ;
+      /**
+       * <pre>
+       * pool_id is the ID of the pool that the gauge is meant to be associated
+       * with. if pool_id is set, then the "QueryCondition.LockQueryType" must be
+       * "NoLock" with all other fields of the "QueryCondition.LockQueryType" struct
+       * unset, including "QueryCondition.Denom". However, note that, internally,
+       * the empty string in "QueryCondition.Denom" ends up being overwritten with
+       * incentivestypes.NoLockExternalGaugeDenom(&lt;pool-id&gt;) so that the gauges
+       * associated with a pool can be queried by this prefix if needed.
+       * </pre>
+       *
+       * <code>uint64 pool_id = 7 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <pre>
+       * pool_id is the ID of the pool that the gauge is meant to be associated
+       * with. if pool_id is set, then the "QueryCondition.LockQueryType" must be
+       * "NoLock" with all other fields of the "QueryCondition.LockQueryType" struct
+       * unset, including "QueryCondition.Denom". However, note that, internally,
+       * the empty string in "QueryCondition.Denom" ends up being overwritten with
+       * incentivestypes.NoLockExternalGaugeDenom(&lt;pool-id&gt;) so that the gauges
+       * associated with a pool can be queried by this prefix if needed.
+       * </pre>
+       *
+       * <code>uint64 pool_id = 7 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_id is the ID of the pool that the gauge is meant to be associated
+       * with. if pool_id is set, then the "QueryCondition.LockQueryType" must be
+       * "NoLock" with all other fields of the "QueryCondition.LockQueryType" struct
+       * unset, including "QueryCondition.Denom". However, note that, internally,
+       * the empty string in "QueryCondition.Denom" ends up being overwritten with
+       * incentivestypes.NoLockExternalGaugeDenom(&lt;pool-id&gt;) so that the gauges
+       * associated with a pool can be queried by this prefix if needed.
+       * </pre>
+       *
+       * <code>uint64 pool_id = 7 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        poolId_ = 0L;
         onChanged();
         return this;
       }
@@ -3811,6 +3934,1927 @@ public final class TxProto {
 
   }
 
+  public interface MsgCreateGroupOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.incentives.MsgCreateGroup)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * coins are the provided coins that the group will distribute
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getCoinsList();
+    /**
+     * <pre>
+     * coins are the provided coins that the group will distribute
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index);
+    /**
+     * <pre>
+     * coins are the provided coins that the group will distribute
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getCoinsCount();
+    /**
+     * <pre>
+     * coins are the provided coins that the group will distribute
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getCoinsOrBuilderList();
+    /**
+     * <pre>
+     * coins are the provided coins that the group will distribute
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * num_epochs_paid_over is the number of epochs distribution will be completed
+     * in. 0 means it's perpetual
+     * </pre>
+     *
+     * <code>uint64 num_epochs_paid_over = 2 [json_name = "numEpochsPaidOver"];</code>
+     * @return The numEpochsPaidOver.
+     */
+    long getNumEpochsPaidOver();
+
+    /**
+     * <pre>
+     * owner is the group owner's address
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * owner is the group owner's address
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     * pool_ids are the IDs of pools that the group is comprised of
+     * </pre>
+     *
+     * <code>repeated uint64 pool_ids = 4 [json_name = "poolIds"];</code>
+     * @return A list containing the poolIds.
+     */
+    java.util.List<java.lang.Long> getPoolIdsList();
+    /**
+     * <pre>
+     * pool_ids are the IDs of pools that the group is comprised of
+     * </pre>
+     *
+     * <code>repeated uint64 pool_ids = 4 [json_name = "poolIds"];</code>
+     * @return The count of poolIds.
+     */
+    int getPoolIdsCount();
+    /**
+     * <pre>
+     * pool_ids are the IDs of pools that the group is comprised of
+     * </pre>
+     *
+     * <code>repeated uint64 pool_ids = 4 [json_name = "poolIds"];</code>
+     * @param index The index of the element to return.
+     * @return The poolIds at the given index.
+     */
+    long getPoolIds(int index);
+  }
+  /**
+   * <pre>
+   * MsgCreateGroup creates a group to distribute rewards to a group of pools
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.incentives.MsgCreateGroup}
+   */
+  public static final class MsgCreateGroup extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.incentives.MsgCreateGroup)
+      MsgCreateGroupOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateGroup.newBuilder() to construct.
+    private MsgCreateGroup(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateGroup() {
+      coins_ = java.util.Collections.emptyList();
+      owner_ = "";
+      poolIds_ = emptyLongList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateGroup();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgCreateGroup_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgCreateGroup_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.incentives.TxProto.MsgCreateGroup.class, com.osmosis.incentives.TxProto.MsgCreateGroup.Builder.class);
+    }
+
+    public static final int COINS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> coins_;
+    /**
+     * <pre>
+     * coins are the provided coins that the group will distribute
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getCoinsList() {
+      return coins_;
+    }
+    /**
+     * <pre>
+     * coins are the provided coins that the group will distribute
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getCoinsOrBuilderList() {
+      return coins_;
+    }
+    /**
+     * <pre>
+     * coins are the provided coins that the group will distribute
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getCoinsCount() {
+      return coins_.size();
+    }
+    /**
+     * <pre>
+     * coins are the provided coins that the group will distribute
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index) {
+      return coins_.get(index);
+    }
+    /**
+     * <pre>
+     * coins are the provided coins that the group will distribute
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+        int index) {
+      return coins_.get(index);
+    }
+
+    public static final int NUM_EPOCHS_PAID_OVER_FIELD_NUMBER = 2;
+    private long numEpochsPaidOver_ = 0L;
+    /**
+     * <pre>
+     * num_epochs_paid_over is the number of epochs distribution will be completed
+     * in. 0 means it's perpetual
+     * </pre>
+     *
+     * <code>uint64 num_epochs_paid_over = 2 [json_name = "numEpochsPaidOver"];</code>
+     * @return The numEpochsPaidOver.
+     */
+    @java.lang.Override
+    public long getNumEpochsPaidOver() {
+      return numEpochsPaidOver_;
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * owner is the group owner's address
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * owner is the group owner's address
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POOL_IDS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList poolIds_;
+    /**
+     * <pre>
+     * pool_ids are the IDs of pools that the group is comprised of
+     * </pre>
+     *
+     * <code>repeated uint64 pool_ids = 4 [json_name = "poolIds"];</code>
+     * @return A list containing the poolIds.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getPoolIdsList() {
+      return poolIds_;
+    }
+    /**
+     * <pre>
+     * pool_ids are the IDs of pools that the group is comprised of
+     * </pre>
+     *
+     * <code>repeated uint64 pool_ids = 4 [json_name = "poolIds"];</code>
+     * @return The count of poolIds.
+     */
+    public int getPoolIdsCount() {
+      return poolIds_.size();
+    }
+    /**
+     * <pre>
+     * pool_ids are the IDs of pools that the group is comprised of
+     * </pre>
+     *
+     * <code>repeated uint64 pool_ids = 4 [json_name = "poolIds"];</code>
+     * @param index The index of the element to return.
+     * @return The poolIds at the given index.
+     */
+    public long getPoolIds(int index) {
+      return poolIds_.getLong(index);
+    }
+    private int poolIdsMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < coins_.size(); i++) {
+        output.writeMessage(1, coins_.get(i));
+      }
+      if (numEpochsPaidOver_ != 0L) {
+        output.writeUInt64(2, numEpochsPaidOver_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, owner_);
+      }
+      if (getPoolIdsList().size() > 0) {
+        output.writeUInt32NoTag(34);
+        output.writeUInt32NoTag(poolIdsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < poolIds_.size(); i++) {
+        output.writeUInt64NoTag(poolIds_.getLong(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < coins_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, coins_.get(i));
+      }
+      if (numEpochsPaidOver_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, numEpochsPaidOver_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, owner_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < poolIds_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(poolIds_.getLong(i));
+        }
+        size += dataSize;
+        if (!getPoolIdsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        poolIdsMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.incentives.TxProto.MsgCreateGroup)) {
+        return super.equals(obj);
+      }
+      com.osmosis.incentives.TxProto.MsgCreateGroup other = (com.osmosis.incentives.TxProto.MsgCreateGroup) obj;
+
+      if (!getCoinsList()
+          .equals(other.getCoinsList())) return false;
+      if (getNumEpochsPaidOver()
+          != other.getNumEpochsPaidOver()) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getPoolIdsList()
+          .equals(other.getPoolIdsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getCoinsCount() > 0) {
+        hash = (37 * hash) + COINS_FIELD_NUMBER;
+        hash = (53 * hash) + getCoinsList().hashCode();
+      }
+      hash = (37 * hash) + NUM_EPOCHS_PAID_OVER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getNumEpochsPaidOver());
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      if (getPoolIdsCount() > 0) {
+        hash = (37 * hash) + POOL_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolIdsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.incentives.TxProto.MsgCreateGroup parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGroup parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGroup parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGroup parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGroup parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGroup parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGroup parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGroup parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.incentives.TxProto.MsgCreateGroup parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.incentives.TxProto.MsgCreateGroup parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGroup parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGroup parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.incentives.TxProto.MsgCreateGroup prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateGroup creates a group to distribute rewards to a group of pools
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.incentives.MsgCreateGroup}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.incentives.MsgCreateGroup)
+        com.osmosis.incentives.TxProto.MsgCreateGroupOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgCreateGroup_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgCreateGroup_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.incentives.TxProto.MsgCreateGroup.class, com.osmosis.incentives.TxProto.MsgCreateGroup.Builder.class);
+      }
+
+      // Construct using com.osmosis.incentives.TxProto.MsgCreateGroup.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (coinsBuilder_ == null) {
+          coins_ = java.util.Collections.emptyList();
+        } else {
+          coins_ = null;
+          coinsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        numEpochsPaidOver_ = 0L;
+        owner_ = "";
+        poolIds_ = emptyLongList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgCreateGroup_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.TxProto.MsgCreateGroup getDefaultInstanceForType() {
+        return com.osmosis.incentives.TxProto.MsgCreateGroup.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.TxProto.MsgCreateGroup build() {
+        com.osmosis.incentives.TxProto.MsgCreateGroup result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.TxProto.MsgCreateGroup buildPartial() {
+        com.osmosis.incentives.TxProto.MsgCreateGroup result = new com.osmosis.incentives.TxProto.MsgCreateGroup(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.incentives.TxProto.MsgCreateGroup result) {
+        if (coinsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            coins_ = java.util.Collections.unmodifiableList(coins_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.coins_ = coins_;
+        } else {
+          result.coins_ = coinsBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          poolIds_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.poolIds_ = poolIds_;
+      }
+
+      private void buildPartial0(com.osmosis.incentives.TxProto.MsgCreateGroup result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.numEpochsPaidOver_ = numEpochsPaidOver_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.owner_ = owner_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.incentives.TxProto.MsgCreateGroup) {
+          return mergeFrom((com.osmosis.incentives.TxProto.MsgCreateGroup)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.incentives.TxProto.MsgCreateGroup other) {
+        if (other == com.osmosis.incentives.TxProto.MsgCreateGroup.getDefaultInstance()) return this;
+        if (coinsBuilder_ == null) {
+          if (!other.coins_.isEmpty()) {
+            if (coins_.isEmpty()) {
+              coins_ = other.coins_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureCoinsIsMutable();
+              coins_.addAll(other.coins_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.coins_.isEmpty()) {
+            if (coinsBuilder_.isEmpty()) {
+              coinsBuilder_.dispose();
+              coinsBuilder_ = null;
+              coins_ = other.coins_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              coinsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCoinsFieldBuilder() : null;
+            } else {
+              coinsBuilder_.addAllMessages(other.coins_);
+            }
+          }
+        }
+        if (other.getNumEpochsPaidOver() != 0L) {
+          setNumEpochsPaidOver(other.getNumEpochsPaidOver());
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.poolIds_.isEmpty()) {
+          if (poolIds_.isEmpty()) {
+            poolIds_ = other.poolIds_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensurePoolIdsIsMutable();
+            poolIds_.addAll(other.poolIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (coinsBuilder_ == null) {
+                  ensureCoinsIsMutable();
+                  coins_.add(m);
+                } else {
+                  coinsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 16: {
+                numEpochsPaidOver_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                long v = input.readUInt64();
+                ensurePoolIdsIsMutable();
+                poolIds_.addLong(v);
+                break;
+              } // case 32
+              case 34: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensurePoolIdsIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  poolIds_.addLong(input.readUInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> coins_ =
+        java.util.Collections.emptyList();
+      private void ensureCoinsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          coins_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(coins_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> coinsBuilder_;
+
+      /**
+       * <pre>
+       * coins are the provided coins that the group will distribute
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getCoinsList() {
+        if (coinsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(coins_);
+        } else {
+          return coinsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * coins are the provided coins that the group will distribute
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getCoinsCount() {
+        if (coinsBuilder_ == null) {
+          return coins_.size();
+        } else {
+          return coinsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * coins are the provided coins that the group will distribute
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index) {
+        if (coinsBuilder_ == null) {
+          return coins_.get(index);
+        } else {
+          return coinsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * coins are the provided coins that the group will distribute
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsIsMutable();
+          coins_.set(index, value);
+          onChanged();
+        } else {
+          coinsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are the provided coins that the group will distribute
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          coinsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are the provided coins that the group will distribute
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsIsMutable();
+          coins_.add(value);
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are the provided coins that the group will distribute
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsIsMutable();
+          coins_.add(index, value);
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are the provided coins that the group will distribute
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.add(builderForValue.build());
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are the provided coins that the group will distribute
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are the provided coins that the group will distribute
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllCoins(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, coins_);
+          onChanged();
+        } else {
+          coinsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are the provided coins that the group will distribute
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearCoins() {
+        if (coinsBuilder_ == null) {
+          coins_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          coinsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are the provided coins that the group will distribute
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeCoins(int index) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.remove(index);
+          onChanged();
+        } else {
+          coinsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are the provided coins that the group will distribute
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getCoinsBuilder(
+          int index) {
+        return getCoinsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * coins are the provided coins that the group will distribute
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+          int index) {
+        if (coinsBuilder_ == null) {
+          return coins_.get(index);  } else {
+          return coinsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * coins are the provided coins that the group will distribute
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getCoinsOrBuilderList() {
+        if (coinsBuilder_ != null) {
+          return coinsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(coins_);
+        }
+      }
+      /**
+       * <pre>
+       * coins are the provided coins that the group will distribute
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addCoinsBuilder() {
+        return getCoinsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * coins are the provided coins that the group will distribute
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addCoinsBuilder(
+          int index) {
+        return getCoinsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * coins are the provided coins that the group will distribute
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getCoinsBuilderList() {
+        return getCoinsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getCoinsFieldBuilder() {
+        if (coinsBuilder_ == null) {
+          coinsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  coins_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          coins_ = null;
+        }
+        return coinsBuilder_;
+      }
+
+      private long numEpochsPaidOver_ ;
+      /**
+       * <pre>
+       * num_epochs_paid_over is the number of epochs distribution will be completed
+       * in. 0 means it's perpetual
+       * </pre>
+       *
+       * <code>uint64 num_epochs_paid_over = 2 [json_name = "numEpochsPaidOver"];</code>
+       * @return The numEpochsPaidOver.
+       */
+      @java.lang.Override
+      public long getNumEpochsPaidOver() {
+        return numEpochsPaidOver_;
+      }
+      /**
+       * <pre>
+       * num_epochs_paid_over is the number of epochs distribution will be completed
+       * in. 0 means it's perpetual
+       * </pre>
+       *
+       * <code>uint64 num_epochs_paid_over = 2 [json_name = "numEpochsPaidOver"];</code>
+       * @param value The numEpochsPaidOver to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumEpochsPaidOver(long value) {
+
+        numEpochsPaidOver_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * num_epochs_paid_over is the number of epochs distribution will be completed
+       * in. 0 means it's perpetual
+       * </pre>
+       *
+       * <code>uint64 num_epochs_paid_over = 2 [json_name = "numEpochsPaidOver"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumEpochsPaidOver() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        numEpochsPaidOver_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * owner is the group owner's address
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * owner is the group owner's address
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * owner is the group owner's address
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * owner is the group owner's address
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * owner is the group owner's address
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.LongList poolIds_ = emptyLongList();
+      private void ensurePoolIdsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          poolIds_ = mutableCopy(poolIds_);
+          bitField0_ |= 0x00000008;
+        }
+      }
+      /**
+       * <pre>
+       * pool_ids are the IDs of pools that the group is comprised of
+       * </pre>
+       *
+       * <code>repeated uint64 pool_ids = 4 [json_name = "poolIds"];</code>
+       * @return A list containing the poolIds.
+       */
+      public java.util.List<java.lang.Long>
+          getPoolIdsList() {
+        return ((bitField0_ & 0x00000008) != 0) ?
+                 java.util.Collections.unmodifiableList(poolIds_) : poolIds_;
+      }
+      /**
+       * <pre>
+       * pool_ids are the IDs of pools that the group is comprised of
+       * </pre>
+       *
+       * <code>repeated uint64 pool_ids = 4 [json_name = "poolIds"];</code>
+       * @return The count of poolIds.
+       */
+      public int getPoolIdsCount() {
+        return poolIds_.size();
+      }
+      /**
+       * <pre>
+       * pool_ids are the IDs of pools that the group is comprised of
+       * </pre>
+       *
+       * <code>repeated uint64 pool_ids = 4 [json_name = "poolIds"];</code>
+       * @param index The index of the element to return.
+       * @return The poolIds at the given index.
+       */
+      public long getPoolIds(int index) {
+        return poolIds_.getLong(index);
+      }
+      /**
+       * <pre>
+       * pool_ids are the IDs of pools that the group is comprised of
+       * </pre>
+       *
+       * <code>repeated uint64 pool_ids = 4 [json_name = "poolIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The poolIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolIds(
+          int index, long value) {
+
+        ensurePoolIdsIsMutable();
+        poolIds_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_ids are the IDs of pools that the group is comprised of
+       * </pre>
+       *
+       * <code>repeated uint64 pool_ids = 4 [json_name = "poolIds"];</code>
+       * @param value The poolIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPoolIds(long value) {
+
+        ensurePoolIdsIsMutable();
+        poolIds_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_ids are the IDs of pools that the group is comprised of
+       * </pre>
+       *
+       * <code>repeated uint64 pool_ids = 4 [json_name = "poolIds"];</code>
+       * @param values The poolIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPoolIds(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensurePoolIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, poolIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_ids are the IDs of pools that the group is comprised of
+       * </pre>
+       *
+       * <code>repeated uint64 pool_ids = 4 [json_name = "poolIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolIds() {
+        poolIds_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.incentives.MsgCreateGroup)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.incentives.MsgCreateGroup)
+    private static final com.osmosis.incentives.TxProto.MsgCreateGroup DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.incentives.TxProto.MsgCreateGroup();
+    }
+
+    public static com.osmosis.incentives.TxProto.MsgCreateGroup getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateGroup>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateGroup>() {
+      @java.lang.Override
+      public MsgCreateGroup parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateGroup> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateGroup> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.incentives.TxProto.MsgCreateGroup getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateGroupResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.incentives.MsgCreateGroupResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * group_id is the ID of the group that is created from this msg
+     * </pre>
+     *
+     * <code>uint64 group_id = 1 [json_name = "groupId"];</code>
+     * @return The groupId.
+     */
+    long getGroupId();
+  }
+  /**
+   * Protobuf type {@code osmosis.incentives.MsgCreateGroupResponse}
+   */
+  public static final class MsgCreateGroupResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.incentives.MsgCreateGroupResponse)
+      MsgCreateGroupResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateGroupResponse.newBuilder() to construct.
+    private MsgCreateGroupResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateGroupResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateGroupResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgCreateGroupResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgCreateGroupResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.incentives.TxProto.MsgCreateGroupResponse.class, com.osmosis.incentives.TxProto.MsgCreateGroupResponse.Builder.class);
+    }
+
+    public static final int GROUP_ID_FIELD_NUMBER = 1;
+    private long groupId_ = 0L;
+    /**
+     * <pre>
+     * group_id is the ID of the group that is created from this msg
+     * </pre>
+     *
+     * <code>uint64 group_id = 1 [json_name = "groupId"];</code>
+     * @return The groupId.
+     */
+    @java.lang.Override
+    public long getGroupId() {
+      return groupId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (groupId_ != 0L) {
+        output.writeUInt64(1, groupId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (groupId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, groupId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.incentives.TxProto.MsgCreateGroupResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.incentives.TxProto.MsgCreateGroupResponse other = (com.osmosis.incentives.TxProto.MsgCreateGroupResponse) obj;
+
+      if (getGroupId()
+          != other.getGroupId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getGroupId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.incentives.TxProto.MsgCreateGroupResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGroupResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGroupResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGroupResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGroupResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGroupResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGroupResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGroupResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.incentives.TxProto.MsgCreateGroupResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.incentives.TxProto.MsgCreateGroupResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGroupResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGroupResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.incentives.TxProto.MsgCreateGroupResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.incentives.MsgCreateGroupResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.incentives.MsgCreateGroupResponse)
+        com.osmosis.incentives.TxProto.MsgCreateGroupResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgCreateGroupResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgCreateGroupResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.incentives.TxProto.MsgCreateGroupResponse.class, com.osmosis.incentives.TxProto.MsgCreateGroupResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.incentives.TxProto.MsgCreateGroupResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        groupId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgCreateGroupResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.TxProto.MsgCreateGroupResponse getDefaultInstanceForType() {
+        return com.osmosis.incentives.TxProto.MsgCreateGroupResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.TxProto.MsgCreateGroupResponse build() {
+        com.osmosis.incentives.TxProto.MsgCreateGroupResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.TxProto.MsgCreateGroupResponse buildPartial() {
+        com.osmosis.incentives.TxProto.MsgCreateGroupResponse result = new com.osmosis.incentives.TxProto.MsgCreateGroupResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.incentives.TxProto.MsgCreateGroupResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.groupId_ = groupId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.incentives.TxProto.MsgCreateGroupResponse) {
+          return mergeFrom((com.osmosis.incentives.TxProto.MsgCreateGroupResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.incentives.TxProto.MsgCreateGroupResponse other) {
+        if (other == com.osmosis.incentives.TxProto.MsgCreateGroupResponse.getDefaultInstance()) return this;
+        if (other.getGroupId() != 0L) {
+          setGroupId(other.getGroupId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                groupId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long groupId_ ;
+      /**
+       * <pre>
+       * group_id is the ID of the group that is created from this msg
+       * </pre>
+       *
+       * <code>uint64 group_id = 1 [json_name = "groupId"];</code>
+       * @return The groupId.
+       */
+      @java.lang.Override
+      public long getGroupId() {
+        return groupId_;
+      }
+      /**
+       * <pre>
+       * group_id is the ID of the group that is created from this msg
+       * </pre>
+       *
+       * <code>uint64 group_id = 1 [json_name = "groupId"];</code>
+       * @param value The groupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupId(long value) {
+
+        groupId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * group_id is the ID of the group that is created from this msg
+       * </pre>
+       *
+       * <code>uint64 group_id = 1 [json_name = "groupId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGroupId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        groupId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.incentives.MsgCreateGroupResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.incentives.MsgCreateGroupResponse)
+    private static final com.osmosis.incentives.TxProto.MsgCreateGroupResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.incentives.TxProto.MsgCreateGroupResponse();
+    }
+
+    public static com.osmosis.incentives.TxProto.MsgCreateGroupResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateGroupResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateGroupResponse>() {
+      @java.lang.Override
+      public MsgCreateGroupResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateGroupResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateGroupResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.incentives.TxProto.MsgCreateGroupResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_incentives_MsgCreateGauge_descriptor;
   private static final 
@@ -3831,6 +5875,16 @@ public final class TxProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_incentives_MsgAddToGaugeResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_incentives_MsgCreateGroup_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_incentives_MsgCreateGroup_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_incentives_MsgCreateGroupResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_incentives_MsgCreateGroupResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3845,35 +5899,47 @@ public final class TxProto {
       "mino.proto\032\037google/protobuf/timestamp.pr" +
       "oto\032\036cosmos/base/v1beta1/coin.proto\032\036osm" +
       "osis/incentives/gauge.proto\032\031osmosis/loc" +
-      "kup/lock.proto\"\271\003\n\016MsgCreateGauge\022!\n\014is_" +
-      "perpetual\030\001 \001(\010R\013isPerpetual\022&\n\005owner\030\002 " +
-      "\001(\tB\020\362\336\037\014yaml:\"owner\"R\005owner\022I\n\rdistribu" +
-      "te_to\030\003 \001(\0132\036.osmosis.lockup.QueryCondit" +
-      "ionB\004\310\336\037\000R\014distributeTo\022a\n\005coins\030\004 \003(\0132\031" +
-      ".cosmos.base.v1beta1.CoinB0\310\336\037\000\252\337\037(githu" +
-      "b.com/cosmos/cosmos-sdk/types.CoinsR\005coi" +
-      "ns\022W\n\nstart_time\030\005 \001(\0132\032.google.protobuf" +
-      ".TimestampB\034\310\336\037\000\362\336\037\020yaml:\"timestamp\"\220\337\037\001" +
-      "R\tstartTime\022/\n\024num_epochs_paid_over\030\006 \001(" +
-      "\004R\021numEpochsPaidOver:$\212\347\260*\037osmosis/incen" +
-      "tives/create-gauge\"\030\n\026MsgCreateGaugeResp" +
-      "onse\"\337\001\n\rMsgAddToGauge\022&\n\005owner\030\001 \001(\tB\020\362" +
-      "\336\037\014yaml:\"owner\"R\005owner\022\031\n\010gauge_id\030\002 \001(\004" +
-      "R\007gaugeId\022e\n\007rewards\030\003 \003(\0132\031.cosmos.base" +
-      ".v1beta1.CoinB0\310\336\037\000\252\337\037(github.com/cosmos" +
-      "/cosmos-sdk/types.CoinsR\007rewards:$\212\347\260*\037o" +
-      "smosis/incentives/add-to-gauge\"\027\n\025MsgAdd" +
-      "ToGaugeResponse2\300\001\n\003Msg\022]\n\013CreateGauge\022\"" +
-      ".osmosis.incentives.MsgCreateGauge\032*.osm" +
-      "osis.incentives.MsgCreateGaugeResponse\022Z" +
-      "\n\nAddToGauge\022!.osmosis.incentives.MsgAdd" +
-      "ToGauge\032).osmosis.incentives.MsgAddToGau" +
-      "geResponseB\300\001\n\026com.osmosis.incentivesB\007T" +
-      "xProtoZ6github.com/osmosis-labs/osmosis/" +
-      "v15/x/incentives/types\242\002\003OIX\252\002\022Osmosis.I" +
-      "ncentives\312\002\022Osmosis\\Incentives\342\002\036Osmosis" +
-      "\\Incentives\\GPBMetadata\352\002\023Osmosis::Incen" +
-      "tivesb\006proto3"
+      "kup/lock.proto\032\027cosmos/msg/v1/msg.proto\"" +
+      "\334\003\n\016MsgCreateGauge\022!\n\014is_perpetual\030\001 \001(\010" +
+      "R\013isPerpetual\022&\n\005owner\030\002 \001(\tB\020\362\336\037\014yaml:\"" +
+      "owner\"R\005owner\022I\n\rdistribute_to\030\003 \001(\0132\036.o" +
+      "smosis.lockup.QueryConditionB\004\310\336\037\000R\014dist" +
+      "ributeTo\022a\n\005coins\030\004 \003(\0132\031.cosmos.base.v1" +
+      "beta1.CoinB0\310\336\037\000\252\337\037(github.com/cosmos/co" +
+      "smos-sdk/types.CoinsR\005coins\022W\n\nstart_tim" +
+      "e\030\005 \001(\0132\032.google.protobuf.TimestampB\034\310\336\037" +
+      "\000\362\336\037\020yaml:\"timestamp\"\220\337\037\001R\tstartTime\022/\n\024" +
+      "num_epochs_paid_over\030\006 \001(\004R\021numEpochsPai" +
+      "dOver\022\027\n\007pool_id\030\007 \001(\004R\006poolId:.\202\347\260*\005own" +
+      "er\212\347\260*\037osmosis/incentives/create-gauge\"\030" +
+      "\n\026MsgCreateGaugeResponse\"\351\001\n\rMsgAddToGau" +
+      "ge\022&\n\005owner\030\001 \001(\tB\020\362\336\037\014yaml:\"owner\"R\005own" +
+      "er\022\031\n\010gauge_id\030\002 \001(\004R\007gaugeId\022e\n\007rewards" +
+      "\030\003 \003(\0132\031.cosmos.base.v1beta1.CoinB0\310\336\037\000\252" +
+      "\337\037(github.com/cosmos/cosmos-sdk/types.Co" +
+      "insR\007rewards:.\202\347\260*\005owner\212\347\260*\037osmosis/inc" +
+      "entives/add-to-gauge\"\027\n\025MsgAddToGaugeRes" +
+      "ponse\"\227\002\n\016MsgCreateGroup\022a\n\005coins\030\001 \003(\0132" +
+      "\031.cosmos.base.v1beta1.CoinB0\310\336\037\000\252\337\037(gith" +
+      "ub.com/cosmos/cosmos-sdk/types.CoinsR\005co" +
+      "ins\022/\n\024num_epochs_paid_over\030\002 \001(\004R\021numEp" +
+      "ochsPaidOver\022&\n\005owner\030\003 \001(\tB\020\362\336\037\014yaml:\"o" +
+      "wner\"R\005owner\022\031\n\010pool_ids\030\004 \003(\004R\007poolIds:" +
+      ".\202\347\260*\005owner\212\347\260*\037osmosis/incentives/creat" +
+      "e-group\"3\n\026MsgCreateGroupResponse\022\031\n\010gro" +
+      "up_id\030\001 \001(\004R\007groupId2\237\002\n\003Msg\022]\n\013CreateGa" +
+      "uge\022\".osmosis.incentives.MsgCreateGauge\032" +
+      "*.osmosis.incentives.MsgCreateGaugeRespo" +
+      "nse\022Z\n\nAddToGauge\022!.osmosis.incentives.M" +
+      "sgAddToGauge\032).osmosis.incentives.MsgAdd" +
+      "ToGaugeResponse\022]\n\013CreateGroup\022\".osmosis" +
+      ".incentives.MsgCreateGroup\032*.osmosis.inc" +
+      "entives.MsgCreateGroupResponseB\300\001\n\026com.o" +
+      "smosis.incentivesB\007TxProtoZ6github.com/o" +
+      "smosis-labs/osmosis/v26/x/incentives/typ" +
+      "es\242\002\003OIX\252\002\022Osmosis.Incentives\312\002\022Osmosis\\" +
+      "Incentives\342\002\036Osmosis\\Incentives\\GPBMetad" +
+      "ata\352\002\023Osmosis::Incentivesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3884,13 +5950,14 @@ public final class TxProto {
           com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
           com.osmosis.incentives.GaugeProto.getDescriptor(),
           com.osmosis.lockup.LockProto.getDescriptor(),
+          com.cosmos.msg.v1.MsgProto.getDescriptor(),
         });
     internal_static_osmosis_incentives_MsgCreateGauge_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_osmosis_incentives_MsgCreateGauge_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_incentives_MsgCreateGauge_descriptor,
-        new java.lang.String[] { "IsPerpetual", "Owner", "DistributeTo", "Coins", "StartTime", "NumEpochsPaidOver", });
+        new java.lang.String[] { "IsPerpetual", "Owner", "DistributeTo", "Coins", "StartTime", "NumEpochsPaidOver", "PoolId", });
     internal_static_osmosis_incentives_MsgCreateGaugeResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_osmosis_incentives_MsgCreateGaugeResponse_fieldAccessorTable = new
@@ -3909,9 +5976,22 @@ public final class TxProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_incentives_MsgAddToGaugeResponse_descriptor,
         new java.lang.String[] { });
+    internal_static_osmosis_incentives_MsgCreateGroup_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_osmosis_incentives_MsgCreateGroup_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_incentives_MsgCreateGroup_descriptor,
+        new java.lang.String[] { "Coins", "NumEpochsPaidOver", "Owner", "PoolIds", });
+    internal_static_osmosis_incentives_MsgCreateGroupResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_osmosis_incentives_MsgCreateGroupResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_incentives_MsgCreateGroupResponse_descriptor,
+        new java.lang.String[] { "GroupId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.amino.AminoProto.name);
+    registry.add(com.cosmos.msg.v1.MsgProto.signer);
     registry.add(com.gogoproto.GogoProto.castrepeated);
     registry.add(com.gogoproto.GogoProto.moretags);
     registry.add(com.gogoproto.GogoProto.nullable);
@@ -3924,6 +6004,7 @@ public final class TxProto {
     com.cosmos.base.v1beta1.CoinProto.getDescriptor();
     com.osmosis.incentives.GaugeProto.getDescriptor();
     com.osmosis.lockup.LockProto.getDescriptor();
+    com.cosmos.msg.v1.MsgProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

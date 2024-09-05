@@ -741,22 +741,19 @@ public final class InstantiateMsgProto {
     java.lang.String[] descriptorData = {
       "\n8osmosis/cosmwasmpool/v1beta1/model/ins" +
       "tantiate_msg.proto\022\034osmosis.cosmwasmpool" +
-      ".v1beta1\032\024gogoproto/gogo.proto\032\036cosmos/b" +
-      "ase/v1beta1/coin.proto\"<\n\016InstantiateMsg" +
-      "\022*\n\021pool_asset_denoms\030\001 \003(\tR\017poolAssetDe" +
-      "nomsB\210\002\n com.osmosis.cosmwasmpool.v1beta" +
-      "1B\023InstantiateMsgProtoZ?github.com/osmos" +
-      "is-labs/osmosis/v15/x/cosmwasmpool/cosmw" +
-      "asm/msg\242\002\003OCX\252\002\034Osmosis.Cosmwasmpool.V1b" +
-      "eta1\312\002\034Osmosis\\Cosmwasmpool\\V1beta1\342\002(Os" +
-      "mosis\\Cosmwasmpool\\V1beta1\\GPBMetadata\352\002" +
-      "\036Osmosis::Cosmwasmpool::V1beta1b\006proto3"
+      ".v1beta1\"<\n\016InstantiateMsg\022*\n\021pool_asset" +
+      "_denoms\030\001 \003(\tR\017poolAssetDenomsB\210\002\n com.o" +
+      "smosis.cosmwasmpool.v1beta1B\023Instantiate" +
+      "MsgProtoZ?github.com/osmosis-labs/osmosi" +
+      "s/v26/x/cosmwasmpool/cosmwasm/msg\242\002\003OCX\252" +
+      "\002\034Osmosis.Cosmwasmpool.V1beta1\312\002\034Osmosis" +
+      "\\Cosmwasmpool\\V1beta1\342\002(Osmosis\\Cosmwasm" +
+      "pool\\V1beta1\\GPBMetadata\352\002\036Osmosis::Cosm" +
+      "wasmpool::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.gogoproto.GogoProto.getDescriptor(),
-          com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
         });
     internal_static_osmosis_cosmwasmpool_v1beta1_InstantiateMsg_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -764,8 +761,6 @@ public final class InstantiateMsgProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_cosmwasmpool_v1beta1_InstantiateMsg_descriptor,
         new java.lang.String[] { "PoolAssetDenoms", });
-    com.gogoproto.GogoProto.getDescriptor();
-    com.cosmos.base.v1beta1.CoinProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

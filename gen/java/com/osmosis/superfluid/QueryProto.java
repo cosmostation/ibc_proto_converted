@@ -9390,24 +9390,24 @@ public final class QueryProto {
         getValAddrBytes();
 
     /**
-     * <code>string amount_sfsd = 2 [json_name = "amountSfsd", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_sfsd&#92;""];</code>
+     * <code>string amount_sfsd = 2 [json_name = "amountSfsd", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_sfsd&#92;""];</code>
      * @return The amountSfsd.
      */
     java.lang.String getAmountSfsd();
     /**
-     * <code>string amount_sfsd = 2 [json_name = "amountSfsd", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_sfsd&#92;""];</code>
+     * <code>string amount_sfsd = 2 [json_name = "amountSfsd", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_sfsd&#92;""];</code>
      * @return The bytes for amountSfsd.
      */
     com.google.protobuf.ByteString
         getAmountSfsdBytes();
 
     /**
-     * <code>string osmo_equivalent = 3 [json_name = "osmoEquivalent", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"osmo_equivalent&#92;""];</code>
+     * <code>string osmo_equivalent = 3 [json_name = "osmoEquivalent", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"osmo_equivalent&#92;""];</code>
      * @return The osmoEquivalent.
      */
     java.lang.String getOsmoEquivalent();
     /**
-     * <code>string osmo_equivalent = 3 [json_name = "osmoEquivalent", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"osmo_equivalent&#92;""];</code>
+     * <code>string osmo_equivalent = 3 [json_name = "osmoEquivalent", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"osmo_equivalent&#92;""];</code>
      * @return The bytes for osmoEquivalent.
      */
     com.google.protobuf.ByteString
@@ -9494,7 +9494,7 @@ public final class QueryProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object amountSfsd_ = "";
     /**
-     * <code>string amount_sfsd = 2 [json_name = "amountSfsd", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_sfsd&#92;""];</code>
+     * <code>string amount_sfsd = 2 [json_name = "amountSfsd", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_sfsd&#92;""];</code>
      * @return The amountSfsd.
      */
     @java.lang.Override
@@ -9511,7 +9511,7 @@ public final class QueryProto {
       }
     }
     /**
-     * <code>string amount_sfsd = 2 [json_name = "amountSfsd", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_sfsd&#92;""];</code>
+     * <code>string amount_sfsd = 2 [json_name = "amountSfsd", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_sfsd&#92;""];</code>
      * @return The bytes for amountSfsd.
      */
     @java.lang.Override
@@ -9533,7 +9533,7 @@ public final class QueryProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object osmoEquivalent_ = "";
     /**
-     * <code>string osmo_equivalent = 3 [json_name = "osmoEquivalent", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"osmo_equivalent&#92;""];</code>
+     * <code>string osmo_equivalent = 3 [json_name = "osmoEquivalent", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"osmo_equivalent&#92;""];</code>
      * @return The osmoEquivalent.
      */
     @java.lang.Override
@@ -9550,7 +9550,7 @@ public final class QueryProto {
       }
     }
     /**
-     * <code>string osmo_equivalent = 3 [json_name = "osmoEquivalent", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"osmo_equivalent&#92;""];</code>
+     * <code>string osmo_equivalent = 3 [json_name = "osmoEquivalent", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"osmo_equivalent&#92;""];</code>
      * @return The bytes for osmoEquivalent.
      */
     @java.lang.Override
@@ -10016,7 +10016,7 @@ public final class QueryProto {
 
       private java.lang.Object amountSfsd_ = "";
       /**
-       * <code>string amount_sfsd = 2 [json_name = "amountSfsd", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_sfsd&#92;""];</code>
+       * <code>string amount_sfsd = 2 [json_name = "amountSfsd", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_sfsd&#92;""];</code>
        * @return The amountSfsd.
        */
       public java.lang.String getAmountSfsd() {
@@ -10032,7 +10032,7 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>string amount_sfsd = 2 [json_name = "amountSfsd", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_sfsd&#92;""];</code>
+       * <code>string amount_sfsd = 2 [json_name = "amountSfsd", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_sfsd&#92;""];</code>
        * @return The bytes for amountSfsd.
        */
       public com.google.protobuf.ByteString
@@ -10049,7 +10049,7 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>string amount_sfsd = 2 [json_name = "amountSfsd", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_sfsd&#92;""];</code>
+       * <code>string amount_sfsd = 2 [json_name = "amountSfsd", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_sfsd&#92;""];</code>
        * @param value The amountSfsd to set.
        * @return This builder for chaining.
        */
@@ -10062,7 +10062,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>string amount_sfsd = 2 [json_name = "amountSfsd", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_sfsd&#92;""];</code>
+       * <code>string amount_sfsd = 2 [json_name = "amountSfsd", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_sfsd&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearAmountSfsd() {
@@ -10072,7 +10072,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>string amount_sfsd = 2 [json_name = "amountSfsd", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_sfsd&#92;""];</code>
+       * <code>string amount_sfsd = 2 [json_name = "amountSfsd", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount_sfsd&#92;""];</code>
        * @param value The bytes for amountSfsd to set.
        * @return This builder for chaining.
        */
@@ -10088,7 +10088,7 @@ public final class QueryProto {
 
       private java.lang.Object osmoEquivalent_ = "";
       /**
-       * <code>string osmo_equivalent = 3 [json_name = "osmoEquivalent", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"osmo_equivalent&#92;""];</code>
+       * <code>string osmo_equivalent = 3 [json_name = "osmoEquivalent", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"osmo_equivalent&#92;""];</code>
        * @return The osmoEquivalent.
        */
       public java.lang.String getOsmoEquivalent() {
@@ -10104,7 +10104,7 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>string osmo_equivalent = 3 [json_name = "osmoEquivalent", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"osmo_equivalent&#92;""];</code>
+       * <code>string osmo_equivalent = 3 [json_name = "osmoEquivalent", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"osmo_equivalent&#92;""];</code>
        * @return The bytes for osmoEquivalent.
        */
       public com.google.protobuf.ByteString
@@ -10121,7 +10121,7 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>string osmo_equivalent = 3 [json_name = "osmoEquivalent", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"osmo_equivalent&#92;""];</code>
+       * <code>string osmo_equivalent = 3 [json_name = "osmoEquivalent", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"osmo_equivalent&#92;""];</code>
        * @param value The osmoEquivalent to set.
        * @return This builder for chaining.
        */
@@ -10134,7 +10134,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>string osmo_equivalent = 3 [json_name = "osmoEquivalent", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"osmo_equivalent&#92;""];</code>
+       * <code>string osmo_equivalent = 3 [json_name = "osmoEquivalent", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"osmo_equivalent&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearOsmoEquivalent() {
@@ -10144,7 +10144,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>string osmo_equivalent = 3 [json_name = "osmoEquivalent", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"osmo_equivalent&#92;""];</code>
+       * <code>string osmo_equivalent = 3 [json_name = "osmoEquivalent", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"osmo_equivalent&#92;""];</code>
        * @param value The bytes for osmoEquivalent to set.
        * @return This builder for chaining.
        */
@@ -10623,12 +10623,12 @@ public final class QueryProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string total_delegations = 1 [json_name = "totalDelegations", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_superfluid_delegations&#92;""];</code>
+     * <code>string total_delegations = 1 [json_name = "totalDelegations", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"total_superfluid_delegations&#92;""];</code>
      * @return The totalDelegations.
      */
     java.lang.String getTotalDelegations();
     /**
-     * <code>string total_delegations = 1 [json_name = "totalDelegations", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_superfluid_delegations&#92;""];</code>
+     * <code>string total_delegations = 1 [json_name = "totalDelegations", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"total_superfluid_delegations&#92;""];</code>
      * @return The bytes for totalDelegations.
      */
     com.google.protobuf.ByteString
@@ -10674,7 +10674,7 @@ public final class QueryProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object totalDelegations_ = "";
     /**
-     * <code>string total_delegations = 1 [json_name = "totalDelegations", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_superfluid_delegations&#92;""];</code>
+     * <code>string total_delegations = 1 [json_name = "totalDelegations", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"total_superfluid_delegations&#92;""];</code>
      * @return The totalDelegations.
      */
     @java.lang.Override
@@ -10691,7 +10691,7 @@ public final class QueryProto {
       }
     }
     /**
-     * <code>string total_delegations = 1 [json_name = "totalDelegations", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_superfluid_delegations&#92;""];</code>
+     * <code>string total_delegations = 1 [json_name = "totalDelegations", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"total_superfluid_delegations&#92;""];</code>
      * @return The bytes for totalDelegations.
      */
     @java.lang.Override
@@ -11037,7 +11037,7 @@ public final class QueryProto {
 
       private java.lang.Object totalDelegations_ = "";
       /**
-       * <code>string total_delegations = 1 [json_name = "totalDelegations", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_superfluid_delegations&#92;""];</code>
+       * <code>string total_delegations = 1 [json_name = "totalDelegations", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"total_superfluid_delegations&#92;""];</code>
        * @return The totalDelegations.
        */
       public java.lang.String getTotalDelegations() {
@@ -11053,7 +11053,7 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>string total_delegations = 1 [json_name = "totalDelegations", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_superfluid_delegations&#92;""];</code>
+       * <code>string total_delegations = 1 [json_name = "totalDelegations", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"total_superfluid_delegations&#92;""];</code>
        * @return The bytes for totalDelegations.
        */
       public com.google.protobuf.ByteString
@@ -11070,7 +11070,7 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>string total_delegations = 1 [json_name = "totalDelegations", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_superfluid_delegations&#92;""];</code>
+       * <code>string total_delegations = 1 [json_name = "totalDelegations", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"total_superfluid_delegations&#92;""];</code>
        * @param value The totalDelegations to set.
        * @return This builder for chaining.
        */
@@ -11083,7 +11083,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>string total_delegations = 1 [json_name = "totalDelegations", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_superfluid_delegations&#92;""];</code>
+       * <code>string total_delegations = 1 [json_name = "totalDelegations", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"total_superfluid_delegations&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearTotalDelegations() {
@@ -11093,7 +11093,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>string total_delegations = 1 [json_name = "totalDelegations", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_superfluid_delegations&#92;""];</code>
+       * <code>string total_delegations = 1 [json_name = "totalDelegations", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"total_superfluid_delegations&#92;""];</code>
        * @param value The bytes for totalDelegations to set.
        * @return This builder for chaining.
        */
@@ -23169,6 +23169,3894 @@ public final class QueryProto {
 
   }
 
+  public interface UserConcentratedSuperfluidPositionsDelegatedRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.superfluid.UserConcentratedSuperfluidPositionsDelegatedRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The delegatorAddress.
+     */
+    java.lang.String getDelegatorAddress();
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The bytes for delegatorAddress.
+     */
+    com.google.protobuf.ByteString
+        getDelegatorAddressBytes();
+  }
+  /**
+   * Protobuf type {@code osmosis.superfluid.UserConcentratedSuperfluidPositionsDelegatedRequest}
+   */
+  public static final class UserConcentratedSuperfluidPositionsDelegatedRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.superfluid.UserConcentratedSuperfluidPositionsDelegatedRequest)
+      UserConcentratedSuperfluidPositionsDelegatedRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UserConcentratedSuperfluidPositionsDelegatedRequest.newBuilder() to construct.
+    private UserConcentratedSuperfluidPositionsDelegatedRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UserConcentratedSuperfluidPositionsDelegatedRequest() {
+      delegatorAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UserConcentratedSuperfluidPositionsDelegatedRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest.class, com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest.Builder.class);
+    }
+
+    public static final int DELEGATOR_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object delegatorAddress_ = "";
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The delegatorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getDelegatorAddress() {
+      java.lang.Object ref = delegatorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        delegatorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The bytes for delegatorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDelegatorAddressBytes() {
+      java.lang.Object ref = delegatorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        delegatorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegatorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, delegatorAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegatorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, delegatorAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest other = (com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest) obj;
+
+      if (!getDelegatorAddress()
+          .equals(other.getDelegatorAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DELEGATOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getDelegatorAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.superfluid.UserConcentratedSuperfluidPositionsDelegatedRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.superfluid.UserConcentratedSuperfluidPositionsDelegatedRequest)
+        com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest.class, com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        delegatorAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest getDefaultInstanceForType() {
+        return com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest build() {
+        com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest buildPartial() {
+        com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest result = new com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.delegatorAddress_ = delegatorAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest) {
+          return mergeFrom((com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest other) {
+        if (other == com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest.getDefaultInstance()) return this;
+        if (!other.getDelegatorAddress().isEmpty()) {
+          delegatorAddress_ = other.delegatorAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                delegatorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object delegatorAddress_ = "";
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @return The delegatorAddress.
+       */
+      public java.lang.String getDelegatorAddress() {
+        java.lang.Object ref = delegatorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          delegatorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @return The bytes for delegatorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getDelegatorAddressBytes() {
+        java.lang.Object ref = delegatorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          delegatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @param value The delegatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegatorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        delegatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelegatorAddress() {
+        delegatorAddress_ = getDefaultInstance().getDelegatorAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @param value The bytes for delegatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegatorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        delegatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.superfluid.UserConcentratedSuperfluidPositionsDelegatedRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.superfluid.UserConcentratedSuperfluidPositionsDelegatedRequest)
+    private static final com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest();
+    }
+
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UserConcentratedSuperfluidPositionsDelegatedRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UserConcentratedSuperfluidPositionsDelegatedRequest>() {
+      @java.lang.Override
+      public UserConcentratedSuperfluidPositionsDelegatedRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UserConcentratedSuperfluidPositionsDelegatedRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UserConcentratedSuperfluidPositionsDelegatedRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UserConcentratedSuperfluidPositionsDelegatedResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.superfluid.UserConcentratedSuperfluidPositionsDelegatedResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord> 
+        getClPoolUserPositionRecordsList();
+    /**
+     * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord getClPoolUserPositionRecords(int index);
+    /**
+     * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+     */
+    int getClPoolUserPositionRecordsCount();
+    /**
+     * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecordOrBuilder> 
+        getClPoolUserPositionRecordsOrBuilderList();
+    /**
+     * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecordOrBuilder getClPoolUserPositionRecordsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code osmosis.superfluid.UserConcentratedSuperfluidPositionsDelegatedResponse}
+   */
+  public static final class UserConcentratedSuperfluidPositionsDelegatedResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.superfluid.UserConcentratedSuperfluidPositionsDelegatedResponse)
+      UserConcentratedSuperfluidPositionsDelegatedResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UserConcentratedSuperfluidPositionsDelegatedResponse.newBuilder() to construct.
+    private UserConcentratedSuperfluidPositionsDelegatedResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UserConcentratedSuperfluidPositionsDelegatedResponse() {
+      clPoolUserPositionRecords_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UserConcentratedSuperfluidPositionsDelegatedResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse.class, com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse.Builder.class);
+    }
+
+    public static final int CL_POOL_USER_POSITION_RECORDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord> clPoolUserPositionRecords_;
+    /**
+     * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord> getClPoolUserPositionRecordsList() {
+      return clPoolUserPositionRecords_;
+    }
+    /**
+     * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecordOrBuilder> 
+        getClPoolUserPositionRecordsOrBuilderList() {
+      return clPoolUserPositionRecords_;
+    }
+    /**
+     * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getClPoolUserPositionRecordsCount() {
+      return clPoolUserPositionRecords_.size();
+    }
+    /**
+     * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord getClPoolUserPositionRecords(int index) {
+      return clPoolUserPositionRecords_.get(index);
+    }
+    /**
+     * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecordOrBuilder getClPoolUserPositionRecordsOrBuilder(
+        int index) {
+      return clPoolUserPositionRecords_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < clPoolUserPositionRecords_.size(); i++) {
+        output.writeMessage(1, clPoolUserPositionRecords_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < clPoolUserPositionRecords_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, clPoolUserPositionRecords_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse other = (com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse) obj;
+
+      if (!getClPoolUserPositionRecordsList()
+          .equals(other.getClPoolUserPositionRecordsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getClPoolUserPositionRecordsCount() > 0) {
+        hash = (37 * hash) + CL_POOL_USER_POSITION_RECORDS_FIELD_NUMBER;
+        hash = (53 * hash) + getClPoolUserPositionRecordsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.superfluid.UserConcentratedSuperfluidPositionsDelegatedResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.superfluid.UserConcentratedSuperfluidPositionsDelegatedResponse)
+        com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse.class, com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          clPoolUserPositionRecords_ = java.util.Collections.emptyList();
+        } else {
+          clPoolUserPositionRecords_ = null;
+          clPoolUserPositionRecordsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse getDefaultInstanceForType() {
+        return com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse build() {
+        com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse buildPartial() {
+        com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse result = new com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse result) {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            clPoolUserPositionRecords_ = java.util.Collections.unmodifiableList(clPoolUserPositionRecords_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.clPoolUserPositionRecords_ = clPoolUserPositionRecords_;
+        } else {
+          result.clPoolUserPositionRecords_ = clPoolUserPositionRecordsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse) {
+          return mergeFrom((com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse other) {
+        if (other == com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse.getDefaultInstance()) return this;
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          if (!other.clPoolUserPositionRecords_.isEmpty()) {
+            if (clPoolUserPositionRecords_.isEmpty()) {
+              clPoolUserPositionRecords_ = other.clPoolUserPositionRecords_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureClPoolUserPositionRecordsIsMutable();
+              clPoolUserPositionRecords_.addAll(other.clPoolUserPositionRecords_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.clPoolUserPositionRecords_.isEmpty()) {
+            if (clPoolUserPositionRecordsBuilder_.isEmpty()) {
+              clPoolUserPositionRecordsBuilder_.dispose();
+              clPoolUserPositionRecordsBuilder_ = null;
+              clPoolUserPositionRecords_ = other.clPoolUserPositionRecords_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              clPoolUserPositionRecordsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getClPoolUserPositionRecordsFieldBuilder() : null;
+            } else {
+              clPoolUserPositionRecordsBuilder_.addAllMessages(other.clPoolUserPositionRecords_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord m =
+                    input.readMessage(
+                        com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.parser(),
+                        extensionRegistry);
+                if (clPoolUserPositionRecordsBuilder_ == null) {
+                  ensureClPoolUserPositionRecordsIsMutable();
+                  clPoolUserPositionRecords_.add(m);
+                } else {
+                  clPoolUserPositionRecordsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord> clPoolUserPositionRecords_ =
+        java.util.Collections.emptyList();
+      private void ensureClPoolUserPositionRecordsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          clPoolUserPositionRecords_ = new java.util.ArrayList<com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord>(clPoolUserPositionRecords_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord, com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.Builder, com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecordOrBuilder> clPoolUserPositionRecordsBuilder_;
+
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord> getClPoolUserPositionRecordsList() {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(clPoolUserPositionRecords_);
+        } else {
+          return clPoolUserPositionRecordsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public int getClPoolUserPositionRecordsCount() {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          return clPoolUserPositionRecords_.size();
+        } else {
+          return clPoolUserPositionRecordsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord getClPoolUserPositionRecords(int index) {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          return clPoolUserPositionRecords_.get(index);
+        } else {
+          return clPoolUserPositionRecordsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClPoolUserPositionRecords(
+          int index, com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord value) {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClPoolUserPositionRecordsIsMutable();
+          clPoolUserPositionRecords_.set(index, value);
+          onChanged();
+        } else {
+          clPoolUserPositionRecordsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClPoolUserPositionRecords(
+          int index, com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.Builder builderForValue) {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          ensureClPoolUserPositionRecordsIsMutable();
+          clPoolUserPositionRecords_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          clPoolUserPositionRecordsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClPoolUserPositionRecords(com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord value) {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClPoolUserPositionRecordsIsMutable();
+          clPoolUserPositionRecords_.add(value);
+          onChanged();
+        } else {
+          clPoolUserPositionRecordsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClPoolUserPositionRecords(
+          int index, com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord value) {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClPoolUserPositionRecordsIsMutable();
+          clPoolUserPositionRecords_.add(index, value);
+          onChanged();
+        } else {
+          clPoolUserPositionRecordsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClPoolUserPositionRecords(
+          com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.Builder builderForValue) {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          ensureClPoolUserPositionRecordsIsMutable();
+          clPoolUserPositionRecords_.add(builderForValue.build());
+          onChanged();
+        } else {
+          clPoolUserPositionRecordsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClPoolUserPositionRecords(
+          int index, com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.Builder builderForValue) {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          ensureClPoolUserPositionRecordsIsMutable();
+          clPoolUserPositionRecords_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          clPoolUserPositionRecordsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllClPoolUserPositionRecords(
+          java.lang.Iterable<? extends com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord> values) {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          ensureClPoolUserPositionRecordsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, clPoolUserPositionRecords_);
+          onChanged();
+        } else {
+          clPoolUserPositionRecordsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearClPoolUserPositionRecords() {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          clPoolUserPositionRecords_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          clPoolUserPositionRecordsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeClPoolUserPositionRecords(int index) {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          ensureClPoolUserPositionRecordsIsMutable();
+          clPoolUserPositionRecords_.remove(index);
+          onChanged();
+        } else {
+          clPoolUserPositionRecordsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.Builder getClPoolUserPositionRecordsBuilder(
+          int index) {
+        return getClPoolUserPositionRecordsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecordOrBuilder getClPoolUserPositionRecordsOrBuilder(
+          int index) {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          return clPoolUserPositionRecords_.get(index);  } else {
+          return clPoolUserPositionRecordsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecordOrBuilder> 
+           getClPoolUserPositionRecordsOrBuilderList() {
+        if (clPoolUserPositionRecordsBuilder_ != null) {
+          return clPoolUserPositionRecordsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(clPoolUserPositionRecords_);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.Builder addClPoolUserPositionRecordsBuilder() {
+        return getClPoolUserPositionRecordsFieldBuilder().addBuilder(
+            com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.Builder addClPoolUserPositionRecordsBuilder(
+          int index) {
+        return getClPoolUserPositionRecordsFieldBuilder().addBuilder(
+            index, com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.Builder> 
+           getClPoolUserPositionRecordsBuilderList() {
+        return getClPoolUserPositionRecordsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord, com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.Builder, com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecordOrBuilder> 
+          getClPoolUserPositionRecordsFieldBuilder() {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          clPoolUserPositionRecordsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord, com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.Builder, com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecordOrBuilder>(
+                  clPoolUserPositionRecords_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          clPoolUserPositionRecords_ = null;
+        }
+        return clPoolUserPositionRecordsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.superfluid.UserConcentratedSuperfluidPositionsDelegatedResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.superfluid.UserConcentratedSuperfluidPositionsDelegatedResponse)
+    private static final com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse();
+    }
+
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UserConcentratedSuperfluidPositionsDelegatedResponse>
+        PARSER = new com.google.protobuf.AbstractParser<UserConcentratedSuperfluidPositionsDelegatedResponse>() {
+      @java.lang.Override
+      public UserConcentratedSuperfluidPositionsDelegatedResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UserConcentratedSuperfluidPositionsDelegatedResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UserConcentratedSuperfluidPositionsDelegatedResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UserConcentratedSuperfluidPositionsUndelegatingRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.superfluid.UserConcentratedSuperfluidPositionsUndelegatingRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The delegatorAddress.
+     */
+    java.lang.String getDelegatorAddress();
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The bytes for delegatorAddress.
+     */
+    com.google.protobuf.ByteString
+        getDelegatorAddressBytes();
+  }
+  /**
+   * Protobuf type {@code osmosis.superfluid.UserConcentratedSuperfluidPositionsUndelegatingRequest}
+   */
+  public static final class UserConcentratedSuperfluidPositionsUndelegatingRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.superfluid.UserConcentratedSuperfluidPositionsUndelegatingRequest)
+      UserConcentratedSuperfluidPositionsUndelegatingRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UserConcentratedSuperfluidPositionsUndelegatingRequest.newBuilder() to construct.
+    private UserConcentratedSuperfluidPositionsUndelegatingRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UserConcentratedSuperfluidPositionsUndelegatingRequest() {
+      delegatorAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UserConcentratedSuperfluidPositionsUndelegatingRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest.class, com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest.Builder.class);
+    }
+
+    public static final int DELEGATOR_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object delegatorAddress_ = "";
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The delegatorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getDelegatorAddress() {
+      java.lang.Object ref = delegatorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        delegatorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+     * @return The bytes for delegatorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDelegatorAddressBytes() {
+      java.lang.Object ref = delegatorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        delegatorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegatorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, delegatorAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegatorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, delegatorAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest other = (com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest) obj;
+
+      if (!getDelegatorAddress()
+          .equals(other.getDelegatorAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DELEGATOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getDelegatorAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.superfluid.UserConcentratedSuperfluidPositionsUndelegatingRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.superfluid.UserConcentratedSuperfluidPositionsUndelegatingRequest)
+        com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest.class, com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        delegatorAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest getDefaultInstanceForType() {
+        return com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest build() {
+        com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest buildPartial() {
+        com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest result = new com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.delegatorAddress_ = delegatorAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest) {
+          return mergeFrom((com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest other) {
+        if (other == com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest.getDefaultInstance()) return this;
+        if (!other.getDelegatorAddress().isEmpty()) {
+          delegatorAddress_ = other.delegatorAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                delegatorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object delegatorAddress_ = "";
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @return The delegatorAddress.
+       */
+      public java.lang.String getDelegatorAddress() {
+        java.lang.Object ref = delegatorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          delegatorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @return The bytes for delegatorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getDelegatorAddressBytes() {
+        java.lang.Object ref = delegatorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          delegatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @param value The delegatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegatorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        delegatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelegatorAddress() {
+        delegatorAddress_ = getDefaultInstance().getDelegatorAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress"];</code>
+       * @param value The bytes for delegatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegatorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        delegatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.superfluid.UserConcentratedSuperfluidPositionsUndelegatingRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.superfluid.UserConcentratedSuperfluidPositionsUndelegatingRequest)
+    private static final com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest();
+    }
+
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UserConcentratedSuperfluidPositionsUndelegatingRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UserConcentratedSuperfluidPositionsUndelegatingRequest>() {
+      @java.lang.Override
+      public UserConcentratedSuperfluidPositionsUndelegatingRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UserConcentratedSuperfluidPositionsUndelegatingRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UserConcentratedSuperfluidPositionsUndelegatingRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UserConcentratedSuperfluidPositionsUndelegatingResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.superfluid.UserConcentratedSuperfluidPositionsUndelegatingResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord> 
+        getClPoolUserPositionRecordsList();
+    /**
+     * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord getClPoolUserPositionRecords(int index);
+    /**
+     * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+     */
+    int getClPoolUserPositionRecordsCount();
+    /**
+     * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecordOrBuilder> 
+        getClPoolUserPositionRecordsOrBuilderList();
+    /**
+     * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecordOrBuilder getClPoolUserPositionRecordsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code osmosis.superfluid.UserConcentratedSuperfluidPositionsUndelegatingResponse}
+   */
+  public static final class UserConcentratedSuperfluidPositionsUndelegatingResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.superfluid.UserConcentratedSuperfluidPositionsUndelegatingResponse)
+      UserConcentratedSuperfluidPositionsUndelegatingResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UserConcentratedSuperfluidPositionsUndelegatingResponse.newBuilder() to construct.
+    private UserConcentratedSuperfluidPositionsUndelegatingResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UserConcentratedSuperfluidPositionsUndelegatingResponse() {
+      clPoolUserPositionRecords_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UserConcentratedSuperfluidPositionsUndelegatingResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse.class, com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse.Builder.class);
+    }
+
+    public static final int CL_POOL_USER_POSITION_RECORDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord> clPoolUserPositionRecords_;
+    /**
+     * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord> getClPoolUserPositionRecordsList() {
+      return clPoolUserPositionRecords_;
+    }
+    /**
+     * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecordOrBuilder> 
+        getClPoolUserPositionRecordsOrBuilderList() {
+      return clPoolUserPositionRecords_;
+    }
+    /**
+     * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getClPoolUserPositionRecordsCount() {
+      return clPoolUserPositionRecords_.size();
+    }
+    /**
+     * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord getClPoolUserPositionRecords(int index) {
+      return clPoolUserPositionRecords_.get(index);
+    }
+    /**
+     * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecordOrBuilder getClPoolUserPositionRecordsOrBuilder(
+        int index) {
+      return clPoolUserPositionRecords_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < clPoolUserPositionRecords_.size(); i++) {
+        output.writeMessage(1, clPoolUserPositionRecords_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < clPoolUserPositionRecords_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, clPoolUserPositionRecords_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse other = (com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse) obj;
+
+      if (!getClPoolUserPositionRecordsList()
+          .equals(other.getClPoolUserPositionRecordsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getClPoolUserPositionRecordsCount() > 0) {
+        hash = (37 * hash) + CL_POOL_USER_POSITION_RECORDS_FIELD_NUMBER;
+        hash = (53 * hash) + getClPoolUserPositionRecordsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.superfluid.UserConcentratedSuperfluidPositionsUndelegatingResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.superfluid.UserConcentratedSuperfluidPositionsUndelegatingResponse)
+        com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse.class, com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          clPoolUserPositionRecords_ = java.util.Collections.emptyList();
+        } else {
+          clPoolUserPositionRecords_ = null;
+          clPoolUserPositionRecordsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse getDefaultInstanceForType() {
+        return com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse build() {
+        com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse buildPartial() {
+        com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse result = new com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse result) {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            clPoolUserPositionRecords_ = java.util.Collections.unmodifiableList(clPoolUserPositionRecords_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.clPoolUserPositionRecords_ = clPoolUserPositionRecords_;
+        } else {
+          result.clPoolUserPositionRecords_ = clPoolUserPositionRecordsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse) {
+          return mergeFrom((com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse other) {
+        if (other == com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse.getDefaultInstance()) return this;
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          if (!other.clPoolUserPositionRecords_.isEmpty()) {
+            if (clPoolUserPositionRecords_.isEmpty()) {
+              clPoolUserPositionRecords_ = other.clPoolUserPositionRecords_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureClPoolUserPositionRecordsIsMutable();
+              clPoolUserPositionRecords_.addAll(other.clPoolUserPositionRecords_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.clPoolUserPositionRecords_.isEmpty()) {
+            if (clPoolUserPositionRecordsBuilder_.isEmpty()) {
+              clPoolUserPositionRecordsBuilder_.dispose();
+              clPoolUserPositionRecordsBuilder_ = null;
+              clPoolUserPositionRecords_ = other.clPoolUserPositionRecords_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              clPoolUserPositionRecordsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getClPoolUserPositionRecordsFieldBuilder() : null;
+            } else {
+              clPoolUserPositionRecordsBuilder_.addAllMessages(other.clPoolUserPositionRecords_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord m =
+                    input.readMessage(
+                        com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.parser(),
+                        extensionRegistry);
+                if (clPoolUserPositionRecordsBuilder_ == null) {
+                  ensureClPoolUserPositionRecordsIsMutable();
+                  clPoolUserPositionRecords_.add(m);
+                } else {
+                  clPoolUserPositionRecordsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord> clPoolUserPositionRecords_ =
+        java.util.Collections.emptyList();
+      private void ensureClPoolUserPositionRecordsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          clPoolUserPositionRecords_ = new java.util.ArrayList<com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord>(clPoolUserPositionRecords_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord, com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.Builder, com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecordOrBuilder> clPoolUserPositionRecordsBuilder_;
+
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord> getClPoolUserPositionRecordsList() {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(clPoolUserPositionRecords_);
+        } else {
+          return clPoolUserPositionRecordsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public int getClPoolUserPositionRecordsCount() {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          return clPoolUserPositionRecords_.size();
+        } else {
+          return clPoolUserPositionRecordsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord getClPoolUserPositionRecords(int index) {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          return clPoolUserPositionRecords_.get(index);
+        } else {
+          return clPoolUserPositionRecordsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClPoolUserPositionRecords(
+          int index, com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord value) {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClPoolUserPositionRecordsIsMutable();
+          clPoolUserPositionRecords_.set(index, value);
+          onChanged();
+        } else {
+          clPoolUserPositionRecordsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClPoolUserPositionRecords(
+          int index, com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.Builder builderForValue) {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          ensureClPoolUserPositionRecordsIsMutable();
+          clPoolUserPositionRecords_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          clPoolUserPositionRecordsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClPoolUserPositionRecords(com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord value) {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClPoolUserPositionRecordsIsMutable();
+          clPoolUserPositionRecords_.add(value);
+          onChanged();
+        } else {
+          clPoolUserPositionRecordsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClPoolUserPositionRecords(
+          int index, com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord value) {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClPoolUserPositionRecordsIsMutable();
+          clPoolUserPositionRecords_.add(index, value);
+          onChanged();
+        } else {
+          clPoolUserPositionRecordsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClPoolUserPositionRecords(
+          com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.Builder builderForValue) {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          ensureClPoolUserPositionRecordsIsMutable();
+          clPoolUserPositionRecords_.add(builderForValue.build());
+          onChanged();
+        } else {
+          clPoolUserPositionRecordsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClPoolUserPositionRecords(
+          int index, com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.Builder builderForValue) {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          ensureClPoolUserPositionRecordsIsMutable();
+          clPoolUserPositionRecords_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          clPoolUserPositionRecordsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllClPoolUserPositionRecords(
+          java.lang.Iterable<? extends com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord> values) {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          ensureClPoolUserPositionRecordsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, clPoolUserPositionRecords_);
+          onChanged();
+        } else {
+          clPoolUserPositionRecordsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearClPoolUserPositionRecords() {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          clPoolUserPositionRecords_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          clPoolUserPositionRecordsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeClPoolUserPositionRecords(int index) {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          ensureClPoolUserPositionRecordsIsMutable();
+          clPoolUserPositionRecords_.remove(index);
+          onChanged();
+        } else {
+          clPoolUserPositionRecordsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.Builder getClPoolUserPositionRecordsBuilder(
+          int index) {
+        return getClPoolUserPositionRecordsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecordOrBuilder getClPoolUserPositionRecordsOrBuilder(
+          int index) {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          return clPoolUserPositionRecords_.get(index);  } else {
+          return clPoolUserPositionRecordsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecordOrBuilder> 
+           getClPoolUserPositionRecordsOrBuilderList() {
+        if (clPoolUserPositionRecordsBuilder_ != null) {
+          return clPoolUserPositionRecordsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(clPoolUserPositionRecords_);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.Builder addClPoolUserPositionRecordsBuilder() {
+        return getClPoolUserPositionRecordsFieldBuilder().addBuilder(
+            com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.Builder addClPoolUserPositionRecordsBuilder(
+          int index) {
+        return getClPoolUserPositionRecordsFieldBuilder().addBuilder(
+            index, com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.ConcentratedPoolUserPositionRecord cl_pool_user_position_records = 1 [json_name = "clPoolUserPositionRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.Builder> 
+           getClPoolUserPositionRecordsBuilderList() {
+        return getClPoolUserPositionRecordsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord, com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.Builder, com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecordOrBuilder> 
+          getClPoolUserPositionRecordsFieldBuilder() {
+        if (clPoolUserPositionRecordsBuilder_ == null) {
+          clPoolUserPositionRecordsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord, com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.Builder, com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecordOrBuilder>(
+                  clPoolUserPositionRecords_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          clPoolUserPositionRecords_ = null;
+        }
+        return clPoolUserPositionRecordsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.superfluid.UserConcentratedSuperfluidPositionsUndelegatingResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.superfluid.UserConcentratedSuperfluidPositionsUndelegatingResponse)
+    private static final com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse();
+    }
+
+    public static com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UserConcentratedSuperfluidPositionsUndelegatingResponse>
+        PARSER = new com.google.protobuf.AbstractParser<UserConcentratedSuperfluidPositionsUndelegatingResponse>() {
+      @java.lang.Override
+      public UserConcentratedSuperfluidPositionsUndelegatingResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UserConcentratedSuperfluidPositionsUndelegatingResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UserConcentratedSuperfluidPositionsUndelegatingResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRestSupplyRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.superfluid.QueryRestSupplyRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+  }
+  /**
+   * <pre>
+   * THIS QUERY IS TEMPORARY
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.superfluid.QueryRestSupplyRequest}
+   */
+  public static final class QueryRestSupplyRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.superfluid.QueryRestSupplyRequest)
+      QueryRestSupplyRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRestSupplyRequest.newBuilder() to construct.
+    private QueryRestSupplyRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRestSupplyRequest() {
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRestSupplyRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_QueryRestSupplyRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_QueryRestSupplyRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest.class, com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest other = (com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * THIS QUERY IS TEMPORARY
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.superfluid.QueryRestSupplyRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.superfluid.QueryRestSupplyRequest)
+        com.osmosis.superfluid.QueryProto.QueryRestSupplyRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_QueryRestSupplyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_QueryRestSupplyRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest.class, com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_QueryRestSupplyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest getDefaultInstanceForType() {
+        return com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest build() {
+        com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest buildPartial() {
+        com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest result = new com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest) {
+          return mergeFrom((com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest other) {
+        if (other == com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.superfluid.QueryRestSupplyRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.superfluid.QueryRestSupplyRequest)
+    private static final com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest();
+    }
+
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRestSupplyRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRestSupplyRequest>() {
+      @java.lang.Override
+      public QueryRestSupplyRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRestSupplyRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRestSupplyRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRestSupplyResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.superfluid.QueryRestSupplyResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * amount is the supply of the coin.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin amount = 1 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the amount field is set.
+     */
+    boolean hasAmount();
+    /**
+     * <pre>
+     * amount is the supply of the coin.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin amount = 1 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     * @return The amount.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getAmount();
+    /**
+     * <pre>
+     * amount is the supply of the coin.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin amount = 1 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder();
+  }
+  /**
+   * Protobuf type {@code osmosis.superfluid.QueryRestSupplyResponse}
+   */
+  public static final class QueryRestSupplyResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.superfluid.QueryRestSupplyResponse)
+      QueryRestSupplyResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRestSupplyResponse.newBuilder() to construct.
+    private QueryRestSupplyResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRestSupplyResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRestSupplyResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_QueryRestSupplyResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_QueryRestSupplyResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse.class, com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse.Builder.class);
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.Coin amount_;
+    /**
+     * <pre>
+     * amount is the supply of the coin.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin amount = 1 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the amount field is set.
+     */
+    @java.lang.Override
+    public boolean hasAmount() {
+      return amount_ != null;
+    }
+    /**
+     * <pre>
+     * amount is the supply of the coin.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin amount = 1 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getAmount() {
+      return amount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+    }
+    /**
+     * <pre>
+     * amount is the supply of the coin.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin amount = 1 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder() {
+      return amount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (amount_ != null) {
+        output.writeMessage(1, getAmount());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (amount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getAmount());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse other = (com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse) obj;
+
+      if (hasAmount() != other.hasAmount()) return false;
+      if (hasAmount()) {
+        if (!getAmount()
+            .equals(other.getAmount())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAmount()) {
+        hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getAmount().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.superfluid.QueryRestSupplyResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.superfluid.QueryRestSupplyResponse)
+        com.osmosis.superfluid.QueryProto.QueryRestSupplyResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_QueryRestSupplyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_QueryRestSupplyResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse.class, com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        amount_ = null;
+        if (amountBuilder_ != null) {
+          amountBuilder_.dispose();
+          amountBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.superfluid.QueryProto.internal_static_osmosis_superfluid_QueryRestSupplyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse getDefaultInstanceForType() {
+        return com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse build() {
+        com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse buildPartial() {
+        com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse result = new com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.amount_ = amountBuilder_ == null
+              ? amount_
+              : amountBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse) {
+          return mergeFrom((com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse other) {
+        if (other == com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse.getDefaultInstance()) return this;
+        if (other.hasAmount()) {
+          mergeAmount(other.getAmount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getAmountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin amount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> amountBuilder_;
+      /**
+       * <pre>
+       * amount is the supply of the coin.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 1 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       * @return Whether the amount field is set.
+       */
+      public boolean hasAmount() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * amount is the supply of the coin.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 1 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       * @return The amount.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getAmount() {
+        if (amountBuilder_ == null) {
+          return amount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+        } else {
+          return amountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * amount is the supply of the coin.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 1 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          amount_ = value;
+        } else {
+          amountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount is the supply of the coin.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 1 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (amountBuilder_ == null) {
+          amount_ = builderForValue.build();
+        } else {
+          amountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount is the supply of the coin.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 1 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            amount_ != null &&
+            amount_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getAmountBuilder().mergeFrom(value);
+          } else {
+            amount_ = value;
+          }
+        } else {
+          amountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount is the supply of the coin.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 1 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAmount() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        amount_ = null;
+        if (amountBuilder_ != null) {
+          amountBuilder_.dispose();
+          amountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount is the supply of the coin.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 1 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getAmountBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getAmountFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * amount is the supply of the coin.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 1 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder() {
+        if (amountBuilder_ != null) {
+          return amountBuilder_.getMessageOrBuilder();
+        } else {
+          return amount_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+        }
+      }
+      /**
+       * <pre>
+       * amount is the supply of the coin.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 1 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getAmountFieldBuilder() {
+        if (amountBuilder_ == null) {
+          amountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getAmount(),
+                  getParentForChildren(),
+                  isClean());
+          amount_ = null;
+        }
+        return amountBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.superfluid.QueryRestSupplyResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.superfluid.QueryRestSupplyResponse)
+    private static final com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse();
+    }
+
+    public static com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRestSupplyResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRestSupplyResponse>() {
+      @java.lang.Override
+      public QueryRestSupplyResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRestSupplyResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRestSupplyResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_superfluid_QueryParamsRequest_descriptor;
   private static final 
@@ -23329,6 +27217,36 @@ public final class QueryProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_superfluid_QueryUnpoolWhitelistResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_superfluid_QueryRestSupplyRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_superfluid_QueryRestSupplyRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_superfluid_QueryRestSupplyResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_superfluid_QueryRestSupplyResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -23381,166 +27299,201 @@ public final class QueryProto {
       "enom\030\001 \001(\tR\005denom\"p\n/QueryTotalDelegatio" +
       "nByValidatorForDenomResponse\022=\n\006assets\030\001" +
       " \003(\0132\037.osmosis.superfluid.DelegationsB\004\310" +
-      "\336\037\000R\006assets\"\202\002\n\013Delegations\022\031\n\010val_addr\030" +
-      "\001 \001(\tR\007valAddr\022e\n\013amount_sfsd\030\002 \001(\tBD\310\336\037" +
-      "\000\332\336\037&github.com/cosmos/cosmos-sdk/types." +
-      "Int\362\336\037\022yaml:\"amount_sfsd\"R\namountSfsd\022q\n" +
-      "\017osmo_equivalent\030\003 \001(\tBH\310\336\037\000\332\336\037&github.c" +
-      "om/cosmos/cosmos-sdk/types.Int\362\336\037\026yaml:\"" +
-      "osmo_equivalent\"R\016osmoEquivalent\"#\n!Tota" +
-      "lSuperfluidDelegationsRequest\"\251\001\n\"TotalS" +
-      "uperfluidDelegationsResponse\022\202\001\n\021total_d" +
-      "elegations\030\001 \001(\tBU\310\336\037\000\332\336\037&github.com/cos" +
-      "mos/cosmos-sdk/types.Int\362\336\037#yaml:\"total_" +
-      "superfluid_delegations\"R\020totalDelegation" +
-      "s\"\223\001\n!SuperfluidDelegationAmountRequest\022" +
-      "+\n\021delegator_address\030\001 \001(\tR\020delegatorAdd" +
-      "ress\022+\n\021validator_address\030\002 \001(\tR\020validat" +
-      "orAddress\022\024\n\005denom\030\003 \001(\tR\005denom\"\211\001\n\"Supe" +
-      "rfluidDelegationAmountResponse\022c\n\006amount" +
-      "\030\001 \003(\0132\031.cosmos.base.v1beta1.CoinB0\310\336\037\000\252" +
-      "\337\037(github.com/cosmos/cosmos-sdk/types.Co" +
-      "insR\006amount\"V\n\'SuperfluidDelegationsByDe" +
+      "\336\037\000R\006assets\"\340\001\n\013Delegations\022\031\n\010val_addr\030" +
+      "\001 \001(\tR\007valAddr\022T\n\013amount_sfsd\030\002 \001(\tB3\310\336\037" +
+      "\000\332\336\037\025cosmossdk.io/math.Int\362\336\037\022yaml:\"amou" +
+      "nt_sfsd\"R\namountSfsd\022`\n\017osmo_equivalent\030" +
+      "\003 \001(\tB7\310\336\037\000\332\336\037\025cosmossdk.io/math.Int\362\336\037\026" +
+      "yaml:\"osmo_equivalent\"R\016osmoEquivalent\"#" +
+      "\n!TotalSuperfluidDelegationsRequest\"\227\001\n\"" +
+      "TotalSuperfluidDelegationsResponse\022q\n\021to" +
+      "tal_delegations\030\001 \001(\tBD\310\336\037\000\332\336\037\025cosmossdk" +
+      ".io/math.Int\362\336\037#yaml:\"total_superfluid_d" +
+      "elegations\"R\020totalDelegations\"\223\001\n!Superf" +
+      "luidDelegationAmountRequest\022+\n\021delegator" +
+      "_address\030\001 \001(\tR\020delegatorAddress\022+\n\021vali" +
+      "dator_address\030\002 \001(\tR\020validatorAddress\022\024\n" +
+      "\005denom\030\003 \001(\tR\005denom\"\211\001\n\"SuperfluidDelega" +
+      "tionAmountResponse\022c\n\006amount\030\001 \003(\0132\031.cos" +
+      "mos.base.v1beta1.CoinB0\310\336\037\000\252\337\037(github.co" +
+      "m/cosmos/cosmos-sdk/types.CoinsR\006amount\"" +
+      "V\n\'SuperfluidDelegationsByDelegatorReque" +
+      "st\022+\n\021delegator_address\030\001 \001(\tR\020delegator" +
+      "Address\"\267\003\n(SuperfluidDelegationsByDeleg" +
+      "atorResponse\022x\n\035superfluid_delegation_re" +
+      "cords\030\001 \003(\0132..osmosis.superfluid.Superfl" +
+      "uidDelegationRecordB\004\310\336\037\000R\033superfluidDel" +
+      "egationRecords\022\177\n\025total_delegated_coins\030" +
+      "\002 \003(\0132\031.cosmos.base.v1beta1.CoinB0\310\336\037\000\252\337" +
+      "\037(github.com/cosmos/cosmos-sdk/types.Coi" +
+      "nsR\023totalDelegatedCoins\022\217\001\n\036total_equiva" +
+      "lent_staked_amount\030\003 \001(\0132\031.cosmos.base.v" +
+      "1beta1.CoinB/\310\336\037\000\252\337\037\'github.com/cosmos/c" +
+      "osmos-sdk/types.CoinR\033totalEquivalentSta" +
+      "kedAmount\"n\n)SuperfluidUndelegationsByDe" +
       "legatorRequest\022+\n\021delegator_address\030\001 \001(" +
-      "\tR\020delegatorAddress\"\267\003\n(SuperfluidDelega" +
-      "tionsByDelegatorResponse\022x\n\035superfluid_d" +
-      "elegation_records\030\001 \003(\0132..osmosis.superf" +
-      "luid.SuperfluidDelegationRecordB\004\310\336\037\000R\033s" +
-      "uperfluidDelegationRecords\022\177\n\025total_dele" +
-      "gated_coins\030\002 \003(\0132\031.cosmos.base.v1beta1." +
-      "CoinB0\310\336\037\000\252\337\037(github.com/cosmos/cosmos-s" +
-      "dk/types.CoinsR\023totalDelegatedCoins\022\217\001\n\036" +
-      "total_equivalent_staked_amount\030\003 \001(\0132\031.c" +
-      "osmos.base.v1beta1.CoinB/\310\336\037\000\252\337\037\'github." +
-      "com/cosmos/cosmos-sdk/types.CoinR\033totalE" +
-      "quivalentStakedAmount\"n\n)SuperfluidUndel" +
-      "egationsByDelegatorRequest\022+\n\021delegator_" +
-      "address\030\001 \001(\tR\020delegatorAddress\022\024\n\005denom" +
-      "\030\002 \001(\tR\005denom\"\372\002\n*SuperfluidUndelegation" +
-      "sByDelegatorResponse\022x\n\035superfluid_deleg" +
-      "ation_records\030\001 \003(\0132..osmosis.superfluid" +
-      ".SuperfluidDelegationRecordB\004\310\336\037\000R\033super" +
-      "fluidDelegationRecords\022\203\001\n\027total_undeleg" +
-      "ated_coins\030\002 \003(\0132\031.cosmos.base.v1beta1.C" +
-      "oinB0\310\336\037\000\252\337\037(github.com/cosmos/cosmos-sd" +
-      "k/types.CoinsR\025totalUndelegatedCoins\022L\n\017" +
-      "synthetic_locks\030\003 \003(\0132\035.osmosis.lockup.S" +
-      "yntheticLockB\004\310\336\037\000R\016syntheticLocks\"q\n,Su" +
-      "perfluidDelegationsByValidatorDenomReque" +
-      "st\022+\n\021validator_address\030\001 \001(\tR\020validator" +
-      "Address\022\024\n\005denom\030\002 \001(\tR\005denom\"\251\001\n-Superf" +
-      "luidDelegationsByValidatorDenomResponse\022" +
-      "x\n\035superfluid_delegation_records\030\001 \003(\0132." +
-      ".osmosis.superfluid.SuperfluidDelegation" +
-      "RecordB\004\310\336\037\000R\033superfluidDelegationRecord" +
-      "s\"}\n8EstimateSuperfluidDelegatedAmountBy" +
-      "ValidatorDenomRequest\022+\n\021validator_addre" +
-      "ss\030\001 \001(\tR\020validatorAddress\022\024\n\005denom\030\002 \001(" +
-      "\tR\005denom\"\274\001\n9EstimateSuperfluidDelegated" +
-      "AmountByValidatorDenomResponse\022\177\n\025total_" +
-      "delegated_coins\030\001 \003(\0132\031.cosmos.base.v1be" +
-      "ta1.CoinB0\310\336\037\000\252\337\037(github.com/cosmos/cosm" +
-      "os-sdk/types.CoinsR\023totalDelegatedCoins\"" +
-      "U\n&QueryTotalDelegationByDelegatorReques" +
-      "t\022+\n\021delegator_address\030\001 \001(\tR\020delegatorA" +
-      "ddress\"\231\004\n\'QueryTotalDelegationByDelegat" +
-      "orResponse\022x\n\035superfluid_delegation_reco" +
-      "rds\030\001 \003(\0132..osmosis.superfluid.Superflui" +
-      "dDelegationRecordB\004\310\336\037\000R\033superfluidDeleg" +
-      "ationRecords\022a\n\023delegation_response\030\002 \003(" +
-      "\0132*.cosmos.staking.v1beta1.DelegationRes" +
-      "ponseB\004\310\336\037\000R\022delegationResponse\022\177\n\025total" +
-      "_delegated_coins\030\003 \003(\0132\031.cosmos.base.v1b" +
-      "eta1.CoinB0\310\336\037\000\252\337\037(github.com/cosmos/cos" +
-      "mos-sdk/types.CoinsR\023totalDelegatedCoins" +
-      "\022\217\001\n\036total_equivalent_staked_amount\030\004 \001(" +
-      "\0132\031.cosmos.base.v1beta1.CoinB/\310\336\037\000\252\337\037\'gi" +
-      "thub.com/cosmos/cosmos-sdk/types.CoinR\033t" +
-      "otalEquivalentStakedAmount\"\035\n\033QueryUnpoo" +
-      "lWhitelistRequest\"9\n\034QueryUnpoolWhitelis" +
-      "tResponse\022\031\n\010pool_ids\030\001 \003(\004R\007poolIds2\376\027\n" +
-      "\005Query\022\205\001\n\006Params\022&.osmosis.superfluid.Q" +
-      "ueryParamsRequest\032\'.osmosis.superfluid.Q" +
-      "ueryParamsResponse\"*\202\323\344\223\002$\022\"/osmosis/sup" +
-      "erfluid/v1beta1/params\022\210\001\n\tAssetType\022$.o" +
-      "smosis.superfluid.AssetTypeRequest\032%.osm" +
-      "osis.superfluid.AssetTypeResponse\".\202\323\344\223\002" +
-      "(\022&/osmosis/superfluid/v1beta1/asset_typ" +
-      "e\022\210\001\n\tAllAssets\022$.osmosis.superfluid.All" +
-      "AssetsRequest\032%.osmosis.superfluid.AllAs" +
-      "setsResponse\".\202\323\344\223\002(\022&/osmosis/superflui" +
-      "d/v1beta1/all_assets\022\240\001\n\017AssetMultiplier" +
-      "\022*.osmosis.superfluid.AssetMultiplierReq" +
-      "uest\032+.osmosis.superfluid.AssetMultiplie" +
-      "rResponse\"4\202\323\344\223\002.\022,/osmosis/superfluid/v" +
-      "1beta1/asset_multiplier\022\301\001\n\027AllIntermedi" +
-      "aryAccounts\0222.osmosis.superfluid.AllInte" +
-      "rmediaryAccountsRequest\0323.osmosis.superf" +
-      "luid.AllIntermediaryAccountsResponse\"=\202\323" +
-      "\344\223\0027\0225/osmosis/superfluid/v1beta1/all_in" +
-      "termediary_accounts\022\337\001\n\034ConnectedInterme" +
-      "diaryAccount\0227.osmosis.superfluid.Connec" +
-      "tedIntermediaryAccountRequest\0328.osmosis." +
-      "superfluid.ConnectedIntermediaryAccountR" +
-      "esponse\"L\202\323\344\223\002F\022D/osmosis/superfluid/v1b" +
-      "eta1/connected_intermediary_account/{loc" +
-      "k_id}\022\257\001\n\"TotalDelegationByValidatorForD" +
-      "enom\022B.osmosis.superfluid.QueryTotalDele" +
-      "gationByValidatorForDenomRequest\032C.osmos" +
-      "is.superfluid.QueryTotalDelegationByVali" +
-      "datorForDenomResponse\"\000\022\313\001\n\032TotalSuperfl" +
-      "uidDelegations\0225.osmosis.superfluid.Tota" +
-      "lSuperfluidDelegationsRequest\0326.osmosis." +
-      "superfluid.TotalSuperfluidDelegationsRes" +
-      "ponse\">\202\323\344\223\0028\0226/osmosis/superfluid/v1bet" +
-      "a1/all_superfluid_delegations\022\315\001\n\032Superf" +
-      "luidDelegationAmount\0225.osmosis.superflui" +
-      "d.SuperfluidDelegationAmountRequest\0326.os" +
-      "mosis.superfluid.SuperfluidDelegationAmo" +
-      "untResponse\"@\202\323\344\223\002:\0228/osmosis/superfluid" +
-      "/v1beta1/superfluid_delegation_amount\022\355\001" +
-      "\n SuperfluidDelegationsByDelegator\022;.osm" +
-      "osis.superfluid.SuperfluidDelegationsByD" +
-      "elegatorRequest\032<.osmosis.superfluid.Sup" +
-      "erfluidDelegationsByDelegatorResponse\"N\202" +
-      "\323\344\223\002H\022F/osmosis/superfluid/v1beta1/super" +
-      "fluid_delegations/{delegator_address}\022\202\002" +
-      "\n\"SuperfluidUndelegationsByDelegator\022=.o" +
-      "smosis.superfluid.SuperfluidUndelegation" +
-      "sByDelegatorRequest\032>.osmosis.superfluid" +
-      ".SuperfluidUndelegationsByDelegatorRespo" +
-      "nse\"]\202\323\344\223\002W\022U/osmosis/superfluid/v1beta1" +
-      "/superfluid_undelegations_by_delegator/{" +
-      "delegator_address}\022\373\001\n%SuperfluidDelegat" +
-      "ionsByValidatorDenom\022@.osmosis.superflui" +
-      "d.SuperfluidDelegationsByValidatorDenomR" +
-      "equest\032A.osmosis.superfluid.SuperfluidDe" +
-      "legationsByValidatorDenomResponse\"M\202\323\344\223\002" +
-      "G\022E/osmosis/superfluid/v1beta1/superflui" +
-      "d_delegations_by_validator_denom\022\256\002\n1Est" +
-      "imateSuperfluidDelegatedAmountByValidato" +
-      "rDenom\022L.osmosis.superfluid.EstimateSupe" +
-      "rfluidDelegatedAmountByValidatorDenomReq" +
-      "uest\032M.osmosis.superfluid.EstimateSuperf" +
-      "luidDelegatedAmountByValidatorDenomRespo" +
-      "nse\"\\\202\323\344\223\002V\022T/osmosis/superfluid/v1beta1" +
-      "/estimate_superfluid_delegation_amount_b" +
-      "y_validator_denom\022\354\001\n\032TotalDelegationByD" +
-      "elegator\022:.osmosis.superfluid.QueryTotal" +
-      "DelegationByDelegatorRequest\032;.osmosis.s" +
-      "uperfluid.QueryTotalDelegationByDelegato" +
-      "rResponse\"U\202\323\344\223\002O\022M/osmosis/superfluid/v" +
-      "1beta1/total_delegation_by_delegator/{de" +
-      "legator_address}\022\252\001\n\017UnpoolWhitelist\022/.o" +
-      "smosis.superfluid.QueryUnpoolWhitelistRe" +
-      "quest\0320.osmosis.superfluid.QueryUnpoolWh" +
-      "itelistResponse\"4\202\323\344\223\002.\022,/osmosis/superf" +
-      "luid/v1beta1/unpool_whitelistB\303\001\n\026com.os" +
-      "mosis.superfluidB\nQueryProtoZ6github.com" +
-      "/osmosis-labs/osmosis/v15/x/superfluid/t" +
-      "ypes\242\002\003OSX\252\002\022Osmosis.Superfluid\312\002\022Osmosi" +
-      "s\\Superfluid\342\002\036Osmosis\\Superfluid\\GPBMet" +
-      "adata\352\002\023Osmosis::Superfluidb\006proto3"
+      "\tR\020delegatorAddress\022\024\n\005denom\030\002 \001(\tR\005deno" +
+      "m\"\372\002\n*SuperfluidUndelegationsByDelegator" +
+      "Response\022x\n\035superfluid_delegation_record" +
+      "s\030\001 \003(\0132..osmosis.superfluid.SuperfluidD" +
+      "elegationRecordB\004\310\336\037\000R\033superfluidDelegat" +
+      "ionRecords\022\203\001\n\027total_undelegated_coins\030\002" +
+      " \003(\0132\031.cosmos.base.v1beta1.CoinB0\310\336\037\000\252\337\037" +
+      "(github.com/cosmos/cosmos-sdk/types.Coin" +
+      "sR\025totalUndelegatedCoins\022L\n\017synthetic_lo" +
+      "cks\030\003 \003(\0132\035.osmosis.lockup.SyntheticLock" +
+      "B\004\310\336\037\000R\016syntheticLocks\"q\n,SuperfluidDele" +
+      "gationsByValidatorDenomRequest\022+\n\021valida" +
+      "tor_address\030\001 \001(\tR\020validatorAddress\022\024\n\005d" +
+      "enom\030\002 \001(\tR\005denom\"\251\001\n-SuperfluidDelegati" +
+      "onsByValidatorDenomResponse\022x\n\035superflui" +
+      "d_delegation_records\030\001 \003(\0132..osmosis.sup" +
+      "erfluid.SuperfluidDelegationRecordB\004\310\336\037\000" +
+      "R\033superfluidDelegationRecords\"}\n8Estimat" +
+      "eSuperfluidDelegatedAmountByValidatorDen" +
+      "omRequest\022+\n\021validator_address\030\001 \001(\tR\020va" +
+      "lidatorAddress\022\024\n\005denom\030\002 \001(\tR\005denom\"\274\001\n" +
+      "9EstimateSuperfluidDelegatedAmountByVali" +
+      "datorDenomResponse\022\177\n\025total_delegated_co" +
+      "ins\030\001 \003(\0132\031.cosmos.base.v1beta1.CoinB0\310\336" +
+      "\037\000\252\337\037(github.com/cosmos/cosmos-sdk/types" +
+      ".CoinsR\023totalDelegatedCoins\"U\n&QueryTota" +
+      "lDelegationByDelegatorRequest\022+\n\021delegat" +
+      "or_address\030\001 \001(\tR\020delegatorAddress\"\231\004\n\'Q" +
+      "ueryTotalDelegationByDelegatorResponse\022x" +
+      "\n\035superfluid_delegation_records\030\001 \003(\0132.." +
+      "osmosis.superfluid.SuperfluidDelegationR" +
+      "ecordB\004\310\336\037\000R\033superfluidDelegationRecords" +
+      "\022a\n\023delegation_response\030\002 \003(\0132*.cosmos.s" +
+      "taking.v1beta1.DelegationResponseB\004\310\336\037\000R" +
+      "\022delegationResponse\022\177\n\025total_delegated_c" +
+      "oins\030\003 \003(\0132\031.cosmos.base.v1beta1.CoinB0\310" +
+      "\336\037\000\252\337\037(github.com/cosmos/cosmos-sdk/type" +
+      "s.CoinsR\023totalDelegatedCoins\022\217\001\n\036total_e" +
+      "quivalent_staked_amount\030\004 \001(\0132\031.cosmos.b" +
+      "ase.v1beta1.CoinB/\310\336\037\000\252\337\037\'github.com/cos" +
+      "mos/cosmos-sdk/types.CoinR\033totalEquivale" +
+      "ntStakedAmount\"\035\n\033QueryUnpoolWhitelistRe" +
+      "quest\"9\n\034QueryUnpoolWhitelistResponse\022\031\n" +
+      "\010pool_ids\030\001 \003(\004R\007poolIds\"b\n3UserConcentr" +
+      "atedSuperfluidPositionsDelegatedRequest\022" +
+      "+\n\021delegator_address\030\001 \001(\tR\020delegatorAdd" +
+      "ress\"\266\001\n4UserConcentratedSuperfluidPosit" +
+      "ionsDelegatedResponse\022~\n\035cl_pool_user_po" +
+      "sition_records\030\001 \003(\01326.osmosis.superflui" +
+      "d.ConcentratedPoolUserPositionRecordB\004\310\336" +
+      "\037\000R\031clPoolUserPositionRecords\"e\n6UserCon" +
+      "centratedSuperfluidPositionsUndelegating" +
+      "Request\022+\n\021delegator_address\030\001 \001(\tR\020dele" +
+      "gatorAddress\"\271\001\n7UserConcentratedSuperfl" +
+      "uidPositionsUndelegatingResponse\022~\n\035cl_p" +
+      "ool_user_position_records\030\001 \003(\01326.osmosi" +
+      "s.superfluid.ConcentratedPoolUserPositio" +
+      "nRecordB\004\310\336\037\000R\031clPoolUserPositionRecords" +
+      "\".\n\026QueryRestSupplyRequest\022\024\n\005denom\030\001 \001(" +
+      "\tR\005denom\"R\n\027QueryRestSupplyResponse\0227\n\006a" +
+      "mount\030\001 \001(\0132\031.cosmos.base.v1beta1.CoinB\004" +
+      "\310\336\037\000R\006amount2\326\035\n\005Query\022\205\001\n\006Params\022&.osmo" +
+      "sis.superfluid.QueryParamsRequest\032\'.osmo" +
+      "sis.superfluid.QueryParamsResponse\"*\202\323\344\223" +
+      "\002$\022\"/osmosis/superfluid/v1beta1/params\022\210" +
+      "\001\n\tAssetType\022$.osmosis.superfluid.AssetT" +
+      "ypeRequest\032%.osmosis.superfluid.AssetTyp" +
+      "eResponse\".\202\323\344\223\002(\022&/osmosis/superfluid/v" +
+      "1beta1/asset_type\022\210\001\n\tAllAssets\022$.osmosi" +
+      "s.superfluid.AllAssetsRequest\032%.osmosis." +
+      "superfluid.AllAssetsResponse\".\202\323\344\223\002(\022&/o" +
+      "smosis/superfluid/v1beta1/all_assets\022\240\001\n" +
+      "\017AssetMultiplier\022*.osmosis.superfluid.As" +
+      "setMultiplierRequest\032+.osmosis.superflui" +
+      "d.AssetMultiplierResponse\"4\202\323\344\223\002.\022,/osmo" +
+      "sis/superfluid/v1beta1/asset_multiplier\022" +
+      "\301\001\n\027AllIntermediaryAccounts\0222.osmosis.su" +
+      "perfluid.AllIntermediaryAccountsRequest\032" +
+      "3.osmosis.superfluid.AllIntermediaryAcco" +
+      "untsResponse\"=\202\323\344\223\0027\0225/osmosis/superflui" +
+      "d/v1beta1/all_intermediary_accounts\022\337\001\n\034" +
+      "ConnectedIntermediaryAccount\0227.osmosis.s" +
+      "uperfluid.ConnectedIntermediaryAccountRe" +
+      "quest\0328.osmosis.superfluid.ConnectedInte" +
+      "rmediaryAccountResponse\"L\202\323\344\223\002F\022D/osmosi" +
+      "s/superfluid/v1beta1/connected_intermedi" +
+      "ary_account/{lock_id}\022\257\001\n\"TotalDelegatio" +
+      "nByValidatorForDenom\022B.osmosis.superflui" +
+      "d.QueryTotalDelegationByValidatorForDeno" +
+      "mRequest\032C.osmosis.superfluid.QueryTotal" +
+      "DelegationByValidatorForDenomResponse\"\000\022" +
+      "\313\001\n\032TotalSuperfluidDelegations\0225.osmosis" +
+      ".superfluid.TotalSuperfluidDelegationsRe" +
+      "quest\0326.osmosis.superfluid.TotalSuperflu" +
+      "idDelegationsResponse\">\202\323\344\223\0028\0226/osmosis/" +
+      "superfluid/v1beta1/all_superfluid_delega" +
+      "tions\022\315\001\n\032SuperfluidDelegationAmount\0225.o" +
+      "smosis.superfluid.SuperfluidDelegationAm" +
+      "ountRequest\0326.osmosis.superfluid.Superfl" +
+      "uidDelegationAmountResponse\"@\202\323\344\223\002:\0228/os" +
+      "mosis/superfluid/v1beta1/superfluid_dele" +
+      "gation_amount\022\355\001\n SuperfluidDelegationsB" +
+      "yDelegator\022;.osmosis.superfluid.Superflu" +
+      "idDelegationsByDelegatorRequest\032<.osmosi" +
+      "s.superfluid.SuperfluidDelegationsByDele" +
+      "gatorResponse\"N\202\323\344\223\002H\022F/osmosis/superflu" +
+      "id/v1beta1/superfluid_delegations/{deleg" +
+      "ator_address}\022\202\002\n\"SuperfluidUndelegation" +
+      "sByDelegator\022=.osmosis.superfluid.Superf" +
+      "luidUndelegationsByDelegatorRequest\032>.os" +
+      "mosis.superfluid.SuperfluidUndelegations" +
+      "ByDelegatorResponse\"]\202\323\344\223\002W\022U/osmosis/su" +
+      "perfluid/v1beta1/superfluid_undelegation" +
+      "s_by_delegator/{delegator_address}\022\373\001\n%S" +
+      "uperfluidDelegationsByValidatorDenom\022@.o" +
+      "smosis.superfluid.SuperfluidDelegationsB" +
+      "yValidatorDenomRequest\032A.osmosis.superfl" +
+      "uid.SuperfluidDelegationsByValidatorDeno" +
+      "mResponse\"M\202\323\344\223\002G\022E/osmosis/superfluid/v" +
+      "1beta1/superfluid_delegations_by_validat" +
+      "or_denom\022\256\002\n1EstimateSuperfluidDelegated" +
+      "AmountByValidatorDenom\022L.osmosis.superfl" +
+      "uid.EstimateSuperfluidDelegatedAmountByV" +
+      "alidatorDenomRequest\032M.osmosis.superflui" +
+      "d.EstimateSuperfluidDelegatedAmountByVal" +
+      "idatorDenomResponse\"\\\202\323\344\223\002V\022T/osmosis/su" +
+      "perfluid/v1beta1/estimate_superfluid_del" +
+      "egation_amount_by_validator_denom\022\354\001\n\032To" +
+      "talDelegationByDelegator\022:.osmosis.super" +
+      "fluid.QueryTotalDelegationByDelegatorReq" +
+      "uest\032;.osmosis.superfluid.QueryTotalDele" +
+      "gationByDelegatorResponse\"U\202\323\344\223\002O\022M/osmo" +
+      "sis/superfluid/v1beta1/total_delegation_" +
+      "by_delegator/{delegator_address}\022\252\001\n\017Unp" +
+      "oolWhitelist\022/.osmosis.superfluid.QueryU" +
+      "npoolWhitelistRequest\0320.osmosis.superflu" +
+      "id.QueryUnpoolWhitelistResponse\"4\202\323\344\223\002.\022" +
+      ",/osmosis/superfluid/v1beta1/unpool_whit" +
+      "elist\022\231\002\n,UserConcentratedSuperfluidPosi" +
+      "tionsDelegated\022G.osmosis.superfluid.User" +
+      "ConcentratedSuperfluidPositionsDelegated" +
+      "Request\032H.osmosis.superfluid.UserConcent" +
+      "ratedSuperfluidPositionsDelegatedRespons" +
+      "e\"V\202\323\344\223\002P\022N/osmosis/superfluid/v1beta1/a" +
+      "ccount_delegated_cl_positions/{delegator" +
+      "_address}\022\245\002\n/UserConcentratedSuperfluid" +
+      "PositionsUndelegating\022J.osmosis.superflu" +
+      "id.UserConcentratedSuperfluidPositionsUn" +
+      "delegatingRequest\032K.osmosis.superfluid.U" +
+      "serConcentratedSuperfluidPositionsUndele" +
+      "gatingResponse\"Y\202\323\344\223\002S\022Q/osmosis/superfl" +
+      "uid/v1beta1/account_undelegating_cl_posi" +
+      "tions/{delegator_address}\022\221\001\n\nRestSupply" +
+      "\022*.osmosis.superfluid.QueryRestSupplyReq" +
+      "uest\032+.osmosis.superfluid.QueryRestSuppl" +
+      "yResponse\"*\202\323\344\223\002$\022\"/osmosis/superfluid/v" +
+      "1beta1/supplyB\303\001\n\026com.osmosis.superfluid" +
+      "B\nQueryProtoZ6github.com/osmosis-labs/os" +
+      "mosis/v26/x/superfluid/types\242\002\003OSX\252\002\022Osm" +
+      "osis.Superfluid\312\002\022Osmosis\\Superfluid\342\002\036O" +
+      "smosis\\Superfluid\\GPBMetadata\352\002\023Osmosis:" +
+      ":Superfluidb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -23748,6 +27701,42 @@ public final class QueryProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_superfluid_QueryUnpoolWhitelistResponse_descriptor,
         new java.lang.String[] { "PoolIds", });
+    internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest_descriptor =
+      getDescriptor().getMessageTypes().get(32);
+    internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsDelegatedRequest_descriptor,
+        new java.lang.String[] { "DelegatorAddress", });
+    internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse_descriptor =
+      getDescriptor().getMessageTypes().get(33);
+    internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsDelegatedResponse_descriptor,
+        new java.lang.String[] { "ClPoolUserPositionRecords", });
+    internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest_descriptor =
+      getDescriptor().getMessageTypes().get(34);
+    internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsUndelegatingRequest_descriptor,
+        new java.lang.String[] { "DelegatorAddress", });
+    internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse_descriptor =
+      getDescriptor().getMessageTypes().get(35);
+    internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_superfluid_UserConcentratedSuperfluidPositionsUndelegatingResponse_descriptor,
+        new java.lang.String[] { "ClPoolUserPositionRecords", });
+    internal_static_osmosis_superfluid_QueryRestSupplyRequest_descriptor =
+      getDescriptor().getMessageTypes().get(36);
+    internal_static_osmosis_superfluid_QueryRestSupplyRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_superfluid_QueryRestSupplyRequest_descriptor,
+        new java.lang.String[] { "Denom", });
+    internal_static_osmosis_superfluid_QueryRestSupplyResponse_descriptor =
+      getDescriptor().getMessageTypes().get(37);
+    internal_static_osmosis_superfluid_QueryRestSupplyResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_superfluid_QueryRestSupplyResponse_descriptor,
+        new java.lang.String[] { "Amount", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.gogoproto.GogoProto.castrepeated);

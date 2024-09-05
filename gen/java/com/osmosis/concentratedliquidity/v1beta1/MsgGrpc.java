@@ -6,7 +6,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.55.1)",
-    comments = "Source: osmosis/concentrated-liquidity/tx.proto")
+    comments = "Source: osmosis/concentratedliquidity/v1beta1/tx.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class MsgGrpc {
 
@@ -170,35 +170,35 @@ public final class MsgGrpc {
     return getCollectIncentivesMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgFungifyChargedPositions,
-      com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgFungifyChargedPositionsResponse> getFungifyChargedPositionsMethod;
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgTransferPositions,
+      com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgTransferPositionsResponse> getTransferPositionsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "FungifyChargedPositions",
-      requestType = com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgFungifyChargedPositions.class,
-      responseType = com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgFungifyChargedPositionsResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "TransferPositions",
+      requestType = com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgTransferPositions.class,
+      responseType = com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgTransferPositionsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgFungifyChargedPositions,
-      com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgFungifyChargedPositionsResponse> getFungifyChargedPositionsMethod() {
-    io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgFungifyChargedPositions, com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgFungifyChargedPositionsResponse> getFungifyChargedPositionsMethod;
-    if ((getFungifyChargedPositionsMethod = MsgGrpc.getFungifyChargedPositionsMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgTransferPositions,
+      com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgTransferPositionsResponse> getTransferPositionsMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgTransferPositions, com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgTransferPositionsResponse> getTransferPositionsMethod;
+    if ((getTransferPositionsMethod = MsgGrpc.getTransferPositionsMethod) == null) {
       synchronized (MsgGrpc.class) {
-        if ((getFungifyChargedPositionsMethod = MsgGrpc.getFungifyChargedPositionsMethod) == null) {
-          MsgGrpc.getFungifyChargedPositionsMethod = getFungifyChargedPositionsMethod =
-              io.grpc.MethodDescriptor.<com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgFungifyChargedPositions, com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgFungifyChargedPositionsResponse>newBuilder()
+        if ((getTransferPositionsMethod = MsgGrpc.getTransferPositionsMethod) == null) {
+          MsgGrpc.getTransferPositionsMethod = getTransferPositionsMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgTransferPositions, com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgTransferPositionsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FungifyChargedPositions"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TransferPositions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgFungifyChargedPositions.getDefaultInstance()))
+                  com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgTransferPositions.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgFungifyChargedPositionsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("FungifyChargedPositions"))
+                  com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgTransferPositionsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("TransferPositions"))
               .build();
         }
       }
     }
-    return getFungifyChargedPositionsMethod;
+    return getTransferPositionsMethod;
   }
 
   /**
@@ -292,10 +292,14 @@ public final class MsgGrpc {
     }
 
     /**
+     * <pre>
+     * TransferPositions transfers ownership of a set of one or more positions
+     * from a sender to a recipient.
+     * </pre>
      */
-    default void fungifyChargedPositions(com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgFungifyChargedPositions request,
-        io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgFungifyChargedPositionsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFungifyChargedPositionsMethod(), responseObserver);
+    default void transferPositions(com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgTransferPositions request,
+        io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgTransferPositionsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTransferPositionsMethod(), responseObserver);
     }
   }
 
@@ -374,11 +378,15 @@ public final class MsgGrpc {
     }
 
     /**
+     * <pre>
+     * TransferPositions transfers ownership of a set of one or more positions
+     * from a sender to a recipient.
+     * </pre>
      */
-    public void fungifyChargedPositions(com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgFungifyChargedPositions request,
-        io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgFungifyChargedPositionsResponse> responseObserver) {
+    public void transferPositions(com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgTransferPositions request,
+        io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgTransferPositionsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getFungifyChargedPositionsMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getTransferPositionsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -441,10 +449,14 @@ public final class MsgGrpc {
     }
 
     /**
+     * <pre>
+     * TransferPositions transfers ownership of a set of one or more positions
+     * from a sender to a recipient.
+     * </pre>
      */
-    public com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgFungifyChargedPositionsResponse fungifyChargedPositions(com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgFungifyChargedPositions request) {
+    public com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgTransferPositionsResponse transferPositions(com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgTransferPositions request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getFungifyChargedPositionsMethod(), getCallOptions(), request);
+          getChannel(), getTransferPositionsMethod(), getCallOptions(), request);
     }
   }
 
@@ -512,11 +524,15 @@ public final class MsgGrpc {
     }
 
     /**
+     * <pre>
+     * TransferPositions transfers ownership of a set of one or more positions
+     * from a sender to a recipient.
+     * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgFungifyChargedPositionsResponse> fungifyChargedPositions(
-        com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgFungifyChargedPositions request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgTransferPositionsResponse> transferPositions(
+        com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgTransferPositions request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getFungifyChargedPositionsMethod(), getCallOptions()), request);
+          getChannel().newCall(getTransferPositionsMethod(), getCallOptions()), request);
     }
   }
 
@@ -525,7 +541,7 @@ public final class MsgGrpc {
   private static final int METHODID_ADD_TO_POSITION = 2;
   private static final int METHODID_COLLECT_SPREAD_REWARDS = 3;
   private static final int METHODID_COLLECT_INCENTIVES = 4;
-  private static final int METHODID_FUNGIFY_CHARGED_POSITIONS = 5;
+  private static final int METHODID_TRANSFER_POSITIONS = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -564,9 +580,9 @@ public final class MsgGrpc {
           serviceImpl.collectIncentives((com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgCollectIncentives) request,
               (io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgCollectIncentivesResponse>) responseObserver);
           break;
-        case METHODID_FUNGIFY_CHARGED_POSITIONS:
-          serviceImpl.fungifyChargedPositions((com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgFungifyChargedPositions) request,
-              (io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgFungifyChargedPositionsResponse>) responseObserver);
+        case METHODID_TRANSFER_POSITIONS:
+          serviceImpl.transferPositions((com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgTransferPositions) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgTransferPositionsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -622,12 +638,12 @@ public final class MsgGrpc {
               com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgCollectIncentivesResponse>(
                 service, METHODID_COLLECT_INCENTIVES)))
         .addMethod(
-          getFungifyChargedPositionsMethod(),
+          getTransferPositionsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgFungifyChargedPositions,
-              com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgFungifyChargedPositionsResponse>(
-                service, METHODID_FUNGIFY_CHARGED_POSITIONS)))
+              com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgTransferPositions,
+              com.osmosis.concentratedliquidity.v1beta1.TxProto.MsgTransferPositionsResponse>(
+                service, METHODID_TRANSFER_POSITIONS)))
         .build();
   }
 
@@ -681,7 +697,7 @@ public final class MsgGrpc {
               .addMethod(getAddToPositionMethod())
               .addMethod(getCollectSpreadRewardsMethod())
               .addMethod(getCollectIncentivesMethod())
-              .addMethod(getFungifyChargedPositionsMethod())
+              .addMethod(getTransferPositionsMethod())
               .build();
         }
       }

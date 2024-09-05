@@ -1962,7 +1962,7 @@ public final class GenesisProto {
       "\005twaps\022:\n\006params\030\002 \001(\0132\034.osmosis.twap.v1" +
       "beta1.ParamsB\004\310\336\037\000R\006paramsB\312\001\n\030com.osmos" +
       "is.twap.v1beta1B\014GenesisProtoZ0github.co" +
-      "m/osmosis-labs/osmosis/v15/x/twap/types\242" +
+      "m/osmosis-labs/osmosis/v26/x/twap/types\242" +
       "\002\003OTX\252\002\024Osmosis.Twap.V1beta1\312\002\024Osmosis\\T" +
       "wap\\V1beta1\342\002 Osmosis\\Twap\\V1beta1\\GPBMe" +
       "tadata\352\002\026Osmosis::Twap::V1beta1b\006proto3"

@@ -724,7 +724,7 @@ public final class ParamsProto {
       "\"R\007enabled\022&\n\005admin\030\002 \001(\tB\020\362\336\037\014yaml:\"adm" +
       "in\"R\005adminB\341\001\n\034com.osmosis.protorev.v1be" +
       "ta1B\013ParamsProtoZ4github.com/osmosis-lab" +
-      "s/osmosis/v15/x/protorev/types\242\002\003OPX\252\002\030O" +
+      "s/osmosis/v26/x/protorev/types\242\002\003OPX\252\002\030O" +
       "smosis.Protorev.V1beta1\312\002\030Osmosis\\Protor" +
       "ev\\V1beta1\342\002$Osmosis\\Protorev\\V1beta1\\GP" +
       "BMetadata\352\002\032Osmosis::Protorev::V1beta1b\006" +

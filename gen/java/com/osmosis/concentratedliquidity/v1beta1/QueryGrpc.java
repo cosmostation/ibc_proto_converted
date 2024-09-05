@@ -6,7 +6,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.55.1)",
-    comments = "Source: osmosis/concentrated-liquidity/query.proto")
+    comments = "Source: osmosis/concentratedliquidity/v1beta1/query.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class QueryGrpc {
 
@@ -263,6 +263,223 @@ public final class QueryGrpc {
     return getPositionByIdMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.QueryProto.PoolAccumulatorRewardsRequest,
+      com.osmosis.concentratedliquidity.v1beta1.QueryProto.PoolAccumulatorRewardsResponse> getPoolAccumulatorRewardsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "PoolAccumulatorRewards",
+      requestType = com.osmosis.concentratedliquidity.v1beta1.QueryProto.PoolAccumulatorRewardsRequest.class,
+      responseType = com.osmosis.concentratedliquidity.v1beta1.QueryProto.PoolAccumulatorRewardsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.QueryProto.PoolAccumulatorRewardsRequest,
+      com.osmosis.concentratedliquidity.v1beta1.QueryProto.PoolAccumulatorRewardsResponse> getPoolAccumulatorRewardsMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.QueryProto.PoolAccumulatorRewardsRequest, com.osmosis.concentratedliquidity.v1beta1.QueryProto.PoolAccumulatorRewardsResponse> getPoolAccumulatorRewardsMethod;
+    if ((getPoolAccumulatorRewardsMethod = QueryGrpc.getPoolAccumulatorRewardsMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getPoolAccumulatorRewardsMethod = QueryGrpc.getPoolAccumulatorRewardsMethod) == null) {
+          QueryGrpc.getPoolAccumulatorRewardsMethod = getPoolAccumulatorRewardsMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.concentratedliquidity.v1beta1.QueryProto.PoolAccumulatorRewardsRequest, com.osmosis.concentratedliquidity.v1beta1.QueryProto.PoolAccumulatorRewardsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "PoolAccumulatorRewards"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.concentratedliquidity.v1beta1.QueryProto.PoolAccumulatorRewardsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.concentratedliquidity.v1beta1.QueryProto.PoolAccumulatorRewardsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("PoolAccumulatorRewards"))
+              .build();
+        }
+      }
+    }
+    return getPoolAccumulatorRewardsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.QueryProto.IncentiveRecordsRequest,
+      com.osmosis.concentratedliquidity.v1beta1.QueryProto.IncentiveRecordsResponse> getIncentiveRecordsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "IncentiveRecords",
+      requestType = com.osmosis.concentratedliquidity.v1beta1.QueryProto.IncentiveRecordsRequest.class,
+      responseType = com.osmosis.concentratedliquidity.v1beta1.QueryProto.IncentiveRecordsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.QueryProto.IncentiveRecordsRequest,
+      com.osmosis.concentratedliquidity.v1beta1.QueryProto.IncentiveRecordsResponse> getIncentiveRecordsMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.QueryProto.IncentiveRecordsRequest, com.osmosis.concentratedliquidity.v1beta1.QueryProto.IncentiveRecordsResponse> getIncentiveRecordsMethod;
+    if ((getIncentiveRecordsMethod = QueryGrpc.getIncentiveRecordsMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getIncentiveRecordsMethod = QueryGrpc.getIncentiveRecordsMethod) == null) {
+          QueryGrpc.getIncentiveRecordsMethod = getIncentiveRecordsMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.concentratedliquidity.v1beta1.QueryProto.IncentiveRecordsRequest, com.osmosis.concentratedliquidity.v1beta1.QueryProto.IncentiveRecordsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "IncentiveRecords"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.concentratedliquidity.v1beta1.QueryProto.IncentiveRecordsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.concentratedliquidity.v1beta1.QueryProto.IncentiveRecordsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("IncentiveRecords"))
+              .build();
+        }
+      }
+    }
+    return getIncentiveRecordsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.QueryProto.TickAccumulatorTrackersRequest,
+      com.osmosis.concentratedliquidity.v1beta1.QueryProto.TickAccumulatorTrackersResponse> getTickAccumulatorTrackersMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TickAccumulatorTrackers",
+      requestType = com.osmosis.concentratedliquidity.v1beta1.QueryProto.TickAccumulatorTrackersRequest.class,
+      responseType = com.osmosis.concentratedliquidity.v1beta1.QueryProto.TickAccumulatorTrackersResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.QueryProto.TickAccumulatorTrackersRequest,
+      com.osmosis.concentratedliquidity.v1beta1.QueryProto.TickAccumulatorTrackersResponse> getTickAccumulatorTrackersMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.QueryProto.TickAccumulatorTrackersRequest, com.osmosis.concentratedliquidity.v1beta1.QueryProto.TickAccumulatorTrackersResponse> getTickAccumulatorTrackersMethod;
+    if ((getTickAccumulatorTrackersMethod = QueryGrpc.getTickAccumulatorTrackersMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getTickAccumulatorTrackersMethod = QueryGrpc.getTickAccumulatorTrackersMethod) == null) {
+          QueryGrpc.getTickAccumulatorTrackersMethod = getTickAccumulatorTrackersMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.concentratedliquidity.v1beta1.QueryProto.TickAccumulatorTrackersRequest, com.osmosis.concentratedliquidity.v1beta1.QueryProto.TickAccumulatorTrackersResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TickAccumulatorTrackers"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.concentratedliquidity.v1beta1.QueryProto.TickAccumulatorTrackersRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.concentratedliquidity.v1beta1.QueryProto.TickAccumulatorTrackersResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("TickAccumulatorTrackers"))
+              .build();
+        }
+      }
+    }
+    return getTickAccumulatorTrackersMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.QueryProto.CFMMPoolIdLinkFromConcentratedPoolIdRequest,
+      com.osmosis.concentratedliquidity.v1beta1.QueryProto.CFMMPoolIdLinkFromConcentratedPoolIdResponse> getCFMMPoolIdLinkFromConcentratedPoolIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CFMMPoolIdLinkFromConcentratedPoolId",
+      requestType = com.osmosis.concentratedliquidity.v1beta1.QueryProto.CFMMPoolIdLinkFromConcentratedPoolIdRequest.class,
+      responseType = com.osmosis.concentratedliquidity.v1beta1.QueryProto.CFMMPoolIdLinkFromConcentratedPoolIdResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.QueryProto.CFMMPoolIdLinkFromConcentratedPoolIdRequest,
+      com.osmosis.concentratedliquidity.v1beta1.QueryProto.CFMMPoolIdLinkFromConcentratedPoolIdResponse> getCFMMPoolIdLinkFromConcentratedPoolIdMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.QueryProto.CFMMPoolIdLinkFromConcentratedPoolIdRequest, com.osmosis.concentratedliquidity.v1beta1.QueryProto.CFMMPoolIdLinkFromConcentratedPoolIdResponse> getCFMMPoolIdLinkFromConcentratedPoolIdMethod;
+    if ((getCFMMPoolIdLinkFromConcentratedPoolIdMethod = QueryGrpc.getCFMMPoolIdLinkFromConcentratedPoolIdMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getCFMMPoolIdLinkFromConcentratedPoolIdMethod = QueryGrpc.getCFMMPoolIdLinkFromConcentratedPoolIdMethod) == null) {
+          QueryGrpc.getCFMMPoolIdLinkFromConcentratedPoolIdMethod = getCFMMPoolIdLinkFromConcentratedPoolIdMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.concentratedliquidity.v1beta1.QueryProto.CFMMPoolIdLinkFromConcentratedPoolIdRequest, com.osmosis.concentratedliquidity.v1beta1.QueryProto.CFMMPoolIdLinkFromConcentratedPoolIdResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CFMMPoolIdLinkFromConcentratedPoolId"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.concentratedliquidity.v1beta1.QueryProto.CFMMPoolIdLinkFromConcentratedPoolIdRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.concentratedliquidity.v1beta1.QueryProto.CFMMPoolIdLinkFromConcentratedPoolIdResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("CFMMPoolIdLinkFromConcentratedPoolId"))
+              .build();
+        }
+      }
+    }
+    return getCFMMPoolIdLinkFromConcentratedPoolIdMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserUnbondingPositionsRequest,
+      com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserUnbondingPositionsResponse> getUserUnbondingPositionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UserUnbondingPositions",
+      requestType = com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserUnbondingPositionsRequest.class,
+      responseType = com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserUnbondingPositionsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserUnbondingPositionsRequest,
+      com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserUnbondingPositionsResponse> getUserUnbondingPositionsMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserUnbondingPositionsRequest, com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserUnbondingPositionsResponse> getUserUnbondingPositionsMethod;
+    if ((getUserUnbondingPositionsMethod = QueryGrpc.getUserUnbondingPositionsMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getUserUnbondingPositionsMethod = QueryGrpc.getUserUnbondingPositionsMethod) == null) {
+          QueryGrpc.getUserUnbondingPositionsMethod = getUserUnbondingPositionsMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserUnbondingPositionsRequest, com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserUnbondingPositionsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UserUnbondingPositions"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserUnbondingPositionsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserUnbondingPositionsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("UserUnbondingPositions"))
+              .build();
+        }
+      }
+    }
+    return getUserUnbondingPositionsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.QueryProto.GetTotalLiquidityRequest,
+      com.osmosis.concentratedliquidity.v1beta1.QueryProto.GetTotalLiquidityResponse> getGetTotalLiquidityMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetTotalLiquidity",
+      requestType = com.osmosis.concentratedliquidity.v1beta1.QueryProto.GetTotalLiquidityRequest.class,
+      responseType = com.osmosis.concentratedliquidity.v1beta1.QueryProto.GetTotalLiquidityResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.QueryProto.GetTotalLiquidityRequest,
+      com.osmosis.concentratedliquidity.v1beta1.QueryProto.GetTotalLiquidityResponse> getGetTotalLiquidityMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.QueryProto.GetTotalLiquidityRequest, com.osmosis.concentratedliquidity.v1beta1.QueryProto.GetTotalLiquidityResponse> getGetTotalLiquidityMethod;
+    if ((getGetTotalLiquidityMethod = QueryGrpc.getGetTotalLiquidityMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getGetTotalLiquidityMethod = QueryGrpc.getGetTotalLiquidityMethod) == null) {
+          QueryGrpc.getGetTotalLiquidityMethod = getGetTotalLiquidityMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.concentratedliquidity.v1beta1.QueryProto.GetTotalLiquidityRequest, com.osmosis.concentratedliquidity.v1beta1.QueryProto.GetTotalLiquidityResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetTotalLiquidity"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.concentratedliquidity.v1beta1.QueryProto.GetTotalLiquidityRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.concentratedliquidity.v1beta1.QueryProto.GetTotalLiquidityResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("GetTotalLiquidity"))
+              .build();
+        }
+      }
+    }
+    return getGetTotalLiquidityMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.QueryProto.NumNextInitializedTicksRequest,
+      com.osmosis.concentratedliquidity.v1beta1.QueryProto.NumNextInitializedTicksResponse> getNumNextInitializedTicksMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "NumNextInitializedTicks",
+      requestType = com.osmosis.concentratedliquidity.v1beta1.QueryProto.NumNextInitializedTicksRequest.class,
+      responseType = com.osmosis.concentratedliquidity.v1beta1.QueryProto.NumNextInitializedTicksResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.QueryProto.NumNextInitializedTicksRequest,
+      com.osmosis.concentratedliquidity.v1beta1.QueryProto.NumNextInitializedTicksResponse> getNumNextInitializedTicksMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.concentratedliquidity.v1beta1.QueryProto.NumNextInitializedTicksRequest, com.osmosis.concentratedliquidity.v1beta1.QueryProto.NumNextInitializedTicksResponse> getNumNextInitializedTicksMethod;
+    if ((getNumNextInitializedTicksMethod = QueryGrpc.getNumNextInitializedTicksMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getNumNextInitializedTicksMethod = QueryGrpc.getNumNextInitializedTicksMethod) == null) {
+          QueryGrpc.getNumNextInitializedTicksMethod = getNumNextInitializedTicksMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.concentratedliquidity.v1beta1.QueryProto.NumNextInitializedTicksRequest, com.osmosis.concentratedliquidity.v1beta1.QueryProto.NumNextInitializedTicksResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "NumNextInitializedTicks"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.concentratedliquidity.v1beta1.QueryProto.NumNextInitializedTicksRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.concentratedliquidity.v1beta1.QueryProto.NumNextInitializedTicksResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("NumNextInitializedTicks"))
+              .build();
+        }
+      }
+    }
+    return getNumNextInitializedTicksMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -333,7 +550,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * UserPositions returns all concentrated postitions of some address.
+     * UserPositions returns all concentrated positions of some address.
      * </pre>
      */
     default void userPositions(com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserPositionsRequest request,
@@ -395,6 +612,81 @@ public final class QueryGrpc {
         io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.QueryProto.PositionByIdResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPositionByIdMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * PoolAccumulatorRewards returns the pool-global accumulator rewards.
+     * Contains spread factor rewards and uptime rewards.
+     * </pre>
+     */
+    default void poolAccumulatorRewards(com.osmosis.concentratedliquidity.v1beta1.QueryProto.PoolAccumulatorRewardsRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.QueryProto.PoolAccumulatorRewardsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPoolAccumulatorRewardsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * IncentiveRecords returns the incentive records for a given poolId
+     * </pre>
+     */
+    default void incentiveRecords(com.osmosis.concentratedliquidity.v1beta1.QueryProto.IncentiveRecordsRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.QueryProto.IncentiveRecordsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getIncentiveRecordsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * TickAccumulatorTrackers returns the tick accumulator trackers.
+     * Contains spread factor and uptime accumulator trackers.
+     * </pre>
+     */
+    default void tickAccumulatorTrackers(com.osmosis.concentratedliquidity.v1beta1.QueryProto.TickAccumulatorTrackersRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.QueryProto.TickAccumulatorTrackersResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTickAccumulatorTrackersMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CFMMPoolIdLinkFromConcentratedPoolId returns the pool id of the CFMM
+     * pool that is linked with the given concentrated pool.
+     * </pre>
+     */
+    default void cFMMPoolIdLinkFromConcentratedPoolId(com.osmosis.concentratedliquidity.v1beta1.QueryProto.CFMMPoolIdLinkFromConcentratedPoolIdRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.QueryProto.CFMMPoolIdLinkFromConcentratedPoolIdResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCFMMPoolIdLinkFromConcentratedPoolIdMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UserUnbondingPositions returns the position and lock info of unbonding
+     * positions of the given address.
+     * </pre>
+     */
+    default void userUnbondingPositions(com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserUnbondingPositionsRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserUnbondingPositionsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUserUnbondingPositionsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetTotalLiquidity returns total liquidity across all cl pools.
+     * </pre>
+     */
+    default void getTotalLiquidity(com.osmosis.concentratedliquidity.v1beta1.QueryProto.GetTotalLiquidityRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.QueryProto.GetTotalLiquidityResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTotalLiquidityMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * NumNextInitializedTicks returns the provided number of next initialized
+     * ticks in the direction of swapping the token in denom.
+     * </pre>
+     */
+    default void numNextInitializedTicks(com.osmosis.concentratedliquidity.v1beta1.QueryProto.NumNextInitializedTicksRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.QueryProto.NumNextInitializedTicksResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getNumNextInitializedTicksMethod(), responseObserver);
+    }
   }
 
   /**
@@ -448,7 +740,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * UserPositions returns all concentrated postitions of some address.
+     * UserPositions returns all concentrated positions of some address.
      * </pre>
      */
     public void userPositions(com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserPositionsRequest request,
@@ -516,6 +808,88 @@ public final class QueryGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getPositionByIdMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * PoolAccumulatorRewards returns the pool-global accumulator rewards.
+     * Contains spread factor rewards and uptime rewards.
+     * </pre>
+     */
+    public void poolAccumulatorRewards(com.osmosis.concentratedliquidity.v1beta1.QueryProto.PoolAccumulatorRewardsRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.QueryProto.PoolAccumulatorRewardsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getPoolAccumulatorRewardsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * IncentiveRecords returns the incentive records for a given poolId
+     * </pre>
+     */
+    public void incentiveRecords(com.osmosis.concentratedliquidity.v1beta1.QueryProto.IncentiveRecordsRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.QueryProto.IncentiveRecordsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getIncentiveRecordsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * TickAccumulatorTrackers returns the tick accumulator trackers.
+     * Contains spread factor and uptime accumulator trackers.
+     * </pre>
+     */
+    public void tickAccumulatorTrackers(com.osmosis.concentratedliquidity.v1beta1.QueryProto.TickAccumulatorTrackersRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.QueryProto.TickAccumulatorTrackersResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTickAccumulatorTrackersMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CFMMPoolIdLinkFromConcentratedPoolId returns the pool id of the CFMM
+     * pool that is linked with the given concentrated pool.
+     * </pre>
+     */
+    public void cFMMPoolIdLinkFromConcentratedPoolId(com.osmosis.concentratedliquidity.v1beta1.QueryProto.CFMMPoolIdLinkFromConcentratedPoolIdRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.QueryProto.CFMMPoolIdLinkFromConcentratedPoolIdResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCFMMPoolIdLinkFromConcentratedPoolIdMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UserUnbondingPositions returns the position and lock info of unbonding
+     * positions of the given address.
+     * </pre>
+     */
+    public void userUnbondingPositions(com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserUnbondingPositionsRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserUnbondingPositionsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUserUnbondingPositionsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetTotalLiquidity returns total liquidity across all cl pools.
+     * </pre>
+     */
+    public void getTotalLiquidity(com.osmosis.concentratedliquidity.v1beta1.QueryProto.GetTotalLiquidityRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.QueryProto.GetTotalLiquidityResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetTotalLiquidityMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * NumNextInitializedTicks returns the provided number of next initialized
+     * ticks in the direction of swapping the token in denom.
+     * </pre>
+     */
+    public void numNextInitializedTicks(com.osmosis.concentratedliquidity.v1beta1.QueryProto.NumNextInitializedTicksRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.QueryProto.NumNextInitializedTicksResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getNumNextInitializedTicksMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -556,7 +930,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * UserPositions returns all concentrated postitions of some address.
+     * UserPositions returns all concentrated positions of some address.
      * </pre>
      */
     public com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserPositionsResponse userPositions(com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserPositionsRequest request) {
@@ -618,6 +992,81 @@ public final class QueryGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getPositionByIdMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * PoolAccumulatorRewards returns the pool-global accumulator rewards.
+     * Contains spread factor rewards and uptime rewards.
+     * </pre>
+     */
+    public com.osmosis.concentratedliquidity.v1beta1.QueryProto.PoolAccumulatorRewardsResponse poolAccumulatorRewards(com.osmosis.concentratedliquidity.v1beta1.QueryProto.PoolAccumulatorRewardsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getPoolAccumulatorRewardsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * IncentiveRecords returns the incentive records for a given poolId
+     * </pre>
+     */
+    public com.osmosis.concentratedliquidity.v1beta1.QueryProto.IncentiveRecordsResponse incentiveRecords(com.osmosis.concentratedliquidity.v1beta1.QueryProto.IncentiveRecordsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getIncentiveRecordsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * TickAccumulatorTrackers returns the tick accumulator trackers.
+     * Contains spread factor and uptime accumulator trackers.
+     * </pre>
+     */
+    public com.osmosis.concentratedliquidity.v1beta1.QueryProto.TickAccumulatorTrackersResponse tickAccumulatorTrackers(com.osmosis.concentratedliquidity.v1beta1.QueryProto.TickAccumulatorTrackersRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTickAccumulatorTrackersMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CFMMPoolIdLinkFromConcentratedPoolId returns the pool id of the CFMM
+     * pool that is linked with the given concentrated pool.
+     * </pre>
+     */
+    public com.osmosis.concentratedliquidity.v1beta1.QueryProto.CFMMPoolIdLinkFromConcentratedPoolIdResponse cFMMPoolIdLinkFromConcentratedPoolId(com.osmosis.concentratedliquidity.v1beta1.QueryProto.CFMMPoolIdLinkFromConcentratedPoolIdRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCFMMPoolIdLinkFromConcentratedPoolIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UserUnbondingPositions returns the position and lock info of unbonding
+     * positions of the given address.
+     * </pre>
+     */
+    public com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserUnbondingPositionsResponse userUnbondingPositions(com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserUnbondingPositionsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUserUnbondingPositionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetTotalLiquidity returns total liquidity across all cl pools.
+     * </pre>
+     */
+    public com.osmosis.concentratedliquidity.v1beta1.QueryProto.GetTotalLiquidityResponse getTotalLiquidity(com.osmosis.concentratedliquidity.v1beta1.QueryProto.GetTotalLiquidityRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetTotalLiquidityMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * NumNextInitializedTicks returns the provided number of next initialized
+     * ticks in the direction of swapping the token in denom.
+     * </pre>
+     */
+    public com.osmosis.concentratedliquidity.v1beta1.QueryProto.NumNextInitializedTicksResponse numNextInitializedTicks(com.osmosis.concentratedliquidity.v1beta1.QueryProto.NumNextInitializedTicksRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getNumNextInitializedTicksMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -660,7 +1109,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * UserPositions returns all concentrated postitions of some address.
+     * UserPositions returns all concentrated positions of some address.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserPositionsResponse> userPositions(
@@ -728,6 +1177,88 @@ public final class QueryGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getPositionByIdMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * PoolAccumulatorRewards returns the pool-global accumulator rewards.
+     * Contains spread factor rewards and uptime rewards.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.concentratedliquidity.v1beta1.QueryProto.PoolAccumulatorRewardsResponse> poolAccumulatorRewards(
+        com.osmosis.concentratedliquidity.v1beta1.QueryProto.PoolAccumulatorRewardsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getPoolAccumulatorRewardsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * IncentiveRecords returns the incentive records for a given poolId
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.concentratedliquidity.v1beta1.QueryProto.IncentiveRecordsResponse> incentiveRecords(
+        com.osmosis.concentratedliquidity.v1beta1.QueryProto.IncentiveRecordsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getIncentiveRecordsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * TickAccumulatorTrackers returns the tick accumulator trackers.
+     * Contains spread factor and uptime accumulator trackers.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.concentratedliquidity.v1beta1.QueryProto.TickAccumulatorTrackersResponse> tickAccumulatorTrackers(
+        com.osmosis.concentratedliquidity.v1beta1.QueryProto.TickAccumulatorTrackersRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTickAccumulatorTrackersMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * CFMMPoolIdLinkFromConcentratedPoolId returns the pool id of the CFMM
+     * pool that is linked with the given concentrated pool.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.concentratedliquidity.v1beta1.QueryProto.CFMMPoolIdLinkFromConcentratedPoolIdResponse> cFMMPoolIdLinkFromConcentratedPoolId(
+        com.osmosis.concentratedliquidity.v1beta1.QueryProto.CFMMPoolIdLinkFromConcentratedPoolIdRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCFMMPoolIdLinkFromConcentratedPoolIdMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * UserUnbondingPositions returns the position and lock info of unbonding
+     * positions of the given address.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserUnbondingPositionsResponse> userUnbondingPositions(
+        com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserUnbondingPositionsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUserUnbondingPositionsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetTotalLiquidity returns total liquidity across all cl pools.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.concentratedliquidity.v1beta1.QueryProto.GetTotalLiquidityResponse> getTotalLiquidity(
+        com.osmosis.concentratedliquidity.v1beta1.QueryProto.GetTotalLiquidityRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetTotalLiquidityMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * NumNextInitializedTicks returns the provided number of next initialized
+     * ticks in the direction of swapping the token in denom.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.concentratedliquidity.v1beta1.QueryProto.NumNextInitializedTicksResponse> numNextInitializedTicks(
+        com.osmosis.concentratedliquidity.v1beta1.QueryProto.NumNextInitializedTicksRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getNumNextInitializedTicksMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_POOLS = 0;
@@ -738,6 +1269,13 @@ public final class QueryGrpc {
   private static final int METHODID_CLAIMABLE_SPREAD_REWARDS = 5;
   private static final int METHODID_CLAIMABLE_INCENTIVES = 6;
   private static final int METHODID_POSITION_BY_ID = 7;
+  private static final int METHODID_POOL_ACCUMULATOR_REWARDS = 8;
+  private static final int METHODID_INCENTIVE_RECORDS = 9;
+  private static final int METHODID_TICK_ACCUMULATOR_TRACKERS = 10;
+  private static final int METHODID_CFMMPOOL_ID_LINK_FROM_CONCENTRATED_POOL_ID = 11;
+  private static final int METHODID_USER_UNBONDING_POSITIONS = 12;
+  private static final int METHODID_GET_TOTAL_LIQUIDITY = 13;
+  private static final int METHODID_NUM_NEXT_INITIALIZED_TICKS = 14;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -787,6 +1325,34 @@ public final class QueryGrpc {
         case METHODID_POSITION_BY_ID:
           serviceImpl.positionById((com.osmosis.concentratedliquidity.v1beta1.QueryProto.PositionByIdRequest) request,
               (io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.QueryProto.PositionByIdResponse>) responseObserver);
+          break;
+        case METHODID_POOL_ACCUMULATOR_REWARDS:
+          serviceImpl.poolAccumulatorRewards((com.osmosis.concentratedliquidity.v1beta1.QueryProto.PoolAccumulatorRewardsRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.QueryProto.PoolAccumulatorRewardsResponse>) responseObserver);
+          break;
+        case METHODID_INCENTIVE_RECORDS:
+          serviceImpl.incentiveRecords((com.osmosis.concentratedliquidity.v1beta1.QueryProto.IncentiveRecordsRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.QueryProto.IncentiveRecordsResponse>) responseObserver);
+          break;
+        case METHODID_TICK_ACCUMULATOR_TRACKERS:
+          serviceImpl.tickAccumulatorTrackers((com.osmosis.concentratedliquidity.v1beta1.QueryProto.TickAccumulatorTrackersRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.QueryProto.TickAccumulatorTrackersResponse>) responseObserver);
+          break;
+        case METHODID_CFMMPOOL_ID_LINK_FROM_CONCENTRATED_POOL_ID:
+          serviceImpl.cFMMPoolIdLinkFromConcentratedPoolId((com.osmosis.concentratedliquidity.v1beta1.QueryProto.CFMMPoolIdLinkFromConcentratedPoolIdRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.QueryProto.CFMMPoolIdLinkFromConcentratedPoolIdResponse>) responseObserver);
+          break;
+        case METHODID_USER_UNBONDING_POSITIONS:
+          serviceImpl.userUnbondingPositions((com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserUnbondingPositionsRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserUnbondingPositionsResponse>) responseObserver);
+          break;
+        case METHODID_GET_TOTAL_LIQUIDITY:
+          serviceImpl.getTotalLiquidity((com.osmosis.concentratedliquidity.v1beta1.QueryProto.GetTotalLiquidityRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.QueryProto.GetTotalLiquidityResponse>) responseObserver);
+          break;
+        case METHODID_NUM_NEXT_INITIALIZED_TICKS:
+          serviceImpl.numNextInitializedTicks((com.osmosis.concentratedliquidity.v1beta1.QueryProto.NumNextInitializedTicksRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.concentratedliquidity.v1beta1.QueryProto.NumNextInitializedTicksResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -862,6 +1428,55 @@ public final class QueryGrpc {
               com.osmosis.concentratedliquidity.v1beta1.QueryProto.PositionByIdRequest,
               com.osmosis.concentratedliquidity.v1beta1.QueryProto.PositionByIdResponse>(
                 service, METHODID_POSITION_BY_ID)))
+        .addMethod(
+          getPoolAccumulatorRewardsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.concentratedliquidity.v1beta1.QueryProto.PoolAccumulatorRewardsRequest,
+              com.osmosis.concentratedliquidity.v1beta1.QueryProto.PoolAccumulatorRewardsResponse>(
+                service, METHODID_POOL_ACCUMULATOR_REWARDS)))
+        .addMethod(
+          getIncentiveRecordsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.concentratedliquidity.v1beta1.QueryProto.IncentiveRecordsRequest,
+              com.osmosis.concentratedliquidity.v1beta1.QueryProto.IncentiveRecordsResponse>(
+                service, METHODID_INCENTIVE_RECORDS)))
+        .addMethod(
+          getTickAccumulatorTrackersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.concentratedliquidity.v1beta1.QueryProto.TickAccumulatorTrackersRequest,
+              com.osmosis.concentratedliquidity.v1beta1.QueryProto.TickAccumulatorTrackersResponse>(
+                service, METHODID_TICK_ACCUMULATOR_TRACKERS)))
+        .addMethod(
+          getCFMMPoolIdLinkFromConcentratedPoolIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.concentratedliquidity.v1beta1.QueryProto.CFMMPoolIdLinkFromConcentratedPoolIdRequest,
+              com.osmosis.concentratedliquidity.v1beta1.QueryProto.CFMMPoolIdLinkFromConcentratedPoolIdResponse>(
+                service, METHODID_CFMMPOOL_ID_LINK_FROM_CONCENTRATED_POOL_ID)))
+        .addMethod(
+          getUserUnbondingPositionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserUnbondingPositionsRequest,
+              com.osmosis.concentratedliquidity.v1beta1.QueryProto.UserUnbondingPositionsResponse>(
+                service, METHODID_USER_UNBONDING_POSITIONS)))
+        .addMethod(
+          getGetTotalLiquidityMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.concentratedliquidity.v1beta1.QueryProto.GetTotalLiquidityRequest,
+              com.osmosis.concentratedliquidity.v1beta1.QueryProto.GetTotalLiquidityResponse>(
+                service, METHODID_GET_TOTAL_LIQUIDITY)))
+        .addMethod(
+          getNumNextInitializedTicksMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.concentratedliquidity.v1beta1.QueryProto.NumNextInitializedTicksRequest,
+              com.osmosis.concentratedliquidity.v1beta1.QueryProto.NumNextInitializedTicksResponse>(
+                service, METHODID_NUM_NEXT_INITIALIZED_TICKS)))
         .build();
   }
 
@@ -918,6 +1533,13 @@ public final class QueryGrpc {
               .addMethod(getClaimableSpreadRewardsMethod())
               .addMethod(getClaimableIncentivesMethod())
               .addMethod(getPositionByIdMethod())
+              .addMethod(getPoolAccumulatorRewardsMethod())
+              .addMethod(getIncentiveRecordsMethod())
+              .addMethod(getTickAccumulatorTrackersMethod())
+              .addMethod(getCFMMPoolIdLinkFromConcentratedPoolIdMethod())
+              .addMethod(getUserUnbondingPositionsMethod())
+              .addMethod(getGetTotalLiquidityMethod())
+              .addMethod(getNumNextInitializedTicksMethod())
               .build();
         }
       }

@@ -3299,7 +3299,7 @@ public final class GaugeProto {
       "buf.DurationB%\310\336\037\000\362\336\037\031yaml:\"lockable_dur" +
       "ations\"\230\337\037\001R\021lockableDurationsB\303\001\n\026com.o" +
       "smosis.incentivesB\nGaugeProtoZ6github.co" +
-      "m/osmosis-labs/osmosis/v15/x/incentives/" +
+      "m/osmosis-labs/osmosis/v26/x/incentives/" +
       "types\242\002\003OIX\252\002\022Osmosis.Incentives\312\002\022Osmos" +
       "is\\Incentives\342\002\036Osmosis\\Incentives\\GPBMe" +
       "tadata\352\002\023Osmosis::Incentivesb\006proto3"

@@ -43,12 +43,12 @@ public final class AccumProto {
         int index);
 
     /**
-     * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The totalShares.
      */
     java.lang.String getTotalShares();
     /**
-     * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The bytes for totalShares.
      */
     com.google.protobuf.ByteString
@@ -142,7 +142,7 @@ public final class AccumProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object totalShares_ = "";
     /**
-     * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The totalShares.
      */
     @java.lang.Override
@@ -159,7 +159,7 @@ public final class AccumProto {
       }
     }
     /**
-     * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The bytes for totalShares.
      */
     @java.lang.Override
@@ -823,7 +823,7 @@ public final class AccumProto {
 
       private java.lang.Object totalShares_ = "";
       /**
-       * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return The totalShares.
        */
       public java.lang.String getTotalShares() {
@@ -839,7 +839,7 @@ public final class AccumProto {
         }
       }
       /**
-       * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return The bytes for totalShares.
        */
       public com.google.protobuf.ByteString
@@ -856,7 +856,7 @@ public final class AccumProto {
         }
       }
       /**
-       * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @param value The totalShares to set.
        * @return This builder for chaining.
        */
@@ -869,7 +869,7 @@ public final class AccumProto {
         return this;
       }
       /**
-       * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTotalShares() {
@@ -879,7 +879,7 @@ public final class AccumProto {
         return this;
       }
       /**
-       * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string total_shares = 2 [json_name = "totalShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @param value The bytes for totalShares to set.
        * @return This builder for chaining.
        */
@@ -1363,7 +1363,7 @@ public final class AccumProto {
      * with this record.
      * </pre>
      *
-     * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The numShares.
      */
     java.lang.String getNumShares();
@@ -1373,7 +1373,7 @@ public final class AccumProto {
      * with this record.
      * </pre>
      *
-     * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The bytes for numShares.
      */
     com.google.protobuf.ByteString
@@ -1634,7 +1634,7 @@ public final class AccumProto {
      * with this record.
      * </pre>
      *
-     * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The numShares.
      */
     @java.lang.Override
@@ -1656,7 +1656,7 @@ public final class AccumProto {
      * with this record.
      * </pre>
      *
-     * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The bytes for numShares.
      */
     @java.lang.Override
@@ -2436,7 +2436,7 @@ public final class AccumProto {
        * with this record.
        * </pre>
        *
-       * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return The numShares.
        */
       public java.lang.String getNumShares() {
@@ -2457,7 +2457,7 @@ public final class AccumProto {
        * with this record.
        * </pre>
        *
-       * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return The bytes for numShares.
        */
       public com.google.protobuf.ByteString
@@ -2479,7 +2479,7 @@ public final class AccumProto {
        * with this record.
        * </pre>
        *
-       * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @param value The numShares to set.
        * @return This builder for chaining.
        */
@@ -2497,7 +2497,7 @@ public final class AccumProto {
        * with this record.
        * </pre>
        *
-       * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return This builder for chaining.
        */
       public Builder clearNumShares() {
@@ -2512,7 +2512,7 @@ public final class AccumProto {
        * with this record.
        * </pre>
        *
-       * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string num_shares = 1 [json_name = "numShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @param value The bytes for numShares to set.
        * @return This builder for chaining.
        */
@@ -3718,29 +3718,29 @@ public final class AccumProto {
     java.lang.String[] descriptorData = {
       "\n!osmosis/accum/v1beta1/accum.proto\022\025osm" +
       "osis.accum.v1beta1\032\024gogoproto/gogo.proto" +
-      "\032\036cosmos/base/v1beta1/coin.proto\"\333\001\n\022Acc" +
+      "\032\036cosmos/base/v1beta1/coin.proto\"\320\001\n\022Acc" +
       "umulatorContent\022r\n\013accum_value\030\001 \003(\0132\034.c" +
       "osmos.base.v1beta1.DecCoinB3\310\336\037\000\252\337\037+gith" +
       "ub.com/cosmos/cosmos-sdk/types.DecCoinsR" +
-      "\naccumValue\022Q\n\014total_shares\030\002 \001(\tB.\310\336\037\000\332" +
-      "\336\037&github.com/cosmos/cosmos-sdk/types.De" +
-      "cR\013totalShares\"\t\n\007Options\"\244\003\n\006Record\022M\n\n" +
-      "num_shares\030\001 \001(\tB.\310\336\037\000\332\336\037&github.com/cos" +
-      "mos/cosmos-sdk/types.DecR\tnumShares\022\204\001\n\025" +
-      "accum_value_per_share\030\002 \003(\0132\034.cosmos.bas" +
-      "e.v1beta1.DecCoinB3\310\336\037\000\252\337\037+github.com/co" +
-      "smos/cosmos-sdk/types.DecCoinsR\022accumVal" +
-      "uePerShare\022\211\001\n\027unclaimed_rewards_total\030\003" +
-      " \003(\0132\034.cosmos.base.v1beta1.DecCoinB3\310\336\037\000" +
-      "\252\337\037+github.com/cosmos/cosmos-sdk/types.D" +
-      "ecCoinsR\025unclaimedRewardsTotal\0228\n\007option" +
-      "s\030\004 \001(\0132\036.osmosis.accum.v1beta1.OptionsR" +
-      "\007optionsB\314\001\n\031com.osmosis.accum.v1beta1B\n" +
-      "AccumProtoZ/github.com/osmosis-labs/osmo" +
-      "sis/osmoutils/accum\242\002\003OAX\252\002\025Osmosis.Accu" +
-      "m.V1beta1\312\002\025Osmosis\\Accum\\V1beta1\342\002!Osmo" +
-      "sis\\Accum\\V1beta1\\GPBMetadata\352\002\027Osmosis:" +
-      ":Accum::V1beta1b\006proto3"
+      "\naccumValue\022F\n\014total_shares\030\002 \001(\tB#\310\336\037\000\332" +
+      "\336\037\033cosmossdk.io/math.LegacyDecR\013totalSha" +
+      "res\"\t\n\007Options\"\231\003\n\006Record\022B\n\nnum_shares\030" +
+      "\001 \001(\tB#\310\336\037\000\332\336\037\033cosmossdk.io/math.LegacyD" +
+      "ecR\tnumShares\022\204\001\n\025accum_value_per_share\030" +
+      "\002 \003(\0132\034.cosmos.base.v1beta1.DecCoinB3\310\336\037" +
+      "\000\252\337\037+github.com/cosmos/cosmos-sdk/types." +
+      "DecCoinsR\022accumValuePerShare\022\211\001\n\027unclaim" +
+      "ed_rewards_total\030\003 \003(\0132\034.cosmos.base.v1b" +
+      "eta1.DecCoinB3\310\336\037\000\252\337\037+github.com/cosmos/" +
+      "cosmos-sdk/types.DecCoinsR\025unclaimedRewa" +
+      "rdsTotal\0228\n\007options\030\004 \001(\0132\036.osmosis.accu" +
+      "m.v1beta1.OptionsR\007optionsB\314\001\n\031com.osmos" +
+      "is.accum.v1beta1B\nAccumProtoZ/github.com" +
+      "/osmosis-labs/osmosis/osmoutils/accum\242\002\003" +
+      "OAX\252\002\025Osmosis.Accum.V1beta1\312\002\025Osmosis\\Ac" +
+      "cum\\V1beta1\342\002!Osmosis\\Accum\\V1beta1\\GPBM" +
+      "etadata\352\002\027Osmosis::Accum::V1beta1b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

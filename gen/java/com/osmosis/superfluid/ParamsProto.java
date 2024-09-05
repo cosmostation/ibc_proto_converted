@@ -26,7 +26,7 @@ public final class ParamsProto {
      * volatilities, and have base staking be 'resistant' to volatility.
      * </pre>
      *
-     * <code>string minimum_risk_factor = 1 [json_name = "minimumRiskFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"minimum_risk_factor&#92;""];</code>
+     * <code>string minimum_risk_factor = 1 [json_name = "minimumRiskFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"minimum_risk_factor&#92;""];</code>
      * @return The minimumRiskFactor.
      */
     java.lang.String getMinimumRiskFactor();
@@ -38,7 +38,7 @@ public final class ParamsProto {
      * volatilities, and have base staking be 'resistant' to volatility.
      * </pre>
      *
-     * <code>string minimum_risk_factor = 1 [json_name = "minimumRiskFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"minimum_risk_factor&#92;""];</code>
+     * <code>string minimum_risk_factor = 1 [json_name = "minimumRiskFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"minimum_risk_factor&#92;""];</code>
      * @return The bytes for minimumRiskFactor.
      */
     com.google.protobuf.ByteString
@@ -95,7 +95,7 @@ public final class ParamsProto {
      * volatilities, and have base staking be 'resistant' to volatility.
      * </pre>
      *
-     * <code>string minimum_risk_factor = 1 [json_name = "minimumRiskFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"minimum_risk_factor&#92;""];</code>
+     * <code>string minimum_risk_factor = 1 [json_name = "minimumRiskFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"minimum_risk_factor&#92;""];</code>
      * @return The minimumRiskFactor.
      */
     @java.lang.Override
@@ -119,7 +119,7 @@ public final class ParamsProto {
      * volatilities, and have base staking be 'resistant' to volatility.
      * </pre>
      *
-     * <code>string minimum_risk_factor = 1 [json_name = "minimumRiskFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"minimum_risk_factor&#92;""];</code>
+     * <code>string minimum_risk_factor = 1 [json_name = "minimumRiskFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"minimum_risk_factor&#92;""];</code>
      * @return The bytes for minimumRiskFactor.
      */
     @java.lang.Override
@@ -476,7 +476,7 @@ public final class ParamsProto {
        * volatilities, and have base staking be 'resistant' to volatility.
        * </pre>
        *
-       * <code>string minimum_risk_factor = 1 [json_name = "minimumRiskFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"minimum_risk_factor&#92;""];</code>
+       * <code>string minimum_risk_factor = 1 [json_name = "minimumRiskFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"minimum_risk_factor&#92;""];</code>
        * @return The minimumRiskFactor.
        */
       public java.lang.String getMinimumRiskFactor() {
@@ -499,7 +499,7 @@ public final class ParamsProto {
        * volatilities, and have base staking be 'resistant' to volatility.
        * </pre>
        *
-       * <code>string minimum_risk_factor = 1 [json_name = "minimumRiskFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"minimum_risk_factor&#92;""];</code>
+       * <code>string minimum_risk_factor = 1 [json_name = "minimumRiskFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"minimum_risk_factor&#92;""];</code>
        * @return The bytes for minimumRiskFactor.
        */
       public com.google.protobuf.ByteString
@@ -523,7 +523,7 @@ public final class ParamsProto {
        * volatilities, and have base staking be 'resistant' to volatility.
        * </pre>
        *
-       * <code>string minimum_risk_factor = 1 [json_name = "minimumRiskFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"minimum_risk_factor&#92;""];</code>
+       * <code>string minimum_risk_factor = 1 [json_name = "minimumRiskFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"minimum_risk_factor&#92;""];</code>
        * @param value The minimumRiskFactor to set.
        * @return This builder for chaining.
        */
@@ -543,7 +543,7 @@ public final class ParamsProto {
        * volatilities, and have base staking be 'resistant' to volatility.
        * </pre>
        *
-       * <code>string minimum_risk_factor = 1 [json_name = "minimumRiskFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"minimum_risk_factor&#92;""];</code>
+       * <code>string minimum_risk_factor = 1 [json_name = "minimumRiskFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"minimum_risk_factor&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearMinimumRiskFactor() {
@@ -560,7 +560,7 @@ public final class ParamsProto {
        * volatilities, and have base staking be 'resistant' to volatility.
        * </pre>
        *
-       * <code>string minimum_risk_factor = 1 [json_name = "minimumRiskFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"minimum_risk_factor&#92;""];</code>
+       * <code>string minimum_risk_factor = 1 [json_name = "minimumRiskFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"minimum_risk_factor&#92;""];</code>
        * @param value The bytes for minimumRiskFactor to set.
        * @return This builder for chaining.
        */
@@ -653,16 +653,15 @@ public final class ParamsProto {
     java.lang.String[] descriptorData = {
       "\n\037osmosis/superfluid/params.proto\022\022osmos" +
       "is.superfluid\032\024gogoproto/gogo.proto\032\036goo" +
-      "gle/protobuf/duration.proto\"\206\001\n\006Params\022|" +
-      "\n\023minimum_risk_factor\030\001 \001(\tBL\310\336\037\000\332\336\037&git" +
-      "hub.com/cosmos/cosmos-sdk/types.Dec\362\336\037\032y" +
-      "aml:\"minimum_risk_factor\"R\021minimumRiskFa" +
-      "ctorB\304\001\n\026com.osmosis.superfluidB\013ParamsP" +
-      "rotoZ6github.com/osmosis-labs/osmosis/v1" +
-      "5/x/superfluid/types\242\002\003OSX\252\002\022Osmosis.Sup" +
-      "erfluid\312\002\022Osmosis\\Superfluid\342\002\036Osmosis\\S" +
-      "uperfluid\\GPBMetadata\352\002\023Osmosis::Superfl" +
-      "uidb\006proto3"
+      "gle/protobuf/duration.proto\"{\n\006Params\022q\n" +
+      "\023minimum_risk_factor\030\001 \001(\tBA\310\336\037\000\332\336\037\033cosm" +
+      "ossdk.io/math.LegacyDec\362\336\037\032yaml:\"minimum" +
+      "_risk_factor\"R\021minimumRiskFactorB\304\001\n\026com" +
+      ".osmosis.superfluidB\013ParamsProtoZ6github" +
+      ".com/osmosis-labs/osmosis/v26/x/superflu" +
+      "id/types\242\002\003OSX\252\002\022Osmosis.Superfluid\312\002\022Os" +
+      "mosis\\Superfluid\342\002\036Osmosis\\Superfluid\\GP" +
+      "BMetadata\352\002\023Osmosis::Superfluidb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

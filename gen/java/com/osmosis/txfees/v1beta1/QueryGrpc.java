@@ -139,6 +139,37 @@ public final class QueryGrpc {
     return getBaseDenomMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest,
+      com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse> getGetEipBaseFeeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetEipBaseFee",
+      requestType = com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest.class,
+      responseType = com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest,
+      com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse> getGetEipBaseFeeMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest, com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse> getGetEipBaseFeeMethod;
+    if ((getGetEipBaseFeeMethod = QueryGrpc.getGetEipBaseFeeMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getGetEipBaseFeeMethod = QueryGrpc.getGetEipBaseFeeMethod) == null) {
+          QueryGrpc.getGetEipBaseFeeMethod = getGetEipBaseFeeMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest, com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetEipBaseFee"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("GetEipBaseFee"))
+              .build();
+        }
+      }
+    }
+    return getGetEipBaseFeeMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -228,6 +259,16 @@ public final class QueryGrpc {
         io.grpc.stub.StreamObserver<com.osmosis.txfees.v1beta1.QueryProto.QueryBaseDenomResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBaseDenomMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Returns a list of all base denom tokens and their corresponding pools.
+     * </pre>
+     */
+    default void getEipBaseFee(com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetEipBaseFeeMethod(), responseObserver);
+    }
   }
 
   /**
@@ -302,6 +343,17 @@ public final class QueryGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getBaseDenomMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Returns a list of all base denom tokens and their corresponding pools.
+     * </pre>
+     */
+    public void getEipBaseFee(com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetEipBaseFeeMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -360,6 +412,16 @@ public final class QueryGrpc {
     public com.osmosis.txfees.v1beta1.QueryProto.QueryBaseDenomResponse baseDenom(com.osmosis.txfees.v1beta1.QueryProto.QueryBaseDenomRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBaseDenomMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns a list of all base denom tokens and their corresponding pools.
+     * </pre>
+     */
+    public com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse getEipBaseFee(com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetEipBaseFeeMethod(), getCallOptions(), request);
     }
   }
 
@@ -424,12 +486,24 @@ public final class QueryGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getBaseDenomMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Returns a list of all base denom tokens and their corresponding pools.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse> getEipBaseFee(
+        com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetEipBaseFeeMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_FEE_TOKENS = 0;
   private static final int METHODID_DENOM_SPOT_PRICE = 1;
   private static final int METHODID_DENOM_POOL_ID = 2;
   private static final int METHODID_BASE_DENOM = 3;
+  private static final int METHODID_GET_EIP_BASE_FEE = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -463,6 +537,10 @@ public final class QueryGrpc {
         case METHODID_BASE_DENOM:
           serviceImpl.baseDenom((com.osmosis.txfees.v1beta1.QueryProto.QueryBaseDenomRequest) request,
               (io.grpc.stub.StreamObserver<com.osmosis.txfees.v1beta1.QueryProto.QueryBaseDenomResponse>) responseObserver);
+          break;
+        case METHODID_GET_EIP_BASE_FEE:
+          serviceImpl.getEipBaseFee((com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -510,6 +588,13 @@ public final class QueryGrpc {
               com.osmosis.txfees.v1beta1.QueryProto.QueryBaseDenomRequest,
               com.osmosis.txfees.v1beta1.QueryProto.QueryBaseDenomResponse>(
                 service, METHODID_BASE_DENOM)))
+        .addMethod(
+          getGetEipBaseFeeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest,
+              com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse>(
+                service, METHODID_GET_EIP_BASE_FEE)))
         .build();
   }
 
@@ -562,6 +647,7 @@ public final class QueryGrpc {
               .addMethod(getDenomSpotPriceMethod())
               .addMethod(getDenomPoolIdMethod())
               .addMethod(getBaseDenomMethod())
+              .addMethod(getGetEipBaseFeeMethod())
               .build();
         }
       }

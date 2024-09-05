@@ -4,12 +4,12 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * Msg defines the valset-pref modules's gRPC message service.
+ * Msg defines the valset-pref module's gRPC message service.
  * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.55.1)",
-    comments = "Source: osmosis/valset-pref/v1beta1/tx.proto")
+    comments = "Source: osmosis/valsetpref/v1beta1/tx.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class MsgGrpc {
 
@@ -109,6 +109,37 @@ public final class MsgGrpc {
       }
     }
     return getUndelegateFromValidatorSetMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromRebalancedValidatorSet,
+      com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromRebalancedValidatorSetResponse> getUndelegateFromRebalancedValidatorSetMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UndelegateFromRebalancedValidatorSet",
+      requestType = com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromRebalancedValidatorSet.class,
+      responseType = com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromRebalancedValidatorSetResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromRebalancedValidatorSet,
+      com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromRebalancedValidatorSetResponse> getUndelegateFromRebalancedValidatorSetMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromRebalancedValidatorSet, com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromRebalancedValidatorSetResponse> getUndelegateFromRebalancedValidatorSetMethod;
+    if ((getUndelegateFromRebalancedValidatorSetMethod = MsgGrpc.getUndelegateFromRebalancedValidatorSetMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getUndelegateFromRebalancedValidatorSetMethod = MsgGrpc.getUndelegateFromRebalancedValidatorSetMethod) == null) {
+          MsgGrpc.getUndelegateFromRebalancedValidatorSetMethod = getUndelegateFromRebalancedValidatorSetMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromRebalancedValidatorSet, com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromRebalancedValidatorSetResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UndelegateFromRebalancedValidatorSet"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromRebalancedValidatorSet.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromRebalancedValidatorSetResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("UndelegateFromRebalancedValidatorSet"))
+              .build();
+        }
+      }
+    }
+    return getUndelegateFromRebalancedValidatorSetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet,
@@ -250,7 +281,7 @@ public final class MsgGrpc {
 
   /**
    * <pre>
-   * Msg defines the valset-pref modules's gRPC message service.
+   * Msg defines the valset-pref module's gRPC message service.
    * </pre>
    */
   public interface AsyncService {
@@ -291,6 +322,18 @@ public final class MsgGrpc {
 
     /**
      * <pre>
+     * UndelegateFromRebalancedValidatorSet undelegates the proivded amount from
+     * the validator set, but takes into consideration the current delegations
+     * to the user's validator set to determine the weights assigned to each.
+     * </pre>
+     */
+    default void undelegateFromRebalancedValidatorSet(com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromRebalancedValidatorSet request,
+        io.grpc.stub.StreamObserver<com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromRebalancedValidatorSetResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUndelegateFromRebalancedValidatorSetMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * RedelegateValidatorSet takes the existing validator set and redelegates to
      * a new set.
      * </pre>
@@ -326,7 +369,7 @@ public final class MsgGrpc {
   /**
    * Base class for the server implementation of the service Msg.
    * <pre>
-   * Msg defines the valset-pref modules's gRPC message service.
+   * Msg defines the valset-pref module's gRPC message service.
    * </pre>
    */
   public static abstract class MsgImplBase
@@ -340,7 +383,7 @@ public final class MsgGrpc {
   /**
    * A stub to allow clients to do asynchronous rpc calls to service Msg.
    * <pre>
-   * Msg defines the valset-pref modules's gRPC message service.
+   * Msg defines the valset-pref module's gRPC message service.
    * </pre>
    */
   public static final class MsgStub
@@ -395,6 +438,19 @@ public final class MsgGrpc {
 
     /**
      * <pre>
+     * UndelegateFromRebalancedValidatorSet undelegates the proivded amount from
+     * the validator set, but takes into consideration the current delegations
+     * to the user's validator set to determine the weights assigned to each.
+     * </pre>
+     */
+    public void undelegateFromRebalancedValidatorSet(com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromRebalancedValidatorSet request,
+        io.grpc.stub.StreamObserver<com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromRebalancedValidatorSetResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUndelegateFromRebalancedValidatorSetMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * RedelegateValidatorSet takes the existing validator set and redelegates to
      * a new set.
      * </pre>
@@ -433,7 +489,7 @@ public final class MsgGrpc {
   /**
    * A stub to allow clients to do synchronous rpc calls to service Msg.
    * <pre>
-   * Msg defines the valset-pref modules's gRPC message service.
+   * Msg defines the valset-pref module's gRPC message service.
    * </pre>
    */
   public static final class MsgBlockingStub
@@ -485,6 +541,18 @@ public final class MsgGrpc {
 
     /**
      * <pre>
+     * UndelegateFromRebalancedValidatorSet undelegates the proivded amount from
+     * the validator set, but takes into consideration the current delegations
+     * to the user's validator set to determine the weights assigned to each.
+     * </pre>
+     */
+    public com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromRebalancedValidatorSetResponse undelegateFromRebalancedValidatorSet(com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromRebalancedValidatorSet request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUndelegateFromRebalancedValidatorSetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * RedelegateValidatorSet takes the existing validator set and redelegates to
      * a new set.
      * </pre>
@@ -520,7 +588,7 @@ public final class MsgGrpc {
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service Msg.
    * <pre>
-   * Msg defines the valset-pref modules's gRPC message service.
+   * Msg defines the valset-pref module's gRPC message service.
    * </pre>
    */
   public static final class MsgFutureStub
@@ -575,6 +643,19 @@ public final class MsgGrpc {
 
     /**
      * <pre>
+     * UndelegateFromRebalancedValidatorSet undelegates the proivded amount from
+     * the validator set, but takes into consideration the current delegations
+     * to the user's validator set to determine the weights assigned to each.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromRebalancedValidatorSetResponse> undelegateFromRebalancedValidatorSet(
+        com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromRebalancedValidatorSet request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUndelegateFromRebalancedValidatorSetMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * RedelegateValidatorSet takes the existing validator set and redelegates to
      * a new set.
      * </pre>
@@ -613,9 +694,10 @@ public final class MsgGrpc {
   private static final int METHODID_SET_VALIDATOR_SET_PREFERENCE = 0;
   private static final int METHODID_DELEGATE_TO_VALIDATOR_SET = 1;
   private static final int METHODID_UNDELEGATE_FROM_VALIDATOR_SET = 2;
-  private static final int METHODID_REDELEGATE_VALIDATOR_SET = 3;
-  private static final int METHODID_WITHDRAW_DELEGATION_REWARDS = 4;
-  private static final int METHODID_DELEGATE_BONDED_TOKENS = 5;
+  private static final int METHODID_UNDELEGATE_FROM_REBALANCED_VALIDATOR_SET = 3;
+  private static final int METHODID_REDELEGATE_VALIDATOR_SET = 4;
+  private static final int METHODID_WITHDRAW_DELEGATION_REWARDS = 5;
+  private static final int METHODID_DELEGATE_BONDED_TOKENS = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -645,6 +727,10 @@ public final class MsgGrpc {
         case METHODID_UNDELEGATE_FROM_VALIDATOR_SET:
           serviceImpl.undelegateFromValidatorSet((com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet) request,
               (io.grpc.stub.StreamObserver<com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse>) responseObserver);
+          break;
+        case METHODID_UNDELEGATE_FROM_REBALANCED_VALIDATOR_SET:
+          serviceImpl.undelegateFromRebalancedValidatorSet((com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromRebalancedValidatorSet) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromRebalancedValidatorSetResponse>) responseObserver);
           break;
         case METHODID_REDELEGATE_VALIDATOR_SET:
           serviceImpl.redelegateValidatorSet((com.osmosis.valsetpref.v1beta1.TxProto.MsgRedelegateValidatorSet) request,
@@ -697,6 +783,13 @@ public final class MsgGrpc {
               com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSet,
               com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromValidatorSetResponse>(
                 service, METHODID_UNDELEGATE_FROM_VALIDATOR_SET)))
+        .addMethod(
+          getUndelegateFromRebalancedValidatorSetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromRebalancedValidatorSet,
+              com.osmosis.valsetpref.v1beta1.TxProto.MsgUndelegateFromRebalancedValidatorSetResponse>(
+                service, METHODID_UNDELEGATE_FROM_REBALANCED_VALIDATOR_SET)))
         .addMethod(
           getRedelegateValidatorSetMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -769,6 +862,7 @@ public final class MsgGrpc {
               .addMethod(getSetValidatorSetPreferenceMethod())
               .addMethod(getDelegateToValidatorSetMethod())
               .addMethod(getUndelegateFromValidatorSetMethod())
+              .addMethod(getUndelegateFromRebalancedValidatorSetMethod())
               .addMethod(getRedelegateValidatorSetMethod())
               .addMethod(getWithdrawDelegationRewardsMethod())
               .addMethod(getDelegateBondedTokensMethod())

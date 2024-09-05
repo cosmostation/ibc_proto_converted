@@ -838,7 +838,7 @@ public final class ModuleRouteProto {
       "ncentrated\020\002\022\014\n\010CosmWasm\020\003\032\004\210\243\036\000B\370\001\n\037com" +
       ".osmosis.poolmanager.v1beta1B\020ModuleRout" +
       "eProtoZ7github.com/osmosis-labs/osmosis/" +
-      "v15/x/poolmanager/types\242\002\003OPX\252\002\033Osmosis." +
+      "v26/x/poolmanager/types\242\002\003OPX\252\002\033Osmosis." +
       "Poolmanager.V1beta1\312\002\033Osmosis\\Poolmanage" +
       "r\\V1beta1\342\002\'Osmosis\\Poolmanager\\V1beta1\\" +
       "GPBMetadata\352\002\035Osmosis::Poolmanager::V1be" +

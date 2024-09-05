@@ -140,33 +140,40 @@ public final class GenesisProto {
 
     /**
      * <pre>
-     * The pool weights that are being used to calculate the weight (compute cost)
-     * of each route.
+     * DEPRECATED: pool_weights are weights that are being used to calculate the
+     * compute cost of each route. This field is deprecated.
+     * It is replaced by the `info_by_pool_type` field.
      * </pre>
      *
-     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;",deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.protorev.v1beta1.GenesisState.pool_weights is deprecated.
+     *     See osmosis/protorev/v1beta1/genesis.proto;l=30
      * @return Whether the poolWeights field is set.
      */
-    boolean hasPoolWeights();
+    @java.lang.Deprecated boolean hasPoolWeights();
     /**
      * <pre>
-     * The pool weights that are being used to calculate the weight (compute cost)
-     * of each route.
+     * DEPRECATED: pool_weights are weights that are being used to calculate the
+     * compute cost of each route. This field is deprecated.
+     * It is replaced by the `info_by_pool_type` field.
      * </pre>
      *
-     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;",deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.protorev.v1beta1.GenesisState.pool_weights is deprecated.
+     *     See osmosis/protorev/v1beta1/genesis.proto;l=30
      * @return The poolWeights.
      */
-    com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights getPoolWeights();
+    @java.lang.Deprecated com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights getPoolWeights();
     /**
      * <pre>
-     * The pool weights that are being used to calculate the weight (compute cost)
-     * of each route.
+     * DEPRECATED: pool_weights are weights that are being used to calculate the
+     * compute cost of each route. This field is deprecated.
+     * It is replaced by the `info_by_pool_type` field.
      * </pre>
      *
-     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;",deprecated:&#92;"true&#92;""];</code>
      */
-    com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder getPoolWeightsOrBuilder();
+    @java.lang.Deprecated com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder getPoolWeightsOrBuilder();
 
     /**
      * <pre>
@@ -283,6 +290,95 @@ public final class GenesisProto {
      * @return The pointCountForBlock.
      */
     long getPointCountForBlock();
+
+    /**
+     * <pre>
+     * All of the profits that have been accumulated by the module.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getProfitsList();
+    /**
+     * <pre>
+     * All of the profits that have been accumulated by the module.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getProfits(int index);
+    /**
+     * <pre>
+     * All of the profits that have been accumulated by the module.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+     */
+    int getProfitsCount();
+    /**
+     * <pre>
+     * All of the profits that have been accumulated by the module.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getProfitsOrBuilderList();
+    /**
+     * <pre>
+     * All of the profits that have been accumulated by the module.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getProfitsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Information that is used to estimate execution time / gas
+     * consumption of a swap on a given pool type.
+     * </pre>
+     *
+     * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 13 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+     * @return Whether the infoByPoolType field is set.
+     */
+    boolean hasInfoByPoolType();
+    /**
+     * <pre>
+     * Information that is used to estimate execution time / gas
+     * consumption of a swap on a given pool type.
+     * </pre>
+     *
+     * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 13 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+     * @return The infoByPoolType.
+     */
+    com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType getInfoByPoolType();
+    /**
+     * <pre>
+     * Information that is used to estimate execution time / gas
+     * consumption of a swap on a given pool type.
+     * </pre>
+     *
+     * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 13 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+     */
+    com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolTypeOrBuilder getInfoByPoolTypeOrBuilder();
+
+    /**
+     * <code>.osmosis.protorev.v1beta1.CyclicArbTracker cyclic_arb_tracker = 14 [json_name = "cyclicArbTracker", (.gogoproto.moretags) = "yaml:&#92;"cyclic_arb_tracker&#92;""];</code>
+     * @return Whether the cyclicArbTracker field is set.
+     */
+    boolean hasCyclicArbTracker();
+    /**
+     * <code>.osmosis.protorev.v1beta1.CyclicArbTracker cyclic_arb_tracker = 14 [json_name = "cyclicArbTracker", (.gogoproto.moretags) = "yaml:&#92;"cyclic_arb_tracker&#92;""];</code>
+     * @return The cyclicArbTracker.
+     */
+    com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTracker getCyclicArbTracker();
+    /**
+     * <code>.osmosis.protorev.v1beta1.CyclicArbTracker cyclic_arb_tracker = 14 [json_name = "cyclicArbTracker", (.gogoproto.moretags) = "yaml:&#92;"cyclic_arb_tracker&#92;""];</code>
+     */
+    com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTrackerOrBuilder getCyclicArbTrackerOrBuilder();
   }
   /**
    * <pre>
@@ -305,6 +401,7 @@ public final class GenesisProto {
       baseDenoms_ = java.util.Collections.emptyList();
       developerFees_ = java.util.Collections.emptyList();
       developerAddress_ = "";
+      profits_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -496,40 +593,47 @@ public final class GenesisProto {
     private com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights poolWeights_;
     /**
      * <pre>
-     * The pool weights that are being used to calculate the weight (compute cost)
-     * of each route.
+     * DEPRECATED: pool_weights are weights that are being used to calculate the
+     * compute cost of each route. This field is deprecated.
+     * It is replaced by the `info_by_pool_type` field.
      * </pre>
      *
-     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;",deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.protorev.v1beta1.GenesisState.pool_weights is deprecated.
+     *     See osmosis/protorev/v1beta1/genesis.proto;l=30
      * @return Whether the poolWeights field is set.
      */
     @java.lang.Override
-    public boolean hasPoolWeights() {
+    @java.lang.Deprecated public boolean hasPoolWeights() {
       return poolWeights_ != null;
     }
     /**
      * <pre>
-     * The pool weights that are being used to calculate the weight (compute cost)
-     * of each route.
+     * DEPRECATED: pool_weights are weights that are being used to calculate the
+     * compute cost of each route. This field is deprecated.
+     * It is replaced by the `info_by_pool_type` field.
      * </pre>
      *
-     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;",deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.protorev.v1beta1.GenesisState.pool_weights is deprecated.
+     *     See osmosis/protorev/v1beta1/genesis.proto;l=30
      * @return The poolWeights.
      */
     @java.lang.Override
-    public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights getPoolWeights() {
+    @java.lang.Deprecated public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights getPoolWeights() {
       return poolWeights_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.getDefaultInstance() : poolWeights_;
     }
     /**
      * <pre>
-     * The pool weights that are being used to calculate the weight (compute cost)
-     * of each route.
+     * DEPRECATED: pool_weights are weights that are being used to calculate the
+     * compute cost of each route. This field is deprecated.
+     * It is replaced by the `info_by_pool_type` field.
      * </pre>
      *
-     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;",deprecated:&#92;"true&#92;""];</code>
      */
     @java.lang.Override
-    public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder getPoolWeightsOrBuilder() {
+    @java.lang.Deprecated public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder getPoolWeightsOrBuilder() {
       return poolWeights_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.getDefaultInstance() : poolWeights_;
     }
 
@@ -718,6 +822,134 @@ public final class GenesisProto {
       return pointCountForBlock_;
     }
 
+    public static final int PROFITS_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> profits_;
+    /**
+     * <pre>
+     * All of the profits that have been accumulated by the module.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getProfitsList() {
+      return profits_;
+    }
+    /**
+     * <pre>
+     * All of the profits that have been accumulated by the module.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getProfitsOrBuilderList() {
+      return profits_;
+    }
+    /**
+     * <pre>
+     * All of the profits that have been accumulated by the module.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getProfitsCount() {
+      return profits_.size();
+    }
+    /**
+     * <pre>
+     * All of the profits that have been accumulated by the module.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getProfits(int index) {
+      return profits_.get(index);
+    }
+    /**
+     * <pre>
+     * All of the profits that have been accumulated by the module.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getProfitsOrBuilder(
+        int index) {
+      return profits_.get(index);
+    }
+
+    public static final int INFO_BY_POOL_TYPE_FIELD_NUMBER = 13;
+    private com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType infoByPoolType_;
+    /**
+     * <pre>
+     * Information that is used to estimate execution time / gas
+     * consumption of a swap on a given pool type.
+     * </pre>
+     *
+     * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 13 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+     * @return Whether the infoByPoolType field is set.
+     */
+    @java.lang.Override
+    public boolean hasInfoByPoolType() {
+      return infoByPoolType_ != null;
+    }
+    /**
+     * <pre>
+     * Information that is used to estimate execution time / gas
+     * consumption of a swap on a given pool type.
+     * </pre>
+     *
+     * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 13 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+     * @return The infoByPoolType.
+     */
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType getInfoByPoolType() {
+      return infoByPoolType_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.getDefaultInstance() : infoByPoolType_;
+    }
+    /**
+     * <pre>
+     * Information that is used to estimate execution time / gas
+     * consumption of a swap on a given pool type.
+     * </pre>
+     *
+     * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 13 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolTypeOrBuilder getInfoByPoolTypeOrBuilder() {
+      return infoByPoolType_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.getDefaultInstance() : infoByPoolType_;
+    }
+
+    public static final int CYCLIC_ARB_TRACKER_FIELD_NUMBER = 14;
+    private com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTracker cyclicArbTracker_;
+    /**
+     * <code>.osmosis.protorev.v1beta1.CyclicArbTracker cyclic_arb_tracker = 14 [json_name = "cyclicArbTracker", (.gogoproto.moretags) = "yaml:&#92;"cyclic_arb_tracker&#92;""];</code>
+     * @return Whether the cyclicArbTracker field is set.
+     */
+    @java.lang.Override
+    public boolean hasCyclicArbTracker() {
+      return cyclicArbTracker_ != null;
+    }
+    /**
+     * <code>.osmosis.protorev.v1beta1.CyclicArbTracker cyclic_arb_tracker = 14 [json_name = "cyclicArbTracker", (.gogoproto.moretags) = "yaml:&#92;"cyclic_arb_tracker&#92;""];</code>
+     * @return The cyclicArbTracker.
+     */
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTracker getCyclicArbTracker() {
+      return cyclicArbTracker_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTracker.getDefaultInstance() : cyclicArbTracker_;
+    }
+    /**
+     * <code>.osmosis.protorev.v1beta1.CyclicArbTracker cyclic_arb_tracker = 14 [json_name = "cyclicArbTracker", (.gogoproto.moretags) = "yaml:&#92;"cyclic_arb_tracker&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTrackerOrBuilder getCyclicArbTrackerOrBuilder() {
+      return cyclicArbTracker_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTracker.getDefaultInstance() : cyclicArbTracker_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -764,6 +996,15 @@ public final class GenesisProto {
       }
       if (pointCountForBlock_ != 0L) {
         output.writeUInt64(11, pointCountForBlock_);
+      }
+      for (int i = 0; i < profits_.size(); i++) {
+        output.writeMessage(12, profits_.get(i));
+      }
+      if (infoByPoolType_ != null) {
+        output.writeMessage(13, getInfoByPoolType());
+      }
+      if (cyclicArbTracker_ != null) {
+        output.writeMessage(14, getCyclicArbTracker());
       }
       getUnknownFields().writeTo(output);
     }
@@ -817,6 +1058,18 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(11, pointCountForBlock_);
       }
+      for (int i = 0; i < profits_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, profits_.get(i));
+      }
+      if (infoByPoolType_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getInfoByPoolType());
+      }
+      if (cyclicArbTracker_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getCyclicArbTracker());
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -860,6 +1113,18 @@ public final class GenesisProto {
           != other.getMaxPoolPointsPerTx()) return false;
       if (getPointCountForBlock()
           != other.getPointCountForBlock()) return false;
+      if (!getProfitsList()
+          .equals(other.getProfitsList())) return false;
+      if (hasInfoByPoolType() != other.hasInfoByPoolType()) return false;
+      if (hasInfoByPoolType()) {
+        if (!getInfoByPoolType()
+            .equals(other.getInfoByPoolType())) return false;
+      }
+      if (hasCyclicArbTracker() != other.hasCyclicArbTracker()) return false;
+      if (hasCyclicArbTracker()) {
+        if (!getCyclicArbTracker()
+            .equals(other.getCyclicArbTracker())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -908,6 +1173,18 @@ public final class GenesisProto {
       hash = (37 * hash) + POINT_COUNT_FOR_BLOCK_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getPointCountForBlock());
+      if (getProfitsCount() > 0) {
+        hash = (37 * hash) + PROFITS_FIELD_NUMBER;
+        hash = (53 * hash) + getProfitsList().hashCode();
+      }
+      if (hasInfoByPoolType()) {
+        hash = (37 * hash) + INFO_BY_POOL_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getInfoByPoolType().hashCode();
+      }
+      if (hasCyclicArbTracker()) {
+        hash = (37 * hash) + CYCLIC_ARB_TRACKER_FIELD_NUMBER;
+        hash = (53 * hash) + getCyclicArbTracker().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1080,6 +1357,23 @@ public final class GenesisProto {
         maxPoolPointsPerBlock_ = 0L;
         maxPoolPointsPerTx_ = 0L;
         pointCountForBlock_ = 0L;
+        if (profitsBuilder_ == null) {
+          profits_ = java.util.Collections.emptyList();
+        } else {
+          profits_ = null;
+          profitsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000800);
+        infoByPoolType_ = null;
+        if (infoByPoolTypeBuilder_ != null) {
+          infoByPoolTypeBuilder_.dispose();
+          infoByPoolTypeBuilder_ = null;
+        }
+        cyclicArbTracker_ = null;
+        if (cyclicArbTrackerBuilder_ != null) {
+          cyclicArbTrackerBuilder_.dispose();
+          cyclicArbTrackerBuilder_ = null;
+        }
         return this;
       }
 
@@ -1140,6 +1434,15 @@ public final class GenesisProto {
         } else {
           result.developerFees_ = developerFeesBuilder_.build();
         }
+        if (profitsBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) != 0)) {
+            profits_ = java.util.Collections.unmodifiableList(profits_);
+            bitField0_ = (bitField0_ & ~0x00000800);
+          }
+          result.profits_ = profits_;
+        } else {
+          result.profits_ = profitsBuilder_.build();
+        }
       }
 
       private void buildPartial0(com.osmosis.protorev.v1beta1.GenesisProto.GenesisState result) {
@@ -1171,6 +1474,16 @@ public final class GenesisProto {
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.pointCountForBlock_ = pointCountForBlock_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.infoByPoolType_ = infoByPoolTypeBuilder_ == null
+              ? infoByPoolType_
+              : infoByPoolTypeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.cyclicArbTracker_ = cyclicArbTrackerBuilder_ == null
+              ? cyclicArbTracker_
+              : cyclicArbTrackerBuilder_.build();
         }
       }
 
@@ -1322,6 +1635,38 @@ public final class GenesisProto {
         if (other.getPointCountForBlock() != 0L) {
           setPointCountForBlock(other.getPointCountForBlock());
         }
+        if (profitsBuilder_ == null) {
+          if (!other.profits_.isEmpty()) {
+            if (profits_.isEmpty()) {
+              profits_ = other.profits_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+            } else {
+              ensureProfitsIsMutable();
+              profits_.addAll(other.profits_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.profits_.isEmpty()) {
+            if (profitsBuilder_.isEmpty()) {
+              profitsBuilder_.dispose();
+              profitsBuilder_ = null;
+              profits_ = other.profits_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+              profitsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getProfitsFieldBuilder() : null;
+            } else {
+              profitsBuilder_.addAllMessages(other.profits_);
+            }
+          }
+        }
+        if (other.hasInfoByPoolType()) {
+          mergeInfoByPoolType(other.getInfoByPoolType());
+        }
+        if (other.hasCyclicArbTracker()) {
+          mergeCyclicArbTracker(other.getCyclicArbTracker());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1431,6 +1776,33 @@ public final class GenesisProto {
                 bitField0_ |= 0x00000400;
                 break;
               } // case 88
+              case 98: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (profitsBuilder_ == null) {
+                  ensureProfitsIsMutable();
+                  profits_.add(m);
+                } else {
+                  profitsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 98
+              case 106: {
+                input.readMessage(
+                    getInfoByPoolTypeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 106
+              case 114: {
+                input.readMessage(
+                    getCyclicArbTrackerFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 114
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2250,26 +2622,32 @@ public final class GenesisProto {
           com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder> poolWeightsBuilder_;
       /**
        * <pre>
-       * The pool weights that are being used to calculate the weight (compute cost)
-       * of each route.
+       * DEPRECATED: pool_weights are weights that are being used to calculate the
+       * compute cost of each route. This field is deprecated.
+       * It is replaced by the `info_by_pool_type` field.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.protorev.v1beta1.GenesisState.pool_weights is deprecated.
+       *     See osmosis/protorev/v1beta1/genesis.proto;l=30
        * @return Whether the poolWeights field is set.
        */
-      public boolean hasPoolWeights() {
+      @java.lang.Deprecated public boolean hasPoolWeights() {
         return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
-       * The pool weights that are being used to calculate the weight (compute cost)
-       * of each route.
+       * DEPRECATED: pool_weights are weights that are being used to calculate the
+       * compute cost of each route. This field is deprecated.
+       * It is replaced by the `info_by_pool_type` field.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.protorev.v1beta1.GenesisState.pool_weights is deprecated.
+       *     See osmosis/protorev/v1beta1/genesis.proto;l=30
        * @return The poolWeights.
        */
-      public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights getPoolWeights() {
+      @java.lang.Deprecated public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights getPoolWeights() {
         if (poolWeightsBuilder_ == null) {
           return poolWeights_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.getDefaultInstance() : poolWeights_;
         } else {
@@ -2278,13 +2656,14 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * The pool weights that are being used to calculate the weight (compute cost)
-       * of each route.
+       * DEPRECATED: pool_weights are weights that are being used to calculate the
+       * compute cost of each route. This field is deprecated.
+       * It is replaced by the `info_by_pool_type` field.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;",deprecated:&#92;"true&#92;""];</code>
        */
-      public Builder setPoolWeights(com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights value) {
+      @java.lang.Deprecated public Builder setPoolWeights(com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights value) {
         if (poolWeightsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2299,13 +2678,14 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * The pool weights that are being used to calculate the weight (compute cost)
-       * of each route.
+       * DEPRECATED: pool_weights are weights that are being used to calculate the
+       * compute cost of each route. This field is deprecated.
+       * It is replaced by the `info_by_pool_type` field.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;",deprecated:&#92;"true&#92;""];</code>
        */
-      public Builder setPoolWeights(
+      @java.lang.Deprecated public Builder setPoolWeights(
           com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder builderForValue) {
         if (poolWeightsBuilder_ == null) {
           poolWeights_ = builderForValue.build();
@@ -2318,13 +2698,14 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * The pool weights that are being used to calculate the weight (compute cost)
-       * of each route.
+       * DEPRECATED: pool_weights are weights that are being used to calculate the
+       * compute cost of each route. This field is deprecated.
+       * It is replaced by the `info_by_pool_type` field.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;",deprecated:&#92;"true&#92;""];</code>
        */
-      public Builder mergePoolWeights(com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights value) {
+      @java.lang.Deprecated public Builder mergePoolWeights(com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights value) {
         if (poolWeightsBuilder_ == null) {
           if (((bitField0_ & 0x00000008) != 0) &&
             poolWeights_ != null &&
@@ -2342,13 +2723,14 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * The pool weights that are being used to calculate the weight (compute cost)
-       * of each route.
+       * DEPRECATED: pool_weights are weights that are being used to calculate the
+       * compute cost of each route. This field is deprecated.
+       * It is replaced by the `info_by_pool_type` field.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;",deprecated:&#92;"true&#92;""];</code>
        */
-      public Builder clearPoolWeights() {
+      @java.lang.Deprecated public Builder clearPoolWeights() {
         bitField0_ = (bitField0_ & ~0x00000008);
         poolWeights_ = null;
         if (poolWeightsBuilder_ != null) {
@@ -2360,26 +2742,28 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * The pool weights that are being used to calculate the weight (compute cost)
-       * of each route.
+       * DEPRECATED: pool_weights are weights that are being used to calculate the
+       * compute cost of each route. This field is deprecated.
+       * It is replaced by the `info_by_pool_type` field.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;",deprecated:&#92;"true&#92;""];</code>
        */
-      public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder getPoolWeightsBuilder() {
+      @java.lang.Deprecated public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder getPoolWeightsBuilder() {
         bitField0_ |= 0x00000008;
         onChanged();
         return getPoolWeightsFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * The pool weights that are being used to calculate the weight (compute cost)
-       * of each route.
+       * DEPRECATED: pool_weights are weights that are being used to calculate the
+       * compute cost of each route. This field is deprecated.
+       * It is replaced by the `info_by_pool_type` field.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;",deprecated:&#92;"true&#92;""];</code>
        */
-      public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder getPoolWeightsOrBuilder() {
+      @java.lang.Deprecated public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder getPoolWeightsOrBuilder() {
         if (poolWeightsBuilder_ != null) {
           return poolWeightsBuilder_.getMessageOrBuilder();
         } else {
@@ -2389,11 +2773,12 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * The pool weights that are being used to calculate the weight (compute cost)
-       * of each route.
+       * DEPRECATED: pool_weights are weights that are being used to calculate the
+       * compute cost of each route. This field is deprecated.
+       * It is replaced by the `info_by_pool_type` field.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;",deprecated:&#92;"true&#92;""];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder> 
@@ -3038,6 +3423,601 @@ public final class GenesisProto {
         onChanged();
         return this;
       }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> profits_ =
+        java.util.Collections.emptyList();
+      private void ensureProfitsIsMutable() {
+        if (!((bitField0_ & 0x00000800) != 0)) {
+          profits_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(profits_);
+          bitField0_ |= 0x00000800;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> profitsBuilder_;
+
+      /**
+       * <pre>
+       * All of the profits that have been accumulated by the module.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getProfitsList() {
+        if (profitsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(profits_);
+        } else {
+          return profitsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * All of the profits that have been accumulated by the module.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public int getProfitsCount() {
+        if (profitsBuilder_ == null) {
+          return profits_.size();
+        } else {
+          return profitsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * All of the profits that have been accumulated by the module.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getProfits(int index) {
+        if (profitsBuilder_ == null) {
+          return profits_.get(index);
+        } else {
+          return profitsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * All of the profits that have been accumulated by the module.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public Builder setProfits(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (profitsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProfitsIsMutable();
+          profits_.set(index, value);
+          onChanged();
+        } else {
+          profitsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * All of the profits that have been accumulated by the module.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public Builder setProfits(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (profitsBuilder_ == null) {
+          ensureProfitsIsMutable();
+          profits_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          profitsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * All of the profits that have been accumulated by the module.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public Builder addProfits(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (profitsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProfitsIsMutable();
+          profits_.add(value);
+          onChanged();
+        } else {
+          profitsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * All of the profits that have been accumulated by the module.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public Builder addProfits(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (profitsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProfitsIsMutable();
+          profits_.add(index, value);
+          onChanged();
+        } else {
+          profitsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * All of the profits that have been accumulated by the module.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public Builder addProfits(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (profitsBuilder_ == null) {
+          ensureProfitsIsMutable();
+          profits_.add(builderForValue.build());
+          onChanged();
+        } else {
+          profitsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * All of the profits that have been accumulated by the module.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public Builder addProfits(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (profitsBuilder_ == null) {
+          ensureProfitsIsMutable();
+          profits_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          profitsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * All of the profits that have been accumulated by the module.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public Builder addAllProfits(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (profitsBuilder_ == null) {
+          ensureProfitsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, profits_);
+          onChanged();
+        } else {
+          profitsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * All of the profits that have been accumulated by the module.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public Builder clearProfits() {
+        if (profitsBuilder_ == null) {
+          profits_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000800);
+          onChanged();
+        } else {
+          profitsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * All of the profits that have been accumulated by the module.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public Builder removeProfits(int index) {
+        if (profitsBuilder_ == null) {
+          ensureProfitsIsMutable();
+          profits_.remove(index);
+          onChanged();
+        } else {
+          profitsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * All of the profits that have been accumulated by the module.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getProfitsBuilder(
+          int index) {
+        return getProfitsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * All of the profits that have been accumulated by the module.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getProfitsOrBuilder(
+          int index) {
+        if (profitsBuilder_ == null) {
+          return profits_.get(index);  } else {
+          return profitsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * All of the profits that have been accumulated by the module.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getProfitsOrBuilderList() {
+        if (profitsBuilder_ != null) {
+          return profitsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(profits_);
+        }
+      }
+      /**
+       * <pre>
+       * All of the profits that have been accumulated by the module.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addProfitsBuilder() {
+        return getProfitsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * All of the profits that have been accumulated by the module.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addProfitsBuilder(
+          int index) {
+        return getProfitsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * All of the profits that have been accumulated by the module.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 12 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getProfitsBuilderList() {
+        return getProfitsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getProfitsFieldBuilder() {
+        if (profitsBuilder_ == null) {
+          profitsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  profits_,
+                  ((bitField0_ & 0x00000800) != 0),
+                  getParentForChildren(),
+                  isClean());
+          profits_ = null;
+        }
+        return profitsBuilder_;
+      }
+
+      private com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType infoByPoolType_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType, com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolTypeOrBuilder> infoByPoolTypeBuilder_;
+      /**
+       * <pre>
+       * Information that is used to estimate execution time / gas
+       * consumption of a swap on a given pool type.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 13 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+       * @return Whether the infoByPoolType field is set.
+       */
+      public boolean hasInfoByPoolType() {
+        return ((bitField0_ & 0x00001000) != 0);
+      }
+      /**
+       * <pre>
+       * Information that is used to estimate execution time / gas
+       * consumption of a swap on a given pool type.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 13 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+       * @return The infoByPoolType.
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType getInfoByPoolType() {
+        if (infoByPoolTypeBuilder_ == null) {
+          return infoByPoolType_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.getDefaultInstance() : infoByPoolType_;
+        } else {
+          return infoByPoolTypeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Information that is used to estimate execution time / gas
+       * consumption of a swap on a given pool type.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 13 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+       */
+      public Builder setInfoByPoolType(com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType value) {
+        if (infoByPoolTypeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          infoByPoolType_ = value;
+        } else {
+          infoByPoolTypeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Information that is used to estimate execution time / gas
+       * consumption of a swap on a given pool type.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 13 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+       */
+      public Builder setInfoByPoolType(
+          com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.Builder builderForValue) {
+        if (infoByPoolTypeBuilder_ == null) {
+          infoByPoolType_ = builderForValue.build();
+        } else {
+          infoByPoolTypeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Information that is used to estimate execution time / gas
+       * consumption of a swap on a given pool type.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 13 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+       */
+      public Builder mergeInfoByPoolType(com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType value) {
+        if (infoByPoolTypeBuilder_ == null) {
+          if (((bitField0_ & 0x00001000) != 0) &&
+            infoByPoolType_ != null &&
+            infoByPoolType_ != com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.getDefaultInstance()) {
+            getInfoByPoolTypeBuilder().mergeFrom(value);
+          } else {
+            infoByPoolType_ = value;
+          }
+        } else {
+          infoByPoolTypeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Information that is used to estimate execution time / gas
+       * consumption of a swap on a given pool type.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 13 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+       */
+      public Builder clearInfoByPoolType() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        infoByPoolType_ = null;
+        if (infoByPoolTypeBuilder_ != null) {
+          infoByPoolTypeBuilder_.dispose();
+          infoByPoolTypeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Information that is used to estimate execution time / gas
+       * consumption of a swap on a given pool type.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 13 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.Builder getInfoByPoolTypeBuilder() {
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return getInfoByPoolTypeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Information that is used to estimate execution time / gas
+       * consumption of a swap on a given pool type.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 13 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolTypeOrBuilder getInfoByPoolTypeOrBuilder() {
+        if (infoByPoolTypeBuilder_ != null) {
+          return infoByPoolTypeBuilder_.getMessageOrBuilder();
+        } else {
+          return infoByPoolType_ == null ?
+              com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.getDefaultInstance() : infoByPoolType_;
+        }
+      }
+      /**
+       * <pre>
+       * Information that is used to estimate execution time / gas
+       * consumption of a swap on a given pool type.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 13 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType, com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolTypeOrBuilder> 
+          getInfoByPoolTypeFieldBuilder() {
+        if (infoByPoolTypeBuilder_ == null) {
+          infoByPoolTypeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType, com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolTypeOrBuilder>(
+                  getInfoByPoolType(),
+                  getParentForChildren(),
+                  isClean());
+          infoByPoolType_ = null;
+        }
+        return infoByPoolTypeBuilder_;
+      }
+
+      private com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTracker cyclicArbTracker_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTracker, com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTracker.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTrackerOrBuilder> cyclicArbTrackerBuilder_;
+      /**
+       * <code>.osmosis.protorev.v1beta1.CyclicArbTracker cyclic_arb_tracker = 14 [json_name = "cyclicArbTracker", (.gogoproto.moretags) = "yaml:&#92;"cyclic_arb_tracker&#92;""];</code>
+       * @return Whether the cyclicArbTracker field is set.
+       */
+      public boolean hasCyclicArbTracker() {
+        return ((bitField0_ & 0x00002000) != 0);
+      }
+      /**
+       * <code>.osmosis.protorev.v1beta1.CyclicArbTracker cyclic_arb_tracker = 14 [json_name = "cyclicArbTracker", (.gogoproto.moretags) = "yaml:&#92;"cyclic_arb_tracker&#92;""];</code>
+       * @return The cyclicArbTracker.
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTracker getCyclicArbTracker() {
+        if (cyclicArbTrackerBuilder_ == null) {
+          return cyclicArbTracker_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTracker.getDefaultInstance() : cyclicArbTracker_;
+        } else {
+          return cyclicArbTrackerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.osmosis.protorev.v1beta1.CyclicArbTracker cyclic_arb_tracker = 14 [json_name = "cyclicArbTracker", (.gogoproto.moretags) = "yaml:&#92;"cyclic_arb_tracker&#92;""];</code>
+       */
+      public Builder setCyclicArbTracker(com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTracker value) {
+        if (cyclicArbTrackerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cyclicArbTracker_ = value;
+        } else {
+          cyclicArbTrackerBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.protorev.v1beta1.CyclicArbTracker cyclic_arb_tracker = 14 [json_name = "cyclicArbTracker", (.gogoproto.moretags) = "yaml:&#92;"cyclic_arb_tracker&#92;""];</code>
+       */
+      public Builder setCyclicArbTracker(
+          com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTracker.Builder builderForValue) {
+        if (cyclicArbTrackerBuilder_ == null) {
+          cyclicArbTracker_ = builderForValue.build();
+        } else {
+          cyclicArbTrackerBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.protorev.v1beta1.CyclicArbTracker cyclic_arb_tracker = 14 [json_name = "cyclicArbTracker", (.gogoproto.moretags) = "yaml:&#92;"cyclic_arb_tracker&#92;""];</code>
+       */
+      public Builder mergeCyclicArbTracker(com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTracker value) {
+        if (cyclicArbTrackerBuilder_ == null) {
+          if (((bitField0_ & 0x00002000) != 0) &&
+            cyclicArbTracker_ != null &&
+            cyclicArbTracker_ != com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTracker.getDefaultInstance()) {
+            getCyclicArbTrackerBuilder().mergeFrom(value);
+          } else {
+            cyclicArbTracker_ = value;
+          }
+        } else {
+          cyclicArbTrackerBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.protorev.v1beta1.CyclicArbTracker cyclic_arb_tracker = 14 [json_name = "cyclicArbTracker", (.gogoproto.moretags) = "yaml:&#92;"cyclic_arb_tracker&#92;""];</code>
+       */
+      public Builder clearCyclicArbTracker() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        cyclicArbTracker_ = null;
+        if (cyclicArbTrackerBuilder_ != null) {
+          cyclicArbTrackerBuilder_.dispose();
+          cyclicArbTrackerBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.protorev.v1beta1.CyclicArbTracker cyclic_arb_tracker = 14 [json_name = "cyclicArbTracker", (.gogoproto.moretags) = "yaml:&#92;"cyclic_arb_tracker&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTracker.Builder getCyclicArbTrackerBuilder() {
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return getCyclicArbTrackerFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.osmosis.protorev.v1beta1.CyclicArbTracker cyclic_arb_tracker = 14 [json_name = "cyclicArbTracker", (.gogoproto.moretags) = "yaml:&#92;"cyclic_arb_tracker&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTrackerOrBuilder getCyclicArbTrackerOrBuilder() {
+        if (cyclicArbTrackerBuilder_ != null) {
+          return cyclicArbTrackerBuilder_.getMessageOrBuilder();
+        } else {
+          return cyclicArbTracker_ == null ?
+              com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTracker.getDefaultInstance() : cyclicArbTracker_;
+        }
+      }
+      /**
+       * <code>.osmosis.protorev.v1beta1.CyclicArbTracker cyclic_arb_tracker = 14 [json_name = "cyclicArbTracker", (.gogoproto.moretags) = "yaml:&#92;"cyclic_arb_tracker&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTracker, com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTracker.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTrackerOrBuilder> 
+          getCyclicArbTrackerFieldBuilder() {
+        if (cyclicArbTrackerBuilder_ == null) {
+          cyclicArbTrackerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTracker, com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTracker.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.CyclicArbTrackerOrBuilder>(
+                  getCyclicArbTracker(),
+                  getParentForChildren(),
+                  isClean());
+          cyclicArbTracker_ = null;
+        }
+        return cyclicArbTrackerBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3121,7 +4101,7 @@ public final class GenesisProto {
       "go.proto\032\'osmosis/protorev/v1beta1/proto" +
       "rev.proto\032%osmosis/protorev/v1beta1/para" +
       "ms.proto\032\031cosmos_proto/cosmos.proto\032\036cos" +
-      "mos/base/v1beta1/coin.proto\"\232\010\n\014GenesisS" +
+      "mos/base/v1beta1/coin.proto\"\353\n\n\014GenesisS" +
       "tate\022>\n\006params\030\001 \001(\0132 .osmosis.protorev." +
       "v1beta1.ParamsB\004\310\336\037\000R\006params\022\205\001\n\025token_p" +
       "air_arb_routes\030\002 \003(\0132,.osmosis.protorev." +
@@ -3129,31 +4109,40 @@ public final class GenesisProto {
       ":\"token_pair_arb_routes\"R\022tokenPairArbRo" +
       "utes\022`\n\013base_denoms\030\003 \003(\0132#.osmosis.prot" +
       "orev.v1beta1.BaseDenomB\032\310\336\037\000\362\336\037\022yaml:\"ba" +
-      "se_denoms\"R\nbaseDenoms\022e\n\014pool_weights\030\004" +
+      "se_denoms\"R\nbaseDenoms\022y\n\014pool_weights\030\004" +
       " \001(\0132%.osmosis.protorev.v1beta1.PoolWeig" +
-      "htsB\033\310\336\037\000\362\336\037\023yaml:\"pool_weights\"R\013poolWe" +
-      "ights\022_\n\031days_since_module_genesis\030\005 \001(\004" +
-      "B$\362\336\037 yaml:\"days_since_module_genesis\"R\026" +
-      "daysSinceModuleGenesis\022_\n\016developer_fees" +
-      "\030\006 \003(\0132\031.cosmos.base.v1beta1.CoinB\035\310\336\037\000\362" +
-      "\336\037\025yaml:\"developer_fees\"R\rdeveloperFees\022" +
-      "N\n\023latest_block_height\030\007 \001(\004B\036\362\336\037\032yaml:\"" +
-      "latest_block_height\"R\021latestBlockHeight\022" +
-      "[\n\021developer_address\030\010 \001(\tB.\362\336\037\030yaml:\"de" +
-      "veloper_address\"\322\264-\016cosmos.AddressR\020deve" +
-      "loperAddress\022^\n\031max_pool_points_per_bloc" +
-      "k\030\t \001(\004B$\362\336\037 yaml:\"max_pool_points_per_b" +
-      "lock\"R\025maxPoolPointsPerBlock\022U\n\026max_pool" +
-      "_points_per_tx\030\n \001(\004B!\362\336\037\035yaml:\"max_pool" +
-      "_points_per_tx\"R\022maxPoolPointsPerTx\022S\n\025p" +
-      "oint_count_for_block\030\013 \001(\004B \362\336\037\034yaml:\"po" +
-      "int_count_for_block\"R\022pointCountForBlock" +
-      "B\342\001\n\034com.osmosis.protorev.v1beta1B\014Genes" +
-      "isProtoZ4github.com/osmosis-labs/osmosis" +
-      "/v15/x/protorev/types\242\002\003OPX\252\002\030Osmosis.Pr" +
-      "otorev.V1beta1\312\002\030Osmosis\\Protorev\\V1beta" +
-      "1\342\002$Osmosis\\Protorev\\V1beta1\\GPBMetadata" +
-      "\352\002\032Osmosis::Protorev::V1beta1b\006proto3"
+      "htsB/\030\001\310\336\037\000\362\336\037%yaml:\"pool_weights\",depre" +
+      "cated:\"true\"R\013poolWeights\022_\n\031days_since_" +
+      "module_genesis\030\005 \001(\004B$\362\336\037 yaml:\"days_sin" +
+      "ce_module_genesis\"R\026daysSinceModuleGenes" +
+      "is\022_\n\016developer_fees\030\006 \003(\0132\031.cosmos.base" +
+      ".v1beta1.CoinB\035\310\336\037\000\362\336\037\025yaml:\"developer_f" +
+      "ees\"R\rdeveloperFees\022N\n\023latest_block_heig" +
+      "ht\030\007 \001(\004B\036\362\336\037\032yaml:\"latest_block_height\"" +
+      "R\021latestBlockHeight\022[\n\021developer_address" +
+      "\030\010 \001(\tB.\362\336\037\030yaml:\"developer_address\"\322\264-\016" +
+      "cosmos.AddressR\020developerAddress\022^\n\031max_" +
+      "pool_points_per_block\030\t \001(\004B$\362\336\037 yaml:\"m" +
+      "ax_pool_points_per_block\"R\025maxPoolPoints" +
+      "PerBlock\022U\n\026max_pool_points_per_tx\030\n \001(\004" +
+      "B!\362\336\037\035yaml:\"max_pool_points_per_tx\"R\022max" +
+      "PoolPointsPerTx\022S\n\025point_count_for_block" +
+      "\030\013 \001(\004B \362\336\037\034yaml:\"point_count_for_block\"" +
+      "R\022pointCountForBlock\022K\n\007profits\030\014 \003(\0132\031." +
+      "cosmos.base.v1beta1.CoinB\026\310\336\037\000\362\336\037\016yaml:\"" +
+      "profits\"R\007profits\022u\n\021info_by_pool_type\030\r" +
+      " \001(\0132(.osmosis.protorev.v1beta1.InfoByPo" +
+      "olTypeB \310\336\037\000\362\336\037\030yaml:\"info_by_pool_type\"" +
+      "R\016infoByPoolType\022w\n\022cyclic_arb_tracker\030\016" +
+      " \001(\0132*.osmosis.protorev.v1beta1.CyclicAr" +
+      "bTrackerB\035\362\336\037\031yaml:\"cyclic_arb_tracker\"R" +
+      "\020cyclicArbTrackerB\342\001\n\034com.osmosis.protor" +
+      "ev.v1beta1B\014GenesisProtoZ4github.com/osm" +
+      "osis-labs/osmosis/v26/x/protorev/types\242\002" +
+      "\003OPX\252\002\030Osmosis.Protorev.V1beta1\312\002\030Osmosi" +
+      "s\\Protorev\\V1beta1\342\002$Osmosis\\Protorev\\V1" +
+      "beta1\\GPBMetadata\352\002\032Osmosis::Protorev::V" +
+      "1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3169,7 +4158,7 @@ public final class GenesisProto {
     internal_static_osmosis_protorev_v1beta1_GenesisState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_protorev_v1beta1_GenesisState_descriptor,
-        new java.lang.String[] { "Params", "TokenPairArbRoutes", "BaseDenoms", "PoolWeights", "DaysSinceModuleGenesis", "DeveloperFees", "LatestBlockHeight", "DeveloperAddress", "MaxPoolPointsPerBlock", "MaxPoolPointsPerTx", "PointCountForBlock", });
+        new java.lang.String[] { "Params", "TokenPairArbRoutes", "BaseDenoms", "PoolWeights", "DaysSinceModuleGenesis", "DeveloperFees", "LatestBlockHeight", "DeveloperAddress", "MaxPoolPointsPerBlock", "MaxPoolPointsPerTx", "PointCountForBlock", "Profits", "InfoByPoolType", "CyclicArbTracker", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.cosmos_proto.CosmosProto.scalar);

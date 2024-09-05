@@ -1135,7 +1135,7 @@ public final class GovProto {
       "osmos.gov.v1beta1.Content\212\347\260*\036osmosis/Up" +
       "dateFeeTokenProposalB\322\001\n\032com.osmosis.txf" +
       "ees.v1beta1B\010GovProtoZ2github.com/osmosi" +
-      "s-labs/osmosis/v15/x/txfees/types\242\002\003OTX\252" +
+      "s-labs/osmosis/v26/x/txfees/types\242\002\003OTX\252" +
       "\002\026Osmosis.Txfees.V1beta1\312\002\026Osmosis\\Txfee" +
       "s\\V1beta1\342\002\"Osmosis\\Txfees\\V1beta1\\GPBMe" +
       "tadata\352\002\030Osmosis::Txfees::V1beta1b\006proto" +

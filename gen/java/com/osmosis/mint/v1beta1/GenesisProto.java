@@ -47,7 +47,7 @@ public final class GenesisProto {
 
     /**
      * <pre>
-     * params defines all the paramaters of the mint module.
+     * params defines all the parameters of the mint module.
      * </pre>
      *
      * <code>.osmosis.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -56,7 +56,7 @@ public final class GenesisProto {
     boolean hasParams();
     /**
      * <pre>
-     * params defines all the paramaters of the mint module.
+     * params defines all the parameters of the mint module.
      * </pre>
      *
      * <code>.osmosis.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -65,7 +65,7 @@ public final class GenesisProto {
     com.osmosis.mint.v1beta1.MintProto.Params getParams();
     /**
      * <pre>
-     * params defines all the paramaters of the mint module.
+     * params defines all the parameters of the mint module.
      * </pre>
      *
      * <code>.osmosis.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -164,7 +164,7 @@ public final class GenesisProto {
     private com.osmosis.mint.v1beta1.MintProto.Params params_;
     /**
      * <pre>
-     * params defines all the paramaters of the mint module.
+     * params defines all the parameters of the mint module.
      * </pre>
      *
      * <code>.osmosis.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -176,7 +176,7 @@ public final class GenesisProto {
     }
     /**
      * <pre>
-     * params defines all the paramaters of the mint module.
+     * params defines all the parameters of the mint module.
      * </pre>
      *
      * <code>.osmosis.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -188,7 +188,7 @@ public final class GenesisProto {
     }
     /**
      * <pre>
-     * params defines all the paramaters of the mint module.
+     * params defines all the parameters of the mint module.
      * </pre>
      *
      * <code>.osmosis.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -776,7 +776,7 @@ public final class GenesisProto {
           com.osmosis.mint.v1beta1.MintProto.Params, com.osmosis.mint.v1beta1.MintProto.Params.Builder, com.osmosis.mint.v1beta1.MintProto.ParamsOrBuilder> paramsBuilder_;
       /**
        * <pre>
-       * params defines all the paramaters of the mint module.
+       * params defines all the parameters of the mint module.
        * </pre>
        *
        * <code>.osmosis.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -787,7 +787,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * params defines all the paramaters of the mint module.
+       * params defines all the parameters of the mint module.
        * </pre>
        *
        * <code>.osmosis.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -802,7 +802,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * params defines all the paramaters of the mint module.
+       * params defines all the parameters of the mint module.
        * </pre>
        *
        * <code>.osmosis.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -822,7 +822,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * params defines all the paramaters of the mint module.
+       * params defines all the parameters of the mint module.
        * </pre>
        *
        * <code>.osmosis.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -840,7 +840,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * params defines all the paramaters of the mint module.
+       * params defines all the parameters of the mint module.
        * </pre>
        *
        * <code>.osmosis.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -863,7 +863,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * params defines all the paramaters of the mint module.
+       * params defines all the parameters of the mint module.
        * </pre>
        *
        * <code>.osmosis.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -880,7 +880,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * params defines all the paramaters of the mint module.
+       * params defines all the parameters of the mint module.
        * </pre>
        *
        * <code>.osmosis.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -892,7 +892,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * params defines all the paramaters of the mint module.
+       * params defines all the parameters of the mint module.
        * </pre>
        *
        * <code>.osmosis.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -907,7 +907,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * params defines all the paramaters of the mint module.
+       * params defines all the parameters of the mint module.
        * </pre>
        *
        * <code>.osmosis.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -1060,7 +1060,7 @@ public final class GenesisProto {
       "\001(\003B\"\362\336\037\036yaml:\"reduction_started_epoch\"R" +
       "\025reductionStartedEpochB\312\001\n\030com.osmosis.m" +
       "int.v1beta1B\014GenesisProtoZ0github.com/os" +
-      "mosis-labs/osmosis/v15/x/mint/types\242\002\003OM" +
+      "mosis-labs/osmosis/v26/x/mint/types\242\002\003OM" +
       "X\252\002\024Osmosis.Mint.V1beta1\312\002\024Osmosis\\Mint\\" +
       "V1beta1\342\002 Osmosis\\Mint\\V1beta1\\GPBMetada" +
       "ta\352\002\026Osmosis::Mint::V1beta1b\006proto3"

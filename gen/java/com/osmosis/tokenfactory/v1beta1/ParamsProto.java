@@ -1108,7 +1108,7 @@ public final class ParamsProto {
       "as_consume\"R\027denomCreationGasConsumeB\371\001\n" +
       " com.osmosis.tokenfactory.v1beta1B\013Param" +
       "sProtoZ8github.com/osmosis-labs/osmosis/" +
-      "v15/x/tokenfactory/types\242\002\003OTX\252\002\034Osmosis" +
+      "v26/x/tokenfactory/types\242\002\003OTX\252\002\034Osmosis" +
       ".Tokenfactory.V1beta1\312\002\034Osmosis\\Tokenfac" +
       "tory\\V1beta1\342\002(Osmosis\\Tokenfactory\\V1be" +
       "ta1\\GPBMetadata\352\002\036Osmosis::Tokenfactory:" +

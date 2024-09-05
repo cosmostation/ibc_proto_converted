@@ -139,35 +139,35 @@ public final class MsgGrpc {
     return getSetMaxPoolPointsPerBlockMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights,
-      com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse> getSetPoolWeightsMethod;
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType,
+      com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse> getSetInfoByPoolTypeMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "SetPoolWeights",
-      requestType = com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights.class,
-      responseType = com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "SetInfoByPoolType",
+      requestType = com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType.class,
+      responseType = com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights,
-      com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse> getSetPoolWeightsMethod() {
-    io.grpc.MethodDescriptor<com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights, com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse> getSetPoolWeightsMethod;
-    if ((getSetPoolWeightsMethod = MsgGrpc.getSetPoolWeightsMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType,
+      com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse> getSetInfoByPoolTypeMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType, com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse> getSetInfoByPoolTypeMethod;
+    if ((getSetInfoByPoolTypeMethod = MsgGrpc.getSetInfoByPoolTypeMethod) == null) {
       synchronized (MsgGrpc.class) {
-        if ((getSetPoolWeightsMethod = MsgGrpc.getSetPoolWeightsMethod) == null) {
-          MsgGrpc.getSetPoolWeightsMethod = getSetPoolWeightsMethod =
-              io.grpc.MethodDescriptor.<com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights, com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse>newBuilder()
+        if ((getSetInfoByPoolTypeMethod = MsgGrpc.getSetInfoByPoolTypeMethod) == null) {
+          MsgGrpc.getSetInfoByPoolTypeMethod = getSetInfoByPoolTypeMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType, com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetPoolWeights"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetInfoByPoolType"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights.getDefaultInstance()))
+                  com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("SetPoolWeights"))
+                  com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("SetInfoByPoolType"))
               .build();
         }
       }
     }
-    return getSetPoolWeightsMethod;
+    return getSetInfoByPoolTypeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms,
@@ -295,13 +295,13 @@ public final class MsgGrpc {
 
     /**
      * <pre>
-     * SetPoolWeights sets the weights of each pool type in the store. Can only be
-     * called by the admin account.
+     * SetInfoByPoolType sets the pool type information needed to make smart
+     * assumptions about swapping on different pool types
      * </pre>
      */
-    default void setPoolWeights(com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights request,
-        io.grpc.stub.StreamObserver<com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetPoolWeightsMethod(), responseObserver);
+    default void setInfoByPoolType(com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType request,
+        io.grpc.stub.StreamObserver<com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetInfoByPoolTypeMethod(), responseObserver);
     }
 
     /**
@@ -393,14 +393,14 @@ public final class MsgGrpc {
 
     /**
      * <pre>
-     * SetPoolWeights sets the weights of each pool type in the store. Can only be
-     * called by the admin account.
+     * SetInfoByPoolType sets the pool type information needed to make smart
+     * assumptions about swapping on different pool types
      * </pre>
      */
-    public void setPoolWeights(com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights request,
-        io.grpc.stub.StreamObserver<com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse> responseObserver) {
+    public void setInfoByPoolType(com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType request,
+        io.grpc.stub.StreamObserver<com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getSetPoolWeightsMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getSetInfoByPoolTypeMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -478,13 +478,13 @@ public final class MsgGrpc {
 
     /**
      * <pre>
-     * SetPoolWeights sets the weights of each pool type in the store. Can only be
-     * called by the admin account.
+     * SetInfoByPoolType sets the pool type information needed to make smart
+     * assumptions about swapping on different pool types
      * </pre>
      */
-    public com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse setPoolWeights(com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights request) {
+    public com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse setInfoByPoolType(com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getSetPoolWeightsMethod(), getCallOptions(), request);
+          getChannel(), getSetInfoByPoolTypeMethod(), getCallOptions(), request);
     }
 
     /**
@@ -565,14 +565,14 @@ public final class MsgGrpc {
 
     /**
      * <pre>
-     * SetPoolWeights sets the weights of each pool type in the store. Can only be
-     * called by the admin account.
+     * SetInfoByPoolType sets the pool type information needed to make smart
+     * assumptions about swapping on different pool types
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse> setPoolWeights(
-        com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse> setInfoByPoolType(
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getSetPoolWeightsMethod(), getCallOptions()), request);
+          getChannel().newCall(getSetInfoByPoolTypeMethod(), getCallOptions()), request);
     }
 
     /**
@@ -592,7 +592,7 @@ public final class MsgGrpc {
   private static final int METHODID_SET_DEVELOPER_ACCOUNT = 1;
   private static final int METHODID_SET_MAX_POOL_POINTS_PER_TX = 2;
   private static final int METHODID_SET_MAX_POOL_POINTS_PER_BLOCK = 3;
-  private static final int METHODID_SET_POOL_WEIGHTS = 4;
+  private static final int METHODID_SET_INFO_BY_POOL_TYPE = 4;
   private static final int METHODID_SET_BASE_DENOMS = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
@@ -628,9 +628,9 @@ public final class MsgGrpc {
           serviceImpl.setMaxPoolPointsPerBlock((com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock) request,
               (io.grpc.stub.StreamObserver<com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse>) responseObserver);
           break;
-        case METHODID_SET_POOL_WEIGHTS:
-          serviceImpl.setPoolWeights((com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights) request,
-              (io.grpc.stub.StreamObserver<com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse>) responseObserver);
+        case METHODID_SET_INFO_BY_POOL_TYPE:
+          serviceImpl.setInfoByPoolType((com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse>) responseObserver);
           break;
         case METHODID_SET_BASE_DENOMS:
           serviceImpl.setBaseDenoms((com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms) request,
@@ -683,12 +683,12 @@ public final class MsgGrpc {
               com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse>(
                 service, METHODID_SET_MAX_POOL_POINTS_PER_BLOCK)))
         .addMethod(
-          getSetPoolWeightsMethod(),
+          getSetInfoByPoolTypeMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights,
-              com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse>(
-                service, METHODID_SET_POOL_WEIGHTS)))
+              com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType,
+              com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse>(
+                service, METHODID_SET_INFO_BY_POOL_TYPE)))
         .addMethod(
           getSetBaseDenomsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -748,7 +748,7 @@ public final class MsgGrpc {
               .addMethod(getSetDeveloperAccountMethod())
               .addMethod(getSetMaxPoolPointsPerTxMethod())
               .addMethod(getSetMaxPoolPointsPerBlockMethod())
-              .addMethod(getSetPoolWeightsMethod())
+              .addMethod(getSetInfoByPoolTypeMethod())
               .addMethod(getSetBaseDenomsMethod())
               .build();
         }

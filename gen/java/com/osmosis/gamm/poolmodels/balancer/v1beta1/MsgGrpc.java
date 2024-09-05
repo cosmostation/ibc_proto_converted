@@ -6,7 +6,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.55.1)",
-    comments = "Source: osmosis/gamm/pool-models/balancer/tx/tx.proto")
+    comments = "Source: osmosis/gamm/poolmodels/balancer/v1beta1/tx.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class MsgGrpc {
 
@@ -44,37 +44,6 @@ public final class MsgGrpc {
       }
     }
     return getCreateBalancerPoolMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPosition,
-      com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPositionResponse> getMigrateSharesToFullRangeConcentratedPositionMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "MigrateSharesToFullRangeConcentratedPosition",
-      requestType = com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPosition.class,
-      responseType = com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPositionResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPosition,
-      com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPositionResponse> getMigrateSharesToFullRangeConcentratedPositionMethod() {
-    io.grpc.MethodDescriptor<com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPosition, com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPositionResponse> getMigrateSharesToFullRangeConcentratedPositionMethod;
-    if ((getMigrateSharesToFullRangeConcentratedPositionMethod = MsgGrpc.getMigrateSharesToFullRangeConcentratedPositionMethod) == null) {
-      synchronized (MsgGrpc.class) {
-        if ((getMigrateSharesToFullRangeConcentratedPositionMethod = MsgGrpc.getMigrateSharesToFullRangeConcentratedPositionMethod) == null) {
-          MsgGrpc.getMigrateSharesToFullRangeConcentratedPositionMethod = getMigrateSharesToFullRangeConcentratedPositionMethod =
-              io.grpc.MethodDescriptor.<com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPosition, com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPositionResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MigrateSharesToFullRangeConcentratedPosition"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPosition.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPositionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("MigrateSharesToFullRangeConcentratedPosition"))
-              .build();
-        }
-      }
-    }
-    return getMigrateSharesToFullRangeConcentratedPositionMethod;
   }
 
   /**
@@ -131,13 +100,6 @@ public final class MsgGrpc {
         io.grpc.stub.StreamObserver<com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgCreateBalancerPoolResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateBalancerPoolMethod(), responseObserver);
     }
-
-    /**
-     */
-    default void migrateSharesToFullRangeConcentratedPosition(com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPosition request,
-        io.grpc.stub.StreamObserver<com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPositionResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMigrateSharesToFullRangeConcentratedPositionMethod(), responseObserver);
-    }
   }
 
   /**
@@ -174,14 +136,6 @@ public final class MsgGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateBalancerPoolMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     */
-    public void migrateSharesToFullRangeConcentratedPosition(com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPosition request,
-        io.grpc.stub.StreamObserver<com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPositionResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getMigrateSharesToFullRangeConcentratedPositionMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
@@ -205,13 +159,6 @@ public final class MsgGrpc {
     public com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgCreateBalancerPoolResponse createBalancerPool(com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgCreateBalancerPool request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateBalancerPoolMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPositionResponse migrateSharesToFullRangeConcentratedPosition(com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPosition request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getMigrateSharesToFullRangeConcentratedPositionMethod(), getCallOptions(), request);
     }
   }
 
@@ -238,18 +185,9 @@ public final class MsgGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateBalancerPoolMethod(), getCallOptions()), request);
     }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPositionResponse> migrateSharesToFullRangeConcentratedPosition(
-        com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPosition request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getMigrateSharesToFullRangeConcentratedPositionMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_CREATE_BALANCER_POOL = 0;
-  private static final int METHODID_MIGRATE_SHARES_TO_FULL_RANGE_CONCENTRATED_POSITION = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -271,10 +209,6 @@ public final class MsgGrpc {
         case METHODID_CREATE_BALANCER_POOL:
           serviceImpl.createBalancerPool((com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgCreateBalancerPool) request,
               (io.grpc.stub.StreamObserver<com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgCreateBalancerPoolResponse>) responseObserver);
-          break;
-        case METHODID_MIGRATE_SHARES_TO_FULL_RANGE_CONCENTRATED_POSITION:
-          serviceImpl.migrateSharesToFullRangeConcentratedPosition((com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPosition) request,
-              (io.grpc.stub.StreamObserver<com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPositionResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -301,13 +235,6 @@ public final class MsgGrpc {
               com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgCreateBalancerPool,
               com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgCreateBalancerPoolResponse>(
                 service, METHODID_CREATE_BALANCER_POOL)))
-        .addMethod(
-          getMigrateSharesToFullRangeConcentratedPositionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPosition,
-              com.osmosis.gamm.poolmodels.balancer.v1beta1.TxProto.MsgMigrateSharesToFullRangeConcentratedPositionResponse>(
-                service, METHODID_MIGRATE_SHARES_TO_FULL_RANGE_CONCENTRATED_POSITION)))
         .build();
   }
 
@@ -357,7 +284,6 @@ public final class MsgGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new MsgFileDescriptorSupplier())
               .addMethod(getCreateBalancerPoolMethod())
-              .addMethod(getMigrateSharesToFullRangeConcentratedPositionMethod())
               .build();
         }
       }

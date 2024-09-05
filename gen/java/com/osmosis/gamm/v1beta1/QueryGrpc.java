@@ -511,6 +511,68 @@ public final class QueryGrpc {
     return getConcentratedPoolIdLinkFromCFMMMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.gamm.v1beta1.QueryProto.QueryCFMMConcentratedPoolLinksRequest,
+      com.osmosis.gamm.v1beta1.QueryProto.QueryCFMMConcentratedPoolLinksResponse> getCFMMConcentratedPoolLinksMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CFMMConcentratedPoolLinks",
+      requestType = com.osmosis.gamm.v1beta1.QueryProto.QueryCFMMConcentratedPoolLinksRequest.class,
+      responseType = com.osmosis.gamm.v1beta1.QueryProto.QueryCFMMConcentratedPoolLinksResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.gamm.v1beta1.QueryProto.QueryCFMMConcentratedPoolLinksRequest,
+      com.osmosis.gamm.v1beta1.QueryProto.QueryCFMMConcentratedPoolLinksResponse> getCFMMConcentratedPoolLinksMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.gamm.v1beta1.QueryProto.QueryCFMMConcentratedPoolLinksRequest, com.osmosis.gamm.v1beta1.QueryProto.QueryCFMMConcentratedPoolLinksResponse> getCFMMConcentratedPoolLinksMethod;
+    if ((getCFMMConcentratedPoolLinksMethod = QueryGrpc.getCFMMConcentratedPoolLinksMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getCFMMConcentratedPoolLinksMethod = QueryGrpc.getCFMMConcentratedPoolLinksMethod) == null) {
+          QueryGrpc.getCFMMConcentratedPoolLinksMethod = getCFMMConcentratedPoolLinksMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.gamm.v1beta1.QueryProto.QueryCFMMConcentratedPoolLinksRequest, com.osmosis.gamm.v1beta1.QueryProto.QueryCFMMConcentratedPoolLinksResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CFMMConcentratedPoolLinks"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.gamm.v1beta1.QueryProto.QueryCFMMConcentratedPoolLinksRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.gamm.v1beta1.QueryProto.QueryCFMMConcentratedPoolLinksResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("CFMMConcentratedPoolLinks"))
+              .build();
+        }
+      }
+    }
+    return getCFMMConcentratedPoolLinksMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.gamm.v1beta1.QueryProto.ParamsRequest,
+      com.osmosis.gamm.v1beta1.QueryProto.ParamsResponse> getParamsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Params",
+      requestType = com.osmosis.gamm.v1beta1.QueryProto.ParamsRequest.class,
+      responseType = com.osmosis.gamm.v1beta1.QueryProto.ParamsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.gamm.v1beta1.QueryProto.ParamsRequest,
+      com.osmosis.gamm.v1beta1.QueryProto.ParamsResponse> getParamsMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.gamm.v1beta1.QueryProto.ParamsRequest, com.osmosis.gamm.v1beta1.QueryProto.ParamsResponse> getParamsMethod;
+    if ((getParamsMethod = QueryGrpc.getParamsMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getParamsMethod = QueryGrpc.getParamsMethod) == null) {
+          QueryGrpc.getParamsMethod = getParamsMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.gamm.v1beta1.QueryProto.ParamsRequest, com.osmosis.gamm.v1beta1.QueryProto.ParamsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Params"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.gamm.v1beta1.QueryProto.ParamsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.gamm.v1beta1.QueryProto.ParamsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("Params"))
+              .build();
+        }
+      }
+    }
+    return getParamsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -712,6 +774,27 @@ public final class QueryGrpc {
         io.grpc.stub.StreamObserver<com.osmosis.gamm.v1beta1.QueryProto.QueryConcentratedPoolIdLinkFromCFMMResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getConcentratedPoolIdLinkFromCFMMMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * CFMMConcentratedPoolLinks returns migration links between CFMM and
+     * Concentrated pools.
+     * </pre>
+     */
+    default void cFMMConcentratedPoolLinks(com.osmosis.gamm.v1beta1.QueryProto.QueryCFMMConcentratedPoolLinksRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.gamm.v1beta1.QueryProto.QueryCFMMConcentratedPoolLinksResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCFMMConcentratedPoolLinksMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Params returns gamm module params.
+     * </pre>
+     */
+    default void params(com.osmosis.gamm.v1beta1.QueryProto.ParamsRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.gamm.v1beta1.QueryProto.ParamsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getParamsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -910,6 +993,29 @@ public final class QueryGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getConcentratedPoolIdLinkFromCFMMMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * CFMMConcentratedPoolLinks returns migration links between CFMM and
+     * Concentrated pools.
+     * </pre>
+     */
+    public void cFMMConcentratedPoolLinks(com.osmosis.gamm.v1beta1.QueryProto.QueryCFMMConcentratedPoolLinksRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.gamm.v1beta1.QueryProto.QueryCFMMConcentratedPoolLinksResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCFMMConcentratedPoolLinksMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Params returns gamm module params.
+     * </pre>
+     */
+    public void params(com.osmosis.gamm.v1beta1.QueryProto.ParamsRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.gamm.v1beta1.QueryProto.ParamsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getParamsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1080,6 +1186,27 @@ public final class QueryGrpc {
     public com.osmosis.gamm.v1beta1.QueryProto.QueryConcentratedPoolIdLinkFromCFMMResponse concentratedPoolIdLinkFromCFMM(com.osmosis.gamm.v1beta1.QueryProto.QueryConcentratedPoolIdLinkFromCFMMRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getConcentratedPoolIdLinkFromCFMMMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CFMMConcentratedPoolLinks returns migration links between CFMM and
+     * Concentrated pools.
+     * </pre>
+     */
+    public com.osmosis.gamm.v1beta1.QueryProto.QueryCFMMConcentratedPoolLinksResponse cFMMConcentratedPoolLinks(com.osmosis.gamm.v1beta1.QueryProto.QueryCFMMConcentratedPoolLinksRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCFMMConcentratedPoolLinksMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Params returns gamm module params.
+     * </pre>
+     */
+    public com.osmosis.gamm.v1beta1.QueryProto.ParamsResponse params(com.osmosis.gamm.v1beta1.QueryProto.ParamsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getParamsMethod(), getCallOptions(), request);
     }
   }
 
@@ -1268,6 +1395,29 @@ public final class QueryGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getConcentratedPoolIdLinkFromCFMMMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * CFMMConcentratedPoolLinks returns migration links between CFMM and
+     * Concentrated pools.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.gamm.v1beta1.QueryProto.QueryCFMMConcentratedPoolLinksResponse> cFMMConcentratedPoolLinks(
+        com.osmosis.gamm.v1beta1.QueryProto.QueryCFMMConcentratedPoolLinksRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCFMMConcentratedPoolLinksMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Params returns gamm module params.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.gamm.v1beta1.QueryProto.ParamsResponse> params(
+        com.osmosis.gamm.v1beta1.QueryProto.ParamsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getParamsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_POOLS = 0;
@@ -1286,6 +1436,8 @@ public final class QueryGrpc {
   private static final int METHODID_ESTIMATE_SWAP_EXACT_AMOUNT_IN = 13;
   private static final int METHODID_ESTIMATE_SWAP_EXACT_AMOUNT_OUT = 14;
   private static final int METHODID_CONCENTRATED_POOL_ID_LINK_FROM_CFMM = 15;
+  private static final int METHODID_CFMMCONCENTRATED_POOL_LINKS = 16;
+  private static final int METHODID_PARAMS = 17;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1367,6 +1519,14 @@ public final class QueryGrpc {
         case METHODID_CONCENTRATED_POOL_ID_LINK_FROM_CFMM:
           serviceImpl.concentratedPoolIdLinkFromCFMM((com.osmosis.gamm.v1beta1.QueryProto.QueryConcentratedPoolIdLinkFromCFMMRequest) request,
               (io.grpc.stub.StreamObserver<com.osmosis.gamm.v1beta1.QueryProto.QueryConcentratedPoolIdLinkFromCFMMResponse>) responseObserver);
+          break;
+        case METHODID_CFMMCONCENTRATED_POOL_LINKS:
+          serviceImpl.cFMMConcentratedPoolLinks((com.osmosis.gamm.v1beta1.QueryProto.QueryCFMMConcentratedPoolLinksRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.gamm.v1beta1.QueryProto.QueryCFMMConcentratedPoolLinksResponse>) responseObserver);
+          break;
+        case METHODID_PARAMS:
+          serviceImpl.params((com.osmosis.gamm.v1beta1.QueryProto.ParamsRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.gamm.v1beta1.QueryProto.ParamsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1498,6 +1658,20 @@ public final class QueryGrpc {
               com.osmosis.gamm.v1beta1.QueryProto.QueryConcentratedPoolIdLinkFromCFMMRequest,
               com.osmosis.gamm.v1beta1.QueryProto.QueryConcentratedPoolIdLinkFromCFMMResponse>(
                 service, METHODID_CONCENTRATED_POOL_ID_LINK_FROM_CFMM)))
+        .addMethod(
+          getCFMMConcentratedPoolLinksMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.gamm.v1beta1.QueryProto.QueryCFMMConcentratedPoolLinksRequest,
+              com.osmosis.gamm.v1beta1.QueryProto.QueryCFMMConcentratedPoolLinksResponse>(
+                service, METHODID_CFMMCONCENTRATED_POOL_LINKS)))
+        .addMethod(
+          getParamsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.gamm.v1beta1.QueryProto.ParamsRequest,
+              com.osmosis.gamm.v1beta1.QueryProto.ParamsResponse>(
+                service, METHODID_PARAMS)))
         .build();
   }
 
@@ -1562,6 +1736,8 @@ public final class QueryGrpc {
               .addMethod(getEstimateSwapExactAmountInMethod())
               .addMethod(getEstimateSwapExactAmountOutMethod())
               .addMethod(getConcentratedPoolIdLinkFromCFMMMethod())
+              .addMethod(getCFMMConcentratedPoolLinksMethod())
+              .addMethod(getParamsMethod())
               .build();
         }
       }

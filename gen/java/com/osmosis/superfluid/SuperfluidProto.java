@@ -1726,12 +1726,12 @@ public final class SuperfluidProto {
         getDenomBytes();
 
     /**
-     * <code>string multiplier = 3 [json_name = "multiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"multiplier&#92;""];</code>
+     * <code>string multiplier = 3 [json_name = "multiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"multiplier&#92;""];</code>
      * @return The multiplier.
      */
     java.lang.String getMultiplier();
     /**
-     * <code>string multiplier = 3 [json_name = "multiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"multiplier&#92;""];</code>
+     * <code>string multiplier = 3 [json_name = "multiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"multiplier&#92;""];</code>
      * @return The bytes for multiplier.
      */
     com.google.protobuf.ByteString
@@ -1742,10 +1742,10 @@ public final class SuperfluidProto {
    * The Osmo-Equivalent-Multiplier Record for epoch N refers to the osmo worth we
    * treat an LP share as having, for all of epoch N. Eventually this is intended
    * to be set as the Time-weighted-average-osmo-backing for the entire duration
-   * of epoch N-1. (Thereby locking whats in use for epoch N as based on the prior
-   * epochs rewards) However for now, this is not the TWAP but instead the spot
-   * price at the boundary. For different types of assets in the future, it could
-   * change.
+   * of epoch N-1. (Thereby locking what's in use for epoch N as based on the
+   * prior epochs rewards) However for now, this is not the TWAP but instead the
+   * spot price at the boundary. For different types of assets in the future, it
+   * could change.
    * </pre>
    *
    * Protobuf type {@code osmosis.superfluid.OsmoEquivalentMultiplierRecord}
@@ -1846,7 +1846,7 @@ public final class SuperfluidProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object multiplier_ = "";
     /**
-     * <code>string multiplier = 3 [json_name = "multiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"multiplier&#92;""];</code>
+     * <code>string multiplier = 3 [json_name = "multiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"multiplier&#92;""];</code>
      * @return The multiplier.
      */
     @java.lang.Override
@@ -1863,7 +1863,7 @@ public final class SuperfluidProto {
       }
     }
     /**
-     * <code>string multiplier = 3 [json_name = "multiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"multiplier&#92;""];</code>
+     * <code>string multiplier = 3 [json_name = "multiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"multiplier&#92;""];</code>
      * @return The bytes for multiplier.
      */
     @java.lang.Override
@@ -2064,10 +2064,10 @@ public final class SuperfluidProto {
      * The Osmo-Equivalent-Multiplier Record for epoch N refers to the osmo worth we
      * treat an LP share as having, for all of epoch N. Eventually this is intended
      * to be set as the Time-weighted-average-osmo-backing for the entire duration
-     * of epoch N-1. (Thereby locking whats in use for epoch N as based on the prior
-     * epochs rewards) However for now, this is not the TWAP but instead the spot
-     * price at the boundary. For different types of assets in the future, it could
-     * change.
+     * of epoch N-1. (Thereby locking what's in use for epoch N as based on the
+     * prior epochs rewards) However for now, this is not the TWAP but instead the
+     * spot price at the boundary. For different types of assets in the future, it
+     * could change.
      * </pre>
      *
      * Protobuf type {@code osmosis.superfluid.OsmoEquivalentMultiplierRecord}
@@ -2391,7 +2391,7 @@ public final class SuperfluidProto {
 
       private java.lang.Object multiplier_ = "";
       /**
-       * <code>string multiplier = 3 [json_name = "multiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"multiplier&#92;""];</code>
+       * <code>string multiplier = 3 [json_name = "multiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"multiplier&#92;""];</code>
        * @return The multiplier.
        */
       public java.lang.String getMultiplier() {
@@ -2407,7 +2407,7 @@ public final class SuperfluidProto {
         }
       }
       /**
-       * <code>string multiplier = 3 [json_name = "multiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"multiplier&#92;""];</code>
+       * <code>string multiplier = 3 [json_name = "multiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"multiplier&#92;""];</code>
        * @return The bytes for multiplier.
        */
       public com.google.protobuf.ByteString
@@ -2424,7 +2424,7 @@ public final class SuperfluidProto {
         }
       }
       /**
-       * <code>string multiplier = 3 [json_name = "multiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"multiplier&#92;""];</code>
+       * <code>string multiplier = 3 [json_name = "multiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"multiplier&#92;""];</code>
        * @param value The multiplier to set.
        * @return This builder for chaining.
        */
@@ -2437,7 +2437,7 @@ public final class SuperfluidProto {
         return this;
       }
       /**
-       * <code>string multiplier = 3 [json_name = "multiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"multiplier&#92;""];</code>
+       * <code>string multiplier = 3 [json_name = "multiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"multiplier&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearMultiplier() {
@@ -2447,7 +2447,7 @@ public final class SuperfluidProto {
         return this;
       }
       /**
-       * <code>string multiplier = 3 [json_name = "multiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"multiplier&#92;""];</code>
+       * <code>string multiplier = 3 [json_name = "multiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"multiplier&#92;""];</code>
        * @param value The bytes for multiplier to set.
        * @return This builder for chaining.
        */
@@ -4859,6 +4859,1292 @@ public final class SuperfluidProto {
 
   }
 
+  public interface ConcentratedPoolUserPositionRecordOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.superfluid.ConcentratedPoolUserPositionRecord)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The validatorAddress.
+     */
+    java.lang.String getValidatorAddress();
+    /**
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The bytes for validatorAddress.
+     */
+    com.google.protobuf.ByteString
+        getValidatorAddressBytes();
+
+    /**
+     * <code>uint64 position_id = 2 [json_name = "positionId"];</code>
+     * @return The positionId.
+     */
+    long getPositionId();
+
+    /**
+     * <code>uint64 lock_id = 3 [json_name = "lockId"];</code>
+     * @return The lockId.
+     */
+    long getLockId();
+
+    /**
+     * <code>.osmosis.lockup.SyntheticLock synthetic_lock = 4 [json_name = "syntheticLock", (.gogoproto.nullable) = false];</code>
+     * @return Whether the syntheticLock field is set.
+     */
+    boolean hasSyntheticLock();
+    /**
+     * <code>.osmosis.lockup.SyntheticLock synthetic_lock = 4 [json_name = "syntheticLock", (.gogoproto.nullable) = false];</code>
+     * @return The syntheticLock.
+     */
+    com.osmosis.lockup.LockProto.SyntheticLock getSyntheticLock();
+    /**
+     * <code>.osmosis.lockup.SyntheticLock synthetic_lock = 4 [json_name = "syntheticLock", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.lockup.LockProto.SyntheticLockOrBuilder getSyntheticLockOrBuilder();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin delegation_amount = 5 [json_name = "delegationAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the delegationAmount field is set.
+     */
+    boolean hasDelegationAmount();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin delegation_amount = 5 [json_name = "delegationAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The delegationAmount.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getDelegationAmount();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin delegation_amount = 5 [json_name = "delegationAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDelegationAmountOrBuilder();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin equivalent_staked_amount = 6 [json_name = "equivalentStakedAmount", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the equivalentStakedAmount field is set.
+     */
+    boolean hasEquivalentStakedAmount();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin equivalent_staked_amount = 6 [json_name = "equivalentStakedAmount", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The equivalentStakedAmount.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getEquivalentStakedAmount();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin equivalent_staked_amount = 6 [json_name = "equivalentStakedAmount", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getEquivalentStakedAmountOrBuilder();
+  }
+  /**
+   * Protobuf type {@code osmosis.superfluid.ConcentratedPoolUserPositionRecord}
+   */
+  public static final class ConcentratedPoolUserPositionRecord extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.superfluid.ConcentratedPoolUserPositionRecord)
+      ConcentratedPoolUserPositionRecordOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ConcentratedPoolUserPositionRecord.newBuilder() to construct.
+    private ConcentratedPoolUserPositionRecord(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ConcentratedPoolUserPositionRecord() {
+      validatorAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ConcentratedPoolUserPositionRecord();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.superfluid.SuperfluidProto.internal_static_osmosis_superfluid_ConcentratedPoolUserPositionRecord_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.superfluid.SuperfluidProto.internal_static_osmosis_superfluid_ConcentratedPoolUserPositionRecord_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.class, com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.Builder.class);
+    }
+
+    public static final int VALIDATOR_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validatorAddress_ = "";
+    /**
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The validatorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getValidatorAddress() {
+      java.lang.Object ref = validatorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validatorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The bytes for validatorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidatorAddressBytes() {
+      java.lang.Object ref = validatorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validatorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POSITION_ID_FIELD_NUMBER = 2;
+    private long positionId_ = 0L;
+    /**
+     * <code>uint64 position_id = 2 [json_name = "positionId"];</code>
+     * @return The positionId.
+     */
+    @java.lang.Override
+    public long getPositionId() {
+      return positionId_;
+    }
+
+    public static final int LOCK_ID_FIELD_NUMBER = 3;
+    private long lockId_ = 0L;
+    /**
+     * <code>uint64 lock_id = 3 [json_name = "lockId"];</code>
+     * @return The lockId.
+     */
+    @java.lang.Override
+    public long getLockId() {
+      return lockId_;
+    }
+
+    public static final int SYNTHETIC_LOCK_FIELD_NUMBER = 4;
+    private com.osmosis.lockup.LockProto.SyntheticLock syntheticLock_;
+    /**
+     * <code>.osmosis.lockup.SyntheticLock synthetic_lock = 4 [json_name = "syntheticLock", (.gogoproto.nullable) = false];</code>
+     * @return Whether the syntheticLock field is set.
+     */
+    @java.lang.Override
+    public boolean hasSyntheticLock() {
+      return syntheticLock_ != null;
+    }
+    /**
+     * <code>.osmosis.lockup.SyntheticLock synthetic_lock = 4 [json_name = "syntheticLock", (.gogoproto.nullable) = false];</code>
+     * @return The syntheticLock.
+     */
+    @java.lang.Override
+    public com.osmosis.lockup.LockProto.SyntheticLock getSyntheticLock() {
+      return syntheticLock_ == null ? com.osmosis.lockup.LockProto.SyntheticLock.getDefaultInstance() : syntheticLock_;
+    }
+    /**
+     * <code>.osmosis.lockup.SyntheticLock synthetic_lock = 4 [json_name = "syntheticLock", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.lockup.LockProto.SyntheticLockOrBuilder getSyntheticLockOrBuilder() {
+      return syntheticLock_ == null ? com.osmosis.lockup.LockProto.SyntheticLock.getDefaultInstance() : syntheticLock_;
+    }
+
+    public static final int DELEGATION_AMOUNT_FIELD_NUMBER = 5;
+    private com.cosmos.base.v1beta1.CoinProto.Coin delegationAmount_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin delegation_amount = 5 [json_name = "delegationAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the delegationAmount field is set.
+     */
+    @java.lang.Override
+    public boolean hasDelegationAmount() {
+      return delegationAmount_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin delegation_amount = 5 [json_name = "delegationAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The delegationAmount.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getDelegationAmount() {
+      return delegationAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : delegationAmount_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin delegation_amount = 5 [json_name = "delegationAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDelegationAmountOrBuilder() {
+      return delegationAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : delegationAmount_;
+    }
+
+    public static final int EQUIVALENT_STAKED_AMOUNT_FIELD_NUMBER = 6;
+    private com.cosmos.base.v1beta1.CoinProto.Coin equivalentStakedAmount_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin equivalent_staked_amount = 6 [json_name = "equivalentStakedAmount", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the equivalentStakedAmount field is set.
+     */
+    @java.lang.Override
+    public boolean hasEquivalentStakedAmount() {
+      return equivalentStakedAmount_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin equivalent_staked_amount = 6 [json_name = "equivalentStakedAmount", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The equivalentStakedAmount.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getEquivalentStakedAmount() {
+      return equivalentStakedAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : equivalentStakedAmount_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin equivalent_staked_amount = 6 [json_name = "equivalentStakedAmount", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getEquivalentStakedAmountOrBuilder() {
+      return equivalentStakedAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : equivalentStakedAmount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, validatorAddress_);
+      }
+      if (positionId_ != 0L) {
+        output.writeUInt64(2, positionId_);
+      }
+      if (lockId_ != 0L) {
+        output.writeUInt64(3, lockId_);
+      }
+      if (syntheticLock_ != null) {
+        output.writeMessage(4, getSyntheticLock());
+      }
+      if (delegationAmount_ != null) {
+        output.writeMessage(5, getDelegationAmount());
+      }
+      if (equivalentStakedAmount_ != null) {
+        output.writeMessage(6, getEquivalentStakedAmount());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, validatorAddress_);
+      }
+      if (positionId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, positionId_);
+      }
+      if (lockId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, lockId_);
+      }
+      if (syntheticLock_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getSyntheticLock());
+      }
+      if (delegationAmount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getDelegationAmount());
+      }
+      if (equivalentStakedAmount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getEquivalentStakedAmount());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord)) {
+        return super.equals(obj);
+      }
+      com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord other = (com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord) obj;
+
+      if (!getValidatorAddress()
+          .equals(other.getValidatorAddress())) return false;
+      if (getPositionId()
+          != other.getPositionId()) return false;
+      if (getLockId()
+          != other.getLockId()) return false;
+      if (hasSyntheticLock() != other.hasSyntheticLock()) return false;
+      if (hasSyntheticLock()) {
+        if (!getSyntheticLock()
+            .equals(other.getSyntheticLock())) return false;
+      }
+      if (hasDelegationAmount() != other.hasDelegationAmount()) return false;
+      if (hasDelegationAmount()) {
+        if (!getDelegationAmount()
+            .equals(other.getDelegationAmount())) return false;
+      }
+      if (hasEquivalentStakedAmount() != other.hasEquivalentStakedAmount()) return false;
+      if (hasEquivalentStakedAmount()) {
+        if (!getEquivalentStakedAmount()
+            .equals(other.getEquivalentStakedAmount())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VALIDATOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getValidatorAddress().hashCode();
+      hash = (37 * hash) + POSITION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPositionId());
+      hash = (37 * hash) + LOCK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLockId());
+      if (hasSyntheticLock()) {
+        hash = (37 * hash) + SYNTHETIC_LOCK_FIELD_NUMBER;
+        hash = (53 * hash) + getSyntheticLock().hashCode();
+      }
+      if (hasDelegationAmount()) {
+        hash = (37 * hash) + DELEGATION_AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getDelegationAmount().hashCode();
+      }
+      if (hasEquivalentStakedAmount()) {
+        hash = (37 * hash) + EQUIVALENT_STAKED_AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getEquivalentStakedAmount().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.superfluid.ConcentratedPoolUserPositionRecord}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.superfluid.ConcentratedPoolUserPositionRecord)
+        com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecordOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.superfluid.SuperfluidProto.internal_static_osmosis_superfluid_ConcentratedPoolUserPositionRecord_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.superfluid.SuperfluidProto.internal_static_osmosis_superfluid_ConcentratedPoolUserPositionRecord_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.class, com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.Builder.class);
+      }
+
+      // Construct using com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        validatorAddress_ = "";
+        positionId_ = 0L;
+        lockId_ = 0L;
+        syntheticLock_ = null;
+        if (syntheticLockBuilder_ != null) {
+          syntheticLockBuilder_.dispose();
+          syntheticLockBuilder_ = null;
+        }
+        delegationAmount_ = null;
+        if (delegationAmountBuilder_ != null) {
+          delegationAmountBuilder_.dispose();
+          delegationAmountBuilder_ = null;
+        }
+        equivalentStakedAmount_ = null;
+        if (equivalentStakedAmountBuilder_ != null) {
+          equivalentStakedAmountBuilder_.dispose();
+          equivalentStakedAmountBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.superfluid.SuperfluidProto.internal_static_osmosis_superfluid_ConcentratedPoolUserPositionRecord_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord getDefaultInstanceForType() {
+        return com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord build() {
+        com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord buildPartial() {
+        com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord result = new com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.validatorAddress_ = validatorAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.positionId_ = positionId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.lockId_ = lockId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.syntheticLock_ = syntheticLockBuilder_ == null
+              ? syntheticLock_
+              : syntheticLockBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.delegationAmount_ = delegationAmountBuilder_ == null
+              ? delegationAmount_
+              : delegationAmountBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.equivalentStakedAmount_ = equivalentStakedAmountBuilder_ == null
+              ? equivalentStakedAmount_
+              : equivalentStakedAmountBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord) {
+          return mergeFrom((com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord other) {
+        if (other == com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord.getDefaultInstance()) return this;
+        if (!other.getValidatorAddress().isEmpty()) {
+          validatorAddress_ = other.validatorAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getPositionId() != 0L) {
+          setPositionId(other.getPositionId());
+        }
+        if (other.getLockId() != 0L) {
+          setLockId(other.getLockId());
+        }
+        if (other.hasSyntheticLock()) {
+          mergeSyntheticLock(other.getSyntheticLock());
+        }
+        if (other.hasDelegationAmount()) {
+          mergeDelegationAmount(other.getDelegationAmount());
+        }
+        if (other.hasEquivalentStakedAmount()) {
+          mergeEquivalentStakedAmount(other.getEquivalentStakedAmount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                validatorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                positionId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                lockId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                input.readMessage(
+                    getSyntheticLockFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getDelegationAmountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getEquivalentStakedAmountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object validatorAddress_ = "";
+      /**
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @return The validatorAddress.
+       */
+      public java.lang.String getValidatorAddress() {
+        java.lang.Object ref = validatorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validatorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @return The bytes for validatorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getValidatorAddressBytes() {
+        java.lang.Object ref = validatorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @param value The validatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidatorAddress() {
+        validatorAddress_ = getDefaultInstance().getValidatorAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @param value The bytes for validatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long positionId_ ;
+      /**
+       * <code>uint64 position_id = 2 [json_name = "positionId"];</code>
+       * @return The positionId.
+       */
+      @java.lang.Override
+      public long getPositionId() {
+        return positionId_;
+      }
+      /**
+       * <code>uint64 position_id = 2 [json_name = "positionId"];</code>
+       * @param value The positionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPositionId(long value) {
+
+        positionId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 position_id = 2 [json_name = "positionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPositionId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        positionId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long lockId_ ;
+      /**
+       * <code>uint64 lock_id = 3 [json_name = "lockId"];</code>
+       * @return The lockId.
+       */
+      @java.lang.Override
+      public long getLockId() {
+        return lockId_;
+      }
+      /**
+       * <code>uint64 lock_id = 3 [json_name = "lockId"];</code>
+       * @param value The lockId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLockId(long value) {
+
+        lockId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 lock_id = 3 [json_name = "lockId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLockId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        lockId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.osmosis.lockup.LockProto.SyntheticLock syntheticLock_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.lockup.LockProto.SyntheticLock, com.osmosis.lockup.LockProto.SyntheticLock.Builder, com.osmosis.lockup.LockProto.SyntheticLockOrBuilder> syntheticLockBuilder_;
+      /**
+       * <code>.osmosis.lockup.SyntheticLock synthetic_lock = 4 [json_name = "syntheticLock", (.gogoproto.nullable) = false];</code>
+       * @return Whether the syntheticLock field is set.
+       */
+      public boolean hasSyntheticLock() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.osmosis.lockup.SyntheticLock synthetic_lock = 4 [json_name = "syntheticLock", (.gogoproto.nullable) = false];</code>
+       * @return The syntheticLock.
+       */
+      public com.osmosis.lockup.LockProto.SyntheticLock getSyntheticLock() {
+        if (syntheticLockBuilder_ == null) {
+          return syntheticLock_ == null ? com.osmosis.lockup.LockProto.SyntheticLock.getDefaultInstance() : syntheticLock_;
+        } else {
+          return syntheticLockBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.osmosis.lockup.SyntheticLock synthetic_lock = 4 [json_name = "syntheticLock", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSyntheticLock(com.osmosis.lockup.LockProto.SyntheticLock value) {
+        if (syntheticLockBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          syntheticLock_ = value;
+        } else {
+          syntheticLockBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.lockup.SyntheticLock synthetic_lock = 4 [json_name = "syntheticLock", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSyntheticLock(
+          com.osmosis.lockup.LockProto.SyntheticLock.Builder builderForValue) {
+        if (syntheticLockBuilder_ == null) {
+          syntheticLock_ = builderForValue.build();
+        } else {
+          syntheticLockBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.lockup.SyntheticLock synthetic_lock = 4 [json_name = "syntheticLock", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeSyntheticLock(com.osmosis.lockup.LockProto.SyntheticLock value) {
+        if (syntheticLockBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            syntheticLock_ != null &&
+            syntheticLock_ != com.osmosis.lockup.LockProto.SyntheticLock.getDefaultInstance()) {
+            getSyntheticLockBuilder().mergeFrom(value);
+          } else {
+            syntheticLock_ = value;
+          }
+        } else {
+          syntheticLockBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.lockup.SyntheticLock synthetic_lock = 4 [json_name = "syntheticLock", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearSyntheticLock() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        syntheticLock_ = null;
+        if (syntheticLockBuilder_ != null) {
+          syntheticLockBuilder_.dispose();
+          syntheticLockBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.lockup.SyntheticLock synthetic_lock = 4 [json_name = "syntheticLock", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.lockup.LockProto.SyntheticLock.Builder getSyntheticLockBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getSyntheticLockFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.osmosis.lockup.SyntheticLock synthetic_lock = 4 [json_name = "syntheticLock", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.lockup.LockProto.SyntheticLockOrBuilder getSyntheticLockOrBuilder() {
+        if (syntheticLockBuilder_ != null) {
+          return syntheticLockBuilder_.getMessageOrBuilder();
+        } else {
+          return syntheticLock_ == null ?
+              com.osmosis.lockup.LockProto.SyntheticLock.getDefaultInstance() : syntheticLock_;
+        }
+      }
+      /**
+       * <code>.osmosis.lockup.SyntheticLock synthetic_lock = 4 [json_name = "syntheticLock", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.lockup.LockProto.SyntheticLock, com.osmosis.lockup.LockProto.SyntheticLock.Builder, com.osmosis.lockup.LockProto.SyntheticLockOrBuilder> 
+          getSyntheticLockFieldBuilder() {
+        if (syntheticLockBuilder_ == null) {
+          syntheticLockBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.lockup.LockProto.SyntheticLock, com.osmosis.lockup.LockProto.SyntheticLock.Builder, com.osmosis.lockup.LockProto.SyntheticLockOrBuilder>(
+                  getSyntheticLock(),
+                  getParentForChildren(),
+                  isClean());
+          syntheticLock_ = null;
+        }
+        return syntheticLockBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin delegationAmount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> delegationAmountBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin delegation_amount = 5 [json_name = "delegationAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the delegationAmount field is set.
+       */
+      public boolean hasDelegationAmount() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin delegation_amount = 5 [json_name = "delegationAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The delegationAmount.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getDelegationAmount() {
+        if (delegationAmountBuilder_ == null) {
+          return delegationAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : delegationAmount_;
+        } else {
+          return delegationAmountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin delegation_amount = 5 [json_name = "delegationAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setDelegationAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (delegationAmountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          delegationAmount_ = value;
+        } else {
+          delegationAmountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin delegation_amount = 5 [json_name = "delegationAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setDelegationAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (delegationAmountBuilder_ == null) {
+          delegationAmount_ = builderForValue.build();
+        } else {
+          delegationAmountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin delegation_amount = 5 [json_name = "delegationAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeDelegationAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (delegationAmountBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            delegationAmount_ != null &&
+            delegationAmount_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getDelegationAmountBuilder().mergeFrom(value);
+          } else {
+            delegationAmount_ = value;
+          }
+        } else {
+          delegationAmountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin delegation_amount = 5 [json_name = "delegationAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearDelegationAmount() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        delegationAmount_ = null;
+        if (delegationAmountBuilder_ != null) {
+          delegationAmountBuilder_.dispose();
+          delegationAmountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin delegation_amount = 5 [json_name = "delegationAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getDelegationAmountBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getDelegationAmountFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin delegation_amount = 5 [json_name = "delegationAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDelegationAmountOrBuilder() {
+        if (delegationAmountBuilder_ != null) {
+          return delegationAmountBuilder_.getMessageOrBuilder();
+        } else {
+          return delegationAmount_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : delegationAmount_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin delegation_amount = 5 [json_name = "delegationAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getDelegationAmountFieldBuilder() {
+        if (delegationAmountBuilder_ == null) {
+          delegationAmountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getDelegationAmount(),
+                  getParentForChildren(),
+                  isClean());
+          delegationAmount_ = null;
+        }
+        return delegationAmountBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin equivalentStakedAmount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> equivalentStakedAmountBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin equivalent_staked_amount = 6 [json_name = "equivalentStakedAmount", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the equivalentStakedAmount field is set.
+       */
+      public boolean hasEquivalentStakedAmount() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin equivalent_staked_amount = 6 [json_name = "equivalentStakedAmount", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The equivalentStakedAmount.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getEquivalentStakedAmount() {
+        if (equivalentStakedAmountBuilder_ == null) {
+          return equivalentStakedAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : equivalentStakedAmount_;
+        } else {
+          return equivalentStakedAmountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin equivalent_staked_amount = 6 [json_name = "equivalentStakedAmount", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setEquivalentStakedAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (equivalentStakedAmountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          equivalentStakedAmount_ = value;
+        } else {
+          equivalentStakedAmountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin equivalent_staked_amount = 6 [json_name = "equivalentStakedAmount", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setEquivalentStakedAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (equivalentStakedAmountBuilder_ == null) {
+          equivalentStakedAmount_ = builderForValue.build();
+        } else {
+          equivalentStakedAmountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin equivalent_staked_amount = 6 [json_name = "equivalentStakedAmount", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeEquivalentStakedAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (equivalentStakedAmountBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            equivalentStakedAmount_ != null &&
+            equivalentStakedAmount_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getEquivalentStakedAmountBuilder().mergeFrom(value);
+          } else {
+            equivalentStakedAmount_ = value;
+          }
+        } else {
+          equivalentStakedAmountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin equivalent_staked_amount = 6 [json_name = "equivalentStakedAmount", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearEquivalentStakedAmount() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        equivalentStakedAmount_ = null;
+        if (equivalentStakedAmountBuilder_ != null) {
+          equivalentStakedAmountBuilder_.dispose();
+          equivalentStakedAmountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin equivalent_staked_amount = 6 [json_name = "equivalentStakedAmount", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getEquivalentStakedAmountBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getEquivalentStakedAmountFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin equivalent_staked_amount = 6 [json_name = "equivalentStakedAmount", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getEquivalentStakedAmountOrBuilder() {
+        if (equivalentStakedAmountBuilder_ != null) {
+          return equivalentStakedAmountBuilder_.getMessageOrBuilder();
+        } else {
+          return equivalentStakedAmount_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : equivalentStakedAmount_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin equivalent_staked_amount = 6 [json_name = "equivalentStakedAmount", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getEquivalentStakedAmountFieldBuilder() {
+        if (equivalentStakedAmountBuilder_ == null) {
+          equivalentStakedAmountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getEquivalentStakedAmount(),
+                  getParentForChildren(),
+                  isClean());
+          equivalentStakedAmount_ = null;
+        }
+        return equivalentStakedAmountBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.superfluid.ConcentratedPoolUserPositionRecord)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.superfluid.ConcentratedPoolUserPositionRecord)
+    private static final com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord();
+    }
+
+    public static com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ConcentratedPoolUserPositionRecord>
+        PARSER = new com.google.protobuf.AbstractParser<ConcentratedPoolUserPositionRecord>() {
+      @java.lang.Override
+      public ConcentratedPoolUserPositionRecord parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ConcentratedPoolUserPositionRecord> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ConcentratedPoolUserPositionRecord> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.superfluid.SuperfluidProto.ConcentratedPoolUserPositionRecord getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_superfluid_SuperfluidAsset_descriptor;
   private static final 
@@ -4889,6 +6175,11 @@ public final class SuperfluidProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_superfluid_UnpoolWhitelistedPools_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_superfluid_ConcentratedPoolUserPositionRecord_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_superfluid_ConcentratedPoolUserPositionRecord_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4902,39 +6193,52 @@ public final class SuperfluidProto {
       "smosis.superfluid\032\024gogoproto/gogo.proto\032" +
       "\036google/protobuf/duration.proto\032\037google/" +
       "protobuf/timestamp.proto\032\036cosmos/base/v1" +
-      "beta1/coin.proto\"y\n\017SuperfluidAsset\022\024\n\005d" +
-      "enom\030\001 \001(\tR\005denom\022F\n\nasset_type\030\002 \001(\0162\'." +
-      "osmosis.superfluid.SuperfluidAssetTypeR\t" +
-      "assetType:\010\210\240\037\000\350\240\037\001\"k\n\035SuperfluidInterme" +
-      "diaryAccount\022\024\n\005denom\030\001 \001(\tR\005denom\022\031\n\010va" +
-      "l_addr\030\002 \001(\tR\007valAddr\022\031\n\010gauge_id\030\003 \001(\004R" +
-      "\007gaugeId\"\276\001\n\036OsmoEquivalentMultiplierRec" +
-      "ord\022!\n\014epoch_number\030\001 \001(\003R\013epochNumber\022\024" +
-      "\n\005denom\030\002 \001(\tR\005denom\022c\n\nmultiplier\030\003 \001(\t" +
-      "BC\310\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/t" +
-      "ypes.Dec\362\336\037\021yaml:\"multiplier\"R\nmultiplie" +
-      "r\"\362\002\n\032SuperfluidDelegationRecord\022+\n\021dele" +
-      "gator_address\030\001 \001(\tR\020delegatorAddress\022+\n" +
-      "\021validator_address\030\002 \001(\tR\020validatorAddre" +
-      "ss\022w\n\021delegation_amount\030\003 \001(\0132\031.cosmos.b" +
-      "ase.v1beta1.CoinB/\310\336\037\000\252\337\037\'github.com/cos" +
-      "mos/cosmos-sdk/types.CoinR\020delegationAmo" +
-      "unt\022\200\001\n\030equivalent_staked_amount\030\004 \001(\0132\031" +
-      ".cosmos.base.v1beta1.CoinB+\252\337\037\'github.co" +
-      "m/cosmos/cosmos-sdk/types.CoinR\026equivale" +
-      "ntStakedAmount\"q\n#LockIdIntermediaryAcco" +
-      "untConnection\022\027\n\007lock_id\030\001 \001(\004R\006lockId\0221" +
-      "\n\024intermediary_account\030\002 \001(\tR\023intermedia" +
-      "ryAccount\"*\n\026UnpoolWhitelistedPools\022\020\n\003i" +
-      "ds\030\001 \003(\004R\003ids*\204\001\n\023SuperfluidAssetType\022\035\n" +
-      "\031SuperfluidAssetTypeNative\020\000\022\036\n\032Superflu" +
-      "idAssetTypeLPShare\020\001\022(\n$SuperfluidAssetT" +
-      "ypeConcentratedShare\020\002\032\004\210\243\036\000B\310\001\n\026com.osm" +
-      "osis.superfluidB\017SuperfluidProtoZ6github" +
-      ".com/osmosis-labs/osmosis/v15/x/superflu" +
-      "id/types\242\002\003OSX\252\002\022Osmosis.Superfluid\312\002\022Os" +
-      "mosis\\Superfluid\342\002\036Osmosis\\Superfluid\\GP" +
-      "BMetadata\352\002\023Osmosis::Superfluidb\006proto3"
+      "beta1/coin.proto\032\031osmosis/lockup/lock.pr" +
+      "oto\"y\n\017SuperfluidAsset\022\024\n\005denom\030\001 \001(\tR\005d" +
+      "enom\022F\n\nasset_type\030\002 \001(\0162\'.osmosis.super" +
+      "fluid.SuperfluidAssetTypeR\tassetType:\010\210\240" +
+      "\037\000\350\240\037\001\"k\n\035SuperfluidIntermediaryAccount\022" +
+      "\024\n\005denom\030\001 \001(\tR\005denom\022\031\n\010val_addr\030\002 \001(\tR" +
+      "\007valAddr\022\031\n\010gauge_id\030\003 \001(\004R\007gaugeId\"\263\001\n\036" +
+      "OsmoEquivalentMultiplierRecord\022!\n\014epoch_" +
+      "number\030\001 \001(\003R\013epochNumber\022\024\n\005denom\030\002 \001(\t" +
+      "R\005denom\022X\n\nmultiplier\030\003 \001(\tB8\310\336\037\000\332\336\037\033cos" +
+      "mossdk.io/math.LegacyDec\362\336\037\021yaml:\"multip" +
+      "lier\"R\nmultiplier\"\362\002\n\032SuperfluidDelegati" +
+      "onRecord\022+\n\021delegator_address\030\001 \001(\tR\020del" +
+      "egatorAddress\022+\n\021validator_address\030\002 \001(\t" +
+      "R\020validatorAddress\022w\n\021delegation_amount\030" +
+      "\003 \001(\0132\031.cosmos.base.v1beta1.CoinB/\310\336\037\000\252\337" +
+      "\037\'github.com/cosmos/cosmos-sdk/types.Coi" +
+      "nR\020delegationAmount\022\200\001\n\030equivalent_stake" +
+      "d_amount\030\004 \001(\0132\031.cosmos.base.v1beta1.Coi" +
+      "nB+\252\337\037\'github.com/cosmos/cosmos-sdk/type" +
+      "s.CoinR\026equivalentStakedAmount\"q\n#LockId" +
+      "IntermediaryAccountConnection\022\027\n\007lock_id" +
+      "\030\001 \001(\004R\006lockId\0221\n\024intermediary_account\030\002" +
+      " \001(\tR\023intermediaryAccount\"*\n\026UnpoolWhite" +
+      "listedPools\022\020\n\003ids\030\001 \003(\004R\003ids\"\323\003\n\"Concen" +
+      "tratedPoolUserPositionRecord\022+\n\021validato" +
+      "r_address\030\001 \001(\tR\020validatorAddress\022\037\n\013pos" +
+      "ition_id\030\002 \001(\004R\npositionId\022\027\n\007lock_id\030\003 " +
+      "\001(\004R\006lockId\022J\n\016synthetic_lock\030\004 \001(\0132\035.os" +
+      "mosis.lockup.SyntheticLockB\004\310\336\037\000R\rsynthe" +
+      "ticLock\022w\n\021delegation_amount\030\005 \001(\0132\031.cos" +
+      "mos.base.v1beta1.CoinB/\310\336\037\000\252\337\037\'github.co" +
+      "m/cosmos/cosmos-sdk/types.CoinR\020delegati" +
+      "onAmount\022\200\001\n\030equivalent_staked_amount\030\006 " +
+      "\001(\0132\031.cosmos.base.v1beta1.CoinB+\252\337\037\'gith" +
+      "ub.com/cosmos/cosmos-sdk/types.CoinR\026equ" +
+      "ivalentStakedAmount*\204\001\n\023SuperfluidAssetT" +
+      "ype\022\035\n\031SuperfluidAssetTypeNative\020\000\022\036\n\032Su" +
+      "perfluidAssetTypeLPShare\020\001\022(\n$Superfluid" +
+      "AssetTypeConcentratedShare\020\002\032\004\210\243\036\000B\310\001\n\026c" +
+      "om.osmosis.superfluidB\017SuperfluidProtoZ6" +
+      "github.com/osmosis-labs/osmosis/v26/x/su" +
+      "perfluid/types\242\002\003OSX\252\002\022Osmosis.Superflui" +
+      "d\312\002\022Osmosis\\Superfluid\342\002\036Osmosis\\Superfl" +
+      "uid\\GPBMetadata\352\002\023Osmosis::Superfluidb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4943,6 +6247,7 @@ public final class SuperfluidProto {
           com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
+          com.osmosis.lockup.LockProto.getDescriptor(),
         });
     internal_static_osmosis_superfluid_SuperfluidAsset_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -4980,6 +6285,12 @@ public final class SuperfluidProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_superfluid_UnpoolWhitelistedPools_descriptor,
         new java.lang.String[] { "Ids", });
+    internal_static_osmosis_superfluid_ConcentratedPoolUserPositionRecord_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_osmosis_superfluid_ConcentratedPoolUserPositionRecord_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_superfluid_ConcentratedPoolUserPositionRecord_descriptor,
+        new java.lang.String[] { "ValidatorAddress", "PositionId", "LockId", "SyntheticLock", "DelegationAmount", "EquivalentStakedAmount", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.gogoproto.GogoProto.castrepeated);
@@ -4995,6 +6306,7 @@ public final class SuperfluidProto {
     com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     com.cosmos.base.v1beta1.CoinProto.getDescriptor();
+    com.osmosis.lockup.LockProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

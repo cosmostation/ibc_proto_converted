@@ -8924,65 +8924,70 @@ public final class TxProto {
       "p\032\024gogoproto/gogo.proto\032\021amino/amino.pro" +
       "to\032\036google/protobuf/duration.proto\032\036cosm" +
       "os/base/v1beta1/coin.proto\032\031osmosis/lock" +
-      "up/lock.proto\"\245\002\n\rMsgLockTokens\022&\n\005owner" +
-      "\030\001 \001(\tB\020\362\336\037\014yaml:\"owner\"R\005owner\022h\n\010durat" +
-      "ion\030\002 \001(\0132\031.google.protobuf.DurationB1\310\336" +
-      "\037\000\352\336\037\022duration,omitempty\362\336\037\017yaml:\"durati" +
-      "on\"\230\337\037\001R\010duration\022a\n\005coins\030\003 \003(\0132\031.cosmo" +
-      "s.base.v1beta1.CoinB0\310\336\037\000\252\337\037(github.com/" +
-      "cosmos/cosmos-sdk/types.CoinsR\005coins:\037\212\347" +
-      "\260*\032osmosis/lockup/lock-tokens\"\'\n\025MsgLock" +
-      "TokensResponse\022\016\n\002ID\030\001 \001(\004R\002ID\"g\n\024MsgBeg" +
-      "inUnlockingAll\022&\n\005owner\030\001 \001(\tB\020\362\336\037\014yaml:" +
-      "\"owner\"R\005owner:\'\212\347\260*\"osmosis/lockup/begi" +
-      "n-unlock-tokens\"T\n\034MsgBeginUnlockingAllR" +
-      "esponse\0224\n\007unlocks\030\001 \003(\0132\032.osmosis.locku" +
-      "p.PeriodLockR\007unlocks\"\334\001\n\021MsgBeginUnlock" +
-      "ing\022&\n\005owner\030\001 \001(\tB\020\362\336\037\014yaml:\"owner\"R\005ow" +
-      "ner\022\016\n\002ID\030\002 \001(\004R\002ID\022a\n\005coins\030\003 \003(\0132\031.cos" +
-      "mos.base.v1beta1.CoinB0\310\336\037\000\252\337\037(github.co" +
-      "m/cosmos/cosmos-sdk/types.CoinsR\005coins:," +
-      "\212\347\260*\'osmosis/lockup/begin-unlock-period-" +
-      "lock\"_\n\031MsgBeginUnlockingResponse\022\030\n\007suc" +
-      "cess\030\001 \001(\010R\007success\022(\n\017unlockingLockID\030\002" +
-      " \001(\004R\017unlockingLockID\"\263\001\n\017MsgExtendLocku" +
-      "p\022&\n\005owner\030\001 \001(\tB\020\362\336\037\014yaml:\"owner\"R\005owne" +
-      "r\022\016\n\002ID\030\002 \001(\004R\002ID\022h\n\010duration\030\003 \001(\0132\031.go" +
-      "ogle.protobuf.DurationB1\310\336\037\000\352\336\037\022duration" +
-      ",omitempty\362\336\037\017yaml:\"duration\"\230\337\037\001R\010durat" +
-      "ion\"3\n\027MsgExtendLockupResponse\022\030\n\007succes" +
-      "s\030\001 \001(\010R\007success\"\253\001\n\016MsgForceUnlock\022&\n\005o" +
-      "wner\030\001 \001(\tB\020\362\336\037\014yaml:\"owner\"R\005owner\022\016\n\002I" +
-      "D\030\002 \001(\004R\002ID\022a\n\005coins\030\003 \003(\0132\031.cosmos.base" +
-      ".v1beta1.CoinB0\310\336\037\000\252\337\037(github.com/cosmos" +
-      "/cosmos-sdk/types.CoinsR\005coins\"2\n\026MsgFor" +
-      "ceUnlockResponse\022\030\n\007success\030\001 \001(\010R\007succe" +
-      "ss\"\242\001\n\033MsgSetRewardReceiverAddress\022&\n\005ow" +
-      "ner\030\001 \001(\tB\020\362\336\037\014yaml:\"owner\"R\005owner\022\026\n\006lo" +
-      "ckID\030\002 \001(\004R\006lockID\022C\n\017reward_receiver\030\003 " +
-      "\001(\tB\032\362\336\037\026yaml:\"reward_receiver\"R\016rewardR" +
-      "eceiver\"?\n#MsgSetRewardReceiverAddressRe" +
-      "sponse\022\030\n\007success\030\001 \001(\010R\007success2\321\004\n\003Msg" +
-      "\022R\n\nLockTokens\022\035.osmosis.lockup.MsgLockT" +
-      "okens\032%.osmosis.lockup.MsgLockTokensResp" +
-      "onse\022g\n\021BeginUnlockingAll\022$.osmosis.lock" +
-      "up.MsgBeginUnlockingAll\032,.osmosis.lockup" +
-      ".MsgBeginUnlockingAllResponse\022^\n\016BeginUn" +
-      "locking\022!.osmosis.lockup.MsgBeginUnlocki" +
-      "ng\032).osmosis.lockup.MsgBeginUnlockingRes" +
-      "ponse\022X\n\014ExtendLockup\022\037.osmosis.lockup.M" +
-      "sgExtendLockup\032\'.osmosis.lockup.MsgExten" +
-      "dLockupResponse\022U\n\013ForceUnlock\022\036.osmosis" +
-      ".lockup.MsgForceUnlock\032&.osmosis.lockup." +
-      "MsgForceUnlockResponse\022|\n\030SetRewardRecei" +
-      "verAddress\022+.osmosis.lockup.MsgSetReward" +
-      "ReceiverAddress\0323.osmosis.lockup.MsgSetR" +
-      "ewardReceiverAddressResponseB\250\001\n\022com.osm" +
-      "osis.lockupB\007TxProtoZ2github.com/osmosis" +
-      "-labs/osmosis/v15/x/lockup/types\242\002\003OLX\252\002" +
-      "\016Osmosis.Lockup\312\002\016Osmosis\\Lockup\342\002\032Osmos" +
-      "is\\Lockup\\GPBMetadata\352\002\017Osmosis::Lockupb" +
-      "\006proto3"
+      "up/lock.proto\032\027cosmos/msg/v1/msg.proto\"\257" +
+      "\002\n\rMsgLockTokens\022&\n\005owner\030\001 \001(\tB\020\362\336\037\014yam" +
+      "l:\"owner\"R\005owner\022h\n\010duration\030\002 \001(\0132\031.goo" +
+      "gle.protobuf.DurationB1\310\336\037\000\352\336\037\022duration," +
+      "omitempty\362\336\037\017yaml:\"duration\"\230\337\037\001R\010durati" +
+      "on\022a\n\005coins\030\003 \003(\0132\031.cosmos.base.v1beta1." +
+      "CoinB0\310\336\037\000\252\337\037(github.com/cosmos/cosmos-s" +
+      "dk/types.CoinsR\005coins:)\202\347\260*\005owner\212\347\260*\032os" +
+      "mosis/lockup/lock-tokens\"\'\n\025MsgLockToken" +
+      "sResponse\022\016\n\002ID\030\001 \001(\004R\002ID\"q\n\024MsgBeginUnl" +
+      "ockingAll\022&\n\005owner\030\001 \001(\tB\020\362\336\037\014yaml:\"owne" +
+      "r\"R\005owner:1\202\347\260*\005owner\212\347\260*\"osmosis/lockup" +
+      "/begin-unlock-tokens\"T\n\034MsgBeginUnlockin" +
+      "gAllResponse\0224\n\007unlocks\030\001 \003(\0132\032.osmosis." +
+      "lockup.PeriodLockR\007unlocks\"\346\001\n\021MsgBeginU" +
+      "nlocking\022&\n\005owner\030\001 \001(\tB\020\362\336\037\014yaml:\"owner" +
+      "\"R\005owner\022\016\n\002ID\030\002 \001(\004R\002ID\022a\n\005coins\030\003 \003(\0132" +
+      "\031.cosmos.base.v1beta1.CoinB0\310\336\037\000\252\337\037(gith" +
+      "ub.com/cosmos/cosmos-sdk/types.CoinsR\005co" +
+      "ins:6\202\347\260*\005owner\212\347\260*\'osmosis/lockup/begin" +
+      "-unlock-period-lock\"_\n\031MsgBeginUnlocking" +
+      "Response\022\030\n\007success\030\001 \001(\010R\007success\022(\n\017un" +
+      "lockingLockID\030\002 \001(\004R\017unlockingLockID\"\340\001\n" +
+      "\017MsgExtendLockup\022&\n\005owner\030\001 \001(\tB\020\362\336\037\014yam" +
+      "l:\"owner\"R\005owner\022\016\n\002ID\030\002 \001(\004R\002ID\022h\n\010dura" +
+      "tion\030\003 \001(\0132\031.google.protobuf.DurationB1\310" +
+      "\336\037\000\352\336\037\022duration,omitempty\362\336\037\017yaml:\"durat" +
+      "ion\"\230\337\037\001R\010duration:+\202\347\260*\005owner\212\347\260*\034osmos" +
+      "is/lockup/extend-lockup\"3\n\027MsgExtendLock" +
+      "upResponse\022\030\n\007success\030\001 \001(\010R\007success\"\336\001\n" +
+      "\016MsgForceUnlock\022&\n\005owner\030\001 \001(\tB\020\362\336\037\014yaml" +
+      ":\"owner\"R\005owner\022\016\n\002ID\030\002 \001(\004R\002ID\022a\n\005coins" +
+      "\030\003 \003(\0132\031.cosmos.base.v1beta1.CoinB0\310\336\037\000\252" +
+      "\337\037(github.com/cosmos/cosmos-sdk/types.Co" +
+      "insR\005coins:1\202\347\260*\005owner\212\347\260*\"osmosis/locku" +
+      "p/force-unlock-tokens\"2\n\026MsgForceUnlockR" +
+      "esponse\022\030\n\007success\030\001 \001(\010R\007success\"\335\001\n\033Ms" +
+      "gSetRewardReceiverAddress\022&\n\005owner\030\001 \001(\t" +
+      "B\020\362\336\037\014yaml:\"owner\"R\005owner\022\026\n\006lockID\030\002 \001(" +
+      "\004R\006lockID\022C\n\017reward_receiver\030\003 \001(\tB\032\362\336\037\026" +
+      "yaml:\"reward_receiver\"R\016rewardReceiver:9" +
+      "\202\347\260*\005owner\212\347\260**osmosis/lockup/set-reward" +
+      "-receiver-address\"?\n#MsgSetRewardReceive" +
+      "rAddressResponse\022\030\n\007success\030\001 \001(\010R\007succe" +
+      "ss2\321\004\n\003Msg\022R\n\nLockTokens\022\035.osmosis.locku" +
+      "p.MsgLockTokens\032%.osmosis.lockup.MsgLock" +
+      "TokensResponse\022g\n\021BeginUnlockingAll\022$.os" +
+      "mosis.lockup.MsgBeginUnlockingAll\032,.osmo" +
+      "sis.lockup.MsgBeginUnlockingAllResponse\022" +
+      "^\n\016BeginUnlocking\022!.osmosis.lockup.MsgBe" +
+      "ginUnlocking\032).osmosis.lockup.MsgBeginUn" +
+      "lockingResponse\022X\n\014ExtendLockup\022\037.osmosi" +
+      "s.lockup.MsgExtendLockup\032\'.osmosis.locku" +
+      "p.MsgExtendLockupResponse\022U\n\013ForceUnlock" +
+      "\022\036.osmosis.lockup.MsgForceUnlock\032&.osmos" +
+      "is.lockup.MsgForceUnlockResponse\022|\n\030SetR" +
+      "ewardReceiverAddress\022+.osmosis.lockup.Ms" +
+      "gSetRewardReceiverAddress\0323.osmosis.lock" +
+      "up.MsgSetRewardReceiverAddressResponseB\250" +
+      "\001\n\022com.osmosis.lockupB\007TxProtoZ2github.c" +
+      "om/osmosis-labs/osmosis/v26/x/lockup/typ" +
+      "es\242\002\003OLX\252\002\016Osmosis.Lockup\312\002\016Osmosis\\Lock" +
+      "up\342\002\032Osmosis\\Lockup\\GPBMetadata\352\002\017Osmosi" +
+      "s::Lockupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8992,6 +8997,7 @@ public final class TxProto {
           com.google.protobuf.DurationProto.getDescriptor(),
           com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
           com.osmosis.lockup.LockProto.getDescriptor(),
+          com.cosmos.msg.v1.MsgProto.getDescriptor(),
         });
     internal_static_osmosis_lockup_MsgLockTokens_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -9068,6 +9074,7 @@ public final class TxProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.amino.AminoProto.name);
+    registry.add(com.cosmos.msg.v1.MsgProto.signer);
     registry.add(com.gogoproto.GogoProto.castrepeated);
     registry.add(com.gogoproto.GogoProto.jsontag);
     registry.add(com.gogoproto.GogoProto.moretags);
@@ -9080,6 +9087,7 @@ public final class TxProto {
     com.google.protobuf.DurationProto.getDescriptor();
     com.cosmos.base.v1beta1.CoinProto.getDescriptor();
     com.osmosis.lockup.LockProto.getDescriptor();
+    com.cosmos.msg.v1.MsgProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

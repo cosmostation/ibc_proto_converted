@@ -1692,7 +1692,7 @@ public final class GovProto {
       "1.Content\212\347\260*\'osmosis/SetProtoRevAdminAc" +
       "countProposalB\336\001\n\034com.osmosis.protorev.v" +
       "1beta1B\010GovProtoZ4github.com/osmosis-lab" +
-      "s/osmosis/v15/x/protorev/types\242\002\003OPX\252\002\030O" +
+      "s/osmosis/v26/x/protorev/types\242\002\003OPX\252\002\030O" +
       "smosis.Protorev.V1beta1\312\002\030Osmosis\\Protor" +
       "ev\\V1beta1\342\002$Osmosis\\Protorev\\V1beta1\\GP" +
       "BMetadata\352\002\032Osmosis::Protorev::V1beta1b\006" +

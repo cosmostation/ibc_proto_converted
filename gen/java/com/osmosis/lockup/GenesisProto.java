@@ -71,6 +71,21 @@ public final class GenesisProto {
      */
     com.osmosis.lockup.LockProto.SyntheticLockOrBuilder getSyntheticLocksOrBuilder(
         int index);
+
+    /**
+     * <code>.osmosis.lockup.Params params = 4 [json_name = "params"];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.osmosis.lockup.Params params = 4 [json_name = "params"];</code>
+     * @return The params.
+     */
+    com.osmosis.lockup.ParamsProto.Params getParams();
+    /**
+     * <code>.osmosis.lockup.Params params = 4 [json_name = "params"];</code>
+     */
+    com.osmosis.lockup.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
    * <pre>
@@ -206,6 +221,32 @@ public final class GenesisProto {
       return syntheticLocks_.get(index);
     }
 
+    public static final int PARAMS_FIELD_NUMBER = 4;
+    private com.osmosis.lockup.ParamsProto.Params params_;
+    /**
+     * <code>.osmosis.lockup.Params params = 4 [json_name = "params"];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.osmosis.lockup.Params params = 4 [json_name = "params"];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.osmosis.lockup.ParamsProto.Params getParams() {
+      return params_ == null ? com.osmosis.lockup.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.osmosis.lockup.Params params = 4 [json_name = "params"];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.lockup.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.osmosis.lockup.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -229,6 +270,9 @@ public final class GenesisProto {
       for (int i = 0; i < syntheticLocks_.size(); i++) {
         output.writeMessage(3, syntheticLocks_.get(i));
       }
+      if (params_ != null) {
+        output.writeMessage(4, getParams());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -249,6 +293,10 @@ public final class GenesisProto {
       for (int i = 0; i < syntheticLocks_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, syntheticLocks_.get(i));
+      }
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getParams());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -271,6 +319,11 @@ public final class GenesisProto {
           .equals(other.getLocksList())) return false;
       if (!getSyntheticLocksList()
           .equals(other.getSyntheticLocksList())) return false;
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -292,6 +345,10 @@ public final class GenesisProto {
       if (getSyntheticLocksCount() > 0) {
         hash = (37 * hash) + SYNTHETIC_LOCKS_FIELD_NUMBER;
         hash = (53 * hash) + getSyntheticLocksList().hashCode();
+      }
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -443,6 +500,11 @@ public final class GenesisProto {
           syntheticLocksBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
         return this;
       }
 
@@ -500,6 +562,11 @@ public final class GenesisProto {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.lastLockId_ = lastLockId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
         }
       }
 
@@ -602,6 +669,9 @@ public final class GenesisProto {
             }
           }
         }
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -659,6 +729,13 @@ public final class GenesisProto {
                 }
                 break;
               } // case 26
+              case 34: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1187,6 +1264,125 @@ public final class GenesisProto {
         }
         return syntheticLocksBuilder_;
       }
+
+      private com.osmosis.lockup.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.lockup.ParamsProto.Params, com.osmosis.lockup.ParamsProto.Params.Builder, com.osmosis.lockup.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.osmosis.lockup.Params params = 4 [json_name = "params"];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.osmosis.lockup.Params params = 4 [json_name = "params"];</code>
+       * @return The params.
+       */
+      public com.osmosis.lockup.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.osmosis.lockup.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.osmosis.lockup.Params params = 4 [json_name = "params"];</code>
+       */
+      public Builder setParams(com.osmosis.lockup.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.lockup.Params params = 4 [json_name = "params"];</code>
+       */
+      public Builder setParams(
+          com.osmosis.lockup.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.lockup.Params params = 4 [json_name = "params"];</code>
+       */
+      public Builder mergeParams(com.osmosis.lockup.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            params_ != null &&
+            params_ != com.osmosis.lockup.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.lockup.Params params = 4 [json_name = "params"];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.lockup.Params params = 4 [json_name = "params"];</code>
+       */
+      public com.osmosis.lockup.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.osmosis.lockup.Params params = 4 [json_name = "params"];</code>
+       */
+      public com.osmosis.lockup.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.osmosis.lockup.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.osmosis.lockup.Params params = 4 [json_name = "params"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.lockup.ParamsProto.Params, com.osmosis.lockup.ParamsProto.Params.Builder, com.osmosis.lockup.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.lockup.ParamsProto.Params, com.osmosis.lockup.ParamsProto.Params.Builder, com.osmosis.lockup.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1267,29 +1463,32 @@ public final class GenesisProto {
     java.lang.String[] descriptorData = {
       "\n\034osmosis/lockup/genesis.proto\022\016osmosis." +
       "lockup\032\024gogoproto/gogo.proto\032\031osmosis/lo" +
-      "ckup/lock.proto\"\266\001\n\014GenesisState\022 \n\014last" +
-      "_lock_id\030\001 \001(\004R\nlastLockId\0226\n\005locks\030\002 \003(" +
-      "\0132\032.osmosis.lockup.PeriodLockB\004\310\336\037\000R\005loc" +
-      "ks\022L\n\017synthetic_locks\030\003 \003(\0132\035.osmosis.lo" +
-      "ckup.SyntheticLockB\004\310\336\037\000R\016syntheticLocks" +
-      "B\255\001\n\022com.osmosis.lockupB\014GenesisProtoZ2g" +
-      "ithub.com/osmosis-labs/osmosis/v15/x/loc" +
-      "kup/types\242\002\003OLX\252\002\016Osmosis.Lockup\312\002\016Osmos" +
-      "is\\Lockup\342\002\032Osmosis\\Lockup\\GPBMetadata\352\002" +
-      "\017Osmosis::Lockupb\006proto3"
+      "ckup/lock.proto\032\033osmosis/lockup/params.p" +
+      "roto\"\346\001\n\014GenesisState\022 \n\014last_lock_id\030\001 " +
+      "\001(\004R\nlastLockId\0226\n\005locks\030\002 \003(\0132\032.osmosis" +
+      ".lockup.PeriodLockB\004\310\336\037\000R\005locks\022L\n\017synth" +
+      "etic_locks\030\003 \003(\0132\035.osmosis.lockup.Synthe" +
+      "ticLockB\004\310\336\037\000R\016syntheticLocks\022.\n\006params\030" +
+      "\004 \001(\0132\026.osmosis.lockup.ParamsR\006paramsB\255\001" +
+      "\n\022com.osmosis.lockupB\014GenesisProtoZ2gith" +
+      "ub.com/osmosis-labs/osmosis/v26/x/lockup" +
+      "/types\242\002\003OLX\252\002\016Osmosis.Lockup\312\002\016Osmosis\\" +
+      "Lockup\342\002\032Osmosis\\Lockup\\GPBMetadata\352\002\017Os" +
+      "mosis::Lockupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.gogoproto.GogoProto.getDescriptor(),
           com.osmosis.lockup.LockProto.getDescriptor(),
+          com.osmosis.lockup.ParamsProto.getDescriptor(),
         });
     internal_static_osmosis_lockup_GenesisState_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_osmosis_lockup_GenesisState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_lockup_GenesisState_descriptor,
-        new java.lang.String[] { "LastLockId", "Locks", "SyntheticLocks", });
+        new java.lang.String[] { "LastLockId", "Locks", "SyntheticLocks", "Params", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.gogoproto.GogoProto.nullable);
@@ -1297,6 +1496,7 @@ public final class GenesisProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.gogoproto.GogoProto.getDescriptor();
     com.osmosis.lockup.LockProto.getDescriptor();
+    com.osmosis.lockup.ParamsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -77,6 +77,37 @@ public final class QueryGrpc {
     return getEstimateSwapExactAmountInMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInResponse> getEstimateSwapExactAmountInWithPrimitiveTypesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "EstimateSwapExactAmountInWithPrimitiveTypes",
+      requestType = com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest.class,
+      responseType = com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInResponse> getEstimateSwapExactAmountInWithPrimitiveTypesMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest, com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInResponse> getEstimateSwapExactAmountInWithPrimitiveTypesMethod;
+    if ((getEstimateSwapExactAmountInWithPrimitiveTypesMethod = QueryGrpc.getEstimateSwapExactAmountInWithPrimitiveTypesMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getEstimateSwapExactAmountInWithPrimitiveTypesMethod = QueryGrpc.getEstimateSwapExactAmountInWithPrimitiveTypesMethod) == null) {
+          QueryGrpc.getEstimateSwapExactAmountInWithPrimitiveTypesMethod = getEstimateSwapExactAmountInWithPrimitiveTypesMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest, com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EstimateSwapExactAmountInWithPrimitiveTypes"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("EstimateSwapExactAmountInWithPrimitiveTypes"))
+              .build();
+        }
+      }
+    }
+    return getEstimateSwapExactAmountInWithPrimitiveTypesMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSinglePoolSwapExactAmountInRequest,
       com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInResponse> getEstimateSinglePoolSwapExactAmountInMethod;
 
@@ -137,6 +168,37 @@ public final class QueryGrpc {
       }
     }
     return getEstimateSwapExactAmountOutMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutResponse> getEstimateSwapExactAmountOutWithPrimitiveTypesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "EstimateSwapExactAmountOutWithPrimitiveTypes",
+      requestType = com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest.class,
+      responseType = com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutResponse> getEstimateSwapExactAmountOutWithPrimitiveTypesMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest, com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutResponse> getEstimateSwapExactAmountOutWithPrimitiveTypesMethod;
+    if ((getEstimateSwapExactAmountOutWithPrimitiveTypesMethod = QueryGrpc.getEstimateSwapExactAmountOutWithPrimitiveTypesMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getEstimateSwapExactAmountOutWithPrimitiveTypesMethod = QueryGrpc.getEstimateSwapExactAmountOutWithPrimitiveTypesMethod) == null) {
+          QueryGrpc.getEstimateSwapExactAmountOutWithPrimitiveTypesMethod = getEstimateSwapExactAmountOutWithPrimitiveTypesMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest, com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EstimateSwapExactAmountOutWithPrimitiveTypes"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("EstimateSwapExactAmountOutWithPrimitiveTypes"))
+              .build();
+        }
+      }
+    }
+    return getEstimateSwapExactAmountOutWithPrimitiveTypesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSinglePoolSwapExactAmountOutRequest,
@@ -263,6 +325,37 @@ public final class QueryGrpc {
     return getAllPoolsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse> getListPoolsByDenomMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListPoolsByDenom",
+      requestType = com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest.class,
+      responseType = com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse> getListPoolsByDenomMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest, com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse> getListPoolsByDenomMethod;
+    if ((getListPoolsByDenomMethod = QueryGrpc.getListPoolsByDenomMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getListPoolsByDenomMethod = QueryGrpc.getListPoolsByDenomMethod) == null) {
+          QueryGrpc.getListPoolsByDenomMethod = getListPoolsByDenomMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest, com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPoolsByDenom"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("ListPoolsByDenom"))
+              .build();
+        }
+      }
+    }
+    return getListPoolsByDenomMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.SpotPriceRequest,
       com.osmosis.poolmanager.v1beta1.QueryProto.SpotPriceResponse> getSpotPriceMethod;
 
@@ -323,6 +416,347 @@ public final class QueryGrpc {
       }
     }
     return getTotalPoolLiquidityMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse> getTotalLiquidityMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TotalLiquidity",
+      requestType = com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest.class,
+      responseType = com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse> getTotalLiquidityMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest, com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse> getTotalLiquidityMethod;
+    if ((getTotalLiquidityMethod = QueryGrpc.getTotalLiquidityMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getTotalLiquidityMethod = QueryGrpc.getTotalLiquidityMethod) == null) {
+          QueryGrpc.getTotalLiquidityMethod = getTotalLiquidityMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest, com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TotalLiquidity"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("TotalLiquidity"))
+              .build();
+        }
+      }
+    }
+    return getTotalLiquidityMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse> getTotalVolumeForPoolMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TotalVolumeForPool",
+      requestType = com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest.class,
+      responseType = com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse> getTotalVolumeForPoolMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest, com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse> getTotalVolumeForPoolMethod;
+    if ((getTotalVolumeForPoolMethod = QueryGrpc.getTotalVolumeForPoolMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getTotalVolumeForPoolMethod = QueryGrpc.getTotalVolumeForPoolMethod) == null) {
+          QueryGrpc.getTotalVolumeForPoolMethod = getTotalVolumeForPoolMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest, com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TotalVolumeForPool"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("TotalVolumeForPool"))
+              .build();
+        }
+      }
+    }
+    return getTotalVolumeForPoolMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse> getTradingPairTakerFeeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TradingPairTakerFee",
+      requestType = com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest.class,
+      responseType = com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse> getTradingPairTakerFeeMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest, com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse> getTradingPairTakerFeeMethod;
+    if ((getTradingPairTakerFeeMethod = QueryGrpc.getTradingPairTakerFeeMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getTradingPairTakerFeeMethod = QueryGrpc.getTradingPairTakerFeeMethod) == null) {
+          QueryGrpc.getTradingPairTakerFeeMethod = getTradingPairTakerFeeMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest, com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TradingPairTakerFee"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("TradingPairTakerFee"))
+              .build();
+        }
+      }
+    }
+    return getTradingPairTakerFeeMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse> getEstimateTradeBasedOnPriceImpactMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "EstimateTradeBasedOnPriceImpact",
+      requestType = com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest.class,
+      responseType = com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse> getEstimateTradeBasedOnPriceImpactMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest, com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse> getEstimateTradeBasedOnPriceImpactMethod;
+    if ((getEstimateTradeBasedOnPriceImpactMethod = QueryGrpc.getEstimateTradeBasedOnPriceImpactMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getEstimateTradeBasedOnPriceImpactMethod = QueryGrpc.getEstimateTradeBasedOnPriceImpactMethod) == null) {
+          QueryGrpc.getEstimateTradeBasedOnPriceImpactMethod = getEstimateTradeBasedOnPriceImpactMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest, com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EstimateTradeBasedOnPriceImpact"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("EstimateTradeBasedOnPriceImpact"))
+              .build();
+        }
+      }
+    }
+    return getEstimateTradeBasedOnPriceImpactMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse> getAllTakerFeeShareAgreementsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AllTakerFeeShareAgreements",
+      requestType = com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest.class,
+      responseType = com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse> getAllTakerFeeShareAgreementsMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest, com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse> getAllTakerFeeShareAgreementsMethod;
+    if ((getAllTakerFeeShareAgreementsMethod = QueryGrpc.getAllTakerFeeShareAgreementsMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getAllTakerFeeShareAgreementsMethod = QueryGrpc.getAllTakerFeeShareAgreementsMethod) == null) {
+          QueryGrpc.getAllTakerFeeShareAgreementsMethod = getAllTakerFeeShareAgreementsMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest, com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AllTakerFeeShareAgreements"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("AllTakerFeeShareAgreements"))
+              .build();
+        }
+      }
+    }
+    return getAllTakerFeeShareAgreementsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse> getTakerFeeShareAgreementFromDenomMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TakerFeeShareAgreementFromDenom",
+      requestType = com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest.class,
+      responseType = com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse> getTakerFeeShareAgreementFromDenomMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest, com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse> getTakerFeeShareAgreementFromDenomMethod;
+    if ((getTakerFeeShareAgreementFromDenomMethod = QueryGrpc.getTakerFeeShareAgreementFromDenomMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getTakerFeeShareAgreementFromDenomMethod = QueryGrpc.getTakerFeeShareAgreementFromDenomMethod) == null) {
+          QueryGrpc.getTakerFeeShareAgreementFromDenomMethod = getTakerFeeShareAgreementFromDenomMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest, com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TakerFeeShareAgreementFromDenom"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("TakerFeeShareAgreementFromDenom"))
+              .build();
+        }
+      }
+    }
+    return getTakerFeeShareAgreementFromDenomMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse> getTakerFeeShareDenomsToAccruedValueMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TakerFeeShareDenomsToAccruedValue",
+      requestType = com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest.class,
+      responseType = com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse> getTakerFeeShareDenomsToAccruedValueMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest, com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse> getTakerFeeShareDenomsToAccruedValueMethod;
+    if ((getTakerFeeShareDenomsToAccruedValueMethod = QueryGrpc.getTakerFeeShareDenomsToAccruedValueMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getTakerFeeShareDenomsToAccruedValueMethod = QueryGrpc.getTakerFeeShareDenomsToAccruedValueMethod) == null) {
+          QueryGrpc.getTakerFeeShareDenomsToAccruedValueMethod = getTakerFeeShareDenomsToAccruedValueMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest, com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TakerFeeShareDenomsToAccruedValue"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("TakerFeeShareDenomsToAccruedValue"))
+              .build();
+        }
+      }
+    }
+    return getTakerFeeShareDenomsToAccruedValueMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse> getAllTakerFeeShareAccumulatorsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AllTakerFeeShareAccumulators",
+      requestType = com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest.class,
+      responseType = com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse> getAllTakerFeeShareAccumulatorsMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest, com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse> getAllTakerFeeShareAccumulatorsMethod;
+    if ((getAllTakerFeeShareAccumulatorsMethod = QueryGrpc.getAllTakerFeeShareAccumulatorsMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getAllTakerFeeShareAccumulatorsMethod = QueryGrpc.getAllTakerFeeShareAccumulatorsMethod) == null) {
+          QueryGrpc.getAllTakerFeeShareAccumulatorsMethod = getAllTakerFeeShareAccumulatorsMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest, com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AllTakerFeeShareAccumulators"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("AllTakerFeeShareAccumulators"))
+              .build();
+        }
+      }
+    }
+    return getAllTakerFeeShareAccumulatorsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse> getRegisteredAlloyedPoolFromDenomMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RegisteredAlloyedPoolFromDenom",
+      requestType = com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest.class,
+      responseType = com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse> getRegisteredAlloyedPoolFromDenomMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest, com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse> getRegisteredAlloyedPoolFromDenomMethod;
+    if ((getRegisteredAlloyedPoolFromDenomMethod = QueryGrpc.getRegisteredAlloyedPoolFromDenomMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getRegisteredAlloyedPoolFromDenomMethod = QueryGrpc.getRegisteredAlloyedPoolFromDenomMethod) == null) {
+          QueryGrpc.getRegisteredAlloyedPoolFromDenomMethod = getRegisteredAlloyedPoolFromDenomMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest, com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RegisteredAlloyedPoolFromDenom"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("RegisteredAlloyedPoolFromDenom"))
+              .build();
+        }
+      }
+    }
+    return getRegisteredAlloyedPoolFromDenomMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse> getRegisteredAlloyedPoolFromPoolIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RegisteredAlloyedPoolFromPoolId",
+      requestType = com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest.class,
+      responseType = com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse> getRegisteredAlloyedPoolFromPoolIdMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest, com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse> getRegisteredAlloyedPoolFromPoolIdMethod;
+    if ((getRegisteredAlloyedPoolFromPoolIdMethod = QueryGrpc.getRegisteredAlloyedPoolFromPoolIdMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getRegisteredAlloyedPoolFromPoolIdMethod = QueryGrpc.getRegisteredAlloyedPoolFromPoolIdMethod) == null) {
+          QueryGrpc.getRegisteredAlloyedPoolFromPoolIdMethod = getRegisteredAlloyedPoolFromPoolIdMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest, com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RegisteredAlloyedPoolFromPoolId"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("RegisteredAlloyedPoolFromPoolId"))
+              .build();
+        }
+      }
+    }
+    return getRegisteredAlloyedPoolFromPoolIdMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse> getAllRegisteredAlloyedPoolsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AllRegisteredAlloyedPools",
+      requestType = com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest.class,
+      responseType = com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest,
+      com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse> getAllRegisteredAlloyedPoolsMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest, com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse> getAllRegisteredAlloyedPoolsMethod;
+    if ((getAllRegisteredAlloyedPoolsMethod = QueryGrpc.getAllRegisteredAlloyedPoolsMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getAllRegisteredAlloyedPoolsMethod = QueryGrpc.getAllRegisteredAlloyedPoolsMethod) == null) {
+          QueryGrpc.getAllRegisteredAlloyedPoolsMethod = getAllRegisteredAlloyedPoolsMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest, com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AllRegisteredAlloyedPools"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("AllRegisteredAlloyedPools"))
+              .build();
+        }
+      }
+    }
+    return getAllRegisteredAlloyedPoolsMethod;
   }
 
   /**
@@ -391,6 +825,25 @@ public final class QueryGrpc {
     }
 
     /**
+     * <pre>
+     * EstimateSwapExactAmountInWithPrimitiveTypes is an alternative query for
+     * EstimateSwapExactAmountIn. Supports query via GRPC-Gateway by using
+     * primitive types instead of repeated structs. Each index in the
+     * routes_pool_id field corresponds to the respective routes_token_out_denom
+     * value, thus they are required to have the same length and are grouped
+     * together as pairs.
+     * example usage:
+     * http://0.0.0.0:1317/osmosis/poolmanager/v1beta1/1/estimate/
+     * swap_exact_amount_in_with_primitive_types?token_in=100000stake&amp;routes_token_out_denom=uatom
+     * &amp;routes_token_out_denom=uion&amp;routes_pool_id=1&amp;routes_pool_id=2
+     * </pre>
+     */
+    default void estimateSwapExactAmountInWithPrimitiveTypes(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEstimateSwapExactAmountInWithPrimitiveTypesMethod(), responseObserver);
+    }
+
+    /**
      */
     default void estimateSinglePoolSwapExactAmountIn(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSinglePoolSwapExactAmountInRequest request,
         io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInResponse> responseObserver) {
@@ -405,6 +858,16 @@ public final class QueryGrpc {
     default void estimateSwapExactAmountOut(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutRequest request,
         io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEstimateSwapExactAmountOutMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Estimates swap amount in given out.
+     * </pre>
+     */
+    default void estimateSwapExactAmountOutWithPrimitiveTypes(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEstimateSwapExactAmountOutWithPrimitiveTypesMethod(), responseObserver);
     }
 
     /**
@@ -446,6 +909,16 @@ public final class QueryGrpc {
 
     /**
      * <pre>
+     * ListPoolsByDenom return all pools by denom
+     * </pre>
+     */
+    default void listPoolsByDenom(com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPoolsByDenomMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * SpotPrice defines a gRPC query handler that returns the spot price given
      * a base denomination and a quote denomination.
      * </pre>
@@ -456,10 +929,147 @@ public final class QueryGrpc {
     }
 
     /**
+     * <pre>
+     * TotalPoolLiquidity returns the total liquidity of the specified pool.
+     * </pre>
      */
     default void totalPoolLiquidity(com.osmosis.poolmanager.v1beta1.QueryProto.TotalPoolLiquidityRequest request,
         io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.TotalPoolLiquidityResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTotalPoolLiquidityMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * TotalLiquidity returns the total liquidity across all pools.
+     * </pre>
+     */
+    default void totalLiquidity(com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTotalLiquidityMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * TotalVolumeForPool returns the total volume of the specified pool.
+     * </pre>
+     */
+    default void totalVolumeForPool(com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTotalVolumeForPoolMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * TradingPairTakerFee returns the taker fee for a given set of denoms
+     * </pre>
+     */
+    default void tradingPairTakerFee(com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTradingPairTakerFeeMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * EstimateTradeBasedOnPriceImpact returns an estimated trade based on price
+     * impact, if a trade cannot be estimated a 0 input and 0 output would be
+     * returned.
+     * </pre>
+     */
+    default void estimateTradeBasedOnPriceImpact(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEstimateTradeBasedOnPriceImpactMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AllTakerFeeShareAgreements returns all taker fee share agreements.
+     * A taker fee share agreement includes the denom of the denom getting the
+     * taker fees, the percent of the taker fees that the denom gets when it is
+     * in the route being traded against, and the address that the taker fees are
+     * sent to at epoch.
+     * </pre>
+     */
+    default void allTakerFeeShareAgreements(com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAllTakerFeeShareAgreementsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * TakerFeeShareAgreementFromDenom returns the taker fee share agreement for a
+     * given denom. A taker fee share agreement includes the denom of the denom
+     * getting the taker fees, the percent of the taker fees that the denom gets
+     * when it is in the route being traded against, and the address that the
+     * taker fees are sent to at epoch.
+     * </pre>
+     */
+    default void takerFeeShareAgreementFromDenom(com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTakerFeeShareAgreementFromDenomMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * TakerFeeShareDenomsToAccruedValue returns the accrued value (as an Int) of
+     * the given taker fee denom (the collected fees) for the given fee share
+     * denom (the denom with the taker fee share agreement)
+     * </pre>
+     */
+    default void takerFeeShareDenomsToAccruedValue(com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTakerFeeShareDenomsToAccruedValueMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AllTakerFeeShareAccumulators returns all taker fee share accumulators. A
+     * taker fee share accumulator includes the denom of the denom getting the
+     * taker fees, and an accumulated value of coins that the denom has accrued
+     * since the last time it was distributed in the epoch prior.
+     * </pre>
+     */
+    default void allTakerFeeShareAccumulators(com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAllTakerFeeShareAccumulatorsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RegisteredAlloyedPoolFromDenom returns the registered alloyed pool state
+     * from the given denom. The registered alloyed pool contains the pool's
+     * contract address, along with the current distribution composition of taker
+     * fee share denoms within the alloyed pool.
+     * </pre>
+     */
+    default void registeredAlloyedPoolFromDenom(com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRegisteredAlloyedPoolFromDenomMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RegisteredAlloyedPoolFromPoolId returns the registered alloyed pool state
+     * from the given pool id. The registered alloyed pool contains the pool's
+     * contract address, along with the current distribution composition of taker
+     * fee share denoms within the alloyed pool.
+     * </pre>
+     */
+    default void registeredAlloyedPoolFromPoolId(com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRegisteredAlloyedPoolFromPoolIdMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AllRegisteredAlloyedPools returns all registered alloyed pools. The
+     * registered alloyed pool contains the pool's contract address, along with
+     * the current distribution composition of taker fee share denoms within the
+     * alloyed pool.
+     * </pre>
+     */
+    default void allRegisteredAlloyedPools(com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAllRegisteredAlloyedPoolsMethod(), responseObserver);
     }
   }
 
@@ -510,6 +1120,26 @@ public final class QueryGrpc {
     }
 
     /**
+     * <pre>
+     * EstimateSwapExactAmountInWithPrimitiveTypes is an alternative query for
+     * EstimateSwapExactAmountIn. Supports query via GRPC-Gateway by using
+     * primitive types instead of repeated structs. Each index in the
+     * routes_pool_id field corresponds to the respective routes_token_out_denom
+     * value, thus they are required to have the same length and are grouped
+     * together as pairs.
+     * example usage:
+     * http://0.0.0.0:1317/osmosis/poolmanager/v1beta1/1/estimate/
+     * swap_exact_amount_in_with_primitive_types?token_in=100000stake&amp;routes_token_out_denom=uatom
+     * &amp;routes_token_out_denom=uion&amp;routes_pool_id=1&amp;routes_pool_id=2
+     * </pre>
+     */
+    public void estimateSwapExactAmountInWithPrimitiveTypes(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getEstimateSwapExactAmountInWithPrimitiveTypesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
      */
     public void estimateSinglePoolSwapExactAmountIn(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSinglePoolSwapExactAmountInRequest request,
         io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInResponse> responseObserver) {
@@ -526,6 +1156,17 @@ public final class QueryGrpc {
         io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getEstimateSwapExactAmountOutMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Estimates swap amount in given out.
+     * </pre>
+     */
+    public void estimateSwapExactAmountOutWithPrimitiveTypes(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getEstimateSwapExactAmountOutWithPrimitiveTypesMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -571,6 +1212,17 @@ public final class QueryGrpc {
 
     /**
      * <pre>
+     * ListPoolsByDenom return all pools by denom
+     * </pre>
+     */
+    public void listPoolsByDenom(com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListPoolsByDenomMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * SpotPrice defines a gRPC query handler that returns the spot price given
      * a base denomination and a quote denomination.
      * </pre>
@@ -582,11 +1234,159 @@ public final class QueryGrpc {
     }
 
     /**
+     * <pre>
+     * TotalPoolLiquidity returns the total liquidity of the specified pool.
+     * </pre>
      */
     public void totalPoolLiquidity(com.osmosis.poolmanager.v1beta1.QueryProto.TotalPoolLiquidityRequest request,
         io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.TotalPoolLiquidityResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getTotalPoolLiquidityMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * TotalLiquidity returns the total liquidity across all pools.
+     * </pre>
+     */
+    public void totalLiquidity(com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTotalLiquidityMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * TotalVolumeForPool returns the total volume of the specified pool.
+     * </pre>
+     */
+    public void totalVolumeForPool(com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTotalVolumeForPoolMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * TradingPairTakerFee returns the taker fee for a given set of denoms
+     * </pre>
+     */
+    public void tradingPairTakerFee(com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTradingPairTakerFeeMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * EstimateTradeBasedOnPriceImpact returns an estimated trade based on price
+     * impact, if a trade cannot be estimated a 0 input and 0 output would be
+     * returned.
+     * </pre>
+     */
+    public void estimateTradeBasedOnPriceImpact(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getEstimateTradeBasedOnPriceImpactMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AllTakerFeeShareAgreements returns all taker fee share agreements.
+     * A taker fee share agreement includes the denom of the denom getting the
+     * taker fees, the percent of the taker fees that the denom gets when it is
+     * in the route being traded against, and the address that the taker fees are
+     * sent to at epoch.
+     * </pre>
+     */
+    public void allTakerFeeShareAgreements(com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAllTakerFeeShareAgreementsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * TakerFeeShareAgreementFromDenom returns the taker fee share agreement for a
+     * given denom. A taker fee share agreement includes the denom of the denom
+     * getting the taker fees, the percent of the taker fees that the denom gets
+     * when it is in the route being traded against, and the address that the
+     * taker fees are sent to at epoch.
+     * </pre>
+     */
+    public void takerFeeShareAgreementFromDenom(com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTakerFeeShareAgreementFromDenomMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * TakerFeeShareDenomsToAccruedValue returns the accrued value (as an Int) of
+     * the given taker fee denom (the collected fees) for the given fee share
+     * denom (the denom with the taker fee share agreement)
+     * </pre>
+     */
+    public void takerFeeShareDenomsToAccruedValue(com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTakerFeeShareDenomsToAccruedValueMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AllTakerFeeShareAccumulators returns all taker fee share accumulators. A
+     * taker fee share accumulator includes the denom of the denom getting the
+     * taker fees, and an accumulated value of coins that the denom has accrued
+     * since the last time it was distributed in the epoch prior.
+     * </pre>
+     */
+    public void allTakerFeeShareAccumulators(com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAllTakerFeeShareAccumulatorsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RegisteredAlloyedPoolFromDenom returns the registered alloyed pool state
+     * from the given denom. The registered alloyed pool contains the pool's
+     * contract address, along with the current distribution composition of taker
+     * fee share denoms within the alloyed pool.
+     * </pre>
+     */
+    public void registeredAlloyedPoolFromDenom(com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRegisteredAlloyedPoolFromDenomMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RegisteredAlloyedPoolFromPoolId returns the registered alloyed pool state
+     * from the given pool id. The registered alloyed pool contains the pool's
+     * contract address, along with the current distribution composition of taker
+     * fee share denoms within the alloyed pool.
+     * </pre>
+     */
+    public void registeredAlloyedPoolFromPoolId(com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRegisteredAlloyedPoolFromPoolIdMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AllRegisteredAlloyedPools returns all registered alloyed pools. The
+     * registered alloyed pool contains the pool's contract address, along with
+     * the current distribution composition of taker fee share denoms within the
+     * alloyed pool.
+     * </pre>
+     */
+    public void allRegisteredAlloyedPools(com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAllRegisteredAlloyedPoolsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -624,6 +1424,25 @@ public final class QueryGrpc {
     }
 
     /**
+     * <pre>
+     * EstimateSwapExactAmountInWithPrimitiveTypes is an alternative query for
+     * EstimateSwapExactAmountIn. Supports query via GRPC-Gateway by using
+     * primitive types instead of repeated structs. Each index in the
+     * routes_pool_id field corresponds to the respective routes_token_out_denom
+     * value, thus they are required to have the same length and are grouped
+     * together as pairs.
+     * example usage:
+     * http://0.0.0.0:1317/osmosis/poolmanager/v1beta1/1/estimate/
+     * swap_exact_amount_in_with_primitive_types?token_in=100000stake&amp;routes_token_out_denom=uatom
+     * &amp;routes_token_out_denom=uion&amp;routes_pool_id=1&amp;routes_pool_id=2
+     * </pre>
+     */
+    public com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInResponse estimateSwapExactAmountInWithPrimitiveTypes(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getEstimateSwapExactAmountInWithPrimitiveTypesMethod(), getCallOptions(), request);
+    }
+
+    /**
      */
     public com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInResponse estimateSinglePoolSwapExactAmountIn(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSinglePoolSwapExactAmountInRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -638,6 +1457,16 @@ public final class QueryGrpc {
     public com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutResponse estimateSwapExactAmountOut(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getEstimateSwapExactAmountOutMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Estimates swap amount in given out.
+     * </pre>
+     */
+    public com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutResponse estimateSwapExactAmountOutWithPrimitiveTypes(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getEstimateSwapExactAmountOutWithPrimitiveTypesMethod(), getCallOptions(), request);
     }
 
     /**
@@ -679,6 +1508,16 @@ public final class QueryGrpc {
 
     /**
      * <pre>
+     * ListPoolsByDenom return all pools by denom
+     * </pre>
+     */
+    public com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse listPoolsByDenom(com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListPoolsByDenomMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * SpotPrice defines a gRPC query handler that returns the spot price given
      * a base denomination and a quote denomination.
      * </pre>
@@ -689,10 +1528,147 @@ public final class QueryGrpc {
     }
 
     /**
+     * <pre>
+     * TotalPoolLiquidity returns the total liquidity of the specified pool.
+     * </pre>
      */
     public com.osmosis.poolmanager.v1beta1.QueryProto.TotalPoolLiquidityResponse totalPoolLiquidity(com.osmosis.poolmanager.v1beta1.QueryProto.TotalPoolLiquidityRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getTotalPoolLiquidityMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * TotalLiquidity returns the total liquidity across all pools.
+     * </pre>
+     */
+    public com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse totalLiquidity(com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTotalLiquidityMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * TotalVolumeForPool returns the total volume of the specified pool.
+     * </pre>
+     */
+    public com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse totalVolumeForPool(com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTotalVolumeForPoolMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * TradingPairTakerFee returns the taker fee for a given set of denoms
+     * </pre>
+     */
+    public com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse tradingPairTakerFee(com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTradingPairTakerFeeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * EstimateTradeBasedOnPriceImpact returns an estimated trade based on price
+     * impact, if a trade cannot be estimated a 0 input and 0 output would be
+     * returned.
+     * </pre>
+     */
+    public com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse estimateTradeBasedOnPriceImpact(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getEstimateTradeBasedOnPriceImpactMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AllTakerFeeShareAgreements returns all taker fee share agreements.
+     * A taker fee share agreement includes the denom of the denom getting the
+     * taker fees, the percent of the taker fees that the denom gets when it is
+     * in the route being traded against, and the address that the taker fees are
+     * sent to at epoch.
+     * </pre>
+     */
+    public com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse allTakerFeeShareAgreements(com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAllTakerFeeShareAgreementsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * TakerFeeShareAgreementFromDenom returns the taker fee share agreement for a
+     * given denom. A taker fee share agreement includes the denom of the denom
+     * getting the taker fees, the percent of the taker fees that the denom gets
+     * when it is in the route being traded against, and the address that the
+     * taker fees are sent to at epoch.
+     * </pre>
+     */
+    public com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse takerFeeShareAgreementFromDenom(com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTakerFeeShareAgreementFromDenomMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * TakerFeeShareDenomsToAccruedValue returns the accrued value (as an Int) of
+     * the given taker fee denom (the collected fees) for the given fee share
+     * denom (the denom with the taker fee share agreement)
+     * </pre>
+     */
+    public com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse takerFeeShareDenomsToAccruedValue(com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTakerFeeShareDenomsToAccruedValueMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AllTakerFeeShareAccumulators returns all taker fee share accumulators. A
+     * taker fee share accumulator includes the denom of the denom getting the
+     * taker fees, and an accumulated value of coins that the denom has accrued
+     * since the last time it was distributed in the epoch prior.
+     * </pre>
+     */
+    public com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse allTakerFeeShareAccumulators(com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAllTakerFeeShareAccumulatorsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RegisteredAlloyedPoolFromDenom returns the registered alloyed pool state
+     * from the given denom. The registered alloyed pool contains the pool's
+     * contract address, along with the current distribution composition of taker
+     * fee share denoms within the alloyed pool.
+     * </pre>
+     */
+    public com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse registeredAlloyedPoolFromDenom(com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRegisteredAlloyedPoolFromDenomMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RegisteredAlloyedPoolFromPoolId returns the registered alloyed pool state
+     * from the given pool id. The registered alloyed pool contains the pool's
+     * contract address, along with the current distribution composition of taker
+     * fee share denoms within the alloyed pool.
+     * </pre>
+     */
+    public com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse registeredAlloyedPoolFromPoolId(com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRegisteredAlloyedPoolFromPoolIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AllRegisteredAlloyedPools returns all registered alloyed pools. The
+     * registered alloyed pool contains the pool's contract address, along with
+     * the current distribution composition of taker fee share denoms within the
+     * alloyed pool.
+     * </pre>
+     */
+    public com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse allRegisteredAlloyedPools(com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAllRegisteredAlloyedPoolsMethod(), getCallOptions(), request);
     }
   }
 
@@ -732,6 +1708,26 @@ public final class QueryGrpc {
     }
 
     /**
+     * <pre>
+     * EstimateSwapExactAmountInWithPrimitiveTypes is an alternative query for
+     * EstimateSwapExactAmountIn. Supports query via GRPC-Gateway by using
+     * primitive types instead of repeated structs. Each index in the
+     * routes_pool_id field corresponds to the respective routes_token_out_denom
+     * value, thus they are required to have the same length and are grouped
+     * together as pairs.
+     * example usage:
+     * http://0.0.0.0:1317/osmosis/poolmanager/v1beta1/1/estimate/
+     * swap_exact_amount_in_with_primitive_types?token_in=100000stake&amp;routes_token_out_denom=uatom
+     * &amp;routes_token_out_denom=uion&amp;routes_pool_id=1&amp;routes_pool_id=2
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInResponse> estimateSwapExactAmountInWithPrimitiveTypes(
+        com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getEstimateSwapExactAmountInWithPrimitiveTypesMethod(), getCallOptions()), request);
+    }
+
+    /**
      */
     public com.google.common.util.concurrent.ListenableFuture<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInResponse> estimateSinglePoolSwapExactAmountIn(
         com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSinglePoolSwapExactAmountInRequest request) {
@@ -748,6 +1744,17 @@ public final class QueryGrpc {
         com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getEstimateSwapExactAmountOutMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Estimates swap amount in given out.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutResponse> estimateSwapExactAmountOutWithPrimitiveTypes(
+        com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getEstimateSwapExactAmountOutWithPrimitiveTypesMethod(), getCallOptions()), request);
     }
 
     /**
@@ -793,6 +1800,17 @@ public final class QueryGrpc {
 
     /**
      * <pre>
+     * ListPoolsByDenom return all pools by denom
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse> listPoolsByDenom(
+        com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListPoolsByDenomMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * SpotPrice defines a gRPC query handler that returns the spot price given
      * a base denomination and a quote denomination.
      * </pre>
@@ -804,24 +1822,186 @@ public final class QueryGrpc {
     }
 
     /**
+     * <pre>
+     * TotalPoolLiquidity returns the total liquidity of the specified pool.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.osmosis.poolmanager.v1beta1.QueryProto.TotalPoolLiquidityResponse> totalPoolLiquidity(
         com.osmosis.poolmanager.v1beta1.QueryProto.TotalPoolLiquidityRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getTotalPoolLiquidityMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * TotalLiquidity returns the total liquidity across all pools.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse> totalLiquidity(
+        com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTotalLiquidityMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * TotalVolumeForPool returns the total volume of the specified pool.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse> totalVolumeForPool(
+        com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTotalVolumeForPoolMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * TradingPairTakerFee returns the taker fee for a given set of denoms
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse> tradingPairTakerFee(
+        com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTradingPairTakerFeeMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * EstimateTradeBasedOnPriceImpact returns an estimated trade based on price
+     * impact, if a trade cannot be estimated a 0 input and 0 output would be
+     * returned.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse> estimateTradeBasedOnPriceImpact(
+        com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getEstimateTradeBasedOnPriceImpactMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * AllTakerFeeShareAgreements returns all taker fee share agreements.
+     * A taker fee share agreement includes the denom of the denom getting the
+     * taker fees, the percent of the taker fees that the denom gets when it is
+     * in the route being traded against, and the address that the taker fees are
+     * sent to at epoch.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse> allTakerFeeShareAgreements(
+        com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAllTakerFeeShareAgreementsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * TakerFeeShareAgreementFromDenom returns the taker fee share agreement for a
+     * given denom. A taker fee share agreement includes the denom of the denom
+     * getting the taker fees, the percent of the taker fees that the denom gets
+     * when it is in the route being traded against, and the address that the
+     * taker fees are sent to at epoch.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse> takerFeeShareAgreementFromDenom(
+        com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTakerFeeShareAgreementFromDenomMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * TakerFeeShareDenomsToAccruedValue returns the accrued value (as an Int) of
+     * the given taker fee denom (the collected fees) for the given fee share
+     * denom (the denom with the taker fee share agreement)
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse> takerFeeShareDenomsToAccruedValue(
+        com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTakerFeeShareDenomsToAccruedValueMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * AllTakerFeeShareAccumulators returns all taker fee share accumulators. A
+     * taker fee share accumulator includes the denom of the denom getting the
+     * taker fees, and an accumulated value of coins that the denom has accrued
+     * since the last time it was distributed in the epoch prior.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse> allTakerFeeShareAccumulators(
+        com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAllTakerFeeShareAccumulatorsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * RegisteredAlloyedPoolFromDenom returns the registered alloyed pool state
+     * from the given denom. The registered alloyed pool contains the pool's
+     * contract address, along with the current distribution composition of taker
+     * fee share denoms within the alloyed pool.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse> registeredAlloyedPoolFromDenom(
+        com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRegisteredAlloyedPoolFromDenomMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * RegisteredAlloyedPoolFromPoolId returns the registered alloyed pool state
+     * from the given pool id. The registered alloyed pool contains the pool's
+     * contract address, along with the current distribution composition of taker
+     * fee share denoms within the alloyed pool.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse> registeredAlloyedPoolFromPoolId(
+        com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRegisteredAlloyedPoolFromPoolIdMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * AllRegisteredAlloyedPools returns all registered alloyed pools. The
+     * registered alloyed pool contains the pool's contract address, along with
+     * the current distribution composition of taker fee share denoms within the
+     * alloyed pool.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse> allRegisteredAlloyedPools(
+        com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAllRegisteredAlloyedPoolsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PARAMS = 0;
   private static final int METHODID_ESTIMATE_SWAP_EXACT_AMOUNT_IN = 1;
-  private static final int METHODID_ESTIMATE_SINGLE_POOL_SWAP_EXACT_AMOUNT_IN = 2;
-  private static final int METHODID_ESTIMATE_SWAP_EXACT_AMOUNT_OUT = 3;
-  private static final int METHODID_ESTIMATE_SINGLE_POOL_SWAP_EXACT_AMOUNT_OUT = 4;
-  private static final int METHODID_NUM_POOLS = 5;
-  private static final int METHODID_POOL = 6;
-  private static final int METHODID_ALL_POOLS = 7;
-  private static final int METHODID_SPOT_PRICE = 8;
-  private static final int METHODID_TOTAL_POOL_LIQUIDITY = 9;
+  private static final int METHODID_ESTIMATE_SWAP_EXACT_AMOUNT_IN_WITH_PRIMITIVE_TYPES = 2;
+  private static final int METHODID_ESTIMATE_SINGLE_POOL_SWAP_EXACT_AMOUNT_IN = 3;
+  private static final int METHODID_ESTIMATE_SWAP_EXACT_AMOUNT_OUT = 4;
+  private static final int METHODID_ESTIMATE_SWAP_EXACT_AMOUNT_OUT_WITH_PRIMITIVE_TYPES = 5;
+  private static final int METHODID_ESTIMATE_SINGLE_POOL_SWAP_EXACT_AMOUNT_OUT = 6;
+  private static final int METHODID_NUM_POOLS = 7;
+  private static final int METHODID_POOL = 8;
+  private static final int METHODID_ALL_POOLS = 9;
+  private static final int METHODID_LIST_POOLS_BY_DENOM = 10;
+  private static final int METHODID_SPOT_PRICE = 11;
+  private static final int METHODID_TOTAL_POOL_LIQUIDITY = 12;
+  private static final int METHODID_TOTAL_LIQUIDITY = 13;
+  private static final int METHODID_TOTAL_VOLUME_FOR_POOL = 14;
+  private static final int METHODID_TRADING_PAIR_TAKER_FEE = 15;
+  private static final int METHODID_ESTIMATE_TRADE_BASED_ON_PRICE_IMPACT = 16;
+  private static final int METHODID_ALL_TAKER_FEE_SHARE_AGREEMENTS = 17;
+  private static final int METHODID_TAKER_FEE_SHARE_AGREEMENT_FROM_DENOM = 18;
+  private static final int METHODID_TAKER_FEE_SHARE_DENOMS_TO_ACCRUED_VALUE = 19;
+  private static final int METHODID_ALL_TAKER_FEE_SHARE_ACCUMULATORS = 20;
+  private static final int METHODID_REGISTERED_ALLOYED_POOL_FROM_DENOM = 21;
+  private static final int METHODID_REGISTERED_ALLOYED_POOL_FROM_POOL_ID = 22;
+  private static final int METHODID_ALL_REGISTERED_ALLOYED_POOLS = 23;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -848,12 +2028,20 @@ public final class QueryGrpc {
           serviceImpl.estimateSwapExactAmountIn((com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInRequest) request,
               (io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInResponse>) responseObserver);
           break;
+        case METHODID_ESTIMATE_SWAP_EXACT_AMOUNT_IN_WITH_PRIMITIVE_TYPES:
+          serviceImpl.estimateSwapExactAmountInWithPrimitiveTypes((com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInResponse>) responseObserver);
+          break;
         case METHODID_ESTIMATE_SINGLE_POOL_SWAP_EXACT_AMOUNT_IN:
           serviceImpl.estimateSinglePoolSwapExactAmountIn((com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSinglePoolSwapExactAmountInRequest) request,
               (io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInResponse>) responseObserver);
           break;
         case METHODID_ESTIMATE_SWAP_EXACT_AMOUNT_OUT:
           serviceImpl.estimateSwapExactAmountOut((com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutResponse>) responseObserver);
+          break;
+        case METHODID_ESTIMATE_SWAP_EXACT_AMOUNT_OUT_WITH_PRIMITIVE_TYPES:
+          serviceImpl.estimateSwapExactAmountOutWithPrimitiveTypes((com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest) request,
               (io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutResponse>) responseObserver);
           break;
         case METHODID_ESTIMATE_SINGLE_POOL_SWAP_EXACT_AMOUNT_OUT:
@@ -872,6 +2060,10 @@ public final class QueryGrpc {
           serviceImpl.allPools((com.osmosis.poolmanager.v1beta1.QueryProto.AllPoolsRequest) request,
               (io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.AllPoolsResponse>) responseObserver);
           break;
+        case METHODID_LIST_POOLS_BY_DENOM:
+          serviceImpl.listPoolsByDenom((com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse>) responseObserver);
+          break;
         case METHODID_SPOT_PRICE:
           serviceImpl.spotPrice((com.osmosis.poolmanager.v1beta1.QueryProto.SpotPriceRequest) request,
               (io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.SpotPriceResponse>) responseObserver);
@@ -879,6 +2071,50 @@ public final class QueryGrpc {
         case METHODID_TOTAL_POOL_LIQUIDITY:
           serviceImpl.totalPoolLiquidity((com.osmosis.poolmanager.v1beta1.QueryProto.TotalPoolLiquidityRequest) request,
               (io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.TotalPoolLiquidityResponse>) responseObserver);
+          break;
+        case METHODID_TOTAL_LIQUIDITY:
+          serviceImpl.totalLiquidity((com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse>) responseObserver);
+          break;
+        case METHODID_TOTAL_VOLUME_FOR_POOL:
+          serviceImpl.totalVolumeForPool((com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse>) responseObserver);
+          break;
+        case METHODID_TRADING_PAIR_TAKER_FEE:
+          serviceImpl.tradingPairTakerFee((com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse>) responseObserver);
+          break;
+        case METHODID_ESTIMATE_TRADE_BASED_ON_PRICE_IMPACT:
+          serviceImpl.estimateTradeBasedOnPriceImpact((com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse>) responseObserver);
+          break;
+        case METHODID_ALL_TAKER_FEE_SHARE_AGREEMENTS:
+          serviceImpl.allTakerFeeShareAgreements((com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse>) responseObserver);
+          break;
+        case METHODID_TAKER_FEE_SHARE_AGREEMENT_FROM_DENOM:
+          serviceImpl.takerFeeShareAgreementFromDenom((com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse>) responseObserver);
+          break;
+        case METHODID_TAKER_FEE_SHARE_DENOMS_TO_ACCRUED_VALUE:
+          serviceImpl.takerFeeShareDenomsToAccruedValue((com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse>) responseObserver);
+          break;
+        case METHODID_ALL_TAKER_FEE_SHARE_ACCUMULATORS:
+          serviceImpl.allTakerFeeShareAccumulators((com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse>) responseObserver);
+          break;
+        case METHODID_REGISTERED_ALLOYED_POOL_FROM_DENOM:
+          serviceImpl.registeredAlloyedPoolFromDenom((com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse>) responseObserver);
+          break;
+        case METHODID_REGISTERED_ALLOYED_POOL_FROM_POOL_ID:
+          serviceImpl.registeredAlloyedPoolFromPoolId((com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse>) responseObserver);
+          break;
+        case METHODID_ALL_REGISTERED_ALLOYED_POOLS:
+          serviceImpl.allRegisteredAlloyedPools((com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -913,6 +2149,13 @@ public final class QueryGrpc {
               com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInResponse>(
                 service, METHODID_ESTIMATE_SWAP_EXACT_AMOUNT_IN)))
         .addMethod(
+          getEstimateSwapExactAmountInWithPrimitiveTypesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest,
+              com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInResponse>(
+                service, METHODID_ESTIMATE_SWAP_EXACT_AMOUNT_IN_WITH_PRIMITIVE_TYPES)))
+        .addMethod(
           getEstimateSinglePoolSwapExactAmountInMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -926,6 +2169,13 @@ public final class QueryGrpc {
               com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutRequest,
               com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutResponse>(
                 service, METHODID_ESTIMATE_SWAP_EXACT_AMOUNT_OUT)))
+        .addMethod(
+          getEstimateSwapExactAmountOutWithPrimitiveTypesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest,
+              com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutResponse>(
+                service, METHODID_ESTIMATE_SWAP_EXACT_AMOUNT_OUT_WITH_PRIMITIVE_TYPES)))
         .addMethod(
           getEstimateSinglePoolSwapExactAmountOutMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -955,6 +2205,13 @@ public final class QueryGrpc {
               com.osmosis.poolmanager.v1beta1.QueryProto.AllPoolsResponse>(
                 service, METHODID_ALL_POOLS)))
         .addMethod(
+          getListPoolsByDenomMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest,
+              com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse>(
+                service, METHODID_LIST_POOLS_BY_DENOM)))
+        .addMethod(
           getSpotPriceMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -968,6 +2225,83 @@ public final class QueryGrpc {
               com.osmosis.poolmanager.v1beta1.QueryProto.TotalPoolLiquidityRequest,
               com.osmosis.poolmanager.v1beta1.QueryProto.TotalPoolLiquidityResponse>(
                 service, METHODID_TOTAL_POOL_LIQUIDITY)))
+        .addMethod(
+          getTotalLiquidityMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest,
+              com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse>(
+                service, METHODID_TOTAL_LIQUIDITY)))
+        .addMethod(
+          getTotalVolumeForPoolMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest,
+              com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse>(
+                service, METHODID_TOTAL_VOLUME_FOR_POOL)))
+        .addMethod(
+          getTradingPairTakerFeeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest,
+              com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse>(
+                service, METHODID_TRADING_PAIR_TAKER_FEE)))
+        .addMethod(
+          getEstimateTradeBasedOnPriceImpactMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest,
+              com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse>(
+                service, METHODID_ESTIMATE_TRADE_BASED_ON_PRICE_IMPACT)))
+        .addMethod(
+          getAllTakerFeeShareAgreementsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest,
+              com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse>(
+                service, METHODID_ALL_TAKER_FEE_SHARE_AGREEMENTS)))
+        .addMethod(
+          getTakerFeeShareAgreementFromDenomMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest,
+              com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse>(
+                service, METHODID_TAKER_FEE_SHARE_AGREEMENT_FROM_DENOM)))
+        .addMethod(
+          getTakerFeeShareDenomsToAccruedValueMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest,
+              com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse>(
+                service, METHODID_TAKER_FEE_SHARE_DENOMS_TO_ACCRUED_VALUE)))
+        .addMethod(
+          getAllTakerFeeShareAccumulatorsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest,
+              com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse>(
+                service, METHODID_ALL_TAKER_FEE_SHARE_ACCUMULATORS)))
+        .addMethod(
+          getRegisteredAlloyedPoolFromDenomMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest,
+              com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse>(
+                service, METHODID_REGISTERED_ALLOYED_POOL_FROM_DENOM)))
+        .addMethod(
+          getRegisteredAlloyedPoolFromPoolIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest,
+              com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse>(
+                service, METHODID_REGISTERED_ALLOYED_POOL_FROM_POOL_ID)))
+        .addMethod(
+          getAllRegisteredAlloyedPoolsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest,
+              com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse>(
+                service, METHODID_ALL_REGISTERED_ALLOYED_POOLS)))
         .build();
   }
 
@@ -1018,14 +2352,28 @@ public final class QueryGrpc {
               .setSchemaDescriptor(new QueryFileDescriptorSupplier())
               .addMethod(getParamsMethod())
               .addMethod(getEstimateSwapExactAmountInMethod())
+              .addMethod(getEstimateSwapExactAmountInWithPrimitiveTypesMethod())
               .addMethod(getEstimateSinglePoolSwapExactAmountInMethod())
               .addMethod(getEstimateSwapExactAmountOutMethod())
+              .addMethod(getEstimateSwapExactAmountOutWithPrimitiveTypesMethod())
               .addMethod(getEstimateSinglePoolSwapExactAmountOutMethod())
               .addMethod(getNumPoolsMethod())
               .addMethod(getPoolMethod())
               .addMethod(getAllPoolsMethod())
+              .addMethod(getListPoolsByDenomMethod())
               .addMethod(getSpotPriceMethod())
               .addMethod(getTotalPoolLiquidityMethod())
+              .addMethod(getTotalLiquidityMethod())
+              .addMethod(getTotalVolumeForPoolMethod())
+              .addMethod(getTradingPairTakerFeeMethod())
+              .addMethod(getEstimateTradeBasedOnPriceImpactMethod())
+              .addMethod(getAllTakerFeeShareAgreementsMethod())
+              .addMethod(getTakerFeeShareAgreementFromDenomMethod())
+              .addMethod(getTakerFeeShareDenomsToAccruedValueMethod())
+              .addMethod(getAllTakerFeeShareAccumulatorsMethod())
+              .addMethod(getRegisteredAlloyedPoolFromDenomMethod())
+              .addMethod(getRegisteredAlloyedPoolFromPoolIdMethod())
+              .addMethod(getAllRegisteredAlloyedPoolsMethod())
               .build();
         }
       }

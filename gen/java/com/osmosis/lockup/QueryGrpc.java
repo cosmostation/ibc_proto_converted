@@ -359,6 +359,37 @@ public final class QueryGrpc {
     return getLockedByIDMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.lockup.QueryProto.LockRewardReceiverRequest,
+      com.osmosis.lockup.QueryProto.LockRewardReceiverResponse> getLockRewardReceiverMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "LockRewardReceiver",
+      requestType = com.osmosis.lockup.QueryProto.LockRewardReceiverRequest.class,
+      responseType = com.osmosis.lockup.QueryProto.LockRewardReceiverResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.lockup.QueryProto.LockRewardReceiverRequest,
+      com.osmosis.lockup.QueryProto.LockRewardReceiverResponse> getLockRewardReceiverMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.lockup.QueryProto.LockRewardReceiverRequest, com.osmosis.lockup.QueryProto.LockRewardReceiverResponse> getLockRewardReceiverMethod;
+    if ((getLockRewardReceiverMethod = QueryGrpc.getLockRewardReceiverMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getLockRewardReceiverMethod = QueryGrpc.getLockRewardReceiverMethod) == null) {
+          QueryGrpc.getLockRewardReceiverMethod = getLockRewardReceiverMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.lockup.QueryProto.LockRewardReceiverRequest, com.osmosis.lockup.QueryProto.LockRewardReceiverResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "LockRewardReceiver"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.lockup.QueryProto.LockRewardReceiverRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.lockup.QueryProto.LockRewardReceiverResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("LockRewardReceiver"))
+              .build();
+        }
+      }
+    }
+    return getLockRewardReceiverMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.osmosis.lockup.QueryProto.NextLockIDRequest,
       com.osmosis.lockup.QueryProto.NextLockIDResponse> getNextLockIDMethod;
 
@@ -771,6 +802,16 @@ public final class QueryGrpc {
 
     /**
      * <pre>
+     * Returns lock record by id
+     * </pre>
+     */
+    default void lockRewardReceiver(com.osmosis.lockup.QueryProto.LockRewardReceiverRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.lockup.QueryProto.LockRewardReceiverResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getLockRewardReceiverMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Returns next lock ID
      * </pre>
      */
@@ -1010,6 +1051,17 @@ public final class QueryGrpc {
 
     /**
      * <pre>
+     * Returns lock record by id
+     * </pre>
+     */
+    public void lockRewardReceiver(com.osmosis.lockup.QueryProto.LockRewardReceiverRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.lockup.QueryProto.LockRewardReceiverResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getLockRewardReceiverMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Returns next lock ID
      * </pre>
      */
@@ -1228,6 +1280,16 @@ public final class QueryGrpc {
     public com.osmosis.lockup.QueryProto.LockedResponse lockedByID(com.osmosis.lockup.QueryProto.LockedRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getLockedByIDMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns lock record by id
+     * </pre>
+     */
+    public com.osmosis.lockup.QueryProto.LockRewardReceiverResponse lockRewardReceiver(com.osmosis.lockup.QueryProto.LockRewardReceiverRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getLockRewardReceiverMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1457,6 +1519,17 @@ public final class QueryGrpc {
 
     /**
      * <pre>
+     * Returns lock record by id
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.lockup.QueryProto.LockRewardReceiverResponse> lockRewardReceiver(
+        com.osmosis.lockup.QueryProto.LockRewardReceiverRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getLockRewardReceiverMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Returns next lock ID
      * </pre>
      */
@@ -1558,14 +1631,15 @@ public final class QueryGrpc {
   private static final int METHODID_ACCOUNT_LOCKED_PAST_TIME_DENOM = 8;
   private static final int METHODID_LOCKED_DENOM = 9;
   private static final int METHODID_LOCKED_BY_ID = 10;
-  private static final int METHODID_NEXT_LOCK_ID = 11;
-  private static final int METHODID_SYNTHETIC_LOCKUPS_BY_LOCKUP_ID = 12;
-  private static final int METHODID_SYNTHETIC_LOCKUP_BY_LOCKUP_ID = 13;
-  private static final int METHODID_ACCOUNT_LOCKED_LONGER_DURATION = 14;
-  private static final int METHODID_ACCOUNT_LOCKED_DURATION = 15;
-  private static final int METHODID_ACCOUNT_LOCKED_LONGER_DURATION_NOT_UNLOCKING_ONLY = 16;
-  private static final int METHODID_ACCOUNT_LOCKED_LONGER_DURATION_DENOM = 17;
-  private static final int METHODID_PARAMS = 18;
+  private static final int METHODID_LOCK_REWARD_RECEIVER = 11;
+  private static final int METHODID_NEXT_LOCK_ID = 12;
+  private static final int METHODID_SYNTHETIC_LOCKUPS_BY_LOCKUP_ID = 13;
+  private static final int METHODID_SYNTHETIC_LOCKUP_BY_LOCKUP_ID = 14;
+  private static final int METHODID_ACCOUNT_LOCKED_LONGER_DURATION = 15;
+  private static final int METHODID_ACCOUNT_LOCKED_DURATION = 16;
+  private static final int METHODID_ACCOUNT_LOCKED_LONGER_DURATION_NOT_UNLOCKING_ONLY = 17;
+  private static final int METHODID_ACCOUNT_LOCKED_LONGER_DURATION_DENOM = 18;
+  private static final int METHODID_PARAMS = 19;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1627,6 +1701,10 @@ public final class QueryGrpc {
         case METHODID_LOCKED_BY_ID:
           serviceImpl.lockedByID((com.osmosis.lockup.QueryProto.LockedRequest) request,
               (io.grpc.stub.StreamObserver<com.osmosis.lockup.QueryProto.LockedResponse>) responseObserver);
+          break;
+        case METHODID_LOCK_REWARD_RECEIVER:
+          serviceImpl.lockRewardReceiver((com.osmosis.lockup.QueryProto.LockRewardReceiverRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.lockup.QueryProto.LockRewardReceiverResponse>) responseObserver);
           break;
         case METHODID_NEXT_LOCK_ID:
           serviceImpl.nextLockID((com.osmosis.lockup.QueryProto.NextLockIDRequest) request,
@@ -1756,6 +1834,13 @@ public final class QueryGrpc {
               com.osmosis.lockup.QueryProto.LockedResponse>(
                 service, METHODID_LOCKED_BY_ID)))
         .addMethod(
+          getLockRewardReceiverMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.lockup.QueryProto.LockRewardReceiverRequest,
+              com.osmosis.lockup.QueryProto.LockRewardReceiverResponse>(
+                service, METHODID_LOCK_REWARD_RECEIVER)))
+        .addMethod(
           getNextLockIDMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -1870,6 +1955,7 @@ public final class QueryGrpc {
               .addMethod(getAccountLockedPastTimeDenomMethod())
               .addMethod(getLockedDenomMethod())
               .addMethod(getLockedByIDMethod())
+              .addMethod(getLockRewardReceiverMethod())
               .addMethod(getNextLockIDMethod())
               .addMethod(getSyntheticLockupsByLockupIDMethod())
               .addMethod(getSyntheticLockupByLockupIDMethod())

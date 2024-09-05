@@ -297,6 +297,192 @@ public final class QueryGrpc {
     return getLockableDurationsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.incentives.QueryProto.QueryAllGroupsRequest,
+      com.osmosis.incentives.QueryProto.QueryAllGroupsResponse> getAllGroupsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AllGroups",
+      requestType = com.osmosis.incentives.QueryProto.QueryAllGroupsRequest.class,
+      responseType = com.osmosis.incentives.QueryProto.QueryAllGroupsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.incentives.QueryProto.QueryAllGroupsRequest,
+      com.osmosis.incentives.QueryProto.QueryAllGroupsResponse> getAllGroupsMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.incentives.QueryProto.QueryAllGroupsRequest, com.osmosis.incentives.QueryProto.QueryAllGroupsResponse> getAllGroupsMethod;
+    if ((getAllGroupsMethod = QueryGrpc.getAllGroupsMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getAllGroupsMethod = QueryGrpc.getAllGroupsMethod) == null) {
+          QueryGrpc.getAllGroupsMethod = getAllGroupsMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.incentives.QueryProto.QueryAllGroupsRequest, com.osmosis.incentives.QueryProto.QueryAllGroupsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AllGroups"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.incentives.QueryProto.QueryAllGroupsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.incentives.QueryProto.QueryAllGroupsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("AllGroups"))
+              .build();
+        }
+      }
+    }
+    return getAllGroupsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest,
+      com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse> getAllGroupsGaugesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AllGroupsGauges",
+      requestType = com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest.class,
+      responseType = com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest,
+      com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse> getAllGroupsGaugesMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest, com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse> getAllGroupsGaugesMethod;
+    if ((getAllGroupsGaugesMethod = QueryGrpc.getAllGroupsGaugesMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getAllGroupsGaugesMethod = QueryGrpc.getAllGroupsGaugesMethod) == null) {
+          QueryGrpc.getAllGroupsGaugesMethod = getAllGroupsGaugesMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest, com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AllGroupsGauges"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("AllGroupsGauges"))
+              .build();
+        }
+      }
+    }
+    return getAllGroupsGaugesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest,
+      com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse> getAllGroupsWithGaugeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AllGroupsWithGauge",
+      requestType = com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest.class,
+      responseType = com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest,
+      com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse> getAllGroupsWithGaugeMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest, com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse> getAllGroupsWithGaugeMethod;
+    if ((getAllGroupsWithGaugeMethod = QueryGrpc.getAllGroupsWithGaugeMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getAllGroupsWithGaugeMethod = QueryGrpc.getAllGroupsWithGaugeMethod) == null) {
+          QueryGrpc.getAllGroupsWithGaugeMethod = getAllGroupsWithGaugeMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest, com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AllGroupsWithGauge"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("AllGroupsWithGauge"))
+              .build();
+        }
+      }
+    }
+    return getAllGroupsWithGaugeMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest,
+      com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse> getGroupByGroupGaugeIDMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GroupByGroupGaugeID",
+      requestType = com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest.class,
+      responseType = com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest,
+      com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse> getGroupByGroupGaugeIDMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest, com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse> getGroupByGroupGaugeIDMethod;
+    if ((getGroupByGroupGaugeIDMethod = QueryGrpc.getGroupByGroupGaugeIDMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getGroupByGroupGaugeIDMethod = QueryGrpc.getGroupByGroupGaugeIDMethod) == null) {
+          QueryGrpc.getGroupByGroupGaugeIDMethod = getGroupByGroupGaugeIDMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest, com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GroupByGroupGaugeID"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("GroupByGroupGaugeID"))
+              .build();
+        }
+      }
+    }
+    return getGroupByGroupGaugeIDMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest,
+      com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse> getCurrentWeightByGroupGaugeIDMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CurrentWeightByGroupGaugeID",
+      requestType = com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest.class,
+      responseType = com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest,
+      com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse> getCurrentWeightByGroupGaugeIDMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest, com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse> getCurrentWeightByGroupGaugeIDMethod;
+    if ((getCurrentWeightByGroupGaugeIDMethod = QueryGrpc.getCurrentWeightByGroupGaugeIDMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getCurrentWeightByGroupGaugeIDMethod = QueryGrpc.getCurrentWeightByGroupGaugeIDMethod) == null) {
+          QueryGrpc.getCurrentWeightByGroupGaugeIDMethod = getCurrentWeightByGroupGaugeIDMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest, com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CurrentWeightByGroupGaugeID"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("CurrentWeightByGroupGaugeID"))
+              .build();
+        }
+      }
+    }
+    return getCurrentWeightByGroupGaugeIDMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.incentives.QueryProto.ParamsRequest,
+      com.osmosis.incentives.QueryProto.ParamsResponse> getParamsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Params",
+      requestType = com.osmosis.incentives.QueryProto.ParamsRequest.class,
+      responseType = com.osmosis.incentives.QueryProto.ParamsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.incentives.QueryProto.ParamsRequest,
+      com.osmosis.incentives.QueryProto.ParamsResponse> getParamsMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.incentives.QueryProto.ParamsRequest, com.osmosis.incentives.QueryProto.ParamsResponse> getParamsMethod;
+    if ((getParamsMethod = QueryGrpc.getParamsMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getParamsMethod = QueryGrpc.getParamsMethod) == null) {
+          QueryGrpc.getParamsMethod = getParamsMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.incentives.QueryProto.ParamsRequest, com.osmosis.incentives.QueryProto.ParamsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Params"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.incentives.QueryProto.ParamsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.incentives.QueryProto.ParamsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("Params"))
+              .build();
+        }
+      }
+    }
+    return getParamsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -400,7 +586,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * Returns scheduled gauges that have not yet occured
+     * Returns scheduled gauges that have not yet occurred
      * </pre>
      */
     default void upcomingGauges(com.osmosis.incentives.QueryProto.UpcomingGaugesRequest request,
@@ -410,7 +596,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * UpcomingGaugesPerDenom returns scheduled gauges that have not yet occured
+     * UpcomingGaugesPerDenom returns scheduled gauges that have not yet occurred
      * by denom
      * </pre>
      */
@@ -440,6 +626,67 @@ public final class QueryGrpc {
     default void lockableDurations(com.osmosis.incentives.QueryProto.QueryLockableDurationsRequest request,
         io.grpc.stub.StreamObserver<com.osmosis.incentives.QueryProto.QueryLockableDurationsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getLockableDurationsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AllGroups returns all groups
+     * </pre>
+     */
+    default void allGroups(com.osmosis.incentives.QueryProto.QueryAllGroupsRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.incentives.QueryProto.QueryAllGroupsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAllGroupsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AllGroupsGauges returns all group gauges
+     * </pre>
+     */
+    default void allGroupsGauges(com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAllGroupsGaugesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AllGroupsWithGauge returns all groups with their group gauge
+     * </pre>
+     */
+    default void allGroupsWithGauge(com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAllGroupsWithGaugeMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GroupByGroupGaugeID returns a group given its group gauge ID
+     * </pre>
+     */
+    default void groupByGroupGaugeID(com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGroupByGroupGaugeIDMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CurrentWeightByGroupGaugeID returns the current weight since the
+     * the last epoch given a group gauge ID
+     * </pre>
+     */
+    default void currentWeightByGroupGaugeID(com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCurrentWeightByGroupGaugeIDMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Params returns incentives module params.
+     * </pre>
+     */
+    default void params(com.osmosis.incentives.QueryProto.ParamsRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.incentives.QueryProto.ParamsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getParamsMethod(), responseObserver);
     }
   }
 
@@ -533,7 +780,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * Returns scheduled gauges that have not yet occured
+     * Returns scheduled gauges that have not yet occurred
      * </pre>
      */
     public void upcomingGauges(com.osmosis.incentives.QueryProto.UpcomingGaugesRequest request,
@@ -544,7 +791,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * UpcomingGaugesPerDenom returns scheduled gauges that have not yet occured
+     * UpcomingGaugesPerDenom returns scheduled gauges that have not yet occurred
      * by denom
      * </pre>
      */
@@ -577,6 +824,73 @@ public final class QueryGrpc {
         io.grpc.stub.StreamObserver<com.osmosis.incentives.QueryProto.QueryLockableDurationsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getLockableDurationsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AllGroups returns all groups
+     * </pre>
+     */
+    public void allGroups(com.osmosis.incentives.QueryProto.QueryAllGroupsRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.incentives.QueryProto.QueryAllGroupsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAllGroupsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AllGroupsGauges returns all group gauges
+     * </pre>
+     */
+    public void allGroupsGauges(com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAllGroupsGaugesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AllGroupsWithGauge returns all groups with their group gauge
+     * </pre>
+     */
+    public void allGroupsWithGauge(com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAllGroupsWithGaugeMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GroupByGroupGaugeID returns a group given its group gauge ID
+     * </pre>
+     */
+    public void groupByGroupGaugeID(com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGroupByGroupGaugeIDMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CurrentWeightByGroupGaugeID returns the current weight since the
+     * the last epoch given a group gauge ID
+     * </pre>
+     */
+    public void currentWeightByGroupGaugeID(com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCurrentWeightByGroupGaugeIDMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Params returns incentives module params.
+     * </pre>
+     */
+    public void params(com.osmosis.incentives.QueryProto.ParamsRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.incentives.QueryProto.ParamsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getParamsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -651,7 +965,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * Returns scheduled gauges that have not yet occured
+     * Returns scheduled gauges that have not yet occurred
      * </pre>
      */
     public com.osmosis.incentives.QueryProto.UpcomingGaugesResponse upcomingGauges(com.osmosis.incentives.QueryProto.UpcomingGaugesRequest request) {
@@ -661,7 +975,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * UpcomingGaugesPerDenom returns scheduled gauges that have not yet occured
+     * UpcomingGaugesPerDenom returns scheduled gauges that have not yet occurred
      * by denom
      * </pre>
      */
@@ -691,6 +1005,67 @@ public final class QueryGrpc {
     public com.osmosis.incentives.QueryProto.QueryLockableDurationsResponse lockableDurations(com.osmosis.incentives.QueryProto.QueryLockableDurationsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getLockableDurationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AllGroups returns all groups
+     * </pre>
+     */
+    public com.osmosis.incentives.QueryProto.QueryAllGroupsResponse allGroups(com.osmosis.incentives.QueryProto.QueryAllGroupsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAllGroupsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AllGroupsGauges returns all group gauges
+     * </pre>
+     */
+    public com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse allGroupsGauges(com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAllGroupsGaugesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AllGroupsWithGauge returns all groups with their group gauge
+     * </pre>
+     */
+    public com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse allGroupsWithGauge(com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAllGroupsWithGaugeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GroupByGroupGaugeID returns a group given its group gauge ID
+     * </pre>
+     */
+    public com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse groupByGroupGaugeID(com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGroupByGroupGaugeIDMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CurrentWeightByGroupGaugeID returns the current weight since the
+     * the last epoch given a group gauge ID
+     * </pre>
+     */
+    public com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse currentWeightByGroupGaugeID(com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCurrentWeightByGroupGaugeIDMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Params returns incentives module params.
+     * </pre>
+     */
+    public com.osmosis.incentives.QueryProto.ParamsResponse params(com.osmosis.incentives.QueryProto.ParamsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getParamsMethod(), getCallOptions(), request);
     }
   }
 
@@ -770,7 +1145,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * Returns scheduled gauges that have not yet occured
+     * Returns scheduled gauges that have not yet occurred
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.osmosis.incentives.QueryProto.UpcomingGaugesResponse> upcomingGauges(
@@ -781,7 +1156,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * UpcomingGaugesPerDenom returns scheduled gauges that have not yet occured
+     * UpcomingGaugesPerDenom returns scheduled gauges that have not yet occurred
      * by denom
      * </pre>
      */
@@ -815,6 +1190,73 @@ public final class QueryGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getLockableDurationsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * AllGroups returns all groups
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.incentives.QueryProto.QueryAllGroupsResponse> allGroups(
+        com.osmosis.incentives.QueryProto.QueryAllGroupsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAllGroupsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * AllGroupsGauges returns all group gauges
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse> allGroupsGauges(
+        com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAllGroupsGaugesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * AllGroupsWithGauge returns all groups with their group gauge
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse> allGroupsWithGauge(
+        com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAllGroupsWithGaugeMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GroupByGroupGaugeID returns a group given its group gauge ID
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse> groupByGroupGaugeID(
+        com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGroupByGroupGaugeIDMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * CurrentWeightByGroupGaugeID returns the current weight since the
+     * the last epoch given a group gauge ID
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse> currentWeightByGroupGaugeID(
+        com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCurrentWeightByGroupGaugeIDMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Params returns incentives module params.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.incentives.QueryProto.ParamsResponse> params(
+        com.osmosis.incentives.QueryProto.ParamsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getParamsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_MODULE_TO_DISTRIBUTE_COINS = 0;
@@ -826,6 +1268,12 @@ public final class QueryGrpc {
   private static final int METHODID_UPCOMING_GAUGES_PER_DENOM = 6;
   private static final int METHODID_REWARDS_EST = 7;
   private static final int METHODID_LOCKABLE_DURATIONS = 8;
+  private static final int METHODID_ALL_GROUPS = 9;
+  private static final int METHODID_ALL_GROUPS_GAUGES = 10;
+  private static final int METHODID_ALL_GROUPS_WITH_GAUGE = 11;
+  private static final int METHODID_GROUP_BY_GROUP_GAUGE_ID = 12;
+  private static final int METHODID_CURRENT_WEIGHT_BY_GROUP_GAUGE_ID = 13;
+  private static final int METHODID_PARAMS = 14;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -879,6 +1327,30 @@ public final class QueryGrpc {
         case METHODID_LOCKABLE_DURATIONS:
           serviceImpl.lockableDurations((com.osmosis.incentives.QueryProto.QueryLockableDurationsRequest) request,
               (io.grpc.stub.StreamObserver<com.osmosis.incentives.QueryProto.QueryLockableDurationsResponse>) responseObserver);
+          break;
+        case METHODID_ALL_GROUPS:
+          serviceImpl.allGroups((com.osmosis.incentives.QueryProto.QueryAllGroupsRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.incentives.QueryProto.QueryAllGroupsResponse>) responseObserver);
+          break;
+        case METHODID_ALL_GROUPS_GAUGES:
+          serviceImpl.allGroupsGauges((com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse>) responseObserver);
+          break;
+        case METHODID_ALL_GROUPS_WITH_GAUGE:
+          serviceImpl.allGroupsWithGauge((com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse>) responseObserver);
+          break;
+        case METHODID_GROUP_BY_GROUP_GAUGE_ID:
+          serviceImpl.groupByGroupGaugeID((com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse>) responseObserver);
+          break;
+        case METHODID_CURRENT_WEIGHT_BY_GROUP_GAUGE_ID:
+          serviceImpl.currentWeightByGroupGaugeID((com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse>) responseObserver);
+          break;
+        case METHODID_PARAMS:
+          serviceImpl.params((com.osmosis.incentives.QueryProto.ParamsRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.incentives.QueryProto.ParamsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -961,6 +1433,48 @@ public final class QueryGrpc {
               com.osmosis.incentives.QueryProto.QueryLockableDurationsRequest,
               com.osmosis.incentives.QueryProto.QueryLockableDurationsResponse>(
                 service, METHODID_LOCKABLE_DURATIONS)))
+        .addMethod(
+          getAllGroupsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.incentives.QueryProto.QueryAllGroupsRequest,
+              com.osmosis.incentives.QueryProto.QueryAllGroupsResponse>(
+                service, METHODID_ALL_GROUPS)))
+        .addMethod(
+          getAllGroupsGaugesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest,
+              com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse>(
+                service, METHODID_ALL_GROUPS_GAUGES)))
+        .addMethod(
+          getAllGroupsWithGaugeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest,
+              com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse>(
+                service, METHODID_ALL_GROUPS_WITH_GAUGE)))
+        .addMethod(
+          getGroupByGroupGaugeIDMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest,
+              com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse>(
+                service, METHODID_GROUP_BY_GROUP_GAUGE_ID)))
+        .addMethod(
+          getCurrentWeightByGroupGaugeIDMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest,
+              com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse>(
+                service, METHODID_CURRENT_WEIGHT_BY_GROUP_GAUGE_ID)))
+        .addMethod(
+          getParamsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.incentives.QueryProto.ParamsRequest,
+              com.osmosis.incentives.QueryProto.ParamsResponse>(
+                service, METHODID_PARAMS)))
         .build();
   }
 
@@ -1018,6 +1532,12 @@ public final class QueryGrpc {
               .addMethod(getUpcomingGaugesPerDenomMethod())
               .addMethod(getRewardsEstMethod())
               .addMethod(getLockableDurationsMethod())
+              .addMethod(getAllGroupsMethod())
+              .addMethod(getAllGroupsGaugesMethod())
+              .addMethod(getAllGroupsWithGaugeMethod())
+              .addMethod(getGroupByGroupGaugeIDMethod())
+              .addMethod(getCurrentWeightByGroupGaugeIDMethod())
+              .addMethod(getParamsMethod())
               .build();
         }
       }

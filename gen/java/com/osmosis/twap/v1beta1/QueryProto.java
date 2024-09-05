@@ -1184,12 +1184,12 @@ public final class QueryProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
+     * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
      * @return The arithmeticTwap.
      */
     java.lang.String getArithmeticTwap();
     /**
-     * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
+     * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
      * @return The bytes for arithmeticTwap.
      */
     com.google.protobuf.ByteString
@@ -1235,7 +1235,7 @@ public final class QueryProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object arithmeticTwap_ = "";
     /**
-     * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
+     * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
      * @return The arithmeticTwap.
      */
     @java.lang.Override
@@ -1252,7 +1252,7 @@ public final class QueryProto {
       }
     }
     /**
-     * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
+     * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
      * @return The bytes for arithmeticTwap.
      */
     @java.lang.Override
@@ -1598,7 +1598,7 @@ public final class QueryProto {
 
       private java.lang.Object arithmeticTwap_ = "";
       /**
-       * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
+       * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
        * @return The arithmeticTwap.
        */
       public java.lang.String getArithmeticTwap() {
@@ -1614,7 +1614,7 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
+       * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
        * @return The bytes for arithmeticTwap.
        */
       public com.google.protobuf.ByteString
@@ -1631,7 +1631,7 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
+       * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
        * @param value The arithmeticTwap to set.
        * @return This builder for chaining.
        */
@@ -1644,7 +1644,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
+       * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearArithmeticTwap() {
@@ -1654,7 +1654,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
+       * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
        * @param value The bytes for arithmeticTwap to set.
        * @return This builder for chaining.
        */
@@ -2705,12 +2705,12 @@ public final class QueryProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
+     * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
      * @return The arithmeticTwap.
      */
     java.lang.String getArithmeticTwap();
     /**
-     * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
+     * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
      * @return The bytes for arithmeticTwap.
      */
     com.google.protobuf.ByteString
@@ -2756,7 +2756,7 @@ public final class QueryProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object arithmeticTwap_ = "";
     /**
-     * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
+     * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
      * @return The arithmeticTwap.
      */
     @java.lang.Override
@@ -2773,7 +2773,7 @@ public final class QueryProto {
       }
     }
     /**
-     * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
+     * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
      * @return The bytes for arithmeticTwap.
      */
     @java.lang.Override
@@ -3119,7 +3119,7 @@ public final class QueryProto {
 
       private java.lang.Object arithmeticTwap_ = "";
       /**
-       * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
+       * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
        * @return The arithmeticTwap.
        */
       public java.lang.String getArithmeticTwap() {
@@ -3135,7 +3135,7 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
+       * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
        * @return The bytes for arithmeticTwap.
        */
       public com.google.protobuf.ByteString
@@ -3152,7 +3152,7 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
+       * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
        * @param value The arithmeticTwap to set.
        * @return This builder for chaining.
        */
@@ -3165,7 +3165,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
+       * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearArithmeticTwap() {
@@ -3175,7 +3175,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
+       * <code>string arithmetic_twap = 1 [json_name = "arithmeticTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"arithmetic_twap&#92;""];</code>
        * @param value The bytes for arithmeticTwap to set.
        * @return This builder for chaining.
        */
@@ -4422,12 +4422,12 @@ public final class QueryProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
+     * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
      * @return The geometricTwap.
      */
     java.lang.String getGeometricTwap();
     /**
-     * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
+     * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
      * @return The bytes for geometricTwap.
      */
     com.google.protobuf.ByteString
@@ -4473,7 +4473,7 @@ public final class QueryProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object geometricTwap_ = "";
     /**
-     * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
+     * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
      * @return The geometricTwap.
      */
     @java.lang.Override
@@ -4490,7 +4490,7 @@ public final class QueryProto {
       }
     }
     /**
-     * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
+     * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
      * @return The bytes for geometricTwap.
      */
     @java.lang.Override
@@ -4836,7 +4836,7 @@ public final class QueryProto {
 
       private java.lang.Object geometricTwap_ = "";
       /**
-       * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
+       * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
        * @return The geometricTwap.
        */
       public java.lang.String getGeometricTwap() {
@@ -4852,7 +4852,7 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
+       * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
        * @return The bytes for geometricTwap.
        */
       public com.google.protobuf.ByteString
@@ -4869,7 +4869,7 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
+       * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
        * @param value The geometricTwap to set.
        * @return This builder for chaining.
        */
@@ -4882,7 +4882,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
+       * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearGeometricTwap() {
@@ -4892,7 +4892,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
+       * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
        * @param value The bytes for geometricTwap to set.
        * @return This builder for chaining.
        */
@@ -5943,12 +5943,12 @@ public final class QueryProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
+     * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
      * @return The geometricTwap.
      */
     java.lang.String getGeometricTwap();
     /**
-     * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
+     * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
      * @return The bytes for geometricTwap.
      */
     com.google.protobuf.ByteString
@@ -5994,7 +5994,7 @@ public final class QueryProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object geometricTwap_ = "";
     /**
-     * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
+     * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
      * @return The geometricTwap.
      */
     @java.lang.Override
@@ -6011,7 +6011,7 @@ public final class QueryProto {
       }
     }
     /**
-     * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
+     * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
      * @return The bytes for geometricTwap.
      */
     @java.lang.Override
@@ -6357,7 +6357,7 @@ public final class QueryProto {
 
       private java.lang.Object geometricTwap_ = "";
       /**
-       * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
+       * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
        * @return The geometricTwap.
        */
       public java.lang.String getGeometricTwap() {
@@ -6373,7 +6373,7 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
+       * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
        * @return The bytes for geometricTwap.
        */
       public com.google.protobuf.ByteString
@@ -6390,7 +6390,7 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
+       * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
        * @param value The geometricTwap to set.
        * @return This builder for chaining.
        */
@@ -6403,7 +6403,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
+       * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearGeometricTwap() {
@@ -6413,7 +6413,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
+       * <code>string geometric_twap = 1 [json_name = "geometricTwap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"geometric_twap&#92;""];</code>
        * @param value The bytes for geometricTwap to set.
        * @return This builder for chaining.
        */
@@ -7561,67 +7561,66 @@ public final class QueryProto {
       "(\0132\032.google.protobuf.TimestampB\035\310\336\037\000\362\336\037\021" +
       "yaml:\"start_time\"\220\337\037\001R\tstartTime\022R\n\010end_" +
       "time\030\005 \001(\0132\032.google.protobuf.TimestampB\033" +
-      "\310\336\037\001\362\336\037\017yaml:\"end_time\"\220\337\037\001R\007endTime\"\213\001\n" +
-      "\026ArithmeticTwapResponse\022q\n\017arithmetic_tw" +
-      "ap\030\001 \001(\tBH\310\336\037\000\332\336\037&github.com/cosmos/cosm" +
-      "os-sdk/types.Dec\362\336\037\026yaml:\"arithmetic_twa" +
-      "p\"R\016arithmeticTwap\"\317\001\n\032ArithmeticTwapToN" +
-      "owRequest\022\027\n\007pool_id\030\001 \001(\004R\006poolId\022\035\n\nba" +
-      "se_asset\030\002 \001(\tR\tbaseAsset\022\037\n\013quote_asset" +
-      "\030\003 \001(\tR\nquoteAsset\022X\n\nstart_time\030\004 \001(\0132\032" +
-      ".google.protobuf.TimestampB\035\310\336\037\000\362\336\037\021yaml" +
-      ":\"start_time\"\220\337\037\001R\tstartTime\"\220\001\n\033Arithme" +
-      "ticTwapToNowResponse\022q\n\017arithmetic_twap\030" +
-      "\001 \001(\tBH\310\336\037\000\332\336\037&github.com/cosmos/cosmos-" +
-      "sdk/types.Dec\362\336\037\026yaml:\"arithmetic_twap\"R" +
-      "\016arithmeticTwap\"\235\002\n\024GeometricTwapRequest" +
-      "\022\027\n\007pool_id\030\001 \001(\004R\006poolId\022\035\n\nbase_asset\030" +
-      "\002 \001(\tR\tbaseAsset\022\037\n\013quote_asset\030\003 \001(\tR\nq" +
-      "uoteAsset\022X\n\nstart_time\030\004 \001(\0132\032.google.p" +
-      "rotobuf.TimestampB\035\310\336\037\000\362\336\037\021yaml:\"start_t" +
-      "ime\"\220\337\037\001R\tstartTime\022R\n\010end_time\030\005 \001(\0132\032." +
-      "google.protobuf.TimestampB\033\310\336\037\001\362\336\037\017yaml:" +
-      "\"end_time\"\220\337\037\001R\007endTime\"\207\001\n\025GeometricTwa" +
-      "pResponse\022n\n\016geometric_twap\030\001 \001(\tBG\310\336\037\000\332" +
-      "\336\037&github.com/cosmos/cosmos-sdk/types.De" +
-      "c\362\336\037\025yaml:\"geometric_twap\"R\rgeometricTwa" +
-      "p\"\316\001\n\031GeometricTwapToNowRequest\022\027\n\007pool_" +
-      "id\030\001 \001(\004R\006poolId\022\035\n\nbase_asset\030\002 \001(\tR\tba" +
-      "seAsset\022\037\n\013quote_asset\030\003 \001(\tR\nquoteAsset" +
-      "\022X\n\nstart_time\030\004 \001(\0132\032.google.protobuf.T" +
-      "imestampB\035\310\336\037\000\362\336\037\021yaml:\"start_time\"\220\337\037\001R" +
-      "\tstartTime\"\214\001\n\032GeometricTwapToNowRespons" +
-      "e\022n\n\016geometric_twap\030\001 \001(\tBG\310\336\037\000\332\336\037&githu" +
-      "b.com/cosmos/cosmos-sdk/types.Dec\362\336\037\025yam" +
-      "l:\"geometric_twap\"R\rgeometricTwap\"\017\n\rPar" +
-      "amsRequest\"L\n\016ParamsResponse\022:\n\006params\030\001" +
-      " \001(\0132\034.osmosis.twap.v1beta1.ParamsB\004\310\336\037\000" +
-      "R\006params2\222\006\n\005Query\022y\n\006Params\022#.osmosis.t" +
-      "wap.v1beta1.ParamsRequest\032$.osmosis.twap" +
-      ".v1beta1.ParamsResponse\"$\202\323\344\223\002\036\022\034/osmosi" +
-      "s/twap/v1beta1/Params\022\231\001\n\016ArithmeticTwap" +
-      "\022+.osmosis.twap.v1beta1.ArithmeticTwapRe" +
-      "quest\032,.osmosis.twap.v1beta1.ArithmeticT" +
-      "wapResponse\",\202\323\344\223\002&\022$/osmosis/twap/v1bet" +
-      "a1/ArithmeticTwap\022\255\001\n\023ArithmeticTwapToNo" +
-      "w\0220.osmosis.twap.v1beta1.ArithmeticTwapT" +
-      "oNowRequest\0321.osmosis.twap.v1beta1.Arith" +
-      "meticTwapToNowResponse\"1\202\323\344\223\002+\022)/osmosis" +
-      "/twap/v1beta1/ArithmeticTwapToNow\022\225\001\n\rGe" +
-      "ometricTwap\022*.osmosis.twap.v1beta1.Geome" +
-      "tricTwapRequest\032+.osmosis.twap.v1beta1.G" +
-      "eometricTwapResponse\"+\202\323\344\223\002%\022#/osmosis/t" +
-      "wap/v1beta1/GeometricTwap\022\251\001\n\022GeometricT" +
-      "wapToNow\022/.osmosis.twap.v1beta1.Geometri" +
-      "cTwapToNowRequest\0320.osmosis.twap.v1beta1" +
-      ".GeometricTwapToNowResponse\"0\202\323\344\223\002*\022(/os" +
-      "mosis/twap/v1beta1/GeometricTwapToNowB\324\001" +
-      "\n\030com.osmosis.twap.v1beta1B\nQueryProtoZ<" +
-      "github.com/osmosis-labs/osmosis/v15/x/tw" +
-      "ap/client/queryproto\242\002\003OTX\252\002\024Osmosis.Twa" +
-      "p.V1beta1\312\002\024Osmosis\\Twap\\V1beta1\342\002 Osmos" +
-      "is\\Twap\\V1beta1\\GPBMetadata\352\002\026Osmosis::T" +
-      "wap::V1beta1b\006proto3"
+      "\310\336\037\001\362\336\037\017yaml:\"end_time\"\220\337\037\001R\007endTime\"\200\001\n" +
+      "\026ArithmeticTwapResponse\022f\n\017arithmetic_tw" +
+      "ap\030\001 \001(\tB=\310\336\037\000\332\336\037\033cosmossdk.io/math.Lega" +
+      "cyDec\362\336\037\026yaml:\"arithmetic_twap\"R\016arithme" +
+      "ticTwap\"\317\001\n\032ArithmeticTwapToNowRequest\022\027" +
+      "\n\007pool_id\030\001 \001(\004R\006poolId\022\035\n\nbase_asset\030\002 " +
+      "\001(\tR\tbaseAsset\022\037\n\013quote_asset\030\003 \001(\tR\nquo" +
+      "teAsset\022X\n\nstart_time\030\004 \001(\0132\032.google.pro" +
+      "tobuf.TimestampB\035\310\336\037\000\362\336\037\021yaml:\"start_tim" +
+      "e\"\220\337\037\001R\tstartTime\"\205\001\n\033ArithmeticTwapToNo" +
+      "wResponse\022f\n\017arithmetic_twap\030\001 \001(\tB=\310\336\037\000" +
+      "\332\336\037\033cosmossdk.io/math.LegacyDec\362\336\037\026yaml:" +
+      "\"arithmetic_twap\"R\016arithmeticTwap\"\235\002\n\024Ge" +
+      "ometricTwapRequest\022\027\n\007pool_id\030\001 \001(\004R\006poo" +
+      "lId\022\035\n\nbase_asset\030\002 \001(\tR\tbaseAsset\022\037\n\013qu" +
+      "ote_asset\030\003 \001(\tR\nquoteAsset\022X\n\nstart_tim" +
+      "e\030\004 \001(\0132\032.google.protobuf.TimestampB\035\310\336\037" +
+      "\000\362\336\037\021yaml:\"start_time\"\220\337\037\001R\tstartTime\022R\n" +
+      "\010end_time\030\005 \001(\0132\032.google.protobuf.Timest" +
+      "ampB\033\310\336\037\001\362\336\037\017yaml:\"end_time\"\220\337\037\001R\007endTim" +
+      "e\"|\n\025GeometricTwapResponse\022c\n\016geometric_" +
+      "twap\030\001 \001(\tB<\310\336\037\000\332\336\037\033cosmossdk.io/math.Le" +
+      "gacyDec\362\336\037\025yaml:\"geometric_twap\"R\rgeomet" +
+      "ricTwap\"\316\001\n\031GeometricTwapToNowRequest\022\027\n" +
+      "\007pool_id\030\001 \001(\004R\006poolId\022\035\n\nbase_asset\030\002 \001" +
+      "(\tR\tbaseAsset\022\037\n\013quote_asset\030\003 \001(\tR\nquot" +
+      "eAsset\022X\n\nstart_time\030\004 \001(\0132\032.google.prot" +
+      "obuf.TimestampB\035\310\336\037\000\362\336\037\021yaml:\"start_time" +
+      "\"\220\337\037\001R\tstartTime\"\201\001\n\032GeometricTwapToNowR" +
+      "esponse\022c\n\016geometric_twap\030\001 \001(\tB<\310\336\037\000\332\336\037" +
+      "\033cosmossdk.io/math.LegacyDec\362\336\037\025yaml:\"ge" +
+      "ometric_twap\"R\rgeometricTwap\"\017\n\rParamsRe" +
+      "quest\"L\n\016ParamsResponse\022:\n\006params\030\001 \001(\0132" +
+      "\034.osmosis.twap.v1beta1.ParamsB\004\310\336\037\000R\006par" +
+      "ams2\222\006\n\005Query\022y\n\006Params\022#.osmosis.twap.v" +
+      "1beta1.ParamsRequest\032$.osmosis.twap.v1be" +
+      "ta1.ParamsResponse\"$\202\323\344\223\002\036\022\034/osmosis/twa" +
+      "p/v1beta1/Params\022\231\001\n\016ArithmeticTwap\022+.os" +
+      "mosis.twap.v1beta1.ArithmeticTwapRequest" +
+      "\032,.osmosis.twap.v1beta1.ArithmeticTwapRe" +
+      "sponse\",\202\323\344\223\002&\022$/osmosis/twap/v1beta1/Ar" +
+      "ithmeticTwap\022\255\001\n\023ArithmeticTwapToNow\0220.o" +
+      "smosis.twap.v1beta1.ArithmeticTwapToNowR" +
+      "equest\0321.osmosis.twap.v1beta1.Arithmetic" +
+      "TwapToNowResponse\"1\202\323\344\223\002+\022)/osmosis/twap" +
+      "/v1beta1/ArithmeticTwapToNow\022\225\001\n\rGeometr" +
+      "icTwap\022*.osmosis.twap.v1beta1.GeometricT" +
+      "wapRequest\032+.osmosis.twap.v1beta1.Geomet" +
+      "ricTwapResponse\"+\202\323\344\223\002%\022#/osmosis/twap/v" +
+      "1beta1/GeometricTwap\022\251\001\n\022GeometricTwapTo" +
+      "Now\022/.osmosis.twap.v1beta1.GeometricTwap" +
+      "ToNowRequest\0320.osmosis.twap.v1beta1.Geom" +
+      "etricTwapToNowResponse\"0\202\323\344\223\002*\022(/osmosis" +
+      "/twap/v1beta1/GeometricTwapToNowB\324\001\n\030com" +
+      ".osmosis.twap.v1beta1B\nQueryProtoZ<githu" +
+      "b.com/osmosis-labs/osmosis/v26/x/twap/cl" +
+      "ient/queryproto\242\002\003OTX\252\002\024Osmosis.Twap.V1b" +
+      "eta1\312\002\024Osmosis\\Twap\\V1beta1\342\002 Osmosis\\Tw" +
+      "ap\\V1beta1\\GPBMetadata\352\002\026Osmosis::Twap::" +
+      "V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -297,35 +297,35 @@ public final class QueryGrpc {
     return getGetProtoRevDeveloperAccountMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest,
-      com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse> getGetProtoRevPoolWeightsMethod;
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest,
+      com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse> getGetProtoRevInfoByPoolTypeMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetProtoRevPoolWeights",
-      requestType = com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest.class,
-      responseType = com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "GetProtoRevInfoByPoolType",
+      requestType = com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest.class,
+      responseType = com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest,
-      com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse> getGetProtoRevPoolWeightsMethod() {
-    io.grpc.MethodDescriptor<com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest, com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse> getGetProtoRevPoolWeightsMethod;
-    if ((getGetProtoRevPoolWeightsMethod = QueryGrpc.getGetProtoRevPoolWeightsMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest,
+      com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse> getGetProtoRevInfoByPoolTypeMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest, com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse> getGetProtoRevInfoByPoolTypeMethod;
+    if ((getGetProtoRevInfoByPoolTypeMethod = QueryGrpc.getGetProtoRevInfoByPoolTypeMethod) == null) {
       synchronized (QueryGrpc.class) {
-        if ((getGetProtoRevPoolWeightsMethod = QueryGrpc.getGetProtoRevPoolWeightsMethod) == null) {
-          QueryGrpc.getGetProtoRevPoolWeightsMethod = getGetProtoRevPoolWeightsMethod =
-              io.grpc.MethodDescriptor.<com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest, com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse>newBuilder()
+        if ((getGetProtoRevInfoByPoolTypeMethod = QueryGrpc.getGetProtoRevInfoByPoolTypeMethod) == null) {
+          QueryGrpc.getGetProtoRevInfoByPoolTypeMethod = getGetProtoRevInfoByPoolTypeMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest, com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetProtoRevPoolWeights"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetProtoRevInfoByPoolType"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest.getDefaultInstance()))
+                  com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("GetProtoRevPoolWeights"))
+                  com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("GetProtoRevInfoByPoolType"))
               .build();
         }
       }
     }
-    return getGetProtoRevPoolWeightsMethod;
+    return getGetProtoRevInfoByPoolTypeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevMaxPoolPointsPerTxRequest,
@@ -483,6 +483,37 @@ public final class QueryGrpc {
     return getGetProtoRevPoolMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest,
+      com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse> getGetAllProtocolRevenueMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAllProtocolRevenue",
+      requestType = com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest.class,
+      responseType = com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest,
+      com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse> getGetAllProtocolRevenueMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest, com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse> getGetAllProtocolRevenueMethod;
+    if ((getGetAllProtocolRevenueMethod = QueryGrpc.getGetAllProtocolRevenueMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getGetAllProtocolRevenueMethod = QueryGrpc.getGetAllProtocolRevenueMethod) == null) {
+          QueryGrpc.getGetAllProtocolRevenueMethod = getGetAllProtocolRevenueMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest, com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAllProtocolRevenue"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("GetAllProtocolRevenue"))
+              .build();
+        }
+      }
+    }
+    return getGetAllProtocolRevenueMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -631,13 +662,13 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * GetProtoRevPoolWeights queries the weights of each pool type currently
-     * being used by the module
+     * GetProtoRevInfoByPoolType queries pool type information that is currently
+     * being utilized by the module
      * </pre>
      */
-    default void getProtoRevPoolWeights(com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest request,
-        io.grpc.stub.StreamObserver<com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProtoRevPoolWeightsMethod(), responseObserver);
+    default void getProtoRevInfoByPoolType(com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProtoRevInfoByPoolTypeMethod(), responseObserver);
     }
 
     /**
@@ -692,6 +723,17 @@ public final class QueryGrpc {
     default void getProtoRevPool(com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolRequest request,
         io.grpc.stub.StreamObserver<com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProtoRevPoolMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetAllProtocolRevenue queries all of the protocol revenue that has been
+     * accumulated by any module
+     * </pre>
+     */
+    default void getAllProtocolRevenue(com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAllProtocolRevenueMethod(), responseObserver);
     }
   }
 
@@ -834,14 +876,14 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * GetProtoRevPoolWeights queries the weights of each pool type currently
-     * being used by the module
+     * GetProtoRevInfoByPoolType queries pool type information that is currently
+     * being utilized by the module
      * </pre>
      */
-    public void getProtoRevPoolWeights(com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest request,
-        io.grpc.stub.StreamObserver<com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse> responseObserver) {
+    public void getProtoRevInfoByPoolType(com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetProtoRevPoolWeightsMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetProtoRevInfoByPoolTypeMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -901,6 +943,18 @@ public final class QueryGrpc {
         io.grpc.stub.StreamObserver<com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetProtoRevPoolMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetAllProtocolRevenue queries all of the protocol revenue that has been
+     * accumulated by any module
+     * </pre>
+     */
+    public void getAllProtocolRevenue(com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetAllProtocolRevenueMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -1020,13 +1074,13 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * GetProtoRevPoolWeights queries the weights of each pool type currently
-     * being used by the module
+     * GetProtoRevInfoByPoolType queries pool type information that is currently
+     * being utilized by the module
      * </pre>
      */
-    public com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse getProtoRevPoolWeights(com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest request) {
+    public com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse getProtoRevInfoByPoolType(com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetProtoRevPoolWeightsMethod(), getCallOptions(), request);
+          getChannel(), getGetProtoRevInfoByPoolTypeMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1081,6 +1135,17 @@ public final class QueryGrpc {
     public com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolResponse getProtoRevPool(com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetProtoRevPoolMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetAllProtocolRevenue queries all of the protocol revenue that has been
+     * accumulated by any module
+     * </pre>
+     */
+    public com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse getAllProtocolRevenue(com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetAllProtocolRevenueMethod(), getCallOptions(), request);
     }
   }
 
@@ -1209,14 +1274,14 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * GetProtoRevPoolWeights queries the weights of each pool type currently
-     * being used by the module
+     * GetProtoRevInfoByPoolType queries pool type information that is currently
+     * being utilized by the module
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse> getProtoRevPoolWeights(
-        com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse> getProtoRevInfoByPoolType(
+        com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetProtoRevPoolWeightsMethod(), getCallOptions()), request);
+          getChannel().newCall(getGetProtoRevInfoByPoolTypeMethod(), getCallOptions()), request);
     }
 
     /**
@@ -1277,6 +1342,18 @@ public final class QueryGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetProtoRevPoolMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * GetAllProtocolRevenue queries all of the protocol revenue that has been
+     * accumulated by any module
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse> getAllProtocolRevenue(
+        com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetAllProtocolRevenueMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PARAMS = 0;
@@ -1288,12 +1365,13 @@ public final class QueryGrpc {
   private static final int METHODID_GET_PROTO_REV_TOKEN_PAIR_ARB_ROUTES = 6;
   private static final int METHODID_GET_PROTO_REV_ADMIN_ACCOUNT = 7;
   private static final int METHODID_GET_PROTO_REV_DEVELOPER_ACCOUNT = 8;
-  private static final int METHODID_GET_PROTO_REV_POOL_WEIGHTS = 9;
+  private static final int METHODID_GET_PROTO_REV_INFO_BY_POOL_TYPE = 9;
   private static final int METHODID_GET_PROTO_REV_MAX_POOL_POINTS_PER_TX = 10;
   private static final int METHODID_GET_PROTO_REV_MAX_POOL_POINTS_PER_BLOCK = 11;
   private static final int METHODID_GET_PROTO_REV_BASE_DENOMS = 12;
   private static final int METHODID_GET_PROTO_REV_ENABLED = 13;
   private static final int METHODID_GET_PROTO_REV_POOL = 14;
+  private static final int METHODID_GET_ALL_PROTOCOL_REVENUE = 15;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1348,9 +1426,9 @@ public final class QueryGrpc {
           serviceImpl.getProtoRevDeveloperAccount((com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevDeveloperAccountRequest) request,
               (io.grpc.stub.StreamObserver<com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevDeveloperAccountResponse>) responseObserver);
           break;
-        case METHODID_GET_PROTO_REV_POOL_WEIGHTS:
-          serviceImpl.getProtoRevPoolWeights((com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest) request,
-              (io.grpc.stub.StreamObserver<com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse>) responseObserver);
+        case METHODID_GET_PROTO_REV_INFO_BY_POOL_TYPE:
+          serviceImpl.getProtoRevInfoByPoolType((com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse>) responseObserver);
           break;
         case METHODID_GET_PROTO_REV_MAX_POOL_POINTS_PER_TX:
           serviceImpl.getProtoRevMaxPoolPointsPerTx((com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevMaxPoolPointsPerTxRequest) request,
@@ -1371,6 +1449,10 @@ public final class QueryGrpc {
         case METHODID_GET_PROTO_REV_POOL:
           serviceImpl.getProtoRevPool((com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolRequest) request,
               (io.grpc.stub.StreamObserver<com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolResponse>) responseObserver);
+          break;
+        case METHODID_GET_ALL_PROTOCOL_REVENUE:
+          serviceImpl.getAllProtocolRevenue((com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1454,12 +1536,12 @@ public final class QueryGrpc {
               com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevDeveloperAccountResponse>(
                 service, METHODID_GET_PROTO_REV_DEVELOPER_ACCOUNT)))
         .addMethod(
-          getGetProtoRevPoolWeightsMethod(),
+          getGetProtoRevInfoByPoolTypeMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest,
-              com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse>(
-                service, METHODID_GET_PROTO_REV_POOL_WEIGHTS)))
+              com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest,
+              com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse>(
+                service, METHODID_GET_PROTO_REV_INFO_BY_POOL_TYPE)))
         .addMethod(
           getGetProtoRevMaxPoolPointsPerTxMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1495,6 +1577,13 @@ public final class QueryGrpc {
               com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolRequest,
               com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolResponse>(
                 service, METHODID_GET_PROTO_REV_POOL)))
+        .addMethod(
+          getGetAllProtocolRevenueMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest,
+              com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse>(
+                service, METHODID_GET_ALL_PROTOCOL_REVENUE)))
         .build();
   }
 
@@ -1552,12 +1641,13 @@ public final class QueryGrpc {
               .addMethod(getGetProtoRevTokenPairArbRoutesMethod())
               .addMethod(getGetProtoRevAdminAccountMethod())
               .addMethod(getGetProtoRevDeveloperAccountMethod())
-              .addMethod(getGetProtoRevPoolWeightsMethod())
+              .addMethod(getGetProtoRevInfoByPoolTypeMethod())
               .addMethod(getGetProtoRevMaxPoolPointsPerTxMethod())
               .addMethod(getGetProtoRevMaxPoolPointsPerBlockMethod())
               .addMethod(getGetProtoRevBaseDenomsMethod())
               .addMethod(getGetProtoRevEnabledMethod())
               .addMethod(getGetProtoRevPoolMethod())
+              .addMethod(getGetAllProtocolRevenueMethod())
               .build();
         }
       }

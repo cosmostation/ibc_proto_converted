@@ -1503,7 +1503,7 @@ public final class QueryProto {
      * epoch_provisions is the current minting per epoch provisions value.
      * </pre>
      *
-     * <code>bytes epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>bytes epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The epochProvisions.
      */
     com.google.protobuf.ByteString getEpochProvisions();
@@ -1556,7 +1556,7 @@ public final class QueryProto {
      * epoch_provisions is the current minting per epoch provisions value.
      * </pre>
      *
-     * <code>bytes epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>bytes epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The epochProvisions.
      */
     @java.lang.Override
@@ -1900,7 +1900,7 @@ public final class QueryProto {
        * epoch_provisions is the current minting per epoch provisions value.
        * </pre>
        *
-       * <code>bytes epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>bytes epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return The epochProvisions.
        */
       @java.lang.Override
@@ -1912,7 +1912,7 @@ public final class QueryProto {
        * epoch_provisions is the current minting per epoch provisions value.
        * </pre>
        *
-       * <code>bytes epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>bytes epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @param value The epochProvisions to set.
        * @return This builder for chaining.
        */
@@ -1928,7 +1928,7 @@ public final class QueryProto {
        * epoch_provisions is the current minting per epoch provisions value.
        * </pre>
        *
-       * <code>bytes epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>bytes epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return This builder for chaining.
        */
       public Builder clearEpochProvisions() {
@@ -2036,24 +2036,23 @@ public final class QueryProto {
       "nt/v1beta1/mint.proto\"\024\n\022QueryParamsRequ" +
       "est\"Q\n\023QueryParamsResponse\022:\n\006params\030\001 \001" +
       "(\0132\034.osmosis.mint.v1beta1.ParamsB\004\310\336\037\000R\006" +
-      "params\"\035\n\033QueryEpochProvisionsRequest\"y\n" +
-      "\034QueryEpochProvisionsResponse\022Y\n\020epoch_p" +
-      "rovisions\030\001 \001(\014B.\310\336\037\000\332\336\037&github.com/cosm" +
-      "os/cosmos-sdk/types.DecR\017epochProvisions" +
-      "2\270\002\n\005Query\022\203\001\n\006Params\022(.osmosis.mint.v1b" +
-      "eta1.QueryParamsRequest\032).osmosis.mint.v" +
-      "1beta1.QueryParamsResponse\"$\202\323\344\223\002\036\022\034/osm" +
-      "osis/mint/v1beta1/params\022\250\001\n\017EpochProvis" +
-      "ions\0221.osmosis.mint.v1beta1.QueryEpochPr" +
-      "ovisionsRequest\0322.osmosis.mint.v1beta1.Q" +
-      "ueryEpochProvisionsResponse\".\202\323\344\223\002(\022&/os" +
-      "mosis/mint/v1beta1/epoch_provisionsB\310\001\n\030" +
-      "com.osmosis.mint.v1beta1B\nQueryProtoZ0gi" +
-      "thub.com/osmosis-labs/osmosis/v15/x/mint" +
-      "/types\242\002\003OMX\252\002\024Osmosis.Mint.V1beta1\312\002\024Os" +
-      "mosis\\Mint\\V1beta1\342\002 Osmosis\\Mint\\V1beta" +
-      "1\\GPBMetadata\352\002\026Osmosis::Mint::V1beta1b\006" +
-      "proto3"
+      "params\"\035\n\033QueryEpochProvisionsRequest\"n\n" +
+      "\034QueryEpochProvisionsResponse\022N\n\020epoch_p" +
+      "rovisions\030\001 \001(\014B#\310\336\037\000\332\336\037\033cosmossdk.io/ma" +
+      "th.LegacyDecR\017epochProvisions2\270\002\n\005Query\022" +
+      "\203\001\n\006Params\022(.osmosis.mint.v1beta1.QueryP" +
+      "aramsRequest\032).osmosis.mint.v1beta1.Quer" +
+      "yParamsResponse\"$\202\323\344\223\002\036\022\034/osmosis/mint/v" +
+      "1beta1/params\022\250\001\n\017EpochProvisions\0221.osmo" +
+      "sis.mint.v1beta1.QueryEpochProvisionsReq" +
+      "uest\0322.osmosis.mint.v1beta1.QueryEpochPr" +
+      "ovisionsResponse\".\202\323\344\223\002(\022&/osmosis/mint/" +
+      "v1beta1/epoch_provisionsB\310\001\n\030com.osmosis" +
+      ".mint.v1beta1B\nQueryProtoZ0github.com/os" +
+      "mosis-labs/osmosis/v26/x/mint/types\242\002\003OM" +
+      "X\252\002\024Osmosis.Mint.V1beta1\312\002\024Osmosis\\Mint\\" +
+      "V1beta1\342\002 Osmosis\\Mint\\V1beta1\\GPBMetada" +
+      "ta\352\002\026Osmosis::Mint::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -20,7 +20,7 @@ public final class PoolQueryMsgProto {
 
     /**
      * <pre>
-     * get_swap_fee is the query strcuture to get swap fee.
+     * get_swap_fee is the query structure to get swap fee.
      * </pre>
      *
      * <code>.osmosis.cosmwasmpool.v1beta1.EmptyStruct get_swap_fee = 1 [json_name = "getSwapFee", (.gogoproto.nullable) = false];</code>
@@ -29,7 +29,7 @@ public final class PoolQueryMsgProto {
     boolean hasGetSwapFee();
     /**
      * <pre>
-     * get_swap_fee is the query strcuture to get swap fee.
+     * get_swap_fee is the query structure to get swap fee.
      * </pre>
      *
      * <code>.osmosis.cosmwasmpool.v1beta1.EmptyStruct get_swap_fee = 1 [json_name = "getSwapFee", (.gogoproto.nullable) = false];</code>
@@ -38,7 +38,7 @@ public final class PoolQueryMsgProto {
     com.osmosis.cosmwasmpool.v1beta1.PoolQueryMsgProto.EmptyStruct getGetSwapFee();
     /**
      * <pre>
-     * get_swap_fee is the query strcuture to get swap fee.
+     * get_swap_fee is the query structure to get swap fee.
      * </pre>
      *
      * <code>.osmosis.cosmwasmpool.v1beta1.EmptyStruct get_swap_fee = 1 [json_name = "getSwapFee", (.gogoproto.nullable) = false];</code>
@@ -88,7 +88,7 @@ public final class PoolQueryMsgProto {
     private com.osmosis.cosmwasmpool.v1beta1.PoolQueryMsgProto.EmptyStruct getSwapFee_;
     /**
      * <pre>
-     * get_swap_fee is the query strcuture to get swap fee.
+     * get_swap_fee is the query structure to get swap fee.
      * </pre>
      *
      * <code>.osmosis.cosmwasmpool.v1beta1.EmptyStruct get_swap_fee = 1 [json_name = "getSwapFee", (.gogoproto.nullable) = false];</code>
@@ -100,7 +100,7 @@ public final class PoolQueryMsgProto {
     }
     /**
      * <pre>
-     * get_swap_fee is the query strcuture to get swap fee.
+     * get_swap_fee is the query structure to get swap fee.
      * </pre>
      *
      * <code>.osmosis.cosmwasmpool.v1beta1.EmptyStruct get_swap_fee = 1 [json_name = "getSwapFee", (.gogoproto.nullable) = false];</code>
@@ -112,7 +112,7 @@ public final class PoolQueryMsgProto {
     }
     /**
      * <pre>
-     * get_swap_fee is the query strcuture to get swap fee.
+     * get_swap_fee is the query structure to get swap fee.
      * </pre>
      *
      * <code>.osmosis.cosmwasmpool.v1beta1.EmptyStruct get_swap_fee = 1 [json_name = "getSwapFee", (.gogoproto.nullable) = false];</code>
@@ -469,7 +469,7 @@ public final class PoolQueryMsgProto {
           com.osmosis.cosmwasmpool.v1beta1.PoolQueryMsgProto.EmptyStruct, com.osmosis.cosmwasmpool.v1beta1.PoolQueryMsgProto.EmptyStruct.Builder, com.osmosis.cosmwasmpool.v1beta1.PoolQueryMsgProto.EmptyStructOrBuilder> getSwapFeeBuilder_;
       /**
        * <pre>
-       * get_swap_fee is the query strcuture to get swap fee.
+       * get_swap_fee is the query structure to get swap fee.
        * </pre>
        *
        * <code>.osmosis.cosmwasmpool.v1beta1.EmptyStruct get_swap_fee = 1 [json_name = "getSwapFee", (.gogoproto.nullable) = false];</code>
@@ -480,7 +480,7 @@ public final class PoolQueryMsgProto {
       }
       /**
        * <pre>
-       * get_swap_fee is the query strcuture to get swap fee.
+       * get_swap_fee is the query structure to get swap fee.
        * </pre>
        *
        * <code>.osmosis.cosmwasmpool.v1beta1.EmptyStruct get_swap_fee = 1 [json_name = "getSwapFee", (.gogoproto.nullable) = false];</code>
@@ -495,7 +495,7 @@ public final class PoolQueryMsgProto {
       }
       /**
        * <pre>
-       * get_swap_fee is the query strcuture to get swap fee.
+       * get_swap_fee is the query structure to get swap fee.
        * </pre>
        *
        * <code>.osmosis.cosmwasmpool.v1beta1.EmptyStruct get_swap_fee = 1 [json_name = "getSwapFee", (.gogoproto.nullable) = false];</code>
@@ -515,7 +515,7 @@ public final class PoolQueryMsgProto {
       }
       /**
        * <pre>
-       * get_swap_fee is the query strcuture to get swap fee.
+       * get_swap_fee is the query structure to get swap fee.
        * </pre>
        *
        * <code>.osmosis.cosmwasmpool.v1beta1.EmptyStruct get_swap_fee = 1 [json_name = "getSwapFee", (.gogoproto.nullable) = false];</code>
@@ -533,7 +533,7 @@ public final class PoolQueryMsgProto {
       }
       /**
        * <pre>
-       * get_swap_fee is the query strcuture to get swap fee.
+       * get_swap_fee is the query structure to get swap fee.
        * </pre>
        *
        * <code>.osmosis.cosmwasmpool.v1beta1.EmptyStruct get_swap_fee = 1 [json_name = "getSwapFee", (.gogoproto.nullable) = false];</code>
@@ -556,7 +556,7 @@ public final class PoolQueryMsgProto {
       }
       /**
        * <pre>
-       * get_swap_fee is the query strcuture to get swap fee.
+       * get_swap_fee is the query structure to get swap fee.
        * </pre>
        *
        * <code>.osmosis.cosmwasmpool.v1beta1.EmptyStruct get_swap_fee = 1 [json_name = "getSwapFee", (.gogoproto.nullable) = false];</code>
@@ -573,7 +573,7 @@ public final class PoolQueryMsgProto {
       }
       /**
        * <pre>
-       * get_swap_fee is the query strcuture to get swap fee.
+       * get_swap_fee is the query structure to get swap fee.
        * </pre>
        *
        * <code>.osmosis.cosmwasmpool.v1beta1.EmptyStruct get_swap_fee = 1 [json_name = "getSwapFee", (.gogoproto.nullable) = false];</code>
@@ -585,7 +585,7 @@ public final class PoolQueryMsgProto {
       }
       /**
        * <pre>
-       * get_swap_fee is the query strcuture to get swap fee.
+       * get_swap_fee is the query structure to get swap fee.
        * </pre>
        *
        * <code>.osmosis.cosmwasmpool.v1beta1.EmptyStruct get_swap_fee = 1 [json_name = "getSwapFee", (.gogoproto.nullable) = false];</code>
@@ -600,7 +600,7 @@ public final class PoolQueryMsgProto {
       }
       /**
        * <pre>
-       * get_swap_fee is the query strcuture to get swap fee.
+       * get_swap_fee is the query structure to get swap fee.
        * </pre>
        *
        * <code>.osmosis.cosmwasmpool.v1beta1.EmptyStruct get_swap_fee = 1 [json_name = "getSwapFee", (.gogoproto.nullable) = false];</code>
@@ -691,7 +691,7 @@ public final class PoolQueryMsgProto {
      * swap_fee is the swap fee for this swap estimate.
      * </pre>
      *
-     * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The swapFee.
      */
     java.lang.String getSwapFee();
@@ -700,7 +700,7 @@ public final class PoolQueryMsgProto {
      * swap_fee is the swap fee for this swap estimate.
      * </pre>
      *
-     * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The bytes for swapFee.
      */
     com.google.protobuf.ByteString
@@ -750,7 +750,7 @@ public final class PoolQueryMsgProto {
      * swap_fee is the swap fee for this swap estimate.
      * </pre>
      *
-     * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The swapFee.
      */
     @java.lang.Override
@@ -771,7 +771,7 @@ public final class PoolQueryMsgProto {
      * swap_fee is the swap fee for this swap estimate.
      * </pre>
      *
-     * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The bytes for swapFee.
      */
     @java.lang.Override
@@ -1121,7 +1121,7 @@ public final class PoolQueryMsgProto {
        * swap_fee is the swap fee for this swap estimate.
        * </pre>
        *
-       * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return The swapFee.
        */
       public java.lang.String getSwapFee() {
@@ -1141,7 +1141,7 @@ public final class PoolQueryMsgProto {
        * swap_fee is the swap fee for this swap estimate.
        * </pre>
        *
-       * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return The bytes for swapFee.
        */
       public com.google.protobuf.ByteString
@@ -1162,7 +1162,7 @@ public final class PoolQueryMsgProto {
        * swap_fee is the swap fee for this swap estimate.
        * </pre>
        *
-       * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @param value The swapFee to set.
        * @return This builder for chaining.
        */
@@ -1179,7 +1179,7 @@ public final class PoolQueryMsgProto {
        * swap_fee is the swap fee for this swap estimate.
        * </pre>
        *
-       * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSwapFee() {
@@ -1193,7 +1193,7 @@ public final class PoolQueryMsgProto {
        * swap_fee is the swap fee for this swap estimate.
        * </pre>
        *
-       * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string swap_fee = 3 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @param value The bytes for swapFee to set.
        * @return This builder for chaining.
        */
@@ -6651,34 +6651,34 @@ public final class PoolQueryMsgProto {
       "se/v1beta1/coin.proto\"g\n\022GetSwapFeeQuery" +
       "Msg\022Q\n\014get_swap_fee\030\001 \001(\0132).osmosis.cosm" +
       "wasmpool.v1beta1.EmptyStructB\004\310\336\037\000R\ngetS" +
-      "wapFee\"g\n\032GetSwapFeeQueryMsgResponse\022I\n\010" +
-      "swap_fee\030\003 \001(\tB.\310\336\037\000\332\336\037&github.com/cosmo" +
-      "s/cosmos-sdk/types.DecR\007swapFee\"a\n\tSpotP" +
-      "rice\022*\n\021quote_asset_denom\030\001 \001(\tR\017quoteAs" +
-      "setDenom\022(\n\020base_asset_denom\030\002 \001(\tR\016base" +
-      "AssetDenom\"a\n\021SpotPriceQueryMsg\022L\n\nspot_" +
-      "price\030\001 \001(\0132\'.osmosis.cosmwasmpool.v1bet" +
-      "a1.SpotPriceB\004\310\336\037\000R\tspotPrice\":\n\031SpotPri" +
-      "ceQueryMsgResponse\022\035\n\nspot_price\030\001 \001(\tR\t" +
-      "spotPrice\"\r\n\013EmptyStruct\"\211\001\n\035GetTotalPoo" +
-      "lLiquidityQueryMsg\022h\n\030get_total_pool_liq" +
-      "uidity\030\001 \001(\0132).osmosis.cosmwasmpool.v1be" +
-      "ta1.EmptyStructB\004\310\336\037\000R\025getTotalPoolLiqui" +
-      "dity\"z\n%GetTotalPoolLiquidityQueryMsgRes" +
-      "ponse\022Q\n\024total_pool_liquidity\030\001 \003(\0132\031.co" +
-      "smos.base.v1beta1.CoinB\004\310\336\037\000R\022totalPoolL" +
-      "iquidity\"s\n\026GetTotalSharesQueryMsg\022Y\n\020ge" +
-      "t_total_shares\030\001 \001(\0132).osmosis.cosmwasmp" +
-      "ool.v1beta1.EmptyStructB\004\310\336\037\000R\016getTotalS" +
-      "hares\"C\n\036GetTotalSharesQueryMsgResponse\022" +
-      "!\n\014total_shares\030\001 \001(\tR\013totalSharesB\206\002\n c" +
-      "om.osmosis.cosmwasmpool.v1beta1B\021PoolQue" +
-      "ryMsgProtoZ?github.com/osmosis-labs/osmo" +
-      "sis/v15/x/cosmwasmpool/cosmwasm/msg\242\002\003OC" +
-      "X\252\002\034Osmosis.Cosmwasmpool.V1beta1\312\002\034Osmos" +
-      "is\\Cosmwasmpool\\V1beta1\342\002(Osmosis\\Cosmwa" +
-      "smpool\\V1beta1\\GPBMetadata\352\002\036Osmosis::Co" +
-      "smwasmpool::V1beta1b\006proto3"
+      "wapFee\"\\\n\032GetSwapFeeQueryMsgResponse\022>\n\010" +
+      "swap_fee\030\003 \001(\tB#\310\336\037\000\332\336\037\033cosmossdk.io/mat" +
+      "h.LegacyDecR\007swapFee\"a\n\tSpotPrice\022*\n\021quo" +
+      "te_asset_denom\030\001 \001(\tR\017quoteAssetDenom\022(\n" +
+      "\020base_asset_denom\030\002 \001(\tR\016baseAssetDenom\"" +
+      "a\n\021SpotPriceQueryMsg\022L\n\nspot_price\030\001 \001(\013" +
+      "2\'.osmosis.cosmwasmpool.v1beta1.SpotPric" +
+      "eB\004\310\336\037\000R\tspotPrice\":\n\031SpotPriceQueryMsgR" +
+      "esponse\022\035\n\nspot_price\030\001 \001(\tR\tspotPrice\"\r" +
+      "\n\013EmptyStruct\"\211\001\n\035GetTotalPoolLiquidityQ" +
+      "ueryMsg\022h\n\030get_total_pool_liquidity\030\001 \001(" +
+      "\0132).osmosis.cosmwasmpool.v1beta1.EmptySt" +
+      "ructB\004\310\336\037\000R\025getTotalPoolLiquidity\"z\n%Get" +
+      "TotalPoolLiquidityQueryMsgResponse\022Q\n\024to" +
+      "tal_pool_liquidity\030\001 \003(\0132\031.cosmos.base.v" +
+      "1beta1.CoinB\004\310\336\037\000R\022totalPoolLiquidity\"s\n" +
+      "\026GetTotalSharesQueryMsg\022Y\n\020get_total_sha" +
+      "res\030\001 \001(\0132).osmosis.cosmwasmpool.v1beta1" +
+      ".EmptyStructB\004\310\336\037\000R\016getTotalShares\"C\n\036Ge" +
+      "tTotalSharesQueryMsgResponse\022!\n\014total_sh" +
+      "ares\030\001 \001(\tR\013totalSharesB\206\002\n com.osmosis." +
+      "cosmwasmpool.v1beta1B\021PoolQueryMsgProtoZ" +
+      "?github.com/osmosis-labs/osmosis/v26/x/c" +
+      "osmwasmpool/cosmwasm/msg\242\002\003OCX\252\002\034Osmosis" +
+      ".Cosmwasmpool.V1beta1\312\002\034Osmosis\\Cosmwasm" +
+      "pool\\V1beta1\342\002(Osmosis\\Cosmwasmpool\\V1be" +
+      "ta1\\GPBMetadata\352\002\036Osmosis::Cosmwasmpool:" +
+      ":V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

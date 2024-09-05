@@ -483,6 +483,99 @@ public final class QueryGrpc {
     return getUnpoolWhitelistMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest,
+      com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse> getUserConcentratedSuperfluidPositionsDelegatedMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UserConcentratedSuperfluidPositionsDelegated",
+      requestType = com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest.class,
+      responseType = com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest,
+      com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse> getUserConcentratedSuperfluidPositionsDelegatedMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest, com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse> getUserConcentratedSuperfluidPositionsDelegatedMethod;
+    if ((getUserConcentratedSuperfluidPositionsDelegatedMethod = QueryGrpc.getUserConcentratedSuperfluidPositionsDelegatedMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getUserConcentratedSuperfluidPositionsDelegatedMethod = QueryGrpc.getUserConcentratedSuperfluidPositionsDelegatedMethod) == null) {
+          QueryGrpc.getUserConcentratedSuperfluidPositionsDelegatedMethod = getUserConcentratedSuperfluidPositionsDelegatedMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest, com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UserConcentratedSuperfluidPositionsDelegated"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("UserConcentratedSuperfluidPositionsDelegated"))
+              .build();
+        }
+      }
+    }
+    return getUserConcentratedSuperfluidPositionsDelegatedMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest,
+      com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse> getUserConcentratedSuperfluidPositionsUndelegatingMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UserConcentratedSuperfluidPositionsUndelegating",
+      requestType = com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest.class,
+      responseType = com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest,
+      com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse> getUserConcentratedSuperfluidPositionsUndelegatingMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest, com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse> getUserConcentratedSuperfluidPositionsUndelegatingMethod;
+    if ((getUserConcentratedSuperfluidPositionsUndelegatingMethod = QueryGrpc.getUserConcentratedSuperfluidPositionsUndelegatingMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getUserConcentratedSuperfluidPositionsUndelegatingMethod = QueryGrpc.getUserConcentratedSuperfluidPositionsUndelegatingMethod) == null) {
+          QueryGrpc.getUserConcentratedSuperfluidPositionsUndelegatingMethod = getUserConcentratedSuperfluidPositionsUndelegatingMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest, com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UserConcentratedSuperfluidPositionsUndelegating"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("UserConcentratedSuperfluidPositionsUndelegating"))
+              .build();
+        }
+      }
+    }
+    return getUserConcentratedSuperfluidPositionsUndelegatingMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest,
+      com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse> getRestSupplyMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RestSupply",
+      requestType = com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest.class,
+      responseType = com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest,
+      com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse> getRestSupplyMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest, com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse> getRestSupplyMethod;
+    if ((getRestSupplyMethod = QueryGrpc.getRestSupplyMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getRestSupplyMethod = QueryGrpc.getRestSupplyMethod) == null) {
+          QueryGrpc.getRestSupplyMethod = getRestSupplyMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest, com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RestSupply"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("RestSupply"))
+              .build();
+        }
+      }
+    }
+    return getRestSupplyMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -629,7 +722,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * Returns all the delegated superfluid poistions for a specific delegator.
+     * Returns all the delegated superfluid positions for a specific delegator.
      * </pre>
      */
     default void superfluidDelegationsByDelegator(com.osmosis.superfluid.QueryProto.SuperfluidDelegationsByDelegatorRequest request,
@@ -639,7 +732,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * Returns all the undelegating superfluid poistions for a specific delegator.
+     * Returns all the undelegating superfluid positions for a specific delegator.
      * </pre>
      */
     default void superfluidUndelegationsByDelegator(com.osmosis.superfluid.QueryProto.SuperfluidUndelegationsByDelegatorRequest request,
@@ -688,6 +781,30 @@ public final class QueryGrpc {
     default void unpoolWhitelist(com.osmosis.superfluid.QueryProto.QueryUnpoolWhitelistRequest request,
         io.grpc.stub.StreamObserver<com.osmosis.superfluid.QueryProto.QueryUnpoolWhitelistResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUnpoolWhitelistMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns all of a user's full range CL positions that are superfluid staked.
+     * </pre>
+     */
+    default void userConcentratedSuperfluidPositionsDelegated(com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUserConcentratedSuperfluidPositionsDelegatedMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void userConcentratedSuperfluidPositionsUndelegating(com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUserConcentratedSuperfluidPositionsUndelegatingMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void restSupply(com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRestSupplyMethod(), responseObserver);
     }
   }
 
@@ -828,7 +945,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * Returns all the delegated superfluid poistions for a specific delegator.
+     * Returns all the delegated superfluid positions for a specific delegator.
      * </pre>
      */
     public void superfluidDelegationsByDelegator(com.osmosis.superfluid.QueryProto.SuperfluidDelegationsByDelegatorRequest request,
@@ -839,7 +956,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * Returns all the undelegating superfluid poistions for a specific delegator.
+     * Returns all the undelegating superfluid positions for a specific delegator.
      * </pre>
      */
     public void superfluidUndelegationsByDelegator(com.osmosis.superfluid.QueryProto.SuperfluidUndelegationsByDelegatorRequest request,
@@ -893,6 +1010,33 @@ public final class QueryGrpc {
         io.grpc.stub.StreamObserver<com.osmosis.superfluid.QueryProto.QueryUnpoolWhitelistResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUnpoolWhitelistMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns all of a user's full range CL positions that are superfluid staked.
+     * </pre>
+     */
+    public void userConcentratedSuperfluidPositionsDelegated(com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUserConcentratedSuperfluidPositionsDelegatedMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void userConcentratedSuperfluidPositionsUndelegating(com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUserConcentratedSuperfluidPositionsUndelegatingMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void restSupply(com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRestSupplyMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -1010,7 +1154,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * Returns all the delegated superfluid poistions for a specific delegator.
+     * Returns all the delegated superfluid positions for a specific delegator.
      * </pre>
      */
     public com.osmosis.superfluid.QueryProto.SuperfluidDelegationsByDelegatorResponse superfluidDelegationsByDelegator(com.osmosis.superfluid.QueryProto.SuperfluidDelegationsByDelegatorRequest request) {
@@ -1020,7 +1164,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * Returns all the undelegating superfluid poistions for a specific delegator.
+     * Returns all the undelegating superfluid positions for a specific delegator.
      * </pre>
      */
     public com.osmosis.superfluid.QueryProto.SuperfluidUndelegationsByDelegatorResponse superfluidUndelegationsByDelegator(com.osmosis.superfluid.QueryProto.SuperfluidUndelegationsByDelegatorRequest request) {
@@ -1069,6 +1213,30 @@ public final class QueryGrpc {
     public com.osmosis.superfluid.QueryProto.QueryUnpoolWhitelistResponse unpoolWhitelist(com.osmosis.superfluid.QueryProto.QueryUnpoolWhitelistRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUnpoolWhitelistMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns all of a user's full range CL positions that are superfluid staked.
+     * </pre>
+     */
+    public com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse userConcentratedSuperfluidPositionsDelegated(com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUserConcentratedSuperfluidPositionsDelegatedMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse userConcentratedSuperfluidPositionsUndelegating(com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUserConcentratedSuperfluidPositionsUndelegatingMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse restSupply(com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRestSupplyMethod(), getCallOptions(), request);
     }
   }
 
@@ -1195,7 +1363,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * Returns all the delegated superfluid poistions for a specific delegator.
+     * Returns all the delegated superfluid positions for a specific delegator.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.osmosis.superfluid.QueryProto.SuperfluidDelegationsByDelegatorResponse> superfluidDelegationsByDelegator(
@@ -1206,7 +1374,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * Returns all the undelegating superfluid poistions for a specific delegator.
+     * Returns all the undelegating superfluid positions for a specific delegator.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.osmosis.superfluid.QueryProto.SuperfluidUndelegationsByDelegatorResponse> superfluidUndelegationsByDelegator(
@@ -1261,6 +1429,33 @@ public final class QueryGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUnpoolWhitelistMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Returns all of a user's full range CL positions that are superfluid staked.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse> userConcentratedSuperfluidPositionsDelegated(
+        com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUserConcentratedSuperfluidPositionsDelegatedMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse> userConcentratedSuperfluidPositionsUndelegating(
+        com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUserConcentratedSuperfluidPositionsUndelegatingMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse> restSupply(
+        com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRestSupplyMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PARAMS = 0;
@@ -1278,6 +1473,9 @@ public final class QueryGrpc {
   private static final int METHODID_ESTIMATE_SUPERFLUID_DELEGATED_AMOUNT_BY_VALIDATOR_DENOM = 12;
   private static final int METHODID_TOTAL_DELEGATION_BY_DELEGATOR = 13;
   private static final int METHODID_UNPOOL_WHITELIST = 14;
+  private static final int METHODID_USER_CONCENTRATED_SUPERFLUID_POSITIONS_DELEGATED = 15;
+  private static final int METHODID_USER_CONCENTRATED_SUPERFLUID_POSITIONS_UNDELEGATING = 16;
+  private static final int METHODID_REST_SUPPLY = 17;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1355,6 +1553,18 @@ public final class QueryGrpc {
         case METHODID_UNPOOL_WHITELIST:
           serviceImpl.unpoolWhitelist((com.osmosis.superfluid.QueryProto.QueryUnpoolWhitelistRequest) request,
               (io.grpc.stub.StreamObserver<com.osmosis.superfluid.QueryProto.QueryUnpoolWhitelistResponse>) responseObserver);
+          break;
+        case METHODID_USER_CONCENTRATED_SUPERFLUID_POSITIONS_DELEGATED:
+          serviceImpl.userConcentratedSuperfluidPositionsDelegated((com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse>) responseObserver);
+          break;
+        case METHODID_USER_CONCENTRATED_SUPERFLUID_POSITIONS_UNDELEGATING:
+          serviceImpl.userConcentratedSuperfluidPositionsUndelegating((com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse>) responseObserver);
+          break;
+        case METHODID_REST_SUPPLY:
+          serviceImpl.restSupply((com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1479,6 +1689,27 @@ public final class QueryGrpc {
               com.osmosis.superfluid.QueryProto.QueryUnpoolWhitelistRequest,
               com.osmosis.superfluid.QueryProto.QueryUnpoolWhitelistResponse>(
                 service, METHODID_UNPOOL_WHITELIST)))
+        .addMethod(
+          getUserConcentratedSuperfluidPositionsDelegatedMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedRequest,
+              com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsDelegatedResponse>(
+                service, METHODID_USER_CONCENTRATED_SUPERFLUID_POSITIONS_DELEGATED)))
+        .addMethod(
+          getUserConcentratedSuperfluidPositionsUndelegatingMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingRequest,
+              com.osmosis.superfluid.QueryProto.UserConcentratedSuperfluidPositionsUndelegatingResponse>(
+                service, METHODID_USER_CONCENTRATED_SUPERFLUID_POSITIONS_UNDELEGATING)))
+        .addMethod(
+          getRestSupplyMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.superfluid.QueryProto.QueryRestSupplyRequest,
+              com.osmosis.superfluid.QueryProto.QueryRestSupplyResponse>(
+                service, METHODID_REST_SUPPLY)))
         .build();
   }
 
@@ -1542,6 +1773,9 @@ public final class QueryGrpc {
               .addMethod(getEstimateSuperfluidDelegatedAmountByValidatorDenomMethod())
               .addMethod(getTotalDelegationByDelegatorMethod())
               .addMethod(getUnpoolWhitelistMethod())
+              .addMethod(getUserConcentratedSuperfluidPositionsDelegatedMethod())
+              .addMethod(getUserConcentratedSuperfluidPositionsUndelegatingMethod())
+              .addMethod(getRestSupplyMethod())
               .build();
         }
       }

@@ -83,7 +83,7 @@ public final class ModuleSudoMsgProto {
      * the pool.
      * </pre>
      *
-     * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
      * @return The tokenOutMinAmount.
      */
     java.lang.String getTokenOutMinAmount();
@@ -93,7 +93,7 @@ public final class ModuleSudoMsgProto {
      * the pool.
      * </pre>
      *
-     * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
      * @return The bytes for tokenOutMinAmount.
      */
     com.google.protobuf.ByteString
@@ -104,7 +104,7 @@ public final class ModuleSudoMsgProto {
      * swap_fee is the swap fee for this swap estimate.
      * </pre>
      *
-     * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The swapFee.
      */
     java.lang.String getSwapFee();
@@ -113,7 +113,7 @@ public final class ModuleSudoMsgProto {
      * swap_fee is the swap fee for this swap estimate.
      * </pre>
      *
-     * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The bytes for swapFee.
      */
     com.google.protobuf.ByteString
@@ -295,7 +295,7 @@ public final class ModuleSudoMsgProto {
      * the pool.
      * </pre>
      *
-     * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
      * @return The tokenOutMinAmount.
      */
     @java.lang.Override
@@ -317,7 +317,7 @@ public final class ModuleSudoMsgProto {
      * the pool.
      * </pre>
      *
-     * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
      * @return The bytes for tokenOutMinAmount.
      */
     @java.lang.Override
@@ -343,7 +343,7 @@ public final class ModuleSudoMsgProto {
      * swap_fee is the swap fee for this swap estimate.
      * </pre>
      *
-     * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The swapFee.
      */
     @java.lang.Override
@@ -364,7 +364,7 @@ public final class ModuleSudoMsgProto {
      * swap_fee is the swap fee for this swap estimate.
      * </pre>
      *
-     * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The bytes for swapFee.
      */
     @java.lang.Override
@@ -1146,7 +1146,7 @@ public final class ModuleSudoMsgProto {
        * the pool.
        * </pre>
        *
-       * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
        * @return The tokenOutMinAmount.
        */
       public java.lang.String getTokenOutMinAmount() {
@@ -1167,7 +1167,7 @@ public final class ModuleSudoMsgProto {
        * the pool.
        * </pre>
        *
-       * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
        * @return The bytes for tokenOutMinAmount.
        */
       public com.google.protobuf.ByteString
@@ -1189,7 +1189,7 @@ public final class ModuleSudoMsgProto {
        * the pool.
        * </pre>
        *
-       * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
        * @param value The tokenOutMinAmount to set.
        * @return This builder for chaining.
        */
@@ -1207,7 +1207,7 @@ public final class ModuleSudoMsgProto {
        * the pool.
        * </pre>
        *
-       * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTokenOutMinAmount() {
@@ -1222,7 +1222,7 @@ public final class ModuleSudoMsgProto {
        * the pool.
        * </pre>
        *
-       * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
        * @param value The bytes for tokenOutMinAmount to set.
        * @return This builder for chaining.
        */
@@ -1242,7 +1242,7 @@ public final class ModuleSudoMsgProto {
        * swap_fee is the swap fee for this swap estimate.
        * </pre>
        *
-       * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return The swapFee.
        */
       public java.lang.String getSwapFee() {
@@ -1262,7 +1262,7 @@ public final class ModuleSudoMsgProto {
        * swap_fee is the swap fee for this swap estimate.
        * </pre>
        *
-       * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return The bytes for swapFee.
        */
       public com.google.protobuf.ByteString
@@ -1283,7 +1283,7 @@ public final class ModuleSudoMsgProto {
        * swap_fee is the swap fee for this swap estimate.
        * </pre>
        *
-       * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @param value The swapFee to set.
        * @return This builder for chaining.
        */
@@ -1300,7 +1300,7 @@ public final class ModuleSudoMsgProto {
        * swap_fee is the swap fee for this swap estimate.
        * </pre>
        *
-       * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSwapFee() {
@@ -1314,7 +1314,7 @@ public final class ModuleSudoMsgProto {
        * swap_fee is the swap fee for this swap estimate.
        * </pre>
        *
-       * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @param value The bytes for swapFee to set.
        * @return This builder for chaining.
        */
@@ -2075,7 +2075,7 @@ public final class ModuleSudoMsgProto {
      * token_out_amount is the token out computed from this swap estimate call.
      * </pre>
      *
-     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
      * @return The tokenOutAmount.
      */
     java.lang.String getTokenOutAmount();
@@ -2084,7 +2084,7 @@ public final class ModuleSudoMsgProto {
      * token_out_amount is the token out computed from this swap estimate call.
      * </pre>
      *
-     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
      * @return The bytes for tokenOutAmount.
      */
     com.google.protobuf.ByteString
@@ -2134,7 +2134,7 @@ public final class ModuleSudoMsgProto {
      * token_out_amount is the token out computed from this swap estimate call.
      * </pre>
      *
-     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
      * @return The tokenOutAmount.
      */
     @java.lang.Override
@@ -2155,7 +2155,7 @@ public final class ModuleSudoMsgProto {
      * token_out_amount is the token out computed from this swap estimate call.
      * </pre>
      *
-     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
      * @return The bytes for tokenOutAmount.
      */
     @java.lang.Override
@@ -2505,7 +2505,7 @@ public final class ModuleSudoMsgProto {
        * token_out_amount is the token out computed from this swap estimate call.
        * </pre>
        *
-       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
        * @return The tokenOutAmount.
        */
       public java.lang.String getTokenOutAmount() {
@@ -2525,7 +2525,7 @@ public final class ModuleSudoMsgProto {
        * token_out_amount is the token out computed from this swap estimate call.
        * </pre>
        *
-       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
        * @return The bytes for tokenOutAmount.
        */
       public com.google.protobuf.ByteString
@@ -2546,7 +2546,7 @@ public final class ModuleSudoMsgProto {
        * token_out_amount is the token out computed from this swap estimate call.
        * </pre>
        *
-       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
        * @param value The tokenOutAmount to set.
        * @return This builder for chaining.
        */
@@ -2563,7 +2563,7 @@ public final class ModuleSudoMsgProto {
        * token_out_amount is the token out computed from this swap estimate call.
        * </pre>
        *
-       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTokenOutAmount() {
@@ -2577,7 +2577,7 @@ public final class ModuleSudoMsgProto {
        * token_out_amount is the token out computed from this swap estimate call.
        * </pre>
        *
-       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
        * @param value The bytes for tokenOutAmount to set.
        * @return This builder for chaining.
        */
@@ -2723,7 +2723,7 @@ public final class ModuleSudoMsgProto {
      * pool.
      * </pre>
      *
-     * <code>string token_in_max_amount = 4 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * <code>string token_in_max_amount = 4 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
      * @return The tokenInMaxAmount.
      */
     java.lang.String getTokenInMaxAmount();
@@ -2733,7 +2733,7 @@ public final class ModuleSudoMsgProto {
      * pool.
      * </pre>
      *
-     * <code>string token_in_max_amount = 4 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * <code>string token_in_max_amount = 4 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
      * @return The bytes for tokenInMaxAmount.
      */
     com.google.protobuf.ByteString
@@ -2744,7 +2744,7 @@ public final class ModuleSudoMsgProto {
      * swap_fee is the swap fee for this swap estimate.
      * </pre>
      *
-     * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The swapFee.
      */
     java.lang.String getSwapFee();
@@ -2753,7 +2753,7 @@ public final class ModuleSudoMsgProto {
      * swap_fee is the swap fee for this swap estimate.
      * </pre>
      *
-     * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The bytes for swapFee.
      */
     com.google.protobuf.ByteString
@@ -2935,7 +2935,7 @@ public final class ModuleSudoMsgProto {
      * pool.
      * </pre>
      *
-     * <code>string token_in_max_amount = 4 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * <code>string token_in_max_amount = 4 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
      * @return The tokenInMaxAmount.
      */
     @java.lang.Override
@@ -2957,7 +2957,7 @@ public final class ModuleSudoMsgProto {
      * pool.
      * </pre>
      *
-     * <code>string token_in_max_amount = 4 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * <code>string token_in_max_amount = 4 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
      * @return The bytes for tokenInMaxAmount.
      */
     @java.lang.Override
@@ -2983,7 +2983,7 @@ public final class ModuleSudoMsgProto {
      * swap_fee is the swap fee for this swap estimate.
      * </pre>
      *
-     * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The swapFee.
      */
     @java.lang.Override
@@ -3004,7 +3004,7 @@ public final class ModuleSudoMsgProto {
      * swap_fee is the swap fee for this swap estimate.
      * </pre>
      *
-     * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The bytes for swapFee.
      */
     @java.lang.Override
@@ -3786,7 +3786,7 @@ public final class ModuleSudoMsgProto {
        * pool.
        * </pre>
        *
-       * <code>string token_in_max_amount = 4 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * <code>string token_in_max_amount = 4 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
        * @return The tokenInMaxAmount.
        */
       public java.lang.String getTokenInMaxAmount() {
@@ -3807,7 +3807,7 @@ public final class ModuleSudoMsgProto {
        * pool.
        * </pre>
        *
-       * <code>string token_in_max_amount = 4 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * <code>string token_in_max_amount = 4 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
        * @return The bytes for tokenInMaxAmount.
        */
       public com.google.protobuf.ByteString
@@ -3829,7 +3829,7 @@ public final class ModuleSudoMsgProto {
        * pool.
        * </pre>
        *
-       * <code>string token_in_max_amount = 4 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * <code>string token_in_max_amount = 4 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
        * @param value The tokenInMaxAmount to set.
        * @return This builder for chaining.
        */
@@ -3847,7 +3847,7 @@ public final class ModuleSudoMsgProto {
        * pool.
        * </pre>
        *
-       * <code>string token_in_max_amount = 4 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * <code>string token_in_max_amount = 4 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTokenInMaxAmount() {
@@ -3862,7 +3862,7 @@ public final class ModuleSudoMsgProto {
        * pool.
        * </pre>
        *
-       * <code>string token_in_max_amount = 4 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * <code>string token_in_max_amount = 4 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
        * @param value The bytes for tokenInMaxAmount to set.
        * @return This builder for chaining.
        */
@@ -3882,7 +3882,7 @@ public final class ModuleSudoMsgProto {
        * swap_fee is the swap fee for this swap estimate.
        * </pre>
        *
-       * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return The swapFee.
        */
       public java.lang.String getSwapFee() {
@@ -3902,7 +3902,7 @@ public final class ModuleSudoMsgProto {
        * swap_fee is the swap fee for this swap estimate.
        * </pre>
        *
-       * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return The bytes for swapFee.
        */
       public com.google.protobuf.ByteString
@@ -3923,7 +3923,7 @@ public final class ModuleSudoMsgProto {
        * swap_fee is the swap fee for this swap estimate.
        * </pre>
        *
-       * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @param value The swapFee to set.
        * @return This builder for chaining.
        */
@@ -3940,7 +3940,7 @@ public final class ModuleSudoMsgProto {
        * swap_fee is the swap fee for this swap estimate.
        * </pre>
        *
-       * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSwapFee() {
@@ -3954,7 +3954,7 @@ public final class ModuleSudoMsgProto {
        * swap_fee is the swap fee for this swap estimate.
        * </pre>
        *
-       * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string swap_fee = 5 [json_name = "swapFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @param value The bytes for swapFee to set.
        * @return This builder for chaining.
        */
@@ -4715,7 +4715,7 @@ public final class ModuleSudoMsgProto {
      * token_in_amount is the token in computed from this swap estimate call.
      * </pre>
      *
-     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
      * @return The tokenInAmount.
      */
     java.lang.String getTokenInAmount();
@@ -4724,7 +4724,7 @@ public final class ModuleSudoMsgProto {
      * token_in_amount is the token in computed from this swap estimate call.
      * </pre>
      *
-     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
      * @return The bytes for tokenInAmount.
      */
     com.google.protobuf.ByteString
@@ -4774,7 +4774,7 @@ public final class ModuleSudoMsgProto {
      * token_in_amount is the token in computed from this swap estimate call.
      * </pre>
      *
-     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
      * @return The tokenInAmount.
      */
     @java.lang.Override
@@ -4795,7 +4795,7 @@ public final class ModuleSudoMsgProto {
      * token_in_amount is the token in computed from this swap estimate call.
      * </pre>
      *
-     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
      * @return The bytes for tokenInAmount.
      */
     @java.lang.Override
@@ -5145,7 +5145,7 @@ public final class ModuleSudoMsgProto {
        * token_in_amount is the token in computed from this swap estimate call.
        * </pre>
        *
-       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
        * @return The tokenInAmount.
        */
       public java.lang.String getTokenInAmount() {
@@ -5165,7 +5165,7 @@ public final class ModuleSudoMsgProto {
        * token_in_amount is the token in computed from this swap estimate call.
        * </pre>
        *
-       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
        * @return The bytes for tokenInAmount.
        */
       public com.google.protobuf.ByteString
@@ -5186,7 +5186,7 @@ public final class ModuleSudoMsgProto {
        * token_in_amount is the token in computed from this swap estimate call.
        * </pre>
        *
-       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
        * @param value The tokenInAmount to set.
        * @return This builder for chaining.
        */
@@ -5203,7 +5203,7 @@ public final class ModuleSudoMsgProto {
        * token_in_amount is the token in computed from this swap estimate call.
        * </pre>
        *
-       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTokenInAmount() {
@@ -5217,7 +5217,7 @@ public final class ModuleSudoMsgProto {
        * token_in_amount is the token in computed from this swap estimate call.
        * </pre>
        *
-       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int"];</code>
        * @param value The bytes for tokenInAmount to set.
        * @return This builder for chaining.
        */
@@ -5336,43 +5336,41 @@ public final class ModuleSudoMsgProto {
       "\n8osmosis/cosmwasmpool/v1beta1/model/mod" +
       "ule_sudo_msg.proto\022\034osmosis.cosmwasmpool" +
       ".v1beta1\032\024gogoproto/gogo.proto\032\036cosmos/b" +
-      "ase/v1beta1/coin.proto\"\273\002\n\021SwapExactAmou" +
+      "ase/v1beta1/coin.proto\"\237\002\n\021SwapExactAmou" +
       "ntIn\022\026\n\006sender\030\001 \001(\tR\006sender\022:\n\010token_in" +
       "\030\002 \001(\0132\031.cosmos.base.v1beta1.CoinB\004\310\336\037\000R" +
       "\007tokenIn\022&\n\017token_out_denom\030\003 \001(\tR\rtoken" +
-      "OutDenom\022_\n\024token_out_min_amount\030\004 \001(\tB." +
-      "\310\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/typ" +
-      "es.IntR\021tokenOutMinAmount\022I\n\010swap_fee\030\005 " +
-      "\001(\tB.\310\336\037\000\332\336\037&github.com/cosmos/cosmos-sd" +
-      "k/types.DecR\007swapFee\"\202\001\n\030SwapExactAmount" +
-      "InSudoMsg\022f\n\024swap_exact_amount_in\030\001 \001(\0132" +
-      "/.osmosis.cosmwasmpool.v1beta1.SwapExact" +
-      "AmountInB\004\310\336\037\000R\021swapExactAmountIn\"|\n Swa" +
-      "pExactAmountInSudoMsgResponse\022X\n\020token_o" +
-      "ut_amount\030\001 \001(\tB.\310\336\037\000\332\336\037&github.com/cosm" +
-      "os/cosmos-sdk/types.IntR\016tokenOutAmount\"" +
-      "\272\002\n\022SwapExactAmountOut\022\026\n\006sender\030\001 \001(\tR\006" +
-      "sender\022<\n\ttoken_out\030\002 \001(\0132\031.cosmos.base." +
-      "v1beta1.CoinB\004\310\336\037\000R\010tokenOut\022$\n\016token_in" +
-      "_denom\030\003 \001(\tR\014tokenInDenom\022]\n\023token_in_m" +
-      "ax_amount\030\004 \001(\tB.\310\336\037\000\332\336\037&github.com/cosm" +
-      "os/cosmos-sdk/types.IntR\020tokenInMaxAmoun" +
-      "t\022I\n\010swap_fee\030\005 \001(\tB.\310\336\037\000\332\336\037&github.com/" +
-      "cosmos/cosmos-sdk/types.DecR\007swapFee\"\206\001\n" +
-      "\031SwapExactAmountOutSudoMsg\022i\n\025swap_exact" +
-      "_amount_out\030\001 \001(\01320.osmosis.cosmwasmpool" +
-      ".v1beta1.SwapExactAmountOutB\004\310\336\037\000R\022swapE" +
-      "xactAmountOut\"{\n!SwapExactAmountOutSudoM" +
-      "sgResponse\022V\n\017token_in_amount\030\001 \001(\tB.\310\336\037" +
-      "\000\332\336\037&github.com/cosmos/cosmos-sdk/types." +
-      "IntR\rtokenInAmountB\207\002\n com.osmosis.cosmw" +
-      "asmpool.v1beta1B\022ModuleSudoMsgProtoZ?git" +
-      "hub.com/osmosis-labs/osmosis/v15/x/cosmw" +
-      "asmpool/cosmwasm/msg\242\002\003OCX\252\002\034Osmosis.Cos" +
-      "mwasmpool.V1beta1\312\002\034Osmosis\\Cosmwasmpool" +
-      "\\V1beta1\342\002(Osmosis\\Cosmwasmpool\\V1beta1\\" +
-      "GPBMetadata\352\002\036Osmosis::Cosmwasmpool::V1b" +
-      "eta1b\006proto3"
+      "OutDenom\022N\n\024token_out_min_amount\030\004 \001(\tB\035" +
+      "\310\336\037\000\332\336\037\025cosmossdk.io/math.IntR\021tokenOutM" +
+      "inAmount\022>\n\010swap_fee\030\005 \001(\tB#\310\336\037\000\332\336\037\033cosm" +
+      "ossdk.io/math.LegacyDecR\007swapFee\"\202\001\n\030Swa" +
+      "pExactAmountInSudoMsg\022f\n\024swap_exact_amou" +
+      "nt_in\030\001 \001(\0132/.osmosis.cosmwasmpool.v1bet" +
+      "a1.SwapExactAmountInB\004\310\336\037\000R\021swapExactAmo" +
+      "untIn\"k\n SwapExactAmountInSudoMsgRespons" +
+      "e\022G\n\020token_out_amount\030\001 \001(\tB\035\310\336\037\000\332\336\037\025cos" +
+      "mossdk.io/math.IntR\016tokenOutAmount\"\236\002\n\022S" +
+      "wapExactAmountOut\022\026\n\006sender\030\001 \001(\tR\006sende" +
+      "r\022<\n\ttoken_out\030\002 \001(\0132\031.cosmos.base.v1bet" +
+      "a1.CoinB\004\310\336\037\000R\010tokenOut\022$\n\016token_in_deno" +
+      "m\030\003 \001(\tR\014tokenInDenom\022L\n\023token_in_max_am" +
+      "ount\030\004 \001(\tB\035\310\336\037\000\332\336\037\025cosmossdk.io/math.In" +
+      "tR\020tokenInMaxAmount\022>\n\010swap_fee\030\005 \001(\tB#\310" +
+      "\336\037\000\332\336\037\033cosmossdk.io/math.LegacyDecR\007swap" +
+      "Fee\"\206\001\n\031SwapExactAmountOutSudoMsg\022i\n\025swa" +
+      "p_exact_amount_out\030\001 \001(\01320.osmosis.cosmw" +
+      "asmpool.v1beta1.SwapExactAmountOutB\004\310\336\037\000" +
+      "R\022swapExactAmountOut\"j\n!SwapExactAmountO" +
+      "utSudoMsgResponse\022E\n\017token_in_amount\030\001 \001" +
+      "(\tB\035\310\336\037\000\332\336\037\025cosmossdk.io/math.IntR\rtoken" +
+      "InAmountB\207\002\n com.osmosis.cosmwasmpool.v1" +
+      "beta1B\022ModuleSudoMsgProtoZ?github.com/os" +
+      "mosis-labs/osmosis/v26/x/cosmwasmpool/co" +
+      "smwasm/msg\242\002\003OCX\252\002\034Osmosis.Cosmwasmpool." +
+      "V1beta1\312\002\034Osmosis\\Cosmwasmpool\\V1beta1\342\002" +
+      "(Osmosis\\Cosmwasmpool\\V1beta1\\GPBMetadat" +
+      "a\352\002\036Osmosis::Cosmwasmpool::V1beta1b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

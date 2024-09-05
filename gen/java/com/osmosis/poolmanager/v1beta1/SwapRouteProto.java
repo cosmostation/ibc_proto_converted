@@ -1293,12 +1293,12 @@ public final class SwapRouteProto {
         int index);
 
     /**
-     * <code>string token_in_amount = 2 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+     * <code>string token_in_amount = 2 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
      * @return The tokenInAmount.
      */
     java.lang.String getTokenInAmount();
     /**
-     * <code>string token_in_amount = 2 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+     * <code>string token_in_amount = 2 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
      * @return The bytes for tokenInAmount.
      */
     com.google.protobuf.ByteString
@@ -1386,7 +1386,7 @@ public final class SwapRouteProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object tokenInAmount_ = "";
     /**
-     * <code>string token_in_amount = 2 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+     * <code>string token_in_amount = 2 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
      * @return The tokenInAmount.
      */
     @java.lang.Override
@@ -1403,7 +1403,7 @@ public final class SwapRouteProto {
       }
     }
     /**
-     * <code>string token_in_amount = 2 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+     * <code>string token_in_amount = 2 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
      * @return The bytes for tokenInAmount.
      */
     @java.lang.Override
@@ -2061,7 +2061,7 @@ public final class SwapRouteProto {
 
       private java.lang.Object tokenInAmount_ = "";
       /**
-       * <code>string token_in_amount = 2 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+       * <code>string token_in_amount = 2 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
        * @return The tokenInAmount.
        */
       public java.lang.String getTokenInAmount() {
@@ -2077,7 +2077,7 @@ public final class SwapRouteProto {
         }
       }
       /**
-       * <code>string token_in_amount = 2 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+       * <code>string token_in_amount = 2 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
        * @return The bytes for tokenInAmount.
        */
       public com.google.protobuf.ByteString
@@ -2094,7 +2094,7 @@ public final class SwapRouteProto {
         }
       }
       /**
-       * <code>string token_in_amount = 2 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+       * <code>string token_in_amount = 2 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
        * @param value The tokenInAmount to set.
        * @return This builder for chaining.
        */
@@ -2107,7 +2107,7 @@ public final class SwapRouteProto {
         return this;
       }
       /**
-       * <code>string token_in_amount = 2 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+       * <code>string token_in_amount = 2 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearTokenInAmount() {
@@ -2117,7 +2117,7 @@ public final class SwapRouteProto {
         return this;
       }
       /**
-       * <code>string token_in_amount = 2 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+       * <code>string token_in_amount = 2 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
        * @param value The bytes for tokenInAmount to set.
        * @return This builder for chaining.
        */
@@ -2223,12 +2223,12 @@ public final class SwapRouteProto {
         int index);
 
     /**
-     * <code>string token_out_amount = 2 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+     * <code>string token_out_amount = 2 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
      * @return The tokenOutAmount.
      */
     java.lang.String getTokenOutAmount();
     /**
-     * <code>string token_out_amount = 2 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+     * <code>string token_out_amount = 2 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
      * @return The bytes for tokenOutAmount.
      */
     com.google.protobuf.ByteString
@@ -2316,7 +2316,7 @@ public final class SwapRouteProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object tokenOutAmount_ = "";
     /**
-     * <code>string token_out_amount = 2 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+     * <code>string token_out_amount = 2 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
      * @return The tokenOutAmount.
      */
     @java.lang.Override
@@ -2333,7 +2333,7 @@ public final class SwapRouteProto {
       }
     }
     /**
-     * <code>string token_out_amount = 2 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+     * <code>string token_out_amount = 2 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
      * @return The bytes for tokenOutAmount.
      */
     @java.lang.Override
@@ -2991,7 +2991,7 @@ public final class SwapRouteProto {
 
       private java.lang.Object tokenOutAmount_ = "";
       /**
-       * <code>string token_out_amount = 2 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+       * <code>string token_out_amount = 2 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
        * @return The tokenOutAmount.
        */
       public java.lang.String getTokenOutAmount() {
@@ -3007,7 +3007,7 @@ public final class SwapRouteProto {
         }
       }
       /**
-       * <code>string token_out_amount = 2 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+       * <code>string token_out_amount = 2 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
        * @return The bytes for tokenOutAmount.
        */
       public com.google.protobuf.ByteString
@@ -3024,7 +3024,7 @@ public final class SwapRouteProto {
         }
       }
       /**
-       * <code>string token_out_amount = 2 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+       * <code>string token_out_amount = 2 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
        * @param value The tokenOutAmount to set.
        * @return This builder for chaining.
        */
@@ -3037,7 +3037,7 @@ public final class SwapRouteProto {
         return this;
       }
       /**
-       * <code>string token_out_amount = 2 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+       * <code>string token_out_amount = 2 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearTokenOutAmount() {
@@ -3047,7 +3047,7 @@ public final class SwapRouteProto {
         return this;
       }
       /**
-       * <code>string token_out_amount = 2 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+       * <code>string token_out_amount = 2 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
        * @param value The bytes for tokenOutAmount to set.
        * @return This builder for chaining.
        */
@@ -3162,25 +3162,24 @@ public final class SwapRouteProto {
       "pAmountOutRoute\022+\n\007pool_id\030\001 \001(\004B\022\362\336\037\016ya" +
       "ml:\"pool_id\"R\006poolId\022?\n\016token_in_denom\030\002" +
       " \001(\tB\031\362\336\037\025yaml:\"token_in_denom\"R\014tokenIn" +
-      "Denom\"\346\001\n\026SwapAmountInSplitRoute\022Z\n\005pool" +
+      "Denom\"\325\001\n\026SwapAmountInSplitRoute\022Z\n\005pool" +
       "s\030\001 \003(\0132..osmosis.poolmanager.v1beta1.Sw" +
       "apAmountInRouteB\024\310\336\037\000\362\336\037\014yaml:\"pools\"R\005p" +
-      "ools\022p\n\017token_in_amount\030\002 \001(\tBH\310\336\037\000\332\336\037&g" +
-      "ithub.com/cosmos/cosmos-sdk/types.Int\362\336\037" +
-      "\026yaml:\"token_in_amount\"R\rtokenInAmount\"\353" +
-      "\001\n\027SwapAmountOutSplitRoute\022[\n\005pools\030\001 \003(" +
-      "\0132/.osmosis.poolmanager.v1beta1.SwapAmou" +
-      "ntOutRouteB\024\310\336\037\000\362\336\037\014yaml:\"pools\"R\005pools\022" +
-      "s\n\020token_out_amount\030\002 \001(\tBI\310\336\037\000\332\336\037&githu" +
-      "b.com/cosmos/cosmos-sdk/types.Int\362\336\037\027yam" +
-      "l:\"token_out_amount\"R\016tokenOutAmountB\366\001\n" +
-      "\037com.osmosis.poolmanager.v1beta1B\016SwapRo" +
-      "uteProtoZ7github.com/osmosis-labs/osmosi" +
-      "s/v15/x/poolmanager/types\242\002\003OPX\252\002\033Osmosi" +
-      "s.Poolmanager.V1beta1\312\002\033Osmosis\\Poolmana" +
-      "ger\\V1beta1\342\002\'Osmosis\\Poolmanager\\V1beta" +
-      "1\\GPBMetadata\352\002\035Osmosis::Poolmanager::V1" +
-      "beta1b\006proto3"
+      "ools\022_\n\017token_in_amount\030\002 \001(\tB7\310\336\037\000\332\336\037\025c" +
+      "osmossdk.io/math.Int\362\336\037\026yaml:\"token_in_a" +
+      "mount\"R\rtokenInAmount\"\332\001\n\027SwapAmountOutS" +
+      "plitRoute\022[\n\005pools\030\001 \003(\0132/.osmosis.poolm" +
+      "anager.v1beta1.SwapAmountOutRouteB\024\310\336\037\000\362" +
+      "\336\037\014yaml:\"pools\"R\005pools\022b\n\020token_out_amou" +
+      "nt\030\002 \001(\tB8\310\336\037\000\332\336\037\025cosmossdk.io/math.Int\362" +
+      "\336\037\027yaml:\"token_out_amount\"R\016tokenOutAmou" +
+      "ntB\366\001\n\037com.osmosis.poolmanager.v1beta1B\016" +
+      "SwapRouteProtoZ7github.com/osmosis-labs/" +
+      "osmosis/v26/x/poolmanager/types\242\002\003OPX\252\002\033" +
+      "Osmosis.Poolmanager.V1beta1\312\002\033Osmosis\\Po" +
+      "olmanager\\V1beta1\342\002\'Osmosis\\Poolmanager\\" +
+      "V1beta1\\GPBMetadata\352\002\035Osmosis::Poolmanag" +
+      "er::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

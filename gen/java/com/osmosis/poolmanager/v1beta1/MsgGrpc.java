@@ -139,6 +139,99 @@ public final class MsgGrpc {
     return getSplitRouteSwapExactAmountOutMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.TxProto.MsgSetDenomPairTakerFee,
+      com.osmosis.poolmanager.v1beta1.TxProto.MsgSetDenomPairTakerFeeResponse> getSetDenomPairTakerFeeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetDenomPairTakerFee",
+      requestType = com.osmosis.poolmanager.v1beta1.TxProto.MsgSetDenomPairTakerFee.class,
+      responseType = com.osmosis.poolmanager.v1beta1.TxProto.MsgSetDenomPairTakerFeeResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.TxProto.MsgSetDenomPairTakerFee,
+      com.osmosis.poolmanager.v1beta1.TxProto.MsgSetDenomPairTakerFeeResponse> getSetDenomPairTakerFeeMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.TxProto.MsgSetDenomPairTakerFee, com.osmosis.poolmanager.v1beta1.TxProto.MsgSetDenomPairTakerFeeResponse> getSetDenomPairTakerFeeMethod;
+    if ((getSetDenomPairTakerFeeMethod = MsgGrpc.getSetDenomPairTakerFeeMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getSetDenomPairTakerFeeMethod = MsgGrpc.getSetDenomPairTakerFeeMethod) == null) {
+          MsgGrpc.getSetDenomPairTakerFeeMethod = getSetDenomPairTakerFeeMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.poolmanager.v1beta1.TxProto.MsgSetDenomPairTakerFee, com.osmosis.poolmanager.v1beta1.TxProto.MsgSetDenomPairTakerFeeResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetDenomPairTakerFee"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.TxProto.MsgSetDenomPairTakerFee.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.TxProto.MsgSetDenomPairTakerFeeResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("SetDenomPairTakerFee"))
+              .build();
+        }
+      }
+    }
+    return getSetDenomPairTakerFeeMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.TxProto.MsgSetTakerFeeShareAgreementForDenom,
+      com.osmosis.poolmanager.v1beta1.TxProto.MsgSetTakerFeeShareAgreementForDenomResponse> getSetTakerFeeShareAgreementForDenomMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetTakerFeeShareAgreementForDenom",
+      requestType = com.osmosis.poolmanager.v1beta1.TxProto.MsgSetTakerFeeShareAgreementForDenom.class,
+      responseType = com.osmosis.poolmanager.v1beta1.TxProto.MsgSetTakerFeeShareAgreementForDenomResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.TxProto.MsgSetTakerFeeShareAgreementForDenom,
+      com.osmosis.poolmanager.v1beta1.TxProto.MsgSetTakerFeeShareAgreementForDenomResponse> getSetTakerFeeShareAgreementForDenomMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.TxProto.MsgSetTakerFeeShareAgreementForDenom, com.osmosis.poolmanager.v1beta1.TxProto.MsgSetTakerFeeShareAgreementForDenomResponse> getSetTakerFeeShareAgreementForDenomMethod;
+    if ((getSetTakerFeeShareAgreementForDenomMethod = MsgGrpc.getSetTakerFeeShareAgreementForDenomMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getSetTakerFeeShareAgreementForDenomMethod = MsgGrpc.getSetTakerFeeShareAgreementForDenomMethod) == null) {
+          MsgGrpc.getSetTakerFeeShareAgreementForDenomMethod = getSetTakerFeeShareAgreementForDenomMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.poolmanager.v1beta1.TxProto.MsgSetTakerFeeShareAgreementForDenom, com.osmosis.poolmanager.v1beta1.TxProto.MsgSetTakerFeeShareAgreementForDenomResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetTakerFeeShareAgreementForDenom"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.TxProto.MsgSetTakerFeeShareAgreementForDenom.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.TxProto.MsgSetTakerFeeShareAgreementForDenomResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("SetTakerFeeShareAgreementForDenom"))
+              .build();
+        }
+      }
+    }
+    return getSetTakerFeeShareAgreementForDenomMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.TxProto.MsgSetRegisteredAlloyedPool,
+      com.osmosis.poolmanager.v1beta1.TxProto.MsgSetRegisteredAlloyedPoolResponse> getSetRegisteredAlloyedPoolMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetRegisteredAlloyedPool",
+      requestType = com.osmosis.poolmanager.v1beta1.TxProto.MsgSetRegisteredAlloyedPool.class,
+      responseType = com.osmosis.poolmanager.v1beta1.TxProto.MsgSetRegisteredAlloyedPoolResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.TxProto.MsgSetRegisteredAlloyedPool,
+      com.osmosis.poolmanager.v1beta1.TxProto.MsgSetRegisteredAlloyedPoolResponse> getSetRegisteredAlloyedPoolMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.poolmanager.v1beta1.TxProto.MsgSetRegisteredAlloyedPool, com.osmosis.poolmanager.v1beta1.TxProto.MsgSetRegisteredAlloyedPoolResponse> getSetRegisteredAlloyedPoolMethod;
+    if ((getSetRegisteredAlloyedPoolMethod = MsgGrpc.getSetRegisteredAlloyedPoolMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getSetRegisteredAlloyedPoolMethod = MsgGrpc.getSetRegisteredAlloyedPoolMethod) == null) {
+          MsgGrpc.getSetRegisteredAlloyedPoolMethod = getSetRegisteredAlloyedPoolMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.poolmanager.v1beta1.TxProto.MsgSetRegisteredAlloyedPool, com.osmosis.poolmanager.v1beta1.TxProto.MsgSetRegisteredAlloyedPoolResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetRegisteredAlloyedPool"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.TxProto.MsgSetRegisteredAlloyedPool.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.poolmanager.v1beta1.TxProto.MsgSetRegisteredAlloyedPoolResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("SetRegisteredAlloyedPool"))
+              .build();
+        }
+      }
+    }
+    return getSetRegisteredAlloyedPoolMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -214,6 +307,27 @@ public final class MsgGrpc {
         io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.TxProto.MsgSplitRouteSwapExactAmountOutResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSplitRouteSwapExactAmountOutMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void setDenomPairTakerFee(com.osmosis.poolmanager.v1beta1.TxProto.MsgSetDenomPairTakerFee request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.TxProto.MsgSetDenomPairTakerFeeResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetDenomPairTakerFeeMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void setTakerFeeShareAgreementForDenom(com.osmosis.poolmanager.v1beta1.TxProto.MsgSetTakerFeeShareAgreementForDenom request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.TxProto.MsgSetTakerFeeShareAgreementForDenomResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetTakerFeeShareAgreementForDenomMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void setRegisteredAlloyedPool(com.osmosis.poolmanager.v1beta1.TxProto.MsgSetRegisteredAlloyedPool request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.TxProto.MsgSetRegisteredAlloyedPoolResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetRegisteredAlloyedPoolMethod(), responseObserver);
+    }
   }
 
   /**
@@ -274,6 +388,30 @@ public final class MsgGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSplitRouteSwapExactAmountOutMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void setDenomPairTakerFee(com.osmosis.poolmanager.v1beta1.TxProto.MsgSetDenomPairTakerFee request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.TxProto.MsgSetDenomPairTakerFeeResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetDenomPairTakerFeeMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void setTakerFeeShareAgreementForDenom(com.osmosis.poolmanager.v1beta1.TxProto.MsgSetTakerFeeShareAgreementForDenom request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.TxProto.MsgSetTakerFeeShareAgreementForDenomResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetTakerFeeShareAgreementForDenomMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void setRegisteredAlloyedPool(com.osmosis.poolmanager.v1beta1.TxProto.MsgSetRegisteredAlloyedPool request,
+        io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.TxProto.MsgSetRegisteredAlloyedPoolResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetRegisteredAlloyedPoolMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -318,6 +456,27 @@ public final class MsgGrpc {
     public com.osmosis.poolmanager.v1beta1.TxProto.MsgSplitRouteSwapExactAmountOutResponse splitRouteSwapExactAmountOut(com.osmosis.poolmanager.v1beta1.TxProto.MsgSplitRouteSwapExactAmountOut request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSplitRouteSwapExactAmountOutMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.osmosis.poolmanager.v1beta1.TxProto.MsgSetDenomPairTakerFeeResponse setDenomPairTakerFee(com.osmosis.poolmanager.v1beta1.TxProto.MsgSetDenomPairTakerFee request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetDenomPairTakerFeeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.osmosis.poolmanager.v1beta1.TxProto.MsgSetTakerFeeShareAgreementForDenomResponse setTakerFeeShareAgreementForDenom(com.osmosis.poolmanager.v1beta1.TxProto.MsgSetTakerFeeShareAgreementForDenom request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetTakerFeeShareAgreementForDenomMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.osmosis.poolmanager.v1beta1.TxProto.MsgSetRegisteredAlloyedPoolResponse setRegisteredAlloyedPool(com.osmosis.poolmanager.v1beta1.TxProto.MsgSetRegisteredAlloyedPool request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetRegisteredAlloyedPoolMethod(), getCallOptions(), request);
     }
   }
 
@@ -368,12 +527,39 @@ public final class MsgGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSplitRouteSwapExactAmountOutMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.poolmanager.v1beta1.TxProto.MsgSetDenomPairTakerFeeResponse> setDenomPairTakerFee(
+        com.osmosis.poolmanager.v1beta1.TxProto.MsgSetDenomPairTakerFee request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetDenomPairTakerFeeMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.poolmanager.v1beta1.TxProto.MsgSetTakerFeeShareAgreementForDenomResponse> setTakerFeeShareAgreementForDenom(
+        com.osmosis.poolmanager.v1beta1.TxProto.MsgSetTakerFeeShareAgreementForDenom request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetTakerFeeShareAgreementForDenomMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.poolmanager.v1beta1.TxProto.MsgSetRegisteredAlloyedPoolResponse> setRegisteredAlloyedPool(
+        com.osmosis.poolmanager.v1beta1.TxProto.MsgSetRegisteredAlloyedPool request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetRegisteredAlloyedPoolMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SWAP_EXACT_AMOUNT_IN = 0;
   private static final int METHODID_SWAP_EXACT_AMOUNT_OUT = 1;
   private static final int METHODID_SPLIT_ROUTE_SWAP_EXACT_AMOUNT_IN = 2;
   private static final int METHODID_SPLIT_ROUTE_SWAP_EXACT_AMOUNT_OUT = 3;
+  private static final int METHODID_SET_DENOM_PAIR_TAKER_FEE = 4;
+  private static final int METHODID_SET_TAKER_FEE_SHARE_AGREEMENT_FOR_DENOM = 5;
+  private static final int METHODID_SET_REGISTERED_ALLOYED_POOL = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -407,6 +593,18 @@ public final class MsgGrpc {
         case METHODID_SPLIT_ROUTE_SWAP_EXACT_AMOUNT_OUT:
           serviceImpl.splitRouteSwapExactAmountOut((com.osmosis.poolmanager.v1beta1.TxProto.MsgSplitRouteSwapExactAmountOut) request,
               (io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.TxProto.MsgSplitRouteSwapExactAmountOutResponse>) responseObserver);
+          break;
+        case METHODID_SET_DENOM_PAIR_TAKER_FEE:
+          serviceImpl.setDenomPairTakerFee((com.osmosis.poolmanager.v1beta1.TxProto.MsgSetDenomPairTakerFee) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.TxProto.MsgSetDenomPairTakerFeeResponse>) responseObserver);
+          break;
+        case METHODID_SET_TAKER_FEE_SHARE_AGREEMENT_FOR_DENOM:
+          serviceImpl.setTakerFeeShareAgreementForDenom((com.osmosis.poolmanager.v1beta1.TxProto.MsgSetTakerFeeShareAgreementForDenom) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.TxProto.MsgSetTakerFeeShareAgreementForDenomResponse>) responseObserver);
+          break;
+        case METHODID_SET_REGISTERED_ALLOYED_POOL:
+          serviceImpl.setRegisteredAlloyedPool((com.osmosis.poolmanager.v1beta1.TxProto.MsgSetRegisteredAlloyedPool) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.poolmanager.v1beta1.TxProto.MsgSetRegisteredAlloyedPoolResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -454,6 +652,27 @@ public final class MsgGrpc {
               com.osmosis.poolmanager.v1beta1.TxProto.MsgSplitRouteSwapExactAmountOut,
               com.osmosis.poolmanager.v1beta1.TxProto.MsgSplitRouteSwapExactAmountOutResponse>(
                 service, METHODID_SPLIT_ROUTE_SWAP_EXACT_AMOUNT_OUT)))
+        .addMethod(
+          getSetDenomPairTakerFeeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.poolmanager.v1beta1.TxProto.MsgSetDenomPairTakerFee,
+              com.osmosis.poolmanager.v1beta1.TxProto.MsgSetDenomPairTakerFeeResponse>(
+                service, METHODID_SET_DENOM_PAIR_TAKER_FEE)))
+        .addMethod(
+          getSetTakerFeeShareAgreementForDenomMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.poolmanager.v1beta1.TxProto.MsgSetTakerFeeShareAgreementForDenom,
+              com.osmosis.poolmanager.v1beta1.TxProto.MsgSetTakerFeeShareAgreementForDenomResponse>(
+                service, METHODID_SET_TAKER_FEE_SHARE_AGREEMENT_FOR_DENOM)))
+        .addMethod(
+          getSetRegisteredAlloyedPoolMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.poolmanager.v1beta1.TxProto.MsgSetRegisteredAlloyedPool,
+              com.osmosis.poolmanager.v1beta1.TxProto.MsgSetRegisteredAlloyedPoolResponse>(
+                service, METHODID_SET_REGISTERED_ALLOYED_POOL)))
         .build();
   }
 
@@ -506,6 +725,9 @@ public final class MsgGrpc {
               .addMethod(getSwapExactAmountOutMethod())
               .addMethod(getSplitRouteSwapExactAmountInMethod())
               .addMethod(getSplitRouteSwapExactAmountOutMethod())
+              .addMethod(getSetDenomPairTakerFeeMethod())
+              .addMethod(getSetTakerFeeShareAgreementForDenomMethod())
+              .addMethod(getSetRegisteredAlloyedPoolMethod())
               .build();
         }
       }

@@ -19,48 +19,55 @@ public final class PoolProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string pool_address = 1 [json_name = "poolAddress", (.gogoproto.moretags) = "yaml:&#92;"pool_address&#92;""];</code>
-     * @return The poolAddress.
-     */
-    java.lang.String getPoolAddress();
-    /**
-     * <code>string pool_address = 1 [json_name = "poolAddress", (.gogoproto.moretags) = "yaml:&#92;"pool_address&#92;""];</code>
-     * @return The bytes for poolAddress.
-     */
-    com.google.protobuf.ByteString
-        getPoolAddressBytes();
-
-    /**
-     * <code>string contract_address = 2 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
+     * <code>string contract_address = 1 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
      * @return The contractAddress.
      */
     java.lang.String getContractAddress();
     /**
-     * <code>string contract_address = 2 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
+     * <code>string contract_address = 1 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
      * @return The bytes for contractAddress.
      */
     com.google.protobuf.ByteString
         getContractAddressBytes();
 
     /**
-     * <code>uint64 pool_id = 3 [json_name = "poolId"];</code>
+     * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
      * @return The poolId.
      */
     long getPoolId();
 
     /**
-     * <code>uint64 code_id = 4 [json_name = "codeId"];</code>
+     * <code>uint64 code_id = 3 [json_name = "codeId"];</code>
      * @return The codeId.
      */
     long getCodeId();
 
     /**
-     * <code>bytes instantiate_msg = 5 [json_name = "instantiateMsg", (.gogoproto.moretags) = "yaml:&#92;"instantiate_msg&#92;""];</code>
+     * <code>bytes instantiate_msg = 4 [json_name = "instantiateMsg", (.gogoproto.moretags) = "yaml:&#92;"instantiate_msg&#92;""];</code>
      * @return The instantiateMsg.
      */
     com.google.protobuf.ByteString getInstantiateMsg();
   }
   /**
+   * <pre>
+   * CosmWasmPool represents the data serialized into state for each CW pool.
+   *
+   * Note: CW Pool has 2 pool models:
+   * - CosmWasmPool which is a proto-generated store model used for serialization
+   * into state.
+   * - Pool struct that encapsulates the CosmWasmPool and wasmKeeper for calling
+   * the contract.
+   *
+   * CosmWasmPool implements the poolmanager.PoolI interface but it panics on all
+   * methods. The reason is that access to wasmKeeper is required to call the
+   * contract.
+   *
+   * Instead, all interactions and poolmanager.PoolI methods are to be performed
+   * on the Pool struct. The reason why we cannot have a Pool struct only is
+   * because it cannot be serialized into state due to having a non-serializable
+   * wasmKeeper field.
+   * </pre>
+   *
    * Protobuf type {@code osmosis.cosmwasmpool.v1beta1.CosmWasmPool}
    */
   public static final class CosmWasmPool extends
@@ -73,7 +80,6 @@ public final class PoolProto {
       super(builder);
     }
     private CosmWasmPool() {
-      poolAddress_ = "";
       contractAddress_ = "";
       instantiateMsg_ = com.google.protobuf.ByteString.EMPTY;
     }
@@ -98,50 +104,11 @@ public final class PoolProto {
               com.osmosis.cosmwasmpool.v1beta1.PoolProto.CosmWasmPool.class, com.osmosis.cosmwasmpool.v1beta1.PoolProto.CosmWasmPool.Builder.class);
     }
 
-    public static final int POOL_ADDRESS_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object poolAddress_ = "";
-    /**
-     * <code>string pool_address = 1 [json_name = "poolAddress", (.gogoproto.moretags) = "yaml:&#92;"pool_address&#92;""];</code>
-     * @return The poolAddress.
-     */
-    @java.lang.Override
-    public java.lang.String getPoolAddress() {
-      java.lang.Object ref = poolAddress_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        poolAddress_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string pool_address = 1 [json_name = "poolAddress", (.gogoproto.moretags) = "yaml:&#92;"pool_address&#92;""];</code>
-     * @return The bytes for poolAddress.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPoolAddressBytes() {
-      java.lang.Object ref = poolAddress_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        poolAddress_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CONTRACT_ADDRESS_FIELD_NUMBER = 2;
+    public static final int CONTRACT_ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object contractAddress_ = "";
     /**
-     * <code>string contract_address = 2 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
+     * <code>string contract_address = 1 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
      * @return The contractAddress.
      */
     @java.lang.Override
@@ -158,7 +125,7 @@ public final class PoolProto {
       }
     }
     /**
-     * <code>string contract_address = 2 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
+     * <code>string contract_address = 1 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
      * @return The bytes for contractAddress.
      */
     @java.lang.Override
@@ -176,10 +143,10 @@ public final class PoolProto {
       }
     }
 
-    public static final int POOL_ID_FIELD_NUMBER = 3;
+    public static final int POOL_ID_FIELD_NUMBER = 2;
     private long poolId_ = 0L;
     /**
-     * <code>uint64 pool_id = 3 [json_name = "poolId"];</code>
+     * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
      * @return The poolId.
      */
     @java.lang.Override
@@ -187,10 +154,10 @@ public final class PoolProto {
       return poolId_;
     }
 
-    public static final int CODE_ID_FIELD_NUMBER = 4;
+    public static final int CODE_ID_FIELD_NUMBER = 3;
     private long codeId_ = 0L;
     /**
-     * <code>uint64 code_id = 4 [json_name = "codeId"];</code>
+     * <code>uint64 code_id = 3 [json_name = "codeId"];</code>
      * @return The codeId.
      */
     @java.lang.Override
@@ -198,10 +165,10 @@ public final class PoolProto {
       return codeId_;
     }
 
-    public static final int INSTANTIATE_MSG_FIELD_NUMBER = 5;
+    public static final int INSTANTIATE_MSG_FIELD_NUMBER = 4;
     private com.google.protobuf.ByteString instantiateMsg_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes instantiate_msg = 5 [json_name = "instantiateMsg", (.gogoproto.moretags) = "yaml:&#92;"instantiate_msg&#92;""];</code>
+     * <code>bytes instantiate_msg = 4 [json_name = "instantiateMsg", (.gogoproto.moretags) = "yaml:&#92;"instantiate_msg&#92;""];</code>
      * @return The instantiateMsg.
      */
     @java.lang.Override
@@ -223,20 +190,17 @@ public final class PoolProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(poolAddress_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, poolAddress_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, contractAddress_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contractAddress_);
       }
       if (poolId_ != 0L) {
-        output.writeUInt64(3, poolId_);
+        output.writeUInt64(2, poolId_);
       }
       if (codeId_ != 0L) {
-        output.writeUInt64(4, codeId_);
+        output.writeUInt64(3, codeId_);
       }
       if (!instantiateMsg_.isEmpty()) {
-        output.writeBytes(5, instantiateMsg_);
+        output.writeBytes(4, instantiateMsg_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -247,23 +211,20 @@ public final class PoolProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(poolAddress_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, poolAddress_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, contractAddress_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contractAddress_);
       }
       if (poolId_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(3, poolId_);
+          .computeUInt64Size(2, poolId_);
       }
       if (codeId_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(4, codeId_);
+          .computeUInt64Size(3, codeId_);
       }
       if (!instantiateMsg_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(5, instantiateMsg_);
+          .computeBytesSize(4, instantiateMsg_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -280,8 +241,6 @@ public final class PoolProto {
       }
       com.osmosis.cosmwasmpool.v1beta1.PoolProto.CosmWasmPool other = (com.osmosis.cosmwasmpool.v1beta1.PoolProto.CosmWasmPool) obj;
 
-      if (!getPoolAddress()
-          .equals(other.getPoolAddress())) return false;
       if (!getContractAddress()
           .equals(other.getContractAddress())) return false;
       if (getPoolId()
@@ -301,8 +260,6 @@ public final class PoolProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + POOL_ADDRESS_FIELD_NUMBER;
-      hash = (53 * hash) + getPoolAddress().hashCode();
       hash = (37 * hash) + CONTRACT_ADDRESS_FIELD_NUMBER;
       hash = (53 * hash) + getContractAddress().hashCode();
       hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
@@ -411,6 +368,25 @@ public final class PoolProto {
       return builder;
     }
     /**
+     * <pre>
+     * CosmWasmPool represents the data serialized into state for each CW pool.
+     *
+     * Note: CW Pool has 2 pool models:
+     * - CosmWasmPool which is a proto-generated store model used for serialization
+     * into state.
+     * - Pool struct that encapsulates the CosmWasmPool and wasmKeeper for calling
+     * the contract.
+     *
+     * CosmWasmPool implements the poolmanager.PoolI interface but it panics on all
+     * methods. The reason is that access to wasmKeeper is required to call the
+     * contract.
+     *
+     * Instead, all interactions and poolmanager.PoolI methods are to be performed
+     * on the Pool struct. The reason why we cannot have a Pool struct only is
+     * because it cannot be serialized into state due to having a non-serializable
+     * wasmKeeper field.
+     * </pre>
+     *
      * Protobuf type {@code osmosis.cosmwasmpool.v1beta1.CosmWasmPool}
      */
     public static final class Builder extends
@@ -444,7 +420,6 @@ public final class PoolProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        poolAddress_ = "";
         contractAddress_ = "";
         poolId_ = 0L;
         codeId_ = 0L;
@@ -483,18 +458,15 @@ public final class PoolProto {
       private void buildPartial0(com.osmosis.cosmwasmpool.v1beta1.PoolProto.CosmWasmPool result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.poolAddress_ = poolAddress_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
           result.contractAddress_ = contractAddress_;
         }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
+        if (((from_bitField0_ & 0x00000002) != 0)) {
           result.poolId_ = poolId_;
         }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
+        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.codeId_ = codeId_;
         }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
+        if (((from_bitField0_ & 0x00000008) != 0)) {
           result.instantiateMsg_ = instantiateMsg_;
         }
       }
@@ -543,14 +515,9 @@ public final class PoolProto {
 
       public Builder mergeFrom(com.osmosis.cosmwasmpool.v1beta1.PoolProto.CosmWasmPool other) {
         if (other == com.osmosis.cosmwasmpool.v1beta1.PoolProto.CosmWasmPool.getDefaultInstance()) return this;
-        if (!other.getPoolAddress().isEmpty()) {
-          poolAddress_ = other.poolAddress_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
         if (!other.getContractAddress().isEmpty()) {
           contractAddress_ = other.contractAddress_;
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.getPoolId() != 0L) {
@@ -589,30 +556,25 @@ public final class PoolProto {
                 done = true;
                 break;
               case 10: {
-                poolAddress_ = input.readStringRequireUtf8();
+                contractAddress_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
-              case 18: {
-                contractAddress_ = input.readStringRequireUtf8();
+              case 16: {
+                poolId_ = input.readUInt64();
                 bitField0_ |= 0x00000002;
                 break;
-              } // case 18
+              } // case 16
               case 24: {
-                poolId_ = input.readUInt64();
+                codeId_ = input.readUInt64();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 24
-              case 32: {
-                codeId_ = input.readUInt64();
+              case 34: {
+                instantiateMsg_ = input.readBytes();
                 bitField0_ |= 0x00000008;
                 break;
-              } // case 32
-              case 42: {
-                instantiateMsg_ = input.readBytes();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 42
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -630,81 +592,9 @@ public final class PoolProto {
       }
       private int bitField0_;
 
-      private java.lang.Object poolAddress_ = "";
-      /**
-       * <code>string pool_address = 1 [json_name = "poolAddress", (.gogoproto.moretags) = "yaml:&#92;"pool_address&#92;""];</code>
-       * @return The poolAddress.
-       */
-      public java.lang.String getPoolAddress() {
-        java.lang.Object ref = poolAddress_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          poolAddress_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string pool_address = 1 [json_name = "poolAddress", (.gogoproto.moretags) = "yaml:&#92;"pool_address&#92;""];</code>
-       * @return The bytes for poolAddress.
-       */
-      public com.google.protobuf.ByteString
-          getPoolAddressBytes() {
-        java.lang.Object ref = poolAddress_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          poolAddress_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string pool_address = 1 [json_name = "poolAddress", (.gogoproto.moretags) = "yaml:&#92;"pool_address&#92;""];</code>
-       * @param value The poolAddress to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPoolAddress(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        poolAddress_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string pool_address = 1 [json_name = "poolAddress", (.gogoproto.moretags) = "yaml:&#92;"pool_address&#92;""];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPoolAddress() {
-        poolAddress_ = getDefaultInstance().getPoolAddress();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string pool_address = 1 [json_name = "poolAddress", (.gogoproto.moretags) = "yaml:&#92;"pool_address&#92;""];</code>
-       * @param value The bytes for poolAddress to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPoolAddressBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        poolAddress_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object contractAddress_ = "";
       /**
-       * <code>string contract_address = 2 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
+       * <code>string contract_address = 1 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
        * @return The contractAddress.
        */
       public java.lang.String getContractAddress() {
@@ -720,7 +610,7 @@ public final class PoolProto {
         }
       }
       /**
-       * <code>string contract_address = 2 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
+       * <code>string contract_address = 1 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
        * @return The bytes for contractAddress.
        */
       public com.google.protobuf.ByteString
@@ -737,7 +627,7 @@ public final class PoolProto {
         }
       }
       /**
-       * <code>string contract_address = 2 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
+       * <code>string contract_address = 1 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
        * @param value The contractAddress to set.
        * @return This builder for chaining.
        */
@@ -745,22 +635,22 @@ public final class PoolProto {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         contractAddress_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>string contract_address = 2 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
+       * <code>string contract_address = 1 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearContractAddress() {
         contractAddress_ = getDefaultInstance().getContractAddress();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
-       * <code>string contract_address = 2 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
+       * <code>string contract_address = 1 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
        * @param value The bytes for contractAddress to set.
        * @return This builder for chaining.
        */
@@ -769,14 +659,14 @@ public final class PoolProto {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         contractAddress_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
 
       private long poolId_ ;
       /**
-       * <code>uint64 pool_id = 3 [json_name = "poolId"];</code>
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
        * @return The poolId.
        */
       @java.lang.Override
@@ -784,23 +674,23 @@ public final class PoolProto {
         return poolId_;
       }
       /**
-       * <code>uint64 pool_id = 3 [json_name = "poolId"];</code>
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
        * @param value The poolId to set.
        * @return This builder for chaining.
        */
       public Builder setPoolId(long value) {
 
         poolId_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 pool_id = 3 [json_name = "poolId"];</code>
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPoolId() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         poolId_ = 0L;
         onChanged();
         return this;
@@ -808,7 +698,7 @@ public final class PoolProto {
 
       private long codeId_ ;
       /**
-       * <code>uint64 code_id = 4 [json_name = "codeId"];</code>
+       * <code>uint64 code_id = 3 [json_name = "codeId"];</code>
        * @return The codeId.
        */
       @java.lang.Override
@@ -816,23 +706,23 @@ public final class PoolProto {
         return codeId_;
       }
       /**
-       * <code>uint64 code_id = 4 [json_name = "codeId"];</code>
+       * <code>uint64 code_id = 3 [json_name = "codeId"];</code>
        * @param value The codeId to set.
        * @return This builder for chaining.
        */
       public Builder setCodeId(long value) {
 
         codeId_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 code_id = 4 [json_name = "codeId"];</code>
+       * <code>uint64 code_id = 3 [json_name = "codeId"];</code>
        * @return This builder for chaining.
        */
       public Builder clearCodeId() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         codeId_ = 0L;
         onChanged();
         return this;
@@ -840,7 +730,7 @@ public final class PoolProto {
 
       private com.google.protobuf.ByteString instantiateMsg_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>bytes instantiate_msg = 5 [json_name = "instantiateMsg", (.gogoproto.moretags) = "yaml:&#92;"instantiate_msg&#92;""];</code>
+       * <code>bytes instantiate_msg = 4 [json_name = "instantiateMsg", (.gogoproto.moretags) = "yaml:&#92;"instantiate_msg&#92;""];</code>
        * @return The instantiateMsg.
        */
       @java.lang.Override
@@ -848,23 +738,23 @@ public final class PoolProto {
         return instantiateMsg_;
       }
       /**
-       * <code>bytes instantiate_msg = 5 [json_name = "instantiateMsg", (.gogoproto.moretags) = "yaml:&#92;"instantiate_msg&#92;""];</code>
+       * <code>bytes instantiate_msg = 4 [json_name = "instantiateMsg", (.gogoproto.moretags) = "yaml:&#92;"instantiate_msg&#92;""];</code>
        * @param value The instantiateMsg to set.
        * @return This builder for chaining.
        */
       public Builder setInstantiateMsg(com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         instantiateMsg_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>bytes instantiate_msg = 5 [json_name = "instantiateMsg", (.gogoproto.moretags) = "yaml:&#92;"instantiate_msg&#92;""];</code>
+       * <code>bytes instantiate_msg = 4 [json_name = "instantiateMsg", (.gogoproto.moretags) = "yaml:&#92;"instantiate_msg&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearInstantiateMsg() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         instantiateMsg_ = getDefaultInstance().getInstantiateMsg();
         onChanged();
         return this;
@@ -950,35 +840,32 @@ public final class PoolProto {
       "\n-osmosis/cosmwasmpool/v1beta1/model/poo" +
       "l.proto\022\034osmosis.cosmwasmpool.v1beta1\032\031c" +
       "osmos_proto/cosmos.proto\032\024gogoproto/gogo" +
-      ".proto\032\037google/protobuf/timestamp.proto\"" +
-      "\234\002\n\014CosmWasmPool\022:\n\014pool_address\030\001 \001(\tB\027" +
-      "\362\336\037\023yaml:\"pool_address\"R\013poolAddress\022F\n\020" +
-      "contract_address\030\002 \001(\tB\033\362\336\037\027yaml:\"contra" +
-      "ct_address\"R\017contractAddress\022\027\n\007pool_id\030" +
-      "\003 \001(\004R\006poolId\022\027\n\007code_id\030\004 \001(\004R\006codeId\022C" +
-      "\n\017instantiate_msg\030\005 \001(\014B\032\362\336\037\026yaml:\"insta" +
-      "ntiate_msg\"R\016instantiateMsg:\021\210\240\037\000\230\240\037\000\312\264-" +
-      "\005PoolIB\367\001\n com.osmosis.cosmwasmpool.v1be" +
-      "ta1B\tPoolProtoZ8github.com/osmosis-labs/" +
-      "osmosis/v15/x/cosmwasmpool/model\242\002\003OCX\252\002" +
-      "\034Osmosis.Cosmwasmpool.V1beta1\312\002\034Osmosis\\" +
-      "Cosmwasmpool\\V1beta1\342\002(Osmosis\\Cosmwasmp" +
-      "ool\\V1beta1\\GPBMetadata\352\002\036Osmosis::Cosmw" +
-      "asmpool::V1beta1b\006proto3"
+      ".proto\"\340\001\n\014CosmWasmPool\022F\n\020contract_addr" +
+      "ess\030\001 \001(\tB\033\362\336\037\027yaml:\"contract_address\"R\017" +
+      "contractAddress\022\027\n\007pool_id\030\002 \001(\004R\006poolId" +
+      "\022\027\n\007code_id\030\003 \001(\004R\006codeId\022C\n\017instantiate" +
+      "_msg\030\004 \001(\014B\032\362\336\037\026yaml:\"instantiate_msg\"R\016" +
+      "instantiateMsg:\021\210\240\037\000\230\240\037\000\312\264-\005PoolIB\367\001\n co" +
+      "m.osmosis.cosmwasmpool.v1beta1B\tPoolProt" +
+      "oZ8github.com/osmosis-labs/osmosis/v26/x" +
+      "/cosmwasmpool/model\242\002\003OCX\252\002\034Osmosis.Cosm" +
+      "wasmpool.V1beta1\312\002\034Osmosis\\Cosmwasmpool\\" +
+      "V1beta1\342\002(Osmosis\\Cosmwasmpool\\V1beta1\\G" +
+      "PBMetadata\352\002\036Osmosis::Cosmwasmpool::V1be" +
+      "ta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.cosmos_proto.CosmosProto.getDescriptor(),
           com.gogoproto.GogoProto.getDescriptor(),
-          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_osmosis_cosmwasmpool_v1beta1_CosmWasmPool_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_osmosis_cosmwasmpool_v1beta1_CosmWasmPool_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_cosmwasmpool_v1beta1_CosmWasmPool_descriptor,
-        new java.lang.String[] { "PoolAddress", "ContractAddress", "PoolId", "CodeId", "InstantiateMsg", });
+        new java.lang.String[] { "ContractAddress", "PoolId", "CodeId", "InstantiateMsg", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.cosmos_proto.CosmosProto.implementsInterface);
@@ -989,7 +876,6 @@ public final class PoolProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.cosmos_proto.CosmosProto.getDescriptor();
     com.gogoproto.GogoProto.getDescriptor();
-    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

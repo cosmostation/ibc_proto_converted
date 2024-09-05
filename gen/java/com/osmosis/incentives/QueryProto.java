@@ -1311,7 +1311,7 @@ public final class QueryProto {
 
     /**
      * <pre>
-     * Gague ID being queried
+     * Gauge ID being queried
      * </pre>
      *
      * <code>uint64 id = 1 [json_name = "id"];</code>
@@ -1358,7 +1358,7 @@ public final class QueryProto {
     private long id_ = 0L;
     /**
      * <pre>
-     * Gague ID being queried
+     * Gauge ID being queried
      * </pre>
      *
      * <code>uint64 id = 1 [json_name = "id"];</code>
@@ -1698,7 +1698,7 @@ public final class QueryProto {
       private long id_ ;
       /**
        * <pre>
-       * Gague ID being queried
+       * Gauge ID being queried
        * </pre>
        *
        * <code>uint64 id = 1 [json_name = "id"];</code>
@@ -1710,7 +1710,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Gague ID being queried
+       * Gauge ID being queried
        * </pre>
        *
        * <code>uint64 id = 1 [json_name = "id"];</code>
@@ -1726,7 +1726,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Gague ID being queried
+       * Gauge ID being queried
        * </pre>
        *
        * <code>uint64 id = 1 [json_name = "id"];</code>
@@ -1808,7 +1808,7 @@ public final class QueryProto {
 
     /**
      * <pre>
-     * Gauge that corresponds to provided gague ID
+     * Gauge that corresponds to provided gauge ID
      * </pre>
      *
      * <code>.osmosis.incentives.Gauge gauge = 1 [json_name = "gauge"];</code>
@@ -1817,7 +1817,7 @@ public final class QueryProto {
     boolean hasGauge();
     /**
      * <pre>
-     * Gauge that corresponds to provided gague ID
+     * Gauge that corresponds to provided gauge ID
      * </pre>
      *
      * <code>.osmosis.incentives.Gauge gauge = 1 [json_name = "gauge"];</code>
@@ -1826,7 +1826,7 @@ public final class QueryProto {
     com.osmosis.incentives.GaugeProto.Gauge getGauge();
     /**
      * <pre>
-     * Gauge that corresponds to provided gague ID
+     * Gauge that corresponds to provided gauge ID
      * </pre>
      *
      * <code>.osmosis.incentives.Gauge gauge = 1 [json_name = "gauge"];</code>
@@ -1872,7 +1872,7 @@ public final class QueryProto {
     private com.osmosis.incentives.GaugeProto.Gauge gauge_;
     /**
      * <pre>
-     * Gauge that corresponds to provided gague ID
+     * Gauge that corresponds to provided gauge ID
      * </pre>
      *
      * <code>.osmosis.incentives.Gauge gauge = 1 [json_name = "gauge"];</code>
@@ -1884,7 +1884,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * Gauge that corresponds to provided gague ID
+     * Gauge that corresponds to provided gauge ID
      * </pre>
      *
      * <code>.osmosis.incentives.Gauge gauge = 1 [json_name = "gauge"];</code>
@@ -1896,7 +1896,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * Gauge that corresponds to provided gague ID
+     * Gauge that corresponds to provided gauge ID
      * </pre>
      *
      * <code>.osmosis.incentives.Gauge gauge = 1 [json_name = "gauge"];</code>
@@ -2249,7 +2249,7 @@ public final class QueryProto {
           com.osmosis.incentives.GaugeProto.Gauge, com.osmosis.incentives.GaugeProto.Gauge.Builder, com.osmosis.incentives.GaugeProto.GaugeOrBuilder> gaugeBuilder_;
       /**
        * <pre>
-       * Gauge that corresponds to provided gague ID
+       * Gauge that corresponds to provided gauge ID
        * </pre>
        *
        * <code>.osmosis.incentives.Gauge gauge = 1 [json_name = "gauge"];</code>
@@ -2260,7 +2260,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Gauge that corresponds to provided gague ID
+       * Gauge that corresponds to provided gauge ID
        * </pre>
        *
        * <code>.osmosis.incentives.Gauge gauge = 1 [json_name = "gauge"];</code>
@@ -2275,7 +2275,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Gauge that corresponds to provided gague ID
+       * Gauge that corresponds to provided gauge ID
        * </pre>
        *
        * <code>.osmosis.incentives.Gauge gauge = 1 [json_name = "gauge"];</code>
@@ -2295,7 +2295,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Gauge that corresponds to provided gague ID
+       * Gauge that corresponds to provided gauge ID
        * </pre>
        *
        * <code>.osmosis.incentives.Gauge gauge = 1 [json_name = "gauge"];</code>
@@ -2313,7 +2313,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Gauge that corresponds to provided gague ID
+       * Gauge that corresponds to provided gauge ID
        * </pre>
        *
        * <code>.osmosis.incentives.Gauge gauge = 1 [json_name = "gauge"];</code>
@@ -2336,7 +2336,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Gauge that corresponds to provided gague ID
+       * Gauge that corresponds to provided gauge ID
        * </pre>
        *
        * <code>.osmosis.incentives.Gauge gauge = 1 [json_name = "gauge"];</code>
@@ -2353,7 +2353,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Gauge that corresponds to provided gague ID
+       * Gauge that corresponds to provided gauge ID
        * </pre>
        *
        * <code>.osmosis.incentives.Gauge gauge = 1 [json_name = "gauge"];</code>
@@ -2365,7 +2365,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Gauge that corresponds to provided gague ID
+       * Gauge that corresponds to provided gauge ID
        * </pre>
        *
        * <code>.osmosis.incentives.Gauge gauge = 1 [json_name = "gauge"];</code>
@@ -2380,7 +2380,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Gauge that corresponds to provided gague ID
+       * Gauge that corresponds to provided gauge ID
        * </pre>
        *
        * <code>.osmosis.incentives.Gauge gauge = 1 [json_name = "gauge"];</code>
@@ -4938,7 +4938,7 @@ public final class QueryProto {
 
     /**
      * <pre>
-     * Active gagues only
+     * Active gauges only
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -4947,7 +4947,7 @@ public final class QueryProto {
         getDataList();
     /**
      * <pre>
-     * Active gagues only
+     * Active gauges only
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -4955,7 +4955,7 @@ public final class QueryProto {
     com.osmosis.incentives.GaugeProto.Gauge getData(int index);
     /**
      * <pre>
-     * Active gagues only
+     * Active gauges only
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -4963,7 +4963,7 @@ public final class QueryProto {
     int getDataCount();
     /**
      * <pre>
-     * Active gagues only
+     * Active gauges only
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -4972,7 +4972,7 @@ public final class QueryProto {
         getDataOrBuilderList();
     /**
      * <pre>
-     * Active gagues only
+     * Active gauges only
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -5048,7 +5048,7 @@ public final class QueryProto {
     private java.util.List<com.osmosis.incentives.GaugeProto.Gauge> data_;
     /**
      * <pre>
-     * Active gagues only
+     * Active gauges only
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -5059,7 +5059,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * Active gagues only
+     * Active gauges only
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -5071,7 +5071,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * Active gagues only
+     * Active gauges only
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -5082,7 +5082,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * Active gagues only
+     * Active gauges only
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -5093,7 +5093,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * Active gagues only
+     * Active gauges only
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -5566,7 +5566,7 @@ public final class QueryProto {
 
       /**
        * <pre>
-       * Active gagues only
+       * Active gauges only
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -5580,7 +5580,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues only
+       * Active gauges only
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -5594,7 +5594,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues only
+       * Active gauges only
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -5608,7 +5608,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues only
+       * Active gauges only
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -5629,7 +5629,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues only
+       * Active gauges only
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -5647,7 +5647,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues only
+       * Active gauges only
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -5667,7 +5667,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues only
+       * Active gauges only
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -5688,7 +5688,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues only
+       * Active gauges only
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -5706,7 +5706,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues only
+       * Active gauges only
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -5724,7 +5724,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues only
+       * Active gauges only
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -5743,7 +5743,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues only
+       * Active gauges only
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -5760,7 +5760,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues only
+       * Active gauges only
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -5777,7 +5777,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues only
+       * Active gauges only
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -5788,7 +5788,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues only
+       * Active gauges only
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -5802,7 +5802,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues only
+       * Active gauges only
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -5817,7 +5817,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues only
+       * Active gauges only
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -5828,7 +5828,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues only
+       * Active gauges only
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -5840,7 +5840,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues only
+       * Active gauges only
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -6088,7 +6088,7 @@ public final class QueryProto {
 
     /**
      * <pre>
-     * Desired denom when querying active gagues
+     * Desired denom when querying active gauges
      * </pre>
      *
      * <code>string denom = 1 [json_name = "denom"];</code>
@@ -6097,7 +6097,7 @@ public final class QueryProto {
     java.lang.String getDenom();
     /**
      * <pre>
-     * Desired denom when querying active gagues
+     * Desired denom when querying active gauges
      * </pre>
      *
      * <code>string denom = 1 [json_name = "denom"];</code>
@@ -6174,7 +6174,7 @@ public final class QueryProto {
     private volatile java.lang.Object denom_ = "";
     /**
      * <pre>
-     * Desired denom when querying active gagues
+     * Desired denom when querying active gauges
      * </pre>
      *
      * <code>string denom = 1 [json_name = "denom"];</code>
@@ -6195,7 +6195,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * Desired denom when querying active gagues
+     * Desired denom when querying active gauges
      * </pre>
      *
      * <code>string denom = 1 [json_name = "denom"];</code>
@@ -6619,7 +6619,7 @@ public final class QueryProto {
       private java.lang.Object denom_ = "";
       /**
        * <pre>
-       * Desired denom when querying active gagues
+       * Desired denom when querying active gauges
        * </pre>
        *
        * <code>string denom = 1 [json_name = "denom"];</code>
@@ -6639,7 +6639,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Desired denom when querying active gagues
+       * Desired denom when querying active gauges
        * </pre>
        *
        * <code>string denom = 1 [json_name = "denom"];</code>
@@ -6660,7 +6660,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Desired denom when querying active gagues
+       * Desired denom when querying active gauges
        * </pre>
        *
        * <code>string denom = 1 [json_name = "denom"];</code>
@@ -6677,7 +6677,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Desired denom when querying active gagues
+       * Desired denom when querying active gauges
        * </pre>
        *
        * <code>string denom = 1 [json_name = "denom"];</code>
@@ -6691,7 +6691,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Desired denom when querying active gagues
+       * Desired denom when querying active gauges
        * </pre>
        *
        * <code>string denom = 1 [json_name = "denom"];</code>
@@ -6932,7 +6932,7 @@ public final class QueryProto {
 
     /**
      * <pre>
-     * Active gagues that match denom in query
+     * Active gauges that match denom in query
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -6941,7 +6941,7 @@ public final class QueryProto {
         getDataList();
     /**
      * <pre>
-     * Active gagues that match denom in query
+     * Active gauges that match denom in query
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -6949,7 +6949,7 @@ public final class QueryProto {
     com.osmosis.incentives.GaugeProto.Gauge getData(int index);
     /**
      * <pre>
-     * Active gagues that match denom in query
+     * Active gauges that match denom in query
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -6957,7 +6957,7 @@ public final class QueryProto {
     int getDataCount();
     /**
      * <pre>
-     * Active gagues that match denom in query
+     * Active gauges that match denom in query
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -6966,7 +6966,7 @@ public final class QueryProto {
         getDataOrBuilderList();
     /**
      * <pre>
-     * Active gagues that match denom in query
+     * Active gauges that match denom in query
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -7042,7 +7042,7 @@ public final class QueryProto {
     private java.util.List<com.osmosis.incentives.GaugeProto.Gauge> data_;
     /**
      * <pre>
-     * Active gagues that match denom in query
+     * Active gauges that match denom in query
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -7053,7 +7053,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * Active gagues that match denom in query
+     * Active gauges that match denom in query
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -7065,7 +7065,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * Active gagues that match denom in query
+     * Active gauges that match denom in query
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -7076,7 +7076,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * Active gagues that match denom in query
+     * Active gauges that match denom in query
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -7087,7 +7087,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * Active gagues that match denom in query
+     * Active gauges that match denom in query
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -7560,7 +7560,7 @@ public final class QueryProto {
 
       /**
        * <pre>
-       * Active gagues that match denom in query
+       * Active gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -7574,7 +7574,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues that match denom in query
+       * Active gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -7588,7 +7588,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues that match denom in query
+       * Active gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -7602,7 +7602,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues that match denom in query
+       * Active gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -7623,7 +7623,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues that match denom in query
+       * Active gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -7641,7 +7641,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues that match denom in query
+       * Active gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -7661,7 +7661,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues that match denom in query
+       * Active gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -7682,7 +7682,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues that match denom in query
+       * Active gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -7700,7 +7700,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues that match denom in query
+       * Active gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -7718,7 +7718,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues that match denom in query
+       * Active gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -7737,7 +7737,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues that match denom in query
+       * Active gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -7754,7 +7754,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues that match denom in query
+       * Active gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -7771,7 +7771,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues that match denom in query
+       * Active gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -7782,7 +7782,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues that match denom in query
+       * Active gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -7796,7 +7796,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues that match denom in query
+       * Active gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -7811,7 +7811,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues that match denom in query
+       * Active gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -7822,7 +7822,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues that match denom in query
+       * Active gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -7834,7 +7834,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Active gagues that match denom in query
+       * Active gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge data = 1 [json_name = "data", (.gogoproto.nullable) = false];</code>
@@ -9892,7 +9892,7 @@ public final class QueryProto {
 
     /**
      * <pre>
-     * Filter for upcoming gagues that match specific denom
+     * Filter for upcoming gauges that match specific denom
      * </pre>
      *
      * <code>string denom = 1 [json_name = "denom"];</code>
@@ -9901,7 +9901,7 @@ public final class QueryProto {
     java.lang.String getDenom();
     /**
      * <pre>
-     * Filter for upcoming gagues that match specific denom
+     * Filter for upcoming gauges that match specific denom
      * </pre>
      *
      * <code>string denom = 1 [json_name = "denom"];</code>
@@ -9978,7 +9978,7 @@ public final class QueryProto {
     private volatile java.lang.Object denom_ = "";
     /**
      * <pre>
-     * Filter for upcoming gagues that match specific denom
+     * Filter for upcoming gauges that match specific denom
      * </pre>
      *
      * <code>string denom = 1 [json_name = "denom"];</code>
@@ -9999,7 +9999,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * Filter for upcoming gagues that match specific denom
+     * Filter for upcoming gauges that match specific denom
      * </pre>
      *
      * <code>string denom = 1 [json_name = "denom"];</code>
@@ -10423,7 +10423,7 @@ public final class QueryProto {
       private java.lang.Object denom_ = "";
       /**
        * <pre>
-       * Filter for upcoming gagues that match specific denom
+       * Filter for upcoming gauges that match specific denom
        * </pre>
        *
        * <code>string denom = 1 [json_name = "denom"];</code>
@@ -10443,7 +10443,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Filter for upcoming gagues that match specific denom
+       * Filter for upcoming gauges that match specific denom
        * </pre>
        *
        * <code>string denom = 1 [json_name = "denom"];</code>
@@ -10464,7 +10464,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Filter for upcoming gagues that match specific denom
+       * Filter for upcoming gauges that match specific denom
        * </pre>
        *
        * <code>string denom = 1 [json_name = "denom"];</code>
@@ -10481,7 +10481,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Filter for upcoming gagues that match specific denom
+       * Filter for upcoming gauges that match specific denom
        * </pre>
        *
        * <code>string denom = 1 [json_name = "denom"];</code>
@@ -10495,7 +10495,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Filter for upcoming gagues that match specific denom
+       * Filter for upcoming gauges that match specific denom
        * </pre>
        *
        * <code>string denom = 1 [json_name = "denom"];</code>
@@ -10736,7 +10736,7 @@ public final class QueryProto {
 
     /**
      * <pre>
-     * Upcoming gagues that match denom in query
+     * Upcoming gauges that match denom in query
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -10745,7 +10745,7 @@ public final class QueryProto {
         getUpcomingGaugesList();
     /**
      * <pre>
-     * Upcoming gagues that match denom in query
+     * Upcoming gauges that match denom in query
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -10753,7 +10753,7 @@ public final class QueryProto {
     com.osmosis.incentives.GaugeProto.Gauge getUpcomingGauges(int index);
     /**
      * <pre>
-     * Upcoming gagues that match denom in query
+     * Upcoming gauges that match denom in query
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -10761,7 +10761,7 @@ public final class QueryProto {
     int getUpcomingGaugesCount();
     /**
      * <pre>
-     * Upcoming gagues that match denom in query
+     * Upcoming gauges that match denom in query
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -10770,7 +10770,7 @@ public final class QueryProto {
         getUpcomingGaugesOrBuilderList();
     /**
      * <pre>
-     * Upcoming gagues that match denom in query
+     * Upcoming gauges that match denom in query
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -10846,7 +10846,7 @@ public final class QueryProto {
     private java.util.List<com.osmosis.incentives.GaugeProto.Gauge> upcomingGauges_;
     /**
      * <pre>
-     * Upcoming gagues that match denom in query
+     * Upcoming gauges that match denom in query
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -10857,7 +10857,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * Upcoming gagues that match denom in query
+     * Upcoming gauges that match denom in query
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -10869,7 +10869,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * Upcoming gagues that match denom in query
+     * Upcoming gauges that match denom in query
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -10880,7 +10880,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * Upcoming gagues that match denom in query
+     * Upcoming gauges that match denom in query
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -10891,7 +10891,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * Upcoming gagues that match denom in query
+     * Upcoming gauges that match denom in query
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -11364,7 +11364,7 @@ public final class QueryProto {
 
       /**
        * <pre>
-       * Upcoming gagues that match denom in query
+       * Upcoming gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -11378,7 +11378,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Upcoming gagues that match denom in query
+       * Upcoming gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -11392,7 +11392,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Upcoming gagues that match denom in query
+       * Upcoming gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -11406,7 +11406,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Upcoming gagues that match denom in query
+       * Upcoming gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -11427,7 +11427,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Upcoming gagues that match denom in query
+       * Upcoming gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -11445,7 +11445,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Upcoming gagues that match denom in query
+       * Upcoming gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -11465,7 +11465,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Upcoming gagues that match denom in query
+       * Upcoming gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -11486,7 +11486,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Upcoming gagues that match denom in query
+       * Upcoming gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -11504,7 +11504,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Upcoming gagues that match denom in query
+       * Upcoming gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -11522,7 +11522,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Upcoming gagues that match denom in query
+       * Upcoming gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -11541,7 +11541,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Upcoming gagues that match denom in query
+       * Upcoming gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -11558,7 +11558,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Upcoming gagues that match denom in query
+       * Upcoming gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -11575,7 +11575,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Upcoming gagues that match denom in query
+       * Upcoming gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -11586,7 +11586,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Upcoming gagues that match denom in query
+       * Upcoming gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -11600,7 +11600,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Upcoming gagues that match denom in query
+       * Upcoming gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -11615,7 +11615,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Upcoming gagues that match denom in query
+       * Upcoming gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -11626,7 +11626,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Upcoming gagues that match denom in query
+       * Upcoming gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -11638,7 +11638,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Upcoming gagues that match denom in query
+       * Upcoming gauges that match denom in query
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge upcoming_gauges = 1 [json_name = "upcomingGauges", (.gogoproto.nullable) = false];</code>
@@ -12816,7 +12816,7 @@ public final class QueryProto {
 
     /**
      * <pre>
-     * Estimated coin rewards that will be recieved at provided address
+     * Estimated coin rewards that will be received at provided address
      * from specified locks between current time and end epoch
      * </pre>
      *
@@ -12826,7 +12826,7 @@ public final class QueryProto {
         getCoinsList();
     /**
      * <pre>
-     * Estimated coin rewards that will be recieved at provided address
+     * Estimated coin rewards that will be received at provided address
      * from specified locks between current time and end epoch
      * </pre>
      *
@@ -12835,7 +12835,7 @@ public final class QueryProto {
     com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index);
     /**
      * <pre>
-     * Estimated coin rewards that will be recieved at provided address
+     * Estimated coin rewards that will be received at provided address
      * from specified locks between current time and end epoch
      * </pre>
      *
@@ -12844,7 +12844,7 @@ public final class QueryProto {
     int getCoinsCount();
     /**
      * <pre>
-     * Estimated coin rewards that will be recieved at provided address
+     * Estimated coin rewards that will be received at provided address
      * from specified locks between current time and end epoch
      * </pre>
      *
@@ -12854,7 +12854,7 @@ public final class QueryProto {
         getCoinsOrBuilderList();
     /**
      * <pre>
-     * Estimated coin rewards that will be recieved at provided address
+     * Estimated coin rewards that will be received at provided address
      * from specified locks between current time and end epoch
      * </pre>
      *
@@ -12904,7 +12904,7 @@ public final class QueryProto {
     private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> coins_;
     /**
      * <pre>
-     * Estimated coin rewards that will be recieved at provided address
+     * Estimated coin rewards that will be received at provided address
      * from specified locks between current time and end epoch
      * </pre>
      *
@@ -12916,7 +12916,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * Estimated coin rewards that will be recieved at provided address
+     * Estimated coin rewards that will be received at provided address
      * from specified locks between current time and end epoch
      * </pre>
      *
@@ -12929,7 +12929,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * Estimated coin rewards that will be recieved at provided address
+     * Estimated coin rewards that will be received at provided address
      * from specified locks between current time and end epoch
      * </pre>
      *
@@ -12941,7 +12941,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * Estimated coin rewards that will be recieved at provided address
+     * Estimated coin rewards that will be received at provided address
      * from specified locks between current time and end epoch
      * </pre>
      *
@@ -12953,7 +12953,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * Estimated coin rewards that will be recieved at provided address
+     * Estimated coin rewards that will be received at provided address
      * from specified locks between current time and end epoch
      * </pre>
      *
@@ -13353,7 +13353,7 @@ public final class QueryProto {
 
       /**
        * <pre>
-       * Estimated coin rewards that will be recieved at provided address
+       * Estimated coin rewards that will be received at provided address
        * from specified locks between current time and end epoch
        * </pre>
        *
@@ -13368,7 +13368,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Estimated coin rewards that will be recieved at provided address
+       * Estimated coin rewards that will be received at provided address
        * from specified locks between current time and end epoch
        * </pre>
        *
@@ -13383,7 +13383,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Estimated coin rewards that will be recieved at provided address
+       * Estimated coin rewards that will be received at provided address
        * from specified locks between current time and end epoch
        * </pre>
        *
@@ -13398,7 +13398,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Estimated coin rewards that will be recieved at provided address
+       * Estimated coin rewards that will be received at provided address
        * from specified locks between current time and end epoch
        * </pre>
        *
@@ -13420,7 +13420,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Estimated coin rewards that will be recieved at provided address
+       * Estimated coin rewards that will be received at provided address
        * from specified locks between current time and end epoch
        * </pre>
        *
@@ -13439,7 +13439,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Estimated coin rewards that will be recieved at provided address
+       * Estimated coin rewards that will be received at provided address
        * from specified locks between current time and end epoch
        * </pre>
        *
@@ -13460,7 +13460,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Estimated coin rewards that will be recieved at provided address
+       * Estimated coin rewards that will be received at provided address
        * from specified locks between current time and end epoch
        * </pre>
        *
@@ -13482,7 +13482,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Estimated coin rewards that will be recieved at provided address
+       * Estimated coin rewards that will be received at provided address
        * from specified locks between current time and end epoch
        * </pre>
        *
@@ -13501,7 +13501,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Estimated coin rewards that will be recieved at provided address
+       * Estimated coin rewards that will be received at provided address
        * from specified locks between current time and end epoch
        * </pre>
        *
@@ -13520,7 +13520,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Estimated coin rewards that will be recieved at provided address
+       * Estimated coin rewards that will be received at provided address
        * from specified locks between current time and end epoch
        * </pre>
        *
@@ -13540,7 +13540,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Estimated coin rewards that will be recieved at provided address
+       * Estimated coin rewards that will be received at provided address
        * from specified locks between current time and end epoch
        * </pre>
        *
@@ -13558,7 +13558,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Estimated coin rewards that will be recieved at provided address
+       * Estimated coin rewards that will be received at provided address
        * from specified locks between current time and end epoch
        * </pre>
        *
@@ -13576,7 +13576,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Estimated coin rewards that will be recieved at provided address
+       * Estimated coin rewards that will be received at provided address
        * from specified locks between current time and end epoch
        * </pre>
        *
@@ -13588,7 +13588,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Estimated coin rewards that will be recieved at provided address
+       * Estimated coin rewards that will be received at provided address
        * from specified locks between current time and end epoch
        * </pre>
        *
@@ -13603,7 +13603,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Estimated coin rewards that will be recieved at provided address
+       * Estimated coin rewards that will be received at provided address
        * from specified locks between current time and end epoch
        * </pre>
        *
@@ -13619,7 +13619,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Estimated coin rewards that will be recieved at provided address
+       * Estimated coin rewards that will be received at provided address
        * from specified locks between current time and end epoch
        * </pre>
        *
@@ -13631,7 +13631,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Estimated coin rewards that will be recieved at provided address
+       * Estimated coin rewards that will be received at provided address
        * from specified locks between current time and end epoch
        * </pre>
        *
@@ -13644,7 +13644,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Estimated coin rewards that will be recieved at provided address
+       * Estimated coin rewards that will be received at provided address
        * from specified locks between current time and end epoch
        * </pre>
        *
@@ -14135,7 +14135,7 @@ public final class QueryProto {
 
     /**
      * <pre>
-     * Time durations that users can lock coins for in order to recieve rewards
+     * Time durations that users can lock coins for in order to receive rewards
      * </pre>
      *
      * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14144,7 +14144,7 @@ public final class QueryProto {
         getLockableDurationsList();
     /**
      * <pre>
-     * Time durations that users can lock coins for in order to recieve rewards
+     * Time durations that users can lock coins for in order to receive rewards
      * </pre>
      *
      * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14152,7 +14152,7 @@ public final class QueryProto {
     com.google.protobuf.Duration getLockableDurations(int index);
     /**
      * <pre>
-     * Time durations that users can lock coins for in order to recieve rewards
+     * Time durations that users can lock coins for in order to receive rewards
      * </pre>
      *
      * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14160,7 +14160,7 @@ public final class QueryProto {
     int getLockableDurationsCount();
     /**
      * <pre>
-     * Time durations that users can lock coins for in order to recieve rewards
+     * Time durations that users can lock coins for in order to receive rewards
      * </pre>
      *
      * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14169,7 +14169,7 @@ public final class QueryProto {
         getLockableDurationsOrBuilderList();
     /**
      * <pre>
-     * Time durations that users can lock coins for in order to recieve rewards
+     * Time durations that users can lock coins for in order to receive rewards
      * </pre>
      *
      * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14218,7 +14218,7 @@ public final class QueryProto {
     private java.util.List<com.google.protobuf.Duration> lockableDurations_;
     /**
      * <pre>
-     * Time durations that users can lock coins for in order to recieve rewards
+     * Time durations that users can lock coins for in order to receive rewards
      * </pre>
      *
      * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14229,7 +14229,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * Time durations that users can lock coins for in order to recieve rewards
+     * Time durations that users can lock coins for in order to receive rewards
      * </pre>
      *
      * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14241,7 +14241,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * Time durations that users can lock coins for in order to recieve rewards
+     * Time durations that users can lock coins for in order to receive rewards
      * </pre>
      *
      * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14252,7 +14252,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * Time durations that users can lock coins for in order to recieve rewards
+     * Time durations that users can lock coins for in order to receive rewards
      * </pre>
      *
      * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14263,7 +14263,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * Time durations that users can lock coins for in order to recieve rewards
+     * Time durations that users can lock coins for in order to receive rewards
      * </pre>
      *
      * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14662,7 +14662,7 @@ public final class QueryProto {
 
       /**
        * <pre>
-       * Time durations that users can lock coins for in order to recieve rewards
+       * Time durations that users can lock coins for in order to receive rewards
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14676,7 +14676,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Time durations that users can lock coins for in order to recieve rewards
+       * Time durations that users can lock coins for in order to receive rewards
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14690,7 +14690,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Time durations that users can lock coins for in order to recieve rewards
+       * Time durations that users can lock coins for in order to receive rewards
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14704,7 +14704,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Time durations that users can lock coins for in order to recieve rewards
+       * Time durations that users can lock coins for in order to receive rewards
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14725,7 +14725,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Time durations that users can lock coins for in order to recieve rewards
+       * Time durations that users can lock coins for in order to receive rewards
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14743,7 +14743,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Time durations that users can lock coins for in order to recieve rewards
+       * Time durations that users can lock coins for in order to receive rewards
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14763,7 +14763,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Time durations that users can lock coins for in order to recieve rewards
+       * Time durations that users can lock coins for in order to receive rewards
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14784,7 +14784,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Time durations that users can lock coins for in order to recieve rewards
+       * Time durations that users can lock coins for in order to receive rewards
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14802,7 +14802,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Time durations that users can lock coins for in order to recieve rewards
+       * Time durations that users can lock coins for in order to receive rewards
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14820,7 +14820,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Time durations that users can lock coins for in order to recieve rewards
+       * Time durations that users can lock coins for in order to receive rewards
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14839,7 +14839,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Time durations that users can lock coins for in order to recieve rewards
+       * Time durations that users can lock coins for in order to receive rewards
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14856,7 +14856,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Time durations that users can lock coins for in order to recieve rewards
+       * Time durations that users can lock coins for in order to receive rewards
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14873,7 +14873,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Time durations that users can lock coins for in order to recieve rewards
+       * Time durations that users can lock coins for in order to receive rewards
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14884,7 +14884,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Time durations that users can lock coins for in order to recieve rewards
+       * Time durations that users can lock coins for in order to receive rewards
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14898,7 +14898,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Time durations that users can lock coins for in order to recieve rewards
+       * Time durations that users can lock coins for in order to receive rewards
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14913,7 +14913,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Time durations that users can lock coins for in order to recieve rewards
+       * Time durations that users can lock coins for in order to receive rewards
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14924,7 +14924,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Time durations that users can lock coins for in order to recieve rewards
+       * Time durations that users can lock coins for in order to receive rewards
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -14936,7 +14936,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * Time durations that users can lock coins for in order to recieve rewards
+       * Time durations that users can lock coins for in order to receive rewards
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 1 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -15018,6 +15018,7501 @@ public final class QueryProto {
 
     @java.lang.Override
     public com.osmosis.incentives.QueryProto.QueryLockableDurationsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllGroupsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.incentives.QueryAllGroupsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code osmosis.incentives.QueryAllGroupsRequest}
+   */
+  public static final class QueryAllGroupsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.incentives.QueryAllGroupsRequest)
+      QueryAllGroupsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllGroupsRequest.newBuilder() to construct.
+    private QueryAllGroupsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllGroupsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllGroupsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.incentives.QueryProto.QueryAllGroupsRequest.class, com.osmosis.incentives.QueryProto.QueryAllGroupsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.incentives.QueryProto.QueryAllGroupsRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.incentives.QueryProto.QueryAllGroupsRequest other = (com.osmosis.incentives.QueryProto.QueryAllGroupsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.incentives.QueryProto.QueryAllGroupsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.incentives.QueryAllGroupsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.incentives.QueryAllGroupsRequest)
+        com.osmosis.incentives.QueryProto.QueryAllGroupsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.incentives.QueryProto.QueryAllGroupsRequest.class, com.osmosis.incentives.QueryProto.QueryAllGroupsRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.incentives.QueryProto.QueryAllGroupsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryAllGroupsRequest getDefaultInstanceForType() {
+        return com.osmosis.incentives.QueryProto.QueryAllGroupsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryAllGroupsRequest build() {
+        com.osmosis.incentives.QueryProto.QueryAllGroupsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryAllGroupsRequest buildPartial() {
+        com.osmosis.incentives.QueryProto.QueryAllGroupsRequest result = new com.osmosis.incentives.QueryProto.QueryAllGroupsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.incentives.QueryProto.QueryAllGroupsRequest) {
+          return mergeFrom((com.osmosis.incentives.QueryProto.QueryAllGroupsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.incentives.QueryProto.QueryAllGroupsRequest other) {
+        if (other == com.osmosis.incentives.QueryProto.QueryAllGroupsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.incentives.QueryAllGroupsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.incentives.QueryAllGroupsRequest)
+    private static final com.osmosis.incentives.QueryProto.QueryAllGroupsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.incentives.QueryProto.QueryAllGroupsRequest();
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllGroupsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllGroupsRequest>() {
+      @java.lang.Override
+      public QueryAllGroupsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllGroupsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllGroupsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.incentives.QueryProto.QueryAllGroupsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllGroupsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.incentives.QueryAllGroupsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.osmosis.incentives.GroupProto.Group> 
+        getGroupsList();
+    /**
+     * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.incentives.GroupProto.Group getGroups(int index);
+    /**
+     * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+     */
+    int getGroupsCount();
+    /**
+     * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.osmosis.incentives.GroupProto.GroupOrBuilder> 
+        getGroupsOrBuilderList();
+    /**
+     * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.incentives.GroupProto.GroupOrBuilder getGroupsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code osmosis.incentives.QueryAllGroupsResponse}
+   */
+  public static final class QueryAllGroupsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.incentives.QueryAllGroupsResponse)
+      QueryAllGroupsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllGroupsResponse.newBuilder() to construct.
+    private QueryAllGroupsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllGroupsResponse() {
+      groups_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllGroupsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.incentives.QueryProto.QueryAllGroupsResponse.class, com.osmosis.incentives.QueryProto.QueryAllGroupsResponse.Builder.class);
+    }
+
+    public static final int GROUPS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.incentives.GroupProto.Group> groups_;
+    /**
+     * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.incentives.GroupProto.Group> getGroupsList() {
+      return groups_;
+    }
+    /**
+     * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.incentives.GroupProto.GroupOrBuilder> 
+        getGroupsOrBuilderList() {
+      return groups_;
+    }
+    /**
+     * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getGroupsCount() {
+      return groups_.size();
+    }
+    /**
+     * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.incentives.GroupProto.Group getGroups(int index) {
+      return groups_.get(index);
+    }
+    /**
+     * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.incentives.GroupProto.GroupOrBuilder getGroupsOrBuilder(
+        int index) {
+      return groups_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < groups_.size(); i++) {
+        output.writeMessage(1, groups_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < groups_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, groups_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.incentives.QueryProto.QueryAllGroupsResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.incentives.QueryProto.QueryAllGroupsResponse other = (com.osmosis.incentives.QueryProto.QueryAllGroupsResponse) obj;
+
+      if (!getGroupsList()
+          .equals(other.getGroupsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getGroupsCount() > 0) {
+        hash = (37 * hash) + GROUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getGroupsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.incentives.QueryProto.QueryAllGroupsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.incentives.QueryAllGroupsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.incentives.QueryAllGroupsResponse)
+        com.osmosis.incentives.QueryProto.QueryAllGroupsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.incentives.QueryProto.QueryAllGroupsResponse.class, com.osmosis.incentives.QueryProto.QueryAllGroupsResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.incentives.QueryProto.QueryAllGroupsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (groupsBuilder_ == null) {
+          groups_ = java.util.Collections.emptyList();
+        } else {
+          groups_ = null;
+          groupsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryAllGroupsResponse getDefaultInstanceForType() {
+        return com.osmosis.incentives.QueryProto.QueryAllGroupsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryAllGroupsResponse build() {
+        com.osmosis.incentives.QueryProto.QueryAllGroupsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryAllGroupsResponse buildPartial() {
+        com.osmosis.incentives.QueryProto.QueryAllGroupsResponse result = new com.osmosis.incentives.QueryProto.QueryAllGroupsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.incentives.QueryProto.QueryAllGroupsResponse result) {
+        if (groupsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            groups_ = java.util.Collections.unmodifiableList(groups_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.groups_ = groups_;
+        } else {
+          result.groups_ = groupsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.incentives.QueryProto.QueryAllGroupsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.incentives.QueryProto.QueryAllGroupsResponse) {
+          return mergeFrom((com.osmosis.incentives.QueryProto.QueryAllGroupsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.incentives.QueryProto.QueryAllGroupsResponse other) {
+        if (other == com.osmosis.incentives.QueryProto.QueryAllGroupsResponse.getDefaultInstance()) return this;
+        if (groupsBuilder_ == null) {
+          if (!other.groups_.isEmpty()) {
+            if (groups_.isEmpty()) {
+              groups_ = other.groups_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureGroupsIsMutable();
+              groups_.addAll(other.groups_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.groups_.isEmpty()) {
+            if (groupsBuilder_.isEmpty()) {
+              groupsBuilder_.dispose();
+              groupsBuilder_ = null;
+              groups_ = other.groups_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              groupsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getGroupsFieldBuilder() : null;
+            } else {
+              groupsBuilder_.addAllMessages(other.groups_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.osmosis.incentives.GroupProto.Group m =
+                    input.readMessage(
+                        com.osmosis.incentives.GroupProto.Group.parser(),
+                        extensionRegistry);
+                if (groupsBuilder_ == null) {
+                  ensureGroupsIsMutable();
+                  groups_.add(m);
+                } else {
+                  groupsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.osmosis.incentives.GroupProto.Group> groups_ =
+        java.util.Collections.emptyList();
+      private void ensureGroupsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          groups_ = new java.util.ArrayList<com.osmosis.incentives.GroupProto.Group>(groups_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.incentives.GroupProto.Group, com.osmosis.incentives.GroupProto.Group.Builder, com.osmosis.incentives.GroupProto.GroupOrBuilder> groupsBuilder_;
+
+      /**
+       * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.incentives.GroupProto.Group> getGroupsList() {
+        if (groupsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(groups_);
+        } else {
+          return groupsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public int getGroupsCount() {
+        if (groupsBuilder_ == null) {
+          return groups_.size();
+        } else {
+          return groupsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GroupProto.Group getGroups(int index) {
+        if (groupsBuilder_ == null) {
+          return groups_.get(index);
+        } else {
+          return groupsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGroups(
+          int index, com.osmosis.incentives.GroupProto.Group value) {
+        if (groupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupsIsMutable();
+          groups_.set(index, value);
+          onChanged();
+        } else {
+          groupsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGroups(
+          int index, com.osmosis.incentives.GroupProto.Group.Builder builderForValue) {
+        if (groupsBuilder_ == null) {
+          ensureGroupsIsMutable();
+          groups_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          groupsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGroups(com.osmosis.incentives.GroupProto.Group value) {
+        if (groupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupsIsMutable();
+          groups_.add(value);
+          onChanged();
+        } else {
+          groupsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGroups(
+          int index, com.osmosis.incentives.GroupProto.Group value) {
+        if (groupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupsIsMutable();
+          groups_.add(index, value);
+          onChanged();
+        } else {
+          groupsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGroups(
+          com.osmosis.incentives.GroupProto.Group.Builder builderForValue) {
+        if (groupsBuilder_ == null) {
+          ensureGroupsIsMutable();
+          groups_.add(builderForValue.build());
+          onChanged();
+        } else {
+          groupsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGroups(
+          int index, com.osmosis.incentives.GroupProto.Group.Builder builderForValue) {
+        if (groupsBuilder_ == null) {
+          ensureGroupsIsMutable();
+          groups_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          groupsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllGroups(
+          java.lang.Iterable<? extends com.osmosis.incentives.GroupProto.Group> values) {
+        if (groupsBuilder_ == null) {
+          ensureGroupsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, groups_);
+          onChanged();
+        } else {
+          groupsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearGroups() {
+        if (groupsBuilder_ == null) {
+          groups_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          groupsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeGroups(int index) {
+        if (groupsBuilder_ == null) {
+          ensureGroupsIsMutable();
+          groups_.remove(index);
+          onChanged();
+        } else {
+          groupsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GroupProto.Group.Builder getGroupsBuilder(
+          int index) {
+        return getGroupsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GroupProto.GroupOrBuilder getGroupsOrBuilder(
+          int index) {
+        if (groupsBuilder_ == null) {
+          return groups_.get(index);  } else {
+          return groupsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.osmosis.incentives.GroupProto.GroupOrBuilder> 
+           getGroupsOrBuilderList() {
+        if (groupsBuilder_ != null) {
+          return groupsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(groups_);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GroupProto.Group.Builder addGroupsBuilder() {
+        return getGroupsFieldBuilder().addBuilder(
+            com.osmosis.incentives.GroupProto.Group.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GroupProto.Group.Builder addGroupsBuilder(
+          int index) {
+        return getGroupsFieldBuilder().addBuilder(
+            index, com.osmosis.incentives.GroupProto.Group.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Group groups = 1 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.incentives.GroupProto.Group.Builder> 
+           getGroupsBuilderList() {
+        return getGroupsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.incentives.GroupProto.Group, com.osmosis.incentives.GroupProto.Group.Builder, com.osmosis.incentives.GroupProto.GroupOrBuilder> 
+          getGroupsFieldBuilder() {
+        if (groupsBuilder_ == null) {
+          groupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.incentives.GroupProto.Group, com.osmosis.incentives.GroupProto.Group.Builder, com.osmosis.incentives.GroupProto.GroupOrBuilder>(
+                  groups_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          groups_ = null;
+        }
+        return groupsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.incentives.QueryAllGroupsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.incentives.QueryAllGroupsResponse)
+    private static final com.osmosis.incentives.QueryProto.QueryAllGroupsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.incentives.QueryProto.QueryAllGroupsResponse();
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllGroupsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllGroupsResponse>() {
+      @java.lang.Override
+      public QueryAllGroupsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllGroupsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllGroupsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.incentives.QueryProto.QueryAllGroupsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllGroupsGaugesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.incentives.QueryAllGroupsGaugesRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code osmosis.incentives.QueryAllGroupsGaugesRequest}
+   */
+  public static final class QueryAllGroupsGaugesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.incentives.QueryAllGroupsGaugesRequest)
+      QueryAllGroupsGaugesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllGroupsGaugesRequest.newBuilder() to construct.
+    private QueryAllGroupsGaugesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllGroupsGaugesRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllGroupsGaugesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsGaugesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsGaugesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest.class, com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest other = (com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.incentives.QueryAllGroupsGaugesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.incentives.QueryAllGroupsGaugesRequest)
+        com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsGaugesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsGaugesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest.class, com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsGaugesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest getDefaultInstanceForType() {
+        return com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest build() {
+        com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest buildPartial() {
+        com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest result = new com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest) {
+          return mergeFrom((com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest other) {
+        if (other == com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.incentives.QueryAllGroupsGaugesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.incentives.QueryAllGroupsGaugesRequest)
+    private static final com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest();
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllGroupsGaugesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllGroupsGaugesRequest>() {
+      @java.lang.Override
+      public QueryAllGroupsGaugesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllGroupsGaugesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllGroupsGaugesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllGroupsGaugesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.incentives.QueryAllGroupsGaugesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.osmosis.incentives.GaugeProto.Gauge> 
+        getGaugesList();
+    /**
+     * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.incentives.GaugeProto.Gauge getGauges(int index);
+    /**
+     * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+     */
+    int getGaugesCount();
+    /**
+     * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.osmosis.incentives.GaugeProto.GaugeOrBuilder> 
+        getGaugesOrBuilderList();
+    /**
+     * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.incentives.GaugeProto.GaugeOrBuilder getGaugesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code osmosis.incentives.QueryAllGroupsGaugesResponse}
+   */
+  public static final class QueryAllGroupsGaugesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.incentives.QueryAllGroupsGaugesResponse)
+      QueryAllGroupsGaugesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllGroupsGaugesResponse.newBuilder() to construct.
+    private QueryAllGroupsGaugesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllGroupsGaugesResponse() {
+      gauges_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllGroupsGaugesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsGaugesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsGaugesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse.class, com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse.Builder.class);
+    }
+
+    public static final int GAUGES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.incentives.GaugeProto.Gauge> gauges_;
+    /**
+     * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.incentives.GaugeProto.Gauge> getGaugesList() {
+      return gauges_;
+    }
+    /**
+     * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.incentives.GaugeProto.GaugeOrBuilder> 
+        getGaugesOrBuilderList() {
+      return gauges_;
+    }
+    /**
+     * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getGaugesCount() {
+      return gauges_.size();
+    }
+    /**
+     * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.incentives.GaugeProto.Gauge getGauges(int index) {
+      return gauges_.get(index);
+    }
+    /**
+     * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.incentives.GaugeProto.GaugeOrBuilder getGaugesOrBuilder(
+        int index) {
+      return gauges_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < gauges_.size(); i++) {
+        output.writeMessage(1, gauges_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < gauges_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, gauges_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse other = (com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse) obj;
+
+      if (!getGaugesList()
+          .equals(other.getGaugesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getGaugesCount() > 0) {
+        hash = (37 * hash) + GAUGES_FIELD_NUMBER;
+        hash = (53 * hash) + getGaugesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.incentives.QueryAllGroupsGaugesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.incentives.QueryAllGroupsGaugesResponse)
+        com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsGaugesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsGaugesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse.class, com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (gaugesBuilder_ == null) {
+          gauges_ = java.util.Collections.emptyList();
+        } else {
+          gauges_ = null;
+          gaugesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsGaugesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse getDefaultInstanceForType() {
+        return com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse build() {
+        com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse buildPartial() {
+        com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse result = new com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse result) {
+        if (gaugesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            gauges_ = java.util.Collections.unmodifiableList(gauges_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.gauges_ = gauges_;
+        } else {
+          result.gauges_ = gaugesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse) {
+          return mergeFrom((com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse other) {
+        if (other == com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse.getDefaultInstance()) return this;
+        if (gaugesBuilder_ == null) {
+          if (!other.gauges_.isEmpty()) {
+            if (gauges_.isEmpty()) {
+              gauges_ = other.gauges_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureGaugesIsMutable();
+              gauges_.addAll(other.gauges_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.gauges_.isEmpty()) {
+            if (gaugesBuilder_.isEmpty()) {
+              gaugesBuilder_.dispose();
+              gaugesBuilder_ = null;
+              gauges_ = other.gauges_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              gaugesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getGaugesFieldBuilder() : null;
+            } else {
+              gaugesBuilder_.addAllMessages(other.gauges_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.osmosis.incentives.GaugeProto.Gauge m =
+                    input.readMessage(
+                        com.osmosis.incentives.GaugeProto.Gauge.parser(),
+                        extensionRegistry);
+                if (gaugesBuilder_ == null) {
+                  ensureGaugesIsMutable();
+                  gauges_.add(m);
+                } else {
+                  gaugesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.osmosis.incentives.GaugeProto.Gauge> gauges_ =
+        java.util.Collections.emptyList();
+      private void ensureGaugesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          gauges_ = new java.util.ArrayList<com.osmosis.incentives.GaugeProto.Gauge>(gauges_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.incentives.GaugeProto.Gauge, com.osmosis.incentives.GaugeProto.Gauge.Builder, com.osmosis.incentives.GaugeProto.GaugeOrBuilder> gaugesBuilder_;
+
+      /**
+       * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.incentives.GaugeProto.Gauge> getGaugesList() {
+        if (gaugesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(gauges_);
+        } else {
+          return gaugesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+       */
+      public int getGaugesCount() {
+        if (gaugesBuilder_ == null) {
+          return gauges_.size();
+        } else {
+          return gaugesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GaugeProto.Gauge getGauges(int index) {
+        if (gaugesBuilder_ == null) {
+          return gauges_.get(index);
+        } else {
+          return gaugesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGauges(
+          int index, com.osmosis.incentives.GaugeProto.Gauge value) {
+        if (gaugesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGaugesIsMutable();
+          gauges_.set(index, value);
+          onChanged();
+        } else {
+          gaugesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGauges(
+          int index, com.osmosis.incentives.GaugeProto.Gauge.Builder builderForValue) {
+        if (gaugesBuilder_ == null) {
+          ensureGaugesIsMutable();
+          gauges_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          gaugesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGauges(com.osmosis.incentives.GaugeProto.Gauge value) {
+        if (gaugesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGaugesIsMutable();
+          gauges_.add(value);
+          onChanged();
+        } else {
+          gaugesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGauges(
+          int index, com.osmosis.incentives.GaugeProto.Gauge value) {
+        if (gaugesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGaugesIsMutable();
+          gauges_.add(index, value);
+          onChanged();
+        } else {
+          gaugesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGauges(
+          com.osmosis.incentives.GaugeProto.Gauge.Builder builderForValue) {
+        if (gaugesBuilder_ == null) {
+          ensureGaugesIsMutable();
+          gauges_.add(builderForValue.build());
+          onChanged();
+        } else {
+          gaugesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGauges(
+          int index, com.osmosis.incentives.GaugeProto.Gauge.Builder builderForValue) {
+        if (gaugesBuilder_ == null) {
+          ensureGaugesIsMutable();
+          gauges_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          gaugesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllGauges(
+          java.lang.Iterable<? extends com.osmosis.incentives.GaugeProto.Gauge> values) {
+        if (gaugesBuilder_ == null) {
+          ensureGaugesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, gauges_);
+          onChanged();
+        } else {
+          gaugesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearGauges() {
+        if (gaugesBuilder_ == null) {
+          gauges_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          gaugesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeGauges(int index) {
+        if (gaugesBuilder_ == null) {
+          ensureGaugesIsMutable();
+          gauges_.remove(index);
+          onChanged();
+        } else {
+          gaugesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GaugeProto.Gauge.Builder getGaugesBuilder(
+          int index) {
+        return getGaugesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GaugeProto.GaugeOrBuilder getGaugesOrBuilder(
+          int index) {
+        if (gaugesBuilder_ == null) {
+          return gauges_.get(index);  } else {
+          return gaugesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.osmosis.incentives.GaugeProto.GaugeOrBuilder> 
+           getGaugesOrBuilderList() {
+        if (gaugesBuilder_ != null) {
+          return gaugesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(gauges_);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GaugeProto.Gauge.Builder addGaugesBuilder() {
+        return getGaugesFieldBuilder().addBuilder(
+            com.osmosis.incentives.GaugeProto.Gauge.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GaugeProto.Gauge.Builder addGaugesBuilder(
+          int index) {
+        return getGaugesFieldBuilder().addBuilder(
+            index, com.osmosis.incentives.GaugeProto.Gauge.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.incentives.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.incentives.GaugeProto.Gauge.Builder> 
+           getGaugesBuilderList() {
+        return getGaugesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.incentives.GaugeProto.Gauge, com.osmosis.incentives.GaugeProto.Gauge.Builder, com.osmosis.incentives.GaugeProto.GaugeOrBuilder> 
+          getGaugesFieldBuilder() {
+        if (gaugesBuilder_ == null) {
+          gaugesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.incentives.GaugeProto.Gauge, com.osmosis.incentives.GaugeProto.Gauge.Builder, com.osmosis.incentives.GaugeProto.GaugeOrBuilder>(
+                  gauges_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          gauges_ = null;
+        }
+        return gaugesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.incentives.QueryAllGroupsGaugesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.incentives.QueryAllGroupsGaugesResponse)
+    private static final com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse();
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllGroupsGaugesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllGroupsGaugesResponse>() {
+      @java.lang.Override
+      public QueryAllGroupsGaugesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllGroupsGaugesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllGroupsGaugesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.incentives.QueryProto.QueryAllGroupsGaugesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllGroupsWithGaugeRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.incentives.QueryAllGroupsWithGaugeRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code osmosis.incentives.QueryAllGroupsWithGaugeRequest}
+   */
+  public static final class QueryAllGroupsWithGaugeRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.incentives.QueryAllGroupsWithGaugeRequest)
+      QueryAllGroupsWithGaugeRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllGroupsWithGaugeRequest.newBuilder() to construct.
+    private QueryAllGroupsWithGaugeRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllGroupsWithGaugeRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllGroupsWithGaugeRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsWithGaugeRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsWithGaugeRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest.class, com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest other = (com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.incentives.QueryAllGroupsWithGaugeRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.incentives.QueryAllGroupsWithGaugeRequest)
+        com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsWithGaugeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsWithGaugeRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest.class, com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsWithGaugeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest getDefaultInstanceForType() {
+        return com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest build() {
+        com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest buildPartial() {
+        com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest result = new com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest) {
+          return mergeFrom((com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest other) {
+        if (other == com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.incentives.QueryAllGroupsWithGaugeRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.incentives.QueryAllGroupsWithGaugeRequest)
+    private static final com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest();
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllGroupsWithGaugeRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllGroupsWithGaugeRequest>() {
+      @java.lang.Override
+      public QueryAllGroupsWithGaugeRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllGroupsWithGaugeRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllGroupsWithGaugeRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllGroupsWithGaugeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.incentives.QueryAllGroupsWithGaugeResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.osmosis.incentives.GroupProto.GroupsWithGauge> 
+        getGroupsWithGaugeList();
+    /**
+     * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.incentives.GroupProto.GroupsWithGauge getGroupsWithGauge(int index);
+    /**
+     * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+     */
+    int getGroupsWithGaugeCount();
+    /**
+     * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.osmosis.incentives.GroupProto.GroupsWithGaugeOrBuilder> 
+        getGroupsWithGaugeOrBuilderList();
+    /**
+     * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.incentives.GroupProto.GroupsWithGaugeOrBuilder getGroupsWithGaugeOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code osmosis.incentives.QueryAllGroupsWithGaugeResponse}
+   */
+  public static final class QueryAllGroupsWithGaugeResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.incentives.QueryAllGroupsWithGaugeResponse)
+      QueryAllGroupsWithGaugeResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllGroupsWithGaugeResponse.newBuilder() to construct.
+    private QueryAllGroupsWithGaugeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllGroupsWithGaugeResponse() {
+      groupsWithGauge_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllGroupsWithGaugeResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsWithGaugeResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsWithGaugeResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse.class, com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse.Builder.class);
+    }
+
+    public static final int GROUPS_WITH_GAUGE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.incentives.GroupProto.GroupsWithGauge> groupsWithGauge_;
+    /**
+     * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.incentives.GroupProto.GroupsWithGauge> getGroupsWithGaugeList() {
+      return groupsWithGauge_;
+    }
+    /**
+     * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.incentives.GroupProto.GroupsWithGaugeOrBuilder> 
+        getGroupsWithGaugeOrBuilderList() {
+      return groupsWithGauge_;
+    }
+    /**
+     * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getGroupsWithGaugeCount() {
+      return groupsWithGauge_.size();
+    }
+    /**
+     * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.incentives.GroupProto.GroupsWithGauge getGroupsWithGauge(int index) {
+      return groupsWithGauge_.get(index);
+    }
+    /**
+     * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.incentives.GroupProto.GroupsWithGaugeOrBuilder getGroupsWithGaugeOrBuilder(
+        int index) {
+      return groupsWithGauge_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < groupsWithGauge_.size(); i++) {
+        output.writeMessage(1, groupsWithGauge_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < groupsWithGauge_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, groupsWithGauge_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse other = (com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse) obj;
+
+      if (!getGroupsWithGaugeList()
+          .equals(other.getGroupsWithGaugeList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getGroupsWithGaugeCount() > 0) {
+        hash = (37 * hash) + GROUPS_WITH_GAUGE_FIELD_NUMBER;
+        hash = (53 * hash) + getGroupsWithGaugeList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.incentives.QueryAllGroupsWithGaugeResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.incentives.QueryAllGroupsWithGaugeResponse)
+        com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsWithGaugeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsWithGaugeResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse.class, com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (groupsWithGaugeBuilder_ == null) {
+          groupsWithGauge_ = java.util.Collections.emptyList();
+        } else {
+          groupsWithGauge_ = null;
+          groupsWithGaugeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryAllGroupsWithGaugeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse getDefaultInstanceForType() {
+        return com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse build() {
+        com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse buildPartial() {
+        com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse result = new com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse result) {
+        if (groupsWithGaugeBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            groupsWithGauge_ = java.util.Collections.unmodifiableList(groupsWithGauge_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.groupsWithGauge_ = groupsWithGauge_;
+        } else {
+          result.groupsWithGauge_ = groupsWithGaugeBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse) {
+          return mergeFrom((com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse other) {
+        if (other == com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse.getDefaultInstance()) return this;
+        if (groupsWithGaugeBuilder_ == null) {
+          if (!other.groupsWithGauge_.isEmpty()) {
+            if (groupsWithGauge_.isEmpty()) {
+              groupsWithGauge_ = other.groupsWithGauge_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureGroupsWithGaugeIsMutable();
+              groupsWithGauge_.addAll(other.groupsWithGauge_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.groupsWithGauge_.isEmpty()) {
+            if (groupsWithGaugeBuilder_.isEmpty()) {
+              groupsWithGaugeBuilder_.dispose();
+              groupsWithGaugeBuilder_ = null;
+              groupsWithGauge_ = other.groupsWithGauge_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              groupsWithGaugeBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getGroupsWithGaugeFieldBuilder() : null;
+            } else {
+              groupsWithGaugeBuilder_.addAllMessages(other.groupsWithGauge_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.osmosis.incentives.GroupProto.GroupsWithGauge m =
+                    input.readMessage(
+                        com.osmosis.incentives.GroupProto.GroupsWithGauge.parser(),
+                        extensionRegistry);
+                if (groupsWithGaugeBuilder_ == null) {
+                  ensureGroupsWithGaugeIsMutable();
+                  groupsWithGauge_.add(m);
+                } else {
+                  groupsWithGaugeBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.osmosis.incentives.GroupProto.GroupsWithGauge> groupsWithGauge_ =
+        java.util.Collections.emptyList();
+      private void ensureGroupsWithGaugeIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          groupsWithGauge_ = new java.util.ArrayList<com.osmosis.incentives.GroupProto.GroupsWithGauge>(groupsWithGauge_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.incentives.GroupProto.GroupsWithGauge, com.osmosis.incentives.GroupProto.GroupsWithGauge.Builder, com.osmosis.incentives.GroupProto.GroupsWithGaugeOrBuilder> groupsWithGaugeBuilder_;
+
+      /**
+       * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.incentives.GroupProto.GroupsWithGauge> getGroupsWithGaugeList() {
+        if (groupsWithGaugeBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(groupsWithGauge_);
+        } else {
+          return groupsWithGaugeBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+       */
+      public int getGroupsWithGaugeCount() {
+        if (groupsWithGaugeBuilder_ == null) {
+          return groupsWithGauge_.size();
+        } else {
+          return groupsWithGaugeBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GroupProto.GroupsWithGauge getGroupsWithGauge(int index) {
+        if (groupsWithGaugeBuilder_ == null) {
+          return groupsWithGauge_.get(index);
+        } else {
+          return groupsWithGaugeBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGroupsWithGauge(
+          int index, com.osmosis.incentives.GroupProto.GroupsWithGauge value) {
+        if (groupsWithGaugeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupsWithGaugeIsMutable();
+          groupsWithGauge_.set(index, value);
+          onChanged();
+        } else {
+          groupsWithGaugeBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGroupsWithGauge(
+          int index, com.osmosis.incentives.GroupProto.GroupsWithGauge.Builder builderForValue) {
+        if (groupsWithGaugeBuilder_ == null) {
+          ensureGroupsWithGaugeIsMutable();
+          groupsWithGauge_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          groupsWithGaugeBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGroupsWithGauge(com.osmosis.incentives.GroupProto.GroupsWithGauge value) {
+        if (groupsWithGaugeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupsWithGaugeIsMutable();
+          groupsWithGauge_.add(value);
+          onChanged();
+        } else {
+          groupsWithGaugeBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGroupsWithGauge(
+          int index, com.osmosis.incentives.GroupProto.GroupsWithGauge value) {
+        if (groupsWithGaugeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupsWithGaugeIsMutable();
+          groupsWithGauge_.add(index, value);
+          onChanged();
+        } else {
+          groupsWithGaugeBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGroupsWithGauge(
+          com.osmosis.incentives.GroupProto.GroupsWithGauge.Builder builderForValue) {
+        if (groupsWithGaugeBuilder_ == null) {
+          ensureGroupsWithGaugeIsMutable();
+          groupsWithGauge_.add(builderForValue.build());
+          onChanged();
+        } else {
+          groupsWithGaugeBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGroupsWithGauge(
+          int index, com.osmosis.incentives.GroupProto.GroupsWithGauge.Builder builderForValue) {
+        if (groupsWithGaugeBuilder_ == null) {
+          ensureGroupsWithGaugeIsMutable();
+          groupsWithGauge_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          groupsWithGaugeBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllGroupsWithGauge(
+          java.lang.Iterable<? extends com.osmosis.incentives.GroupProto.GroupsWithGauge> values) {
+        if (groupsWithGaugeBuilder_ == null) {
+          ensureGroupsWithGaugeIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, groupsWithGauge_);
+          onChanged();
+        } else {
+          groupsWithGaugeBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearGroupsWithGauge() {
+        if (groupsWithGaugeBuilder_ == null) {
+          groupsWithGauge_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          groupsWithGaugeBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeGroupsWithGauge(int index) {
+        if (groupsWithGaugeBuilder_ == null) {
+          ensureGroupsWithGaugeIsMutable();
+          groupsWithGauge_.remove(index);
+          onChanged();
+        } else {
+          groupsWithGaugeBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GroupProto.GroupsWithGauge.Builder getGroupsWithGaugeBuilder(
+          int index) {
+        return getGroupsWithGaugeFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GroupProto.GroupsWithGaugeOrBuilder getGroupsWithGaugeOrBuilder(
+          int index) {
+        if (groupsWithGaugeBuilder_ == null) {
+          return groupsWithGauge_.get(index);  } else {
+          return groupsWithGaugeBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.osmosis.incentives.GroupProto.GroupsWithGaugeOrBuilder> 
+           getGroupsWithGaugeOrBuilderList() {
+        if (groupsWithGaugeBuilder_ != null) {
+          return groupsWithGaugeBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(groupsWithGauge_);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GroupProto.GroupsWithGauge.Builder addGroupsWithGaugeBuilder() {
+        return getGroupsWithGaugeFieldBuilder().addBuilder(
+            com.osmosis.incentives.GroupProto.GroupsWithGauge.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GroupProto.GroupsWithGauge.Builder addGroupsWithGaugeBuilder(
+          int index) {
+        return getGroupsWithGaugeFieldBuilder().addBuilder(
+            index, com.osmosis.incentives.GroupProto.GroupsWithGauge.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GroupsWithGauge groups_with_gauge = 1 [json_name = "groupsWithGauge", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.incentives.GroupProto.GroupsWithGauge.Builder> 
+           getGroupsWithGaugeBuilderList() {
+        return getGroupsWithGaugeFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.incentives.GroupProto.GroupsWithGauge, com.osmosis.incentives.GroupProto.GroupsWithGauge.Builder, com.osmosis.incentives.GroupProto.GroupsWithGaugeOrBuilder> 
+          getGroupsWithGaugeFieldBuilder() {
+        if (groupsWithGaugeBuilder_ == null) {
+          groupsWithGaugeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.incentives.GroupProto.GroupsWithGauge, com.osmosis.incentives.GroupProto.GroupsWithGauge.Builder, com.osmosis.incentives.GroupProto.GroupsWithGaugeOrBuilder>(
+                  groupsWithGauge_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          groupsWithGauge_ = null;
+        }
+        return groupsWithGaugeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.incentives.QueryAllGroupsWithGaugeResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.incentives.QueryAllGroupsWithGaugeResponse)
+    private static final com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse();
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllGroupsWithGaugeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllGroupsWithGaugeResponse>() {
+      @java.lang.Override
+      public QueryAllGroupsWithGaugeResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllGroupsWithGaugeResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllGroupsWithGaugeResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.incentives.QueryProto.QueryAllGroupsWithGaugeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGroupByGroupGaugeIDRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.incentives.QueryGroupByGroupGaugeIDRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+  }
+  /**
+   * Protobuf type {@code osmosis.incentives.QueryGroupByGroupGaugeIDRequest}
+   */
+  public static final class QueryGroupByGroupGaugeIDRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.incentives.QueryGroupByGroupGaugeIDRequest)
+      QueryGroupByGroupGaugeIDRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGroupByGroupGaugeIDRequest.newBuilder() to construct.
+    private QueryGroupByGroupGaugeIDRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGroupByGroupGaugeIDRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGroupByGroupGaugeIDRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryGroupByGroupGaugeIDRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryGroupByGroupGaugeIDRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest.class, com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest other = (com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.incentives.QueryGroupByGroupGaugeIDRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.incentives.QueryGroupByGroupGaugeIDRequest)
+        com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryGroupByGroupGaugeIDRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryGroupByGroupGaugeIDRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest.class, com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryGroupByGroupGaugeIDRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest getDefaultInstanceForType() {
+        return com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest build() {
+        com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest buildPartial() {
+        com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest result = new com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest) {
+          return mergeFrom((com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest other) {
+        if (other == com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.incentives.QueryGroupByGroupGaugeIDRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.incentives.QueryGroupByGroupGaugeIDRequest)
+    private static final com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest();
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGroupByGroupGaugeIDRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGroupByGroupGaugeIDRequest>() {
+      @java.lang.Override
+      public QueryGroupByGroupGaugeIDRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGroupByGroupGaugeIDRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGroupByGroupGaugeIDRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGroupByGroupGaugeIDResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.incentives.QueryGroupByGroupGaugeIDResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.osmosis.incentives.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+     * @return Whether the group field is set.
+     */
+    boolean hasGroup();
+    /**
+     * <code>.osmosis.incentives.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+     * @return The group.
+     */
+    com.osmosis.incentives.GroupProto.Group getGroup();
+    /**
+     * <code>.osmosis.incentives.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.incentives.GroupProto.GroupOrBuilder getGroupOrBuilder();
+  }
+  /**
+   * Protobuf type {@code osmosis.incentives.QueryGroupByGroupGaugeIDResponse}
+   */
+  public static final class QueryGroupByGroupGaugeIDResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.incentives.QueryGroupByGroupGaugeIDResponse)
+      QueryGroupByGroupGaugeIDResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGroupByGroupGaugeIDResponse.newBuilder() to construct.
+    private QueryGroupByGroupGaugeIDResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGroupByGroupGaugeIDResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGroupByGroupGaugeIDResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryGroupByGroupGaugeIDResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryGroupByGroupGaugeIDResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse.class, com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse.Builder.class);
+    }
+
+    public static final int GROUP_FIELD_NUMBER = 1;
+    private com.osmosis.incentives.GroupProto.Group group_;
+    /**
+     * <code>.osmosis.incentives.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+     * @return Whether the group field is set.
+     */
+    @java.lang.Override
+    public boolean hasGroup() {
+      return group_ != null;
+    }
+    /**
+     * <code>.osmosis.incentives.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+     * @return The group.
+     */
+    @java.lang.Override
+    public com.osmosis.incentives.GroupProto.Group getGroup() {
+      return group_ == null ? com.osmosis.incentives.GroupProto.Group.getDefaultInstance() : group_;
+    }
+    /**
+     * <code>.osmosis.incentives.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.incentives.GroupProto.GroupOrBuilder getGroupOrBuilder() {
+      return group_ == null ? com.osmosis.incentives.GroupProto.Group.getDefaultInstance() : group_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (group_ != null) {
+        output.writeMessage(1, getGroup());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (group_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getGroup());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse other = (com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse) obj;
+
+      if (hasGroup() != other.hasGroup()) return false;
+      if (hasGroup()) {
+        if (!getGroup()
+            .equals(other.getGroup())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasGroup()) {
+        hash = (37 * hash) + GROUP_FIELD_NUMBER;
+        hash = (53 * hash) + getGroup().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.incentives.QueryGroupByGroupGaugeIDResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.incentives.QueryGroupByGroupGaugeIDResponse)
+        com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryGroupByGroupGaugeIDResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryGroupByGroupGaugeIDResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse.class, com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        group_ = null;
+        if (groupBuilder_ != null) {
+          groupBuilder_.dispose();
+          groupBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryGroupByGroupGaugeIDResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse getDefaultInstanceForType() {
+        return com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse build() {
+        com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse buildPartial() {
+        com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse result = new com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.group_ = groupBuilder_ == null
+              ? group_
+              : groupBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse) {
+          return mergeFrom((com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse other) {
+        if (other == com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse.getDefaultInstance()) return this;
+        if (other.hasGroup()) {
+          mergeGroup(other.getGroup());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getGroupFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.osmosis.incentives.GroupProto.Group group_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.incentives.GroupProto.Group, com.osmosis.incentives.GroupProto.Group.Builder, com.osmosis.incentives.GroupProto.GroupOrBuilder> groupBuilder_;
+      /**
+       * <code>.osmosis.incentives.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+       * @return Whether the group field is set.
+       */
+      public boolean hasGroup() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.osmosis.incentives.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+       * @return The group.
+       */
+      public com.osmosis.incentives.GroupProto.Group getGroup() {
+        if (groupBuilder_ == null) {
+          return group_ == null ? com.osmosis.incentives.GroupProto.Group.getDefaultInstance() : group_;
+        } else {
+          return groupBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.osmosis.incentives.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGroup(com.osmosis.incentives.GroupProto.Group value) {
+        if (groupBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          group_ = value;
+        } else {
+          groupBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.incentives.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGroup(
+          com.osmosis.incentives.GroupProto.Group.Builder builderForValue) {
+        if (groupBuilder_ == null) {
+          group_ = builderForValue.build();
+        } else {
+          groupBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.incentives.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeGroup(com.osmosis.incentives.GroupProto.Group value) {
+        if (groupBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            group_ != null &&
+            group_ != com.osmosis.incentives.GroupProto.Group.getDefaultInstance()) {
+            getGroupBuilder().mergeFrom(value);
+          } else {
+            group_ = value;
+          }
+        } else {
+          groupBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.incentives.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearGroup() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        group_ = null;
+        if (groupBuilder_ != null) {
+          groupBuilder_.dispose();
+          groupBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.incentives.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GroupProto.Group.Builder getGroupBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getGroupFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.osmosis.incentives.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GroupProto.GroupOrBuilder getGroupOrBuilder() {
+        if (groupBuilder_ != null) {
+          return groupBuilder_.getMessageOrBuilder();
+        } else {
+          return group_ == null ?
+              com.osmosis.incentives.GroupProto.Group.getDefaultInstance() : group_;
+        }
+      }
+      /**
+       * <code>.osmosis.incentives.Group group = 1 [json_name = "group", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.incentives.GroupProto.Group, com.osmosis.incentives.GroupProto.Group.Builder, com.osmosis.incentives.GroupProto.GroupOrBuilder> 
+          getGroupFieldBuilder() {
+        if (groupBuilder_ == null) {
+          groupBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.incentives.GroupProto.Group, com.osmosis.incentives.GroupProto.Group.Builder, com.osmosis.incentives.GroupProto.GroupOrBuilder>(
+                  getGroup(),
+                  getParentForChildren(),
+                  isClean());
+          group_ = null;
+        }
+        return groupBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.incentives.QueryGroupByGroupGaugeIDResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.incentives.QueryGroupByGroupGaugeIDResponse)
+    private static final com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse();
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGroupByGroupGaugeIDResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGroupByGroupGaugeIDResponse>() {
+      @java.lang.Override
+      public QueryGroupByGroupGaugeIDResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGroupByGroupGaugeIDResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGroupByGroupGaugeIDResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.incentives.QueryProto.QueryGroupByGroupGaugeIDResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCurrentWeightByGroupGaugeIDRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.incentives.QueryCurrentWeightByGroupGaugeIDRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 group_gauge_id = 1 [json_name = "groupGaugeId"];</code>
+     * @return The groupGaugeId.
+     */
+    long getGroupGaugeId();
+  }
+  /**
+   * Protobuf type {@code osmosis.incentives.QueryCurrentWeightByGroupGaugeIDRequest}
+   */
+  public static final class QueryCurrentWeightByGroupGaugeIDRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.incentives.QueryCurrentWeightByGroupGaugeIDRequest)
+      QueryCurrentWeightByGroupGaugeIDRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCurrentWeightByGroupGaugeIDRequest.newBuilder() to construct.
+    private QueryCurrentWeightByGroupGaugeIDRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCurrentWeightByGroupGaugeIDRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCurrentWeightByGroupGaugeIDRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryCurrentWeightByGroupGaugeIDRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryCurrentWeightByGroupGaugeIDRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest.class, com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest.Builder.class);
+    }
+
+    public static final int GROUP_GAUGE_ID_FIELD_NUMBER = 1;
+    private long groupGaugeId_ = 0L;
+    /**
+     * <code>uint64 group_gauge_id = 1 [json_name = "groupGaugeId"];</code>
+     * @return The groupGaugeId.
+     */
+    @java.lang.Override
+    public long getGroupGaugeId() {
+      return groupGaugeId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (groupGaugeId_ != 0L) {
+        output.writeUInt64(1, groupGaugeId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (groupGaugeId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, groupGaugeId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest other = (com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest) obj;
+
+      if (getGroupGaugeId()
+          != other.getGroupGaugeId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + GROUP_GAUGE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getGroupGaugeId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.incentives.QueryCurrentWeightByGroupGaugeIDRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.incentives.QueryCurrentWeightByGroupGaugeIDRequest)
+        com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryCurrentWeightByGroupGaugeIDRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryCurrentWeightByGroupGaugeIDRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest.class, com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        groupGaugeId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryCurrentWeightByGroupGaugeIDRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest getDefaultInstanceForType() {
+        return com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest build() {
+        com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest buildPartial() {
+        com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest result = new com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.groupGaugeId_ = groupGaugeId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest) {
+          return mergeFrom((com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest other) {
+        if (other == com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest.getDefaultInstance()) return this;
+        if (other.getGroupGaugeId() != 0L) {
+          setGroupGaugeId(other.getGroupGaugeId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                groupGaugeId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long groupGaugeId_ ;
+      /**
+       * <code>uint64 group_gauge_id = 1 [json_name = "groupGaugeId"];</code>
+       * @return The groupGaugeId.
+       */
+      @java.lang.Override
+      public long getGroupGaugeId() {
+        return groupGaugeId_;
+      }
+      /**
+       * <code>uint64 group_gauge_id = 1 [json_name = "groupGaugeId"];</code>
+       * @param value The groupGaugeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupGaugeId(long value) {
+
+        groupGaugeId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 group_gauge_id = 1 [json_name = "groupGaugeId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGroupGaugeId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        groupGaugeId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.incentives.QueryCurrentWeightByGroupGaugeIDRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.incentives.QueryCurrentWeightByGroupGaugeIDRequest)
+    private static final com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest();
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCurrentWeightByGroupGaugeIDRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCurrentWeightByGroupGaugeIDRequest>() {
+      @java.lang.Override
+      public QueryCurrentWeightByGroupGaugeIDRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCurrentWeightByGroupGaugeIDRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCurrentWeightByGroupGaugeIDRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCurrentWeightByGroupGaugeIDResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.incentives.QueryCurrentWeightByGroupGaugeIDResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.osmosis.incentives.QueryProto.GaugeWeight> 
+        getGaugeWeightList();
+    /**
+     * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.incentives.QueryProto.GaugeWeight getGaugeWeight(int index);
+    /**
+     * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+     */
+    int getGaugeWeightCount();
+    /**
+     * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.osmosis.incentives.QueryProto.GaugeWeightOrBuilder> 
+        getGaugeWeightOrBuilderList();
+    /**
+     * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.incentives.QueryProto.GaugeWeightOrBuilder getGaugeWeightOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code osmosis.incentives.QueryCurrentWeightByGroupGaugeIDResponse}
+   */
+  public static final class QueryCurrentWeightByGroupGaugeIDResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.incentives.QueryCurrentWeightByGroupGaugeIDResponse)
+      QueryCurrentWeightByGroupGaugeIDResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCurrentWeightByGroupGaugeIDResponse.newBuilder() to construct.
+    private QueryCurrentWeightByGroupGaugeIDResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCurrentWeightByGroupGaugeIDResponse() {
+      gaugeWeight_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCurrentWeightByGroupGaugeIDResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryCurrentWeightByGroupGaugeIDResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryCurrentWeightByGroupGaugeIDResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse.class, com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse.Builder.class);
+    }
+
+    public static final int GAUGE_WEIGHT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.incentives.QueryProto.GaugeWeight> gaugeWeight_;
+    /**
+     * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.incentives.QueryProto.GaugeWeight> getGaugeWeightList() {
+      return gaugeWeight_;
+    }
+    /**
+     * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.incentives.QueryProto.GaugeWeightOrBuilder> 
+        getGaugeWeightOrBuilderList() {
+      return gaugeWeight_;
+    }
+    /**
+     * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getGaugeWeightCount() {
+      return gaugeWeight_.size();
+    }
+    /**
+     * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.incentives.QueryProto.GaugeWeight getGaugeWeight(int index) {
+      return gaugeWeight_.get(index);
+    }
+    /**
+     * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.incentives.QueryProto.GaugeWeightOrBuilder getGaugeWeightOrBuilder(
+        int index) {
+      return gaugeWeight_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < gaugeWeight_.size(); i++) {
+        output.writeMessage(1, gaugeWeight_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < gaugeWeight_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, gaugeWeight_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse other = (com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse) obj;
+
+      if (!getGaugeWeightList()
+          .equals(other.getGaugeWeightList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getGaugeWeightCount() > 0) {
+        hash = (37 * hash) + GAUGE_WEIGHT_FIELD_NUMBER;
+        hash = (53 * hash) + getGaugeWeightList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.incentives.QueryCurrentWeightByGroupGaugeIDResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.incentives.QueryCurrentWeightByGroupGaugeIDResponse)
+        com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryCurrentWeightByGroupGaugeIDResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryCurrentWeightByGroupGaugeIDResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse.class, com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (gaugeWeightBuilder_ == null) {
+          gaugeWeight_ = java.util.Collections.emptyList();
+        } else {
+          gaugeWeight_ = null;
+          gaugeWeightBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_QueryCurrentWeightByGroupGaugeIDResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse getDefaultInstanceForType() {
+        return com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse build() {
+        com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse buildPartial() {
+        com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse result = new com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse result) {
+        if (gaugeWeightBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            gaugeWeight_ = java.util.Collections.unmodifiableList(gaugeWeight_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.gaugeWeight_ = gaugeWeight_;
+        } else {
+          result.gaugeWeight_ = gaugeWeightBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse) {
+          return mergeFrom((com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse other) {
+        if (other == com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse.getDefaultInstance()) return this;
+        if (gaugeWeightBuilder_ == null) {
+          if (!other.gaugeWeight_.isEmpty()) {
+            if (gaugeWeight_.isEmpty()) {
+              gaugeWeight_ = other.gaugeWeight_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureGaugeWeightIsMutable();
+              gaugeWeight_.addAll(other.gaugeWeight_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.gaugeWeight_.isEmpty()) {
+            if (gaugeWeightBuilder_.isEmpty()) {
+              gaugeWeightBuilder_.dispose();
+              gaugeWeightBuilder_ = null;
+              gaugeWeight_ = other.gaugeWeight_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              gaugeWeightBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getGaugeWeightFieldBuilder() : null;
+            } else {
+              gaugeWeightBuilder_.addAllMessages(other.gaugeWeight_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.osmosis.incentives.QueryProto.GaugeWeight m =
+                    input.readMessage(
+                        com.osmosis.incentives.QueryProto.GaugeWeight.parser(),
+                        extensionRegistry);
+                if (gaugeWeightBuilder_ == null) {
+                  ensureGaugeWeightIsMutable();
+                  gaugeWeight_.add(m);
+                } else {
+                  gaugeWeightBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.osmosis.incentives.QueryProto.GaugeWeight> gaugeWeight_ =
+        java.util.Collections.emptyList();
+      private void ensureGaugeWeightIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          gaugeWeight_ = new java.util.ArrayList<com.osmosis.incentives.QueryProto.GaugeWeight>(gaugeWeight_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.incentives.QueryProto.GaugeWeight, com.osmosis.incentives.QueryProto.GaugeWeight.Builder, com.osmosis.incentives.QueryProto.GaugeWeightOrBuilder> gaugeWeightBuilder_;
+
+      /**
+       * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.incentives.QueryProto.GaugeWeight> getGaugeWeightList() {
+        if (gaugeWeightBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(gaugeWeight_);
+        } else {
+          return gaugeWeightBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+       */
+      public int getGaugeWeightCount() {
+        if (gaugeWeightBuilder_ == null) {
+          return gaugeWeight_.size();
+        } else {
+          return gaugeWeightBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.QueryProto.GaugeWeight getGaugeWeight(int index) {
+        if (gaugeWeightBuilder_ == null) {
+          return gaugeWeight_.get(index);
+        } else {
+          return gaugeWeightBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGaugeWeight(
+          int index, com.osmosis.incentives.QueryProto.GaugeWeight value) {
+        if (gaugeWeightBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGaugeWeightIsMutable();
+          gaugeWeight_.set(index, value);
+          onChanged();
+        } else {
+          gaugeWeightBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGaugeWeight(
+          int index, com.osmosis.incentives.QueryProto.GaugeWeight.Builder builderForValue) {
+        if (gaugeWeightBuilder_ == null) {
+          ensureGaugeWeightIsMutable();
+          gaugeWeight_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          gaugeWeightBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGaugeWeight(com.osmosis.incentives.QueryProto.GaugeWeight value) {
+        if (gaugeWeightBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGaugeWeightIsMutable();
+          gaugeWeight_.add(value);
+          onChanged();
+        } else {
+          gaugeWeightBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGaugeWeight(
+          int index, com.osmosis.incentives.QueryProto.GaugeWeight value) {
+        if (gaugeWeightBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGaugeWeightIsMutable();
+          gaugeWeight_.add(index, value);
+          onChanged();
+        } else {
+          gaugeWeightBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGaugeWeight(
+          com.osmosis.incentives.QueryProto.GaugeWeight.Builder builderForValue) {
+        if (gaugeWeightBuilder_ == null) {
+          ensureGaugeWeightIsMutable();
+          gaugeWeight_.add(builderForValue.build());
+          onChanged();
+        } else {
+          gaugeWeightBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGaugeWeight(
+          int index, com.osmosis.incentives.QueryProto.GaugeWeight.Builder builderForValue) {
+        if (gaugeWeightBuilder_ == null) {
+          ensureGaugeWeightIsMutable();
+          gaugeWeight_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          gaugeWeightBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllGaugeWeight(
+          java.lang.Iterable<? extends com.osmosis.incentives.QueryProto.GaugeWeight> values) {
+        if (gaugeWeightBuilder_ == null) {
+          ensureGaugeWeightIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, gaugeWeight_);
+          onChanged();
+        } else {
+          gaugeWeightBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearGaugeWeight() {
+        if (gaugeWeightBuilder_ == null) {
+          gaugeWeight_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          gaugeWeightBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeGaugeWeight(int index) {
+        if (gaugeWeightBuilder_ == null) {
+          ensureGaugeWeightIsMutable();
+          gaugeWeight_.remove(index);
+          onChanged();
+        } else {
+          gaugeWeightBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.QueryProto.GaugeWeight.Builder getGaugeWeightBuilder(
+          int index) {
+        return getGaugeWeightFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.QueryProto.GaugeWeightOrBuilder getGaugeWeightOrBuilder(
+          int index) {
+        if (gaugeWeightBuilder_ == null) {
+          return gaugeWeight_.get(index);  } else {
+          return gaugeWeightBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.osmosis.incentives.QueryProto.GaugeWeightOrBuilder> 
+           getGaugeWeightOrBuilderList() {
+        if (gaugeWeightBuilder_ != null) {
+          return gaugeWeightBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(gaugeWeight_);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.QueryProto.GaugeWeight.Builder addGaugeWeightBuilder() {
+        return getGaugeWeightFieldBuilder().addBuilder(
+            com.osmosis.incentives.QueryProto.GaugeWeight.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.QueryProto.GaugeWeight.Builder addGaugeWeightBuilder(
+          int index) {
+        return getGaugeWeightFieldBuilder().addBuilder(
+            index, com.osmosis.incentives.QueryProto.GaugeWeight.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.incentives.GaugeWeight gauge_weight = 1 [json_name = "gaugeWeight", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.incentives.QueryProto.GaugeWeight.Builder> 
+           getGaugeWeightBuilderList() {
+        return getGaugeWeightFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.incentives.QueryProto.GaugeWeight, com.osmosis.incentives.QueryProto.GaugeWeight.Builder, com.osmosis.incentives.QueryProto.GaugeWeightOrBuilder> 
+          getGaugeWeightFieldBuilder() {
+        if (gaugeWeightBuilder_ == null) {
+          gaugeWeightBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.incentives.QueryProto.GaugeWeight, com.osmosis.incentives.QueryProto.GaugeWeight.Builder, com.osmosis.incentives.QueryProto.GaugeWeightOrBuilder>(
+                  gaugeWeight_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          gaugeWeight_ = null;
+        }
+        return gaugeWeightBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.incentives.QueryCurrentWeightByGroupGaugeIDResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.incentives.QueryCurrentWeightByGroupGaugeIDResponse)
+    private static final com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse();
+    }
+
+    public static com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCurrentWeightByGroupGaugeIDResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCurrentWeightByGroupGaugeIDResponse>() {
+      @java.lang.Override
+      public QueryCurrentWeightByGroupGaugeIDResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCurrentWeightByGroupGaugeIDResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCurrentWeightByGroupGaugeIDResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.incentives.QueryProto.QueryCurrentWeightByGroupGaugeIDResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GaugeWeightOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.incentives.GaugeWeight)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 gauge_id = 1 [json_name = "gaugeId"];</code>
+     * @return The gaugeId.
+     */
+    long getGaugeId();
+
+    /**
+     * <code>string weight_ratio = 2 [json_name = "weightRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"weight_ratio&#92;""];</code>
+     * @return The weightRatio.
+     */
+    java.lang.String getWeightRatio();
+    /**
+     * <code>string weight_ratio = 2 [json_name = "weightRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"weight_ratio&#92;""];</code>
+     * @return The bytes for weightRatio.
+     */
+    com.google.protobuf.ByteString
+        getWeightRatioBytes();
+  }
+  /**
+   * Protobuf type {@code osmosis.incentives.GaugeWeight}
+   */
+  public static final class GaugeWeight extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.incentives.GaugeWeight)
+      GaugeWeightOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GaugeWeight.newBuilder() to construct.
+    private GaugeWeight(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GaugeWeight() {
+      weightRatio_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GaugeWeight();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_GaugeWeight_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_GaugeWeight_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.incentives.QueryProto.GaugeWeight.class, com.osmosis.incentives.QueryProto.GaugeWeight.Builder.class);
+    }
+
+    public static final int GAUGE_ID_FIELD_NUMBER = 1;
+    private long gaugeId_ = 0L;
+    /**
+     * <code>uint64 gauge_id = 1 [json_name = "gaugeId"];</code>
+     * @return The gaugeId.
+     */
+    @java.lang.Override
+    public long getGaugeId() {
+      return gaugeId_;
+    }
+
+    public static final int WEIGHT_RATIO_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object weightRatio_ = "";
+    /**
+     * <code>string weight_ratio = 2 [json_name = "weightRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"weight_ratio&#92;""];</code>
+     * @return The weightRatio.
+     */
+    @java.lang.Override
+    public java.lang.String getWeightRatio() {
+      java.lang.Object ref = weightRatio_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        weightRatio_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string weight_ratio = 2 [json_name = "weightRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"weight_ratio&#92;""];</code>
+     * @return The bytes for weightRatio.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWeightRatioBytes() {
+      java.lang.Object ref = weightRatio_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        weightRatio_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (gaugeId_ != 0L) {
+        output.writeUInt64(1, gaugeId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(weightRatio_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, weightRatio_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (gaugeId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, gaugeId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(weightRatio_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, weightRatio_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.incentives.QueryProto.GaugeWeight)) {
+        return super.equals(obj);
+      }
+      com.osmosis.incentives.QueryProto.GaugeWeight other = (com.osmosis.incentives.QueryProto.GaugeWeight) obj;
+
+      if (getGaugeId()
+          != other.getGaugeId()) return false;
+      if (!getWeightRatio()
+          .equals(other.getWeightRatio())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + GAUGE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getGaugeId());
+      hash = (37 * hash) + WEIGHT_RATIO_FIELD_NUMBER;
+      hash = (53 * hash) + getWeightRatio().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.incentives.QueryProto.GaugeWeight parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.GaugeWeight parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.GaugeWeight parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.GaugeWeight parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.GaugeWeight parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.GaugeWeight parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.GaugeWeight parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.GaugeWeight parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.incentives.QueryProto.GaugeWeight parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.incentives.QueryProto.GaugeWeight parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.GaugeWeight parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.GaugeWeight parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.incentives.QueryProto.GaugeWeight prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.incentives.GaugeWeight}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.incentives.GaugeWeight)
+        com.osmosis.incentives.QueryProto.GaugeWeightOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_GaugeWeight_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_GaugeWeight_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.incentives.QueryProto.GaugeWeight.class, com.osmosis.incentives.QueryProto.GaugeWeight.Builder.class);
+      }
+
+      // Construct using com.osmosis.incentives.QueryProto.GaugeWeight.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        gaugeId_ = 0L;
+        weightRatio_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_GaugeWeight_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.GaugeWeight getDefaultInstanceForType() {
+        return com.osmosis.incentives.QueryProto.GaugeWeight.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.GaugeWeight build() {
+        com.osmosis.incentives.QueryProto.GaugeWeight result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.GaugeWeight buildPartial() {
+        com.osmosis.incentives.QueryProto.GaugeWeight result = new com.osmosis.incentives.QueryProto.GaugeWeight(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.incentives.QueryProto.GaugeWeight result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.gaugeId_ = gaugeId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.weightRatio_ = weightRatio_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.incentives.QueryProto.GaugeWeight) {
+          return mergeFrom((com.osmosis.incentives.QueryProto.GaugeWeight)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.incentives.QueryProto.GaugeWeight other) {
+        if (other == com.osmosis.incentives.QueryProto.GaugeWeight.getDefaultInstance()) return this;
+        if (other.getGaugeId() != 0L) {
+          setGaugeId(other.getGaugeId());
+        }
+        if (!other.getWeightRatio().isEmpty()) {
+          weightRatio_ = other.weightRatio_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                gaugeId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                weightRatio_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long gaugeId_ ;
+      /**
+       * <code>uint64 gauge_id = 1 [json_name = "gaugeId"];</code>
+       * @return The gaugeId.
+       */
+      @java.lang.Override
+      public long getGaugeId() {
+        return gaugeId_;
+      }
+      /**
+       * <code>uint64 gauge_id = 1 [json_name = "gaugeId"];</code>
+       * @param value The gaugeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGaugeId(long value) {
+
+        gaugeId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 gauge_id = 1 [json_name = "gaugeId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGaugeId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        gaugeId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object weightRatio_ = "";
+      /**
+       * <code>string weight_ratio = 2 [json_name = "weightRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"weight_ratio&#92;""];</code>
+       * @return The weightRatio.
+       */
+      public java.lang.String getWeightRatio() {
+        java.lang.Object ref = weightRatio_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          weightRatio_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string weight_ratio = 2 [json_name = "weightRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"weight_ratio&#92;""];</code>
+       * @return The bytes for weightRatio.
+       */
+      public com.google.protobuf.ByteString
+          getWeightRatioBytes() {
+        java.lang.Object ref = weightRatio_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          weightRatio_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string weight_ratio = 2 [json_name = "weightRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"weight_ratio&#92;""];</code>
+       * @param value The weightRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWeightRatio(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        weightRatio_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string weight_ratio = 2 [json_name = "weightRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"weight_ratio&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWeightRatio() {
+        weightRatio_ = getDefaultInstance().getWeightRatio();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string weight_ratio = 2 [json_name = "weightRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"weight_ratio&#92;""];</code>
+       * @param value The bytes for weightRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWeightRatioBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        weightRatio_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.incentives.GaugeWeight)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.incentives.GaugeWeight)
+    private static final com.osmosis.incentives.QueryProto.GaugeWeight DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.incentives.QueryProto.GaugeWeight();
+    }
+
+    public static com.osmosis.incentives.QueryProto.GaugeWeight getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GaugeWeight>
+        PARSER = new com.google.protobuf.AbstractParser<GaugeWeight>() {
+      @java.lang.Override
+      public GaugeWeight parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GaugeWeight> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GaugeWeight> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.incentives.QueryProto.GaugeWeight getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.incentives.ParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code osmosis.incentives.ParamsRequest}
+   */
+  public static final class ParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.incentives.ParamsRequest)
+      ParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ParamsRequest.newBuilder() to construct.
+    private ParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_ParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_ParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.incentives.QueryProto.ParamsRequest.class, com.osmosis.incentives.QueryProto.ParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.incentives.QueryProto.ParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.incentives.QueryProto.ParamsRequest other = (com.osmosis.incentives.QueryProto.ParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.incentives.QueryProto.ParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.ParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.ParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.ParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.ParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.ParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.ParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.ParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.incentives.QueryProto.ParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.incentives.QueryProto.ParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.ParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.ParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.incentives.QueryProto.ParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.incentives.ParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.incentives.ParamsRequest)
+        com.osmosis.incentives.QueryProto.ParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_ParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_ParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.incentives.QueryProto.ParamsRequest.class, com.osmosis.incentives.QueryProto.ParamsRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.incentives.QueryProto.ParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_ParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.ParamsRequest getDefaultInstanceForType() {
+        return com.osmosis.incentives.QueryProto.ParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.ParamsRequest build() {
+        com.osmosis.incentives.QueryProto.ParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.ParamsRequest buildPartial() {
+        com.osmosis.incentives.QueryProto.ParamsRequest result = new com.osmosis.incentives.QueryProto.ParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.incentives.QueryProto.ParamsRequest) {
+          return mergeFrom((com.osmosis.incentives.QueryProto.ParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.incentives.QueryProto.ParamsRequest other) {
+        if (other == com.osmosis.incentives.QueryProto.ParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.incentives.ParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.incentives.ParamsRequest)
+    private static final com.osmosis.incentives.QueryProto.ParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.incentives.QueryProto.ParamsRequest();
+    }
+
+    public static com.osmosis.incentives.QueryProto.ParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ParamsRequest>() {
+      @java.lang.Override
+      public ParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.incentives.QueryProto.ParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.incentives.ParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.osmosis.incentives.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.osmosis.incentives.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.osmosis.incentives.ParamsProto.Params getParams();
+    /**
+     * <code>.osmosis.incentives.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.incentives.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code osmosis.incentives.ParamsResponse}
+   */
+  public static final class ParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.incentives.ParamsResponse)
+      ParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ParamsResponse.newBuilder() to construct.
+    private ParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_ParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_ParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.incentives.QueryProto.ParamsResponse.class, com.osmosis.incentives.QueryProto.ParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.osmosis.incentives.ParamsProto.Params params_;
+    /**
+     * <code>.osmosis.incentives.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.osmosis.incentives.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.osmosis.incentives.ParamsProto.Params getParams() {
+      return params_ == null ? com.osmosis.incentives.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.osmosis.incentives.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.incentives.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.osmosis.incentives.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.incentives.QueryProto.ParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.incentives.QueryProto.ParamsResponse other = (com.osmosis.incentives.QueryProto.ParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.incentives.QueryProto.ParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.ParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.ParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.ParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.ParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.QueryProto.ParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.ParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.ParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.incentives.QueryProto.ParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.incentives.QueryProto.ParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.incentives.QueryProto.ParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.QueryProto.ParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.incentives.QueryProto.ParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.incentives.ParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.incentives.ParamsResponse)
+        com.osmosis.incentives.QueryProto.ParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_ParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_ParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.incentives.QueryProto.ParamsResponse.class, com.osmosis.incentives.QueryProto.ParamsResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.incentives.QueryProto.ParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.incentives.QueryProto.internal_static_osmosis_incentives_ParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.ParamsResponse getDefaultInstanceForType() {
+        return com.osmosis.incentives.QueryProto.ParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.ParamsResponse build() {
+        com.osmosis.incentives.QueryProto.ParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.QueryProto.ParamsResponse buildPartial() {
+        com.osmosis.incentives.QueryProto.ParamsResponse result = new com.osmosis.incentives.QueryProto.ParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.incentives.QueryProto.ParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.incentives.QueryProto.ParamsResponse) {
+          return mergeFrom((com.osmosis.incentives.QueryProto.ParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.incentives.QueryProto.ParamsResponse other) {
+        if (other == com.osmosis.incentives.QueryProto.ParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.osmosis.incentives.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.incentives.ParamsProto.Params, com.osmosis.incentives.ParamsProto.Params.Builder, com.osmosis.incentives.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.osmosis.incentives.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.osmosis.incentives.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.osmosis.incentives.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.osmosis.incentives.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.osmosis.incentives.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.osmosis.incentives.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.incentives.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.osmosis.incentives.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.incentives.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.osmosis.incentives.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.osmosis.incentives.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.incentives.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.incentives.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.osmosis.incentives.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.osmosis.incentives.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.osmosis.incentives.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.incentives.ParamsProto.Params, com.osmosis.incentives.ParamsProto.Params.Builder, com.osmosis.incentives.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.incentives.ParamsProto.Params, com.osmosis.incentives.ParamsProto.Params.Builder, com.osmosis.incentives.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.incentives.ParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.incentives.ParamsResponse)
+    private static final com.osmosis.incentives.QueryProto.ParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.incentives.QueryProto.ParamsResponse();
+    }
+
+    public static com.osmosis.incentives.QueryProto.ParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ParamsResponse>() {
+      @java.lang.Override
+      public ParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.incentives.QueryProto.ParamsResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -15113,6 +22608,71 @@ public final class QueryProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_incentives_QueryLockableDurationsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_incentives_QueryAllGroupsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_incentives_QueryAllGroupsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_incentives_QueryAllGroupsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_incentives_QueryAllGroupsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_incentives_QueryAllGroupsGaugesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_incentives_QueryAllGroupsGaugesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_incentives_QueryAllGroupsGaugesResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_incentives_QueryAllGroupsGaugesResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_incentives_QueryAllGroupsWithGaugeRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_incentives_QueryAllGroupsWithGaugeRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_incentives_QueryAllGroupsWithGaugeResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_incentives_QueryAllGroupsWithGaugeResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_incentives_QueryGroupByGroupGaugeIDRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_incentives_QueryGroupByGroupGaugeIDRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_incentives_QueryGroupByGroupGaugeIDResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_incentives_QueryGroupByGroupGaugeIDResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_incentives_QueryCurrentWeightByGroupGaugeIDRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_incentives_QueryCurrentWeightByGroupGaugeIDRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_incentives_QueryCurrentWeightByGroupGaugeIDResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_incentives_QueryCurrentWeightByGroupGaugeIDResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_incentives_GaugeWeight_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_incentives_GaugeWeight_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_incentives_ParamsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_incentives_ParamsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_incentives_ParamsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_incentives_ParamsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -15128,100 +22688,153 @@ public final class QueryProto {
       "f/duration.proto\032\036cosmos/base/v1beta1/co" +
       "in.proto\032*cosmos/base/query/v1beta1/pagi" +
       "nation.proto\032\036osmosis/incentives/gauge.p" +
-      "roto\032\031osmosis/lockup/lock.proto\" \n\036Modul" +
-      "eToDistributeCoinsRequest\"\204\001\n\037ModuleToDi" +
-      "stributeCoinsResponse\022a\n\005coins\030\001 \003(\0132\031.c" +
-      "osmos.base.v1beta1.CoinB0\310\336\037\000\252\337\037(github." +
-      "com/cosmos/cosmos-sdk/types.CoinsR\005coins" +
-      "\"\"\n\020GaugeByIDRequest\022\016\n\002id\030\001 \001(\004R\002id\"D\n\021" +
-      "GaugeByIDResponse\022/\n\005gauge\030\001 \001(\0132\031.osmos" +
-      "is.incentives.GaugeR\005gauge\"W\n\rGaugesRequ" +
-      "est\022F\n\npagination\030\001 \001(\0132&.cosmos.base.qu" +
-      "ery.v1beta1.PageRequestR\npagination\"\216\001\n\016" +
-      "GaugesResponse\0223\n\004data\030\001 \003(\0132\031.osmosis.i" +
-      "ncentives.GaugeB\004\310\336\037\000R\004data\022G\n\npaginatio" +
-      "n\030\002 \001(\0132\'.cosmos.base.query.v1beta1.Page" +
-      "ResponseR\npagination\"]\n\023ActiveGaugesRequ" +
-      "est\022F\n\npagination\030\001 \001(\0132&.cosmos.base.qu" +
-      "ery.v1beta1.PageRequestR\npagination\"\224\001\n\024" +
-      "ActiveGaugesResponse\0223\n\004data\030\001 \003(\0132\031.osm" +
-      "osis.incentives.GaugeB\004\310\336\037\000R\004data\022G\n\npag" +
-      "ination\030\002 \001(\0132\'.cosmos.base.query.v1beta" +
-      "1.PageResponseR\npagination\"{\n\033ActiveGaug" +
-      "esPerDenomRequest\022\024\n\005denom\030\001 \001(\tR\005denom\022" +
-      "F\n\npagination\030\002 \001(\0132&.cosmos.base.query." +
-      "v1beta1.PageRequestR\npagination\"\234\001\n\034Acti" +
-      "veGaugesPerDenomResponse\0223\n\004data\030\001 \003(\0132\031" +
-      ".osmosis.incentives.GaugeB\004\310\336\037\000R\004data\022G\n" +
-      "\npagination\030\002 \001(\0132\'.cosmos.base.query.v1" +
-      "beta1.PageResponseR\npagination\"_\n\025Upcomi" +
-      "ngGaugesRequest\022F\n\npagination\030\001 \001(\0132&.co" +
-      "smos.base.query.v1beta1.PageRequestR\npag" +
-      "ination\"\226\001\n\026UpcomingGaugesResponse\0223\n\004da" +
-      "ta\030\001 \003(\0132\031.osmosis.incentives.GaugeB\004\310\336\037" +
-      "\000R\004data\022G\n\npagination\030\002 \001(\0132\'.cosmos.bas" +
-      "e.query.v1beta1.PageResponseR\npagination" +
-      "\"}\n\035UpcomingGaugesPerDenomRequest\022\024\n\005den" +
-      "om\030\001 \001(\tR\005denom\022F\n\npagination\030\002 \001(\0132&.co" +
-      "smos.base.query.v1beta1.PageRequestR\npag" +
-      "ination\"\263\001\n\036UpcomingGaugesPerDenomRespon" +
-      "se\022H\n\017upcoming_gauges\030\001 \003(\0132\031.osmosis.in" +
-      "centives.GaugeB\004\310\336\037\000R\016upcomingGauges\022G\n\n" +
-      "pagination\030\002 \001(\0132\'.cosmos.base.query.v1b" +
-      "eta1.PageResponseR\npagination\"s\n\021Rewards" +
-      "EstRequest\022&\n\005owner\030\001 \001(\tB\020\362\336\037\014yaml:\"own" +
-      "er\"R\005owner\022\031\n\010lock_ids\030\002 \003(\004R\007lockIds\022\033\n" +
-      "\tend_epoch\030\003 \001(\003R\010endEpoch\"w\n\022RewardsEst" +
-      "Response\022a\n\005coins\030\001 \003(\0132\031.cosmos.base.v1" +
-      "beta1.CoinB0\310\336\037\000\252\337\037(github.com/cosmos/co" +
-      "smos-sdk/types.CoinsR\005coins\"\037\n\035QueryLock" +
-      "ableDurationsRequest\"\221\001\n\036QueryLockableDu" +
-      "rationsResponse\022o\n\022lockable_durations\030\001 " +
-      "\003(\0132\031.google.protobuf.DurationB%\310\336\037\000\362\336\037\031" +
-      "yaml:\"lockable_durations\"\230\337\037\001R\021lockableD" +
-      "urations2\326\013\n\005Query\022\302\001\n\027ModuleToDistribut" +
-      "eCoins\0222.osmosis.incentives.ModuleToDist" +
-      "ributeCoinsRequest\0323.osmosis.incentives." +
-      "ModuleToDistributeCoinsResponse\">\202\323\344\223\0028\022" +
-      "6/osmosis/incentives/v1beta1/module_to_d" +
-      "istribute_coins\022\216\001\n\tGaugeByID\022$.osmosis." +
-      "incentives.GaugeByIDRequest\032%.osmosis.in" +
-      "centives.GaugeByIDResponse\"4\202\323\344\223\002.\022,/osm" +
-      "osis/incentives/v1beta1/gauge_by_id/{id}" +
-      "\022{\n\006Gauges\022!.osmosis.incentives.GaugesRe" +
-      "quest\032\".osmosis.incentives.GaugesRespons" +
-      "e\"*\202\323\344\223\002$\022\"/osmosis/incentives/v1beta1/g" +
-      "auges\022\224\001\n\014ActiveGauges\022\'.osmosis.incenti" +
-      "ves.ActiveGaugesRequest\032(.osmosis.incent" +
-      "ives.ActiveGaugesResponse\"1\202\323\344\223\002+\022)/osmo" +
-      "sis/incentives/v1beta1/active_gauges\022\266\001\n" +
-      "\024ActiveGaugesPerDenom\022/.osmosis.incentiv" +
-      "es.ActiveGaugesPerDenomRequest\0320.osmosis" +
-      ".incentives.ActiveGaugesPerDenomResponse" +
-      "\";\202\323\344\223\0025\0223/osmosis/incentives/v1beta1/ac" +
-      "tive_gauges_per_denom\022\234\001\n\016UpcomingGauges" +
-      "\022).osmosis.incentives.UpcomingGaugesRequ" +
-      "est\032*.osmosis.incentives.UpcomingGaugesR" +
-      "esponse\"3\202\323\344\223\002-\022+/osmosis/incentives/v1b" +
-      "eta1/upcoming_gauges\022\276\001\n\026UpcomingGaugesP" +
-      "erDenom\0221.osmosis.incentives.UpcomingGau" +
-      "gesPerDenomRequest\0322.osmosis.incentives." +
-      "UpcomingGaugesPerDenomResponse\"=\202\323\344\223\0027\0225" +
-      "/osmosis/incentives/v1beta1/upcoming_gau" +
-      "ges_per_denom\022\224\001\n\nRewardsEst\022%.osmosis.i" +
-      "ncentives.RewardsEstRequest\032&.osmosis.in" +
-      "centives.RewardsEstResponse\"7\202\323\344\223\0021\022//os" +
-      "mosis/incentives/v1beta1/rewards_est/{ow" +
-      "ner}\022\262\001\n\021LockableDurations\0221.osmosis.inc" +
-      "entives.QueryLockableDurationsRequest\0322." +
-      "osmosis.incentives.QueryLockableDuration" +
-      "sResponse\"6\202\323\344\223\0020\022./osmosis/incentives/v" +
-      "1beta1/lockable_durationsB\303\001\n\026com.osmosi" +
-      "s.incentivesB\nQueryProtoZ6github.com/osm" +
-      "osis-labs/osmosis/v15/x/incentives/types" +
-      "\242\002\003OIX\252\002\022Osmosis.Incentives\312\002\022Osmosis\\In" +
-      "centives\342\002\036Osmosis\\Incentives\\GPBMetadat" +
-      "a\352\002\023Osmosis::Incentivesb\006proto3"
+      "roto\032\031osmosis/lockup/lock.proto\032\036osmosis" +
+      "/incentives/group.proto\032\037osmosis/incenti" +
+      "ves/params.proto\" \n\036ModuleToDistributeCo" +
+      "insRequest\"\204\001\n\037ModuleToDistributeCoinsRe" +
+      "sponse\022a\n\005coins\030\001 \003(\0132\031.cosmos.base.v1be" +
+      "ta1.CoinB0\310\336\037\000\252\337\037(github.com/cosmos/cosm" +
+      "os-sdk/types.CoinsR\005coins\"\"\n\020GaugeByIDRe" +
+      "quest\022\016\n\002id\030\001 \001(\004R\002id\"D\n\021GaugeByIDRespon" +
+      "se\022/\n\005gauge\030\001 \001(\0132\031.osmosis.incentives.G" +
+      "augeR\005gauge\"W\n\rGaugesRequest\022F\n\npaginati" +
+      "on\030\001 \001(\0132&.cosmos.base.query.v1beta1.Pag" +
+      "eRequestR\npagination\"\216\001\n\016GaugesResponse\022" +
+      "3\n\004data\030\001 \003(\0132\031.osmosis.incentives.Gauge" +
+      "B\004\310\336\037\000R\004data\022G\n\npagination\030\002 \001(\0132\'.cosmo" +
+      "s.base.query.v1beta1.PageResponseR\npagin" +
+      "ation\"]\n\023ActiveGaugesRequest\022F\n\npaginati" +
+      "on\030\001 \001(\0132&.cosmos.base.query.v1beta1.Pag" +
+      "eRequestR\npagination\"\224\001\n\024ActiveGaugesRes" +
+      "ponse\0223\n\004data\030\001 \003(\0132\031.osmosis.incentives" +
+      ".GaugeB\004\310\336\037\000R\004data\022G\n\npagination\030\002 \001(\0132\'" +
+      ".cosmos.base.query.v1beta1.PageResponseR" +
+      "\npagination\"{\n\033ActiveGaugesPerDenomReque" +
+      "st\022\024\n\005denom\030\001 \001(\tR\005denom\022F\n\npagination\030\002" +
+      " \001(\0132&.cosmos.base.query.v1beta1.PageReq" +
+      "uestR\npagination\"\234\001\n\034ActiveGaugesPerDeno" +
+      "mResponse\0223\n\004data\030\001 \003(\0132\031.osmosis.incent" +
+      "ives.GaugeB\004\310\336\037\000R\004data\022G\n\npagination\030\002 \001" +
+      "(\0132\'.cosmos.base.query.v1beta1.PageRespo" +
+      "nseR\npagination\"_\n\025UpcomingGaugesRequest" +
+      "\022F\n\npagination\030\001 \001(\0132&.cosmos.base.query" +
+      ".v1beta1.PageRequestR\npagination\"\226\001\n\026Upc" +
+      "omingGaugesResponse\0223\n\004data\030\001 \003(\0132\031.osmo" +
+      "sis.incentives.GaugeB\004\310\336\037\000R\004data\022G\n\npagi" +
+      "nation\030\002 \001(\0132\'.cosmos.base.query.v1beta1" +
+      ".PageResponseR\npagination\"}\n\035UpcomingGau" +
+      "gesPerDenomRequest\022\024\n\005denom\030\001 \001(\tR\005denom" +
+      "\022F\n\npagination\030\002 \001(\0132&.cosmos.base.query" +
+      ".v1beta1.PageRequestR\npagination\"\263\001\n\036Upc" +
+      "omingGaugesPerDenomResponse\022H\n\017upcoming_" +
+      "gauges\030\001 \003(\0132\031.osmosis.incentives.GaugeB" +
+      "\004\310\336\037\000R\016upcomingGauges\022G\n\npagination\030\002 \001(" +
+      "\0132\'.cosmos.base.query.v1beta1.PageRespon" +
+      "seR\npagination\"s\n\021RewardsEstRequest\022&\n\005o" +
+      "wner\030\001 \001(\tB\020\362\336\037\014yaml:\"owner\"R\005owner\022\031\n\010l" +
+      "ock_ids\030\002 \003(\004R\007lockIds\022\033\n\tend_epoch\030\003 \001(" +
+      "\003R\010endEpoch\"w\n\022RewardsEstResponse\022a\n\005coi" +
+      "ns\030\001 \003(\0132\031.cosmos.base.v1beta1.CoinB0\310\336\037" +
+      "\000\252\337\037(github.com/cosmos/cosmos-sdk/types." +
+      "CoinsR\005coins\"\037\n\035QueryLockableDurationsRe" +
+      "quest\"\221\001\n\036QueryLockableDurationsResponse" +
+      "\022o\n\022lockable_durations\030\001 \003(\0132\031.google.pr" +
+      "otobuf.DurationB%\310\336\037\000\362\336\037\031yaml:\"lockable_" +
+      "durations\"\230\337\037\001R\021lockableDurations\"\027\n\025Que" +
+      "ryAllGroupsRequest\"Q\n\026QueryAllGroupsResp" +
+      "onse\0227\n\006groups\030\001 \003(\0132\031.osmosis.incentive" +
+      "s.GroupB\004\310\336\037\000R\006groups\"\035\n\033QueryAllGroupsG" +
+      "augesRequest\"W\n\034QueryAllGroupsGaugesResp" +
+      "onse\0227\n\006gauges\030\001 \003(\0132\031.osmosis.incentive" +
+      "s.GaugeB\004\310\336\037\000R\006gauges\" \n\036QueryAllGroupsW" +
+      "ithGaugeRequest\"x\n\037QueryAllGroupsWithGau" +
+      "geResponse\022U\n\021groups_with_gauge\030\001 \003(\0132#." +
+      "osmosis.incentives.GroupsWithGaugeB\004\310\336\037\000" +
+      "R\017groupsWithGauge\"1\n\037QueryGroupByGroupGa" +
+      "ugeIDRequest\022\016\n\002id\030\001 \001(\004R\002id\"Y\n QueryGro" +
+      "upByGroupGaugeIDResponse\0225\n\005group\030\001 \001(\0132" +
+      "\031.osmosis.incentives.GroupB\004\310\336\037\000R\005group\"" +
+      "O\n\'QueryCurrentWeightByGroupGaugeIDReque" +
+      "st\022$\n\016group_gauge_id\030\001 \001(\004R\014groupGaugeId" +
+      "\"t\n(QueryCurrentWeightByGroupGaugeIDResp" +
+      "onse\022H\n\014gauge_weight\030\001 \003(\0132\037.osmosis.inc" +
+      "entives.GaugeWeightB\004\310\336\037\000R\013gaugeWeight\"\207" +
+      "\001\n\013GaugeWeight\022\031\n\010gauge_id\030\001 \001(\004R\007gaugeI" +
+      "d\022]\n\014weight_ratio\030\002 \001(\tB:\310\336\037\000\332\336\037\033cosmoss" +
+      "dk.io/math.LegacyDec\362\336\037\023yaml:\"weight_rat" +
+      "io\"R\013weightRatio\"\017\n\rParamsRequest\"J\n\016Par" +
+      "amsResponse\0228\n\006params\030\001 \001(\0132\032.osmosis.in" +
+      "centives.ParamsB\004\310\336\037\000R\006params2\210\024\n\005Query\022" +
+      "\302\001\n\027ModuleToDistributeCoins\0222.osmosis.in" +
+      "centives.ModuleToDistributeCoinsRequest\032" +
+      "3.osmosis.incentives.ModuleToDistributeC" +
+      "oinsResponse\">\202\323\344\223\0028\0226/osmosis/incentive" +
+      "s/v1beta1/module_to_distribute_coins\022\216\001\n" +
+      "\tGaugeByID\022$.osmosis.incentives.GaugeByI" +
+      "DRequest\032%.osmosis.incentives.GaugeByIDR" +
+      "esponse\"4\202\323\344\223\002.\022,/osmosis/incentives/v1b" +
+      "eta1/gauge_by_id/{id}\022{\n\006Gauges\022!.osmosi" +
+      "s.incentives.GaugesRequest\032\".osmosis.inc" +
+      "entives.GaugesResponse\"*\202\323\344\223\002$\022\"/osmosis" +
+      "/incentives/v1beta1/gauges\022\224\001\n\014ActiveGau" +
+      "ges\022\'.osmosis.incentives.ActiveGaugesReq" +
+      "uest\032(.osmosis.incentives.ActiveGaugesRe" +
+      "sponse\"1\202\323\344\223\002+\022)/osmosis/incentives/v1be" +
+      "ta1/active_gauges\022\266\001\n\024ActiveGaugesPerDen" +
+      "om\022/.osmosis.incentives.ActiveGaugesPerD" +
+      "enomRequest\0320.osmosis.incentives.ActiveG" +
+      "augesPerDenomResponse\";\202\323\344\223\0025\0223/osmosis/" +
+      "incentives/v1beta1/active_gauges_per_den" +
+      "om\022\234\001\n\016UpcomingGauges\022).osmosis.incentiv" +
+      "es.UpcomingGaugesRequest\032*.osmosis.incen" +
+      "tives.UpcomingGaugesResponse\"3\202\323\344\223\002-\022+/o" +
+      "smosis/incentives/v1beta1/upcoming_gauge" +
+      "s\022\276\001\n\026UpcomingGaugesPerDenom\0221.osmosis.i" +
+      "ncentives.UpcomingGaugesPerDenomRequest\032" +
+      "2.osmosis.incentives.UpcomingGaugesPerDe" +
+      "nomResponse\"=\202\323\344\223\0027\0225/osmosis/incentives" +
+      "/v1beta1/upcoming_gauges_per_denom\022\224\001\n\nR" +
+      "ewardsEst\022%.osmosis.incentives.RewardsEs" +
+      "tRequest\032&.osmosis.incentives.RewardsEst" +
+      "Response\"7\202\323\344\223\0021\022//osmosis/incentives/v1" +
+      "beta1/rewards_est/{owner}\022\262\001\n\021LockableDu" +
+      "rations\0221.osmosis.incentives.QueryLockab" +
+      "leDurationsRequest\0322.osmosis.incentives." +
+      "QueryLockableDurationsResponse\"6\202\323\344\223\0020\022." +
+      "/osmosis/incentives/v1beta1/lockable_dur" +
+      "ations\022\222\001\n\tAllGroups\022).osmosis.incentive" +
+      "s.QueryAllGroupsRequest\032*.osmosis.incent" +
+      "ives.QueryAllGroupsResponse\".\202\323\344\223\002(\022&/os" +
+      "mosis/incentives/v1beta1/all_groups\022\253\001\n\017" +
+      "AllGroupsGauges\022/.osmosis.incentives.Que" +
+      "ryAllGroupsGaugesRequest\0320.osmosis.incen" +
+      "tives.QueryAllGroupsGaugesResponse\"5\202\323\344\223" +
+      "\002/\022-/osmosis/incentives/v1beta1/all_grou" +
+      "ps_gauges\022\270\001\n\022AllGroupsWithGauge\0222.osmos" +
+      "is.incentives.QueryAllGroupsWithGaugeReq" +
+      "uest\0323.osmosis.incentives.QueryAllGroups" +
+      "WithGaugeResponse\"9\202\323\344\223\0023\0221/osmosis/ince" +
+      "ntives/v1beta1/all_groups_with_gauge\022\302\001\n" +
+      "\023GroupByGroupGaugeID\0223.osmosis.incentive" +
+      "s.QueryGroupByGroupGaugeIDRequest\0324.osmo" +
+      "sis.incentives.QueryGroupByGroupGaugeIDR" +
+      "esponse\"@\202\323\344\223\002:\0228/osmosis/incentives/v1b" +
+      "eta1/group_by_group_gauge_id/{id}\022\357\001\n\033Cu" +
+      "rrentWeightByGroupGaugeID\022;.osmosis.ince" +
+      "ntives.QueryCurrentWeightByGroupGaugeIDR" +
+      "equest\032<.osmosis.incentives.QueryCurrent" +
+      "WeightByGroupGaugeIDResponse\"U\202\323\344\223\002O\022M/o" +
+      "smosis/incentives/v1beta1/current_weight" +
+      "_by_group_gauge_id/{group_gauge_id}\022{\n\006P" +
+      "arams\022!.osmosis.incentives.ParamsRequest" +
+      "\032\".osmosis.incentives.ParamsResponse\"*\202\323" +
+      "\344\223\002$\022\"/osmosis/incentives/v1beta1/params" +
+      "B\303\001\n\026com.osmosis.incentivesB\nQueryProtoZ" +
+      "6github.com/osmosis-labs/osmosis/v26/x/i" +
+      "ncentives/types\242\002\003OIX\252\002\022Osmosis.Incentiv" +
+      "es\312\002\022Osmosis\\Incentives\342\002\036Osmosis\\Incent" +
+      "ives\\GPBMetadata\352\002\023Osmosis::Incentivesb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -15233,6 +22846,8 @@ public final class QueryProto {
           com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor(),
           com.osmosis.incentives.GaugeProto.getDescriptor(),
           com.osmosis.lockup.LockProto.getDescriptor(),
+          com.osmosis.incentives.GroupProto.getDescriptor(),
+          com.osmosis.incentives.ParamsProto.getDescriptor(),
         });
     internal_static_osmosis_incentives_ModuleToDistributeCoinsRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -15342,9 +22957,88 @@ public final class QueryProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_incentives_QueryLockableDurationsResponse_descriptor,
         new java.lang.String[] { "LockableDurations", });
+    internal_static_osmosis_incentives_QueryAllGroupsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_osmosis_incentives_QueryAllGroupsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_incentives_QueryAllGroupsRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_osmosis_incentives_QueryAllGroupsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_osmosis_incentives_QueryAllGroupsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_incentives_QueryAllGroupsResponse_descriptor,
+        new java.lang.String[] { "Groups", });
+    internal_static_osmosis_incentives_QueryAllGroupsGaugesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_osmosis_incentives_QueryAllGroupsGaugesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_incentives_QueryAllGroupsGaugesRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_osmosis_incentives_QueryAllGroupsGaugesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_osmosis_incentives_QueryAllGroupsGaugesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_incentives_QueryAllGroupsGaugesResponse_descriptor,
+        new java.lang.String[] { "Gauges", });
+    internal_static_osmosis_incentives_QueryAllGroupsWithGaugeRequest_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_osmosis_incentives_QueryAllGroupsWithGaugeRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_incentives_QueryAllGroupsWithGaugeRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_osmosis_incentives_QueryAllGroupsWithGaugeResponse_descriptor =
+      getDescriptor().getMessageTypes().get(23);
+    internal_static_osmosis_incentives_QueryAllGroupsWithGaugeResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_incentives_QueryAllGroupsWithGaugeResponse_descriptor,
+        new java.lang.String[] { "GroupsWithGauge", });
+    internal_static_osmosis_incentives_QueryGroupByGroupGaugeIDRequest_descriptor =
+      getDescriptor().getMessageTypes().get(24);
+    internal_static_osmosis_incentives_QueryGroupByGroupGaugeIDRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_incentives_QueryGroupByGroupGaugeIDRequest_descriptor,
+        new java.lang.String[] { "Id", });
+    internal_static_osmosis_incentives_QueryGroupByGroupGaugeIDResponse_descriptor =
+      getDescriptor().getMessageTypes().get(25);
+    internal_static_osmosis_incentives_QueryGroupByGroupGaugeIDResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_incentives_QueryGroupByGroupGaugeIDResponse_descriptor,
+        new java.lang.String[] { "Group", });
+    internal_static_osmosis_incentives_QueryCurrentWeightByGroupGaugeIDRequest_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_osmosis_incentives_QueryCurrentWeightByGroupGaugeIDRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_incentives_QueryCurrentWeightByGroupGaugeIDRequest_descriptor,
+        new java.lang.String[] { "GroupGaugeId", });
+    internal_static_osmosis_incentives_QueryCurrentWeightByGroupGaugeIDResponse_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_osmosis_incentives_QueryCurrentWeightByGroupGaugeIDResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_incentives_QueryCurrentWeightByGroupGaugeIDResponse_descriptor,
+        new java.lang.String[] { "GaugeWeight", });
+    internal_static_osmosis_incentives_GaugeWeight_descriptor =
+      getDescriptor().getMessageTypes().get(28);
+    internal_static_osmosis_incentives_GaugeWeight_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_incentives_GaugeWeight_descriptor,
+        new java.lang.String[] { "GaugeId", "WeightRatio", });
+    internal_static_osmosis_incentives_ParamsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(29);
+    internal_static_osmosis_incentives_ParamsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_incentives_ParamsRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_osmosis_incentives_ParamsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(30);
+    internal_static_osmosis_incentives_ParamsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_incentives_ParamsResponse_descriptor,
+        new java.lang.String[] { "Params", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.gogoproto.GogoProto.castrepeated);
+    registry.add(com.gogoproto.GogoProto.customtype);
     registry.add(com.gogoproto.GogoProto.moretags);
     registry.add(com.gogoproto.GogoProto.nullable);
     registry.add(com.gogoproto.GogoProto.stdduration);
@@ -15358,6 +23052,8 @@ public final class QueryProto {
     com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor();
     com.osmosis.incentives.GaugeProto.getDescriptor();
     com.osmosis.lockup.LockProto.getDescriptor();
+    com.osmosis.incentives.GroupProto.getDescriptor();
+    com.osmosis.incentives.ParamsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

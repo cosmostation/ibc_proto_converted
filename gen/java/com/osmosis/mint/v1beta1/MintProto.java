@@ -23,7 +23,7 @@ public final class MintProto {
      * epoch_provisions represent rewards for the current epoch.
      * </pre>
      *
-     * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
+     * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
      * @return The epochProvisions.
      */
     java.lang.String getEpochProvisions();
@@ -32,7 +32,7 @@ public final class MintProto {
      * epoch_provisions represent rewards for the current epoch.
      * </pre>
      *
-     * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
+     * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
      * @return The bytes for epochProvisions.
      */
     com.google.protobuf.ByteString
@@ -86,7 +86,7 @@ public final class MintProto {
      * epoch_provisions represent rewards for the current epoch.
      * </pre>
      *
-     * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
+     * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
      * @return The epochProvisions.
      */
     @java.lang.Override
@@ -107,7 +107,7 @@ public final class MintProto {
      * epoch_provisions represent rewards for the current epoch.
      * </pre>
      *
-     * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
+     * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
      * @return The bytes for epochProvisions.
      */
     @java.lang.Override
@@ -461,7 +461,7 @@ public final class MintProto {
        * epoch_provisions represent rewards for the current epoch.
        * </pre>
        *
-       * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
+       * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
        * @return The epochProvisions.
        */
       public java.lang.String getEpochProvisions() {
@@ -481,7 +481,7 @@ public final class MintProto {
        * epoch_provisions represent rewards for the current epoch.
        * </pre>
        *
-       * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
+       * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
        * @return The bytes for epochProvisions.
        */
       public com.google.protobuf.ByteString
@@ -502,7 +502,7 @@ public final class MintProto {
        * epoch_provisions represent rewards for the current epoch.
        * </pre>
        *
-       * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
+       * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
        * @param value The epochProvisions to set.
        * @return This builder for chaining.
        */
@@ -519,7 +519,7 @@ public final class MintProto {
        * epoch_provisions represent rewards for the current epoch.
        * </pre>
        *
-       * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
+       * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearEpochProvisions() {
@@ -533,7 +533,7 @@ public final class MintProto {
        * epoch_provisions represent rewards for the current epoch.
        * </pre>
        *
-       * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
+       * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
        * @param value The bytes for epochProvisions to set.
        * @return This builder for chaining.
        */
@@ -627,12 +627,12 @@ public final class MintProto {
         getAddressBytes();
 
     /**
-     * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+     * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
      * @return The weight.
      */
     java.lang.String getWeight();
     /**
-     * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+     * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
      * @return The bytes for weight.
      */
     com.google.protobuf.ByteString
@@ -724,7 +724,7 @@ public final class MintProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object weight_ = "";
     /**
-     * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+     * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
      * @return The weight.
      */
     @java.lang.Override
@@ -741,7 +741,7 @@ public final class MintProto {
       }
     }
     /**
-     * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+     * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
      * @return The bytes for weight.
      */
     @java.lang.Override
@@ -1189,7 +1189,7 @@ public final class MintProto {
 
       private java.lang.Object weight_ = "";
       /**
-       * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+       * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
        * @return The weight.
        */
       public java.lang.String getWeight() {
@@ -1205,7 +1205,7 @@ public final class MintProto {
         }
       }
       /**
-       * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+       * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
        * @return The bytes for weight.
        */
       public com.google.protobuf.ByteString
@@ -1222,7 +1222,7 @@ public final class MintProto {
         }
       }
       /**
-       * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+       * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
        * @param value The weight to set.
        * @return This builder for chaining.
        */
@@ -1235,7 +1235,7 @@ public final class MintProto {
         return this;
       }
       /**
-       * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+       * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearWeight() {
@@ -1245,7 +1245,7 @@ public final class MintProto {
         return this;
       }
       /**
-       * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+       * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
        * @param value The bytes for weight to set.
        * @return This builder for chaining.
        */
@@ -1332,7 +1332,7 @@ public final class MintProto {
      * allocated as staking rewards.
      * </pre>
      *
-     * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
+     * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
      * @return The staking.
      */
     java.lang.String getStaking();
@@ -1342,7 +1342,7 @@ public final class MintProto {
      * allocated as staking rewards.
      * </pre>
      *
-     * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
+     * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
      * @return The bytes for staking.
      */
     com.google.protobuf.ByteString
@@ -1354,7 +1354,7 @@ public final class MintProto {
      * to be allocated as pool incentives.
      * </pre>
      *
-     * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
+     * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
      * @return The poolIncentives.
      */
     java.lang.String getPoolIncentives();
@@ -1364,7 +1364,7 @@ public final class MintProto {
      * to be allocated as pool incentives.
      * </pre>
      *
-     * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
+     * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
      * @return The bytes for poolIncentives.
      */
     com.google.protobuf.ByteString
@@ -1376,7 +1376,7 @@ public final class MintProto {
      * to be allocated to developer rewards address.
      * </pre>
      *
-     * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+     * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
      * @return The developerRewards.
      */
     java.lang.String getDeveloperRewards();
@@ -1386,7 +1386,7 @@ public final class MintProto {
      * to be allocated to developer rewards address.
      * </pre>
      *
-     * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+     * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
      * @return The bytes for developerRewards.
      */
     com.google.protobuf.ByteString
@@ -1398,7 +1398,7 @@ public final class MintProto {
      * to be allocated to the community pool.
      * </pre>
      *
-     * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+     * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
      * @return The communityPool.
      */
     java.lang.String getCommunityPool();
@@ -1408,7 +1408,7 @@ public final class MintProto {
      * to be allocated to the community pool.
      * </pre>
      *
-     * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+     * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
      * @return The bytes for communityPool.
      */
     com.google.protobuf.ByteString
@@ -1468,7 +1468,7 @@ public final class MintProto {
      * allocated as staking rewards.
      * </pre>
      *
-     * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
+     * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
      * @return The staking.
      */
     @java.lang.Override
@@ -1490,7 +1490,7 @@ public final class MintProto {
      * allocated as staking rewards.
      * </pre>
      *
-     * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
+     * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
      * @return The bytes for staking.
      */
     @java.lang.Override
@@ -1517,7 +1517,7 @@ public final class MintProto {
      * to be allocated as pool incentives.
      * </pre>
      *
-     * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
+     * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
      * @return The poolIncentives.
      */
     @java.lang.Override
@@ -1539,7 +1539,7 @@ public final class MintProto {
      * to be allocated as pool incentives.
      * </pre>
      *
-     * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
+     * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
      * @return The bytes for poolIncentives.
      */
     @java.lang.Override
@@ -1566,7 +1566,7 @@ public final class MintProto {
      * to be allocated to developer rewards address.
      * </pre>
      *
-     * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+     * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
      * @return The developerRewards.
      */
     @java.lang.Override
@@ -1588,7 +1588,7 @@ public final class MintProto {
      * to be allocated to developer rewards address.
      * </pre>
      *
-     * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+     * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
      * @return The bytes for developerRewards.
      */
     @java.lang.Override
@@ -1615,7 +1615,7 @@ public final class MintProto {
      * to be allocated to the community pool.
      * </pre>
      *
-     * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+     * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
      * @return The communityPool.
      */
     @java.lang.Override
@@ -1637,7 +1637,7 @@ public final class MintProto {
      * to be allocated to the community pool.
      * </pre>
      *
-     * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+     * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
      * @return The bytes for communityPool.
      */
     @java.lang.Override
@@ -2066,7 +2066,7 @@ public final class MintProto {
        * allocated as staking rewards.
        * </pre>
        *
-       * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
+       * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
        * @return The staking.
        */
       public java.lang.String getStaking() {
@@ -2087,7 +2087,7 @@ public final class MintProto {
        * allocated as staking rewards.
        * </pre>
        *
-       * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
+       * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
        * @return The bytes for staking.
        */
       public com.google.protobuf.ByteString
@@ -2109,7 +2109,7 @@ public final class MintProto {
        * allocated as staking rewards.
        * </pre>
        *
-       * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
+       * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
        * @param value The staking to set.
        * @return This builder for chaining.
        */
@@ -2127,7 +2127,7 @@ public final class MintProto {
        * allocated as staking rewards.
        * </pre>
        *
-       * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
+       * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearStaking() {
@@ -2142,7 +2142,7 @@ public final class MintProto {
        * allocated as staking rewards.
        * </pre>
        *
-       * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
+       * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
        * @param value The bytes for staking to set.
        * @return This builder for chaining.
        */
@@ -2163,7 +2163,7 @@ public final class MintProto {
        * to be allocated as pool incentives.
        * </pre>
        *
-       * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
+       * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
        * @return The poolIncentives.
        */
       public java.lang.String getPoolIncentives() {
@@ -2184,7 +2184,7 @@ public final class MintProto {
        * to be allocated as pool incentives.
        * </pre>
        *
-       * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
+       * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
        * @return The bytes for poolIncentives.
        */
       public com.google.protobuf.ByteString
@@ -2206,7 +2206,7 @@ public final class MintProto {
        * to be allocated as pool incentives.
        * </pre>
        *
-       * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
+       * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
        * @param value The poolIncentives to set.
        * @return This builder for chaining.
        */
@@ -2224,7 +2224,7 @@ public final class MintProto {
        * to be allocated as pool incentives.
        * </pre>
        *
-       * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
+       * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearPoolIncentives() {
@@ -2239,7 +2239,7 @@ public final class MintProto {
        * to be allocated as pool incentives.
        * </pre>
        *
-       * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
+       * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
        * @param value The bytes for poolIncentives to set.
        * @return This builder for chaining.
        */
@@ -2260,7 +2260,7 @@ public final class MintProto {
        * to be allocated to developer rewards address.
        * </pre>
        *
-       * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+       * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
        * @return The developerRewards.
        */
       public java.lang.String getDeveloperRewards() {
@@ -2281,7 +2281,7 @@ public final class MintProto {
        * to be allocated to developer rewards address.
        * </pre>
        *
-       * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+       * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
        * @return The bytes for developerRewards.
        */
       public com.google.protobuf.ByteString
@@ -2303,7 +2303,7 @@ public final class MintProto {
        * to be allocated to developer rewards address.
        * </pre>
        *
-       * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+       * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
        * @param value The developerRewards to set.
        * @return This builder for chaining.
        */
@@ -2321,7 +2321,7 @@ public final class MintProto {
        * to be allocated to developer rewards address.
        * </pre>
        *
-       * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+       * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearDeveloperRewards() {
@@ -2336,7 +2336,7 @@ public final class MintProto {
        * to be allocated to developer rewards address.
        * </pre>
        *
-       * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+       * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
        * @param value The bytes for developerRewards to set.
        * @return This builder for chaining.
        */
@@ -2357,7 +2357,7 @@ public final class MintProto {
        * to be allocated to the community pool.
        * </pre>
        *
-       * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+       * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
        * @return The communityPool.
        */
       public java.lang.String getCommunityPool() {
@@ -2378,7 +2378,7 @@ public final class MintProto {
        * to be allocated to the community pool.
        * </pre>
        *
-       * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+       * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
        * @return The bytes for communityPool.
        */
       public com.google.protobuf.ByteString
@@ -2400,7 +2400,7 @@ public final class MintProto {
        * to be allocated to the community pool.
        * </pre>
        *
-       * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+       * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
        * @param value The communityPool to set.
        * @return This builder for chaining.
        */
@@ -2418,7 +2418,7 @@ public final class MintProto {
        * to be allocated to the community pool.
        * </pre>
        *
-       * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+       * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearCommunityPool() {
@@ -2433,7 +2433,7 @@ public final class MintProto {
        * to be allocated to the community pool.
        * </pre>
        *
-       * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+       * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
        * @param value The bytes for communityPool to set.
        * @return This builder for chaining.
        */
@@ -2539,7 +2539,7 @@ public final class MintProto {
      * genesis_epoch_provisions epoch provisions from the first epoch.
      * </pre>
      *
-     * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
+     * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
      * @return The genesisEpochProvisions.
      */
     java.lang.String getGenesisEpochProvisions();
@@ -2548,7 +2548,7 @@ public final class MintProto {
      * genesis_epoch_provisions epoch provisions from the first epoch.
      * </pre>
      *
-     * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
+     * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
      * @return The bytes for genesisEpochProvisions.
      */
     com.google.protobuf.ByteString
@@ -2591,7 +2591,7 @@ public final class MintProto {
      * at the end of each period set by reduction_period_in_epochs.
      * </pre>
      *
-     * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
+     * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
      * @return The reductionFactor.
      */
     java.lang.String getReductionFactor();
@@ -2601,7 +2601,7 @@ public final class MintProto {
      * at the end of each period set by reduction_period_in_epochs.
      * </pre>
      *
-     * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
+     * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
      * @return The bytes for reductionFactor.
      */
     com.google.protobuf.ByteString
@@ -2809,7 +2809,7 @@ public final class MintProto {
      * genesis_epoch_provisions epoch provisions from the first epoch.
      * </pre>
      *
-     * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
+     * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
      * @return The genesisEpochProvisions.
      */
     @java.lang.Override
@@ -2830,7 +2830,7 @@ public final class MintProto {
      * genesis_epoch_provisions epoch provisions from the first epoch.
      * </pre>
      *
-     * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
+     * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
      * @return The bytes for genesisEpochProvisions.
      */
     @java.lang.Override
@@ -2920,7 +2920,7 @@ public final class MintProto {
      * at the end of each period set by reduction_period_in_epochs.
      * </pre>
      *
-     * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
+     * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
      * @return The reductionFactor.
      */
     @java.lang.Override
@@ -2942,7 +2942,7 @@ public final class MintProto {
      * at the end of each period set by reduction_period_in_epochs.
      * </pre>
      *
-     * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
+     * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
      * @return The bytes for reductionFactor.
      */
     @java.lang.Override
@@ -3752,7 +3752,7 @@ public final class MintProto {
        * genesis_epoch_provisions epoch provisions from the first epoch.
        * </pre>
        *
-       * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
+       * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
        * @return The genesisEpochProvisions.
        */
       public java.lang.String getGenesisEpochProvisions() {
@@ -3772,7 +3772,7 @@ public final class MintProto {
        * genesis_epoch_provisions epoch provisions from the first epoch.
        * </pre>
        *
-       * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
+       * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
        * @return The bytes for genesisEpochProvisions.
        */
       public com.google.protobuf.ByteString
@@ -3793,7 +3793,7 @@ public final class MintProto {
        * genesis_epoch_provisions epoch provisions from the first epoch.
        * </pre>
        *
-       * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
+       * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
        * @param value The genesisEpochProvisions to set.
        * @return This builder for chaining.
        */
@@ -3810,7 +3810,7 @@ public final class MintProto {
        * genesis_epoch_provisions epoch provisions from the first epoch.
        * </pre>
        *
-       * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
+       * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearGenesisEpochProvisions() {
@@ -3824,7 +3824,7 @@ public final class MintProto {
        * genesis_epoch_provisions epoch provisions from the first epoch.
        * </pre>
        *
-       * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
+       * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
        * @param value The bytes for genesisEpochProvisions to set.
        * @return This builder for chaining.
        */
@@ -3984,7 +3984,7 @@ public final class MintProto {
        * at the end of each period set by reduction_period_in_epochs.
        * </pre>
        *
-       * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
+       * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
        * @return The reductionFactor.
        */
       public java.lang.String getReductionFactor() {
@@ -4005,7 +4005,7 @@ public final class MintProto {
        * at the end of each period set by reduction_period_in_epochs.
        * </pre>
        *
-       * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
+       * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
        * @return The bytes for reductionFactor.
        */
       public com.google.protobuf.ByteString
@@ -4027,7 +4027,7 @@ public final class MintProto {
        * at the end of each period set by reduction_period_in_epochs.
        * </pre>
        *
-       * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
+       * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
        * @param value The reductionFactor to set.
        * @return This builder for chaining.
        */
@@ -4045,7 +4045,7 @@ public final class MintProto {
        * at the end of each period set by reduction_period_in_epochs.
        * </pre>
        *
-       * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
+       * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearReductionFactor() {
@@ -4060,7 +4060,7 @@ public final class MintProto {
        * at the end of each period set by reduction_period_in_epochs.
        * </pre>
        *
-       * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
+       * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
        * @param value The bytes for reductionFactor to set.
        * @return This builder for chaining.
        */
@@ -4756,53 +4756,51 @@ public final class MintProto {
       "is.mint.v1beta1\032\024gogoproto/gogo.proto\032\037g" +
       "oogle/protobuf/timestamp.proto\032\031google/p" +
       "rotobuf/any.proto\032\036google/protobuf/durat" +
-      "ion.proto\"~\n\006Minter\022t\n\020epoch_provisions\030" +
-      "\001 \001(\tBI\310\336\037\000\332\336\037&github.com/cosmos/cosmos-" +
-      "sdk/types.Dec\362\336\037\027yaml:\"epoch_provisions\"" +
-      "R\017epochProvisions\"\230\001\n\017WeightedAddress\022,\n" +
-      "\007address\030\001 \001(\tB\022\362\336\037\016yaml:\"address\"R\007addr" +
-      "ess\022W\n\006weight\030\002 \001(\tB?\310\336\037\000\332\336\037&github.com/" +
-      "cosmos/cosmos-sdk/types.Dec\362\336\037\ryaml:\"wei" +
-      "ght\"R\006weight\"\321\003\n\027DistributionProportions" +
-      "\022Z\n\007staking\030\001 \001(\tB@\310\336\037\000\332\336\037&github.com/co" +
-      "smos/cosmos-sdk/types.Dec\362\336\037\016yaml:\"staki" +
-      "ng\"R\007staking\022q\n\017pool_incentives\030\002 \001(\tBH\310" +
-      "\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/type" +
-      "s.Dec\362\336\037\026yaml:\"pool_incentives\"R\016poolInc" +
-      "entives\022w\n\021developer_rewards\030\003 \001(\tBJ\310\336\037\000" +
-      "\332\336\037&github.com/cosmos/cosmos-sdk/types.D" +
-      "ec\362\336\037\030yaml:\"developer_rewards\"R\020develope" +
-      "rRewards\022n\n\016community_pool\030\004 \001(\tBG\310\336\037\000\332\336" +
-      "\037&github.com/cosmos/cosmos-sdk/types.Dec" +
-      "\362\336\037\025yaml:\"community_pool\"R\rcommunityPool" +
-      "\"\377\006\n\006Params\022\035\n\nmint_denom\030\001 \001(\tR\tmintDen" +
-      "om\022\213\001\n\030genesis_epoch_provisions\030\002 \001(\tBQ\310" +
-      "\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/type" +
-      "s.Dec\362\336\037\037yaml:\"genesis_epoch_provisions\"" +
-      "R\026genesisEpochProvisions\022F\n\020epoch_identi" +
-      "fier\030\003 \001(\tB\033\362\336\037\027yaml:\"epoch_identifier\"R" +
-      "\017epochIdentifier\022b\n\032reduction_period_in_" +
-      "epochs\030\004 \001(\003B%\362\336\037!yaml:\"reduction_period" +
-      "_in_epochs\"R\027reductionPeriodInEpochs\022t\n\020" +
-      "reduction_factor\030\005 \001(\tBI\310\336\037\000\332\336\037&github.c" +
-      "om/cosmos/cosmos-sdk/types.Dec\362\336\037\027yaml:\"" +
-      "reduction_factor\"R\017reductionFactor\022n\n\030di" +
-      "stribution_proportions\030\006 \001(\0132-.osmosis.m" +
-      "int.v1beta1.DistributionProportionsB\004\310\336\037" +
-      "\000R\027distributionProportions\022\241\001\n$weighted_" +
-      "developer_rewards_receivers\030\007 \003(\0132%.osmo" +
-      "sis.mint.v1beta1.WeightedAddressB)\310\336\037\000\362\336" +
-      "\037!yaml:\"developer_rewards_receiver\"R!wei" +
-      "ghtedDeveloperRewardsReceivers\022\213\001\n(minti" +
-      "ng_rewards_distribution_start_epoch\030\010 \001(" +
-      "\003B3\362\336\037/yaml:\"minting_rewards_distributio" +
-      "n_start_epoch\"R$mintingRewardsDistributi" +
-      "onStartEpoch:\004\230\240\037\000B\307\001\n\030com.osmosis.mint." +
-      "v1beta1B\tMintProtoZ0github.com/osmosis-l" +
-      "abs/osmosis/v15/x/mint/types\242\002\003OMX\252\002\024Osm" +
-      "osis.Mint.V1beta1\312\002\024Osmosis\\Mint\\V1beta1" +
-      "\342\002 Osmosis\\Mint\\V1beta1\\GPBMetadata\352\002\026Os" +
-      "mosis::Mint::V1beta1b\006proto3"
+      "ion.proto\"s\n\006Minter\022i\n\020epoch_provisions\030" +
+      "\001 \001(\tB>\310\336\037\000\332\336\037\033cosmossdk.io/math.LegacyD" +
+      "ec\362\336\037\027yaml:\"epoch_provisions\"R\017epochProv" +
+      "isions\"\215\001\n\017WeightedAddress\022,\n\007address\030\001 " +
+      "\001(\tB\022\362\336\037\016yaml:\"address\"R\007address\022L\n\006weig" +
+      "ht\030\002 \001(\tB4\310\336\037\000\332\336\037\033cosmossdk.io/math.Lega" +
+      "cyDec\362\336\037\ryaml:\"weight\"R\006weight\"\245\003\n\027Distr" +
+      "ibutionProportions\022O\n\007staking\030\001 \001(\tB5\310\336\037" +
+      "\000\332\336\037\033cosmossdk.io/math.LegacyDec\362\336\037\016yaml" +
+      ":\"staking\"R\007staking\022f\n\017pool_incentives\030\002" +
+      " \001(\tB=\310\336\037\000\332\336\037\033cosmossdk.io/math.LegacyDe" +
+      "c\362\336\037\026yaml:\"pool_incentives\"R\016poolIncenti" +
+      "ves\022l\n\021developer_rewards\030\003 \001(\tB?\310\336\037\000\332\336\037\033" +
+      "cosmossdk.io/math.LegacyDec\362\336\037\030yaml:\"dev" +
+      "eloper_rewards\"R\020developerRewards\022c\n\016com" +
+      "munity_pool\030\004 \001(\tB<\310\336\037\000\332\336\037\033cosmossdk.io/" +
+      "math.LegacyDec\362\336\037\025yaml:\"community_pool\"R" +
+      "\rcommunityPool\"\351\006\n\006Params\022\035\n\nmint_denom\030" +
+      "\001 \001(\tR\tmintDenom\022\200\001\n\030genesis_epoch_provi" +
+      "sions\030\002 \001(\tBF\310\336\037\000\332\336\037\033cosmossdk.io/math.L" +
+      "egacyDec\362\336\037\037yaml:\"genesis_epoch_provisio" +
+      "ns\"R\026genesisEpochProvisions\022F\n\020epoch_ide" +
+      "ntifier\030\003 \001(\tB\033\362\336\037\027yaml:\"epoch_identifie" +
+      "r\"R\017epochIdentifier\022b\n\032reduction_period_" +
+      "in_epochs\030\004 \001(\003B%\362\336\037!yaml:\"reduction_per" +
+      "iod_in_epochs\"R\027reductionPeriodInEpochs\022" +
+      "i\n\020reduction_factor\030\005 \001(\tB>\310\336\037\000\332\336\037\033cosmo" +
+      "ssdk.io/math.LegacyDec\362\336\037\027yaml:\"reductio" +
+      "n_factor\"R\017reductionFactor\022n\n\030distributi" +
+      "on_proportions\030\006 \001(\0132-.osmosis.mint.v1be" +
+      "ta1.DistributionProportionsB\004\310\336\037\000R\027distr" +
+      "ibutionProportions\022\241\001\n$weighted_develope" +
+      "r_rewards_receivers\030\007 \003(\0132%.osmosis.mint" +
+      ".v1beta1.WeightedAddressB)\310\336\037\000\362\336\037!yaml:\"" +
+      "developer_rewards_receiver\"R!weightedDev" +
+      "eloperRewardsReceivers\022\213\001\n(minting_rewar" +
+      "ds_distribution_start_epoch\030\010 \001(\003B3\362\336\037/y" +
+      "aml:\"minting_rewards_distribution_start_" +
+      "epoch\"R$mintingRewardsDistributionStartE" +
+      "poch:\004\230\240\037\000B\307\001\n\030com.osmosis.mint.v1beta1B" +
+      "\tMintProtoZ0github.com/osmosis-labs/osmo" +
+      "sis/v26/x/mint/types\242\002\003OMX\252\002\024Osmosis.Min" +
+      "t.V1beta1\312\002\024Osmosis\\Mint\\V1beta1\342\002 Osmos" +
+      "is\\Mint\\V1beta1\\GPBMetadata\352\002\026Osmosis::M" +
+      "int::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

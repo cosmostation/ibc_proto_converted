@@ -47,7 +47,8 @@ public final class GenesisProto {
 
     /**
      * <pre>
-     * gauges are all gauges that should exist at genesis
+     * gauges are all gauges (not including group gauges) that should exist at
+     * genesis
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -56,7 +57,8 @@ public final class GenesisProto {
         getGaugesList();
     /**
      * <pre>
-     * gauges are all gauges that should exist at genesis
+     * gauges are all gauges (not including group gauges) that should exist at
+     * genesis
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -64,7 +66,8 @@ public final class GenesisProto {
     com.osmosis.incentives.GaugeProto.Gauge getGauges(int index);
     /**
      * <pre>
-     * gauges are all gauges that should exist at genesis
+     * gauges are all gauges (not including group gauges) that should exist at
+     * genesis
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -72,7 +75,8 @@ public final class GenesisProto {
     int getGaugesCount();
     /**
      * <pre>
-     * gauges are all gauges that should exist at genesis
+     * gauges are all gauges (not including group gauges) that should exist at
+     * genesis
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -81,7 +85,8 @@ public final class GenesisProto {
         getGaugesOrBuilderList();
     /**
      * <pre>
-     * gauges are all gauges that should exist at genesis
+     * gauges are all gauges (not including group gauges) that should exist at
+     * genesis
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -92,7 +97,7 @@ public final class GenesisProto {
     /**
      * <pre>
      * lockable_durations are all lockup durations that gauges can be locked for
-     * in order to recieve incentives
+     * in order to receive incentives
      * </pre>
      *
      * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -102,7 +107,7 @@ public final class GenesisProto {
     /**
      * <pre>
      * lockable_durations are all lockup durations that gauges can be locked for
-     * in order to recieve incentives
+     * in order to receive incentives
      * </pre>
      *
      * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -111,7 +116,7 @@ public final class GenesisProto {
     /**
      * <pre>
      * lockable_durations are all lockup durations that gauges can be locked for
-     * in order to recieve incentives
+     * in order to receive incentives
      * </pre>
      *
      * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -120,7 +125,7 @@ public final class GenesisProto {
     /**
      * <pre>
      * lockable_durations are all lockup durations that gauges can be locked for
-     * in order to recieve incentives
+     * in order to receive incentives
      * </pre>
      *
      * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -130,7 +135,7 @@ public final class GenesisProto {
     /**
      * <pre>
      * lockable_durations are all lockup durations that gauges can be locked for
-     * in order to recieve incentives
+     * in order to receive incentives
      * </pre>
      *
      * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -148,6 +153,94 @@ public final class GenesisProto {
      * @return The lastGaugeId.
      */
     long getLastGaugeId();
+
+    /**
+     * <pre>
+     * gauges are all group gauges that should exist at genesis
+     * </pre>
+     *
+     * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.osmosis.incentives.GaugeProto.Gauge> 
+        getGroupGaugesList();
+    /**
+     * <pre>
+     * gauges are all group gauges that should exist at genesis
+     * </pre>
+     *
+     * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.incentives.GaugeProto.Gauge getGroupGauges(int index);
+    /**
+     * <pre>
+     * gauges are all group gauges that should exist at genesis
+     * </pre>
+     *
+     * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+     */
+    int getGroupGaugesCount();
+    /**
+     * <pre>
+     * gauges are all group gauges that should exist at genesis
+     * </pre>
+     *
+     * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.osmosis.incentives.GaugeProto.GaugeOrBuilder> 
+        getGroupGaugesOrBuilderList();
+    /**
+     * <pre>
+     * gauges are all group gauges that should exist at genesis
+     * </pre>
+     *
+     * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.incentives.GaugeProto.GaugeOrBuilder getGroupGaugesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * groups are all the groups that should exist at genesis
+     * </pre>
+     *
+     * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.osmosis.incentives.GroupProto.Group> 
+        getGroupsList();
+    /**
+     * <pre>
+     * groups are all the groups that should exist at genesis
+     * </pre>
+     *
+     * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.incentives.GroupProto.Group getGroups(int index);
+    /**
+     * <pre>
+     * groups are all the groups that should exist at genesis
+     * </pre>
+     *
+     * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+     */
+    int getGroupsCount();
+    /**
+     * <pre>
+     * groups are all the groups that should exist at genesis
+     * </pre>
+     *
+     * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.osmosis.incentives.GroupProto.GroupOrBuilder> 
+        getGroupsOrBuilderList();
+    /**
+     * <pre>
+     * groups are all the groups that should exist at genesis
+     * </pre>
+     *
+     * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.incentives.GroupProto.GroupOrBuilder getGroupsOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -169,6 +262,8 @@ public final class GenesisProto {
     private GenesisState() {
       gauges_ = java.util.Collections.emptyList();
       lockableDurations_ = java.util.Collections.emptyList();
+      groupGauges_ = java.util.Collections.emptyList();
+      groups_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -234,7 +329,8 @@ public final class GenesisProto {
     private java.util.List<com.osmosis.incentives.GaugeProto.Gauge> gauges_;
     /**
      * <pre>
-     * gauges are all gauges that should exist at genesis
+     * gauges are all gauges (not including group gauges) that should exist at
+     * genesis
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -245,7 +341,8 @@ public final class GenesisProto {
     }
     /**
      * <pre>
-     * gauges are all gauges that should exist at genesis
+     * gauges are all gauges (not including group gauges) that should exist at
+     * genesis
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -257,7 +354,8 @@ public final class GenesisProto {
     }
     /**
      * <pre>
-     * gauges are all gauges that should exist at genesis
+     * gauges are all gauges (not including group gauges) that should exist at
+     * genesis
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -268,7 +366,8 @@ public final class GenesisProto {
     }
     /**
      * <pre>
-     * gauges are all gauges that should exist at genesis
+     * gauges are all gauges (not including group gauges) that should exist at
+     * genesis
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -279,7 +378,8 @@ public final class GenesisProto {
     }
     /**
      * <pre>
-     * gauges are all gauges that should exist at genesis
+     * gauges are all gauges (not including group gauges) that should exist at
+     * genesis
      * </pre>
      *
      * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -296,7 +396,7 @@ public final class GenesisProto {
     /**
      * <pre>
      * lockable_durations are all lockup durations that gauges can be locked for
-     * in order to recieve incentives
+     * in order to receive incentives
      * </pre>
      *
      * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -308,7 +408,7 @@ public final class GenesisProto {
     /**
      * <pre>
      * lockable_durations are all lockup durations that gauges can be locked for
-     * in order to recieve incentives
+     * in order to receive incentives
      * </pre>
      *
      * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -321,7 +421,7 @@ public final class GenesisProto {
     /**
      * <pre>
      * lockable_durations are all lockup durations that gauges can be locked for
-     * in order to recieve incentives
+     * in order to receive incentives
      * </pre>
      *
      * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -333,7 +433,7 @@ public final class GenesisProto {
     /**
      * <pre>
      * lockable_durations are all lockup durations that gauges can be locked for
-     * in order to recieve incentives
+     * in order to receive incentives
      * </pre>
      *
      * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -345,7 +445,7 @@ public final class GenesisProto {
     /**
      * <pre>
      * lockable_durations are all lockup durations that gauges can be locked for
-     * in order to recieve incentives
+     * in order to receive incentives
      * </pre>
      *
      * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -370,6 +470,128 @@ public final class GenesisProto {
     @java.lang.Override
     public long getLastGaugeId() {
       return lastGaugeId_;
+    }
+
+    public static final int GROUP_GAUGES_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.incentives.GaugeProto.Gauge> groupGauges_;
+    /**
+     * <pre>
+     * gauges are all group gauges that should exist at genesis
+     * </pre>
+     *
+     * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.incentives.GaugeProto.Gauge> getGroupGaugesList() {
+      return groupGauges_;
+    }
+    /**
+     * <pre>
+     * gauges are all group gauges that should exist at genesis
+     * </pre>
+     *
+     * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.incentives.GaugeProto.GaugeOrBuilder> 
+        getGroupGaugesOrBuilderList() {
+      return groupGauges_;
+    }
+    /**
+     * <pre>
+     * gauges are all group gauges that should exist at genesis
+     * </pre>
+     *
+     * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getGroupGaugesCount() {
+      return groupGauges_.size();
+    }
+    /**
+     * <pre>
+     * gauges are all group gauges that should exist at genesis
+     * </pre>
+     *
+     * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.incentives.GaugeProto.Gauge getGroupGauges(int index) {
+      return groupGauges_.get(index);
+    }
+    /**
+     * <pre>
+     * gauges are all group gauges that should exist at genesis
+     * </pre>
+     *
+     * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.incentives.GaugeProto.GaugeOrBuilder getGroupGaugesOrBuilder(
+        int index) {
+      return groupGauges_.get(index);
+    }
+
+    public static final int GROUPS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.incentives.GroupProto.Group> groups_;
+    /**
+     * <pre>
+     * groups are all the groups that should exist at genesis
+     * </pre>
+     *
+     * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.incentives.GroupProto.Group> getGroupsList() {
+      return groups_;
+    }
+    /**
+     * <pre>
+     * groups are all the groups that should exist at genesis
+     * </pre>
+     *
+     * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.incentives.GroupProto.GroupOrBuilder> 
+        getGroupsOrBuilderList() {
+      return groups_;
+    }
+    /**
+     * <pre>
+     * groups are all the groups that should exist at genesis
+     * </pre>
+     *
+     * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getGroupsCount() {
+      return groups_.size();
+    }
+    /**
+     * <pre>
+     * groups are all the groups that should exist at genesis
+     * </pre>
+     *
+     * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.incentives.GroupProto.Group getGroups(int index) {
+      return groups_.get(index);
+    }
+    /**
+     * <pre>
+     * groups are all the groups that should exist at genesis
+     * </pre>
+     *
+     * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.incentives.GroupProto.GroupOrBuilder getGroupsOrBuilder(
+        int index) {
+      return groups_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -398,6 +620,12 @@ public final class GenesisProto {
       if (lastGaugeId_ != 0L) {
         output.writeUInt64(4, lastGaugeId_);
       }
+      for (int i = 0; i < groupGauges_.size(); i++) {
+        output.writeMessage(5, groupGauges_.get(i));
+      }
+      for (int i = 0; i < groups_.size(); i++) {
+        output.writeMessage(6, groups_.get(i));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -422,6 +650,14 @@ public final class GenesisProto {
       if (lastGaugeId_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(4, lastGaugeId_);
+      }
+      for (int i = 0; i < groupGauges_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, groupGauges_.get(i));
+      }
+      for (int i = 0; i < groups_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, groups_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -449,6 +685,10 @@ public final class GenesisProto {
           .equals(other.getLockableDurationsList())) return false;
       if (getLastGaugeId()
           != other.getLastGaugeId()) return false;
+      if (!getGroupGaugesList()
+          .equals(other.getGroupGaugesList())) return false;
+      if (!getGroupsList()
+          .equals(other.getGroupsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -475,6 +715,14 @@ public final class GenesisProto {
       hash = (37 * hash) + LAST_GAUGE_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getLastGaugeId());
+      if (getGroupGaugesCount() > 0) {
+        hash = (37 * hash) + GROUP_GAUGES_FIELD_NUMBER;
+        hash = (53 * hash) + getGroupGaugesList().hashCode();
+      }
+      if (getGroupsCount() > 0) {
+        hash = (37 * hash) + GROUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getGroupsList().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -631,6 +879,20 @@ public final class GenesisProto {
         }
         bitField0_ = (bitField0_ & ~0x00000004);
         lastGaugeId_ = 0L;
+        if (groupGaugesBuilder_ == null) {
+          groupGauges_ = java.util.Collections.emptyList();
+        } else {
+          groupGauges_ = null;
+          groupGaugesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (groupsBuilder_ == null) {
+          groups_ = java.util.Collections.emptyList();
+        } else {
+          groups_ = null;
+          groupsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -681,6 +943,24 @@ public final class GenesisProto {
           result.lockableDurations_ = lockableDurations_;
         } else {
           result.lockableDurations_ = lockableDurationsBuilder_.build();
+        }
+        if (groupGaugesBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            groupGauges_ = java.util.Collections.unmodifiableList(groupGauges_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.groupGauges_ = groupGauges_;
+        } else {
+          result.groupGauges_ = groupGaugesBuilder_.build();
+        }
+        if (groupsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            groups_ = java.util.Collections.unmodifiableList(groups_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.groups_ = groups_;
+        } else {
+          result.groups_ = groupsBuilder_.build();
         }
       }
 
@@ -798,6 +1078,58 @@ public final class GenesisProto {
         if (other.getLastGaugeId() != 0L) {
           setLastGaugeId(other.getLastGaugeId());
         }
+        if (groupGaugesBuilder_ == null) {
+          if (!other.groupGauges_.isEmpty()) {
+            if (groupGauges_.isEmpty()) {
+              groupGauges_ = other.groupGauges_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureGroupGaugesIsMutable();
+              groupGauges_.addAll(other.groupGauges_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.groupGauges_.isEmpty()) {
+            if (groupGaugesBuilder_.isEmpty()) {
+              groupGaugesBuilder_.dispose();
+              groupGaugesBuilder_ = null;
+              groupGauges_ = other.groupGauges_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              groupGaugesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getGroupGaugesFieldBuilder() : null;
+            } else {
+              groupGaugesBuilder_.addAllMessages(other.groupGauges_);
+            }
+          }
+        }
+        if (groupsBuilder_ == null) {
+          if (!other.groups_.isEmpty()) {
+            if (groups_.isEmpty()) {
+              groups_ = other.groups_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureGroupsIsMutable();
+              groups_.addAll(other.groups_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.groups_.isEmpty()) {
+            if (groupsBuilder_.isEmpty()) {
+              groupsBuilder_.dispose();
+              groupsBuilder_ = null;
+              groups_ = other.groups_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              groupsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getGroupsFieldBuilder() : null;
+            } else {
+              groupsBuilder_.addAllMessages(other.groups_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -862,6 +1194,32 @@ public final class GenesisProto {
                 bitField0_ |= 0x00000008;
                 break;
               } // case 32
+              case 42: {
+                com.osmosis.incentives.GaugeProto.Gauge m =
+                    input.readMessage(
+                        com.osmosis.incentives.GaugeProto.Gauge.parser(),
+                        extensionRegistry);
+                if (groupGaugesBuilder_ == null) {
+                  ensureGroupGaugesIsMutable();
+                  groupGauges_.add(m);
+                } else {
+                  groupGaugesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                com.osmosis.incentives.GroupProto.Group m =
+                    input.readMessage(
+                        com.osmosis.incentives.GroupProto.Group.parser(),
+                        extensionRegistry);
+                if (groupsBuilder_ == null) {
+                  ensureGroupsIsMutable();
+                  groups_.add(m);
+                } else {
+                  groupsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1048,7 +1406,8 @@ public final class GenesisProto {
 
       /**
        * <pre>
-       * gauges are all gauges that should exist at genesis
+       * gauges are all gauges (not including group gauges) that should exist at
+       * genesis
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -1062,7 +1421,8 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * gauges are all gauges that should exist at genesis
+       * gauges are all gauges (not including group gauges) that should exist at
+       * genesis
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -1076,7 +1436,8 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * gauges are all gauges that should exist at genesis
+       * gauges are all gauges (not including group gauges) that should exist at
+       * genesis
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -1090,7 +1451,8 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * gauges are all gauges that should exist at genesis
+       * gauges are all gauges (not including group gauges) that should exist at
+       * genesis
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -1111,7 +1473,8 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * gauges are all gauges that should exist at genesis
+       * gauges are all gauges (not including group gauges) that should exist at
+       * genesis
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -1129,7 +1492,8 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * gauges are all gauges that should exist at genesis
+       * gauges are all gauges (not including group gauges) that should exist at
+       * genesis
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -1149,7 +1513,8 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * gauges are all gauges that should exist at genesis
+       * gauges are all gauges (not including group gauges) that should exist at
+       * genesis
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -1170,7 +1535,8 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * gauges are all gauges that should exist at genesis
+       * gauges are all gauges (not including group gauges) that should exist at
+       * genesis
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -1188,7 +1554,8 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * gauges are all gauges that should exist at genesis
+       * gauges are all gauges (not including group gauges) that should exist at
+       * genesis
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -1206,7 +1573,8 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * gauges are all gauges that should exist at genesis
+       * gauges are all gauges (not including group gauges) that should exist at
+       * genesis
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -1225,7 +1593,8 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * gauges are all gauges that should exist at genesis
+       * gauges are all gauges (not including group gauges) that should exist at
+       * genesis
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -1242,7 +1611,8 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * gauges are all gauges that should exist at genesis
+       * gauges are all gauges (not including group gauges) that should exist at
+       * genesis
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -1259,7 +1629,8 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * gauges are all gauges that should exist at genesis
+       * gauges are all gauges (not including group gauges) that should exist at
+       * genesis
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -1270,7 +1641,8 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * gauges are all gauges that should exist at genesis
+       * gauges are all gauges (not including group gauges) that should exist at
+       * genesis
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -1284,7 +1656,8 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * gauges are all gauges that should exist at genesis
+       * gauges are all gauges (not including group gauges) that should exist at
+       * genesis
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -1299,7 +1672,8 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * gauges are all gauges that should exist at genesis
+       * gauges are all gauges (not including group gauges) that should exist at
+       * genesis
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -1310,7 +1684,8 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * gauges are all gauges that should exist at genesis
+       * gauges are all gauges (not including group gauges) that should exist at
+       * genesis
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -1322,7 +1697,8 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * gauges are all gauges that should exist at genesis
+       * gauges are all gauges (not including group gauges) that should exist at
+       * genesis
        * </pre>
        *
        * <code>repeated .osmosis.incentives.Gauge gauges = 2 [json_name = "gauges", (.gogoproto.nullable) = false];</code>
@@ -1361,7 +1737,7 @@ public final class GenesisProto {
       /**
        * <pre>
        * lockable_durations are all lockup durations that gauges can be locked for
-       * in order to recieve incentives
+       * in order to receive incentives
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -1376,7 +1752,7 @@ public final class GenesisProto {
       /**
        * <pre>
        * lockable_durations are all lockup durations that gauges can be locked for
-       * in order to recieve incentives
+       * in order to receive incentives
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -1391,7 +1767,7 @@ public final class GenesisProto {
       /**
        * <pre>
        * lockable_durations are all lockup durations that gauges can be locked for
-       * in order to recieve incentives
+       * in order to receive incentives
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -1406,7 +1782,7 @@ public final class GenesisProto {
       /**
        * <pre>
        * lockable_durations are all lockup durations that gauges can be locked for
-       * in order to recieve incentives
+       * in order to receive incentives
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -1428,7 +1804,7 @@ public final class GenesisProto {
       /**
        * <pre>
        * lockable_durations are all lockup durations that gauges can be locked for
-       * in order to recieve incentives
+       * in order to receive incentives
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -1447,7 +1823,7 @@ public final class GenesisProto {
       /**
        * <pre>
        * lockable_durations are all lockup durations that gauges can be locked for
-       * in order to recieve incentives
+       * in order to receive incentives
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -1468,7 +1844,7 @@ public final class GenesisProto {
       /**
        * <pre>
        * lockable_durations are all lockup durations that gauges can be locked for
-       * in order to recieve incentives
+       * in order to receive incentives
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -1490,7 +1866,7 @@ public final class GenesisProto {
       /**
        * <pre>
        * lockable_durations are all lockup durations that gauges can be locked for
-       * in order to recieve incentives
+       * in order to receive incentives
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -1509,7 +1885,7 @@ public final class GenesisProto {
       /**
        * <pre>
        * lockable_durations are all lockup durations that gauges can be locked for
-       * in order to recieve incentives
+       * in order to receive incentives
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -1528,7 +1904,7 @@ public final class GenesisProto {
       /**
        * <pre>
        * lockable_durations are all lockup durations that gauges can be locked for
-       * in order to recieve incentives
+       * in order to receive incentives
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -1548,7 +1924,7 @@ public final class GenesisProto {
       /**
        * <pre>
        * lockable_durations are all lockup durations that gauges can be locked for
-       * in order to recieve incentives
+       * in order to receive incentives
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -1566,7 +1942,7 @@ public final class GenesisProto {
       /**
        * <pre>
        * lockable_durations are all lockup durations that gauges can be locked for
-       * in order to recieve incentives
+       * in order to receive incentives
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -1584,7 +1960,7 @@ public final class GenesisProto {
       /**
        * <pre>
        * lockable_durations are all lockup durations that gauges can be locked for
-       * in order to recieve incentives
+       * in order to receive incentives
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -1596,7 +1972,7 @@ public final class GenesisProto {
       /**
        * <pre>
        * lockable_durations are all lockup durations that gauges can be locked for
-       * in order to recieve incentives
+       * in order to receive incentives
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -1611,7 +1987,7 @@ public final class GenesisProto {
       /**
        * <pre>
        * lockable_durations are all lockup durations that gauges can be locked for
-       * in order to recieve incentives
+       * in order to receive incentives
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -1627,7 +2003,7 @@ public final class GenesisProto {
       /**
        * <pre>
        * lockable_durations are all lockup durations that gauges can be locked for
-       * in order to recieve incentives
+       * in order to receive incentives
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -1639,7 +2015,7 @@ public final class GenesisProto {
       /**
        * <pre>
        * lockable_durations are all lockup durations that gauges can be locked for
-       * in order to recieve incentives
+       * in order to receive incentives
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -1652,7 +2028,7 @@ public final class GenesisProto {
       /**
        * <pre>
        * lockable_durations are all lockup durations that gauges can be locked for
-       * in order to recieve incentives
+       * in order to receive incentives
        * </pre>
        *
        * <code>repeated .google.protobuf.Duration lockable_durations = 3 [json_name = "lockableDurations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lockable_durations&#92;"", (.gogoproto.stdduration) = true];</code>
@@ -1721,6 +2097,630 @@ public final class GenesisProto {
         lastGaugeId_ = 0L;
         onChanged();
         return this;
+      }
+
+      private java.util.List<com.osmosis.incentives.GaugeProto.Gauge> groupGauges_ =
+        java.util.Collections.emptyList();
+      private void ensureGroupGaugesIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          groupGauges_ = new java.util.ArrayList<com.osmosis.incentives.GaugeProto.Gauge>(groupGauges_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.incentives.GaugeProto.Gauge, com.osmosis.incentives.GaugeProto.Gauge.Builder, com.osmosis.incentives.GaugeProto.GaugeOrBuilder> groupGaugesBuilder_;
+
+      /**
+       * <pre>
+       * gauges are all group gauges that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.incentives.GaugeProto.Gauge> getGroupGaugesList() {
+        if (groupGaugesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(groupGauges_);
+        } else {
+          return groupGaugesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * gauges are all group gauges that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+       */
+      public int getGroupGaugesCount() {
+        if (groupGaugesBuilder_ == null) {
+          return groupGauges_.size();
+        } else {
+          return groupGaugesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * gauges are all group gauges that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GaugeProto.Gauge getGroupGauges(int index) {
+        if (groupGaugesBuilder_ == null) {
+          return groupGauges_.get(index);
+        } else {
+          return groupGaugesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * gauges are all group gauges that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGroupGauges(
+          int index, com.osmosis.incentives.GaugeProto.Gauge value) {
+        if (groupGaugesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupGaugesIsMutable();
+          groupGauges_.set(index, value);
+          onChanged();
+        } else {
+          groupGaugesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gauges are all group gauges that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGroupGauges(
+          int index, com.osmosis.incentives.GaugeProto.Gauge.Builder builderForValue) {
+        if (groupGaugesBuilder_ == null) {
+          ensureGroupGaugesIsMutable();
+          groupGauges_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          groupGaugesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gauges are all group gauges that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGroupGauges(com.osmosis.incentives.GaugeProto.Gauge value) {
+        if (groupGaugesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupGaugesIsMutable();
+          groupGauges_.add(value);
+          onChanged();
+        } else {
+          groupGaugesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gauges are all group gauges that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGroupGauges(
+          int index, com.osmosis.incentives.GaugeProto.Gauge value) {
+        if (groupGaugesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupGaugesIsMutable();
+          groupGauges_.add(index, value);
+          onChanged();
+        } else {
+          groupGaugesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gauges are all group gauges that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGroupGauges(
+          com.osmosis.incentives.GaugeProto.Gauge.Builder builderForValue) {
+        if (groupGaugesBuilder_ == null) {
+          ensureGroupGaugesIsMutable();
+          groupGauges_.add(builderForValue.build());
+          onChanged();
+        } else {
+          groupGaugesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gauges are all group gauges that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGroupGauges(
+          int index, com.osmosis.incentives.GaugeProto.Gauge.Builder builderForValue) {
+        if (groupGaugesBuilder_ == null) {
+          ensureGroupGaugesIsMutable();
+          groupGauges_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          groupGaugesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gauges are all group gauges that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllGroupGauges(
+          java.lang.Iterable<? extends com.osmosis.incentives.GaugeProto.Gauge> values) {
+        if (groupGaugesBuilder_ == null) {
+          ensureGroupGaugesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, groupGauges_);
+          onChanged();
+        } else {
+          groupGaugesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gauges are all group gauges that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearGroupGauges() {
+        if (groupGaugesBuilder_ == null) {
+          groupGauges_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          groupGaugesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gauges are all group gauges that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeGroupGauges(int index) {
+        if (groupGaugesBuilder_ == null) {
+          ensureGroupGaugesIsMutable();
+          groupGauges_.remove(index);
+          onChanged();
+        } else {
+          groupGaugesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gauges are all group gauges that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GaugeProto.Gauge.Builder getGroupGaugesBuilder(
+          int index) {
+        return getGroupGaugesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * gauges are all group gauges that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GaugeProto.GaugeOrBuilder getGroupGaugesOrBuilder(
+          int index) {
+        if (groupGaugesBuilder_ == null) {
+          return groupGauges_.get(index);  } else {
+          return groupGaugesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * gauges are all group gauges that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.osmosis.incentives.GaugeProto.GaugeOrBuilder> 
+           getGroupGaugesOrBuilderList() {
+        if (groupGaugesBuilder_ != null) {
+          return groupGaugesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(groupGauges_);
+        }
+      }
+      /**
+       * <pre>
+       * gauges are all group gauges that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GaugeProto.Gauge.Builder addGroupGaugesBuilder() {
+        return getGroupGaugesFieldBuilder().addBuilder(
+            com.osmosis.incentives.GaugeProto.Gauge.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * gauges are all group gauges that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GaugeProto.Gauge.Builder addGroupGaugesBuilder(
+          int index) {
+        return getGroupGaugesFieldBuilder().addBuilder(
+            index, com.osmosis.incentives.GaugeProto.Gauge.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * gauges are all group gauges that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Gauge group_gauges = 5 [json_name = "groupGauges", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.incentives.GaugeProto.Gauge.Builder> 
+           getGroupGaugesBuilderList() {
+        return getGroupGaugesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.incentives.GaugeProto.Gauge, com.osmosis.incentives.GaugeProto.Gauge.Builder, com.osmosis.incentives.GaugeProto.GaugeOrBuilder> 
+          getGroupGaugesFieldBuilder() {
+        if (groupGaugesBuilder_ == null) {
+          groupGaugesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.incentives.GaugeProto.Gauge, com.osmosis.incentives.GaugeProto.Gauge.Builder, com.osmosis.incentives.GaugeProto.GaugeOrBuilder>(
+                  groupGauges_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          groupGauges_ = null;
+        }
+        return groupGaugesBuilder_;
+      }
+
+      private java.util.List<com.osmosis.incentives.GroupProto.Group> groups_ =
+        java.util.Collections.emptyList();
+      private void ensureGroupsIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          groups_ = new java.util.ArrayList<com.osmosis.incentives.GroupProto.Group>(groups_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.incentives.GroupProto.Group, com.osmosis.incentives.GroupProto.Group.Builder, com.osmosis.incentives.GroupProto.GroupOrBuilder> groupsBuilder_;
+
+      /**
+       * <pre>
+       * groups are all the groups that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.incentives.GroupProto.Group> getGroupsList() {
+        if (groupsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(groups_);
+        } else {
+          return groupsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * groups are all the groups that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public int getGroupsCount() {
+        if (groupsBuilder_ == null) {
+          return groups_.size();
+        } else {
+          return groupsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * groups are all the groups that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GroupProto.Group getGroups(int index) {
+        if (groupsBuilder_ == null) {
+          return groups_.get(index);
+        } else {
+          return groupsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * groups are all the groups that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGroups(
+          int index, com.osmosis.incentives.GroupProto.Group value) {
+        if (groupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupsIsMutable();
+          groups_.set(index, value);
+          onChanged();
+        } else {
+          groupsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * groups are all the groups that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGroups(
+          int index, com.osmosis.incentives.GroupProto.Group.Builder builderForValue) {
+        if (groupsBuilder_ == null) {
+          ensureGroupsIsMutable();
+          groups_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          groupsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * groups are all the groups that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGroups(com.osmosis.incentives.GroupProto.Group value) {
+        if (groupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupsIsMutable();
+          groups_.add(value);
+          onChanged();
+        } else {
+          groupsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * groups are all the groups that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGroups(
+          int index, com.osmosis.incentives.GroupProto.Group value) {
+        if (groupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupsIsMutable();
+          groups_.add(index, value);
+          onChanged();
+        } else {
+          groupsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * groups are all the groups that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGroups(
+          com.osmosis.incentives.GroupProto.Group.Builder builderForValue) {
+        if (groupsBuilder_ == null) {
+          ensureGroupsIsMutable();
+          groups_.add(builderForValue.build());
+          onChanged();
+        } else {
+          groupsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * groups are all the groups that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGroups(
+          int index, com.osmosis.incentives.GroupProto.Group.Builder builderForValue) {
+        if (groupsBuilder_ == null) {
+          ensureGroupsIsMutable();
+          groups_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          groupsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * groups are all the groups that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllGroups(
+          java.lang.Iterable<? extends com.osmosis.incentives.GroupProto.Group> values) {
+        if (groupsBuilder_ == null) {
+          ensureGroupsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, groups_);
+          onChanged();
+        } else {
+          groupsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * groups are all the groups that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearGroups() {
+        if (groupsBuilder_ == null) {
+          groups_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          groupsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * groups are all the groups that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeGroups(int index) {
+        if (groupsBuilder_ == null) {
+          ensureGroupsIsMutable();
+          groups_.remove(index);
+          onChanged();
+        } else {
+          groupsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * groups are all the groups that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GroupProto.Group.Builder getGroupsBuilder(
+          int index) {
+        return getGroupsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * groups are all the groups that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GroupProto.GroupOrBuilder getGroupsOrBuilder(
+          int index) {
+        if (groupsBuilder_ == null) {
+          return groups_.get(index);  } else {
+          return groupsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * groups are all the groups that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.osmosis.incentives.GroupProto.GroupOrBuilder> 
+           getGroupsOrBuilderList() {
+        if (groupsBuilder_ != null) {
+          return groupsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(groups_);
+        }
+      }
+      /**
+       * <pre>
+       * groups are all the groups that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GroupProto.Group.Builder addGroupsBuilder() {
+        return getGroupsFieldBuilder().addBuilder(
+            com.osmosis.incentives.GroupProto.Group.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * groups are all the groups that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.incentives.GroupProto.Group.Builder addGroupsBuilder(
+          int index) {
+        return getGroupsFieldBuilder().addBuilder(
+            index, com.osmosis.incentives.GroupProto.Group.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * groups are all the groups that should exist at genesis
+       * </pre>
+       *
+       * <code>repeated .osmosis.incentives.Group groups = 6 [json_name = "groups", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.incentives.GroupProto.Group.Builder> 
+           getGroupsBuilderList() {
+        return getGroupsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.incentives.GroupProto.Group, com.osmosis.incentives.GroupProto.Group.Builder, com.osmosis.incentives.GroupProto.GroupOrBuilder> 
+          getGroupsFieldBuilder() {
+        if (groupsBuilder_ == null) {
+          groupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.incentives.GroupProto.Group, com.osmosis.incentives.GroupProto.Group.Builder, com.osmosis.incentives.GroupProto.GroupOrBuilder>(
+                  groups_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          groups_ = null;
+        }
+        return groupsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1804,19 +2804,23 @@ public final class GenesisProto {
       "sis.incentives\032\024gogoproto/gogo.proto\032\036go" +
       "ogle/protobuf/duration.proto\032\037osmosis/in" +
       "centives/params.proto\032\036osmosis/incentive" +
-      "s/gauge.proto\"\226\002\n\014GenesisState\0228\n\006params" +
-      "\030\001 \001(\0132\032.osmosis.incentives.ParamsB\004\310\336\037\000" +
-      "R\006params\0227\n\006gauges\030\002 \003(\0132\031.osmosis.incen" +
-      "tives.GaugeB\004\310\336\037\000R\006gauges\022o\n\022lockable_du" +
-      "rations\030\003 \003(\0132\031.google.protobuf.Duration" +
-      "B%\310\336\037\000\362\336\037\031yaml:\"lockable_durations\"\230\337\037\001R" +
-      "\021lockableDurations\022\"\n\rlast_gauge_id\030\004 \001(" +
-      "\004R\013lastGaugeIdB\305\001\n\026com.osmosis.incentive" +
-      "sB\014GenesisProtoZ6github.com/osmosis-labs" +
-      "/osmosis/v15/x/incentives/types\242\002\003OIX\252\002\022" +
-      "Osmosis.Incentives\312\002\022Osmosis\\Incentives\342" +
-      "\002\036Osmosis\\Incentives\\GPBMetadata\352\002\023Osmos" +
-      "is::Incentivesb\006proto3"
+      "s/gauge.proto\032\036osmosis/incentives/group." +
+      "proto\"\223\003\n\014GenesisState\0228\n\006params\030\001 \001(\0132\032" +
+      ".osmosis.incentives.ParamsB\004\310\336\037\000R\006params" +
+      "\0227\n\006gauges\030\002 \003(\0132\031.osmosis.incentives.Ga" +
+      "ugeB\004\310\336\037\000R\006gauges\022o\n\022lockable_durations\030" +
+      "\003 \003(\0132\031.google.protobuf.DurationB%\310\336\037\000\362\336" +
+      "\037\031yaml:\"lockable_durations\"\230\337\037\001R\021lockabl" +
+      "eDurations\022\"\n\rlast_gauge_id\030\004 \001(\004R\013lastG" +
+      "augeId\022B\n\014group_gauges\030\005 \003(\0132\031.osmosis.i" +
+      "ncentives.GaugeB\004\310\336\037\000R\013groupGauges\0227\n\006gr" +
+      "oups\030\006 \003(\0132\031.osmosis.incentives.GroupB\004\310" +
+      "\336\037\000R\006groupsB\305\001\n\026com.osmosis.incentivesB\014" +
+      "GenesisProtoZ6github.com/osmosis-labs/os" +
+      "mosis/v26/x/incentives/types\242\002\003OIX\252\002\022Osm" +
+      "osis.Incentives\312\002\022Osmosis\\Incentives\342\002\036O" +
+      "smosis\\Incentives\\GPBMetadata\352\002\023Osmosis:" +
+      ":Incentivesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1825,13 +2829,14 @@ public final class GenesisProto {
           com.google.protobuf.DurationProto.getDescriptor(),
           com.osmosis.incentives.ParamsProto.getDescriptor(),
           com.osmosis.incentives.GaugeProto.getDescriptor(),
+          com.osmosis.incentives.GroupProto.getDescriptor(),
         });
     internal_static_osmosis_incentives_GenesisState_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_osmosis_incentives_GenesisState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_incentives_GenesisState_descriptor,
-        new java.lang.String[] { "Params", "Gauges", "LockableDurations", "LastGaugeId", });
+        new java.lang.String[] { "Params", "Gauges", "LockableDurations", "LastGaugeId", "GroupGauges", "Groups", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.gogoproto.GogoProto.moretags);
@@ -1843,6 +2848,7 @@ public final class GenesisProto {
     com.google.protobuf.DurationProto.getDescriptor();
     com.osmosis.incentives.ParamsProto.getDescriptor();
     com.osmosis.incentives.GaugeProto.getDescriptor();
+    com.osmosis.incentives.GroupProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

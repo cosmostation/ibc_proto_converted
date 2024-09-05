@@ -32,6 +32,14 @@ public final class LockProto {
      * <code>ByTime = 1;</code>
      */
     ByTime(1),
+    /**
+     * <code>NoLock = 2;</code>
+     */
+    NoLock(2),
+    /**
+     * <code>ByGroup = 3;</code>
+     */
+    ByGroup(3),
     UNRECOGNIZED(-1),
     ;
 
@@ -43,6 +51,14 @@ public final class LockProto {
      * <code>ByTime = 1;</code>
      */
     public static final int ByTime_VALUE = 1;
+    /**
+     * <code>NoLock = 2;</code>
+     */
+    public static final int NoLock_VALUE = 2;
+    /**
+     * <code>ByGroup = 3;</code>
+     */
+    public static final int ByGroup_VALUE = 3;
 
 
     public final int getNumber() {
@@ -71,6 +87,8 @@ public final class LockProto {
       switch (value) {
         case 0: return ByDuration;
         case 1: return ByTime;
+        case 2: return NoLock;
+        case 3: return ByGroup;
         default: return null;
       }
     }
@@ -4709,13 +4727,14 @@ public final class LockProto {
       "pB\033\310\336\037\000\362\336\037\017yaml:\"end_time\"\220\337\037\001R\007endTime\022" +
       "h\n\010duration\030\004 \001(\0132\031.google.protobuf.Dura" +
       "tionB1\310\336\037\000\352\336\037\022duration,omitempty\362\336\037\017yaml" +
-      ":\"duration\"\230\337\037\001R\010duration*1\n\rLockQueryTy" +
-      "pe\022\016\n\nByDuration\020\000\022\n\n\006ByTime\020\001\032\004\210\243\036\000B\252\001\n" +
-      "\022com.osmosis.lockupB\tLockProtoZ2github.c" +
-      "om/osmosis-labs/osmosis/v15/x/lockup/typ" +
-      "es\242\002\003OLX\252\002\016Osmosis.Lockup\312\002\016Osmosis\\Lock" +
-      "up\342\002\032Osmosis\\Lockup\\GPBMetadata\352\002\017Osmosi" +
-      "s::Lockupb\006proto3"
+      ":\"duration\"\230\337\037\001R\010duration*J\n\rLockQueryTy" +
+      "pe\022\016\n\nByDuration\020\000\022\n\n\006ByTime\020\001\022\n\n\006NoLock" +
+      "\020\002\022\013\n\007ByGroup\020\003\032\004\210\243\036\000B\252\001\n\022com.osmosis.lo" +
+      "ckupB\tLockProtoZ2github.com/osmosis-labs" +
+      "/osmosis/v26/x/lockup/types\242\002\003OLX\252\002\016Osmo" +
+      "sis.Lockup\312\002\016Osmosis\\Lockup\342\002\032Osmosis\\Lo" +
+      "ckup\\GPBMetadata\352\002\017Osmosis::Lockupb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

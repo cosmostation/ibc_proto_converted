@@ -47,6 +47,18 @@ public final class QueryProto {
      */
     com.google.protobuf.ByteString
         getQuoteAssetDenomBytes();
+
+    /**
+     * <pre>
+     * DEPRECATED
+     * </pre>
+     *
+     * <code>bool withSwapFee = 4 [json_name = "withSwapFee", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"with_swap_fee&#92;",deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.gamm.v2.QuerySpotPriceRequest.withSwapFee is deprecated.
+     *     See osmosis/gamm/v2/query.proto;l=31
+     * @return The withSwapFee.
+     */
+    @java.lang.Deprecated boolean getWithSwapFee();
   }
   /**
    * <pre>
@@ -178,6 +190,23 @@ public final class QueryProto {
       }
     }
 
+    public static final int WITHSWAPFEE_FIELD_NUMBER = 4;
+    private boolean withSwapFee_ = false;
+    /**
+     * <pre>
+     * DEPRECATED
+     * </pre>
+     *
+     * <code>bool withSwapFee = 4 [json_name = "withSwapFee", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"with_swap_fee&#92;",deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.gamm.v2.QuerySpotPriceRequest.withSwapFee is deprecated.
+     *     See osmosis/gamm/v2/query.proto;l=31
+     * @return The withSwapFee.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public boolean getWithSwapFee() {
+      return withSwapFee_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -201,6 +230,9 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quoteAssetDenom_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, quoteAssetDenom_);
       }
+      if (withSwapFee_ != false) {
+        output.writeBool(4, withSwapFee_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -219,6 +251,10 @@ public final class QueryProto {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quoteAssetDenom_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, quoteAssetDenom_);
+      }
+      if (withSwapFee_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, withSwapFee_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -241,6 +277,8 @@ public final class QueryProto {
           .equals(other.getBaseAssetDenom())) return false;
       if (!getQuoteAssetDenom()
           .equals(other.getQuoteAssetDenom())) return false;
+      if (getWithSwapFee()
+          != other.getWithSwapFee()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -259,6 +297,9 @@ public final class QueryProto {
       hash = (53 * hash) + getBaseAssetDenom().hashCode();
       hash = (37 * hash) + QUOTE_ASSET_DENOM_FIELD_NUMBER;
       hash = (53 * hash) + getQuoteAssetDenom().hashCode();
+      hash = (37 * hash) + WITHSWAPFEE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getWithSwapFee());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -397,6 +438,7 @@ public final class QueryProto {
         poolId_ = 0L;
         baseAssetDenom_ = "";
         quoteAssetDenom_ = "";
+        withSwapFee_ = false;
         return this;
       }
 
@@ -438,6 +480,9 @@ public final class QueryProto {
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.quoteAssetDenom_ = quoteAssetDenom_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.withSwapFee_ = withSwapFee_;
         }
       }
 
@@ -498,6 +543,9 @@ public final class QueryProto {
           bitField0_ |= 0x00000004;
           onChanged();
         }
+        if (other.getWithSwapFee() != false) {
+          setWithSwapFee(other.getWithSwapFee());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -539,6 +587,11 @@ public final class QueryProto {
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
+              case 32: {
+                withSwapFee_ = input.readBool();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -731,6 +784,56 @@ public final class QueryProto {
         onChanged();
         return this;
       }
+
+      private boolean withSwapFee_ ;
+      /**
+       * <pre>
+       * DEPRECATED
+       * </pre>
+       *
+       * <code>bool withSwapFee = 4 [json_name = "withSwapFee", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"with_swap_fee&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.gamm.v2.QuerySpotPriceRequest.withSwapFee is deprecated.
+       *     See osmosis/gamm/v2/query.proto;l=31
+       * @return The withSwapFee.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated public boolean getWithSwapFee() {
+        return withSwapFee_;
+      }
+      /**
+       * <pre>
+       * DEPRECATED
+       * </pre>
+       *
+       * <code>bool withSwapFee = 4 [json_name = "withSwapFee", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"with_swap_fee&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.gamm.v2.QuerySpotPriceRequest.withSwapFee is deprecated.
+       *     See osmosis/gamm/v2/query.proto;l=31
+       * @param value The withSwapFee to set.
+       * @return This builder for chaining.
+       */
+      @java.lang.Deprecated public Builder setWithSwapFee(boolean value) {
+
+        withSwapFee_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DEPRECATED
+       * </pre>
+       *
+       * <code>bool withSwapFee = 4 [json_name = "withSwapFee", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"with_swap_fee&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.gamm.v2.QuerySpotPriceRequest.withSwapFee is deprecated.
+       *     See osmosis/gamm/v2/query.proto;l=31
+       * @return This builder for chaining.
+       */
+      @java.lang.Deprecated public Builder clearWithSwapFee() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        withSwapFee_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -821,7 +924,7 @@ public final class QueryProto {
   }
   /**
    * <pre>
-   * Depreacted: please use alternate in x/poolmanager
+   * Deprecated: please use alternate in x/poolmanager
    * </pre>
    *
    * Protobuf type {@code osmosis.gamm.v2.QuerySpotPriceResponse}
@@ -1064,7 +1167,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * Depreacted: please use alternate in x/poolmanager
+     * Deprecated: please use alternate in x/poolmanager
      * </pre>
      *
      * Protobuf type {@code osmosis.gamm.v2.QuerySpotPriceResponse}
@@ -1416,12 +1519,14 @@ public final class QueryProto {
       "/coin.proto\032*cosmos/base/query/v1beta1/p" +
       "agination.proto\032\034google/api/annotations." +
       "proto\032\031google/protobuf/any.proto\032\031cosmos" +
-      "_proto/cosmos.proto\"\331\001\n\025QuerySpotPriceRe" +
+      "_proto/cosmos.proto\"\251\002\n\025QuerySpotPriceRe" +
       "quest\022+\n\007pool_id\030\001 \001(\004B\022\362\336\037\016yaml:\"pool_i" +
       "d\"R\006poolId\022E\n\020base_asset_denom\030\002 \001(\tB\033\362\336" +
       "\037\027yaml:\"base_asset_denom\"R\016baseAssetDeno" +
       "m\022H\n\021quote_asset_denom\030\003 \001(\tB\034\362\336\037\030yaml:\"" +
-      "quote_asset_denom\"R\017quoteAssetDenom:\002\030\001\"" +
+      "quote_asset_denom\"R\017quoteAssetDenom\022N\n\013w" +
+      "ithSwapFee\030\004 \001(\010B,\030\001\362\336\037&yaml:\"with_swap_" +
+      "fee\",deprecated:\"true\"R\013withSwapFee:\002\030\001\"" +
       "R\n\026QuerySpotPriceResponse\0224\n\nspot_price\030" +
       "\001 \001(\tB\025\362\336\037\021yaml:\"spot_price\"R\tspotPrice:" +
       "\002\030\0012\232\001\n\005Query\022\220\001\n\tSpotPrice\022&.osmosis.ga" +
@@ -1429,7 +1534,7 @@ public final class QueryProto {
       "mm.v2.QuerySpotPriceResponse\"2\210\002\001\202\323\344\223\002)\022" +
       "\'/osmosis/gamm/v2/pools/{pool_id}/prices" +
       "B\261\001\n\023com.osmosis.gamm.v2B\nQueryProtoZ2gi" +
-      "thub.com/osmosis-labs/osmosis/v15/x/gamm" +
+      "thub.com/osmosis-labs/osmosis/v26/x/gamm" +
       "/v2types\242\002\003OGX\252\002\017Osmosis.Gamm.V2\312\002\017Osmos" +
       "is\\Gamm\\V2\342\002\033Osmosis\\Gamm\\V2\\GPBMetadata" +
       "\352\002\021Osmosis::Gamm::V2b\006proto3"
@@ -1450,7 +1555,7 @@ public final class QueryProto {
     internal_static_osmosis_gamm_v2_QuerySpotPriceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_gamm_v2_QuerySpotPriceRequest_descriptor,
-        new java.lang.String[] { "PoolId", "BaseAssetDenom", "QuoteAssetDenom", });
+        new java.lang.String[] { "PoolId", "BaseAssetDenom", "QuoteAssetDenom", "WithSwapFee", });
     internal_static_osmosis_gamm_v2_QuerySpotPriceResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_osmosis_gamm_v2_QuerySpotPriceResponse_fieldAccessorTable = new

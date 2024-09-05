@@ -297,6 +297,37 @@ public final class MsgGrpc {
     return getAddToConcentratedLiquiditySuperfluidPositionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake,
+      com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse> getUnbondConvertAndStakeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UnbondConvertAndStake",
+      requestType = com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake.class,
+      responseType = com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake,
+      com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse> getUnbondConvertAndStakeMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake, com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse> getUnbondConvertAndStakeMethod;
+    if ((getUnbondConvertAndStakeMethod = MsgGrpc.getUnbondConvertAndStakeMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getUnbondConvertAndStakeMethod = MsgGrpc.getUnbondConvertAndStakeMethod) == null) {
+          MsgGrpc.getUnbondConvertAndStakeMethod = getUnbondConvertAndStakeMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake, com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UnbondConvertAndStake"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("UnbondConvertAndStake"))
+              .build();
+        }
+      }
+    }
+    return getUnbondConvertAndStakeMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -426,6 +457,17 @@ public final class MsgGrpc {
         io.grpc.stub.StreamObserver<com.osmosis.superfluid.TxProto.MsgAddToConcentratedLiquiditySuperfluidPositionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddToConcentratedLiquiditySuperfluidPositionMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * UnbondConvertAndStake breaks all locks / superfluid staked assets,
+     * converts them to osmo then stakes the osmo to the designated validator.
+     * </pre>
+     */
+    default void unbondConvertAndStake(com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake request,
+        io.grpc.stub.StreamObserver<com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUnbondConvertAndStakeMethod(), responseObserver);
+    }
   }
 
   /**
@@ -548,6 +590,18 @@ public final class MsgGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddToConcentratedLiquiditySuperfluidPositionMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * UnbondConvertAndStake breaks all locks / superfluid staked assets,
+     * converts them to osmo then stakes the osmo to the designated validator.
+     * </pre>
+     */
+    public void unbondConvertAndStake(com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake request,
+        io.grpc.stub.StreamObserver<com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUnbondConvertAndStakeMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -646,6 +700,17 @@ public final class MsgGrpc {
     public com.osmosis.superfluid.TxProto.MsgAddToConcentratedLiquiditySuperfluidPositionResponse addToConcentratedLiquiditySuperfluidPosition(com.osmosis.superfluid.TxProto.MsgAddToConcentratedLiquiditySuperfluidPosition request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddToConcentratedLiquiditySuperfluidPositionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UnbondConvertAndStake breaks all locks / superfluid staked assets,
+     * converts them to osmo then stakes the osmo to the designated validator.
+     * </pre>
+     */
+    public com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse unbondConvertAndStake(com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUnbondConvertAndStakeMethod(), getCallOptions(), request);
     }
   }
 
@@ -755,6 +820,18 @@ public final class MsgGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddToConcentratedLiquiditySuperfluidPositionMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * UnbondConvertAndStake breaks all locks / superfluid staked assets,
+     * converts them to osmo then stakes the osmo to the designated validator.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse> unbondConvertAndStake(
+        com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUnbondConvertAndStakeMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SUPERFLUID_DELEGATE = 0;
@@ -766,6 +843,7 @@ public final class MsgGrpc {
   private static final int METHODID_UN_POOL_WHITELISTED_POOL = 6;
   private static final int METHODID_UNLOCK_AND_MIGRATE_SHARES_TO_FULL_RANGE_CONCENTRATED_POSITION = 7;
   private static final int METHODID_ADD_TO_CONCENTRATED_LIQUIDITY_SUPERFLUID_POSITION = 8;
+  private static final int METHODID_UNBOND_CONVERT_AND_STAKE = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -819,6 +897,10 @@ public final class MsgGrpc {
         case METHODID_ADD_TO_CONCENTRATED_LIQUIDITY_SUPERFLUID_POSITION:
           serviceImpl.addToConcentratedLiquiditySuperfluidPosition((com.osmosis.superfluid.TxProto.MsgAddToConcentratedLiquiditySuperfluidPosition) request,
               (io.grpc.stub.StreamObserver<com.osmosis.superfluid.TxProto.MsgAddToConcentratedLiquiditySuperfluidPositionResponse>) responseObserver);
+          break;
+        case METHODID_UNBOND_CONVERT_AND_STAKE:
+          serviceImpl.unbondConvertAndStake((com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -901,6 +983,13 @@ public final class MsgGrpc {
               com.osmosis.superfluid.TxProto.MsgAddToConcentratedLiquiditySuperfluidPosition,
               com.osmosis.superfluid.TxProto.MsgAddToConcentratedLiquiditySuperfluidPositionResponse>(
                 service, METHODID_ADD_TO_CONCENTRATED_LIQUIDITY_SUPERFLUID_POSITION)))
+        .addMethod(
+          getUnbondConvertAndStakeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake,
+              com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse>(
+                service, METHODID_UNBOND_CONVERT_AND_STAKE)))
         .build();
   }
 
@@ -958,6 +1047,7 @@ public final class MsgGrpc {
               .addMethod(getUnPoolWhitelistedPoolMethod())
               .addMethod(getUnlockAndMigrateSharesToFullRangeConcentratedPositionMethod())
               .addMethod(getAddToConcentratedLiquiditySuperfluidPositionMethod())
+              .addMethod(getUnbondConvertAndStakeMethod())
               .build();
         }
       }

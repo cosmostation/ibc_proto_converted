@@ -53,6 +53,64 @@ public final class GenesisProto {
      */
     com.osmosis.txfees.v1beta1.FeetokenProto.FeeTokenOrBuilder getFeetokensOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * DEPRECATED
+     * </pre>
+     *
+     * <code>.osmosis.txfees.v1beta1.TxFeesTracker txFeesTracker = 3 [json_name = "txFeesTracker", deprecated = true, (.gogoproto.moretags) = "deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.txfees.v1beta1.GenesisState.txFeesTracker is deprecated.
+     *     See osmosis/txfees/v1beta1/genesis.proto;l=16
+     * @return Whether the txFeesTracker field is set.
+     */
+    @java.lang.Deprecated boolean hasTxFeesTracker();
+    /**
+     * <pre>
+     * DEPRECATED
+     * </pre>
+     *
+     * <code>.osmosis.txfees.v1beta1.TxFeesTracker txFeesTracker = 3 [json_name = "txFeesTracker", deprecated = true, (.gogoproto.moretags) = "deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.txfees.v1beta1.GenesisState.txFeesTracker is deprecated.
+     *     See osmosis/txfees/v1beta1/genesis.proto;l=16
+     * @return The txFeesTracker.
+     */
+    @java.lang.Deprecated com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker getTxFeesTracker();
+    /**
+     * <pre>
+     * DEPRECATED
+     * </pre>
+     *
+     * <code>.osmosis.txfees.v1beta1.TxFeesTracker txFeesTracker = 3 [json_name = "txFeesTracker", deprecated = true, (.gogoproto.moretags) = "deprecated:&#92;"true&#92;""];</code>
+     */
+    @java.lang.Deprecated com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTrackerOrBuilder getTxFeesTrackerOrBuilder();
+
+    /**
+     * <pre>
+     * params is the container of txfees parameters.
+     * </pre>
+     *
+     * <code>.osmosis.txfees.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params is the container of txfees parameters.
+     * </pre>
+     *
+     * <code>.osmosis.txfees.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.osmosis.txfees.v1beta1.ParamsProto.Params getParams();
+    /**
+     * <pre>
+     * params is the container of txfees parameters.
+     * </pre>
+     *
+     * <code>.osmosis.txfees.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.txfees.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
    * <pre>
@@ -175,6 +233,86 @@ public final class GenesisProto {
       return feetokens_.get(index);
     }
 
+    public static final int TXFEESTRACKER_FIELD_NUMBER = 3;
+    private com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker txFeesTracker_;
+    /**
+     * <pre>
+     * DEPRECATED
+     * </pre>
+     *
+     * <code>.osmosis.txfees.v1beta1.TxFeesTracker txFeesTracker = 3 [json_name = "txFeesTracker", deprecated = true, (.gogoproto.moretags) = "deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.txfees.v1beta1.GenesisState.txFeesTracker is deprecated.
+     *     See osmosis/txfees/v1beta1/genesis.proto;l=16
+     * @return Whether the txFeesTracker field is set.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public boolean hasTxFeesTracker() {
+      return txFeesTracker_ != null;
+    }
+    /**
+     * <pre>
+     * DEPRECATED
+     * </pre>
+     *
+     * <code>.osmosis.txfees.v1beta1.TxFeesTracker txFeesTracker = 3 [json_name = "txFeesTracker", deprecated = true, (.gogoproto.moretags) = "deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.txfees.v1beta1.GenesisState.txFeesTracker is deprecated.
+     *     See osmosis/txfees/v1beta1/genesis.proto;l=16
+     * @return The txFeesTracker.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker getTxFeesTracker() {
+      return txFeesTracker_ == null ? com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker.getDefaultInstance() : txFeesTracker_;
+    }
+    /**
+     * <pre>
+     * DEPRECATED
+     * </pre>
+     *
+     * <code>.osmosis.txfees.v1beta1.TxFeesTracker txFeesTracker = 3 [json_name = "txFeesTracker", deprecated = true, (.gogoproto.moretags) = "deprecated:&#92;"true&#92;""];</code>
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTrackerOrBuilder getTxFeesTrackerOrBuilder() {
+      return txFeesTracker_ == null ? com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker.getDefaultInstance() : txFeesTracker_;
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 4;
+    private com.osmosis.txfees.v1beta1.ParamsProto.Params params_;
+    /**
+     * <pre>
+     * params is the container of txfees parameters.
+     * </pre>
+     *
+     * <code>.osmosis.txfees.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params is the container of txfees parameters.
+     * </pre>
+     *
+     * <code>.osmosis.txfees.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.osmosis.txfees.v1beta1.ParamsProto.Params getParams() {
+      return params_ == null ? com.osmosis.txfees.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params is the container of txfees parameters.
+     * </pre>
+     *
+     * <code>.osmosis.txfees.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.txfees.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.osmosis.txfees.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -195,6 +333,12 @@ public final class GenesisProto {
       for (int i = 0; i < feetokens_.size(); i++) {
         output.writeMessage(2, feetokens_.get(i));
       }
+      if (txFeesTracker_ != null) {
+        output.writeMessage(3, getTxFeesTracker());
+      }
+      if (params_ != null) {
+        output.writeMessage(4, getParams());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -210,6 +354,14 @@ public final class GenesisProto {
       for (int i = 0; i < feetokens_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, feetokens_.get(i));
+      }
+      if (txFeesTracker_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getTxFeesTracker());
+      }
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getParams());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -230,6 +382,16 @@ public final class GenesisProto {
           .equals(other.getBasedenom())) return false;
       if (!getFeetokensList()
           .equals(other.getFeetokensList())) return false;
+      if (hasTxFeesTracker() != other.hasTxFeesTracker()) return false;
+      if (hasTxFeesTracker()) {
+        if (!getTxFeesTracker()
+            .equals(other.getTxFeesTracker())) return false;
+      }
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -246,6 +408,14 @@ public final class GenesisProto {
       if (getFeetokensCount() > 0) {
         hash = (37 * hash) + FEETOKENS_FIELD_NUMBER;
         hash = (53 * hash) + getFeetokensList().hashCode();
+      }
+      if (hasTxFeesTracker()) {
+        hash = (37 * hash) + TXFEESTRACKER_FIELD_NUMBER;
+        hash = (53 * hash) + getTxFeesTracker().hashCode();
+      }
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -390,6 +560,16 @@ public final class GenesisProto {
           feetokensBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
+        txFeesTracker_ = null;
+        if (txFeesTrackerBuilder_ != null) {
+          txFeesTrackerBuilder_.dispose();
+          txFeesTrackerBuilder_ = null;
+        }
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
         return this;
       }
 
@@ -438,6 +618,16 @@ public final class GenesisProto {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.basedenom_ = basedenom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.txFeesTracker_ = txFeesTrackerBuilder_ == null
+              ? txFeesTracker_
+              : txFeesTrackerBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
         }
       }
 
@@ -516,6 +706,12 @@ public final class GenesisProto {
             }
           }
         }
+        if (other.hasTxFeesTracker()) {
+          mergeTxFeesTracker(other.getTxFeesTracker());
+        }
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -560,6 +756,20 @@ public final class GenesisProto {
                 }
                 break;
               } // case 18
+              case 26: {
+                input.readMessage(
+                    getTxFeesTrackerFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -888,6 +1098,320 @@ public final class GenesisProto {
         }
         return feetokensBuilder_;
       }
+
+      private com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker txFeesTracker_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker, com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker.Builder, com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTrackerOrBuilder> txFeesTrackerBuilder_;
+      /**
+       * <pre>
+       * DEPRECATED
+       * </pre>
+       *
+       * <code>.osmosis.txfees.v1beta1.TxFeesTracker txFeesTracker = 3 [json_name = "txFeesTracker", deprecated = true, (.gogoproto.moretags) = "deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.txfees.v1beta1.GenesisState.txFeesTracker is deprecated.
+       *     See osmosis/txfees/v1beta1/genesis.proto;l=16
+       * @return Whether the txFeesTracker field is set.
+       */
+      @java.lang.Deprecated public boolean hasTxFeesTracker() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * DEPRECATED
+       * </pre>
+       *
+       * <code>.osmosis.txfees.v1beta1.TxFeesTracker txFeesTracker = 3 [json_name = "txFeesTracker", deprecated = true, (.gogoproto.moretags) = "deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.txfees.v1beta1.GenesisState.txFeesTracker is deprecated.
+       *     See osmosis/txfees/v1beta1/genesis.proto;l=16
+       * @return The txFeesTracker.
+       */
+      @java.lang.Deprecated public com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker getTxFeesTracker() {
+        if (txFeesTrackerBuilder_ == null) {
+          return txFeesTracker_ == null ? com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker.getDefaultInstance() : txFeesTracker_;
+        } else {
+          return txFeesTrackerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * DEPRECATED
+       * </pre>
+       *
+       * <code>.osmosis.txfees.v1beta1.TxFeesTracker txFeesTracker = 3 [json_name = "txFeesTracker", deprecated = true, (.gogoproto.moretags) = "deprecated:&#92;"true&#92;""];</code>
+       */
+      @java.lang.Deprecated public Builder setTxFeesTracker(com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker value) {
+        if (txFeesTrackerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          txFeesTracker_ = value;
+        } else {
+          txFeesTrackerBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DEPRECATED
+       * </pre>
+       *
+       * <code>.osmosis.txfees.v1beta1.TxFeesTracker txFeesTracker = 3 [json_name = "txFeesTracker", deprecated = true, (.gogoproto.moretags) = "deprecated:&#92;"true&#92;""];</code>
+       */
+      @java.lang.Deprecated public Builder setTxFeesTracker(
+          com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker.Builder builderForValue) {
+        if (txFeesTrackerBuilder_ == null) {
+          txFeesTracker_ = builderForValue.build();
+        } else {
+          txFeesTrackerBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DEPRECATED
+       * </pre>
+       *
+       * <code>.osmosis.txfees.v1beta1.TxFeesTracker txFeesTracker = 3 [json_name = "txFeesTracker", deprecated = true, (.gogoproto.moretags) = "deprecated:&#92;"true&#92;""];</code>
+       */
+      @java.lang.Deprecated public Builder mergeTxFeesTracker(com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker value) {
+        if (txFeesTrackerBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            txFeesTracker_ != null &&
+            txFeesTracker_ != com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker.getDefaultInstance()) {
+            getTxFeesTrackerBuilder().mergeFrom(value);
+          } else {
+            txFeesTracker_ = value;
+          }
+        } else {
+          txFeesTrackerBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DEPRECATED
+       * </pre>
+       *
+       * <code>.osmosis.txfees.v1beta1.TxFeesTracker txFeesTracker = 3 [json_name = "txFeesTracker", deprecated = true, (.gogoproto.moretags) = "deprecated:&#92;"true&#92;""];</code>
+       */
+      @java.lang.Deprecated public Builder clearTxFeesTracker() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        txFeesTracker_ = null;
+        if (txFeesTrackerBuilder_ != null) {
+          txFeesTrackerBuilder_.dispose();
+          txFeesTrackerBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DEPRECATED
+       * </pre>
+       *
+       * <code>.osmosis.txfees.v1beta1.TxFeesTracker txFeesTracker = 3 [json_name = "txFeesTracker", deprecated = true, (.gogoproto.moretags) = "deprecated:&#92;"true&#92;""];</code>
+       */
+      @java.lang.Deprecated public com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker.Builder getTxFeesTrackerBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getTxFeesTrackerFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * DEPRECATED
+       * </pre>
+       *
+       * <code>.osmosis.txfees.v1beta1.TxFeesTracker txFeesTracker = 3 [json_name = "txFeesTracker", deprecated = true, (.gogoproto.moretags) = "deprecated:&#92;"true&#92;""];</code>
+       */
+      @java.lang.Deprecated public com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTrackerOrBuilder getTxFeesTrackerOrBuilder() {
+        if (txFeesTrackerBuilder_ != null) {
+          return txFeesTrackerBuilder_.getMessageOrBuilder();
+        } else {
+          return txFeesTracker_ == null ?
+              com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker.getDefaultInstance() : txFeesTracker_;
+        }
+      }
+      /**
+       * <pre>
+       * DEPRECATED
+       * </pre>
+       *
+       * <code>.osmosis.txfees.v1beta1.TxFeesTracker txFeesTracker = 3 [json_name = "txFeesTracker", deprecated = true, (.gogoproto.moretags) = "deprecated:&#92;"true&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker, com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker.Builder, com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTrackerOrBuilder> 
+          getTxFeesTrackerFieldBuilder() {
+        if (txFeesTrackerBuilder_ == null) {
+          txFeesTrackerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker, com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker.Builder, com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTrackerOrBuilder>(
+                  getTxFeesTracker(),
+                  getParentForChildren(),
+                  isClean());
+          txFeesTracker_ = null;
+        }
+        return txFeesTrackerBuilder_;
+      }
+
+      private com.osmosis.txfees.v1beta1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.txfees.v1beta1.ParamsProto.Params, com.osmosis.txfees.v1beta1.ParamsProto.Params.Builder, com.osmosis.txfees.v1beta1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params is the container of txfees parameters.
+       * </pre>
+       *
+       * <code>.osmosis.txfees.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * params is the container of txfees parameters.
+       * </pre>
+       *
+       * <code>.osmosis.txfees.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.osmosis.txfees.v1beta1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.osmosis.txfees.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params is the container of txfees parameters.
+       * </pre>
+       *
+       * <code>.osmosis.txfees.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.osmosis.txfees.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params is the container of txfees parameters.
+       * </pre>
+       *
+       * <code>.osmosis.txfees.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.osmosis.txfees.v1beta1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params is the container of txfees parameters.
+       * </pre>
+       *
+       * <code>.osmosis.txfees.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.osmosis.txfees.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            params_ != null &&
+            params_ != com.osmosis.txfees.v1beta1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params is the container of txfees parameters.
+       * </pre>
+       *
+       * <code>.osmosis.txfees.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params is the container of txfees parameters.
+       * </pre>
+       *
+       * <code>.osmosis.txfees.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.txfees.v1beta1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params is the container of txfees parameters.
+       * </pre>
+       *
+       * <code>.osmosis.txfees.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.txfees.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.osmosis.txfees.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params is the container of txfees parameters.
+       * </pre>
+       *
+       * <code>.osmosis.txfees.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.txfees.v1beta1.ParamsProto.Params, com.osmosis.txfees.v1beta1.ParamsProto.Params.Builder, com.osmosis.txfees.v1beta1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.txfees.v1beta1.ParamsProto.Params, com.osmosis.txfees.v1beta1.ParamsProto.Params.Builder, com.osmosis.txfees.v1beta1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -952,11 +1476,871 @@ public final class GenesisProto {
 
   }
 
+  public interface TxFeesTrackerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.txfees.v1beta1.TxFeesTracker)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getTxFeesList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getTxFees(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getTxFeesCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getTxFeesOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTxFeesOrBuilder(
+        int index);
+
+    /**
+     * <code>int64 height_accounting_starts_from = 2 [json_name = "heightAccountingStartsFrom", (.gogoproto.moretags) = "yaml:&#92;"height_accounting_starts_from&#92;""];</code>
+     * @return The heightAccountingStartsFrom.
+     */
+    long getHeightAccountingStartsFrom();
+  }
+  /**
+   * Protobuf type {@code osmosis.txfees.v1beta1.TxFeesTracker}
+   */
+  public static final class TxFeesTracker extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.txfees.v1beta1.TxFeesTracker)
+      TxFeesTrackerOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TxFeesTracker.newBuilder() to construct.
+    private TxFeesTracker(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TxFeesTracker() {
+      txFees_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TxFeesTracker();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.txfees.v1beta1.GenesisProto.internal_static_osmosis_txfees_v1beta1_TxFeesTracker_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.txfees.v1beta1.GenesisProto.internal_static_osmosis_txfees_v1beta1_TxFeesTracker_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker.class, com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker.Builder.class);
+    }
+
+    public static final int TX_FEES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> txFees_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getTxFeesList() {
+      return txFees_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getTxFeesOrBuilderList() {
+      return txFees_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getTxFeesCount() {
+      return txFees_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getTxFees(int index) {
+      return txFees_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTxFeesOrBuilder(
+        int index) {
+      return txFees_.get(index);
+    }
+
+    public static final int HEIGHT_ACCOUNTING_STARTS_FROM_FIELD_NUMBER = 2;
+    private long heightAccountingStartsFrom_ = 0L;
+    /**
+     * <code>int64 height_accounting_starts_from = 2 [json_name = "heightAccountingStartsFrom", (.gogoproto.moretags) = "yaml:&#92;"height_accounting_starts_from&#92;""];</code>
+     * @return The heightAccountingStartsFrom.
+     */
+    @java.lang.Override
+    public long getHeightAccountingStartsFrom() {
+      return heightAccountingStartsFrom_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < txFees_.size(); i++) {
+        output.writeMessage(1, txFees_.get(i));
+      }
+      if (heightAccountingStartsFrom_ != 0L) {
+        output.writeInt64(2, heightAccountingStartsFrom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < txFees_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, txFees_.get(i));
+      }
+      if (heightAccountingStartsFrom_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, heightAccountingStartsFrom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker)) {
+        return super.equals(obj);
+      }
+      com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker other = (com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker) obj;
+
+      if (!getTxFeesList()
+          .equals(other.getTxFeesList())) return false;
+      if (getHeightAccountingStartsFrom()
+          != other.getHeightAccountingStartsFrom()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTxFeesCount() > 0) {
+        hash = (37 * hash) + TX_FEES_FIELD_NUMBER;
+        hash = (53 * hash) + getTxFeesList().hashCode();
+      }
+      hash = (37 * hash) + HEIGHT_ACCOUNTING_STARTS_FROM_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getHeightAccountingStartsFrom());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.txfees.v1beta1.TxFeesTracker}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.txfees.v1beta1.TxFeesTracker)
+        com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTrackerOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.txfees.v1beta1.GenesisProto.internal_static_osmosis_txfees_v1beta1_TxFeesTracker_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.txfees.v1beta1.GenesisProto.internal_static_osmosis_txfees_v1beta1_TxFeesTracker_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker.class, com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker.Builder.class);
+      }
+
+      // Construct using com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (txFeesBuilder_ == null) {
+          txFees_ = java.util.Collections.emptyList();
+        } else {
+          txFees_ = null;
+          txFeesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        heightAccountingStartsFrom_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.txfees.v1beta1.GenesisProto.internal_static_osmosis_txfees_v1beta1_TxFeesTracker_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker getDefaultInstanceForType() {
+        return com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker build() {
+        com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker buildPartial() {
+        com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker result = new com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker result) {
+        if (txFeesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            txFees_ = java.util.Collections.unmodifiableList(txFees_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.txFees_ = txFees_;
+        } else {
+          result.txFees_ = txFeesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.heightAccountingStartsFrom_ = heightAccountingStartsFrom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker) {
+          return mergeFrom((com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker other) {
+        if (other == com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker.getDefaultInstance()) return this;
+        if (txFeesBuilder_ == null) {
+          if (!other.txFees_.isEmpty()) {
+            if (txFees_.isEmpty()) {
+              txFees_ = other.txFees_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTxFeesIsMutable();
+              txFees_.addAll(other.txFees_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.txFees_.isEmpty()) {
+            if (txFeesBuilder_.isEmpty()) {
+              txFeesBuilder_.dispose();
+              txFeesBuilder_ = null;
+              txFees_ = other.txFees_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              txFeesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTxFeesFieldBuilder() : null;
+            } else {
+              txFeesBuilder_.addAllMessages(other.txFees_);
+            }
+          }
+        }
+        if (other.getHeightAccountingStartsFrom() != 0L) {
+          setHeightAccountingStartsFrom(other.getHeightAccountingStartsFrom());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (txFeesBuilder_ == null) {
+                  ensureTxFeesIsMutable();
+                  txFees_.add(m);
+                } else {
+                  txFeesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 16: {
+                heightAccountingStartsFrom_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> txFees_ =
+        java.util.Collections.emptyList();
+      private void ensureTxFeesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          txFees_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(txFees_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> txFeesBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getTxFeesList() {
+        if (txFeesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(txFees_);
+        } else {
+          return txFeesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getTxFeesCount() {
+        if (txFeesBuilder_ == null) {
+          return txFees_.size();
+        } else {
+          return txFeesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getTxFees(int index) {
+        if (txFeesBuilder_ == null) {
+          return txFees_.get(index);
+        } else {
+          return txFeesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setTxFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (txFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTxFeesIsMutable();
+          txFees_.set(index, value);
+          onChanged();
+        } else {
+          txFeesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setTxFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (txFeesBuilder_ == null) {
+          ensureTxFeesIsMutable();
+          txFees_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          txFeesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addTxFees(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (txFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTxFeesIsMutable();
+          txFees_.add(value);
+          onChanged();
+        } else {
+          txFeesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addTxFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (txFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTxFeesIsMutable();
+          txFees_.add(index, value);
+          onChanged();
+        } else {
+          txFeesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addTxFees(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (txFeesBuilder_ == null) {
+          ensureTxFeesIsMutable();
+          txFees_.add(builderForValue.build());
+          onChanged();
+        } else {
+          txFeesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addTxFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (txFeesBuilder_ == null) {
+          ensureTxFeesIsMutable();
+          txFees_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          txFeesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllTxFees(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (txFeesBuilder_ == null) {
+          ensureTxFeesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, txFees_);
+          onChanged();
+        } else {
+          txFeesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearTxFees() {
+        if (txFeesBuilder_ == null) {
+          txFees_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          txFeesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeTxFees(int index) {
+        if (txFeesBuilder_ == null) {
+          ensureTxFeesIsMutable();
+          txFees_.remove(index);
+          onChanged();
+        } else {
+          txFeesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getTxFeesBuilder(
+          int index) {
+        return getTxFeesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTxFeesOrBuilder(
+          int index) {
+        if (txFeesBuilder_ == null) {
+          return txFees_.get(index);  } else {
+          return txFeesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getTxFeesOrBuilderList() {
+        if (txFeesBuilder_ != null) {
+          return txFeesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(txFees_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addTxFeesBuilder() {
+        return getTxFeesFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addTxFeesBuilder(
+          int index) {
+        return getTxFeesFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin tx_fees = 1 [json_name = "txFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getTxFeesBuilderList() {
+        return getTxFeesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getTxFeesFieldBuilder() {
+        if (txFeesBuilder_ == null) {
+          txFeesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  txFees_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          txFees_ = null;
+        }
+        return txFeesBuilder_;
+      }
+
+      private long heightAccountingStartsFrom_ ;
+      /**
+       * <code>int64 height_accounting_starts_from = 2 [json_name = "heightAccountingStartsFrom", (.gogoproto.moretags) = "yaml:&#92;"height_accounting_starts_from&#92;""];</code>
+       * @return The heightAccountingStartsFrom.
+       */
+      @java.lang.Override
+      public long getHeightAccountingStartsFrom() {
+        return heightAccountingStartsFrom_;
+      }
+      /**
+       * <code>int64 height_accounting_starts_from = 2 [json_name = "heightAccountingStartsFrom", (.gogoproto.moretags) = "yaml:&#92;"height_accounting_starts_from&#92;""];</code>
+       * @param value The heightAccountingStartsFrom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeightAccountingStartsFrom(long value) {
+
+        heightAccountingStartsFrom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 height_accounting_starts_from = 2 [json_name = "heightAccountingStartsFrom", (.gogoproto.moretags) = "yaml:&#92;"height_accounting_starts_from&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeightAccountingStartsFrom() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        heightAccountingStartsFrom_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.txfees.v1beta1.TxFeesTracker)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.txfees.v1beta1.TxFeesTracker)
+    private static final com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker();
+    }
+
+    public static com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TxFeesTracker>
+        PARSER = new com.google.protobuf.AbstractParser<TxFeesTracker>() {
+      @java.lang.Override
+      public TxFeesTracker parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TxFeesTracker> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TxFeesTracker> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.txfees.v1beta1.GenesisProto.TxFeesTracker getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_txfees_v1beta1_GenesisState_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_txfees_v1beta1_GenesisState_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_txfees_v1beta1_TxFeesTracker_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_txfees_v1beta1_TxFeesTracker_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -969,35 +2353,59 @@ public final class GenesisProto {
       "\n$osmosis/txfees/v1beta1/genesis.proto\022\026" +
       "osmosis.txfees.v1beta1\032\024gogoproto/gogo.p" +
       "roto\032%osmosis/txfees/v1beta1/feetoken.pr" +
-      "oto\"r\n\014GenesisState\022\034\n\tbasedenom\030\001 \001(\tR\t" +
-      "basedenom\022D\n\tfeetokens\030\002 \003(\0132 .osmosis.t" +
-      "xfees.v1beta1.FeeTokenB\004\310\336\037\000R\tfeetokensB" +
-      "\326\001\n\032com.osmosis.txfees.v1beta1B\014GenesisP" +
-      "rotoZ2github.com/osmosis-labs/osmosis/v1" +
-      "5/x/txfees/types\242\002\003OTX\252\002\026Osmosis.Txfees." +
-      "V1beta1\312\002\026Osmosis\\Txfees\\V1beta1\342\002\"Osmos" +
-      "is\\Txfees\\V1beta1\\GPBMetadata\352\002\030Osmosis:" +
-      ":Txfees::V1beta1b\006proto3"
+      "oto\032\036cosmos/base/v1beta1/coin.proto\032#osm" +
+      "osis/txfees/v1beta1/params.proto\"\226\002\n\014Gen" +
+      "esisState\022\034\n\tbasedenom\030\001 \001(\tR\tbasedenom\022" +
+      "D\n\tfeetokens\030\002 \003(\0132 .osmosis.txfees.v1be" +
+      "ta1.FeeTokenB\004\310\336\037\000R\tfeetokens\022d\n\rtxFeesT" +
+      "racker\030\003 \001(\0132%.osmosis.txfees.v1beta1.Tx" +
+      "FeesTrackerB\027\030\001\362\336\037\021deprecated:\"true\"R\rtx" +
+      "FeesTracker\022<\n\006params\030\004 \001(\0132\036.osmosis.tx" +
+      "fees.v1beta1.ParamsB\004\310\336\037\000R\006params\"\342\001\n\rTx" +
+      "FeesTracker\022d\n\007tx_fees\030\001 \003(\0132\031.cosmos.ba" +
+      "se.v1beta1.CoinB0\310\336\037\000\252\337\037(github.com/cosm" +
+      "os/cosmos-sdk/types.CoinsR\006txFees\022k\n\035hei" +
+      "ght_accounting_starts_from\030\002 \001(\003B(\362\336\037$ya" +
+      "ml:\"height_accounting_starts_from\"R\032heig" +
+      "htAccountingStartsFromB\326\001\n\032com.osmosis.t" +
+      "xfees.v1beta1B\014GenesisProtoZ2github.com/" +
+      "osmosis-labs/osmosis/v26/x/txfees/types\242" +
+      "\002\003OTX\252\002\026Osmosis.Txfees.V1beta1\312\002\026Osmosis" +
+      "\\Txfees\\V1beta1\342\002\"Osmosis\\Txfees\\V1beta1" +
+      "\\GPBMetadata\352\002\030Osmosis::Txfees::V1beta1b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.gogoproto.GogoProto.getDescriptor(),
           com.osmosis.txfees.v1beta1.FeetokenProto.getDescriptor(),
+          com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
+          com.osmosis.txfees.v1beta1.ParamsProto.getDescriptor(),
         });
     internal_static_osmosis_txfees_v1beta1_GenesisState_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_osmosis_txfees_v1beta1_GenesisState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_txfees_v1beta1_GenesisState_descriptor,
-        new java.lang.String[] { "Basedenom", "Feetokens", });
+        new java.lang.String[] { "Basedenom", "Feetokens", "TxFeesTracker", "Params", });
+    internal_static_osmosis_txfees_v1beta1_TxFeesTracker_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_osmosis_txfees_v1beta1_TxFeesTracker_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_txfees_v1beta1_TxFeesTracker_descriptor,
+        new java.lang.String[] { "TxFees", "HeightAccountingStartsFrom", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.gogoproto.GogoProto.castrepeated);
+    registry.add(com.gogoproto.GogoProto.moretags);
     registry.add(com.gogoproto.GogoProto.nullable);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.gogoproto.GogoProto.getDescriptor();
     com.osmosis.txfees.v1beta1.FeetokenProto.getDescriptor();
+    com.cosmos.base.v1beta1.CoinProto.getDescriptor();
+    com.osmosis.txfees.v1beta1.ParamsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

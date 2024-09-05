@@ -1024,10 +1024,36 @@ public final class QueryProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint64 pool_id = 2 [json_name = "poolId", (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;""];</code>
+     * <pre>
+     * DEPRECATED
+     * </pre>
+     *
+     * <code>string sender = 1 [json_name = "sender", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"sender&#92;",deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInRequest.sender is deprecated.
+     *     See osmosis/poolmanager/v1beta1/query.proto;l=225
+     * @return The sender.
+     */
+    @java.lang.Deprecated java.lang.String getSender();
+    /**
+     * <pre>
+     * DEPRECATED
+     * </pre>
+     *
+     * <code>string sender = 1 [json_name = "sender", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"sender&#92;",deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInRequest.sender is deprecated.
+     *     See osmosis/poolmanager/v1beta1/query.proto;l=225
+     * @return The bytes for sender.
+     */
+    @java.lang.Deprecated com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <code>uint64 pool_id = 2 [json_name = "poolId", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;",deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInRequest.pool_id is deprecated.
+     *     See osmosis/poolmanager/v1beta1/query.proto;l=229
      * @return The poolId.
      */
-    long getPoolId();
+    @java.lang.Deprecated long getPoolId();
 
     /**
      * <code>string token_in = 3 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
@@ -1082,6 +1108,7 @@ public final class QueryProto {
       super(builder);
     }
     private EstimateSwapExactAmountInRequest() {
+      sender_ = "";
       tokenIn_ = "";
       routes_ = java.util.Collections.emptyList();
     }
@@ -1106,14 +1133,67 @@ public final class QueryProto {
               com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInRequest.Builder.class);
     }
 
+    public static final int SENDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <pre>
+     * DEPRECATED
+     * </pre>
+     *
+     * <code>string sender = 1 [json_name = "sender", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"sender&#92;",deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInRequest.sender is deprecated.
+     *     See osmosis/poolmanager/v1beta1/query.proto;l=225
+     * @return The sender.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * DEPRECATED
+     * </pre>
+     *
+     * <code>string sender = 1 [json_name = "sender", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"sender&#92;",deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInRequest.sender is deprecated.
+     *     See osmosis/poolmanager/v1beta1/query.proto;l=225
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int POOL_ID_FIELD_NUMBER = 2;
     private long poolId_ = 0L;
     /**
-     * <code>uint64 pool_id = 2 [json_name = "poolId", (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;""];</code>
+     * <code>uint64 pool_id = 2 [json_name = "poolId", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;",deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInRequest.pool_id is deprecated.
+     *     See osmosis/poolmanager/v1beta1/query.proto;l=229
      * @return The poolId.
      */
     @java.lang.Override
-    public long getPoolId() {
+    @java.lang.Deprecated public long getPoolId() {
       return poolId_;
     }
 
@@ -1211,6 +1291,9 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
+      }
       if (poolId_ != 0L) {
         output.writeUInt64(2, poolId_);
       }
@@ -1229,6 +1312,9 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
+      }
       if (poolId_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, poolId_);
@@ -1255,6 +1341,8 @@ public final class QueryProto {
       }
       com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInRequest other = (com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInRequest) obj;
 
+      if (!getSender()
+          .equals(other.getSender())) return false;
       if (getPoolId()
           != other.getPoolId()) return false;
       if (!getTokenIn()
@@ -1272,6 +1360,8 @@ public final class QueryProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
       hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getPoolId());
@@ -1416,6 +1506,7 @@ public final class QueryProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
+        sender_ = "";
         poolId_ = 0L;
         tokenIn_ = "";
         if (routesBuilder_ == null) {
@@ -1424,7 +1515,7 @@ public final class QueryProto {
           routes_ = null;
           routesBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -1459,9 +1550,9 @@ public final class QueryProto {
 
       private void buildPartialRepeatedFields(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInRequest result) {
         if (routesBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             routes_ = java.util.Collections.unmodifiableList(routes_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.routes_ = routes_;
         } else {
@@ -1472,9 +1563,12 @@ public final class QueryProto {
       private void buildPartial0(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.poolId_ = poolId_;
+          result.sender_ = sender_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.tokenIn_ = tokenIn_;
         }
       }
@@ -1523,19 +1617,24 @@ public final class QueryProto {
 
       public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInRequest other) {
         if (other == com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInRequest.getDefaultInstance()) return this;
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         if (other.getPoolId() != 0L) {
           setPoolId(other.getPoolId());
         }
         if (!other.getTokenIn().isEmpty()) {
           tokenIn_ = other.tokenIn_;
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (routesBuilder_ == null) {
           if (!other.routes_.isEmpty()) {
             if (routes_.isEmpty()) {
               routes_ = other.routes_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureRoutesIsMutable();
               routes_.addAll(other.routes_);
@@ -1548,7 +1647,7 @@ public final class QueryProto {
               routesBuilder_.dispose();
               routesBuilder_ = null;
               routes_ = other.routes_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
               routesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getRoutesFieldBuilder() : null;
@@ -1583,14 +1682,19 @@ public final class QueryProto {
               case 0:
                 done = true;
                 break;
+              case 10: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
               case 16: {
                 poolId_ = input.readUInt64();
-                bitField0_ |= 0x00000001;
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 26: {
                 tokenIn_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
@@ -1623,33 +1727,141 @@ public final class QueryProto {
       }
       private int bitField0_;
 
-      private long poolId_ ;
+      private java.lang.Object sender_ = "";
       /**
-       * <code>uint64 pool_id = 2 [json_name = "poolId", (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;""];</code>
-       * @return The poolId.
+       * <pre>
+       * DEPRECATED
+       * </pre>
+       *
+       * <code>string sender = 1 [json_name = "sender", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"sender&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInRequest.sender is deprecated.
+       *     See osmosis/poolmanager/v1beta1/query.proto;l=225
+       * @return The sender.
        */
-      @java.lang.Override
-      public long getPoolId() {
-        return poolId_;
+      @java.lang.Deprecated public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>uint64 pool_id = 2 [json_name = "poolId", (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;""];</code>
-       * @param value The poolId to set.
+       * <pre>
+       * DEPRECATED
+       * </pre>
+       *
+       * <code>string sender = 1 [json_name = "sender", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"sender&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInRequest.sender is deprecated.
+       *     See osmosis/poolmanager/v1beta1/query.proto;l=225
+       * @return The bytes for sender.
+       */
+      @java.lang.Deprecated public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * DEPRECATED
+       * </pre>
+       *
+       * <code>string sender = 1 [json_name = "sender", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"sender&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInRequest.sender is deprecated.
+       *     See osmosis/poolmanager/v1beta1/query.proto;l=225
+       * @param value The sender to set.
        * @return This builder for chaining.
        */
-      public Builder setPoolId(long value) {
-
-        poolId_ = value;
+      @java.lang.Deprecated public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 pool_id = 2 [json_name = "poolId", (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;""];</code>
+       * <pre>
+       * DEPRECATED
+       * </pre>
+       *
+       * <code>string sender = 1 [json_name = "sender", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"sender&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInRequest.sender is deprecated.
+       *     See osmosis/poolmanager/v1beta1/query.proto;l=225
        * @return This builder for chaining.
        */
-      public Builder clearPoolId() {
+      @java.lang.Deprecated public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
         bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DEPRECATED
+       * </pre>
+       *
+       * <code>string sender = 1 [json_name = "sender", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"sender&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInRequest.sender is deprecated.
+       *     See osmosis/poolmanager/v1beta1/query.proto;l=225
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      @java.lang.Deprecated public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInRequest.pool_id is deprecated.
+       *     See osmosis/poolmanager/v1beta1/query.proto;l=229
+       * @return The poolId.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInRequest.pool_id is deprecated.
+       *     See osmosis/poolmanager/v1beta1/query.proto;l=229
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      @java.lang.Deprecated public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInRequest.pool_id is deprecated.
+       *     See osmosis/poolmanager/v1beta1/query.proto;l=229
+       * @return This builder for chaining.
+       */
+      @java.lang.Deprecated public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
         poolId_ = 0L;
         onChanged();
         return this;
@@ -1698,7 +1910,7 @@ public final class QueryProto {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         tokenIn_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1708,7 +1920,7 @@ public final class QueryProto {
        */
       public Builder clearTokenIn() {
         tokenIn_ = getDefaultInstance().getTokenIn();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1722,7 +1934,7 @@ public final class QueryProto {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         tokenIn_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1730,9 +1942,9 @@ public final class QueryProto {
       private java.util.List<com.osmosis.poolmanager.v1beta1.SwapRouteProto.SwapAmountInRoute> routes_ =
         java.util.Collections.emptyList();
       private void ensureRoutesIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           routes_ = new java.util.ArrayList<com.osmosis.poolmanager.v1beta1.SwapRouteProto.SwapAmountInRoute>(routes_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -1882,7 +2094,7 @@ public final class QueryProto {
       public Builder clearRoutes() {
         if (routesBuilder_ == null) {
           routes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           routesBuilder_.clear();
@@ -1959,7 +2171,7 @@ public final class QueryProto {
           routesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.osmosis.poolmanager.v1beta1.SwapRouteProto.SwapAmountInRoute, com.osmosis.poolmanager.v1beta1.SwapRouteProto.SwapAmountInRoute.Builder, com.osmosis.poolmanager.v1beta1.SwapRouteProto.SwapAmountInRouteOrBuilder>(
                   routes_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           routes_ = null;
@@ -2025,6 +2237,1047 @@ public final class QueryProto {
 
     @java.lang.Override
     public com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EstimateSwapExactAmountInWithPrimitiveTypesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInWithPrimitiveTypesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;",deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInWithPrimitiveTypesRequest.pool_id is deprecated.
+     *     See osmosis/poolmanager/v1beta1/query.proto;l=240
+     * @return The poolId.
+     */
+    @java.lang.Deprecated long getPoolId();
+
+    /**
+     * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+     * @return The tokenIn.
+     */
+    java.lang.String getTokenIn();
+    /**
+     * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+     * @return The bytes for tokenIn.
+     */
+    com.google.protobuf.ByteString
+        getTokenInBytes();
+
+    /**
+     * <code>repeated uint64 routes_pool_id = 3 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+     * @return A list containing the routesPoolId.
+     */
+    java.util.List<java.lang.Long> getRoutesPoolIdList();
+    /**
+     * <code>repeated uint64 routes_pool_id = 3 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+     * @return The count of routesPoolId.
+     */
+    int getRoutesPoolIdCount();
+    /**
+     * <code>repeated uint64 routes_pool_id = 3 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The routesPoolId at the given index.
+     */
+    long getRoutesPoolId(int index);
+
+    /**
+     * <code>repeated string routes_token_out_denom = 4 [json_name = "routesTokenOutDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_out_denom&#92;""];</code>
+     * @return A list containing the routesTokenOutDenom.
+     */
+    java.util.List<java.lang.String>
+        getRoutesTokenOutDenomList();
+    /**
+     * <code>repeated string routes_token_out_denom = 4 [json_name = "routesTokenOutDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_out_denom&#92;""];</code>
+     * @return The count of routesTokenOutDenom.
+     */
+    int getRoutesTokenOutDenomCount();
+    /**
+     * <code>repeated string routes_token_out_denom = 4 [json_name = "routesTokenOutDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_out_denom&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The routesTokenOutDenom at the given index.
+     */
+    java.lang.String getRoutesTokenOutDenom(int index);
+    /**
+     * <code>repeated string routes_token_out_denom = 4 [json_name = "routesTokenOutDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_out_denom&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the routesTokenOutDenom at the given index.
+     */
+    com.google.protobuf.ByteString
+        getRoutesTokenOutDenomBytes(int index);
+  }
+  /**
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInWithPrimitiveTypesRequest}
+   */
+  public static final class EstimateSwapExactAmountInWithPrimitiveTypesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInWithPrimitiveTypesRequest)
+      EstimateSwapExactAmountInWithPrimitiveTypesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EstimateSwapExactAmountInWithPrimitiveTypesRequest.newBuilder() to construct.
+    private EstimateSwapExactAmountInWithPrimitiveTypesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EstimateSwapExactAmountInWithPrimitiveTypesRequest() {
+      tokenIn_ = "";
+      routesPoolId_ = emptyLongList();
+      routesTokenOutDenom_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EstimateSwapExactAmountInWithPrimitiveTypesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountInWithPrimitiveTypesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountInWithPrimitiveTypesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;",deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInWithPrimitiveTypesRequest.pool_id is deprecated.
+     *     See osmosis/poolmanager/v1beta1/query.proto;l=240
+     * @return The poolId.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int TOKEN_IN_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tokenIn_ = "";
+    /**
+     * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+     * @return The tokenIn.
+     */
+    @java.lang.Override
+    public java.lang.String getTokenIn() {
+      java.lang.Object ref = tokenIn_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tokenIn_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+     * @return The bytes for tokenIn.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenInBytes() {
+      java.lang.Object ref = tokenIn_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tokenIn_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ROUTES_POOL_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList routesPoolId_;
+    /**
+     * <code>repeated uint64 routes_pool_id = 3 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+     * @return A list containing the routesPoolId.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getRoutesPoolIdList() {
+      return routesPoolId_;
+    }
+    /**
+     * <code>repeated uint64 routes_pool_id = 3 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+     * @return The count of routesPoolId.
+     */
+    public int getRoutesPoolIdCount() {
+      return routesPoolId_.size();
+    }
+    /**
+     * <code>repeated uint64 routes_pool_id = 3 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The routesPoolId at the given index.
+     */
+    public long getRoutesPoolId(int index) {
+      return routesPoolId_.getLong(index);
+    }
+    private int routesPoolIdMemoizedSerializedSize = -1;
+
+    public static final int ROUTES_TOKEN_OUT_DENOM_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList routesTokenOutDenom_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string routes_token_out_denom = 4 [json_name = "routesTokenOutDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_out_denom&#92;""];</code>
+     * @return A list containing the routesTokenOutDenom.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getRoutesTokenOutDenomList() {
+      return routesTokenOutDenom_;
+    }
+    /**
+     * <code>repeated string routes_token_out_denom = 4 [json_name = "routesTokenOutDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_out_denom&#92;""];</code>
+     * @return The count of routesTokenOutDenom.
+     */
+    public int getRoutesTokenOutDenomCount() {
+      return routesTokenOutDenom_.size();
+    }
+    /**
+     * <code>repeated string routes_token_out_denom = 4 [json_name = "routesTokenOutDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_out_denom&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The routesTokenOutDenom at the given index.
+     */
+    public java.lang.String getRoutesTokenOutDenom(int index) {
+      return routesTokenOutDenom_.get(index);
+    }
+    /**
+     * <code>repeated string routes_token_out_denom = 4 [json_name = "routesTokenOutDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_out_denom&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the routesTokenOutDenom at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getRoutesTokenOutDenomBytes(int index) {
+      return routesTokenOutDenom_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenIn_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tokenIn_);
+      }
+      if (getRoutesPoolIdList().size() > 0) {
+        output.writeUInt32NoTag(26);
+        output.writeUInt32NoTag(routesPoolIdMemoizedSerializedSize);
+      }
+      for (int i = 0; i < routesPoolId_.size(); i++) {
+        output.writeUInt64NoTag(routesPoolId_.getLong(i));
+      }
+      for (int i = 0; i < routesTokenOutDenom_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, routesTokenOutDenom_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenIn_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, tokenIn_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < routesPoolId_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(routesPoolId_.getLong(i));
+        }
+        size += dataSize;
+        if (!getRoutesPoolIdList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        routesPoolIdMemoizedSerializedSize = dataSize;
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < routesTokenOutDenom_.size(); i++) {
+          dataSize += computeStringSizeNoTag(routesTokenOutDenom_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getRoutesTokenOutDenomList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest other = (com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getTokenIn()
+          .equals(other.getTokenIn())) return false;
+      if (!getRoutesPoolIdList()
+          .equals(other.getRoutesPoolIdList())) return false;
+      if (!getRoutesTokenOutDenomList()
+          .equals(other.getRoutesTokenOutDenomList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + TOKEN_IN_FIELD_NUMBER;
+      hash = (53 * hash) + getTokenIn().hashCode();
+      if (getRoutesPoolIdCount() > 0) {
+        hash = (37 * hash) + ROUTES_POOL_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getRoutesPoolIdList().hashCode();
+      }
+      if (getRoutesTokenOutDenomCount() > 0) {
+        hash = (37 * hash) + ROUTES_TOKEN_OUT_DENOM_FIELD_NUMBER;
+        hash = (53 * hash) + getRoutesTokenOutDenomList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInWithPrimitiveTypesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInWithPrimitiveTypesRequest)
+        com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountInWithPrimitiveTypesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountInWithPrimitiveTypesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        tokenIn_ = "";
+        routesPoolId_ = emptyLongList();
+        routesTokenOutDenom_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountInWithPrimitiveTypesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest result = new com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          routesPoolId_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.routesPoolId_ = routesPoolId_;
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.tokenIn_ = tokenIn_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          routesTokenOutDenom_.makeImmutable();
+          result.routesTokenOutDenom_ = routesTokenOutDenom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (!other.getTokenIn().isEmpty()) {
+          tokenIn_ = other.tokenIn_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.routesPoolId_.isEmpty()) {
+          if (routesPoolId_.isEmpty()) {
+            routesPoolId_ = other.routesPoolId_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureRoutesPoolIdIsMutable();
+            routesPoolId_.addAll(other.routesPoolId_);
+          }
+          onChanged();
+        }
+        if (!other.routesTokenOutDenom_.isEmpty()) {
+          if (routesTokenOutDenom_.isEmpty()) {
+            routesTokenOutDenom_ = other.routesTokenOutDenom_;
+            bitField0_ |= 0x00000008;
+          } else {
+            ensureRoutesTokenOutDenomIsMutable();
+            routesTokenOutDenom_.addAll(other.routesTokenOutDenom_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                tokenIn_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                long v = input.readUInt64();
+                ensureRoutesPoolIdIsMutable();
+                routesPoolId_.addLong(v);
+                break;
+              } // case 24
+              case 26: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureRoutesPoolIdIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  routesPoolId_.addLong(input.readUInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 26
+              case 34: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureRoutesTokenOutDenomIsMutable();
+                routesTokenOutDenom_.add(s);
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInWithPrimitiveTypesRequest.pool_id is deprecated.
+       *     See osmosis/poolmanager/v1beta1/query.proto;l=240
+       * @return The poolId.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInWithPrimitiveTypesRequest.pool_id is deprecated.
+       *     See osmosis/poolmanager/v1beta1/query.proto;l=240
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      @java.lang.Deprecated public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInWithPrimitiveTypesRequest.pool_id is deprecated.
+       *     See osmosis/poolmanager/v1beta1/query.proto;l=240
+       * @return This builder for chaining.
+       */
+      @java.lang.Deprecated public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object tokenIn_ = "";
+      /**
+       * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+       * @return The tokenIn.
+       */
+      public java.lang.String getTokenIn() {
+        java.lang.Object ref = tokenIn_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tokenIn_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+       * @return The bytes for tokenIn.
+       */
+      public com.google.protobuf.ByteString
+          getTokenInBytes() {
+        java.lang.Object ref = tokenIn_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tokenIn_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+       * @param value The tokenIn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenIn(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        tokenIn_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTokenIn() {
+        tokenIn_ = getDefaultInstance().getTokenIn();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+       * @param value The bytes for tokenIn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenInBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        tokenIn_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.LongList routesPoolId_ = emptyLongList();
+      private void ensureRoutesPoolIdIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          routesPoolId_ = mutableCopy(routesPoolId_);
+          bitField0_ |= 0x00000004;
+        }
+      }
+      /**
+       * <code>repeated uint64 routes_pool_id = 3 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+       * @return A list containing the routesPoolId.
+       */
+      public java.util.List<java.lang.Long>
+          getRoutesPoolIdList() {
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(routesPoolId_) : routesPoolId_;
+      }
+      /**
+       * <code>repeated uint64 routes_pool_id = 3 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+       * @return The count of routesPoolId.
+       */
+      public int getRoutesPoolIdCount() {
+        return routesPoolId_.size();
+      }
+      /**
+       * <code>repeated uint64 routes_pool_id = 3 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The routesPoolId at the given index.
+       */
+      public long getRoutesPoolId(int index) {
+        return routesPoolId_.getLong(index);
+      }
+      /**
+       * <code>repeated uint64 routes_pool_id = 3 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The routesPoolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoutesPoolId(
+          int index, long value) {
+
+        ensureRoutesPoolIdIsMutable();
+        routesPoolId_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 routes_pool_id = 3 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+       * @param value The routesPoolId to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRoutesPoolId(long value) {
+
+        ensureRoutesPoolIdIsMutable();
+        routesPoolId_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 routes_pool_id = 3 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+       * @param values The routesPoolId to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllRoutesPoolId(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureRoutesPoolIdIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, routesPoolId_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 routes_pool_id = 3 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRoutesPoolId() {
+        routesPoolId_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList routesTokenOutDenom_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureRoutesTokenOutDenomIsMutable() {
+        if (!routesTokenOutDenom_.isModifiable()) {
+          routesTokenOutDenom_ = new com.google.protobuf.LazyStringArrayList(routesTokenOutDenom_);
+        }
+        bitField0_ |= 0x00000008;
+      }
+      /**
+       * <code>repeated string routes_token_out_denom = 4 [json_name = "routesTokenOutDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_out_denom&#92;""];</code>
+       * @return A list containing the routesTokenOutDenom.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getRoutesTokenOutDenomList() {
+        routesTokenOutDenom_.makeImmutable();
+        return routesTokenOutDenom_;
+      }
+      /**
+       * <code>repeated string routes_token_out_denom = 4 [json_name = "routesTokenOutDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_out_denom&#92;""];</code>
+       * @return The count of routesTokenOutDenom.
+       */
+      public int getRoutesTokenOutDenomCount() {
+        return routesTokenOutDenom_.size();
+      }
+      /**
+       * <code>repeated string routes_token_out_denom = 4 [json_name = "routesTokenOutDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_out_denom&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The routesTokenOutDenom at the given index.
+       */
+      public java.lang.String getRoutesTokenOutDenom(int index) {
+        return routesTokenOutDenom_.get(index);
+      }
+      /**
+       * <code>repeated string routes_token_out_denom = 4 [json_name = "routesTokenOutDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_out_denom&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the routesTokenOutDenom at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getRoutesTokenOutDenomBytes(int index) {
+        return routesTokenOutDenom_.getByteString(index);
+      }
+      /**
+       * <code>repeated string routes_token_out_denom = 4 [json_name = "routesTokenOutDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_out_denom&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The routesTokenOutDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoutesTokenOutDenom(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureRoutesTokenOutDenomIsMutable();
+        routesTokenOutDenom_.set(index, value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string routes_token_out_denom = 4 [json_name = "routesTokenOutDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_out_denom&#92;""];</code>
+       * @param value The routesTokenOutDenom to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRoutesTokenOutDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureRoutesTokenOutDenomIsMutable();
+        routesTokenOutDenom_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string routes_token_out_denom = 4 [json_name = "routesTokenOutDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_out_denom&#92;""];</code>
+       * @param values The routesTokenOutDenom to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllRoutesTokenOutDenom(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureRoutesTokenOutDenomIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, routesTokenOutDenom_);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string routes_token_out_denom = 4 [json_name = "routesTokenOutDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_out_denom&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRoutesTokenOutDenom() {
+        routesTokenOutDenom_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string routes_token_out_denom = 4 [json_name = "routesTokenOutDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_out_denom&#92;""];</code>
+       * @param value The bytes of the routesTokenOutDenom to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRoutesTokenOutDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureRoutesTokenOutDenomIsMutable();
+        routesTokenOutDenom_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInWithPrimitiveTypesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInWithPrimitiveTypesRequest)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EstimateSwapExactAmountInWithPrimitiveTypesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<EstimateSwapExactAmountInWithPrimitiveTypesRequest>() {
+      @java.lang.Override
+      public EstimateSwapExactAmountInWithPrimitiveTypesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EstimateSwapExactAmountInWithPrimitiveTypesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EstimateSwapExactAmountInWithPrimitiveTypesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountInWithPrimitiveTypesRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2808,12 +4061,12 @@ public final class QueryProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
      * @return The tokenOutAmount.
      */
     java.lang.String getTokenOutAmount();
     /**
-     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
      * @return The bytes for tokenOutAmount.
      */
     com.google.protobuf.ByteString
@@ -2859,7 +4112,7 @@ public final class QueryProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object tokenOutAmount_ = "";
     /**
-     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
      * @return The tokenOutAmount.
      */
     @java.lang.Override
@@ -2876,7 +4129,7 @@ public final class QueryProto {
       }
     }
     /**
-     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
      * @return The bytes for tokenOutAmount.
      */
     @java.lang.Override
@@ -3222,7 +4475,7 @@ public final class QueryProto {
 
       private java.lang.Object tokenOutAmount_ = "";
       /**
-       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
        * @return The tokenOutAmount.
        */
       public java.lang.String getTokenOutAmount() {
@@ -3238,7 +4491,7 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
        * @return The bytes for tokenOutAmount.
        */
       public com.google.protobuf.ByteString
@@ -3255,7 +4508,7 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
        * @param value The tokenOutAmount to set.
        * @return This builder for chaining.
        */
@@ -3268,7 +4521,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearTokenOutAmount() {
@@ -3278,7 +4531,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
        * @param value The bytes for tokenOutAmount to set.
        * @return This builder for chaining.
        */
@@ -3360,10 +4613,36 @@ public final class QueryProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint64 pool_id = 2 [json_name = "poolId", (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;""];</code>
+     * <pre>
+     * DEPRECATED
+     * </pre>
+     *
+     * <code>string sender = 1 [json_name = "sender", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"sender&#92;",deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest.sender is deprecated.
+     *     See osmosis/poolmanager/v1beta1/query.proto;l=270
+     * @return The sender.
+     */
+    @java.lang.Deprecated java.lang.String getSender();
+    /**
+     * <pre>
+     * DEPRECATED
+     * </pre>
+     *
+     * <code>string sender = 1 [json_name = "sender", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"sender&#92;",deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest.sender is deprecated.
+     *     See osmosis/poolmanager/v1beta1/query.proto;l=270
+     * @return The bytes for sender.
+     */
+    @java.lang.Deprecated com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <code>uint64 pool_id = 2 [json_name = "poolId", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;",deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest.pool_id is deprecated.
+     *     See osmosis/poolmanager/v1beta1/query.proto;l=274
      * @return The poolId.
      */
-    long getPoolId();
+    @java.lang.Deprecated long getPoolId();
 
     /**
      * <code>repeated .osmosis.poolmanager.v1beta1.SwapAmountOutRoute routes = 3 [json_name = "routes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"routes&#92;""];</code>
@@ -3418,6 +4697,7 @@ public final class QueryProto {
       super(builder);
     }
     private EstimateSwapExactAmountOutRequest() {
+      sender_ = "";
       routes_ = java.util.Collections.emptyList();
       tokenOut_ = "";
     }
@@ -3442,14 +4722,67 @@ public final class QueryProto {
               com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutRequest.Builder.class);
     }
 
+    public static final int SENDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <pre>
+     * DEPRECATED
+     * </pre>
+     *
+     * <code>string sender = 1 [json_name = "sender", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"sender&#92;",deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest.sender is deprecated.
+     *     See osmosis/poolmanager/v1beta1/query.proto;l=270
+     * @return The sender.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * DEPRECATED
+     * </pre>
+     *
+     * <code>string sender = 1 [json_name = "sender", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"sender&#92;",deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest.sender is deprecated.
+     *     See osmosis/poolmanager/v1beta1/query.proto;l=270
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int POOL_ID_FIELD_NUMBER = 2;
     private long poolId_ = 0L;
     /**
-     * <code>uint64 pool_id = 2 [json_name = "poolId", (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;""];</code>
+     * <code>uint64 pool_id = 2 [json_name = "poolId", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;",deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest.pool_id is deprecated.
+     *     See osmosis/poolmanager/v1beta1/query.proto;l=274
      * @return The poolId.
      */
     @java.lang.Override
-    public long getPoolId() {
+    @java.lang.Deprecated public long getPoolId() {
       return poolId_;
     }
 
@@ -3547,6 +4880,9 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
+      }
       if (poolId_ != 0L) {
         output.writeUInt64(2, poolId_);
       }
@@ -3565,6 +4901,9 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
+      }
       if (poolId_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, poolId_);
@@ -3591,6 +4930,8 @@ public final class QueryProto {
       }
       com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutRequest other = (com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutRequest) obj;
 
+      if (!getSender()
+          .equals(other.getSender())) return false;
       if (getPoolId()
           != other.getPoolId()) return false;
       if (!getRoutesList()
@@ -3608,6 +4949,8 @@ public final class QueryProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
       hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getPoolId());
@@ -3752,6 +5095,7 @@ public final class QueryProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
+        sender_ = "";
         poolId_ = 0L;
         if (routesBuilder_ == null) {
           routes_ = java.util.Collections.emptyList();
@@ -3759,7 +5103,7 @@ public final class QueryProto {
           routes_ = null;
           routesBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         tokenOut_ = "";
         return this;
       }
@@ -3795,9 +5139,9 @@ public final class QueryProto {
 
       private void buildPartialRepeatedFields(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutRequest result) {
         if (routesBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             routes_ = java.util.Collections.unmodifiableList(routes_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.routes_ = routes_;
         } else {
@@ -3808,9 +5152,12 @@ public final class QueryProto {
       private void buildPartial0(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
           result.poolId_ = poolId_;
         }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
+        if (((from_bitField0_ & 0x00000008) != 0)) {
           result.tokenOut_ = tokenOut_;
         }
       }
@@ -3859,6 +5206,11 @@ public final class QueryProto {
 
       public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutRequest other) {
         if (other == com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutRequest.getDefaultInstance()) return this;
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         if (other.getPoolId() != 0L) {
           setPoolId(other.getPoolId());
         }
@@ -3866,7 +5218,7 @@ public final class QueryProto {
           if (!other.routes_.isEmpty()) {
             if (routes_.isEmpty()) {
               routes_ = other.routes_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureRoutesIsMutable();
               routes_.addAll(other.routes_);
@@ -3879,7 +5231,7 @@ public final class QueryProto {
               routesBuilder_.dispose();
               routesBuilder_ = null;
               routes_ = other.routes_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000004);
               routesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getRoutesFieldBuilder() : null;
@@ -3890,7 +5242,7 @@ public final class QueryProto {
         }
         if (!other.getTokenOut().isEmpty()) {
           tokenOut_ = other.tokenOut_;
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -3919,9 +5271,14 @@ public final class QueryProto {
               case 0:
                 done = true;
                 break;
+              case 10: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
               case 16: {
                 poolId_ = input.readUInt64();
-                bitField0_ |= 0x00000001;
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 26: {
@@ -3939,7 +5296,7 @@ public final class QueryProto {
               } // case 26
               case 34: {
                 tokenOut_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               default: {
@@ -3959,33 +5316,141 @@ public final class QueryProto {
       }
       private int bitField0_;
 
-      private long poolId_ ;
+      private java.lang.Object sender_ = "";
       /**
-       * <code>uint64 pool_id = 2 [json_name = "poolId", (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;""];</code>
-       * @return The poolId.
+       * <pre>
+       * DEPRECATED
+       * </pre>
+       *
+       * <code>string sender = 1 [json_name = "sender", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"sender&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest.sender is deprecated.
+       *     See osmosis/poolmanager/v1beta1/query.proto;l=270
+       * @return The sender.
        */
-      @java.lang.Override
-      public long getPoolId() {
-        return poolId_;
+      @java.lang.Deprecated public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>uint64 pool_id = 2 [json_name = "poolId", (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;""];</code>
-       * @param value The poolId to set.
+       * <pre>
+       * DEPRECATED
+       * </pre>
+       *
+       * <code>string sender = 1 [json_name = "sender", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"sender&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest.sender is deprecated.
+       *     See osmosis/poolmanager/v1beta1/query.proto;l=270
+       * @return The bytes for sender.
+       */
+      @java.lang.Deprecated public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * DEPRECATED
+       * </pre>
+       *
+       * <code>string sender = 1 [json_name = "sender", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"sender&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest.sender is deprecated.
+       *     See osmosis/poolmanager/v1beta1/query.proto;l=270
+       * @param value The sender to set.
        * @return This builder for chaining.
        */
-      public Builder setPoolId(long value) {
-
-        poolId_ = value;
+      @java.lang.Deprecated public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 pool_id = 2 [json_name = "poolId", (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;""];</code>
+       * <pre>
+       * DEPRECATED
+       * </pre>
+       *
+       * <code>string sender = 1 [json_name = "sender", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"sender&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest.sender is deprecated.
+       *     See osmosis/poolmanager/v1beta1/query.proto;l=270
        * @return This builder for chaining.
        */
-      public Builder clearPoolId() {
+      @java.lang.Deprecated public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
         bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DEPRECATED
+       * </pre>
+       *
+       * <code>string sender = 1 [json_name = "sender", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"sender&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest.sender is deprecated.
+       *     See osmosis/poolmanager/v1beta1/query.proto;l=270
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      @java.lang.Deprecated public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest.pool_id is deprecated.
+       *     See osmosis/poolmanager/v1beta1/query.proto;l=274
+       * @return The poolId.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest.pool_id is deprecated.
+       *     See osmosis/poolmanager/v1beta1/query.proto;l=274
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      @java.lang.Deprecated public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest.pool_id is deprecated.
+       *     See osmosis/poolmanager/v1beta1/query.proto;l=274
+       * @return This builder for chaining.
+       */
+      @java.lang.Deprecated public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
         poolId_ = 0L;
         onChanged();
         return this;
@@ -3994,9 +5459,9 @@ public final class QueryProto {
       private java.util.List<com.osmosis.poolmanager.v1beta1.SwapRouteProto.SwapAmountOutRoute> routes_ =
         java.util.Collections.emptyList();
       private void ensureRoutesIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           routes_ = new java.util.ArrayList<com.osmosis.poolmanager.v1beta1.SwapRouteProto.SwapAmountOutRoute>(routes_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -4146,7 +5611,7 @@ public final class QueryProto {
       public Builder clearRoutes() {
         if (routesBuilder_ == null) {
           routes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           routesBuilder_.clear();
@@ -4223,7 +5688,7 @@ public final class QueryProto {
           routesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.osmosis.poolmanager.v1beta1.SwapRouteProto.SwapAmountOutRoute, com.osmosis.poolmanager.v1beta1.SwapRouteProto.SwapAmountOutRoute.Builder, com.osmosis.poolmanager.v1beta1.SwapRouteProto.SwapAmountOutRouteOrBuilder>(
                   routes_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           routes_ = null;
@@ -4274,7 +5739,7 @@ public final class QueryProto {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         tokenOut_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -4284,7 +5749,7 @@ public final class QueryProto {
        */
       public Builder clearTokenOut() {
         tokenOut_ = getDefaultInstance().getTokenOut();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -4298,7 +5763,7 @@ public final class QueryProto {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         tokenOut_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -4361,6 +5826,1047 @@ public final class QueryProto {
 
     @java.lang.Override
     public com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EstimateSwapExactAmountOutWithPrimitiveTypesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutWithPrimitiveTypesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;",deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutWithPrimitiveTypesRequest.pool_id is deprecated.
+     *     See osmosis/poolmanager/v1beta1/query.proto;l=286
+     * @return The poolId.
+     */
+    @java.lang.Deprecated long getPoolId();
+
+    /**
+     * <code>repeated uint64 routes_pool_id = 2 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+     * @return A list containing the routesPoolId.
+     */
+    java.util.List<java.lang.Long> getRoutesPoolIdList();
+    /**
+     * <code>repeated uint64 routes_pool_id = 2 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+     * @return The count of routesPoolId.
+     */
+    int getRoutesPoolIdCount();
+    /**
+     * <code>repeated uint64 routes_pool_id = 2 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The routesPoolId at the given index.
+     */
+    long getRoutesPoolId(int index);
+
+    /**
+     * <code>repeated string routes_token_in_denom = 3 [json_name = "routesTokenInDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_in_denom&#92;""];</code>
+     * @return A list containing the routesTokenInDenom.
+     */
+    java.util.List<java.lang.String>
+        getRoutesTokenInDenomList();
+    /**
+     * <code>repeated string routes_token_in_denom = 3 [json_name = "routesTokenInDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_in_denom&#92;""];</code>
+     * @return The count of routesTokenInDenom.
+     */
+    int getRoutesTokenInDenomCount();
+    /**
+     * <code>repeated string routes_token_in_denom = 3 [json_name = "routesTokenInDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_in_denom&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The routesTokenInDenom at the given index.
+     */
+    java.lang.String getRoutesTokenInDenom(int index);
+    /**
+     * <code>repeated string routes_token_in_denom = 3 [json_name = "routesTokenInDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_in_denom&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the routesTokenInDenom at the given index.
+     */
+    com.google.protobuf.ByteString
+        getRoutesTokenInDenomBytes(int index);
+
+    /**
+     * <code>string token_out = 4 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+     * @return The tokenOut.
+     */
+    java.lang.String getTokenOut();
+    /**
+     * <code>string token_out = 4 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+     * @return The bytes for tokenOut.
+     */
+    com.google.protobuf.ByteString
+        getTokenOutBytes();
+  }
+  /**
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutWithPrimitiveTypesRequest}
+   */
+  public static final class EstimateSwapExactAmountOutWithPrimitiveTypesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutWithPrimitiveTypesRequest)
+      EstimateSwapExactAmountOutWithPrimitiveTypesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EstimateSwapExactAmountOutWithPrimitiveTypesRequest.newBuilder() to construct.
+    private EstimateSwapExactAmountOutWithPrimitiveTypesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EstimateSwapExactAmountOutWithPrimitiveTypesRequest() {
+      routesPoolId_ = emptyLongList();
+      routesTokenInDenom_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      tokenOut_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EstimateSwapExactAmountOutWithPrimitiveTypesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountOutWithPrimitiveTypesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountOutWithPrimitiveTypesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;",deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutWithPrimitiveTypesRequest.pool_id is deprecated.
+     *     See osmosis/poolmanager/v1beta1/query.proto;l=286
+     * @return The poolId.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int ROUTES_POOL_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList routesPoolId_;
+    /**
+     * <code>repeated uint64 routes_pool_id = 2 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+     * @return A list containing the routesPoolId.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getRoutesPoolIdList() {
+      return routesPoolId_;
+    }
+    /**
+     * <code>repeated uint64 routes_pool_id = 2 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+     * @return The count of routesPoolId.
+     */
+    public int getRoutesPoolIdCount() {
+      return routesPoolId_.size();
+    }
+    /**
+     * <code>repeated uint64 routes_pool_id = 2 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The routesPoolId at the given index.
+     */
+    public long getRoutesPoolId(int index) {
+      return routesPoolId_.getLong(index);
+    }
+    private int routesPoolIdMemoizedSerializedSize = -1;
+
+    public static final int ROUTES_TOKEN_IN_DENOM_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList routesTokenInDenom_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string routes_token_in_denom = 3 [json_name = "routesTokenInDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_in_denom&#92;""];</code>
+     * @return A list containing the routesTokenInDenom.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getRoutesTokenInDenomList() {
+      return routesTokenInDenom_;
+    }
+    /**
+     * <code>repeated string routes_token_in_denom = 3 [json_name = "routesTokenInDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_in_denom&#92;""];</code>
+     * @return The count of routesTokenInDenom.
+     */
+    public int getRoutesTokenInDenomCount() {
+      return routesTokenInDenom_.size();
+    }
+    /**
+     * <code>repeated string routes_token_in_denom = 3 [json_name = "routesTokenInDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_in_denom&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The routesTokenInDenom at the given index.
+     */
+    public java.lang.String getRoutesTokenInDenom(int index) {
+      return routesTokenInDenom_.get(index);
+    }
+    /**
+     * <code>repeated string routes_token_in_denom = 3 [json_name = "routesTokenInDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_in_denom&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the routesTokenInDenom at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getRoutesTokenInDenomBytes(int index) {
+      return routesTokenInDenom_.getByteString(index);
+    }
+
+    public static final int TOKEN_OUT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tokenOut_ = "";
+    /**
+     * <code>string token_out = 4 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+     * @return The tokenOut.
+     */
+    @java.lang.Override
+    public java.lang.String getTokenOut() {
+      java.lang.Object ref = tokenOut_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tokenOut_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string token_out = 4 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+     * @return The bytes for tokenOut.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenOutBytes() {
+      java.lang.Object ref = tokenOut_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tokenOut_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (getRoutesPoolIdList().size() > 0) {
+        output.writeUInt32NoTag(18);
+        output.writeUInt32NoTag(routesPoolIdMemoizedSerializedSize);
+      }
+      for (int i = 0; i < routesPoolId_.size(); i++) {
+        output.writeUInt64NoTag(routesPoolId_.getLong(i));
+      }
+      for (int i = 0; i < routesTokenInDenom_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, routesTokenInDenom_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenOut_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, tokenOut_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < routesPoolId_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(routesPoolId_.getLong(i));
+        }
+        size += dataSize;
+        if (!getRoutesPoolIdList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        routesPoolIdMemoizedSerializedSize = dataSize;
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < routesTokenInDenom_.size(); i++) {
+          dataSize += computeStringSizeNoTag(routesTokenInDenom_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getRoutesTokenInDenomList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenOut_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, tokenOut_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest other = (com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getRoutesPoolIdList()
+          .equals(other.getRoutesPoolIdList())) return false;
+      if (!getRoutesTokenInDenomList()
+          .equals(other.getRoutesTokenInDenomList())) return false;
+      if (!getTokenOut()
+          .equals(other.getTokenOut())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      if (getRoutesPoolIdCount() > 0) {
+        hash = (37 * hash) + ROUTES_POOL_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getRoutesPoolIdList().hashCode();
+      }
+      if (getRoutesTokenInDenomCount() > 0) {
+        hash = (37 * hash) + ROUTES_TOKEN_IN_DENOM_FIELD_NUMBER;
+        hash = (53 * hash) + getRoutesTokenInDenomList().hashCode();
+      }
+      hash = (37 * hash) + TOKEN_OUT_FIELD_NUMBER;
+      hash = (53 * hash) + getTokenOut().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutWithPrimitiveTypesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutWithPrimitiveTypesRequest)
+        com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountOutWithPrimitiveTypesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountOutWithPrimitiveTypesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        routesPoolId_ = emptyLongList();
+        routesTokenInDenom_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        tokenOut_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountOutWithPrimitiveTypesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest result = new com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest result) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          routesPoolId_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.routesPoolId_ = routesPoolId_;
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          routesTokenInDenom_.makeImmutable();
+          result.routesTokenInDenom_ = routesTokenInDenom_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.tokenOut_ = tokenOut_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (!other.routesPoolId_.isEmpty()) {
+          if (routesPoolId_.isEmpty()) {
+            routesPoolId_ = other.routesPoolId_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureRoutesPoolIdIsMutable();
+            routesPoolId_.addAll(other.routesPoolId_);
+          }
+          onChanged();
+        }
+        if (!other.routesTokenInDenom_.isEmpty()) {
+          if (routesTokenInDenom_.isEmpty()) {
+            routesTokenInDenom_ = other.routesTokenInDenom_;
+            bitField0_ |= 0x00000004;
+          } else {
+            ensureRoutesTokenInDenomIsMutable();
+            routesTokenInDenom_.addAll(other.routesTokenInDenom_);
+          }
+          onChanged();
+        }
+        if (!other.getTokenOut().isEmpty()) {
+          tokenOut_ = other.tokenOut_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                long v = input.readUInt64();
+                ensureRoutesPoolIdIsMutable();
+                routesPoolId_.addLong(v);
+                break;
+              } // case 16
+              case 18: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureRoutesPoolIdIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  routesPoolId_.addLong(input.readUInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 18
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureRoutesTokenInDenomIsMutable();
+                routesTokenInDenom_.add(s);
+                break;
+              } // case 26
+              case 34: {
+                tokenOut_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutWithPrimitiveTypesRequest.pool_id is deprecated.
+       *     See osmosis/poolmanager/v1beta1/query.proto;l=286
+       * @return The poolId.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutWithPrimitiveTypesRequest.pool_id is deprecated.
+       *     See osmosis/poolmanager/v1beta1/query.proto;l=286
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      @java.lang.Deprecated public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId", deprecated = true, (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;",deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutWithPrimitiveTypesRequest.pool_id is deprecated.
+       *     See osmosis/poolmanager/v1beta1/query.proto;l=286
+       * @return This builder for chaining.
+       */
+      @java.lang.Deprecated public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.LongList routesPoolId_ = emptyLongList();
+      private void ensureRoutesPoolIdIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          routesPoolId_ = mutableCopy(routesPoolId_);
+          bitField0_ |= 0x00000002;
+        }
+      }
+      /**
+       * <code>repeated uint64 routes_pool_id = 2 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+       * @return A list containing the routesPoolId.
+       */
+      public java.util.List<java.lang.Long>
+          getRoutesPoolIdList() {
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(routesPoolId_) : routesPoolId_;
+      }
+      /**
+       * <code>repeated uint64 routes_pool_id = 2 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+       * @return The count of routesPoolId.
+       */
+      public int getRoutesPoolIdCount() {
+        return routesPoolId_.size();
+      }
+      /**
+       * <code>repeated uint64 routes_pool_id = 2 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The routesPoolId at the given index.
+       */
+      public long getRoutesPoolId(int index) {
+        return routesPoolId_.getLong(index);
+      }
+      /**
+       * <code>repeated uint64 routes_pool_id = 2 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The routesPoolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoutesPoolId(
+          int index, long value) {
+
+        ensureRoutesPoolIdIsMutable();
+        routesPoolId_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 routes_pool_id = 2 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+       * @param value The routesPoolId to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRoutesPoolId(long value) {
+
+        ensureRoutesPoolIdIsMutable();
+        routesPoolId_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 routes_pool_id = 2 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+       * @param values The routesPoolId to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllRoutesPoolId(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureRoutesPoolIdIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, routesPoolId_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 routes_pool_id = 2 [json_name = "routesPoolId", (.gogoproto.moretags) = "yaml:&#92;"routes_pool_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRoutesPoolId() {
+        routesPoolId_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList routesTokenInDenom_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureRoutesTokenInDenomIsMutable() {
+        if (!routesTokenInDenom_.isModifiable()) {
+          routesTokenInDenom_ = new com.google.protobuf.LazyStringArrayList(routesTokenInDenom_);
+        }
+        bitField0_ |= 0x00000004;
+      }
+      /**
+       * <code>repeated string routes_token_in_denom = 3 [json_name = "routesTokenInDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_in_denom&#92;""];</code>
+       * @return A list containing the routesTokenInDenom.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getRoutesTokenInDenomList() {
+        routesTokenInDenom_.makeImmutable();
+        return routesTokenInDenom_;
+      }
+      /**
+       * <code>repeated string routes_token_in_denom = 3 [json_name = "routesTokenInDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_in_denom&#92;""];</code>
+       * @return The count of routesTokenInDenom.
+       */
+      public int getRoutesTokenInDenomCount() {
+        return routesTokenInDenom_.size();
+      }
+      /**
+       * <code>repeated string routes_token_in_denom = 3 [json_name = "routesTokenInDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_in_denom&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The routesTokenInDenom at the given index.
+       */
+      public java.lang.String getRoutesTokenInDenom(int index) {
+        return routesTokenInDenom_.get(index);
+      }
+      /**
+       * <code>repeated string routes_token_in_denom = 3 [json_name = "routesTokenInDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_in_denom&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the routesTokenInDenom at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getRoutesTokenInDenomBytes(int index) {
+        return routesTokenInDenom_.getByteString(index);
+      }
+      /**
+       * <code>repeated string routes_token_in_denom = 3 [json_name = "routesTokenInDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_in_denom&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The routesTokenInDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoutesTokenInDenom(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureRoutesTokenInDenomIsMutable();
+        routesTokenInDenom_.set(index, value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string routes_token_in_denom = 3 [json_name = "routesTokenInDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_in_denom&#92;""];</code>
+       * @param value The routesTokenInDenom to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRoutesTokenInDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureRoutesTokenInDenomIsMutable();
+        routesTokenInDenom_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string routes_token_in_denom = 3 [json_name = "routesTokenInDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_in_denom&#92;""];</code>
+       * @param values The routesTokenInDenom to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllRoutesTokenInDenom(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureRoutesTokenInDenomIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, routesTokenInDenom_);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string routes_token_in_denom = 3 [json_name = "routesTokenInDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_in_denom&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRoutesTokenInDenom() {
+        routesTokenInDenom_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string routes_token_in_denom = 3 [json_name = "routesTokenInDenom", (.gogoproto.moretags) = "yaml:&#92;"routes_token_in_denom&#92;""];</code>
+       * @param value The bytes of the routesTokenInDenom to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRoutesTokenInDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureRoutesTokenInDenomIsMutable();
+        routesTokenInDenom_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object tokenOut_ = "";
+      /**
+       * <code>string token_out = 4 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+       * @return The tokenOut.
+       */
+      public java.lang.String getTokenOut() {
+        java.lang.Object ref = tokenOut_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tokenOut_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string token_out = 4 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+       * @return The bytes for tokenOut.
+       */
+      public com.google.protobuf.ByteString
+          getTokenOutBytes() {
+        java.lang.Object ref = tokenOut_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tokenOut_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string token_out = 4 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+       * @param value The tokenOut to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenOut(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        tokenOut_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string token_out = 4 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTokenOut() {
+        tokenOut_ = getDefaultInstance().getTokenOut();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string token_out = 4 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+       * @param value The bytes for tokenOut to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenOutBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        tokenOut_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutWithPrimitiveTypesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutWithPrimitiveTypesRequest)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EstimateSwapExactAmountOutWithPrimitiveTypesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<EstimateSwapExactAmountOutWithPrimitiveTypesRequest>() {
+      @java.lang.Override
+      public EstimateSwapExactAmountOutWithPrimitiveTypesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EstimateSwapExactAmountOutWithPrimitiveTypesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EstimateSwapExactAmountOutWithPrimitiveTypesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.EstimateSwapExactAmountOutWithPrimitiveTypesRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5144,12 +7650,12 @@ public final class QueryProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
      * @return The tokenInAmount.
      */
     java.lang.String getTokenInAmount();
     /**
-     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
      * @return The bytes for tokenInAmount.
      */
     com.google.protobuf.ByteString
@@ -5195,7 +7701,7 @@ public final class QueryProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object tokenInAmount_ = "";
     /**
-     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
      * @return The tokenInAmount.
      */
     @java.lang.Override
@@ -5212,7 +7718,7 @@ public final class QueryProto {
       }
     }
     /**
-     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
      * @return The bytes for tokenInAmount.
      */
     @java.lang.Override
@@ -5558,7 +8064,7 @@ public final class QueryProto {
 
       private java.lang.Object tokenInAmount_ = "";
       /**
-       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
        * @return The tokenInAmount.
        */
       public java.lang.String getTokenInAmount() {
@@ -5574,7 +8080,7 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
        * @return The bytes for tokenInAmount.
        */
       public com.google.protobuf.ByteString
@@ -5591,7 +8097,7 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
        * @param value The tokenInAmount to set.
        * @return This builder for chaining.
        */
@@ -5604,7 +8110,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearTokenInAmount() {
@@ -5614,7 +8120,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
        * @param value The bytes for tokenInAmount to set.
        * @return This builder for chaining.
        */
@@ -8845,6 +11351,1350 @@ public final class QueryProto {
 
   }
 
+  public interface ListPoolsByDenomRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.ListPoolsByDenomRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+  }
+  /**
+   * <pre>
+   * =======================================================
+   * ListPoolsByDenomRequest
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.ListPoolsByDenomRequest}
+   */
+  public static final class ListPoolsByDenomRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.ListPoolsByDenomRequest)
+      ListPoolsByDenomRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListPoolsByDenomRequest.newBuilder() to construct.
+    private ListPoolsByDenomRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListPoolsByDenomRequest() {
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListPoolsByDenomRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_ListPoolsByDenomRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_ListPoolsByDenomRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest other = (com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * =======================================================
+     * ListPoolsByDenomRequest
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.ListPoolsByDenomRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.ListPoolsByDenomRequest)
+        com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_ListPoolsByDenomRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_ListPoolsByDenomRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_ListPoolsByDenomRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest result = new com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.ListPoolsByDenomRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.ListPoolsByDenomRequest)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListPoolsByDenomRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListPoolsByDenomRequest>() {
+      @java.lang.Override
+      public ListPoolsByDenomRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListPoolsByDenomRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListPoolsByDenomRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListPoolsByDenomResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.ListPoolsByDenomResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    java.util.List<com.google.protobuf.Any> 
+        getPoolsList();
+    /**
+     * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    com.google.protobuf.Any getPools(int index);
+    /**
+     * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    int getPoolsCount();
+    /**
+     * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
+        getPoolsOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    com.google.protobuf.AnyOrBuilder getPoolsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.ListPoolsByDenomResponse}
+   */
+  public static final class ListPoolsByDenomResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.ListPoolsByDenomResponse)
+      ListPoolsByDenomResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListPoolsByDenomResponse.newBuilder() to construct.
+    private ListPoolsByDenomResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListPoolsByDenomResponse() {
+      pools_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListPoolsByDenomResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_ListPoolsByDenomResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_ListPoolsByDenomResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse.class, com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse.Builder.class);
+    }
+
+    public static final int POOLS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.google.protobuf.Any> pools_;
+    /**
+     * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.Any> getPoolsList() {
+      return pools_;
+    }
+    /**
+     * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
+        getPoolsOrBuilderList() {
+      return pools_;
+    }
+    /**
+     * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    @java.lang.Override
+    public int getPoolsCount() {
+      return pools_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Any getPools(int index) {
+      return pools_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.AnyOrBuilder getPoolsOrBuilder(
+        int index) {
+      return pools_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < pools_.size(); i++) {
+        output.writeMessage(1, pools_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < pools_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, pools_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse other = (com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse) obj;
+
+      if (!getPoolsList()
+          .equals(other.getPoolsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPoolsCount() > 0) {
+        hash = (37 * hash) + POOLS_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.ListPoolsByDenomResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.ListPoolsByDenomResponse)
+        com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_ListPoolsByDenomResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_ListPoolsByDenomResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse.class, com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (poolsBuilder_ == null) {
+          pools_ = java.util.Collections.emptyList();
+        } else {
+          pools_ = null;
+          poolsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_ListPoolsByDenomResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse result = new com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse result) {
+        if (poolsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            pools_ = java.util.Collections.unmodifiableList(pools_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.pools_ = pools_;
+        } else {
+          result.pools_ = poolsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse.getDefaultInstance()) return this;
+        if (poolsBuilder_ == null) {
+          if (!other.pools_.isEmpty()) {
+            if (pools_.isEmpty()) {
+              pools_ = other.pools_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePoolsIsMutable();
+              pools_.addAll(other.pools_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.pools_.isEmpty()) {
+            if (poolsBuilder_.isEmpty()) {
+              poolsBuilder_.dispose();
+              poolsBuilder_ = null;
+              pools_ = other.pools_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              poolsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPoolsFieldBuilder() : null;
+            } else {
+              poolsBuilder_.addAllMessages(other.pools_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.Any m =
+                    input.readMessage(
+                        com.google.protobuf.Any.parser(),
+                        extensionRegistry);
+                if (poolsBuilder_ == null) {
+                  ensurePoolsIsMutable();
+                  pools_.add(m);
+                } else {
+                  poolsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.google.protobuf.Any> pools_ =
+        java.util.Collections.emptyList();
+      private void ensurePoolsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          pools_ = new java.util.ArrayList<com.google.protobuf.Any>(pools_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> poolsBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public java.util.List<com.google.protobuf.Any> getPoolsList() {
+        if (poolsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(pools_);
+        } else {
+          return poolsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public int getPoolsCount() {
+        if (poolsBuilder_ == null) {
+          return pools_.size();
+        } else {
+          return poolsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public com.google.protobuf.Any getPools(int index) {
+        if (poolsBuilder_ == null) {
+          return pools_.get(index);
+        } else {
+          return poolsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder setPools(
+          int index, com.google.protobuf.Any value) {
+        if (poolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolsIsMutable();
+          pools_.set(index, value);
+          onChanged();
+        } else {
+          poolsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder setPools(
+          int index, com.google.protobuf.Any.Builder builderForValue) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          poolsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder addPools(com.google.protobuf.Any value) {
+        if (poolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolsIsMutable();
+          pools_.add(value);
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder addPools(
+          int index, com.google.protobuf.Any value) {
+        if (poolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolsIsMutable();
+          pools_.add(index, value);
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder addPools(
+          com.google.protobuf.Any.Builder builderForValue) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.add(builderForValue.build());
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder addPools(
+          int index, com.google.protobuf.Any.Builder builderForValue) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder addAllPools(
+          java.lang.Iterable<? extends com.google.protobuf.Any> values) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, pools_);
+          onChanged();
+        } else {
+          poolsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder clearPools() {
+        if (poolsBuilder_ == null) {
+          pools_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          poolsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder removePools(int index) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.remove(index);
+          onChanged();
+        } else {
+          poolsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public com.google.protobuf.Any.Builder getPoolsBuilder(
+          int index) {
+        return getPoolsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public com.google.protobuf.AnyOrBuilder getPoolsOrBuilder(
+          int index) {
+        if (poolsBuilder_ == null) {
+          return pools_.get(index);  } else {
+          return poolsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
+           getPoolsOrBuilderList() {
+        if (poolsBuilder_ != null) {
+          return poolsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(pools_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public com.google.protobuf.Any.Builder addPoolsBuilder() {
+        return getPoolsFieldBuilder().addBuilder(
+            com.google.protobuf.Any.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public com.google.protobuf.Any.Builder addPoolsBuilder(
+          int index) {
+        return getPoolsFieldBuilder().addBuilder(
+            index, com.google.protobuf.Any.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public java.util.List<com.google.protobuf.Any.Builder> 
+           getPoolsBuilderList() {
+        return getPoolsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
+          getPoolsFieldBuilder() {
+        if (poolsBuilder_ == null) {
+          poolsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
+                  pools_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          pools_ = null;
+        }
+        return poolsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.ListPoolsByDenomResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.ListPoolsByDenomResponse)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListPoolsByDenomResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListPoolsByDenomResponse>() {
+      @java.lang.Override
+      public ListPoolsByDenomResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListPoolsByDenomResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListPoolsByDenomResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.ListPoolsByDenomResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface SpotPriceRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.SpotPriceRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -8881,6 +12731,7 @@ public final class QueryProto {
   }
   /**
    * <pre>
+   * ==========================================================
    * SpotPriceRequest defines the gRPC request structure for a SpotPrice
    * query.
    * </pre>
@@ -9190,6 +13041,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
+     * ==========================================================
      * SpotPriceRequest defines the gRPC request structure for a SpotPrice
      * query.
      * </pre>
@@ -10238,7 +14090,7 @@ public final class QueryProto {
   }
   /**
    * <pre>
-   *=============================== PoolLiquidity
+   *=============================== TotalPoolLiquidity
    * </pre>
    *
    * Protobuf type {@code osmosis.poolmanager.v1beta1.TotalPoolLiquidityRequest}
@@ -10446,7 +14298,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     *=============================== PoolLiquidity
+     *=============================== TotalPoolLiquidity
      * </pre>
      *
      * Protobuf type {@code osmosis.poolmanager.v1beta1.TotalPoolLiquidityRequest}
@@ -11493,6 +15345,14208 @@ public final class QueryProto {
 
   }
 
+  public interface TotalLiquidityRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.TotalLiquidityRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   *=============================== TotalLiquidity
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.TotalLiquidityRequest}
+   */
+  public static final class TotalLiquidityRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.TotalLiquidityRequest)
+      TotalLiquidityRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TotalLiquidityRequest.newBuilder() to construct.
+    private TotalLiquidityRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TotalLiquidityRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TotalLiquidityRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TotalLiquidityRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TotalLiquidityRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest other = (com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     *=============================== TotalLiquidity
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.TotalLiquidityRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.TotalLiquidityRequest)
+        com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TotalLiquidityRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TotalLiquidityRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TotalLiquidityRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest result = new com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.TotalLiquidityRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.TotalLiquidityRequest)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TotalLiquidityRequest>
+        PARSER = new com.google.protobuf.AbstractParser<TotalLiquidityRequest>() {
+      @java.lang.Override
+      public TotalLiquidityRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TotalLiquidityRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TotalLiquidityRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TotalLiquidityResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.TotalLiquidityResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getLiquidityList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getLiquidity(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getLiquidityCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getLiquidityOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getLiquidityOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.TotalLiquidityResponse}
+   */
+  public static final class TotalLiquidityResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.TotalLiquidityResponse)
+      TotalLiquidityResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TotalLiquidityResponse.newBuilder() to construct.
+    private TotalLiquidityResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TotalLiquidityResponse() {
+      liquidity_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TotalLiquidityResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TotalLiquidityResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TotalLiquidityResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse.class, com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse.Builder.class);
+    }
+
+    public static final int LIQUIDITY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> liquidity_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getLiquidityList() {
+      return liquidity_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getLiquidityOrBuilderList() {
+      return liquidity_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getLiquidityCount() {
+      return liquidity_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getLiquidity(int index) {
+      return liquidity_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getLiquidityOrBuilder(
+        int index) {
+      return liquidity_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < liquidity_.size(); i++) {
+        output.writeMessage(1, liquidity_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < liquidity_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, liquidity_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse other = (com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse) obj;
+
+      if (!getLiquidityList()
+          .equals(other.getLiquidityList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getLiquidityCount() > 0) {
+        hash = (37 * hash) + LIQUIDITY_FIELD_NUMBER;
+        hash = (53 * hash) + getLiquidityList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.TotalLiquidityResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.TotalLiquidityResponse)
+        com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TotalLiquidityResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TotalLiquidityResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse.class, com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (liquidityBuilder_ == null) {
+          liquidity_ = java.util.Collections.emptyList();
+        } else {
+          liquidity_ = null;
+          liquidityBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TotalLiquidityResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse result = new com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse result) {
+        if (liquidityBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            liquidity_ = java.util.Collections.unmodifiableList(liquidity_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.liquidity_ = liquidity_;
+        } else {
+          result.liquidity_ = liquidityBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse.getDefaultInstance()) return this;
+        if (liquidityBuilder_ == null) {
+          if (!other.liquidity_.isEmpty()) {
+            if (liquidity_.isEmpty()) {
+              liquidity_ = other.liquidity_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureLiquidityIsMutable();
+              liquidity_.addAll(other.liquidity_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.liquidity_.isEmpty()) {
+            if (liquidityBuilder_.isEmpty()) {
+              liquidityBuilder_.dispose();
+              liquidityBuilder_ = null;
+              liquidity_ = other.liquidity_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              liquidityBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLiquidityFieldBuilder() : null;
+            } else {
+              liquidityBuilder_.addAllMessages(other.liquidity_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (liquidityBuilder_ == null) {
+                  ensureLiquidityIsMutable();
+                  liquidity_.add(m);
+                } else {
+                  liquidityBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> liquidity_ =
+        java.util.Collections.emptyList();
+      private void ensureLiquidityIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          liquidity_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(liquidity_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> liquidityBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getLiquidityList() {
+        if (liquidityBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(liquidity_);
+        } else {
+          return liquidityBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getLiquidityCount() {
+        if (liquidityBuilder_ == null) {
+          return liquidity_.size();
+        } else {
+          return liquidityBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getLiquidity(int index) {
+        if (liquidityBuilder_ == null) {
+          return liquidity_.get(index);
+        } else {
+          return liquidityBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setLiquidity(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (liquidityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLiquidityIsMutable();
+          liquidity_.set(index, value);
+          onChanged();
+        } else {
+          liquidityBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setLiquidity(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (liquidityBuilder_ == null) {
+          ensureLiquidityIsMutable();
+          liquidity_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          liquidityBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addLiquidity(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (liquidityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLiquidityIsMutable();
+          liquidity_.add(value);
+          onChanged();
+        } else {
+          liquidityBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addLiquidity(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (liquidityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLiquidityIsMutable();
+          liquidity_.add(index, value);
+          onChanged();
+        } else {
+          liquidityBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addLiquidity(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (liquidityBuilder_ == null) {
+          ensureLiquidityIsMutable();
+          liquidity_.add(builderForValue.build());
+          onChanged();
+        } else {
+          liquidityBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addLiquidity(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (liquidityBuilder_ == null) {
+          ensureLiquidityIsMutable();
+          liquidity_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          liquidityBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllLiquidity(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (liquidityBuilder_ == null) {
+          ensureLiquidityIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, liquidity_);
+          onChanged();
+        } else {
+          liquidityBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearLiquidity() {
+        if (liquidityBuilder_ == null) {
+          liquidity_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          liquidityBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeLiquidity(int index) {
+        if (liquidityBuilder_ == null) {
+          ensureLiquidityIsMutable();
+          liquidity_.remove(index);
+          onChanged();
+        } else {
+          liquidityBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getLiquidityBuilder(
+          int index) {
+        return getLiquidityFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getLiquidityOrBuilder(
+          int index) {
+        if (liquidityBuilder_ == null) {
+          return liquidity_.get(index);  } else {
+          return liquidityBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getLiquidityOrBuilderList() {
+        if (liquidityBuilder_ != null) {
+          return liquidityBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(liquidity_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addLiquidityBuilder() {
+        return getLiquidityFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addLiquidityBuilder(
+          int index) {
+        return getLiquidityFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin liquidity = 1 [json_name = "liquidity", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquidity&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getLiquidityBuilderList() {
+        return getLiquidityFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getLiquidityFieldBuilder() {
+        if (liquidityBuilder_ == null) {
+          liquidityBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  liquidity_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          liquidity_ = null;
+        }
+        return liquidityBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.TotalLiquidityResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.TotalLiquidityResponse)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TotalLiquidityResponse>
+        PARSER = new com.google.protobuf.AbstractParser<TotalLiquidityResponse>() {
+      @java.lang.Override
+      public TotalLiquidityResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TotalLiquidityResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TotalLiquidityResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.TotalLiquidityResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TotalVolumeForPoolRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.TotalVolumeForPoolRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId", (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;""];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+  }
+  /**
+   * <pre>
+   *=============================== TotalVolumeForPool
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.TotalVolumeForPoolRequest}
+   */
+  public static final class TotalVolumeForPoolRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.TotalVolumeForPoolRequest)
+      TotalVolumeForPoolRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TotalVolumeForPoolRequest.newBuilder() to construct.
+    private TotalVolumeForPoolRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TotalVolumeForPoolRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TotalVolumeForPoolRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TotalVolumeForPoolRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TotalVolumeForPoolRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId", (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;""];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest other = (com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     *=============================== TotalVolumeForPool
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.TotalVolumeForPoolRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.TotalVolumeForPoolRequest)
+        com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TotalVolumeForPoolRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TotalVolumeForPoolRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TotalVolumeForPoolRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest result = new com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId", (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;""];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId", (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;""];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId", (.gogoproto.moretags) = "yaml:&#92;"pool_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.TotalVolumeForPoolRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.TotalVolumeForPoolRequest)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TotalVolumeForPoolRequest>
+        PARSER = new com.google.protobuf.AbstractParser<TotalVolumeForPoolRequest>() {
+      @java.lang.Override
+      public TotalVolumeForPoolRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TotalVolumeForPoolRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TotalVolumeForPoolRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TotalVolumeForPoolResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.TotalVolumeForPoolResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getVolumeList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getVolume(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getVolumeCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getVolumeOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getVolumeOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.TotalVolumeForPoolResponse}
+   */
+  public static final class TotalVolumeForPoolResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.TotalVolumeForPoolResponse)
+      TotalVolumeForPoolResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TotalVolumeForPoolResponse.newBuilder() to construct.
+    private TotalVolumeForPoolResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TotalVolumeForPoolResponse() {
+      volume_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TotalVolumeForPoolResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TotalVolumeForPoolResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TotalVolumeForPoolResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse.class, com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse.Builder.class);
+    }
+
+    public static final int VOLUME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> volume_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getVolumeList() {
+      return volume_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getVolumeOrBuilderList() {
+      return volume_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getVolumeCount() {
+      return volume_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getVolume(int index) {
+      return volume_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getVolumeOrBuilder(
+        int index) {
+      return volume_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < volume_.size(); i++) {
+        output.writeMessage(1, volume_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < volume_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, volume_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse other = (com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse) obj;
+
+      if (!getVolumeList()
+          .equals(other.getVolumeList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getVolumeCount() > 0) {
+        hash = (37 * hash) + VOLUME_FIELD_NUMBER;
+        hash = (53 * hash) + getVolumeList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.TotalVolumeForPoolResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.TotalVolumeForPoolResponse)
+        com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TotalVolumeForPoolResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TotalVolumeForPoolResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse.class, com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (volumeBuilder_ == null) {
+          volume_ = java.util.Collections.emptyList();
+        } else {
+          volume_ = null;
+          volumeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TotalVolumeForPoolResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse result = new com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse result) {
+        if (volumeBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            volume_ = java.util.Collections.unmodifiableList(volume_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.volume_ = volume_;
+        } else {
+          result.volume_ = volumeBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse.getDefaultInstance()) return this;
+        if (volumeBuilder_ == null) {
+          if (!other.volume_.isEmpty()) {
+            if (volume_.isEmpty()) {
+              volume_ = other.volume_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureVolumeIsMutable();
+              volume_.addAll(other.volume_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.volume_.isEmpty()) {
+            if (volumeBuilder_.isEmpty()) {
+              volumeBuilder_.dispose();
+              volumeBuilder_ = null;
+              volume_ = other.volume_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              volumeBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getVolumeFieldBuilder() : null;
+            } else {
+              volumeBuilder_.addAllMessages(other.volume_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (volumeBuilder_ == null) {
+                  ensureVolumeIsMutable();
+                  volume_.add(m);
+                } else {
+                  volumeBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> volume_ =
+        java.util.Collections.emptyList();
+      private void ensureVolumeIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          volume_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(volume_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> volumeBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getVolumeList() {
+        if (volumeBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(volume_);
+        } else {
+          return volumeBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getVolumeCount() {
+        if (volumeBuilder_ == null) {
+          return volume_.size();
+        } else {
+          return volumeBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getVolume(int index) {
+        if (volumeBuilder_ == null) {
+          return volume_.get(index);
+        } else {
+          return volumeBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setVolume(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (volumeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVolumeIsMutable();
+          volume_.set(index, value);
+          onChanged();
+        } else {
+          volumeBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setVolume(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (volumeBuilder_ == null) {
+          ensureVolumeIsMutable();
+          volume_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          volumeBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addVolume(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (volumeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVolumeIsMutable();
+          volume_.add(value);
+          onChanged();
+        } else {
+          volumeBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addVolume(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (volumeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVolumeIsMutable();
+          volume_.add(index, value);
+          onChanged();
+        } else {
+          volumeBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addVolume(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (volumeBuilder_ == null) {
+          ensureVolumeIsMutable();
+          volume_.add(builderForValue.build());
+          onChanged();
+        } else {
+          volumeBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addVolume(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (volumeBuilder_ == null) {
+          ensureVolumeIsMutable();
+          volume_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          volumeBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllVolume(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (volumeBuilder_ == null) {
+          ensureVolumeIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, volume_);
+          onChanged();
+        } else {
+          volumeBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearVolume() {
+        if (volumeBuilder_ == null) {
+          volume_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          volumeBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeVolume(int index) {
+        if (volumeBuilder_ == null) {
+          ensureVolumeIsMutable();
+          volume_.remove(index);
+          onChanged();
+        } else {
+          volumeBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getVolumeBuilder(
+          int index) {
+        return getVolumeFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getVolumeOrBuilder(
+          int index) {
+        if (volumeBuilder_ == null) {
+          return volume_.get(index);  } else {
+          return volumeBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getVolumeOrBuilderList() {
+        if (volumeBuilder_ != null) {
+          return volumeBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(volume_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addVolumeBuilder() {
+        return getVolumeFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addVolumeBuilder(
+          int index) {
+        return getVolumeFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin volume = 1 [json_name = "volume", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"volume&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getVolumeBuilderList() {
+        return getVolumeFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getVolumeFieldBuilder() {
+        if (volumeBuilder_ == null) {
+          volumeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  volume_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          volume_ = null;
+        }
+        return volumeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.TotalVolumeForPoolResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.TotalVolumeForPoolResponse)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TotalVolumeForPoolResponse>
+        PARSER = new com.google.protobuf.AbstractParser<TotalVolumeForPoolResponse>() {
+      @java.lang.Override
+      public TotalVolumeForPoolResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TotalVolumeForPoolResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TotalVolumeForPoolResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.TotalVolumeForPoolResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TradingPairTakerFeeRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.TradingPairTakerFeeRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom_0 = 1 [json_name = "denom0", (.gogoproto.moretags) = "yaml:&#92;"denom_0&#92;""];</code>
+     * @return The denom0.
+     */
+    java.lang.String getDenom0();
+    /**
+     * <code>string denom_0 = 1 [json_name = "denom0", (.gogoproto.moretags) = "yaml:&#92;"denom_0&#92;""];</code>
+     * @return The bytes for denom0.
+     */
+    com.google.protobuf.ByteString
+        getDenom0Bytes();
+
+    /**
+     * <code>string denom_1 = 2 [json_name = "denom1", (.gogoproto.moretags) = "yaml:&#92;"denom_1&#92;""];</code>
+     * @return The denom1.
+     */
+    java.lang.String getDenom1();
+    /**
+     * <code>string denom_1 = 2 [json_name = "denom1", (.gogoproto.moretags) = "yaml:&#92;"denom_1&#92;""];</code>
+     * @return The bytes for denom1.
+     */
+    com.google.protobuf.ByteString
+        getDenom1Bytes();
+  }
+  /**
+   * <pre>
+   *=============================== TradingPairTakerFee
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.TradingPairTakerFeeRequest}
+   */
+  public static final class TradingPairTakerFeeRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.TradingPairTakerFeeRequest)
+      TradingPairTakerFeeRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TradingPairTakerFeeRequest.newBuilder() to construct.
+    private TradingPairTakerFeeRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TradingPairTakerFeeRequest() {
+      denom0_ = "";
+      denom1_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TradingPairTakerFeeRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TradingPairTakerFeeRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TradingPairTakerFeeRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest.Builder.class);
+    }
+
+    public static final int DENOM_0_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom0_ = "";
+    /**
+     * <code>string denom_0 = 1 [json_name = "denom0", (.gogoproto.moretags) = "yaml:&#92;"denom_0&#92;""];</code>
+     * @return The denom0.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom0() {
+      java.lang.Object ref = denom0_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom0_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom_0 = 1 [json_name = "denom0", (.gogoproto.moretags) = "yaml:&#92;"denom_0&#92;""];</code>
+     * @return The bytes for denom0.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenom0Bytes() {
+      java.lang.Object ref = denom0_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom0_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DENOM_1_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom1_ = "";
+    /**
+     * <code>string denom_1 = 2 [json_name = "denom1", (.gogoproto.moretags) = "yaml:&#92;"denom_1&#92;""];</code>
+     * @return The denom1.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom1() {
+      java.lang.Object ref = denom1_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom1_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom_1 = 2 [json_name = "denom1", (.gogoproto.moretags) = "yaml:&#92;"denom_1&#92;""];</code>
+     * @return The bytes for denom1.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenom1Bytes() {
+      java.lang.Object ref = denom1_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom1_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom0_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom0_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom1_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, denom1_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom0_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom0_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom1_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, denom1_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest other = (com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest) obj;
+
+      if (!getDenom0()
+          .equals(other.getDenom0())) return false;
+      if (!getDenom1()
+          .equals(other.getDenom1())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_0_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom0().hashCode();
+      hash = (37 * hash) + DENOM_1_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom1().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     *=============================== TradingPairTakerFee
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.TradingPairTakerFeeRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.TradingPairTakerFeeRequest)
+        com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TradingPairTakerFeeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TradingPairTakerFeeRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom0_ = "";
+        denom1_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TradingPairTakerFeeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest result = new com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom0_ = denom0_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.denom1_ = denom1_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest.getDefaultInstance()) return this;
+        if (!other.getDenom0().isEmpty()) {
+          denom0_ = other.denom0_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDenom1().isEmpty()) {
+          denom1_ = other.denom1_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom0_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                denom1_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom0_ = "";
+      /**
+       * <code>string denom_0 = 1 [json_name = "denom0", (.gogoproto.moretags) = "yaml:&#92;"denom_0&#92;""];</code>
+       * @return The denom0.
+       */
+      public java.lang.String getDenom0() {
+        java.lang.Object ref = denom0_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom0_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom_0 = 1 [json_name = "denom0", (.gogoproto.moretags) = "yaml:&#92;"denom_0&#92;""];</code>
+       * @return The bytes for denom0.
+       */
+      public com.google.protobuf.ByteString
+          getDenom0Bytes() {
+        java.lang.Object ref = denom0_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom0_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom_0 = 1 [json_name = "denom0", (.gogoproto.moretags) = "yaml:&#92;"denom_0&#92;""];</code>
+       * @param value The denom0 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom0(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom0_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom_0 = 1 [json_name = "denom0", (.gogoproto.moretags) = "yaml:&#92;"denom_0&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom0() {
+        denom0_ = getDefaultInstance().getDenom0();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom_0 = 1 [json_name = "denom0", (.gogoproto.moretags) = "yaml:&#92;"denom_0&#92;""];</code>
+       * @param value The bytes for denom0 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom0Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom0_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object denom1_ = "";
+      /**
+       * <code>string denom_1 = 2 [json_name = "denom1", (.gogoproto.moretags) = "yaml:&#92;"denom_1&#92;""];</code>
+       * @return The denom1.
+       */
+      public java.lang.String getDenom1() {
+        java.lang.Object ref = denom1_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom1_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom_1 = 2 [json_name = "denom1", (.gogoproto.moretags) = "yaml:&#92;"denom_1&#92;""];</code>
+       * @return The bytes for denom1.
+       */
+      public com.google.protobuf.ByteString
+          getDenom1Bytes() {
+        java.lang.Object ref = denom1_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom1_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom_1 = 2 [json_name = "denom1", (.gogoproto.moretags) = "yaml:&#92;"denom_1&#92;""];</code>
+       * @param value The denom1 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom1(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom1_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom_1 = 2 [json_name = "denom1", (.gogoproto.moretags) = "yaml:&#92;"denom_1&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom1() {
+        denom1_ = getDefaultInstance().getDenom1();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom_1 = 2 [json_name = "denom1", (.gogoproto.moretags) = "yaml:&#92;"denom_1&#92;""];</code>
+       * @param value The bytes for denom1 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom1Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom1_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.TradingPairTakerFeeRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.TradingPairTakerFeeRequest)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TradingPairTakerFeeRequest>
+        PARSER = new com.google.protobuf.AbstractParser<TradingPairTakerFeeRequest>() {
+      @java.lang.Override
+      public TradingPairTakerFeeRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TradingPairTakerFeeRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TradingPairTakerFeeRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TradingPairTakerFeeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.TradingPairTakerFeeResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string taker_fee = 1 [json_name = "takerFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+     * @return The takerFee.
+     */
+    java.lang.String getTakerFee();
+    /**
+     * <code>string taker_fee = 1 [json_name = "takerFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+     * @return The bytes for takerFee.
+     */
+    com.google.protobuf.ByteString
+        getTakerFeeBytes();
+  }
+  /**
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.TradingPairTakerFeeResponse}
+   */
+  public static final class TradingPairTakerFeeResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.TradingPairTakerFeeResponse)
+      TradingPairTakerFeeResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TradingPairTakerFeeResponse.newBuilder() to construct.
+    private TradingPairTakerFeeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TradingPairTakerFeeResponse() {
+      takerFee_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TradingPairTakerFeeResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TradingPairTakerFeeResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TradingPairTakerFeeResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse.class, com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse.Builder.class);
+    }
+
+    public static final int TAKER_FEE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object takerFee_ = "";
+    /**
+     * <code>string taker_fee = 1 [json_name = "takerFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+     * @return The takerFee.
+     */
+    @java.lang.Override
+    public java.lang.String getTakerFee() {
+      java.lang.Object ref = takerFee_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        takerFee_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string taker_fee = 1 [json_name = "takerFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+     * @return The bytes for takerFee.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTakerFeeBytes() {
+      java.lang.Object ref = takerFee_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        takerFee_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(takerFee_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, takerFee_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(takerFee_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, takerFee_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse other = (com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse) obj;
+
+      if (!getTakerFee()
+          .equals(other.getTakerFee())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TAKER_FEE_FIELD_NUMBER;
+      hash = (53 * hash) + getTakerFee().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.TradingPairTakerFeeResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.TradingPairTakerFeeResponse)
+        com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TradingPairTakerFeeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TradingPairTakerFeeResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse.class, com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        takerFee_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TradingPairTakerFeeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse result = new com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.takerFee_ = takerFee_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse.getDefaultInstance()) return this;
+        if (!other.getTakerFee().isEmpty()) {
+          takerFee_ = other.takerFee_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                takerFee_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object takerFee_ = "";
+      /**
+       * <code>string taker_fee = 1 [json_name = "takerFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+       * @return The takerFee.
+       */
+      public java.lang.String getTakerFee() {
+        java.lang.Object ref = takerFee_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          takerFee_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string taker_fee = 1 [json_name = "takerFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+       * @return The bytes for takerFee.
+       */
+      public com.google.protobuf.ByteString
+          getTakerFeeBytes() {
+        java.lang.Object ref = takerFee_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          takerFee_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string taker_fee = 1 [json_name = "takerFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+       * @param value The takerFee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTakerFee(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        takerFee_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string taker_fee = 1 [json_name = "takerFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTakerFee() {
+        takerFee_ = getDefaultInstance().getTakerFee();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string taker_fee = 1 [json_name = "takerFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+       * @param value The bytes for takerFee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTakerFeeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        takerFee_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.TradingPairTakerFeeResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.TradingPairTakerFeeResponse)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TradingPairTakerFeeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<TradingPairTakerFeeResponse>() {
+      @java.lang.Override
+      public TradingPairTakerFeeResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TradingPairTakerFeeResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TradingPairTakerFeeResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.TradingPairTakerFeeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EstimateTradeBasedOnPriceImpactRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.EstimateTradeBasedOnPriceImpactRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * from_coin is the total amount of tokens that the user wants to sell.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin from_coin = 1 [json_name = "fromCoin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the fromCoin field is set.
+     */
+    boolean hasFromCoin();
+    /**
+     * <pre>
+     * from_coin is the total amount of tokens that the user wants to sell.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin from_coin = 1 [json_name = "fromCoin", (.gogoproto.nullable) = false];</code>
+     * @return The fromCoin.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getFromCoin();
+    /**
+     * <pre>
+     * from_coin is the total amount of tokens that the user wants to sell.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin from_coin = 1 [json_name = "fromCoin", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFromCoinOrBuilder();
+
+    /**
+     * <pre>
+     * to_coin_denom is the denom identifier of the token that the user wants to
+     * buy.
+     * </pre>
+     *
+     * <code>string to_coin_denom = 2 [json_name = "toCoinDenom"];</code>
+     * @return The toCoinDenom.
+     */
+    java.lang.String getToCoinDenom();
+    /**
+     * <pre>
+     * to_coin_denom is the denom identifier of the token that the user wants to
+     * buy.
+     * </pre>
+     *
+     * <code>string to_coin_denom = 2 [json_name = "toCoinDenom"];</code>
+     * @return The bytes for toCoinDenom.
+     */
+    com.google.protobuf.ByteString
+        getToCoinDenomBytes();
+
+    /**
+     * <pre>
+     * pool_id is the identifier of the liquidity pool that the trade will occur
+     * on.
+     * </pre>
+     *
+     * <code>uint64 pool_id = 3 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <pre>
+     * max_price_impact is the maximum percentage that the user is willing
+     * to affect the price of the liquidity pool.
+     * </pre>
+     *
+     * <code>string max_price_impact = 4 [json_name = "maxPriceImpact", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+     * @return The maxPriceImpact.
+     */
+    java.lang.String getMaxPriceImpact();
+    /**
+     * <pre>
+     * max_price_impact is the maximum percentage that the user is willing
+     * to affect the price of the liquidity pool.
+     * </pre>
+     *
+     * <code>string max_price_impact = 4 [json_name = "maxPriceImpact", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+     * @return The bytes for maxPriceImpact.
+     */
+    com.google.protobuf.ByteString
+        getMaxPriceImpactBytes();
+
+    /**
+     * <pre>
+     * external_price is an optional external price that the user can enter.
+     * It adjusts the MaxPriceImpact as the SpotPrice of a pool can be changed at
+     * any time.
+     * </pre>
+     *
+     * <code>string external_price = 5 [json_name = "externalPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+     * @return The externalPrice.
+     */
+    java.lang.String getExternalPrice();
+    /**
+     * <pre>
+     * external_price is an optional external price that the user can enter.
+     * It adjusts the MaxPriceImpact as the SpotPrice of a pool can be changed at
+     * any time.
+     * </pre>
+     *
+     * <code>string external_price = 5 [json_name = "externalPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+     * @return The bytes for externalPrice.
+     */
+    com.google.protobuf.ByteString
+        getExternalPriceBytes();
+  }
+  /**
+   * <pre>
+   * EstimateTradeBasedOnPriceImpactRequest represents a request to estimate a
+   * trade for Balancer/StableSwap/Concentrated liquidity pool types based on the
+   * given parameters.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.EstimateTradeBasedOnPriceImpactRequest}
+   */
+  public static final class EstimateTradeBasedOnPriceImpactRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.EstimateTradeBasedOnPriceImpactRequest)
+      EstimateTradeBasedOnPriceImpactRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EstimateTradeBasedOnPriceImpactRequest.newBuilder() to construct.
+    private EstimateTradeBasedOnPriceImpactRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EstimateTradeBasedOnPriceImpactRequest() {
+      toCoinDenom_ = "";
+      maxPriceImpact_ = "";
+      externalPrice_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EstimateTradeBasedOnPriceImpactRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_EstimateTradeBasedOnPriceImpactRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_EstimateTradeBasedOnPriceImpactRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest.Builder.class);
+    }
+
+    public static final int FROM_COIN_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.Coin fromCoin_;
+    /**
+     * <pre>
+     * from_coin is the total amount of tokens that the user wants to sell.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin from_coin = 1 [json_name = "fromCoin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the fromCoin field is set.
+     */
+    @java.lang.Override
+    public boolean hasFromCoin() {
+      return fromCoin_ != null;
+    }
+    /**
+     * <pre>
+     * from_coin is the total amount of tokens that the user wants to sell.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin from_coin = 1 [json_name = "fromCoin", (.gogoproto.nullable) = false];</code>
+     * @return The fromCoin.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getFromCoin() {
+      return fromCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : fromCoin_;
+    }
+    /**
+     * <pre>
+     * from_coin is the total amount of tokens that the user wants to sell.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin from_coin = 1 [json_name = "fromCoin", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFromCoinOrBuilder() {
+      return fromCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : fromCoin_;
+    }
+
+    public static final int TO_COIN_DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object toCoinDenom_ = "";
+    /**
+     * <pre>
+     * to_coin_denom is the denom identifier of the token that the user wants to
+     * buy.
+     * </pre>
+     *
+     * <code>string to_coin_denom = 2 [json_name = "toCoinDenom"];</code>
+     * @return The toCoinDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getToCoinDenom() {
+      java.lang.Object ref = toCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        toCoinDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * to_coin_denom is the denom identifier of the token that the user wants to
+     * buy.
+     * </pre>
+     *
+     * <code>string to_coin_denom = 2 [json_name = "toCoinDenom"];</code>
+     * @return The bytes for toCoinDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getToCoinDenomBytes() {
+      java.lang.Object ref = toCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        toCoinDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 3;
+    private long poolId_ = 0L;
+    /**
+     * <pre>
+     * pool_id is the identifier of the liquidity pool that the trade will occur
+     * on.
+     * </pre>
+     *
+     * <code>uint64 pool_id = 3 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int MAX_PRICE_IMPACT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object maxPriceImpact_ = "";
+    /**
+     * <pre>
+     * max_price_impact is the maximum percentage that the user is willing
+     * to affect the price of the liquidity pool.
+     * </pre>
+     *
+     * <code>string max_price_impact = 4 [json_name = "maxPriceImpact", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+     * @return The maxPriceImpact.
+     */
+    @java.lang.Override
+    public java.lang.String getMaxPriceImpact() {
+      java.lang.Object ref = maxPriceImpact_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        maxPriceImpact_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * max_price_impact is the maximum percentage that the user is willing
+     * to affect the price of the liquidity pool.
+     * </pre>
+     *
+     * <code>string max_price_impact = 4 [json_name = "maxPriceImpact", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+     * @return The bytes for maxPriceImpact.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMaxPriceImpactBytes() {
+      java.lang.Object ref = maxPriceImpact_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        maxPriceImpact_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXTERNAL_PRICE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object externalPrice_ = "";
+    /**
+     * <pre>
+     * external_price is an optional external price that the user can enter.
+     * It adjusts the MaxPriceImpact as the SpotPrice of a pool can be changed at
+     * any time.
+     * </pre>
+     *
+     * <code>string external_price = 5 [json_name = "externalPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+     * @return The externalPrice.
+     */
+    @java.lang.Override
+    public java.lang.String getExternalPrice() {
+      java.lang.Object ref = externalPrice_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        externalPrice_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * external_price is an optional external price that the user can enter.
+     * It adjusts the MaxPriceImpact as the SpotPrice of a pool can be changed at
+     * any time.
+     * </pre>
+     *
+     * <code>string external_price = 5 [json_name = "externalPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+     * @return The bytes for externalPrice.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExternalPriceBytes() {
+      java.lang.Object ref = externalPrice_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        externalPrice_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (fromCoin_ != null) {
+        output.writeMessage(1, getFromCoin());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(toCoinDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, toCoinDenom_);
+      }
+      if (poolId_ != 0L) {
+        output.writeUInt64(3, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxPriceImpact_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, maxPriceImpact_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalPrice_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, externalPrice_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (fromCoin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getFromCoin());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(toCoinDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, toCoinDenom_);
+      }
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxPriceImpact_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, maxPriceImpact_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalPrice_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, externalPrice_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest other = (com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest) obj;
+
+      if (hasFromCoin() != other.hasFromCoin()) return false;
+      if (hasFromCoin()) {
+        if (!getFromCoin()
+            .equals(other.getFromCoin())) return false;
+      }
+      if (!getToCoinDenom()
+          .equals(other.getToCoinDenom())) return false;
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getMaxPriceImpact()
+          .equals(other.getMaxPriceImpact())) return false;
+      if (!getExternalPrice()
+          .equals(other.getExternalPrice())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFromCoin()) {
+        hash = (37 * hash) + FROM_COIN_FIELD_NUMBER;
+        hash = (53 * hash) + getFromCoin().hashCode();
+      }
+      hash = (37 * hash) + TO_COIN_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getToCoinDenom().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + MAX_PRICE_IMPACT_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxPriceImpact().hashCode();
+      hash = (37 * hash) + EXTERNAL_PRICE_FIELD_NUMBER;
+      hash = (53 * hash) + getExternalPrice().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EstimateTradeBasedOnPriceImpactRequest represents a request to estimate a
+     * trade for Balancer/StableSwap/Concentrated liquidity pool types based on the
+     * given parameters.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.EstimateTradeBasedOnPriceImpactRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.EstimateTradeBasedOnPriceImpactRequest)
+        com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_EstimateTradeBasedOnPriceImpactRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_EstimateTradeBasedOnPriceImpactRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        fromCoin_ = null;
+        if (fromCoinBuilder_ != null) {
+          fromCoinBuilder_.dispose();
+          fromCoinBuilder_ = null;
+        }
+        toCoinDenom_ = "";
+        poolId_ = 0L;
+        maxPriceImpact_ = "";
+        externalPrice_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_EstimateTradeBasedOnPriceImpactRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest result = new com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.fromCoin_ = fromCoinBuilder_ == null
+              ? fromCoin_
+              : fromCoinBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.toCoinDenom_ = toCoinDenom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.maxPriceImpact_ = maxPriceImpact_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.externalPrice_ = externalPrice_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest.getDefaultInstance()) return this;
+        if (other.hasFromCoin()) {
+          mergeFromCoin(other.getFromCoin());
+        }
+        if (!other.getToCoinDenom().isEmpty()) {
+          toCoinDenom_ = other.toCoinDenom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (!other.getMaxPriceImpact().isEmpty()) {
+          maxPriceImpact_ = other.maxPriceImpact_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getExternalPrice().isEmpty()) {
+          externalPrice_ = other.externalPrice_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getFromCoinFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                toCoinDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                maxPriceImpact_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                externalPrice_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin fromCoin_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> fromCoinBuilder_;
+      /**
+       * <pre>
+       * from_coin is the total amount of tokens that the user wants to sell.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin from_coin = 1 [json_name = "fromCoin", (.gogoproto.nullable) = false];</code>
+       * @return Whether the fromCoin field is set.
+       */
+      public boolean hasFromCoin() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * from_coin is the total amount of tokens that the user wants to sell.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin from_coin = 1 [json_name = "fromCoin", (.gogoproto.nullable) = false];</code>
+       * @return The fromCoin.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getFromCoin() {
+        if (fromCoinBuilder_ == null) {
+          return fromCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : fromCoin_;
+        } else {
+          return fromCoinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * from_coin is the total amount of tokens that the user wants to sell.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin from_coin = 1 [json_name = "fromCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFromCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (fromCoinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          fromCoin_ = value;
+        } else {
+          fromCoinBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * from_coin is the total amount of tokens that the user wants to sell.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin from_coin = 1 [json_name = "fromCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFromCoin(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (fromCoinBuilder_ == null) {
+          fromCoin_ = builderForValue.build();
+        } else {
+          fromCoinBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * from_coin is the total amount of tokens that the user wants to sell.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin from_coin = 1 [json_name = "fromCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeFromCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (fromCoinBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            fromCoin_ != null &&
+            fromCoin_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getFromCoinBuilder().mergeFrom(value);
+          } else {
+            fromCoin_ = value;
+          }
+        } else {
+          fromCoinBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * from_coin is the total amount of tokens that the user wants to sell.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin from_coin = 1 [json_name = "fromCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearFromCoin() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        fromCoin_ = null;
+        if (fromCoinBuilder_ != null) {
+          fromCoinBuilder_.dispose();
+          fromCoinBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * from_coin is the total amount of tokens that the user wants to sell.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin from_coin = 1 [json_name = "fromCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getFromCoinBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getFromCoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * from_coin is the total amount of tokens that the user wants to sell.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin from_coin = 1 [json_name = "fromCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFromCoinOrBuilder() {
+        if (fromCoinBuilder_ != null) {
+          return fromCoinBuilder_.getMessageOrBuilder();
+        } else {
+          return fromCoin_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : fromCoin_;
+        }
+      }
+      /**
+       * <pre>
+       * from_coin is the total amount of tokens that the user wants to sell.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin from_coin = 1 [json_name = "fromCoin", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getFromCoinFieldBuilder() {
+        if (fromCoinBuilder_ == null) {
+          fromCoinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getFromCoin(),
+                  getParentForChildren(),
+                  isClean());
+          fromCoin_ = null;
+        }
+        return fromCoinBuilder_;
+      }
+
+      private java.lang.Object toCoinDenom_ = "";
+      /**
+       * <pre>
+       * to_coin_denom is the denom identifier of the token that the user wants to
+       * buy.
+       * </pre>
+       *
+       * <code>string to_coin_denom = 2 [json_name = "toCoinDenom"];</code>
+       * @return The toCoinDenom.
+       */
+      public java.lang.String getToCoinDenom() {
+        java.lang.Object ref = toCoinDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          toCoinDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * to_coin_denom is the denom identifier of the token that the user wants to
+       * buy.
+       * </pre>
+       *
+       * <code>string to_coin_denom = 2 [json_name = "toCoinDenom"];</code>
+       * @return The bytes for toCoinDenom.
+       */
+      public com.google.protobuf.ByteString
+          getToCoinDenomBytes() {
+        java.lang.Object ref = toCoinDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          toCoinDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * to_coin_denom is the denom identifier of the token that the user wants to
+       * buy.
+       * </pre>
+       *
+       * <code>string to_coin_denom = 2 [json_name = "toCoinDenom"];</code>
+       * @param value The toCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToCoinDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        toCoinDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * to_coin_denom is the denom identifier of the token that the user wants to
+       * buy.
+       * </pre>
+       *
+       * <code>string to_coin_denom = 2 [json_name = "toCoinDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearToCoinDenom() {
+        toCoinDenom_ = getDefaultInstance().getToCoinDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * to_coin_denom is the denom identifier of the token that the user wants to
+       * buy.
+       * </pre>
+       *
+       * <code>string to_coin_denom = 2 [json_name = "toCoinDenom"];</code>
+       * @param value The bytes for toCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToCoinDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        toCoinDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long poolId_ ;
+      /**
+       * <pre>
+       * pool_id is the identifier of the liquidity pool that the trade will occur
+       * on.
+       * </pre>
+       *
+       * <code>uint64 pool_id = 3 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <pre>
+       * pool_id is the identifier of the liquidity pool that the trade will occur
+       * on.
+       * </pre>
+       *
+       * <code>uint64 pool_id = 3 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_id is the identifier of the liquidity pool that the trade will occur
+       * on.
+       * </pre>
+       *
+       * <code>uint64 pool_id = 3 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object maxPriceImpact_ = "";
+      /**
+       * <pre>
+       * max_price_impact is the maximum percentage that the user is willing
+       * to affect the price of the liquidity pool.
+       * </pre>
+       *
+       * <code>string max_price_impact = 4 [json_name = "maxPriceImpact", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+       * @return The maxPriceImpact.
+       */
+      public java.lang.String getMaxPriceImpact() {
+        java.lang.Object ref = maxPriceImpact_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          maxPriceImpact_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * max_price_impact is the maximum percentage that the user is willing
+       * to affect the price of the liquidity pool.
+       * </pre>
+       *
+       * <code>string max_price_impact = 4 [json_name = "maxPriceImpact", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+       * @return The bytes for maxPriceImpact.
+       */
+      public com.google.protobuf.ByteString
+          getMaxPriceImpactBytes() {
+        java.lang.Object ref = maxPriceImpact_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          maxPriceImpact_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * max_price_impact is the maximum percentage that the user is willing
+       * to affect the price of the liquidity pool.
+       * </pre>
+       *
+       * <code>string max_price_impact = 4 [json_name = "maxPriceImpact", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+       * @param value The maxPriceImpact to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxPriceImpact(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        maxPriceImpact_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * max_price_impact is the maximum percentage that the user is willing
+       * to affect the price of the liquidity pool.
+       * </pre>
+       *
+       * <code>string max_price_impact = 4 [json_name = "maxPriceImpact", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxPriceImpact() {
+        maxPriceImpact_ = getDefaultInstance().getMaxPriceImpact();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * max_price_impact is the maximum percentage that the user is willing
+       * to affect the price of the liquidity pool.
+       * </pre>
+       *
+       * <code>string max_price_impact = 4 [json_name = "maxPriceImpact", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+       * @param value The bytes for maxPriceImpact to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxPriceImpactBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        maxPriceImpact_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object externalPrice_ = "";
+      /**
+       * <pre>
+       * external_price is an optional external price that the user can enter.
+       * It adjusts the MaxPriceImpact as the SpotPrice of a pool can be changed at
+       * any time.
+       * </pre>
+       *
+       * <code>string external_price = 5 [json_name = "externalPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+       * @return The externalPrice.
+       */
+      public java.lang.String getExternalPrice() {
+        java.lang.Object ref = externalPrice_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          externalPrice_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * external_price is an optional external price that the user can enter.
+       * It adjusts the MaxPriceImpact as the SpotPrice of a pool can be changed at
+       * any time.
+       * </pre>
+       *
+       * <code>string external_price = 5 [json_name = "externalPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+       * @return The bytes for externalPrice.
+       */
+      public com.google.protobuf.ByteString
+          getExternalPriceBytes() {
+        java.lang.Object ref = externalPrice_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          externalPrice_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * external_price is an optional external price that the user can enter.
+       * It adjusts the MaxPriceImpact as the SpotPrice of a pool can be changed at
+       * any time.
+       * </pre>
+       *
+       * <code>string external_price = 5 [json_name = "externalPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+       * @param value The externalPrice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalPrice(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        externalPrice_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * external_price is an optional external price that the user can enter.
+       * It adjusts the MaxPriceImpact as the SpotPrice of a pool can be changed at
+       * any time.
+       * </pre>
+       *
+       * <code>string external_price = 5 [json_name = "externalPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExternalPrice() {
+        externalPrice_ = getDefaultInstance().getExternalPrice();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * external_price is an optional external price that the user can enter.
+       * It adjusts the MaxPriceImpact as the SpotPrice of a pool can be changed at
+       * any time.
+       * </pre>
+       *
+       * <code>string external_price = 5 [json_name = "externalPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+       * @param value The bytes for externalPrice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalPriceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        externalPrice_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.EstimateTradeBasedOnPriceImpactRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.EstimateTradeBasedOnPriceImpactRequest)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EstimateTradeBasedOnPriceImpactRequest>
+        PARSER = new com.google.protobuf.AbstractParser<EstimateTradeBasedOnPriceImpactRequest>() {
+      @java.lang.Override
+      public EstimateTradeBasedOnPriceImpactRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EstimateTradeBasedOnPriceImpactRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EstimateTradeBasedOnPriceImpactRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EstimateTradeBasedOnPriceImpactResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.EstimateTradeBasedOnPriceImpactResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * input_coin is the actual input amount that would be tradeable
+     * under the specified price impact.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin input_coin = 1 [json_name = "inputCoin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the inputCoin field is set.
+     */
+    boolean hasInputCoin();
+    /**
+     * <pre>
+     * input_coin is the actual input amount that would be tradeable
+     * under the specified price impact.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin input_coin = 1 [json_name = "inputCoin", (.gogoproto.nullable) = false];</code>
+     * @return The inputCoin.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getInputCoin();
+    /**
+     * <pre>
+     * input_coin is the actual input amount that would be tradeable
+     * under the specified price impact.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin input_coin = 1 [json_name = "inputCoin", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getInputCoinOrBuilder();
+
+    /**
+     * <pre>
+     * output_coin is the amount of tokens of the ToCoinDenom type
+     * that will be received for the actual InputCoin trade.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin output_coin = 2 [json_name = "outputCoin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the outputCoin field is set.
+     */
+    boolean hasOutputCoin();
+    /**
+     * <pre>
+     * output_coin is the amount of tokens of the ToCoinDenom type
+     * that will be received for the actual InputCoin trade.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin output_coin = 2 [json_name = "outputCoin", (.gogoproto.nullable) = false];</code>
+     * @return The outputCoin.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getOutputCoin();
+    /**
+     * <pre>
+     * output_coin is the amount of tokens of the ToCoinDenom type
+     * that will be received for the actual InputCoin trade.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin output_coin = 2 [json_name = "outputCoin", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getOutputCoinOrBuilder();
+  }
+  /**
+   * <pre>
+   * EstimateTradeBasedOnPriceImpactResponse represents the response data
+   * for an estimated trade based on price impact. If a trade fails to be
+   * estimated the response would be 0,0 for input_coin and output_coin and will
+   * not error.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.EstimateTradeBasedOnPriceImpactResponse}
+   */
+  public static final class EstimateTradeBasedOnPriceImpactResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.EstimateTradeBasedOnPriceImpactResponse)
+      EstimateTradeBasedOnPriceImpactResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EstimateTradeBasedOnPriceImpactResponse.newBuilder() to construct.
+    private EstimateTradeBasedOnPriceImpactResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EstimateTradeBasedOnPriceImpactResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EstimateTradeBasedOnPriceImpactResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_EstimateTradeBasedOnPriceImpactResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_EstimateTradeBasedOnPriceImpactResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse.class, com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse.Builder.class);
+    }
+
+    public static final int INPUT_COIN_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.Coin inputCoin_;
+    /**
+     * <pre>
+     * input_coin is the actual input amount that would be tradeable
+     * under the specified price impact.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin input_coin = 1 [json_name = "inputCoin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the inputCoin field is set.
+     */
+    @java.lang.Override
+    public boolean hasInputCoin() {
+      return inputCoin_ != null;
+    }
+    /**
+     * <pre>
+     * input_coin is the actual input amount that would be tradeable
+     * under the specified price impact.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin input_coin = 1 [json_name = "inputCoin", (.gogoproto.nullable) = false];</code>
+     * @return The inputCoin.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getInputCoin() {
+      return inputCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : inputCoin_;
+    }
+    /**
+     * <pre>
+     * input_coin is the actual input amount that would be tradeable
+     * under the specified price impact.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin input_coin = 1 [json_name = "inputCoin", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getInputCoinOrBuilder() {
+      return inputCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : inputCoin_;
+    }
+
+    public static final int OUTPUT_COIN_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin outputCoin_;
+    /**
+     * <pre>
+     * output_coin is the amount of tokens of the ToCoinDenom type
+     * that will be received for the actual InputCoin trade.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin output_coin = 2 [json_name = "outputCoin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the outputCoin field is set.
+     */
+    @java.lang.Override
+    public boolean hasOutputCoin() {
+      return outputCoin_ != null;
+    }
+    /**
+     * <pre>
+     * output_coin is the amount of tokens of the ToCoinDenom type
+     * that will be received for the actual InputCoin trade.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin output_coin = 2 [json_name = "outputCoin", (.gogoproto.nullable) = false];</code>
+     * @return The outputCoin.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getOutputCoin() {
+      return outputCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : outputCoin_;
+    }
+    /**
+     * <pre>
+     * output_coin is the amount of tokens of the ToCoinDenom type
+     * that will be received for the actual InputCoin trade.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin output_coin = 2 [json_name = "outputCoin", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getOutputCoinOrBuilder() {
+      return outputCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : outputCoin_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (inputCoin_ != null) {
+        output.writeMessage(1, getInputCoin());
+      }
+      if (outputCoin_ != null) {
+        output.writeMessage(2, getOutputCoin());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (inputCoin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getInputCoin());
+      }
+      if (outputCoin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getOutputCoin());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse other = (com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse) obj;
+
+      if (hasInputCoin() != other.hasInputCoin()) return false;
+      if (hasInputCoin()) {
+        if (!getInputCoin()
+            .equals(other.getInputCoin())) return false;
+      }
+      if (hasOutputCoin() != other.hasOutputCoin()) return false;
+      if (hasOutputCoin()) {
+        if (!getOutputCoin()
+            .equals(other.getOutputCoin())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasInputCoin()) {
+        hash = (37 * hash) + INPUT_COIN_FIELD_NUMBER;
+        hash = (53 * hash) + getInputCoin().hashCode();
+      }
+      if (hasOutputCoin()) {
+        hash = (37 * hash) + OUTPUT_COIN_FIELD_NUMBER;
+        hash = (53 * hash) + getOutputCoin().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EstimateTradeBasedOnPriceImpactResponse represents the response data
+     * for an estimated trade based on price impact. If a trade fails to be
+     * estimated the response would be 0,0 for input_coin and output_coin and will
+     * not error.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.EstimateTradeBasedOnPriceImpactResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.EstimateTradeBasedOnPriceImpactResponse)
+        com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_EstimateTradeBasedOnPriceImpactResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_EstimateTradeBasedOnPriceImpactResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse.class, com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        inputCoin_ = null;
+        if (inputCoinBuilder_ != null) {
+          inputCoinBuilder_.dispose();
+          inputCoinBuilder_ = null;
+        }
+        outputCoin_ = null;
+        if (outputCoinBuilder_ != null) {
+          outputCoinBuilder_.dispose();
+          outputCoinBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_EstimateTradeBasedOnPriceImpactResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse result = new com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.inputCoin_ = inputCoinBuilder_ == null
+              ? inputCoin_
+              : inputCoinBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.outputCoin_ = outputCoinBuilder_ == null
+              ? outputCoin_
+              : outputCoinBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse.getDefaultInstance()) return this;
+        if (other.hasInputCoin()) {
+          mergeInputCoin(other.getInputCoin());
+        }
+        if (other.hasOutputCoin()) {
+          mergeOutputCoin(other.getOutputCoin());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getInputCoinFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getOutputCoinFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin inputCoin_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> inputCoinBuilder_;
+      /**
+       * <pre>
+       * input_coin is the actual input amount that would be tradeable
+       * under the specified price impact.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin input_coin = 1 [json_name = "inputCoin", (.gogoproto.nullable) = false];</code>
+       * @return Whether the inputCoin field is set.
+       */
+      public boolean hasInputCoin() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * input_coin is the actual input amount that would be tradeable
+       * under the specified price impact.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin input_coin = 1 [json_name = "inputCoin", (.gogoproto.nullable) = false];</code>
+       * @return The inputCoin.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getInputCoin() {
+        if (inputCoinBuilder_ == null) {
+          return inputCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : inputCoin_;
+        } else {
+          return inputCoinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * input_coin is the actual input amount that would be tradeable
+       * under the specified price impact.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin input_coin = 1 [json_name = "inputCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setInputCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (inputCoinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          inputCoin_ = value;
+        } else {
+          inputCoinBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * input_coin is the actual input amount that would be tradeable
+       * under the specified price impact.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin input_coin = 1 [json_name = "inputCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setInputCoin(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (inputCoinBuilder_ == null) {
+          inputCoin_ = builderForValue.build();
+        } else {
+          inputCoinBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * input_coin is the actual input amount that would be tradeable
+       * under the specified price impact.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin input_coin = 1 [json_name = "inputCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeInputCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (inputCoinBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            inputCoin_ != null &&
+            inputCoin_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getInputCoinBuilder().mergeFrom(value);
+          } else {
+            inputCoin_ = value;
+          }
+        } else {
+          inputCoinBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * input_coin is the actual input amount that would be tradeable
+       * under the specified price impact.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin input_coin = 1 [json_name = "inputCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearInputCoin() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        inputCoin_ = null;
+        if (inputCoinBuilder_ != null) {
+          inputCoinBuilder_.dispose();
+          inputCoinBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * input_coin is the actual input amount that would be tradeable
+       * under the specified price impact.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin input_coin = 1 [json_name = "inputCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getInputCoinBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getInputCoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * input_coin is the actual input amount that would be tradeable
+       * under the specified price impact.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin input_coin = 1 [json_name = "inputCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getInputCoinOrBuilder() {
+        if (inputCoinBuilder_ != null) {
+          return inputCoinBuilder_.getMessageOrBuilder();
+        } else {
+          return inputCoin_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : inputCoin_;
+        }
+      }
+      /**
+       * <pre>
+       * input_coin is the actual input amount that would be tradeable
+       * under the specified price impact.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin input_coin = 1 [json_name = "inputCoin", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getInputCoinFieldBuilder() {
+        if (inputCoinBuilder_ == null) {
+          inputCoinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getInputCoin(),
+                  getParentForChildren(),
+                  isClean());
+          inputCoin_ = null;
+        }
+        return inputCoinBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin outputCoin_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> outputCoinBuilder_;
+      /**
+       * <pre>
+       * output_coin is the amount of tokens of the ToCoinDenom type
+       * that will be received for the actual InputCoin trade.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin output_coin = 2 [json_name = "outputCoin", (.gogoproto.nullable) = false];</code>
+       * @return Whether the outputCoin field is set.
+       */
+      public boolean hasOutputCoin() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * output_coin is the amount of tokens of the ToCoinDenom type
+       * that will be received for the actual InputCoin trade.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin output_coin = 2 [json_name = "outputCoin", (.gogoproto.nullable) = false];</code>
+       * @return The outputCoin.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getOutputCoin() {
+        if (outputCoinBuilder_ == null) {
+          return outputCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : outputCoin_;
+        } else {
+          return outputCoinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * output_coin is the amount of tokens of the ToCoinDenom type
+       * that will be received for the actual InputCoin trade.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin output_coin = 2 [json_name = "outputCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOutputCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (outputCoinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          outputCoin_ = value;
+        } else {
+          outputCoinBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * output_coin is the amount of tokens of the ToCoinDenom type
+       * that will be received for the actual InputCoin trade.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin output_coin = 2 [json_name = "outputCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOutputCoin(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (outputCoinBuilder_ == null) {
+          outputCoin_ = builderForValue.build();
+        } else {
+          outputCoinBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * output_coin is the amount of tokens of the ToCoinDenom type
+       * that will be received for the actual InputCoin trade.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin output_coin = 2 [json_name = "outputCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeOutputCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (outputCoinBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            outputCoin_ != null &&
+            outputCoin_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getOutputCoinBuilder().mergeFrom(value);
+          } else {
+            outputCoin_ = value;
+          }
+        } else {
+          outputCoinBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * output_coin is the amount of tokens of the ToCoinDenom type
+       * that will be received for the actual InputCoin trade.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin output_coin = 2 [json_name = "outputCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearOutputCoin() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        outputCoin_ = null;
+        if (outputCoinBuilder_ != null) {
+          outputCoinBuilder_.dispose();
+          outputCoinBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * output_coin is the amount of tokens of the ToCoinDenom type
+       * that will be received for the actual InputCoin trade.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin output_coin = 2 [json_name = "outputCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getOutputCoinBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getOutputCoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * output_coin is the amount of tokens of the ToCoinDenom type
+       * that will be received for the actual InputCoin trade.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin output_coin = 2 [json_name = "outputCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getOutputCoinOrBuilder() {
+        if (outputCoinBuilder_ != null) {
+          return outputCoinBuilder_.getMessageOrBuilder();
+        } else {
+          return outputCoin_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : outputCoin_;
+        }
+      }
+      /**
+       * <pre>
+       * output_coin is the amount of tokens of the ToCoinDenom type
+       * that will be received for the actual InputCoin trade.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin output_coin = 2 [json_name = "outputCoin", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getOutputCoinFieldBuilder() {
+        if (outputCoinBuilder_ == null) {
+          outputCoinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getOutputCoin(),
+                  getParentForChildren(),
+                  isClean());
+          outputCoin_ = null;
+        }
+        return outputCoinBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.EstimateTradeBasedOnPriceImpactResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.EstimateTradeBasedOnPriceImpactResponse)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EstimateTradeBasedOnPriceImpactResponse>
+        PARSER = new com.google.protobuf.AbstractParser<EstimateTradeBasedOnPriceImpactResponse>() {
+      @java.lang.Override
+      public EstimateTradeBasedOnPriceImpactResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EstimateTradeBasedOnPriceImpactResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EstimateTradeBasedOnPriceImpactResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.EstimateTradeBasedOnPriceImpactResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AllTakerFeeShareAgreementsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.AllTakerFeeShareAgreementsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.AllTakerFeeShareAgreementsRequest}
+   */
+  public static final class AllTakerFeeShareAgreementsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.AllTakerFeeShareAgreementsRequest)
+      AllTakerFeeShareAgreementsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AllTakerFeeShareAgreementsRequest.newBuilder() to construct.
+    private AllTakerFeeShareAgreementsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AllTakerFeeShareAgreementsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AllTakerFeeShareAgreementsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAgreementsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAgreementsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest other = (com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.AllTakerFeeShareAgreementsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.AllTakerFeeShareAgreementsRequest)
+        com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAgreementsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAgreementsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAgreementsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest result = new com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.AllTakerFeeShareAgreementsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.AllTakerFeeShareAgreementsRequest)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AllTakerFeeShareAgreementsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AllTakerFeeShareAgreementsRequest>() {
+      @java.lang.Override
+      public AllTakerFeeShareAgreementsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AllTakerFeeShareAgreementsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AllTakerFeeShareAgreementsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AllTakerFeeShareAgreementsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.AllTakerFeeShareAgreementsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement> 
+        getTakerFeeShareAgreementsList();
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement getTakerFeeShareAgreements(int index);
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+     */
+    int getTakerFeeShareAgreementsCount();
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreementOrBuilder> 
+        getTakerFeeShareAgreementsOrBuilderList();
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreementOrBuilder getTakerFeeShareAgreementsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.AllTakerFeeShareAgreementsResponse}
+   */
+  public static final class AllTakerFeeShareAgreementsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.AllTakerFeeShareAgreementsResponse)
+      AllTakerFeeShareAgreementsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AllTakerFeeShareAgreementsResponse.newBuilder() to construct.
+    private AllTakerFeeShareAgreementsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AllTakerFeeShareAgreementsResponse() {
+      takerFeeShareAgreements_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AllTakerFeeShareAgreementsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAgreementsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAgreementsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse.class, com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse.Builder.class);
+    }
+
+    public static final int TAKER_FEE_SHARE_AGREEMENTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement> takerFeeShareAgreements_;
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement> getTakerFeeShareAgreementsList() {
+      return takerFeeShareAgreements_;
+    }
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreementOrBuilder> 
+        getTakerFeeShareAgreementsOrBuilderList() {
+      return takerFeeShareAgreements_;
+    }
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getTakerFeeShareAgreementsCount() {
+      return takerFeeShareAgreements_.size();
+    }
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement getTakerFeeShareAgreements(int index) {
+      return takerFeeShareAgreements_.get(index);
+    }
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreementOrBuilder getTakerFeeShareAgreementsOrBuilder(
+        int index) {
+      return takerFeeShareAgreements_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < takerFeeShareAgreements_.size(); i++) {
+        output.writeMessage(1, takerFeeShareAgreements_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < takerFeeShareAgreements_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, takerFeeShareAgreements_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse other = (com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse) obj;
+
+      if (!getTakerFeeShareAgreementsList()
+          .equals(other.getTakerFeeShareAgreementsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTakerFeeShareAgreementsCount() > 0) {
+        hash = (37 * hash) + TAKER_FEE_SHARE_AGREEMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getTakerFeeShareAgreementsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.AllTakerFeeShareAgreementsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.AllTakerFeeShareAgreementsResponse)
+        com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAgreementsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAgreementsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse.class, com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (takerFeeShareAgreementsBuilder_ == null) {
+          takerFeeShareAgreements_ = java.util.Collections.emptyList();
+        } else {
+          takerFeeShareAgreements_ = null;
+          takerFeeShareAgreementsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAgreementsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse result = new com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse result) {
+        if (takerFeeShareAgreementsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            takerFeeShareAgreements_ = java.util.Collections.unmodifiableList(takerFeeShareAgreements_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.takerFeeShareAgreements_ = takerFeeShareAgreements_;
+        } else {
+          result.takerFeeShareAgreements_ = takerFeeShareAgreementsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse.getDefaultInstance()) return this;
+        if (takerFeeShareAgreementsBuilder_ == null) {
+          if (!other.takerFeeShareAgreements_.isEmpty()) {
+            if (takerFeeShareAgreements_.isEmpty()) {
+              takerFeeShareAgreements_ = other.takerFeeShareAgreements_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTakerFeeShareAgreementsIsMutable();
+              takerFeeShareAgreements_.addAll(other.takerFeeShareAgreements_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.takerFeeShareAgreements_.isEmpty()) {
+            if (takerFeeShareAgreementsBuilder_.isEmpty()) {
+              takerFeeShareAgreementsBuilder_.dispose();
+              takerFeeShareAgreementsBuilder_ = null;
+              takerFeeShareAgreements_ = other.takerFeeShareAgreements_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              takerFeeShareAgreementsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTakerFeeShareAgreementsFieldBuilder() : null;
+            } else {
+              takerFeeShareAgreementsBuilder_.addAllMessages(other.takerFeeShareAgreements_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement m =
+                    input.readMessage(
+                        com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement.parser(),
+                        extensionRegistry);
+                if (takerFeeShareAgreementsBuilder_ == null) {
+                  ensureTakerFeeShareAgreementsIsMutable();
+                  takerFeeShareAgreements_.add(m);
+                } else {
+                  takerFeeShareAgreementsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement> takerFeeShareAgreements_ =
+        java.util.Collections.emptyList();
+      private void ensureTakerFeeShareAgreementsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          takerFeeShareAgreements_ = new java.util.ArrayList<com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement>(takerFeeShareAgreements_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement.Builder, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreementOrBuilder> takerFeeShareAgreementsBuilder_;
+
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement> getTakerFeeShareAgreementsList() {
+        if (takerFeeShareAgreementsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(takerFeeShareAgreements_);
+        } else {
+          return takerFeeShareAgreementsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+       */
+      public int getTakerFeeShareAgreementsCount() {
+        if (takerFeeShareAgreementsBuilder_ == null) {
+          return takerFeeShareAgreements_.size();
+        } else {
+          return takerFeeShareAgreementsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement getTakerFeeShareAgreements(int index) {
+        if (takerFeeShareAgreementsBuilder_ == null) {
+          return takerFeeShareAgreements_.get(index);
+        } else {
+          return takerFeeShareAgreementsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTakerFeeShareAgreements(
+          int index, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement value) {
+        if (takerFeeShareAgreementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTakerFeeShareAgreementsIsMutable();
+          takerFeeShareAgreements_.set(index, value);
+          onChanged();
+        } else {
+          takerFeeShareAgreementsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTakerFeeShareAgreements(
+          int index, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement.Builder builderForValue) {
+        if (takerFeeShareAgreementsBuilder_ == null) {
+          ensureTakerFeeShareAgreementsIsMutable();
+          takerFeeShareAgreements_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          takerFeeShareAgreementsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTakerFeeShareAgreements(com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement value) {
+        if (takerFeeShareAgreementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTakerFeeShareAgreementsIsMutable();
+          takerFeeShareAgreements_.add(value);
+          onChanged();
+        } else {
+          takerFeeShareAgreementsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTakerFeeShareAgreements(
+          int index, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement value) {
+        if (takerFeeShareAgreementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTakerFeeShareAgreementsIsMutable();
+          takerFeeShareAgreements_.add(index, value);
+          onChanged();
+        } else {
+          takerFeeShareAgreementsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTakerFeeShareAgreements(
+          com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement.Builder builderForValue) {
+        if (takerFeeShareAgreementsBuilder_ == null) {
+          ensureTakerFeeShareAgreementsIsMutable();
+          takerFeeShareAgreements_.add(builderForValue.build());
+          onChanged();
+        } else {
+          takerFeeShareAgreementsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTakerFeeShareAgreements(
+          int index, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement.Builder builderForValue) {
+        if (takerFeeShareAgreementsBuilder_ == null) {
+          ensureTakerFeeShareAgreementsIsMutable();
+          takerFeeShareAgreements_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          takerFeeShareAgreementsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllTakerFeeShareAgreements(
+          java.lang.Iterable<? extends com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement> values) {
+        if (takerFeeShareAgreementsBuilder_ == null) {
+          ensureTakerFeeShareAgreementsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, takerFeeShareAgreements_);
+          onChanged();
+        } else {
+          takerFeeShareAgreementsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTakerFeeShareAgreements() {
+        if (takerFeeShareAgreementsBuilder_ == null) {
+          takerFeeShareAgreements_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          takerFeeShareAgreementsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeTakerFeeShareAgreements(int index) {
+        if (takerFeeShareAgreementsBuilder_ == null) {
+          ensureTakerFeeShareAgreementsIsMutable();
+          takerFeeShareAgreements_.remove(index);
+          onChanged();
+        } else {
+          takerFeeShareAgreementsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement.Builder getTakerFeeShareAgreementsBuilder(
+          int index) {
+        return getTakerFeeShareAgreementsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreementOrBuilder getTakerFeeShareAgreementsOrBuilder(
+          int index) {
+        if (takerFeeShareAgreementsBuilder_ == null) {
+          return takerFeeShareAgreements_.get(index);  } else {
+          return takerFeeShareAgreementsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreementOrBuilder> 
+           getTakerFeeShareAgreementsOrBuilderList() {
+        if (takerFeeShareAgreementsBuilder_ != null) {
+          return takerFeeShareAgreementsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(takerFeeShareAgreements_);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement.Builder addTakerFeeShareAgreementsBuilder() {
+        return getTakerFeeShareAgreementsFieldBuilder().addBuilder(
+            com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement.Builder addTakerFeeShareAgreementsBuilder(
+          int index) {
+        return getTakerFeeShareAgreementsFieldBuilder().addBuilder(
+            index, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreements = 1 [json_name = "takerFeeShareAgreements", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement.Builder> 
+           getTakerFeeShareAgreementsBuilderList() {
+        return getTakerFeeShareAgreementsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement.Builder, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreementOrBuilder> 
+          getTakerFeeShareAgreementsFieldBuilder() {
+        if (takerFeeShareAgreementsBuilder_ == null) {
+          takerFeeShareAgreementsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement.Builder, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreementOrBuilder>(
+                  takerFeeShareAgreements_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          takerFeeShareAgreements_ = null;
+        }
+        return takerFeeShareAgreementsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.AllTakerFeeShareAgreementsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.AllTakerFeeShareAgreementsResponse)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AllTakerFeeShareAgreementsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<AllTakerFeeShareAgreementsResponse>() {
+      @java.lang.Override
+      public AllTakerFeeShareAgreementsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AllTakerFeeShareAgreementsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AllTakerFeeShareAgreementsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAgreementsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TakerFeeShareAgreementFromDenomRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+  }
+  /**
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomRequest}
+   */
+  public static final class TakerFeeShareAgreementFromDenomRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomRequest)
+      TakerFeeShareAgreementFromDenomRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TakerFeeShareAgreementFromDenomRequest.newBuilder() to construct.
+    private TakerFeeShareAgreementFromDenomRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TakerFeeShareAgreementFromDenomRequest() {
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TakerFeeShareAgreementFromDenomRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareAgreementFromDenomRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareAgreementFromDenomRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest other = (com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomRequest)
+        com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareAgreementFromDenomRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareAgreementFromDenomRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareAgreementFromDenomRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest result = new com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomRequest)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TakerFeeShareAgreementFromDenomRequest>
+        PARSER = new com.google.protobuf.AbstractParser<TakerFeeShareAgreementFromDenomRequest>() {
+      @java.lang.Override
+      public TakerFeeShareAgreementFromDenomRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TakerFeeShareAgreementFromDenomRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TakerFeeShareAgreementFromDenomRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TakerFeeShareAgreementFromDenomResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreement = 1 [json_name = "takerFeeShareAgreement", (.gogoproto.nullable) = false];</code>
+     * @return Whether the takerFeeShareAgreement field is set.
+     */
+    boolean hasTakerFeeShareAgreement();
+    /**
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreement = 1 [json_name = "takerFeeShareAgreement", (.gogoproto.nullable) = false];</code>
+     * @return The takerFeeShareAgreement.
+     */
+    com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement getTakerFeeShareAgreement();
+    /**
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreement = 1 [json_name = "takerFeeShareAgreement", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreementOrBuilder getTakerFeeShareAgreementOrBuilder();
+  }
+  /**
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomResponse}
+   */
+  public static final class TakerFeeShareAgreementFromDenomResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomResponse)
+      TakerFeeShareAgreementFromDenomResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TakerFeeShareAgreementFromDenomResponse.newBuilder() to construct.
+    private TakerFeeShareAgreementFromDenomResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TakerFeeShareAgreementFromDenomResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TakerFeeShareAgreementFromDenomResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareAgreementFromDenomResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareAgreementFromDenomResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse.class, com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse.Builder.class);
+    }
+
+    public static final int TAKER_FEE_SHARE_AGREEMENT_FIELD_NUMBER = 1;
+    private com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement takerFeeShareAgreement_;
+    /**
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreement = 1 [json_name = "takerFeeShareAgreement", (.gogoproto.nullable) = false];</code>
+     * @return Whether the takerFeeShareAgreement field is set.
+     */
+    @java.lang.Override
+    public boolean hasTakerFeeShareAgreement() {
+      return takerFeeShareAgreement_ != null;
+    }
+    /**
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreement = 1 [json_name = "takerFeeShareAgreement", (.gogoproto.nullable) = false];</code>
+     * @return The takerFeeShareAgreement.
+     */
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement getTakerFeeShareAgreement() {
+      return takerFeeShareAgreement_ == null ? com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement.getDefaultInstance() : takerFeeShareAgreement_;
+    }
+    /**
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreement = 1 [json_name = "takerFeeShareAgreement", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreementOrBuilder getTakerFeeShareAgreementOrBuilder() {
+      return takerFeeShareAgreement_ == null ? com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement.getDefaultInstance() : takerFeeShareAgreement_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (takerFeeShareAgreement_ != null) {
+        output.writeMessage(1, getTakerFeeShareAgreement());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (takerFeeShareAgreement_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTakerFeeShareAgreement());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse other = (com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse) obj;
+
+      if (hasTakerFeeShareAgreement() != other.hasTakerFeeShareAgreement()) return false;
+      if (hasTakerFeeShareAgreement()) {
+        if (!getTakerFeeShareAgreement()
+            .equals(other.getTakerFeeShareAgreement())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTakerFeeShareAgreement()) {
+        hash = (37 * hash) + TAKER_FEE_SHARE_AGREEMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getTakerFeeShareAgreement().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomResponse)
+        com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareAgreementFromDenomResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareAgreementFromDenomResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse.class, com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        takerFeeShareAgreement_ = null;
+        if (takerFeeShareAgreementBuilder_ != null) {
+          takerFeeShareAgreementBuilder_.dispose();
+          takerFeeShareAgreementBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareAgreementFromDenomResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse result = new com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.takerFeeShareAgreement_ = takerFeeShareAgreementBuilder_ == null
+              ? takerFeeShareAgreement_
+              : takerFeeShareAgreementBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse.getDefaultInstance()) return this;
+        if (other.hasTakerFeeShareAgreement()) {
+          mergeTakerFeeShareAgreement(other.getTakerFeeShareAgreement());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getTakerFeeShareAgreementFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement takerFeeShareAgreement_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement.Builder, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreementOrBuilder> takerFeeShareAgreementBuilder_;
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreement = 1 [json_name = "takerFeeShareAgreement", (.gogoproto.nullable) = false];</code>
+       * @return Whether the takerFeeShareAgreement field is set.
+       */
+      public boolean hasTakerFeeShareAgreement() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreement = 1 [json_name = "takerFeeShareAgreement", (.gogoproto.nullable) = false];</code>
+       * @return The takerFeeShareAgreement.
+       */
+      public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement getTakerFeeShareAgreement() {
+        if (takerFeeShareAgreementBuilder_ == null) {
+          return takerFeeShareAgreement_ == null ? com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement.getDefaultInstance() : takerFeeShareAgreement_;
+        } else {
+          return takerFeeShareAgreementBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreement = 1 [json_name = "takerFeeShareAgreement", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTakerFeeShareAgreement(com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement value) {
+        if (takerFeeShareAgreementBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          takerFeeShareAgreement_ = value;
+        } else {
+          takerFeeShareAgreementBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreement = 1 [json_name = "takerFeeShareAgreement", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTakerFeeShareAgreement(
+          com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement.Builder builderForValue) {
+        if (takerFeeShareAgreementBuilder_ == null) {
+          takerFeeShareAgreement_ = builderForValue.build();
+        } else {
+          takerFeeShareAgreementBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreement = 1 [json_name = "takerFeeShareAgreement", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeTakerFeeShareAgreement(com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement value) {
+        if (takerFeeShareAgreementBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            takerFeeShareAgreement_ != null &&
+            takerFeeShareAgreement_ != com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement.getDefaultInstance()) {
+            getTakerFeeShareAgreementBuilder().mergeFrom(value);
+          } else {
+            takerFeeShareAgreement_ = value;
+          }
+        } else {
+          takerFeeShareAgreementBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreement = 1 [json_name = "takerFeeShareAgreement", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTakerFeeShareAgreement() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        takerFeeShareAgreement_ = null;
+        if (takerFeeShareAgreementBuilder_ != null) {
+          takerFeeShareAgreementBuilder_.dispose();
+          takerFeeShareAgreementBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreement = 1 [json_name = "takerFeeShareAgreement", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement.Builder getTakerFeeShareAgreementBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getTakerFeeShareAgreementFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreement = 1 [json_name = "takerFeeShareAgreement", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreementOrBuilder getTakerFeeShareAgreementOrBuilder() {
+        if (takerFeeShareAgreementBuilder_ != null) {
+          return takerFeeShareAgreementBuilder_.getMessageOrBuilder();
+        } else {
+          return takerFeeShareAgreement_ == null ?
+              com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement.getDefaultInstance() : takerFeeShareAgreement_;
+        }
+      }
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeShareAgreement taker_fee_share_agreement = 1 [json_name = "takerFeeShareAgreement", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement.Builder, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreementOrBuilder> 
+          getTakerFeeShareAgreementFieldBuilder() {
+        if (takerFeeShareAgreementBuilder_ == null) {
+          takerFeeShareAgreementBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreement.Builder, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeShareAgreementOrBuilder>(
+                  getTakerFeeShareAgreement(),
+                  getParentForChildren(),
+                  isClean());
+          takerFeeShareAgreement_ = null;
+        }
+        return takerFeeShareAgreementBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.TakerFeeShareAgreementFromDenomResponse)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TakerFeeShareAgreementFromDenomResponse>
+        PARSER = new com.google.protobuf.AbstractParser<TakerFeeShareAgreementFromDenomResponse>() {
+      @java.lang.Override
+      public TakerFeeShareAgreementFromDenomResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TakerFeeShareAgreementFromDenomResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TakerFeeShareAgreementFromDenomResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareAgreementFromDenomResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TakerFeeShareDenomsToAccruedValueRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>string takerFeeDenom = 2 [json_name = "takerFeeDenom"];</code>
+     * @return The takerFeeDenom.
+     */
+    java.lang.String getTakerFeeDenom();
+    /**
+     * <code>string takerFeeDenom = 2 [json_name = "takerFeeDenom"];</code>
+     * @return The bytes for takerFeeDenom.
+     */
+    com.google.protobuf.ByteString
+        getTakerFeeDenomBytes();
+  }
+  /**
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueRequest}
+   */
+  public static final class TakerFeeShareDenomsToAccruedValueRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueRequest)
+      TakerFeeShareDenomsToAccruedValueRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TakerFeeShareDenomsToAccruedValueRequest.newBuilder() to construct.
+    private TakerFeeShareDenomsToAccruedValueRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TakerFeeShareDenomsToAccruedValueRequest() {
+      denom_ = "";
+      takerFeeDenom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TakerFeeShareDenomsToAccruedValueRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareDenomsToAccruedValueRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareDenomsToAccruedValueRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TAKERFEEDENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object takerFeeDenom_ = "";
+    /**
+     * <code>string takerFeeDenom = 2 [json_name = "takerFeeDenom"];</code>
+     * @return The takerFeeDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getTakerFeeDenom() {
+      java.lang.Object ref = takerFeeDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        takerFeeDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string takerFeeDenom = 2 [json_name = "takerFeeDenom"];</code>
+     * @return The bytes for takerFeeDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTakerFeeDenomBytes() {
+      java.lang.Object ref = takerFeeDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        takerFeeDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(takerFeeDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, takerFeeDenom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(takerFeeDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, takerFeeDenom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest other = (com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getTakerFeeDenom()
+          .equals(other.getTakerFeeDenom())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + TAKERFEEDENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getTakerFeeDenom().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueRequest)
+        com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareDenomsToAccruedValueRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareDenomsToAccruedValueRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        takerFeeDenom_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareDenomsToAccruedValueRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest result = new com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.takerFeeDenom_ = takerFeeDenom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getTakerFeeDenom().isEmpty()) {
+          takerFeeDenom_ = other.takerFeeDenom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                takerFeeDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object takerFeeDenom_ = "";
+      /**
+       * <code>string takerFeeDenom = 2 [json_name = "takerFeeDenom"];</code>
+       * @return The takerFeeDenom.
+       */
+      public java.lang.String getTakerFeeDenom() {
+        java.lang.Object ref = takerFeeDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          takerFeeDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string takerFeeDenom = 2 [json_name = "takerFeeDenom"];</code>
+       * @return The bytes for takerFeeDenom.
+       */
+      public com.google.protobuf.ByteString
+          getTakerFeeDenomBytes() {
+        java.lang.Object ref = takerFeeDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          takerFeeDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string takerFeeDenom = 2 [json_name = "takerFeeDenom"];</code>
+       * @param value The takerFeeDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTakerFeeDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        takerFeeDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string takerFeeDenom = 2 [json_name = "takerFeeDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTakerFeeDenom() {
+        takerFeeDenom_ = getDefaultInstance().getTakerFeeDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string takerFeeDenom = 2 [json_name = "takerFeeDenom"];</code>
+       * @param value The bytes for takerFeeDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTakerFeeDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        takerFeeDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueRequest)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TakerFeeShareDenomsToAccruedValueRequest>
+        PARSER = new com.google.protobuf.AbstractParser<TakerFeeShareDenomsToAccruedValueRequest>() {
+      @java.lang.Override
+      public TakerFeeShareDenomsToAccruedValueRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TakerFeeShareDenomsToAccruedValueRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TakerFeeShareDenomsToAccruedValueRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TakerFeeShareDenomsToAccruedValueResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The amount.
+     */
+    java.lang.String getAmount();
+    /**
+     * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
+  }
+  /**
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueResponse}
+   */
+  public static final class TakerFeeShareDenomsToAccruedValueResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueResponse)
+      TakerFeeShareDenomsToAccruedValueResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TakerFeeShareDenomsToAccruedValueResponse.newBuilder() to construct.
+    private TakerFeeShareDenomsToAccruedValueResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TakerFeeShareDenomsToAccruedValueResponse() {
+      amount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TakerFeeShareDenomsToAccruedValueResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareDenomsToAccruedValueResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareDenomsToAccruedValueResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse.class, com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse.Builder.class);
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amount_ = "";
+    /**
+     * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, amount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, amount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse other = (com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse) obj;
+
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueResponse)
+        com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareDenomsToAccruedValueResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareDenomsToAccruedValueResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse.class, com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        amount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareDenomsToAccruedValueResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse result = new com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.amount_ = amount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse.getDefaultInstance()) return this;
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                amount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object amount_ = "";
+      /**
+       * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return The amount.
+       */
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amount_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        amount_ = getDefaultInstance().getAmount();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amount_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.TakerFeeShareDenomsToAccruedValueResponse)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TakerFeeShareDenomsToAccruedValueResponse>
+        PARSER = new com.google.protobuf.AbstractParser<TakerFeeShareDenomsToAccruedValueResponse>() {
+      @java.lang.Override
+      public TakerFeeShareDenomsToAccruedValueResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TakerFeeShareDenomsToAccruedValueResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TakerFeeShareDenomsToAccruedValueResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.TakerFeeShareDenomsToAccruedValueResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AllTakerFeeShareAccumulatorsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsRequest}
+   */
+  public static final class AllTakerFeeShareAccumulatorsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsRequest)
+      AllTakerFeeShareAccumulatorsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AllTakerFeeShareAccumulatorsRequest.newBuilder() to construct.
+    private AllTakerFeeShareAccumulatorsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AllTakerFeeShareAccumulatorsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AllTakerFeeShareAccumulatorsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAccumulatorsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAccumulatorsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest other = (com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsRequest)
+        com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAccumulatorsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAccumulatorsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAccumulatorsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest result = new com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsRequest)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AllTakerFeeShareAccumulatorsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AllTakerFeeShareAccumulatorsRequest>() {
+      @java.lang.Override
+      public AllTakerFeeShareAccumulatorsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AllTakerFeeShareAccumulatorsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AllTakerFeeShareAccumulatorsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AllTakerFeeShareAccumulatorsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator> 
+        getTakerFeeSkimAccumulatorsList();
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator getTakerFeeSkimAccumulators(int index);
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+     */
+    int getTakerFeeSkimAccumulatorsCount();
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulatorOrBuilder> 
+        getTakerFeeSkimAccumulatorsOrBuilderList();
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulatorOrBuilder getTakerFeeSkimAccumulatorsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsResponse}
+   */
+  public static final class AllTakerFeeShareAccumulatorsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsResponse)
+      AllTakerFeeShareAccumulatorsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AllTakerFeeShareAccumulatorsResponse.newBuilder() to construct.
+    private AllTakerFeeShareAccumulatorsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AllTakerFeeShareAccumulatorsResponse() {
+      takerFeeSkimAccumulators_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AllTakerFeeShareAccumulatorsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAccumulatorsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAccumulatorsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse.class, com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse.Builder.class);
+    }
+
+    public static final int TAKER_FEE_SKIM_ACCUMULATORS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator> takerFeeSkimAccumulators_;
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator> getTakerFeeSkimAccumulatorsList() {
+      return takerFeeSkimAccumulators_;
+    }
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulatorOrBuilder> 
+        getTakerFeeSkimAccumulatorsOrBuilderList() {
+      return takerFeeSkimAccumulators_;
+    }
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getTakerFeeSkimAccumulatorsCount() {
+      return takerFeeSkimAccumulators_.size();
+    }
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator getTakerFeeSkimAccumulators(int index) {
+      return takerFeeSkimAccumulators_.get(index);
+    }
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulatorOrBuilder getTakerFeeSkimAccumulatorsOrBuilder(
+        int index) {
+      return takerFeeSkimAccumulators_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < takerFeeSkimAccumulators_.size(); i++) {
+        output.writeMessage(1, takerFeeSkimAccumulators_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < takerFeeSkimAccumulators_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, takerFeeSkimAccumulators_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse other = (com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse) obj;
+
+      if (!getTakerFeeSkimAccumulatorsList()
+          .equals(other.getTakerFeeSkimAccumulatorsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTakerFeeSkimAccumulatorsCount() > 0) {
+        hash = (37 * hash) + TAKER_FEE_SKIM_ACCUMULATORS_FIELD_NUMBER;
+        hash = (53 * hash) + getTakerFeeSkimAccumulatorsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsResponse)
+        com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAccumulatorsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAccumulatorsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse.class, com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (takerFeeSkimAccumulatorsBuilder_ == null) {
+          takerFeeSkimAccumulators_ = java.util.Collections.emptyList();
+        } else {
+          takerFeeSkimAccumulators_ = null;
+          takerFeeSkimAccumulatorsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAccumulatorsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse result = new com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse result) {
+        if (takerFeeSkimAccumulatorsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            takerFeeSkimAccumulators_ = java.util.Collections.unmodifiableList(takerFeeSkimAccumulators_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.takerFeeSkimAccumulators_ = takerFeeSkimAccumulators_;
+        } else {
+          result.takerFeeSkimAccumulators_ = takerFeeSkimAccumulatorsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse.getDefaultInstance()) return this;
+        if (takerFeeSkimAccumulatorsBuilder_ == null) {
+          if (!other.takerFeeSkimAccumulators_.isEmpty()) {
+            if (takerFeeSkimAccumulators_.isEmpty()) {
+              takerFeeSkimAccumulators_ = other.takerFeeSkimAccumulators_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTakerFeeSkimAccumulatorsIsMutable();
+              takerFeeSkimAccumulators_.addAll(other.takerFeeSkimAccumulators_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.takerFeeSkimAccumulators_.isEmpty()) {
+            if (takerFeeSkimAccumulatorsBuilder_.isEmpty()) {
+              takerFeeSkimAccumulatorsBuilder_.dispose();
+              takerFeeSkimAccumulatorsBuilder_ = null;
+              takerFeeSkimAccumulators_ = other.takerFeeSkimAccumulators_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              takerFeeSkimAccumulatorsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTakerFeeSkimAccumulatorsFieldBuilder() : null;
+            } else {
+              takerFeeSkimAccumulatorsBuilder_.addAllMessages(other.takerFeeSkimAccumulators_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator m =
+                    input.readMessage(
+                        com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator.parser(),
+                        extensionRegistry);
+                if (takerFeeSkimAccumulatorsBuilder_ == null) {
+                  ensureTakerFeeSkimAccumulatorsIsMutable();
+                  takerFeeSkimAccumulators_.add(m);
+                } else {
+                  takerFeeSkimAccumulatorsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator> takerFeeSkimAccumulators_ =
+        java.util.Collections.emptyList();
+      private void ensureTakerFeeSkimAccumulatorsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          takerFeeSkimAccumulators_ = new java.util.ArrayList<com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator>(takerFeeSkimAccumulators_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator.Builder, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulatorOrBuilder> takerFeeSkimAccumulatorsBuilder_;
+
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator> getTakerFeeSkimAccumulatorsList() {
+        if (takerFeeSkimAccumulatorsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(takerFeeSkimAccumulators_);
+        } else {
+          return takerFeeSkimAccumulatorsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public int getTakerFeeSkimAccumulatorsCount() {
+        if (takerFeeSkimAccumulatorsBuilder_ == null) {
+          return takerFeeSkimAccumulators_.size();
+        } else {
+          return takerFeeSkimAccumulatorsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator getTakerFeeSkimAccumulators(int index) {
+        if (takerFeeSkimAccumulatorsBuilder_ == null) {
+          return takerFeeSkimAccumulators_.get(index);
+        } else {
+          return takerFeeSkimAccumulatorsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTakerFeeSkimAccumulators(
+          int index, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator value) {
+        if (takerFeeSkimAccumulatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTakerFeeSkimAccumulatorsIsMutable();
+          takerFeeSkimAccumulators_.set(index, value);
+          onChanged();
+        } else {
+          takerFeeSkimAccumulatorsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTakerFeeSkimAccumulators(
+          int index, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator.Builder builderForValue) {
+        if (takerFeeSkimAccumulatorsBuilder_ == null) {
+          ensureTakerFeeSkimAccumulatorsIsMutable();
+          takerFeeSkimAccumulators_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          takerFeeSkimAccumulatorsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTakerFeeSkimAccumulators(com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator value) {
+        if (takerFeeSkimAccumulatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTakerFeeSkimAccumulatorsIsMutable();
+          takerFeeSkimAccumulators_.add(value);
+          onChanged();
+        } else {
+          takerFeeSkimAccumulatorsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTakerFeeSkimAccumulators(
+          int index, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator value) {
+        if (takerFeeSkimAccumulatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTakerFeeSkimAccumulatorsIsMutable();
+          takerFeeSkimAccumulators_.add(index, value);
+          onChanged();
+        } else {
+          takerFeeSkimAccumulatorsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTakerFeeSkimAccumulators(
+          com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator.Builder builderForValue) {
+        if (takerFeeSkimAccumulatorsBuilder_ == null) {
+          ensureTakerFeeSkimAccumulatorsIsMutable();
+          takerFeeSkimAccumulators_.add(builderForValue.build());
+          onChanged();
+        } else {
+          takerFeeSkimAccumulatorsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTakerFeeSkimAccumulators(
+          int index, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator.Builder builderForValue) {
+        if (takerFeeSkimAccumulatorsBuilder_ == null) {
+          ensureTakerFeeSkimAccumulatorsIsMutable();
+          takerFeeSkimAccumulators_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          takerFeeSkimAccumulatorsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllTakerFeeSkimAccumulators(
+          java.lang.Iterable<? extends com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator> values) {
+        if (takerFeeSkimAccumulatorsBuilder_ == null) {
+          ensureTakerFeeSkimAccumulatorsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, takerFeeSkimAccumulators_);
+          onChanged();
+        } else {
+          takerFeeSkimAccumulatorsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTakerFeeSkimAccumulators() {
+        if (takerFeeSkimAccumulatorsBuilder_ == null) {
+          takerFeeSkimAccumulators_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          takerFeeSkimAccumulatorsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeTakerFeeSkimAccumulators(int index) {
+        if (takerFeeSkimAccumulatorsBuilder_ == null) {
+          ensureTakerFeeSkimAccumulatorsIsMutable();
+          takerFeeSkimAccumulators_.remove(index);
+          onChanged();
+        } else {
+          takerFeeSkimAccumulatorsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator.Builder getTakerFeeSkimAccumulatorsBuilder(
+          int index) {
+        return getTakerFeeSkimAccumulatorsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulatorOrBuilder getTakerFeeSkimAccumulatorsOrBuilder(
+          int index) {
+        if (takerFeeSkimAccumulatorsBuilder_ == null) {
+          return takerFeeSkimAccumulators_.get(index);  } else {
+          return takerFeeSkimAccumulatorsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulatorOrBuilder> 
+           getTakerFeeSkimAccumulatorsOrBuilderList() {
+        if (takerFeeSkimAccumulatorsBuilder_ != null) {
+          return takerFeeSkimAccumulatorsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(takerFeeSkimAccumulators_);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator.Builder addTakerFeeSkimAccumulatorsBuilder() {
+        return getTakerFeeSkimAccumulatorsFieldBuilder().addBuilder(
+            com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator.Builder addTakerFeeSkimAccumulatorsBuilder(
+          int index) {
+        return getTakerFeeSkimAccumulatorsFieldBuilder().addBuilder(
+            index, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.TakerFeeSkimAccumulator taker_fee_skim_accumulators = 1 [json_name = "takerFeeSkimAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator.Builder> 
+           getTakerFeeSkimAccumulatorsBuilderList() {
+        return getTakerFeeSkimAccumulatorsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator.Builder, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulatorOrBuilder> 
+          getTakerFeeSkimAccumulatorsFieldBuilder() {
+        if (takerFeeSkimAccumulatorsBuilder_ == null) {
+          takerFeeSkimAccumulatorsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulator.Builder, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.TakerFeeSkimAccumulatorOrBuilder>(
+                  takerFeeSkimAccumulators_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          takerFeeSkimAccumulators_ = null;
+        }
+        return takerFeeSkimAccumulatorsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.AllTakerFeeShareAccumulatorsResponse)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AllTakerFeeShareAccumulatorsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<AllTakerFeeShareAccumulatorsResponse>() {
+      @java.lang.Override
+      public AllTakerFeeShareAccumulatorsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AllTakerFeeShareAccumulatorsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AllTakerFeeShareAccumulatorsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.AllTakerFeeShareAccumulatorsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RegisteredAlloyedPoolFromDenomRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+  }
+  /**
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomRequest}
+   */
+  public static final class RegisteredAlloyedPoolFromDenomRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomRequest)
+      RegisteredAlloyedPoolFromDenomRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegisteredAlloyedPoolFromDenomRequest.newBuilder() to construct.
+    private RegisteredAlloyedPoolFromDenomRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegisteredAlloyedPoolFromDenomRequest() {
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegisteredAlloyedPoolFromDenomRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromDenomRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromDenomRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest other = (com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomRequest)
+        com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromDenomRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromDenomRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromDenomRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest result = new com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomRequest)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegisteredAlloyedPoolFromDenomRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RegisteredAlloyedPoolFromDenomRequest>() {
+      @java.lang.Override
+      public RegisteredAlloyedPoolFromDenomRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegisteredAlloyedPoolFromDenomRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegisteredAlloyedPoolFromDenomRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RegisteredAlloyedPoolFromDenomResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+     * @return Whether the contractState field is set.
+     */
+    boolean hasContractState();
+    /**
+     * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+     * @return The contractState.
+     */
+    com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState getContractState();
+    /**
+     * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareStateOrBuilder getContractStateOrBuilder();
+  }
+  /**
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomResponse}
+   */
+  public static final class RegisteredAlloyedPoolFromDenomResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomResponse)
+      RegisteredAlloyedPoolFromDenomResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegisteredAlloyedPoolFromDenomResponse.newBuilder() to construct.
+    private RegisteredAlloyedPoolFromDenomResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegisteredAlloyedPoolFromDenomResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegisteredAlloyedPoolFromDenomResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromDenomResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromDenomResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse.class, com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse.Builder.class);
+    }
+
+    public static final int CONTRACT_STATE_FIELD_NUMBER = 1;
+    private com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState contractState_;
+    /**
+     * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+     * @return Whether the contractState field is set.
+     */
+    @java.lang.Override
+    public boolean hasContractState() {
+      return contractState_ != null;
+    }
+    /**
+     * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+     * @return The contractState.
+     */
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState getContractState() {
+      return contractState_ == null ? com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.getDefaultInstance() : contractState_;
+    }
+    /**
+     * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareStateOrBuilder getContractStateOrBuilder() {
+      return contractState_ == null ? com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.getDefaultInstance() : contractState_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (contractState_ != null) {
+        output.writeMessage(1, getContractState());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (contractState_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getContractState());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse other = (com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse) obj;
+
+      if (hasContractState() != other.hasContractState()) return false;
+      if (hasContractState()) {
+        if (!getContractState()
+            .equals(other.getContractState())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasContractState()) {
+        hash = (37 * hash) + CONTRACT_STATE_FIELD_NUMBER;
+        hash = (53 * hash) + getContractState().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomResponse)
+        com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromDenomResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromDenomResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse.class, com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contractState_ = null;
+        if (contractStateBuilder_ != null) {
+          contractStateBuilder_.dispose();
+          contractStateBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromDenomResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse result = new com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contractState_ = contractStateBuilder_ == null
+              ? contractState_
+              : contractStateBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse.getDefaultInstance()) return this;
+        if (other.hasContractState()) {
+          mergeContractState(other.getContractState());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getContractStateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState contractState_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.Builder, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareStateOrBuilder> contractStateBuilder_;
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       * @return Whether the contractState field is set.
+       */
+      public boolean hasContractState() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       * @return The contractState.
+       */
+      public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState getContractState() {
+        if (contractStateBuilder_ == null) {
+          return contractState_ == null ? com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.getDefaultInstance() : contractState_;
+        } else {
+          return contractStateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setContractState(com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState value) {
+        if (contractStateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          contractState_ = value;
+        } else {
+          contractStateBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setContractState(
+          com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.Builder builderForValue) {
+        if (contractStateBuilder_ == null) {
+          contractState_ = builderForValue.build();
+        } else {
+          contractStateBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeContractState(com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState value) {
+        if (contractStateBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            contractState_ != null &&
+            contractState_ != com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.getDefaultInstance()) {
+            getContractStateBuilder().mergeFrom(value);
+          } else {
+            contractState_ = value;
+          }
+        } else {
+          contractStateBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearContractState() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        contractState_ = null;
+        if (contractStateBuilder_ != null) {
+          contractStateBuilder_.dispose();
+          contractStateBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.Builder getContractStateBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getContractStateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareStateOrBuilder getContractStateOrBuilder() {
+        if (contractStateBuilder_ != null) {
+          return contractStateBuilder_.getMessageOrBuilder();
+        } else {
+          return contractState_ == null ?
+              com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.getDefaultInstance() : contractState_;
+        }
+      }
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.Builder, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareStateOrBuilder> 
+          getContractStateFieldBuilder() {
+        if (contractStateBuilder_ == null) {
+          contractStateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.Builder, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareStateOrBuilder>(
+                  getContractState(),
+                  getParentForChildren(),
+                  isClean());
+          contractState_ = null;
+        }
+        return contractStateBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromDenomResponse)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegisteredAlloyedPoolFromDenomResponse>
+        PARSER = new com.google.protobuf.AbstractParser<RegisteredAlloyedPoolFromDenomResponse>() {
+      @java.lang.Override
+      public RegisteredAlloyedPoolFromDenomResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegisteredAlloyedPoolFromDenomResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegisteredAlloyedPoolFromDenomResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromDenomResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RegisteredAlloyedPoolFromPoolIdRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+  }
+  /**
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdRequest}
+   */
+  public static final class RegisteredAlloyedPoolFromPoolIdRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdRequest)
+      RegisteredAlloyedPoolFromPoolIdRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegisteredAlloyedPoolFromPoolIdRequest.newBuilder() to construct.
+    private RegisteredAlloyedPoolFromPoolIdRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegisteredAlloyedPoolFromPoolIdRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegisteredAlloyedPoolFromPoolIdRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromPoolIdRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromPoolIdRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest other = (com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdRequest)
+        com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromPoolIdRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromPoolIdRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromPoolIdRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest result = new com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdRequest)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegisteredAlloyedPoolFromPoolIdRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RegisteredAlloyedPoolFromPoolIdRequest>() {
+      @java.lang.Override
+      public RegisteredAlloyedPoolFromPoolIdRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegisteredAlloyedPoolFromPoolIdRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegisteredAlloyedPoolFromPoolIdRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RegisteredAlloyedPoolFromPoolIdResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+     * @return Whether the contractState field is set.
+     */
+    boolean hasContractState();
+    /**
+     * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+     * @return The contractState.
+     */
+    com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState getContractState();
+    /**
+     * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareStateOrBuilder getContractStateOrBuilder();
+  }
+  /**
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdResponse}
+   */
+  public static final class RegisteredAlloyedPoolFromPoolIdResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdResponse)
+      RegisteredAlloyedPoolFromPoolIdResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegisteredAlloyedPoolFromPoolIdResponse.newBuilder() to construct.
+    private RegisteredAlloyedPoolFromPoolIdResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegisteredAlloyedPoolFromPoolIdResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegisteredAlloyedPoolFromPoolIdResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromPoolIdResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromPoolIdResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse.class, com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse.Builder.class);
+    }
+
+    public static final int CONTRACT_STATE_FIELD_NUMBER = 1;
+    private com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState contractState_;
+    /**
+     * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+     * @return Whether the contractState field is set.
+     */
+    @java.lang.Override
+    public boolean hasContractState() {
+      return contractState_ != null;
+    }
+    /**
+     * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+     * @return The contractState.
+     */
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState getContractState() {
+      return contractState_ == null ? com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.getDefaultInstance() : contractState_;
+    }
+    /**
+     * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareStateOrBuilder getContractStateOrBuilder() {
+      return contractState_ == null ? com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.getDefaultInstance() : contractState_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (contractState_ != null) {
+        output.writeMessage(1, getContractState());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (contractState_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getContractState());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse other = (com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse) obj;
+
+      if (hasContractState() != other.hasContractState()) return false;
+      if (hasContractState()) {
+        if (!getContractState()
+            .equals(other.getContractState())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasContractState()) {
+        hash = (37 * hash) + CONTRACT_STATE_FIELD_NUMBER;
+        hash = (53 * hash) + getContractState().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdResponse)
+        com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromPoolIdResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromPoolIdResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse.class, com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contractState_ = null;
+        if (contractStateBuilder_ != null) {
+          contractStateBuilder_.dispose();
+          contractStateBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromPoolIdResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse result = new com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contractState_ = contractStateBuilder_ == null
+              ? contractState_
+              : contractStateBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse.getDefaultInstance()) return this;
+        if (other.hasContractState()) {
+          mergeContractState(other.getContractState());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getContractStateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState contractState_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.Builder, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareStateOrBuilder> contractStateBuilder_;
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       * @return Whether the contractState field is set.
+       */
+      public boolean hasContractState() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       * @return The contractState.
+       */
+      public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState getContractState() {
+        if (contractStateBuilder_ == null) {
+          return contractState_ == null ? com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.getDefaultInstance() : contractState_;
+        } else {
+          return contractStateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setContractState(com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState value) {
+        if (contractStateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          contractState_ = value;
+        } else {
+          contractStateBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setContractState(
+          com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.Builder builderForValue) {
+        if (contractStateBuilder_ == null) {
+          contractState_ = builderForValue.build();
+        } else {
+          contractStateBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeContractState(com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState value) {
+        if (contractStateBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            contractState_ != null &&
+            contractState_ != com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.getDefaultInstance()) {
+            getContractStateBuilder().mergeFrom(value);
+          } else {
+            contractState_ = value;
+          }
+        } else {
+          contractStateBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearContractState() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        contractState_ = null;
+        if (contractStateBuilder_ != null) {
+          contractStateBuilder_.dispose();
+          contractStateBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.Builder getContractStateBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getContractStateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareStateOrBuilder getContractStateOrBuilder() {
+        if (contractStateBuilder_ != null) {
+          return contractStateBuilder_.getMessageOrBuilder();
+        } else {
+          return contractState_ == null ?
+              com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.getDefaultInstance() : contractState_;
+        }
+      }
+      /**
+       * <code>.osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_state = 1 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.Builder, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareStateOrBuilder> 
+          getContractStateFieldBuilder() {
+        if (contractStateBuilder_ == null) {
+          contractStateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.Builder, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareStateOrBuilder>(
+                  getContractState(),
+                  getParentForChildren(),
+                  isClean());
+          contractState_ = null;
+        }
+        return contractStateBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.RegisteredAlloyedPoolFromPoolIdResponse)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegisteredAlloyedPoolFromPoolIdResponse>
+        PARSER = new com.google.protobuf.AbstractParser<RegisteredAlloyedPoolFromPoolIdResponse>() {
+      @java.lang.Override
+      public RegisteredAlloyedPoolFromPoolIdResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegisteredAlloyedPoolFromPoolIdResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegisteredAlloyedPoolFromPoolIdResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.RegisteredAlloyedPoolFromPoolIdResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AllRegisteredAlloyedPoolsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.AllRegisteredAlloyedPoolsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.AllRegisteredAlloyedPoolsRequest}
+   */
+  public static final class AllRegisteredAlloyedPoolsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.AllRegisteredAlloyedPoolsRequest)
+      AllRegisteredAlloyedPoolsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AllRegisteredAlloyedPoolsRequest.newBuilder() to construct.
+    private AllRegisteredAlloyedPoolsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AllRegisteredAlloyedPoolsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AllRegisteredAlloyedPoolsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllRegisteredAlloyedPoolsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllRegisteredAlloyedPoolsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest other = (com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.AllRegisteredAlloyedPoolsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.AllRegisteredAlloyedPoolsRequest)
+        com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllRegisteredAlloyedPoolsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllRegisteredAlloyedPoolsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest.class, com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllRegisteredAlloyedPoolsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest result = new com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.AllRegisteredAlloyedPoolsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.AllRegisteredAlloyedPoolsRequest)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AllRegisteredAlloyedPoolsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AllRegisteredAlloyedPoolsRequest>() {
+      @java.lang.Override
+      public AllRegisteredAlloyedPoolsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AllRegisteredAlloyedPoolsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AllRegisteredAlloyedPoolsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AllRegisteredAlloyedPoolsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.AllRegisteredAlloyedPoolsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState> 
+        getContractStatesList();
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState getContractStates(int index);
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+     */
+    int getContractStatesCount();
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareStateOrBuilder> 
+        getContractStatesOrBuilderList();
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareStateOrBuilder getContractStatesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.AllRegisteredAlloyedPoolsResponse}
+   */
+  public static final class AllRegisteredAlloyedPoolsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.AllRegisteredAlloyedPoolsResponse)
+      AllRegisteredAlloyedPoolsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AllRegisteredAlloyedPoolsResponse.newBuilder() to construct.
+    private AllRegisteredAlloyedPoolsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AllRegisteredAlloyedPoolsResponse() {
+      contractStates_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AllRegisteredAlloyedPoolsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllRegisteredAlloyedPoolsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllRegisteredAlloyedPoolsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse.class, com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse.Builder.class);
+    }
+
+    public static final int CONTRACT_STATES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState> contractStates_;
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState> getContractStatesList() {
+      return contractStates_;
+    }
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareStateOrBuilder> 
+        getContractStatesOrBuilderList() {
+      return contractStates_;
+    }
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getContractStatesCount() {
+      return contractStates_.size();
+    }
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState getContractStates(int index) {
+      return contractStates_.get(index);
+    }
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareStateOrBuilder getContractStatesOrBuilder(
+        int index) {
+      return contractStates_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < contractStates_.size(); i++) {
+        output.writeMessage(1, contractStates_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < contractStates_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, contractStates_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse other = (com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse) obj;
+
+      if (!getContractStatesList()
+          .equals(other.getContractStatesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getContractStatesCount() > 0) {
+        hash = (37 * hash) + CONTRACT_STATES_FIELD_NUMBER;
+        hash = (53 * hash) + getContractStatesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.AllRegisteredAlloyedPoolsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.AllRegisteredAlloyedPoolsResponse)
+        com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllRegisteredAlloyedPoolsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllRegisteredAlloyedPoolsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse.class, com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (contractStatesBuilder_ == null) {
+          contractStates_ = java.util.Collections.emptyList();
+        } else {
+          contractStates_ = null;
+          contractStatesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.internal_static_osmosis_poolmanager_v1beta1_AllRegisteredAlloyedPoolsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse build() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse buildPartial() {
+        com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse result = new com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse result) {
+        if (contractStatesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            contractStates_ = java.util.Collections.unmodifiableList(contractStates_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.contractStates_ = contractStates_;
+        } else {
+          result.contractStates_ = contractStatesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse other) {
+        if (other == com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse.getDefaultInstance()) return this;
+        if (contractStatesBuilder_ == null) {
+          if (!other.contractStates_.isEmpty()) {
+            if (contractStates_.isEmpty()) {
+              contractStates_ = other.contractStates_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureContractStatesIsMutable();
+              contractStates_.addAll(other.contractStates_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.contractStates_.isEmpty()) {
+            if (contractStatesBuilder_.isEmpty()) {
+              contractStatesBuilder_.dispose();
+              contractStatesBuilder_ = null;
+              contractStates_ = other.contractStates_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              contractStatesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getContractStatesFieldBuilder() : null;
+            } else {
+              contractStatesBuilder_.addAllMessages(other.contractStates_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState m =
+                    input.readMessage(
+                        com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.parser(),
+                        extensionRegistry);
+                if (contractStatesBuilder_ == null) {
+                  ensureContractStatesIsMutable();
+                  contractStates_.add(m);
+                } else {
+                  contractStatesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState> contractStates_ =
+        java.util.Collections.emptyList();
+      private void ensureContractStatesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          contractStates_ = new java.util.ArrayList<com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState>(contractStates_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.Builder, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareStateOrBuilder> contractStatesBuilder_;
+
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState> getContractStatesList() {
+        if (contractStatesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(contractStates_);
+        } else {
+          return contractStatesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+       */
+      public int getContractStatesCount() {
+        if (contractStatesBuilder_ == null) {
+          return contractStates_.size();
+        } else {
+          return contractStatesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState getContractStates(int index) {
+        if (contractStatesBuilder_ == null) {
+          return contractStates_.get(index);
+        } else {
+          return contractStatesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setContractStates(
+          int index, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState value) {
+        if (contractStatesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContractStatesIsMutable();
+          contractStates_.set(index, value);
+          onChanged();
+        } else {
+          contractStatesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setContractStates(
+          int index, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.Builder builderForValue) {
+        if (contractStatesBuilder_ == null) {
+          ensureContractStatesIsMutable();
+          contractStates_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          contractStatesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addContractStates(com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState value) {
+        if (contractStatesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContractStatesIsMutable();
+          contractStates_.add(value);
+          onChanged();
+        } else {
+          contractStatesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addContractStates(
+          int index, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState value) {
+        if (contractStatesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContractStatesIsMutable();
+          contractStates_.add(index, value);
+          onChanged();
+        } else {
+          contractStatesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addContractStates(
+          com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.Builder builderForValue) {
+        if (contractStatesBuilder_ == null) {
+          ensureContractStatesIsMutable();
+          contractStates_.add(builderForValue.build());
+          onChanged();
+        } else {
+          contractStatesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addContractStates(
+          int index, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.Builder builderForValue) {
+        if (contractStatesBuilder_ == null) {
+          ensureContractStatesIsMutable();
+          contractStates_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          contractStatesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllContractStates(
+          java.lang.Iterable<? extends com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState> values) {
+        if (contractStatesBuilder_ == null) {
+          ensureContractStatesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, contractStates_);
+          onChanged();
+        } else {
+          contractStatesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearContractStates() {
+        if (contractStatesBuilder_ == null) {
+          contractStates_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          contractStatesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeContractStates(int index) {
+        if (contractStatesBuilder_ == null) {
+          ensureContractStatesIsMutable();
+          contractStates_.remove(index);
+          onChanged();
+        } else {
+          contractStatesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.Builder getContractStatesBuilder(
+          int index) {
+        return getContractStatesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareStateOrBuilder getContractStatesOrBuilder(
+          int index) {
+        if (contractStatesBuilder_ == null) {
+          return contractStates_.get(index);  } else {
+          return contractStatesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareStateOrBuilder> 
+           getContractStatesOrBuilderList() {
+        if (contractStatesBuilder_ != null) {
+          return contractStatesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(contractStates_);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.Builder addContractStatesBuilder() {
+        return getContractStatesFieldBuilder().addBuilder(
+            com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.Builder addContractStatesBuilder(
+          int index) {
+        return getContractStatesFieldBuilder().addBuilder(
+            index, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.AlloyContractTakerFeeShareState contract_states = 1 [json_name = "contractStates", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.Builder> 
+           getContractStatesBuilderList() {
+        return getContractStatesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.Builder, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareStateOrBuilder> 
+          getContractStatesFieldBuilder() {
+        if (contractStatesBuilder_ == null) {
+          contractStatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareState.Builder, com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.AlloyContractTakerFeeShareStateOrBuilder>(
+                  contractStates_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          contractStates_ = null;
+        }
+        return contractStatesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.AllRegisteredAlloyedPoolsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.AllRegisteredAlloyedPoolsResponse)
+    private static final com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AllRegisteredAlloyedPoolsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<AllRegisteredAlloyedPoolsResponse>() {
+      @java.lang.Override
+      public AllRegisteredAlloyedPoolsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AllRegisteredAlloyedPoolsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AllRegisteredAlloyedPoolsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.QueryProto.AllRegisteredAlloyedPoolsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_poolmanager_v1beta1_ParamsRequest_descriptor;
   private static final 
@@ -11509,6 +29563,11 @@ public final class QueryProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountInRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountInWithPrimitiveTypesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountInWithPrimitiveTypesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_poolmanager_v1beta1_EstimateSinglePoolSwapExactAmountInRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -11523,6 +29582,11 @@ public final class QueryProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountOutRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountOutWithPrimitiveTypesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountOutWithPrimitiveTypesRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_poolmanager_v1beta1_EstimateSinglePoolSwapExactAmountOutRequest_descriptor;
   private static final 
@@ -11564,6 +29628,16 @@ public final class QueryProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_poolmanager_v1beta1_AllPoolsResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_ListPoolsByDenomRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_ListPoolsByDenomRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_ListPoolsByDenomResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_ListPoolsByDenomResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_poolmanager_v1beta1_SpotPriceRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -11583,6 +29657,116 @@ public final class QueryProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_poolmanager_v1beta1_TotalPoolLiquidityResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_TotalLiquidityRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_TotalLiquidityRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_TotalLiquidityResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_TotalLiquidityResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_TotalVolumeForPoolRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_TotalVolumeForPoolRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_TotalVolumeForPoolResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_TotalVolumeForPoolResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_TradingPairTakerFeeRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_TradingPairTakerFeeRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_TradingPairTakerFeeResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_TradingPairTakerFeeResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_EstimateTradeBasedOnPriceImpactRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_EstimateTradeBasedOnPriceImpactRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_EstimateTradeBasedOnPriceImpactResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_EstimateTradeBasedOnPriceImpactResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAgreementsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAgreementsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAgreementsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAgreementsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareAgreementFromDenomRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareAgreementFromDenomRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareAgreementFromDenomResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareAgreementFromDenomResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareDenomsToAccruedValueRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareDenomsToAccruedValueRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareDenomsToAccruedValueResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareDenomsToAccruedValueResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAccumulatorsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAccumulatorsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAccumulatorsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAccumulatorsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromDenomRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromDenomRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromDenomResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromDenomResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromPoolIdRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromPoolIdRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromPoolIdResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromPoolIdResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_AllRegisteredAlloyedPoolsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_AllRegisteredAlloyedPoolsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_AllRegisteredAlloyedPoolsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_AllRegisteredAlloyedPoolsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -11597,122 +29781,293 @@ public final class QueryProto {
       "o/gogo.proto\032)osmosis/poolmanager/v1beta" +
       "1/genesis.proto\032$osmosis/poolmanager/v1b" +
       "eta1/tx.proto\032,osmosis/poolmanager/v1bet" +
-      "a1/swap_route.proto\032\036cosmos/base/v1beta1" +
-      "/coin.proto\032*cosmos/base/query/v1beta1/p" +
-      "agination.proto\032\034google/api/annotations." +
-      "proto\032\031google/protobuf/any.proto\032\031cosmos" +
-      "_proto/cosmos.proto\032\037google/protobuf/tim" +
-      "estamp.proto\"\017\n\rParamsRequest\"S\n\016ParamsR" +
-      "esponse\022A\n\006params\030\001 \001(\0132#.osmosis.poolma" +
-      "nager.v1beta1.ParamsB\004\310\336\037\000R\006params\"\354\001\n E" +
-      "stimateSwapExactAmountInRequest\022+\n\007pool_" +
-      "id\030\002 \001(\004B\022\362\336\037\016yaml:\"pool_id\"R\006poolId\022.\n\010" +
-      "token_in\030\003 \001(\tB\023\362\336\037\017yaml:\"token_in\"R\007tok" +
-      "enIn\022]\n\006routes\030\004 \003(\0132..osmosis.poolmanag" +
-      "er.v1beta1.SwapAmountInRouteB\025\310\336\037\000\362\336\037\rya" +
-      "ml:\"routes\"R\006routesJ\004\010\001\020\002R\006sender\"\315\001\n*Es" +
-      "timateSinglePoolSwapExactAmountInRequest" +
-      "\022+\n\007pool_id\030\001 \001(\004B\022\362\336\037\016yaml:\"pool_id\"R\006p" +
-      "oolId\022.\n\010token_in\030\002 \001(\tB\023\362\336\037\017yaml:\"token" +
-      "_in\"R\007tokenIn\022B\n\017token_out_denom\030\003 \001(\tB\032" +
-      "\362\336\037\026yaml:\"token_out_denom\"R\rtokenOutDeno" +
-      "m\"\230\001\n!EstimateSwapExactAmountInResponse\022" +
-      "s\n\020token_out_amount\030\001 \001(\tBI\310\336\037\000\332\336\037&githu" +
-      "b.com/cosmos/cosmos-sdk/types.Int\362\336\037\027yam" +
-      "l:\"token_out_amount\"R\016tokenOutAmount\"\361\001\n" +
-      "!EstimateSwapExactAmountOutRequest\022+\n\007po" +
-      "ol_id\030\002 \001(\004B\022\362\336\037\016yaml:\"pool_id\"R\006poolId\022" +
-      "^\n\006routes\030\003 \003(\0132/.osmosis.poolmanager.v1" +
-      "beta1.SwapAmountOutRouteB\025\310\336\037\000\362\336\037\ryaml:\"" +
-      "routes\"R\006routes\0221\n\ttoken_out\030\004 \001(\tB\024\362\336\037\020" +
-      "yaml:\"token_out\"R\010tokenOutJ\004\010\001\020\002R\006sender" +
-      "\"\316\001\n+EstimateSinglePoolSwapExactAmountOu" +
-      "tRequest\022+\n\007pool_id\030\001 \001(\004B\022\362\336\037\016yaml:\"poo" +
-      "l_id\"R\006poolId\022?\n\016token_in_denom\030\002 \001(\tB\031\362" +
-      "\336\037\025yaml:\"token_in_denom\"R\014tokenInDenom\0221" +
-      "\n\ttoken_out\030\003 \001(\tB\024\362\336\037\020yaml:\"token_out\"R" +
-      "\010tokenOut\"\226\001\n\"EstimateSwapExactAmountOut" +
-      "Response\022p\n\017token_in_amount\030\001 \001(\tBH\310\336\037\000\332" +
-      "\336\037&github.com/cosmos/cosmos-sdk/types.In" +
-      "t\362\336\037\026yaml:\"token_in_amount\"R\rtokenInAmou" +
-      "nt\"\021\n\017NumPoolsRequest\"E\n\020NumPoolsRespons" +
-      "e\0221\n\tnum_pools\030\001 \001(\004B\024\362\336\037\020yaml:\"num_pool" +
-      "s\"R\010numPools\":\n\013PoolRequest\022+\n\007pool_id\030\001" +
-      " \001(\004B\022\362\336\037\016yaml:\"pool_id\"R\006poolId\"C\n\014Pool" +
-      "Response\0223\n\004pool\030\001 \001(\0132\024.google.protobuf" +
-      ".AnyB\t\312\264-\005PoolIR\004pool\"\021\n\017AllPoolsRequest" +
-      "\"I\n\020AllPoolsResponse\0225\n\005pools\030\001 \003(\0132\024.go" +
-      "ogle.protobuf.AnyB\t\312\264-\005PoolIR\005pools\"\320\001\n\020" +
-      "SpotPriceRequest\022+\n\007pool_id\030\001 \001(\004B\022\362\336\037\016y" +
-      "aml:\"pool_id\"R\006poolId\022E\n\020base_asset_deno" +
-      "m\030\002 \001(\tB\033\362\336\037\027yaml:\"base_asset_denom\"R\016ba" +
-      "seAssetDenom\022H\n\021quote_asset_denom\030\003 \001(\tB" +
-      "\034\362\336\037\030yaml:\"quote_asset_denom\"R\017quoteAsse" +
-      "tDenom\"I\n\021SpotPriceResponse\0224\n\nspot_pric" +
-      "e\030\001 \001(\tB\025\362\336\037\021yaml:\"spot_price\"R\tspotPric" +
-      "e\"H\n\031TotalPoolLiquidityRequest\022+\n\007pool_i" +
-      "d\030\001 \001(\004B\022\362\336\037\016yaml:\"pool_id\"R\006poolId\"\233\001\n\032" +
-      "TotalPoolLiquidityResponse\022}\n\tliquidity\030" +
-      "\001 \003(\0132\031.cosmos.base.v1beta1.CoinBD\310\336\037\000\362\336" +
-      "\037\020yaml:\"liquidity\"\252\337\037(github.com/cosmos/" +
-      "cosmos-sdk/types.CoinsR\tliquidity2\315\017\n\005Qu" +
-      "ery\022\216\001\n\006Params\022*.osmosis.poolmanager.v1b" +
-      "eta1.ParamsRequest\032+.osmosis.poolmanager" +
-      ".v1beta1.ParamsResponse\"+\202\323\344\223\002%\022#/osmosi" +
-      "s/poolmanager/v1beta1/Params\022\350\001\n\031Estimat" +
-      "eSwapExactAmountIn\022=.osmosis.poolmanager" +
-      ".v1beta1.EstimateSwapExactAmountInReques" +
-      "t\032>.osmosis.poolmanager.v1beta1.Estimate" +
-      "SwapExactAmountInResponse\"L\202\323\344\223\002F\022D/osmo" +
-      "sis/poolmanager/v1beta1/{pool_id}/estima" +
-      "te/swap_exact_amount_in\022\210\002\n#EstimateSing" +
-      "lePoolSwapExactAmountIn\022G.osmosis.poolma" +
-      "nager.v1beta1.EstimateSinglePoolSwapExac" +
-      "tAmountInRequest\032>.osmosis.poolmanager.v" +
-      "1beta1.EstimateSwapExactAmountInResponse" +
-      "\"X\202\323\344\223\002R\022P/osmosis/poolmanager/v1beta1/{" +
-      "pool_id}/estimate/single_pool_swap_exact" +
-      "_amount_in\022\354\001\n\032EstimateSwapExactAmountOu" +
-      "t\022>.osmosis.poolmanager.v1beta1.Estimate" +
-      "SwapExactAmountOutRequest\032?.osmosis.pool" +
-      "manager.v1beta1.EstimateSwapExactAmountO" +
-      "utResponse\"M\202\323\344\223\002G\022E/osmosis/poolmanager" +
-      "/v1beta1/{pool_id}/estimate/swap_exact_a" +
-      "mount_out\022\220\002\n$EstimateSinglePoolSwapExac" +
-      "tAmountOut\022H.osmosis.poolmanager.v1beta1" +
-      ".EstimateSinglePoolSwapExactAmountOutReq" +
-      "uest\032?.osmosis.poolmanager.v1beta1.Estim" +
-      "ateSwapExactAmountOutResponse\"]\202\323\344\223\002W\022U/" +
-      "osmosis/poolmanager/v1beta1/{pool_id}/es" +
-      "timate_out/single_pool_swap_exact_amount" +
-      "_out\022\227\001\n\010NumPools\022,.osmosis.poolmanager." +
-      "v1beta1.NumPoolsRequest\032-.osmosis.poolma" +
-      "nager.v1beta1.NumPoolsResponse\".\202\323\344\223\002(\022&" +
-      "/osmosis/poolmanager/v1beta1/num_pools\022\221" +
-      "\001\n\004Pool\022(.osmosis.poolmanager.v1beta1.Po" +
-      "olRequest\032).osmosis.poolmanager.v1beta1." +
-      "PoolResponse\"4\202\323\344\223\002.\022,/osmosis/poolmanag" +
-      "er/v1beta1/pools/{pool_id}\022\227\001\n\010AllPools\022" +
-      ",.osmosis.poolmanager.v1beta1.AllPoolsRe" +
-      "quest\032-.osmosis.poolmanager.v1beta1.AllP" +
-      "oolsResponse\".\202\323\344\223\002(\022&/osmosis/poolmanag" +
-      "er/v1beta1/all-pools\022\237\001\n\tSpotPrice\022-.osm" +
-      "osis.poolmanager.v1beta1.SpotPriceReques" +
-      "t\032..osmosis.poolmanager.v1beta1.SpotPric" +
-      "eResponse\"3\202\323\344\223\002-\022+/osmosis/poolmanager/" +
-      "pools/{pool_id}/prices\022\320\001\n\022TotalPoolLiqu" +
-      "idity\0226.osmosis.poolmanager.v1beta1.Tota" +
-      "lPoolLiquidityRequest\0327.osmosis.poolmana" +
-      "ger.v1beta1.TotalPoolLiquidityResponse\"I" +
-      "\202\323\344\223\002C\022A/osmosis/poolmanager/v1beta1/poo" +
-      "ls/{pool_id}/total_pool_liquidityB\376\001\n\037co" +
-      "m.osmosis.poolmanager.v1beta1B\nQueryProt" +
-      "oZCgithub.com/osmosis-labs/osmosis/v15/x" +
-      "/poolmanager/client/queryproto\242\002\003OPX\252\002\033O" +
-      "smosis.Poolmanager.V1beta1\312\002\033Osmosis\\Poo" +
-      "lmanager\\V1beta1\342\002\'Osmosis\\Poolmanager\\V" +
-      "1beta1\\GPBMetadata\352\002\035Osmosis::Poolmanage" +
-      "r::V1beta1b\006proto3"
+      "a1/swap_route.proto\0321osmosis/poolmanager" +
+      "/v1beta1/taker_fee_share.proto\032\036cosmos/b" +
+      "ase/v1beta1/coin.proto\032*cosmos/base/quer" +
+      "y/v1beta1/pagination.proto\032\034google/api/a" +
+      "nnotations.proto\032\031google/protobuf/any.pr" +
+      "oto\032\031cosmos_proto/cosmos.proto\032\037google/p" +
+      "rotobuf/timestamp.proto\"\017\n\rParamsRequest" +
+      "\"S\n\016ParamsResponse\022A\n\006params\030\001 \001(\0132#.osm" +
+      "osis.poolmanager.v1beta1.ParamsB\004\310\336\037\000R\006p" +
+      "arams\"\261\002\n EstimateSwapExactAmountInReque" +
+      "st\022=\n\006sender\030\001 \001(\tB%\030\001\362\336\037\037yaml:\"sender\"," +
+      "deprecated:\"true\"R\006sender\022?\n\007pool_id\030\002 \001" +
+      "(\004B&\030\001\362\336\037 yaml:\"pool_id\",deprecated:\"tru" +
+      "e\"R\006poolId\022.\n\010token_in\030\003 \001(\tB\023\362\336\037\017yaml:\"" +
+      "token_in\"R\007tokenIn\022]\n\006routes\030\004 \003(\0132..osm" +
+      "osis.poolmanager.v1beta1.SwapAmountInRou" +
+      "teB\025\310\336\037\000\362\336\037\ryaml:\"routes\"R\006routes\"\276\002\n2Es" +
+      "timateSwapExactAmountInWithPrimitiveType" +
+      "sRequest\022?\n\007pool_id\030\001 \001(\004B&\030\001\362\336\037 yaml:\"p" +
+      "ool_id\",deprecated:\"true\"R\006poolId\022.\n\010tok" +
+      "en_in\030\002 \001(\tB\023\362\336\037\017yaml:\"token_in\"R\007tokenI" +
+      "n\022?\n\016routes_pool_id\030\003 \003(\004B\031\362\336\037\025yaml:\"rou" +
+      "tes_pool_id\"R\014routesPoolId\022V\n\026routes_tok" +
+      "en_out_denom\030\004 \003(\tB!\362\336\037\035yaml:\"routes_tok" +
+      "en_out_denom\"R\023routesTokenOutDenom\"\315\001\n*E" +
+      "stimateSinglePoolSwapExactAmountInReques" +
+      "t\022+\n\007pool_id\030\001 \001(\004B\022\362\336\037\016yaml:\"pool_id\"R\006" +
+      "poolId\022.\n\010token_in\030\002 \001(\tB\023\362\336\037\017yaml:\"toke" +
+      "n_in\"R\007tokenIn\022B\n\017token_out_denom\030\003 \001(\tB" +
+      "\032\362\336\037\026yaml:\"token_out_denom\"R\rtokenOutDen" +
+      "om\"\207\001\n!EstimateSwapExactAmountInResponse" +
+      "\022b\n\020token_out_amount\030\001 \001(\tB8\310\336\037\000\332\336\037\025cosm" +
+      "ossdk.io/math.Int\362\336\037\027yaml:\"token_out_amo" +
+      "unt\"R\016tokenOutAmount\"\266\002\n!EstimateSwapExa" +
+      "ctAmountOutRequest\022=\n\006sender\030\001 \001(\tB%\030\001\362\336" +
+      "\037\037yaml:\"sender\",deprecated:\"true\"R\006sende" +
+      "r\022?\n\007pool_id\030\002 \001(\004B&\030\001\362\336\037 yaml:\"pool_id\"" +
+      ",deprecated:\"true\"R\006poolId\022^\n\006routes\030\003 \003" +
+      "(\0132/.osmosis.poolmanager.v1beta1.SwapAmo" +
+      "untOutRouteB\025\310\336\037\000\362\336\037\ryaml:\"routes\"R\006rout" +
+      "es\0221\n\ttoken_out\030\004 \001(\tB\024\362\336\037\020yaml:\"token_o" +
+      "ut\"R\010tokenOut\"\277\002\n3EstimateSwapExactAmoun" +
+      "tOutWithPrimitiveTypesRequest\022?\n\007pool_id" +
+      "\030\001 \001(\004B&\030\001\362\336\037 yaml:\"pool_id\",deprecated:" +
+      "\"true\"R\006poolId\022?\n\016routes_pool_id\030\002 \003(\004B\031" +
+      "\362\336\037\025yaml:\"routes_pool_id\"R\014routesPoolId\022" +
+      "S\n\025routes_token_in_denom\030\003 \003(\tB \362\336\037\034yaml" +
+      ":\"routes_token_in_denom\"R\022routesTokenInD" +
+      "enom\0221\n\ttoken_out\030\004 \001(\tB\024\362\336\037\020yaml:\"token" +
+      "_out\"R\010tokenOut\"\316\001\n+EstimateSinglePoolSw" +
+      "apExactAmountOutRequest\022+\n\007pool_id\030\001 \001(\004" +
+      "B\022\362\336\037\016yaml:\"pool_id\"R\006poolId\022?\n\016token_in" +
+      "_denom\030\002 \001(\tB\031\362\336\037\025yaml:\"token_in_denom\"R" +
+      "\014tokenInDenom\0221\n\ttoken_out\030\003 \001(\tB\024\362\336\037\020ya" +
+      "ml:\"token_out\"R\010tokenOut\"\205\001\n\"EstimateSwa" +
+      "pExactAmountOutResponse\022_\n\017token_in_amou" +
+      "nt\030\001 \001(\tB7\310\336\037\000\332\336\037\025cosmossdk.io/math.Int\362" +
+      "\336\037\026yaml:\"token_in_amount\"R\rtokenInAmount" +
+      "\"\021\n\017NumPoolsRequest\"E\n\020NumPoolsResponse\022" +
+      "1\n\tnum_pools\030\001 \001(\004B\024\362\336\037\020yaml:\"num_pools\"" +
+      "R\010numPools\":\n\013PoolRequest\022+\n\007pool_id\030\001 \001" +
+      "(\004B\022\362\336\037\016yaml:\"pool_id\"R\006poolId\"C\n\014PoolRe" +
+      "sponse\0223\n\004pool\030\001 \001(\0132\024.google.protobuf.A" +
+      "nyB\t\312\264-\005PoolIR\004pool\"\021\n\017AllPoolsRequest\"I" +
+      "\n\020AllPoolsResponse\0225\n\005pools\030\001 \003(\0132\024.goog" +
+      "le.protobuf.AnyB\t\312\264-\005PoolIR\005pools\"A\n\027Lis" +
+      "tPoolsByDenomRequest\022&\n\005denom\030\001 \001(\tB\020\362\336\037" +
+      "\014yaml:\"denom\"R\005denom\"Q\n\030ListPoolsByDenom" +
+      "Response\0225\n\005pools\030\001 \003(\0132\024.google.protobu" +
+      "f.AnyB\t\312\264-\005PoolIR\005pools\"\320\001\n\020SpotPriceReq" +
+      "uest\022+\n\007pool_id\030\001 \001(\004B\022\362\336\037\016yaml:\"pool_id" +
+      "\"R\006poolId\022E\n\020base_asset_denom\030\002 \001(\tB\033\362\336\037" +
+      "\027yaml:\"base_asset_denom\"R\016baseAssetDenom" +
+      "\022H\n\021quote_asset_denom\030\003 \001(\tB\034\362\336\037\030yaml:\"q" +
+      "uote_asset_denom\"R\017quoteAssetDenom\"I\n\021Sp" +
+      "otPriceResponse\0224\n\nspot_price\030\001 \001(\tB\025\362\336\037" +
+      "\021yaml:\"spot_price\"R\tspotPrice\"H\n\031TotalPo" +
+      "olLiquidityRequest\022+\n\007pool_id\030\001 \001(\004B\022\362\336\037" +
+      "\016yaml:\"pool_id\"R\006poolId\"\233\001\n\032TotalPoolLiq" +
+      "uidityResponse\022}\n\tliquidity\030\001 \003(\0132\031.cosm" +
+      "os.base.v1beta1.CoinBD\310\336\037\000\362\336\037\020yaml:\"liqu" +
+      "idity\"\252\337\037(github.com/cosmos/cosmos-sdk/t" +
+      "ypes.CoinsR\tliquidity\"\027\n\025TotalLiquidityR" +
+      "equest\"\227\001\n\026TotalLiquidityResponse\022}\n\tliq" +
+      "uidity\030\001 \003(\0132\031.cosmos.base.v1beta1.CoinB" +
+      "D\310\336\037\000\362\336\037\020yaml:\"liquidity\"\252\337\037(github.com/" +
+      "cosmos/cosmos-sdk/types.CoinsR\tliquidity" +
+      "\"H\n\031TotalVolumeForPoolRequest\022+\n\007pool_id" +
+      "\030\001 \001(\004B\022\362\336\037\016yaml:\"pool_id\"R\006poolId\"\222\001\n\032T" +
+      "otalVolumeForPoolResponse\022t\n\006volume\030\001 \003(" +
+      "\0132\031.cosmos.base.v1beta1.CoinBA\310\336\037\000\362\336\037\rya" +
+      "ml:\"volume\"\252\337\037(github.com/cosmos/cosmos-" +
+      "sdk/types.CoinsR\006volume\"v\n\032TradingPairTa" +
+      "kerFeeRequest\022+\n\007denom_0\030\001 \001(\tB\022\362\336\037\016yaml" +
+      ":\"denom_0\"R\006denom0\022+\n\007denom_1\030\002 \001(\tB\022\362\336\037" +
+      "\016yaml:\"denom_1\"R\006denom1\"_\n\033TradingPairTa" +
+      "kerFeeResponse\022@\n\ttaker_fee\030\001 \001(\tB#\310\336\037\000\332" +
+      "\336\037\033cosmossdk.io/math.LegacyDecR\010takerFee" +
+      "\"\276\002\n&EstimateTradeBasedOnPriceImpactRequ" +
+      "est\022<\n\tfrom_coin\030\001 \001(\0132\031.cosmos.base.v1b" +
+      "eta1.CoinB\004\310\336\037\000R\010fromCoin\022\"\n\rto_coin_den" +
+      "om\030\002 \001(\tR\013toCoinDenom\022\027\n\007pool_id\030\003 \001(\004R\006" +
+      "poolId\022M\n\020max_price_impact\030\004 \001(\tB#\310\336\037\000\332\336" +
+      "\037\033cosmossdk.io/math.LegacyDecR\016maxPriceI" +
+      "mpact\022J\n\016external_price\030\005 \001(\tB#\310\336\037\000\332\336\037\033c" +
+      "osmossdk.io/math.LegacyDecR\rexternalPric" +
+      "e\"\253\001\n\'EstimateTradeBasedOnPriceImpactRes" +
+      "ponse\022>\n\ninput_coin\030\001 \001(\0132\031.cosmos.base." +
+      "v1beta1.CoinB\004\310\336\037\000R\tinputCoin\022@\n\013output_" +
+      "coin\030\002 \001(\0132\031.cosmos.base.v1beta1.CoinB\004\310" +
+      "\336\037\000R\noutputCoin\"#\n!AllTakerFeeShareAgree" +
+      "mentsRequest\"\234\001\n\"AllTakerFeeShareAgreeme" +
+      "ntsResponse\022v\n\032taker_fee_share_agreement" +
+      "s\030\001 \003(\01323.osmosis.poolmanager.v1beta1.Ta" +
+      "kerFeeShareAgreementB\004\310\336\037\000R\027takerFeeShar" +
+      "eAgreements\">\n&TakerFeeShareAgreementFro" +
+      "mDenomRequest\022\024\n\005denom\030\001 \001(\tR\005denom\"\237\001\n\'" +
+      "TakerFeeShareAgreementFromDenomResponse\022" +
+      "t\n\031taker_fee_share_agreement\030\001 \001(\01323.osm" +
+      "osis.poolmanager.v1beta1.TakerFeeShareAg" +
+      "reementB\004\310\336\037\000R\026takerFeeShareAgreement\"f\n" +
+      "(TakerFeeShareDenomsToAccruedValueReques" +
+      "t\022\024\n\005denom\030\001 \001(\tR\005denom\022$\n\rtakerFeeDenom" +
+      "\030\002 \001(\tR\rtakerFeeDenom\"s\n)TakerFeeShareDe" +
+      "nomsToAccruedValueResponse\022F\n\006amount\030\001 \001" +
+      "(\tB.\310\336\037\000\332\336\037\025cosmossdk.io/math.Int\362\336\037\ryam" +
+      "l:\"amount\"R\006amount\"%\n#AllTakerFeeShareAc" +
+      "cumulatorsRequest\"\241\001\n$AllTakerFeeShareAc" +
+      "cumulatorsResponse\022y\n\033taker_fee_skim_acc" +
+      "umulators\030\001 \003(\01324.osmosis.poolmanager.v1" +
+      "beta1.TakerFeeSkimAccumulatorB\004\310\336\037\000R\030tak" +
+      "erFeeSkimAccumulators\"=\n%RegisteredAlloy" +
+      "edPoolFromDenomRequest\022\024\n\005denom\030\001 \001(\tR\005d" +
+      "enom\"\223\001\n&RegisteredAlloyedPoolFromDenomR" +
+      "esponse\022i\n\016contract_state\030\001 \001(\0132<.osmosi" +
+      "s.poolmanager.v1beta1.AlloyContractTaker" +
+      "FeeShareStateB\004\310\336\037\000R\rcontractState\"A\n&Re" +
+      "gisteredAlloyedPoolFromPoolIdRequest\022\027\n\007" +
+      "pool_id\030\001 \001(\004R\006poolId\"\224\001\n\'RegisteredAllo" +
+      "yedPoolFromPoolIdResponse\022i\n\016contract_st" +
+      "ate\030\001 \001(\0132<.osmosis.poolmanager.v1beta1." +
+      "AlloyContractTakerFeeShareStateB\004\310\336\037\000R\rc" +
+      "ontractState\"\"\n AllRegisteredAlloyedPool" +
+      "sRequest\"\220\001\n!AllRegisteredAlloyedPoolsRe" +
+      "sponse\022k\n\017contract_states\030\001 \003(\0132<.osmosi" +
+      "s.poolmanager.v1beta1.AlloyContractTaker" +
+      "FeeShareStateB\004\310\336\037\000R\016contractStates2\327)\n\005" +
+      "Query\022\216\001\n\006Params\022*.osmosis.poolmanager.v" +
+      "1beta1.ParamsRequest\032+.osmosis.poolmanag" +
+      "er.v1beta1.ParamsResponse\"+\202\323\344\223\002%\022#/osmo" +
+      "sis/poolmanager/v1beta1/Params\022\350\001\n\031Estim" +
+      "ateSwapExactAmountIn\022=.osmosis.poolmanag" +
+      "er.v1beta1.EstimateSwapExactAmountInRequ" +
+      "est\032>.osmosis.poolmanager.v1beta1.Estima" +
+      "teSwapExactAmountInResponse\"L\202\323\344\223\002F\022D/os" +
+      "mosis/poolmanager/v1beta1/{pool_id}/esti" +
+      "mate/swap_exact_amount_in\022\241\002\n+EstimateSw" +
+      "apExactAmountInWithPrimitiveTypes\022O.osmo" +
+      "sis.poolmanager.v1beta1.EstimateSwapExac" +
+      "tAmountInWithPrimitiveTypesRequest\032>.osm" +
+      "osis.poolmanager.v1beta1.EstimateSwapExa" +
+      "ctAmountInResponse\"a\202\323\344\223\002[\022Y/osmosis/poo" +
+      "lmanager/v1beta1/{pool_id}/estimate/swap" +
+      "_exact_amount_in_with_primitive_types\022\210\002" +
+      "\n#EstimateSinglePoolSwapExactAmountIn\022G." +
+      "osmosis.poolmanager.v1beta1.EstimateSing" +
+      "lePoolSwapExactAmountInRequest\032>.osmosis" +
+      ".poolmanager.v1beta1.EstimateSwapExactAm" +
+      "ountInResponse\"X\202\323\344\223\002R\022P/osmosis/poolman" +
+      "ager/v1beta1/{pool_id}/estimate/single_p" +
+      "ool_swap_exact_amount_in\022\354\001\n\032EstimateSwa" +
+      "pExactAmountOut\022>.osmosis.poolmanager.v1" +
+      "beta1.EstimateSwapExactAmountOutRequest\032" +
+      "?.osmosis.poolmanager.v1beta1.EstimateSw" +
+      "apExactAmountOutResponse\"M\202\323\344\223\002G\022E/osmos" +
+      "is/poolmanager/v1beta1/{pool_id}/estimat" +
+      "e/swap_exact_amount_out\022\245\002\n,EstimateSwap" +
+      "ExactAmountOutWithPrimitiveTypes\022P.osmos" +
+      "is.poolmanager.v1beta1.EstimateSwapExact" +
+      "AmountOutWithPrimitiveTypesRequest\032?.osm" +
+      "osis.poolmanager.v1beta1.EstimateSwapExa" +
+      "ctAmountOutResponse\"b\202\323\344\223\002\\\022Z/osmosis/po" +
+      "olmanager/v1beta1/{pool_id}/estimate/swa" +
+      "p_exact_amount_out_with_primitive_types\022" +
+      "\220\002\n$EstimateSinglePoolSwapExactAmountOut" +
+      "\022H.osmosis.poolmanager.v1beta1.EstimateS" +
+      "inglePoolSwapExactAmountOutRequest\032?.osm" +
+      "osis.poolmanager.v1beta1.EstimateSwapExa" +
+      "ctAmountOutResponse\"]\202\323\344\223\002W\022U/osmosis/po" +
+      "olmanager/v1beta1/{pool_id}/estimate_out" +
+      "/single_pool_swap_exact_amount_out\022\227\001\n\010N" +
+      "umPools\022,.osmosis.poolmanager.v1beta1.Nu" +
+      "mPoolsRequest\032-.osmosis.poolmanager.v1be" +
+      "ta1.NumPoolsResponse\".\202\323\344\223\002(\022&/osmosis/p" +
+      "oolmanager/v1beta1/num_pools\022\221\001\n\004Pool\022(." +
+      "osmosis.poolmanager.v1beta1.PoolRequest\032" +
+      ").osmosis.poolmanager.v1beta1.PoolRespon" +
+      "se\"4\202\323\344\223\002.\022,/osmosis/poolmanager/v1beta1" +
+      "/pools/{pool_id}\022\227\001\n\010AllPools\022,.osmosis." +
+      "poolmanager.v1beta1.AllPoolsRequest\032-.os" +
+      "mosis.poolmanager.v1beta1.AllPoolsRespon" +
+      "se\".\202\323\344\223\002(\022&/osmosis/poolmanager/v1beta1" +
+      "/all-pools\022\271\001\n\020ListPoolsByDenom\0224.osmosi" +
+      "s.poolmanager.v1beta1.ListPoolsByDenomRe" +
+      "quest\0325.osmosis.poolmanager.v1beta1.List" +
+      "PoolsByDenomResponse\"8\202\323\344\223\0022\0220/osmosis/p" +
+      "oolmanager/v1beta1/list-pools-by-denom\022\237" +
+      "\001\n\tSpotPrice\022-.osmosis.poolmanager.v1bet" +
+      "a1.SpotPriceRequest\032..osmosis.poolmanage" +
+      "r.v1beta1.SpotPriceResponse\"3\202\323\344\223\002-\022+/os" +
+      "mosis/poolmanager/pools/{pool_id}/prices" +
+      "\022\320\001\n\022TotalPoolLiquidity\0226.osmosis.poolma" +
+      "nager.v1beta1.TotalPoolLiquidityRequest\032" +
+      "7.osmosis.poolmanager.v1beta1.TotalPoolL" +
+      "iquidityResponse\"I\202\323\344\223\002C\022A/osmosis/poolm" +
+      "anager/v1beta1/pools/{pool_id}/total_poo" +
+      "l_liquidity\022\257\001\n\016TotalLiquidity\0222.osmosis" +
+      ".poolmanager.v1beta1.TotalLiquidityReque" +
+      "st\0323.osmosis.poolmanager.v1beta1.TotalLi" +
+      "quidityResponse\"4\202\323\344\223\002.\022,/osmosis/poolma" +
+      "nager/v1beta1/total_liquidity\022\310\001\n\022TotalV" +
+      "olumeForPool\0226.osmosis.poolmanager.v1bet" +
+      "a1.TotalVolumeForPoolRequest\0327.osmosis.p" +
+      "oolmanager.v1beta1.TotalVolumeForPoolRes" +
+      "ponse\"A\202\323\344\223\002;\0229/osmosis/poolmanager/v1be" +
+      "ta1/pools/{pool_id}/total_volume\022\304\001\n\023Tra" +
+      "dingPairTakerFee\0227.osmosis.poolmanager.v" +
+      "1beta1.TradingPairTakerFeeRequest\0328.osmo" +
+      "sis.poolmanager.v1beta1.TradingPairTaker" +
+      "FeeResponse\":\202\323\344\223\0024\0222/osmosis/poolmanage" +
+      "r/v1beta1/trading_pair_takerfee\022\353\001\n\037Esti" +
+      "mateTradeBasedOnPriceImpact\022C.osmosis.po" +
+      "olmanager.v1beta1.EstimateTradeBasedOnPr" +
+      "iceImpactRequest\032D.osmosis.poolmanager.v" +
+      "1beta1.EstimateTradeBasedOnPriceImpactRe" +
+      "sponse\"=\202\323\344\223\0027\0225/osmosis/poolmanager/v1b" +
+      "eta1/{pool_id}/estimate_trade\022\342\001\n\032AllTak" +
+      "erFeeShareAgreements\022>.osmosis.poolmanag" +
+      "er.v1beta1.AllTakerFeeShareAgreementsReq" +
+      "uest\032?.osmosis.poolmanager.v1beta1.AllTa" +
+      "kerFeeShareAgreementsResponse\"C\202\323\344\223\002=\022;/" +
+      "osmosis/poolmanager/v1beta1/all_taker_fe" +
+      "e_share_agreements\022\377\001\n\037TakerFeeShareAgre" +
+      "ementFromDenom\022C.osmosis.poolmanager.v1b" +
+      "eta1.TakerFeeShareAgreementFromDenomRequ" +
+      "est\032D.osmosis.poolmanager.v1beta1.TakerF" +
+      "eeShareAgreementFromDenomResponse\"Q\202\323\344\223\002" +
+      "K\022I/osmosis/poolmanager/v1beta1/{denom}/" +
+      "taker_fee_share_agreement_from_denom\022\230\002\n" +
+      "!TakerFeeShareDenomsToAccruedValue\022E.osm" +
+      "osis.poolmanager.v1beta1.TakerFeeShareDe" +
+      "nomsToAccruedValueRequest\032F.osmosis.pool" +
+      "manager.v1beta1.TakerFeeShareDenomsToAcc" +
+      "ruedValueResponse\"d\202\323\344\223\002^\022\\/osmosis/pool" +
+      "manager/v1beta1/{takerFeeDenom}/{denom}/" +
+      "taker_fee_share_denoms_to_accrued_value\022" +
+      "\352\001\n\034AllTakerFeeShareAccumulators\022@.osmos" +
+      "is.poolmanager.v1beta1.AllTakerFeeShareA" +
+      "ccumulatorsRequest\032A.osmosis.poolmanager" +
+      ".v1beta1.AllTakerFeeShareAccumulatorsRes" +
+      "ponse\"E\202\323\344\223\002?\022=/osmosis/poolmanager/v1be" +
+      "ta1/all_taker_fee_share_accumulators\022\372\001\n" +
+      "\036RegisteredAlloyedPoolFromDenom\022B.osmosi" +
+      "s.poolmanager.v1beta1.RegisteredAlloyedP" +
+      "oolFromDenomRequest\032C.osmosis.poolmanage" +
+      "r.v1beta1.RegisteredAlloyedPoolFromDenom" +
+      "Response\"O\202\323\344\223\002I\022G/osmosis/poolmanager/v" +
+      "1beta1/{denom}/registered_alloyed_pool_f" +
+      "rom_denom\022\201\002\n\037RegisteredAlloyedPoolFromP" +
+      "oolId\022C.osmosis.poolmanager.v1beta1.Regi" +
+      "steredAlloyedPoolFromPoolIdRequest\032D.osm" +
+      "osis.poolmanager.v1beta1.RegisteredAlloy" +
+      "edPoolFromPoolIdResponse\"S\202\323\344\223\002M\022K/osmos" +
+      "is/poolmanager/v1beta1/{pool_id}/registe" +
+      "red_alloyed_pool_from_pool_id\022\335\001\n\031AllReg" +
+      "isteredAlloyedPools\022=.osmosis.poolmanage" +
+      "r.v1beta1.AllRegisteredAlloyedPoolsReque" +
+      "st\032>.osmosis.poolmanager.v1beta1.AllRegi" +
+      "steredAlloyedPoolsResponse\"A\202\323\344\223\002;\0229/osm" +
+      "osis/poolmanager/v1beta1/all_registered_" +
+      "alloyed_poolsB\376\001\n\037com.osmosis.poolmanage" +
+      "r.v1beta1B\nQueryProtoZCgithub.com/osmosi" +
+      "s-labs/osmosis/v26/x/poolmanager/client/" +
+      "queryproto\242\002\003OPX\252\002\033Osmosis.Poolmanager.V" +
+      "1beta1\312\002\033Osmosis\\Poolmanager\\V1beta1\342\002\'O" +
+      "smosis\\Poolmanager\\V1beta1\\GPBMetadata\352\002" +
+      "\035Osmosis::Poolmanager::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11721,6 +30076,7 @@ public final class QueryProto {
           com.osmosis.poolmanager.v1beta1.GenesisProto.getDescriptor(),
           com.osmosis.poolmanager.v1beta1.TxProto.getDescriptor(),
           com.osmosis.poolmanager.v1beta1.SwapRouteProto.getDescriptor(),
+          com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.getDescriptor(),
           com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
           com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -11745,97 +30101,253 @@ public final class QueryProto {
     internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountInRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountInRequest_descriptor,
-        new java.lang.String[] { "PoolId", "TokenIn", "Routes", });
-    internal_static_osmosis_poolmanager_v1beta1_EstimateSinglePoolSwapExactAmountInRequest_descriptor =
+        new java.lang.String[] { "Sender", "PoolId", "TokenIn", "Routes", });
+    internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountInWithPrimitiveTypesRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountInWithPrimitiveTypesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountInWithPrimitiveTypesRequest_descriptor,
+        new java.lang.String[] { "PoolId", "TokenIn", "RoutesPoolId", "RoutesTokenOutDenom", });
+    internal_static_osmosis_poolmanager_v1beta1_EstimateSinglePoolSwapExactAmountInRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_osmosis_poolmanager_v1beta1_EstimateSinglePoolSwapExactAmountInRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_poolmanager_v1beta1_EstimateSinglePoolSwapExactAmountInRequest_descriptor,
         new java.lang.String[] { "PoolId", "TokenIn", "TokenOutDenom", });
     internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountInResponse_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountInResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountInResponse_descriptor,
         new java.lang.String[] { "TokenOutAmount", });
     internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountOutRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountOutRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountOutRequest_descriptor,
-        new java.lang.String[] { "PoolId", "Routes", "TokenOut", });
+        new java.lang.String[] { "Sender", "PoolId", "Routes", "TokenOut", });
+    internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountOutWithPrimitiveTypesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountOutWithPrimitiveTypesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountOutWithPrimitiveTypesRequest_descriptor,
+        new java.lang.String[] { "PoolId", "RoutesPoolId", "RoutesTokenInDenom", "TokenOut", });
     internal_static_osmosis_poolmanager_v1beta1_EstimateSinglePoolSwapExactAmountOutRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_osmosis_poolmanager_v1beta1_EstimateSinglePoolSwapExactAmountOutRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_poolmanager_v1beta1_EstimateSinglePoolSwapExactAmountOutRequest_descriptor,
         new java.lang.String[] { "PoolId", "TokenInDenom", "TokenOut", });
     internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountOutResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountOutResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_poolmanager_v1beta1_EstimateSwapExactAmountOutResponse_descriptor,
         new java.lang.String[] { "TokenInAmount", });
     internal_static_osmosis_poolmanager_v1beta1_NumPoolsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_osmosis_poolmanager_v1beta1_NumPoolsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_poolmanager_v1beta1_NumPoolsRequest_descriptor,
         new java.lang.String[] { });
     internal_static_osmosis_poolmanager_v1beta1_NumPoolsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_osmosis_poolmanager_v1beta1_NumPoolsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_poolmanager_v1beta1_NumPoolsResponse_descriptor,
         new java.lang.String[] { "NumPools", });
     internal_static_osmosis_poolmanager_v1beta1_PoolRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_osmosis_poolmanager_v1beta1_PoolRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_poolmanager_v1beta1_PoolRequest_descriptor,
         new java.lang.String[] { "PoolId", });
     internal_static_osmosis_poolmanager_v1beta1_PoolResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_osmosis_poolmanager_v1beta1_PoolResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_poolmanager_v1beta1_PoolResponse_descriptor,
         new java.lang.String[] { "Pool", });
     internal_static_osmosis_poolmanager_v1beta1_AllPoolsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_osmosis_poolmanager_v1beta1_AllPoolsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_poolmanager_v1beta1_AllPoolsRequest_descriptor,
         new java.lang.String[] { });
     internal_static_osmosis_poolmanager_v1beta1_AllPoolsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_osmosis_poolmanager_v1beta1_AllPoolsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_poolmanager_v1beta1_AllPoolsResponse_descriptor,
         new java.lang.String[] { "Pools", });
+    internal_static_osmosis_poolmanager_v1beta1_ListPoolsByDenomRequest_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_osmosis_poolmanager_v1beta1_ListPoolsByDenomRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_ListPoolsByDenomRequest_descriptor,
+        new java.lang.String[] { "Denom", });
+    internal_static_osmosis_poolmanager_v1beta1_ListPoolsByDenomResponse_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_osmosis_poolmanager_v1beta1_ListPoolsByDenomResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_ListPoolsByDenomResponse_descriptor,
+        new java.lang.String[] { "Pools", });
     internal_static_osmosis_poolmanager_v1beta1_SpotPriceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_osmosis_poolmanager_v1beta1_SpotPriceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_poolmanager_v1beta1_SpotPriceRequest_descriptor,
         new java.lang.String[] { "PoolId", "BaseAssetDenom", "QuoteAssetDenom", });
     internal_static_osmosis_poolmanager_v1beta1_SpotPriceResponse_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_osmosis_poolmanager_v1beta1_SpotPriceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_poolmanager_v1beta1_SpotPriceResponse_descriptor,
         new java.lang.String[] { "SpotPrice", });
     internal_static_osmosis_poolmanager_v1beta1_TotalPoolLiquidityRequest_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_osmosis_poolmanager_v1beta1_TotalPoolLiquidityRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_poolmanager_v1beta1_TotalPoolLiquidityRequest_descriptor,
         new java.lang.String[] { "PoolId", });
     internal_static_osmosis_poolmanager_v1beta1_TotalPoolLiquidityResponse_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_osmosis_poolmanager_v1beta1_TotalPoolLiquidityResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_poolmanager_v1beta1_TotalPoolLiquidityResponse_descriptor,
         new java.lang.String[] { "Liquidity", });
+    internal_static_osmosis_poolmanager_v1beta1_TotalLiquidityRequest_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_osmosis_poolmanager_v1beta1_TotalLiquidityRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_TotalLiquidityRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_osmosis_poolmanager_v1beta1_TotalLiquidityResponse_descriptor =
+      getDescriptor().getMessageTypes().get(23);
+    internal_static_osmosis_poolmanager_v1beta1_TotalLiquidityResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_TotalLiquidityResponse_descriptor,
+        new java.lang.String[] { "Liquidity", });
+    internal_static_osmosis_poolmanager_v1beta1_TotalVolumeForPoolRequest_descriptor =
+      getDescriptor().getMessageTypes().get(24);
+    internal_static_osmosis_poolmanager_v1beta1_TotalVolumeForPoolRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_TotalVolumeForPoolRequest_descriptor,
+        new java.lang.String[] { "PoolId", });
+    internal_static_osmosis_poolmanager_v1beta1_TotalVolumeForPoolResponse_descriptor =
+      getDescriptor().getMessageTypes().get(25);
+    internal_static_osmosis_poolmanager_v1beta1_TotalVolumeForPoolResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_TotalVolumeForPoolResponse_descriptor,
+        new java.lang.String[] { "Volume", });
+    internal_static_osmosis_poolmanager_v1beta1_TradingPairTakerFeeRequest_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_osmosis_poolmanager_v1beta1_TradingPairTakerFeeRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_TradingPairTakerFeeRequest_descriptor,
+        new java.lang.String[] { "Denom0", "Denom1", });
+    internal_static_osmosis_poolmanager_v1beta1_TradingPairTakerFeeResponse_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_osmosis_poolmanager_v1beta1_TradingPairTakerFeeResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_TradingPairTakerFeeResponse_descriptor,
+        new java.lang.String[] { "TakerFee", });
+    internal_static_osmosis_poolmanager_v1beta1_EstimateTradeBasedOnPriceImpactRequest_descriptor =
+      getDescriptor().getMessageTypes().get(28);
+    internal_static_osmosis_poolmanager_v1beta1_EstimateTradeBasedOnPriceImpactRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_EstimateTradeBasedOnPriceImpactRequest_descriptor,
+        new java.lang.String[] { "FromCoin", "ToCoinDenom", "PoolId", "MaxPriceImpact", "ExternalPrice", });
+    internal_static_osmosis_poolmanager_v1beta1_EstimateTradeBasedOnPriceImpactResponse_descriptor =
+      getDescriptor().getMessageTypes().get(29);
+    internal_static_osmosis_poolmanager_v1beta1_EstimateTradeBasedOnPriceImpactResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_EstimateTradeBasedOnPriceImpactResponse_descriptor,
+        new java.lang.String[] { "InputCoin", "OutputCoin", });
+    internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAgreementsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(30);
+    internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAgreementsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAgreementsRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAgreementsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(31);
+    internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAgreementsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAgreementsResponse_descriptor,
+        new java.lang.String[] { "TakerFeeShareAgreements", });
+    internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareAgreementFromDenomRequest_descriptor =
+      getDescriptor().getMessageTypes().get(32);
+    internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareAgreementFromDenomRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareAgreementFromDenomRequest_descriptor,
+        new java.lang.String[] { "Denom", });
+    internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareAgreementFromDenomResponse_descriptor =
+      getDescriptor().getMessageTypes().get(33);
+    internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareAgreementFromDenomResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareAgreementFromDenomResponse_descriptor,
+        new java.lang.String[] { "TakerFeeShareAgreement", });
+    internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareDenomsToAccruedValueRequest_descriptor =
+      getDescriptor().getMessageTypes().get(34);
+    internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareDenomsToAccruedValueRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareDenomsToAccruedValueRequest_descriptor,
+        new java.lang.String[] { "Denom", "TakerFeeDenom", });
+    internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareDenomsToAccruedValueResponse_descriptor =
+      getDescriptor().getMessageTypes().get(35);
+    internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareDenomsToAccruedValueResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_TakerFeeShareDenomsToAccruedValueResponse_descriptor,
+        new java.lang.String[] { "Amount", });
+    internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAccumulatorsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(36);
+    internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAccumulatorsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAccumulatorsRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAccumulatorsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(37);
+    internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAccumulatorsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_AllTakerFeeShareAccumulatorsResponse_descriptor,
+        new java.lang.String[] { "TakerFeeSkimAccumulators", });
+    internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromDenomRequest_descriptor =
+      getDescriptor().getMessageTypes().get(38);
+    internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromDenomRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromDenomRequest_descriptor,
+        new java.lang.String[] { "Denom", });
+    internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromDenomResponse_descriptor =
+      getDescriptor().getMessageTypes().get(39);
+    internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromDenomResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromDenomResponse_descriptor,
+        new java.lang.String[] { "ContractState", });
+    internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromPoolIdRequest_descriptor =
+      getDescriptor().getMessageTypes().get(40);
+    internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromPoolIdRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromPoolIdRequest_descriptor,
+        new java.lang.String[] { "PoolId", });
+    internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromPoolIdResponse_descriptor =
+      getDescriptor().getMessageTypes().get(41);
+    internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromPoolIdResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_RegisteredAlloyedPoolFromPoolIdResponse_descriptor,
+        new java.lang.String[] { "ContractState", });
+    internal_static_osmosis_poolmanager_v1beta1_AllRegisteredAlloyedPoolsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(42);
+    internal_static_osmosis_poolmanager_v1beta1_AllRegisteredAlloyedPoolsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_AllRegisteredAlloyedPoolsRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_osmosis_poolmanager_v1beta1_AllRegisteredAlloyedPoolsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(43);
+    internal_static_osmosis_poolmanager_v1beta1_AllRegisteredAlloyedPoolsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_AllRegisteredAlloyedPoolsResponse_descriptor,
+        new java.lang.String[] { "ContractStates", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.cosmos_proto.CosmosProto.acceptsInterface);
@@ -11850,6 +30362,7 @@ public final class QueryProto {
     com.osmosis.poolmanager.v1beta1.GenesisProto.getDescriptor();
     com.osmosis.poolmanager.v1beta1.TxProto.getDescriptor();
     com.osmosis.poolmanager.v1beta1.SwapRouteProto.getDescriptor();
+    com.osmosis.poolmanager.v1beta1.TakerFeeShareProto.getDescriptor();
     com.cosmos.base.v1beta1.CoinProto.getDescriptor();
     com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

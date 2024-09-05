@@ -673,7 +673,7 @@ public final class FeetokenProto {
       "ml:\"denom\"R\005denom\022*\n\006poolID\030\002 \001(\004B\022\362\336\037\016y" +
       "aml:\"pool_id\"R\006poolID:\004\350\240\037\001B\327\001\n\032com.osmo" +
       "sis.txfees.v1beta1B\rFeetokenProtoZ2githu" +
-      "b.com/osmosis-labs/osmosis/v15/x/txfees/" +
+      "b.com/osmosis-labs/osmosis/v26/x/txfees/" +
       "types\242\002\003OTX\252\002\026Osmosis.Txfees.V1beta1\312\002\026O" +
       "smosis\\Txfees\\V1beta1\342\002\"Osmosis\\Txfees\\V" +
       "1beta1\\GPBMetadata\352\002\030Osmosis::Txfees::V1" +

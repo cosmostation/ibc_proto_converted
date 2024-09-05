@@ -652,7 +652,7 @@ public final class ParamsProto {
       "\336\037#yaml:\"force_unlock_allowed_address\"R\033" +
       "forceUnlockAllowedAddressesB\254\001\n\022com.osmo" +
       "sis.lockupB\013ParamsProtoZ2github.com/osmo" +
-      "sis-labs/osmosis/v15/x/lockup/types\242\002\003OL" +
+      "sis-labs/osmosis/v26/x/lockup/types\242\002\003OL" +
       "X\252\002\016Osmosis.Lockup\312\002\016Osmosis\\Lockup\342\002\032Os" +
       "mosis\\Lockup\\GPBMetadata\352\002\017Osmosis::Lock" +
       "upb\006proto3"

@@ -9154,7 +9154,7 @@ public final class TxProto {
         getSenderBytes();
 
     /**
-     * <code>uint64 lock_id = 2 [json_name = "lockId", (.gogoproto.moretags) = "yaml:&#92;"lock_id&#92;""];</code>
+     * <code>int64 lock_id = 2 [json_name = "lockId", (.gogoproto.moretags) = "yaml:&#92;"lock_id&#92;""];</code>
      * @return The lockId.
      */
     long getLockId();
@@ -9302,7 +9302,7 @@ public final class TxProto {
     public static final int LOCK_ID_FIELD_NUMBER = 2;
     private long lockId_ = 0L;
     /**
-     * <code>uint64 lock_id = 2 [json_name = "lockId", (.gogoproto.moretags) = "yaml:&#92;"lock_id&#92;""];</code>
+     * <code>int64 lock_id = 2 [json_name = "lockId", (.gogoproto.moretags) = "yaml:&#92;"lock_id&#92;""];</code>
      * @return The lockId.
      */
     @java.lang.Override
@@ -9415,7 +9415,7 @@ public final class TxProto {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
       }
       if (lockId_ != 0L) {
-        output.writeUInt64(2, lockId_);
+        output.writeInt64(2, lockId_);
       }
       if (sharesToMigrate_ != null) {
         output.writeMessage(3, getSharesToMigrate());
@@ -9437,7 +9437,7 @@ public final class TxProto {
       }
       if (lockId_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(2, lockId_);
+          .computeInt64Size(2, lockId_);
       }
       if (sharesToMigrate_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -9819,7 +9819,7 @@ public final class TxProto {
                 break;
               } // case 10
               case 16: {
-                lockId_ = input.readUInt64();
+                lockId_ = input.readInt64();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 16
@@ -9934,7 +9934,7 @@ public final class TxProto {
 
       private long lockId_ ;
       /**
-       * <code>uint64 lock_id = 2 [json_name = "lockId", (.gogoproto.moretags) = "yaml:&#92;"lock_id&#92;""];</code>
+       * <code>int64 lock_id = 2 [json_name = "lockId", (.gogoproto.moretags) = "yaml:&#92;"lock_id&#92;""];</code>
        * @return The lockId.
        */
       @java.lang.Override
@@ -9942,7 +9942,7 @@ public final class TxProto {
         return lockId_;
       }
       /**
-       * <code>uint64 lock_id = 2 [json_name = "lockId", (.gogoproto.moretags) = "yaml:&#92;"lock_id&#92;""];</code>
+       * <code>int64 lock_id = 2 [json_name = "lockId", (.gogoproto.moretags) = "yaml:&#92;"lock_id&#92;""];</code>
        * @param value The lockId to set.
        * @return This builder for chaining.
        */
@@ -9954,7 +9954,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>uint64 lock_id = 2 [json_name = "lockId", (.gogoproto.moretags) = "yaml:&#92;"lock_id&#92;""];</code>
+       * <code>int64 lock_id = 2 [json_name = "lockId", (.gogoproto.moretags) = "yaml:&#92;"lock_id&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearLockId() {
@@ -10463,36 +10463,36 @@ public final class TxProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string amount0 = 1 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
+     * <code>string amount0 = 1 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
      * @return The amount0.
      */
     java.lang.String getAmount0();
     /**
-     * <code>string amount0 = 1 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
+     * <code>string amount0 = 1 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
      * @return The bytes for amount0.
      */
     com.google.protobuf.ByteString
         getAmount0Bytes();
 
     /**
-     * <code>string amount1 = 2 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
+     * <code>string amount1 = 2 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
      * @return The amount1.
      */
     java.lang.String getAmount1();
     /**
-     * <code>string amount1 = 2 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
+     * <code>string amount1 = 2 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
      * @return The bytes for amount1.
      */
     com.google.protobuf.ByteString
         getAmount1Bytes();
 
     /**
-     * <code>string liquidity_created = 3 [json_name = "liquidityCreated", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_created&#92;""];</code>
+     * <code>string liquidity_created = 3 [json_name = "liquidityCreated", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_created&#92;""];</code>
      * @return The liquidityCreated.
      */
     java.lang.String getLiquidityCreated();
     /**
-     * <code>string liquidity_created = 3 [json_name = "liquidityCreated", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_created&#92;""];</code>
+     * <code>string liquidity_created = 3 [json_name = "liquidityCreated", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_created&#92;""];</code>
      * @return The bytes for liquidityCreated.
      */
     com.google.protobuf.ByteString
@@ -10555,7 +10555,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object amount0_ = "";
     /**
-     * <code>string amount0 = 1 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
+     * <code>string amount0 = 1 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
      * @return The amount0.
      */
     @java.lang.Override
@@ -10572,7 +10572,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string amount0 = 1 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
+     * <code>string amount0 = 1 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
      * @return The bytes for amount0.
      */
     @java.lang.Override
@@ -10594,7 +10594,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object amount1_ = "";
     /**
-     * <code>string amount1 = 2 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
+     * <code>string amount1 = 2 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
      * @return The amount1.
      */
     @java.lang.Override
@@ -10611,7 +10611,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string amount1 = 2 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
+     * <code>string amount1 = 2 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
      * @return The bytes for amount1.
      */
     @java.lang.Override
@@ -10633,7 +10633,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object liquidityCreated_ = "";
     /**
-     * <code>string liquidity_created = 3 [json_name = "liquidityCreated", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_created&#92;""];</code>
+     * <code>string liquidity_created = 3 [json_name = "liquidityCreated", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_created&#92;""];</code>
      * @return The liquidityCreated.
      */
     @java.lang.Override
@@ -10650,7 +10650,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string liquidity_created = 3 [json_name = "liquidityCreated", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_created&#92;""];</code>
+     * <code>string liquidity_created = 3 [json_name = "liquidityCreated", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_created&#92;""];</code>
      * @return The bytes for liquidityCreated.
      */
     @java.lang.Override
@@ -11106,7 +11106,7 @@ public final class TxProto {
 
       private java.lang.Object amount0_ = "";
       /**
-       * <code>string amount0 = 1 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
+       * <code>string amount0 = 1 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
        * @return The amount0.
        */
       public java.lang.String getAmount0() {
@@ -11122,7 +11122,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string amount0 = 1 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
+       * <code>string amount0 = 1 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
        * @return The bytes for amount0.
        */
       public com.google.protobuf.ByteString
@@ -11139,7 +11139,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string amount0 = 1 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
+       * <code>string amount0 = 1 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
        * @param value The amount0 to set.
        * @return This builder for chaining.
        */
@@ -11152,7 +11152,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string amount0 = 1 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
+       * <code>string amount0 = 1 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearAmount0() {
@@ -11162,7 +11162,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string amount0 = 1 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
+       * <code>string amount0 = 1 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
        * @param value The bytes for amount0 to set.
        * @return This builder for chaining.
        */
@@ -11178,7 +11178,7 @@ public final class TxProto {
 
       private java.lang.Object amount1_ = "";
       /**
-       * <code>string amount1 = 2 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
+       * <code>string amount1 = 2 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
        * @return The amount1.
        */
       public java.lang.String getAmount1() {
@@ -11194,7 +11194,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string amount1 = 2 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
+       * <code>string amount1 = 2 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
        * @return The bytes for amount1.
        */
       public com.google.protobuf.ByteString
@@ -11211,7 +11211,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string amount1 = 2 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
+       * <code>string amount1 = 2 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
        * @param value The amount1 to set.
        * @return This builder for chaining.
        */
@@ -11224,7 +11224,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string amount1 = 2 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
+       * <code>string amount1 = 2 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearAmount1() {
@@ -11234,7 +11234,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string amount1 = 2 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
+       * <code>string amount1 = 2 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
        * @param value The bytes for amount1 to set.
        * @return This builder for chaining.
        */
@@ -11250,7 +11250,7 @@ public final class TxProto {
 
       private java.lang.Object liquidityCreated_ = "";
       /**
-       * <code>string liquidity_created = 3 [json_name = "liquidityCreated", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_created&#92;""];</code>
+       * <code>string liquidity_created = 3 [json_name = "liquidityCreated", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_created&#92;""];</code>
        * @return The liquidityCreated.
        */
       public java.lang.String getLiquidityCreated() {
@@ -11266,7 +11266,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string liquidity_created = 3 [json_name = "liquidityCreated", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_created&#92;""];</code>
+       * <code>string liquidity_created = 3 [json_name = "liquidityCreated", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_created&#92;""];</code>
        * @return The bytes for liquidityCreated.
        */
       public com.google.protobuf.ByteString
@@ -11283,7 +11283,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string liquidity_created = 3 [json_name = "liquidityCreated", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_created&#92;""];</code>
+       * <code>string liquidity_created = 3 [json_name = "liquidityCreated", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_created&#92;""];</code>
        * @param value The liquidityCreated to set.
        * @return This builder for chaining.
        */
@@ -11296,7 +11296,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string liquidity_created = 3 [json_name = "liquidityCreated", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_created&#92;""];</code>
+       * <code>string liquidity_created = 3 [json_name = "liquidityCreated", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_created&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearLiquidityCreated() {
@@ -11306,7 +11306,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string liquidity_created = 3 [json_name = "liquidityCreated", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_created&#92;""];</code>
+       * <code>string liquidity_created = 3 [json_name = "liquidityCreated", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_created&#92;""];</code>
        * @param value The bytes for liquidityCreated to set.
        * @return This builder for chaining.
        */
@@ -12538,24 +12538,24 @@ public final class TxProto {
     long getPositionId();
 
     /**
-     * <code>string amount0 = 2 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
+     * <code>string amount0 = 2 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
      * @return The amount0.
      */
     java.lang.String getAmount0();
     /**
-     * <code>string amount0 = 2 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
+     * <code>string amount0 = 2 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
      * @return The bytes for amount0.
      */
     com.google.protobuf.ByteString
         getAmount0Bytes();
 
     /**
-     * <code>string amount1 = 3 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
+     * <code>string amount1 = 3 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
      * @return The amount1.
      */
     java.lang.String getAmount1();
     /**
-     * <code>string amount1 = 3 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
+     * <code>string amount1 = 3 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
      * @return The bytes for amount1.
      */
     com.google.protobuf.ByteString
@@ -12568,7 +12568,7 @@ public final class TxProto {
      * and the new liquidity that was added to the position.
      * </pre>
      *
-     * <code>string new_liquidity = 5 [json_name = "newLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"new_liquidity&#92;""];</code>
+     * <code>string new_liquidity = 5 [json_name = "newLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"new_liquidity&#92;""];</code>
      * @return The newLiquidity.
      */
     java.lang.String getNewLiquidity();
@@ -12579,7 +12579,7 @@ public final class TxProto {
      * and the new liquidity that was added to the position.
      * </pre>
      *
-     * <code>string new_liquidity = 5 [json_name = "newLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"new_liquidity&#92;""];</code>
+     * <code>string new_liquidity = 5 [json_name = "newLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"new_liquidity&#92;""];</code>
      * @return The bytes for newLiquidity.
      */
     com.google.protobuf.ByteString
@@ -12644,7 +12644,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object amount0_ = "";
     /**
-     * <code>string amount0 = 2 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
+     * <code>string amount0 = 2 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
      * @return The amount0.
      */
     @java.lang.Override
@@ -12661,7 +12661,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string amount0 = 2 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
+     * <code>string amount0 = 2 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
      * @return The bytes for amount0.
      */
     @java.lang.Override
@@ -12683,7 +12683,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object amount1_ = "";
     /**
-     * <code>string amount1 = 3 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
+     * <code>string amount1 = 3 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
      * @return The amount1.
      */
     @java.lang.Override
@@ -12700,7 +12700,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string amount1 = 3 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
+     * <code>string amount1 = 3 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
      * @return The bytes for amount1.
      */
     @java.lang.Override
@@ -12728,7 +12728,7 @@ public final class TxProto {
      * and the new liquidity that was added to the position.
      * </pre>
      *
-     * <code>string new_liquidity = 5 [json_name = "newLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"new_liquidity&#92;""];</code>
+     * <code>string new_liquidity = 5 [json_name = "newLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"new_liquidity&#92;""];</code>
      * @return The newLiquidity.
      */
     @java.lang.Override
@@ -12751,7 +12751,7 @@ public final class TxProto {
      * and the new liquidity that was added to the position.
      * </pre>
      *
-     * <code>string new_liquidity = 5 [json_name = "newLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"new_liquidity&#92;""];</code>
+     * <code>string new_liquidity = 5 [json_name = "newLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"new_liquidity&#92;""];</code>
      * @return The bytes for newLiquidity.
      */
     @java.lang.Override
@@ -13236,7 +13236,7 @@ public final class TxProto {
 
       private java.lang.Object amount0_ = "";
       /**
-       * <code>string amount0 = 2 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
+       * <code>string amount0 = 2 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
        * @return The amount0.
        */
       public java.lang.String getAmount0() {
@@ -13252,7 +13252,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string amount0 = 2 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
+       * <code>string amount0 = 2 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
        * @return The bytes for amount0.
        */
       public com.google.protobuf.ByteString
@@ -13269,7 +13269,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string amount0 = 2 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
+       * <code>string amount0 = 2 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
        * @param value The amount0 to set.
        * @return This builder for chaining.
        */
@@ -13282,7 +13282,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string amount0 = 2 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
+       * <code>string amount0 = 2 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearAmount0() {
@@ -13292,7 +13292,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string amount0 = 2 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
+       * <code>string amount0 = 2 [json_name = "amount0", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount0&#92;""];</code>
        * @param value The bytes for amount0 to set.
        * @return This builder for chaining.
        */
@@ -13308,7 +13308,7 @@ public final class TxProto {
 
       private java.lang.Object amount1_ = "";
       /**
-       * <code>string amount1 = 3 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
+       * <code>string amount1 = 3 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
        * @return The amount1.
        */
       public java.lang.String getAmount1() {
@@ -13324,7 +13324,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string amount1 = 3 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
+       * <code>string amount1 = 3 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
        * @return The bytes for amount1.
        */
       public com.google.protobuf.ByteString
@@ -13341,7 +13341,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string amount1 = 3 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
+       * <code>string amount1 = 3 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
        * @param value The amount1 to set.
        * @return This builder for chaining.
        */
@@ -13354,7 +13354,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string amount1 = 3 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
+       * <code>string amount1 = 3 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearAmount1() {
@@ -13364,7 +13364,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string amount1 = 3 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
+       * <code>string amount1 = 3 [json_name = "amount1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"amount1&#92;""];</code>
        * @param value The bytes for amount1 to set.
        * @return This builder for chaining.
        */
@@ -13386,7 +13386,7 @@ public final class TxProto {
        * and the new liquidity that was added to the position.
        * </pre>
        *
-       * <code>string new_liquidity = 5 [json_name = "newLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"new_liquidity&#92;""];</code>
+       * <code>string new_liquidity = 5 [json_name = "newLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"new_liquidity&#92;""];</code>
        * @return The newLiquidity.
        */
       public java.lang.String getNewLiquidity() {
@@ -13408,7 +13408,7 @@ public final class TxProto {
        * and the new liquidity that was added to the position.
        * </pre>
        *
-       * <code>string new_liquidity = 5 [json_name = "newLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"new_liquidity&#92;""];</code>
+       * <code>string new_liquidity = 5 [json_name = "newLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"new_liquidity&#92;""];</code>
        * @return The bytes for newLiquidity.
        */
       public com.google.protobuf.ByteString
@@ -13431,7 +13431,7 @@ public final class TxProto {
        * and the new liquidity that was added to the position.
        * </pre>
        *
-       * <code>string new_liquidity = 5 [json_name = "newLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"new_liquidity&#92;""];</code>
+       * <code>string new_liquidity = 5 [json_name = "newLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"new_liquidity&#92;""];</code>
        * @param value The newLiquidity to set.
        * @return This builder for chaining.
        */
@@ -13450,7 +13450,7 @@ public final class TxProto {
        * and the new liquidity that was added to the position.
        * </pre>
        *
-       * <code>string new_liquidity = 5 [json_name = "newLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"new_liquidity&#92;""];</code>
+       * <code>string new_liquidity = 5 [json_name = "newLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"new_liquidity&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearNewLiquidity() {
@@ -13466,7 +13466,7 @@ public final class TxProto {
        * and the new liquidity that was added to the position.
        * </pre>
        *
-       * <code>string new_liquidity = 5 [json_name = "newLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"new_liquidity&#92;""];</code>
+       * <code>string new_liquidity = 5 [json_name = "newLiquidity", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"new_liquidity&#92;""];</code>
        * @param value The bytes for newLiquidity to set.
        * @return This builder for chaining.
        */
@@ -13575,6 +13575,1888 @@ public final class TxProto {
 
   }
 
+  public interface MsgUnbondConvertAndStakeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.superfluid.MsgUnbondConvertAndStake)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * lock ID to convert and stake.
+     * lock id with 0 should be provided if converting liquid gamm shares to stake
+     * </pre>
+     *
+     * <code>uint64 lock_id = 1 [json_name = "lockId", (.gogoproto.moretags) = "yaml:&#92;"lock_id&#92;""];</code>
+     * @return The lockId.
+     */
+    long getLockId();
+
+    /**
+     * <code>string sender = 2 [json_name = "sender", (.gogoproto.moretags) = "yaml:&#92;"sender&#92;""];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <code>string sender = 2 [json_name = "sender", (.gogoproto.moretags) = "yaml:&#92;"sender&#92;""];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <pre>
+     * validator address to delegate to.
+     * If provided empty string, we use the validators returned from
+     * valset-preference module.
+     * </pre>
+     *
+     * <code>string val_addr = 3 [json_name = "valAddr"];</code>
+     * @return The valAddr.
+     */
+    java.lang.String getValAddr();
+    /**
+     * <pre>
+     * validator address to delegate to.
+     * If provided empty string, we use the validators returned from
+     * valset-preference module.
+     * </pre>
+     *
+     * <code>string val_addr = 3 [json_name = "valAddr"];</code>
+     * @return The bytes for valAddr.
+     */
+    com.google.protobuf.ByteString
+        getValAddrBytes();
+
+    /**
+     * <pre>
+     * min_amt_to_stake indicates the minimum amount to stake after conversion
+     * </pre>
+     *
+     * <code>string min_amt_to_stake = 4 [json_name = "minAmtToStake", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"min_amt_to_stake&#92;""];</code>
+     * @return The minAmtToStake.
+     */
+    java.lang.String getMinAmtToStake();
+    /**
+     * <pre>
+     * min_amt_to_stake indicates the minimum amount to stake after conversion
+     * </pre>
+     *
+     * <code>string min_amt_to_stake = 4 [json_name = "minAmtToStake", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"min_amt_to_stake&#92;""];</code>
+     * @return The bytes for minAmtToStake.
+     */
+    com.google.protobuf.ByteString
+        getMinAmtToStakeBytes();
+
+    /**
+     * <pre>
+     * shares_to_convert indicates shares wanted to stake.
+     * Note that this field is only used for liquid(unlocked) gamm shares.
+     * For all other cases, this field would be disregarded.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin shares_to_convert = 5 [json_name = "sharesToConvert", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"shares_to_convert&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the sharesToConvert field is set.
+     */
+    boolean hasSharesToConvert();
+    /**
+     * <pre>
+     * shares_to_convert indicates shares wanted to stake.
+     * Note that this field is only used for liquid(unlocked) gamm shares.
+     * For all other cases, this field would be disregarded.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin shares_to_convert = 5 [json_name = "sharesToConvert", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"shares_to_convert&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The sharesToConvert.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getSharesToConvert();
+    /**
+     * <pre>
+     * shares_to_convert indicates shares wanted to stake.
+     * Note that this field is only used for liquid(unlocked) gamm shares.
+     * For all other cases, this field would be disregarded.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin shares_to_convert = 5 [json_name = "sharesToConvert", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"shares_to_convert&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getSharesToConvertOrBuilder();
+  }
+  /**
+   * <pre>
+   * ===================== MsgUnbondConvertAndStake
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.superfluid.MsgUnbondConvertAndStake}
+   */
+  public static final class MsgUnbondConvertAndStake extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.superfluid.MsgUnbondConvertAndStake)
+      MsgUnbondConvertAndStakeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUnbondConvertAndStake.newBuilder() to construct.
+    private MsgUnbondConvertAndStake(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUnbondConvertAndStake() {
+      sender_ = "";
+      valAddr_ = "";
+      minAmtToStake_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUnbondConvertAndStake();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.superfluid.TxProto.internal_static_osmosis_superfluid_MsgUnbondConvertAndStake_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.superfluid.TxProto.internal_static_osmosis_superfluid_MsgUnbondConvertAndStake_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake.class, com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake.Builder.class);
+    }
+
+    public static final int LOCK_ID_FIELD_NUMBER = 1;
+    private long lockId_ = 0L;
+    /**
+     * <pre>
+     * lock ID to convert and stake.
+     * lock id with 0 should be provided if converting liquid gamm shares to stake
+     * </pre>
+     *
+     * <code>uint64 lock_id = 1 [json_name = "lockId", (.gogoproto.moretags) = "yaml:&#92;"lock_id&#92;""];</code>
+     * @return The lockId.
+     */
+    @java.lang.Override
+    public long getLockId() {
+      return lockId_;
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <code>string sender = 2 [json_name = "sender", (.gogoproto.moretags) = "yaml:&#92;"sender&#92;""];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sender = 2 [json_name = "sender", (.gogoproto.moretags) = "yaml:&#92;"sender&#92;""];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VAL_ADDR_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object valAddr_ = "";
+    /**
+     * <pre>
+     * validator address to delegate to.
+     * If provided empty string, we use the validators returned from
+     * valset-preference module.
+     * </pre>
+     *
+     * <code>string val_addr = 3 [json_name = "valAddr"];</code>
+     * @return The valAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getValAddr() {
+      java.lang.Object ref = valAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        valAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * validator address to delegate to.
+     * If provided empty string, we use the validators returned from
+     * valset-preference module.
+     * </pre>
+     *
+     * <code>string val_addr = 3 [json_name = "valAddr"];</code>
+     * @return The bytes for valAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValAddrBytes() {
+      java.lang.Object ref = valAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        valAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MIN_AMT_TO_STAKE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minAmtToStake_ = "";
+    /**
+     * <pre>
+     * min_amt_to_stake indicates the minimum amount to stake after conversion
+     * </pre>
+     *
+     * <code>string min_amt_to_stake = 4 [json_name = "minAmtToStake", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"min_amt_to_stake&#92;""];</code>
+     * @return The minAmtToStake.
+     */
+    @java.lang.Override
+    public java.lang.String getMinAmtToStake() {
+      java.lang.Object ref = minAmtToStake_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minAmtToStake_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * min_amt_to_stake indicates the minimum amount to stake after conversion
+     * </pre>
+     *
+     * <code>string min_amt_to_stake = 4 [json_name = "minAmtToStake", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"min_amt_to_stake&#92;""];</code>
+     * @return The bytes for minAmtToStake.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinAmtToStakeBytes() {
+      java.lang.Object ref = minAmtToStake_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minAmtToStake_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SHARES_TO_CONVERT_FIELD_NUMBER = 5;
+    private com.cosmos.base.v1beta1.CoinProto.Coin sharesToConvert_;
+    /**
+     * <pre>
+     * shares_to_convert indicates shares wanted to stake.
+     * Note that this field is only used for liquid(unlocked) gamm shares.
+     * For all other cases, this field would be disregarded.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin shares_to_convert = 5 [json_name = "sharesToConvert", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"shares_to_convert&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the sharesToConvert field is set.
+     */
+    @java.lang.Override
+    public boolean hasSharesToConvert() {
+      return sharesToConvert_ != null;
+    }
+    /**
+     * <pre>
+     * shares_to_convert indicates shares wanted to stake.
+     * Note that this field is only used for liquid(unlocked) gamm shares.
+     * For all other cases, this field would be disregarded.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin shares_to_convert = 5 [json_name = "sharesToConvert", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"shares_to_convert&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The sharesToConvert.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getSharesToConvert() {
+      return sharesToConvert_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : sharesToConvert_;
+    }
+    /**
+     * <pre>
+     * shares_to_convert indicates shares wanted to stake.
+     * Note that this field is only used for liquid(unlocked) gamm shares.
+     * For all other cases, this field would be disregarded.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin shares_to_convert = 5 [json_name = "sharesToConvert", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"shares_to_convert&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getSharesToConvertOrBuilder() {
+      return sharesToConvert_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : sharesToConvert_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (lockId_ != 0L) {
+        output.writeUInt64(1, lockId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, valAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minAmtToStake_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, minAmtToStake_);
+      }
+      if (sharesToConvert_ != null) {
+        output.writeMessage(5, getSharesToConvert());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (lockId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, lockId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, valAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minAmtToStake_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, minAmtToStake_);
+      }
+      if (sharesToConvert_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getSharesToConvert());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake)) {
+        return super.equals(obj);
+      }
+      com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake other = (com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake) obj;
+
+      if (getLockId()
+          != other.getLockId()) return false;
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getValAddr()
+          .equals(other.getValAddr())) return false;
+      if (!getMinAmtToStake()
+          .equals(other.getMinAmtToStake())) return false;
+      if (hasSharesToConvert() != other.hasSharesToConvert()) return false;
+      if (hasSharesToConvert()) {
+        if (!getSharesToConvert()
+            .equals(other.getSharesToConvert())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LOCK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLockId());
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + VAL_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getValAddr().hashCode();
+      hash = (37 * hash) + MIN_AMT_TO_STAKE_FIELD_NUMBER;
+      hash = (53 * hash) + getMinAmtToStake().hashCode();
+      if (hasSharesToConvert()) {
+        hash = (37 * hash) + SHARES_TO_CONVERT_FIELD_NUMBER;
+        hash = (53 * hash) + getSharesToConvert().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ===================== MsgUnbondConvertAndStake
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.superfluid.MsgUnbondConvertAndStake}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.superfluid.MsgUnbondConvertAndStake)
+        com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.superfluid.TxProto.internal_static_osmosis_superfluid_MsgUnbondConvertAndStake_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.superfluid.TxProto.internal_static_osmosis_superfluid_MsgUnbondConvertAndStake_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake.class, com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake.Builder.class);
+      }
+
+      // Construct using com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        lockId_ = 0L;
+        sender_ = "";
+        valAddr_ = "";
+        minAmtToStake_ = "";
+        sharesToConvert_ = null;
+        if (sharesToConvertBuilder_ != null) {
+          sharesToConvertBuilder_.dispose();
+          sharesToConvertBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.superfluid.TxProto.internal_static_osmosis_superfluid_MsgUnbondConvertAndStake_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake getDefaultInstanceForType() {
+        return com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake build() {
+        com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake buildPartial() {
+        com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake result = new com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.lockId_ = lockId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.valAddr_ = valAddr_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.minAmtToStake_ = minAmtToStake_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.sharesToConvert_ = sharesToConvertBuilder_ == null
+              ? sharesToConvert_
+              : sharesToConvertBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake) {
+          return mergeFrom((com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake other) {
+        if (other == com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake.getDefaultInstance()) return this;
+        if (other.getLockId() != 0L) {
+          setLockId(other.getLockId());
+        }
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getValAddr().isEmpty()) {
+          valAddr_ = other.valAddr_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getMinAmtToStake().isEmpty()) {
+          minAmtToStake_ = other.minAmtToStake_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.hasSharesToConvert()) {
+          mergeSharesToConvert(other.getSharesToConvert());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                lockId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                valAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                minAmtToStake_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getSharesToConvertFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long lockId_ ;
+      /**
+       * <pre>
+       * lock ID to convert and stake.
+       * lock id with 0 should be provided if converting liquid gamm shares to stake
+       * </pre>
+       *
+       * <code>uint64 lock_id = 1 [json_name = "lockId", (.gogoproto.moretags) = "yaml:&#92;"lock_id&#92;""];</code>
+       * @return The lockId.
+       */
+      @java.lang.Override
+      public long getLockId() {
+        return lockId_;
+      }
+      /**
+       * <pre>
+       * lock ID to convert and stake.
+       * lock id with 0 should be provided if converting liquid gamm shares to stake
+       * </pre>
+       *
+       * <code>uint64 lock_id = 1 [json_name = "lockId", (.gogoproto.moretags) = "yaml:&#92;"lock_id&#92;""];</code>
+       * @param value The lockId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLockId(long value) {
+
+        lockId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * lock ID to convert and stake.
+       * lock id with 0 should be provided if converting liquid gamm shares to stake
+       * </pre>
+       *
+       * <code>uint64 lock_id = 1 [json_name = "lockId", (.gogoproto.moretags) = "yaml:&#92;"lock_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLockId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        lockId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <code>string sender = 2 [json_name = "sender", (.gogoproto.moretags) = "yaml:&#92;"sender&#92;""];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sender = 2 [json_name = "sender", (.gogoproto.moretags) = "yaml:&#92;"sender&#92;""];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sender = 2 [json_name = "sender", (.gogoproto.moretags) = "yaml:&#92;"sender&#92;""];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 2 [json_name = "sender", (.gogoproto.moretags) = "yaml:&#92;"sender&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 2 [json_name = "sender", (.gogoproto.moretags) = "yaml:&#92;"sender&#92;""];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object valAddr_ = "";
+      /**
+       * <pre>
+       * validator address to delegate to.
+       * If provided empty string, we use the validators returned from
+       * valset-preference module.
+       * </pre>
+       *
+       * <code>string val_addr = 3 [json_name = "valAddr"];</code>
+       * @return The valAddr.
+       */
+      public java.lang.String getValAddr() {
+        java.lang.Object ref = valAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          valAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * validator address to delegate to.
+       * If provided empty string, we use the validators returned from
+       * valset-preference module.
+       * </pre>
+       *
+       * <code>string val_addr = 3 [json_name = "valAddr"];</code>
+       * @return The bytes for valAddr.
+       */
+      public com.google.protobuf.ByteString
+          getValAddrBytes() {
+        java.lang.Object ref = valAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          valAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * validator address to delegate to.
+       * If provided empty string, we use the validators returned from
+       * valset-preference module.
+       * </pre>
+       *
+       * <code>string val_addr = 3 [json_name = "valAddr"];</code>
+       * @param value The valAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        valAddr_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * validator address to delegate to.
+       * If provided empty string, we use the validators returned from
+       * valset-preference module.
+       * </pre>
+       *
+       * <code>string val_addr = 3 [json_name = "valAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValAddr() {
+        valAddr_ = getDefaultInstance().getValAddr();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * validator address to delegate to.
+       * If provided empty string, we use the validators returned from
+       * valset-preference module.
+       * </pre>
+       *
+       * <code>string val_addr = 3 [json_name = "valAddr"];</code>
+       * @param value The bytes for valAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        valAddr_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object minAmtToStake_ = "";
+      /**
+       * <pre>
+       * min_amt_to_stake indicates the minimum amount to stake after conversion
+       * </pre>
+       *
+       * <code>string min_amt_to_stake = 4 [json_name = "minAmtToStake", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"min_amt_to_stake&#92;""];</code>
+       * @return The minAmtToStake.
+       */
+      public java.lang.String getMinAmtToStake() {
+        java.lang.Object ref = minAmtToStake_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minAmtToStake_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * min_amt_to_stake indicates the minimum amount to stake after conversion
+       * </pre>
+       *
+       * <code>string min_amt_to_stake = 4 [json_name = "minAmtToStake", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"min_amt_to_stake&#92;""];</code>
+       * @return The bytes for minAmtToStake.
+       */
+      public com.google.protobuf.ByteString
+          getMinAmtToStakeBytes() {
+        java.lang.Object ref = minAmtToStake_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minAmtToStake_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * min_amt_to_stake indicates the minimum amount to stake after conversion
+       * </pre>
+       *
+       * <code>string min_amt_to_stake = 4 [json_name = "minAmtToStake", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"min_amt_to_stake&#92;""];</code>
+       * @param value The minAmtToStake to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinAmtToStake(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minAmtToStake_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * min_amt_to_stake indicates the minimum amount to stake after conversion
+       * </pre>
+       *
+       * <code>string min_amt_to_stake = 4 [json_name = "minAmtToStake", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"min_amt_to_stake&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinAmtToStake() {
+        minAmtToStake_ = getDefaultInstance().getMinAmtToStake();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * min_amt_to_stake indicates the minimum amount to stake after conversion
+       * </pre>
+       *
+       * <code>string min_amt_to_stake = 4 [json_name = "minAmtToStake", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"min_amt_to_stake&#92;""];</code>
+       * @param value The bytes for minAmtToStake to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinAmtToStakeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minAmtToStake_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin sharesToConvert_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> sharesToConvertBuilder_;
+      /**
+       * <pre>
+       * shares_to_convert indicates shares wanted to stake.
+       * Note that this field is only used for liquid(unlocked) gamm shares.
+       * For all other cases, this field would be disregarded.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin shares_to_convert = 5 [json_name = "sharesToConvert", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"shares_to_convert&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the sharesToConvert field is set.
+       */
+      public boolean hasSharesToConvert() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * shares_to_convert indicates shares wanted to stake.
+       * Note that this field is only used for liquid(unlocked) gamm shares.
+       * For all other cases, this field would be disregarded.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin shares_to_convert = 5 [json_name = "sharesToConvert", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"shares_to_convert&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The sharesToConvert.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getSharesToConvert() {
+        if (sharesToConvertBuilder_ == null) {
+          return sharesToConvert_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : sharesToConvert_;
+        } else {
+          return sharesToConvertBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * shares_to_convert indicates shares wanted to stake.
+       * Note that this field is only used for liquid(unlocked) gamm shares.
+       * For all other cases, this field would be disregarded.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin shares_to_convert = 5 [json_name = "sharesToConvert", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"shares_to_convert&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setSharesToConvert(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (sharesToConvertBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sharesToConvert_ = value;
+        } else {
+          sharesToConvertBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * shares_to_convert indicates shares wanted to stake.
+       * Note that this field is only used for liquid(unlocked) gamm shares.
+       * For all other cases, this field would be disregarded.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin shares_to_convert = 5 [json_name = "sharesToConvert", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"shares_to_convert&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setSharesToConvert(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (sharesToConvertBuilder_ == null) {
+          sharesToConvert_ = builderForValue.build();
+        } else {
+          sharesToConvertBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * shares_to_convert indicates shares wanted to stake.
+       * Note that this field is only used for liquid(unlocked) gamm shares.
+       * For all other cases, this field would be disregarded.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin shares_to_convert = 5 [json_name = "sharesToConvert", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"shares_to_convert&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeSharesToConvert(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (sharesToConvertBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            sharesToConvert_ != null &&
+            sharesToConvert_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getSharesToConvertBuilder().mergeFrom(value);
+          } else {
+            sharesToConvert_ = value;
+          }
+        } else {
+          sharesToConvertBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * shares_to_convert indicates shares wanted to stake.
+       * Note that this field is only used for liquid(unlocked) gamm shares.
+       * For all other cases, this field would be disregarded.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin shares_to_convert = 5 [json_name = "sharesToConvert", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"shares_to_convert&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearSharesToConvert() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        sharesToConvert_ = null;
+        if (sharesToConvertBuilder_ != null) {
+          sharesToConvertBuilder_.dispose();
+          sharesToConvertBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * shares_to_convert indicates shares wanted to stake.
+       * Note that this field is only used for liquid(unlocked) gamm shares.
+       * For all other cases, this field would be disregarded.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin shares_to_convert = 5 [json_name = "sharesToConvert", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"shares_to_convert&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getSharesToConvertBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getSharesToConvertFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * shares_to_convert indicates shares wanted to stake.
+       * Note that this field is only used for liquid(unlocked) gamm shares.
+       * For all other cases, this field would be disregarded.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin shares_to_convert = 5 [json_name = "sharesToConvert", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"shares_to_convert&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getSharesToConvertOrBuilder() {
+        if (sharesToConvertBuilder_ != null) {
+          return sharesToConvertBuilder_.getMessageOrBuilder();
+        } else {
+          return sharesToConvert_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : sharesToConvert_;
+        }
+      }
+      /**
+       * <pre>
+       * shares_to_convert indicates shares wanted to stake.
+       * Note that this field is only used for liquid(unlocked) gamm shares.
+       * For all other cases, this field would be disregarded.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin shares_to_convert = 5 [json_name = "sharesToConvert", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"shares_to_convert&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getSharesToConvertFieldBuilder() {
+        if (sharesToConvertBuilder_ == null) {
+          sharesToConvertBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getSharesToConvert(),
+                  getParentForChildren(),
+                  isClean());
+          sharesToConvert_ = null;
+        }
+        return sharesToConvertBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.superfluid.MsgUnbondConvertAndStake)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.superfluid.MsgUnbondConvertAndStake)
+    private static final com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake();
+    }
+
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUnbondConvertAndStake>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUnbondConvertAndStake>() {
+      @java.lang.Override
+      public MsgUnbondConvertAndStake parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUnbondConvertAndStake> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUnbondConvertAndStake> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStake getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUnbondConvertAndStakeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.superfluid.MsgUnbondConvertAndStakeResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string total_amt_staked = 1 [json_name = "totalAmtStaked", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"total_amt_staked&#92;""];</code>
+     * @return The totalAmtStaked.
+     */
+    java.lang.String getTotalAmtStaked();
+    /**
+     * <code>string total_amt_staked = 1 [json_name = "totalAmtStaked", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"total_amt_staked&#92;""];</code>
+     * @return The bytes for totalAmtStaked.
+     */
+    com.google.protobuf.ByteString
+        getTotalAmtStakedBytes();
+  }
+  /**
+   * Protobuf type {@code osmosis.superfluid.MsgUnbondConvertAndStakeResponse}
+   */
+  public static final class MsgUnbondConvertAndStakeResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.superfluid.MsgUnbondConvertAndStakeResponse)
+      MsgUnbondConvertAndStakeResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUnbondConvertAndStakeResponse.newBuilder() to construct.
+    private MsgUnbondConvertAndStakeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUnbondConvertAndStakeResponse() {
+      totalAmtStaked_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUnbondConvertAndStakeResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.superfluid.TxProto.internal_static_osmosis_superfluid_MsgUnbondConvertAndStakeResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.superfluid.TxProto.internal_static_osmosis_superfluid_MsgUnbondConvertAndStakeResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse.class, com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse.Builder.class);
+    }
+
+    public static final int TOTAL_AMT_STAKED_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object totalAmtStaked_ = "";
+    /**
+     * <code>string total_amt_staked = 1 [json_name = "totalAmtStaked", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"total_amt_staked&#92;""];</code>
+     * @return The totalAmtStaked.
+     */
+    @java.lang.Override
+    public java.lang.String getTotalAmtStaked() {
+      java.lang.Object ref = totalAmtStaked_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        totalAmtStaked_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string total_amt_staked = 1 [json_name = "totalAmtStaked", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"total_amt_staked&#92;""];</code>
+     * @return The bytes for totalAmtStaked.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTotalAmtStakedBytes() {
+      java.lang.Object ref = totalAmtStaked_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalAmtStaked_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalAmtStaked_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, totalAmtStaked_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalAmtStaked_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, totalAmtStaked_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse other = (com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse) obj;
+
+      if (!getTotalAmtStaked()
+          .equals(other.getTotalAmtStaked())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TOTAL_AMT_STAKED_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalAmtStaked().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.superfluid.MsgUnbondConvertAndStakeResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.superfluid.MsgUnbondConvertAndStakeResponse)
+        com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.superfluid.TxProto.internal_static_osmosis_superfluid_MsgUnbondConvertAndStakeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.superfluid.TxProto.internal_static_osmosis_superfluid_MsgUnbondConvertAndStakeResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse.class, com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        totalAmtStaked_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.superfluid.TxProto.internal_static_osmosis_superfluid_MsgUnbondConvertAndStakeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse getDefaultInstanceForType() {
+        return com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse build() {
+        com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse buildPartial() {
+        com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse result = new com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.totalAmtStaked_ = totalAmtStaked_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse) {
+          return mergeFrom((com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse other) {
+        if (other == com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse.getDefaultInstance()) return this;
+        if (!other.getTotalAmtStaked().isEmpty()) {
+          totalAmtStaked_ = other.totalAmtStaked_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                totalAmtStaked_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object totalAmtStaked_ = "";
+      /**
+       * <code>string total_amt_staked = 1 [json_name = "totalAmtStaked", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"total_amt_staked&#92;""];</code>
+       * @return The totalAmtStaked.
+       */
+      public java.lang.String getTotalAmtStaked() {
+        java.lang.Object ref = totalAmtStaked_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          totalAmtStaked_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string total_amt_staked = 1 [json_name = "totalAmtStaked", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"total_amt_staked&#92;""];</code>
+       * @return The bytes for totalAmtStaked.
+       */
+      public com.google.protobuf.ByteString
+          getTotalAmtStakedBytes() {
+        java.lang.Object ref = totalAmtStaked_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalAmtStaked_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string total_amt_staked = 1 [json_name = "totalAmtStaked", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"total_amt_staked&#92;""];</code>
+       * @param value The totalAmtStaked to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalAmtStaked(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        totalAmtStaked_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string total_amt_staked = 1 [json_name = "totalAmtStaked", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"total_amt_staked&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalAmtStaked() {
+        totalAmtStaked_ = getDefaultInstance().getTotalAmtStaked();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string total_amt_staked = 1 [json_name = "totalAmtStaked", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"total_amt_staked&#92;""];</code>
+       * @param value The bytes for totalAmtStaked to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalAmtStakedBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        totalAmtStaked_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.superfluid.MsgUnbondConvertAndStakeResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.superfluid.MsgUnbondConvertAndStakeResponse)
+    private static final com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse();
+    }
+
+    public static com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUnbondConvertAndStakeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUnbondConvertAndStakeResponse>() {
+      @java.lang.Override
+      public MsgUnbondConvertAndStakeResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUnbondConvertAndStakeResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUnbondConvertAndStakeResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.superfluid.TxProto.MsgUnbondConvertAndStakeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_superfluid_MsgSuperfluidDelegate_descriptor;
   private static final 
@@ -13665,6 +15547,16 @@ public final class TxProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_superfluid_MsgAddToConcentratedLiquiditySuperfluidPositionResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_superfluid_MsgUnbondConvertAndStake_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_superfluid_MsgUnbondConvertAndStake_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_superfluid_MsgUnbondConvertAndStakeResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_superfluid_MsgUnbondConvertAndStakeResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -13679,131 +15571,153 @@ public final class TxProto {
       "mino.proto\032\036google/protobuf/duration.pro" +
       "to\032\036cosmos/base/v1beta1/coin.proto\032\037goog" +
       "le/protobuf/timestamp.proto\032#osmosis/sup" +
-      "erfluid/superfluid.proto\"\230\001\n\025MsgSuperflu" +
-      "idDelegate\022)\n\006sender\030\001 \001(\tB\021\362\336\037\ryaml:\"se" +
-      "nder\"R\006sender\022\027\n\007lock_id\030\002 \001(\004R\006lockId\022\031" +
-      "\n\010val_addr\030\003 \001(\tR\007valAddr: \212\347\260*\033osmosis/" +
-      "superfluid-delegate\"\037\n\035MsgSuperfluidDele" +
-      "gateResponse\"\201\001\n\027MsgSuperfluidUndelegate" +
-      "\022)\n\006sender\030\001 \001(\tB\021\362\336\037\ryaml:\"sender\"R\006sen" +
-      "der\022\027\n\007lock_id\030\002 \001(\004R\006lockId:\"\212\347\260*\035osmos" +
-      "is/superfluid-undelegate\"!\n\037MsgSuperflui" +
-      "dUndelegateResponse\"\202\001\n\027MsgSuperfluidUnb" +
-      "ondLock\022)\n\006sender\030\001 \001(\tB\021\362\336\037\ryaml:\"sende" +
-      "r\"R\006sender\022\027\n\007lock_id\030\002 \001(\004R\006lockId:#\212\347\260" +
-      "*\036osmosis/superfluid-unbond-lock\"!\n\037MsgS" +
-      "uperfluidUnbondLockResponse\"\256\001\n$MsgSuper" +
-      "fluidUndelegateAndUnbondLock\022)\n\006sender\030\001" +
-      " \001(\tB\021\362\336\037\ryaml:\"sender\"R\006sender\022\027\n\007lock_" +
-      "id\030\002 \001(\004R\006lockId\022B\n\004coin\030\003 \001(\0132\031.cosmos." +
-      "base.v1beta1.CoinB\023\310\336\037\000\362\336\037\013yaml:\"coin\"R\004" +
-      "coin\"G\n,MsgSuperfluidUndelegateAndUnbond" +
-      "LockResponse\022\027\n\007lock_id\030\001 \001(\004R\006lockId\"\362\001" +
-      "\n\034MsgLockAndSuperfluidDelegate\022)\n\006sender" +
-      "\030\001 \001(\tB\021\362\336\037\ryaml:\"sender\"R\006sender\022a\n\005coi" +
-      "ns\030\002 \003(\0132\031.cosmos.base.v1beta1.CoinB0\310\336\037" +
-      "\000\252\337\037(github.com/cosmos/cosmos-sdk/types." +
-      "CoinsR\005coins\022\031\n\010val_addr\030\003 \001(\tR\007valAddr:" +
-      ")\212\347\260*$osmosis/lock-and-superfluid-delega" +
-      "te\"6\n$MsgLockAndSuperfluidDelegateRespon" +
-      "se\022\016\n\002ID\030\001 \001(\004R\002ID\"\207\002\n/MsgCreateFullRang" +
-      "ePositionAndSuperfluidDelegate\022)\n\006sender" +
-      "\030\001 \001(\tB\021\362\336\037\ryaml:\"sender\"R\006sender\022a\n\005coi" +
-      "ns\030\002 \003(\0132\031.cosmos.base.v1beta1.CoinB0\310\336\037" +
-      "\000\252\337\037(github.com/cosmos/cosmos-sdk/types." +
-      "CoinsR\005coins\022\031\n\010val_addr\030\003 \001(\tR\007valAddr\022" +
-      "+\n\007pool_id\030\004 \001(\004B\022\362\336\037\016yaml:\"pool_id\"R\006po" +
-      "olId\"q\n7MsgCreateFullRangePositionAndSup" +
-      "erfluidDelegateResponse\022\026\n\006lockID\030\001 \001(\004R" +
-      "\006lockID\022\036\n\npositionID\030\002 \001(\004R\npositionID\"" +
-      "\230\001\n\030MsgUnPoolWhitelistedPool\022)\n\006sender\030\001" +
-      " \001(\tB\021\362\336\037\ryaml:\"sender\"R\006sender\022+\n\007pool_" +
-      "id\030\002 \001(\004B\022\362\336\037\016yaml:\"pool_id\"R\006poolId:$\212\347" +
-      "\260*\037osmosis/unpool-whitelisted-pool\"J\n Ms" +
-      "gUnPoolWhitelistedPoolResponse\022&\n\017exited" +
-      "_lock_ids\030\001 \003(\004R\rexitedLockIds\"\210\003\n8MsgUn" +
-      "lockAndMigrateSharesToFullRangeConcentra" +
-      "tedPosition\022)\n\006sender\030\001 \001(\tB\021\362\336\037\ryaml:\"s" +
-      "ender\"R\006sender\022+\n\007lock_id\030\002 \001(\004B\022\362\336\037\016yam" +
-      "l:\"lock_id\"R\006lockId\022g\n\021shares_to_migrate" +
-      "\030\003 \001(\0132\031.cosmos.base.v1beta1.CoinB \310\336\037\000\362" +
-      "\336\037\030yaml:\"shares_to_migrate\"R\017sharesToMig" +
-      "rate\022\212\001\n\016token_out_mins\030\004 \003(\0132\031.cosmos.b" +
-      "ase.v1beta1.CoinBI\310\336\037\000\362\336\037\025yaml:\"token_ou" +
-      "t_mins\"\252\337\037(github.com/cosmos/cosmos-sdk/" +
-      "types.CoinsR\014tokenOutMins\"\312\003\n@MsgUnlockA" +
-      "ndMigrateSharesToFullRangeConcentratedPo" +
-      "sitionResponse\022Z\n\007amount0\030\001 \001(\tB@\310\336\037\000\332\336\037" +
-      "&github.com/cosmos/cosmos-sdk/types.Int\362" +
-      "\336\037\016yaml:\"amount0\"R\007amount0\022Z\n\007amount1\030\002 " +
-      "\001(\tB@\310\336\037\000\332\336\037&github.com/cosmos/cosmos-sd" +
-      "k/types.Int\362\336\037\016yaml:\"amount1\"R\007amount1\022w" +
-      "\n\021liquidity_created\030\003 \001(\tBJ\310\336\037\000\332\336\037&githu" +
-      "b.com/cosmos/cosmos-sdk/types.Dec\362\336\037\030yam" +
-      "l:\"liquidity_created\"R\020liquidityCreated\022" +
-      "U\n\tjoin_time\030\004 \001(\0132\032.google.protobuf.Tim" +
-      "estampB\034\310\336\037\000\362\336\037\020yaml:\"join_time\"\220\337\037\001R\010jo" +
-      "inTime\"\327\002\n/MsgAddToConcentratedLiquidity" +
-      "SuperfluidPosition\0227\n\013position_id\030\001 \001(\004B" +
-      "\026\362\336\037\022yaml:\"position_id\"R\npositionId\022)\n\006s" +
-      "ender\030\002 \001(\tB\021\362\336\037\ryaml:\"sender\"R\006sender\022_" +
-      "\n\016token_desired0\030\003 \001(\0132\031.cosmos.base.v1b" +
-      "eta1.CoinB\035\310\336\037\000\362\336\037\025yaml:\"token_desired0\"" +
-      "R\rtokenDesired0\022_\n\016token_desired1\030\004 \001(\0132" +
-      "\031.cosmos.base.v1beta1.CoinB\035\310\336\037\000\362\336\037\025yaml" +
-      ":\"token_desired1\"R\rtokenDesired1\"\304\003\n7Msg" +
-      "AddToConcentratedLiquiditySuperfluidPosi" +
-      "tionResponse\0227\n\013position_id\030\001 \001(\004B\026\362\336\037\022y" +
-      "aml:\"position_id\"R\npositionId\022Z\n\007amount0" +
-      "\030\002 \001(\tB@\310\336\037\000\332\336\037&github.com/cosmos/cosmos" +
-      "-sdk/types.Int\362\336\037\016yaml:\"amount0\"R\007amount" +
-      "0\022Z\n\007amount1\030\003 \001(\tB@\310\336\037\000\332\336\037&github.com/c" +
-      "osmos/cosmos-sdk/types.Int\362\336\037\016yaml:\"amou" +
-      "nt1\"R\007amount1\022k\n\rnew_liquidity\030\005 \001(\tBF\310\336" +
-      "\037\000\332\336\037&github.com/cosmos/cosmos-sdk/types" +
-      ".Dec\362\336\037\024yaml:\"new_liquidity\"R\014newLiquidi" +
+      "erfluid/superfluid.proto\032\027cosmos/msg/v1/" +
+      "msg.proto\"\243\001\n\025MsgSuperfluidDelegate\022)\n\006s" +
+      "ender\030\001 \001(\tB\021\362\336\037\ryaml:\"sender\"R\006sender\022\027" +
+      "\n\007lock_id\030\002 \001(\004R\006lockId\022\031\n\010val_addr\030\003 \001(" +
+      "\tR\007valAddr:+\202\347\260*\006sender\212\347\260*\033osmosis/supe" +
+      "rfluid-delegate\"\037\n\035MsgSuperfluidDelegate" +
+      "Response\"\214\001\n\027MsgSuperfluidUndelegate\022)\n\006" +
+      "sender\030\001 \001(\tB\021\362\336\037\ryaml:\"sender\"R\006sender\022" +
+      "\027\n\007lock_id\030\002 \001(\004R\006lockId:-\202\347\260*\006sender\212\347\260" +
+      "*\035osmosis/superfluid-undelegate\"!\n\037MsgSu" +
+      "perfluidUndelegateResponse\"\215\001\n\027MsgSuperf" +
+      "luidUnbondLock\022)\n\006sender\030\001 \001(\tB\021\362\336\037\ryaml" +
+      ":\"sender\"R\006sender\022\027\n\007lock_id\030\002 \001(\004R\006lock" +
+      "Id:.\202\347\260*\006sender\212\347\260*\036osmosis/superfluid-u" +
+      "nbond-lock\"!\n\037MsgSuperfluidUnbondLockRes" +
+      "ponse\"\351\001\n$MsgSuperfluidUndelegateAndUnbo" +
+      "ndLock\022)\n\006sender\030\001 \001(\tB\021\362\336\037\ryaml:\"sender" +
+      "\"R\006sender\022\027\n\007lock_id\030\002 \001(\004R\006lockId\022B\n\004co" +
+      "in\030\003 \001(\0132\031.cosmos.base.v1beta1.CoinB\023\310\336\037" +
+      "\000\362\336\037\013yaml:\"coin\"R\004coin:9\202\347\260*\006sender\212\347\260*)" +
+      "osmosis/superfluid-undelegate-unbond-loc" +
+      "k\"G\n,MsgSuperfluidUndelegateAndUnbondLoc" +
+      "kResponse\022\027\n\007lock_id\030\001 \001(\004R\006lockId\"\375\001\n\034M" +
+      "sgLockAndSuperfluidDelegate\022)\n\006sender\030\001 " +
+      "\001(\tB\021\362\336\037\ryaml:\"sender\"R\006sender\022a\n\005coins\030" +
+      "\002 \003(\0132\031.cosmos.base.v1beta1.CoinB0\310\336\037\000\252\337" +
+      "\037(github.com/cosmos/cosmos-sdk/types.Coi" +
+      "nsR\005coins\022\031\n\010val_addr\030\003 \001(\tR\007valAddr:4\202\347" +
+      "\260*\006sender\212\347\260*$osmosis/lock-and-superflui" +
+      "d-delegate\"6\n$MsgLockAndSuperfluidDelega" +
+      "teResponse\022\016\n\002ID\030\001 \001(\004R\002ID\"\273\002\n/MsgCreate" +
+      "FullRangePositionAndSuperfluidDelegate\022)" +
+      "\n\006sender\030\001 \001(\tB\021\362\336\037\ryaml:\"sender\"R\006sende" +
+      "r\022a\n\005coins\030\002 \003(\0132\031.cosmos.base.v1beta1.C" +
+      "oinB0\310\336\037\000\252\337\037(github.com/cosmos/cosmos-sd" +
+      "k/types.CoinsR\005coins\022\031\n\010val_addr\030\003 \001(\tR\007" +
+      "valAddr\022+\n\007pool_id\030\004 \001(\004B\022\362\336\037\016yaml:\"pool" +
+      "_id\"R\006poolId:2\202\347\260*\006sender\212\347\260*\"osmosis/fu" +
+      "ll-range-and-sf-delegate\"q\n7MsgCreateFul" +
+      "lRangePositionAndSuperfluidDelegateRespo" +
+      "nse\022\026\n\006lockID\030\001 \001(\004R\006lockID\022\036\n\npositionI" +
+      "D\030\002 \001(\004R\npositionID\"\243\001\n\030MsgUnPoolWhiteli" +
+      "stedPool\022)\n\006sender\030\001 \001(\tB\021\362\336\037\ryaml:\"send" +
+      "er\"R\006sender\022+\n\007pool_id\030\002 \001(\004B\022\362\336\037\016yaml:\"" +
+      "pool_id\"R\006poolId:/\202\347\260*\006sender\212\347\260*\037osmosi" +
+      "s/unpool-whitelisted-pool\"J\n MsgUnPoolWh" +
+      "itelistedPoolResponse\022&\n\017exited_lock_ids" +
+      "\030\001 \003(\004R\rexitedLockIds\"\264\003\n8MsgUnlockAndMi" +
+      "grateSharesToFullRangeConcentratedPositi" +
+      "on\022)\n\006sender\030\001 \001(\tB\021\362\336\037\ryaml:\"sender\"R\006s" +
+      "ender\022+\n\007lock_id\030\002 \001(\003B\022\362\336\037\016yaml:\"lock_i" +
+      "d\"R\006lockId\022g\n\021shares_to_migrate\030\003 \001(\0132\031." +
+      "cosmos.base.v1beta1.CoinB \310\336\037\000\362\336\037\030yaml:\"" +
+      "shares_to_migrate\"R\017sharesToMigrate\022\212\001\n\016" +
+      "token_out_mins\030\004 \003(\0132\031.cosmos.base.v1bet" +
+      "a1.CoinBI\310\336\037\000\362\336\037\025yaml:\"token_out_mins\"\252\337" +
+      "\037(github.com/cosmos/cosmos-sdk/types.Coi" +
+      "nsR\014tokenOutMins:*\202\347\260*\006sender\212\347\260*\032osmosi" +
+      "s/unlock-and-migrate\"\235\003\n@MsgUnlockAndMig" +
+      "rateSharesToFullRangeConcentratedPositio" +
+      "nResponse\022I\n\007amount0\030\001 \001(\tB/\310\336\037\000\332\336\037\025cosm" +
+      "ossdk.io/math.Int\362\336\037\016yaml:\"amount0\"R\007amo" +
+      "unt0\022I\n\007amount1\030\002 \001(\tB/\310\336\037\000\332\336\037\025cosmossdk" +
+      ".io/math.Int\362\336\037\016yaml:\"amount1\"R\007amount1\022" +
+      "l\n\021liquidity_created\030\003 \001(\tB?\310\336\037\000\332\336\037\033cosm" +
+      "ossdk.io/math.LegacyDec\362\336\037\030yaml:\"liquidi" +
+      "ty_created\"R\020liquidityCreated\022U\n\tjoin_ti" +
+      "me\030\004 \001(\0132\032.google.protobuf.TimestampB\034\310\336" +
+      "\037\000\362\336\037\020yaml:\"join_time\"\220\337\037\001R\010joinTime\"\216\003\n" +
+      "/MsgAddToConcentratedLiquiditySuperfluid" +
+      "Position\0227\n\013position_id\030\001 \001(\004B\026\362\336\037\022yaml:" +
+      "\"position_id\"R\npositionId\022)\n\006sender\030\002 \001(" +
+      "\tB\021\362\336\037\ryaml:\"sender\"R\006sender\022_\n\016token_de" +
+      "sired0\030\003 \001(\0132\031.cosmos.base.v1beta1.CoinB" +
+      "\035\310\336\037\000\362\336\037\025yaml:\"token_desired0\"R\rtokenDes" +
+      "ired0\022_\n\016token_desired1\030\004 \001(\0132\031.cosmos.b" +
+      "ase.v1beta1.CoinB\035\310\336\037\000\362\336\037\025yaml:\"token_de" +
+      "sired1\"R\rtokenDesired1:5\202\347\260*\006sender\212\347\260*%" +
+      "osmosis/add-to-cl-superfluid-position\"\227\003" +
+      "\n7MsgAddToConcentratedLiquiditySuperflui" +
+      "dPositionResponse\0227\n\013position_id\030\001 \001(\004B\026" +
+      "\362\336\037\022yaml:\"position_id\"R\npositionId\022I\n\007am" +
+      "ount0\030\002 \001(\tB/\310\336\037\000\332\336\037\025cosmossdk.io/math.I" +
+      "nt\362\336\037\016yaml:\"amount0\"R\007amount0\022I\n\007amount1" +
+      "\030\003 \001(\tB/\310\336\037\000\332\336\037\025cosmossdk.io/math.Int\362\336\037" +
+      "\016yaml:\"amount1\"R\007amount1\022`\n\rnew_liquidit" +
+      "y\030\005 \001(\tB;\310\336\037\000\332\336\037\033cosmossdk.io/math.Legac" +
+      "yDec\362\336\037\024yaml:\"new_liquidity\"R\014newLiquidi" +
       "ty\022+\n\007lock_id\030\004 \001(\004B\022\362\336\037\016yaml:\"lock_id\"R" +
-      "\006lockId2\372\n\n\003Msg\022r\n\022SuperfluidDelegate\022)." +
-      "osmosis.superfluid.MsgSuperfluidDelegate" +
-      "\0321.osmosis.superfluid.MsgSuperfluidDeleg" +
-      "ateResponse\022x\n\024SuperfluidUndelegate\022+.os" +
-      "mosis.superfluid.MsgSuperfluidUndelegate" +
-      "\0323.osmosis.superfluid.MsgSuperfluidUndel" +
-      "egateResponse\022x\n\024SuperfluidUnbondLock\022+." +
-      "osmosis.superfluid.MsgSuperfluidUnbondLo" +
-      "ck\0323.osmosis.superfluid.MsgSuperfluidUnb" +
-      "ondLockResponse\022\237\001\n!SuperfluidUndelegate" +
-      "AndUnbondLock\0228.osmosis.superfluid.MsgSu" +
-      "perfluidUndelegateAndUnbondLock\032@.osmosi" +
-      "s.superfluid.MsgSuperfluidUndelegateAndU" +
-      "nbondLockResponse\022\207\001\n\031LockAndSuperfluidD" +
-      "elegate\0220.osmosis.superfluid.MsgLockAndS" +
-      "uperfluidDelegate\0328.osmosis.superfluid.M" +
-      "sgLockAndSuperfluidDelegateResponse\022\300\001\n," +
-      "CreateFullRangePositionAndSuperfluidDele" +
-      "gate\022C.osmosis.superfluid.MsgCreateFullR" +
-      "angePositionAndSuperfluidDelegate\032K.osmo" +
-      "sis.superfluid.MsgCreateFullRangePositio" +
-      "nAndSuperfluidDelegateResponse\022{\n\025UnPool" +
-      "WhitelistedPool\022,.osmosis.superfluid.Msg" +
-      "UnPoolWhitelistedPool\0324.osmosis.superflu" +
-      "id.MsgUnPoolWhitelistedPoolResponse\022\333\001\n5" +
-      "UnlockAndMigrateSharesToFullRangeConcent" +
-      "ratedPosition\022L.osmosis.superfluid.MsgUn" +
-      "lockAndMigrateSharesToFullRangeConcentra" +
-      "tedPosition\032T.osmosis.superfluid.MsgUnlo" +
-      "ckAndMigrateSharesToFullRangeConcentrate" +
-      "dPositionResponse\022\300\001\n,AddToConcentratedL" +
-      "iquiditySuperfluidPosition\022C.osmosis.sup" +
-      "erfluid.MsgAddToConcentratedLiquiditySup" +
-      "erfluidPosition\032K.osmosis.superfluid.Msg" +
-      "AddToConcentratedLiquiditySuperfluidPosi" +
-      "tionResponseB\300\001\n\026com.osmosis.superfluidB" +
-      "\007TxProtoZ6github.com/osmosis-labs/osmosi" +
-      "s/v15/x/superfluid/types\242\002\003OSX\252\002\022Osmosis" +
-      ".Superfluid\312\002\022Osmosis\\Superfluid\342\002\036Osmos" +
-      "is\\Superfluid\\GPBMetadata\352\002\023Osmosis::Sup" +
-      "erfluidb\006proto3"
+      "\006lockId\"\267\003\n\030MsgUnbondConvertAndStake\022+\n\007" +
+      "lock_id\030\001 \001(\004B\022\362\336\037\016yaml:\"lock_id\"R\006lockI" +
+      "d\022)\n\006sender\030\002 \001(\tB\021\362\336\037\ryaml:\"sender\"R\006se" +
+      "nder\022\031\n\010val_addr\030\003 \001(\tR\007valAddr\022a\n\020min_a" +
+      "mt_to_stake\030\004 \001(\tB8\310\336\037\000\332\336\037\025cosmossdk.io/" +
+      "math.Int\362\336\037\027yaml:\"min_amt_to_stake\"R\rmin" +
+      "AmtToStake\022\222\001\n\021shares_to_convert\030\005 \001(\0132\031" +
+      ".cosmos.base.v1beta1.CoinBK\310\336\037\000\362\336\037\030yaml:" +
+      "\"shares_to_convert\"\252\337\037\'github.com/cosmos" +
+      "/cosmos-sdk/types.CoinR\017sharesToConvert:" +
+      "0\202\347\260*\006sender\212\347\260* osmosis/unbond-convert-" +
+      "and-stake\"\206\001\n MsgUnbondConvertAndStakeRe" +
+      "sponse\022b\n\020total_amt_staked\030\001 \001(\tB8\310\336\037\000\332\336" +
+      "\037\025cosmossdk.io/math.Int\362\336\037\027yaml:\"total_a" +
+      "mt_staked\"R\016totalAmtStaked2\367\013\n\003Msg\022r\n\022Su" +
+      "perfluidDelegate\022).osmosis.superfluid.Ms" +
+      "gSuperfluidDelegate\0321.osmosis.superfluid" +
+      ".MsgSuperfluidDelegateResponse\022x\n\024Superf" +
+      "luidUndelegate\022+.osmosis.superfluid.MsgS" +
+      "uperfluidUndelegate\0323.osmosis.superfluid" +
+      ".MsgSuperfluidUndelegateResponse\022x\n\024Supe" +
+      "rfluidUnbondLock\022+.osmosis.superfluid.Ms" +
+      "gSuperfluidUnbondLock\0323.osmosis.superflu" +
+      "id.MsgSuperfluidUnbondLockResponse\022\237\001\n!S" +
+      "uperfluidUndelegateAndUnbondLock\0228.osmos" +
+      "is.superfluid.MsgSuperfluidUndelegateAnd" +
+      "UnbondLock\032@.osmosis.superfluid.MsgSuper" +
+      "fluidUndelegateAndUnbondLockResponse\022\207\001\n" +
+      "\031LockAndSuperfluidDelegate\0220.osmosis.sup" +
+      "erfluid.MsgLockAndSuperfluidDelegate\0328.o" +
+      "smosis.superfluid.MsgLockAndSuperfluidDe" +
+      "legateResponse\022\300\001\n,CreateFullRangePositi" +
+      "onAndSuperfluidDelegate\022C.osmosis.superf" +
+      "luid.MsgCreateFullRangePositionAndSuperf" +
+      "luidDelegate\032K.osmosis.superfluid.MsgCre" +
+      "ateFullRangePositionAndSuperfluidDelegat" +
+      "eResponse\022{\n\025UnPoolWhitelistedPool\022,.osm" +
+      "osis.superfluid.MsgUnPoolWhitelistedPool" +
+      "\0324.osmosis.superfluid.MsgUnPoolWhitelist" +
+      "edPoolResponse\022\333\001\n5UnlockAndMigrateShare" +
+      "sToFullRangeConcentratedPosition\022L.osmos" +
+      "is.superfluid.MsgUnlockAndMigrateSharesT" +
+      "oFullRangeConcentratedPosition\032T.osmosis" +
+      ".superfluid.MsgUnlockAndMigrateSharesToF" +
+      "ullRangeConcentratedPositionResponse\022\300\001\n" +
+      ",AddToConcentratedLiquiditySuperfluidPos" +
+      "ition\022C.osmosis.superfluid.MsgAddToConce" +
+      "ntratedLiquiditySuperfluidPosition\032K.osm" +
+      "osis.superfluid.MsgAddToConcentratedLiqu" +
+      "iditySuperfluidPositionResponse\022{\n\025Unbon" +
+      "dConvertAndStake\022,.osmosis.superfluid.Ms" +
+      "gUnbondConvertAndStake\0324.osmosis.superfl" +
+      "uid.MsgUnbondConvertAndStakeResponseB\300\001\n" +
+      "\026com.osmosis.superfluidB\007TxProtoZ6github" +
+      ".com/osmosis-labs/osmosis/v26/x/superflu" +
+      "id/types\242\002\003OSX\252\002\022Osmosis.Superfluid\312\002\022Os" +
+      "mosis\\Superfluid\342\002\036Osmosis\\Superfluid\\GP" +
+      "BMetadata\352\002\023Osmosis::Superfluidb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13814,6 +15728,7 @@ public final class TxProto {
           com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.osmosis.superfluid.SuperfluidProto.getDescriptor(),
+          com.cosmos.msg.v1.MsgProto.getDescriptor(),
         });
     internal_static_osmosis_superfluid_MsgSuperfluidDelegate_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -13923,9 +15838,22 @@ public final class TxProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_superfluid_MsgAddToConcentratedLiquiditySuperfluidPositionResponse_descriptor,
         new java.lang.String[] { "PositionId", "Amount0", "Amount1", "NewLiquidity", "LockId", });
+    internal_static_osmosis_superfluid_MsgUnbondConvertAndStake_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_osmosis_superfluid_MsgUnbondConvertAndStake_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_superfluid_MsgUnbondConvertAndStake_descriptor,
+        new java.lang.String[] { "LockId", "Sender", "ValAddr", "MinAmtToStake", "SharesToConvert", });
+    internal_static_osmosis_superfluid_MsgUnbondConvertAndStakeResponse_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_osmosis_superfluid_MsgUnbondConvertAndStakeResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_superfluid_MsgUnbondConvertAndStakeResponse_descriptor,
+        new java.lang.String[] { "TotalAmtStaked", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.amino.AminoProto.name);
+    registry.add(com.cosmos.msg.v1.MsgProto.signer);
     registry.add(com.gogoproto.GogoProto.castrepeated);
     registry.add(com.gogoproto.GogoProto.customtype);
     registry.add(com.gogoproto.GogoProto.moretags);
@@ -13939,6 +15867,7 @@ public final class TxProto {
     com.cosmos.base.v1beta1.CoinProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     com.osmosis.superfluid.SuperfluidProto.getDescriptor();
+    com.cosmos.msg.v1.MsgProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -142,6 +142,37 @@ public final class QueryGrpc {
     return getBeforeSendHookAddressMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest,
+      com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse> getAllBeforeSendHooksAddressesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AllBeforeSendHooksAddresses",
+      requestType = com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest.class,
+      responseType = com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest,
+      com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse> getAllBeforeSendHooksAddressesMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest, com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse> getAllBeforeSendHooksAddressesMethod;
+    if ((getAllBeforeSendHooksAddressesMethod = QueryGrpc.getAllBeforeSendHooksAddressesMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getAllBeforeSendHooksAddressesMethod = QueryGrpc.getAllBeforeSendHooksAddressesMethod) == null) {
+          QueryGrpc.getAllBeforeSendHooksAddressesMethod = getAllBeforeSendHooksAddressesMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest, com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AllBeforeSendHooksAddresses"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("AllBeforeSendHooksAddresses"))
+              .build();
+        }
+      }
+    }
+    return getAllBeforeSendHooksAddressesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -236,6 +267,20 @@ public final class QueryGrpc {
         io.grpc.stub.StreamObserver<com.osmosis.tokenfactory.v1beta1.QueryProto.QueryBeforeSendHookAddressResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBeforeSendHookAddressMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * AllBeforeSendHooksAddresses defines a gRPC query method for
+     * getting all addresses with before send hook registered.
+     * The response returns two arrays, an array with a list of denom and an array
+     * of before send hook addresses. The idx of denom corresponds to before send
+     * hook addresse's idx.
+     * </pre>
+     */
+    default void allBeforeSendHooksAddresses(com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAllBeforeSendHooksAddressesMethod(), responseObserver);
+    }
   }
 
   /**
@@ -318,6 +363,21 @@ public final class QueryGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getBeforeSendHookAddressMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * AllBeforeSendHooksAddresses defines a gRPC query method for
+     * getting all addresses with before send hook registered.
+     * The response returns two arrays, an array with a list of denom and an array
+     * of before send hook addresses. The idx of denom corresponds to before send
+     * hook addresse's idx.
+     * </pre>
+     */
+    public void allBeforeSendHooksAddresses(com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest request,
+        io.grpc.stub.StreamObserver<com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAllBeforeSendHooksAddressesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -381,6 +441,20 @@ public final class QueryGrpc {
     public com.osmosis.tokenfactory.v1beta1.QueryProto.QueryBeforeSendHookAddressResponse beforeSendHookAddress(com.osmosis.tokenfactory.v1beta1.QueryProto.QueryBeforeSendHookAddressRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBeforeSendHookAddressMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AllBeforeSendHooksAddresses defines a gRPC query method for
+     * getting all addresses with before send hook registered.
+     * The response returns two arrays, an array with a list of denom and an array
+     * of before send hook addresses. The idx of denom corresponds to before send
+     * hook addresse's idx.
+     * </pre>
+     */
+    public com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse allBeforeSendHooksAddresses(com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAllBeforeSendHooksAddressesMethod(), getCallOptions(), request);
     }
   }
 
@@ -450,12 +524,28 @@ public final class QueryGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getBeforeSendHookAddressMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * AllBeforeSendHooksAddresses defines a gRPC query method for
+     * getting all addresses with before send hook registered.
+     * The response returns two arrays, an array with a list of denom and an array
+     * of before send hook addresses. The idx of denom corresponds to before send
+     * hook addresse's idx.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse> allBeforeSendHooksAddresses(
+        com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAllBeforeSendHooksAddressesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PARAMS = 0;
   private static final int METHODID_DENOM_AUTHORITY_METADATA = 1;
   private static final int METHODID_DENOMS_FROM_CREATOR = 2;
   private static final int METHODID_BEFORE_SEND_HOOK_ADDRESS = 3;
+  private static final int METHODID_ALL_BEFORE_SEND_HOOKS_ADDRESSES = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -489,6 +579,10 @@ public final class QueryGrpc {
         case METHODID_BEFORE_SEND_HOOK_ADDRESS:
           serviceImpl.beforeSendHookAddress((com.osmosis.tokenfactory.v1beta1.QueryProto.QueryBeforeSendHookAddressRequest) request,
               (io.grpc.stub.StreamObserver<com.osmosis.tokenfactory.v1beta1.QueryProto.QueryBeforeSendHookAddressResponse>) responseObserver);
+          break;
+        case METHODID_ALL_BEFORE_SEND_HOOKS_ADDRESSES:
+          serviceImpl.allBeforeSendHooksAddresses((com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -536,6 +630,13 @@ public final class QueryGrpc {
               com.osmosis.tokenfactory.v1beta1.QueryProto.QueryBeforeSendHookAddressRequest,
               com.osmosis.tokenfactory.v1beta1.QueryProto.QueryBeforeSendHookAddressResponse>(
                 service, METHODID_BEFORE_SEND_HOOK_ADDRESS)))
+        .addMethod(
+          getAllBeforeSendHooksAddressesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest,
+              com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse>(
+                service, METHODID_ALL_BEFORE_SEND_HOOKS_ADDRESSES)))
         .build();
   }
 
@@ -588,6 +689,7 @@ public final class QueryGrpc {
               .addMethod(getDenomAuthorityMetadataMethod())
               .addMethod(getDenomsFromCreatorMethod())
               .addMethod(getBeforeSendHookAddressMethod())
+              .addMethod(getAllBeforeSendHooksAddressesMethod())
               .build();
         }
       }

@@ -39,6 +39,210 @@ public final class ParamsProto {
      */
     com.google.protobuf.ByteString
         getDistrEpochIdentifierBytes();
+
+    /**
+     * <pre>
+     * group_creation_fee is the fee required to create a new group
+     * It is only charged to all addresses other than incentive module account
+     * or addresses in the unrestricted_creator_whitelist
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getGroupCreationFeeList();
+    /**
+     * <pre>
+     * group_creation_fee is the fee required to create a new group
+     * It is only charged to all addresses other than incentive module account
+     * or addresses in the unrestricted_creator_whitelist
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getGroupCreationFee(int index);
+    /**
+     * <pre>
+     * group_creation_fee is the fee required to create a new group
+     * It is only charged to all addresses other than incentive module account
+     * or addresses in the unrestricted_creator_whitelist
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getGroupCreationFeeCount();
+    /**
+     * <pre>
+     * group_creation_fee is the fee required to create a new group
+     * It is only charged to all addresses other than incentive module account
+     * or addresses in the unrestricted_creator_whitelist
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getGroupCreationFeeOrBuilderList();
+    /**
+     * <pre>
+     * group_creation_fee is the fee required to create a new group
+     * It is only charged to all addresses other than incentive module account
+     * or addresses in the unrestricted_creator_whitelist
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getGroupCreationFeeOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * unrestricted_creator_whitelist is a list of addresses that are
+     * allowed to bypass restrictions on permissionless Group
+     * creation. In the future, we might expand these to creating gauges
+     * as well.
+     * The goal of this is to allow a subdao to manage incentives efficiently
+     * without being stopped by 5 day governance process or a high fee.
+     * At the same time, it prevents spam by having a fee for all
+     * other users.
+     * </pre>
+     *
+     * <code>repeated string unrestricted_creator_whitelist = 3 [json_name = "unrestrictedCreatorWhitelist", (.gogoproto.moretags) = "yaml:&#92;"unrestricted_creator_whitelist&#92;""];</code>
+     * @return A list containing the unrestrictedCreatorWhitelist.
+     */
+    java.util.List<java.lang.String>
+        getUnrestrictedCreatorWhitelistList();
+    /**
+     * <pre>
+     * unrestricted_creator_whitelist is a list of addresses that are
+     * allowed to bypass restrictions on permissionless Group
+     * creation. In the future, we might expand these to creating gauges
+     * as well.
+     * The goal of this is to allow a subdao to manage incentives efficiently
+     * without being stopped by 5 day governance process or a high fee.
+     * At the same time, it prevents spam by having a fee for all
+     * other users.
+     * </pre>
+     *
+     * <code>repeated string unrestricted_creator_whitelist = 3 [json_name = "unrestrictedCreatorWhitelist", (.gogoproto.moretags) = "yaml:&#92;"unrestricted_creator_whitelist&#92;""];</code>
+     * @return The count of unrestrictedCreatorWhitelist.
+     */
+    int getUnrestrictedCreatorWhitelistCount();
+    /**
+     * <pre>
+     * unrestricted_creator_whitelist is a list of addresses that are
+     * allowed to bypass restrictions on permissionless Group
+     * creation. In the future, we might expand these to creating gauges
+     * as well.
+     * The goal of this is to allow a subdao to manage incentives efficiently
+     * without being stopped by 5 day governance process or a high fee.
+     * At the same time, it prevents spam by having a fee for all
+     * other users.
+     * </pre>
+     *
+     * <code>repeated string unrestricted_creator_whitelist = 3 [json_name = "unrestrictedCreatorWhitelist", (.gogoproto.moretags) = "yaml:&#92;"unrestricted_creator_whitelist&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The unrestrictedCreatorWhitelist at the given index.
+     */
+    java.lang.String getUnrestrictedCreatorWhitelist(int index);
+    /**
+     * <pre>
+     * unrestricted_creator_whitelist is a list of addresses that are
+     * allowed to bypass restrictions on permissionless Group
+     * creation. In the future, we might expand these to creating gauges
+     * as well.
+     * The goal of this is to allow a subdao to manage incentives efficiently
+     * without being stopped by 5 day governance process or a high fee.
+     * At the same time, it prevents spam by having a fee for all
+     * other users.
+     * </pre>
+     *
+     * <code>repeated string unrestricted_creator_whitelist = 3 [json_name = "unrestrictedCreatorWhitelist", (.gogoproto.moretags) = "yaml:&#92;"unrestricted_creator_whitelist&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the unrestrictedCreatorWhitelist at the given index.
+     */
+    com.google.protobuf.ByteString
+        getUnrestrictedCreatorWhitelistBytes(int index);
+
+    /**
+     * <pre>
+     * internal_uptime is the uptime used for internal incentives on pools that
+     * use NoLock gauges (currently only Concentrated Liquidity pools).
+     *
+     * Since Group gauges route through internal gauges, this parameter affects
+     * the uptime of those incentives as well (i.e. distributions through volume
+     * splitting incentives will use this uptime).
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration internal_uptime = 4 [json_name = "internalUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the internalUptime field is set.
+     */
+    boolean hasInternalUptime();
+    /**
+     * <pre>
+     * internal_uptime is the uptime used for internal incentives on pools that
+     * use NoLock gauges (currently only Concentrated Liquidity pools).
+     *
+     * Since Group gauges route through internal gauges, this parameter affects
+     * the uptime of those incentives as well (i.e. distributions through volume
+     * splitting incentives will use this uptime).
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration internal_uptime = 4 [json_name = "internalUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The internalUptime.
+     */
+    com.google.protobuf.Duration getInternalUptime();
+    /**
+     * <pre>
+     * internal_uptime is the uptime used for internal incentives on pools that
+     * use NoLock gauges (currently only Concentrated Liquidity pools).
+     *
+     * Since Group gauges route through internal gauges, this parameter affects
+     * the uptime of those incentives as well (i.e. distributions through volume
+     * splitting incentives will use this uptime).
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration internal_uptime = 4 [json_name = "internalUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getInternalUptimeOrBuilder();
+
+    /**
+     * <pre>
+     * min_value_for_distribution is the minimum amount a token must be worth
+     * in order to be eligible for distribution. If the token is worth
+     * less than this amount (or the route between the two denoms is not
+     * registered), it will not be distributed and is forfeited to the remaining
+     * distributees that are eligible.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin min_value_for_distribution = 5 [json_name = "minValueForDistribution", (.gogoproto.nullable) = false];</code>
+     * @return Whether the minValueForDistribution field is set.
+     */
+    boolean hasMinValueForDistribution();
+    /**
+     * <pre>
+     * min_value_for_distribution is the minimum amount a token must be worth
+     * in order to be eligible for distribution. If the token is worth
+     * less than this amount (or the route between the two denoms is not
+     * registered), it will not be distributed and is forfeited to the remaining
+     * distributees that are eligible.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin min_value_for_distribution = 5 [json_name = "minValueForDistribution", (.gogoproto.nullable) = false];</code>
+     * @return The minValueForDistribution.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getMinValueForDistribution();
+    /**
+     * <pre>
+     * min_value_for_distribution is the minimum amount a token must be worth
+     * in order to be eligible for distribution. If the token is worth
+     * less than this amount (or the route between the two denoms is not
+     * registered), it will not be distributed and is forfeited to the remaining
+     * distributees that are eligible.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin min_value_for_distribution = 5 [json_name = "minValueForDistribution", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getMinValueForDistributionOrBuilder();
   }
   /**
    * <pre>
@@ -58,6 +262,9 @@ public final class ParamsProto {
     }
     private Params() {
       distrEpochIdentifier_ = "";
+      groupCreationFee_ = java.util.Collections.emptyList();
+      unrestrictedCreatorWhitelist_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
@@ -129,6 +336,261 @@ public final class ParamsProto {
       }
     }
 
+    public static final int GROUP_CREATION_FEE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> groupCreationFee_;
+    /**
+     * <pre>
+     * group_creation_fee is the fee required to create a new group
+     * It is only charged to all addresses other than incentive module account
+     * or addresses in the unrestricted_creator_whitelist
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getGroupCreationFeeList() {
+      return groupCreationFee_;
+    }
+    /**
+     * <pre>
+     * group_creation_fee is the fee required to create a new group
+     * It is only charged to all addresses other than incentive module account
+     * or addresses in the unrestricted_creator_whitelist
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getGroupCreationFeeOrBuilderList() {
+      return groupCreationFee_;
+    }
+    /**
+     * <pre>
+     * group_creation_fee is the fee required to create a new group
+     * It is only charged to all addresses other than incentive module account
+     * or addresses in the unrestricted_creator_whitelist
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getGroupCreationFeeCount() {
+      return groupCreationFee_.size();
+    }
+    /**
+     * <pre>
+     * group_creation_fee is the fee required to create a new group
+     * It is only charged to all addresses other than incentive module account
+     * or addresses in the unrestricted_creator_whitelist
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getGroupCreationFee(int index) {
+      return groupCreationFee_.get(index);
+    }
+    /**
+     * <pre>
+     * group_creation_fee is the fee required to create a new group
+     * It is only charged to all addresses other than incentive module account
+     * or addresses in the unrestricted_creator_whitelist
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getGroupCreationFeeOrBuilder(
+        int index) {
+      return groupCreationFee_.get(index);
+    }
+
+    public static final int UNRESTRICTED_CREATOR_WHITELIST_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList unrestrictedCreatorWhitelist_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * unrestricted_creator_whitelist is a list of addresses that are
+     * allowed to bypass restrictions on permissionless Group
+     * creation. In the future, we might expand these to creating gauges
+     * as well.
+     * The goal of this is to allow a subdao to manage incentives efficiently
+     * without being stopped by 5 day governance process or a high fee.
+     * At the same time, it prevents spam by having a fee for all
+     * other users.
+     * </pre>
+     *
+     * <code>repeated string unrestricted_creator_whitelist = 3 [json_name = "unrestrictedCreatorWhitelist", (.gogoproto.moretags) = "yaml:&#92;"unrestricted_creator_whitelist&#92;""];</code>
+     * @return A list containing the unrestrictedCreatorWhitelist.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getUnrestrictedCreatorWhitelistList() {
+      return unrestrictedCreatorWhitelist_;
+    }
+    /**
+     * <pre>
+     * unrestricted_creator_whitelist is a list of addresses that are
+     * allowed to bypass restrictions on permissionless Group
+     * creation. In the future, we might expand these to creating gauges
+     * as well.
+     * The goal of this is to allow a subdao to manage incentives efficiently
+     * without being stopped by 5 day governance process or a high fee.
+     * At the same time, it prevents spam by having a fee for all
+     * other users.
+     * </pre>
+     *
+     * <code>repeated string unrestricted_creator_whitelist = 3 [json_name = "unrestrictedCreatorWhitelist", (.gogoproto.moretags) = "yaml:&#92;"unrestricted_creator_whitelist&#92;""];</code>
+     * @return The count of unrestrictedCreatorWhitelist.
+     */
+    public int getUnrestrictedCreatorWhitelistCount() {
+      return unrestrictedCreatorWhitelist_.size();
+    }
+    /**
+     * <pre>
+     * unrestricted_creator_whitelist is a list of addresses that are
+     * allowed to bypass restrictions on permissionless Group
+     * creation. In the future, we might expand these to creating gauges
+     * as well.
+     * The goal of this is to allow a subdao to manage incentives efficiently
+     * without being stopped by 5 day governance process or a high fee.
+     * At the same time, it prevents spam by having a fee for all
+     * other users.
+     * </pre>
+     *
+     * <code>repeated string unrestricted_creator_whitelist = 3 [json_name = "unrestrictedCreatorWhitelist", (.gogoproto.moretags) = "yaml:&#92;"unrestricted_creator_whitelist&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The unrestrictedCreatorWhitelist at the given index.
+     */
+    public java.lang.String getUnrestrictedCreatorWhitelist(int index) {
+      return unrestrictedCreatorWhitelist_.get(index);
+    }
+    /**
+     * <pre>
+     * unrestricted_creator_whitelist is a list of addresses that are
+     * allowed to bypass restrictions on permissionless Group
+     * creation. In the future, we might expand these to creating gauges
+     * as well.
+     * The goal of this is to allow a subdao to manage incentives efficiently
+     * without being stopped by 5 day governance process or a high fee.
+     * At the same time, it prevents spam by having a fee for all
+     * other users.
+     * </pre>
+     *
+     * <code>repeated string unrestricted_creator_whitelist = 3 [json_name = "unrestrictedCreatorWhitelist", (.gogoproto.moretags) = "yaml:&#92;"unrestricted_creator_whitelist&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the unrestrictedCreatorWhitelist at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getUnrestrictedCreatorWhitelistBytes(int index) {
+      return unrestrictedCreatorWhitelist_.getByteString(index);
+    }
+
+    public static final int INTERNAL_UPTIME_FIELD_NUMBER = 4;
+    private com.google.protobuf.Duration internalUptime_;
+    /**
+     * <pre>
+     * internal_uptime is the uptime used for internal incentives on pools that
+     * use NoLock gauges (currently only Concentrated Liquidity pools).
+     *
+     * Since Group gauges route through internal gauges, this parameter affects
+     * the uptime of those incentives as well (i.e. distributions through volume
+     * splitting incentives will use this uptime).
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration internal_uptime = 4 [json_name = "internalUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the internalUptime field is set.
+     */
+    @java.lang.Override
+    public boolean hasInternalUptime() {
+      return internalUptime_ != null;
+    }
+    /**
+     * <pre>
+     * internal_uptime is the uptime used for internal incentives on pools that
+     * use NoLock gauges (currently only Concentrated Liquidity pools).
+     *
+     * Since Group gauges route through internal gauges, this parameter affects
+     * the uptime of those incentives as well (i.e. distributions through volume
+     * splitting incentives will use this uptime).
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration internal_uptime = 4 [json_name = "internalUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The internalUptime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getInternalUptime() {
+      return internalUptime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : internalUptime_;
+    }
+    /**
+     * <pre>
+     * internal_uptime is the uptime used for internal incentives on pools that
+     * use NoLock gauges (currently only Concentrated Liquidity pools).
+     *
+     * Since Group gauges route through internal gauges, this parameter affects
+     * the uptime of those incentives as well (i.e. distributions through volume
+     * splitting incentives will use this uptime).
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration internal_uptime = 4 [json_name = "internalUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getInternalUptimeOrBuilder() {
+      return internalUptime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : internalUptime_;
+    }
+
+    public static final int MIN_VALUE_FOR_DISTRIBUTION_FIELD_NUMBER = 5;
+    private com.cosmos.base.v1beta1.CoinProto.Coin minValueForDistribution_;
+    /**
+     * <pre>
+     * min_value_for_distribution is the minimum amount a token must be worth
+     * in order to be eligible for distribution. If the token is worth
+     * less than this amount (or the route between the two denoms is not
+     * registered), it will not be distributed and is forfeited to the remaining
+     * distributees that are eligible.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin min_value_for_distribution = 5 [json_name = "minValueForDistribution", (.gogoproto.nullable) = false];</code>
+     * @return Whether the minValueForDistribution field is set.
+     */
+    @java.lang.Override
+    public boolean hasMinValueForDistribution() {
+      return minValueForDistribution_ != null;
+    }
+    /**
+     * <pre>
+     * min_value_for_distribution is the minimum amount a token must be worth
+     * in order to be eligible for distribution. If the token is worth
+     * less than this amount (or the route between the two denoms is not
+     * registered), it will not be distributed and is forfeited to the remaining
+     * distributees that are eligible.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin min_value_for_distribution = 5 [json_name = "minValueForDistribution", (.gogoproto.nullable) = false];</code>
+     * @return The minValueForDistribution.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getMinValueForDistribution() {
+      return minValueForDistribution_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : minValueForDistribution_;
+    }
+    /**
+     * <pre>
+     * min_value_for_distribution is the minimum amount a token must be worth
+     * in order to be eligible for distribution. If the token is worth
+     * less than this amount (or the route between the two denoms is not
+     * registered), it will not be distributed and is forfeited to the remaining
+     * distributees that are eligible.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin min_value_for_distribution = 5 [json_name = "minValueForDistribution", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getMinValueForDistributionOrBuilder() {
+      return minValueForDistribution_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : minValueForDistribution_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -146,6 +608,18 @@ public final class ParamsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(distrEpochIdentifier_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, distrEpochIdentifier_);
       }
+      for (int i = 0; i < groupCreationFee_.size(); i++) {
+        output.writeMessage(2, groupCreationFee_.get(i));
+      }
+      for (int i = 0; i < unrestrictedCreatorWhitelist_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, unrestrictedCreatorWhitelist_.getRaw(i));
+      }
+      if (internalUptime_ != null) {
+        output.writeMessage(4, getInternalUptime());
+      }
+      if (minValueForDistribution_ != null) {
+        output.writeMessage(5, getMinValueForDistribution());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -157,6 +631,26 @@ public final class ParamsProto {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(distrEpochIdentifier_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, distrEpochIdentifier_);
+      }
+      for (int i = 0; i < groupCreationFee_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, groupCreationFee_.get(i));
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < unrestrictedCreatorWhitelist_.size(); i++) {
+          dataSize += computeStringSizeNoTag(unrestrictedCreatorWhitelist_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getUnrestrictedCreatorWhitelistList().size();
+      }
+      if (internalUptime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getInternalUptime());
+      }
+      if (minValueForDistribution_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getMinValueForDistribution());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -175,6 +669,20 @@ public final class ParamsProto {
 
       if (!getDistrEpochIdentifier()
           .equals(other.getDistrEpochIdentifier())) return false;
+      if (!getGroupCreationFeeList()
+          .equals(other.getGroupCreationFeeList())) return false;
+      if (!getUnrestrictedCreatorWhitelistList()
+          .equals(other.getUnrestrictedCreatorWhitelistList())) return false;
+      if (hasInternalUptime() != other.hasInternalUptime()) return false;
+      if (hasInternalUptime()) {
+        if (!getInternalUptime()
+            .equals(other.getInternalUptime())) return false;
+      }
+      if (hasMinValueForDistribution() != other.hasMinValueForDistribution()) return false;
+      if (hasMinValueForDistribution()) {
+        if (!getMinValueForDistribution()
+            .equals(other.getMinValueForDistribution())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -188,6 +696,22 @@ public final class ParamsProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + DISTR_EPOCH_IDENTIFIER_FIELD_NUMBER;
       hash = (53 * hash) + getDistrEpochIdentifier().hashCode();
+      if (getGroupCreationFeeCount() > 0) {
+        hash = (37 * hash) + GROUP_CREATION_FEE_FIELD_NUMBER;
+        hash = (53 * hash) + getGroupCreationFeeList().hashCode();
+      }
+      if (getUnrestrictedCreatorWhitelistCount() > 0) {
+        hash = (37 * hash) + UNRESTRICTED_CREATOR_WHITELIST_FIELD_NUMBER;
+        hash = (53 * hash) + getUnrestrictedCreatorWhitelistList().hashCode();
+      }
+      if (hasInternalUptime()) {
+        hash = (37 * hash) + INTERNAL_UPTIME_FIELD_NUMBER;
+        hash = (53 * hash) + getInternalUptime().hashCode();
+      }
+      if (hasMinValueForDistribution()) {
+        hash = (37 * hash) + MIN_VALUE_FOR_DISTRIBUTION_FIELD_NUMBER;
+        hash = (53 * hash) + getMinValueForDistribution().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -324,6 +848,25 @@ public final class ParamsProto {
         super.clear();
         bitField0_ = 0;
         distrEpochIdentifier_ = "";
+        if (groupCreationFeeBuilder_ == null) {
+          groupCreationFee_ = java.util.Collections.emptyList();
+        } else {
+          groupCreationFee_ = null;
+          groupCreationFeeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        unrestrictedCreatorWhitelist_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        internalUptime_ = null;
+        if (internalUptimeBuilder_ != null) {
+          internalUptimeBuilder_.dispose();
+          internalUptimeBuilder_ = null;
+        }
+        minValueForDistribution_ = null;
+        if (minValueForDistributionBuilder_ != null) {
+          minValueForDistributionBuilder_.dispose();
+          minValueForDistributionBuilder_ = null;
+        }
         return this;
       }
 
@@ -350,15 +893,42 @@ public final class ParamsProto {
       @java.lang.Override
       public com.osmosis.incentives.ParamsProto.Params buildPartial() {
         com.osmosis.incentives.ParamsProto.Params result = new com.osmosis.incentives.ParamsProto.Params(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.incentives.ParamsProto.Params result) {
+        if (groupCreationFeeBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            groupCreationFee_ = java.util.Collections.unmodifiableList(groupCreationFee_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.groupCreationFee_ = groupCreationFee_;
+        } else {
+          result.groupCreationFee_ = groupCreationFeeBuilder_.build();
+        }
       }
 
       private void buildPartial0(com.osmosis.incentives.ParamsProto.Params result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.distrEpochIdentifier_ = distrEpochIdentifier_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          unrestrictedCreatorWhitelist_.makeImmutable();
+          result.unrestrictedCreatorWhitelist_ = unrestrictedCreatorWhitelist_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.internalUptime_ = internalUptimeBuilder_ == null
+              ? internalUptime_
+              : internalUptimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.minValueForDistribution_ = minValueForDistributionBuilder_ == null
+              ? minValueForDistribution_
+              : minValueForDistributionBuilder_.build();
         }
       }
 
@@ -411,6 +981,48 @@ public final class ParamsProto {
           bitField0_ |= 0x00000001;
           onChanged();
         }
+        if (groupCreationFeeBuilder_ == null) {
+          if (!other.groupCreationFee_.isEmpty()) {
+            if (groupCreationFee_.isEmpty()) {
+              groupCreationFee_ = other.groupCreationFee_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureGroupCreationFeeIsMutable();
+              groupCreationFee_.addAll(other.groupCreationFee_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.groupCreationFee_.isEmpty()) {
+            if (groupCreationFeeBuilder_.isEmpty()) {
+              groupCreationFeeBuilder_.dispose();
+              groupCreationFeeBuilder_ = null;
+              groupCreationFee_ = other.groupCreationFee_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              groupCreationFeeBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getGroupCreationFeeFieldBuilder() : null;
+            } else {
+              groupCreationFeeBuilder_.addAllMessages(other.groupCreationFee_);
+            }
+          }
+        }
+        if (!other.unrestrictedCreatorWhitelist_.isEmpty()) {
+          if (unrestrictedCreatorWhitelist_.isEmpty()) {
+            unrestrictedCreatorWhitelist_ = other.unrestrictedCreatorWhitelist_;
+            bitField0_ |= 0x00000004;
+          } else {
+            ensureUnrestrictedCreatorWhitelistIsMutable();
+            unrestrictedCreatorWhitelist_.addAll(other.unrestrictedCreatorWhitelist_);
+          }
+          onChanged();
+        }
+        if (other.hasInternalUptime()) {
+          mergeInternalUptime(other.getInternalUptime());
+        }
+        if (other.hasMinValueForDistribution()) {
+          mergeMinValueForDistribution(other.getMinValueForDistribution());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -442,6 +1054,39 @@ public final class ParamsProto {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
+              case 18: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (groupCreationFeeBuilder_ == null) {
+                  ensureGroupCreationFeeIsMutable();
+                  groupCreationFee_.add(m);
+                } else {
+                  groupCreationFeeBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureUnrestrictedCreatorWhitelistIsMutable();
+                unrestrictedCreatorWhitelist_.add(s);
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getInternalUptimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getMinValueForDistributionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -555,6 +1200,955 @@ public final class ParamsProto {
         onChanged();
         return this;
       }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> groupCreationFee_ =
+        java.util.Collections.emptyList();
+      private void ensureGroupCreationFeeIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          groupCreationFee_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(groupCreationFee_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> groupCreationFeeBuilder_;
+
+      /**
+       * <pre>
+       * group_creation_fee is the fee required to create a new group
+       * It is only charged to all addresses other than incentive module account
+       * or addresses in the unrestricted_creator_whitelist
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getGroupCreationFeeList() {
+        if (groupCreationFeeBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(groupCreationFee_);
+        } else {
+          return groupCreationFeeBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * group_creation_fee is the fee required to create a new group
+       * It is only charged to all addresses other than incentive module account
+       * or addresses in the unrestricted_creator_whitelist
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getGroupCreationFeeCount() {
+        if (groupCreationFeeBuilder_ == null) {
+          return groupCreationFee_.size();
+        } else {
+          return groupCreationFeeBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * group_creation_fee is the fee required to create a new group
+       * It is only charged to all addresses other than incentive module account
+       * or addresses in the unrestricted_creator_whitelist
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getGroupCreationFee(int index) {
+        if (groupCreationFeeBuilder_ == null) {
+          return groupCreationFee_.get(index);
+        } else {
+          return groupCreationFeeBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * group_creation_fee is the fee required to create a new group
+       * It is only charged to all addresses other than incentive module account
+       * or addresses in the unrestricted_creator_whitelist
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setGroupCreationFee(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (groupCreationFeeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupCreationFeeIsMutable();
+          groupCreationFee_.set(index, value);
+          onChanged();
+        } else {
+          groupCreationFeeBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * group_creation_fee is the fee required to create a new group
+       * It is only charged to all addresses other than incentive module account
+       * or addresses in the unrestricted_creator_whitelist
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setGroupCreationFee(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (groupCreationFeeBuilder_ == null) {
+          ensureGroupCreationFeeIsMutable();
+          groupCreationFee_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          groupCreationFeeBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * group_creation_fee is the fee required to create a new group
+       * It is only charged to all addresses other than incentive module account
+       * or addresses in the unrestricted_creator_whitelist
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addGroupCreationFee(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (groupCreationFeeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupCreationFeeIsMutable();
+          groupCreationFee_.add(value);
+          onChanged();
+        } else {
+          groupCreationFeeBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * group_creation_fee is the fee required to create a new group
+       * It is only charged to all addresses other than incentive module account
+       * or addresses in the unrestricted_creator_whitelist
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addGroupCreationFee(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (groupCreationFeeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupCreationFeeIsMutable();
+          groupCreationFee_.add(index, value);
+          onChanged();
+        } else {
+          groupCreationFeeBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * group_creation_fee is the fee required to create a new group
+       * It is only charged to all addresses other than incentive module account
+       * or addresses in the unrestricted_creator_whitelist
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addGroupCreationFee(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (groupCreationFeeBuilder_ == null) {
+          ensureGroupCreationFeeIsMutable();
+          groupCreationFee_.add(builderForValue.build());
+          onChanged();
+        } else {
+          groupCreationFeeBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * group_creation_fee is the fee required to create a new group
+       * It is only charged to all addresses other than incentive module account
+       * or addresses in the unrestricted_creator_whitelist
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addGroupCreationFee(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (groupCreationFeeBuilder_ == null) {
+          ensureGroupCreationFeeIsMutable();
+          groupCreationFee_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          groupCreationFeeBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * group_creation_fee is the fee required to create a new group
+       * It is only charged to all addresses other than incentive module account
+       * or addresses in the unrestricted_creator_whitelist
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllGroupCreationFee(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (groupCreationFeeBuilder_ == null) {
+          ensureGroupCreationFeeIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, groupCreationFee_);
+          onChanged();
+        } else {
+          groupCreationFeeBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * group_creation_fee is the fee required to create a new group
+       * It is only charged to all addresses other than incentive module account
+       * or addresses in the unrestricted_creator_whitelist
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearGroupCreationFee() {
+        if (groupCreationFeeBuilder_ == null) {
+          groupCreationFee_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          groupCreationFeeBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * group_creation_fee is the fee required to create a new group
+       * It is only charged to all addresses other than incentive module account
+       * or addresses in the unrestricted_creator_whitelist
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeGroupCreationFee(int index) {
+        if (groupCreationFeeBuilder_ == null) {
+          ensureGroupCreationFeeIsMutable();
+          groupCreationFee_.remove(index);
+          onChanged();
+        } else {
+          groupCreationFeeBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * group_creation_fee is the fee required to create a new group
+       * It is only charged to all addresses other than incentive module account
+       * or addresses in the unrestricted_creator_whitelist
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getGroupCreationFeeBuilder(
+          int index) {
+        return getGroupCreationFeeFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * group_creation_fee is the fee required to create a new group
+       * It is only charged to all addresses other than incentive module account
+       * or addresses in the unrestricted_creator_whitelist
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getGroupCreationFeeOrBuilder(
+          int index) {
+        if (groupCreationFeeBuilder_ == null) {
+          return groupCreationFee_.get(index);  } else {
+          return groupCreationFeeBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * group_creation_fee is the fee required to create a new group
+       * It is only charged to all addresses other than incentive module account
+       * or addresses in the unrestricted_creator_whitelist
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getGroupCreationFeeOrBuilderList() {
+        if (groupCreationFeeBuilder_ != null) {
+          return groupCreationFeeBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(groupCreationFee_);
+        }
+      }
+      /**
+       * <pre>
+       * group_creation_fee is the fee required to create a new group
+       * It is only charged to all addresses other than incentive module account
+       * or addresses in the unrestricted_creator_whitelist
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addGroupCreationFeeBuilder() {
+        return getGroupCreationFeeFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * group_creation_fee is the fee required to create a new group
+       * It is only charged to all addresses other than incentive module account
+       * or addresses in the unrestricted_creator_whitelist
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addGroupCreationFeeBuilder(
+          int index) {
+        return getGroupCreationFeeFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * group_creation_fee is the fee required to create a new group
+       * It is only charged to all addresses other than incentive module account
+       * or addresses in the unrestricted_creator_whitelist
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin group_creation_fee = 2 [json_name = "groupCreationFee", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getGroupCreationFeeBuilderList() {
+        return getGroupCreationFeeFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getGroupCreationFeeFieldBuilder() {
+        if (groupCreationFeeBuilder_ == null) {
+          groupCreationFeeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  groupCreationFee_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          groupCreationFee_ = null;
+        }
+        return groupCreationFeeBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringArrayList unrestrictedCreatorWhitelist_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureUnrestrictedCreatorWhitelistIsMutable() {
+        if (!unrestrictedCreatorWhitelist_.isModifiable()) {
+          unrestrictedCreatorWhitelist_ = new com.google.protobuf.LazyStringArrayList(unrestrictedCreatorWhitelist_);
+        }
+        bitField0_ |= 0x00000004;
+      }
+      /**
+       * <pre>
+       * unrestricted_creator_whitelist is a list of addresses that are
+       * allowed to bypass restrictions on permissionless Group
+       * creation. In the future, we might expand these to creating gauges
+       * as well.
+       * The goal of this is to allow a subdao to manage incentives efficiently
+       * without being stopped by 5 day governance process or a high fee.
+       * At the same time, it prevents spam by having a fee for all
+       * other users.
+       * </pre>
+       *
+       * <code>repeated string unrestricted_creator_whitelist = 3 [json_name = "unrestrictedCreatorWhitelist", (.gogoproto.moretags) = "yaml:&#92;"unrestricted_creator_whitelist&#92;""];</code>
+       * @return A list containing the unrestrictedCreatorWhitelist.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getUnrestrictedCreatorWhitelistList() {
+        unrestrictedCreatorWhitelist_.makeImmutable();
+        return unrestrictedCreatorWhitelist_;
+      }
+      /**
+       * <pre>
+       * unrestricted_creator_whitelist is a list of addresses that are
+       * allowed to bypass restrictions on permissionless Group
+       * creation. In the future, we might expand these to creating gauges
+       * as well.
+       * The goal of this is to allow a subdao to manage incentives efficiently
+       * without being stopped by 5 day governance process or a high fee.
+       * At the same time, it prevents spam by having a fee for all
+       * other users.
+       * </pre>
+       *
+       * <code>repeated string unrestricted_creator_whitelist = 3 [json_name = "unrestrictedCreatorWhitelist", (.gogoproto.moretags) = "yaml:&#92;"unrestricted_creator_whitelist&#92;""];</code>
+       * @return The count of unrestrictedCreatorWhitelist.
+       */
+      public int getUnrestrictedCreatorWhitelistCount() {
+        return unrestrictedCreatorWhitelist_.size();
+      }
+      /**
+       * <pre>
+       * unrestricted_creator_whitelist is a list of addresses that are
+       * allowed to bypass restrictions on permissionless Group
+       * creation. In the future, we might expand these to creating gauges
+       * as well.
+       * The goal of this is to allow a subdao to manage incentives efficiently
+       * without being stopped by 5 day governance process or a high fee.
+       * At the same time, it prevents spam by having a fee for all
+       * other users.
+       * </pre>
+       *
+       * <code>repeated string unrestricted_creator_whitelist = 3 [json_name = "unrestrictedCreatorWhitelist", (.gogoproto.moretags) = "yaml:&#92;"unrestricted_creator_whitelist&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The unrestrictedCreatorWhitelist at the given index.
+       */
+      public java.lang.String getUnrestrictedCreatorWhitelist(int index) {
+        return unrestrictedCreatorWhitelist_.get(index);
+      }
+      /**
+       * <pre>
+       * unrestricted_creator_whitelist is a list of addresses that are
+       * allowed to bypass restrictions on permissionless Group
+       * creation. In the future, we might expand these to creating gauges
+       * as well.
+       * The goal of this is to allow a subdao to manage incentives efficiently
+       * without being stopped by 5 day governance process or a high fee.
+       * At the same time, it prevents spam by having a fee for all
+       * other users.
+       * </pre>
+       *
+       * <code>repeated string unrestricted_creator_whitelist = 3 [json_name = "unrestrictedCreatorWhitelist", (.gogoproto.moretags) = "yaml:&#92;"unrestricted_creator_whitelist&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the unrestrictedCreatorWhitelist at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getUnrestrictedCreatorWhitelistBytes(int index) {
+        return unrestrictedCreatorWhitelist_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * unrestricted_creator_whitelist is a list of addresses that are
+       * allowed to bypass restrictions on permissionless Group
+       * creation. In the future, we might expand these to creating gauges
+       * as well.
+       * The goal of this is to allow a subdao to manage incentives efficiently
+       * without being stopped by 5 day governance process or a high fee.
+       * At the same time, it prevents spam by having a fee for all
+       * other users.
+       * </pre>
+       *
+       * <code>repeated string unrestricted_creator_whitelist = 3 [json_name = "unrestrictedCreatorWhitelist", (.gogoproto.moretags) = "yaml:&#92;"unrestricted_creator_whitelist&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The unrestrictedCreatorWhitelist to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnrestrictedCreatorWhitelist(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureUnrestrictedCreatorWhitelistIsMutable();
+        unrestrictedCreatorWhitelist_.set(index, value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unrestricted_creator_whitelist is a list of addresses that are
+       * allowed to bypass restrictions on permissionless Group
+       * creation. In the future, we might expand these to creating gauges
+       * as well.
+       * The goal of this is to allow a subdao to manage incentives efficiently
+       * without being stopped by 5 day governance process or a high fee.
+       * At the same time, it prevents spam by having a fee for all
+       * other users.
+       * </pre>
+       *
+       * <code>repeated string unrestricted_creator_whitelist = 3 [json_name = "unrestrictedCreatorWhitelist", (.gogoproto.moretags) = "yaml:&#92;"unrestricted_creator_whitelist&#92;""];</code>
+       * @param value The unrestrictedCreatorWhitelist to add.
+       * @return This builder for chaining.
+       */
+      public Builder addUnrestrictedCreatorWhitelist(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureUnrestrictedCreatorWhitelistIsMutable();
+        unrestrictedCreatorWhitelist_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unrestricted_creator_whitelist is a list of addresses that are
+       * allowed to bypass restrictions on permissionless Group
+       * creation. In the future, we might expand these to creating gauges
+       * as well.
+       * The goal of this is to allow a subdao to manage incentives efficiently
+       * without being stopped by 5 day governance process or a high fee.
+       * At the same time, it prevents spam by having a fee for all
+       * other users.
+       * </pre>
+       *
+       * <code>repeated string unrestricted_creator_whitelist = 3 [json_name = "unrestrictedCreatorWhitelist", (.gogoproto.moretags) = "yaml:&#92;"unrestricted_creator_whitelist&#92;""];</code>
+       * @param values The unrestrictedCreatorWhitelist to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllUnrestrictedCreatorWhitelist(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureUnrestrictedCreatorWhitelistIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, unrestrictedCreatorWhitelist_);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unrestricted_creator_whitelist is a list of addresses that are
+       * allowed to bypass restrictions on permissionless Group
+       * creation. In the future, we might expand these to creating gauges
+       * as well.
+       * The goal of this is to allow a subdao to manage incentives efficiently
+       * without being stopped by 5 day governance process or a high fee.
+       * At the same time, it prevents spam by having a fee for all
+       * other users.
+       * </pre>
+       *
+       * <code>repeated string unrestricted_creator_whitelist = 3 [json_name = "unrestrictedCreatorWhitelist", (.gogoproto.moretags) = "yaml:&#92;"unrestricted_creator_whitelist&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnrestrictedCreatorWhitelist() {
+        unrestrictedCreatorWhitelist_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unrestricted_creator_whitelist is a list of addresses that are
+       * allowed to bypass restrictions on permissionless Group
+       * creation. In the future, we might expand these to creating gauges
+       * as well.
+       * The goal of this is to allow a subdao to manage incentives efficiently
+       * without being stopped by 5 day governance process or a high fee.
+       * At the same time, it prevents spam by having a fee for all
+       * other users.
+       * </pre>
+       *
+       * <code>repeated string unrestricted_creator_whitelist = 3 [json_name = "unrestrictedCreatorWhitelist", (.gogoproto.moretags) = "yaml:&#92;"unrestricted_creator_whitelist&#92;""];</code>
+       * @param value The bytes of the unrestrictedCreatorWhitelist to add.
+       * @return This builder for chaining.
+       */
+      public Builder addUnrestrictedCreatorWhitelistBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureUnrestrictedCreatorWhitelistIsMutable();
+        unrestrictedCreatorWhitelist_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration internalUptime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> internalUptimeBuilder_;
+      /**
+       * <pre>
+       * internal_uptime is the uptime used for internal incentives on pools that
+       * use NoLock gauges (currently only Concentrated Liquidity pools).
+       *
+       * Since Group gauges route through internal gauges, this parameter affects
+       * the uptime of those incentives as well (i.e. distributions through volume
+       * splitting incentives will use this uptime).
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration internal_uptime = 4 [json_name = "internalUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return Whether the internalUptime field is set.
+       */
+      public boolean hasInternalUptime() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * internal_uptime is the uptime used for internal incentives on pools that
+       * use NoLock gauges (currently only Concentrated Liquidity pools).
+       *
+       * Since Group gauges route through internal gauges, this parameter affects
+       * the uptime of those incentives as well (i.e. distributions through volume
+       * splitting incentives will use this uptime).
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration internal_uptime = 4 [json_name = "internalUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return The internalUptime.
+       */
+      public com.google.protobuf.Duration getInternalUptime() {
+        if (internalUptimeBuilder_ == null) {
+          return internalUptime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : internalUptime_;
+        } else {
+          return internalUptimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * internal_uptime is the uptime used for internal incentives on pools that
+       * use NoLock gauges (currently only Concentrated Liquidity pools).
+       *
+       * Since Group gauges route through internal gauges, this parameter affects
+       * the uptime of those incentives as well (i.e. distributions through volume
+       * splitting incentives will use this uptime).
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration internal_uptime = 4 [json_name = "internalUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setInternalUptime(com.google.protobuf.Duration value) {
+        if (internalUptimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          internalUptime_ = value;
+        } else {
+          internalUptimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * internal_uptime is the uptime used for internal incentives on pools that
+       * use NoLock gauges (currently only Concentrated Liquidity pools).
+       *
+       * Since Group gauges route through internal gauges, this parameter affects
+       * the uptime of those incentives as well (i.e. distributions through volume
+       * splitting incentives will use this uptime).
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration internal_uptime = 4 [json_name = "internalUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setInternalUptime(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (internalUptimeBuilder_ == null) {
+          internalUptime_ = builderForValue.build();
+        } else {
+          internalUptimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * internal_uptime is the uptime used for internal incentives on pools that
+       * use NoLock gauges (currently only Concentrated Liquidity pools).
+       *
+       * Since Group gauges route through internal gauges, this parameter affects
+       * the uptime of those incentives as well (i.e. distributions through volume
+       * splitting incentives will use this uptime).
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration internal_uptime = 4 [json_name = "internalUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeInternalUptime(com.google.protobuf.Duration value) {
+        if (internalUptimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            internalUptime_ != null &&
+            internalUptime_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getInternalUptimeBuilder().mergeFrom(value);
+          } else {
+            internalUptime_ = value;
+          }
+        } else {
+          internalUptimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * internal_uptime is the uptime used for internal incentives on pools that
+       * use NoLock gauges (currently only Concentrated Liquidity pools).
+       *
+       * Since Group gauges route through internal gauges, this parameter affects
+       * the uptime of those incentives as well (i.e. distributions through volume
+       * splitting incentives will use this uptime).
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration internal_uptime = 4 [json_name = "internalUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearInternalUptime() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        internalUptime_ = null;
+        if (internalUptimeBuilder_ != null) {
+          internalUptimeBuilder_.dispose();
+          internalUptimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * internal_uptime is the uptime used for internal incentives on pools that
+       * use NoLock gauges (currently only Concentrated Liquidity pools).
+       *
+       * Since Group gauges route through internal gauges, this parameter affects
+       * the uptime of those incentives as well (i.e. distributions through volume
+       * splitting incentives will use this uptime).
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration internal_uptime = 4 [json_name = "internalUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getInternalUptimeBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getInternalUptimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * internal_uptime is the uptime used for internal incentives on pools that
+       * use NoLock gauges (currently only Concentrated Liquidity pools).
+       *
+       * Since Group gauges route through internal gauges, this parameter affects
+       * the uptime of those incentives as well (i.e. distributions through volume
+       * splitting incentives will use this uptime).
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration internal_uptime = 4 [json_name = "internalUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getInternalUptimeOrBuilder() {
+        if (internalUptimeBuilder_ != null) {
+          return internalUptimeBuilder_.getMessageOrBuilder();
+        } else {
+          return internalUptime_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : internalUptime_;
+        }
+      }
+      /**
+       * <pre>
+       * internal_uptime is the uptime used for internal incentives on pools that
+       * use NoLock gauges (currently only Concentrated Liquidity pools).
+       *
+       * Since Group gauges route through internal gauges, this parameter affects
+       * the uptime of those incentives as well (i.e. distributions through volume
+       * splitting incentives will use this uptime).
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration internal_uptime = 4 [json_name = "internalUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getInternalUptimeFieldBuilder() {
+        if (internalUptimeBuilder_ == null) {
+          internalUptimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getInternalUptime(),
+                  getParentForChildren(),
+                  isClean());
+          internalUptime_ = null;
+        }
+        return internalUptimeBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin minValueForDistribution_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> minValueForDistributionBuilder_;
+      /**
+       * <pre>
+       * min_value_for_distribution is the minimum amount a token must be worth
+       * in order to be eligible for distribution. If the token is worth
+       * less than this amount (or the route between the two denoms is not
+       * registered), it will not be distributed and is forfeited to the remaining
+       * distributees that are eligible.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin min_value_for_distribution = 5 [json_name = "minValueForDistribution", (.gogoproto.nullable) = false];</code>
+       * @return Whether the minValueForDistribution field is set.
+       */
+      public boolean hasMinValueForDistribution() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * min_value_for_distribution is the minimum amount a token must be worth
+       * in order to be eligible for distribution. If the token is worth
+       * less than this amount (or the route between the two denoms is not
+       * registered), it will not be distributed and is forfeited to the remaining
+       * distributees that are eligible.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin min_value_for_distribution = 5 [json_name = "minValueForDistribution", (.gogoproto.nullable) = false];</code>
+       * @return The minValueForDistribution.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getMinValueForDistribution() {
+        if (minValueForDistributionBuilder_ == null) {
+          return minValueForDistribution_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : minValueForDistribution_;
+        } else {
+          return minValueForDistributionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * min_value_for_distribution is the minimum amount a token must be worth
+       * in order to be eligible for distribution. If the token is worth
+       * less than this amount (or the route between the two denoms is not
+       * registered), it will not be distributed and is forfeited to the remaining
+       * distributees that are eligible.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin min_value_for_distribution = 5 [json_name = "minValueForDistribution", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinValueForDistribution(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (minValueForDistributionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          minValueForDistribution_ = value;
+        } else {
+          minValueForDistributionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * min_value_for_distribution is the minimum amount a token must be worth
+       * in order to be eligible for distribution. If the token is worth
+       * less than this amount (or the route between the two denoms is not
+       * registered), it will not be distributed and is forfeited to the remaining
+       * distributees that are eligible.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin min_value_for_distribution = 5 [json_name = "minValueForDistribution", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinValueForDistribution(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (minValueForDistributionBuilder_ == null) {
+          minValueForDistribution_ = builderForValue.build();
+        } else {
+          minValueForDistributionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * min_value_for_distribution is the minimum amount a token must be worth
+       * in order to be eligible for distribution. If the token is worth
+       * less than this amount (or the route between the two denoms is not
+       * registered), it will not be distributed and is forfeited to the remaining
+       * distributees that are eligible.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin min_value_for_distribution = 5 [json_name = "minValueForDistribution", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeMinValueForDistribution(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (minValueForDistributionBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            minValueForDistribution_ != null &&
+            minValueForDistribution_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getMinValueForDistributionBuilder().mergeFrom(value);
+          } else {
+            minValueForDistribution_ = value;
+          }
+        } else {
+          minValueForDistributionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * min_value_for_distribution is the minimum amount a token must be worth
+       * in order to be eligible for distribution. If the token is worth
+       * less than this amount (or the route between the two denoms is not
+       * registered), it will not be distributed and is forfeited to the remaining
+       * distributees that are eligible.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin min_value_for_distribution = 5 [json_name = "minValueForDistribution", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMinValueForDistribution() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        minValueForDistribution_ = null;
+        if (minValueForDistributionBuilder_ != null) {
+          minValueForDistributionBuilder_.dispose();
+          minValueForDistributionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * min_value_for_distribution is the minimum amount a token must be worth
+       * in order to be eligible for distribution. If the token is worth
+       * less than this amount (or the route between the two denoms is not
+       * registered), it will not be distributed and is forfeited to the remaining
+       * distributees that are eligible.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin min_value_for_distribution = 5 [json_name = "minValueForDistribution", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getMinValueForDistributionBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getMinValueForDistributionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * min_value_for_distribution is the minimum amount a token must be worth
+       * in order to be eligible for distribution. If the token is worth
+       * less than this amount (or the route between the two denoms is not
+       * registered), it will not be distributed and is forfeited to the remaining
+       * distributees that are eligible.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin min_value_for_distribution = 5 [json_name = "minValueForDistribution", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getMinValueForDistributionOrBuilder() {
+        if (minValueForDistributionBuilder_ != null) {
+          return minValueForDistributionBuilder_.getMessageOrBuilder();
+        } else {
+          return minValueForDistribution_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : minValueForDistribution_;
+        }
+      }
+      /**
+       * <pre>
+       * min_value_for_distribution is the minimum amount a token must be worth
+       * in order to be eligible for distribution. If the token is worth
+       * less than this amount (or the route between the two denoms is not
+       * registered), it will not be distributed and is forfeited to the remaining
+       * distributees that are eligible.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin min_value_for_distribution = 5 [json_name = "minValueForDistribution", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getMinValueForDistributionFieldBuilder() {
+        if (minValueForDistributionBuilder_ == null) {
+          minValueForDistributionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getMinValueForDistribution(),
+                  getParentForChildren(),
+                  isClean());
+          minValueForDistribution_ = null;
+        }
+        return minValueForDistributionBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -634,33 +2228,52 @@ public final class ParamsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\037osmosis/incentives/params.proto\022\022osmos" +
-      "is.incentives\032\024gogoproto/gogo.proto\"a\n\006P" +
-      "arams\022W\n\026distr_epoch_identifier\030\001 \001(\tB!\362" +
-      "\336\037\035yaml:\"distr_epoch_identifier\"R\024distrE" +
-      "pochIdentifierB\304\001\n\026com.osmosis.incentive" +
-      "sB\013ParamsProtoZ6github.com/osmosis-labs/" +
-      "osmosis/v15/x/incentives/types\242\002\003OIX\252\002\022O" +
-      "smosis.Incentives\312\002\022Osmosis\\Incentives\342\002" +
-      "\036Osmosis\\Incentives\\GPBMetadata\352\002\023Osmosi" +
-      "s::Incentivesb\006proto3"
+      "is.incentives\032\024gogoproto/gogo.proto\032\036cos" +
+      "mos/base/v1beta1/coin.proto\032\036google/prot" +
+      "obuf/duration.proto\"\223\004\n\006Params\022W\n\026distr_" +
+      "epoch_identifier\030\001 \001(\tB!\362\336\037\035yaml:\"distr_" +
+      "epoch_identifier\"R\024distrEpochIdentifier\022" +
+      "y\n\022group_creation_fee\030\002 \003(\0132\031.cosmos.bas" +
+      "e.v1beta1.CoinB0\310\336\037\000\252\337\037(github.com/cosmo" +
+      "s/cosmos-sdk/types.CoinsR\020groupCreationF" +
+      "ee\022o\n\036unrestricted_creator_whitelist\030\003 \003" +
+      "(\tB)\362\336\037%yaml:\"unrestricted_creator_white" +
+      "list\"R\034unrestrictedCreatorWhitelist\022f\n\017i" +
+      "nternal_uptime\030\004 \001(\0132\031.google.protobuf.D" +
+      "urationB\"\310\336\037\000\362\336\037\026yaml:\"internal_uptime\"\230" +
+      "\337\037\001R\016internalUptime\022\\\n\032min_value_for_dis" +
+      "tribution\030\005 \001(\0132\031.cosmos.base.v1beta1.Co" +
+      "inB\004\310\336\037\000R\027minValueForDistributionB\304\001\n\026co" +
+      "m.osmosis.incentivesB\013ParamsProtoZ6githu" +
+      "b.com/osmosis-labs/osmosis/v26/x/incenti" +
+      "ves/types\242\002\003OIX\252\002\022Osmosis.Incentives\312\002\022O" +
+      "smosis\\Incentives\342\002\036Osmosis\\Incentives\\G" +
+      "PBMetadata\352\002\023Osmosis::Incentivesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.gogoproto.GogoProto.getDescriptor(),
+          com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
+          com.google.protobuf.DurationProto.getDescriptor(),
         });
     internal_static_osmosis_incentives_Params_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_osmosis_incentives_Params_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_incentives_Params_descriptor,
-        new java.lang.String[] { "DistrEpochIdentifier", });
+        new java.lang.String[] { "DistrEpochIdentifier", "GroupCreationFee", "UnrestrictedCreatorWhitelist", "InternalUptime", "MinValueForDistribution", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.gogoproto.GogoProto.castrepeated);
     registry.add(com.gogoproto.GogoProto.moretags);
+    registry.add(com.gogoproto.GogoProto.nullable);
+    registry.add(com.gogoproto.GogoProto.stdduration);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.gogoproto.GogoProto.getDescriptor();
+    com.cosmos.base.v1beta1.CoinProto.getDescriptor();
+    com.google.protobuf.DurationProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

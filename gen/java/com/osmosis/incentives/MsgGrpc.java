@@ -77,6 +77,37 @@ public final class MsgGrpc {
     return getAddToGaugeMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.osmosis.incentives.TxProto.MsgCreateGroup,
+      com.osmosis.incentives.TxProto.MsgCreateGroupResponse> getCreateGroupMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateGroup",
+      requestType = com.osmosis.incentives.TxProto.MsgCreateGroup.class,
+      responseType = com.osmosis.incentives.TxProto.MsgCreateGroupResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.osmosis.incentives.TxProto.MsgCreateGroup,
+      com.osmosis.incentives.TxProto.MsgCreateGroupResponse> getCreateGroupMethod() {
+    io.grpc.MethodDescriptor<com.osmosis.incentives.TxProto.MsgCreateGroup, com.osmosis.incentives.TxProto.MsgCreateGroupResponse> getCreateGroupMethod;
+    if ((getCreateGroupMethod = MsgGrpc.getCreateGroupMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getCreateGroupMethod = MsgGrpc.getCreateGroupMethod) == null) {
+          MsgGrpc.getCreateGroupMethod = getCreateGroupMethod =
+              io.grpc.MethodDescriptor.<com.osmosis.incentives.TxProto.MsgCreateGroup, com.osmosis.incentives.TxProto.MsgCreateGroupResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateGroup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.incentives.TxProto.MsgCreateGroup.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.osmosis.incentives.TxProto.MsgCreateGroupResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("CreateGroup"))
+              .build();
+        }
+      }
+    }
+    return getCreateGroupMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -138,6 +169,13 @@ public final class MsgGrpc {
         io.grpc.stub.StreamObserver<com.osmosis.incentives.TxProto.MsgAddToGaugeResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddToGaugeMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void createGroup(com.osmosis.incentives.TxProto.MsgCreateGroup request,
+        io.grpc.stub.StreamObserver<com.osmosis.incentives.TxProto.MsgCreateGroupResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateGroupMethod(), responseObserver);
+    }
   }
 
   /**
@@ -182,6 +220,14 @@ public final class MsgGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddToGaugeMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void createGroup(com.osmosis.incentives.TxProto.MsgCreateGroup request,
+        io.grpc.stub.StreamObserver<com.osmosis.incentives.TxProto.MsgCreateGroupResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateGroupMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -212,6 +258,13 @@ public final class MsgGrpc {
     public com.osmosis.incentives.TxProto.MsgAddToGaugeResponse addToGauge(com.osmosis.incentives.TxProto.MsgAddToGauge request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddToGaugeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.osmosis.incentives.TxProto.MsgCreateGroupResponse createGroup(com.osmosis.incentives.TxProto.MsgCreateGroup request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateGroupMethod(), getCallOptions(), request);
     }
   }
 
@@ -246,10 +299,19 @@ public final class MsgGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddToGaugeMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.osmosis.incentives.TxProto.MsgCreateGroupResponse> createGroup(
+        com.osmosis.incentives.TxProto.MsgCreateGroup request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateGroupMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_GAUGE = 0;
   private static final int METHODID_ADD_TO_GAUGE = 1;
+  private static final int METHODID_CREATE_GROUP = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -275,6 +337,10 @@ public final class MsgGrpc {
         case METHODID_ADD_TO_GAUGE:
           serviceImpl.addToGauge((com.osmosis.incentives.TxProto.MsgAddToGauge) request,
               (io.grpc.stub.StreamObserver<com.osmosis.incentives.TxProto.MsgAddToGaugeResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_GROUP:
+          serviceImpl.createGroup((com.osmosis.incentives.TxProto.MsgCreateGroup) request,
+              (io.grpc.stub.StreamObserver<com.osmosis.incentives.TxProto.MsgCreateGroupResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -308,6 +374,13 @@ public final class MsgGrpc {
               com.osmosis.incentives.TxProto.MsgAddToGauge,
               com.osmosis.incentives.TxProto.MsgAddToGaugeResponse>(
                 service, METHODID_ADD_TO_GAUGE)))
+        .addMethod(
+          getCreateGroupMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.osmosis.incentives.TxProto.MsgCreateGroup,
+              com.osmosis.incentives.TxProto.MsgCreateGroupResponse>(
+                service, METHODID_CREATE_GROUP)))
         .build();
   }
 
@@ -358,6 +431,7 @@ public final class MsgGrpc {
               .setSchemaDescriptor(new MsgFileDescriptorSupplier())
               .addMethod(getCreateGaugeMethod())
               .addMethod(getAddToGaugeMethod())
+              .addMethod(getCreateGroupMethod())
               .build();
         }
       }

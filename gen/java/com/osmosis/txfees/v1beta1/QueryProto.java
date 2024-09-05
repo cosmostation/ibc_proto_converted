@@ -1766,12 +1766,12 @@ public final class QueryProto {
     long getPoolID();
 
     /**
-     * <code>string spot_price = 2 [json_name = "spotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"spot_price&#92;""];</code>
+     * <code>string spot_price = 2 [json_name = "spotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"spot_price&#92;""];</code>
      * @return The spotPrice.
      */
     java.lang.String getSpotPrice();
     /**
-     * <code>string spot_price = 2 [json_name = "spotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"spot_price&#92;""];</code>
+     * <code>string spot_price = 2 [json_name = "spotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"spot_price&#92;""];</code>
      * @return The bytes for spotPrice.
      */
     com.google.protobuf.ByteString
@@ -1833,7 +1833,7 @@ public final class QueryProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object spotPrice_ = "";
     /**
-     * <code>string spot_price = 2 [json_name = "spotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"spot_price&#92;""];</code>
+     * <code>string spot_price = 2 [json_name = "spotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"spot_price&#92;""];</code>
      * @return The spotPrice.
      */
     @java.lang.Override
@@ -1850,7 +1850,7 @@ public final class QueryProto {
       }
     }
     /**
-     * <code>string spot_price = 2 [json_name = "spotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"spot_price&#92;""];</code>
+     * <code>string spot_price = 2 [json_name = "spotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"spot_price&#92;""];</code>
      * @return The bytes for spotPrice.
      */
     @java.lang.Override
@@ -2257,7 +2257,7 @@ public final class QueryProto {
 
       private java.lang.Object spotPrice_ = "";
       /**
-       * <code>string spot_price = 2 [json_name = "spotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"spot_price&#92;""];</code>
+       * <code>string spot_price = 2 [json_name = "spotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"spot_price&#92;""];</code>
        * @return The spotPrice.
        */
       public java.lang.String getSpotPrice() {
@@ -2273,7 +2273,7 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>string spot_price = 2 [json_name = "spotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"spot_price&#92;""];</code>
+       * <code>string spot_price = 2 [json_name = "spotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"spot_price&#92;""];</code>
        * @return The bytes for spotPrice.
        */
       public com.google.protobuf.ByteString
@@ -2290,7 +2290,7 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>string spot_price = 2 [json_name = "spotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"spot_price&#92;""];</code>
+       * <code>string spot_price = 2 [json_name = "spotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"spot_price&#92;""];</code>
        * @param value The spotPrice to set.
        * @return This builder for chaining.
        */
@@ -2303,7 +2303,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>string spot_price = 2 [json_name = "spotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"spot_price&#92;""];</code>
+       * <code>string spot_price = 2 [json_name = "spotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"spot_price&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearSpotPrice() {
@@ -2313,7 +2313,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>string spot_price = 2 [json_name = "spotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"spot_price&#92;""];</code>
+       * <code>string spot_price = 2 [json_name = "spotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"spot_price&#92;""];</code>
        * @param value The bytes for spotPrice to set.
        * @return This builder for chaining.
        */
@@ -4368,6 +4368,955 @@ public final class QueryProto {
 
   }
 
+  public interface QueryEipBaseFeeRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.txfees.v1beta1.QueryEipBaseFeeRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code osmosis.txfees.v1beta1.QueryEipBaseFeeRequest}
+   */
+  public static final class QueryEipBaseFeeRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.txfees.v1beta1.QueryEipBaseFeeRequest)
+      QueryEipBaseFeeRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryEipBaseFeeRequest.newBuilder() to construct.
+    private QueryEipBaseFeeRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryEipBaseFeeRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryEipBaseFeeRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.txfees.v1beta1.QueryProto.internal_static_osmosis_txfees_v1beta1_QueryEipBaseFeeRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.txfees.v1beta1.QueryProto.internal_static_osmosis_txfees_v1beta1_QueryEipBaseFeeRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest.class, com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest other = (com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.txfees.v1beta1.QueryEipBaseFeeRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.txfees.v1beta1.QueryEipBaseFeeRequest)
+        com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.txfees.v1beta1.QueryProto.internal_static_osmosis_txfees_v1beta1_QueryEipBaseFeeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.txfees.v1beta1.QueryProto.internal_static_osmosis_txfees_v1beta1_QueryEipBaseFeeRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest.class, com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.txfees.v1beta1.QueryProto.internal_static_osmosis_txfees_v1beta1_QueryEipBaseFeeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest getDefaultInstanceForType() {
+        return com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest build() {
+        com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest buildPartial() {
+        com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest result = new com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest) {
+          return mergeFrom((com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest other) {
+        if (other == com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.txfees.v1beta1.QueryEipBaseFeeRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.txfees.v1beta1.QueryEipBaseFeeRequest)
+    private static final com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest();
+    }
+
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryEipBaseFeeRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryEipBaseFeeRequest>() {
+      @java.lang.Override
+      public QueryEipBaseFeeRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryEipBaseFeeRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryEipBaseFeeRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryEipBaseFeeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.txfees.v1beta1.QueryEipBaseFeeResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string base_fee = 1 [json_name = "baseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"base_fee&#92;""];</code>
+     * @return The baseFee.
+     */
+    java.lang.String getBaseFee();
+    /**
+     * <code>string base_fee = 1 [json_name = "baseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"base_fee&#92;""];</code>
+     * @return The bytes for baseFee.
+     */
+    com.google.protobuf.ByteString
+        getBaseFeeBytes();
+  }
+  /**
+   * Protobuf type {@code osmosis.txfees.v1beta1.QueryEipBaseFeeResponse}
+   */
+  public static final class QueryEipBaseFeeResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.txfees.v1beta1.QueryEipBaseFeeResponse)
+      QueryEipBaseFeeResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryEipBaseFeeResponse.newBuilder() to construct.
+    private QueryEipBaseFeeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryEipBaseFeeResponse() {
+      baseFee_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryEipBaseFeeResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.txfees.v1beta1.QueryProto.internal_static_osmosis_txfees_v1beta1_QueryEipBaseFeeResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.txfees.v1beta1.QueryProto.internal_static_osmosis_txfees_v1beta1_QueryEipBaseFeeResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse.class, com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse.Builder.class);
+    }
+
+    public static final int BASE_FEE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object baseFee_ = "";
+    /**
+     * <code>string base_fee = 1 [json_name = "baseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"base_fee&#92;""];</code>
+     * @return The baseFee.
+     */
+    @java.lang.Override
+    public java.lang.String getBaseFee() {
+      java.lang.Object ref = baseFee_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        baseFee_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string base_fee = 1 [json_name = "baseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"base_fee&#92;""];</code>
+     * @return The bytes for baseFee.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBaseFeeBytes() {
+      java.lang.Object ref = baseFee_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        baseFee_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseFee_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, baseFee_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseFee_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, baseFee_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse other = (com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse) obj;
+
+      if (!getBaseFee()
+          .equals(other.getBaseFee())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BASE_FEE_FIELD_NUMBER;
+      hash = (53 * hash) + getBaseFee().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.txfees.v1beta1.QueryEipBaseFeeResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.txfees.v1beta1.QueryEipBaseFeeResponse)
+        com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.txfees.v1beta1.QueryProto.internal_static_osmosis_txfees_v1beta1_QueryEipBaseFeeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.txfees.v1beta1.QueryProto.internal_static_osmosis_txfees_v1beta1_QueryEipBaseFeeResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse.class, com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        baseFee_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.txfees.v1beta1.QueryProto.internal_static_osmosis_txfees_v1beta1_QueryEipBaseFeeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse getDefaultInstanceForType() {
+        return com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse build() {
+        com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse buildPartial() {
+        com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse result = new com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.baseFee_ = baseFee_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse) {
+          return mergeFrom((com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse other) {
+        if (other == com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse.getDefaultInstance()) return this;
+        if (!other.getBaseFee().isEmpty()) {
+          baseFee_ = other.baseFee_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                baseFee_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object baseFee_ = "";
+      /**
+       * <code>string base_fee = 1 [json_name = "baseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"base_fee&#92;""];</code>
+       * @return The baseFee.
+       */
+      public java.lang.String getBaseFee() {
+        java.lang.Object ref = baseFee_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          baseFee_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string base_fee = 1 [json_name = "baseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"base_fee&#92;""];</code>
+       * @return The bytes for baseFee.
+       */
+      public com.google.protobuf.ByteString
+          getBaseFeeBytes() {
+        java.lang.Object ref = baseFee_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          baseFee_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string base_fee = 1 [json_name = "baseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"base_fee&#92;""];</code>
+       * @param value The baseFee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseFee(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        baseFee_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string base_fee = 1 [json_name = "baseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"base_fee&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBaseFee() {
+        baseFee_ = getDefaultInstance().getBaseFee();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string base_fee = 1 [json_name = "baseFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"base_fee&#92;""];</code>
+       * @param value The bytes for baseFee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseFeeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        baseFee_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.txfees.v1beta1.QueryEipBaseFeeResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.txfees.v1beta1.QueryEipBaseFeeResponse)
+    private static final com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse();
+    }
+
+    public static com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryEipBaseFeeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryEipBaseFeeResponse>() {
+      @java.lang.Override
+      public QueryEipBaseFeeResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryEipBaseFeeResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryEipBaseFeeResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.txfees.v1beta1.QueryProto.QueryEipBaseFeeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_txfees_v1beta1_QueryFeeTokensRequest_descriptor;
   private static final 
@@ -4408,6 +5357,16 @@ public final class QueryProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_txfees_v1beta1_QueryBaseDenomResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_txfees_v1beta1_QueryEipBaseFeeRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_txfees_v1beta1_QueryEipBaseFeeRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_txfees_v1beta1_QueryEipBaseFeeResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_txfees_v1beta1_QueryEipBaseFeeResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4426,40 +5385,47 @@ public final class QueryProto {
       "e_tokens\030\001 \003(\0132 .osmosis.txfees.v1beta1." +
       "FeeTokenB\031\310\336\037\000\362\336\037\021yaml:\"fee_tokens\"R\tfee" +
       "Tokens\"D\n\032QueryDenomSpotPriceRequest\022&\n\005" +
-      "denom\030\001 \001(\tB\020\362\336\037\014yaml:\"denom\"R\005denom\"\255\001\n" +
+      "denom\030\001 \001(\tB\020\362\336\037\014yaml:\"denom\"R\005denom\"\242\001\n" +
       "\033QueryDenomSpotPriceResponse\022*\n\006poolID\030\001" +
-      " \001(\004B\022\362\336\037\016yaml:\"pool_id\"R\006poolID\022b\n\nspot" +
-      "_price\030\002 \001(\tBC\310\336\037\000\332\336\037&github.com/cosmos/" +
-      "cosmos-sdk/types.Dec\362\336\037\021yaml:\"spot_price" +
-      "\"R\tspotPrice\"A\n\027QueryDenomPoolIdRequest\022" +
-      "&\n\005denom\030\001 \001(\tB\020\362\336\037\014yaml:\"denom\"R\005denom\"" +
-      "F\n\030QueryDenomPoolIdResponse\022*\n\006poolID\030\001 " +
-      "\001(\004B\022\362\336\037\016yaml:\"pool_id\"R\006poolID\"\027\n\025Query" +
-      "BaseDenomRequest\"N\n\026QueryBaseDenomRespon" +
-      "se\0224\n\nbase_denom\030\001 \001(\tB\025\362\336\037\021yaml:\"base_d" +
-      "enom\"R\tbaseDenom2\224\005\n\005Query\022\226\001\n\tFeeTokens" +
-      "\022-.osmosis.txfees.v1beta1.QueryFeeTokens" +
-      "Request\032..osmosis.txfees.v1beta1.QueryFe" +
-      "eTokensResponse\"*\202\323\344\223\002$\022\"/osmosis/txfees" +
-      "/v1beta1/fee_tokens\022\256\001\n\016DenomSpotPrice\0222" +
-      ".osmosis.txfees.v1beta1.QueryDenomSpotPr" +
-      "iceRequest\0323.osmosis.txfees.v1beta1.Quer" +
-      "yDenomSpotPriceResponse\"3\202\323\344\223\002-\022+/osmosi" +
-      "s/txfees/v1beta1/spot_price_by_denom\022\247\001\n" +
-      "\013DenomPoolId\022/.osmosis.txfees.v1beta1.Qu" +
-      "eryDenomPoolIdRequest\0320.osmosis.txfees.v" +
-      "1beta1.QueryDenomPoolIdResponse\"5\202\323\344\223\002/\022" +
-      "-/osmosis/txfees/v1beta1/denom_pool_id/{" +
-      "denom}\022\226\001\n\tBaseDenom\022-.osmosis.txfees.v1" +
-      "beta1.QueryBaseDenomRequest\032..osmosis.tx" +
-      "fees.v1beta1.QueryBaseDenomResponse\"*\202\323\344" +
-      "\223\002$\022\"/osmosis/txfees/v1beta1/base_denomB" +
-      "\324\001\n\032com.osmosis.txfees.v1beta1B\nQueryPro" +
-      "toZ2github.com/osmosis-labs/osmosis/v15/" +
-      "x/txfees/types\242\002\003OTX\252\002\026Osmosis.Txfees.V1" +
-      "beta1\312\002\026Osmosis\\Txfees\\V1beta1\342\002\"Osmosis" +
-      "\\Txfees\\V1beta1\\GPBMetadata\352\002\030Osmosis::T" +
-      "xfees::V1beta1b\006proto3"
+      " \001(\004B\022\362\336\037\016yaml:\"pool_id\"R\006poolID\022W\n\nspot" +
+      "_price\030\002 \001(\tB8\310\336\037\000\332\336\037\033cosmossdk.io/math." +
+      "LegacyDec\362\336\037\021yaml:\"spot_price\"R\tspotPric" +
+      "e\"A\n\027QueryDenomPoolIdRequest\022&\n\005denom\030\001 " +
+      "\001(\tB\020\362\336\037\014yaml:\"denom\"R\005denom\"F\n\030QueryDen" +
+      "omPoolIdResponse\022*\n\006poolID\030\001 \001(\004B\022\362\336\037\016ya" +
+      "ml:\"pool_id\"R\006poolID\"\027\n\025QueryBaseDenomRe" +
+      "quest\"N\n\026QueryBaseDenomResponse\0224\n\nbase_" +
+      "denom\030\001 \001(\tB\025\362\336\037\021yaml:\"base_denom\"R\tbase" +
+      "Denom\"\030\n\026QueryEipBaseFeeRequest\"l\n\027Query" +
+      "EipBaseFeeResponse\022Q\n\010base_fee\030\001 \001(\tB6\310\336" +
+      "\037\000\332\336\037\033cosmossdk.io/math.LegacyDec\362\336\037\017yam" +
+      "l:\"base_fee\"R\007baseFee2\271\006\n\005Query\022\226\001\n\tFeeT" +
+      "okens\022-.osmosis.txfees.v1beta1.QueryFeeT" +
+      "okensRequest\032..osmosis.txfees.v1beta1.Qu" +
+      "eryFeeTokensResponse\"*\202\323\344\223\002$\022\"/osmosis/t" +
+      "xfees/v1beta1/fee_tokens\022\256\001\n\016DenomSpotPr" +
+      "ice\0222.osmosis.txfees.v1beta1.QueryDenomS" +
+      "potPriceRequest\0323.osmosis.txfees.v1beta1" +
+      ".QueryDenomSpotPriceResponse\"3\202\323\344\223\002-\022+/o" +
+      "smosis/txfees/v1beta1/spot_price_by_deno" +
+      "m\022\247\001\n\013DenomPoolId\022/.osmosis.txfees.v1bet" +
+      "a1.QueryDenomPoolIdRequest\0320.osmosis.txf" +
+      "ees.v1beta1.QueryDenomPoolIdResponse\"5\202\323" +
+      "\344\223\002/\022-/osmosis/txfees/v1beta1/denom_pool" +
+      "_id/{denom}\022\226\001\n\tBaseDenom\022-.osmosis.txfe" +
+      "es.v1beta1.QueryBaseDenomRequest\032..osmos" +
+      "is.txfees.v1beta1.QueryBaseDenomResponse" +
+      "\"*\202\323\344\223\002$\022\"/osmosis/txfees/v1beta1/base_d" +
+      "enom\022\242\001\n\rGetEipBaseFee\022..osmosis.txfees." +
+      "v1beta1.QueryEipBaseFeeRequest\032/.osmosis" +
+      ".txfees.v1beta1.QueryEipBaseFeeResponse\"" +
+      "0\202\323\344\223\002*\022(/osmosis/txfees/v1beta1/cur_eip" +
+      "_base_feeB\324\001\n\032com.osmosis.txfees.v1beta1" +
+      "B\nQueryProtoZ2github.com/osmosis-labs/os" +
+      "mosis/v26/x/txfees/types\242\002\003OTX\252\002\026Osmosis" +
+      ".Txfees.V1beta1\312\002\026Osmosis\\Txfees\\V1beta1" +
+      "\342\002\"Osmosis\\Txfees\\V1beta1\\GPBMetadata\352\002\030" +
+      "Osmosis::Txfees::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4517,6 +5483,18 @@ public final class QueryProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_txfees_v1beta1_QueryBaseDenomResponse_descriptor,
         new java.lang.String[] { "BaseDenom", });
+    internal_static_osmosis_txfees_v1beta1_QueryEipBaseFeeRequest_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_osmosis_txfees_v1beta1_QueryEipBaseFeeRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_txfees_v1beta1_QueryEipBaseFeeRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_osmosis_txfees_v1beta1_QueryEipBaseFeeResponse_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_osmosis_txfees_v1beta1_QueryEipBaseFeeResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_txfees_v1beta1_QueryEipBaseFeeResponse_descriptor,
+        new java.lang.String[] { "BaseFee", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.gogoproto.GogoProto.customtype);

@@ -14,411 +14,6 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface ParamsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:osmosis.cosmwasmpool.v1beta1.Params)
-      com.google.protobuf.MessageOrBuilder {
-  }
-  /**
-   * <pre>
-   * Params holds parameters for the cosmwasmpool module
-   * </pre>
-   *
-   * Protobuf type {@code osmosis.cosmwasmpool.v1beta1.Params}
-   */
-  public static final class Params extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:osmosis.cosmwasmpool.v1beta1.Params)
-      ParamsOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Params.newBuilder() to construct.
-    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Params() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Params();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.osmosis.cosmwasmpool.v1beta1.GenesisProto.internal_static_osmosis_cosmwasmpool_v1beta1_Params_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.osmosis.cosmwasmpool.v1beta1.GenesisProto.internal_static_osmosis_cosmwasmpool_v1beta1_Params_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params.class, com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params)) {
-        return super.equals(obj);
-      }
-      com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params other = (com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * Params holds parameters for the cosmwasmpool module
-     * </pre>
-     *
-     * Protobuf type {@code osmosis.cosmwasmpool.v1beta1.Params}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:osmosis.cosmwasmpool.v1beta1.Params)
-        com.osmosis.cosmwasmpool.v1beta1.GenesisProto.ParamsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.osmosis.cosmwasmpool.v1beta1.GenesisProto.internal_static_osmosis_cosmwasmpool_v1beta1_Params_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.osmosis.cosmwasmpool.v1beta1.GenesisProto.internal_static_osmosis_cosmwasmpool_v1beta1_Params_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params.class, com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params.Builder.class);
-      }
-
-      // Construct using com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.osmosis.cosmwasmpool.v1beta1.GenesisProto.internal_static_osmosis_cosmwasmpool_v1beta1_Params_descriptor;
-      }
-
-      @java.lang.Override
-      public com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params getDefaultInstanceForType() {
-        return com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params build() {
-        com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params buildPartial() {
-        com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params result = new com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params) {
-          return mergeFrom((com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params other) {
-        if (other == com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:osmosis.cosmwasmpool.v1beta1.Params)
-    }
-
-    // @@protoc_insertion_point(class_scope:osmosis.cosmwasmpool.v1beta1.Params)
-    private static final com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params();
-    }
-
-    public static com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Params>
-        PARSER = new com.google.protobuf.AbstractParser<Params>() {
-      @java.lang.Override
-      public Params parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<Params> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Params> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface GenesisStateOrBuilder extends
       // @@protoc_insertion_point(interface_extends:osmosis.cosmwasmpool.v1beta1.GenesisState)
       com.google.protobuf.MessageOrBuilder {
@@ -440,7 +35,7 @@ public final class GenesisProto {
      * <code>.osmosis.cosmwasmpool.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
      * @return The params.
      */
-    com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params getParams();
+    com.osmosis.cosmwasmpool.v1beta1.ParamsProto.Params getParams();
     /**
      * <pre>
      * params is the container of cosmwasmpool parameters.
@@ -448,7 +43,31 @@ public final class GenesisProto {
      *
      * <code>.osmosis.cosmwasmpool.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
      */
-    com.osmosis.cosmwasmpool.v1beta1.GenesisProto.ParamsOrBuilder getParamsOrBuilder();
+    com.osmosis.cosmwasmpool.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    java.util.List<com.google.protobuf.Any> 
+        getPoolsList();
+    /**
+     * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    com.google.protobuf.Any getPools(int index);
+    /**
+     * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    int getPoolsCount();
+    /**
+     * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
+        getPoolsOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    com.google.protobuf.AnyOrBuilder getPoolsOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -467,6 +86,7 @@ public final class GenesisProto {
       super(builder);
     }
     private GenesisState() {
+      pools_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -490,7 +110,7 @@ public final class GenesisProto {
     }
 
     public static final int PARAMS_FIELD_NUMBER = 1;
-    private com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params params_;
+    private com.osmosis.cosmwasmpool.v1beta1.ParamsProto.Params params_;
     /**
      * <pre>
      * params is the container of cosmwasmpool parameters.
@@ -512,8 +132,8 @@ public final class GenesisProto {
      * @return The params.
      */
     @java.lang.Override
-    public com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params getParams() {
-      return params_ == null ? com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params.getDefaultInstance() : params_;
+    public com.osmosis.cosmwasmpool.v1beta1.ParamsProto.Params getParams() {
+      return params_ == null ? com.osmosis.cosmwasmpool.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
     }
     /**
      * <pre>
@@ -523,8 +143,49 @@ public final class GenesisProto {
      * <code>.osmosis.cosmwasmpool.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
      */
     @java.lang.Override
-    public com.osmosis.cosmwasmpool.v1beta1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
-      return params_ == null ? com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params.getDefaultInstance() : params_;
+    public com.osmosis.cosmwasmpool.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.osmosis.cosmwasmpool.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int POOLS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.google.protobuf.Any> pools_;
+    /**
+     * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.Any> getPoolsList() {
+      return pools_;
+    }
+    /**
+     * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
+        getPoolsOrBuilderList() {
+      return pools_;
+    }
+    /**
+     * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    @java.lang.Override
+    public int getPoolsCount() {
+      return pools_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Any getPools(int index) {
+      return pools_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.AnyOrBuilder getPoolsOrBuilder(
+        int index) {
+      return pools_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -544,6 +205,9 @@ public final class GenesisProto {
       if (params_ != null) {
         output.writeMessage(1, getParams());
       }
+      for (int i = 0; i < pools_.size(); i++) {
+        output.writeMessage(2, pools_.get(i));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -556,6 +220,10 @@ public final class GenesisProto {
       if (params_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < pools_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, pools_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -577,6 +245,8 @@ public final class GenesisProto {
         if (!getParams()
             .equals(other.getParams())) return false;
       }
+      if (!getPoolsList()
+          .equals(other.getPoolsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -591,6 +261,10 @@ public final class GenesisProto {
       if (hasParams()) {
         hash = (37 * hash) + PARAMS_FIELD_NUMBER;
         hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getPoolsCount() > 0) {
+        hash = (37 * hash) + POOLS_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolsList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -732,6 +406,13 @@ public final class GenesisProto {
           paramsBuilder_.dispose();
           paramsBuilder_ = null;
         }
+        if (poolsBuilder_ == null) {
+          pools_ = java.util.Collections.emptyList();
+        } else {
+          pools_ = null;
+          poolsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -758,9 +439,22 @@ public final class GenesisProto {
       @java.lang.Override
       public com.osmosis.cosmwasmpool.v1beta1.GenesisProto.GenesisState buildPartial() {
         com.osmosis.cosmwasmpool.v1beta1.GenesisProto.GenesisState result = new com.osmosis.cosmwasmpool.v1beta1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.cosmwasmpool.v1beta1.GenesisProto.GenesisState result) {
+        if (poolsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            pools_ = java.util.Collections.unmodifiableList(pools_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.pools_ = pools_;
+        } else {
+          result.pools_ = poolsBuilder_.build();
+        }
       }
 
       private void buildPartial0(com.osmosis.cosmwasmpool.v1beta1.GenesisProto.GenesisState result) {
@@ -819,6 +513,32 @@ public final class GenesisProto {
         if (other.hasParams()) {
           mergeParams(other.getParams());
         }
+        if (poolsBuilder_ == null) {
+          if (!other.pools_.isEmpty()) {
+            if (pools_.isEmpty()) {
+              pools_ = other.pools_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensurePoolsIsMutable();
+              pools_.addAll(other.pools_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.pools_.isEmpty()) {
+            if (poolsBuilder_.isEmpty()) {
+              poolsBuilder_.dispose();
+              poolsBuilder_ = null;
+              pools_ = other.pools_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              poolsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPoolsFieldBuilder() : null;
+            } else {
+              poolsBuilder_.addAllMessages(other.pools_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -852,6 +572,19 @@ public final class GenesisProto {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
+              case 18: {
+                com.google.protobuf.Any m =
+                    input.readMessage(
+                        com.google.protobuf.Any.parser(),
+                        extensionRegistry);
+                if (poolsBuilder_ == null) {
+                  ensurePoolsIsMutable();
+                  pools_.add(m);
+                } else {
+                  poolsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -869,9 +602,9 @@ public final class GenesisProto {
       }
       private int bitField0_;
 
-      private com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params params_;
+      private com.osmosis.cosmwasmpool.v1beta1.ParamsProto.Params params_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params, com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params.Builder, com.osmosis.cosmwasmpool.v1beta1.GenesisProto.ParamsOrBuilder> paramsBuilder_;
+          com.osmosis.cosmwasmpool.v1beta1.ParamsProto.Params, com.osmosis.cosmwasmpool.v1beta1.ParamsProto.Params.Builder, com.osmosis.cosmwasmpool.v1beta1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
       /**
        * <pre>
        * params is the container of cosmwasmpool parameters.
@@ -891,9 +624,9 @@ public final class GenesisProto {
        * <code>.osmosis.cosmwasmpool.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
        * @return The params.
        */
-      public com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params getParams() {
+      public com.osmosis.cosmwasmpool.v1beta1.ParamsProto.Params getParams() {
         if (paramsBuilder_ == null) {
-          return params_ == null ? com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params.getDefaultInstance() : params_;
+          return params_ == null ? com.osmosis.cosmwasmpool.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
         } else {
           return paramsBuilder_.getMessage();
         }
@@ -905,7 +638,7 @@ public final class GenesisProto {
        *
        * <code>.osmosis.cosmwasmpool.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
        */
-      public Builder setParams(com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params value) {
+      public Builder setParams(com.osmosis.cosmwasmpool.v1beta1.ParamsProto.Params value) {
         if (paramsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -926,7 +659,7 @@ public final class GenesisProto {
        * <code>.osmosis.cosmwasmpool.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
        */
       public Builder setParams(
-          com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params.Builder builderForValue) {
+          com.osmosis.cosmwasmpool.v1beta1.ParamsProto.Params.Builder builderForValue) {
         if (paramsBuilder_ == null) {
           params_ = builderForValue.build();
         } else {
@@ -943,11 +676,11 @@ public final class GenesisProto {
        *
        * <code>.osmosis.cosmwasmpool.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
        */
-      public Builder mergeParams(com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params value) {
+      public Builder mergeParams(com.osmosis.cosmwasmpool.v1beta1.ParamsProto.Params value) {
         if (paramsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0) &&
             params_ != null &&
-            params_ != com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params.getDefaultInstance()) {
+            params_ != com.osmosis.cosmwasmpool.v1beta1.ParamsProto.Params.getDefaultInstance()) {
             getParamsBuilder().mergeFrom(value);
           } else {
             params_ = value;
@@ -983,7 +716,7 @@ public final class GenesisProto {
        *
        * <code>.osmosis.cosmwasmpool.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
        */
-      public com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params.Builder getParamsBuilder() {
+      public com.osmosis.cosmwasmpool.v1beta1.ParamsProto.Params.Builder getParamsBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getParamsFieldBuilder().getBuilder();
@@ -995,12 +728,12 @@ public final class GenesisProto {
        *
        * <code>.osmosis.cosmwasmpool.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
        */
-      public com.osmosis.cosmwasmpool.v1beta1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+      public com.osmosis.cosmwasmpool.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
         if (paramsBuilder_ != null) {
           return paramsBuilder_.getMessageOrBuilder();
         } else {
           return params_ == null ?
-              com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params.getDefaultInstance() : params_;
+              com.osmosis.cosmwasmpool.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
         }
       }
       /**
@@ -1011,17 +744,257 @@ public final class GenesisProto {
        * <code>.osmosis.cosmwasmpool.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params, com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params.Builder, com.osmosis.cosmwasmpool.v1beta1.GenesisProto.ParamsOrBuilder> 
+          com.osmosis.cosmwasmpool.v1beta1.ParamsProto.Params, com.osmosis.cosmwasmpool.v1beta1.ParamsProto.Params.Builder, com.osmosis.cosmwasmpool.v1beta1.ParamsProto.ParamsOrBuilder> 
           getParamsFieldBuilder() {
         if (paramsBuilder_ == null) {
           paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params, com.osmosis.cosmwasmpool.v1beta1.GenesisProto.Params.Builder, com.osmosis.cosmwasmpool.v1beta1.GenesisProto.ParamsOrBuilder>(
+              com.osmosis.cosmwasmpool.v1beta1.ParamsProto.Params, com.osmosis.cosmwasmpool.v1beta1.ParamsProto.Params.Builder, com.osmosis.cosmwasmpool.v1beta1.ParamsProto.ParamsOrBuilder>(
                   getParams(),
                   getParentForChildren(),
                   isClean());
           params_ = null;
         }
         return paramsBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.Any> pools_ =
+        java.util.Collections.emptyList();
+      private void ensurePoolsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          pools_ = new java.util.ArrayList<com.google.protobuf.Any>(pools_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> poolsBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public java.util.List<com.google.protobuf.Any> getPoolsList() {
+        if (poolsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(pools_);
+        } else {
+          return poolsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public int getPoolsCount() {
+        if (poolsBuilder_ == null) {
+          return pools_.size();
+        } else {
+          return poolsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public com.google.protobuf.Any getPools(int index) {
+        if (poolsBuilder_ == null) {
+          return pools_.get(index);
+        } else {
+          return poolsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder setPools(
+          int index, com.google.protobuf.Any value) {
+        if (poolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolsIsMutable();
+          pools_.set(index, value);
+          onChanged();
+        } else {
+          poolsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder setPools(
+          int index, com.google.protobuf.Any.Builder builderForValue) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          poolsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder addPools(com.google.protobuf.Any value) {
+        if (poolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolsIsMutable();
+          pools_.add(value);
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder addPools(
+          int index, com.google.protobuf.Any value) {
+        if (poolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolsIsMutable();
+          pools_.add(index, value);
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder addPools(
+          com.google.protobuf.Any.Builder builderForValue) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.add(builderForValue.build());
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder addPools(
+          int index, com.google.protobuf.Any.Builder builderForValue) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder addAllPools(
+          java.lang.Iterable<? extends com.google.protobuf.Any> values) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, pools_);
+          onChanged();
+        } else {
+          poolsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder clearPools() {
+        if (poolsBuilder_ == null) {
+          pools_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          poolsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder removePools(int index) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.remove(index);
+          onChanged();
+        } else {
+          poolsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public com.google.protobuf.Any.Builder getPoolsBuilder(
+          int index) {
+        return getPoolsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public com.google.protobuf.AnyOrBuilder getPoolsOrBuilder(
+          int index) {
+        if (poolsBuilder_ == null) {
+          return pools_.get(index);  } else {
+          return poolsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
+           getPoolsOrBuilderList() {
+        if (poolsBuilder_ != null) {
+          return poolsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(pools_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public com.google.protobuf.Any.Builder addPoolsBuilder() {
+        return getPoolsFieldBuilder().addBuilder(
+            com.google.protobuf.Any.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public com.google.protobuf.Any.Builder addPoolsBuilder(
+          int index) {
+        return getPoolsFieldBuilder().addBuilder(
+            index, com.google.protobuf.Any.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 2 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public java.util.List<com.google.protobuf.Any.Builder> 
+           getPoolsBuilderList() {
+        return getPoolsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
+          getPoolsFieldBuilder() {
+        if (poolsBuilder_ == null) {
+          poolsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
+                  pools_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          pools_ = null;
+        }
+        return poolsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1088,11 +1061,6 @@ public final class GenesisProto {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_osmosis_cosmwasmpool_v1beta1_Params_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_osmosis_cosmwasmpool_v1beta1_Params_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_cosmwasmpool_v1beta1_GenesisState_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -1109,18 +1077,18 @@ public final class GenesisProto {
       "\n*osmosis/cosmwasmpool/v1beta1/genesis.p" +
       "roto\022\034osmosis.cosmwasmpool.v1beta1\032\024gogo" +
       "proto/gogo.proto\032\031google/protobuf/any.pr" +
-      "oto\032\031cosmos_proto/cosmos.proto\032\036google/p" +
-      "rotobuf/duration.proto\032\036cosmos/base/v1be" +
-      "ta1/coin.proto\"\010\n\006Params\"R\n\014GenesisState" +
-      "\022B\n\006params\030\001 \001(\0132$.osmosis.cosmwasmpool." +
-      "v1beta1.ParamsB\004\310\336\037\000R\006paramsB\372\001\n com.osm" +
-      "osis.cosmwasmpool.v1beta1B\014GenesisProtoZ" +
-      "8github.com/osmosis-labs/osmosis/v15/x/c" +
-      "osmwasmpool/types\242\002\003OCX\252\002\034Osmosis.Cosmwa" +
-      "smpool.V1beta1\312\002\034Osmosis\\Cosmwasmpool\\V1" +
-      "beta1\342\002(Osmosis\\Cosmwasmpool\\V1beta1\\GPB" +
-      "Metadata\352\002\036Osmosis::Cosmwasmpool::V1beta" +
-      "1b\006proto3"
+      "oto\032\031cosmos_proto/cosmos.proto\032)osmosis/" +
+      "cosmwasmpool/v1beta1/params.proto\"\211\001\n\014Ge" +
+      "nesisState\022B\n\006params\030\001 \001(\0132$.osmosis.cos" +
+      "mwasmpool.v1beta1.ParamsB\004\310\336\037\000R\006params\0225" +
+      "\n\005pools\030\002 \003(\0132\024.google.protobuf.AnyB\t\312\264-" +
+      "\005PoolIR\005poolsB\372\001\n com.osmosis.cosmwasmpo" +
+      "ol.v1beta1B\014GenesisProtoZ8github.com/osm" +
+      "osis-labs/osmosis/v26/x/cosmwasmpool/typ" +
+      "es\242\002\003OCX\252\002\034Osmosis.Cosmwasmpool.V1beta1\312" +
+      "\002\034Osmosis\\Cosmwasmpool\\V1beta1\342\002(Osmosis" +
+      "\\Cosmwasmpool\\V1beta1\\GPBMetadata\352\002\036Osmo" +
+      "sis::Cosmwasmpool::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1128,31 +1096,24 @@ public final class GenesisProto {
           com.gogoproto.GogoProto.getDescriptor(),
           com.google.protobuf.AnyProto.getDescriptor(),
           com.cosmos_proto.CosmosProto.getDescriptor(),
-          com.google.protobuf.DurationProto.getDescriptor(),
-          com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
+          com.osmosis.cosmwasmpool.v1beta1.ParamsProto.getDescriptor(),
         });
-    internal_static_osmosis_cosmwasmpool_v1beta1_Params_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_osmosis_cosmwasmpool_v1beta1_Params_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_osmosis_cosmwasmpool_v1beta1_Params_descriptor,
-        new java.lang.String[] { });
     internal_static_osmosis_cosmwasmpool_v1beta1_GenesisState_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_osmosis_cosmwasmpool_v1beta1_GenesisState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_cosmwasmpool_v1beta1_GenesisState_descriptor,
-        new java.lang.String[] { "Params", });
+        new java.lang.String[] { "Params", "Pools", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.cosmos_proto.CosmosProto.acceptsInterface);
     registry.add(com.gogoproto.GogoProto.nullable);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.gogoproto.GogoProto.getDescriptor();
     com.google.protobuf.AnyProto.getDescriptor();
     com.cosmos_proto.CosmosProto.getDescriptor();
-    com.google.protobuf.DurationProto.getDescriptor();
-    com.cosmos.base.v1beta1.CoinProto.getDescriptor();
+    com.osmosis.cosmwasmpool.v1beta1.ParamsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

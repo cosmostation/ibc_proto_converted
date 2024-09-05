@@ -1503,7 +1503,7 @@ public final class QueryProto {
      * number_of_trades is the number of trades the module has executed
      * </pre>
      *
-     * <code>string number_of_trades = 1 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
+     * <code>string number_of_trades = 1 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
      * @return The numberOfTrades.
      */
     java.lang.String getNumberOfTrades();
@@ -1512,7 +1512,7 @@ public final class QueryProto {
      * number_of_trades is the number of trades the module has executed
      * </pre>
      *
-     * <code>string number_of_trades = 1 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
+     * <code>string number_of_trades = 1 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
      * @return The bytes for numberOfTrades.
      */
     com.google.protobuf.ByteString
@@ -1567,7 +1567,7 @@ public final class QueryProto {
      * number_of_trades is the number of trades the module has executed
      * </pre>
      *
-     * <code>string number_of_trades = 1 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
+     * <code>string number_of_trades = 1 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
      * @return The numberOfTrades.
      */
     @java.lang.Override
@@ -1588,7 +1588,7 @@ public final class QueryProto {
      * number_of_trades is the number of trades the module has executed
      * </pre>
      *
-     * <code>string number_of_trades = 1 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
+     * <code>string number_of_trades = 1 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
      * @return The bytes for numberOfTrades.
      */
     @java.lang.Override
@@ -1943,7 +1943,7 @@ public final class QueryProto {
        * number_of_trades is the number of trades the module has executed
        * </pre>
        *
-       * <code>string number_of_trades = 1 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
+       * <code>string number_of_trades = 1 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
        * @return The numberOfTrades.
        */
       public java.lang.String getNumberOfTrades() {
@@ -1963,7 +1963,7 @@ public final class QueryProto {
        * number_of_trades is the number of trades the module has executed
        * </pre>
        *
-       * <code>string number_of_trades = 1 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
+       * <code>string number_of_trades = 1 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
        * @return The bytes for numberOfTrades.
        */
       public com.google.protobuf.ByteString
@@ -1984,7 +1984,7 @@ public final class QueryProto {
        * number_of_trades is the number of trades the module has executed
        * </pre>
        *
-       * <code>string number_of_trades = 1 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
+       * <code>string number_of_trades = 1 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
        * @param value The numberOfTrades to set.
        * @return This builder for chaining.
        */
@@ -2001,7 +2001,7 @@ public final class QueryProto {
        * number_of_trades is the number of trades the module has executed
        * </pre>
        *
-       * <code>string number_of_trades = 1 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
+       * <code>string number_of_trades = 1 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearNumberOfTrades() {
@@ -2015,7 +2015,7 @@ public final class QueryProto {
        * number_of_trades is the number of trades the module has executed
        * </pre>
        *
-       * <code>string number_of_trades = 1 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
+       * <code>string number_of_trades = 1 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
        * @param value The bytes for numberOfTrades to set.
        * @return This builder for chaining.
        */
@@ -10702,48 +10702,48 @@ public final class QueryProto {
 
   }
 
-  public interface QueryGetProtoRevPoolWeightsRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.QueryGetProtoRevPoolWeightsRequest)
+  public interface QueryGetProtoRevInfoByPoolTypeRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeRequest)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
    * <pre>
-   * QueryGetProtoRevPoolWeightsRequest is request type for the
-   * Query/GetProtoRevPoolWeights RPC method.
+   * QueryGetProtoRevInfoByPoolTypeRequest is request type for the
+   * Query/GetProtoRevInfoByPoolType RPC method.
    * </pre>
    *
-   * Protobuf type {@code osmosis.protorev.v1beta1.QueryGetProtoRevPoolWeightsRequest}
+   * Protobuf type {@code osmosis.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeRequest}
    */
-  public static final class QueryGetProtoRevPoolWeightsRequest extends
+  public static final class QueryGetProtoRevInfoByPoolTypeRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.QueryGetProtoRevPoolWeightsRequest)
-      QueryGetProtoRevPoolWeightsRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeRequest)
+      QueryGetProtoRevInfoByPoolTypeRequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use QueryGetProtoRevPoolWeightsRequest.newBuilder() to construct.
-    private QueryGetProtoRevPoolWeightsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use QueryGetProtoRevInfoByPoolTypeRequest.newBuilder() to construct.
+    private QueryGetProtoRevInfoByPoolTypeRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private QueryGetProtoRevPoolWeightsRequest() {
+    private QueryGetProtoRevInfoByPoolTypeRequest() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new QueryGetProtoRevPoolWeightsRequest();
+      return new QueryGetProtoRevInfoByPoolTypeRequest();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevPoolWeightsRequest_descriptor;
+      return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevInfoByPoolTypeRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevPoolWeightsRequest_fieldAccessorTable
+      return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevInfoByPoolTypeRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest.class, com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest.Builder.class);
+              com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest.class, com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -10779,10 +10779,10 @@ public final class QueryProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest)) {
+      if (!(obj instanceof com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest)) {
         return super.equals(obj);
       }
-      com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest other = (com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest) obj;
+      com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest other = (com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest) obj;
 
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -10800,44 +10800,44 @@ public final class QueryProto {
       return hash;
     }
 
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest parseFrom(
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest parseFrom(
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest parseFrom(
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest parseFrom(
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest parseFrom(byte[] data)
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest parseFrom(
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest parseFrom(java.io.InputStream input)
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest parseFrom(
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -10845,26 +10845,26 @@ public final class QueryProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest parseDelimitedFrom(
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest parseFrom(
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest parseFrom(
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -10877,7 +10877,7 @@ public final class QueryProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest prototype) {
+    public static Builder newBuilder(com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -10894,30 +10894,30 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * QueryGetProtoRevPoolWeightsRequest is request type for the
-     * Query/GetProtoRevPoolWeights RPC method.
+     * QueryGetProtoRevInfoByPoolTypeRequest is request type for the
+     * Query/GetProtoRevInfoByPoolType RPC method.
      * </pre>
      *
-     * Protobuf type {@code osmosis.protorev.v1beta1.QueryGetProtoRevPoolWeightsRequest}
+     * Protobuf type {@code osmosis.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.QueryGetProtoRevPoolWeightsRequest)
-        com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeRequest)
+        com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevPoolWeightsRequest_descriptor;
+        return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevInfoByPoolTypeRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevPoolWeightsRequest_fieldAccessorTable
+        return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevInfoByPoolTypeRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest.class, com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest.Builder.class);
+                com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest.class, com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest.Builder.class);
       }
 
-      // Construct using com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest.newBuilder()
+      // Construct using com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest.newBuilder()
       private Builder() {
 
       }
@@ -10936,17 +10936,17 @@ public final class QueryProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevPoolWeightsRequest_descriptor;
+        return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevInfoByPoolTypeRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest getDefaultInstanceForType() {
-        return com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest.getDefaultInstance();
+      public com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest getDefaultInstanceForType() {
+        return com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest build() {
-        com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest result = buildPartial();
+      public com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest build() {
+        com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -10954,8 +10954,8 @@ public final class QueryProto {
       }
 
       @java.lang.Override
-      public com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest buildPartial() {
-        com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest result = new com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest(this);
+      public com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest buildPartial() {
+        com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest result = new com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest(this);
         onBuilt();
         return result;
       }
@@ -10994,16 +10994,16 @@ public final class QueryProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest) {
-          return mergeFrom((com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest)other);
+        if (other instanceof com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest) {
+          return mergeFrom((com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest other) {
-        if (other == com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest other) {
+        if (other == com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -11058,23 +11058,23 @@ public final class QueryProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.QueryGetProtoRevPoolWeightsRequest)
+      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.QueryGetProtoRevPoolWeightsRequest)
-    private static final com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeRequest)
+    private static final com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest();
+      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest();
     }
 
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest getDefaultInstance() {
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<QueryGetProtoRevPoolWeightsRequest>
-        PARSER = new com.google.protobuf.AbstractParser<QueryGetProtoRevPoolWeightsRequest>() {
+    private static final com.google.protobuf.Parser<QueryGetProtoRevInfoByPoolTypeRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetProtoRevInfoByPoolTypeRequest>() {
       @java.lang.Override
-      public QueryGetProtoRevPoolWeightsRequest parsePartialFrom(
+      public QueryGetProtoRevInfoByPoolTypeRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -11093,129 +11093,135 @@ public final class QueryProto {
       }
     };
 
-    public static com.google.protobuf.Parser<QueryGetProtoRevPoolWeightsRequest> parser() {
+    public static com.google.protobuf.Parser<QueryGetProtoRevInfoByPoolTypeRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<QueryGetProtoRevPoolWeightsRequest> getParserForType() {
+    public com.google.protobuf.Parser<QueryGetProtoRevInfoByPoolTypeRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsRequest getDefaultInstanceForType() {
+    public com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface QueryGetProtoRevPoolWeightsResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.QueryGetProtoRevPoolWeightsResponse)
+  public interface QueryGetProtoRevInfoByPoolTypeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
-     * pool_weights is a list of all of the pool weights
+     * InfoByPoolType contains all information pertaining to how different
+     * pool types are handled by the module.
      * </pre>
      *
-     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 1 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
-     * @return Whether the poolWeights field is set.
+     * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 1 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+     * @return Whether the infoByPoolType field is set.
      */
-    boolean hasPoolWeights();
+    boolean hasInfoByPoolType();
     /**
      * <pre>
-     * pool_weights is a list of all of the pool weights
+     * InfoByPoolType contains all information pertaining to how different
+     * pool types are handled by the module.
      * </pre>
      *
-     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 1 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
-     * @return The poolWeights.
+     * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 1 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+     * @return The infoByPoolType.
      */
-    com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights getPoolWeights();
+    com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType getInfoByPoolType();
     /**
      * <pre>
-     * pool_weights is a list of all of the pool weights
+     * InfoByPoolType contains all information pertaining to how different
+     * pool types are handled by the module.
      * </pre>
      *
-     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 1 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+     * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 1 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
      */
-    com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder getPoolWeightsOrBuilder();
+    com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolTypeOrBuilder getInfoByPoolTypeOrBuilder();
   }
   /**
    * <pre>
-   * QueryGetProtoRevPoolWeightsResponse is response type for the
-   * Query/GetProtoRevPoolWeights RPC method.
+   * QueryGetProtoRevInfoByPoolTypeResponse is response type for the
+   * Query/GetProtoRevInfoByPoolType RPC method.
    * </pre>
    *
-   * Protobuf type {@code osmosis.protorev.v1beta1.QueryGetProtoRevPoolWeightsResponse}
+   * Protobuf type {@code osmosis.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeResponse}
    */
-  public static final class QueryGetProtoRevPoolWeightsResponse extends
+  public static final class QueryGetProtoRevInfoByPoolTypeResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.QueryGetProtoRevPoolWeightsResponse)
-      QueryGetProtoRevPoolWeightsResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeResponse)
+      QueryGetProtoRevInfoByPoolTypeResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use QueryGetProtoRevPoolWeightsResponse.newBuilder() to construct.
-    private QueryGetProtoRevPoolWeightsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use QueryGetProtoRevInfoByPoolTypeResponse.newBuilder() to construct.
+    private QueryGetProtoRevInfoByPoolTypeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private QueryGetProtoRevPoolWeightsResponse() {
+    private QueryGetProtoRevInfoByPoolTypeResponse() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new QueryGetProtoRevPoolWeightsResponse();
+      return new QueryGetProtoRevInfoByPoolTypeResponse();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevPoolWeightsResponse_descriptor;
+      return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevInfoByPoolTypeResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevPoolWeightsResponse_fieldAccessorTable
+      return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevInfoByPoolTypeResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse.class, com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse.Builder.class);
+              com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse.class, com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse.Builder.class);
     }
 
-    public static final int POOL_WEIGHTS_FIELD_NUMBER = 1;
-    private com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights poolWeights_;
+    public static final int INFO_BY_POOL_TYPE_FIELD_NUMBER = 1;
+    private com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType infoByPoolType_;
     /**
      * <pre>
-     * pool_weights is a list of all of the pool weights
+     * InfoByPoolType contains all information pertaining to how different
+     * pool types are handled by the module.
      * </pre>
      *
-     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 1 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
-     * @return Whether the poolWeights field is set.
+     * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 1 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+     * @return Whether the infoByPoolType field is set.
      */
     @java.lang.Override
-    public boolean hasPoolWeights() {
-      return poolWeights_ != null;
+    public boolean hasInfoByPoolType() {
+      return infoByPoolType_ != null;
     }
     /**
      * <pre>
-     * pool_weights is a list of all of the pool weights
+     * InfoByPoolType contains all information pertaining to how different
+     * pool types are handled by the module.
      * </pre>
      *
-     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 1 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
-     * @return The poolWeights.
+     * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 1 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+     * @return The infoByPoolType.
      */
     @java.lang.Override
-    public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights getPoolWeights() {
-      return poolWeights_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.getDefaultInstance() : poolWeights_;
+    public com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType getInfoByPoolType() {
+      return infoByPoolType_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.getDefaultInstance() : infoByPoolType_;
     }
     /**
      * <pre>
-     * pool_weights is a list of all of the pool weights
+     * InfoByPoolType contains all information pertaining to how different
+     * pool types are handled by the module.
      * </pre>
      *
-     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 1 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+     * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 1 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
      */
     @java.lang.Override
-    public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder getPoolWeightsOrBuilder() {
-      return poolWeights_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.getDefaultInstance() : poolWeights_;
+    public com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolTypeOrBuilder getInfoByPoolTypeOrBuilder() {
+      return infoByPoolType_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.getDefaultInstance() : infoByPoolType_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -11232,8 +11238,8 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (poolWeights_ != null) {
-        output.writeMessage(1, getPoolWeights());
+      if (infoByPoolType_ != null) {
+        output.writeMessage(1, getInfoByPoolType());
       }
       getUnknownFields().writeTo(output);
     }
@@ -11244,9 +11250,9 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (poolWeights_ != null) {
+      if (infoByPoolType_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getPoolWeights());
+          .computeMessageSize(1, getInfoByPoolType());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -11258,15 +11264,15 @@ public final class QueryProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse)) {
+      if (!(obj instanceof com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse)) {
         return super.equals(obj);
       }
-      com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse other = (com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse) obj;
+      com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse other = (com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse) obj;
 
-      if (hasPoolWeights() != other.hasPoolWeights()) return false;
-      if (hasPoolWeights()) {
-        if (!getPoolWeights()
-            .equals(other.getPoolWeights())) return false;
+      if (hasInfoByPoolType() != other.hasInfoByPoolType()) return false;
+      if (hasInfoByPoolType()) {
+        if (!getInfoByPoolType()
+            .equals(other.getInfoByPoolType())) return false;
       }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -11279,53 +11285,53 @@ public final class QueryProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasPoolWeights()) {
-        hash = (37 * hash) + POOL_WEIGHTS_FIELD_NUMBER;
-        hash = (53 * hash) + getPoolWeights().hashCode();
+      if (hasInfoByPoolType()) {
+        hash = (37 * hash) + INFO_BY_POOL_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getInfoByPoolType().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse parseFrom(
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse parseFrom(
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse parseFrom(
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse parseFrom(
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse parseFrom(byte[] data)
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse parseFrom(
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse parseFrom(java.io.InputStream input)
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse parseFrom(
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -11333,26 +11339,26 @@ public final class QueryProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse parseDelimitedFrom(
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse parseFrom(
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse parseFrom(
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -11365,7 +11371,7 @@ public final class QueryProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse prototype) {
+    public static Builder newBuilder(com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -11382,30 +11388,30 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * QueryGetProtoRevPoolWeightsResponse is response type for the
-     * Query/GetProtoRevPoolWeights RPC method.
+     * QueryGetProtoRevInfoByPoolTypeResponse is response type for the
+     * Query/GetProtoRevInfoByPoolType RPC method.
      * </pre>
      *
-     * Protobuf type {@code osmosis.protorev.v1beta1.QueryGetProtoRevPoolWeightsResponse}
+     * Protobuf type {@code osmosis.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.QueryGetProtoRevPoolWeightsResponse)
-        com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeResponse)
+        com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevPoolWeightsResponse_descriptor;
+        return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevInfoByPoolTypeResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevPoolWeightsResponse_fieldAccessorTable
+        return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevInfoByPoolTypeResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse.class, com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse.Builder.class);
+                com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse.class, com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse.Builder.class);
       }
 
-      // Construct using com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse.newBuilder()
+      // Construct using com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse.newBuilder()
       private Builder() {
 
       }
@@ -11419,10 +11425,10 @@ public final class QueryProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        poolWeights_ = null;
-        if (poolWeightsBuilder_ != null) {
-          poolWeightsBuilder_.dispose();
-          poolWeightsBuilder_ = null;
+        infoByPoolType_ = null;
+        if (infoByPoolTypeBuilder_ != null) {
+          infoByPoolTypeBuilder_.dispose();
+          infoByPoolTypeBuilder_ = null;
         }
         return this;
       }
@@ -11430,17 +11436,17 @@ public final class QueryProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevPoolWeightsResponse_descriptor;
+        return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevInfoByPoolTypeResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse getDefaultInstanceForType() {
-        return com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse.getDefaultInstance();
+      public com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse getDefaultInstanceForType() {
+        return com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse build() {
-        com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse result = buildPartial();
+      public com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse build() {
+        com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -11448,19 +11454,19 @@ public final class QueryProto {
       }
 
       @java.lang.Override
-      public com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse buildPartial() {
-        com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse result = new com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse(this);
+      public com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse buildPartial() {
+        com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse result = new com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse result) {
+      private void buildPartial0(com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.poolWeights_ = poolWeightsBuilder_ == null
-              ? poolWeights_
-              : poolWeightsBuilder_.build();
+          result.infoByPoolType_ = infoByPoolTypeBuilder_ == null
+              ? infoByPoolType_
+              : infoByPoolTypeBuilder_.build();
         }
       }
 
@@ -11498,18 +11504,18 @@ public final class QueryProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse) {
-          return mergeFrom((com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse)other);
+        if (other instanceof com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse) {
+          return mergeFrom((com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse other) {
-        if (other == com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse.getDefaultInstance()) return this;
-        if (other.hasPoolWeights()) {
-          mergePoolWeights(other.getPoolWeights());
+      public Builder mergeFrom(com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse other) {
+        if (other == com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse.getDefaultInstance()) return this;
+        if (other.hasInfoByPoolType()) {
+          mergeInfoByPoolType(other.getInfoByPoolType());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -11539,7 +11545,7 @@ public final class QueryProto {
                 break;
               case 10: {
                 input.readMessage(
-                    getPoolWeightsFieldBuilder().getBuilder(),
+                    getInfoByPoolTypeFieldBuilder().getBuilder(),
                     extensionRegistry);
                 bitField0_ |= 0x00000001;
                 break;
@@ -11561,50 +11567,53 @@ public final class QueryProto {
       }
       private int bitField0_;
 
-      private com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights poolWeights_;
+      private com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType infoByPoolType_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder> poolWeightsBuilder_;
+          com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType, com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolTypeOrBuilder> infoByPoolTypeBuilder_;
       /**
        * <pre>
-       * pool_weights is a list of all of the pool weights
+       * InfoByPoolType contains all information pertaining to how different
+       * pool types are handled by the module.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 1 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
-       * @return Whether the poolWeights field is set.
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 1 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+       * @return Whether the infoByPoolType field is set.
        */
-      public boolean hasPoolWeights() {
+      public boolean hasInfoByPoolType() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
-       * pool_weights is a list of all of the pool weights
+       * InfoByPoolType contains all information pertaining to how different
+       * pool types are handled by the module.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 1 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
-       * @return The poolWeights.
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 1 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+       * @return The infoByPoolType.
        */
-      public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights getPoolWeights() {
-        if (poolWeightsBuilder_ == null) {
-          return poolWeights_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.getDefaultInstance() : poolWeights_;
+      public com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType getInfoByPoolType() {
+        if (infoByPoolTypeBuilder_ == null) {
+          return infoByPoolType_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.getDefaultInstance() : infoByPoolType_;
         } else {
-          return poolWeightsBuilder_.getMessage();
+          return infoByPoolTypeBuilder_.getMessage();
         }
       }
       /**
        * <pre>
-       * pool_weights is a list of all of the pool weights
+       * InfoByPoolType contains all information pertaining to how different
+       * pool types are handled by the module.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 1 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 1 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
        */
-      public Builder setPoolWeights(com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights value) {
-        if (poolWeightsBuilder_ == null) {
+      public Builder setInfoByPoolType(com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType value) {
+        if (infoByPoolTypeBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          poolWeights_ = value;
+          infoByPoolType_ = value;
         } else {
-          poolWeightsBuilder_.setMessage(value);
+          infoByPoolTypeBuilder_.setMessage(value);
         }
         bitField0_ |= 0x00000001;
         onChanged();
@@ -11612,17 +11621,18 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * pool_weights is a list of all of the pool weights
+       * InfoByPoolType contains all information pertaining to how different
+       * pool types are handled by the module.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 1 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 1 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
        */
-      public Builder setPoolWeights(
-          com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder builderForValue) {
-        if (poolWeightsBuilder_ == null) {
-          poolWeights_ = builderForValue.build();
+      public Builder setInfoByPoolType(
+          com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.Builder builderForValue) {
+        if (infoByPoolTypeBuilder_ == null) {
+          infoByPoolType_ = builderForValue.build();
         } else {
-          poolWeightsBuilder_.setMessage(builderForValue.build());
+          infoByPoolTypeBuilder_.setMessage(builderForValue.build());
         }
         bitField0_ |= 0x00000001;
         onChanged();
@@ -11630,22 +11640,23 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * pool_weights is a list of all of the pool weights
+       * InfoByPoolType contains all information pertaining to how different
+       * pool types are handled by the module.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 1 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 1 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
        */
-      public Builder mergePoolWeights(com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights value) {
-        if (poolWeightsBuilder_ == null) {
+      public Builder mergeInfoByPoolType(com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType value) {
+        if (infoByPoolTypeBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0) &&
-            poolWeights_ != null &&
-            poolWeights_ != com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.getDefaultInstance()) {
-            getPoolWeightsBuilder().mergeFrom(value);
+            infoByPoolType_ != null &&
+            infoByPoolType_ != com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.getDefaultInstance()) {
+            getInfoByPoolTypeBuilder().mergeFrom(value);
           } else {
-            poolWeights_ = value;
+            infoByPoolType_ = value;
           }
         } else {
-          poolWeightsBuilder_.mergeFrom(value);
+          infoByPoolTypeBuilder_.mergeFrom(value);
         }
         bitField0_ |= 0x00000001;
         onChanged();
@@ -11653,67 +11664,71 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * pool_weights is a list of all of the pool weights
+       * InfoByPoolType contains all information pertaining to how different
+       * pool types are handled by the module.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 1 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 1 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
        */
-      public Builder clearPoolWeights() {
+      public Builder clearInfoByPoolType() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        poolWeights_ = null;
-        if (poolWeightsBuilder_ != null) {
-          poolWeightsBuilder_.dispose();
-          poolWeightsBuilder_ = null;
+        infoByPoolType_ = null;
+        if (infoByPoolTypeBuilder_ != null) {
+          infoByPoolTypeBuilder_.dispose();
+          infoByPoolTypeBuilder_ = null;
         }
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * pool_weights is a list of all of the pool weights
+       * InfoByPoolType contains all information pertaining to how different
+       * pool types are handled by the module.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 1 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 1 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
        */
-      public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder getPoolWeightsBuilder() {
+      public com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.Builder getInfoByPoolTypeBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
-        return getPoolWeightsFieldBuilder().getBuilder();
+        return getInfoByPoolTypeFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * pool_weights is a list of all of the pool weights
+       * InfoByPoolType contains all information pertaining to how different
+       * pool types are handled by the module.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 1 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 1 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
        */
-      public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder getPoolWeightsOrBuilder() {
-        if (poolWeightsBuilder_ != null) {
-          return poolWeightsBuilder_.getMessageOrBuilder();
+      public com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolTypeOrBuilder getInfoByPoolTypeOrBuilder() {
+        if (infoByPoolTypeBuilder_ != null) {
+          return infoByPoolTypeBuilder_.getMessageOrBuilder();
         } else {
-          return poolWeights_ == null ?
-              com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.getDefaultInstance() : poolWeights_;
+          return infoByPoolType_ == null ?
+              com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.getDefaultInstance() : infoByPoolType_;
         }
       }
       /**
        * <pre>
-       * pool_weights is a list of all of the pool weights
+       * InfoByPoolType contains all information pertaining to how different
+       * pool types are handled by the module.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 1 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 1 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder> 
-          getPoolWeightsFieldBuilder() {
-        if (poolWeightsBuilder_ == null) {
-          poolWeightsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder>(
-                  getPoolWeights(),
+          com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType, com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolTypeOrBuilder> 
+          getInfoByPoolTypeFieldBuilder() {
+        if (infoByPoolTypeBuilder_ == null) {
+          infoByPoolTypeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType, com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolTypeOrBuilder>(
+                  getInfoByPoolType(),
                   getParentForChildren(),
                   isClean());
-          poolWeights_ = null;
+          infoByPoolType_ = null;
         }
-        return poolWeightsBuilder_;
+        return infoByPoolTypeBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11728,23 +11743,23 @@ public final class QueryProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.QueryGetProtoRevPoolWeightsResponse)
+      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.QueryGetProtoRevPoolWeightsResponse)
-    private static final com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.QueryGetProtoRevInfoByPoolTypeResponse)
+    private static final com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse();
+      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse();
     }
 
-    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse getDefaultInstance() {
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<QueryGetProtoRevPoolWeightsResponse>
-        PARSER = new com.google.protobuf.AbstractParser<QueryGetProtoRevPoolWeightsResponse>() {
+    private static final com.google.protobuf.Parser<QueryGetProtoRevInfoByPoolTypeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetProtoRevInfoByPoolTypeResponse>() {
       @java.lang.Override
-      public QueryGetProtoRevPoolWeightsResponse parsePartialFrom(
+      public QueryGetProtoRevInfoByPoolTypeResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -11763,17 +11778,17 @@ public final class QueryProto {
       }
     };
 
-    public static com.google.protobuf.Parser<QueryGetProtoRevPoolWeightsResponse> parser() {
+    public static com.google.protobuf.Parser<QueryGetProtoRevInfoByPoolTypeResponse> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<QueryGetProtoRevPoolWeightsResponse> getParserForType() {
+    public com.google.protobuf.Parser<QueryGetProtoRevInfoByPoolTypeResponse> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevPoolWeightsResponse getDefaultInstanceForType() {
+    public com.osmosis.protorev.v1beta1.QueryProto.QueryGetProtoRevInfoByPoolTypeResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -17140,6 +17155,1003 @@ public final class QueryProto {
 
   }
 
+  public interface QueryGetAllProtocolRevenueRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.QueryGetAllProtocolRevenueRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code osmosis.protorev.v1beta1.QueryGetAllProtocolRevenueRequest}
+   */
+  public static final class QueryGetAllProtocolRevenueRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.QueryGetAllProtocolRevenueRequest)
+      QueryGetAllProtocolRevenueRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGetAllProtocolRevenueRequest.newBuilder() to construct.
+    private QueryGetAllProtocolRevenueRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGetAllProtocolRevenueRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGetAllProtocolRevenueRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetAllProtocolRevenueRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetAllProtocolRevenueRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest.class, com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest other = (com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.protorev.v1beta1.QueryGetAllProtocolRevenueRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.QueryGetAllProtocolRevenueRequest)
+        com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetAllProtocolRevenueRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetAllProtocolRevenueRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest.class, com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetAllProtocolRevenueRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest getDefaultInstanceForType() {
+        return com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest build() {
+        com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest buildPartial() {
+        com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest result = new com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest) {
+          return mergeFrom((com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest other) {
+        if (other == com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.QueryGetAllProtocolRevenueRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.QueryGetAllProtocolRevenueRequest)
+    private static final com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest();
+    }
+
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGetAllProtocolRevenueRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetAllProtocolRevenueRequest>() {
+      @java.lang.Override
+      public QueryGetAllProtocolRevenueRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGetAllProtocolRevenueRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGetAllProtocolRevenueRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGetAllProtocolRevenueResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.QueryGetAllProtocolRevenueResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.osmosis.protorev.v1beta1.AllProtocolRevenue all_protocol_revenue = 1 [json_name = "allProtocolRevenue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"all_protocol_revenue&#92;""];</code>
+     * @return Whether the allProtocolRevenue field is set.
+     */
+    boolean hasAllProtocolRevenue();
+    /**
+     * <code>.osmosis.protorev.v1beta1.AllProtocolRevenue all_protocol_revenue = 1 [json_name = "allProtocolRevenue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"all_protocol_revenue&#92;""];</code>
+     * @return The allProtocolRevenue.
+     */
+    com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenue getAllProtocolRevenue();
+    /**
+     * <code>.osmosis.protorev.v1beta1.AllProtocolRevenue all_protocol_revenue = 1 [json_name = "allProtocolRevenue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"all_protocol_revenue&#92;""];</code>
+     */
+    com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenueOrBuilder getAllProtocolRevenueOrBuilder();
+  }
+  /**
+   * Protobuf type {@code osmosis.protorev.v1beta1.QueryGetAllProtocolRevenueResponse}
+   */
+  public static final class QueryGetAllProtocolRevenueResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.QueryGetAllProtocolRevenueResponse)
+      QueryGetAllProtocolRevenueResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGetAllProtocolRevenueResponse.newBuilder() to construct.
+    private QueryGetAllProtocolRevenueResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGetAllProtocolRevenueResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGetAllProtocolRevenueResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetAllProtocolRevenueResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetAllProtocolRevenueResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse.class, com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse.Builder.class);
+    }
+
+    public static final int ALL_PROTOCOL_REVENUE_FIELD_NUMBER = 1;
+    private com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenue allProtocolRevenue_;
+    /**
+     * <code>.osmosis.protorev.v1beta1.AllProtocolRevenue all_protocol_revenue = 1 [json_name = "allProtocolRevenue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"all_protocol_revenue&#92;""];</code>
+     * @return Whether the allProtocolRevenue field is set.
+     */
+    @java.lang.Override
+    public boolean hasAllProtocolRevenue() {
+      return allProtocolRevenue_ != null;
+    }
+    /**
+     * <code>.osmosis.protorev.v1beta1.AllProtocolRevenue all_protocol_revenue = 1 [json_name = "allProtocolRevenue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"all_protocol_revenue&#92;""];</code>
+     * @return The allProtocolRevenue.
+     */
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenue getAllProtocolRevenue() {
+      return allProtocolRevenue_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenue.getDefaultInstance() : allProtocolRevenue_;
+    }
+    /**
+     * <code>.osmosis.protorev.v1beta1.AllProtocolRevenue all_protocol_revenue = 1 [json_name = "allProtocolRevenue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"all_protocol_revenue&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenueOrBuilder getAllProtocolRevenueOrBuilder() {
+      return allProtocolRevenue_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenue.getDefaultInstance() : allProtocolRevenue_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (allProtocolRevenue_ != null) {
+        output.writeMessage(1, getAllProtocolRevenue());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (allProtocolRevenue_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getAllProtocolRevenue());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse other = (com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse) obj;
+
+      if (hasAllProtocolRevenue() != other.hasAllProtocolRevenue()) return false;
+      if (hasAllProtocolRevenue()) {
+        if (!getAllProtocolRevenue()
+            .equals(other.getAllProtocolRevenue())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAllProtocolRevenue()) {
+        hash = (37 * hash) + ALL_PROTOCOL_REVENUE_FIELD_NUMBER;
+        hash = (53 * hash) + getAllProtocolRevenue().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.protorev.v1beta1.QueryGetAllProtocolRevenueResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.QueryGetAllProtocolRevenueResponse)
+        com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetAllProtocolRevenueResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetAllProtocolRevenueResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse.class, com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        allProtocolRevenue_ = null;
+        if (allProtocolRevenueBuilder_ != null) {
+          allProtocolRevenueBuilder_.dispose();
+          allProtocolRevenueBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.protorev.v1beta1.QueryProto.internal_static_osmosis_protorev_v1beta1_QueryGetAllProtocolRevenueResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse getDefaultInstanceForType() {
+        return com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse build() {
+        com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse buildPartial() {
+        com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse result = new com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.allProtocolRevenue_ = allProtocolRevenueBuilder_ == null
+              ? allProtocolRevenue_
+              : allProtocolRevenueBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse) {
+          return mergeFrom((com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse other) {
+        if (other == com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse.getDefaultInstance()) return this;
+        if (other.hasAllProtocolRevenue()) {
+          mergeAllProtocolRevenue(other.getAllProtocolRevenue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getAllProtocolRevenueFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenue allProtocolRevenue_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenue, com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenue.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenueOrBuilder> allProtocolRevenueBuilder_;
+      /**
+       * <code>.osmosis.protorev.v1beta1.AllProtocolRevenue all_protocol_revenue = 1 [json_name = "allProtocolRevenue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"all_protocol_revenue&#92;""];</code>
+       * @return Whether the allProtocolRevenue field is set.
+       */
+      public boolean hasAllProtocolRevenue() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.osmosis.protorev.v1beta1.AllProtocolRevenue all_protocol_revenue = 1 [json_name = "allProtocolRevenue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"all_protocol_revenue&#92;""];</code>
+       * @return The allProtocolRevenue.
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenue getAllProtocolRevenue() {
+        if (allProtocolRevenueBuilder_ == null) {
+          return allProtocolRevenue_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenue.getDefaultInstance() : allProtocolRevenue_;
+        } else {
+          return allProtocolRevenueBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.osmosis.protorev.v1beta1.AllProtocolRevenue all_protocol_revenue = 1 [json_name = "allProtocolRevenue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"all_protocol_revenue&#92;""];</code>
+       */
+      public Builder setAllProtocolRevenue(com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenue value) {
+        if (allProtocolRevenueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          allProtocolRevenue_ = value;
+        } else {
+          allProtocolRevenueBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.protorev.v1beta1.AllProtocolRevenue all_protocol_revenue = 1 [json_name = "allProtocolRevenue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"all_protocol_revenue&#92;""];</code>
+       */
+      public Builder setAllProtocolRevenue(
+          com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenue.Builder builderForValue) {
+        if (allProtocolRevenueBuilder_ == null) {
+          allProtocolRevenue_ = builderForValue.build();
+        } else {
+          allProtocolRevenueBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.protorev.v1beta1.AllProtocolRevenue all_protocol_revenue = 1 [json_name = "allProtocolRevenue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"all_protocol_revenue&#92;""];</code>
+       */
+      public Builder mergeAllProtocolRevenue(com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenue value) {
+        if (allProtocolRevenueBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            allProtocolRevenue_ != null &&
+            allProtocolRevenue_ != com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenue.getDefaultInstance()) {
+            getAllProtocolRevenueBuilder().mergeFrom(value);
+          } else {
+            allProtocolRevenue_ = value;
+          }
+        } else {
+          allProtocolRevenueBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.protorev.v1beta1.AllProtocolRevenue all_protocol_revenue = 1 [json_name = "allProtocolRevenue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"all_protocol_revenue&#92;""];</code>
+       */
+      public Builder clearAllProtocolRevenue() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        allProtocolRevenue_ = null;
+        if (allProtocolRevenueBuilder_ != null) {
+          allProtocolRevenueBuilder_.dispose();
+          allProtocolRevenueBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.protorev.v1beta1.AllProtocolRevenue all_protocol_revenue = 1 [json_name = "allProtocolRevenue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"all_protocol_revenue&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenue.Builder getAllProtocolRevenueBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getAllProtocolRevenueFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.osmosis.protorev.v1beta1.AllProtocolRevenue all_protocol_revenue = 1 [json_name = "allProtocolRevenue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"all_protocol_revenue&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenueOrBuilder getAllProtocolRevenueOrBuilder() {
+        if (allProtocolRevenueBuilder_ != null) {
+          return allProtocolRevenueBuilder_.getMessageOrBuilder();
+        } else {
+          return allProtocolRevenue_ == null ?
+              com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenue.getDefaultInstance() : allProtocolRevenue_;
+        }
+      }
+      /**
+       * <code>.osmosis.protorev.v1beta1.AllProtocolRevenue all_protocol_revenue = 1 [json_name = "allProtocolRevenue", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"all_protocol_revenue&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenue, com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenue.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenueOrBuilder> 
+          getAllProtocolRevenueFieldBuilder() {
+        if (allProtocolRevenueBuilder_ == null) {
+          allProtocolRevenueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenue, com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenue.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.AllProtocolRevenueOrBuilder>(
+                  getAllProtocolRevenue(),
+                  getParentForChildren(),
+                  isClean());
+          allProtocolRevenue_ = null;
+        }
+        return allProtocolRevenueBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.QueryGetAllProtocolRevenueResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.QueryGetAllProtocolRevenueResponse)
+    private static final com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse();
+    }
+
+    public static com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGetAllProtocolRevenueResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetAllProtocolRevenueResponse>() {
+      @java.lang.Override
+      public QueryGetAllProtocolRevenueResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGetAllProtocolRevenueResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGetAllProtocolRevenueResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.QueryProto.QueryGetAllProtocolRevenueResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_protorev_v1beta1_QueryParamsRequest_descriptor;
   private static final 
@@ -17231,15 +18243,15 @@ public final class QueryProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevDeveloperAccountResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevPoolWeightsRequest_descriptor;
+    internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevInfoByPoolTypeRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevPoolWeightsRequest_fieldAccessorTable;
+      internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevInfoByPoolTypeRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevPoolWeightsResponse_descriptor;
+    internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevInfoByPoolTypeResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevPoolWeightsResponse_fieldAccessorTable;
+      internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevInfoByPoolTypeResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevMaxPoolPointsPerBlockRequest_descriptor;
   private static final 
@@ -17290,6 +18302,16 @@ public final class QueryProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevPoolResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_protorev_v1beta1_QueryGetAllProtocolRevenueRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_protorev_v1beta1_QueryGetAllProtocolRevenueRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_protorev_v1beta1_QueryGetAllProtocolRevenueResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_protorev_v1beta1_QueryGetAllProtocolRevenueResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -17310,151 +18332,160 @@ public final class QueryProto {
       "\006params\030\001 \001(\0132 .osmosis.protorev.v1beta1" +
       ".ParamsB\025\310\336\037\000\362\336\037\ryaml:\"params\"R\006params\"\'" +
       "\n%QueryGetProtoRevNumberOfTradesRequest\"" +
-      "\235\001\n&QueryGetProtoRevNumberOfTradesRespon" +
-      "se\022s\n\020number_of_trades\030\001 \001(\tBI\310\336\037\000\332\336\037&gi" +
-      "thub.com/cosmos/cosmos-sdk/types.Int\362\336\037\027" +
-      "yaml:\"number_of_trades\"R\016numberOfTrades\"" +
-      "O\n%QueryGetProtoRevProfitsByDenomRequest" +
-      "\022&\n\005denom\030\001 \001(\tB\020\362\336\037\014yaml:\"denom\"R\005denom" +
-      "\"n\n&QueryGetProtoRevProfitsByDenomRespon" +
-      "se\022D\n\006profit\030\001 \001(\0132\031.cosmos.base.v1beta1" +
-      ".CoinB\021\362\336\037\ryaml:\"profit\"R\006profit\"#\n!Quer" +
-      "yGetProtoRevAllProfitsRequest\"q\n\"QueryGe" +
-      "tProtoRevAllProfitsResponse\022K\n\007profits\030\001" +
-      " \003(\0132\031.cosmos.base.v1beta1.CoinB\026\310\336\037\000\362\336\037" +
-      "\016yaml:\"profits\"R\007profits\"R\n(QueryGetProt" +
-      "oRevStatisticsByRouteRequest\022&\n\005route\030\001 " +
-      "\003(\004B\020\362\336\037\014yaml:\"route\"R\005route\"\221\001\n)QueryGe" +
-      "tProtoRevStatisticsByRouteResponse\022d\n\nst" +
-      "atistics\030\001 \001(\0132).osmosis.protorev.v1beta" +
-      "1.RouteStatisticsB\031\310\336\037\000\362\336\037\021yaml:\"statist" +
-      "ics\"R\nstatistics\"+\n)QueryGetProtoRevAllR" +
-      "outeStatisticsRequest\"\222\001\n*QueryGetProtoR" +
-      "evAllRouteStatisticsResponse\022d\n\nstatisti" +
-      "cs\030\001 \003(\0132).osmosis.protorev.v1beta1.Rout" +
-      "eStatisticsB\031\310\336\037\000\362\336\037\021yaml:\"statistics\"R\n" +
-      "statistics\"+\n)QueryGetProtoRevTokenPairA" +
-      "rbRoutesRequest\"\211\001\n*QueryGetProtoRevToke" +
-      "nPairArbRoutesResponse\022[\n\006routes\030\001 \003(\0132," +
-      ".osmosis.protorev.v1beta1.TokenPairArbRo" +
-      "utesB\025\310\336\037\000\362\336\037\ryaml:\"routes\"R\006routes\"%\n#Q" +
-      "ueryGetProtoRevAdminAccountRequest\"e\n$Qu" +
-      "eryGetProtoRevAdminAccountResponse\022=\n\rad" +
-      "min_account\030\001 \001(\tB\030\362\336\037\024yaml:\"admin_accou" +
-      "nt\"R\014adminAccount\")\n\'QueryGetProtoRevDev" +
-      "eloperAccountRequest\"u\n(QueryGetProtoRev" +
-      "DeveloperAccountResponse\022I\n\021developer_ac" +
-      "count\030\001 \001(\tB\034\362\336\037\030yaml:\"developer_account" +
-      "\"R\020developerAccount\"$\n\"QueryGetProtoRevP" +
-      "oolWeightsRequest\"\214\001\n#QueryGetProtoRevPo" +
-      "olWeightsResponse\022e\n\014pool_weights\030\001 \001(\0132" +
-      "%.osmosis.protorev.v1beta1.PoolWeightsB\033" +
-      "\310\336\037\000\362\336\037\023yaml:\"pool_weights\"R\013poolWeights" +
-      "\".\n,QueryGetProtoRevMaxPoolPointsPerBloc" +
-      "kRequest\"\217\001\n-QueryGetProtoRevMaxPoolPoin" +
-      "tsPerBlockResponse\022^\n\031max_pool_points_pe" +
-      "r_block\030\001 \001(\004B$\362\336\037 yaml:\"max_pool_points" +
-      "_per_block\"R\025maxPoolPointsPerBlock\"+\n)Qu" +
-      "eryGetProtoRevMaxPoolPointsPerTxRequest\"" +
-      "\203\001\n*QueryGetProtoRevMaxPoolPointsPerTxRe" +
-      "sponse\022U\n\026max_pool_points_per_tx\030\001 \001(\004B!" +
-      "\362\336\037\035yaml:\"max_pool_points_per_tx\"R\022maxPo" +
-      "olPointsPerTx\"#\n!QueryGetProtoRevBaseDen" +
-      "omsRequest\"\206\001\n\"QueryGetProtoRevBaseDenom" +
-      "sResponse\022`\n\013base_denoms\030\001 \003(\0132#.osmosis" +
-      ".protorev.v1beta1.BaseDenomB\032\310\336\037\000\362\336\037\022yam" +
-      "l:\"base_denoms\"R\nbaseDenoms\" \n\036QueryGetP" +
-      "rotoRevEnabledRequest\"O\n\037QueryGetProtoRe" +
-      "vEnabledResponse\022,\n\007enabled\030\001 \001(\010B\022\362\336\037\016y" +
-      "aml:\"enabled\"R\007enabled\"\214\001\n\033QueryGetProto" +
-      "RevPoolRequest\0224\n\nbase_denom\030\001 \001(\tB\025\362\336\037\021" +
-      "yaml:\"base_denom\"R\tbaseDenom\0227\n\013other_de" +
-      "nom\030\002 \001(\tB\026\362\336\037\022yaml:\"other_denom\"R\nother" +
-      "Denom\"K\n\034QueryGetProtoRevPoolResponse\022+\n" +
-      "\007pool_id\030\001 \001(\004B\022\362\336\037\016yaml:\"pool_id\"R\006pool" +
-      "Id2\347\027\n\005Query\022\213\001\n\006Params\022,.osmosis.protor" +
-      "ev.v1beta1.QueryParamsRequest\032-.osmosis." +
-      "protorev.v1beta1.QueryParamsResponse\"$\202\323" +
-      "\344\223\002\036\022\034/osmosis/v14/protorev/params\022\316\001\n\031G" +
-      "etProtoRevNumberOfTrades\022?.osmosis.proto" +
-      "rev.v1beta1.QueryGetProtoRevNumberOfTrad" +
-      "esRequest\032@.osmosis.protorev.v1beta1.Que" +
-      "ryGetProtoRevNumberOfTradesResponse\".\202\323\344" +
-      "\223\002(\022&/osmosis/v14/protorev/number_of_tra" +
-      "des\022\316\001\n\031GetProtoRevProfitsByDenom\022?.osmo" +
-      "sis.protorev.v1beta1.QueryGetProtoRevPro" +
-      "fitsByDenomRequest\032@.osmosis.protorev.v1" +
-      "beta1.QueryGetProtoRevProfitsByDenomResp" +
-      "onse\".\202\323\344\223\002(\022&/osmosis/v14/protorev/prof" +
-      "its_by_denom\022\275\001\n\025GetProtoRevAllProfits\022;" +
+      "\214\001\n&QueryGetProtoRevNumberOfTradesRespon" +
+      "se\022b\n\020number_of_trades\030\001 \001(\tB8\310\336\037\000\332\336\037\025co" +
+      "smossdk.io/math.Int\362\336\037\027yaml:\"number_of_t" +
+      "rades\"R\016numberOfTrades\"O\n%QueryGetProtoR" +
+      "evProfitsByDenomRequest\022&\n\005denom\030\001 \001(\tB\020" +
+      "\362\336\037\014yaml:\"denom\"R\005denom\"n\n&QueryGetProto" +
+      "RevProfitsByDenomResponse\022D\n\006profit\030\001 \001(" +
+      "\0132\031.cosmos.base.v1beta1.CoinB\021\362\336\037\ryaml:\"" +
+      "profit\"R\006profit\"#\n!QueryGetProtoRevAllPr" +
+      "ofitsRequest\"q\n\"QueryGetProtoRevAllProfi" +
+      "tsResponse\022K\n\007profits\030\001 \003(\0132\031.cosmos.bas" +
+      "e.v1beta1.CoinB\026\310\336\037\000\362\336\037\016yaml:\"profits\"R\007" +
+      "profits\"R\n(QueryGetProtoRevStatisticsByR" +
+      "outeRequest\022&\n\005route\030\001 \003(\004B\020\362\336\037\014yaml:\"ro" +
+      "ute\"R\005route\"\221\001\n)QueryGetProtoRevStatisti" +
+      "csByRouteResponse\022d\n\nstatistics\030\001 \001(\0132)." +
+      "osmosis.protorev.v1beta1.RouteStatistics" +
+      "B\031\310\336\037\000\362\336\037\021yaml:\"statistics\"R\nstatistics\"" +
+      "+\n)QueryGetProtoRevAllRouteStatisticsReq" +
+      "uest\"\222\001\n*QueryGetProtoRevAllRouteStatist" +
+      "icsResponse\022d\n\nstatistics\030\001 \003(\0132).osmosi" +
+      "s.protorev.v1beta1.RouteStatisticsB\031\310\336\037\000" +
+      "\362\336\037\021yaml:\"statistics\"R\nstatistics\"+\n)Que" +
+      "ryGetProtoRevTokenPairArbRoutesRequest\"\211" +
+      "\001\n*QueryGetProtoRevTokenPairArbRoutesRes" +
+      "ponse\022[\n\006routes\030\001 \003(\0132,.osmosis.protorev" +
+      ".v1beta1.TokenPairArbRoutesB\025\310\336\037\000\362\336\037\ryam" +
+      "l:\"routes\"R\006routes\"%\n#QueryGetProtoRevAd" +
+      "minAccountRequest\"e\n$QueryGetProtoRevAdm" +
+      "inAccountResponse\022=\n\radmin_account\030\001 \001(\t" +
+      "B\030\362\336\037\024yaml:\"admin_account\"R\014adminAccount" +
+      "\")\n\'QueryGetProtoRevDeveloperAccountRequ" +
+      "est\"u\n(QueryGetProtoRevDeveloperAccountR" +
+      "esponse\022I\n\021developer_account\030\001 \001(\tB\034\362\336\037\030" +
+      "yaml:\"developer_account\"R\020developerAccou" +
+      "nt\"\'\n%QueryGetProtoRevInfoByPoolTypeRequ" +
+      "est\"\237\001\n&QueryGetProtoRevInfoByPoolTypeRe" +
+      "sponse\022u\n\021info_by_pool_type\030\001 \001(\0132(.osmo" +
+      "sis.protorev.v1beta1.InfoByPoolTypeB \310\336\037" +
+      "\000\362\336\037\030yaml:\"info_by_pool_type\"R\016infoByPoo" +
+      "lType\".\n,QueryGetProtoRevMaxPoolPointsPe" +
+      "rBlockRequest\"\217\001\n-QueryGetProtoRevMaxPoo" +
+      "lPointsPerBlockResponse\022^\n\031max_pool_poin" +
+      "ts_per_block\030\001 \001(\004B$\362\336\037 yaml:\"max_pool_p" +
+      "oints_per_block\"R\025maxPoolPointsPerBlock\"" +
+      "+\n)QueryGetProtoRevMaxPoolPointsPerTxReq" +
+      "uest\"\203\001\n*QueryGetProtoRevMaxPoolPointsPe" +
+      "rTxResponse\022U\n\026max_pool_points_per_tx\030\001 " +
+      "\001(\004B!\362\336\037\035yaml:\"max_pool_points_per_tx\"R\022" +
+      "maxPoolPointsPerTx\"#\n!QueryGetProtoRevBa" +
+      "seDenomsRequest\"\206\001\n\"QueryGetProtoRevBase" +
+      "DenomsResponse\022`\n\013base_denoms\030\001 \003(\0132#.os" +
+      "mosis.protorev.v1beta1.BaseDenomB\032\310\336\037\000\362\336" +
+      "\037\022yaml:\"base_denoms\"R\nbaseDenoms\" \n\036Quer" +
+      "yGetProtoRevEnabledRequest\"O\n\037QueryGetPr" +
+      "otoRevEnabledResponse\022,\n\007enabled\030\001 \001(\010B\022" +
+      "\362\336\037\016yaml:\"enabled\"R\007enabled\"\214\001\n\033QueryGet" +
+      "ProtoRevPoolRequest\0224\n\nbase_denom\030\001 \001(\tB" +
+      "\025\362\336\037\021yaml:\"base_denom\"R\tbaseDenom\0227\n\013oth" +
+      "er_denom\030\002 \001(\tB\026\362\336\037\022yaml:\"other_denom\"R\n" +
+      "otherDenom\"K\n\034QueryGetProtoRevPoolRespon" +
+      "se\022+\n\007pool_id\030\001 \001(\004B\022\362\336\037\016yaml:\"pool_id\"R" +
+      "\006poolId\"#\n!QueryGetAllProtocolRevenueReq" +
+      "uest\"\252\001\n\"QueryGetAllProtocolRevenueRespo" +
+      "nse\022\203\001\n\024all_protocol_revenue\030\001 \001(\0132,.osm" +
+      "osis.protorev.v1beta1.AllProtocolRevenue" +
+      "B#\310\336\037\000\362\336\037\033yaml:\"all_protocol_revenue\"R\022a" +
+      "llProtocolRevenue2\376\030\n\005Query\022\207\001\n\006Params\022," +
+      ".osmosis.protorev.v1beta1.QueryParamsReq" +
+      "uest\032-.osmosis.protorev.v1beta1.QueryPar" +
+      "amsResponse\" \202\323\344\223\002\032\022\030/osmosis/protorev/p" +
+      "arams\022\312\001\n\031GetProtoRevNumberOfTrades\022?.os" +
+      "mosis.protorev.v1beta1.QueryGetProtoRevN" +
+      "umberOfTradesRequest\032@.osmosis.protorev." +
+      "v1beta1.QueryGetProtoRevNumberOfTradesRe" +
+      "sponse\"*\202\323\344\223\002$\022\"/osmosis/protorev/number" +
+      "_of_trades\022\312\001\n\031GetProtoRevProfitsByDenom" +
+      "\022?.osmosis.protorev.v1beta1.QueryGetProt" +
+      "oRevProfitsByDenomRequest\032@.osmosis.prot" +
+      "orev.v1beta1.QueryGetProtoRevProfitsByDe" +
+      "nomResponse\"*\202\323\344\223\002$\022\"/osmosis/protorev/p" +
+      "rofits_by_denom\022\271\001\n\025GetProtoRevAllProfit" +
+      "s\022;.osmosis.protorev.v1beta1.QueryGetPro" +
+      "toRevAllProfitsRequest\032<.osmosis.protore" +
+      "v.v1beta1.QueryGetProtoRevAllProfitsResp" +
+      "onse\"%\202\323\344\223\002\037\022\035/osmosis/protorev/all_prof" +
+      "its\022\326\001\n\034GetProtoRevStatisticsByRoute\022B.o" +
+      "smosis.protorev.v1beta1.QueryGetProtoRev" +
+      "StatisticsByRouteRequest\032C.osmosis.proto" +
+      "rev.v1beta1.QueryGetProtoRevStatisticsBy" +
+      "RouteResponse\"-\202\323\344\223\002\'\022%/osmosis/protorev" +
+      "/statistics_by_route\022\332\001\n\035GetProtoRevAllR" +
+      "outeStatistics\022C.osmosis.protorev.v1beta" +
+      "1.QueryGetProtoRevAllRouteStatisticsRequ" +
+      "est\032D.osmosis.protorev.v1beta1.QueryGetP" +
+      "rotoRevAllRouteStatisticsResponse\".\202\323\344\223\002" +
+      "(\022&/osmosis/protorev/all_route_statistic" +
+      "s\022\333\001\n\035GetProtoRevTokenPairArbRoutes\022C.os" +
+      "mosis.protorev.v1beta1.QueryGetProtoRevT" +
+      "okenPairArbRoutesRequest\032D.osmosis.proto" +
+      "rev.v1beta1.QueryGetProtoRevTokenPairArb" +
+      "RoutesResponse\"/\202\323\344\223\002)\022\'/osmosis/protore" +
+      "v/token_pair_arb_routes\022\301\001\n\027GetProtoRevA" +
+      "dminAccount\022=.osmosis.protorev.v1beta1.Q" +
+      "ueryGetProtoRevAdminAccountRequest\032>.osm" +
+      "osis.protorev.v1beta1.QueryGetProtoRevAd" +
+      "minAccountResponse\"\'\202\323\344\223\002!\022\037/osmosis/pro" +
+      "torev/admin_account\022\321\001\n\033GetProtoRevDevel" +
+      "operAccount\022A.osmosis.protorev.v1beta1.Q" +
+      "ueryGetProtoRevDeveloperAccountRequest\032B" +
       ".osmosis.protorev.v1beta1.QueryGetProtoR" +
-      "evAllProfitsRequest\032<.osmosis.protorev.v" +
-      "1beta1.QueryGetProtoRevAllProfitsRespons" +
-      "e\")\202\323\344\223\002#\022!/osmosis/v14/protorev/all_pro" +
-      "fits\022\332\001\n\034GetProtoRevStatisticsByRoute\022B." +
-      "osmosis.protorev.v1beta1.QueryGetProtoRe" +
-      "vStatisticsByRouteRequest\032C.osmosis.prot" +
-      "orev.v1beta1.QueryGetProtoRevStatisticsB" +
-      "yRouteResponse\"1\202\323\344\223\002+\022)/osmosis/v14/pro" +
-      "torev/statistics_by_route\022\336\001\n\035GetProtoRe" +
-      "vAllRouteStatistics\022C.osmosis.protorev.v" +
-      "1beta1.QueryGetProtoRevAllRouteStatistic" +
-      "sRequest\032D.osmosis.protorev.v1beta1.Quer" +
-      "yGetProtoRevAllRouteStatisticsResponse\"2" +
-      "\202\323\344\223\002,\022*/osmosis/v14/protorev/all_route_" +
-      "statistics\022\337\001\n\035GetProtoRevTokenPairArbRo" +
-      "utes\022C.osmosis.protorev.v1beta1.QueryGet" +
-      "ProtoRevTokenPairArbRoutesRequest\032D.osmo" +
-      "sis.protorev.v1beta1.QueryGetProtoRevTok" +
-      "enPairArbRoutesResponse\"3\202\323\344\223\002-\022+/osmosi" +
-      "s/v14/protorev/token_pair_arb_routes\022\305\001\n" +
-      "\027GetProtoRevAdminAccount\022=.osmosis.proto" +
-      "rev.v1beta1.QueryGetProtoRevAdminAccount" +
-      "Request\032>.osmosis.protorev.v1beta1.Query" +
-      "GetProtoRevAdminAccountResponse\"+\202\323\344\223\002%\022" +
-      "#/osmosis/v14/protorev/admin_account\022\325\001\n" +
-      "\033GetProtoRevDeveloperAccount\022A.osmosis.p" +
-      "rotorev.v1beta1.QueryGetProtoRevDevelope" +
-      "rAccountRequest\032B.osmosis.protorev.v1bet" +
-      "a1.QueryGetProtoRevDeveloperAccountRespo" +
-      "nse\"/\202\323\344\223\002)\022\'/osmosis/v14/protorev/devel" +
-      "oper_account\022\301\001\n\026GetProtoRevPoolWeights\022" +
-      "<.osmosis.protorev.v1beta1.QueryGetProto" +
-      "RevPoolWeightsRequest\032=.osmosis.protorev" +
-      ".v1beta1.QueryGetProtoRevPoolWeightsResp" +
-      "onse\"*\202\323\344\223\002$\022\"/osmosis/v14/protorev/pool" +
-      "_weights\022\340\001\n\035GetProtoRevMaxPoolPointsPer" +
-      "Tx\022C.osmosis.protorev.v1beta1.QueryGetPr" +
-      "otoRevMaxPoolPointsPerTxRequest\032D.osmosi" +
+      "evDeveloperAccountResponse\"+\202\323\344\223\002%\022#/osm" +
+      "osis/protorev/developer_account\022\313\001\n\031GetP" +
+      "rotoRevInfoByPoolType\022?.osmosis.protorev" +
+      ".v1beta1.QueryGetProtoRevInfoByPoolTypeR" +
+      "equest\032@.osmosis.protorev.v1beta1.QueryG" +
+      "etProtoRevInfoByPoolTypeResponse\"+\202\323\344\223\002%" +
+      "\022#/osmosis/protorev/info_by_pool_type\022\334\001" +
+      "\n\035GetProtoRevMaxPoolPointsPerTx\022C.osmosi" +
       "s.protorev.v1beta1.QueryGetProtoRevMaxPo" +
-      "olPointsPerTxResponse\"4\202\323\344\223\002.\022,/osmosis/" +
-      "v14/protorev/max_pool_points_per_tx\022\354\001\n " +
-      "GetProtoRevMaxPoolPointsPerBlock\022F.osmos" +
-      "is.protorev.v1beta1.QueryGetProtoRevMaxP" +
-      "oolPointsPerBlockRequest\032G.osmosis.proto" +
-      "rev.v1beta1.QueryGetProtoRevMaxPoolPoint" +
-      "sPerBlockResponse\"7\202\323\344\223\0021\022//osmosis/v14/" +
-      "protorev/max_pool_points_per_block\022\275\001\n\025G" +
-      "etProtoRevBaseDenoms\022;.osmosis.protorev." +
-      "v1beta1.QueryGetProtoRevBaseDenomsReques" +
-      "t\032<.osmosis.protorev.v1beta1.QueryGetPro" +
-      "toRevBaseDenomsResponse\")\202\323\344\223\002#\022!/osmosi" +
-      "s/v14/protorev/base_denoms\022\260\001\n\022GetProtoR" +
-      "evEnabled\0228.osmosis.protorev.v1beta1.Que" +
-      "ryGetProtoRevEnabledRequest\0329.osmosis.pr" +
-      "otorev.v1beta1.QueryGetProtoRevEnabledRe" +
-      "sponse\"%\202\323\344\223\002\037\022\035/osmosis/v14/protorev/en" +
-      "abled\022\244\001\n\017GetProtoRevPool\0225.osmosis.prot" +
-      "orev.v1beta1.QueryGetProtoRevPoolRequest" +
-      "\0326.osmosis.protorev.v1beta1.QueryGetProt" +
-      "oRevPoolResponse\"\"\202\323\344\223\002\034\022\032/osmosis/v14/p" +
-      "rotorev/poolB\340\001\n\034com.osmosis.protorev.v1" +
-      "beta1B\nQueryProtoZ4github.com/osmosis-la" +
-      "bs/osmosis/v15/x/protorev/types\242\002\003OPX\252\002\030" +
-      "Osmosis.Protorev.V1beta1\312\002\030Osmosis\\Proto" +
-      "rev\\V1beta1\342\002$Osmosis\\Protorev\\V1beta1\\G" +
-      "PBMetadata\352\002\032Osmosis::Protorev::V1beta1b" +
-      "\006proto3"
+      "olPointsPerTxRequest\032D.osmosis.protorev." +
+      "v1beta1.QueryGetProtoRevMaxPoolPointsPer" +
+      "TxResponse\"0\202\323\344\223\002*\022(/osmosis/protorev/ma" +
+      "x_pool_points_per_tx\022\350\001\n GetProtoRevMaxP" +
+      "oolPointsPerBlock\022F.osmosis.protorev.v1b" +
+      "eta1.QueryGetProtoRevMaxPoolPointsPerBlo" +
+      "ckRequest\032G.osmosis.protorev.v1beta1.Que" +
+      "ryGetProtoRevMaxPoolPointsPerBlockRespon" +
+      "se\"3\202\323\344\223\002-\022+/osmosis/protorev/max_pool_p" +
+      "oints_per_block\022\271\001\n\025GetProtoRevBaseDenom" +
+      "s\022;.osmosis.protorev.v1beta1.QueryGetPro" +
+      "toRevBaseDenomsRequest\032<.osmosis.protore" +
+      "v.v1beta1.QueryGetProtoRevBaseDenomsResp" +
+      "onse\"%\202\323\344\223\002\037\022\035/osmosis/protorev/base_den" +
+      "oms\022\254\001\n\022GetProtoRevEnabled\0228.osmosis.pro" +
+      "torev.v1beta1.QueryGetProtoRevEnabledReq" +
+      "uest\0329.osmosis.protorev.v1beta1.QueryGet" +
+      "ProtoRevEnabledResponse\"!\202\323\344\223\002\033\022\031/osmosi" +
+      "s/protorev/enabled\022\240\001\n\017GetProtoRevPool\0225" +
+      ".osmosis.protorev.v1beta1.QueryGetProtoR" +
+      "evPoolRequest\0326.osmosis.protorev.v1beta1" +
+      ".QueryGetProtoRevPoolResponse\"\036\202\323\344\223\002\030\022\026/" +
+      "osmosis/protorev/pool\022\302\001\n\025GetAllProtocol" +
+      "Revenue\022;.osmosis.protorev.v1beta1.Query" +
+      "GetAllProtocolRevenueRequest\032<.osmosis.p" +
+      "rotorev.v1beta1.QueryGetAllProtocolReven" +
+      "ueResponse\".\202\323\344\223\002(\022&/osmosis/protorev/al" +
+      "l_protocol_revenueB\340\001\n\034com.osmosis.proto" +
+      "rev.v1beta1B\nQueryProtoZ4github.com/osmo" +
+      "sis-labs/osmosis/v26/x/protorev/types\242\002\003" +
+      "OPX\252\002\030Osmosis.Protorev.V1beta1\312\002\030Osmosis" +
+      "\\Protorev\\V1beta1\342\002$Osmosis\\Protorev\\V1b" +
+      "eta1\\GPBMetadata\352\002\032Osmosis::Protorev::V1" +
+      "beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17574,18 +18605,18 @@ public final class QueryProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevDeveloperAccountResponse_descriptor,
         new java.lang.String[] { "DeveloperAccount", });
-    internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevPoolWeightsRequest_descriptor =
+    internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevInfoByPoolTypeRequest_descriptor =
       getDescriptor().getMessageTypes().get(18);
-    internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevPoolWeightsRequest_fieldAccessorTable = new
+    internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevInfoByPoolTypeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevPoolWeightsRequest_descriptor,
+        internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevInfoByPoolTypeRequest_descriptor,
         new java.lang.String[] { });
-    internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevPoolWeightsResponse_descriptor =
+    internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevInfoByPoolTypeResponse_descriptor =
       getDescriptor().getMessageTypes().get(19);
-    internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevPoolWeightsResponse_fieldAccessorTable = new
+    internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevInfoByPoolTypeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevPoolWeightsResponse_descriptor,
-        new java.lang.String[] { "PoolWeights", });
+        internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevInfoByPoolTypeResponse_descriptor,
+        new java.lang.String[] { "InfoByPoolType", });
     internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevMaxPoolPointsPerBlockRequest_descriptor =
       getDescriptor().getMessageTypes().get(20);
     internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevMaxPoolPointsPerBlockRequest_fieldAccessorTable = new
@@ -17646,6 +18677,18 @@ public final class QueryProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_protorev_v1beta1_QueryGetProtoRevPoolResponse_descriptor,
         new java.lang.String[] { "PoolId", });
+    internal_static_osmosis_protorev_v1beta1_QueryGetAllProtocolRevenueRequest_descriptor =
+      getDescriptor().getMessageTypes().get(30);
+    internal_static_osmosis_protorev_v1beta1_QueryGetAllProtocolRevenueRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_protorev_v1beta1_QueryGetAllProtocolRevenueRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_osmosis_protorev_v1beta1_QueryGetAllProtocolRevenueResponse_descriptor =
+      getDescriptor().getMessageTypes().get(31);
+    internal_static_osmosis_protorev_v1beta1_QueryGetAllProtocolRevenueResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_protorev_v1beta1_QueryGetAllProtocolRevenueResponse_descriptor,
+        new java.lang.String[] { "AllProtocolRevenue", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.gogoproto.GogoProto.customtype);

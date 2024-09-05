@@ -20,7 +20,7 @@ public final class GenesisProto {
 
     /**
      * <pre>
-     * params defines the paramaters of the module.
+     * params defines the parameters of the module.
      * </pre>
      *
      * <code>.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -29,7 +29,7 @@ public final class GenesisProto {
     boolean hasParams();
     /**
      * <pre>
-     * params defines the paramaters of the module.
+     * params defines the parameters of the module.
      * </pre>
      *
      * <code>.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -38,7 +38,7 @@ public final class GenesisProto {
     com.osmosis.tokenfactory.v1beta1.ParamsProto.Params getParams();
     /**
      * <pre>
-     * params defines the paramaters of the module.
+     * params defines the parameters of the module.
      * </pre>
      *
      * <code>.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -113,7 +113,7 @@ public final class GenesisProto {
     private com.osmosis.tokenfactory.v1beta1.ParamsProto.Params params_;
     /**
      * <pre>
-     * params defines the paramaters of the module.
+     * params defines the parameters of the module.
      * </pre>
      *
      * <code>.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -125,7 +125,7 @@ public final class GenesisProto {
     }
     /**
      * <pre>
-     * params defines the paramaters of the module.
+     * params defines the parameters of the module.
      * </pre>
      *
      * <code>.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -137,7 +137,7 @@ public final class GenesisProto {
     }
     /**
      * <pre>
-     * params defines the paramaters of the module.
+     * params defines the parameters of the module.
      * </pre>
      *
      * <code>.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -607,7 +607,7 @@ public final class GenesisProto {
           com.osmosis.tokenfactory.v1beta1.ParamsProto.Params, com.osmosis.tokenfactory.v1beta1.ParamsProto.Params.Builder, com.osmosis.tokenfactory.v1beta1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
       /**
        * <pre>
-       * params defines the paramaters of the module.
+       * params defines the parameters of the module.
        * </pre>
        *
        * <code>.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -618,7 +618,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * params defines the paramaters of the module.
+       * params defines the parameters of the module.
        * </pre>
        *
        * <code>.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -633,7 +633,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * params defines the paramaters of the module.
+       * params defines the parameters of the module.
        * </pre>
        *
        * <code>.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -653,7 +653,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * params defines the paramaters of the module.
+       * params defines the parameters of the module.
        * </pre>
        *
        * <code>.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -671,7 +671,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * params defines the paramaters of the module.
+       * params defines the parameters of the module.
        * </pre>
        *
        * <code>.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -694,7 +694,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * params defines the paramaters of the module.
+       * params defines the parameters of the module.
        * </pre>
        *
        * <code>.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -711,7 +711,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * params defines the paramaters of the module.
+       * params defines the parameters of the module.
        * </pre>
        *
        * <code>.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -723,7 +723,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * params defines the paramaters of the module.
+       * params defines the parameters of the module.
        * </pre>
        *
        * <code>.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -738,7 +738,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * params defines the paramaters of the module.
+       * params defines the parameters of the module.
        * </pre>
        *
        * <code>.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
@@ -1855,7 +1855,7 @@ public final class GenesisProto {
       "rityMetadataB!\310\336\037\000\362\336\037\031yaml:\"authority_me" +
       "tadata\"R\021authorityMetadata:\004\350\240\037\001B\372\001\n com" +
       ".osmosis.tokenfactory.v1beta1B\014GenesisPr" +
-      "otoZ8github.com/osmosis-labs/osmosis/v15" +
+      "otoZ8github.com/osmosis-labs/osmosis/v26" +
       "/x/tokenfactory/types\242\002\003OTX\252\002\034Osmosis.To" +
       "kenfactory.V1beta1\312\002\034Osmosis\\Tokenfactor" +
       "y\\V1beta1\342\002(Osmosis\\Tokenfactory\\V1beta1" +

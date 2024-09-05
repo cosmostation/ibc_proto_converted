@@ -635,7 +635,7 @@ public final class AuthorityMetadataProto {
       "data\022&\n\005admin\030\001 \001(\tB\020\362\336\037\014yaml:\"admin\"R\005a" +
       "dmin:\004\350\240\037\001B\204\002\n com.osmosis.tokenfactory." +
       "v1beta1B\026AuthorityMetadataProtoZ8github." +
-      "com/osmosis-labs/osmosis/v15/x/tokenfact" +
+      "com/osmosis-labs/osmosis/v26/x/tokenfact" +
       "ory/types\242\002\003OTX\252\002\034Osmosis.Tokenfactory.V" +
       "1beta1\312\002\034Osmosis\\Tokenfactory\\V1beta1\342\002(" +
       "Osmosis\\Tokenfactory\\V1beta1\\GPBMetadata" +

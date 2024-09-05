@@ -37,12 +37,12 @@ public final class TxProto {
     long getPoolId();
 
     /**
-     * <code>string share_out_amount = 3 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"pool_amount_out&#92;""];</code>
+     * <code>string share_out_amount = 3 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"pool_amount_out&#92;""];</code>
      * @return The shareOutAmount.
      */
     java.lang.String getShareOutAmount();
     /**
-     * <code>string share_out_amount = 3 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"pool_amount_out&#92;""];</code>
+     * <code>string share_out_amount = 3 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"pool_amount_out&#92;""];</code>
      * @return The bytes for shareOutAmount.
      */
     com.google.protobuf.ByteString
@@ -169,7 +169,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object shareOutAmount_ = "";
     /**
-     * <code>string share_out_amount = 3 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"pool_amount_out&#92;""];</code>
+     * <code>string share_out_amount = 3 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"pool_amount_out&#92;""];</code>
      * @return The shareOutAmount.
      */
     @java.lang.Override
@@ -186,7 +186,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string share_out_amount = 3 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"pool_amount_out&#92;""];</code>
+     * <code>string share_out_amount = 3 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"pool_amount_out&#92;""];</code>
      * @return The bytes for shareOutAmount.
      */
     @java.lang.Override
@@ -802,7 +802,7 @@ public final class TxProto {
 
       private java.lang.Object shareOutAmount_ = "";
       /**
-       * <code>string share_out_amount = 3 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"pool_amount_out&#92;""];</code>
+       * <code>string share_out_amount = 3 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"pool_amount_out&#92;""];</code>
        * @return The shareOutAmount.
        */
       public java.lang.String getShareOutAmount() {
@@ -818,7 +818,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string share_out_amount = 3 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"pool_amount_out&#92;""];</code>
+       * <code>string share_out_amount = 3 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"pool_amount_out&#92;""];</code>
        * @return The bytes for shareOutAmount.
        */
       public com.google.protobuf.ByteString
@@ -835,7 +835,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string share_out_amount = 3 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"pool_amount_out&#92;""];</code>
+       * <code>string share_out_amount = 3 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"pool_amount_out&#92;""];</code>
        * @param value The shareOutAmount to set.
        * @return This builder for chaining.
        */
@@ -848,7 +848,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string share_out_amount = 3 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"pool_amount_out&#92;""];</code>
+       * <code>string share_out_amount = 3 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"pool_amount_out&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearShareOutAmount() {
@@ -858,7 +858,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string share_out_amount = 3 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"pool_amount_out&#92;""];</code>
+       * <code>string share_out_amount = 3 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"pool_amount_out&#92;""];</code>
        * @param value The bytes for shareOutAmount to set.
        * @return This builder for chaining.
        */
@@ -1180,12 +1180,12 @@ public final class TxProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+     * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
      * @return The shareOutAmount.
      */
     java.lang.String getShareOutAmount();
     /**
-     * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+     * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
      * @return The bytes for shareOutAmount.
      */
     com.google.protobuf.ByteString
@@ -1256,7 +1256,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object shareOutAmount_ = "";
     /**
-     * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+     * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
      * @return The shareOutAmount.
      */
     @java.lang.Override
@@ -1273,7 +1273,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+     * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
      * @return The bytes for shareOutAmount.
      */
     @java.lang.Override
@@ -1732,7 +1732,7 @@ public final class TxProto {
 
       private java.lang.Object shareOutAmount_ = "";
       /**
-       * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+       * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
        * @return The shareOutAmount.
        */
       public java.lang.String getShareOutAmount() {
@@ -1748,7 +1748,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+       * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
        * @return The bytes for shareOutAmount.
        */
       public com.google.protobuf.ByteString
@@ -1765,7 +1765,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+       * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
        * @param value The shareOutAmount to set.
        * @return This builder for chaining.
        */
@@ -1778,7 +1778,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+       * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearShareOutAmount() {
@@ -1788,7 +1788,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+       * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
        * @param value The bytes for shareOutAmount to set.
        * @return This builder for chaining.
        */
@@ -2128,12 +2128,12 @@ public final class TxProto {
     long getPoolId();
 
     /**
-     * <code>string share_in_amount = 3 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+     * <code>string share_in_amount = 3 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
      * @return The shareInAmount.
      */
     java.lang.String getShareInAmount();
     /**
-     * <code>string share_in_amount = 3 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+     * <code>string share_in_amount = 3 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
      * @return The bytes for shareInAmount.
      */
     com.google.protobuf.ByteString
@@ -2259,7 +2259,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object shareInAmount_ = "";
     /**
-     * <code>string share_in_amount = 3 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+     * <code>string share_in_amount = 3 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
      * @return The shareInAmount.
      */
     @java.lang.Override
@@ -2276,7 +2276,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string share_in_amount = 3 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+     * <code>string share_in_amount = 3 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
      * @return The bytes for shareInAmount.
      */
     @java.lang.Override
@@ -2891,7 +2891,7 @@ public final class TxProto {
 
       private java.lang.Object shareInAmount_ = "";
       /**
-       * <code>string share_in_amount = 3 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+       * <code>string share_in_amount = 3 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
        * @return The shareInAmount.
        */
       public java.lang.String getShareInAmount() {
@@ -2907,7 +2907,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string share_in_amount = 3 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+       * <code>string share_in_amount = 3 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
        * @return The bytes for shareInAmount.
        */
       public com.google.protobuf.ByteString
@@ -2924,7 +2924,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string share_in_amount = 3 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+       * <code>string share_in_amount = 3 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
        * @param value The shareInAmount to set.
        * @return This builder for chaining.
        */
@@ -2937,7 +2937,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string share_in_amount = 3 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+       * <code>string share_in_amount = 3 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearShareInAmount() {
@@ -2947,7 +2947,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string share_in_amount = 3 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+       * <code>string share_in_amount = 3 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
        * @param value The bytes for shareInAmount to set.
        * @return This builder for chaining.
        */
@@ -4102,12 +4102,12 @@ public final class TxProto {
     com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTokenInOrBuilder();
 
     /**
-     * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
+     * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
      * @return The tokenOutMinAmount.
      */
     java.lang.String getTokenOutMinAmount();
     /**
-     * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
+     * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
      * @return The bytes for tokenOutMinAmount.
      */
     com.google.protobuf.ByteString
@@ -4265,7 +4265,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object tokenOutMinAmount_ = "";
     /**
-     * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
+     * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
      * @return The tokenOutMinAmount.
      */
     @java.lang.Override
@@ -4282,7 +4282,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
+     * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
      * @return The bytes for tokenOutMinAmount.
      */
     @java.lang.Override
@@ -5195,7 +5195,7 @@ public final class TxProto {
 
       private java.lang.Object tokenOutMinAmount_ = "";
       /**
-       * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
+       * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
        * @return The tokenOutMinAmount.
        */
       public java.lang.String getTokenOutMinAmount() {
@@ -5211,7 +5211,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
+       * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
        * @return The bytes for tokenOutMinAmount.
        */
       public com.google.protobuf.ByteString
@@ -5228,7 +5228,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
+       * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
        * @param value The tokenOutMinAmount to set.
        * @return This builder for chaining.
        */
@@ -5241,7 +5241,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
+       * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearTokenOutMinAmount() {
@@ -5251,7 +5251,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
+       * <code>string token_out_min_amount = 4 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
        * @param value The bytes for tokenOutMinAmount to set.
        * @return This builder for chaining.
        */
@@ -5333,12 +5333,12 @@ public final class TxProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
      * @return The tokenOutAmount.
      */
     java.lang.String getTokenOutAmount();
     /**
-     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
      * @return The bytes for tokenOutAmount.
      */
     com.google.protobuf.ByteString
@@ -5384,7 +5384,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object tokenOutAmount_ = "";
     /**
-     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
      * @return The tokenOutAmount.
      */
     @java.lang.Override
@@ -5401,7 +5401,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
      * @return The bytes for tokenOutAmount.
      */
     @java.lang.Override
@@ -5747,7 +5747,7 @@ public final class TxProto {
 
       private java.lang.Object tokenOutAmount_ = "";
       /**
-       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
        * @return The tokenOutAmount.
        */
       public java.lang.String getTokenOutAmount() {
@@ -5763,7 +5763,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
        * @return The bytes for tokenOutAmount.
        */
       public com.google.protobuf.ByteString
@@ -5780,7 +5780,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
        * @param value The tokenOutAmount to set.
        * @return This builder for chaining.
        */
@@ -5793,7 +5793,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearTokenOutAmount() {
@@ -5803,7 +5803,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
        * @param value The bytes for tokenOutAmount to set.
        * @return This builder for chaining.
        */
@@ -5921,12 +5921,12 @@ public final class TxProto {
         int index);
 
     /**
-     * <code>string token_in_max_amount = 3 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
+     * <code>string token_in_max_amount = 3 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
      * @return The tokenInMaxAmount.
      */
     java.lang.String getTokenInMaxAmount();
     /**
-     * <code>string token_in_max_amount = 3 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
+     * <code>string token_in_max_amount = 3 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
      * @return The bytes for tokenInMaxAmount.
      */
     com.google.protobuf.ByteString
@@ -6069,7 +6069,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object tokenInMaxAmount_ = "";
     /**
-     * <code>string token_in_max_amount = 3 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
+     * <code>string token_in_max_amount = 3 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
      * @return The tokenInMaxAmount.
      */
     @java.lang.Override
@@ -6086,7 +6086,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string token_in_max_amount = 3 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
+     * <code>string token_in_max_amount = 3 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
      * @return The bytes for tokenInMaxAmount.
      */
     @java.lang.Override
@@ -6902,7 +6902,7 @@ public final class TxProto {
 
       private java.lang.Object tokenInMaxAmount_ = "";
       /**
-       * <code>string token_in_max_amount = 3 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
+       * <code>string token_in_max_amount = 3 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
        * @return The tokenInMaxAmount.
        */
       public java.lang.String getTokenInMaxAmount() {
@@ -6918,7 +6918,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string token_in_max_amount = 3 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
+       * <code>string token_in_max_amount = 3 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
        * @return The bytes for tokenInMaxAmount.
        */
       public com.google.protobuf.ByteString
@@ -6935,7 +6935,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string token_in_max_amount = 3 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
+       * <code>string token_in_max_amount = 3 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
        * @param value The tokenInMaxAmount to set.
        * @return This builder for chaining.
        */
@@ -6948,7 +6948,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string token_in_max_amount = 3 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
+       * <code>string token_in_max_amount = 3 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearTokenInMaxAmount() {
@@ -6958,7 +6958,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string token_in_max_amount = 3 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
+       * <code>string token_in_max_amount = 3 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
        * @param value The bytes for tokenInMaxAmount to set.
        * @return This builder for chaining.
        */
@@ -7159,12 +7159,12 @@ public final class TxProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
      * @return The tokenInAmount.
      */
     java.lang.String getTokenInAmount();
     /**
-     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
      * @return The bytes for tokenInAmount.
      */
     com.google.protobuf.ByteString
@@ -7210,7 +7210,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object tokenInAmount_ = "";
     /**
-     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
      * @return The tokenInAmount.
      */
     @java.lang.Override
@@ -7227,7 +7227,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
      * @return The bytes for tokenInAmount.
      */
     @java.lang.Override
@@ -7573,7 +7573,7 @@ public final class TxProto {
 
       private java.lang.Object tokenInAmount_ = "";
       /**
-       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
        * @return The tokenInAmount.
        */
       public java.lang.String getTokenInAmount() {
@@ -7589,7 +7589,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
        * @return The bytes for tokenInAmount.
        */
       public com.google.protobuf.ByteString
@@ -7606,7 +7606,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
        * @param value The tokenInAmount to set.
        * @return This builder for chaining.
        */
@@ -7619,7 +7619,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearTokenInAmount() {
@@ -7629,7 +7629,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
        * @param value The bytes for tokenInAmount to set.
        * @return This builder for chaining.
        */
@@ -7751,7 +7751,7 @@ public final class TxProto {
      * ];
      * </pre>
      *
-     * <code>string share_out_min_amount = 4 [json_name = "shareOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_min_amount&#92;""];</code>
+     * <code>string share_out_min_amount = 4 [json_name = "shareOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_min_amount&#92;""];</code>
      * @return The shareOutMinAmount.
      */
     java.lang.String getShareOutMinAmount();
@@ -7763,7 +7763,7 @@ public final class TxProto {
      * ];
      * </pre>
      *
-     * <code>string share_out_min_amount = 4 [json_name = "shareOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_min_amount&#92;""];</code>
+     * <code>string share_out_min_amount = 4 [json_name = "shareOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_min_amount&#92;""];</code>
      * @return The bytes for shareOutMinAmount.
      */
     com.google.protobuf.ByteString
@@ -7898,7 +7898,7 @@ public final class TxProto {
      * ];
      * </pre>
      *
-     * <code>string share_out_min_amount = 4 [json_name = "shareOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_min_amount&#92;""];</code>
+     * <code>string share_out_min_amount = 4 [json_name = "shareOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_min_amount&#92;""];</code>
      * @return The shareOutMinAmount.
      */
     @java.lang.Override
@@ -7922,7 +7922,7 @@ public final class TxProto {
      * ];
      * </pre>
      *
-     * <code>string share_out_min_amount = 4 [json_name = "shareOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_min_amount&#92;""];</code>
+     * <code>string share_out_min_amount = 4 [json_name = "shareOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_min_amount&#92;""];</code>
      * @return The bytes for shareOutMinAmount.
      */
     @java.lang.Override
@@ -8587,7 +8587,7 @@ public final class TxProto {
        * ];
        * </pre>
        *
-       * <code>string share_out_min_amount = 4 [json_name = "shareOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_min_amount&#92;""];</code>
+       * <code>string share_out_min_amount = 4 [json_name = "shareOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_min_amount&#92;""];</code>
        * @return The shareOutMinAmount.
        */
       public java.lang.String getShareOutMinAmount() {
@@ -8610,7 +8610,7 @@ public final class TxProto {
        * ];
        * </pre>
        *
-       * <code>string share_out_min_amount = 4 [json_name = "shareOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_min_amount&#92;""];</code>
+       * <code>string share_out_min_amount = 4 [json_name = "shareOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_min_amount&#92;""];</code>
        * @return The bytes for shareOutMinAmount.
        */
       public com.google.protobuf.ByteString
@@ -8634,7 +8634,7 @@ public final class TxProto {
        * ];
        * </pre>
        *
-       * <code>string share_out_min_amount = 4 [json_name = "shareOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_min_amount&#92;""];</code>
+       * <code>string share_out_min_amount = 4 [json_name = "shareOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_min_amount&#92;""];</code>
        * @param value The shareOutMinAmount to set.
        * @return This builder for chaining.
        */
@@ -8654,7 +8654,7 @@ public final class TxProto {
        * ];
        * </pre>
        *
-       * <code>string share_out_min_amount = 4 [json_name = "shareOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_min_amount&#92;""];</code>
+       * <code>string share_out_min_amount = 4 [json_name = "shareOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_min_amount&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearShareOutMinAmount() {
@@ -8671,7 +8671,7 @@ public final class TxProto {
        * ];
        * </pre>
        *
-       * <code>string share_out_min_amount = 4 [json_name = "shareOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_min_amount&#92;""];</code>
+       * <code>string share_out_min_amount = 4 [json_name = "shareOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_min_amount&#92;""];</code>
        * @param value The bytes for shareOutMinAmount to set.
        * @return This builder for chaining.
        */
@@ -8753,12 +8753,12 @@ public final class TxProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+     * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
      * @return The shareOutAmount.
      */
     java.lang.String getShareOutAmount();
     /**
-     * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+     * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
      * @return The bytes for shareOutAmount.
      */
     com.google.protobuf.ByteString
@@ -8804,7 +8804,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object shareOutAmount_ = "";
     /**
-     * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+     * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
      * @return The shareOutAmount.
      */
     @java.lang.Override
@@ -8821,7 +8821,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+     * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
      * @return The bytes for shareOutAmount.
      */
     @java.lang.Override
@@ -9167,7 +9167,7 @@ public final class TxProto {
 
       private java.lang.Object shareOutAmount_ = "";
       /**
-       * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+       * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
        * @return The shareOutAmount.
        */
       public java.lang.String getShareOutAmount() {
@@ -9183,7 +9183,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+       * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
        * @return The bytes for shareOutAmount.
        */
       public com.google.protobuf.ByteString
@@ -9200,7 +9200,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+       * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
        * @param value The shareOutAmount to set.
        * @return This builder for chaining.
        */
@@ -9213,7 +9213,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+       * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearShareOutAmount() {
@@ -9223,7 +9223,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+       * <code>string share_out_amount = 1 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
        * @param value The bytes for shareOutAmount to set.
        * @return This builder for chaining.
        */
@@ -9335,24 +9335,24 @@ public final class TxProto {
         getTokenInDenomBytes();
 
     /**
-     * <code>string share_out_amount = 4 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+     * <code>string share_out_amount = 4 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
      * @return The shareOutAmount.
      */
     java.lang.String getShareOutAmount();
     /**
-     * <code>string share_out_amount = 4 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+     * <code>string share_out_amount = 4 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
      * @return The bytes for shareOutAmount.
      */
     com.google.protobuf.ByteString
         getShareOutAmountBytes();
 
     /**
-     * <code>string token_in_max_amount = 5 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
+     * <code>string token_in_max_amount = 5 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
      * @return The tokenInMaxAmount.
      */
     java.lang.String getTokenInMaxAmount();
     /**
-     * <code>string token_in_max_amount = 5 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
+     * <code>string token_in_max_amount = 5 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
      * @return The bytes for tokenInMaxAmount.
      */
     com.google.protobuf.ByteString
@@ -9494,7 +9494,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object shareOutAmount_ = "";
     /**
-     * <code>string share_out_amount = 4 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+     * <code>string share_out_amount = 4 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
      * @return The shareOutAmount.
      */
     @java.lang.Override
@@ -9511,7 +9511,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string share_out_amount = 4 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+     * <code>string share_out_amount = 4 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
      * @return The bytes for shareOutAmount.
      */
     @java.lang.Override
@@ -9533,7 +9533,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object tokenInMaxAmount_ = "";
     /**
-     * <code>string token_in_max_amount = 5 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
+     * <code>string token_in_max_amount = 5 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
      * @return The tokenInMaxAmount.
      */
     @java.lang.Override
@@ -9550,7 +9550,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string token_in_max_amount = 5 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
+     * <code>string token_in_max_amount = 5 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
      * @return The bytes for tokenInMaxAmount.
      */
     @java.lang.Override
@@ -10172,7 +10172,7 @@ public final class TxProto {
 
       private java.lang.Object shareOutAmount_ = "";
       /**
-       * <code>string share_out_amount = 4 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+       * <code>string share_out_amount = 4 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
        * @return The shareOutAmount.
        */
       public java.lang.String getShareOutAmount() {
@@ -10188,7 +10188,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string share_out_amount = 4 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+       * <code>string share_out_amount = 4 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
        * @return The bytes for shareOutAmount.
        */
       public com.google.protobuf.ByteString
@@ -10205,7 +10205,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string share_out_amount = 4 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+       * <code>string share_out_amount = 4 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
        * @param value The shareOutAmount to set.
        * @return This builder for chaining.
        */
@@ -10218,7 +10218,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string share_out_amount = 4 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+       * <code>string share_out_amount = 4 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearShareOutAmount() {
@@ -10228,7 +10228,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string share_out_amount = 4 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
+       * <code>string share_out_amount = 4 [json_name = "shareOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_out_amount&#92;""];</code>
        * @param value The bytes for shareOutAmount to set.
        * @return This builder for chaining.
        */
@@ -10244,7 +10244,7 @@ public final class TxProto {
 
       private java.lang.Object tokenInMaxAmount_ = "";
       /**
-       * <code>string token_in_max_amount = 5 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
+       * <code>string token_in_max_amount = 5 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
        * @return The tokenInMaxAmount.
        */
       public java.lang.String getTokenInMaxAmount() {
@@ -10260,7 +10260,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string token_in_max_amount = 5 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
+       * <code>string token_in_max_amount = 5 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
        * @return The bytes for tokenInMaxAmount.
        */
       public com.google.protobuf.ByteString
@@ -10277,7 +10277,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string token_in_max_amount = 5 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
+       * <code>string token_in_max_amount = 5 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
        * @param value The tokenInMaxAmount to set.
        * @return This builder for chaining.
        */
@@ -10290,7 +10290,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string token_in_max_amount = 5 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
+       * <code>string token_in_max_amount = 5 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearTokenInMaxAmount() {
@@ -10300,7 +10300,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string token_in_max_amount = 5 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
+       * <code>string token_in_max_amount = 5 [json_name = "tokenInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_max_amount&#92;""];</code>
        * @param value The bytes for tokenInMaxAmount to set.
        * @return This builder for chaining.
        */
@@ -10382,12 +10382,12 @@ public final class TxProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
      * @return The tokenInAmount.
      */
     java.lang.String getTokenInAmount();
     /**
-     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
      * @return The bytes for tokenInAmount.
      */
     com.google.protobuf.ByteString
@@ -10433,7 +10433,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object tokenInAmount_ = "";
     /**
-     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
      * @return The tokenInAmount.
      */
     @java.lang.Override
@@ -10450,7 +10450,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+     * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
      * @return The bytes for tokenInAmount.
      */
     @java.lang.Override
@@ -10796,7 +10796,7 @@ public final class TxProto {
 
       private java.lang.Object tokenInAmount_ = "";
       /**
-       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
        * @return The tokenInAmount.
        */
       public java.lang.String getTokenInAmount() {
@@ -10812,7 +10812,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
        * @return The bytes for tokenInAmount.
        */
       public com.google.protobuf.ByteString
@@ -10829,7 +10829,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
        * @param value The tokenInAmount to set.
        * @return This builder for chaining.
        */
@@ -10842,7 +10842,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearTokenInAmount() {
@@ -10852,7 +10852,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
+       * <code>string token_in_amount = 1 [json_name = "tokenInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_in_amount&#92;""];</code>
        * @param value The bytes for tokenInAmount to set.
        * @return This builder for chaining.
        */
@@ -10964,24 +10964,24 @@ public final class TxProto {
         getTokenOutDenomBytes();
 
     /**
-     * <code>string share_in_amount = 4 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+     * <code>string share_in_amount = 4 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
      * @return The shareInAmount.
      */
     java.lang.String getShareInAmount();
     /**
-     * <code>string share_in_amount = 4 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+     * <code>string share_in_amount = 4 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
      * @return The bytes for shareInAmount.
      */
     com.google.protobuf.ByteString
         getShareInAmountBytes();
 
     /**
-     * <code>string token_out_min_amount = 5 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
+     * <code>string token_out_min_amount = 5 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
      * @return The tokenOutMinAmount.
      */
     java.lang.String getTokenOutMinAmount();
     /**
-     * <code>string token_out_min_amount = 5 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
+     * <code>string token_out_min_amount = 5 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
      * @return The bytes for tokenOutMinAmount.
      */
     com.google.protobuf.ByteString
@@ -11123,7 +11123,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object shareInAmount_ = "";
     /**
-     * <code>string share_in_amount = 4 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+     * <code>string share_in_amount = 4 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
      * @return The shareInAmount.
      */
     @java.lang.Override
@@ -11140,7 +11140,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string share_in_amount = 4 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+     * <code>string share_in_amount = 4 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
      * @return The bytes for shareInAmount.
      */
     @java.lang.Override
@@ -11162,7 +11162,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object tokenOutMinAmount_ = "";
     /**
-     * <code>string token_out_min_amount = 5 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
+     * <code>string token_out_min_amount = 5 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
      * @return The tokenOutMinAmount.
      */
     @java.lang.Override
@@ -11179,7 +11179,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string token_out_min_amount = 5 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
+     * <code>string token_out_min_amount = 5 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
      * @return The bytes for tokenOutMinAmount.
      */
     @java.lang.Override
@@ -11801,7 +11801,7 @@ public final class TxProto {
 
       private java.lang.Object shareInAmount_ = "";
       /**
-       * <code>string share_in_amount = 4 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+       * <code>string share_in_amount = 4 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
        * @return The shareInAmount.
        */
       public java.lang.String getShareInAmount() {
@@ -11817,7 +11817,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string share_in_amount = 4 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+       * <code>string share_in_amount = 4 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
        * @return The bytes for shareInAmount.
        */
       public com.google.protobuf.ByteString
@@ -11834,7 +11834,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string share_in_amount = 4 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+       * <code>string share_in_amount = 4 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
        * @param value The shareInAmount to set.
        * @return This builder for chaining.
        */
@@ -11847,7 +11847,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string share_in_amount = 4 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+       * <code>string share_in_amount = 4 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearShareInAmount() {
@@ -11857,7 +11857,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string share_in_amount = 4 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+       * <code>string share_in_amount = 4 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
        * @param value The bytes for shareInAmount to set.
        * @return This builder for chaining.
        */
@@ -11873,7 +11873,7 @@ public final class TxProto {
 
       private java.lang.Object tokenOutMinAmount_ = "";
       /**
-       * <code>string token_out_min_amount = 5 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
+       * <code>string token_out_min_amount = 5 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
        * @return The tokenOutMinAmount.
        */
       public java.lang.String getTokenOutMinAmount() {
@@ -11889,7 +11889,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string token_out_min_amount = 5 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
+       * <code>string token_out_min_amount = 5 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
        * @return The bytes for tokenOutMinAmount.
        */
       public com.google.protobuf.ByteString
@@ -11906,7 +11906,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string token_out_min_amount = 5 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
+       * <code>string token_out_min_amount = 5 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
        * @param value The tokenOutMinAmount to set.
        * @return This builder for chaining.
        */
@@ -11919,7 +11919,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string token_out_min_amount = 5 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
+       * <code>string token_out_min_amount = 5 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearTokenOutMinAmount() {
@@ -11929,7 +11929,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string token_out_min_amount = 5 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
+       * <code>string token_out_min_amount = 5 [json_name = "tokenOutMinAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_min_amount&#92;""];</code>
        * @param value The bytes for tokenOutMinAmount to set.
        * @return This builder for chaining.
        */
@@ -12011,12 +12011,12 @@ public final class TxProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
      * @return The tokenOutAmount.
      */
     java.lang.String getTokenOutAmount();
     /**
-     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
      * @return The bytes for tokenOutAmount.
      */
     com.google.protobuf.ByteString
@@ -12062,7 +12062,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object tokenOutAmount_ = "";
     /**
-     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
      * @return The tokenOutAmount.
      */
     @java.lang.Override
@@ -12079,7 +12079,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+     * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
      * @return The bytes for tokenOutAmount.
      */
     @java.lang.Override
@@ -12425,7 +12425,7 @@ public final class TxProto {
 
       private java.lang.Object tokenOutAmount_ = "";
       /**
-       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
        * @return The tokenOutAmount.
        */
       public java.lang.String getTokenOutAmount() {
@@ -12441,7 +12441,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
        * @return The bytes for tokenOutAmount.
        */
       public com.google.protobuf.ByteString
@@ -12458,7 +12458,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
        * @param value The tokenOutAmount to set.
        * @return This builder for chaining.
        */
@@ -12471,7 +12471,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearTokenOutAmount() {
@@ -12481,7 +12481,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
+       * <code>string token_out_amount = 1 [json_name = "tokenOutAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"token_out_amount&#92;""];</code>
        * @param value The bytes for tokenOutAmount to set.
        * @return This builder for chaining.
        */
@@ -12596,12 +12596,12 @@ public final class TxProto {
     com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTokenOutOrBuilder();
 
     /**
-     * <code>string share_in_max_amount = 4 [json_name = "shareInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_max_amount&#92;""];</code>
+     * <code>string share_in_max_amount = 4 [json_name = "shareInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_max_amount&#92;""];</code>
      * @return The shareInMaxAmount.
      */
     java.lang.String getShareInMaxAmount();
     /**
-     * <code>string share_in_max_amount = 4 [json_name = "shareInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_max_amount&#92;""];</code>
+     * <code>string share_in_max_amount = 4 [json_name = "shareInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_max_amount&#92;""];</code>
      * @return The bytes for shareInMaxAmount.
      */
     com.google.protobuf.ByteString
@@ -12728,7 +12728,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object shareInMaxAmount_ = "";
     /**
-     * <code>string share_in_max_amount = 4 [json_name = "shareInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_max_amount&#92;""];</code>
+     * <code>string share_in_max_amount = 4 [json_name = "shareInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_max_amount&#92;""];</code>
      * @return The shareInMaxAmount.
      */
     @java.lang.Override
@@ -12745,7 +12745,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string share_in_max_amount = 4 [json_name = "shareInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_max_amount&#92;""];</code>
+     * <code>string share_in_max_amount = 4 [json_name = "shareInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_max_amount&#92;""];</code>
      * @return The bytes for shareInMaxAmount.
      */
     @java.lang.Override
@@ -13402,7 +13402,7 @@ public final class TxProto {
 
       private java.lang.Object shareInMaxAmount_ = "";
       /**
-       * <code>string share_in_max_amount = 4 [json_name = "shareInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_max_amount&#92;""];</code>
+       * <code>string share_in_max_amount = 4 [json_name = "shareInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_max_amount&#92;""];</code>
        * @return The shareInMaxAmount.
        */
       public java.lang.String getShareInMaxAmount() {
@@ -13418,7 +13418,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string share_in_max_amount = 4 [json_name = "shareInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_max_amount&#92;""];</code>
+       * <code>string share_in_max_amount = 4 [json_name = "shareInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_max_amount&#92;""];</code>
        * @return The bytes for shareInMaxAmount.
        */
       public com.google.protobuf.ByteString
@@ -13435,7 +13435,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string share_in_max_amount = 4 [json_name = "shareInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_max_amount&#92;""];</code>
+       * <code>string share_in_max_amount = 4 [json_name = "shareInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_max_amount&#92;""];</code>
        * @param value The shareInMaxAmount to set.
        * @return This builder for chaining.
        */
@@ -13448,7 +13448,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string share_in_max_amount = 4 [json_name = "shareInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_max_amount&#92;""];</code>
+       * <code>string share_in_max_amount = 4 [json_name = "shareInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_max_amount&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearShareInMaxAmount() {
@@ -13458,7 +13458,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string share_in_max_amount = 4 [json_name = "shareInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_max_amount&#92;""];</code>
+       * <code>string share_in_max_amount = 4 [json_name = "shareInMaxAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_max_amount&#92;""];</code>
        * @param value The bytes for shareInMaxAmount to set.
        * @return This builder for chaining.
        */
@@ -13540,12 +13540,12 @@ public final class TxProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string share_in_amount = 1 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+     * <code>string share_in_amount = 1 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
      * @return The shareInAmount.
      */
     java.lang.String getShareInAmount();
     /**
-     * <code>string share_in_amount = 1 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+     * <code>string share_in_amount = 1 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
      * @return The bytes for shareInAmount.
      */
     com.google.protobuf.ByteString
@@ -13591,7 +13591,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object shareInAmount_ = "";
     /**
-     * <code>string share_in_amount = 1 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+     * <code>string share_in_amount = 1 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
      * @return The shareInAmount.
      */
     @java.lang.Override
@@ -13608,7 +13608,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string share_in_amount = 1 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+     * <code>string share_in_amount = 1 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
      * @return The bytes for shareInAmount.
      */
     @java.lang.Override
@@ -13954,7 +13954,7 @@ public final class TxProto {
 
       private java.lang.Object shareInAmount_ = "";
       /**
-       * <code>string share_in_amount = 1 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+       * <code>string share_in_amount = 1 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
        * @return The shareInAmount.
        */
       public java.lang.String getShareInAmount() {
@@ -13970,7 +13970,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string share_in_amount = 1 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+       * <code>string share_in_amount = 1 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
        * @return The bytes for shareInAmount.
        */
       public com.google.protobuf.ByteString
@@ -13987,7 +13987,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string share_in_amount = 1 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+       * <code>string share_in_amount = 1 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
        * @param value The shareInAmount to set.
        * @return This builder for chaining.
        */
@@ -14000,7 +14000,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string share_in_amount = 1 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+       * <code>string share_in_amount = 1 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearShareInAmount() {
@@ -14010,7 +14010,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string share_in_amount = 1 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
+       * <code>string share_in_amount = 1 [json_name = "shareInAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"share_in_amount&#92;""];</code>
        * @param value The bytes for shareInAmount to set.
        * @return This builder for chaining.
        */
@@ -14180,146 +14180,142 @@ public final class TxProto {
       ".gamm.v1beta1\032\024gogoproto/gogo.proto\032\021ami" +
       "no/amino.proto\032\036cosmos/base/v1beta1/coin" +
       ".proto\032,osmosis/poolmanager/v1beta1/swap" +
-      "_route.proto\"\332\002\n\013MsgJoinPool\022)\n\006sender\030\001" +
-      " \001(\tB\021\362\336\037\ryaml:\"sender\"R\006sender\022+\n\007pool_" +
-      "id\030\002 \001(\004B\022\362\336\037\016yaml:\"pool_id\"R\006poolId\022r\n\020" +
-      "share_out_amount\030\003 \001(\tBH\310\336\037\000\332\336\037&github.c" +
-      "om/cosmos/cosmos-sdk/types.Int\362\336\037\026yaml:\"" +
-      "pool_amount_out\"R\016shareOutAmount\022b\n\rtoke" +
-      "n_in_maxs\030\004 \003(\0132\031.cosmos.base.v1beta1.Co" +
-      "inB#\310\336\037\000\362\336\037\033yaml:\"token_in_max_amounts\"R" +
-      "\013tokenInMaxs:\033\212\347\260*\026osmosis/gamm/join-poo" +
-      "l\"\331\001\n\023MsgJoinPoolResponse\022s\n\020share_out_a" +
-      "mount\030\001 \001(\tBI\310\336\037\000\332\336\037&github.com/cosmos/c" +
-      "osmos-sdk/types.Int\362\336\037\027yaml:\"share_out_a" +
-      "mount\"R\016shareOutAmount\022M\n\010token_in\030\002 \003(\013" +
-      "2\031.cosmos.base.v1beta1.CoinB\027\310\336\037\000\362\336\037\017yam" +
-      "l:\"token_in\"R\007tokenIn\"\333\002\n\013MsgExitPool\022)\n" +
-      "\006sender\030\001 \001(\tB\021\362\336\037\ryaml:\"sender\"R\006sender" +
-      "\022+\n\007pool_id\030\002 \001(\004B\022\362\336\037\016yaml:\"pool_id\"R\006p" +
-      "oolId\022p\n\017share_in_amount\030\003 \001(\tBH\310\336\037\000\332\336\037&" +
-      "github.com/cosmos/cosmos-sdk/types.Int\362\336" +
-      "\037\026yaml:\"share_in_amount\"R\rshareInAmount\022" +
-      "e\n\016token_out_mins\030\004 \003(\0132\031.cosmos.base.v1" +
-      "beta1.CoinB$\310\336\037\000\362\336\037\034yaml:\"token_out_min_" +
-      "amounts\"R\014tokenOutMins:\033\212\347\260*\026osmosis/gam" +
-      "m/exit-pool\"g\n\023MsgExitPoolResponse\022P\n\tto" +
-      "ken_out\030\001 \003(\0132\031.cosmos.base.v1beta1.Coin" +
-      "B\030\310\336\037\000\362\336\037\020yaml:\"token_out\"R\010tokenOut\"\373\002\n" +
-      "\024MsgSwapExactAmountIn\022)\n\006sender\030\001 \001(\tB\021\362" +
-      "\336\037\ryaml:\"sender\"R\006sender\022L\n\006routes\030\002 \003(\013" +
-      "2..osmosis.poolmanager.v1beta1.SwapAmoun" +
-      "tInRouteB\004\310\336\037\000R\006routes\022M\n\010token_in\030\003 \001(\013" +
-      "2\031.cosmos.base.v1beta1.CoinB\027\310\336\037\000\362\336\037\017yam" +
-      "l:\"token_in\"R\007tokenIn\022~\n\024token_out_min_a" +
-      "mount\030\004 \001(\tBM\310\336\037\000\332\336\037&github.com/cosmos/c" +
-      "osmos-sdk/types.Int\362\336\037\033yaml:\"token_out_m" +
-      "in_amount\"R\021tokenOutMinAmount:\033\212\347\260*\026osmo" +
-      "sis/gamm/exit-pool\"\223\001\n\034MsgSwapExactAmoun" +
-      "tInResponse\022s\n\020token_out_amount\030\001 \001(\tBI\310" +
-      "\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/type" +
-      "s.Int\362\336\037\027yaml:\"token_out_amount\"R\016tokenO" +
-      "utAmount\"\211\003\n\025MsgSwapExactAmountOut\022)\n\006se" +
-      "nder\030\001 \001(\tB\021\362\336\037\ryaml:\"sender\"R\006sender\022M\n" +
-      "\006routes\030\002 \003(\0132/.osmosis.poolmanager.v1be" +
-      "ta1.SwapAmountOutRouteB\004\310\336\037\000R\006routes\022{\n\023" +
-      "token_in_max_amount\030\003 \001(\tBL\310\336\037\000\332\336\037&githu" +
-      "b.com/cosmos/cosmos-sdk/types.Int\362\336\037\032yam" +
-      "l:\"token_in_max_amount\"R\020tokenInMaxAmoun" +
-      "t\022P\n\ttoken_out\030\004 \001(\0132\031.cosmos.base.v1bet" +
-      "a1.CoinB\030\310\336\037\000\362\336\037\020yaml:\"token_out\"R\010token" +
-      "Out:\'\212\347\260*\"osmosis/gamm/swap-exact-amount" +
-      "-out\"\221\001\n\035MsgSwapExactAmountOutResponse\022p" +
-      "\n\017token_in_amount\030\001 \001(\tBH\310\336\037\000\332\336\037&github." +
-      "com/cosmos/cosmos-sdk/types.Int\362\336\037\026yaml:" +
-      "\"token_in_amount\"R\rtokenInAmount\"\360\002\n\031Msg" +
-      "JoinSwapExternAmountIn\022)\n\006sender\030\001 \001(\tB\021" +
-      "\362\336\037\ryaml:\"sender\"R\006sender\022+\n\007pool_id\030\002 \001" +
-      "(\004B\022\362\336\037\016yaml:\"pool_id\"R\006poolId\022M\n\010token_" +
-      "in\030\003 \001(\0132\031.cosmos.base.v1beta1.CoinB\027\310\336\037" +
-      "\000\362\336\037\017yaml:\"token_in\"R\007tokenIn\022~\n\024share_o" +
-      "ut_min_amount\030\004 \001(\tBM\310\336\037\000\332\336\037&github.com/" +
-      "cosmos/cosmos-sdk/types.Int\362\336\037\033yaml:\"sha" +
-      "re_out_min_amount\"R\021shareOutMinAmount:,\212" +
-      "\347\260*\'osmosis/gamm/join-swap-extern-amount" +
-      "-in\"\230\001\n!MsgJoinSwapExternAmountInRespons" +
-      "e\022s\n\020share_out_amount\030\001 \001(\tBI\310\336\037\000\332\336\037&git" +
-      "hub.com/cosmos/cosmos-sdk/types.Int\362\336\037\027y" +
-      "aml:\"share_out_amount\"R\016shareOutAmount\"\324" +
-      "\003\n\031MsgJoinSwapShareAmountOut\022)\n\006sender\030\001" +
-      " \001(\tB\021\362\336\037\ryaml:\"sender\"R\006sender\022+\n\007pool_" +
-      "id\030\002 \001(\004B\022\362\336\037\016yaml:\"pool_id\"R\006poolId\022?\n\016" +
-      "token_in_denom\030\003 \001(\tB\031\362\336\037\025yaml:\"token_in" +
-      "_denom\"R\014tokenInDenom\022s\n\020share_out_amoun" +
-      "t\030\004 \001(\tBI\310\336\037\000\332\336\037&github.com/cosmos/cosmo" +
-      "s-sdk/types.Int\362\336\037\027yaml:\"share_out_amoun" +
-      "t\"R\016shareOutAmount\022{\n\023token_in_max_amoun" +
-      "t\030\005 \001(\tBL\310\336\037\000\332\336\037&github.com/cosmos/cosmo" +
-      "s-sdk/types.Int\362\336\037\032yaml:\"token_in_max_am" +
-      "ount\"R\020tokenInMaxAmount:,\212\347\260*\'osmosis/ga" +
-      "mm/join-swap-share-amount-out\"\225\001\n!MsgJoi" +
-      "nSwapShareAmountOutResponse\022p\n\017token_in_" +
-      "amount\030\001 \001(\tBH\310\336\037\000\332\336\037&github.com/cosmos/" +
-      "cosmos-sdk/types.Int\362\336\037\026yaml:\"token_in_a" +
-      "mount\"R\rtokenInAmount\"\325\003\n\030MsgExitSwapSha" +
-      "reAmountIn\022)\n\006sender\030\001 \001(\tB\021\362\336\037\ryaml:\"se" +
-      "nder\"R\006sender\022+\n\007pool_id\030\002 \001(\004B\022\362\336\037\016yaml" +
-      ":\"pool_id\"R\006poolId\022B\n\017token_out_denom\030\003 " +
-      "\001(\tB\032\362\336\037\026yaml:\"token_out_denom\"R\rtokenOu" +
-      "tDenom\022p\n\017share_in_amount\030\004 \001(\tBH\310\336\037\000\332\336\037" +
-      "&github.com/cosmos/cosmos-sdk/types.Int\362" +
-      "\336\037\026yaml:\"share_in_amount\"R\rshareInAmount" +
-      "\022~\n\024token_out_min_amount\030\005 \001(\tBM\310\336\037\000\332\336\037&" +
-      "github.com/cosmos/cosmos-sdk/types.Int\362\336" +
+      "_route.proto\032\027cosmos/msg/v1/msg.proto\"\324\002" +
+      "\n\013MsgJoinPool\022)\n\006sender\030\001 \001(\tB\021\362\336\037\ryaml:" +
+      "\"sender\"R\006sender\022+\n\007pool_id\030\002 \001(\004B\022\362\336\037\016y" +
+      "aml:\"pool_id\"R\006poolId\022a\n\020share_out_amoun" +
+      "t\030\003 \001(\tB7\310\336\037\000\332\336\037\025cosmossdk.io/math.Int\362\336" +
+      "\037\026yaml:\"pool_amount_out\"R\016shareOutAmount" +
+      "\022b\n\rtoken_in_maxs\030\004 \003(\0132\031.cosmos.base.v1" +
+      "beta1.CoinB#\310\336\037\000\362\336\037\033yaml:\"token_in_max_a" +
+      "mounts\"R\013tokenInMaxs:&\202\347\260*\006sender\212\347\260*\026os" +
+      "mosis/gamm/join-pool\"\310\001\n\023MsgJoinPoolResp" +
+      "onse\022b\n\020share_out_amount\030\001 \001(\tB8\310\336\037\000\332\336\037\025" +
+      "cosmossdk.io/math.Int\362\336\037\027yaml:\"share_out" +
+      "_amount\"R\016shareOutAmount\022M\n\010token_in\030\002 \003" +
+      "(\0132\031.cosmos.base.v1beta1.CoinB\027\310\336\037\000\362\336\037\017y" +
+      "aml:\"token_in\"R\007tokenIn\"\325\002\n\013MsgExitPool\022" +
+      ")\n\006sender\030\001 \001(\tB\021\362\336\037\ryaml:\"sender\"R\006send" +
+      "er\022+\n\007pool_id\030\002 \001(\004B\022\362\336\037\016yaml:\"pool_id\"R" +
+      "\006poolId\022_\n\017share_in_amount\030\003 \001(\tB7\310\336\037\000\332\336" +
+      "\037\025cosmossdk.io/math.Int\362\336\037\026yaml:\"share_i" +
+      "n_amount\"R\rshareInAmount\022e\n\016token_out_mi" +
+      "ns\030\004 \003(\0132\031.cosmos.base.v1beta1.CoinB$\310\336\037" +
+      "\000\362\336\037\034yaml:\"token_out_min_amounts\"R\014token" +
+      "OutMins:&\202\347\260*\006sender\212\347\260*\026osmosis/gamm/ex" +
+      "it-pool\"g\n\023MsgExitPoolResponse\022P\n\ttoken_" +
+      "out\030\001 \003(\0132\031.cosmos.base.v1beta1.CoinB\030\310\336" +
+      "\037\000\362\336\037\020yaml:\"token_out\"R\010tokenOut\"\200\003\n\024Msg" +
+      "SwapExactAmountIn\022)\n\006sender\030\001 \001(\tB\021\362\336\037\ry" +
+      "aml:\"sender\"R\006sender\022L\n\006routes\030\002 \003(\0132..o" +
+      "smosis.poolmanager.v1beta1.SwapAmountInR" +
+      "outeB\004\310\336\037\000R\006routes\022M\n\010token_in\030\003 \001(\0132\031.c" +
+      "osmos.base.v1beta1.CoinB\027\310\336\037\000\362\336\037\017yaml:\"t" +
+      "oken_in\"R\007tokenIn\022m\n\024token_out_min_amoun" +
+      "t\030\004 \001(\tB<\310\336\037\000\332\336\037\025cosmossdk.io/math.Int\362\336" +
       "\037\033yaml:\"token_out_min_amount\"R\021tokenOutM" +
-      "inAmount:+\212\347\260*&osmosis/gamm/exit-swap-sh" +
-      "are-amount-in\"\227\001\n MsgExitSwapShareAmount" +
-      "InResponse\022s\n\020token_out_amount\030\001 \001(\tBI\310\336" +
-      "\037\000\332\336\037&github.com/cosmos/cosmos-sdk/types" +
-      ".Int\362\336\037\027yaml:\"token_out_amount\"R\016tokenOu" +
-      "tAmount\"\362\002\n\032MsgExitSwapExternAmountOut\022)" +
-      "\n\006sender\030\001 \001(\tB\021\362\336\037\ryaml:\"sender\"R\006sende" +
-      "r\022+\n\007pool_id\030\002 \001(\004B\022\362\336\037\016yaml:\"pool_id\"R\006" +
-      "poolId\022P\n\ttoken_out\030\003 \001(\0132\031.cosmos.base." +
-      "v1beta1.CoinB\030\310\336\037\000\362\336\037\020yaml:\"token_out\"R\010" +
-      "tokenOut\022{\n\023share_in_max_amount\030\004 \001(\tBL\310" +
-      "\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/type" +
-      "s.Int\362\336\037\032yaml:\"share_in_max_amount\"R\020sha" +
-      "reInMaxAmount:-\212\347\260*(osmosis/gamm/exit-sw" +
-      "ap-extern-amount-out\"\226\001\n\"MsgExitSwapExte" +
-      "rnAmountOutResponse\022p\n\017share_in_amount\030\001" +
-      " \001(\tBH\310\336\037\000\332\336\037&github.com/cosmos/cosmos-s" +
-      "dk/types.Int\362\336\037\026yaml:\"share_in_amount\"R\r" +
-      "shareInAmount2\271\007\n\003Msg\022X\n\010JoinPool\022!.osmo" +
-      "sis.gamm.v1beta1.MsgJoinPool\032).osmosis.g" +
-      "amm.v1beta1.MsgJoinPoolResponse\022X\n\010ExitP" +
-      "ool\022!.osmosis.gamm.v1beta1.MsgExitPool\032)" +
-      ".osmosis.gamm.v1beta1.MsgExitPoolRespons" +
-      "e\022s\n\021SwapExactAmountIn\022*.osmosis.gamm.v1" +
-      "beta1.MsgSwapExactAmountIn\0322.osmosis.gam" +
-      "m.v1beta1.MsgSwapExactAmountInResponse\022v" +
-      "\n\022SwapExactAmountOut\022+.osmosis.gamm.v1be" +
-      "ta1.MsgSwapExactAmountOut\0323.osmosis.gamm" +
-      ".v1beta1.MsgSwapExactAmountOutResponse\022\202" +
-      "\001\n\026JoinSwapExternAmountIn\022/.osmosis.gamm" +
-      ".v1beta1.MsgJoinSwapExternAmountIn\0327.osm" +
-      "osis.gamm.v1beta1.MsgJoinSwapExternAmoun" +
-      "tInResponse\022\202\001\n\026JoinSwapShareAmountOut\022/" +
-      ".osmosis.gamm.v1beta1.MsgJoinSwapShareAm" +
-      "ountOut\0327.osmosis.gamm.v1beta1.MsgJoinSw" +
-      "apShareAmountOutResponse\022\205\001\n\027ExitSwapExt" +
-      "ernAmountOut\0220.osmosis.gamm.v1beta1.MsgE" +
-      "xitSwapExternAmountOut\0328.osmosis.gamm.v1" +
-      "beta1.MsgExitSwapExternAmountOutResponse" +
-      "\022\177\n\025ExitSwapShareAmountIn\022..osmosis.gamm" +
-      ".v1beta1.MsgExitSwapShareAmountIn\0326.osmo" +
-      "sis.gamm.v1beta1.MsgExitSwapShareAmountI" +
-      "nResponseB\305\001\n\030com.osmosis.gamm.v1beta1B\007" +
-      "TxProtoZ0github.com/osmosis-labs/osmosis" +
-      "/v15/x/gamm/types\242\002\003OGX\252\002\024Osmosis.Gamm.V" +
-      "1beta1\312\002\024Osmosis\\Gamm\\V1beta1\342\002 Osmosis\\" +
-      "Gamm\\V1beta1\\GPBMetadata\352\002\026Osmosis::Gamm" +
-      "::V1beta1b\006proto3"
+      "inAmount:1\202\347\260*\006sender\212\347\260*!osmosis/gamm/s" +
+      "wap-exact-amount-in\"\202\001\n\034MsgSwapExactAmou" +
+      "ntInResponse\022b\n\020token_out_amount\030\001 \001(\tB8" +
+      "\310\336\037\000\332\336\037\025cosmossdk.io/math.Int\362\336\037\027yaml:\"t" +
+      "oken_out_amount\"R\016tokenOutAmount\"\203\003\n\025Msg" +
+      "SwapExactAmountOut\022)\n\006sender\030\001 \001(\tB\021\362\336\037\r" +
+      "yaml:\"sender\"R\006sender\022M\n\006routes\030\002 \003(\0132/." +
+      "osmosis.poolmanager.v1beta1.SwapAmountOu" +
+      "tRouteB\004\310\336\037\000R\006routes\022j\n\023token_in_max_amo" +
+      "unt\030\003 \001(\tB;\310\336\037\000\332\336\037\025cosmossdk.io/math.Int" +
+      "\362\336\037\032yaml:\"token_in_max_amount\"R\020tokenInM" +
+      "axAmount\022P\n\ttoken_out\030\004 \001(\0132\031.cosmos.bas" +
+      "e.v1beta1.CoinB\030\310\336\037\000\362\336\037\020yaml:\"token_out\"" +
+      "R\010tokenOut:2\202\347\260*\006sender\212\347\260*\"osmosis/gamm" +
+      "/swap-exact-amount-out\"\200\001\n\035MsgSwapExactA" +
+      "mountOutResponse\022_\n\017token_in_amount\030\001 \001(" +
+      "\tB7\310\336\037\000\332\336\037\025cosmossdk.io/math.Int\362\336\037\026yaml" +
+      ":\"token_in_amount\"R\rtokenInAmount\"\352\002\n\031Ms" +
+      "gJoinSwapExternAmountIn\022)\n\006sender\030\001 \001(\tB" +
+      "\021\362\336\037\ryaml:\"sender\"R\006sender\022+\n\007pool_id\030\002 " +
+      "\001(\004B\022\362\336\037\016yaml:\"pool_id\"R\006poolId\022M\n\010token" +
+      "_in\030\003 \001(\0132\031.cosmos.base.v1beta1.CoinB\027\310\336" +
+      "\037\000\362\336\037\017yaml:\"token_in\"R\007tokenIn\022m\n\024share_" +
+      "out_min_amount\030\004 \001(\tB<\310\336\037\000\332\336\037\025cosmossdk." +
+      "io/math.Int\362\336\037\033yaml:\"share_out_min_amoun" +
+      "t\"R\021shareOutMinAmount:7\202\347\260*\006sender\212\347\260*\'o" +
+      "smosis/gamm/join-swap-extern-amount-in\"\207" +
+      "\001\n!MsgJoinSwapExternAmountInResponse\022b\n\020" +
+      "share_out_amount\030\001 \001(\tB8\310\336\037\000\332\336\037\025cosmossd" +
+      "k.io/math.Int\362\336\037\027yaml:\"share_out_amount\"" +
+      "R\016shareOutAmount\"\275\003\n\031MsgJoinSwapShareAmo" +
+      "untOut\022)\n\006sender\030\001 \001(\tB\021\362\336\037\ryaml:\"sender" +
+      "\"R\006sender\022+\n\007pool_id\030\002 \001(\004B\022\362\336\037\016yaml:\"po" +
+      "ol_id\"R\006poolId\022?\n\016token_in_denom\030\003 \001(\tB\031" +
+      "\362\336\037\025yaml:\"token_in_denom\"R\014tokenInDenom\022" +
+      "b\n\020share_out_amount\030\004 \001(\tB8\310\336\037\000\332\336\037\025cosmo" +
+      "ssdk.io/math.Int\362\336\037\027yaml:\"share_out_amou" +
+      "nt\"R\016shareOutAmount\022j\n\023token_in_max_amou" +
+      "nt\030\005 \001(\tB;\310\336\037\000\332\336\037\025cosmossdk.io/math.Int\362" +
+      "\336\037\032yaml:\"token_in_max_amount\"R\020tokenInMa" +
+      "xAmount:7\202\347\260*\006sender\212\347\260*\'osmosis/gamm/jo" +
+      "in-swap-share-amount-out\"\204\001\n!MsgJoinSwap" +
+      "ShareAmountOutResponse\022_\n\017token_in_amoun" +
+      "t\030\001 \001(\tB7\310\336\037\000\332\336\037\025cosmossdk.io/math.Int\362\336" +
+      "\037\026yaml:\"token_in_amount\"R\rtokenInAmount\"" +
+      "\276\003\n\030MsgExitSwapShareAmountIn\022)\n\006sender\030\001" +
+      " \001(\tB\021\362\336\037\ryaml:\"sender\"R\006sender\022+\n\007pool_" +
+      "id\030\002 \001(\004B\022\362\336\037\016yaml:\"pool_id\"R\006poolId\022B\n\017" +
+      "token_out_denom\030\003 \001(\tB\032\362\336\037\026yaml:\"token_o" +
+      "ut_denom\"R\rtokenOutDenom\022_\n\017share_in_amo" +
+      "unt\030\004 \001(\tB7\310\336\037\000\332\336\037\025cosmossdk.io/math.Int" +
+      "\362\336\037\026yaml:\"share_in_amount\"R\rshareInAmoun" +
+      "t\022m\n\024token_out_min_amount\030\005 \001(\tB<\310\336\037\000\332\336\037" +
+      "\025cosmossdk.io/math.Int\362\336\037\033yaml:\"token_ou" +
+      "t_min_amount\"R\021tokenOutMinAmount:6\202\347\260*\006s" +
+      "ender\212\347\260*&osmosis/gamm/exit-swap-share-a" +
+      "mount-in\"\206\001\n MsgExitSwapShareAmountInRes" +
+      "ponse\022b\n\020token_out_amount\030\001 \001(\tB8\310\336\037\000\332\336\037" +
+      "\025cosmossdk.io/math.Int\362\336\037\027yaml:\"token_ou" +
+      "t_amount\"R\016tokenOutAmount\"\354\002\n\032MsgExitSwa" +
+      "pExternAmountOut\022)\n\006sender\030\001 \001(\tB\021\362\336\037\rya" +
+      "ml:\"sender\"R\006sender\022+\n\007pool_id\030\002 \001(\004B\022\362\336" +
+      "\037\016yaml:\"pool_id\"R\006poolId\022P\n\ttoken_out\030\003 " +
+      "\001(\0132\031.cosmos.base.v1beta1.CoinB\030\310\336\037\000\362\336\037\020" +
+      "yaml:\"token_out\"R\010tokenOut\022j\n\023share_in_m" +
+      "ax_amount\030\004 \001(\tB;\310\336\037\000\332\336\037\025cosmossdk.io/ma" +
+      "th.Int\362\336\037\032yaml:\"share_in_max_amount\"R\020sh" +
+      "areInMaxAmount:8\202\347\260*\006sender\212\347\260*(osmosis/" +
+      "gamm/exit-swap-extern-amount-out\"\205\001\n\"Msg" +
+      "ExitSwapExternAmountOutResponse\022_\n\017share" +
+      "_in_amount\030\001 \001(\tB7\310\336\037\000\332\336\037\025cosmossdk.io/m" +
+      "ath.Int\362\336\037\026yaml:\"share_in_amount\"R\rshare" +
+      "InAmount2\271\007\n\003Msg\022X\n\010JoinPool\022!.osmosis.g" +
+      "amm.v1beta1.MsgJoinPool\032).osmosis.gamm.v" +
+      "1beta1.MsgJoinPoolResponse\022X\n\010ExitPool\022!" +
+      ".osmosis.gamm.v1beta1.MsgExitPool\032).osmo" +
+      "sis.gamm.v1beta1.MsgExitPoolResponse\022s\n\021" +
+      "SwapExactAmountIn\022*.osmosis.gamm.v1beta1" +
+      ".MsgSwapExactAmountIn\0322.osmosis.gamm.v1b" +
+      "eta1.MsgSwapExactAmountInResponse\022v\n\022Swa" +
+      "pExactAmountOut\022+.osmosis.gamm.v1beta1.M" +
+      "sgSwapExactAmountOut\0323.osmosis.gamm.v1be" +
+      "ta1.MsgSwapExactAmountOutResponse\022\202\001\n\026Jo" +
+      "inSwapExternAmountIn\022/.osmosis.gamm.v1be" +
+      "ta1.MsgJoinSwapExternAmountIn\0327.osmosis." +
+      "gamm.v1beta1.MsgJoinSwapExternAmountInRe" +
+      "sponse\022\202\001\n\026JoinSwapShareAmountOut\022/.osmo" +
+      "sis.gamm.v1beta1.MsgJoinSwapShareAmountO" +
+      "ut\0327.osmosis.gamm.v1beta1.MsgJoinSwapSha" +
+      "reAmountOutResponse\022\205\001\n\027ExitSwapExternAm" +
+      "ountOut\0220.osmosis.gamm.v1beta1.MsgExitSw" +
+      "apExternAmountOut\0328.osmosis.gamm.v1beta1" +
+      ".MsgExitSwapExternAmountOutResponse\022\177\n\025E" +
+      "xitSwapShareAmountIn\022..osmosis.gamm.v1be" +
+      "ta1.MsgExitSwapShareAmountIn\0326.osmosis.g" +
+      "amm.v1beta1.MsgExitSwapShareAmountInResp" +
+      "onseB\305\001\n\030com.osmosis.gamm.v1beta1B\007TxPro" +
+      "toZ0github.com/osmosis-labs/osmosis/v26/" +
+      "x/gamm/types\242\002\003OGX\252\002\024Osmosis.Gamm.V1beta" +
+      "1\312\002\024Osmosis\\Gamm\\V1beta1\342\002 Osmosis\\Gamm\\" +
+      "V1beta1\\GPBMetadata\352\002\026Osmosis::Gamm::V1b" +
+      "eta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14328,6 +14324,7 @@ public final class TxProto {
           com.amino.AminoProto.getDescriptor(),
           com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
           com.osmosis.poolmanager.v1beta1.SwapRouteProto.getDescriptor(),
+          com.cosmos.msg.v1.MsgProto.getDescriptor(),
         });
     internal_static_osmosis_gamm_v1beta1_MsgJoinPool_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -14428,6 +14425,7 @@ public final class TxProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.amino.AminoProto.name);
+    registry.add(com.cosmos.msg.v1.MsgProto.signer);
     registry.add(com.gogoproto.GogoProto.customtype);
     registry.add(com.gogoproto.GogoProto.moretags);
     registry.add(com.gogoproto.GogoProto.nullable);
@@ -14437,6 +14435,7 @@ public final class TxProto {
     com.amino.AminoProto.getDescriptor();
     com.cosmos.base.v1beta1.CoinProto.getDescriptor();
     com.osmosis.poolmanager.v1beta1.SwapRouteProto.getDescriptor();
+    com.cosmos.msg.v1.MsgProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

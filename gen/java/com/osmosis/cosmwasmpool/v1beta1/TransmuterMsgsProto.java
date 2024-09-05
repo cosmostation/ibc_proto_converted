@@ -2607,28 +2607,27 @@ public final class TransmuterMsgsProto {
     java.lang.String[] descriptorData = {
       "\n8osmosis/cosmwasmpool/v1beta1/model/tra" +
       "nsmuter_msgs.proto\022\034osmosis.cosmwasmpool" +
-      ".v1beta1\032\024gogoproto/gogo.proto\032\036cosmos/b" +
-      "ase/v1beta1/coin.proto\"\016\n\014EmptyRequest\"j" +
-      "\n\031JoinPoolExecuteMsgRequest\022M\n\tjoin_pool" +
-      "\030\001 \001(\0132*.osmosis.cosmwasmpool.v1beta1.Em" +
-      "ptyRequestB\004\310\336\037\000R\010joinPool\"\034\n\032JoinPoolEx" +
-      "ecuteMsgResponse\"j\n\031ExitPoolExecuteMsgRe" +
-      "quest\022M\n\texit_pool\030\001 \001(\0132*.osmosis.cosmw" +
-      "asmpool.v1beta1.EmptyRequestB\004\310\336\037\000R\010exit" +
-      "Pool\"\034\n\032ExitPoolExecuteMsgResponseB\223\002\n c" +
-      "om.osmosis.cosmwasmpool.v1beta1B\023Transmu" +
-      "terMsgsProtoZJgithub.com/osmosis-labs/os" +
-      "mosis/v15/x/cosmwasmpool/cosmwasm/msg/tr" +
-      "ansmuter\242\002\003OCX\252\002\034Osmosis.Cosmwasmpool.V1" +
-      "beta1\312\002\034Osmosis\\Cosmwasmpool\\V1beta1\342\002(O" +
-      "smosis\\Cosmwasmpool\\V1beta1\\GPBMetadata\352" +
-      "\002\036Osmosis::Cosmwasmpool::V1beta1b\006proto3"
+      ".v1beta1\032\024gogoproto/gogo.proto\"\016\n\014EmptyR" +
+      "equest\"j\n\031JoinPoolExecuteMsgRequest\022M\n\tj" +
+      "oin_pool\030\001 \001(\0132*.osmosis.cosmwasmpool.v1" +
+      "beta1.EmptyRequestB\004\310\336\037\000R\010joinPool\"\034\n\032Jo" +
+      "inPoolExecuteMsgResponse\"j\n\031ExitPoolExec" +
+      "uteMsgRequest\022M\n\texit_pool\030\001 \001(\0132*.osmos" +
+      "is.cosmwasmpool.v1beta1.EmptyRequestB\004\310\336" +
+      "\037\000R\010exitPool\"\034\n\032ExitPoolExecuteMsgRespon" +
+      "seB\223\002\n com.osmosis.cosmwasmpool.v1beta1B" +
+      "\023TransmuterMsgsProtoZJgithub.com/osmosis" +
+      "-labs/osmosis/v26/x/cosmwasmpool/cosmwas" +
+      "m/msg/transmuter\242\002\003OCX\252\002\034Osmosis.Cosmwas" +
+      "mpool.V1beta1\312\002\034Osmosis\\Cosmwasmpool\\V1b" +
+      "eta1\342\002(Osmosis\\Cosmwasmpool\\V1beta1\\GPBM" +
+      "etadata\352\002\036Osmosis::Cosmwasmpool::V1beta1" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.gogoproto.GogoProto.getDescriptor(),
-          com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
         });
     internal_static_osmosis_cosmwasmpool_v1beta1_EmptyRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -2666,7 +2665,6 @@ public final class TransmuterMsgsProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.gogoproto.GogoProto.getDescriptor();
-    com.cosmos.base.v1beta1.CoinProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

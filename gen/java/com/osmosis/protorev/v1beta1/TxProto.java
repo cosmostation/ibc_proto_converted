@@ -2701,8 +2701,8 @@ public final class TxProto {
 
   }
 
-  public interface MsgSetPoolWeightsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.MsgSetPoolWeights)
+  public interface MsgSetInfoByPoolTypeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.MsgSetInfoByPoolType)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2727,48 +2727,48 @@ public final class TxProto {
 
     /**
      * <pre>
-     * pool_weights is the list of pool weights to set.
+     * info_by_pool_type contains information about the pool types.
      * </pre>
      *
-     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
-     * @return Whether the poolWeights field is set.
+     * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 2 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+     * @return Whether the infoByPoolType field is set.
      */
-    boolean hasPoolWeights();
+    boolean hasInfoByPoolType();
     /**
      * <pre>
-     * pool_weights is the list of pool weights to set.
+     * info_by_pool_type contains information about the pool types.
      * </pre>
      *
-     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
-     * @return The poolWeights.
+     * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 2 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+     * @return The infoByPoolType.
      */
-    com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights getPoolWeights();
+    com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType getInfoByPoolType();
     /**
      * <pre>
-     * pool_weights is the list of pool weights to set.
+     * info_by_pool_type contains information about the pool types.
      * </pre>
      *
-     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+     * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 2 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
      */
-    com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder getPoolWeightsOrBuilder();
+    com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolTypeOrBuilder getInfoByPoolTypeOrBuilder();
   }
   /**
    * <pre>
-   * MsgSetPoolWeights defines the Msg/SetPoolWeights request type.
+   * MsgSetInfoByPoolType defines the Msg/SetInfoByPoolType request type.
    * </pre>
    *
-   * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetPoolWeights}
+   * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetInfoByPoolType}
    */
-  public static final class MsgSetPoolWeights extends
+  public static final class MsgSetInfoByPoolType extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.MsgSetPoolWeights)
-      MsgSetPoolWeightsOrBuilder {
+      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.MsgSetInfoByPoolType)
+      MsgSetInfoByPoolTypeOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use MsgSetPoolWeights.newBuilder() to construct.
-    private MsgSetPoolWeights(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use MsgSetInfoByPoolType.newBuilder() to construct.
+    private MsgSetInfoByPoolType(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private MsgSetPoolWeights() {
+    private MsgSetInfoByPoolType() {
       admin_ = "";
     }
 
@@ -2776,20 +2776,20 @@ public final class TxProto {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new MsgSetPoolWeights();
+      return new MsgSetInfoByPoolType();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeights_descriptor;
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetInfoByPoolType_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeights_fieldAccessorTable
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetInfoByPoolType_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights.Builder.class);
+              com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType.Builder.class);
     }
 
     public static final int ADMIN_FIELD_NUMBER = 1;
@@ -2839,42 +2839,42 @@ public final class TxProto {
       }
     }
 
-    public static final int POOL_WEIGHTS_FIELD_NUMBER = 2;
-    private com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights poolWeights_;
+    public static final int INFO_BY_POOL_TYPE_FIELD_NUMBER = 2;
+    private com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType infoByPoolType_;
     /**
      * <pre>
-     * pool_weights is the list of pool weights to set.
+     * info_by_pool_type contains information about the pool types.
      * </pre>
      *
-     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
-     * @return Whether the poolWeights field is set.
+     * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 2 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+     * @return Whether the infoByPoolType field is set.
      */
     @java.lang.Override
-    public boolean hasPoolWeights() {
-      return poolWeights_ != null;
+    public boolean hasInfoByPoolType() {
+      return infoByPoolType_ != null;
     }
     /**
      * <pre>
-     * pool_weights is the list of pool weights to set.
+     * info_by_pool_type contains information about the pool types.
      * </pre>
      *
-     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
-     * @return The poolWeights.
+     * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 2 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+     * @return The infoByPoolType.
      */
     @java.lang.Override
-    public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights getPoolWeights() {
-      return poolWeights_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.getDefaultInstance() : poolWeights_;
+    public com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType getInfoByPoolType() {
+      return infoByPoolType_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.getDefaultInstance() : infoByPoolType_;
     }
     /**
      * <pre>
-     * pool_weights is the list of pool weights to set.
+     * info_by_pool_type contains information about the pool types.
      * </pre>
      *
-     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+     * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 2 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
      */
     @java.lang.Override
-    public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder getPoolWeightsOrBuilder() {
-      return poolWeights_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.getDefaultInstance() : poolWeights_;
+    public com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolTypeOrBuilder getInfoByPoolTypeOrBuilder() {
+      return infoByPoolType_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.getDefaultInstance() : infoByPoolType_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2894,8 +2894,8 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(admin_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, admin_);
       }
-      if (poolWeights_ != null) {
-        output.writeMessage(2, getPoolWeights());
+      if (infoByPoolType_ != null) {
+        output.writeMessage(2, getInfoByPoolType());
       }
       getUnknownFields().writeTo(output);
     }
@@ -2909,9 +2909,9 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(admin_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, admin_);
       }
-      if (poolWeights_ != null) {
+      if (infoByPoolType_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getPoolWeights());
+          .computeMessageSize(2, getInfoByPoolType());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2923,17 +2923,17 @@ public final class TxProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights)) {
+      if (!(obj instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType)) {
         return super.equals(obj);
       }
-      com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights other = (com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights) obj;
+      com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType other = (com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType) obj;
 
       if (!getAdmin()
           .equals(other.getAdmin())) return false;
-      if (hasPoolWeights() != other.hasPoolWeights()) return false;
-      if (hasPoolWeights()) {
-        if (!getPoolWeights()
-            .equals(other.getPoolWeights())) return false;
+      if (hasInfoByPoolType() != other.hasInfoByPoolType()) return false;
+      if (hasInfoByPoolType()) {
+        if (!getInfoByPoolType()
+            .equals(other.getInfoByPoolType())) return false;
       }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -2948,53 +2948,53 @@ public final class TxProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ADMIN_FIELD_NUMBER;
       hash = (53 * hash) + getAdmin().hashCode();
-      if (hasPoolWeights()) {
-        hash = (37 * hash) + POOL_WEIGHTS_FIELD_NUMBER;
-        hash = (53 * hash) + getPoolWeights().hashCode();
+      if (hasInfoByPoolType()) {
+        hash = (37 * hash) + INFO_BY_POOL_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getInfoByPoolType().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights parseFrom(
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights parseFrom(
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights parseFrom(
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights parseFrom(
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights parseFrom(byte[] data)
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights parseFrom(
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights parseFrom(java.io.InputStream input)
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights parseFrom(
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3002,26 +3002,26 @@ public final class TxProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights parseDelimitedFrom(java.io.InputStream input)
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights parseDelimitedFrom(
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights parseFrom(
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights parseFrom(
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3034,7 +3034,7 @@ public final class TxProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights prototype) {
+    public static Builder newBuilder(com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -3051,29 +3051,29 @@ public final class TxProto {
     }
     /**
      * <pre>
-     * MsgSetPoolWeights defines the Msg/SetPoolWeights request type.
+     * MsgSetInfoByPoolType defines the Msg/SetInfoByPoolType request type.
      * </pre>
      *
-     * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetPoolWeights}
+     * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetInfoByPoolType}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.MsgSetPoolWeights)
-        com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsOrBuilder {
+        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.MsgSetInfoByPoolType)
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeights_descriptor;
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetInfoByPoolType_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeights_fieldAccessorTable
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetInfoByPoolType_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights.Builder.class);
+                com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType.Builder.class);
       }
 
-      // Construct using com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights.newBuilder()
+      // Construct using com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType.newBuilder()
       private Builder() {
 
       }
@@ -3088,10 +3088,10 @@ public final class TxProto {
         super.clear();
         bitField0_ = 0;
         admin_ = "";
-        poolWeights_ = null;
-        if (poolWeightsBuilder_ != null) {
-          poolWeightsBuilder_.dispose();
-          poolWeightsBuilder_ = null;
+        infoByPoolType_ = null;
+        if (infoByPoolTypeBuilder_ != null) {
+          infoByPoolTypeBuilder_.dispose();
+          infoByPoolTypeBuilder_ = null;
         }
         return this;
       }
@@ -3099,17 +3099,17 @@ public final class TxProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeights_descriptor;
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetInfoByPoolType_descriptor;
       }
 
       @java.lang.Override
-      public com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights getDefaultInstanceForType() {
-        return com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights.getDefaultInstance();
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType getDefaultInstanceForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights build() {
-        com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights result = buildPartial();
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType build() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -3117,22 +3117,22 @@ public final class TxProto {
       }
 
       @java.lang.Override
-      public com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights buildPartial() {
-        com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights result = new com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights(this);
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType buildPartial() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType result = new com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights result) {
+      private void buildPartial0(com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.admin_ = admin_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.poolWeights_ = poolWeightsBuilder_ == null
-              ? poolWeights_
-              : poolWeightsBuilder_.build();
+          result.infoByPoolType_ = infoByPoolTypeBuilder_ == null
+              ? infoByPoolType_
+              : infoByPoolTypeBuilder_.build();
         }
       }
 
@@ -3170,23 +3170,23 @@ public final class TxProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights) {
-          return mergeFrom((com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights)other);
+        if (other instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType) {
+          return mergeFrom((com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights other) {
-        if (other == com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType other) {
+        if (other == com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType.getDefaultInstance()) return this;
         if (!other.getAdmin().isEmpty()) {
           admin_ = other.admin_;
           bitField0_ |= 0x00000001;
           onChanged();
         }
-        if (other.hasPoolWeights()) {
-          mergePoolWeights(other.getPoolWeights());
+        if (other.hasInfoByPoolType()) {
+          mergeInfoByPoolType(other.getInfoByPoolType());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -3221,7 +3221,7 @@ public final class TxProto {
               } // case 10
               case 18: {
                 input.readMessage(
-                    getPoolWeightsFieldBuilder().getBuilder(),
+                    getInfoByPoolTypeFieldBuilder().getBuilder(),
                     extensionRegistry);
                 bitField0_ |= 0x00000002;
                 break;
@@ -3335,50 +3335,50 @@ public final class TxProto {
         return this;
       }
 
-      private com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights poolWeights_;
+      private com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType infoByPoolType_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder> poolWeightsBuilder_;
+          com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType, com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolTypeOrBuilder> infoByPoolTypeBuilder_;
       /**
        * <pre>
-       * pool_weights is the list of pool weights to set.
+       * info_by_pool_type contains information about the pool types.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
-       * @return Whether the poolWeights field is set.
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 2 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+       * @return Whether the infoByPoolType field is set.
        */
-      public boolean hasPoolWeights() {
+      public boolean hasInfoByPoolType() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
-       * pool_weights is the list of pool weights to set.
+       * info_by_pool_type contains information about the pool types.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
-       * @return The poolWeights.
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 2 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
+       * @return The infoByPoolType.
        */
-      public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights getPoolWeights() {
-        if (poolWeightsBuilder_ == null) {
-          return poolWeights_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.getDefaultInstance() : poolWeights_;
+      public com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType getInfoByPoolType() {
+        if (infoByPoolTypeBuilder_ == null) {
+          return infoByPoolType_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.getDefaultInstance() : infoByPoolType_;
         } else {
-          return poolWeightsBuilder_.getMessage();
+          return infoByPoolTypeBuilder_.getMessage();
         }
       }
       /**
        * <pre>
-       * pool_weights is the list of pool weights to set.
+       * info_by_pool_type contains information about the pool types.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 2 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
        */
-      public Builder setPoolWeights(com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights value) {
-        if (poolWeightsBuilder_ == null) {
+      public Builder setInfoByPoolType(com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType value) {
+        if (infoByPoolTypeBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          poolWeights_ = value;
+          infoByPoolType_ = value;
         } else {
-          poolWeightsBuilder_.setMessage(value);
+          infoByPoolTypeBuilder_.setMessage(value);
         }
         bitField0_ |= 0x00000002;
         onChanged();
@@ -3386,17 +3386,17 @@ public final class TxProto {
       }
       /**
        * <pre>
-       * pool_weights is the list of pool weights to set.
+       * info_by_pool_type contains information about the pool types.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 2 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
        */
-      public Builder setPoolWeights(
-          com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder builderForValue) {
-        if (poolWeightsBuilder_ == null) {
-          poolWeights_ = builderForValue.build();
+      public Builder setInfoByPoolType(
+          com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.Builder builderForValue) {
+        if (infoByPoolTypeBuilder_ == null) {
+          infoByPoolType_ = builderForValue.build();
         } else {
-          poolWeightsBuilder_.setMessage(builderForValue.build());
+          infoByPoolTypeBuilder_.setMessage(builderForValue.build());
         }
         bitField0_ |= 0x00000002;
         onChanged();
@@ -3404,22 +3404,22 @@ public final class TxProto {
       }
       /**
        * <pre>
-       * pool_weights is the list of pool weights to set.
+       * info_by_pool_type contains information about the pool types.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 2 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
        */
-      public Builder mergePoolWeights(com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights value) {
-        if (poolWeightsBuilder_ == null) {
+      public Builder mergeInfoByPoolType(com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType value) {
+        if (infoByPoolTypeBuilder_ == null) {
           if (((bitField0_ & 0x00000002) != 0) &&
-            poolWeights_ != null &&
-            poolWeights_ != com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.getDefaultInstance()) {
-            getPoolWeightsBuilder().mergeFrom(value);
+            infoByPoolType_ != null &&
+            infoByPoolType_ != com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.getDefaultInstance()) {
+            getInfoByPoolTypeBuilder().mergeFrom(value);
           } else {
-            poolWeights_ = value;
+            infoByPoolType_ = value;
           }
         } else {
-          poolWeightsBuilder_.mergeFrom(value);
+          infoByPoolTypeBuilder_.mergeFrom(value);
         }
         bitField0_ |= 0x00000002;
         onChanged();
@@ -3427,67 +3427,67 @@ public final class TxProto {
       }
       /**
        * <pre>
-       * pool_weights is the list of pool weights to set.
+       * info_by_pool_type contains information about the pool types.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 2 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
        */
-      public Builder clearPoolWeights() {
+      public Builder clearInfoByPoolType() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        poolWeights_ = null;
-        if (poolWeightsBuilder_ != null) {
-          poolWeightsBuilder_.dispose();
-          poolWeightsBuilder_ = null;
+        infoByPoolType_ = null;
+        if (infoByPoolTypeBuilder_ != null) {
+          infoByPoolTypeBuilder_.dispose();
+          infoByPoolTypeBuilder_ = null;
         }
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * pool_weights is the list of pool weights to set.
+       * info_by_pool_type contains information about the pool types.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 2 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
        */
-      public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder getPoolWeightsBuilder() {
+      public com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.Builder getInfoByPoolTypeBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
-        return getPoolWeightsFieldBuilder().getBuilder();
+        return getInfoByPoolTypeFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * pool_weights is the list of pool weights to set.
+       * info_by_pool_type contains information about the pool types.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 2 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
        */
-      public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder getPoolWeightsOrBuilder() {
-        if (poolWeightsBuilder_ != null) {
-          return poolWeightsBuilder_.getMessageOrBuilder();
+      public com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolTypeOrBuilder getInfoByPoolTypeOrBuilder() {
+        if (infoByPoolTypeBuilder_ != null) {
+          return infoByPoolTypeBuilder_.getMessageOrBuilder();
         } else {
-          return poolWeights_ == null ?
-              com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.getDefaultInstance() : poolWeights_;
+          return infoByPoolType_ == null ?
+              com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.getDefaultInstance() : infoByPoolType_;
         }
       }
       /**
        * <pre>
-       * pool_weights is the list of pool weights to set.
+       * info_by_pool_type contains information about the pool types.
        * </pre>
        *
-       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * <code>.osmosis.protorev.v1beta1.InfoByPoolType info_by_pool_type = 2 [json_name = "infoByPoolType", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"info_by_pool_type&#92;""];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder> 
-          getPoolWeightsFieldBuilder() {
-        if (poolWeightsBuilder_ == null) {
-          poolWeightsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder>(
-                  getPoolWeights(),
+          com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType, com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolTypeOrBuilder> 
+          getInfoByPoolTypeFieldBuilder() {
+        if (infoByPoolTypeBuilder_ == null) {
+          infoByPoolTypeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType, com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolType.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.InfoByPoolTypeOrBuilder>(
+                  getInfoByPoolType(),
                   getParentForChildren(),
                   isClean());
-          poolWeights_ = null;
+          infoByPoolType_ = null;
         }
-        return poolWeightsBuilder_;
+        return infoByPoolTypeBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3502,23 +3502,23 @@ public final class TxProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.MsgSetPoolWeights)
+      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.MsgSetInfoByPoolType)
     }
 
-    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.MsgSetPoolWeights)
-    private static final com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.MsgSetInfoByPoolType)
+    private static final com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights();
+      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType();
     }
 
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights getDefaultInstance() {
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<MsgSetPoolWeights>
-        PARSER = new com.google.protobuf.AbstractParser<MsgSetPoolWeights>() {
+    private static final com.google.protobuf.Parser<MsgSetInfoByPoolType>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetInfoByPoolType>() {
       @java.lang.Override
-      public MsgSetPoolWeights parsePartialFrom(
+      public MsgSetInfoByPoolType parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -3537,63 +3537,63 @@ public final class TxProto {
       }
     };
 
-    public static com.google.protobuf.Parser<MsgSetPoolWeights> parser() {
+    public static com.google.protobuf.Parser<MsgSetInfoByPoolType> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<MsgSetPoolWeights> getParserForType() {
+    public com.google.protobuf.Parser<MsgSetInfoByPoolType> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights getDefaultInstanceForType() {
+    public com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolType getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface MsgSetPoolWeightsResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.MsgSetPoolWeightsResponse)
+  public interface MsgSetInfoByPoolTypeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.MsgSetInfoByPoolTypeResponse)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
    * <pre>
-   * MsgSetPoolWeightsResponse defines the Msg/SetPoolWeights response type.
+   * MsgSetInfoByPoolTypeResponse defines the Msg/SetInfoByPoolType response type.
    * </pre>
    *
-   * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetPoolWeightsResponse}
+   * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetInfoByPoolTypeResponse}
    */
-  public static final class MsgSetPoolWeightsResponse extends
+  public static final class MsgSetInfoByPoolTypeResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.MsgSetPoolWeightsResponse)
-      MsgSetPoolWeightsResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.MsgSetInfoByPoolTypeResponse)
+      MsgSetInfoByPoolTypeResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use MsgSetPoolWeightsResponse.newBuilder() to construct.
-    private MsgSetPoolWeightsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use MsgSetInfoByPoolTypeResponse.newBuilder() to construct.
+    private MsgSetInfoByPoolTypeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private MsgSetPoolWeightsResponse() {
+    private MsgSetInfoByPoolTypeResponse() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new MsgSetPoolWeightsResponse();
+      return new MsgSetInfoByPoolTypeResponse();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeightsResponse_descriptor;
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetInfoByPoolTypeResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeightsResponse_fieldAccessorTable
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetInfoByPoolTypeResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse.Builder.class);
+              com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3629,10 +3629,10 @@ public final class TxProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse)) {
+      if (!(obj instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse)) {
         return super.equals(obj);
       }
-      com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse other = (com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse) obj;
+      com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse other = (com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse) obj;
 
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -3650,44 +3650,44 @@ public final class TxProto {
       return hash;
     }
 
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse parseFrom(
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse parseFrom(
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse parseFrom(
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse parseFrom(
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse parseFrom(byte[] data)
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse parseFrom(
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse parseFrom(java.io.InputStream input)
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse parseFrom(
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3695,26 +3695,26 @@ public final class TxProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse parseDelimitedFrom(
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse parseFrom(
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse parseFrom(
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3727,7 +3727,7 @@ public final class TxProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse prototype) {
+    public static Builder newBuilder(com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -3744,29 +3744,29 @@ public final class TxProto {
     }
     /**
      * <pre>
-     * MsgSetPoolWeightsResponse defines the Msg/SetPoolWeights response type.
+     * MsgSetInfoByPoolTypeResponse defines the Msg/SetInfoByPoolType response type.
      * </pre>
      *
-     * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetPoolWeightsResponse}
+     * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetInfoByPoolTypeResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.MsgSetPoolWeightsResponse)
-        com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.MsgSetInfoByPoolTypeResponse)
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeightsResponse_descriptor;
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetInfoByPoolTypeResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeightsResponse_fieldAccessorTable
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetInfoByPoolTypeResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse.Builder.class);
+                com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse.Builder.class);
       }
 
-      // Construct using com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse.newBuilder()
+      // Construct using com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse.newBuilder()
       private Builder() {
 
       }
@@ -3785,17 +3785,17 @@ public final class TxProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeightsResponse_descriptor;
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetInfoByPoolTypeResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse getDefaultInstanceForType() {
-        return com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse.getDefaultInstance();
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse getDefaultInstanceForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse build() {
-        com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse result = buildPartial();
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse build() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -3803,8 +3803,8 @@ public final class TxProto {
       }
 
       @java.lang.Override
-      public com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse buildPartial() {
-        com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse result = new com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse(this);
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse buildPartial() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse result = new com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse(this);
         onBuilt();
         return result;
       }
@@ -3843,16 +3843,16 @@ public final class TxProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse) {
-          return mergeFrom((com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse)other);
+        if (other instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse) {
+          return mergeFrom((com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse other) {
-        if (other == com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse other) {
+        if (other == com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -3907,23 +3907,23 @@ public final class TxProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.MsgSetPoolWeightsResponse)
+      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.MsgSetInfoByPoolTypeResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.MsgSetPoolWeightsResponse)
-    private static final com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.MsgSetInfoByPoolTypeResponse)
+    private static final com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse();
+      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse();
     }
 
-    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse getDefaultInstance() {
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<MsgSetPoolWeightsResponse>
-        PARSER = new com.google.protobuf.AbstractParser<MsgSetPoolWeightsResponse>() {
+    private static final com.google.protobuf.Parser<MsgSetInfoByPoolTypeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetInfoByPoolTypeResponse>() {
       @java.lang.Override
-      public MsgSetPoolWeightsResponse parsePartialFrom(
+      public MsgSetInfoByPoolTypeResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -3942,17 +3942,17 @@ public final class TxProto {
       }
     };
 
-    public static com.google.protobuf.Parser<MsgSetPoolWeightsResponse> parser() {
+    public static com.google.protobuf.Parser<MsgSetInfoByPoolTypeResponse> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<MsgSetPoolWeightsResponse> getParserForType() {
+    public com.google.protobuf.Parser<MsgSetInfoByPoolTypeResponse> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse getDefaultInstanceForType() {
+    public com.osmosis.protorev.v1beta1.TxProto.MsgSetInfoByPoolTypeResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7683,15 +7683,15 @@ public final class TxProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_protorev_v1beta1_MsgSetDeveloperAccountResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeights_descriptor;
+    internal_static_osmosis_protorev_v1beta1_MsgSetInfoByPoolType_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeights_fieldAccessorTable;
+      internal_static_osmosis_protorev_v1beta1_MsgSetInfoByPoolType_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeightsResponse_descriptor;
+    internal_static_osmosis_protorev_v1beta1_MsgSetInfoByPoolTypeResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeightsResponse_fieldAccessorTable;
+      internal_static_osmosis_protorev_v1beta1_MsgSetInfoByPoolTypeResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerTx_descriptor;
   private static final 
@@ -7736,73 +7736,79 @@ public final class TxProto {
       "oto\032\021amino/amino.proto\032\034google/api/annot" +
       "ations.proto\032\'osmosis/protorev/v1beta1/p" +
       "rotorev.proto\032\031cosmos_proto/cosmos.proto" +
-      "\"\327\001\n\017MsgSetHotRoutes\022>\n\005admin\030\001 \001(\tB(\362\336\037" +
-      "\014yaml:\"admin\"\322\264-\024cosmos.AddressStringR\005a" +
-      "dmin\022f\n\nhot_routes\030\002 \003(\0132,.osmosis.proto" +
-      "rev.v1beta1.TokenPairArbRoutesB\031\310\336\037\000\362\336\037\021" +
-      "yaml:\"hot_routes\"R\thotRoutes:\034\212\347\260*\027osmos" +
-      "is/MsgSetHotRoutes\"\031\n\027MsgSetHotRoutesRes" +
-      "ponse\"\310\001\n\026MsgSetDeveloperAccount\022>\n\005admi" +
+      "\032\027cosmos/msg/v1/msg.proto\"\341\001\n\017MsgSetHotR" +
+      "outes\022>\n\005admin\030\001 \001(\tB(\362\336\037\014yaml:\"admin\"\322\264" +
+      "-\024cosmos.AddressStringR\005admin\022f\n\nhot_rou" +
+      "tes\030\002 \003(\0132,.osmosis.protorev.v1beta1.Tok" +
+      "enPairArbRoutesB\031\310\336\037\000\362\336\037\021yaml:\"hot_route" +
+      "s\"R\thotRoutes:&\202\347\260*\005admin\212\347\260*\027osmosis/Ms" +
+      "gSetHotRoutes\"\031\n\027MsgSetHotRoutesResponse" +
+      "\"\322\001\n\026MsgSetDeveloperAccount\022>\n\005admin\030\001 \001" +
+      "(\tB(\362\336\037\014yaml:\"admin\"\322\264-\024cosmos.AddressSt" +
+      "ringR\005admin\022I\n\021developer_account\030\002 \001(\tB\034" +
+      "\362\336\037\030yaml:\"developer_account\"R\020developerA" +
+      "ccount:-\202\347\260*\005admin\212\347\260*\036osmosis/MsgSetDev" +
+      "eloperAccount\" \n\036MsgSetDeveloperAccountR" +
+      "esponse\"\372\001\n\024MsgSetInfoByPoolType\022>\n\005admi" +
       "n\030\001 \001(\tB(\362\336\037\014yaml:\"admin\"\322\264-\024cosmos.Addr" +
-      "essStringR\005admin\022I\n\021developer_account\030\002 " +
-      "\001(\tB\034\362\336\037\030yaml:\"developer_account\"R\020devel" +
-      "operAccount:#\212\347\260*\036osmosis/MsgSetDevelope" +
-      "rAccount\" \n\036MsgSetDeveloperAccountRespon" +
-      "se\"\272\001\n\021MsgSetPoolWeights\022>\n\005admin\030\001 \001(\tB" +
-      "(\362\336\037\014yaml:\"admin\"\322\264-\024cosmos.AddressStrin" +
-      "gR\005admin\022e\n\014pool_weights\030\002 \001(\0132%.osmosis" +
-      ".protorev.v1beta1.PoolWeightsB\033\310\336\037\000\362\336\037\023y" +
-      "aml:\"pool_weights\"R\013poolWeights\"\033\n\031MsgSe" +
-      "tPoolWeightsResponse\"\261\001\n\030MsgSetMaxPoolPo" +
-      "intsPerTx\022>\n\005admin\030\001 \001(\tB(\362\336\037\014yaml:\"admi" +
-      "n\"\322\264-\024cosmos.AddressStringR\005admin\022U\n\026max" +
-      "_pool_points_per_tx\030\002 \001(\004B!\362\336\037\035yaml:\"max" +
-      "_pool_points_per_tx\"R\022maxPoolPointsPerTx" +
-      "\"\"\n MsgSetMaxPoolPointsPerTxResponse\"\275\001\n" +
-      "\033MsgSetMaxPoolPointsPerBlock\022>\n\005admin\030\001 " +
-      "\001(\tB(\362\336\037\014yaml:\"admin\"\322\264-\024cosmos.AddressS" +
-      "tringR\005admin\022^\n\031max_pool_points_per_bloc" +
-      "k\030\002 \001(\004B$\362\336\037 yaml:\"max_pool_points_per_b" +
-      "lock\"R\025maxPoolPointsPerBlock\"%\n#MsgSetMa" +
-      "xPoolPointsPerBlockResponse\"\264\001\n\020MsgSetBa" +
-      "seDenoms\022>\n\005admin\030\001 \001(\tB(\362\336\037\014yaml:\"admin" +
-      "\"\322\264-\024cosmos.AddressStringR\005admin\022`\n\013base" +
-      "_denoms\030\002 \003(\0132#.osmosis.protorev.v1beta1" +
-      ".BaseDenomB\032\310\336\037\000\362\336\037\022yaml:\"base_denoms\"R\n" +
-      "baseDenoms\"\032\n\030MsgSetBaseDenomsResponse2\265" +
-      "\010\n\003Msg\022\232\001\n\014SetHotRoutes\022).osmosis.protor" +
-      "ev.v1beta1.MsgSetHotRoutes\0321.osmosis.pro" +
-      "torev.v1beta1.MsgSetHotRoutesResponse\",\202" +
-      "\323\344\223\002&\"$/osmosis/v14/protorev/set_hot_rou" +
-      "tes\022\266\001\n\023SetDeveloperAccount\0220.osmosis.pr" +
+      "essStringR\005admin\022u\n\021info_by_pool_type\030\002 " +
+      "\001(\0132(.osmosis.protorev.v1beta1.InfoByPoo" +
+      "lTypeB \310\336\037\000\362\336\037\030yaml:\"info_by_pool_type\"R" +
+      "\016infoByPoolType:+\202\347\260*\005admin\212\347\260*\034osmosis/" +
+      "MsgSetInfoByPoolType\"\036\n\034MsgSetInfoByPool" +
+      "TypeResponse\"\342\001\n\030MsgSetMaxPoolPointsPerT" +
+      "x\022>\n\005admin\030\001 \001(\tB(\362\336\037\014yaml:\"admin\"\322\264-\024co" +
+      "smos.AddressStringR\005admin\022U\n\026max_pool_po" +
+      "ints_per_tx\030\002 \001(\004B!\362\336\037\035yaml:\"max_pool_po" +
+      "ints_per_tx\"R\022maxPoolPointsPerTx:/\202\347\260*\005a" +
+      "dmin\212\347\260* osmosis/MsgSetMaxPoolPointsPerT" +
+      "x\"\"\n MsgSetMaxPoolPointsPerTxResponse\"\347\001" +
+      "\n\033MsgSetMaxPoolPointsPerBlock\022>\n\005admin\030\001" +
+      " \001(\tB(\362\336\037\014yaml:\"admin\"\322\264-\024cosmos.Address" +
+      "StringR\005admin\022^\n\031max_pool_points_per_blo" +
+      "ck\030\002 \001(\004B$\362\336\037 yaml:\"max_pool_points_per_" +
+      "block\"R\025maxPoolPointsPerBlock:(\202\347\260*\005admi" +
+      "n\212\347\260*\031osmosis/MsgSetPoolWeights\"%\n#MsgSe" +
+      "tMaxPoolPointsPerBlockResponse\"\335\001\n\020MsgSe" +
+      "tBaseDenoms\022>\n\005admin\030\001 \001(\tB(\362\336\037\014yaml:\"ad" +
+      "min\"\322\264-\024cosmos.AddressStringR\005admin\022`\n\013b" +
+      "ase_denoms\030\002 \003(\0132#.osmosis.protorev.v1be" +
+      "ta1.BaseDenomB\032\310\336\037\000\362\336\037\022yaml:\"base_denoms" +
+      "\"R\nbaseDenoms:\'\202\347\260*\005admin\212\347\260*\030osmosis/Ms" +
+      "gSetBaseDenoms\"\032\n\030MsgSetBaseDenomsRespon" +
+      "se2\253\010\n\003Msg\022\226\001\n\014SetHotRoutes\022).osmosis.pr" +
+      "otorev.v1beta1.MsgSetHotRoutes\0321.osmosis" +
+      ".protorev.v1beta1.MsgSetHotRoutesRespons" +
+      "e\"(\202\323\344\223\002\"\" /osmosis/protorev/set_hot_rou" +
+      "tes\022\262\001\n\023SetDeveloperAccount\0220.osmosis.pr" +
       "otorev.v1beta1.MsgSetDeveloperAccount\0328." +
       "osmosis.protorev.v1beta1.MsgSetDeveloper" +
-      "AccountResponse\"3\202\323\344\223\002-\"+/osmosis/v14/pr" +
-      "otorev/set_developer_account\022\301\001\n\025SetMaxP" +
-      "oolPointsPerTx\0222.osmosis.protorev.v1beta" +
-      "1.MsgSetMaxPoolPointsPerTx\032:.osmosis.pro" +
-      "torev.v1beta1.MsgSetMaxPoolPointsPerTxRe" +
-      "sponse\"8\202\323\344\223\0022\"0/osmosis/v14/protorev/se" +
-      "t_max_pool_points_per_tx\022\315\001\n\030SetMaxPoolP" +
-      "ointsPerBlock\0225.osmosis.protorev.v1beta1" +
-      ".MsgSetMaxPoolPointsPerBlock\032=.osmosis.p" +
-      "rotorev.v1beta1.MsgSetMaxPoolPointsPerBl" +
-      "ockResponse\";\202\323\344\223\0025\"3/osmosis/v14/protor" +
-      "ev/set_max_pool_points_per_block\022\242\001\n\016Set" +
-      "PoolWeights\022+.osmosis.protorev.v1beta1.M" +
-      "sgSetPoolWeights\0323.osmosis.protorev.v1be" +
-      "ta1.MsgSetPoolWeightsResponse\".\202\323\344\223\002(\"&/" +
-      "osmosis/v14/protorev/set_pool_weights\022\236\001" +
-      "\n\rSetBaseDenoms\022*.osmosis.protorev.v1bet" +
-      "a1.MsgSetBaseDenoms\0322.osmosis.protorev.v" +
-      "1beta1.MsgSetBaseDenomsResponse\"-\202\323\344\223\002\'\"" +
-      "%/osmosis/v14/protorev/set_base_denomsB\335" +
-      "\001\n\034com.osmosis.protorev.v1beta1B\007TxProto" +
-      "Z4github.com/osmosis-labs/osmosis/v15/x/" +
-      "protorev/types\242\002\003OPX\252\002\030Osmosis.Protorev." +
-      "V1beta1\312\002\030Osmosis\\Protorev\\V1beta1\342\002$Osm" +
-      "osis\\Protorev\\V1beta1\\GPBMetadata\352\002\032Osmo" +
-      "sis::Protorev::V1beta1b\006proto3"
+      "AccountResponse\"/\202\323\344\223\002)\"\'/osmosis/protor" +
+      "ev/set_developer_account\022\275\001\n\025SetMaxPoolP" +
+      "ointsPerTx\0222.osmosis.protorev.v1beta1.Ms" +
+      "gSetMaxPoolPointsPerTx\032:.osmosis.protore" +
+      "v.v1beta1.MsgSetMaxPoolPointsPerTxRespon" +
+      "se\"4\202\323\344\223\002.\",/osmosis/protorev/set_max_po" +
+      "ol_points_per_tx\022\311\001\n\030SetMaxPoolPointsPer" +
+      "Block\0225.osmosis.protorev.v1beta1.MsgSetM" +
+      "axPoolPointsPerBlock\032=.osmosis.protorev." +
+      "v1beta1.MsgSetMaxPoolPointsPerBlockRespo" +
+      "nse\"7\202\323\344\223\0021\"//osmosis/protorev/set_max_p" +
+      "ool_points_per_block\022\254\001\n\021SetInfoByPoolTy" +
+      "pe\022..osmosis.protorev.v1beta1.MsgSetInfo" +
+      "ByPoolType\0326.osmosis.protorev.v1beta1.Ms" +
+      "gSetInfoByPoolTypeResponse\"/\202\323\344\223\002)\"\'/osm" +
+      "osis/protorev/set_info_by_pool_type\022\232\001\n\r" +
+      "SetBaseDenoms\022*.osmosis.protorev.v1beta1" +
+      ".MsgSetBaseDenoms\0322.osmosis.protorev.v1b" +
+      "eta1.MsgSetBaseDenomsResponse\")\202\323\344\223\002#\"!/" +
+      "osmosis/protorev/set_base_denomsB\335\001\n\034com" +
+      ".osmosis.protorev.v1beta1B\007TxProtoZ4gith" +
+      "ub.com/osmosis-labs/osmosis/v26/x/protor" +
+      "ev/types\242\002\003OPX\252\002\030Osmosis.Protorev.V1beta" +
+      "1\312\002\030Osmosis\\Protorev\\V1beta1\342\002$Osmosis\\P" +
+      "rotorev\\V1beta1\\GPBMetadata\352\002\032Osmosis::P" +
+      "rotorev::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7812,6 +7818,7 @@ public final class TxProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.osmosis.protorev.v1beta1.ProtorevProto.getDescriptor(),
           com.cosmos_proto.CosmosProto.getDescriptor(),
+          com.cosmos.msg.v1.MsgProto.getDescriptor(),
         });
     internal_static_osmosis_protorev_v1beta1_MsgSetHotRoutes_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -7837,17 +7844,17 @@ public final class TxProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_protorev_v1beta1_MsgSetDeveloperAccountResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeights_descriptor =
+    internal_static_osmosis_protorev_v1beta1_MsgSetInfoByPoolType_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeights_fieldAccessorTable = new
+    internal_static_osmosis_protorev_v1beta1_MsgSetInfoByPoolType_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeights_descriptor,
-        new java.lang.String[] { "Admin", "PoolWeights", });
-    internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeightsResponse_descriptor =
+        internal_static_osmosis_protorev_v1beta1_MsgSetInfoByPoolType_descriptor,
+        new java.lang.String[] { "Admin", "InfoByPoolType", });
+    internal_static_osmosis_protorev_v1beta1_MsgSetInfoByPoolTypeResponse_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeightsResponse_fieldAccessorTable = new
+    internal_static_osmosis_protorev_v1beta1_MsgSetInfoByPoolTypeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeightsResponse_descriptor,
+        internal_static_osmosis_protorev_v1beta1_MsgSetInfoByPoolTypeResponse_descriptor,
         new java.lang.String[] { });
     internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerTx_descriptor =
       getDescriptor().getMessageTypes().get(6);
@@ -7888,6 +7895,7 @@ public final class TxProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.amino.AminoProto.name);
+    registry.add(com.cosmos.msg.v1.MsgProto.signer);
     registry.add(com.cosmos_proto.CosmosProto.scalar);
     registry.add(com.gogoproto.GogoProto.moretags);
     registry.add(com.gogoproto.GogoProto.nullable);
@@ -7899,6 +7907,7 @@ public final class TxProto {
     com.google.api.AnnotationsProto.getDescriptor();
     com.osmosis.protorev.v1beta1.ProtorevProto.getDescriptor();
     com.cosmos_proto.CosmosProto.getDescriptor();
+    com.cosmos.msg.v1.MsgProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

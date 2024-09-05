@@ -2574,7 +2574,7 @@ public final class GenesisProto {
       "luid.LockIdIntermediaryAccountConnection" +
       "B\004\310\336\037\000R\035intemediaryAccountConnectionsB\305\001" +
       "\n\026com.osmosis.superfluidB\014GenesisProtoZ6" +
-      "github.com/osmosis-labs/osmosis/v15/x/su" +
+      "github.com/osmosis-labs/osmosis/v26/x/su" +
       "perfluid/types\242\002\003OSX\252\002\022Osmosis.Superflui" +
       "d\312\002\022Osmosis\\Superfluid\342\002\036Osmosis\\Superfl" +
       "uid\\GPBMetadata\352\002\023Osmosis::Superfluidb\006p" +

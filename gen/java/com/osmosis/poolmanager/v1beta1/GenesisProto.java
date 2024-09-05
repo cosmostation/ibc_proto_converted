@@ -41,6 +41,102 @@ public final class GenesisProto {
      */
     com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPoolCreationFeeOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * taker_fee_params is the container of taker fee parameters.
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeeParams taker_fee_params = 2 [json_name = "takerFeeParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"taker_fee_params&#92;""];</code>
+     * @return Whether the takerFeeParams field is set.
+     */
+    boolean hasTakerFeeParams();
+    /**
+     * <pre>
+     * taker_fee_params is the container of taker fee parameters.
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeeParams taker_fee_params = 2 [json_name = "takerFeeParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"taker_fee_params&#92;""];</code>
+     * @return The takerFeeParams.
+     */
+    com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams getTakerFeeParams();
+    /**
+     * <pre>
+     * taker_fee_params is the container of taker fee parameters.
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeeParams taker_fee_params = 2 [json_name = "takerFeeParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"taker_fee_params&#92;""];</code>
+     */
+    com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParamsOrBuilder getTakerFeeParamsOrBuilder();
+
+    /**
+     * <pre>
+     * authorized_quote_denoms is a list of quote denoms that can be used as
+     * token1 when creating a concentrated pool. We limit the quote assets to a
+     * small set for the purposes of having convenient price increments stemming
+     * from tick to price conversion. These increments are in a human readable
+     * magnitude only for token1 as a quote. For limit orders in the future, this
+     * will be a desirable property in terms of UX as to allow users to set limit
+     * orders at prices in terms of token1 (quote asset) that are easy to reason
+     * about.
+     * </pre>
+     *
+     * <code>repeated string authorized_quote_denoms = 3 [json_name = "authorizedQuoteDenoms", (.gogoproto.moretags) = "yaml:&#92;"authorized_quote_denoms&#92;""];</code>
+     * @return A list containing the authorizedQuoteDenoms.
+     */
+    java.util.List<java.lang.String>
+        getAuthorizedQuoteDenomsList();
+    /**
+     * <pre>
+     * authorized_quote_denoms is a list of quote denoms that can be used as
+     * token1 when creating a concentrated pool. We limit the quote assets to a
+     * small set for the purposes of having convenient price increments stemming
+     * from tick to price conversion. These increments are in a human readable
+     * magnitude only for token1 as a quote. For limit orders in the future, this
+     * will be a desirable property in terms of UX as to allow users to set limit
+     * orders at prices in terms of token1 (quote asset) that are easy to reason
+     * about.
+     * </pre>
+     *
+     * <code>repeated string authorized_quote_denoms = 3 [json_name = "authorizedQuoteDenoms", (.gogoproto.moretags) = "yaml:&#92;"authorized_quote_denoms&#92;""];</code>
+     * @return The count of authorizedQuoteDenoms.
+     */
+    int getAuthorizedQuoteDenomsCount();
+    /**
+     * <pre>
+     * authorized_quote_denoms is a list of quote denoms that can be used as
+     * token1 when creating a concentrated pool. We limit the quote assets to a
+     * small set for the purposes of having convenient price increments stemming
+     * from tick to price conversion. These increments are in a human readable
+     * magnitude only for token1 as a quote. For limit orders in the future, this
+     * will be a desirable property in terms of UX as to allow users to set limit
+     * orders at prices in terms of token1 (quote asset) that are easy to reason
+     * about.
+     * </pre>
+     *
+     * <code>repeated string authorized_quote_denoms = 3 [json_name = "authorizedQuoteDenoms", (.gogoproto.moretags) = "yaml:&#92;"authorized_quote_denoms&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The authorizedQuoteDenoms at the given index.
+     */
+    java.lang.String getAuthorizedQuoteDenoms(int index);
+    /**
+     * <pre>
+     * authorized_quote_denoms is a list of quote denoms that can be used as
+     * token1 when creating a concentrated pool. We limit the quote assets to a
+     * small set for the purposes of having convenient price increments stemming
+     * from tick to price conversion. These increments are in a human readable
+     * magnitude only for token1 as a quote. For limit orders in the future, this
+     * will be a desirable property in terms of UX as to allow users to set limit
+     * orders at prices in terms of token1 (quote asset) that are easy to reason
+     * about.
+     * </pre>
+     *
+     * <code>repeated string authorized_quote_denoms = 3 [json_name = "authorizedQuoteDenoms", (.gogoproto.moretags) = "yaml:&#92;"authorized_quote_denoms&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the authorizedQuoteDenoms at the given index.
+     */
+    com.google.protobuf.ByteString
+        getAuthorizedQuoteDenomsBytes(int index);
   }
   /**
    * <pre>
@@ -60,6 +156,8 @@ public final class GenesisProto {
     }
     private Params() {
       poolCreationFee_ = java.util.Collections.emptyList();
+      authorizedQuoteDenoms_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
@@ -123,6 +221,125 @@ public final class GenesisProto {
       return poolCreationFee_.get(index);
     }
 
+    public static final int TAKER_FEE_PARAMS_FIELD_NUMBER = 2;
+    private com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams takerFeeParams_;
+    /**
+     * <pre>
+     * taker_fee_params is the container of taker fee parameters.
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeeParams taker_fee_params = 2 [json_name = "takerFeeParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"taker_fee_params&#92;""];</code>
+     * @return Whether the takerFeeParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasTakerFeeParams() {
+      return takerFeeParams_ != null;
+    }
+    /**
+     * <pre>
+     * taker_fee_params is the container of taker fee parameters.
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeeParams taker_fee_params = 2 [json_name = "takerFeeParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"taker_fee_params&#92;""];</code>
+     * @return The takerFeeParams.
+     */
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams getTakerFeeParams() {
+      return takerFeeParams_ == null ? com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams.getDefaultInstance() : takerFeeParams_;
+    }
+    /**
+     * <pre>
+     * taker_fee_params is the container of taker fee parameters.
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeeParams taker_fee_params = 2 [json_name = "takerFeeParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"taker_fee_params&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParamsOrBuilder getTakerFeeParamsOrBuilder() {
+      return takerFeeParams_ == null ? com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams.getDefaultInstance() : takerFeeParams_;
+    }
+
+    public static final int AUTHORIZED_QUOTE_DENOMS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList authorizedQuoteDenoms_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * authorized_quote_denoms is a list of quote denoms that can be used as
+     * token1 when creating a concentrated pool. We limit the quote assets to a
+     * small set for the purposes of having convenient price increments stemming
+     * from tick to price conversion. These increments are in a human readable
+     * magnitude only for token1 as a quote. For limit orders in the future, this
+     * will be a desirable property in terms of UX as to allow users to set limit
+     * orders at prices in terms of token1 (quote asset) that are easy to reason
+     * about.
+     * </pre>
+     *
+     * <code>repeated string authorized_quote_denoms = 3 [json_name = "authorizedQuoteDenoms", (.gogoproto.moretags) = "yaml:&#92;"authorized_quote_denoms&#92;""];</code>
+     * @return A list containing the authorizedQuoteDenoms.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAuthorizedQuoteDenomsList() {
+      return authorizedQuoteDenoms_;
+    }
+    /**
+     * <pre>
+     * authorized_quote_denoms is a list of quote denoms that can be used as
+     * token1 when creating a concentrated pool. We limit the quote assets to a
+     * small set for the purposes of having convenient price increments stemming
+     * from tick to price conversion. These increments are in a human readable
+     * magnitude only for token1 as a quote. For limit orders in the future, this
+     * will be a desirable property in terms of UX as to allow users to set limit
+     * orders at prices in terms of token1 (quote asset) that are easy to reason
+     * about.
+     * </pre>
+     *
+     * <code>repeated string authorized_quote_denoms = 3 [json_name = "authorizedQuoteDenoms", (.gogoproto.moretags) = "yaml:&#92;"authorized_quote_denoms&#92;""];</code>
+     * @return The count of authorizedQuoteDenoms.
+     */
+    public int getAuthorizedQuoteDenomsCount() {
+      return authorizedQuoteDenoms_.size();
+    }
+    /**
+     * <pre>
+     * authorized_quote_denoms is a list of quote denoms that can be used as
+     * token1 when creating a concentrated pool. We limit the quote assets to a
+     * small set for the purposes of having convenient price increments stemming
+     * from tick to price conversion. These increments are in a human readable
+     * magnitude only for token1 as a quote. For limit orders in the future, this
+     * will be a desirable property in terms of UX as to allow users to set limit
+     * orders at prices in terms of token1 (quote asset) that are easy to reason
+     * about.
+     * </pre>
+     *
+     * <code>repeated string authorized_quote_denoms = 3 [json_name = "authorizedQuoteDenoms", (.gogoproto.moretags) = "yaml:&#92;"authorized_quote_denoms&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The authorizedQuoteDenoms at the given index.
+     */
+    public java.lang.String getAuthorizedQuoteDenoms(int index) {
+      return authorizedQuoteDenoms_.get(index);
+    }
+    /**
+     * <pre>
+     * authorized_quote_denoms is a list of quote denoms that can be used as
+     * token1 when creating a concentrated pool. We limit the quote assets to a
+     * small set for the purposes of having convenient price increments stemming
+     * from tick to price conversion. These increments are in a human readable
+     * magnitude only for token1 as a quote. For limit orders in the future, this
+     * will be a desirable property in terms of UX as to allow users to set limit
+     * orders at prices in terms of token1 (quote asset) that are easy to reason
+     * about.
+     * </pre>
+     *
+     * <code>repeated string authorized_quote_denoms = 3 [json_name = "authorizedQuoteDenoms", (.gogoproto.moretags) = "yaml:&#92;"authorized_quote_denoms&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the authorizedQuoteDenoms at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getAuthorizedQuoteDenomsBytes(int index) {
+      return authorizedQuoteDenoms_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -140,6 +357,12 @@ public final class GenesisProto {
       for (int i = 0; i < poolCreationFee_.size(); i++) {
         output.writeMessage(1, poolCreationFee_.get(i));
       }
+      if (takerFeeParams_ != null) {
+        output.writeMessage(2, getTakerFeeParams());
+      }
+      for (int i = 0; i < authorizedQuoteDenoms_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, authorizedQuoteDenoms_.getRaw(i));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -152,6 +375,18 @@ public final class GenesisProto {
       for (int i = 0; i < poolCreationFee_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, poolCreationFee_.get(i));
+      }
+      if (takerFeeParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getTakerFeeParams());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < authorizedQuoteDenoms_.size(); i++) {
+          dataSize += computeStringSizeNoTag(authorizedQuoteDenoms_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getAuthorizedQuoteDenomsList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -170,6 +405,13 @@ public final class GenesisProto {
 
       if (!getPoolCreationFeeList()
           .equals(other.getPoolCreationFeeList())) return false;
+      if (hasTakerFeeParams() != other.hasTakerFeeParams()) return false;
+      if (hasTakerFeeParams()) {
+        if (!getTakerFeeParams()
+            .equals(other.getTakerFeeParams())) return false;
+      }
+      if (!getAuthorizedQuoteDenomsList()
+          .equals(other.getAuthorizedQuoteDenomsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -184,6 +426,14 @@ public final class GenesisProto {
       if (getPoolCreationFeeCount() > 0) {
         hash = (37 * hash) + POOL_CREATION_FEE_FIELD_NUMBER;
         hash = (53 * hash) + getPoolCreationFeeList().hashCode();
+      }
+      if (hasTakerFeeParams()) {
+        hash = (37 * hash) + TAKER_FEE_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getTakerFeeParams().hashCode();
+      }
+      if (getAuthorizedQuoteDenomsCount() > 0) {
+        hash = (37 * hash) + AUTHORIZED_QUOTE_DENOMS_FIELD_NUMBER;
+        hash = (53 * hash) + getAuthorizedQuoteDenomsList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -327,6 +577,13 @@ public final class GenesisProto {
           poolCreationFeeBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
+        takerFeeParams_ = null;
+        if (takerFeeParamsBuilder_ != null) {
+          takerFeeParamsBuilder_.dispose();
+          takerFeeParamsBuilder_ = null;
+        }
+        authorizedQuoteDenoms_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -373,6 +630,15 @@ public final class GenesisProto {
 
       private void buildPartial0(com.osmosis.poolmanager.v1beta1.GenesisProto.Params result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.takerFeeParams_ = takerFeeParamsBuilder_ == null
+              ? takerFeeParams_
+              : takerFeeParamsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          authorizedQuoteDenoms_.makeImmutable();
+          result.authorizedQuoteDenoms_ = authorizedQuoteDenoms_;
+        }
       }
 
       @java.lang.Override
@@ -445,6 +711,19 @@ public final class GenesisProto {
             }
           }
         }
+        if (other.hasTakerFeeParams()) {
+          mergeTakerFeeParams(other.getTakerFeeParams());
+        }
+        if (!other.authorizedQuoteDenoms_.isEmpty()) {
+          if (authorizedQuoteDenoms_.isEmpty()) {
+            authorizedQuoteDenoms_ = other.authorizedQuoteDenoms_;
+            bitField0_ |= 0x00000004;
+          } else {
+            ensureAuthorizedQuoteDenomsIsMutable();
+            authorizedQuoteDenoms_.addAll(other.authorizedQuoteDenoms_);
+          }
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -484,6 +763,19 @@ public final class GenesisProto {
                 }
                 break;
               } // case 10
+              case 18: {
+                input.readMessage(
+                    getTakerFeeParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureAuthorizedQuoteDenomsIsMutable();
+                authorizedQuoteDenoms_.add(s);
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -740,6 +1032,371 @@ public final class GenesisProto {
         }
         return poolCreationFeeBuilder_;
       }
+
+      private com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams takerFeeParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams.Builder, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParamsOrBuilder> takerFeeParamsBuilder_;
+      /**
+       * <pre>
+       * taker_fee_params is the container of taker fee parameters.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeParams taker_fee_params = 2 [json_name = "takerFeeParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"taker_fee_params&#92;""];</code>
+       * @return Whether the takerFeeParams field is set.
+       */
+      public boolean hasTakerFeeParams() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * taker_fee_params is the container of taker fee parameters.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeParams taker_fee_params = 2 [json_name = "takerFeeParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"taker_fee_params&#92;""];</code>
+       * @return The takerFeeParams.
+       */
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams getTakerFeeParams() {
+        if (takerFeeParamsBuilder_ == null) {
+          return takerFeeParams_ == null ? com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams.getDefaultInstance() : takerFeeParams_;
+        } else {
+          return takerFeeParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * taker_fee_params is the container of taker fee parameters.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeParams taker_fee_params = 2 [json_name = "takerFeeParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"taker_fee_params&#92;""];</code>
+       */
+      public Builder setTakerFeeParams(com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams value) {
+        if (takerFeeParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          takerFeeParams_ = value;
+        } else {
+          takerFeeParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * taker_fee_params is the container of taker fee parameters.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeParams taker_fee_params = 2 [json_name = "takerFeeParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"taker_fee_params&#92;""];</code>
+       */
+      public Builder setTakerFeeParams(
+          com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams.Builder builderForValue) {
+        if (takerFeeParamsBuilder_ == null) {
+          takerFeeParams_ = builderForValue.build();
+        } else {
+          takerFeeParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * taker_fee_params is the container of taker fee parameters.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeParams taker_fee_params = 2 [json_name = "takerFeeParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"taker_fee_params&#92;""];</code>
+       */
+      public Builder mergeTakerFeeParams(com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams value) {
+        if (takerFeeParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            takerFeeParams_ != null &&
+            takerFeeParams_ != com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams.getDefaultInstance()) {
+            getTakerFeeParamsBuilder().mergeFrom(value);
+          } else {
+            takerFeeParams_ = value;
+          }
+        } else {
+          takerFeeParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * taker_fee_params is the container of taker fee parameters.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeParams taker_fee_params = 2 [json_name = "takerFeeParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"taker_fee_params&#92;""];</code>
+       */
+      public Builder clearTakerFeeParams() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        takerFeeParams_ = null;
+        if (takerFeeParamsBuilder_ != null) {
+          takerFeeParamsBuilder_.dispose();
+          takerFeeParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * taker_fee_params is the container of taker fee parameters.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeParams taker_fee_params = 2 [json_name = "takerFeeParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"taker_fee_params&#92;""];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams.Builder getTakerFeeParamsBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getTakerFeeParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * taker_fee_params is the container of taker fee parameters.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeParams taker_fee_params = 2 [json_name = "takerFeeParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"taker_fee_params&#92;""];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParamsOrBuilder getTakerFeeParamsOrBuilder() {
+        if (takerFeeParamsBuilder_ != null) {
+          return takerFeeParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return takerFeeParams_ == null ?
+              com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams.getDefaultInstance() : takerFeeParams_;
+        }
+      }
+      /**
+       * <pre>
+       * taker_fee_params is the container of taker fee parameters.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeParams taker_fee_params = 2 [json_name = "takerFeeParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"taker_fee_params&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams.Builder, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParamsOrBuilder> 
+          getTakerFeeParamsFieldBuilder() {
+        if (takerFeeParamsBuilder_ == null) {
+          takerFeeParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams.Builder, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParamsOrBuilder>(
+                  getTakerFeeParams(),
+                  getParentForChildren(),
+                  isClean());
+          takerFeeParams_ = null;
+        }
+        return takerFeeParamsBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringArrayList authorizedQuoteDenoms_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureAuthorizedQuoteDenomsIsMutable() {
+        if (!authorizedQuoteDenoms_.isModifiable()) {
+          authorizedQuoteDenoms_ = new com.google.protobuf.LazyStringArrayList(authorizedQuoteDenoms_);
+        }
+        bitField0_ |= 0x00000004;
+      }
+      /**
+       * <pre>
+       * authorized_quote_denoms is a list of quote denoms that can be used as
+       * token1 when creating a concentrated pool. We limit the quote assets to a
+       * small set for the purposes of having convenient price increments stemming
+       * from tick to price conversion. These increments are in a human readable
+       * magnitude only for token1 as a quote. For limit orders in the future, this
+       * will be a desirable property in terms of UX as to allow users to set limit
+       * orders at prices in terms of token1 (quote asset) that are easy to reason
+       * about.
+       * </pre>
+       *
+       * <code>repeated string authorized_quote_denoms = 3 [json_name = "authorizedQuoteDenoms", (.gogoproto.moretags) = "yaml:&#92;"authorized_quote_denoms&#92;""];</code>
+       * @return A list containing the authorizedQuoteDenoms.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAuthorizedQuoteDenomsList() {
+        authorizedQuoteDenoms_.makeImmutable();
+        return authorizedQuoteDenoms_;
+      }
+      /**
+       * <pre>
+       * authorized_quote_denoms is a list of quote denoms that can be used as
+       * token1 when creating a concentrated pool. We limit the quote assets to a
+       * small set for the purposes of having convenient price increments stemming
+       * from tick to price conversion. These increments are in a human readable
+       * magnitude only for token1 as a quote. For limit orders in the future, this
+       * will be a desirable property in terms of UX as to allow users to set limit
+       * orders at prices in terms of token1 (quote asset) that are easy to reason
+       * about.
+       * </pre>
+       *
+       * <code>repeated string authorized_quote_denoms = 3 [json_name = "authorizedQuoteDenoms", (.gogoproto.moretags) = "yaml:&#92;"authorized_quote_denoms&#92;""];</code>
+       * @return The count of authorizedQuoteDenoms.
+       */
+      public int getAuthorizedQuoteDenomsCount() {
+        return authorizedQuoteDenoms_.size();
+      }
+      /**
+       * <pre>
+       * authorized_quote_denoms is a list of quote denoms that can be used as
+       * token1 when creating a concentrated pool. We limit the quote assets to a
+       * small set for the purposes of having convenient price increments stemming
+       * from tick to price conversion. These increments are in a human readable
+       * magnitude only for token1 as a quote. For limit orders in the future, this
+       * will be a desirable property in terms of UX as to allow users to set limit
+       * orders at prices in terms of token1 (quote asset) that are easy to reason
+       * about.
+       * </pre>
+       *
+       * <code>repeated string authorized_quote_denoms = 3 [json_name = "authorizedQuoteDenoms", (.gogoproto.moretags) = "yaml:&#92;"authorized_quote_denoms&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The authorizedQuoteDenoms at the given index.
+       */
+      public java.lang.String getAuthorizedQuoteDenoms(int index) {
+        return authorizedQuoteDenoms_.get(index);
+      }
+      /**
+       * <pre>
+       * authorized_quote_denoms is a list of quote denoms that can be used as
+       * token1 when creating a concentrated pool. We limit the quote assets to a
+       * small set for the purposes of having convenient price increments stemming
+       * from tick to price conversion. These increments are in a human readable
+       * magnitude only for token1 as a quote. For limit orders in the future, this
+       * will be a desirable property in terms of UX as to allow users to set limit
+       * orders at prices in terms of token1 (quote asset) that are easy to reason
+       * about.
+       * </pre>
+       *
+       * <code>repeated string authorized_quote_denoms = 3 [json_name = "authorizedQuoteDenoms", (.gogoproto.moretags) = "yaml:&#92;"authorized_quote_denoms&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the authorizedQuoteDenoms at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getAuthorizedQuoteDenomsBytes(int index) {
+        return authorizedQuoteDenoms_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * authorized_quote_denoms is a list of quote denoms that can be used as
+       * token1 when creating a concentrated pool. We limit the quote assets to a
+       * small set for the purposes of having convenient price increments stemming
+       * from tick to price conversion. These increments are in a human readable
+       * magnitude only for token1 as a quote. For limit orders in the future, this
+       * will be a desirable property in terms of UX as to allow users to set limit
+       * orders at prices in terms of token1 (quote asset) that are easy to reason
+       * about.
+       * </pre>
+       *
+       * <code>repeated string authorized_quote_denoms = 3 [json_name = "authorizedQuoteDenoms", (.gogoproto.moretags) = "yaml:&#92;"authorized_quote_denoms&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The authorizedQuoteDenoms to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthorizedQuoteDenoms(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAuthorizedQuoteDenomsIsMutable();
+        authorizedQuoteDenoms_.set(index, value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authorized_quote_denoms is a list of quote denoms that can be used as
+       * token1 when creating a concentrated pool. We limit the quote assets to a
+       * small set for the purposes of having convenient price increments stemming
+       * from tick to price conversion. These increments are in a human readable
+       * magnitude only for token1 as a quote. For limit orders in the future, this
+       * will be a desirable property in terms of UX as to allow users to set limit
+       * orders at prices in terms of token1 (quote asset) that are easy to reason
+       * about.
+       * </pre>
+       *
+       * <code>repeated string authorized_quote_denoms = 3 [json_name = "authorizedQuoteDenoms", (.gogoproto.moretags) = "yaml:&#92;"authorized_quote_denoms&#92;""];</code>
+       * @param value The authorizedQuoteDenoms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAuthorizedQuoteDenoms(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAuthorizedQuoteDenomsIsMutable();
+        authorizedQuoteDenoms_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authorized_quote_denoms is a list of quote denoms that can be used as
+       * token1 when creating a concentrated pool. We limit the quote assets to a
+       * small set for the purposes of having convenient price increments stemming
+       * from tick to price conversion. These increments are in a human readable
+       * magnitude only for token1 as a quote. For limit orders in the future, this
+       * will be a desirable property in terms of UX as to allow users to set limit
+       * orders at prices in terms of token1 (quote asset) that are easy to reason
+       * about.
+       * </pre>
+       *
+       * <code>repeated string authorized_quote_denoms = 3 [json_name = "authorizedQuoteDenoms", (.gogoproto.moretags) = "yaml:&#92;"authorized_quote_denoms&#92;""];</code>
+       * @param values The authorizedQuoteDenoms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAuthorizedQuoteDenoms(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureAuthorizedQuoteDenomsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, authorizedQuoteDenoms_);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authorized_quote_denoms is a list of quote denoms that can be used as
+       * token1 when creating a concentrated pool. We limit the quote assets to a
+       * small set for the purposes of having convenient price increments stemming
+       * from tick to price conversion. These increments are in a human readable
+       * magnitude only for token1 as a quote. For limit orders in the future, this
+       * will be a desirable property in terms of UX as to allow users to set limit
+       * orders at prices in terms of token1 (quote asset) that are easy to reason
+       * about.
+       * </pre>
+       *
+       * <code>repeated string authorized_quote_denoms = 3 [json_name = "authorizedQuoteDenoms", (.gogoproto.moretags) = "yaml:&#92;"authorized_quote_denoms&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthorizedQuoteDenoms() {
+        authorizedQuoteDenoms_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authorized_quote_denoms is a list of quote denoms that can be used as
+       * token1 when creating a concentrated pool. We limit the quote assets to a
+       * small set for the purposes of having convenient price increments stemming
+       * from tick to price conversion. These increments are in a human readable
+       * magnitude only for token1 as a quote. For limit orders in the future, this
+       * will be a desirable property in terms of UX as to allow users to set limit
+       * orders at prices in terms of token1 (quote asset) that are easy to reason
+       * about.
+       * </pre>
+       *
+       * <code>repeated string authorized_quote_denoms = 3 [json_name = "authorizedQuoteDenoms", (.gogoproto.moretags) = "yaml:&#92;"authorized_quote_denoms&#92;""];</code>
+       * @param value The bytes of the authorizedQuoteDenoms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAuthorizedQuoteDenomsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureAuthorizedQuoteDenomsIsMutable();
+        authorizedQuoteDenoms_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -888,6 +1545,81 @@ public final class GenesisProto {
      */
     com.osmosis.poolmanager.v1beta1.ModuleRouteProto.ModuleRouteOrBuilder getPoolRoutesOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * KVStore state
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeesTracker taker_fees_tracker = 4 [json_name = "takerFeesTracker"];</code>
+     * @return Whether the takerFeesTracker field is set.
+     */
+    boolean hasTakerFeesTracker();
+    /**
+     * <pre>
+     * KVStore state
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeesTracker taker_fees_tracker = 4 [json_name = "takerFeesTracker"];</code>
+     * @return The takerFeesTracker.
+     */
+    com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker getTakerFeesTracker();
+    /**
+     * <pre>
+     * KVStore state
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeesTracker taker_fees_tracker = 4 [json_name = "takerFeesTracker"];</code>
+     */
+    com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTrackerOrBuilder getTakerFeesTrackerOrBuilder();
+
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+     */
+    java.util.List<com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume> 
+        getPoolVolumesList();
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+     */
+    com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume getPoolVolumes(int index);
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+     */
+    int getPoolVolumesCount();
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+     */
+    java.util.List<? extends com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolumeOrBuilder> 
+        getPoolVolumesOrBuilderList();
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+     */
+    com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolumeOrBuilder getPoolVolumesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee> 
+        getDenomPairTakerFeeStoreList();
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee getDenomPairTakerFeeStore(int index);
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+     */
+    int getDenomPairTakerFeeStoreCount();
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFeeOrBuilder> 
+        getDenomPairTakerFeeStoreOrBuilderList();
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFeeOrBuilder getDenomPairTakerFeeStoreOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -907,6 +1639,8 @@ public final class GenesisProto {
     }
     private GenesisState() {
       poolRoutes_ = java.util.Collections.emptyList();
+      poolVolumes_ = java.util.Collections.emptyList();
+      denomPairTakerFeeStore_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -1043,6 +1777,126 @@ public final class GenesisProto {
       return poolRoutes_.get(index);
     }
 
+    public static final int TAKER_FEES_TRACKER_FIELD_NUMBER = 4;
+    private com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker takerFeesTracker_;
+    /**
+     * <pre>
+     * KVStore state
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeesTracker taker_fees_tracker = 4 [json_name = "takerFeesTracker"];</code>
+     * @return Whether the takerFeesTracker field is set.
+     */
+    @java.lang.Override
+    public boolean hasTakerFeesTracker() {
+      return takerFeesTracker_ != null;
+    }
+    /**
+     * <pre>
+     * KVStore state
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeesTracker taker_fees_tracker = 4 [json_name = "takerFeesTracker"];</code>
+     * @return The takerFeesTracker.
+     */
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker getTakerFeesTracker() {
+      return takerFeesTracker_ == null ? com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker.getDefaultInstance() : takerFeesTracker_;
+    }
+    /**
+     * <pre>
+     * KVStore state
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeesTracker taker_fees_tracker = 4 [json_name = "takerFeesTracker"];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTrackerOrBuilder getTakerFeesTrackerOrBuilder() {
+      return takerFeesTracker_ == null ? com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker.getDefaultInstance() : takerFeesTracker_;
+    }
+
+    public static final int POOL_VOLUMES_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume> poolVolumes_;
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume> getPoolVolumesList() {
+      return poolVolumes_;
+    }
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolumeOrBuilder> 
+        getPoolVolumesOrBuilderList() {
+      return poolVolumes_;
+    }
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+     */
+    @java.lang.Override
+    public int getPoolVolumesCount() {
+      return poolVolumes_.size();
+    }
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume getPoolVolumes(int index) {
+      return poolVolumes_.get(index);
+    }
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolumeOrBuilder getPoolVolumesOrBuilder(
+        int index) {
+      return poolVolumes_.get(index);
+    }
+
+    public static final int DENOM_PAIR_TAKER_FEE_STORE_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee> denomPairTakerFeeStore_;
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee> getDenomPairTakerFeeStoreList() {
+      return denomPairTakerFeeStore_;
+    }
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFeeOrBuilder> 
+        getDenomPairTakerFeeStoreOrBuilderList() {
+      return denomPairTakerFeeStore_;
+    }
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getDenomPairTakerFeeStoreCount() {
+      return denomPairTakerFeeStore_.size();
+    }
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee getDenomPairTakerFeeStore(int index) {
+      return denomPairTakerFeeStore_.get(index);
+    }
+    /**
+     * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFeeOrBuilder getDenomPairTakerFeeStoreOrBuilder(
+        int index) {
+      return denomPairTakerFeeStore_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1066,6 +1920,15 @@ public final class GenesisProto {
       for (int i = 0; i < poolRoutes_.size(); i++) {
         output.writeMessage(3, poolRoutes_.get(i));
       }
+      if (takerFeesTracker_ != null) {
+        output.writeMessage(4, getTakerFeesTracker());
+      }
+      for (int i = 0; i < poolVolumes_.size(); i++) {
+        output.writeMessage(5, poolVolumes_.get(i));
+      }
+      for (int i = 0; i < denomPairTakerFeeStore_.size(); i++) {
+        output.writeMessage(6, denomPairTakerFeeStore_.get(i));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1086,6 +1949,18 @@ public final class GenesisProto {
       for (int i = 0; i < poolRoutes_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, poolRoutes_.get(i));
+      }
+      if (takerFeesTracker_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getTakerFeesTracker());
+      }
+      for (int i = 0; i < poolVolumes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, poolVolumes_.get(i));
+      }
+      for (int i = 0; i < denomPairTakerFeeStore_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, denomPairTakerFeeStore_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1111,6 +1986,15 @@ public final class GenesisProto {
       }
       if (!getPoolRoutesList()
           .equals(other.getPoolRoutesList())) return false;
+      if (hasTakerFeesTracker() != other.hasTakerFeesTracker()) return false;
+      if (hasTakerFeesTracker()) {
+        if (!getTakerFeesTracker()
+            .equals(other.getTakerFeesTracker())) return false;
+      }
+      if (!getPoolVolumesList()
+          .equals(other.getPoolVolumesList())) return false;
+      if (!getDenomPairTakerFeeStoreList()
+          .equals(other.getDenomPairTakerFeeStoreList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1132,6 +2016,18 @@ public final class GenesisProto {
       if (getPoolRoutesCount() > 0) {
         hash = (37 * hash) + POOL_ROUTES_FIELD_NUMBER;
         hash = (53 * hash) + getPoolRoutesList().hashCode();
+      }
+      if (hasTakerFeesTracker()) {
+        hash = (37 * hash) + TAKER_FEES_TRACKER_FIELD_NUMBER;
+        hash = (53 * hash) + getTakerFeesTracker().hashCode();
+      }
+      if (getPoolVolumesCount() > 0) {
+        hash = (37 * hash) + POOL_VOLUMES_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolVolumesList().hashCode();
+      }
+      if (getDenomPairTakerFeeStoreCount() > 0) {
+        hash = (37 * hash) + DENOM_PAIR_TAKER_FEE_STORE_FIELD_NUMBER;
+        hash = (53 * hash) + getDenomPairTakerFeeStoreList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -1281,6 +2177,25 @@ public final class GenesisProto {
           poolRoutesBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
+        takerFeesTracker_ = null;
+        if (takerFeesTrackerBuilder_ != null) {
+          takerFeesTrackerBuilder_.dispose();
+          takerFeesTrackerBuilder_ = null;
+        }
+        if (poolVolumesBuilder_ == null) {
+          poolVolumes_ = java.util.Collections.emptyList();
+        } else {
+          poolVolumes_ = null;
+          poolVolumesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (denomPairTakerFeeStoreBuilder_ == null) {
+          denomPairTakerFeeStore_ = java.util.Collections.emptyList();
+        } else {
+          denomPairTakerFeeStore_ = null;
+          denomPairTakerFeeStoreBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -1323,6 +2238,24 @@ public final class GenesisProto {
         } else {
           result.poolRoutes_ = poolRoutesBuilder_.build();
         }
+        if (poolVolumesBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            poolVolumes_ = java.util.Collections.unmodifiableList(poolVolumes_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.poolVolumes_ = poolVolumes_;
+        } else {
+          result.poolVolumes_ = poolVolumesBuilder_.build();
+        }
+        if (denomPairTakerFeeStoreBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            denomPairTakerFeeStore_ = java.util.Collections.unmodifiableList(denomPairTakerFeeStore_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.denomPairTakerFeeStore_ = denomPairTakerFeeStore_;
+        } else {
+          result.denomPairTakerFeeStore_ = denomPairTakerFeeStoreBuilder_.build();
+        }
       }
 
       private void buildPartial0(com.osmosis.poolmanager.v1beta1.GenesisProto.GenesisState result) {
@@ -1334,6 +2267,11 @@ public final class GenesisProto {
           result.params_ = paramsBuilder_ == null
               ? params_
               : paramsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.takerFeesTracker_ = takerFeesTrackerBuilder_ == null
+              ? takerFeesTracker_
+              : takerFeesTrackerBuilder_.build();
         }
       }
 
@@ -1413,6 +2351,61 @@ public final class GenesisProto {
             }
           }
         }
+        if (other.hasTakerFeesTracker()) {
+          mergeTakerFeesTracker(other.getTakerFeesTracker());
+        }
+        if (poolVolumesBuilder_ == null) {
+          if (!other.poolVolumes_.isEmpty()) {
+            if (poolVolumes_.isEmpty()) {
+              poolVolumes_ = other.poolVolumes_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensurePoolVolumesIsMutable();
+              poolVolumes_.addAll(other.poolVolumes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.poolVolumes_.isEmpty()) {
+            if (poolVolumesBuilder_.isEmpty()) {
+              poolVolumesBuilder_.dispose();
+              poolVolumesBuilder_ = null;
+              poolVolumes_ = other.poolVolumes_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              poolVolumesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPoolVolumesFieldBuilder() : null;
+            } else {
+              poolVolumesBuilder_.addAllMessages(other.poolVolumes_);
+            }
+          }
+        }
+        if (denomPairTakerFeeStoreBuilder_ == null) {
+          if (!other.denomPairTakerFeeStore_.isEmpty()) {
+            if (denomPairTakerFeeStore_.isEmpty()) {
+              denomPairTakerFeeStore_ = other.denomPairTakerFeeStore_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureDenomPairTakerFeeStoreIsMutable();
+              denomPairTakerFeeStore_.addAll(other.denomPairTakerFeeStore_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.denomPairTakerFeeStore_.isEmpty()) {
+            if (denomPairTakerFeeStoreBuilder_.isEmpty()) {
+              denomPairTakerFeeStoreBuilder_.dispose();
+              denomPairTakerFeeStoreBuilder_ = null;
+              denomPairTakerFeeStore_ = other.denomPairTakerFeeStore_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              denomPairTakerFeeStoreBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDenomPairTakerFeeStoreFieldBuilder() : null;
+            } else {
+              denomPairTakerFeeStoreBuilder_.addAllMessages(other.denomPairTakerFeeStore_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1464,6 +2457,39 @@ public final class GenesisProto {
                 }
                 break;
               } // case 26
+              case 34: {
+                input.readMessage(
+                    getTakerFeesTrackerFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume m =
+                    input.readMessage(
+                        com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume.parser(),
+                        extensionRegistry);
+                if (poolVolumesBuilder_ == null) {
+                  ensurePoolVolumesIsMutable();
+                  poolVolumes_.add(m);
+                } else {
+                  poolVolumesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee m =
+                    input.readMessage(
+                        com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee.parser(),
+                        extensionRegistry);
+                if (denomPairTakerFeeStoreBuilder_ == null) {
+                  ensureDenomPairTakerFeeStoreIsMutable();
+                  denomPairTakerFeeStore_.add(m);
+                } else {
+                  denomPairTakerFeeStoreBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1991,6 +3017,641 @@ public final class GenesisProto {
         }
         return poolRoutesBuilder_;
       }
+
+      private com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker takerFeesTracker_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker.Builder, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTrackerOrBuilder> takerFeesTrackerBuilder_;
+      /**
+       * <pre>
+       * KVStore state
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeesTracker taker_fees_tracker = 4 [json_name = "takerFeesTracker"];</code>
+       * @return Whether the takerFeesTracker field is set.
+       */
+      public boolean hasTakerFeesTracker() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * KVStore state
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeesTracker taker_fees_tracker = 4 [json_name = "takerFeesTracker"];</code>
+       * @return The takerFeesTracker.
+       */
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker getTakerFeesTracker() {
+        if (takerFeesTrackerBuilder_ == null) {
+          return takerFeesTracker_ == null ? com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker.getDefaultInstance() : takerFeesTracker_;
+        } else {
+          return takerFeesTrackerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * KVStore state
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeesTracker taker_fees_tracker = 4 [json_name = "takerFeesTracker"];</code>
+       */
+      public Builder setTakerFeesTracker(com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker value) {
+        if (takerFeesTrackerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          takerFeesTracker_ = value;
+        } else {
+          takerFeesTrackerBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * KVStore state
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeesTracker taker_fees_tracker = 4 [json_name = "takerFeesTracker"];</code>
+       */
+      public Builder setTakerFeesTracker(
+          com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker.Builder builderForValue) {
+        if (takerFeesTrackerBuilder_ == null) {
+          takerFeesTracker_ = builderForValue.build();
+        } else {
+          takerFeesTrackerBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * KVStore state
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeesTracker taker_fees_tracker = 4 [json_name = "takerFeesTracker"];</code>
+       */
+      public Builder mergeTakerFeesTracker(com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker value) {
+        if (takerFeesTrackerBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            takerFeesTracker_ != null &&
+            takerFeesTracker_ != com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker.getDefaultInstance()) {
+            getTakerFeesTrackerBuilder().mergeFrom(value);
+          } else {
+            takerFeesTracker_ = value;
+          }
+        } else {
+          takerFeesTrackerBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * KVStore state
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeesTracker taker_fees_tracker = 4 [json_name = "takerFeesTracker"];</code>
+       */
+      public Builder clearTakerFeesTracker() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        takerFeesTracker_ = null;
+        if (takerFeesTrackerBuilder_ != null) {
+          takerFeesTrackerBuilder_.dispose();
+          takerFeesTrackerBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * KVStore state
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeesTracker taker_fees_tracker = 4 [json_name = "takerFeesTracker"];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker.Builder getTakerFeesTrackerBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getTakerFeesTrackerFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * KVStore state
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeesTracker taker_fees_tracker = 4 [json_name = "takerFeesTracker"];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTrackerOrBuilder getTakerFeesTrackerOrBuilder() {
+        if (takerFeesTrackerBuilder_ != null) {
+          return takerFeesTrackerBuilder_.getMessageOrBuilder();
+        } else {
+          return takerFeesTracker_ == null ?
+              com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker.getDefaultInstance() : takerFeesTracker_;
+        }
+      }
+      /**
+       * <pre>
+       * KVStore state
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeesTracker taker_fees_tracker = 4 [json_name = "takerFeesTracker"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker.Builder, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTrackerOrBuilder> 
+          getTakerFeesTrackerFieldBuilder() {
+        if (takerFeesTrackerBuilder_ == null) {
+          takerFeesTrackerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker.Builder, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTrackerOrBuilder>(
+                  getTakerFeesTracker(),
+                  getParentForChildren(),
+                  isClean());
+          takerFeesTracker_ = null;
+        }
+        return takerFeesTrackerBuilder_;
+      }
+
+      private java.util.List<com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume> poolVolumes_ =
+        java.util.Collections.emptyList();
+      private void ensurePoolVolumesIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          poolVolumes_ = new java.util.ArrayList<com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume>(poolVolumes_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume, com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume.Builder, com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolumeOrBuilder> poolVolumesBuilder_;
+
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+       */
+      public java.util.List<com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume> getPoolVolumesList() {
+        if (poolVolumesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(poolVolumes_);
+        } else {
+          return poolVolumesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+       */
+      public int getPoolVolumesCount() {
+        if (poolVolumesBuilder_ == null) {
+          return poolVolumes_.size();
+        } else {
+          return poolVolumesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume getPoolVolumes(int index) {
+        if (poolVolumesBuilder_ == null) {
+          return poolVolumes_.get(index);
+        } else {
+          return poolVolumesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+       */
+      public Builder setPoolVolumes(
+          int index, com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume value) {
+        if (poolVolumesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolVolumesIsMutable();
+          poolVolumes_.set(index, value);
+          onChanged();
+        } else {
+          poolVolumesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+       */
+      public Builder setPoolVolumes(
+          int index, com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume.Builder builderForValue) {
+        if (poolVolumesBuilder_ == null) {
+          ensurePoolVolumesIsMutable();
+          poolVolumes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          poolVolumesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+       */
+      public Builder addPoolVolumes(com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume value) {
+        if (poolVolumesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolVolumesIsMutable();
+          poolVolumes_.add(value);
+          onChanged();
+        } else {
+          poolVolumesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+       */
+      public Builder addPoolVolumes(
+          int index, com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume value) {
+        if (poolVolumesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolVolumesIsMutable();
+          poolVolumes_.add(index, value);
+          onChanged();
+        } else {
+          poolVolumesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+       */
+      public Builder addPoolVolumes(
+          com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume.Builder builderForValue) {
+        if (poolVolumesBuilder_ == null) {
+          ensurePoolVolumesIsMutable();
+          poolVolumes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          poolVolumesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+       */
+      public Builder addPoolVolumes(
+          int index, com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume.Builder builderForValue) {
+        if (poolVolumesBuilder_ == null) {
+          ensurePoolVolumesIsMutable();
+          poolVolumes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          poolVolumesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+       */
+      public Builder addAllPoolVolumes(
+          java.lang.Iterable<? extends com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume> values) {
+        if (poolVolumesBuilder_ == null) {
+          ensurePoolVolumesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, poolVolumes_);
+          onChanged();
+        } else {
+          poolVolumesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+       */
+      public Builder clearPoolVolumes() {
+        if (poolVolumesBuilder_ == null) {
+          poolVolumes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          poolVolumesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+       */
+      public Builder removePoolVolumes(int index) {
+        if (poolVolumesBuilder_ == null) {
+          ensurePoolVolumesIsMutable();
+          poolVolumes_.remove(index);
+          onChanged();
+        } else {
+          poolVolumesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume.Builder getPoolVolumesBuilder(
+          int index) {
+        return getPoolVolumesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolumeOrBuilder getPoolVolumesOrBuilder(
+          int index) {
+        if (poolVolumesBuilder_ == null) {
+          return poolVolumes_.get(index);  } else {
+          return poolVolumesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+       */
+      public java.util.List<? extends com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolumeOrBuilder> 
+           getPoolVolumesOrBuilderList() {
+        if (poolVolumesBuilder_ != null) {
+          return poolVolumesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(poolVolumes_);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume.Builder addPoolVolumesBuilder() {
+        return getPoolVolumesFieldBuilder().addBuilder(
+            com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume.Builder addPoolVolumesBuilder(
+          int index) {
+        return getPoolVolumesFieldBuilder().addBuilder(
+            index, com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.PoolVolume pool_volumes = 5 [json_name = "poolVolumes"];</code>
+       */
+      public java.util.List<com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume.Builder> 
+           getPoolVolumesBuilderList() {
+        return getPoolVolumesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume, com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume.Builder, com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolumeOrBuilder> 
+          getPoolVolumesFieldBuilder() {
+        if (poolVolumesBuilder_ == null) {
+          poolVolumesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume, com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume.Builder, com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolumeOrBuilder>(
+                  poolVolumes_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          poolVolumes_ = null;
+        }
+        return poolVolumesBuilder_;
+      }
+
+      private java.util.List<com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee> denomPairTakerFeeStore_ =
+        java.util.Collections.emptyList();
+      private void ensureDenomPairTakerFeeStoreIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          denomPairTakerFeeStore_ = new java.util.ArrayList<com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee>(denomPairTakerFeeStore_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee, com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee.Builder, com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFeeOrBuilder> denomPairTakerFeeStoreBuilder_;
+
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee> getDenomPairTakerFeeStoreList() {
+        if (denomPairTakerFeeStoreBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(denomPairTakerFeeStore_);
+        } else {
+          return denomPairTakerFeeStoreBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+       */
+      public int getDenomPairTakerFeeStoreCount() {
+        if (denomPairTakerFeeStoreBuilder_ == null) {
+          return denomPairTakerFeeStore_.size();
+        } else {
+          return denomPairTakerFeeStoreBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee getDenomPairTakerFeeStore(int index) {
+        if (denomPairTakerFeeStoreBuilder_ == null) {
+          return denomPairTakerFeeStore_.get(index);
+        } else {
+          return denomPairTakerFeeStoreBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDenomPairTakerFeeStore(
+          int index, com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee value) {
+        if (denomPairTakerFeeStoreBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDenomPairTakerFeeStoreIsMutable();
+          denomPairTakerFeeStore_.set(index, value);
+          onChanged();
+        } else {
+          denomPairTakerFeeStoreBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDenomPairTakerFeeStore(
+          int index, com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee.Builder builderForValue) {
+        if (denomPairTakerFeeStoreBuilder_ == null) {
+          ensureDenomPairTakerFeeStoreIsMutable();
+          denomPairTakerFeeStore_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          denomPairTakerFeeStoreBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDenomPairTakerFeeStore(com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee value) {
+        if (denomPairTakerFeeStoreBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDenomPairTakerFeeStoreIsMutable();
+          denomPairTakerFeeStore_.add(value);
+          onChanged();
+        } else {
+          denomPairTakerFeeStoreBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDenomPairTakerFeeStore(
+          int index, com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee value) {
+        if (denomPairTakerFeeStoreBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDenomPairTakerFeeStoreIsMutable();
+          denomPairTakerFeeStore_.add(index, value);
+          onChanged();
+        } else {
+          denomPairTakerFeeStoreBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDenomPairTakerFeeStore(
+          com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee.Builder builderForValue) {
+        if (denomPairTakerFeeStoreBuilder_ == null) {
+          ensureDenomPairTakerFeeStoreIsMutable();
+          denomPairTakerFeeStore_.add(builderForValue.build());
+          onChanged();
+        } else {
+          denomPairTakerFeeStoreBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDenomPairTakerFeeStore(
+          int index, com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee.Builder builderForValue) {
+        if (denomPairTakerFeeStoreBuilder_ == null) {
+          ensureDenomPairTakerFeeStoreIsMutable();
+          denomPairTakerFeeStore_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          denomPairTakerFeeStoreBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllDenomPairTakerFeeStore(
+          java.lang.Iterable<? extends com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee> values) {
+        if (denomPairTakerFeeStoreBuilder_ == null) {
+          ensureDenomPairTakerFeeStoreIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, denomPairTakerFeeStore_);
+          onChanged();
+        } else {
+          denomPairTakerFeeStoreBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDenomPairTakerFeeStore() {
+        if (denomPairTakerFeeStoreBuilder_ == null) {
+          denomPairTakerFeeStore_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          denomPairTakerFeeStoreBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeDenomPairTakerFeeStore(int index) {
+        if (denomPairTakerFeeStoreBuilder_ == null) {
+          ensureDenomPairTakerFeeStoreIsMutable();
+          denomPairTakerFeeStore_.remove(index);
+          onChanged();
+        } else {
+          denomPairTakerFeeStoreBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee.Builder getDenomPairTakerFeeStoreBuilder(
+          int index) {
+        return getDenomPairTakerFeeStoreFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFeeOrBuilder getDenomPairTakerFeeStoreOrBuilder(
+          int index) {
+        if (denomPairTakerFeeStoreBuilder_ == null) {
+          return denomPairTakerFeeStore_.get(index);  } else {
+          return denomPairTakerFeeStoreBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFeeOrBuilder> 
+           getDenomPairTakerFeeStoreOrBuilderList() {
+        if (denomPairTakerFeeStoreBuilder_ != null) {
+          return denomPairTakerFeeStoreBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(denomPairTakerFeeStore_);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee.Builder addDenomPairTakerFeeStoreBuilder() {
+        return getDenomPairTakerFeeStoreFieldBuilder().addBuilder(
+            com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee.Builder addDenomPairTakerFeeStoreBuilder(
+          int index) {
+        return getDenomPairTakerFeeStoreFieldBuilder().addBuilder(
+            index, com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.poolmanager.v1beta1.DenomPairTakerFee denom_pair_taker_fee_store = 6 [json_name = "denomPairTakerFeeStore", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee.Builder> 
+           getDenomPairTakerFeeStoreBuilderList() {
+        return getDenomPairTakerFeeStoreFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee, com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee.Builder, com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFeeOrBuilder> 
+          getDenomPairTakerFeeStoreFieldBuilder() {
+        if (denomPairTakerFeeStoreBuilder_ == null) {
+          denomPairTakerFeeStoreBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee, com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFee.Builder, com.osmosis.poolmanager.v1beta1.TxProto.DenomPairTakerFeeOrBuilder>(
+                  denomPairTakerFeeStore_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          denomPairTakerFeeStore_ = null;
+        }
+        return denomPairTakerFeeStoreBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2055,6 +3716,5173 @@ public final class GenesisProto {
 
   }
 
+  public interface TakerFeeParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.TakerFeeParams)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * default_taker_fee is the fee used when creating a new pool that doesn't
+     * fall under a custom pool taker fee or stableswap taker fee category.
+     * </pre>
+     *
+     * <code>string default_taker_fee = 1 [json_name = "defaultTakerFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.customname) = "DefaultTakerFee"];</code>
+     * @return The defaultTakerFee.
+     */
+    java.lang.String getDefaultTakerFee();
+    /**
+     * <pre>
+     * default_taker_fee is the fee used when creating a new pool that doesn't
+     * fall under a custom pool taker fee or stableswap taker fee category.
+     * </pre>
+     *
+     * <code>string default_taker_fee = 1 [json_name = "defaultTakerFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.customname) = "DefaultTakerFee"];</code>
+     * @return The bytes for defaultTakerFee.
+     */
+    com.google.protobuf.ByteString
+        getDefaultTakerFeeBytes();
+
+    /**
+     * <pre>
+     * osmo_taker_fee_distribution defines the distribution of taker fees
+     * generated in OSMO. As of this writing, it has two categories:
+     * - staking_rewards: the percent of the taker fee that gets distributed to
+     *   stakers.
+     * - community_pool: the percent of the taker fee that gets sent to the
+     *   community pool.
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage osmo_taker_fee_distribution = 2 [json_name = "osmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "OsmoTakerFeeDistribution"];</code>
+     * @return Whether the osmoTakerFeeDistribution field is set.
+     */
+    boolean hasOsmoTakerFeeDistribution();
+    /**
+     * <pre>
+     * osmo_taker_fee_distribution defines the distribution of taker fees
+     * generated in OSMO. As of this writing, it has two categories:
+     * - staking_rewards: the percent of the taker fee that gets distributed to
+     *   stakers.
+     * - community_pool: the percent of the taker fee that gets sent to the
+     *   community pool.
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage osmo_taker_fee_distribution = 2 [json_name = "osmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "OsmoTakerFeeDistribution"];</code>
+     * @return The osmoTakerFeeDistribution.
+     */
+    com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage getOsmoTakerFeeDistribution();
+    /**
+     * <pre>
+     * osmo_taker_fee_distribution defines the distribution of taker fees
+     * generated in OSMO. As of this writing, it has two categories:
+     * - staking_rewards: the percent of the taker fee that gets distributed to
+     *   stakers.
+     * - community_pool: the percent of the taker fee that gets sent to the
+     *   community pool.
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage osmo_taker_fee_distribution = 2 [json_name = "osmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "OsmoTakerFeeDistribution"];</code>
+     */
+    com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentageOrBuilder getOsmoTakerFeeDistributionOrBuilder();
+
+    /**
+     * <pre>
+     * non_osmo_taker_fee_distribution defines the distribution of taker fees
+     * generated in non-OSMO. As of this writing, it has two categories:
+     * - staking_rewards: the percent of the taker fee that gets swapped to OSMO
+     *   and then distributed to stakers.
+     * - community_pool: the percent of the taker fee that gets sent to the
+     *   community pool. Note: If the non-OSMO asset is an authorized_quote_denom,
+     *   that denom is sent directly to the community pool. Otherwise, it is
+     *   swapped to the community_pool_denom_to_swap_non_whitelisted_assets_to and
+     *   then sent to the community pool as that denom.
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage non_osmo_taker_fee_distribution = 3 [json_name = "nonOsmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NonOsmoTakerFeeDistribution"];</code>
+     * @return Whether the nonOsmoTakerFeeDistribution field is set.
+     */
+    boolean hasNonOsmoTakerFeeDistribution();
+    /**
+     * <pre>
+     * non_osmo_taker_fee_distribution defines the distribution of taker fees
+     * generated in non-OSMO. As of this writing, it has two categories:
+     * - staking_rewards: the percent of the taker fee that gets swapped to OSMO
+     *   and then distributed to stakers.
+     * - community_pool: the percent of the taker fee that gets sent to the
+     *   community pool. Note: If the non-OSMO asset is an authorized_quote_denom,
+     *   that denom is sent directly to the community pool. Otherwise, it is
+     *   swapped to the community_pool_denom_to_swap_non_whitelisted_assets_to and
+     *   then sent to the community pool as that denom.
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage non_osmo_taker_fee_distribution = 3 [json_name = "nonOsmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NonOsmoTakerFeeDistribution"];</code>
+     * @return The nonOsmoTakerFeeDistribution.
+     */
+    com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage getNonOsmoTakerFeeDistribution();
+    /**
+     * <pre>
+     * non_osmo_taker_fee_distribution defines the distribution of taker fees
+     * generated in non-OSMO. As of this writing, it has two categories:
+     * - staking_rewards: the percent of the taker fee that gets swapped to OSMO
+     *   and then distributed to stakers.
+     * - community_pool: the percent of the taker fee that gets sent to the
+     *   community pool. Note: If the non-OSMO asset is an authorized_quote_denom,
+     *   that denom is sent directly to the community pool. Otherwise, it is
+     *   swapped to the community_pool_denom_to_swap_non_whitelisted_assets_to and
+     *   then sent to the community pool as that denom.
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage non_osmo_taker_fee_distribution = 3 [json_name = "nonOsmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NonOsmoTakerFeeDistribution"];</code>
+     */
+    com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentageOrBuilder getNonOsmoTakerFeeDistributionOrBuilder();
+
+    /**
+     * <pre>
+     * admin_addresses is a list of addresses that are allowed to set and remove
+     * custom taker fees for denom pairs. Governance also has the ability to set
+     * and remove custom taker fees for denom pairs, but with the normal
+     * governance delay.
+     * </pre>
+     *
+     * <code>repeated string admin_addresses = 4 [json_name = "adminAddresses", (.gogoproto.moretags) = "yaml:&#92;"admin_addresses&#92;""];</code>
+     * @return A list containing the adminAddresses.
+     */
+    java.util.List<java.lang.String>
+        getAdminAddressesList();
+    /**
+     * <pre>
+     * admin_addresses is a list of addresses that are allowed to set and remove
+     * custom taker fees for denom pairs. Governance also has the ability to set
+     * and remove custom taker fees for denom pairs, but with the normal
+     * governance delay.
+     * </pre>
+     *
+     * <code>repeated string admin_addresses = 4 [json_name = "adminAddresses", (.gogoproto.moretags) = "yaml:&#92;"admin_addresses&#92;""];</code>
+     * @return The count of adminAddresses.
+     */
+    int getAdminAddressesCount();
+    /**
+     * <pre>
+     * admin_addresses is a list of addresses that are allowed to set and remove
+     * custom taker fees for denom pairs. Governance also has the ability to set
+     * and remove custom taker fees for denom pairs, but with the normal
+     * governance delay.
+     * </pre>
+     *
+     * <code>repeated string admin_addresses = 4 [json_name = "adminAddresses", (.gogoproto.moretags) = "yaml:&#92;"admin_addresses&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The adminAddresses at the given index.
+     */
+    java.lang.String getAdminAddresses(int index);
+    /**
+     * <pre>
+     * admin_addresses is a list of addresses that are allowed to set and remove
+     * custom taker fees for denom pairs. Governance also has the ability to set
+     * and remove custom taker fees for denom pairs, but with the normal
+     * governance delay.
+     * </pre>
+     *
+     * <code>repeated string admin_addresses = 4 [json_name = "adminAddresses", (.gogoproto.moretags) = "yaml:&#92;"admin_addresses&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the adminAddresses at the given index.
+     */
+    com.google.protobuf.ByteString
+        getAdminAddressesBytes(int index);
+
+    /**
+     * <pre>
+     * community_pool_denom_to_swap_non_whitelisted_assets_to is the denom that
+     * non-whitelisted taker fees will be swapped to before being sent to
+     * the community pool.
+     * </pre>
+     *
+     * <code>string community_pool_denom_to_swap_non_whitelisted_assets_to = 5 [json_name = "communityPoolDenomToSwapNonWhitelistedAssetsTo", (.gogoproto.moretags) = "yaml:&#92;"community_pool_denom_to_swap_non_whitelisted_assets_to&#92;""];</code>
+     * @return The communityPoolDenomToSwapNonWhitelistedAssetsTo.
+     */
+    java.lang.String getCommunityPoolDenomToSwapNonWhitelistedAssetsTo();
+    /**
+     * <pre>
+     * community_pool_denom_to_swap_non_whitelisted_assets_to is the denom that
+     * non-whitelisted taker fees will be swapped to before being sent to
+     * the community pool.
+     * </pre>
+     *
+     * <code>string community_pool_denom_to_swap_non_whitelisted_assets_to = 5 [json_name = "communityPoolDenomToSwapNonWhitelistedAssetsTo", (.gogoproto.moretags) = "yaml:&#92;"community_pool_denom_to_swap_non_whitelisted_assets_to&#92;""];</code>
+     * @return The bytes for communityPoolDenomToSwapNonWhitelistedAssetsTo.
+     */
+    com.google.protobuf.ByteString
+        getCommunityPoolDenomToSwapNonWhitelistedAssetsToBytes();
+
+    /**
+     * <pre>
+     * reduced_fee_whitelist is a list of addresses that are
+     * allowed to pay a reduce taker fee when performing a swap
+     * (i.e. swap without paying the taker fee).
+     * It is intended to be used for integrators who meet qualifying factors
+     * that are approved by governance.
+     * Initially, the taker fee is allowed to be bypassed completely. However
+     * In the future, we will charge a reduced taker fee instead of no fee at all.
+     * </pre>
+     *
+     * <code>repeated string reduced_fee_whitelist = 6 [json_name = "reducedFeeWhitelist", (.gogoproto.moretags) = "yaml:&#92;"reduced_fee_whitelist&#92;""];</code>
+     * @return A list containing the reducedFeeWhitelist.
+     */
+    java.util.List<java.lang.String>
+        getReducedFeeWhitelistList();
+    /**
+     * <pre>
+     * reduced_fee_whitelist is a list of addresses that are
+     * allowed to pay a reduce taker fee when performing a swap
+     * (i.e. swap without paying the taker fee).
+     * It is intended to be used for integrators who meet qualifying factors
+     * that are approved by governance.
+     * Initially, the taker fee is allowed to be bypassed completely. However
+     * In the future, we will charge a reduced taker fee instead of no fee at all.
+     * </pre>
+     *
+     * <code>repeated string reduced_fee_whitelist = 6 [json_name = "reducedFeeWhitelist", (.gogoproto.moretags) = "yaml:&#92;"reduced_fee_whitelist&#92;""];</code>
+     * @return The count of reducedFeeWhitelist.
+     */
+    int getReducedFeeWhitelistCount();
+    /**
+     * <pre>
+     * reduced_fee_whitelist is a list of addresses that are
+     * allowed to pay a reduce taker fee when performing a swap
+     * (i.e. swap without paying the taker fee).
+     * It is intended to be used for integrators who meet qualifying factors
+     * that are approved by governance.
+     * Initially, the taker fee is allowed to be bypassed completely. However
+     * In the future, we will charge a reduced taker fee instead of no fee at all.
+     * </pre>
+     *
+     * <code>repeated string reduced_fee_whitelist = 6 [json_name = "reducedFeeWhitelist", (.gogoproto.moretags) = "yaml:&#92;"reduced_fee_whitelist&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The reducedFeeWhitelist at the given index.
+     */
+    java.lang.String getReducedFeeWhitelist(int index);
+    /**
+     * <pre>
+     * reduced_fee_whitelist is a list of addresses that are
+     * allowed to pay a reduce taker fee when performing a swap
+     * (i.e. swap without paying the taker fee).
+     * It is intended to be used for integrators who meet qualifying factors
+     * that are approved by governance.
+     * Initially, the taker fee is allowed to be bypassed completely. However
+     * In the future, we will charge a reduced taker fee instead of no fee at all.
+     * </pre>
+     *
+     * <code>repeated string reduced_fee_whitelist = 6 [json_name = "reducedFeeWhitelist", (.gogoproto.moretags) = "yaml:&#92;"reduced_fee_whitelist&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the reducedFeeWhitelist at the given index.
+     */
+    com.google.protobuf.ByteString
+        getReducedFeeWhitelistBytes(int index);
+  }
+  /**
+   * <pre>
+   * TakerFeeParams consolidates the taker fee parameters for the poolmanager.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.TakerFeeParams}
+   */
+  public static final class TakerFeeParams extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.TakerFeeParams)
+      TakerFeeParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TakerFeeParams.newBuilder() to construct.
+    private TakerFeeParams(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TakerFeeParams() {
+      defaultTakerFee_ = "";
+      adminAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      communityPoolDenomToSwapNonWhitelistedAssetsTo_ = "";
+      reducedFeeWhitelist_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TakerFeeParams();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.GenesisProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeParams_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.GenesisProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeParams_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams.class, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams.Builder.class);
+    }
+
+    public static final int DEFAULT_TAKER_FEE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object defaultTakerFee_ = "";
+    /**
+     * <pre>
+     * default_taker_fee is the fee used when creating a new pool that doesn't
+     * fall under a custom pool taker fee or stableswap taker fee category.
+     * </pre>
+     *
+     * <code>string default_taker_fee = 1 [json_name = "defaultTakerFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.customname) = "DefaultTakerFee"];</code>
+     * @return The defaultTakerFee.
+     */
+    @java.lang.Override
+    public java.lang.String getDefaultTakerFee() {
+      java.lang.Object ref = defaultTakerFee_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        defaultTakerFee_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * default_taker_fee is the fee used when creating a new pool that doesn't
+     * fall under a custom pool taker fee or stableswap taker fee category.
+     * </pre>
+     *
+     * <code>string default_taker_fee = 1 [json_name = "defaultTakerFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.customname) = "DefaultTakerFee"];</code>
+     * @return The bytes for defaultTakerFee.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultTakerFeeBytes() {
+      java.lang.Object ref = defaultTakerFee_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultTakerFee_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OSMO_TAKER_FEE_DISTRIBUTION_FIELD_NUMBER = 2;
+    private com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage osmoTakerFeeDistribution_;
+    /**
+     * <pre>
+     * osmo_taker_fee_distribution defines the distribution of taker fees
+     * generated in OSMO. As of this writing, it has two categories:
+     * - staking_rewards: the percent of the taker fee that gets distributed to
+     *   stakers.
+     * - community_pool: the percent of the taker fee that gets sent to the
+     *   community pool.
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage osmo_taker_fee_distribution = 2 [json_name = "osmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "OsmoTakerFeeDistribution"];</code>
+     * @return Whether the osmoTakerFeeDistribution field is set.
+     */
+    @java.lang.Override
+    public boolean hasOsmoTakerFeeDistribution() {
+      return osmoTakerFeeDistribution_ != null;
+    }
+    /**
+     * <pre>
+     * osmo_taker_fee_distribution defines the distribution of taker fees
+     * generated in OSMO. As of this writing, it has two categories:
+     * - staking_rewards: the percent of the taker fee that gets distributed to
+     *   stakers.
+     * - community_pool: the percent of the taker fee that gets sent to the
+     *   community pool.
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage osmo_taker_fee_distribution = 2 [json_name = "osmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "OsmoTakerFeeDistribution"];</code>
+     * @return The osmoTakerFeeDistribution.
+     */
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage getOsmoTakerFeeDistribution() {
+      return osmoTakerFeeDistribution_ == null ? com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.getDefaultInstance() : osmoTakerFeeDistribution_;
+    }
+    /**
+     * <pre>
+     * osmo_taker_fee_distribution defines the distribution of taker fees
+     * generated in OSMO. As of this writing, it has two categories:
+     * - staking_rewards: the percent of the taker fee that gets distributed to
+     *   stakers.
+     * - community_pool: the percent of the taker fee that gets sent to the
+     *   community pool.
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage osmo_taker_fee_distribution = 2 [json_name = "osmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "OsmoTakerFeeDistribution"];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentageOrBuilder getOsmoTakerFeeDistributionOrBuilder() {
+      return osmoTakerFeeDistribution_ == null ? com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.getDefaultInstance() : osmoTakerFeeDistribution_;
+    }
+
+    public static final int NON_OSMO_TAKER_FEE_DISTRIBUTION_FIELD_NUMBER = 3;
+    private com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage nonOsmoTakerFeeDistribution_;
+    /**
+     * <pre>
+     * non_osmo_taker_fee_distribution defines the distribution of taker fees
+     * generated in non-OSMO. As of this writing, it has two categories:
+     * - staking_rewards: the percent of the taker fee that gets swapped to OSMO
+     *   and then distributed to stakers.
+     * - community_pool: the percent of the taker fee that gets sent to the
+     *   community pool. Note: If the non-OSMO asset is an authorized_quote_denom,
+     *   that denom is sent directly to the community pool. Otherwise, it is
+     *   swapped to the community_pool_denom_to_swap_non_whitelisted_assets_to and
+     *   then sent to the community pool as that denom.
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage non_osmo_taker_fee_distribution = 3 [json_name = "nonOsmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NonOsmoTakerFeeDistribution"];</code>
+     * @return Whether the nonOsmoTakerFeeDistribution field is set.
+     */
+    @java.lang.Override
+    public boolean hasNonOsmoTakerFeeDistribution() {
+      return nonOsmoTakerFeeDistribution_ != null;
+    }
+    /**
+     * <pre>
+     * non_osmo_taker_fee_distribution defines the distribution of taker fees
+     * generated in non-OSMO. As of this writing, it has two categories:
+     * - staking_rewards: the percent of the taker fee that gets swapped to OSMO
+     *   and then distributed to stakers.
+     * - community_pool: the percent of the taker fee that gets sent to the
+     *   community pool. Note: If the non-OSMO asset is an authorized_quote_denom,
+     *   that denom is sent directly to the community pool. Otherwise, it is
+     *   swapped to the community_pool_denom_to_swap_non_whitelisted_assets_to and
+     *   then sent to the community pool as that denom.
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage non_osmo_taker_fee_distribution = 3 [json_name = "nonOsmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NonOsmoTakerFeeDistribution"];</code>
+     * @return The nonOsmoTakerFeeDistribution.
+     */
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage getNonOsmoTakerFeeDistribution() {
+      return nonOsmoTakerFeeDistribution_ == null ? com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.getDefaultInstance() : nonOsmoTakerFeeDistribution_;
+    }
+    /**
+     * <pre>
+     * non_osmo_taker_fee_distribution defines the distribution of taker fees
+     * generated in non-OSMO. As of this writing, it has two categories:
+     * - staking_rewards: the percent of the taker fee that gets swapped to OSMO
+     *   and then distributed to stakers.
+     * - community_pool: the percent of the taker fee that gets sent to the
+     *   community pool. Note: If the non-OSMO asset is an authorized_quote_denom,
+     *   that denom is sent directly to the community pool. Otherwise, it is
+     *   swapped to the community_pool_denom_to_swap_non_whitelisted_assets_to and
+     *   then sent to the community pool as that denom.
+     * </pre>
+     *
+     * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage non_osmo_taker_fee_distribution = 3 [json_name = "nonOsmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NonOsmoTakerFeeDistribution"];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentageOrBuilder getNonOsmoTakerFeeDistributionOrBuilder() {
+      return nonOsmoTakerFeeDistribution_ == null ? com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.getDefaultInstance() : nonOsmoTakerFeeDistribution_;
+    }
+
+    public static final int ADMIN_ADDRESSES_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList adminAddresses_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * admin_addresses is a list of addresses that are allowed to set and remove
+     * custom taker fees for denom pairs. Governance also has the ability to set
+     * and remove custom taker fees for denom pairs, but with the normal
+     * governance delay.
+     * </pre>
+     *
+     * <code>repeated string admin_addresses = 4 [json_name = "adminAddresses", (.gogoproto.moretags) = "yaml:&#92;"admin_addresses&#92;""];</code>
+     * @return A list containing the adminAddresses.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAdminAddressesList() {
+      return adminAddresses_;
+    }
+    /**
+     * <pre>
+     * admin_addresses is a list of addresses that are allowed to set and remove
+     * custom taker fees for denom pairs. Governance also has the ability to set
+     * and remove custom taker fees for denom pairs, but with the normal
+     * governance delay.
+     * </pre>
+     *
+     * <code>repeated string admin_addresses = 4 [json_name = "adminAddresses", (.gogoproto.moretags) = "yaml:&#92;"admin_addresses&#92;""];</code>
+     * @return The count of adminAddresses.
+     */
+    public int getAdminAddressesCount() {
+      return adminAddresses_.size();
+    }
+    /**
+     * <pre>
+     * admin_addresses is a list of addresses that are allowed to set and remove
+     * custom taker fees for denom pairs. Governance also has the ability to set
+     * and remove custom taker fees for denom pairs, but with the normal
+     * governance delay.
+     * </pre>
+     *
+     * <code>repeated string admin_addresses = 4 [json_name = "adminAddresses", (.gogoproto.moretags) = "yaml:&#92;"admin_addresses&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The adminAddresses at the given index.
+     */
+    public java.lang.String getAdminAddresses(int index) {
+      return adminAddresses_.get(index);
+    }
+    /**
+     * <pre>
+     * admin_addresses is a list of addresses that are allowed to set and remove
+     * custom taker fees for denom pairs. Governance also has the ability to set
+     * and remove custom taker fees for denom pairs, but with the normal
+     * governance delay.
+     * </pre>
+     *
+     * <code>repeated string admin_addresses = 4 [json_name = "adminAddresses", (.gogoproto.moretags) = "yaml:&#92;"admin_addresses&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the adminAddresses at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getAdminAddressesBytes(int index) {
+      return adminAddresses_.getByteString(index);
+    }
+
+    public static final int COMMUNITY_POOL_DENOM_TO_SWAP_NON_WHITELISTED_ASSETS_TO_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object communityPoolDenomToSwapNonWhitelistedAssetsTo_ = "";
+    /**
+     * <pre>
+     * community_pool_denom_to_swap_non_whitelisted_assets_to is the denom that
+     * non-whitelisted taker fees will be swapped to before being sent to
+     * the community pool.
+     * </pre>
+     *
+     * <code>string community_pool_denom_to_swap_non_whitelisted_assets_to = 5 [json_name = "communityPoolDenomToSwapNonWhitelistedAssetsTo", (.gogoproto.moretags) = "yaml:&#92;"community_pool_denom_to_swap_non_whitelisted_assets_to&#92;""];</code>
+     * @return The communityPoolDenomToSwapNonWhitelistedAssetsTo.
+     */
+    @java.lang.Override
+    public java.lang.String getCommunityPoolDenomToSwapNonWhitelistedAssetsTo() {
+      java.lang.Object ref = communityPoolDenomToSwapNonWhitelistedAssetsTo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        communityPoolDenomToSwapNonWhitelistedAssetsTo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * community_pool_denom_to_swap_non_whitelisted_assets_to is the denom that
+     * non-whitelisted taker fees will be swapped to before being sent to
+     * the community pool.
+     * </pre>
+     *
+     * <code>string community_pool_denom_to_swap_non_whitelisted_assets_to = 5 [json_name = "communityPoolDenomToSwapNonWhitelistedAssetsTo", (.gogoproto.moretags) = "yaml:&#92;"community_pool_denom_to_swap_non_whitelisted_assets_to&#92;""];</code>
+     * @return The bytes for communityPoolDenomToSwapNonWhitelistedAssetsTo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCommunityPoolDenomToSwapNonWhitelistedAssetsToBytes() {
+      java.lang.Object ref = communityPoolDenomToSwapNonWhitelistedAssetsTo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        communityPoolDenomToSwapNonWhitelistedAssetsTo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REDUCED_FEE_WHITELIST_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList reducedFeeWhitelist_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * reduced_fee_whitelist is a list of addresses that are
+     * allowed to pay a reduce taker fee when performing a swap
+     * (i.e. swap without paying the taker fee).
+     * It is intended to be used for integrators who meet qualifying factors
+     * that are approved by governance.
+     * Initially, the taker fee is allowed to be bypassed completely. However
+     * In the future, we will charge a reduced taker fee instead of no fee at all.
+     * </pre>
+     *
+     * <code>repeated string reduced_fee_whitelist = 6 [json_name = "reducedFeeWhitelist", (.gogoproto.moretags) = "yaml:&#92;"reduced_fee_whitelist&#92;""];</code>
+     * @return A list containing the reducedFeeWhitelist.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getReducedFeeWhitelistList() {
+      return reducedFeeWhitelist_;
+    }
+    /**
+     * <pre>
+     * reduced_fee_whitelist is a list of addresses that are
+     * allowed to pay a reduce taker fee when performing a swap
+     * (i.e. swap without paying the taker fee).
+     * It is intended to be used for integrators who meet qualifying factors
+     * that are approved by governance.
+     * Initially, the taker fee is allowed to be bypassed completely. However
+     * In the future, we will charge a reduced taker fee instead of no fee at all.
+     * </pre>
+     *
+     * <code>repeated string reduced_fee_whitelist = 6 [json_name = "reducedFeeWhitelist", (.gogoproto.moretags) = "yaml:&#92;"reduced_fee_whitelist&#92;""];</code>
+     * @return The count of reducedFeeWhitelist.
+     */
+    public int getReducedFeeWhitelistCount() {
+      return reducedFeeWhitelist_.size();
+    }
+    /**
+     * <pre>
+     * reduced_fee_whitelist is a list of addresses that are
+     * allowed to pay a reduce taker fee when performing a swap
+     * (i.e. swap without paying the taker fee).
+     * It is intended to be used for integrators who meet qualifying factors
+     * that are approved by governance.
+     * Initially, the taker fee is allowed to be bypassed completely. However
+     * In the future, we will charge a reduced taker fee instead of no fee at all.
+     * </pre>
+     *
+     * <code>repeated string reduced_fee_whitelist = 6 [json_name = "reducedFeeWhitelist", (.gogoproto.moretags) = "yaml:&#92;"reduced_fee_whitelist&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The reducedFeeWhitelist at the given index.
+     */
+    public java.lang.String getReducedFeeWhitelist(int index) {
+      return reducedFeeWhitelist_.get(index);
+    }
+    /**
+     * <pre>
+     * reduced_fee_whitelist is a list of addresses that are
+     * allowed to pay a reduce taker fee when performing a swap
+     * (i.e. swap without paying the taker fee).
+     * It is intended to be used for integrators who meet qualifying factors
+     * that are approved by governance.
+     * Initially, the taker fee is allowed to be bypassed completely. However
+     * In the future, we will charge a reduced taker fee instead of no fee at all.
+     * </pre>
+     *
+     * <code>repeated string reduced_fee_whitelist = 6 [json_name = "reducedFeeWhitelist", (.gogoproto.moretags) = "yaml:&#92;"reduced_fee_whitelist&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the reducedFeeWhitelist at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getReducedFeeWhitelistBytes(int index) {
+      return reducedFeeWhitelist_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultTakerFee_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, defaultTakerFee_);
+      }
+      if (osmoTakerFeeDistribution_ != null) {
+        output.writeMessage(2, getOsmoTakerFeeDistribution());
+      }
+      if (nonOsmoTakerFeeDistribution_ != null) {
+        output.writeMessage(3, getNonOsmoTakerFeeDistribution());
+      }
+      for (int i = 0; i < adminAddresses_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, adminAddresses_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(communityPoolDenomToSwapNonWhitelistedAssetsTo_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, communityPoolDenomToSwapNonWhitelistedAssetsTo_);
+      }
+      for (int i = 0; i < reducedFeeWhitelist_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, reducedFeeWhitelist_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultTakerFee_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, defaultTakerFee_);
+      }
+      if (osmoTakerFeeDistribution_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getOsmoTakerFeeDistribution());
+      }
+      if (nonOsmoTakerFeeDistribution_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getNonOsmoTakerFeeDistribution());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < adminAddresses_.size(); i++) {
+          dataSize += computeStringSizeNoTag(adminAddresses_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getAdminAddressesList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(communityPoolDenomToSwapNonWhitelistedAssetsTo_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, communityPoolDenomToSwapNonWhitelistedAssetsTo_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < reducedFeeWhitelist_.size(); i++) {
+          dataSize += computeStringSizeNoTag(reducedFeeWhitelist_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getReducedFeeWhitelistList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams other = (com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams) obj;
+
+      if (!getDefaultTakerFee()
+          .equals(other.getDefaultTakerFee())) return false;
+      if (hasOsmoTakerFeeDistribution() != other.hasOsmoTakerFeeDistribution()) return false;
+      if (hasOsmoTakerFeeDistribution()) {
+        if (!getOsmoTakerFeeDistribution()
+            .equals(other.getOsmoTakerFeeDistribution())) return false;
+      }
+      if (hasNonOsmoTakerFeeDistribution() != other.hasNonOsmoTakerFeeDistribution()) return false;
+      if (hasNonOsmoTakerFeeDistribution()) {
+        if (!getNonOsmoTakerFeeDistribution()
+            .equals(other.getNonOsmoTakerFeeDistribution())) return false;
+      }
+      if (!getAdminAddressesList()
+          .equals(other.getAdminAddressesList())) return false;
+      if (!getCommunityPoolDenomToSwapNonWhitelistedAssetsTo()
+          .equals(other.getCommunityPoolDenomToSwapNonWhitelistedAssetsTo())) return false;
+      if (!getReducedFeeWhitelistList()
+          .equals(other.getReducedFeeWhitelistList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DEFAULT_TAKER_FEE_FIELD_NUMBER;
+      hash = (53 * hash) + getDefaultTakerFee().hashCode();
+      if (hasOsmoTakerFeeDistribution()) {
+        hash = (37 * hash) + OSMO_TAKER_FEE_DISTRIBUTION_FIELD_NUMBER;
+        hash = (53 * hash) + getOsmoTakerFeeDistribution().hashCode();
+      }
+      if (hasNonOsmoTakerFeeDistribution()) {
+        hash = (37 * hash) + NON_OSMO_TAKER_FEE_DISTRIBUTION_FIELD_NUMBER;
+        hash = (53 * hash) + getNonOsmoTakerFeeDistribution().hashCode();
+      }
+      if (getAdminAddressesCount() > 0) {
+        hash = (37 * hash) + ADMIN_ADDRESSES_FIELD_NUMBER;
+        hash = (53 * hash) + getAdminAddressesList().hashCode();
+      }
+      hash = (37 * hash) + COMMUNITY_POOL_DENOM_TO_SWAP_NON_WHITELISTED_ASSETS_TO_FIELD_NUMBER;
+      hash = (53 * hash) + getCommunityPoolDenomToSwapNonWhitelistedAssetsTo().hashCode();
+      if (getReducedFeeWhitelistCount() > 0) {
+        hash = (37 * hash) + REDUCED_FEE_WHITELIST_FIELD_NUMBER;
+        hash = (53 * hash) + getReducedFeeWhitelistList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * TakerFeeParams consolidates the taker fee parameters for the poolmanager.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.TakerFeeParams}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.TakerFeeParams)
+        com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.GenesisProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeParams_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.GenesisProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeParams_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams.class, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        defaultTakerFee_ = "";
+        osmoTakerFeeDistribution_ = null;
+        if (osmoTakerFeeDistributionBuilder_ != null) {
+          osmoTakerFeeDistributionBuilder_.dispose();
+          osmoTakerFeeDistributionBuilder_ = null;
+        }
+        nonOsmoTakerFeeDistribution_ = null;
+        if (nonOsmoTakerFeeDistributionBuilder_ != null) {
+          nonOsmoTakerFeeDistributionBuilder_.dispose();
+          nonOsmoTakerFeeDistributionBuilder_ = null;
+        }
+        adminAddresses_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        communityPoolDenomToSwapNonWhitelistedAssetsTo_ = "";
+        reducedFeeWhitelist_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.GenesisProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeParams_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams build() {
+        com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams buildPartial() {
+        com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams result = new com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.defaultTakerFee_ = defaultTakerFee_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.osmoTakerFeeDistribution_ = osmoTakerFeeDistributionBuilder_ == null
+              ? osmoTakerFeeDistribution_
+              : osmoTakerFeeDistributionBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.nonOsmoTakerFeeDistribution_ = nonOsmoTakerFeeDistributionBuilder_ == null
+              ? nonOsmoTakerFeeDistribution_
+              : nonOsmoTakerFeeDistributionBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          adminAddresses_.makeImmutable();
+          result.adminAddresses_ = adminAddresses_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.communityPoolDenomToSwapNonWhitelistedAssetsTo_ = communityPoolDenomToSwapNonWhitelistedAssetsTo_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          reducedFeeWhitelist_.makeImmutable();
+          result.reducedFeeWhitelist_ = reducedFeeWhitelist_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams other) {
+        if (other == com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams.getDefaultInstance()) return this;
+        if (!other.getDefaultTakerFee().isEmpty()) {
+          defaultTakerFee_ = other.defaultTakerFee_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasOsmoTakerFeeDistribution()) {
+          mergeOsmoTakerFeeDistribution(other.getOsmoTakerFeeDistribution());
+        }
+        if (other.hasNonOsmoTakerFeeDistribution()) {
+          mergeNonOsmoTakerFeeDistribution(other.getNonOsmoTakerFeeDistribution());
+        }
+        if (!other.adminAddresses_.isEmpty()) {
+          if (adminAddresses_.isEmpty()) {
+            adminAddresses_ = other.adminAddresses_;
+            bitField0_ |= 0x00000008;
+          } else {
+            ensureAdminAddressesIsMutable();
+            adminAddresses_.addAll(other.adminAddresses_);
+          }
+          onChanged();
+        }
+        if (!other.getCommunityPoolDenomToSwapNonWhitelistedAssetsTo().isEmpty()) {
+          communityPoolDenomToSwapNonWhitelistedAssetsTo_ = other.communityPoolDenomToSwapNonWhitelistedAssetsTo_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.reducedFeeWhitelist_.isEmpty()) {
+          if (reducedFeeWhitelist_.isEmpty()) {
+            reducedFeeWhitelist_ = other.reducedFeeWhitelist_;
+            bitField0_ |= 0x00000020;
+          } else {
+            ensureReducedFeeWhitelistIsMutable();
+            reducedFeeWhitelist_.addAll(other.reducedFeeWhitelist_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                defaultTakerFee_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getOsmoTakerFeeDistributionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getNonOsmoTakerFeeDistributionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureAdminAddressesIsMutable();
+                adminAddresses_.add(s);
+                break;
+              } // case 34
+              case 42: {
+                communityPoolDenomToSwapNonWhitelistedAssetsTo_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureReducedFeeWhitelistIsMutable();
+                reducedFeeWhitelist_.add(s);
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object defaultTakerFee_ = "";
+      /**
+       * <pre>
+       * default_taker_fee is the fee used when creating a new pool that doesn't
+       * fall under a custom pool taker fee or stableswap taker fee category.
+       * </pre>
+       *
+       * <code>string default_taker_fee = 1 [json_name = "defaultTakerFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.customname) = "DefaultTakerFee"];</code>
+       * @return The defaultTakerFee.
+       */
+      public java.lang.String getDefaultTakerFee() {
+        java.lang.Object ref = defaultTakerFee_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          defaultTakerFee_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * default_taker_fee is the fee used when creating a new pool that doesn't
+       * fall under a custom pool taker fee or stableswap taker fee category.
+       * </pre>
+       *
+       * <code>string default_taker_fee = 1 [json_name = "defaultTakerFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.customname) = "DefaultTakerFee"];</code>
+       * @return The bytes for defaultTakerFee.
+       */
+      public com.google.protobuf.ByteString
+          getDefaultTakerFeeBytes() {
+        java.lang.Object ref = defaultTakerFee_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          defaultTakerFee_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * default_taker_fee is the fee used when creating a new pool that doesn't
+       * fall under a custom pool taker fee or stableswap taker fee category.
+       * </pre>
+       *
+       * <code>string default_taker_fee = 1 [json_name = "defaultTakerFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.customname) = "DefaultTakerFee"];</code>
+       * @param value The defaultTakerFee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultTakerFee(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        defaultTakerFee_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * default_taker_fee is the fee used when creating a new pool that doesn't
+       * fall under a custom pool taker fee or stableswap taker fee category.
+       * </pre>
+       *
+       * <code>string default_taker_fee = 1 [json_name = "defaultTakerFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.customname) = "DefaultTakerFee"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultTakerFee() {
+        defaultTakerFee_ = getDefaultInstance().getDefaultTakerFee();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * default_taker_fee is the fee used when creating a new pool that doesn't
+       * fall under a custom pool taker fee or stableswap taker fee category.
+       * </pre>
+       *
+       * <code>string default_taker_fee = 1 [json_name = "defaultTakerFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.customname) = "DefaultTakerFee"];</code>
+       * @param value The bytes for defaultTakerFee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultTakerFeeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        defaultTakerFee_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage osmoTakerFeeDistribution_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.Builder, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentageOrBuilder> osmoTakerFeeDistributionBuilder_;
+      /**
+       * <pre>
+       * osmo_taker_fee_distribution defines the distribution of taker fees
+       * generated in OSMO. As of this writing, it has two categories:
+       * - staking_rewards: the percent of the taker fee that gets distributed to
+       *   stakers.
+       * - community_pool: the percent of the taker fee that gets sent to the
+       *   community pool.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage osmo_taker_fee_distribution = 2 [json_name = "osmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "OsmoTakerFeeDistribution"];</code>
+       * @return Whether the osmoTakerFeeDistribution field is set.
+       */
+      public boolean hasOsmoTakerFeeDistribution() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * osmo_taker_fee_distribution defines the distribution of taker fees
+       * generated in OSMO. As of this writing, it has two categories:
+       * - staking_rewards: the percent of the taker fee that gets distributed to
+       *   stakers.
+       * - community_pool: the percent of the taker fee that gets sent to the
+       *   community pool.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage osmo_taker_fee_distribution = 2 [json_name = "osmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "OsmoTakerFeeDistribution"];</code>
+       * @return The osmoTakerFeeDistribution.
+       */
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage getOsmoTakerFeeDistribution() {
+        if (osmoTakerFeeDistributionBuilder_ == null) {
+          return osmoTakerFeeDistribution_ == null ? com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.getDefaultInstance() : osmoTakerFeeDistribution_;
+        } else {
+          return osmoTakerFeeDistributionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * osmo_taker_fee_distribution defines the distribution of taker fees
+       * generated in OSMO. As of this writing, it has two categories:
+       * - staking_rewards: the percent of the taker fee that gets distributed to
+       *   stakers.
+       * - community_pool: the percent of the taker fee that gets sent to the
+       *   community pool.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage osmo_taker_fee_distribution = 2 [json_name = "osmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "OsmoTakerFeeDistribution"];</code>
+       */
+      public Builder setOsmoTakerFeeDistribution(com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage value) {
+        if (osmoTakerFeeDistributionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          osmoTakerFeeDistribution_ = value;
+        } else {
+          osmoTakerFeeDistributionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * osmo_taker_fee_distribution defines the distribution of taker fees
+       * generated in OSMO. As of this writing, it has two categories:
+       * - staking_rewards: the percent of the taker fee that gets distributed to
+       *   stakers.
+       * - community_pool: the percent of the taker fee that gets sent to the
+       *   community pool.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage osmo_taker_fee_distribution = 2 [json_name = "osmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "OsmoTakerFeeDistribution"];</code>
+       */
+      public Builder setOsmoTakerFeeDistribution(
+          com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.Builder builderForValue) {
+        if (osmoTakerFeeDistributionBuilder_ == null) {
+          osmoTakerFeeDistribution_ = builderForValue.build();
+        } else {
+          osmoTakerFeeDistributionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * osmo_taker_fee_distribution defines the distribution of taker fees
+       * generated in OSMO. As of this writing, it has two categories:
+       * - staking_rewards: the percent of the taker fee that gets distributed to
+       *   stakers.
+       * - community_pool: the percent of the taker fee that gets sent to the
+       *   community pool.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage osmo_taker_fee_distribution = 2 [json_name = "osmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "OsmoTakerFeeDistribution"];</code>
+       */
+      public Builder mergeOsmoTakerFeeDistribution(com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage value) {
+        if (osmoTakerFeeDistributionBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            osmoTakerFeeDistribution_ != null &&
+            osmoTakerFeeDistribution_ != com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.getDefaultInstance()) {
+            getOsmoTakerFeeDistributionBuilder().mergeFrom(value);
+          } else {
+            osmoTakerFeeDistribution_ = value;
+          }
+        } else {
+          osmoTakerFeeDistributionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * osmo_taker_fee_distribution defines the distribution of taker fees
+       * generated in OSMO. As of this writing, it has two categories:
+       * - staking_rewards: the percent of the taker fee that gets distributed to
+       *   stakers.
+       * - community_pool: the percent of the taker fee that gets sent to the
+       *   community pool.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage osmo_taker_fee_distribution = 2 [json_name = "osmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "OsmoTakerFeeDistribution"];</code>
+       */
+      public Builder clearOsmoTakerFeeDistribution() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        osmoTakerFeeDistribution_ = null;
+        if (osmoTakerFeeDistributionBuilder_ != null) {
+          osmoTakerFeeDistributionBuilder_.dispose();
+          osmoTakerFeeDistributionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * osmo_taker_fee_distribution defines the distribution of taker fees
+       * generated in OSMO. As of this writing, it has two categories:
+       * - staking_rewards: the percent of the taker fee that gets distributed to
+       *   stakers.
+       * - community_pool: the percent of the taker fee that gets sent to the
+       *   community pool.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage osmo_taker_fee_distribution = 2 [json_name = "osmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "OsmoTakerFeeDistribution"];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.Builder getOsmoTakerFeeDistributionBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getOsmoTakerFeeDistributionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * osmo_taker_fee_distribution defines the distribution of taker fees
+       * generated in OSMO. As of this writing, it has two categories:
+       * - staking_rewards: the percent of the taker fee that gets distributed to
+       *   stakers.
+       * - community_pool: the percent of the taker fee that gets sent to the
+       *   community pool.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage osmo_taker_fee_distribution = 2 [json_name = "osmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "OsmoTakerFeeDistribution"];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentageOrBuilder getOsmoTakerFeeDistributionOrBuilder() {
+        if (osmoTakerFeeDistributionBuilder_ != null) {
+          return osmoTakerFeeDistributionBuilder_.getMessageOrBuilder();
+        } else {
+          return osmoTakerFeeDistribution_ == null ?
+              com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.getDefaultInstance() : osmoTakerFeeDistribution_;
+        }
+      }
+      /**
+       * <pre>
+       * osmo_taker_fee_distribution defines the distribution of taker fees
+       * generated in OSMO. As of this writing, it has two categories:
+       * - staking_rewards: the percent of the taker fee that gets distributed to
+       *   stakers.
+       * - community_pool: the percent of the taker fee that gets sent to the
+       *   community pool.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage osmo_taker_fee_distribution = 2 [json_name = "osmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "OsmoTakerFeeDistribution"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.Builder, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentageOrBuilder> 
+          getOsmoTakerFeeDistributionFieldBuilder() {
+        if (osmoTakerFeeDistributionBuilder_ == null) {
+          osmoTakerFeeDistributionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.Builder, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentageOrBuilder>(
+                  getOsmoTakerFeeDistribution(),
+                  getParentForChildren(),
+                  isClean());
+          osmoTakerFeeDistribution_ = null;
+        }
+        return osmoTakerFeeDistributionBuilder_;
+      }
+
+      private com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage nonOsmoTakerFeeDistribution_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.Builder, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentageOrBuilder> nonOsmoTakerFeeDistributionBuilder_;
+      /**
+       * <pre>
+       * non_osmo_taker_fee_distribution defines the distribution of taker fees
+       * generated in non-OSMO. As of this writing, it has two categories:
+       * - staking_rewards: the percent of the taker fee that gets swapped to OSMO
+       *   and then distributed to stakers.
+       * - community_pool: the percent of the taker fee that gets sent to the
+       *   community pool. Note: If the non-OSMO asset is an authorized_quote_denom,
+       *   that denom is sent directly to the community pool. Otherwise, it is
+       *   swapped to the community_pool_denom_to_swap_non_whitelisted_assets_to and
+       *   then sent to the community pool as that denom.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage non_osmo_taker_fee_distribution = 3 [json_name = "nonOsmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NonOsmoTakerFeeDistribution"];</code>
+       * @return Whether the nonOsmoTakerFeeDistribution field is set.
+       */
+      public boolean hasNonOsmoTakerFeeDistribution() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * non_osmo_taker_fee_distribution defines the distribution of taker fees
+       * generated in non-OSMO. As of this writing, it has two categories:
+       * - staking_rewards: the percent of the taker fee that gets swapped to OSMO
+       *   and then distributed to stakers.
+       * - community_pool: the percent of the taker fee that gets sent to the
+       *   community pool. Note: If the non-OSMO asset is an authorized_quote_denom,
+       *   that denom is sent directly to the community pool. Otherwise, it is
+       *   swapped to the community_pool_denom_to_swap_non_whitelisted_assets_to and
+       *   then sent to the community pool as that denom.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage non_osmo_taker_fee_distribution = 3 [json_name = "nonOsmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NonOsmoTakerFeeDistribution"];</code>
+       * @return The nonOsmoTakerFeeDistribution.
+       */
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage getNonOsmoTakerFeeDistribution() {
+        if (nonOsmoTakerFeeDistributionBuilder_ == null) {
+          return nonOsmoTakerFeeDistribution_ == null ? com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.getDefaultInstance() : nonOsmoTakerFeeDistribution_;
+        } else {
+          return nonOsmoTakerFeeDistributionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * non_osmo_taker_fee_distribution defines the distribution of taker fees
+       * generated in non-OSMO. As of this writing, it has two categories:
+       * - staking_rewards: the percent of the taker fee that gets swapped to OSMO
+       *   and then distributed to stakers.
+       * - community_pool: the percent of the taker fee that gets sent to the
+       *   community pool. Note: If the non-OSMO asset is an authorized_quote_denom,
+       *   that denom is sent directly to the community pool. Otherwise, it is
+       *   swapped to the community_pool_denom_to_swap_non_whitelisted_assets_to and
+       *   then sent to the community pool as that denom.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage non_osmo_taker_fee_distribution = 3 [json_name = "nonOsmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NonOsmoTakerFeeDistribution"];</code>
+       */
+      public Builder setNonOsmoTakerFeeDistribution(com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage value) {
+        if (nonOsmoTakerFeeDistributionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          nonOsmoTakerFeeDistribution_ = value;
+        } else {
+          nonOsmoTakerFeeDistributionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * non_osmo_taker_fee_distribution defines the distribution of taker fees
+       * generated in non-OSMO. As of this writing, it has two categories:
+       * - staking_rewards: the percent of the taker fee that gets swapped to OSMO
+       *   and then distributed to stakers.
+       * - community_pool: the percent of the taker fee that gets sent to the
+       *   community pool. Note: If the non-OSMO asset is an authorized_quote_denom,
+       *   that denom is sent directly to the community pool. Otherwise, it is
+       *   swapped to the community_pool_denom_to_swap_non_whitelisted_assets_to and
+       *   then sent to the community pool as that denom.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage non_osmo_taker_fee_distribution = 3 [json_name = "nonOsmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NonOsmoTakerFeeDistribution"];</code>
+       */
+      public Builder setNonOsmoTakerFeeDistribution(
+          com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.Builder builderForValue) {
+        if (nonOsmoTakerFeeDistributionBuilder_ == null) {
+          nonOsmoTakerFeeDistribution_ = builderForValue.build();
+        } else {
+          nonOsmoTakerFeeDistributionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * non_osmo_taker_fee_distribution defines the distribution of taker fees
+       * generated in non-OSMO. As of this writing, it has two categories:
+       * - staking_rewards: the percent of the taker fee that gets swapped to OSMO
+       *   and then distributed to stakers.
+       * - community_pool: the percent of the taker fee that gets sent to the
+       *   community pool. Note: If the non-OSMO asset is an authorized_quote_denom,
+       *   that denom is sent directly to the community pool. Otherwise, it is
+       *   swapped to the community_pool_denom_to_swap_non_whitelisted_assets_to and
+       *   then sent to the community pool as that denom.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage non_osmo_taker_fee_distribution = 3 [json_name = "nonOsmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NonOsmoTakerFeeDistribution"];</code>
+       */
+      public Builder mergeNonOsmoTakerFeeDistribution(com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage value) {
+        if (nonOsmoTakerFeeDistributionBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            nonOsmoTakerFeeDistribution_ != null &&
+            nonOsmoTakerFeeDistribution_ != com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.getDefaultInstance()) {
+            getNonOsmoTakerFeeDistributionBuilder().mergeFrom(value);
+          } else {
+            nonOsmoTakerFeeDistribution_ = value;
+          }
+        } else {
+          nonOsmoTakerFeeDistributionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * non_osmo_taker_fee_distribution defines the distribution of taker fees
+       * generated in non-OSMO. As of this writing, it has two categories:
+       * - staking_rewards: the percent of the taker fee that gets swapped to OSMO
+       *   and then distributed to stakers.
+       * - community_pool: the percent of the taker fee that gets sent to the
+       *   community pool. Note: If the non-OSMO asset is an authorized_quote_denom,
+       *   that denom is sent directly to the community pool. Otherwise, it is
+       *   swapped to the community_pool_denom_to_swap_non_whitelisted_assets_to and
+       *   then sent to the community pool as that denom.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage non_osmo_taker_fee_distribution = 3 [json_name = "nonOsmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NonOsmoTakerFeeDistribution"];</code>
+       */
+      public Builder clearNonOsmoTakerFeeDistribution() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        nonOsmoTakerFeeDistribution_ = null;
+        if (nonOsmoTakerFeeDistributionBuilder_ != null) {
+          nonOsmoTakerFeeDistributionBuilder_.dispose();
+          nonOsmoTakerFeeDistributionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * non_osmo_taker_fee_distribution defines the distribution of taker fees
+       * generated in non-OSMO. As of this writing, it has two categories:
+       * - staking_rewards: the percent of the taker fee that gets swapped to OSMO
+       *   and then distributed to stakers.
+       * - community_pool: the percent of the taker fee that gets sent to the
+       *   community pool. Note: If the non-OSMO asset is an authorized_quote_denom,
+       *   that denom is sent directly to the community pool. Otherwise, it is
+       *   swapped to the community_pool_denom_to_swap_non_whitelisted_assets_to and
+       *   then sent to the community pool as that denom.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage non_osmo_taker_fee_distribution = 3 [json_name = "nonOsmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NonOsmoTakerFeeDistribution"];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.Builder getNonOsmoTakerFeeDistributionBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getNonOsmoTakerFeeDistributionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * non_osmo_taker_fee_distribution defines the distribution of taker fees
+       * generated in non-OSMO. As of this writing, it has two categories:
+       * - staking_rewards: the percent of the taker fee that gets swapped to OSMO
+       *   and then distributed to stakers.
+       * - community_pool: the percent of the taker fee that gets sent to the
+       *   community pool. Note: If the non-OSMO asset is an authorized_quote_denom,
+       *   that denom is sent directly to the community pool. Otherwise, it is
+       *   swapped to the community_pool_denom_to_swap_non_whitelisted_assets_to and
+       *   then sent to the community pool as that denom.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage non_osmo_taker_fee_distribution = 3 [json_name = "nonOsmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NonOsmoTakerFeeDistribution"];</code>
+       */
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentageOrBuilder getNonOsmoTakerFeeDistributionOrBuilder() {
+        if (nonOsmoTakerFeeDistributionBuilder_ != null) {
+          return nonOsmoTakerFeeDistributionBuilder_.getMessageOrBuilder();
+        } else {
+          return nonOsmoTakerFeeDistribution_ == null ?
+              com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.getDefaultInstance() : nonOsmoTakerFeeDistribution_;
+        }
+      }
+      /**
+       * <pre>
+       * non_osmo_taker_fee_distribution defines the distribution of taker fees
+       * generated in non-OSMO. As of this writing, it has two categories:
+       * - staking_rewards: the percent of the taker fee that gets swapped to OSMO
+       *   and then distributed to stakers.
+       * - community_pool: the percent of the taker fee that gets sent to the
+       *   community pool. Note: If the non-OSMO asset is an authorized_quote_denom,
+       *   that denom is sent directly to the community pool. Otherwise, it is
+       *   swapped to the community_pool_denom_to_swap_non_whitelisted_assets_to and
+       *   then sent to the community pool as that denom.
+       * </pre>
+       *
+       * <code>.osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage non_osmo_taker_fee_distribution = 3 [json_name = "nonOsmoTakerFeeDistribution", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NonOsmoTakerFeeDistribution"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.Builder, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentageOrBuilder> 
+          getNonOsmoTakerFeeDistributionFieldBuilder() {
+        if (nonOsmoTakerFeeDistributionBuilder_ == null) {
+          nonOsmoTakerFeeDistributionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.Builder, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentageOrBuilder>(
+                  getNonOsmoTakerFeeDistribution(),
+                  getParentForChildren(),
+                  isClean());
+          nonOsmoTakerFeeDistribution_ = null;
+        }
+        return nonOsmoTakerFeeDistributionBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringArrayList adminAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureAdminAddressesIsMutable() {
+        if (!adminAddresses_.isModifiable()) {
+          adminAddresses_ = new com.google.protobuf.LazyStringArrayList(adminAddresses_);
+        }
+        bitField0_ |= 0x00000008;
+      }
+      /**
+       * <pre>
+       * admin_addresses is a list of addresses that are allowed to set and remove
+       * custom taker fees for denom pairs. Governance also has the ability to set
+       * and remove custom taker fees for denom pairs, but with the normal
+       * governance delay.
+       * </pre>
+       *
+       * <code>repeated string admin_addresses = 4 [json_name = "adminAddresses", (.gogoproto.moretags) = "yaml:&#92;"admin_addresses&#92;""];</code>
+       * @return A list containing the adminAddresses.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAdminAddressesList() {
+        adminAddresses_.makeImmutable();
+        return adminAddresses_;
+      }
+      /**
+       * <pre>
+       * admin_addresses is a list of addresses that are allowed to set and remove
+       * custom taker fees for denom pairs. Governance also has the ability to set
+       * and remove custom taker fees for denom pairs, but with the normal
+       * governance delay.
+       * </pre>
+       *
+       * <code>repeated string admin_addresses = 4 [json_name = "adminAddresses", (.gogoproto.moretags) = "yaml:&#92;"admin_addresses&#92;""];</code>
+       * @return The count of adminAddresses.
+       */
+      public int getAdminAddressesCount() {
+        return adminAddresses_.size();
+      }
+      /**
+       * <pre>
+       * admin_addresses is a list of addresses that are allowed to set and remove
+       * custom taker fees for denom pairs. Governance also has the ability to set
+       * and remove custom taker fees for denom pairs, but with the normal
+       * governance delay.
+       * </pre>
+       *
+       * <code>repeated string admin_addresses = 4 [json_name = "adminAddresses", (.gogoproto.moretags) = "yaml:&#92;"admin_addresses&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The adminAddresses at the given index.
+       */
+      public java.lang.String getAdminAddresses(int index) {
+        return adminAddresses_.get(index);
+      }
+      /**
+       * <pre>
+       * admin_addresses is a list of addresses that are allowed to set and remove
+       * custom taker fees for denom pairs. Governance also has the ability to set
+       * and remove custom taker fees for denom pairs, but with the normal
+       * governance delay.
+       * </pre>
+       *
+       * <code>repeated string admin_addresses = 4 [json_name = "adminAddresses", (.gogoproto.moretags) = "yaml:&#92;"admin_addresses&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the adminAddresses at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getAdminAddressesBytes(int index) {
+        return adminAddresses_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * admin_addresses is a list of addresses that are allowed to set and remove
+       * custom taker fees for denom pairs. Governance also has the ability to set
+       * and remove custom taker fees for denom pairs, but with the normal
+       * governance delay.
+       * </pre>
+       *
+       * <code>repeated string admin_addresses = 4 [json_name = "adminAddresses", (.gogoproto.moretags) = "yaml:&#92;"admin_addresses&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The adminAddresses to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdminAddresses(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAdminAddressesIsMutable();
+        adminAddresses_.set(index, value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * admin_addresses is a list of addresses that are allowed to set and remove
+       * custom taker fees for denom pairs. Governance also has the ability to set
+       * and remove custom taker fees for denom pairs, but with the normal
+       * governance delay.
+       * </pre>
+       *
+       * <code>repeated string admin_addresses = 4 [json_name = "adminAddresses", (.gogoproto.moretags) = "yaml:&#92;"admin_addresses&#92;""];</code>
+       * @param value The adminAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAdminAddresses(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAdminAddressesIsMutable();
+        adminAddresses_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * admin_addresses is a list of addresses that are allowed to set and remove
+       * custom taker fees for denom pairs. Governance also has the ability to set
+       * and remove custom taker fees for denom pairs, but with the normal
+       * governance delay.
+       * </pre>
+       *
+       * <code>repeated string admin_addresses = 4 [json_name = "adminAddresses", (.gogoproto.moretags) = "yaml:&#92;"admin_addresses&#92;""];</code>
+       * @param values The adminAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAdminAddresses(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureAdminAddressesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, adminAddresses_);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * admin_addresses is a list of addresses that are allowed to set and remove
+       * custom taker fees for denom pairs. Governance also has the ability to set
+       * and remove custom taker fees for denom pairs, but with the normal
+       * governance delay.
+       * </pre>
+       *
+       * <code>repeated string admin_addresses = 4 [json_name = "adminAddresses", (.gogoproto.moretags) = "yaml:&#92;"admin_addresses&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAdminAddresses() {
+        adminAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * admin_addresses is a list of addresses that are allowed to set and remove
+       * custom taker fees for denom pairs. Governance also has the ability to set
+       * and remove custom taker fees for denom pairs, but with the normal
+       * governance delay.
+       * </pre>
+       *
+       * <code>repeated string admin_addresses = 4 [json_name = "adminAddresses", (.gogoproto.moretags) = "yaml:&#92;"admin_addresses&#92;""];</code>
+       * @param value The bytes of the adminAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAdminAddressesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureAdminAddressesIsMutable();
+        adminAddresses_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object communityPoolDenomToSwapNonWhitelistedAssetsTo_ = "";
+      /**
+       * <pre>
+       * community_pool_denom_to_swap_non_whitelisted_assets_to is the denom that
+       * non-whitelisted taker fees will be swapped to before being sent to
+       * the community pool.
+       * </pre>
+       *
+       * <code>string community_pool_denom_to_swap_non_whitelisted_assets_to = 5 [json_name = "communityPoolDenomToSwapNonWhitelistedAssetsTo", (.gogoproto.moretags) = "yaml:&#92;"community_pool_denom_to_swap_non_whitelisted_assets_to&#92;""];</code>
+       * @return The communityPoolDenomToSwapNonWhitelistedAssetsTo.
+       */
+      public java.lang.String getCommunityPoolDenomToSwapNonWhitelistedAssetsTo() {
+        java.lang.Object ref = communityPoolDenomToSwapNonWhitelistedAssetsTo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          communityPoolDenomToSwapNonWhitelistedAssetsTo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * community_pool_denom_to_swap_non_whitelisted_assets_to is the denom that
+       * non-whitelisted taker fees will be swapped to before being sent to
+       * the community pool.
+       * </pre>
+       *
+       * <code>string community_pool_denom_to_swap_non_whitelisted_assets_to = 5 [json_name = "communityPoolDenomToSwapNonWhitelistedAssetsTo", (.gogoproto.moretags) = "yaml:&#92;"community_pool_denom_to_swap_non_whitelisted_assets_to&#92;""];</code>
+       * @return The bytes for communityPoolDenomToSwapNonWhitelistedAssetsTo.
+       */
+      public com.google.protobuf.ByteString
+          getCommunityPoolDenomToSwapNonWhitelistedAssetsToBytes() {
+        java.lang.Object ref = communityPoolDenomToSwapNonWhitelistedAssetsTo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          communityPoolDenomToSwapNonWhitelistedAssetsTo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * community_pool_denom_to_swap_non_whitelisted_assets_to is the denom that
+       * non-whitelisted taker fees will be swapped to before being sent to
+       * the community pool.
+       * </pre>
+       *
+       * <code>string community_pool_denom_to_swap_non_whitelisted_assets_to = 5 [json_name = "communityPoolDenomToSwapNonWhitelistedAssetsTo", (.gogoproto.moretags) = "yaml:&#92;"community_pool_denom_to_swap_non_whitelisted_assets_to&#92;""];</code>
+       * @param value The communityPoolDenomToSwapNonWhitelistedAssetsTo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommunityPoolDenomToSwapNonWhitelistedAssetsTo(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        communityPoolDenomToSwapNonWhitelistedAssetsTo_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * community_pool_denom_to_swap_non_whitelisted_assets_to is the denom that
+       * non-whitelisted taker fees will be swapped to before being sent to
+       * the community pool.
+       * </pre>
+       *
+       * <code>string community_pool_denom_to_swap_non_whitelisted_assets_to = 5 [json_name = "communityPoolDenomToSwapNonWhitelistedAssetsTo", (.gogoproto.moretags) = "yaml:&#92;"community_pool_denom_to_swap_non_whitelisted_assets_to&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCommunityPoolDenomToSwapNonWhitelistedAssetsTo() {
+        communityPoolDenomToSwapNonWhitelistedAssetsTo_ = getDefaultInstance().getCommunityPoolDenomToSwapNonWhitelistedAssetsTo();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * community_pool_denom_to_swap_non_whitelisted_assets_to is the denom that
+       * non-whitelisted taker fees will be swapped to before being sent to
+       * the community pool.
+       * </pre>
+       *
+       * <code>string community_pool_denom_to_swap_non_whitelisted_assets_to = 5 [json_name = "communityPoolDenomToSwapNonWhitelistedAssetsTo", (.gogoproto.moretags) = "yaml:&#92;"community_pool_denom_to_swap_non_whitelisted_assets_to&#92;""];</code>
+       * @param value The bytes for communityPoolDenomToSwapNonWhitelistedAssetsTo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommunityPoolDenomToSwapNonWhitelistedAssetsToBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        communityPoolDenomToSwapNonWhitelistedAssetsTo_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList reducedFeeWhitelist_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureReducedFeeWhitelistIsMutable() {
+        if (!reducedFeeWhitelist_.isModifiable()) {
+          reducedFeeWhitelist_ = new com.google.protobuf.LazyStringArrayList(reducedFeeWhitelist_);
+        }
+        bitField0_ |= 0x00000020;
+      }
+      /**
+       * <pre>
+       * reduced_fee_whitelist is a list of addresses that are
+       * allowed to pay a reduce taker fee when performing a swap
+       * (i.e. swap without paying the taker fee).
+       * It is intended to be used for integrators who meet qualifying factors
+       * that are approved by governance.
+       * Initially, the taker fee is allowed to be bypassed completely. However
+       * In the future, we will charge a reduced taker fee instead of no fee at all.
+       * </pre>
+       *
+       * <code>repeated string reduced_fee_whitelist = 6 [json_name = "reducedFeeWhitelist", (.gogoproto.moretags) = "yaml:&#92;"reduced_fee_whitelist&#92;""];</code>
+       * @return A list containing the reducedFeeWhitelist.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getReducedFeeWhitelistList() {
+        reducedFeeWhitelist_.makeImmutable();
+        return reducedFeeWhitelist_;
+      }
+      /**
+       * <pre>
+       * reduced_fee_whitelist is a list of addresses that are
+       * allowed to pay a reduce taker fee when performing a swap
+       * (i.e. swap without paying the taker fee).
+       * It is intended to be used for integrators who meet qualifying factors
+       * that are approved by governance.
+       * Initially, the taker fee is allowed to be bypassed completely. However
+       * In the future, we will charge a reduced taker fee instead of no fee at all.
+       * </pre>
+       *
+       * <code>repeated string reduced_fee_whitelist = 6 [json_name = "reducedFeeWhitelist", (.gogoproto.moretags) = "yaml:&#92;"reduced_fee_whitelist&#92;""];</code>
+       * @return The count of reducedFeeWhitelist.
+       */
+      public int getReducedFeeWhitelistCount() {
+        return reducedFeeWhitelist_.size();
+      }
+      /**
+       * <pre>
+       * reduced_fee_whitelist is a list of addresses that are
+       * allowed to pay a reduce taker fee when performing a swap
+       * (i.e. swap without paying the taker fee).
+       * It is intended to be used for integrators who meet qualifying factors
+       * that are approved by governance.
+       * Initially, the taker fee is allowed to be bypassed completely. However
+       * In the future, we will charge a reduced taker fee instead of no fee at all.
+       * </pre>
+       *
+       * <code>repeated string reduced_fee_whitelist = 6 [json_name = "reducedFeeWhitelist", (.gogoproto.moretags) = "yaml:&#92;"reduced_fee_whitelist&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The reducedFeeWhitelist at the given index.
+       */
+      public java.lang.String getReducedFeeWhitelist(int index) {
+        return reducedFeeWhitelist_.get(index);
+      }
+      /**
+       * <pre>
+       * reduced_fee_whitelist is a list of addresses that are
+       * allowed to pay a reduce taker fee when performing a swap
+       * (i.e. swap without paying the taker fee).
+       * It is intended to be used for integrators who meet qualifying factors
+       * that are approved by governance.
+       * Initially, the taker fee is allowed to be bypassed completely. However
+       * In the future, we will charge a reduced taker fee instead of no fee at all.
+       * </pre>
+       *
+       * <code>repeated string reduced_fee_whitelist = 6 [json_name = "reducedFeeWhitelist", (.gogoproto.moretags) = "yaml:&#92;"reduced_fee_whitelist&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the reducedFeeWhitelist at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getReducedFeeWhitelistBytes(int index) {
+        return reducedFeeWhitelist_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * reduced_fee_whitelist is a list of addresses that are
+       * allowed to pay a reduce taker fee when performing a swap
+       * (i.e. swap without paying the taker fee).
+       * It is intended to be used for integrators who meet qualifying factors
+       * that are approved by governance.
+       * Initially, the taker fee is allowed to be bypassed completely. However
+       * In the future, we will charge a reduced taker fee instead of no fee at all.
+       * </pre>
+       *
+       * <code>repeated string reduced_fee_whitelist = 6 [json_name = "reducedFeeWhitelist", (.gogoproto.moretags) = "yaml:&#92;"reduced_fee_whitelist&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The reducedFeeWhitelist to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReducedFeeWhitelist(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureReducedFeeWhitelistIsMutable();
+        reducedFeeWhitelist_.set(index, value);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reduced_fee_whitelist is a list of addresses that are
+       * allowed to pay a reduce taker fee when performing a swap
+       * (i.e. swap without paying the taker fee).
+       * It is intended to be used for integrators who meet qualifying factors
+       * that are approved by governance.
+       * Initially, the taker fee is allowed to be bypassed completely. However
+       * In the future, we will charge a reduced taker fee instead of no fee at all.
+       * </pre>
+       *
+       * <code>repeated string reduced_fee_whitelist = 6 [json_name = "reducedFeeWhitelist", (.gogoproto.moretags) = "yaml:&#92;"reduced_fee_whitelist&#92;""];</code>
+       * @param value The reducedFeeWhitelist to add.
+       * @return This builder for chaining.
+       */
+      public Builder addReducedFeeWhitelist(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureReducedFeeWhitelistIsMutable();
+        reducedFeeWhitelist_.add(value);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reduced_fee_whitelist is a list of addresses that are
+       * allowed to pay a reduce taker fee when performing a swap
+       * (i.e. swap without paying the taker fee).
+       * It is intended to be used for integrators who meet qualifying factors
+       * that are approved by governance.
+       * Initially, the taker fee is allowed to be bypassed completely. However
+       * In the future, we will charge a reduced taker fee instead of no fee at all.
+       * </pre>
+       *
+       * <code>repeated string reduced_fee_whitelist = 6 [json_name = "reducedFeeWhitelist", (.gogoproto.moretags) = "yaml:&#92;"reduced_fee_whitelist&#92;""];</code>
+       * @param values The reducedFeeWhitelist to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllReducedFeeWhitelist(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureReducedFeeWhitelistIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, reducedFeeWhitelist_);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reduced_fee_whitelist is a list of addresses that are
+       * allowed to pay a reduce taker fee when performing a swap
+       * (i.e. swap without paying the taker fee).
+       * It is intended to be used for integrators who meet qualifying factors
+       * that are approved by governance.
+       * Initially, the taker fee is allowed to be bypassed completely. However
+       * In the future, we will charge a reduced taker fee instead of no fee at all.
+       * </pre>
+       *
+       * <code>repeated string reduced_fee_whitelist = 6 [json_name = "reducedFeeWhitelist", (.gogoproto.moretags) = "yaml:&#92;"reduced_fee_whitelist&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReducedFeeWhitelist() {
+        reducedFeeWhitelist_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reduced_fee_whitelist is a list of addresses that are
+       * allowed to pay a reduce taker fee when performing a swap
+       * (i.e. swap without paying the taker fee).
+       * It is intended to be used for integrators who meet qualifying factors
+       * that are approved by governance.
+       * Initially, the taker fee is allowed to be bypassed completely. However
+       * In the future, we will charge a reduced taker fee instead of no fee at all.
+       * </pre>
+       *
+       * <code>repeated string reduced_fee_whitelist = 6 [json_name = "reducedFeeWhitelist", (.gogoproto.moretags) = "yaml:&#92;"reduced_fee_whitelist&#92;""];</code>
+       * @param value The bytes of the reducedFeeWhitelist to add.
+       * @return This builder for chaining.
+       */
+      public Builder addReducedFeeWhitelistBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureReducedFeeWhitelistIsMutable();
+        reducedFeeWhitelist_.add(value);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.TakerFeeParams)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.TakerFeeParams)
+    private static final com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TakerFeeParams>
+        PARSER = new com.google.protobuf.AbstractParser<TakerFeeParams>() {
+      @java.lang.Override
+      public TakerFeeParams parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TakerFeeParams> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TakerFeeParams> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeParams getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TakerFeeDistributionPercentageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string staking_rewards = 1 [json_name = "stakingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"staking_rewards&#92;""];</code>
+     * @return The stakingRewards.
+     */
+    java.lang.String getStakingRewards();
+    /**
+     * <code>string staking_rewards = 1 [json_name = "stakingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"staking_rewards&#92;""];</code>
+     * @return The bytes for stakingRewards.
+     */
+    com.google.protobuf.ByteString
+        getStakingRewardsBytes();
+
+    /**
+     * <code>string community_pool = 2 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+     * @return The communityPool.
+     */
+    java.lang.String getCommunityPool();
+    /**
+     * <code>string community_pool = 2 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+     * @return The bytes for communityPool.
+     */
+    com.google.protobuf.ByteString
+        getCommunityPoolBytes();
+  }
+  /**
+   * <pre>
+   * TakerFeeDistributionPercentage defines what percent of the taker fee category
+   * gets distributed to the available categories.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage}
+   */
+  public static final class TakerFeeDistributionPercentage extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage)
+      TakerFeeDistributionPercentageOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TakerFeeDistributionPercentage.newBuilder() to construct.
+    private TakerFeeDistributionPercentage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TakerFeeDistributionPercentage() {
+      stakingRewards_ = "";
+      communityPool_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TakerFeeDistributionPercentage();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.GenesisProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeDistributionPercentage_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.GenesisProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeDistributionPercentage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.class, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.Builder.class);
+    }
+
+    public static final int STAKING_REWARDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingRewards_ = "";
+    /**
+     * <code>string staking_rewards = 1 [json_name = "stakingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"staking_rewards&#92;""];</code>
+     * @return The stakingRewards.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingRewards() {
+      java.lang.Object ref = stakingRewards_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingRewards_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string staking_rewards = 1 [json_name = "stakingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"staking_rewards&#92;""];</code>
+     * @return The bytes for stakingRewards.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingRewardsBytes() {
+      java.lang.Object ref = stakingRewards_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingRewards_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COMMUNITY_POOL_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object communityPool_ = "";
+    /**
+     * <code>string community_pool = 2 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+     * @return The communityPool.
+     */
+    @java.lang.Override
+    public java.lang.String getCommunityPool() {
+      java.lang.Object ref = communityPool_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        communityPool_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string community_pool = 2 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+     * @return The bytes for communityPool.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCommunityPoolBytes() {
+      java.lang.Object ref = communityPool_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        communityPool_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingRewards_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, stakingRewards_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(communityPool_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, communityPool_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingRewards_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, stakingRewards_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(communityPool_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, communityPool_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage other = (com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage) obj;
+
+      if (!getStakingRewards()
+          .equals(other.getStakingRewards())) return false;
+      if (!getCommunityPool()
+          .equals(other.getCommunityPool())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKING_REWARDS_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingRewards().hashCode();
+      hash = (37 * hash) + COMMUNITY_POOL_FIELD_NUMBER;
+      hash = (53 * hash) + getCommunityPool().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * TakerFeeDistributionPercentage defines what percent of the taker fee category
+     * gets distributed to the available categories.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage)
+        com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.GenesisProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeDistributionPercentage_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.GenesisProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeDistributionPercentage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.class, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        stakingRewards_ = "";
+        communityPool_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.GenesisProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeeDistributionPercentage_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage build() {
+        com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage buildPartial() {
+        com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage result = new com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.stakingRewards_ = stakingRewards_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.communityPool_ = communityPool_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage other) {
+        if (other == com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage.getDefaultInstance()) return this;
+        if (!other.getStakingRewards().isEmpty()) {
+          stakingRewards_ = other.stakingRewards_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getCommunityPool().isEmpty()) {
+          communityPool_ = other.communityPool_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                stakingRewards_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                communityPool_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object stakingRewards_ = "";
+      /**
+       * <code>string staking_rewards = 1 [json_name = "stakingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"staking_rewards&#92;""];</code>
+       * @return The stakingRewards.
+       */
+      public java.lang.String getStakingRewards() {
+        java.lang.Object ref = stakingRewards_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingRewards_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string staking_rewards = 1 [json_name = "stakingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"staking_rewards&#92;""];</code>
+       * @return The bytes for stakingRewards.
+       */
+      public com.google.protobuf.ByteString
+          getStakingRewardsBytes() {
+        java.lang.Object ref = stakingRewards_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingRewards_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string staking_rewards = 1 [json_name = "stakingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"staking_rewards&#92;""];</code>
+       * @param value The stakingRewards to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingRewards(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingRewards_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_rewards = 1 [json_name = "stakingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"staking_rewards&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingRewards() {
+        stakingRewards_ = getDefaultInstance().getStakingRewards();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_rewards = 1 [json_name = "stakingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"staking_rewards&#92;""];</code>
+       * @param value The bytes for stakingRewards to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingRewardsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingRewards_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object communityPool_ = "";
+      /**
+       * <code>string community_pool = 2 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+       * @return The communityPool.
+       */
+      public java.lang.String getCommunityPool() {
+        java.lang.Object ref = communityPool_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          communityPool_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string community_pool = 2 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+       * @return The bytes for communityPool.
+       */
+      public com.google.protobuf.ByteString
+          getCommunityPoolBytes() {
+        java.lang.Object ref = communityPool_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          communityPool_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string community_pool = 2 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+       * @param value The communityPool to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommunityPool(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        communityPool_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string community_pool = 2 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCommunityPool() {
+        communityPool_ = getDefaultInstance().getCommunityPool();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string community_pool = 2 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+       * @param value The bytes for communityPool to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommunityPoolBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        communityPool_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.TakerFeeDistributionPercentage)
+    private static final com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TakerFeeDistributionPercentage>
+        PARSER = new com.google.protobuf.AbstractParser<TakerFeeDistributionPercentage>() {
+      @java.lang.Override
+      public TakerFeeDistributionPercentage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TakerFeeDistributionPercentage> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TakerFeeDistributionPercentage> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeeDistributionPercentage getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TakerFeesTrackerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.TakerFeesTracker)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getTakerFeesToStakersList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getTakerFeesToStakers(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+     */
+    int getTakerFeesToStakersCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getTakerFeesToStakersOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTakerFeesToStakersOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getTakerFeesToCommunityPoolList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getTakerFeesToCommunityPool(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+     */
+    int getTakerFeesToCommunityPoolCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getTakerFeesToCommunityPoolOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTakerFeesToCommunityPoolOrBuilder(
+        int index);
+
+    /**
+     * <code>int64 height_accounting_starts_from = 3 [json_name = "heightAccountingStartsFrom", (.gogoproto.moretags) = "yaml:&#92;"height_accounting_starts_from&#92;""];</code>
+     * @return The heightAccountingStartsFrom.
+     */
+    long getHeightAccountingStartsFrom();
+  }
+  /**
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.TakerFeesTracker}
+   */
+  public static final class TakerFeesTracker extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.TakerFeesTracker)
+      TakerFeesTrackerOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TakerFeesTracker.newBuilder() to construct.
+    private TakerFeesTracker(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TakerFeesTracker() {
+      takerFeesToStakers_ = java.util.Collections.emptyList();
+      takerFeesToCommunityPool_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TakerFeesTracker();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.GenesisProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeesTracker_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.GenesisProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeesTracker_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker.class, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker.Builder.class);
+    }
+
+    public static final int TAKER_FEES_TO_STAKERS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> takerFeesToStakers_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getTakerFeesToStakersList() {
+      return takerFeesToStakers_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getTakerFeesToStakersOrBuilderList() {
+      return takerFeesToStakers_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getTakerFeesToStakersCount() {
+      return takerFeesToStakers_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getTakerFeesToStakers(int index) {
+      return takerFeesToStakers_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTakerFeesToStakersOrBuilder(
+        int index) {
+      return takerFeesToStakers_.get(index);
+    }
+
+    public static final int TAKER_FEES_TO_COMMUNITY_POOL_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> takerFeesToCommunityPool_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getTakerFeesToCommunityPoolList() {
+      return takerFeesToCommunityPool_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getTakerFeesToCommunityPoolOrBuilderList() {
+      return takerFeesToCommunityPool_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getTakerFeesToCommunityPoolCount() {
+      return takerFeesToCommunityPool_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getTakerFeesToCommunityPool(int index) {
+      return takerFeesToCommunityPool_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTakerFeesToCommunityPoolOrBuilder(
+        int index) {
+      return takerFeesToCommunityPool_.get(index);
+    }
+
+    public static final int HEIGHT_ACCOUNTING_STARTS_FROM_FIELD_NUMBER = 3;
+    private long heightAccountingStartsFrom_ = 0L;
+    /**
+     * <code>int64 height_accounting_starts_from = 3 [json_name = "heightAccountingStartsFrom", (.gogoproto.moretags) = "yaml:&#92;"height_accounting_starts_from&#92;""];</code>
+     * @return The heightAccountingStartsFrom.
+     */
+    @java.lang.Override
+    public long getHeightAccountingStartsFrom() {
+      return heightAccountingStartsFrom_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < takerFeesToStakers_.size(); i++) {
+        output.writeMessage(1, takerFeesToStakers_.get(i));
+      }
+      for (int i = 0; i < takerFeesToCommunityPool_.size(); i++) {
+        output.writeMessage(2, takerFeesToCommunityPool_.get(i));
+      }
+      if (heightAccountingStartsFrom_ != 0L) {
+        output.writeInt64(3, heightAccountingStartsFrom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < takerFeesToStakers_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, takerFeesToStakers_.get(i));
+      }
+      for (int i = 0; i < takerFeesToCommunityPool_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, takerFeesToCommunityPool_.get(i));
+      }
+      if (heightAccountingStartsFrom_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, heightAccountingStartsFrom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker other = (com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker) obj;
+
+      if (!getTakerFeesToStakersList()
+          .equals(other.getTakerFeesToStakersList())) return false;
+      if (!getTakerFeesToCommunityPoolList()
+          .equals(other.getTakerFeesToCommunityPoolList())) return false;
+      if (getHeightAccountingStartsFrom()
+          != other.getHeightAccountingStartsFrom()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTakerFeesToStakersCount() > 0) {
+        hash = (37 * hash) + TAKER_FEES_TO_STAKERS_FIELD_NUMBER;
+        hash = (53 * hash) + getTakerFeesToStakersList().hashCode();
+      }
+      if (getTakerFeesToCommunityPoolCount() > 0) {
+        hash = (37 * hash) + TAKER_FEES_TO_COMMUNITY_POOL_FIELD_NUMBER;
+        hash = (53 * hash) + getTakerFeesToCommunityPoolList().hashCode();
+      }
+      hash = (37 * hash) + HEIGHT_ACCOUNTING_STARTS_FROM_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getHeightAccountingStartsFrom());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.TakerFeesTracker}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.TakerFeesTracker)
+        com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTrackerOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.GenesisProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeesTracker_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.GenesisProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeesTracker_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker.class, com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (takerFeesToStakersBuilder_ == null) {
+          takerFeesToStakers_ = java.util.Collections.emptyList();
+        } else {
+          takerFeesToStakers_ = null;
+          takerFeesToStakersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (takerFeesToCommunityPoolBuilder_ == null) {
+          takerFeesToCommunityPool_ = java.util.Collections.emptyList();
+        } else {
+          takerFeesToCommunityPool_ = null;
+          takerFeesToCommunityPoolBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        heightAccountingStartsFrom_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.GenesisProto.internal_static_osmosis_poolmanager_v1beta1_TakerFeesTracker_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker build() {
+        com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker buildPartial() {
+        com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker result = new com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker result) {
+        if (takerFeesToStakersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            takerFeesToStakers_ = java.util.Collections.unmodifiableList(takerFeesToStakers_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.takerFeesToStakers_ = takerFeesToStakers_;
+        } else {
+          result.takerFeesToStakers_ = takerFeesToStakersBuilder_.build();
+        }
+        if (takerFeesToCommunityPoolBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            takerFeesToCommunityPool_ = java.util.Collections.unmodifiableList(takerFeesToCommunityPool_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.takerFeesToCommunityPool_ = takerFeesToCommunityPool_;
+        } else {
+          result.takerFeesToCommunityPool_ = takerFeesToCommunityPoolBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.heightAccountingStartsFrom_ = heightAccountingStartsFrom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker other) {
+        if (other == com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker.getDefaultInstance()) return this;
+        if (takerFeesToStakersBuilder_ == null) {
+          if (!other.takerFeesToStakers_.isEmpty()) {
+            if (takerFeesToStakers_.isEmpty()) {
+              takerFeesToStakers_ = other.takerFeesToStakers_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTakerFeesToStakersIsMutable();
+              takerFeesToStakers_.addAll(other.takerFeesToStakers_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.takerFeesToStakers_.isEmpty()) {
+            if (takerFeesToStakersBuilder_.isEmpty()) {
+              takerFeesToStakersBuilder_.dispose();
+              takerFeesToStakersBuilder_ = null;
+              takerFeesToStakers_ = other.takerFeesToStakers_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              takerFeesToStakersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTakerFeesToStakersFieldBuilder() : null;
+            } else {
+              takerFeesToStakersBuilder_.addAllMessages(other.takerFeesToStakers_);
+            }
+          }
+        }
+        if (takerFeesToCommunityPoolBuilder_ == null) {
+          if (!other.takerFeesToCommunityPool_.isEmpty()) {
+            if (takerFeesToCommunityPool_.isEmpty()) {
+              takerFeesToCommunityPool_ = other.takerFeesToCommunityPool_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureTakerFeesToCommunityPoolIsMutable();
+              takerFeesToCommunityPool_.addAll(other.takerFeesToCommunityPool_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.takerFeesToCommunityPool_.isEmpty()) {
+            if (takerFeesToCommunityPoolBuilder_.isEmpty()) {
+              takerFeesToCommunityPoolBuilder_.dispose();
+              takerFeesToCommunityPoolBuilder_ = null;
+              takerFeesToCommunityPool_ = other.takerFeesToCommunityPool_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              takerFeesToCommunityPoolBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTakerFeesToCommunityPoolFieldBuilder() : null;
+            } else {
+              takerFeesToCommunityPoolBuilder_.addAllMessages(other.takerFeesToCommunityPool_);
+            }
+          }
+        }
+        if (other.getHeightAccountingStartsFrom() != 0L) {
+          setHeightAccountingStartsFrom(other.getHeightAccountingStartsFrom());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (takerFeesToStakersBuilder_ == null) {
+                  ensureTakerFeesToStakersIsMutable();
+                  takerFeesToStakers_.add(m);
+                } else {
+                  takerFeesToStakersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (takerFeesToCommunityPoolBuilder_ == null) {
+                  ensureTakerFeesToCommunityPoolIsMutable();
+                  takerFeesToCommunityPool_.add(m);
+                } else {
+                  takerFeesToCommunityPoolBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 24: {
+                heightAccountingStartsFrom_ = input.readInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> takerFeesToStakers_ =
+        java.util.Collections.emptyList();
+      private void ensureTakerFeesToStakersIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          takerFeesToStakers_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(takerFeesToStakers_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> takerFeesToStakersBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getTakerFeesToStakersList() {
+        if (takerFeesToStakersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(takerFeesToStakers_);
+        } else {
+          return takerFeesToStakersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+       */
+      public int getTakerFeesToStakersCount() {
+        if (takerFeesToStakersBuilder_ == null) {
+          return takerFeesToStakers_.size();
+        } else {
+          return takerFeesToStakersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getTakerFeesToStakers(int index) {
+        if (takerFeesToStakersBuilder_ == null) {
+          return takerFeesToStakers_.get(index);
+        } else {
+          return takerFeesToStakersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTakerFeesToStakers(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (takerFeesToStakersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTakerFeesToStakersIsMutable();
+          takerFeesToStakers_.set(index, value);
+          onChanged();
+        } else {
+          takerFeesToStakersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTakerFeesToStakers(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (takerFeesToStakersBuilder_ == null) {
+          ensureTakerFeesToStakersIsMutable();
+          takerFeesToStakers_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          takerFeesToStakersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTakerFeesToStakers(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (takerFeesToStakersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTakerFeesToStakersIsMutable();
+          takerFeesToStakers_.add(value);
+          onChanged();
+        } else {
+          takerFeesToStakersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTakerFeesToStakers(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (takerFeesToStakersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTakerFeesToStakersIsMutable();
+          takerFeesToStakers_.add(index, value);
+          onChanged();
+        } else {
+          takerFeesToStakersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTakerFeesToStakers(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (takerFeesToStakersBuilder_ == null) {
+          ensureTakerFeesToStakersIsMutable();
+          takerFeesToStakers_.add(builderForValue.build());
+          onChanged();
+        } else {
+          takerFeesToStakersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTakerFeesToStakers(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (takerFeesToStakersBuilder_ == null) {
+          ensureTakerFeesToStakersIsMutable();
+          takerFeesToStakers_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          takerFeesToStakersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllTakerFeesToStakers(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (takerFeesToStakersBuilder_ == null) {
+          ensureTakerFeesToStakersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, takerFeesToStakers_);
+          onChanged();
+        } else {
+          takerFeesToStakersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTakerFeesToStakers() {
+        if (takerFeesToStakersBuilder_ == null) {
+          takerFeesToStakers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          takerFeesToStakersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeTakerFeesToStakers(int index) {
+        if (takerFeesToStakersBuilder_ == null) {
+          ensureTakerFeesToStakersIsMutable();
+          takerFeesToStakers_.remove(index);
+          onChanged();
+        } else {
+          takerFeesToStakersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getTakerFeesToStakersBuilder(
+          int index) {
+        return getTakerFeesToStakersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTakerFeesToStakersOrBuilder(
+          int index) {
+        if (takerFeesToStakersBuilder_ == null) {
+          return takerFeesToStakers_.get(index);  } else {
+          return takerFeesToStakersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getTakerFeesToStakersOrBuilderList() {
+        if (takerFeesToStakersBuilder_ != null) {
+          return takerFeesToStakersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(takerFeesToStakers_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addTakerFeesToStakersBuilder() {
+        return getTakerFeesToStakersFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addTakerFeesToStakersBuilder(
+          int index) {
+        return getTakerFeesToStakersFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_stakers = 1 [json_name = "takerFeesToStakers", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getTakerFeesToStakersBuilderList() {
+        return getTakerFeesToStakersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getTakerFeesToStakersFieldBuilder() {
+        if (takerFeesToStakersBuilder_ == null) {
+          takerFeesToStakersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  takerFeesToStakers_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          takerFeesToStakers_ = null;
+        }
+        return takerFeesToStakersBuilder_;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> takerFeesToCommunityPool_ =
+        java.util.Collections.emptyList();
+      private void ensureTakerFeesToCommunityPoolIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          takerFeesToCommunityPool_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(takerFeesToCommunityPool_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> takerFeesToCommunityPoolBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getTakerFeesToCommunityPoolList() {
+        if (takerFeesToCommunityPoolBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(takerFeesToCommunityPool_);
+        } else {
+          return takerFeesToCommunityPoolBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+       */
+      public int getTakerFeesToCommunityPoolCount() {
+        if (takerFeesToCommunityPoolBuilder_ == null) {
+          return takerFeesToCommunityPool_.size();
+        } else {
+          return takerFeesToCommunityPoolBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getTakerFeesToCommunityPool(int index) {
+        if (takerFeesToCommunityPoolBuilder_ == null) {
+          return takerFeesToCommunityPool_.get(index);
+        } else {
+          return takerFeesToCommunityPoolBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTakerFeesToCommunityPool(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (takerFeesToCommunityPoolBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTakerFeesToCommunityPoolIsMutable();
+          takerFeesToCommunityPool_.set(index, value);
+          onChanged();
+        } else {
+          takerFeesToCommunityPoolBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTakerFeesToCommunityPool(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (takerFeesToCommunityPoolBuilder_ == null) {
+          ensureTakerFeesToCommunityPoolIsMutable();
+          takerFeesToCommunityPool_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          takerFeesToCommunityPoolBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTakerFeesToCommunityPool(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (takerFeesToCommunityPoolBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTakerFeesToCommunityPoolIsMutable();
+          takerFeesToCommunityPool_.add(value);
+          onChanged();
+        } else {
+          takerFeesToCommunityPoolBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTakerFeesToCommunityPool(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (takerFeesToCommunityPoolBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTakerFeesToCommunityPoolIsMutable();
+          takerFeesToCommunityPool_.add(index, value);
+          onChanged();
+        } else {
+          takerFeesToCommunityPoolBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTakerFeesToCommunityPool(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (takerFeesToCommunityPoolBuilder_ == null) {
+          ensureTakerFeesToCommunityPoolIsMutable();
+          takerFeesToCommunityPool_.add(builderForValue.build());
+          onChanged();
+        } else {
+          takerFeesToCommunityPoolBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTakerFeesToCommunityPool(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (takerFeesToCommunityPoolBuilder_ == null) {
+          ensureTakerFeesToCommunityPoolIsMutable();
+          takerFeesToCommunityPool_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          takerFeesToCommunityPoolBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllTakerFeesToCommunityPool(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (takerFeesToCommunityPoolBuilder_ == null) {
+          ensureTakerFeesToCommunityPoolIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, takerFeesToCommunityPool_);
+          onChanged();
+        } else {
+          takerFeesToCommunityPoolBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTakerFeesToCommunityPool() {
+        if (takerFeesToCommunityPoolBuilder_ == null) {
+          takerFeesToCommunityPool_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          takerFeesToCommunityPoolBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeTakerFeesToCommunityPool(int index) {
+        if (takerFeesToCommunityPoolBuilder_ == null) {
+          ensureTakerFeesToCommunityPoolIsMutable();
+          takerFeesToCommunityPool_.remove(index);
+          onChanged();
+        } else {
+          takerFeesToCommunityPoolBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getTakerFeesToCommunityPoolBuilder(
+          int index) {
+        return getTakerFeesToCommunityPoolFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTakerFeesToCommunityPoolOrBuilder(
+          int index) {
+        if (takerFeesToCommunityPoolBuilder_ == null) {
+          return takerFeesToCommunityPool_.get(index);  } else {
+          return takerFeesToCommunityPoolBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getTakerFeesToCommunityPoolOrBuilderList() {
+        if (takerFeesToCommunityPoolBuilder_ != null) {
+          return takerFeesToCommunityPoolBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(takerFeesToCommunityPool_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addTakerFeesToCommunityPoolBuilder() {
+        return getTakerFeesToCommunityPoolFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addTakerFeesToCommunityPoolBuilder(
+          int index) {
+        return getTakerFeesToCommunityPoolFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin taker_fees_to_community_pool = 2 [json_name = "takerFeesToCommunityPool", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getTakerFeesToCommunityPoolBuilderList() {
+        return getTakerFeesToCommunityPoolFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getTakerFeesToCommunityPoolFieldBuilder() {
+        if (takerFeesToCommunityPoolBuilder_ == null) {
+          takerFeesToCommunityPoolBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  takerFeesToCommunityPool_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          takerFeesToCommunityPool_ = null;
+        }
+        return takerFeesToCommunityPoolBuilder_;
+      }
+
+      private long heightAccountingStartsFrom_ ;
+      /**
+       * <code>int64 height_accounting_starts_from = 3 [json_name = "heightAccountingStartsFrom", (.gogoproto.moretags) = "yaml:&#92;"height_accounting_starts_from&#92;""];</code>
+       * @return The heightAccountingStartsFrom.
+       */
+      @java.lang.Override
+      public long getHeightAccountingStartsFrom() {
+        return heightAccountingStartsFrom_;
+      }
+      /**
+       * <code>int64 height_accounting_starts_from = 3 [json_name = "heightAccountingStartsFrom", (.gogoproto.moretags) = "yaml:&#92;"height_accounting_starts_from&#92;""];</code>
+       * @param value The heightAccountingStartsFrom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeightAccountingStartsFrom(long value) {
+
+        heightAccountingStartsFrom_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 height_accounting_starts_from = 3 [json_name = "heightAccountingStartsFrom", (.gogoproto.moretags) = "yaml:&#92;"height_accounting_starts_from&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeightAccountingStartsFrom() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        heightAccountingStartsFrom_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.TakerFeesTracker)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.TakerFeesTracker)
+    private static final com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TakerFeesTracker>
+        PARSER = new com.google.protobuf.AbstractParser<TakerFeesTracker>() {
+      @java.lang.Override
+      public TakerFeesTracker parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TakerFeesTracker> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TakerFeesTracker> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.GenesisProto.TakerFeesTracker getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PoolVolumeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.poolmanager.v1beta1.PoolVolume)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pool_id is the id of the pool.
+     * </pre>
+     *
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <pre>
+     * pool_volume is the cumulative volume of the pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getPoolVolumeList();
+    /**
+     * <pre>
+     * pool_volume is the cumulative volume of the pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getPoolVolume(int index);
+    /**
+     * <pre>
+     * pool_volume is the cumulative volume of the pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getPoolVolumeCount();
+    /**
+     * <pre>
+     * pool_volume is the cumulative volume of the pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getPoolVolumeOrBuilderList();
+    /**
+     * <pre>
+     * pool_volume is the cumulative volume of the pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPoolVolumeOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * PoolVolume stores the KVStore entries for each pool's volume, which
+   * is used in export/import genesis.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.poolmanager.v1beta1.PoolVolume}
+   */
+  public static final class PoolVolume extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.poolmanager.v1beta1.PoolVolume)
+      PoolVolumeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PoolVolume.newBuilder() to construct.
+    private PoolVolume(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PoolVolume() {
+      poolVolume_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PoolVolume();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.poolmanager.v1beta1.GenesisProto.internal_static_osmosis_poolmanager_v1beta1_PoolVolume_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.poolmanager.v1beta1.GenesisProto.internal_static_osmosis_poolmanager_v1beta1_PoolVolume_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume.class, com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <pre>
+     * pool_id is the id of the pool.
+     * </pre>
+     *
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int POOL_VOLUME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> poolVolume_;
+    /**
+     * <pre>
+     * pool_volume is the cumulative volume of the pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getPoolVolumeList() {
+      return poolVolume_;
+    }
+    /**
+     * <pre>
+     * pool_volume is the cumulative volume of the pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getPoolVolumeOrBuilderList() {
+      return poolVolume_;
+    }
+    /**
+     * <pre>
+     * pool_volume is the cumulative volume of the pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getPoolVolumeCount() {
+      return poolVolume_.size();
+    }
+    /**
+     * <pre>
+     * pool_volume is the cumulative volume of the pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getPoolVolume(int index) {
+      return poolVolume_.get(index);
+    }
+    /**
+     * <pre>
+     * pool_volume is the cumulative volume of the pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPoolVolumeOrBuilder(
+        int index) {
+      return poolVolume_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      for (int i = 0; i < poolVolume_.size(); i++) {
+        output.writeMessage(2, poolVolume_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      for (int i = 0; i < poolVolume_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, poolVolume_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume)) {
+        return super.equals(obj);
+      }
+      com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume other = (com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getPoolVolumeList()
+          .equals(other.getPoolVolumeList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      if (getPoolVolumeCount() > 0) {
+        hash = (37 * hash) + POOL_VOLUME_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolVolumeList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * PoolVolume stores the KVStore entries for each pool's volume, which
+     * is used in export/import genesis.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.poolmanager.v1beta1.PoolVolume}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.poolmanager.v1beta1.PoolVolume)
+        com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolumeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.poolmanager.v1beta1.GenesisProto.internal_static_osmosis_poolmanager_v1beta1_PoolVolume_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.poolmanager.v1beta1.GenesisProto.internal_static_osmosis_poolmanager_v1beta1_PoolVolume_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume.class, com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume.Builder.class);
+      }
+
+      // Construct using com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        if (poolVolumeBuilder_ == null) {
+          poolVolume_ = java.util.Collections.emptyList();
+        } else {
+          poolVolume_ = null;
+          poolVolumeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.poolmanager.v1beta1.GenesisProto.internal_static_osmosis_poolmanager_v1beta1_PoolVolume_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume getDefaultInstanceForType() {
+        return com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume build() {
+        com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume buildPartial() {
+        com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume result = new com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume result) {
+        if (poolVolumeBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            poolVolume_ = java.util.Collections.unmodifiableList(poolVolume_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.poolVolume_ = poolVolume_;
+        } else {
+          result.poolVolume_ = poolVolumeBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume) {
+          return mergeFrom((com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume other) {
+        if (other == com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (poolVolumeBuilder_ == null) {
+          if (!other.poolVolume_.isEmpty()) {
+            if (poolVolume_.isEmpty()) {
+              poolVolume_ = other.poolVolume_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensurePoolVolumeIsMutable();
+              poolVolume_.addAll(other.poolVolume_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.poolVolume_.isEmpty()) {
+            if (poolVolumeBuilder_.isEmpty()) {
+              poolVolumeBuilder_.dispose();
+              poolVolumeBuilder_ = null;
+              poolVolume_ = other.poolVolume_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              poolVolumeBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPoolVolumeFieldBuilder() : null;
+            } else {
+              poolVolumeBuilder_.addAllMessages(other.poolVolume_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (poolVolumeBuilder_ == null) {
+                  ensurePoolVolumeIsMutable();
+                  poolVolume_.add(m);
+                } else {
+                  poolVolumeBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <pre>
+       * pool_id is the id of the pool.
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <pre>
+       * pool_id is the id of the pool.
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_id is the id of the pool.
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> poolVolume_ =
+        java.util.Collections.emptyList();
+      private void ensurePoolVolumeIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          poolVolume_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(poolVolume_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> poolVolumeBuilder_;
+
+      /**
+       * <pre>
+       * pool_volume is the cumulative volume of the pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getPoolVolumeList() {
+        if (poolVolumeBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(poolVolume_);
+        } else {
+          return poolVolumeBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * pool_volume is the cumulative volume of the pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getPoolVolumeCount() {
+        if (poolVolumeBuilder_ == null) {
+          return poolVolume_.size();
+        } else {
+          return poolVolumeBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * pool_volume is the cumulative volume of the pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getPoolVolume(int index) {
+        if (poolVolumeBuilder_ == null) {
+          return poolVolume_.get(index);
+        } else {
+          return poolVolumeBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * pool_volume is the cumulative volume of the pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setPoolVolume(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (poolVolumeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolVolumeIsMutable();
+          poolVolume_.set(index, value);
+          onChanged();
+        } else {
+          poolVolumeBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_volume is the cumulative volume of the pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setPoolVolume(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (poolVolumeBuilder_ == null) {
+          ensurePoolVolumeIsMutable();
+          poolVolume_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          poolVolumeBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_volume is the cumulative volume of the pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addPoolVolume(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (poolVolumeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolVolumeIsMutable();
+          poolVolume_.add(value);
+          onChanged();
+        } else {
+          poolVolumeBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_volume is the cumulative volume of the pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addPoolVolume(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (poolVolumeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolVolumeIsMutable();
+          poolVolume_.add(index, value);
+          onChanged();
+        } else {
+          poolVolumeBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_volume is the cumulative volume of the pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addPoolVolume(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (poolVolumeBuilder_ == null) {
+          ensurePoolVolumeIsMutable();
+          poolVolume_.add(builderForValue.build());
+          onChanged();
+        } else {
+          poolVolumeBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_volume is the cumulative volume of the pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addPoolVolume(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (poolVolumeBuilder_ == null) {
+          ensurePoolVolumeIsMutable();
+          poolVolume_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          poolVolumeBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_volume is the cumulative volume of the pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllPoolVolume(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (poolVolumeBuilder_ == null) {
+          ensurePoolVolumeIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, poolVolume_);
+          onChanged();
+        } else {
+          poolVolumeBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_volume is the cumulative volume of the pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearPoolVolume() {
+        if (poolVolumeBuilder_ == null) {
+          poolVolume_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          poolVolumeBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_volume is the cumulative volume of the pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removePoolVolume(int index) {
+        if (poolVolumeBuilder_ == null) {
+          ensurePoolVolumeIsMutable();
+          poolVolume_.remove(index);
+          onChanged();
+        } else {
+          poolVolumeBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_volume is the cumulative volume of the pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getPoolVolumeBuilder(
+          int index) {
+        return getPoolVolumeFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * pool_volume is the cumulative volume of the pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPoolVolumeOrBuilder(
+          int index) {
+        if (poolVolumeBuilder_ == null) {
+          return poolVolume_.get(index);  } else {
+          return poolVolumeBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * pool_volume is the cumulative volume of the pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getPoolVolumeOrBuilderList() {
+        if (poolVolumeBuilder_ != null) {
+          return poolVolumeBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(poolVolume_);
+        }
+      }
+      /**
+       * <pre>
+       * pool_volume is the cumulative volume of the pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addPoolVolumeBuilder() {
+        return getPoolVolumeFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * pool_volume is the cumulative volume of the pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addPoolVolumeBuilder(
+          int index) {
+        return getPoolVolumeFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * pool_volume is the cumulative volume of the pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_volume = 2 [json_name = "poolVolume", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getPoolVolumeBuilderList() {
+        return getPoolVolumeFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getPoolVolumeFieldBuilder() {
+        if (poolVolumeBuilder_ == null) {
+          poolVolumeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  poolVolume_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          poolVolume_ = null;
+        }
+        return poolVolumeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.poolmanager.v1beta1.PoolVolume)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.poolmanager.v1beta1.PoolVolume)
+    private static final com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume();
+    }
+
+    public static com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PoolVolume>
+        PARSER = new com.google.protobuf.AbstractParser<PoolVolume>() {
+      @java.lang.Override
+      public PoolVolume parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PoolVolume> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PoolVolume> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.poolmanager.v1beta1.GenesisProto.PoolVolume getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_poolmanager_v1beta1_Params_descriptor;
   private static final 
@@ -2065,6 +8893,26 @@ public final class GenesisProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_poolmanager_v1beta1_GenesisState_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_TakerFeeParams_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_TakerFeeParams_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_TakerFeeDistributionPercentage_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_TakerFeeDistributionPercentage_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_TakerFeesTracker_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_TakerFeesTracker_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_poolmanager_v1beta1_PoolVolume_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_poolmanager_v1beta1_PoolVolume_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2080,22 +8928,73 @@ public final class GenesisProto {
       "o\032\031cosmos_proto/cosmos.proto\032\036google/pro" +
       "tobuf/duration.proto\032\036cosmos/base/v1beta" +
       "1/coin.proto\032.osmosis/poolmanager/v1beta" +
-      "1/module_route.proto\"\236\001\n\006Params\022\223\001\n\021pool" +
-      "_creation_fee\030\001 \003(\0132\031.cosmos.base.v1beta" +
-      "1.CoinBL\310\336\037\000\362\336\037\030yaml:\"pool_creation_fee\"" +
-      "\252\337\037(github.com/cosmos/cosmos-sdk/types.C" +
-      "oinsR\017poolCreationFee\"\304\001\n\014GenesisState\022 " +
-      "\n\014next_pool_id\030\001 \001(\004R\nnextPoolId\022A\n\006para" +
-      "ms\030\002 \001(\0132#.osmosis.poolmanager.v1beta1.P" +
-      "aramsB\004\310\336\037\000R\006params\022O\n\013pool_routes\030\003 \003(\013" +
-      "2(.osmosis.poolmanager.v1beta1.ModuleRou" +
-      "teB\004\310\336\037\000R\npoolRoutesB\364\001\n\037com.osmosis.poo" +
-      "lmanager.v1beta1B\014GenesisProtoZ7github.c" +
-      "om/osmosis-labs/osmosis/v15/x/poolmanage" +
-      "r/types\242\002\003OPX\252\002\033Osmosis.Poolmanager.V1be" +
-      "ta1\312\002\033Osmosis\\Poolmanager\\V1beta1\342\002\'Osmo" +
-      "sis\\Poolmanager\\V1beta1\\GPBMetadata\352\002\035Os" +
-      "mosis::Poolmanager::V1beta1b\006proto3"
+      "1/module_route.proto\032$osmosis/poolmanage" +
+      "r/v1beta1/tx.proto\"\362\002\n\006Params\022\223\001\n\021pool_c" +
+      "reation_fee\030\001 \003(\0132\031.cosmos.base.v1beta1." +
+      "CoinBL\310\336\037\000\362\336\037\030yaml:\"pool_creation_fee\"\252\337" +
+      "\037(github.com/cosmos/cosmos-sdk/types.Coi" +
+      "nsR\017poolCreationFee\022v\n\020taker_fee_params\030" +
+      "\002 \001(\0132+.osmosis.poolmanager.v1beta1.Take" +
+      "rFeeParamsB\037\310\336\037\000\362\336\037\027yaml:\"taker_fee_para" +
+      "ms\"R\016takerFeeParams\022Z\n\027authorized_quote_" +
+      "denoms\030\003 \003(\tB\"\362\336\037\036yaml:\"authorized_quote" +
+      "_denoms\"R\025authorizedQuoteDenoms\"\337\003\n\014Gene" +
+      "sisState\022 \n\014next_pool_id\030\001 \001(\004R\nnextPool" +
+      "Id\022A\n\006params\030\002 \001(\0132#.osmosis.poolmanager" +
+      ".v1beta1.ParamsB\004\310\336\037\000R\006params\022O\n\013pool_ro" +
+      "utes\030\003 \003(\0132(.osmosis.poolmanager.v1beta1" +
+      ".ModuleRouteB\004\310\336\037\000R\npoolRoutes\022[\n\022taker_" +
+      "fees_tracker\030\004 \001(\0132-.osmosis.poolmanager" +
+      ".v1beta1.TakerFeesTrackerR\020takerFeesTrac" +
+      "ker\022J\n\014pool_volumes\030\005 \003(\0132\'.osmosis.pool" +
+      "manager.v1beta1.PoolVolumeR\013poolVolumes\022" +
+      "p\n\032denom_pair_taker_fee_store\030\006 \003(\0132..os" +
+      "mosis.poolmanager.v1beta1.DenomPairTaker" +
+      "FeeB\004\310\336\037\000R\026denomPairTakerFeeStore\"\213\006\n\016Ta" +
+      "kerFeeParams\022b\n\021default_taker_fee\030\001 \001(\tB" +
+      "6\310\336\037\000\332\336\037\033cosmossdk.io/math.LegacyDec\342\336\037\017" +
+      "DefaultTakerFeeR\017defaultTakerFee\022\234\001\n\033osm" +
+      "o_taker_fee_distribution\030\002 \001(\0132;.osmosis" +
+      ".poolmanager.v1beta1.TakerFeeDistributio" +
+      "nPercentageB \310\336\037\000\342\336\037\030OsmoTakerFeeDistrib" +
+      "utionR\030osmoTakerFeeDistribution\022\246\001\n\037non_" +
+      "osmo_taker_fee_distribution\030\003 \001(\0132;.osmo" +
+      "sis.poolmanager.v1beta1.TakerFeeDistribu" +
+      "tionPercentageB#\310\336\037\000\342\336\037\033NonOsmoTakerFeeD" +
+      "istributionR\033nonOsmoTakerFeeDistribution" +
+      "\022C\n\017admin_addresses\030\004 \003(\tB\032\362\336\037\026yaml:\"adm" +
+      "in_addresses\"R\016adminAddresses\022\261\001\n6commun" +
+      "ity_pool_denom_to_swap_non_whitelisted_a" +
+      "ssets_to\030\005 \001(\tBA\362\336\037=yaml:\"community_pool" +
+      "_denom_to_swap_non_whitelisted_assets_to" +
+      "\"R.communityPoolDenomToSwapNonWhiteliste" +
+      "dAssetsTo\022T\n\025reduced_fee_whitelist\030\006 \003(\t" +
+      "B \362\336\037\034yaml:\"reduced_fee_whitelist\"R\023redu" +
+      "cedFeeWhitelist\"\355\001\n\036TakerFeeDistribution" +
+      "Percentage\022f\n\017staking_rewards\030\001 \001(\tB=\310\336\037" +
+      "\000\332\336\037\033cosmossdk.io/math.LegacyDec\362\336\037\026yaml" +
+      ":\"staking_rewards\"R\016stakingRewards\022c\n\016co" +
+      "mmunity_pool\030\002 \001(\tB<\310\336\037\000\332\336\037\033cosmossdk.io" +
+      "/math.LegacyDec\362\336\037\025yaml:\"community_pool\"" +
+      "R\rcommunityPool\"\264\002\n\020TakerFeesTracker\022R\n\025" +
+      "taker_fees_to_stakers\030\001 \003(\0132\031.cosmos.bas" +
+      "e.v1beta1.CoinB\004\310\336\037\000R\022takerFeesToStakers" +
+      "\022_\n\034taker_fees_to_community_pool\030\002 \003(\0132\031" +
+      ".cosmos.base.v1beta1.CoinB\004\310\336\037\000R\030takerFe" +
+      "esToCommunityPool\022k\n\035height_accounting_s" +
+      "tarts_from\030\003 \001(\003B(\362\336\037$yaml:\"height_accou" +
+      "nting_starts_from\"R\032heightAccountingStar" +
+      "tsFrom\"\223\001\n\nPoolVolume\022\027\n\007pool_id\030\001 \001(\004R\006" +
+      "poolId\022l\n\013pool_volume\030\002 \003(\0132\031.cosmos.bas" +
+      "e.v1beta1.CoinB0\310\336\037\000\252\337\037(github.com/cosmo" +
+      "s/cosmos-sdk/types.CoinsR\npoolVolumeB\364\001\n" +
+      "\037com.osmosis.poolmanager.v1beta1B\014Genesi" +
+      "sProtoZ7github.com/osmosis-labs/osmosis/" +
+      "v26/x/poolmanager/types\242\002\003OPX\252\002\033Osmosis." +
+      "Poolmanager.V1beta1\312\002\033Osmosis\\Poolmanage" +
+      "r\\V1beta1\342\002\'Osmosis\\Poolmanager\\V1beta1\\" +
+      "GPBMetadata\352\002\035Osmosis::Poolmanager::V1be" +
+      "ta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2106,22 +9005,49 @@ public final class GenesisProto {
           com.google.protobuf.DurationProto.getDescriptor(),
           com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
           com.osmosis.poolmanager.v1beta1.ModuleRouteProto.getDescriptor(),
+          com.osmosis.poolmanager.v1beta1.TxProto.getDescriptor(),
         });
     internal_static_osmosis_poolmanager_v1beta1_Params_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_osmosis_poolmanager_v1beta1_Params_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_poolmanager_v1beta1_Params_descriptor,
-        new java.lang.String[] { "PoolCreationFee", });
+        new java.lang.String[] { "PoolCreationFee", "TakerFeeParams", "AuthorizedQuoteDenoms", });
     internal_static_osmosis_poolmanager_v1beta1_GenesisState_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_osmosis_poolmanager_v1beta1_GenesisState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_poolmanager_v1beta1_GenesisState_descriptor,
-        new java.lang.String[] { "NextPoolId", "Params", "PoolRoutes", });
+        new java.lang.String[] { "NextPoolId", "Params", "PoolRoutes", "TakerFeesTracker", "PoolVolumes", "DenomPairTakerFeeStore", });
+    internal_static_osmosis_poolmanager_v1beta1_TakerFeeParams_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_osmosis_poolmanager_v1beta1_TakerFeeParams_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_TakerFeeParams_descriptor,
+        new java.lang.String[] { "DefaultTakerFee", "OsmoTakerFeeDistribution", "NonOsmoTakerFeeDistribution", "AdminAddresses", "CommunityPoolDenomToSwapNonWhitelistedAssetsTo", "ReducedFeeWhitelist", });
+    internal_static_osmosis_poolmanager_v1beta1_TakerFeeDistributionPercentage_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_osmosis_poolmanager_v1beta1_TakerFeeDistributionPercentage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_TakerFeeDistributionPercentage_descriptor,
+        new java.lang.String[] { "StakingRewards", "CommunityPool", });
+    internal_static_osmosis_poolmanager_v1beta1_TakerFeesTracker_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_osmosis_poolmanager_v1beta1_TakerFeesTracker_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_TakerFeesTracker_descriptor,
+        new java.lang.String[] { "TakerFeesToStakers", "TakerFeesToCommunityPool", "HeightAccountingStartsFrom", });
+    internal_static_osmosis_poolmanager_v1beta1_PoolVolume_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_osmosis_poolmanager_v1beta1_PoolVolume_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_poolmanager_v1beta1_PoolVolume_descriptor,
+        new java.lang.String[] { "PoolId", "PoolVolume", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.gogoproto.GogoProto.castrepeated);
+    registry.add(com.gogoproto.GogoProto.customname);
+    registry.add(com.gogoproto.GogoProto.customtype);
     registry.add(com.gogoproto.GogoProto.moretags);
     registry.add(com.gogoproto.GogoProto.nullable);
     com.google.protobuf.Descriptors.FileDescriptor
@@ -2132,6 +9058,7 @@ public final class GenesisProto {
     com.google.protobuf.DurationProto.getDescriptor();
     com.cosmos.base.v1beta1.CoinProto.getDescriptor();
     com.osmosis.poolmanager.v1beta1.ModuleRouteProto.getDescriptor();
+    com.osmosis.poolmanager.v1beta1.TxProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

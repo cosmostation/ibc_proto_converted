@@ -110,7 +110,7 @@ public final class TwapRecordProto {
      * accumulator values for times between when accumulator records are stored.
      * </pre>
      *
-     * <code>string p0_last_spot_price = 6 [json_name = "p0LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string p0_last_spot_price = 6 [json_name = "p0LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The p0LastSpotPrice.
      */
     java.lang.String getP0LastSpotPrice();
@@ -120,55 +120,55 @@ public final class TwapRecordProto {
      * accumulator values for times between when accumulator records are stored.
      * </pre>
      *
-     * <code>string p0_last_spot_price = 6 [json_name = "p0LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string p0_last_spot_price = 6 [json_name = "p0LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The bytes for p0LastSpotPrice.
      */
     com.google.protobuf.ByteString
         getP0LastSpotPriceBytes();
 
     /**
-     * <code>string p1_last_spot_price = 7 [json_name = "p1LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string p1_last_spot_price = 7 [json_name = "p1LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The p1LastSpotPrice.
      */
     java.lang.String getP1LastSpotPrice();
     /**
-     * <code>string p1_last_spot_price = 7 [json_name = "p1LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string p1_last_spot_price = 7 [json_name = "p1LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The bytes for p1LastSpotPrice.
      */
     com.google.protobuf.ByteString
         getP1LastSpotPriceBytes();
 
     /**
-     * <code>string p0_arithmetic_twap_accumulator = 8 [json_name = "p0ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string p0_arithmetic_twap_accumulator = 8 [json_name = "p0ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The p0ArithmeticTwapAccumulator.
      */
     java.lang.String getP0ArithmeticTwapAccumulator();
     /**
-     * <code>string p0_arithmetic_twap_accumulator = 8 [json_name = "p0ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string p0_arithmetic_twap_accumulator = 8 [json_name = "p0ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The bytes for p0ArithmeticTwapAccumulator.
      */
     com.google.protobuf.ByteString
         getP0ArithmeticTwapAccumulatorBytes();
 
     /**
-     * <code>string p1_arithmetic_twap_accumulator = 9 [json_name = "p1ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string p1_arithmetic_twap_accumulator = 9 [json_name = "p1ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The p1ArithmeticTwapAccumulator.
      */
     java.lang.String getP1ArithmeticTwapAccumulator();
     /**
-     * <code>string p1_arithmetic_twap_accumulator = 9 [json_name = "p1ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string p1_arithmetic_twap_accumulator = 9 [json_name = "p1ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The bytes for p1ArithmeticTwapAccumulator.
      */
     com.google.protobuf.ByteString
         getP1ArithmeticTwapAccumulatorBytes();
 
     /**
-     * <code>string geometric_twap_accumulator = 10 [json_name = "geometricTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string geometric_twap_accumulator = 10 [json_name = "geometricTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The geometricTwapAccumulator.
      */
     java.lang.String getGeometricTwapAccumulator();
     /**
-     * <code>string geometric_twap_accumulator = 10 [json_name = "geometricTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string geometric_twap_accumulator = 10 [json_name = "geometricTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The bytes for geometricTwapAccumulator.
      */
     com.google.protobuf.ByteString
@@ -176,7 +176,7 @@ public final class TwapRecordProto {
 
     /**
      * <pre>
-     * This field contains the time in which the last spot price error occured.
+     * This field contains the time in which the last spot price error occurred.
      * It is used to alert the caller if they are getting a potentially erroneous
      * TWAP, due to an unforeseen underlying error.
      * </pre>
@@ -187,7 +187,7 @@ public final class TwapRecordProto {
     boolean hasLastErrorTime();
     /**
      * <pre>
-     * This field contains the time in which the last spot price error occured.
+     * This field contains the time in which the last spot price error occurred.
      * It is used to alert the caller if they are getting a potentially erroneous
      * TWAP, due to an unforeseen underlying error.
      * </pre>
@@ -198,7 +198,7 @@ public final class TwapRecordProto {
     com.google.protobuf.Timestamp getLastErrorTime();
     /**
      * <pre>
-     * This field contains the time in which the last spot price error occured.
+     * This field contains the time in which the last spot price error occurred.
      * It is used to alert the caller if they are getting a potentially erroneous
      * TWAP, due to an unforeseen underlying error.
      * </pre>
@@ -429,7 +429,7 @@ public final class TwapRecordProto {
      * accumulator values for times between when accumulator records are stored.
      * </pre>
      *
-     * <code>string p0_last_spot_price = 6 [json_name = "p0LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string p0_last_spot_price = 6 [json_name = "p0LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The p0LastSpotPrice.
      */
     @java.lang.Override
@@ -451,7 +451,7 @@ public final class TwapRecordProto {
      * accumulator values for times between when accumulator records are stored.
      * </pre>
      *
-     * <code>string p0_last_spot_price = 6 [json_name = "p0LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string p0_last_spot_price = 6 [json_name = "p0LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The bytes for p0LastSpotPrice.
      */
     @java.lang.Override
@@ -473,7 +473,7 @@ public final class TwapRecordProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object p1LastSpotPrice_ = "";
     /**
-     * <code>string p1_last_spot_price = 7 [json_name = "p1LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string p1_last_spot_price = 7 [json_name = "p1LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The p1LastSpotPrice.
      */
     @java.lang.Override
@@ -490,7 +490,7 @@ public final class TwapRecordProto {
       }
     }
     /**
-     * <code>string p1_last_spot_price = 7 [json_name = "p1LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string p1_last_spot_price = 7 [json_name = "p1LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The bytes for p1LastSpotPrice.
      */
     @java.lang.Override
@@ -512,7 +512,7 @@ public final class TwapRecordProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object p0ArithmeticTwapAccumulator_ = "";
     /**
-     * <code>string p0_arithmetic_twap_accumulator = 8 [json_name = "p0ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string p0_arithmetic_twap_accumulator = 8 [json_name = "p0ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The p0ArithmeticTwapAccumulator.
      */
     @java.lang.Override
@@ -529,7 +529,7 @@ public final class TwapRecordProto {
       }
     }
     /**
-     * <code>string p0_arithmetic_twap_accumulator = 8 [json_name = "p0ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string p0_arithmetic_twap_accumulator = 8 [json_name = "p0ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The bytes for p0ArithmeticTwapAccumulator.
      */
     @java.lang.Override
@@ -551,7 +551,7 @@ public final class TwapRecordProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object p1ArithmeticTwapAccumulator_ = "";
     /**
-     * <code>string p1_arithmetic_twap_accumulator = 9 [json_name = "p1ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string p1_arithmetic_twap_accumulator = 9 [json_name = "p1ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The p1ArithmeticTwapAccumulator.
      */
     @java.lang.Override
@@ -568,7 +568,7 @@ public final class TwapRecordProto {
       }
     }
     /**
-     * <code>string p1_arithmetic_twap_accumulator = 9 [json_name = "p1ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string p1_arithmetic_twap_accumulator = 9 [json_name = "p1ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The bytes for p1ArithmeticTwapAccumulator.
      */
     @java.lang.Override
@@ -590,7 +590,7 @@ public final class TwapRecordProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object geometricTwapAccumulator_ = "";
     /**
-     * <code>string geometric_twap_accumulator = 10 [json_name = "geometricTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string geometric_twap_accumulator = 10 [json_name = "geometricTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The geometricTwapAccumulator.
      */
     @java.lang.Override
@@ -607,7 +607,7 @@ public final class TwapRecordProto {
       }
     }
     /**
-     * <code>string geometric_twap_accumulator = 10 [json_name = "geometricTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * <code>string geometric_twap_accumulator = 10 [json_name = "geometricTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
      * @return The bytes for geometricTwapAccumulator.
      */
     @java.lang.Override
@@ -629,7 +629,7 @@ public final class TwapRecordProto {
     private com.google.protobuf.Timestamp lastErrorTime_;
     /**
      * <pre>
-     * This field contains the time in which the last spot price error occured.
+     * This field contains the time in which the last spot price error occurred.
      * It is used to alert the caller if they are getting a potentially erroneous
      * TWAP, due to an unforeseen underlying error.
      * </pre>
@@ -643,7 +643,7 @@ public final class TwapRecordProto {
     }
     /**
      * <pre>
-     * This field contains the time in which the last spot price error occured.
+     * This field contains the time in which the last spot price error occurred.
      * It is used to alert the caller if they are getting a potentially erroneous
      * TWAP, due to an unforeseen underlying error.
      * </pre>
@@ -657,7 +657,7 @@ public final class TwapRecordProto {
     }
     /**
      * <pre>
-     * This field contains the time in which the last spot price error occured.
+     * This field contains the time in which the last spot price error occurred.
      * It is used to alert the caller if they are getting a potentially erroneous
      * TWAP, due to an unforeseen underlying error.
      * </pre>
@@ -1700,7 +1700,7 @@ public final class TwapRecordProto {
        * accumulator values for times between when accumulator records are stored.
        * </pre>
        *
-       * <code>string p0_last_spot_price = 6 [json_name = "p0LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string p0_last_spot_price = 6 [json_name = "p0LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return The p0LastSpotPrice.
        */
       public java.lang.String getP0LastSpotPrice() {
@@ -1721,7 +1721,7 @@ public final class TwapRecordProto {
        * accumulator values for times between when accumulator records are stored.
        * </pre>
        *
-       * <code>string p0_last_spot_price = 6 [json_name = "p0LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string p0_last_spot_price = 6 [json_name = "p0LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return The bytes for p0LastSpotPrice.
        */
       public com.google.protobuf.ByteString
@@ -1743,7 +1743,7 @@ public final class TwapRecordProto {
        * accumulator values for times between when accumulator records are stored.
        * </pre>
        *
-       * <code>string p0_last_spot_price = 6 [json_name = "p0LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string p0_last_spot_price = 6 [json_name = "p0LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @param value The p0LastSpotPrice to set.
        * @return This builder for chaining.
        */
@@ -1761,7 +1761,7 @@ public final class TwapRecordProto {
        * accumulator values for times between when accumulator records are stored.
        * </pre>
        *
-       * <code>string p0_last_spot_price = 6 [json_name = "p0LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string p0_last_spot_price = 6 [json_name = "p0LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return This builder for chaining.
        */
       public Builder clearP0LastSpotPrice() {
@@ -1776,7 +1776,7 @@ public final class TwapRecordProto {
        * accumulator values for times between when accumulator records are stored.
        * </pre>
        *
-       * <code>string p0_last_spot_price = 6 [json_name = "p0LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string p0_last_spot_price = 6 [json_name = "p0LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @param value The bytes for p0LastSpotPrice to set.
        * @return This builder for chaining.
        */
@@ -1792,7 +1792,7 @@ public final class TwapRecordProto {
 
       private java.lang.Object p1LastSpotPrice_ = "";
       /**
-       * <code>string p1_last_spot_price = 7 [json_name = "p1LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string p1_last_spot_price = 7 [json_name = "p1LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return The p1LastSpotPrice.
        */
       public java.lang.String getP1LastSpotPrice() {
@@ -1808,7 +1808,7 @@ public final class TwapRecordProto {
         }
       }
       /**
-       * <code>string p1_last_spot_price = 7 [json_name = "p1LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string p1_last_spot_price = 7 [json_name = "p1LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return The bytes for p1LastSpotPrice.
        */
       public com.google.protobuf.ByteString
@@ -1825,7 +1825,7 @@ public final class TwapRecordProto {
         }
       }
       /**
-       * <code>string p1_last_spot_price = 7 [json_name = "p1LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string p1_last_spot_price = 7 [json_name = "p1LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @param value The p1LastSpotPrice to set.
        * @return This builder for chaining.
        */
@@ -1838,7 +1838,7 @@ public final class TwapRecordProto {
         return this;
       }
       /**
-       * <code>string p1_last_spot_price = 7 [json_name = "p1LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string p1_last_spot_price = 7 [json_name = "p1LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return This builder for chaining.
        */
       public Builder clearP1LastSpotPrice() {
@@ -1848,7 +1848,7 @@ public final class TwapRecordProto {
         return this;
       }
       /**
-       * <code>string p1_last_spot_price = 7 [json_name = "p1LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string p1_last_spot_price = 7 [json_name = "p1LastSpotPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @param value The bytes for p1LastSpotPrice to set.
        * @return This builder for chaining.
        */
@@ -1864,7 +1864,7 @@ public final class TwapRecordProto {
 
       private java.lang.Object p0ArithmeticTwapAccumulator_ = "";
       /**
-       * <code>string p0_arithmetic_twap_accumulator = 8 [json_name = "p0ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string p0_arithmetic_twap_accumulator = 8 [json_name = "p0ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return The p0ArithmeticTwapAccumulator.
        */
       public java.lang.String getP0ArithmeticTwapAccumulator() {
@@ -1880,7 +1880,7 @@ public final class TwapRecordProto {
         }
       }
       /**
-       * <code>string p0_arithmetic_twap_accumulator = 8 [json_name = "p0ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string p0_arithmetic_twap_accumulator = 8 [json_name = "p0ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return The bytes for p0ArithmeticTwapAccumulator.
        */
       public com.google.protobuf.ByteString
@@ -1897,7 +1897,7 @@ public final class TwapRecordProto {
         }
       }
       /**
-       * <code>string p0_arithmetic_twap_accumulator = 8 [json_name = "p0ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string p0_arithmetic_twap_accumulator = 8 [json_name = "p0ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @param value The p0ArithmeticTwapAccumulator to set.
        * @return This builder for chaining.
        */
@@ -1910,7 +1910,7 @@ public final class TwapRecordProto {
         return this;
       }
       /**
-       * <code>string p0_arithmetic_twap_accumulator = 8 [json_name = "p0ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string p0_arithmetic_twap_accumulator = 8 [json_name = "p0ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return This builder for chaining.
        */
       public Builder clearP0ArithmeticTwapAccumulator() {
@@ -1920,7 +1920,7 @@ public final class TwapRecordProto {
         return this;
       }
       /**
-       * <code>string p0_arithmetic_twap_accumulator = 8 [json_name = "p0ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string p0_arithmetic_twap_accumulator = 8 [json_name = "p0ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @param value The bytes for p0ArithmeticTwapAccumulator to set.
        * @return This builder for chaining.
        */
@@ -1936,7 +1936,7 @@ public final class TwapRecordProto {
 
       private java.lang.Object p1ArithmeticTwapAccumulator_ = "";
       /**
-       * <code>string p1_arithmetic_twap_accumulator = 9 [json_name = "p1ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string p1_arithmetic_twap_accumulator = 9 [json_name = "p1ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return The p1ArithmeticTwapAccumulator.
        */
       public java.lang.String getP1ArithmeticTwapAccumulator() {
@@ -1952,7 +1952,7 @@ public final class TwapRecordProto {
         }
       }
       /**
-       * <code>string p1_arithmetic_twap_accumulator = 9 [json_name = "p1ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string p1_arithmetic_twap_accumulator = 9 [json_name = "p1ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return The bytes for p1ArithmeticTwapAccumulator.
        */
       public com.google.protobuf.ByteString
@@ -1969,7 +1969,7 @@ public final class TwapRecordProto {
         }
       }
       /**
-       * <code>string p1_arithmetic_twap_accumulator = 9 [json_name = "p1ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string p1_arithmetic_twap_accumulator = 9 [json_name = "p1ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @param value The p1ArithmeticTwapAccumulator to set.
        * @return This builder for chaining.
        */
@@ -1982,7 +1982,7 @@ public final class TwapRecordProto {
         return this;
       }
       /**
-       * <code>string p1_arithmetic_twap_accumulator = 9 [json_name = "p1ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string p1_arithmetic_twap_accumulator = 9 [json_name = "p1ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return This builder for chaining.
        */
       public Builder clearP1ArithmeticTwapAccumulator() {
@@ -1992,7 +1992,7 @@ public final class TwapRecordProto {
         return this;
       }
       /**
-       * <code>string p1_arithmetic_twap_accumulator = 9 [json_name = "p1ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string p1_arithmetic_twap_accumulator = 9 [json_name = "p1ArithmeticTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @param value The bytes for p1ArithmeticTwapAccumulator to set.
        * @return This builder for chaining.
        */
@@ -2008,7 +2008,7 @@ public final class TwapRecordProto {
 
       private java.lang.Object geometricTwapAccumulator_ = "";
       /**
-       * <code>string geometric_twap_accumulator = 10 [json_name = "geometricTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string geometric_twap_accumulator = 10 [json_name = "geometricTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return The geometricTwapAccumulator.
        */
       public java.lang.String getGeometricTwapAccumulator() {
@@ -2024,7 +2024,7 @@ public final class TwapRecordProto {
         }
       }
       /**
-       * <code>string geometric_twap_accumulator = 10 [json_name = "geometricTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string geometric_twap_accumulator = 10 [json_name = "geometricTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return The bytes for geometricTwapAccumulator.
        */
       public com.google.protobuf.ByteString
@@ -2041,7 +2041,7 @@ public final class TwapRecordProto {
         }
       }
       /**
-       * <code>string geometric_twap_accumulator = 10 [json_name = "geometricTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string geometric_twap_accumulator = 10 [json_name = "geometricTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @param value The geometricTwapAccumulator to set.
        * @return This builder for chaining.
        */
@@ -2054,7 +2054,7 @@ public final class TwapRecordProto {
         return this;
       }
       /**
-       * <code>string geometric_twap_accumulator = 10 [json_name = "geometricTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string geometric_twap_accumulator = 10 [json_name = "geometricTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return This builder for chaining.
        */
       public Builder clearGeometricTwapAccumulator() {
@@ -2064,7 +2064,7 @@ public final class TwapRecordProto {
         return this;
       }
       /**
-       * <code>string geometric_twap_accumulator = 10 [json_name = "geometricTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * <code>string geometric_twap_accumulator = 10 [json_name = "geometricTwapAccumulator", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @param value The bytes for geometricTwapAccumulator to set.
        * @return This builder for chaining.
        */
@@ -2083,7 +2083,7 @@ public final class TwapRecordProto {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastErrorTimeBuilder_;
       /**
        * <pre>
-       * This field contains the time in which the last spot price error occured.
+       * This field contains the time in which the last spot price error occurred.
        * It is used to alert the caller if they are getting a potentially erroneous
        * TWAP, due to an unforeseen underlying error.
        * </pre>
@@ -2096,7 +2096,7 @@ public final class TwapRecordProto {
       }
       /**
        * <pre>
-       * This field contains the time in which the last spot price error occured.
+       * This field contains the time in which the last spot price error occurred.
        * It is used to alert the caller if they are getting a potentially erroneous
        * TWAP, due to an unforeseen underlying error.
        * </pre>
@@ -2113,7 +2113,7 @@ public final class TwapRecordProto {
       }
       /**
        * <pre>
-       * This field contains the time in which the last spot price error occured.
+       * This field contains the time in which the last spot price error occurred.
        * It is used to alert the caller if they are getting a potentially erroneous
        * TWAP, due to an unforeseen underlying error.
        * </pre>
@@ -2135,7 +2135,7 @@ public final class TwapRecordProto {
       }
       /**
        * <pre>
-       * This field contains the time in which the last spot price error occured.
+       * This field contains the time in which the last spot price error occurred.
        * It is used to alert the caller if they are getting a potentially erroneous
        * TWAP, due to an unforeseen underlying error.
        * </pre>
@@ -2155,7 +2155,7 @@ public final class TwapRecordProto {
       }
       /**
        * <pre>
-       * This field contains the time in which the last spot price error occured.
+       * This field contains the time in which the last spot price error occurred.
        * It is used to alert the caller if they are getting a potentially erroneous
        * TWAP, due to an unforeseen underlying error.
        * </pre>
@@ -2180,7 +2180,7 @@ public final class TwapRecordProto {
       }
       /**
        * <pre>
-       * This field contains the time in which the last spot price error occured.
+       * This field contains the time in which the last spot price error occurred.
        * It is used to alert the caller if they are getting a potentially erroneous
        * TWAP, due to an unforeseen underlying error.
        * </pre>
@@ -2199,7 +2199,7 @@ public final class TwapRecordProto {
       }
       /**
        * <pre>
-       * This field contains the time in which the last spot price error occured.
+       * This field contains the time in which the last spot price error occurred.
        * It is used to alert the caller if they are getting a potentially erroneous
        * TWAP, due to an unforeseen underlying error.
        * </pre>
@@ -2213,7 +2213,7 @@ public final class TwapRecordProto {
       }
       /**
        * <pre>
-       * This field contains the time in which the last spot price error occured.
+       * This field contains the time in which the last spot price error occurred.
        * It is used to alert the caller if they are getting a potentially erroneous
        * TWAP, due to an unforeseen underlying error.
        * </pre>
@@ -2230,7 +2230,7 @@ public final class TwapRecordProto {
       }
       /**
        * <pre>
-       * This field contains the time in which the last spot price error occured.
+       * This field contains the time in which the last spot price error occurred.
        * It is used to alert the caller if they are getting a potentially erroneous
        * TWAP, due to an unforeseen underlying error.
        * </pre>
@@ -2314,11 +2314,1030 @@ public final class TwapRecordProto {
 
   }
 
+  public interface PruningStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.twap.v1beta1.PruningState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * is_pruning is true if the pruning process is ongoing.
+     * This tells the module to continue pruning the TWAP records
+     * at the EndBlock.
+     * </pre>
+     *
+     * <code>bool is_pruning = 1 [json_name = "isPruning"];</code>
+     * @return The isPruning.
+     */
+    boolean getIsPruning();
+
+    /**
+     * <pre>
+     * last_kept_time is the time of the last kept TWAP record.
+     * This is used to determine all TWAP records that are older than
+     * last_kept_time and should be pruned.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_kept_time = 2 [json_name = "lastKeptTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_kept_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the lastKeptTime field is set.
+     */
+    boolean hasLastKeptTime();
+    /**
+     * <pre>
+     * last_kept_time is the time of the last kept TWAP record.
+     * This is used to determine all TWAP records that are older than
+     * last_kept_time and should be pruned.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_kept_time = 2 [json_name = "lastKeptTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_kept_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The lastKeptTime.
+     */
+    com.google.protobuf.Timestamp getLastKeptTime();
+    /**
+     * <pre>
+     * last_kept_time is the time of the last kept TWAP record.
+     * This is used to determine all TWAP records that are older than
+     * last_kept_time and should be pruned.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_kept_time = 2 [json_name = "lastKeptTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_kept_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getLastKeptTimeOrBuilder();
+
+    /**
+     * <pre>
+     * Deprecated: This field is deprecated.
+     * </pre>
+     *
+     * <code>bytes last_key_seen = 3 [json_name = "lastKeySeen", deprecated = true, (.gogoproto.moretags) = "deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.twap.v1beta1.PruningState.last_key_seen is deprecated.
+     *     See osmosis/twap/v1beta1/twap_record.proto;l=90
+     * @return The lastKeySeen.
+     */
+    @java.lang.Deprecated com.google.protobuf.ByteString getLastKeySeen();
+
+    /**
+     * <pre>
+     * last_seen_pool_id is the pool_id that we will begin pruning in the next
+     * block. This value starts at the highest pool_id at time of epoch, and
+     * decreases until it reaches 1. When it reaches 1, the pruning
+     * process is complete.
+     * </pre>
+     *
+     * <code>uint64 last_seen_pool_id = 4 [json_name = "lastSeenPoolId"];</code>
+     * @return The lastSeenPoolId.
+     */
+    long getLastSeenPoolId();
+  }
+  /**
+   * <pre>
+   * PruningState allows us to spread out the pruning of TWAP records over time,
+   * instead of pruning all at once at the end of the epoch.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.twap.v1beta1.PruningState}
+   */
+  public static final class PruningState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.twap.v1beta1.PruningState)
+      PruningStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PruningState.newBuilder() to construct.
+    private PruningState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PruningState() {
+      lastKeySeen_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PruningState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.twap.v1beta1.TwapRecordProto.internal_static_osmosis_twap_v1beta1_PruningState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.twap.v1beta1.TwapRecordProto.internal_static_osmosis_twap_v1beta1_PruningState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.twap.v1beta1.TwapRecordProto.PruningState.class, com.osmosis.twap.v1beta1.TwapRecordProto.PruningState.Builder.class);
+    }
+
+    public static final int IS_PRUNING_FIELD_NUMBER = 1;
+    private boolean isPruning_ = false;
+    /**
+     * <pre>
+     * is_pruning is true if the pruning process is ongoing.
+     * This tells the module to continue pruning the TWAP records
+     * at the EndBlock.
+     * </pre>
+     *
+     * <code>bool is_pruning = 1 [json_name = "isPruning"];</code>
+     * @return The isPruning.
+     */
+    @java.lang.Override
+    public boolean getIsPruning() {
+      return isPruning_;
+    }
+
+    public static final int LAST_KEPT_TIME_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp lastKeptTime_;
+    /**
+     * <pre>
+     * last_kept_time is the time of the last kept TWAP record.
+     * This is used to determine all TWAP records that are older than
+     * last_kept_time and should be pruned.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_kept_time = 2 [json_name = "lastKeptTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_kept_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the lastKeptTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasLastKeptTime() {
+      return lastKeptTime_ != null;
+    }
+    /**
+     * <pre>
+     * last_kept_time is the time of the last kept TWAP record.
+     * This is used to determine all TWAP records that are older than
+     * last_kept_time and should be pruned.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_kept_time = 2 [json_name = "lastKeptTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_kept_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The lastKeptTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getLastKeptTime() {
+      return lastKeptTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastKeptTime_;
+    }
+    /**
+     * <pre>
+     * last_kept_time is the time of the last kept TWAP record.
+     * This is used to determine all TWAP records that are older than
+     * last_kept_time and should be pruned.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_kept_time = 2 [json_name = "lastKeptTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_kept_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getLastKeptTimeOrBuilder() {
+      return lastKeptTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastKeptTime_;
+    }
+
+    public static final int LAST_KEY_SEEN_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString lastKeySeen_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * Deprecated: This field is deprecated.
+     * </pre>
+     *
+     * <code>bytes last_key_seen = 3 [json_name = "lastKeySeen", deprecated = true, (.gogoproto.moretags) = "deprecated:&#92;"true&#92;""];</code>
+     * @deprecated osmosis.twap.v1beta1.PruningState.last_key_seen is deprecated.
+     *     See osmosis/twap/v1beta1/twap_record.proto;l=90
+     * @return The lastKeySeen.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public com.google.protobuf.ByteString getLastKeySeen() {
+      return lastKeySeen_;
+    }
+
+    public static final int LAST_SEEN_POOL_ID_FIELD_NUMBER = 4;
+    private long lastSeenPoolId_ = 0L;
+    /**
+     * <pre>
+     * last_seen_pool_id is the pool_id that we will begin pruning in the next
+     * block. This value starts at the highest pool_id at time of epoch, and
+     * decreases until it reaches 1. When it reaches 1, the pruning
+     * process is complete.
+     * </pre>
+     *
+     * <code>uint64 last_seen_pool_id = 4 [json_name = "lastSeenPoolId"];</code>
+     * @return The lastSeenPoolId.
+     */
+    @java.lang.Override
+    public long getLastSeenPoolId() {
+      return lastSeenPoolId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (isPruning_ != false) {
+        output.writeBool(1, isPruning_);
+      }
+      if (lastKeptTime_ != null) {
+        output.writeMessage(2, getLastKeptTime());
+      }
+      if (!lastKeySeen_.isEmpty()) {
+        output.writeBytes(3, lastKeySeen_);
+      }
+      if (lastSeenPoolId_ != 0L) {
+        output.writeUInt64(4, lastSeenPoolId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (isPruning_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, isPruning_);
+      }
+      if (lastKeptTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getLastKeptTime());
+      }
+      if (!lastKeySeen_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, lastKeySeen_);
+      }
+      if (lastSeenPoolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, lastSeenPoolId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.twap.v1beta1.TwapRecordProto.PruningState)) {
+        return super.equals(obj);
+      }
+      com.osmosis.twap.v1beta1.TwapRecordProto.PruningState other = (com.osmosis.twap.v1beta1.TwapRecordProto.PruningState) obj;
+
+      if (getIsPruning()
+          != other.getIsPruning()) return false;
+      if (hasLastKeptTime() != other.hasLastKeptTime()) return false;
+      if (hasLastKeptTime()) {
+        if (!getLastKeptTime()
+            .equals(other.getLastKeptTime())) return false;
+      }
+      if (!getLastKeySeen()
+          .equals(other.getLastKeySeen())) return false;
+      if (getLastSeenPoolId()
+          != other.getLastSeenPoolId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + IS_PRUNING_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsPruning());
+      if (hasLastKeptTime()) {
+        hash = (37 * hash) + LAST_KEPT_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getLastKeptTime().hashCode();
+      }
+      hash = (37 * hash) + LAST_KEY_SEEN_FIELD_NUMBER;
+      hash = (53 * hash) + getLastKeySeen().hashCode();
+      hash = (37 * hash) + LAST_SEEN_POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLastSeenPoolId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.twap.v1beta1.TwapRecordProto.PruningState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.twap.v1beta1.TwapRecordProto.PruningState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.twap.v1beta1.TwapRecordProto.PruningState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.twap.v1beta1.TwapRecordProto.PruningState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.twap.v1beta1.TwapRecordProto.PruningState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.twap.v1beta1.TwapRecordProto.PruningState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.twap.v1beta1.TwapRecordProto.PruningState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.twap.v1beta1.TwapRecordProto.PruningState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.twap.v1beta1.TwapRecordProto.PruningState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.twap.v1beta1.TwapRecordProto.PruningState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.twap.v1beta1.TwapRecordProto.PruningState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.twap.v1beta1.TwapRecordProto.PruningState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.twap.v1beta1.TwapRecordProto.PruningState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * PruningState allows us to spread out the pruning of TWAP records over time,
+     * instead of pruning all at once at the end of the epoch.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.twap.v1beta1.PruningState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.twap.v1beta1.PruningState)
+        com.osmosis.twap.v1beta1.TwapRecordProto.PruningStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.twap.v1beta1.TwapRecordProto.internal_static_osmosis_twap_v1beta1_PruningState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.twap.v1beta1.TwapRecordProto.internal_static_osmosis_twap_v1beta1_PruningState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.twap.v1beta1.TwapRecordProto.PruningState.class, com.osmosis.twap.v1beta1.TwapRecordProto.PruningState.Builder.class);
+      }
+
+      // Construct using com.osmosis.twap.v1beta1.TwapRecordProto.PruningState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        isPruning_ = false;
+        lastKeptTime_ = null;
+        if (lastKeptTimeBuilder_ != null) {
+          lastKeptTimeBuilder_.dispose();
+          lastKeptTimeBuilder_ = null;
+        }
+        lastKeySeen_ = com.google.protobuf.ByteString.EMPTY;
+        lastSeenPoolId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.twap.v1beta1.TwapRecordProto.internal_static_osmosis_twap_v1beta1_PruningState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.twap.v1beta1.TwapRecordProto.PruningState getDefaultInstanceForType() {
+        return com.osmosis.twap.v1beta1.TwapRecordProto.PruningState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.twap.v1beta1.TwapRecordProto.PruningState build() {
+        com.osmosis.twap.v1beta1.TwapRecordProto.PruningState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.twap.v1beta1.TwapRecordProto.PruningState buildPartial() {
+        com.osmosis.twap.v1beta1.TwapRecordProto.PruningState result = new com.osmosis.twap.v1beta1.TwapRecordProto.PruningState(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.twap.v1beta1.TwapRecordProto.PruningState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.isPruning_ = isPruning_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.lastKeptTime_ = lastKeptTimeBuilder_ == null
+              ? lastKeptTime_
+              : lastKeptTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.lastKeySeen_ = lastKeySeen_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.lastSeenPoolId_ = lastSeenPoolId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.twap.v1beta1.TwapRecordProto.PruningState) {
+          return mergeFrom((com.osmosis.twap.v1beta1.TwapRecordProto.PruningState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.twap.v1beta1.TwapRecordProto.PruningState other) {
+        if (other == com.osmosis.twap.v1beta1.TwapRecordProto.PruningState.getDefaultInstance()) return this;
+        if (other.getIsPruning() != false) {
+          setIsPruning(other.getIsPruning());
+        }
+        if (other.hasLastKeptTime()) {
+          mergeLastKeptTime(other.getLastKeptTime());
+        }
+        if (other.getLastKeySeen() != com.google.protobuf.ByteString.EMPTY) {
+          setLastKeySeen(other.getLastKeySeen());
+        }
+        if (other.getLastSeenPoolId() != 0L) {
+          setLastSeenPoolId(other.getLastSeenPoolId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                isPruning_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getLastKeptTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                lastKeySeen_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                lastSeenPoolId_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean isPruning_ ;
+      /**
+       * <pre>
+       * is_pruning is true if the pruning process is ongoing.
+       * This tells the module to continue pruning the TWAP records
+       * at the EndBlock.
+       * </pre>
+       *
+       * <code>bool is_pruning = 1 [json_name = "isPruning"];</code>
+       * @return The isPruning.
+       */
+      @java.lang.Override
+      public boolean getIsPruning() {
+        return isPruning_;
+      }
+      /**
+       * <pre>
+       * is_pruning is true if the pruning process is ongoing.
+       * This tells the module to continue pruning the TWAP records
+       * at the EndBlock.
+       * </pre>
+       *
+       * <code>bool is_pruning = 1 [json_name = "isPruning"];</code>
+       * @param value The isPruning to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsPruning(boolean value) {
+
+        isPruning_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is_pruning is true if the pruning process is ongoing.
+       * This tells the module to continue pruning the TWAP records
+       * at the EndBlock.
+       * </pre>
+       *
+       * <code>bool is_pruning = 1 [json_name = "isPruning"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsPruning() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        isPruning_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp lastKeptTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastKeptTimeBuilder_;
+      /**
+       * <pre>
+       * last_kept_time is the time of the last kept TWAP record.
+       * This is used to determine all TWAP records that are older than
+       * last_kept_time and should be pruned.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_kept_time = 2 [json_name = "lastKeptTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_kept_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the lastKeptTime field is set.
+       */
+      public boolean hasLastKeptTime() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * last_kept_time is the time of the last kept TWAP record.
+       * This is used to determine all TWAP records that are older than
+       * last_kept_time and should be pruned.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_kept_time = 2 [json_name = "lastKeptTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_kept_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The lastKeptTime.
+       */
+      public com.google.protobuf.Timestamp getLastKeptTime() {
+        if (lastKeptTimeBuilder_ == null) {
+          return lastKeptTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastKeptTime_;
+        } else {
+          return lastKeptTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * last_kept_time is the time of the last kept TWAP record.
+       * This is used to determine all TWAP records that are older than
+       * last_kept_time and should be pruned.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_kept_time = 2 [json_name = "lastKeptTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_kept_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setLastKeptTime(com.google.protobuf.Timestamp value) {
+        if (lastKeptTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lastKeptTime_ = value;
+        } else {
+          lastKeptTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * last_kept_time is the time of the last kept TWAP record.
+       * This is used to determine all TWAP records that are older than
+       * last_kept_time and should be pruned.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_kept_time = 2 [json_name = "lastKeptTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_kept_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setLastKeptTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (lastKeptTimeBuilder_ == null) {
+          lastKeptTime_ = builderForValue.build();
+        } else {
+          lastKeptTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * last_kept_time is the time of the last kept TWAP record.
+       * This is used to determine all TWAP records that are older than
+       * last_kept_time and should be pruned.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_kept_time = 2 [json_name = "lastKeptTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_kept_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeLastKeptTime(com.google.protobuf.Timestamp value) {
+        if (lastKeptTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            lastKeptTime_ != null &&
+            lastKeptTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getLastKeptTimeBuilder().mergeFrom(value);
+          } else {
+            lastKeptTime_ = value;
+          }
+        } else {
+          lastKeptTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * last_kept_time is the time of the last kept TWAP record.
+       * This is used to determine all TWAP records that are older than
+       * last_kept_time and should be pruned.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_kept_time = 2 [json_name = "lastKeptTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_kept_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearLastKeptTime() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        lastKeptTime_ = null;
+        if (lastKeptTimeBuilder_ != null) {
+          lastKeptTimeBuilder_.dispose();
+          lastKeptTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * last_kept_time is the time of the last kept TWAP record.
+       * This is used to determine all TWAP records that are older than
+       * last_kept_time and should be pruned.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_kept_time = 2 [json_name = "lastKeptTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_kept_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getLastKeptTimeBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getLastKeptTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * last_kept_time is the time of the last kept TWAP record.
+       * This is used to determine all TWAP records that are older than
+       * last_kept_time and should be pruned.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_kept_time = 2 [json_name = "lastKeptTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_kept_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getLastKeptTimeOrBuilder() {
+        if (lastKeptTimeBuilder_ != null) {
+          return lastKeptTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return lastKeptTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : lastKeptTime_;
+        }
+      }
+      /**
+       * <pre>
+       * last_kept_time is the time of the last kept TWAP record.
+       * This is used to determine all TWAP records that are older than
+       * last_kept_time and should be pruned.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_kept_time = 2 [json_name = "lastKeptTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_kept_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getLastKeptTimeFieldBuilder() {
+        if (lastKeptTimeBuilder_ == null) {
+          lastKeptTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getLastKeptTime(),
+                  getParentForChildren(),
+                  isClean());
+          lastKeptTime_ = null;
+        }
+        return lastKeptTimeBuilder_;
+      }
+
+      private com.google.protobuf.ByteString lastKeySeen_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * Deprecated: This field is deprecated.
+       * </pre>
+       *
+       * <code>bytes last_key_seen = 3 [json_name = "lastKeySeen", deprecated = true, (.gogoproto.moretags) = "deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.twap.v1beta1.PruningState.last_key_seen is deprecated.
+       *     See osmosis/twap/v1beta1/twap_record.proto;l=90
+       * @return The lastKeySeen.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated public com.google.protobuf.ByteString getLastKeySeen() {
+        return lastKeySeen_;
+      }
+      /**
+       * <pre>
+       * Deprecated: This field is deprecated.
+       * </pre>
+       *
+       * <code>bytes last_key_seen = 3 [json_name = "lastKeySeen", deprecated = true, (.gogoproto.moretags) = "deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.twap.v1beta1.PruningState.last_key_seen is deprecated.
+       *     See osmosis/twap/v1beta1/twap_record.proto;l=90
+       * @param value The lastKeySeen to set.
+       * @return This builder for chaining.
+       */
+      @java.lang.Deprecated public Builder setLastKeySeen(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        lastKeySeen_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Deprecated: This field is deprecated.
+       * </pre>
+       *
+       * <code>bytes last_key_seen = 3 [json_name = "lastKeySeen", deprecated = true, (.gogoproto.moretags) = "deprecated:&#92;"true&#92;""];</code>
+       * @deprecated osmosis.twap.v1beta1.PruningState.last_key_seen is deprecated.
+       *     See osmosis/twap/v1beta1/twap_record.proto;l=90
+       * @return This builder for chaining.
+       */
+      @java.lang.Deprecated public Builder clearLastKeySeen() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        lastKeySeen_ = getDefaultInstance().getLastKeySeen();
+        onChanged();
+        return this;
+      }
+
+      private long lastSeenPoolId_ ;
+      /**
+       * <pre>
+       * last_seen_pool_id is the pool_id that we will begin pruning in the next
+       * block. This value starts at the highest pool_id at time of epoch, and
+       * decreases until it reaches 1. When it reaches 1, the pruning
+       * process is complete.
+       * </pre>
+       *
+       * <code>uint64 last_seen_pool_id = 4 [json_name = "lastSeenPoolId"];</code>
+       * @return The lastSeenPoolId.
+       */
+      @java.lang.Override
+      public long getLastSeenPoolId() {
+        return lastSeenPoolId_;
+      }
+      /**
+       * <pre>
+       * last_seen_pool_id is the pool_id that we will begin pruning in the next
+       * block. This value starts at the highest pool_id at time of epoch, and
+       * decreases until it reaches 1. When it reaches 1, the pruning
+       * process is complete.
+       * </pre>
+       *
+       * <code>uint64 last_seen_pool_id = 4 [json_name = "lastSeenPoolId"];</code>
+       * @param value The lastSeenPoolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastSeenPoolId(long value) {
+
+        lastSeenPoolId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * last_seen_pool_id is the pool_id that we will begin pruning in the next
+       * block. This value starts at the highest pool_id at time of epoch, and
+       * decreases until it reaches 1. When it reaches 1, the pruning
+       * process is complete.
+       * </pre>
+       *
+       * <code>uint64 last_seen_pool_id = 4 [json_name = "lastSeenPoolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastSeenPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        lastSeenPoolId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.twap.v1beta1.PruningState)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.twap.v1beta1.PruningState)
+    private static final com.osmosis.twap.v1beta1.TwapRecordProto.PruningState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.twap.v1beta1.TwapRecordProto.PruningState();
+    }
+
+    public static com.osmosis.twap.v1beta1.TwapRecordProto.PruningState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PruningState>
+        PARSER = new com.google.protobuf.AbstractParser<PruningState>() {
+      @java.lang.Override
+      public PruningState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PruningState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PruningState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.twap.v1beta1.TwapRecordProto.PruningState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_twap_v1beta1_TwapRecord_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_twap_v1beta1_TwapRecord_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_twap_v1beta1_PruningState_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_twap_v1beta1_PruningState_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2330,45 +3349,45 @@ public final class TwapRecordProto {
     java.lang.String[] descriptorData = {
       "\n&osmosis/twap/v1beta1/twap_record.proto" +
       "\022\024osmosis.twap.v1beta1\032\024gogoproto/gogo.p" +
-      "roto\032\031google/protobuf/any.proto\032\031cosmos_" +
-      "proto/cosmos.proto\032\036cosmos/base/v1beta1/" +
-      "coin.proto\032\037google/protobuf/timestamp.pr" +
-      "oto\"\370\006\n\nTwapRecord\022\027\n\007pool_id\030\001 \001(\004R\006poo" +
-      "lId\022!\n\014asset0_denom\030\002 \001(\tR\013asset0Denom\022!" +
-      "\n\014asset1_denom\030\003 \001(\tR\013asset1Denom\022A\n\006hei" +
-      "ght\030\004 \001(\003B)\352\336\037\rrecord_height\362\336\037\024yaml:\"re" +
-      "cord_height\"R\006height\022N\n\004time\030\005 \001(\0132\032.goo" +
-      "gle.protobuf.TimestampB\036\310\336\037\000\362\336\037\022yaml:\"re" +
-      "cord_time\"\220\337\037\001R\004time\022[\n\022p0_last_spot_pri" +
-      "ce\030\006 \001(\tB.\310\336\037\000\332\336\037&github.com/cosmos/cosm" +
-      "os-sdk/types.DecR\017p0LastSpotPrice\022[\n\022p1_" +
-      "last_spot_price\030\007 \001(\tB.\310\336\037\000\332\336\037&github.co" +
-      "m/cosmos/cosmos-sdk/types.DecR\017p1LastSpo" +
-      "tPrice\022s\n\036p0_arithmetic_twap_accumulator" +
-      "\030\010 \001(\tB.\310\336\037\000\332\336\037&github.com/cosmos/cosmos" +
-      "-sdk/types.DecR\033p0ArithmeticTwapAccumula" +
-      "tor\022s\n\036p1_arithmetic_twap_accumulator\030\t " +
-      "\001(\tB.\310\336\037\000\332\336\037&github.com/cosmos/cosmos-sd" +
-      "k/types.DecR\033p1ArithmeticTwapAccumulator" +
-      "\022l\n\032geometric_twap_accumulator\030\n \001(\tB.\310\336" +
-      "\037\000\332\336\037&github.com/cosmos/cosmos-sdk/types" +
-      ".DecR\030geometricTwapAccumulator\022f\n\017last_e" +
-      "rror_time\030\013 \001(\0132\032.google.protobuf.Timest" +
-      "ampB\"\310\336\037\000\362\336\037\026yaml:\"last_error_time\"\220\337\037\001R" +
-      "\rlastErrorTimeB\315\001\n\030com.osmosis.twap.v1be" +
-      "ta1B\017TwapRecordProtoZ0github.com/osmosis" +
-      "-labs/osmosis/v15/x/twap/types\242\002\003OTX\252\002\024O" +
-      "smosis.Twap.V1beta1\312\002\024Osmosis\\Twap\\V1bet" +
-      "a1\342\002 Osmosis\\Twap\\V1beta1\\GPBMetadata\352\002\026" +
-      "Osmosis::Twap::V1beta1b\006proto3"
+      "roto\032\037google/protobuf/timestamp.proto\"\301\006" +
+      "\n\nTwapRecord\022\027\n\007pool_id\030\001 \001(\004R\006poolId\022!\n" +
+      "\014asset0_denom\030\002 \001(\tR\013asset0Denom\022!\n\014asse" +
+      "t1_denom\030\003 \001(\tR\013asset1Denom\022A\n\006height\030\004 " +
+      "\001(\003B)\352\336\037\rrecord_height\362\336\037\024yaml:\"record_h" +
+      "eight\"R\006height\022N\n\004time\030\005 \001(\0132\032.google.pr" +
+      "otobuf.TimestampB\036\310\336\037\000\362\336\037\022yaml:\"record_t" +
+      "ime\"\220\337\037\001R\004time\022P\n\022p0_last_spot_price\030\006 \001" +
+      "(\tB#\310\336\037\000\332\336\037\033cosmossdk.io/math.LegacyDecR" +
+      "\017p0LastSpotPrice\022P\n\022p1_last_spot_price\030\007" +
+      " \001(\tB#\310\336\037\000\332\336\037\033cosmossdk.io/math.LegacyDe" +
+      "cR\017p1LastSpotPrice\022h\n\036p0_arithmetic_twap" +
+      "_accumulator\030\010 \001(\tB#\310\336\037\000\332\336\037\033cosmossdk.io" +
+      "/math.LegacyDecR\033p0ArithmeticTwapAccumul" +
+      "ator\022h\n\036p1_arithmetic_twap_accumulator\030\t" +
+      " \001(\tB#\310\336\037\000\332\336\037\033cosmossdk.io/math.LegacyDe" +
+      "cR\033p1ArithmeticTwapAccumulator\022a\n\032geomet" +
+      "ric_twap_accumulator\030\n \001(\tB#\310\336\037\000\332\336\037\033cosm" +
+      "ossdk.io/math.LegacyDecR\030geometricTwapAc" +
+      "cumulator\022f\n\017last_error_time\030\013 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampB\"\310\336\037\000\362\336\037\026yaml:\"la" +
+      "st_error_time\"\220\337\037\001R\rlastErrorTime\"\372\001\n\014Pr" +
+      "uningState\022\035\n\nis_pruning\030\001 \001(\010R\tisPrunin" +
+      "g\022c\n\016last_kept_time\030\002 \001(\0132\032.google.proto" +
+      "buf.TimestampB!\310\336\037\000\362\336\037\025yaml:\"last_kept_t" +
+      "ime\"\220\337\037\001R\014lastKeptTime\022;\n\rlast_key_seen\030" +
+      "\003 \001(\014B\027\030\001\362\336\037\021deprecated:\"true\"R\013lastKeyS" +
+      "een\022)\n\021last_seen_pool_id\030\004 \001(\004R\016lastSeen" +
+      "PoolIdB\315\001\n\030com.osmosis.twap.v1beta1B\017Twa" +
+      "pRecordProtoZ0github.com/osmosis-labs/os" +
+      "mosis/v26/x/twap/types\242\002\003OTX\252\002\024Osmosis.T" +
+      "wap.V1beta1\312\002\024Osmosis\\Twap\\V1beta1\342\002 Osm" +
+      "osis\\Twap\\V1beta1\\GPBMetadata\352\002\026Osmosis:" +
+      ":Twap::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.gogoproto.GogoProto.getDescriptor(),
-          com.google.protobuf.AnyProto.getDescriptor(),
-          com.cosmos_proto.CosmosProto.getDescriptor(),
-          com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_osmosis_twap_v1beta1_TwapRecord_descriptor =
@@ -2377,6 +3396,12 @@ public final class TwapRecordProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_twap_v1beta1_TwapRecord_descriptor,
         new java.lang.String[] { "PoolId", "Asset0Denom", "Asset1Denom", "Height", "Time", "P0LastSpotPrice", "P1LastSpotPrice", "P0ArithmeticTwapAccumulator", "P1ArithmeticTwapAccumulator", "GeometricTwapAccumulator", "LastErrorTime", });
+    internal_static_osmosis_twap_v1beta1_PruningState_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_osmosis_twap_v1beta1_PruningState_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_twap_v1beta1_PruningState_descriptor,
+        new java.lang.String[] { "IsPruning", "LastKeptTime", "LastKeySeen", "LastSeenPoolId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.gogoproto.GogoProto.customtype);
@@ -2387,9 +3412,6 @@ public final class TwapRecordProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.gogoproto.GogoProto.getDescriptor();
-    com.google.protobuf.AnyProto.getDescriptor();
-    com.cosmos_proto.CosmosProto.getDescriptor();
-    com.cosmos.base.v1beta1.CoinProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

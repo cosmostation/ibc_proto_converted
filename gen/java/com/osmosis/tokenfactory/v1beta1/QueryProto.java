@@ -4563,6 +4563,1245 @@ public final class QueryProto {
 
   }
 
+  public interface QueryAllBeforeSendHooksAddressesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code osmosis.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesRequest}
+   */
+  public static final class QueryAllBeforeSendHooksAddressesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesRequest)
+      QueryAllBeforeSendHooksAddressesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllBeforeSendHooksAddressesRequest.newBuilder() to construct.
+    private QueryAllBeforeSendHooksAddressesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllBeforeSendHooksAddressesRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllBeforeSendHooksAddressesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.tokenfactory.v1beta1.QueryProto.internal_static_osmosis_tokenfactory_v1beta1_QueryAllBeforeSendHooksAddressesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.tokenfactory.v1beta1.QueryProto.internal_static_osmosis_tokenfactory_v1beta1_QueryAllBeforeSendHooksAddressesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest.class, com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest other = (com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesRequest)
+        com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.tokenfactory.v1beta1.QueryProto.internal_static_osmosis_tokenfactory_v1beta1_QueryAllBeforeSendHooksAddressesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.tokenfactory.v1beta1.QueryProto.internal_static_osmosis_tokenfactory_v1beta1_QueryAllBeforeSendHooksAddressesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest.class, com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.tokenfactory.v1beta1.QueryProto.internal_static_osmosis_tokenfactory_v1beta1_QueryAllBeforeSendHooksAddressesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest getDefaultInstanceForType() {
+        return com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest build() {
+        com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest buildPartial() {
+        com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest result = new com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest) {
+          return mergeFrom((com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest other) {
+        if (other == com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesRequest)
+    private static final com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest();
+    }
+
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllBeforeSendHooksAddressesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllBeforeSendHooksAddressesRequest>() {
+      @java.lang.Override
+      public QueryAllBeforeSendHooksAddressesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllBeforeSendHooksAddressesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllBeforeSendHooksAddressesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllBeforeSendHooksAddressesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+     * @return A list containing the denoms.
+     */
+    java.util.List<java.lang.String>
+        getDenomsList();
+    /**
+     * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+     * @return The count of denoms.
+     */
+    int getDenomsCount();
+    /**
+     * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The denoms at the given index.
+     */
+    java.lang.String getDenoms(int index);
+    /**
+     * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the denoms at the given index.
+     */
+    com.google.protobuf.ByteString
+        getDenomsBytes(int index);
+
+    /**
+     * <code>repeated string before_send_hook_addresses = 2 [json_name = "beforeSendHookAddresses", (.gogoproto.moretags) = "yaml:&#92;"before_send_addresses&#92;""];</code>
+     * @return A list containing the beforeSendHookAddresses.
+     */
+    java.util.List<java.lang.String>
+        getBeforeSendHookAddressesList();
+    /**
+     * <code>repeated string before_send_hook_addresses = 2 [json_name = "beforeSendHookAddresses", (.gogoproto.moretags) = "yaml:&#92;"before_send_addresses&#92;""];</code>
+     * @return The count of beforeSendHookAddresses.
+     */
+    int getBeforeSendHookAddressesCount();
+    /**
+     * <code>repeated string before_send_hook_addresses = 2 [json_name = "beforeSendHookAddresses", (.gogoproto.moretags) = "yaml:&#92;"before_send_addresses&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The beforeSendHookAddresses at the given index.
+     */
+    java.lang.String getBeforeSendHookAddresses(int index);
+    /**
+     * <code>repeated string before_send_hook_addresses = 2 [json_name = "beforeSendHookAddresses", (.gogoproto.moretags) = "yaml:&#92;"before_send_addresses&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the beforeSendHookAddresses at the given index.
+     */
+    com.google.protobuf.ByteString
+        getBeforeSendHookAddressesBytes(int index);
+  }
+  /**
+   * <pre>
+   * QueryAllBeforeSendHooksAddressesResponse defines the response structure for
+   * the AllBeforeSendHooksAddresses gRPC query.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesResponse}
+   */
+  public static final class QueryAllBeforeSendHooksAddressesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesResponse)
+      QueryAllBeforeSendHooksAddressesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllBeforeSendHooksAddressesResponse.newBuilder() to construct.
+    private QueryAllBeforeSendHooksAddressesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllBeforeSendHooksAddressesResponse() {
+      denoms_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      beforeSendHookAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllBeforeSendHooksAddressesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.tokenfactory.v1beta1.QueryProto.internal_static_osmosis_tokenfactory_v1beta1_QueryAllBeforeSendHooksAddressesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.tokenfactory.v1beta1.QueryProto.internal_static_osmosis_tokenfactory_v1beta1_QueryAllBeforeSendHooksAddressesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse.class, com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse.Builder.class);
+    }
+
+    public static final int DENOMS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList denoms_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+     * @return A list containing the denoms.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getDenomsList() {
+      return denoms_;
+    }
+    /**
+     * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+     * @return The count of denoms.
+     */
+    public int getDenomsCount() {
+      return denoms_.size();
+    }
+    /**
+     * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The denoms at the given index.
+     */
+    public java.lang.String getDenoms(int index) {
+      return denoms_.get(index);
+    }
+    /**
+     * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the denoms at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getDenomsBytes(int index) {
+      return denoms_.getByteString(index);
+    }
+
+    public static final int BEFORE_SEND_HOOK_ADDRESSES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList beforeSendHookAddresses_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string before_send_hook_addresses = 2 [json_name = "beforeSendHookAddresses", (.gogoproto.moretags) = "yaml:&#92;"before_send_addresses&#92;""];</code>
+     * @return A list containing the beforeSendHookAddresses.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getBeforeSendHookAddressesList() {
+      return beforeSendHookAddresses_;
+    }
+    /**
+     * <code>repeated string before_send_hook_addresses = 2 [json_name = "beforeSendHookAddresses", (.gogoproto.moretags) = "yaml:&#92;"before_send_addresses&#92;""];</code>
+     * @return The count of beforeSendHookAddresses.
+     */
+    public int getBeforeSendHookAddressesCount() {
+      return beforeSendHookAddresses_.size();
+    }
+    /**
+     * <code>repeated string before_send_hook_addresses = 2 [json_name = "beforeSendHookAddresses", (.gogoproto.moretags) = "yaml:&#92;"before_send_addresses&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The beforeSendHookAddresses at the given index.
+     */
+    public java.lang.String getBeforeSendHookAddresses(int index) {
+      return beforeSendHookAddresses_.get(index);
+    }
+    /**
+     * <code>repeated string before_send_hook_addresses = 2 [json_name = "beforeSendHookAddresses", (.gogoproto.moretags) = "yaml:&#92;"before_send_addresses&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the beforeSendHookAddresses at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getBeforeSendHookAddressesBytes(int index) {
+      return beforeSendHookAddresses_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < denoms_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denoms_.getRaw(i));
+      }
+      for (int i = 0; i < beforeSendHookAddresses_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, beforeSendHookAddresses_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < denoms_.size(); i++) {
+          dataSize += computeStringSizeNoTag(denoms_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getDenomsList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < beforeSendHookAddresses_.size(); i++) {
+          dataSize += computeStringSizeNoTag(beforeSendHookAddresses_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getBeforeSendHookAddressesList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse other = (com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse) obj;
+
+      if (!getDenomsList()
+          .equals(other.getDenomsList())) return false;
+      if (!getBeforeSendHookAddressesList()
+          .equals(other.getBeforeSendHookAddressesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDenomsCount() > 0) {
+        hash = (37 * hash) + DENOMS_FIELD_NUMBER;
+        hash = (53 * hash) + getDenomsList().hashCode();
+      }
+      if (getBeforeSendHookAddressesCount() > 0) {
+        hash = (37 * hash) + BEFORE_SEND_HOOK_ADDRESSES_FIELD_NUMBER;
+        hash = (53 * hash) + getBeforeSendHookAddressesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAllBeforeSendHooksAddressesResponse defines the response structure for
+     * the AllBeforeSendHooksAddresses gRPC query.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesResponse)
+        com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.tokenfactory.v1beta1.QueryProto.internal_static_osmosis_tokenfactory_v1beta1_QueryAllBeforeSendHooksAddressesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.tokenfactory.v1beta1.QueryProto.internal_static_osmosis_tokenfactory_v1beta1_QueryAllBeforeSendHooksAddressesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse.class, com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denoms_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        beforeSendHookAddresses_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.tokenfactory.v1beta1.QueryProto.internal_static_osmosis_tokenfactory_v1beta1_QueryAllBeforeSendHooksAddressesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse getDefaultInstanceForType() {
+        return com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse build() {
+        com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse buildPartial() {
+        com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse result = new com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          denoms_.makeImmutable();
+          result.denoms_ = denoms_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          beforeSendHookAddresses_.makeImmutable();
+          result.beforeSendHookAddresses_ = beforeSendHookAddresses_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse) {
+          return mergeFrom((com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse other) {
+        if (other == com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse.getDefaultInstance()) return this;
+        if (!other.denoms_.isEmpty()) {
+          if (denoms_.isEmpty()) {
+            denoms_ = other.denoms_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureDenomsIsMutable();
+            denoms_.addAll(other.denoms_);
+          }
+          onChanged();
+        }
+        if (!other.beforeSendHookAddresses_.isEmpty()) {
+          if (beforeSendHookAddresses_.isEmpty()) {
+            beforeSendHookAddresses_ = other.beforeSendHookAddresses_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureBeforeSendHookAddressesIsMutable();
+            beforeSendHookAddresses_.addAll(other.beforeSendHookAddresses_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureDenomsIsMutable();
+                denoms_.add(s);
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureBeforeSendHookAddressesIsMutable();
+                beforeSendHookAddresses_.add(s);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList denoms_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureDenomsIsMutable() {
+        if (!denoms_.isModifiable()) {
+          denoms_ = new com.google.protobuf.LazyStringArrayList(denoms_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @return A list containing the denoms.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getDenomsList() {
+        denoms_.makeImmutable();
+        return denoms_;
+      }
+      /**
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @return The count of denoms.
+       */
+      public int getDenomsCount() {
+        return denoms_.size();
+      }
+      /**
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The denoms at the given index.
+       */
+      public java.lang.String getDenoms(int index) {
+        return denoms_.get(index);
+      }
+      /**
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the denoms at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getDenomsBytes(int index) {
+        return denoms_.getByteString(index);
+      }
+      /**
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The denoms to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenoms(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureDenomsIsMutable();
+        denoms_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @param value The denoms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDenoms(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureDenomsIsMutable();
+        denoms_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @param values The denoms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDenoms(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureDenomsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, denoms_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenoms() {
+        denoms_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @param value The bytes of the denoms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDenomsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureDenomsIsMutable();
+        denoms_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList beforeSendHookAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureBeforeSendHookAddressesIsMutable() {
+        if (!beforeSendHookAddresses_.isModifiable()) {
+          beforeSendHookAddresses_ = new com.google.protobuf.LazyStringArrayList(beforeSendHookAddresses_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <code>repeated string before_send_hook_addresses = 2 [json_name = "beforeSendHookAddresses", (.gogoproto.moretags) = "yaml:&#92;"before_send_addresses&#92;""];</code>
+       * @return A list containing the beforeSendHookAddresses.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getBeforeSendHookAddressesList() {
+        beforeSendHookAddresses_.makeImmutable();
+        return beforeSendHookAddresses_;
+      }
+      /**
+       * <code>repeated string before_send_hook_addresses = 2 [json_name = "beforeSendHookAddresses", (.gogoproto.moretags) = "yaml:&#92;"before_send_addresses&#92;""];</code>
+       * @return The count of beforeSendHookAddresses.
+       */
+      public int getBeforeSendHookAddressesCount() {
+        return beforeSendHookAddresses_.size();
+      }
+      /**
+       * <code>repeated string before_send_hook_addresses = 2 [json_name = "beforeSendHookAddresses", (.gogoproto.moretags) = "yaml:&#92;"before_send_addresses&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The beforeSendHookAddresses at the given index.
+       */
+      public java.lang.String getBeforeSendHookAddresses(int index) {
+        return beforeSendHookAddresses_.get(index);
+      }
+      /**
+       * <code>repeated string before_send_hook_addresses = 2 [json_name = "beforeSendHookAddresses", (.gogoproto.moretags) = "yaml:&#92;"before_send_addresses&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the beforeSendHookAddresses at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getBeforeSendHookAddressesBytes(int index) {
+        return beforeSendHookAddresses_.getByteString(index);
+      }
+      /**
+       * <code>repeated string before_send_hook_addresses = 2 [json_name = "beforeSendHookAddresses", (.gogoproto.moretags) = "yaml:&#92;"before_send_addresses&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The beforeSendHookAddresses to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBeforeSendHookAddresses(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureBeforeSendHookAddressesIsMutable();
+        beforeSendHookAddresses_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string before_send_hook_addresses = 2 [json_name = "beforeSendHookAddresses", (.gogoproto.moretags) = "yaml:&#92;"before_send_addresses&#92;""];</code>
+       * @param value The beforeSendHookAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addBeforeSendHookAddresses(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureBeforeSendHookAddressesIsMutable();
+        beforeSendHookAddresses_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string before_send_hook_addresses = 2 [json_name = "beforeSendHookAddresses", (.gogoproto.moretags) = "yaml:&#92;"before_send_addresses&#92;""];</code>
+       * @param values The beforeSendHookAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllBeforeSendHookAddresses(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureBeforeSendHookAddressesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, beforeSendHookAddresses_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string before_send_hook_addresses = 2 [json_name = "beforeSendHookAddresses", (.gogoproto.moretags) = "yaml:&#92;"before_send_addresses&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBeforeSendHookAddresses() {
+        beforeSendHookAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string before_send_hook_addresses = 2 [json_name = "beforeSendHookAddresses", (.gogoproto.moretags) = "yaml:&#92;"before_send_addresses&#92;""];</code>
+       * @param value The bytes of the beforeSendHookAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addBeforeSendHookAddressesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureBeforeSendHookAddressesIsMutable();
+        beforeSendHookAddresses_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.tokenfactory.v1beta1.QueryAllBeforeSendHooksAddressesResponse)
+    private static final com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse();
+    }
+
+    public static com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllBeforeSendHooksAddressesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllBeforeSendHooksAddressesResponse>() {
+      @java.lang.Override
+      public QueryAllBeforeSendHooksAddressesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllBeforeSendHooksAddressesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllBeforeSendHooksAddressesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.tokenfactory.v1beta1.QueryProto.QueryAllBeforeSendHooksAddressesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_tokenfactory_v1beta1_QueryParamsRequest_descriptor;
   private static final 
@@ -4603,6 +5842,16 @@ public final class QueryProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_tokenfactory_v1beta1_QueryBeforeSendHookAddressResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_tokenfactory_v1beta1_QueryAllBeforeSendHooksAddressesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_tokenfactory_v1beta1_QueryAllBeforeSendHooksAddressesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_osmosis_tokenfactory_v1beta1_QueryAllBeforeSendHooksAddressesResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_osmosis_tokenfactory_v1beta1_QueryAllBeforeSendHooksAddressesResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4636,34 +5885,46 @@ public final class QueryProto {
       "\tB\020\362\336\037\014yaml:\"denom\"R\005denom\"l\n\"QueryBefor" +
       "eSendHookAddressResponse\022F\n\020cosmwasm_add" +
       "ress\030\001 \001(\tB\033\362\336\037\027yaml:\"cosmwasm_address\"R" +
-      "\017cosmwasmAddress2\310\006\n\005Query\022\233\001\n\006Params\0220." +
-      "osmosis.tokenfactory.v1beta1.QueryParams" +
-      "Request\0321.osmosis.tokenfactory.v1beta1.Q" +
-      "ueryParamsResponse\",\202\323\344\223\002&\022$/osmosis/tok" +
-      "enfactory/v1beta1/params\022\346\001\n\026DenomAuthor" +
-      "ityMetadata\022@.osmosis.tokenfactory.v1bet" +
-      "a1.QueryDenomAuthorityMetadataRequest\032A." +
+      "\017cosmwasmAddress\")\n\'QueryAllBeforeSendHo" +
+      "oksAddressesRequest\"\264\001\n(QueryAllBeforeSe" +
+      "ndHooksAddressesResponse\022)\n\006denoms\030\001 \003(\t" +
+      "B\021\362\336\037\ryaml:\"denoms\"R\006denoms\022]\n\032before_se" +
+      "nd_hook_addresses\030\002 \003(\tB \362\336\037\034yaml:\"befor" +
+      "e_send_addresses\"R\027beforeSendHookAddress" +
+      "es2\264\010\n\005Query\022\233\001\n\006Params\0220.osmosis.tokenf" +
+      "actory.v1beta1.QueryParamsRequest\0321.osmo" +
+      "sis.tokenfactory.v1beta1.QueryParamsResp" +
+      "onse\",\202\323\344\223\002&\022$/osmosis/tokenfactory/v1be" +
+      "ta1/params\022\346\001\n\026DenomAuthorityMetadata\022@." +
       "osmosis.tokenfactory.v1beta1.QueryDenomA" +
-      "uthorityMetadataResponse\"G\202\323\344\223\002A\022?/osmos" +
-      "is/tokenfactory/v1beta1/denoms/{denom}/a" +
-      "uthority_metadata\022\323\001\n\021DenomsFromCreator\022" +
-      ";.osmosis.tokenfactory.v1beta1.QueryDeno" +
-      "msFromCreatorRequest\032<.osmosis.tokenfact" +
-      "ory.v1beta1.QueryDenomsFromCreatorRespon" +
-      "se\"C\202\323\344\223\002=\022;/osmosis/tokenfactory/v1beta" +
-      "1/denoms_from_creator/{creator}\022\341\001\n\025Befo" +
-      "reSendHookAddress\022?.osmosis.tokenfactory" +
-      ".v1beta1.QueryBeforeSendHookAddressReque" +
-      "st\032@.osmosis.tokenfactory.v1beta1.QueryB" +
-      "eforeSendHookAddressResponse\"E\202\323\344\223\002?\022=/o" +
-      "smosis/tokenfactory/v1beta1/denoms/{deno" +
-      "m}/before_send_hookB\370\001\n com.osmosis.toke" +
-      "nfactory.v1beta1B\nQueryProtoZ8github.com" +
-      "/osmosis-labs/osmosis/v15/x/tokenfactory" +
-      "/types\242\002\003OTX\252\002\034Osmosis.Tokenfactory.V1be" +
-      "ta1\312\002\034Osmosis\\Tokenfactory\\V1beta1\342\002(Osm" +
-      "osis\\Tokenfactory\\V1beta1\\GPBMetadata\352\002\036" +
-      "Osmosis::Tokenfactory::V1beta1b\006proto3"
+      "uthorityMetadataRequest\032A.osmosis.tokenf" +
+      "actory.v1beta1.QueryDenomAuthorityMetada" +
+      "taResponse\"G\202\323\344\223\002A\022?/osmosis/tokenfactor" +
+      "y/v1beta1/denoms/{denom}/authority_metad" +
+      "ata\022\323\001\n\021DenomsFromCreator\022;.osmosis.toke" +
+      "nfactory.v1beta1.QueryDenomsFromCreatorR" +
+      "equest\032<.osmosis.tokenfactory.v1beta1.Qu" +
+      "eryDenomsFromCreatorResponse\"C\202\323\344\223\002=\022;/o" +
+      "smosis/tokenfactory/v1beta1/denoms_from_" +
+      "creator/{creator}\022\341\001\n\025BeforeSendHookAddr" +
+      "ess\022?.osmosis.tokenfactory.v1beta1.Query" +
+      "BeforeSendHookAddressRequest\032@.osmosis.t" +
+      "okenfactory.v1beta1.QueryBeforeSendHookA" +
+      "ddressResponse\"E\202\323\344\223\002?\022=/osmosis/tokenfa" +
+      "ctory/v1beta1/denoms/{denom}/before_send" +
+      "_hook\022\351\001\n\033AllBeforeSendHooksAddresses\022E." +
+      "osmosis.tokenfactory.v1beta1.QueryAllBef" +
+      "oreSendHooksAddressesRequest\032F.osmosis.t" +
+      "okenfactory.v1beta1.QueryAllBeforeSendHo" +
+      "oksAddressesResponse\";\202\323\344\223\0025\0223/osmosis/t" +
+      "okenfactory/v1beta1/all_before_send_hook" +
+      "sB\370\001\n com.osmosis.tokenfactory.v1beta1B\n" +
+      "QueryProtoZ8github.com/osmosis-labs/osmo" +
+      "sis/v26/x/tokenfactory/types\242\002\003OTX\252\002\034Osm" +
+      "osis.Tokenfactory.V1beta1\312\002\034Osmosis\\Toke" +
+      "nfactory\\V1beta1\342\002(Osmosis\\Tokenfactory\\" +
+      "V1beta1\\GPBMetadata\352\002\036Osmosis::Tokenfact" +
+      "ory::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4722,6 +5983,18 @@ public final class QueryProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_osmosis_tokenfactory_v1beta1_QueryBeforeSendHookAddressResponse_descriptor,
         new java.lang.String[] { "CosmwasmAddress", });
+    internal_static_osmosis_tokenfactory_v1beta1_QueryAllBeforeSendHooksAddressesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_osmosis_tokenfactory_v1beta1_QueryAllBeforeSendHooksAddressesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_tokenfactory_v1beta1_QueryAllBeforeSendHooksAddressesRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_osmosis_tokenfactory_v1beta1_QueryAllBeforeSendHooksAddressesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_osmosis_tokenfactory_v1beta1_QueryAllBeforeSendHooksAddressesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_osmosis_tokenfactory_v1beta1_QueryAllBeforeSendHooksAddressesResponse_descriptor,
+        new java.lang.String[] { "Denoms", "BeforeSendHookAddresses", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.gogoproto.GogoProto.moretags);
