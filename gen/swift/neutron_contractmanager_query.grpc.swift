@@ -38,6 +38,11 @@ internal protocol Neutron_Contractmanager_QueryClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> UnaryCall<Neutron_Contractmanager_QueryParamsRequest, Neutron_Contractmanager_QueryParamsResponse>
 
+  func addressFailure(
+    _ request: Neutron_Contractmanager_QueryFailuresRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Neutron_Contractmanager_QueryFailuresRequest, Neutron_Contractmanager_QueryFailuresResponse>
+
   func addressFailures(
     _ request: Neutron_Contractmanager_QueryFailuresRequest,
     callOptions: CallOptions?
@@ -72,7 +77,25 @@ extension Neutron_Contractmanager_QueryClientProtocol {
     )
   }
 
-  /// Queries a Failure by address.
+  /// Queries a Failure by contract address and failure ID.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to AddressFailure.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func addressFailure(
+    _ request: Neutron_Contractmanager_QueryFailuresRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Neutron_Contractmanager_QueryFailuresRequest, Neutron_Contractmanager_QueryFailuresResponse> {
+    return self.makeUnaryCall(
+      path: Neutron_Contractmanager_QueryClientMetadata.Methods.addressFailure.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAddressFailureInterceptors() ?? []
+    )
+  }
+
+  /// Queries Failures by contract address.
   ///
   /// - Parameters:
   ///   - request: Request to send to AddressFailures.
@@ -90,7 +113,7 @@ extension Neutron_Contractmanager_QueryClientProtocol {
     )
   }
 
-  /// Queries a list of Failure items.
+  /// Queries a list of Failures occurred on the network.
   ///
   /// - Parameters:
   ///   - request: Request to send to Failures.
@@ -177,6 +200,11 @@ internal protocol Neutron_Contractmanager_QueryAsyncClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Neutron_Contractmanager_QueryParamsRequest, Neutron_Contractmanager_QueryParamsResponse>
 
+  func makeAddressFailureCall(
+    _ request: Neutron_Contractmanager_QueryFailuresRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Neutron_Contractmanager_QueryFailuresRequest, Neutron_Contractmanager_QueryFailuresResponse>
+
   func makeAddressFailuresCall(
     _ request: Neutron_Contractmanager_QueryFailuresRequest,
     callOptions: CallOptions?
@@ -207,6 +235,18 @@ extension Neutron_Contractmanager_QueryAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeParamsInterceptors() ?? []
+    )
+  }
+
+  internal func makeAddressFailureCall(
+    _ request: Neutron_Contractmanager_QueryFailuresRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Neutron_Contractmanager_QueryFailuresRequest, Neutron_Contractmanager_QueryFailuresResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Neutron_Contractmanager_QueryClientMetadata.Methods.addressFailure.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAddressFailureInterceptors() ?? []
     )
   }
 
@@ -246,6 +286,18 @@ extension Neutron_Contractmanager_QueryAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeParamsInterceptors() ?? []
+    )
+  }
+
+  internal func addressFailure(
+    _ request: Neutron_Contractmanager_QueryFailuresRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Neutron_Contractmanager_QueryFailuresResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Neutron_Contractmanager_QueryClientMetadata.Methods.addressFailure.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAddressFailureInterceptors() ?? []
     )
   }
 
@@ -296,6 +348,9 @@ internal protocol Neutron_Contractmanager_QueryClientInterceptorFactoryProtocol:
   /// - Returns: Interceptors to use when invoking 'params'.
   func makeParamsInterceptors() -> [ClientInterceptor<Neutron_Contractmanager_QueryParamsRequest, Neutron_Contractmanager_QueryParamsResponse>]
 
+  /// - Returns: Interceptors to use when invoking 'addressFailure'.
+  func makeAddressFailureInterceptors() -> [ClientInterceptor<Neutron_Contractmanager_QueryFailuresRequest, Neutron_Contractmanager_QueryFailuresResponse>]
+
   /// - Returns: Interceptors to use when invoking 'addressFailures'.
   func makeAddressFailuresInterceptors() -> [ClientInterceptor<Neutron_Contractmanager_QueryFailuresRequest, Neutron_Contractmanager_QueryFailuresResponse>]
 
@@ -309,6 +364,7 @@ internal enum Neutron_Contractmanager_QueryClientMetadata {
     fullName: "neutron.contractmanager.Query",
     methods: [
       Neutron_Contractmanager_QueryClientMetadata.Methods.params,
+      Neutron_Contractmanager_QueryClientMetadata.Methods.addressFailure,
       Neutron_Contractmanager_QueryClientMetadata.Methods.addressFailures,
       Neutron_Contractmanager_QueryClientMetadata.Methods.failures,
     ]
@@ -318,6 +374,12 @@ internal enum Neutron_Contractmanager_QueryClientMetadata {
     internal static let params = GRPCMethodDescriptor(
       name: "Params",
       path: "/neutron.contractmanager.Query/Params",
+      type: GRPCCallType.unary
+    )
+
+    internal static let addressFailure = GRPCMethodDescriptor(
+      name: "AddressFailure",
+      path: "/neutron.contractmanager.Query/AddressFailure",
       type: GRPCCallType.unary
     )
 
@@ -344,10 +406,13 @@ internal protocol Neutron_Contractmanager_QueryProvider: CallHandlerProvider {
   /// Parameters queries the parameters of the module.
   func params(request: Neutron_Contractmanager_QueryParamsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Neutron_Contractmanager_QueryParamsResponse>
 
-  /// Queries a Failure by address.
+  /// Queries a Failure by contract address and failure ID.
+  func addressFailure(request: Neutron_Contractmanager_QueryFailuresRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Neutron_Contractmanager_QueryFailuresResponse>
+
+  /// Queries Failures by contract address.
   func addressFailures(request: Neutron_Contractmanager_QueryFailuresRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Neutron_Contractmanager_QueryFailuresResponse>
 
-  /// Queries a list of Failure items.
+  /// Queries a list of Failures occurred on the network.
   func failures(request: Neutron_Contractmanager_QueryFailuresRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Neutron_Contractmanager_QueryFailuresResponse>
 }
 
@@ -370,6 +435,15 @@ extension Neutron_Contractmanager_QueryProvider {
         responseSerializer: ProtobufSerializer<Neutron_Contractmanager_QueryParamsResponse>(),
         interceptors: self.interceptors?.makeParamsInterceptors() ?? [],
         userFunction: self.params(request:context:)
+      )
+
+    case "AddressFailure":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Neutron_Contractmanager_QueryFailuresRequest>(),
+        responseSerializer: ProtobufSerializer<Neutron_Contractmanager_QueryFailuresResponse>(),
+        interceptors: self.interceptors?.makeAddressFailureInterceptors() ?? [],
+        userFunction: self.addressFailure(request:context:)
       )
 
     case "AddressFailures":
@@ -410,13 +484,19 @@ internal protocol Neutron_Contractmanager_QueryAsyncProvider: CallHandlerProvide
     context: GRPCAsyncServerCallContext
   ) async throws -> Neutron_Contractmanager_QueryParamsResponse
 
-  /// Queries a Failure by address.
+  /// Queries a Failure by contract address and failure ID.
+  @Sendable func addressFailure(
+    request: Neutron_Contractmanager_QueryFailuresRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Neutron_Contractmanager_QueryFailuresResponse
+
+  /// Queries Failures by contract address.
   @Sendable func addressFailures(
     request: Neutron_Contractmanager_QueryFailuresRequest,
     context: GRPCAsyncServerCallContext
   ) async throws -> Neutron_Contractmanager_QueryFailuresResponse
 
-  /// Queries a list of Failure items.
+  /// Queries a list of Failures occurred on the network.
   @Sendable func failures(
     request: Neutron_Contractmanager_QueryFailuresRequest,
     context: GRPCAsyncServerCallContext
@@ -451,6 +531,15 @@ extension Neutron_Contractmanager_QueryAsyncProvider {
         wrapping: self.params(request:context:)
       )
 
+    case "AddressFailure":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Neutron_Contractmanager_QueryFailuresRequest>(),
+        responseSerializer: ProtobufSerializer<Neutron_Contractmanager_QueryFailuresResponse>(),
+        interceptors: self.interceptors?.makeAddressFailureInterceptors() ?? [],
+        wrapping: self.addressFailure(request:context:)
+      )
+
     case "AddressFailures":
       return GRPCAsyncServerHandler(
         context: context,
@@ -481,6 +570,10 @@ internal protocol Neutron_Contractmanager_QueryServerInterceptorFactoryProtocol 
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeParamsInterceptors() -> [ServerInterceptor<Neutron_Contractmanager_QueryParamsRequest, Neutron_Contractmanager_QueryParamsResponse>]
 
+  /// - Returns: Interceptors to use when handling 'addressFailure'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeAddressFailureInterceptors() -> [ServerInterceptor<Neutron_Contractmanager_QueryFailuresRequest, Neutron_Contractmanager_QueryFailuresResponse>]
+
   /// - Returns: Interceptors to use when handling 'addressFailures'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeAddressFailuresInterceptors() -> [ServerInterceptor<Neutron_Contractmanager_QueryFailuresRequest, Neutron_Contractmanager_QueryFailuresResponse>]
@@ -496,6 +589,7 @@ internal enum Neutron_Contractmanager_QueryServerMetadata {
     fullName: "neutron.contractmanager.Query",
     methods: [
       Neutron_Contractmanager_QueryServerMetadata.Methods.params,
+      Neutron_Contractmanager_QueryServerMetadata.Methods.addressFailure,
       Neutron_Contractmanager_QueryServerMetadata.Methods.addressFailures,
       Neutron_Contractmanager_QueryServerMetadata.Methods.failures,
     ]
@@ -505,6 +599,12 @@ internal enum Neutron_Contractmanager_QueryServerMetadata {
     internal static let params = GRPCMethodDescriptor(
       name: "Params",
       path: "/neutron.contractmanager.Query/Params",
+      type: GRPCCallType.unary
+    )
+
+    internal static let addressFailure = GRPCMethodDescriptor(
+      name: "AddressFailure",
+      path: "/neutron.contractmanager.Query/AddressFailure",
       type: GRPCCallType.unary
     )
 

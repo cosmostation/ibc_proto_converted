@@ -59,7 +59,7 @@ public final class UpgradeProto {
      *
      * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true, (.amino.dont_omitempty) = true];</code>
      * @deprecated cosmos.upgrade.v1beta1.Plan.time is deprecated.
-     *     See cosmos/upgrade/v1beta1/upgrade.proto;l=30
+     *     See cosmos/upgrade/v1beta1/upgrade.proto;l=29
      * @return Whether the time field is set.
      */
     @java.lang.Deprecated boolean hasTime();
@@ -72,7 +72,7 @@ public final class UpgradeProto {
      *
      * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true, (.amino.dont_omitempty) = true];</code>
      * @deprecated cosmos.upgrade.v1beta1.Plan.time is deprecated.
-     *     See cosmos/upgrade/v1beta1/upgrade.proto;l=30
+     *     See cosmos/upgrade/v1beta1/upgrade.proto;l=29
      * @return The time.
      */
     @java.lang.Deprecated com.google.protobuf.Timestamp getTime();
@@ -128,7 +128,7 @@ public final class UpgradeProto {
      *
      * <code>.google.protobuf.Any upgraded_client_state = 5 [json_name = "upgradedClientState", deprecated = true];</code>
      * @deprecated cosmos.upgrade.v1beta1.Plan.upgraded_client_state is deprecated.
-     *     See cosmos/upgrade/v1beta1/upgrade.proto;l=43
+     *     See cosmos/upgrade/v1beta1/upgrade.proto;l=42
      * @return Whether the upgradedClientState field is set.
      */
     @java.lang.Deprecated boolean hasUpgradedClientState();
@@ -141,7 +141,7 @@ public final class UpgradeProto {
      *
      * <code>.google.protobuf.Any upgraded_client_state = 5 [json_name = "upgradedClientState", deprecated = true];</code>
      * @deprecated cosmos.upgrade.v1beta1.Plan.upgraded_client_state is deprecated.
-     *     See cosmos/upgrade/v1beta1/upgrade.proto;l=43
+     *     See cosmos/upgrade/v1beta1/upgrade.proto;l=42
      * @return The upgradedClientState.
      */
     @java.lang.Deprecated com.google.protobuf.Any getUpgradedClientState();
@@ -267,7 +267,7 @@ public final class UpgradeProto {
      *
      * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true, (.amino.dont_omitempty) = true];</code>
      * @deprecated cosmos.upgrade.v1beta1.Plan.time is deprecated.
-     *     See cosmos/upgrade/v1beta1/upgrade.proto;l=30
+     *     See cosmos/upgrade/v1beta1/upgrade.proto;l=29
      * @return Whether the time field is set.
      */
     @java.lang.Override
@@ -283,7 +283,7 @@ public final class UpgradeProto {
      *
      * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true, (.amino.dont_omitempty) = true];</code>
      * @deprecated cosmos.upgrade.v1beta1.Plan.time is deprecated.
-     *     See cosmos/upgrade/v1beta1/upgrade.proto;l=30
+     *     See cosmos/upgrade/v1beta1/upgrade.proto;l=29
      * @return The time.
      */
     @java.lang.Override
@@ -379,7 +379,7 @@ public final class UpgradeProto {
      *
      * <code>.google.protobuf.Any upgraded_client_state = 5 [json_name = "upgradedClientState", deprecated = true];</code>
      * @deprecated cosmos.upgrade.v1beta1.Plan.upgraded_client_state is deprecated.
-     *     See cosmos/upgrade/v1beta1/upgrade.proto;l=43
+     *     See cosmos/upgrade/v1beta1/upgrade.proto;l=42
      * @return Whether the upgradedClientState field is set.
      */
     @java.lang.Override
@@ -395,7 +395,7 @@ public final class UpgradeProto {
      *
      * <code>.google.protobuf.Any upgraded_client_state = 5 [json_name = "upgradedClientState", deprecated = true];</code>
      * @deprecated cosmos.upgrade.v1beta1.Plan.upgraded_client_state is deprecated.
-     *     See cosmos/upgrade/v1beta1/upgrade.proto;l=43
+     *     See cosmos/upgrade/v1beta1/upgrade.proto;l=42
      * @return The upgradedClientState.
      */
     @java.lang.Override
@@ -1000,7 +1000,7 @@ public final class UpgradeProto {
        *
        * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true, (.amino.dont_omitempty) = true];</code>
        * @deprecated cosmos.upgrade.v1beta1.Plan.time is deprecated.
-       *     See cosmos/upgrade/v1beta1/upgrade.proto;l=30
+       *     See cosmos/upgrade/v1beta1/upgrade.proto;l=29
        * @return Whether the time field is set.
        */
       @java.lang.Deprecated public boolean hasTime() {
@@ -1015,7 +1015,7 @@ public final class UpgradeProto {
        *
        * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true, (.amino.dont_omitempty) = true];</code>
        * @deprecated cosmos.upgrade.v1beta1.Plan.time is deprecated.
-       *     See cosmos/upgrade/v1beta1/upgrade.proto;l=30
+       *     See cosmos/upgrade/v1beta1/upgrade.proto;l=29
        * @return The time.
        */
       @java.lang.Deprecated public com.google.protobuf.Timestamp getTime() {
@@ -1318,7 +1318,7 @@ public final class UpgradeProto {
        *
        * <code>.google.protobuf.Any upgraded_client_state = 5 [json_name = "upgradedClientState", deprecated = true];</code>
        * @deprecated cosmos.upgrade.v1beta1.Plan.upgraded_client_state is deprecated.
-       *     See cosmos/upgrade/v1beta1/upgrade.proto;l=43
+       *     See cosmos/upgrade/v1beta1/upgrade.proto;l=42
        * @return Whether the upgradedClientState field is set.
        */
       @java.lang.Deprecated public boolean hasUpgradedClientState() {
@@ -1333,7 +1333,7 @@ public final class UpgradeProto {
        *
        * <code>.google.protobuf.Any upgraded_client_state = 5 [json_name = "upgradedClientState", deprecated = true];</code>
        * @deprecated cosmos.upgrade.v1beta1.Plan.upgraded_client_state is deprecated.
-       *     See cosmos/upgrade/v1beta1/upgrade.proto;l=43
+       *     See cosmos/upgrade/v1beta1/upgrade.proto;l=42
        * @return The upgradedClientState.
        */
       @java.lang.Deprecated public com.google.protobuf.Any getUpgradedClientState() {
@@ -4100,31 +4100,30 @@ public final class UpgradeProto {
       "cosmos.upgrade.v1beta1\032\031google/protobuf/" +
       "any.proto\032\024gogoproto/gogo.proto\032\037google/" +
       "protobuf/timestamp.proto\032\031cosmos_proto/c" +
-      "osmos.proto\032\021amino/amino.proto\"\363\001\n\004Plan\022" +
+      "osmos.proto\032\021amino/amino.proto\"\357\001\n\004Plan\022" +
       "\022\n\004name\030\001 \001(\tR\004name\022?\n\004time\030\002 \001(\0132\032.goog" +
       "le.protobuf.TimestampB\017\030\001\310\336\037\000\220\337\037\001\250\347\260*\001R\004" +
       "time\022\026\n\006height\030\003 \001(\003R\006height\022\022\n\004info\030\004 \001" +
       "(\tR\004info\022L\n\025upgraded_client_state\030\005 \001(\0132" +
       "\024.google.protobuf.AnyB\002\030\001R\023upgradedClien" +
-      "tState:\034\230\240\037\000\350\240\037\001\212\347\260*\017cosmos-sdk/Plan\"\337\001\n" +
-      "\027SoftwareUpgradeProposal\022\024\n\005title\030\001 \001(\tR" +
-      "\005title\022 \n\013description\030\002 \001(\tR\013description" +
-      "\022;\n\004plan\030\003 \001(\0132\034.cosmos.upgrade.v1beta1." +
-      "PlanB\t\310\336\037\000\250\347\260*\001R\004plan:O\030\001\230\240\037\000\350\240\037\001\312\264-\032cos" +
-      "mos.gov.v1beta1.Content\212\347\260*\"cosmos-sdk/S" +
-      "oftwareUpgradeProposal\"\256\001\n\035CancelSoftwar" +
-      "eUpgradeProposal\022\024\n\005title\030\001 \001(\tR\005title\022 " +
-      "\n\013description\030\002 \001(\tR\013description:U\030\001\230\240\037\000" +
-      "\350\240\037\001\312\264-\032cosmos.gov.v1beta1.Content\212\347\260*(c" +
-      "osmos-sdk/CancelSoftwareUpgradeProposal\"" +
-      "G\n\rModuleVersion\022\022\n\004name\030\001 \001(\tR\004name\022\030\n\007" +
-      "version\030\002 \001(\004R\007version:\010\230\240\037\001\350\240\037\001B\324\001\n\032com" +
-      ".cosmos.upgrade.v1beta1B\014UpgradeProtoZ,g" +
-      "ithub.com/cosmos/cosmos-sdk/x/upgrade/ty" +
-      "pes\242\002\003CUX\252\002\026Cosmos.Upgrade.V1beta1\312\002\026Cos" +
-      "mos\\Upgrade\\V1beta1\342\002\"Cosmos\\Upgrade\\V1b" +
-      "eta1\\GPBMetadata\352\002\030Cosmos::Upgrade::V1be" +
-      "ta1\310\341\036\000b\006proto3"
+      "tState:\030\350\240\037\001\212\347\260*\017cosmos-sdk/Plan\"\333\001\n\027Sof" +
+      "twareUpgradeProposal\022\024\n\005title\030\001 \001(\tR\005tit" +
+      "le\022 \n\013description\030\002 \001(\tR\013description\022;\n\004" +
+      "plan\030\003 \001(\0132\034.cosmos.upgrade.v1beta1.Plan" +
+      "B\t\310\336\037\000\250\347\260*\001R\004plan:K\030\001\350\240\037\001\312\264-\032cosmos.gov." +
+      "v1beta1.Content\212\347\260*\"cosmos-sdk/SoftwareU" +
+      "pgradeProposal\"\252\001\n\035CancelSoftwareUpgrade" +
+      "Proposal\022\024\n\005title\030\001 \001(\tR\005title\022 \n\013descri" +
+      "ption\030\002 \001(\tR\013description:Q\030\001\350\240\037\001\312\264-\032cosm" +
+      "os.gov.v1beta1.Content\212\347\260*(cosmos-sdk/Ca" +
+      "ncelSoftwareUpgradeProposal\"C\n\rModuleVer" +
+      "sion\022\022\n\004name\030\001 \001(\tR\004name\022\030\n\007version\030\002 \001(" +
+      "\004R\007version:\004\350\240\037\001B\304\001\n\032com.cosmos.upgrade." +
+      "v1beta1B\014UpgradeProtoZ\034cosmossdk.io/x/up" +
+      "grade/types\242\002\003CUX\252\002\026Cosmos.Upgrade.V1bet" +
+      "a1\312\002\026Cosmos\\Upgrade\\V1beta1\342\002\"Cosmos\\Upg" +
+      "rade\\V1beta1\\GPBMetadata\352\002\030Cosmos::Upgra" +
+      "de::V1beta1\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4166,7 +4165,6 @@ public final class UpgradeProto {
     registry.add(com.cosmos_proto.CosmosProto.implementsInterface);
     registry.add(com.gogoproto.GogoProto.equal);
     registry.add(com.gogoproto.GogoProto.goprotoGettersAll);
-    registry.add(com.gogoproto.GogoProto.goprotoStringer);
     registry.add(com.gogoproto.GogoProto.nullable);
     registry.add(com.gogoproto.GogoProto.stdtime);
     com.google.protobuf.Descriptors.FileDescriptor

@@ -51,7 +51,7 @@ public final class GenesisProto {
      * the previous end block.
      * </pre>
      *
-     * <code>bytes last_total_power = 2 [json_name = "lastTotalPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.amino.dont_omitempty) = true];</code>
+     * <code>bytes last_total_power = 2 [json_name = "lastTotalPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
      * @return The lastTotalPower.
      */
     com.google.protobuf.ByteString getLastTotalPower();
@@ -107,7 +107,7 @@ public final class GenesisProto {
 
     /**
      * <pre>
-     * delegations defines the validator set at genesis.
+     * validators defines the validator set at genesis.
      * </pre>
      *
      * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -116,7 +116,7 @@ public final class GenesisProto {
         getValidatorsList();
     /**
      * <pre>
-     * delegations defines the validator set at genesis.
+     * validators defines the validator set at genesis.
      * </pre>
      *
      * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -124,7 +124,7 @@ public final class GenesisProto {
     com.cosmos.staking.v1beta1.StakingProto.Validator getValidators(int index);
     /**
      * <pre>
-     * delegations defines the validator set at genesis.
+     * validators defines the validator set at genesis.
      * </pre>
      *
      * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -132,7 +132,7 @@ public final class GenesisProto {
     int getValidatorsCount();
     /**
      * <pre>
-     * delegations defines the validator set at genesis.
+     * validators defines the validator set at genesis.
      * </pre>
      *
      * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -141,7 +141,7 @@ public final class GenesisProto {
         getValidatorsOrBuilderList();
     /**
      * <pre>
-     * delegations defines the validator set at genesis.
+     * validators defines the validator set at genesis.
      * </pre>
      *
      * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -282,6 +282,10 @@ public final class GenesisProto {
         int index);
 
     /**
+     * <pre>
+     * exported defines a bool to identify whether the chain dealing with exported or initialized genesis.
+     * </pre>
+     *
      * <code>bool exported = 8 [json_name = "exported"];</code>
      * @return The exported.
      */
@@ -346,7 +350,7 @@ public final class GenesisProto {
      * total number of liquid staked tokens at genesis
      * </pre>
      *
-     * <code>bytes total_liquid_staked_tokens = 11 [json_name = "totalLiquidStakedTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_liquid_staked_tokens&#92;""];</code>
+     * <code>bytes total_liquid_staked_tokens = 11 [json_name = "totalLiquidStakedTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"total_liquid_staked_tokens&#92;""];</code>
      * @return The totalLiquidStakedTokens.
      */
     com.google.protobuf.ByteString getTotalLiquidStakedTokens();
@@ -489,7 +493,7 @@ public final class GenesisProto {
      * the previous end block.
      * </pre>
      *
-     * <code>bytes last_total_power = 2 [json_name = "lastTotalPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.amino.dont_omitempty) = true];</code>
+     * <code>bytes last_total_power = 2 [json_name = "lastTotalPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
      * @return The lastTotalPower.
      */
     @java.lang.Override
@@ -568,7 +572,7 @@ public final class GenesisProto {
     private java.util.List<com.cosmos.staking.v1beta1.StakingProto.Validator> validators_;
     /**
      * <pre>
-     * delegations defines the validator set at genesis.
+     * validators defines the validator set at genesis.
      * </pre>
      *
      * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -579,7 +583,7 @@ public final class GenesisProto {
     }
     /**
      * <pre>
-     * delegations defines the validator set at genesis.
+     * validators defines the validator set at genesis.
      * </pre>
      *
      * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -591,7 +595,7 @@ public final class GenesisProto {
     }
     /**
      * <pre>
-     * delegations defines the validator set at genesis.
+     * validators defines the validator set at genesis.
      * </pre>
      *
      * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -602,7 +606,7 @@ public final class GenesisProto {
     }
     /**
      * <pre>
-     * delegations defines the validator set at genesis.
+     * validators defines the validator set at genesis.
      * </pre>
      *
      * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -613,7 +617,7 @@ public final class GenesisProto {
     }
     /**
      * <pre>
-     * delegations defines the validator set at genesis.
+     * validators defines the validator set at genesis.
      * </pre>
      *
      * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -810,6 +814,10 @@ public final class GenesisProto {
     public static final int EXPORTED_FIELD_NUMBER = 8;
     private boolean exported_ = false;
     /**
+     * <pre>
+     * exported defines a bool to identify whether the chain dealing with exported or initialized genesis.
+     * </pre>
+     *
      * <code>bool exported = 8 [json_name = "exported"];</code>
      * @return The exported.
      */
@@ -901,7 +909,7 @@ public final class GenesisProto {
      * total number of liquid staked tokens at genesis
      * </pre>
      *
-     * <code>bytes total_liquid_staked_tokens = 11 [json_name = "totalLiquidStakedTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_liquid_staked_tokens&#92;""];</code>
+     * <code>bytes total_liquid_staked_tokens = 11 [json_name = "totalLiquidStakedTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"total_liquid_staked_tokens&#92;""];</code>
      * @return The totalLiquidStakedTokens.
      */
     @java.lang.Override
@@ -2048,7 +2056,7 @@ public final class GenesisProto {
        * the previous end block.
        * </pre>
        *
-       * <code>bytes last_total_power = 2 [json_name = "lastTotalPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.amino.dont_omitempty) = true];</code>
+       * <code>bytes last_total_power = 2 [json_name = "lastTotalPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
        * @return The lastTotalPower.
        */
       @java.lang.Override
@@ -2061,7 +2069,7 @@ public final class GenesisProto {
        * the previous end block.
        * </pre>
        *
-       * <code>bytes last_total_power = 2 [json_name = "lastTotalPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.amino.dont_omitempty) = true];</code>
+       * <code>bytes last_total_power = 2 [json_name = "lastTotalPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
        * @param value The lastTotalPower to set.
        * @return This builder for chaining.
        */
@@ -2078,7 +2086,7 @@ public final class GenesisProto {
        * the previous end block.
        * </pre>
        *
-       * <code>bytes last_total_power = 2 [json_name = "lastTotalPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.amino.dont_omitempty) = true];</code>
+       * <code>bytes last_total_power = 2 [json_name = "lastTotalPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearLastTotalPower() {
@@ -2432,7 +2440,7 @@ public final class GenesisProto {
 
       /**
        * <pre>
-       * delegations defines the validator set at genesis.
+       * validators defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2446,7 +2454,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * delegations defines the validator set at genesis.
+       * validators defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2460,7 +2468,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * delegations defines the validator set at genesis.
+       * validators defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2474,7 +2482,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * delegations defines the validator set at genesis.
+       * validators defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2495,7 +2503,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * delegations defines the validator set at genesis.
+       * validators defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2513,7 +2521,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * delegations defines the validator set at genesis.
+       * validators defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2533,7 +2541,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * delegations defines the validator set at genesis.
+       * validators defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2554,7 +2562,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * delegations defines the validator set at genesis.
+       * validators defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2572,7 +2580,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * delegations defines the validator set at genesis.
+       * validators defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2590,7 +2598,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * delegations defines the validator set at genesis.
+       * validators defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2609,7 +2617,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * delegations defines the validator set at genesis.
+       * validators defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2626,7 +2634,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * delegations defines the validator set at genesis.
+       * validators defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2643,7 +2651,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * delegations defines the validator set at genesis.
+       * validators defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2654,7 +2662,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * delegations defines the validator set at genesis.
+       * validators defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2668,7 +2676,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * delegations defines the validator set at genesis.
+       * validators defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2683,7 +2691,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * delegations defines the validator set at genesis.
+       * validators defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2694,7 +2702,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * delegations defines the validator set at genesis.
+       * validators defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -2706,7 +2714,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * delegations defines the validator set at genesis.
+       * validators defines the validator set at genesis.
        * </pre>
        *
        * <code>repeated .cosmos.staking.v1beta1.Validator validators = 4 [json_name = "validators", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -3668,6 +3676,10 @@ public final class GenesisProto {
 
       private boolean exported_ ;
       /**
+       * <pre>
+       * exported defines a bool to identify whether the chain dealing with exported or initialized genesis.
+       * </pre>
+       *
        * <code>bool exported = 8 [json_name = "exported"];</code>
        * @return The exported.
        */
@@ -3676,6 +3688,10 @@ public final class GenesisProto {
         return exported_;
       }
       /**
+       * <pre>
+       * exported defines a bool to identify whether the chain dealing with exported or initialized genesis.
+       * </pre>
+       *
        * <code>bool exported = 8 [json_name = "exported"];</code>
        * @param value The exported to set.
        * @return This builder for chaining.
@@ -3688,6 +3704,10 @@ public final class GenesisProto {
         return this;
       }
       /**
+       * <pre>
+       * exported defines a bool to identify whether the chain dealing with exported or initialized genesis.
+       * </pre>
+       *
        * <code>bool exported = 8 [json_name = "exported"];</code>
        * @return This builder for chaining.
        */
@@ -4060,7 +4080,7 @@ public final class GenesisProto {
        * total number of liquid staked tokens at genesis
        * </pre>
        *
-       * <code>bytes total_liquid_staked_tokens = 11 [json_name = "totalLiquidStakedTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_liquid_staked_tokens&#92;""];</code>
+       * <code>bytes total_liquid_staked_tokens = 11 [json_name = "totalLiquidStakedTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"total_liquid_staked_tokens&#92;""];</code>
        * @return The totalLiquidStakedTokens.
        */
       @java.lang.Override
@@ -4072,7 +4092,7 @@ public final class GenesisProto {
        * total number of liquid staked tokens at genesis
        * </pre>
        *
-       * <code>bytes total_liquid_staked_tokens = 11 [json_name = "totalLiquidStakedTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_liquid_staked_tokens&#92;""];</code>
+       * <code>bytes total_liquid_staked_tokens = 11 [json_name = "totalLiquidStakedTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"total_liquid_staked_tokens&#92;""];</code>
        * @param value The totalLiquidStakedTokens to set.
        * @return This builder for chaining.
        */
@@ -4088,7 +4108,7 @@ public final class GenesisProto {
        * total number of liquid staked tokens at genesis
        * </pre>
        *
-       * <code>bytes total_liquid_staked_tokens = 11 [json_name = "totalLiquidStakedTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_liquid_staked_tokens&#92;""];</code>
+       * <code>bytes total_liquid_staked_tokens = 11 [json_name = "totalLiquidStakedTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"total_liquid_staked_tokens&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearTotalLiquidStakedTokens() {
@@ -6227,46 +6247,46 @@ public final class GenesisProto {
       "roto\032$cosmos/staking/v1beta1/staking.pro" +
       "to\032\031cosmos_proto/cosmos.proto\032\021amino/ami" +
       "no.proto\032\037google/protobuf/timestamp.prot" +
-      "o\"\273\010\n\014GenesisState\022A\n\006params\030\001 \001(\0132\036.cos" +
+      "o\"\246\010\n\014GenesisState\022A\n\006params\030\001 \001(\0132\036.cos" +
       "mos.staking.v1beta1.ParamsB\t\310\336\037\000\250\347\260*\001R\006p" +
-      "arams\022]\n\020last_total_power\030\002 \001(\014B3\310\336\037\000\332\336\037" +
-      "&github.com/cosmos/cosmos-sdk/types.Int\250" +
-      "\347\260*\001R\016lastTotalPower\022i\n\025last_validator_p" +
-      "owers\030\003 \003(\0132*.cosmos.staking.v1beta1.Las" +
-      "tValidatorPowerB\t\310\336\037\000\250\347\260*\001R\023lastValidato" +
-      "rPowers\022L\n\nvalidators\030\004 \003(\0132!.cosmos.sta" +
-      "king.v1beta1.ValidatorB\t\310\336\037\000\250\347\260*\001R\nvalid" +
-      "ators\022O\n\013delegations\030\005 \003(\0132\".cosmos.stak" +
-      "ing.v1beta1.DelegationB\t\310\336\037\000\250\347\260*\001R\013deleg" +
-      "ations\022k\n\025unbonding_delegations\030\006 \003(\0132+." +
-      "cosmos.staking.v1beta1.UnbondingDelegati" +
-      "onB\t\310\336\037\000\250\347\260*\001R\024unbondingDelegations\022U\n\rr" +
-      "edelegations\030\007 \003(\0132$.cosmos.staking.v1be" +
-      "ta1.RedelegationB\t\310\336\037\000\250\347\260*\001R\rredelegatio" +
-      "ns\022\032\n\010exported\030\010 \001(\010R\010exported\022g\n\026tokeni" +
-      "ze_share_records\030\t \003(\0132+.cosmos.staking." +
-      "v1beta1.TokenizeShareRecordB\004\310\336\037\000R\024token" +
-      "izeShareRecords\022@\n\035last_tokenize_share_r" +
-      "ecord_id\030\n \001(\004R\031lastTokenizeShareRecordI" +
-      "d\022\220\001\n\032total_liquid_staked_tokens\030\013 \001(\014BS" +
-      "\310\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/typ" +
-      "es.Int\362\336\037!yaml:\"total_liquid_staked_toke" +
-      "ns\"R\027totalLiquidStakedTokens\022a\n\024tokenize" +
-      "_share_locks\030\014 \003(\0132).cosmos.staking.v1be" +
-      "ta1.TokenizeShareLockB\004\310\336\037\000R\022tokenizeSha" +
-      "reLocks\"\256\001\n\021TokenizeShareLock\022\030\n\007address" +
-      "\030\001 \001(\tR\007address\022\026\n\006status\030\002 \001(\tR\006status\022" +
-      "g\n\017completion_time\030\003 \001(\0132\032.google.protob" +
-      "uf.TimestampB\"\310\336\037\000\362\336\037\026yaml:\"completion_t" +
-      "ime\"\220\337\037\001R\016completionTime\"h\n\022LastValidato" +
-      "rPower\0222\n\007address\030\001 \001(\tB\030\322\264-\024cosmos.Addr" +
-      "essStringR\007address\022\024\n\005power\030\002 \001(\003R\005power" +
-      ":\010\210\240\037\000\350\240\037\000B\320\001\n\032com.cosmos.staking.v1beta" +
-      "1B\014GenesisProtoZ,github.com/cosmos/cosmo" +
-      "s-sdk/x/staking/types\242\002\003CSX\252\002\026Cosmos.Sta" +
-      "king.V1beta1\312\002\026Cosmos\\Staking\\V1beta1\342\002\"" +
-      "Cosmos\\Staking\\V1beta1\\GPBMetadata\352\002\030Cos" +
-      "mos::Staking::V1beta1b\006proto3"
+      "arams\022Z\n\020last_total_power\030\002 \001(\014B0\310\336\037\000\332\336\037" +
+      "\025cosmossdk.io/math.Int\322\264-\ncosmos.Int\250\347\260*" +
+      "\001R\016lastTotalPower\022i\n\025last_validator_powe" +
+      "rs\030\003 \003(\0132*.cosmos.staking.v1beta1.LastVa" +
+      "lidatorPowerB\t\310\336\037\000\250\347\260*\001R\023lastValidatorPo" +
+      "wers\022L\n\nvalidators\030\004 \003(\0132!.cosmos.stakin" +
+      "g.v1beta1.ValidatorB\t\310\336\037\000\250\347\260*\001R\nvalidato" +
+      "rs\022O\n\013delegations\030\005 \003(\0132\".cosmos.staking" +
+      ".v1beta1.DelegationB\t\310\336\037\000\250\347\260*\001R\013delegati" +
+      "ons\022k\n\025unbonding_delegations\030\006 \003(\0132+.cos" +
+      "mos.staking.v1beta1.UnbondingDelegationB" +
+      "\t\310\336\037\000\250\347\260*\001R\024unbondingDelegations\022U\n\rrede" +
+      "legations\030\007 \003(\0132$.cosmos.staking.v1beta1" +
+      ".RedelegationB\t\310\336\037\000\250\347\260*\001R\rredelegations\022" +
+      "\032\n\010exported\030\010 \001(\010R\010exported\022g\n\026tokenize_" +
+      "share_records\030\t \003(\0132+.cosmos.staking.v1b" +
+      "eta1.TokenizeShareRecordB\004\310\336\037\000R\024tokenize" +
+      "ShareRecords\022@\n\035last_tokenize_share_reco" +
+      "rd_id\030\n \001(\004R\031lastTokenizeShareRecordId\022\177" +
+      "\n\032total_liquid_staked_tokens\030\013 \001(\014BB\310\336\037\000" +
+      "\332\336\037\025cosmossdk.io/math.Int\362\336\037!yaml:\"total" +
+      "_liquid_staked_tokens\"R\027totalLiquidStake" +
+      "dTokens\022a\n\024tokenize_share_locks\030\014 \003(\0132)." +
+      "cosmos.staking.v1beta1.TokenizeShareLock" +
+      "B\004\310\336\037\000R\022tokenizeShareLocks\"\256\001\n\021TokenizeS" +
+      "hareLock\022\030\n\007address\030\001 \001(\tR\007address\022\026\n\006st" +
+      "atus\030\002 \001(\tR\006status\022g\n\017completion_time\030\003 " +
+      "\001(\0132\032.google.protobuf.TimestampB\"\310\336\037\000\362\336\037" +
+      "\026yaml:\"completion_time\"\220\337\037\001R\016completionT" +
+      "ime\"h\n\022LastValidatorPower\0222\n\007address\030\001 \001" +
+      "(\tB\030\322\264-\024cosmos.AddressStringR\007address\022\024\n" +
+      "\005power\030\002 \001(\003R\005power:\010\210\240\037\000\350\240\037\000B\320\001\n\032com.co" +
+      "smos.staking.v1beta1B\014GenesisProtoZ,gith" +
+      "ub.com/cosmos/cosmos-sdk/x/staking/types" +
+      "\242\002\003CSX\252\002\026Cosmos.Staking.V1beta1\312\002\026Cosmos" +
+      "\\Staking\\V1beta1\342\002\"Cosmos\\Staking\\V1beta" +
+      "1\\GPBMetadata\352\002\030Cosmos::Staking::V1beta1" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

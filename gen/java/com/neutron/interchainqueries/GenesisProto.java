@@ -4552,10 +4552,10 @@ public final class GenesisProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\'neutron/interchainqueries/genesis.prot" +
-      "o\022\031neutron.interchainqueries\032\024gogoproto/" +
-      "gogo.proto\032&neutron/interchainqueries/pa" +
-      "rams.proto\032\036cosmos/base/v1beta1/coin.pro" +
-      "to\032\037ibc/core/client/v1/client.proto\"\375\004\n\017" +
+      "o\022\031neutron.interchainqueries\032\036cosmos/bas" +
+      "e/v1beta1/coin.proto\032\024gogoproto/gogo.pro" +
+      "to\032\037ibc/core/client/v1/client.proto\032&neu" +
+      "tron/interchainqueries/params.proto\"\375\004\n\017" +
       "RegisteredQuery\022\016\n\002id\030\001 \001(\004R\002id\022\024\n\005owner" +
       "\030\002 \001(\tR\005owner\022\035\n\nquery_type\030\003 \001(\tR\tquery" +
       "Type\0224\n\004keys\030\004 \003(\0132 .neutron.interchainq" +
@@ -4577,21 +4577,21 @@ public final class GenesisProto {
       "utron.interchainqueries.ParamsB\004\310\336\037\000R\006pa" +
       "rams\022Y\n\022registered_queries\030\002 \003(\0132*.neutr" +
       "on.interchainqueries.RegisteredQueryR\021re" +
-      "gisteredQueriesB\352\001\n\035com.neutron.intercha" +
-      "inqueriesB\014GenesisProtoZ8github.com/neut" +
-      "ron-org/neutron/x/interchainqueries/type" +
-      "s\242\002\003NIX\252\002\031Neutron.Interchainqueries\312\002\031Ne" +
-      "utron\\Interchainqueries\342\002%Neutron\\Interc" +
-      "hainqueries\\GPBMetadata\352\002\032Neutron::Inter" +
-      "chainqueriesb\006proto3"
+      "gisteredQueriesB\355\001\n\035com.neutron.intercha" +
+      "inqueriesB\014GenesisProtoZ;github.com/neut" +
+      "ron-org/neutron/v4/x/interchainqueries/t" +
+      "ypes\242\002\003NIX\252\002\031Neutron.Interchainqueries\312\002" +
+      "\031Neutron\\Interchainqueries\342\002%Neutron\\Int" +
+      "erchainqueries\\GPBMetadata\352\002\032Neutron::In" +
+      "terchainqueriesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.gogoproto.GogoProto.getDescriptor(),
-          com.neutron.interchainqueries.ParamsProto.getDescriptor(),
           com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
+          com.gogoproto.GogoProto.getDescriptor(),
           com.ibc.core.client.v1.ClientProto.getDescriptor(),
+          com.neutron.interchainqueries.ParamsProto.getDescriptor(),
         });
     internal_static_neutron_interchainqueries_RegisteredQuery_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -4617,10 +4617,10 @@ public final class GenesisProto {
     registry.add(com.gogoproto.GogoProto.nullable);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.gogoproto.GogoProto.getDescriptor();
-    com.neutron.interchainqueries.ParamsProto.getDescriptor();
     com.cosmos.base.v1beta1.CoinProto.getDescriptor();
+    com.gogoproto.GogoProto.getDescriptor();
     com.ibc.core.client.v1.ClientProto.getDescriptor();
+    com.neutron.interchainqueries.ParamsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

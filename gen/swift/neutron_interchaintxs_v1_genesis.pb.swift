@@ -21,13 +21,13 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// GenesisState defines the interchaintxs module's genesis state.
-struct Neutron_Interchaintxs_GenesisState {
+struct Neutron_Interchaintxs_V1_GenesisState {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var params: Neutron_Interchaintxs_Params {
-    get {return _params ?? Neutron_Interchaintxs_Params()}
+  var params: Neutron_Interchaintxs_V1_Params {
+    get {return _params ?? Neutron_Interchaintxs_V1_Params()}
     set {_params = newValue}
   }
   /// Returns true if `params` has been explicitly set.
@@ -39,18 +39,18 @@ struct Neutron_Interchaintxs_GenesisState {
 
   init() {}
 
-  fileprivate var _params: Neutron_Interchaintxs_Params? = nil
+  fileprivate var _params: Neutron_Interchaintxs_V1_Params? = nil
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
-extension Neutron_Interchaintxs_GenesisState: @unchecked Sendable {}
+extension Neutron_Interchaintxs_V1_GenesisState: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
-fileprivate let _protobuf_package = "neutron.interchaintxs"
+fileprivate let _protobuf_package = "neutron.interchaintxs.v1"
 
-extension Neutron_Interchaintxs_GenesisState: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+extension Neutron_Interchaintxs_V1_GenesisState: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".GenesisState"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "params"),
@@ -79,7 +79,7 @@ extension Neutron_Interchaintxs_GenesisState: SwiftProtobuf.Message, SwiftProtob
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Neutron_Interchaintxs_GenesisState, rhs: Neutron_Interchaintxs_GenesisState) -> Bool {
+  static func ==(lhs: Neutron_Interchaintxs_V1_GenesisState, rhs: Neutron_Interchaintxs_V1_GenesisState) -> Bool {
     if lhs._params != rhs._params {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

@@ -2694,12 +2694,12 @@ public final class FeeProto {
       "thub.com/cosmos/cosmos-sdk/types.CoinsR\n" +
       "timeoutFee\"^\n\010PacketID\022\035\n\nchannel_id\030\001 \001" +
       "(\tR\tchannelId\022\027\n\007port_id\030\002 \001(\tR\006portId\022\032" +
-      "\n\010sequence\030\003 \001(\004R\010sequenceB\302\001\n\027com.neutr" +
-      "on.feerefunderB\010FeeProtoZ2github.com/neu" +
-      "tron-org/neutron/x/feerefunder/types\242\002\003N" +
-      "FX\252\002\023Neutron.Feerefunder\312\002\023Neutron\\Feere" +
-      "funder\342\002\037Neutron\\Feerefunder\\GPBMetadata" +
-      "\352\002\024Neutron::Feerefunderb\006proto3"
+      "\n\010sequence\030\003 \001(\004R\010sequenceB\305\001\n\027com.neutr" +
+      "on.feerefunderB\010FeeProtoZ5github.com/neu" +
+      "tron-org/neutron/v4/x/feerefunder/types\242" +
+      "\002\003NFX\252\002\023Neutron.Feerefunder\312\002\023Neutron\\Fe" +
+      "erefunder\342\002\037Neutron\\Feerefunder\\GPBMetad" +
+      "ata\352\002\024Neutron::Feerefunderb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

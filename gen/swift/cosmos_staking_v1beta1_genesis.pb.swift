@@ -50,7 +50,7 @@ struct Cosmos_Staking_V1beta1_GenesisState {
     set {_uniqueStorage()._lastValidatorPowers = newValue}
   }
 
-  /// delegations defines the validator set at genesis.
+  /// validators defines the validator set at genesis.
   var validators: [Cosmos_Staking_V1beta1_Validator] {
     get {return _storage._validators}
     set {_uniqueStorage()._validators = newValue}
@@ -74,6 +74,7 @@ struct Cosmos_Staking_V1beta1_GenesisState {
     set {_uniqueStorage()._redelegations = newValue}
   }
 
+  /// exported defines a bool to identify whether the chain dealing with exported or initialized genesis.
   var exported: Bool {
     get {return _storage._exported}
     set {_uniqueStorage()._exported = newValue}

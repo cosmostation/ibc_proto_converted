@@ -1132,26 +1132,27 @@ public final class ParamsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n&neutron/interchainqueries/params.proto" +
-      "\022\031neutron.interchainqueries\032\024gogoproto/g" +
-      "ogo.proto\032\036cosmos/base/v1beta1/coin.prot" +
+      "\022\031neutron.interchainqueries\032\036cosmos/base" +
+      "/v1beta1/coin.proto\032\024gogoproto/gogo.prot" +
       "o\"\347\001\n\006Params\0220\n\024query_submit_timeout\030\001 \001" +
       "(\004R\022querySubmitTimeout\022p\n\rquery_deposit\030" +
       "\002 \003(\0132\031.cosmos.base.v1beta1.CoinB0\310\336\037\000\252\337" +
       "\037(github.com/cosmos/cosmos-sdk/types.Coi" +
       "nsR\014queryDeposit\0223\n\026tx_query_removal_lim" +
-      "it\030\003 \001(\004R\023txQueryRemovalLimit:\004\230\240\037\000B\351\001\n\035" +
+      "it\030\003 \001(\004R\023txQueryRemovalLimit:\004\230\240\037\000B\354\001\n\035" +
       "com.neutron.interchainqueriesB\013ParamsPro" +
-      "toZ8github.com/neutron-org/neutron/x/int" +
-      "erchainqueries/types\242\002\003NIX\252\002\031Neutron.Int" +
-      "erchainqueries\312\002\031Neutron\\Interchainqueri" +
-      "es\342\002%Neutron\\Interchainqueries\\GPBMetada" +
-      "ta\352\002\032Neutron::Interchainqueriesb\006proto3"
+      "toZ;github.com/neutron-org/neutron/v4/x/" +
+      "interchainqueries/types\242\002\003NIX\252\002\031Neutron." +
+      "Interchainqueries\312\002\031Neutron\\Interchainqu" +
+      "eries\342\002%Neutron\\Interchainqueries\\GPBMet" +
+      "adata\352\002\032Neutron::Interchainqueriesb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.gogoproto.GogoProto.getDescriptor(),
           com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
+          com.gogoproto.GogoProto.getDescriptor(),
         });
     internal_static_neutron_interchainqueries_Params_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1166,8 +1167,8 @@ public final class ParamsProto {
     registry.add(com.gogoproto.GogoProto.nullable);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.gogoproto.GogoProto.getDescriptor();
     com.cosmos.base.v1beta1.CoinProto.getDescriptor();
+    com.gogoproto.GogoProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

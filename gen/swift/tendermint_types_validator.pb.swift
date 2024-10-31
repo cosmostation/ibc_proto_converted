@@ -20,6 +20,63 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
+/// BlockIdFlag indicates which BlockID the signature is for
+enum Tendermint_Types_BlockIDFlag: SwiftProtobuf.Enum {
+  typealias RawValue = Int
+
+  /// indicates an error condition
+  case unknown // = 0
+
+  /// the vote was not received
+  case absent // = 1
+
+  /// voted for the block that received the majority
+  case commit // = 2
+
+  /// voted for nil
+  case `nil` // = 3
+  case UNRECOGNIZED(Int)
+
+  init() {
+    self = .unknown
+  }
+
+  init?(rawValue: Int) {
+    switch rawValue {
+    case 0: self = .unknown
+    case 1: self = .absent
+    case 2: self = .commit
+    case 3: self = .nil
+    default: self = .UNRECOGNIZED(rawValue)
+    }
+  }
+
+  var rawValue: Int {
+    switch self {
+    case .unknown: return 0
+    case .absent: return 1
+    case .commit: return 2
+    case .nil: return 3
+    case .UNRECOGNIZED(let i): return i
+    }
+  }
+
+}
+
+#if swift(>=4.2)
+
+extension Tendermint_Types_BlockIDFlag: CaseIterable {
+  // The compiler won't synthesize support with the UNRECOGNIZED case.
+  static var allCases: [Tendermint_Types_BlockIDFlag] = [
+    .unknown,
+    .absent,
+    .commit,
+    .nil,
+  ]
+}
+
+#endif  // swift(>=4.2)
+
 struct Tendermint_Types_ValidatorSet {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -96,6 +153,7 @@ struct Tendermint_Types_SimpleValidator {
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
+extension Tendermint_Types_BlockIDFlag: @unchecked Sendable {}
 extension Tendermint_Types_ValidatorSet: @unchecked Sendable {}
 extension Tendermint_Types_Validator: @unchecked Sendable {}
 extension Tendermint_Types_SimpleValidator: @unchecked Sendable {}
@@ -104,6 +162,15 @@ extension Tendermint_Types_SimpleValidator: @unchecked Sendable {}
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 fileprivate let _protobuf_package = "tendermint.types"
+
+extension Tendermint_Types_BlockIDFlag: SwiftProtobuf._ProtoNameProviding {
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    0: .same(proto: "BLOCK_ID_FLAG_UNKNOWN"),
+    1: .same(proto: "BLOCK_ID_FLAG_ABSENT"),
+    2: .same(proto: "BLOCK_ID_FLAG_COMMIT"),
+    3: .same(proto: "BLOCK_ID_FLAG_NIL"),
+  ]
+}
 
 extension Tendermint_Types_ValidatorSet: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".ValidatorSet"

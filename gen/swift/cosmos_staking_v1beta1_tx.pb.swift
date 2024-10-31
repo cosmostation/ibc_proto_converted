@@ -47,6 +47,9 @@ struct Cosmos_Staking_V1beta1_MsgCreateValidator {
   /// Deprecated: This field has been deprecated with LSM in favor of the validator bond
   var minSelfDelegation: String = String()
 
+  /// Deprecated: Use of Delegator Address in MsgCreateValidator is deprecated.
+  /// The validator address bytes and delegator address bytes refer to the same account while creating validator (defer
+  /// only in bech32 notation).
   var delegatorAddress: String = String()
 
   var validatorAddress: String = String()
@@ -265,11 +268,24 @@ struct Cosmos_Staking_V1beta1_MsgUndelegateResponse {
   /// Clears the value of `completionTime`. Subsequent reads from it will return its default value.
   mutating func clearCompletionTime() {self._completionTime = nil}
 
+  /// amount returns the amount of undelegated coins
+  ///
+  /// Since: cosmos-sdk 0.50
+  var amount: Cosmos_Base_V1beta1_Coin {
+    get {return _amount ?? Cosmos_Base_V1beta1_Coin()}
+    set {_amount = newValue}
+  }
+  /// Returns true if `amount` has been explicitly set.
+  var hasAmount: Bool {return self._amount != nil}
+  /// Clears the value of `amount`. Subsequent reads from it will return its default value.
+  mutating func clearAmount() {self._amount = nil}
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
 
   fileprivate var _completionTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+  fileprivate var _amount: Cosmos_Base_V1beta1_Coin? = nil
 }
 
 /// MsgCancelUnbondingDelegation defines the SDK message for performing a cancel unbonding delegation for delegator
@@ -370,6 +386,9 @@ struct Cosmos_Staking_V1beta1_MsgUnbondValidator {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
+  /// the provider address must be bech32 account address (e.g. 'cosmos')
+  /// providing an operator address (e.g. 'cosmosvaloper') or consensus address will result in an error
+  /// this field is populated by the CLI during Tx generation using the `--from` flag
   var validatorAddress: String = String()
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
@@ -1006,6 +1025,7 @@ extension Cosmos_Staking_V1beta1_MsgUndelegateResponse: SwiftProtobuf.Message, S
   static let protoMessageName: String = _protobuf_package + ".MsgUndelegateResponse"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "completion_time"),
+    2: .same(proto: "amount"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -1015,6 +1035,7 @@ extension Cosmos_Staking_V1beta1_MsgUndelegateResponse: SwiftProtobuf.Message, S
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularMessageField(value: &self._completionTime) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._amount) }()
       default: break
       }
     }
@@ -1028,11 +1049,15 @@ extension Cosmos_Staking_V1beta1_MsgUndelegateResponse: SwiftProtobuf.Message, S
     try { if let v = self._completionTime {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
     } }()
+    try { if let v = self._amount {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Cosmos_Staking_V1beta1_MsgUndelegateResponse, rhs: Cosmos_Staking_V1beta1_MsgUndelegateResponse) -> Bool {
     if lhs._completionTime != rhs._completionTime {return false}
+    if lhs._amount != rhs._amount {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

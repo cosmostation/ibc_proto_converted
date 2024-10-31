@@ -720,11 +720,11 @@ public final class ParamsProto {
       "\n\031neutron/cron/params.proto\022\014neutron.cro" +
       "n\032\024gogoproto/gogo.proto\"O\n\006Params\022)\n\020sec" +
       "urity_address\030\001 \001(\tR\017securityAddress\022\024\n\005" +
-      "limit\030\002 \001(\004R\005limit:\004\230\240\037\000B\233\001\n\020com.neutron" +
-      ".cronB\013ParamsProtoZ+github.com/neutron-o" +
-      "rg/neutron/x/cron/types\242\002\003NCX\252\002\014Neutron." +
-      "Cron\312\002\014Neutron\\Cron\342\002\030Neutron\\Cron\\GPBMe" +
-      "tadata\352\002\rNeutron::Cronb\006proto3"
+      "limit\030\002 \001(\004R\005limit:\004\230\240\037\000B\236\001\n\020com.neutron" +
+      ".cronB\013ParamsProtoZ.github.com/neutron-o" +
+      "rg/neutron/v4/x/cron/types\242\002\003NCX\252\002\014Neutr" +
+      "on.Cron\312\002\014Neutron\\Cron\342\002\030Neutron\\Cron\\GP" +
+      "BMetadata\352\002\rNeutron::Cronb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

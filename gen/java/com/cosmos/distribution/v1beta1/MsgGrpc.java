@@ -204,6 +204,37 @@ public final class MsgGrpc {
     return getCommunityPoolSpendMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.cosmos.distribution.v1beta1.TxProto.MsgDepositValidatorRewardsPool,
+      com.cosmos.distribution.v1beta1.TxProto.MsgDepositValidatorRewardsPoolResponse> getDepositValidatorRewardsPoolMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DepositValidatorRewardsPool",
+      requestType = com.cosmos.distribution.v1beta1.TxProto.MsgDepositValidatorRewardsPool.class,
+      responseType = com.cosmos.distribution.v1beta1.TxProto.MsgDepositValidatorRewardsPoolResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.cosmos.distribution.v1beta1.TxProto.MsgDepositValidatorRewardsPool,
+      com.cosmos.distribution.v1beta1.TxProto.MsgDepositValidatorRewardsPoolResponse> getDepositValidatorRewardsPoolMethod() {
+    io.grpc.MethodDescriptor<com.cosmos.distribution.v1beta1.TxProto.MsgDepositValidatorRewardsPool, com.cosmos.distribution.v1beta1.TxProto.MsgDepositValidatorRewardsPoolResponse> getDepositValidatorRewardsPoolMethod;
+    if ((getDepositValidatorRewardsPoolMethod = MsgGrpc.getDepositValidatorRewardsPoolMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getDepositValidatorRewardsPoolMethod = MsgGrpc.getDepositValidatorRewardsPoolMethod) == null) {
+          MsgGrpc.getDepositValidatorRewardsPoolMethod = getDepositValidatorRewardsPoolMethod =
+              io.grpc.MethodDescriptor.<com.cosmos.distribution.v1beta1.TxProto.MsgDepositValidatorRewardsPool, com.cosmos.distribution.v1beta1.TxProto.MsgDepositValidatorRewardsPoolResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DepositValidatorRewardsPool"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.cosmos.distribution.v1beta1.TxProto.MsgDepositValidatorRewardsPool.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.cosmos.distribution.v1beta1.TxProto.MsgDepositValidatorRewardsPoolResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("DepositValidatorRewardsPool"))
+              .build();
+        }
+      }
+    }
+    return getDepositValidatorRewardsPoolMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.cosmos.distribution.v1beta1.TxProto.MsgWithdrawTokenizeShareRecordReward,
       com.cosmos.distribution.v1beta1.TxProto.MsgWithdrawTokenizeShareRecordRewardResponse> getWithdrawTokenizeShareRecordRewardMethod;
 
@@ -389,6 +420,18 @@ public final class MsgGrpc {
 
     /**
      * <pre>
+     * DepositValidatorRewardsPool defines a method to provide additional rewards
+     * to delegators to a specific validator.
+     * Since: cosmos-sdk 0.50
+     * </pre>
+     */
+    default void depositValidatorRewardsPool(com.cosmos.distribution.v1beta1.TxProto.MsgDepositValidatorRewardsPool request,
+        io.grpc.stub.StreamObserver<com.cosmos.distribution.v1beta1.TxProto.MsgDepositValidatorRewardsPoolResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDepositValidatorRewardsPoolMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * WithdrawTokenizeShareRecordReward defines a method to withdraw reward for an owning TokenizeShareRecord
      * </pre>
      */
@@ -519,6 +562,19 @@ public final class MsgGrpc {
 
     /**
      * <pre>
+     * DepositValidatorRewardsPool defines a method to provide additional rewards
+     * to delegators to a specific validator.
+     * Since: cosmos-sdk 0.50
+     * </pre>
+     */
+    public void depositValidatorRewardsPool(com.cosmos.distribution.v1beta1.TxProto.MsgDepositValidatorRewardsPool request,
+        io.grpc.stub.StreamObserver<com.cosmos.distribution.v1beta1.TxProto.MsgDepositValidatorRewardsPoolResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDepositValidatorRewardsPoolMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * WithdrawTokenizeShareRecordReward defines a method to withdraw reward for an owning TokenizeShareRecord
      * </pre>
      */
@@ -627,6 +683,18 @@ public final class MsgGrpc {
     public com.cosmos.distribution.v1beta1.TxProto.MsgCommunityPoolSpendResponse communityPoolSpend(com.cosmos.distribution.v1beta1.TxProto.MsgCommunityPoolSpend request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCommunityPoolSpendMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DepositValidatorRewardsPool defines a method to provide additional rewards
+     * to delegators to a specific validator.
+     * Since: cosmos-sdk 0.50
+     * </pre>
+     */
+    public com.cosmos.distribution.v1beta1.TxProto.MsgDepositValidatorRewardsPoolResponse depositValidatorRewardsPool(com.cosmos.distribution.v1beta1.TxProto.MsgDepositValidatorRewardsPool request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDepositValidatorRewardsPoolMethod(), getCallOptions(), request);
     }
 
     /**
@@ -747,6 +815,19 @@ public final class MsgGrpc {
 
     /**
      * <pre>
+     * DepositValidatorRewardsPool defines a method to provide additional rewards
+     * to delegators to a specific validator.
+     * Since: cosmos-sdk 0.50
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.cosmos.distribution.v1beta1.TxProto.MsgDepositValidatorRewardsPoolResponse> depositValidatorRewardsPool(
+        com.cosmos.distribution.v1beta1.TxProto.MsgDepositValidatorRewardsPool request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDepositValidatorRewardsPoolMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * WithdrawTokenizeShareRecordReward defines a method to withdraw reward for an owning TokenizeShareRecord
      * </pre>
      */
@@ -774,8 +855,9 @@ public final class MsgGrpc {
   private static final int METHODID_FUND_COMMUNITY_POOL = 3;
   private static final int METHODID_UPDATE_PARAMS = 4;
   private static final int METHODID_COMMUNITY_POOL_SPEND = 5;
-  private static final int METHODID_WITHDRAW_TOKENIZE_SHARE_RECORD_REWARD = 6;
-  private static final int METHODID_WITHDRAW_ALL_TOKENIZE_SHARE_RECORD_REWARD = 7;
+  private static final int METHODID_DEPOSIT_VALIDATOR_REWARDS_POOL = 6;
+  private static final int METHODID_WITHDRAW_TOKENIZE_SHARE_RECORD_REWARD = 7;
+  private static final int METHODID_WITHDRAW_ALL_TOKENIZE_SHARE_RECORD_REWARD = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -817,6 +899,10 @@ public final class MsgGrpc {
         case METHODID_COMMUNITY_POOL_SPEND:
           serviceImpl.communityPoolSpend((com.cosmos.distribution.v1beta1.TxProto.MsgCommunityPoolSpend) request,
               (io.grpc.stub.StreamObserver<com.cosmos.distribution.v1beta1.TxProto.MsgCommunityPoolSpendResponse>) responseObserver);
+          break;
+        case METHODID_DEPOSIT_VALIDATOR_REWARDS_POOL:
+          serviceImpl.depositValidatorRewardsPool((com.cosmos.distribution.v1beta1.TxProto.MsgDepositValidatorRewardsPool) request,
+              (io.grpc.stub.StreamObserver<com.cosmos.distribution.v1beta1.TxProto.MsgDepositValidatorRewardsPoolResponse>) responseObserver);
           break;
         case METHODID_WITHDRAW_TOKENIZE_SHARE_RECORD_REWARD:
           serviceImpl.withdrawTokenizeShareRecordReward((com.cosmos.distribution.v1beta1.TxProto.MsgWithdrawTokenizeShareRecordReward) request,
@@ -887,6 +973,13 @@ public final class MsgGrpc {
               com.cosmos.distribution.v1beta1.TxProto.MsgCommunityPoolSpendResponse>(
                 service, METHODID_COMMUNITY_POOL_SPEND)))
         .addMethod(
+          getDepositValidatorRewardsPoolMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.cosmos.distribution.v1beta1.TxProto.MsgDepositValidatorRewardsPool,
+              com.cosmos.distribution.v1beta1.TxProto.MsgDepositValidatorRewardsPoolResponse>(
+                service, METHODID_DEPOSIT_VALIDATOR_REWARDS_POOL)))
+        .addMethod(
           getWithdrawTokenizeShareRecordRewardMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -954,6 +1047,7 @@ public final class MsgGrpc {
               .addMethod(getFundCommunityPoolMethod())
               .addMethod(getUpdateParamsMethod())
               .addMethod(getCommunityPoolSpendMethod())
+              .addMethod(getDepositValidatorRewardsPoolMethod())
               .addMethod(getWithdrawTokenizeShareRecordRewardMethod())
               .addMethod(getWithdrawAllTokenizeShareRecordRewardMethod())
               .build();

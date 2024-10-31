@@ -832,12 +832,13 @@ public final class GovProto {
       "R certifierUpdateSecurityVoteTally\022i\n!ce" +
       "rtifier_update_stake_vote_tally\030\002 \001(\0132\037." +
       "cosmos.gov.v1beta1.TallyParamsR\035certifie" +
-      "rUpdateStakeVoteTallyB\313\001\n\027com.shentu.gov" +
-      ".v1alpha1B\010GovProtoZ.github.com/shentufo" +
-      "undation/shentu/x/gov/types\242\002\003SGX\252\002\023Shen" +
-      "tu.Gov.V1alpha1\312\002\023Shentu\\Gov\\V1alpha1\342\002\037" +
-      "Shentu\\Gov\\V1alpha1\\GPBMetadata\352\002\025Shentu" +
-      "::Gov::V1alpha1\310\341\036\000\330\341\036\000\200\342\036\000b\006proto3"
+      "rUpdateStakeVoteTallyB\324\001\n\027com.shentu.gov" +
+      ".v1alpha1B\010GovProtoZ7github.com/shentufo" +
+      "undation/shentu/x/gov/types/v1alpha1\242\002\003S" +
+      "GX\252\002\023Shentu.Gov.V1alpha1\312\002\023Shentu\\Gov\\V1" +
+      "alpha1\342\002\037Shentu\\Gov\\V1alpha1\\GPBMetadata" +
+      "\352\002\025Shentu::Gov::V1alpha1\310\341\036\000\330\341\036\000\200\342\036\000b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

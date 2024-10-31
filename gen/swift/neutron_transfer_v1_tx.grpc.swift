@@ -37,6 +37,11 @@ internal protocol Neutron_Transfer_MsgClientProtocol: GRPCClient {
     _ request: Neutron_Transfer_MsgTransfer,
     callOptions: CallOptions?
   ) -> UnaryCall<Neutron_Transfer_MsgTransfer, Neutron_Transfer_MsgTransferResponse>
+
+  func updateParams(
+    _ request: Neutron_Transfer_MsgUpdateParams,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Neutron_Transfer_MsgUpdateParams, Neutron_Transfer_MsgUpdateParamsResponse>
 }
 
 extension Neutron_Transfer_MsgClientProtocol {
@@ -59,6 +64,24 @@ extension Neutron_Transfer_MsgClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeTransferInterceptors() ?? []
+    )
+  }
+
+  /// UpdateParams defines a rpc handler for MsgUpdateParams.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to UpdateParams.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func updateParams(
+    _ request: Neutron_Transfer_MsgUpdateParams,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Neutron_Transfer_MsgUpdateParams, Neutron_Transfer_MsgUpdateParamsResponse> {
+    return self.makeUnaryCall(
+      path: Neutron_Transfer_MsgClientMetadata.Methods.updateParams.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? []
     )
   }
 }
@@ -130,6 +153,11 @@ internal protocol Neutron_Transfer_MsgAsyncClientProtocol: GRPCClient {
     _ request: Neutron_Transfer_MsgTransfer,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Neutron_Transfer_MsgTransfer, Neutron_Transfer_MsgTransferResponse>
+
+  func makeUpdateParamsCall(
+    _ request: Neutron_Transfer_MsgUpdateParams,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Neutron_Transfer_MsgUpdateParams, Neutron_Transfer_MsgUpdateParamsResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -153,6 +181,18 @@ extension Neutron_Transfer_MsgAsyncClientProtocol {
       interceptors: self.interceptors?.makeTransferInterceptors() ?? []
     )
   }
+
+  internal func makeUpdateParamsCall(
+    _ request: Neutron_Transfer_MsgUpdateParams,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Neutron_Transfer_MsgUpdateParams, Neutron_Transfer_MsgUpdateParamsResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Neutron_Transfer_MsgClientMetadata.Methods.updateParams.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -166,6 +206,18 @@ extension Neutron_Transfer_MsgAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeTransferInterceptors() ?? []
+    )
+  }
+
+  internal func updateParams(
+    _ request: Neutron_Transfer_MsgUpdateParams,
+    callOptions: CallOptions? = nil
+  ) async throws -> Neutron_Transfer_MsgUpdateParamsResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Neutron_Transfer_MsgClientMetadata.Methods.updateParams.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? []
     )
   }
 }
@@ -191,6 +243,9 @@ internal protocol Neutron_Transfer_MsgClientInterceptorFactoryProtocol: Sendable
 
   /// - Returns: Interceptors to use when invoking 'transfer'.
   func makeTransferInterceptors() -> [ClientInterceptor<Neutron_Transfer_MsgTransfer, Neutron_Transfer_MsgTransferResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'updateParams'.
+  func makeUpdateParamsInterceptors() -> [ClientInterceptor<Neutron_Transfer_MsgUpdateParams, Neutron_Transfer_MsgUpdateParamsResponse>]
 }
 
 internal enum Neutron_Transfer_MsgClientMetadata {
@@ -199,6 +254,7 @@ internal enum Neutron_Transfer_MsgClientMetadata {
     fullName: "neutron.transfer.Msg",
     methods: [
       Neutron_Transfer_MsgClientMetadata.Methods.transfer,
+      Neutron_Transfer_MsgClientMetadata.Methods.updateParams,
     ]
   )
 
@@ -206,6 +262,12 @@ internal enum Neutron_Transfer_MsgClientMetadata {
     internal static let transfer = GRPCMethodDescriptor(
       name: "Transfer",
       path: "/neutron.transfer.Msg/Transfer",
+      type: GRPCCallType.unary
+    )
+
+    internal static let updateParams = GRPCMethodDescriptor(
+      name: "UpdateParams",
+      path: "/neutron.transfer.Msg/UpdateParams",
       type: GRPCCallType.unary
     )
   }
@@ -219,6 +281,9 @@ internal protocol Neutron_Transfer_MsgProvider: CallHandlerProvider {
 
   /// Transfer defines a rpc handler method for MsgTransfer.
   func transfer(request: Neutron_Transfer_MsgTransfer, context: StatusOnlyCallContext) -> EventLoopFuture<Neutron_Transfer_MsgTransferResponse>
+
+  /// UpdateParams defines a rpc handler for MsgUpdateParams.
+  func updateParams(request: Neutron_Transfer_MsgUpdateParams, context: StatusOnlyCallContext) -> EventLoopFuture<Neutron_Transfer_MsgUpdateParamsResponse>
 }
 
 extension Neutron_Transfer_MsgProvider {
@@ -242,6 +307,15 @@ extension Neutron_Transfer_MsgProvider {
         userFunction: self.transfer(request:context:)
       )
 
+    case "UpdateParams":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Neutron_Transfer_MsgUpdateParams>(),
+        responseSerializer: ProtobufSerializer<Neutron_Transfer_MsgUpdateParamsResponse>(),
+        interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? [],
+        userFunction: self.updateParams(request:context:)
+      )
+
     default:
       return nil
     }
@@ -261,6 +335,12 @@ internal protocol Neutron_Transfer_MsgAsyncProvider: CallHandlerProvider {
     request: Neutron_Transfer_MsgTransfer,
     context: GRPCAsyncServerCallContext
   ) async throws -> Neutron_Transfer_MsgTransferResponse
+
+  /// UpdateParams defines a rpc handler for MsgUpdateParams.
+  @Sendable func updateParams(
+    request: Neutron_Transfer_MsgUpdateParams,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Neutron_Transfer_MsgUpdateParamsResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -291,6 +371,15 @@ extension Neutron_Transfer_MsgAsyncProvider {
         wrapping: self.transfer(request:context:)
       )
 
+    case "UpdateParams":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Neutron_Transfer_MsgUpdateParams>(),
+        responseSerializer: ProtobufSerializer<Neutron_Transfer_MsgUpdateParamsResponse>(),
+        interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? [],
+        wrapping: self.updateParams(request:context:)
+      )
+
     default:
       return nil
     }
@@ -302,6 +391,10 @@ internal protocol Neutron_Transfer_MsgServerInterceptorFactoryProtocol {
   /// - Returns: Interceptors to use when handling 'transfer'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeTransferInterceptors() -> [ServerInterceptor<Neutron_Transfer_MsgTransfer, Neutron_Transfer_MsgTransferResponse>]
+
+  /// - Returns: Interceptors to use when handling 'updateParams'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeUpdateParamsInterceptors() -> [ServerInterceptor<Neutron_Transfer_MsgUpdateParams, Neutron_Transfer_MsgUpdateParamsResponse>]
 }
 
 internal enum Neutron_Transfer_MsgServerMetadata {
@@ -310,6 +403,7 @@ internal enum Neutron_Transfer_MsgServerMetadata {
     fullName: "neutron.transfer.Msg",
     methods: [
       Neutron_Transfer_MsgServerMetadata.Methods.transfer,
+      Neutron_Transfer_MsgServerMetadata.Methods.updateParams,
     ]
   )
 
@@ -317,6 +411,12 @@ internal enum Neutron_Transfer_MsgServerMetadata {
     internal static let transfer = GRPCMethodDescriptor(
       name: "Transfer",
       path: "/neutron.transfer.Msg/Transfer",
+      type: GRPCCallType.unary
+    )
+
+    internal static let updateParams = GRPCMethodDescriptor(
+      name: "UpdateParams",
+      path: "/neutron.transfer.Msg/UpdateParams",
       type: GRPCCallType.unary
     )
   }

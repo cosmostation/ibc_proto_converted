@@ -49,6 +49,37 @@ public final class MsgGrpc {
     return getTransferMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.neutron.transfer.TxProto.MsgUpdateParams,
+      com.neutron.transfer.TxProto.MsgUpdateParamsResponse> getUpdateParamsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateParams",
+      requestType = com.neutron.transfer.TxProto.MsgUpdateParams.class,
+      responseType = com.neutron.transfer.TxProto.MsgUpdateParamsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.neutron.transfer.TxProto.MsgUpdateParams,
+      com.neutron.transfer.TxProto.MsgUpdateParamsResponse> getUpdateParamsMethod() {
+    io.grpc.MethodDescriptor<com.neutron.transfer.TxProto.MsgUpdateParams, com.neutron.transfer.TxProto.MsgUpdateParamsResponse> getUpdateParamsMethod;
+    if ((getUpdateParamsMethod = MsgGrpc.getUpdateParamsMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getUpdateParamsMethod = MsgGrpc.getUpdateParamsMethod) == null) {
+          MsgGrpc.getUpdateParamsMethod = getUpdateParamsMethod =
+              io.grpc.MethodDescriptor.<com.neutron.transfer.TxProto.MsgUpdateParams, com.neutron.transfer.TxProto.MsgUpdateParamsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateParams"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.neutron.transfer.TxProto.MsgUpdateParams.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.neutron.transfer.TxProto.MsgUpdateParamsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("UpdateParams"))
+              .build();
+        }
+      }
+    }
+    return getUpdateParamsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -109,6 +140,16 @@ public final class MsgGrpc {
         io.grpc.stub.StreamObserver<com.neutron.transfer.TxProto.MsgTransferResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTransferMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * UpdateParams defines a rpc handler for MsgUpdateParams.
+     * </pre>
+     */
+    default void updateParams(com.neutron.transfer.TxProto.MsgUpdateParams request,
+        io.grpc.stub.StreamObserver<com.neutron.transfer.TxProto.MsgUpdateParamsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateParamsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -154,6 +195,17 @@ public final class MsgGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getTransferMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * UpdateParams defines a rpc handler for MsgUpdateParams.
+     * </pre>
+     */
+    public void updateParams(com.neutron.transfer.TxProto.MsgUpdateParams request,
+        io.grpc.stub.StreamObserver<com.neutron.transfer.TxProto.MsgUpdateParamsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateParamsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -183,6 +235,16 @@ public final class MsgGrpc {
     public com.neutron.transfer.TxProto.MsgTransferResponse transfer(com.neutron.transfer.TxProto.MsgTransfer request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getTransferMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateParams defines a rpc handler for MsgUpdateParams.
+     * </pre>
+     */
+    public com.neutron.transfer.TxProto.MsgUpdateParamsResponse updateParams(com.neutron.transfer.TxProto.MsgUpdateParams request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateParamsMethod(), getCallOptions(), request);
     }
   }
 
@@ -215,9 +277,21 @@ public final class MsgGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getTransferMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * UpdateParams defines a rpc handler for MsgUpdateParams.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.neutron.transfer.TxProto.MsgUpdateParamsResponse> updateParams(
+        com.neutron.transfer.TxProto.MsgUpdateParams request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateParamsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_TRANSFER = 0;
+  private static final int METHODID_UPDATE_PARAMS = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -239,6 +313,10 @@ public final class MsgGrpc {
         case METHODID_TRANSFER:
           serviceImpl.transfer((com.neutron.transfer.TxProto.MsgTransfer) request,
               (io.grpc.stub.StreamObserver<com.neutron.transfer.TxProto.MsgTransferResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_PARAMS:
+          serviceImpl.updateParams((com.neutron.transfer.TxProto.MsgUpdateParams) request,
+              (io.grpc.stub.StreamObserver<com.neutron.transfer.TxProto.MsgUpdateParamsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -265,6 +343,13 @@ public final class MsgGrpc {
               com.neutron.transfer.TxProto.MsgTransfer,
               com.neutron.transfer.TxProto.MsgTransferResponse>(
                 service, METHODID_TRANSFER)))
+        .addMethod(
+          getUpdateParamsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.neutron.transfer.TxProto.MsgUpdateParams,
+              com.neutron.transfer.TxProto.MsgUpdateParamsResponse>(
+                service, METHODID_UPDATE_PARAMS)))
         .build();
   }
 
@@ -314,6 +399,7 @@ public final class MsgGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new MsgFileDescriptorSupplier())
               .addMethod(getTransferMethod())
+              .addMethod(getUpdateParamsMethod())
               .build();
         }
       }

@@ -2490,11 +2490,11 @@ public final class QueryProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\037neutron/feerefunder/query.proto\022\023neutr" +
-      "on.feerefunder\032\024gogoproto/gogo.proto\032\034go" +
-      "ogle/api/annotations.proto\032*cosmos/base/" +
-      "query/v1beta1/pagination.proto\032 neutron/" +
-      "feerefunder/params.proto\032!neutron/feeref" +
-      "under/genesis.proto\"\024\n\022QueryParamsReques" +
+      "on.feerefunder\032*cosmos/base/query/v1beta" +
+      "1/pagination.proto\032\024gogoproto/gogo.proto" +
+      "\032\034google/api/annotations.proto\032!neutron/" +
+      "feerefunder/genesis.proto\032 neutron/feere" +
+      "funder/params.proto\"\024\n\022QueryParamsReques" +
       "t\"P\n\023QueryParamsResponse\0229\n\006params\030\001 \001(\013" +
       "2\033.neutron.feerefunder.ParamsB\004\310\336\037\000R\006par" +
       "ams\"d\n\016FeeInfoRequest\022\035\n\nchannel_id\030\001 \001(" +
@@ -2508,21 +2508,21 @@ public final class QueryProto {
       "efunder/params\022\203\001\n\007FeeInfo\022#.neutron.fee" +
       "refunder.FeeInfoRequest\032$.neutron.feeref" +
       "under.FeeInfoResponse\"-\202\323\344\223\002\'\022%/neutron-" +
-      "org/neutron/feerefunder/infoB\304\001\n\027com.neu" +
-      "tron.feerefunderB\nQueryProtoZ2github.com" +
-      "/neutron-org/neutron/x/feerefunder/types" +
-      "\242\002\003NFX\252\002\023Neutron.Feerefunder\312\002\023Neutron\\F" +
-      "eerefunder\342\002\037Neutron\\Feerefunder\\GPBMeta" +
-      "data\352\002\024Neutron::Feerefunderb\006proto3"
+      "org/neutron/feerefunder/infoB\307\001\n\027com.neu" +
+      "tron.feerefunderB\nQueryProtoZ5github.com" +
+      "/neutron-org/neutron/v4/x/feerefunder/ty" +
+      "pes\242\002\003NFX\252\002\023Neutron.Feerefunder\312\002\023Neutro" +
+      "n\\Feerefunder\342\002\037Neutron\\Feerefunder\\GPBM" +
+      "etadata\352\002\024Neutron::Feerefunderb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor(),
           com.gogoproto.GogoProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor(),
-          com.neutron.feerefunder.ParamsProto.getDescriptor(),
           com.neutron.feerefunder.GenesisProto.getDescriptor(),
+          com.neutron.feerefunder.ParamsProto.getDescriptor(),
         });
     internal_static_neutron_feerefunder_QueryParamsRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -2554,11 +2554,11 @@ public final class QueryProto {
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor();
     com.gogoproto.GogoProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor();
-    com.neutron.feerefunder.ParamsProto.getDescriptor();
     com.neutron.feerefunder.GenesisProto.getDescriptor();
+    com.neutron.feerefunder.ParamsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

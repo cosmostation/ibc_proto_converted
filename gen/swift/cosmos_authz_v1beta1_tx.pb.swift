@@ -49,13 +49,11 @@ struct Cosmos_Authz_V1beta1_MsgGrant {
   fileprivate var _grant: Cosmos_Authz_V1beta1_Grant? = nil
 }
 
-/// MsgExecResponse defines the Msg/MsgExecResponse response type.
-struct Cosmos_Authz_V1beta1_MsgExecResponse {
+/// MsgGrantResponse defines the Msg/MsgGrant response type.
+struct Cosmos_Authz_V1beta1_MsgGrantResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
-
-  var results: [Data] = []
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -82,11 +80,13 @@ struct Cosmos_Authz_V1beta1_MsgExec {
   init() {}
 }
 
-/// MsgGrantResponse defines the Msg/MsgGrant response type.
-struct Cosmos_Authz_V1beta1_MsgGrantResponse {
+/// MsgExecResponse defines the Msg/MsgExecResponse response type.
+struct Cosmos_Authz_V1beta1_MsgExecResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
+
+  var results: [Data] = []
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -124,9 +124,9 @@ struct Cosmos_Authz_V1beta1_MsgRevokeResponse {
 
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Cosmos_Authz_V1beta1_MsgGrant: @unchecked Sendable {}
-extension Cosmos_Authz_V1beta1_MsgExecResponse: @unchecked Sendable {}
-extension Cosmos_Authz_V1beta1_MsgExec: @unchecked Sendable {}
 extension Cosmos_Authz_V1beta1_MsgGrantResponse: @unchecked Sendable {}
+extension Cosmos_Authz_V1beta1_MsgExec: @unchecked Sendable {}
+extension Cosmos_Authz_V1beta1_MsgExecResponse: @unchecked Sendable {}
 extension Cosmos_Authz_V1beta1_MsgRevoke: @unchecked Sendable {}
 extension Cosmos_Authz_V1beta1_MsgRevokeResponse: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
@@ -183,33 +183,20 @@ extension Cosmos_Authz_V1beta1_MsgGrant: SwiftProtobuf.Message, SwiftProtobuf._M
   }
 }
 
-extension Cosmos_Authz_V1beta1_MsgExecResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgExecResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "results"),
-  ]
+extension Cosmos_Authz_V1beta1_MsgGrantResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgGrantResponse"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeRepeatedBytesField(value: &self.results) }()
-      default: break
-      }
+    while let _ = try decoder.nextFieldNumber() {
     }
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.results.isEmpty {
-      try visitor.visitRepeatedBytesField(value: self.results, fieldNumber: 1)
-    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Authz_V1beta1_MsgExecResponse, rhs: Cosmos_Authz_V1beta1_MsgExecResponse) -> Bool {
-    if lhs.results != rhs.results {return false}
+  static func ==(lhs: Cosmos_Authz_V1beta1_MsgGrantResponse, rhs: Cosmos_Authz_V1beta1_MsgGrantResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -253,20 +240,33 @@ extension Cosmos_Authz_V1beta1_MsgExec: SwiftProtobuf.Message, SwiftProtobuf._Me
   }
 }
 
-extension Cosmos_Authz_V1beta1_MsgGrantResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgGrantResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+extension Cosmos_Authz_V1beta1_MsgExecResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgExecResponse"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "results"),
+  ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let _ = try decoder.nextFieldNumber() {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedBytesField(value: &self.results) }()
+      default: break
+      }
     }
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.results.isEmpty {
+      try visitor.visitRepeatedBytesField(value: self.results, fieldNumber: 1)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Authz_V1beta1_MsgGrantResponse, rhs: Cosmos_Authz_V1beta1_MsgGrantResponse) -> Bool {
+  static func ==(lhs: Cosmos_Authz_V1beta1_MsgExecResponse, rhs: Cosmos_Authz_V1beta1_MsgExecResponse) -> Bool {
+    if lhs.results != rhs.results {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

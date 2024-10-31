@@ -14,1158 +14,6 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface FailureOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:neutron.contractmanager.Failure)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * ChannelId
-     * </pre>
-     *
-     * <code>string channel_id = 1 [json_name = "channelId"];</code>
-     * @return The channelId.
-     */
-    java.lang.String getChannelId();
-    /**
-     * <pre>
-     * ChannelId
-     * </pre>
-     *
-     * <code>string channel_id = 1 [json_name = "channelId"];</code>
-     * @return The bytes for channelId.
-     */
-    com.google.protobuf.ByteString
-        getChannelIdBytes();
-
-    /**
-     * <pre>
-     * Address of the failed contract
-     * </pre>
-     *
-     * <code>string address = 2 [json_name = "address"];</code>
-     * @return The address.
-     */
-    java.lang.String getAddress();
-    /**
-     * <pre>
-     * Address of the failed contract
-     * </pre>
-     *
-     * <code>string address = 2 [json_name = "address"];</code>
-     * @return The bytes for address.
-     */
-    com.google.protobuf.ByteString
-        getAddressBytes();
-
-    /**
-     * <pre>
-     * id of the failure under specific address
-     * </pre>
-     *
-     * <code>uint64 id = 3 [json_name = "id"];</code>
-     * @return The id.
-     */
-    long getId();
-
-    /**
-     * <pre>
-     * ACK id to restore
-     * </pre>
-     *
-     * <code>uint64 ack_id = 4 [json_name = "ackId"];</code>
-     * @return The ackId.
-     */
-    long getAckId();
-
-    /**
-     * <pre>
-     * Acknowledgement type
-     * </pre>
-     *
-     * <code>string ack_type = 5 [json_name = "ackType"];</code>
-     * @return The ackType.
-     */
-    java.lang.String getAckType();
-    /**
-     * <pre>
-     * Acknowledgement type
-     * </pre>
-     *
-     * <code>string ack_type = 5 [json_name = "ackType"];</code>
-     * @return The bytes for ackType.
-     */
-    com.google.protobuf.ByteString
-        getAckTypeBytes();
-  }
-  /**
-   * <pre>
-   * Failure message contains information about ACK failures and can be used to
-   * replay ACK in case of requirement.
-   * </pre>
-   *
-   * Protobuf type {@code neutron.contractmanager.Failure}
-   */
-  public static final class Failure extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:neutron.contractmanager.Failure)
-      FailureOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Failure.newBuilder() to construct.
-    private Failure(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Failure() {
-      channelId_ = "";
-      address_ = "";
-      ackType_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Failure();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.neutron.contractmanager.GenesisProto.internal_static_neutron_contractmanager_Failure_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.neutron.contractmanager.GenesisProto.internal_static_neutron_contractmanager_Failure_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.neutron.contractmanager.GenesisProto.Failure.class, com.neutron.contractmanager.GenesisProto.Failure.Builder.class);
-    }
-
-    public static final int CHANNEL_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object channelId_ = "";
-    /**
-     * <pre>
-     * ChannelId
-     * </pre>
-     *
-     * <code>string channel_id = 1 [json_name = "channelId"];</code>
-     * @return The channelId.
-     */
-    @java.lang.Override
-    public java.lang.String getChannelId() {
-      java.lang.Object ref = channelId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        channelId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * ChannelId
-     * </pre>
-     *
-     * <code>string channel_id = 1 [json_name = "channelId"];</code>
-     * @return The bytes for channelId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getChannelIdBytes() {
-      java.lang.Object ref = channelId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        channelId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int ADDRESS_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object address_ = "";
-    /**
-     * <pre>
-     * Address of the failed contract
-     * </pre>
-     *
-     * <code>string address = 2 [json_name = "address"];</code>
-     * @return The address.
-     */
-    @java.lang.Override
-    public java.lang.String getAddress() {
-      java.lang.Object ref = address_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        address_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Address of the failed contract
-     * </pre>
-     *
-     * <code>string address = 2 [json_name = "address"];</code>
-     * @return The bytes for address.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getAddressBytes() {
-      java.lang.Object ref = address_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        address_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int ID_FIELD_NUMBER = 3;
-    private long id_ = 0L;
-    /**
-     * <pre>
-     * id of the failure under specific address
-     * </pre>
-     *
-     * <code>uint64 id = 3 [json_name = "id"];</code>
-     * @return The id.
-     */
-    @java.lang.Override
-    public long getId() {
-      return id_;
-    }
-
-    public static final int ACK_ID_FIELD_NUMBER = 4;
-    private long ackId_ = 0L;
-    /**
-     * <pre>
-     * ACK id to restore
-     * </pre>
-     *
-     * <code>uint64 ack_id = 4 [json_name = "ackId"];</code>
-     * @return The ackId.
-     */
-    @java.lang.Override
-    public long getAckId() {
-      return ackId_;
-    }
-
-    public static final int ACK_TYPE_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object ackType_ = "";
-    /**
-     * <pre>
-     * Acknowledgement type
-     * </pre>
-     *
-     * <code>string ack_type = 5 [json_name = "ackType"];</code>
-     * @return The ackType.
-     */
-    @java.lang.Override
-    public java.lang.String getAckType() {
-      java.lang.Object ref = ackType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        ackType_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Acknowledgement type
-     * </pre>
-     *
-     * <code>string ack_type = 5 [json_name = "ackType"];</code>
-     * @return The bytes for ackType.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getAckTypeBytes() {
-      java.lang.Object ref = ackType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        ackType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(channelId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, channelId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, address_);
-      }
-      if (id_ != 0L) {
-        output.writeUInt64(3, id_);
-      }
-      if (ackId_ != 0L) {
-        output.writeUInt64(4, ackId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ackType_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, ackType_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(channelId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, channelId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, address_);
-      }
-      if (id_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(3, id_);
-      }
-      if (ackId_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(4, ackId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ackType_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, ackType_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.neutron.contractmanager.GenesisProto.Failure)) {
-        return super.equals(obj);
-      }
-      com.neutron.contractmanager.GenesisProto.Failure other = (com.neutron.contractmanager.GenesisProto.Failure) obj;
-
-      if (!getChannelId()
-          .equals(other.getChannelId())) return false;
-      if (!getAddress()
-          .equals(other.getAddress())) return false;
-      if (getId()
-          != other.getId()) return false;
-      if (getAckId()
-          != other.getAckId()) return false;
-      if (!getAckType()
-          .equals(other.getAckType())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CHANNEL_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getChannelId().hashCode();
-      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
-      hash = (53 * hash) + getAddress().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getId());
-      hash = (37 * hash) + ACK_ID_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getAckId());
-      hash = (37 * hash) + ACK_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getAckType().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.neutron.contractmanager.GenesisProto.Failure parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.neutron.contractmanager.GenesisProto.Failure parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.neutron.contractmanager.GenesisProto.Failure parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.neutron.contractmanager.GenesisProto.Failure parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.neutron.contractmanager.GenesisProto.Failure parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.neutron.contractmanager.GenesisProto.Failure parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.neutron.contractmanager.GenesisProto.Failure parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.neutron.contractmanager.GenesisProto.Failure parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.neutron.contractmanager.GenesisProto.Failure parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.neutron.contractmanager.GenesisProto.Failure parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.neutron.contractmanager.GenesisProto.Failure parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.neutron.contractmanager.GenesisProto.Failure parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.neutron.contractmanager.GenesisProto.Failure prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * Failure message contains information about ACK failures and can be used to
-     * replay ACK in case of requirement.
-     * </pre>
-     *
-     * Protobuf type {@code neutron.contractmanager.Failure}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:neutron.contractmanager.Failure)
-        com.neutron.contractmanager.GenesisProto.FailureOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.neutron.contractmanager.GenesisProto.internal_static_neutron_contractmanager_Failure_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.neutron.contractmanager.GenesisProto.internal_static_neutron_contractmanager_Failure_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.neutron.contractmanager.GenesisProto.Failure.class, com.neutron.contractmanager.GenesisProto.Failure.Builder.class);
-      }
-
-      // Construct using com.neutron.contractmanager.GenesisProto.Failure.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        channelId_ = "";
-        address_ = "";
-        id_ = 0L;
-        ackId_ = 0L;
-        ackType_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.neutron.contractmanager.GenesisProto.internal_static_neutron_contractmanager_Failure_descriptor;
-      }
-
-      @java.lang.Override
-      public com.neutron.contractmanager.GenesisProto.Failure getDefaultInstanceForType() {
-        return com.neutron.contractmanager.GenesisProto.Failure.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.neutron.contractmanager.GenesisProto.Failure build() {
-        com.neutron.contractmanager.GenesisProto.Failure result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.neutron.contractmanager.GenesisProto.Failure buildPartial() {
-        com.neutron.contractmanager.GenesisProto.Failure result = new com.neutron.contractmanager.GenesisProto.Failure(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.neutron.contractmanager.GenesisProto.Failure result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.channelId_ = channelId_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.address_ = address_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.id_ = id_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.ackId_ = ackId_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.ackType_ = ackType_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.neutron.contractmanager.GenesisProto.Failure) {
-          return mergeFrom((com.neutron.contractmanager.GenesisProto.Failure)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.neutron.contractmanager.GenesisProto.Failure other) {
-        if (other == com.neutron.contractmanager.GenesisProto.Failure.getDefaultInstance()) return this;
-        if (!other.getChannelId().isEmpty()) {
-          channelId_ = other.channelId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getAddress().isEmpty()) {
-          address_ = other.address_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (other.getId() != 0L) {
-          setId(other.getId());
-        }
-        if (other.getAckId() != 0L) {
-          setAckId(other.getAckId());
-        }
-        if (!other.getAckType().isEmpty()) {
-          ackType_ = other.ackType_;
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                channelId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                address_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 24: {
-                id_ = input.readUInt64();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-              case 32: {
-                ackId_ = input.readUInt64();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 32
-              case 42: {
-                ackType_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 42
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object channelId_ = "";
-      /**
-       * <pre>
-       * ChannelId
-       * </pre>
-       *
-       * <code>string channel_id = 1 [json_name = "channelId"];</code>
-       * @return The channelId.
-       */
-      public java.lang.String getChannelId() {
-        java.lang.Object ref = channelId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          channelId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ChannelId
-       * </pre>
-       *
-       * <code>string channel_id = 1 [json_name = "channelId"];</code>
-       * @return The bytes for channelId.
-       */
-      public com.google.protobuf.ByteString
-          getChannelIdBytes() {
-        java.lang.Object ref = channelId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          channelId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ChannelId
-       * </pre>
-       *
-       * <code>string channel_id = 1 [json_name = "channelId"];</code>
-       * @param value The channelId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setChannelId(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        channelId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ChannelId
-       * </pre>
-       *
-       * <code>string channel_id = 1 [json_name = "channelId"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearChannelId() {
-        channelId_ = getDefaultInstance().getChannelId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ChannelId
-       * </pre>
-       *
-       * <code>string channel_id = 1 [json_name = "channelId"];</code>
-       * @param value The bytes for channelId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setChannelIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        channelId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object address_ = "";
-      /**
-       * <pre>
-       * Address of the failed contract
-       * </pre>
-       *
-       * <code>string address = 2 [json_name = "address"];</code>
-       * @return The address.
-       */
-      public java.lang.String getAddress() {
-        java.lang.Object ref = address_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          address_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Address of the failed contract
-       * </pre>
-       *
-       * <code>string address = 2 [json_name = "address"];</code>
-       * @return The bytes for address.
-       */
-      public com.google.protobuf.ByteString
-          getAddressBytes() {
-        java.lang.Object ref = address_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          address_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Address of the failed contract
-       * </pre>
-       *
-       * <code>string address = 2 [json_name = "address"];</code>
-       * @param value The address to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAddress(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        address_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Address of the failed contract
-       * </pre>
-       *
-       * <code>string address = 2 [json_name = "address"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAddress() {
-        address_ = getDefaultInstance().getAddress();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Address of the failed contract
-       * </pre>
-       *
-       * <code>string address = 2 [json_name = "address"];</code>
-       * @param value The bytes for address to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAddressBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        address_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-
-      private long id_ ;
-      /**
-       * <pre>
-       * id of the failure under specific address
-       * </pre>
-       *
-       * <code>uint64 id = 3 [json_name = "id"];</code>
-       * @return The id.
-       */
-      @java.lang.Override
-      public long getId() {
-        return id_;
-      }
-      /**
-       * <pre>
-       * id of the failure under specific address
-       * </pre>
-       *
-       * <code>uint64 id = 3 [json_name = "id"];</code>
-       * @param value The id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setId(long value) {
-
-        id_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * id of the failure under specific address
-       * </pre>
-       *
-       * <code>uint64 id = 3 [json_name = "id"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearId() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        id_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long ackId_ ;
-      /**
-       * <pre>
-       * ACK id to restore
-       * </pre>
-       *
-       * <code>uint64 ack_id = 4 [json_name = "ackId"];</code>
-       * @return The ackId.
-       */
-      @java.lang.Override
-      public long getAckId() {
-        return ackId_;
-      }
-      /**
-       * <pre>
-       * ACK id to restore
-       * </pre>
-       *
-       * <code>uint64 ack_id = 4 [json_name = "ackId"];</code>
-       * @param value The ackId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAckId(long value) {
-
-        ackId_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ACK id to restore
-       * </pre>
-       *
-       * <code>uint64 ack_id = 4 [json_name = "ackId"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAckId() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        ackId_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object ackType_ = "";
-      /**
-       * <pre>
-       * Acknowledgement type
-       * </pre>
-       *
-       * <code>string ack_type = 5 [json_name = "ackType"];</code>
-       * @return The ackType.
-       */
-      public java.lang.String getAckType() {
-        java.lang.Object ref = ackType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          ackType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Acknowledgement type
-       * </pre>
-       *
-       * <code>string ack_type = 5 [json_name = "ackType"];</code>
-       * @return The bytes for ackType.
-       */
-      public com.google.protobuf.ByteString
-          getAckTypeBytes() {
-        java.lang.Object ref = ackType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          ackType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Acknowledgement type
-       * </pre>
-       *
-       * <code>string ack_type = 5 [json_name = "ackType"];</code>
-       * @param value The ackType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAckType(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ackType_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Acknowledgement type
-       * </pre>
-       *
-       * <code>string ack_type = 5 [json_name = "ackType"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAckType() {
-        ackType_ = getDefaultInstance().getAckType();
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Acknowledgement type
-       * </pre>
-       *
-       * <code>string ack_type = 5 [json_name = "ackType"];</code>
-       * @param value The bytes for ackType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAckTypeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        ackType_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:neutron.contractmanager.Failure)
-    }
-
-    // @@protoc_insertion_point(class_scope:neutron.contractmanager.Failure)
-    private static final com.neutron.contractmanager.GenesisProto.Failure DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.neutron.contractmanager.GenesisProto.Failure();
-    }
-
-    public static com.neutron.contractmanager.GenesisProto.Failure getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Failure>
-        PARSER = new com.google.protobuf.AbstractParser<Failure>() {
-      @java.lang.Override
-      public Failure parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<Failure> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Failure> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.neutron.contractmanager.GenesisProto.Failure getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface GenesisStateOrBuilder extends
       // @@protoc_insertion_point(interface_extends:neutron.contractmanager.GenesisState)
       com.google.protobuf.MessageOrBuilder {
@@ -1192,7 +40,7 @@ public final class GenesisProto {
      *
      * <code>repeated .neutron.contractmanager.Failure failures_list = 2 [json_name = "failuresList", (.gogoproto.nullable) = false];</code>
      */
-    java.util.List<com.neutron.contractmanager.GenesisProto.Failure> 
+    java.util.List<com.neutron.contractmanager.FailureProto.Failure> 
         getFailuresListList();
     /**
      * <pre>
@@ -1201,7 +49,7 @@ public final class GenesisProto {
      *
      * <code>repeated .neutron.contractmanager.Failure failures_list = 2 [json_name = "failuresList", (.gogoproto.nullable) = false];</code>
      */
-    com.neutron.contractmanager.GenesisProto.Failure getFailuresList(int index);
+    com.neutron.contractmanager.FailureProto.Failure getFailuresList(int index);
     /**
      * <pre>
      * List of the contract failures
@@ -1217,7 +65,7 @@ public final class GenesisProto {
      *
      * <code>repeated .neutron.contractmanager.Failure failures_list = 2 [json_name = "failuresList", (.gogoproto.nullable) = false];</code>
      */
-    java.util.List<? extends com.neutron.contractmanager.GenesisProto.FailureOrBuilder> 
+    java.util.List<? extends com.neutron.contractmanager.FailureProto.FailureOrBuilder> 
         getFailuresListOrBuilderList();
     /**
      * <pre>
@@ -1226,7 +74,7 @@ public final class GenesisProto {
      *
      * <code>repeated .neutron.contractmanager.Failure failures_list = 2 [json_name = "failuresList", (.gogoproto.nullable) = false];</code>
      */
-    com.neutron.contractmanager.GenesisProto.FailureOrBuilder getFailuresListOrBuilder(
+    com.neutron.contractmanager.FailureProto.FailureOrBuilder getFailuresListOrBuilder(
         int index);
   }
   /**
@@ -1297,7 +145,7 @@ public final class GenesisProto {
 
     public static final int FAILURES_LIST_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private java.util.List<com.neutron.contractmanager.GenesisProto.Failure> failuresList_;
+    private java.util.List<com.neutron.contractmanager.FailureProto.Failure> failuresList_;
     /**
      * <pre>
      * List of the contract failures
@@ -1306,7 +154,7 @@ public final class GenesisProto {
      * <code>repeated .neutron.contractmanager.Failure failures_list = 2 [json_name = "failuresList", (.gogoproto.nullable) = false];</code>
      */
     @java.lang.Override
-    public java.util.List<com.neutron.contractmanager.GenesisProto.Failure> getFailuresListList() {
+    public java.util.List<com.neutron.contractmanager.FailureProto.Failure> getFailuresListList() {
       return failuresList_;
     }
     /**
@@ -1317,7 +165,7 @@ public final class GenesisProto {
      * <code>repeated .neutron.contractmanager.Failure failures_list = 2 [json_name = "failuresList", (.gogoproto.nullable) = false];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends com.neutron.contractmanager.GenesisProto.FailureOrBuilder> 
+    public java.util.List<? extends com.neutron.contractmanager.FailureProto.FailureOrBuilder> 
         getFailuresListOrBuilderList() {
       return failuresList_;
     }
@@ -1340,7 +188,7 @@ public final class GenesisProto {
      * <code>repeated .neutron.contractmanager.Failure failures_list = 2 [json_name = "failuresList", (.gogoproto.nullable) = false];</code>
      */
     @java.lang.Override
-    public com.neutron.contractmanager.GenesisProto.Failure getFailuresList(int index) {
+    public com.neutron.contractmanager.FailureProto.Failure getFailuresList(int index) {
       return failuresList_.get(index);
     }
     /**
@@ -1351,7 +199,7 @@ public final class GenesisProto {
      * <code>repeated .neutron.contractmanager.Failure failures_list = 2 [json_name = "failuresList", (.gogoproto.nullable) = false];</code>
      */
     @java.lang.Override
-    public com.neutron.contractmanager.GenesisProto.FailureOrBuilder getFailuresListOrBuilder(
+    public com.neutron.contractmanager.FailureProto.FailureOrBuilder getFailuresListOrBuilder(
         int index) {
       return failuresList_.get(index);
     }
@@ -1741,9 +589,9 @@ public final class GenesisProto {
                 break;
               } // case 10
               case 18: {
-                com.neutron.contractmanager.GenesisProto.Failure m =
+                com.neutron.contractmanager.FailureProto.Failure m =
                     input.readMessage(
-                        com.neutron.contractmanager.GenesisProto.Failure.parser(),
+                        com.neutron.contractmanager.FailureProto.Failure.parser(),
                         extensionRegistry);
                 if (failuresListBuilder_ == null) {
                   ensureFailuresListIsMutable();
@@ -1889,17 +737,17 @@ public final class GenesisProto {
         return paramsBuilder_;
       }
 
-      private java.util.List<com.neutron.contractmanager.GenesisProto.Failure> failuresList_ =
+      private java.util.List<com.neutron.contractmanager.FailureProto.Failure> failuresList_ =
         java.util.Collections.emptyList();
       private void ensureFailuresListIsMutable() {
         if (!((bitField0_ & 0x00000002) != 0)) {
-          failuresList_ = new java.util.ArrayList<com.neutron.contractmanager.GenesisProto.Failure>(failuresList_);
+          failuresList_ = new java.util.ArrayList<com.neutron.contractmanager.FailureProto.Failure>(failuresList_);
           bitField0_ |= 0x00000002;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.neutron.contractmanager.GenesisProto.Failure, com.neutron.contractmanager.GenesisProto.Failure.Builder, com.neutron.contractmanager.GenesisProto.FailureOrBuilder> failuresListBuilder_;
+          com.neutron.contractmanager.FailureProto.Failure, com.neutron.contractmanager.FailureProto.Failure.Builder, com.neutron.contractmanager.FailureProto.FailureOrBuilder> failuresListBuilder_;
 
       /**
        * <pre>
@@ -1908,7 +756,7 @@ public final class GenesisProto {
        *
        * <code>repeated .neutron.contractmanager.Failure failures_list = 2 [json_name = "failuresList", (.gogoproto.nullable) = false];</code>
        */
-      public java.util.List<com.neutron.contractmanager.GenesisProto.Failure> getFailuresListList() {
+      public java.util.List<com.neutron.contractmanager.FailureProto.Failure> getFailuresListList() {
         if (failuresListBuilder_ == null) {
           return java.util.Collections.unmodifiableList(failuresList_);
         } else {
@@ -1936,7 +784,7 @@ public final class GenesisProto {
        *
        * <code>repeated .neutron.contractmanager.Failure failures_list = 2 [json_name = "failuresList", (.gogoproto.nullable) = false];</code>
        */
-      public com.neutron.contractmanager.GenesisProto.Failure getFailuresList(int index) {
+      public com.neutron.contractmanager.FailureProto.Failure getFailuresList(int index) {
         if (failuresListBuilder_ == null) {
           return failuresList_.get(index);
         } else {
@@ -1951,7 +799,7 @@ public final class GenesisProto {
        * <code>repeated .neutron.contractmanager.Failure failures_list = 2 [json_name = "failuresList", (.gogoproto.nullable) = false];</code>
        */
       public Builder setFailuresList(
-          int index, com.neutron.contractmanager.GenesisProto.Failure value) {
+          int index, com.neutron.contractmanager.FailureProto.Failure value) {
         if (failuresListBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1972,7 +820,7 @@ public final class GenesisProto {
        * <code>repeated .neutron.contractmanager.Failure failures_list = 2 [json_name = "failuresList", (.gogoproto.nullable) = false];</code>
        */
       public Builder setFailuresList(
-          int index, com.neutron.contractmanager.GenesisProto.Failure.Builder builderForValue) {
+          int index, com.neutron.contractmanager.FailureProto.Failure.Builder builderForValue) {
         if (failuresListBuilder_ == null) {
           ensureFailuresListIsMutable();
           failuresList_.set(index, builderForValue.build());
@@ -1989,7 +837,7 @@ public final class GenesisProto {
        *
        * <code>repeated .neutron.contractmanager.Failure failures_list = 2 [json_name = "failuresList", (.gogoproto.nullable) = false];</code>
        */
-      public Builder addFailuresList(com.neutron.contractmanager.GenesisProto.Failure value) {
+      public Builder addFailuresList(com.neutron.contractmanager.FailureProto.Failure value) {
         if (failuresListBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2010,7 +858,7 @@ public final class GenesisProto {
        * <code>repeated .neutron.contractmanager.Failure failures_list = 2 [json_name = "failuresList", (.gogoproto.nullable) = false];</code>
        */
       public Builder addFailuresList(
-          int index, com.neutron.contractmanager.GenesisProto.Failure value) {
+          int index, com.neutron.contractmanager.FailureProto.Failure value) {
         if (failuresListBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2031,7 +879,7 @@ public final class GenesisProto {
        * <code>repeated .neutron.contractmanager.Failure failures_list = 2 [json_name = "failuresList", (.gogoproto.nullable) = false];</code>
        */
       public Builder addFailuresList(
-          com.neutron.contractmanager.GenesisProto.Failure.Builder builderForValue) {
+          com.neutron.contractmanager.FailureProto.Failure.Builder builderForValue) {
         if (failuresListBuilder_ == null) {
           ensureFailuresListIsMutable();
           failuresList_.add(builderForValue.build());
@@ -2049,7 +897,7 @@ public final class GenesisProto {
        * <code>repeated .neutron.contractmanager.Failure failures_list = 2 [json_name = "failuresList", (.gogoproto.nullable) = false];</code>
        */
       public Builder addFailuresList(
-          int index, com.neutron.contractmanager.GenesisProto.Failure.Builder builderForValue) {
+          int index, com.neutron.contractmanager.FailureProto.Failure.Builder builderForValue) {
         if (failuresListBuilder_ == null) {
           ensureFailuresListIsMutable();
           failuresList_.add(index, builderForValue.build());
@@ -2067,7 +915,7 @@ public final class GenesisProto {
        * <code>repeated .neutron.contractmanager.Failure failures_list = 2 [json_name = "failuresList", (.gogoproto.nullable) = false];</code>
        */
       public Builder addAllFailuresList(
-          java.lang.Iterable<? extends com.neutron.contractmanager.GenesisProto.Failure> values) {
+          java.lang.Iterable<? extends com.neutron.contractmanager.FailureProto.Failure> values) {
         if (failuresListBuilder_ == null) {
           ensureFailuresListIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -2119,7 +967,7 @@ public final class GenesisProto {
        *
        * <code>repeated .neutron.contractmanager.Failure failures_list = 2 [json_name = "failuresList", (.gogoproto.nullable) = false];</code>
        */
-      public com.neutron.contractmanager.GenesisProto.Failure.Builder getFailuresListBuilder(
+      public com.neutron.contractmanager.FailureProto.Failure.Builder getFailuresListBuilder(
           int index) {
         return getFailuresListFieldBuilder().getBuilder(index);
       }
@@ -2130,7 +978,7 @@ public final class GenesisProto {
        *
        * <code>repeated .neutron.contractmanager.Failure failures_list = 2 [json_name = "failuresList", (.gogoproto.nullable) = false];</code>
        */
-      public com.neutron.contractmanager.GenesisProto.FailureOrBuilder getFailuresListOrBuilder(
+      public com.neutron.contractmanager.FailureProto.FailureOrBuilder getFailuresListOrBuilder(
           int index) {
         if (failuresListBuilder_ == null) {
           return failuresList_.get(index);  } else {
@@ -2144,7 +992,7 @@ public final class GenesisProto {
        *
        * <code>repeated .neutron.contractmanager.Failure failures_list = 2 [json_name = "failuresList", (.gogoproto.nullable) = false];</code>
        */
-      public java.util.List<? extends com.neutron.contractmanager.GenesisProto.FailureOrBuilder> 
+      public java.util.List<? extends com.neutron.contractmanager.FailureProto.FailureOrBuilder> 
            getFailuresListOrBuilderList() {
         if (failuresListBuilder_ != null) {
           return failuresListBuilder_.getMessageOrBuilderList();
@@ -2159,9 +1007,9 @@ public final class GenesisProto {
        *
        * <code>repeated .neutron.contractmanager.Failure failures_list = 2 [json_name = "failuresList", (.gogoproto.nullable) = false];</code>
        */
-      public com.neutron.contractmanager.GenesisProto.Failure.Builder addFailuresListBuilder() {
+      public com.neutron.contractmanager.FailureProto.Failure.Builder addFailuresListBuilder() {
         return getFailuresListFieldBuilder().addBuilder(
-            com.neutron.contractmanager.GenesisProto.Failure.getDefaultInstance());
+            com.neutron.contractmanager.FailureProto.Failure.getDefaultInstance());
       }
       /**
        * <pre>
@@ -2170,10 +1018,10 @@ public final class GenesisProto {
        *
        * <code>repeated .neutron.contractmanager.Failure failures_list = 2 [json_name = "failuresList", (.gogoproto.nullable) = false];</code>
        */
-      public com.neutron.contractmanager.GenesisProto.Failure.Builder addFailuresListBuilder(
+      public com.neutron.contractmanager.FailureProto.Failure.Builder addFailuresListBuilder(
           int index) {
         return getFailuresListFieldBuilder().addBuilder(
-            index, com.neutron.contractmanager.GenesisProto.Failure.getDefaultInstance());
+            index, com.neutron.contractmanager.FailureProto.Failure.getDefaultInstance());
       }
       /**
        * <pre>
@@ -2182,16 +1030,16 @@ public final class GenesisProto {
        *
        * <code>repeated .neutron.contractmanager.Failure failures_list = 2 [json_name = "failuresList", (.gogoproto.nullable) = false];</code>
        */
-      public java.util.List<com.neutron.contractmanager.GenesisProto.Failure.Builder> 
+      public java.util.List<com.neutron.contractmanager.FailureProto.Failure.Builder> 
            getFailuresListBuilderList() {
         return getFailuresListFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.neutron.contractmanager.GenesisProto.Failure, com.neutron.contractmanager.GenesisProto.Failure.Builder, com.neutron.contractmanager.GenesisProto.FailureOrBuilder> 
+          com.neutron.contractmanager.FailureProto.Failure, com.neutron.contractmanager.FailureProto.Failure.Builder, com.neutron.contractmanager.FailureProto.FailureOrBuilder> 
           getFailuresListFieldBuilder() {
         if (failuresListBuilder_ == null) {
           failuresListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.neutron.contractmanager.GenesisProto.Failure, com.neutron.contractmanager.GenesisProto.Failure.Builder, com.neutron.contractmanager.GenesisProto.FailureOrBuilder>(
+              com.neutron.contractmanager.FailureProto.Failure, com.neutron.contractmanager.FailureProto.Failure.Builder, com.neutron.contractmanager.FailureProto.FailureOrBuilder>(
                   failuresList_,
                   ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
@@ -2265,11 +1113,6 @@ public final class GenesisProto {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_neutron_contractmanager_Failure_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_neutron_contractmanager_Failure_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_contractmanager_GenesisState_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -2285,36 +1128,28 @@ public final class GenesisProto {
     java.lang.String[] descriptorData = {
       "\n%neutron/contractmanager/genesis.proto\022" +
       "\027neutron.contractmanager\032\024gogoproto/gogo" +
-      ".proto\032$neutron/contractmanager/params.p" +
-      "roto\"\204\001\n\007Failure\022\035\n\nchannel_id\030\001 \001(\tR\tch" +
-      "annelId\022\030\n\007address\030\002 \001(\tR\007address\022\016\n\002id\030" +
-      "\003 \001(\004R\002id\022\025\n\006ack_id\030\004 \001(\004R\005ackId\022\031\n\010ack_" +
-      "type\030\005 \001(\tR\007ackType\"\232\001\n\014GenesisState\022=\n\006" +
-      "params\030\001 \001(\0132\037.neutron.contractmanager.P" +
-      "aramsB\004\310\336\037\000R\006params\022K\n\rfailures_list\030\002 \003" +
-      "(\0132 .neutron.contractmanager.FailureB\004\310\336" +
-      "\037\000R\014failuresListB\336\001\n\033com.neutron.contrac" +
-      "tmanagerB\014GenesisProtoZ6github.com/neutr" +
-      "on-org/neutron/x/contractmanager/types\242\002" +
-      "\003NCX\252\002\027Neutron.Contractmanager\312\002\027Neutron" +
-      "\\Contractmanager\342\002#Neutron\\Contractmanag" +
-      "er\\GPBMetadata\352\002\030Neutron::Contractmanage" +
-      "rb\006proto3"
+      ".proto\032%neutron/contractmanager/failure." +
+      "proto\032$neutron/contractmanager/params.pr" +
+      "oto\"\232\001\n\014GenesisState\022=\n\006params\030\001 \001(\0132\037.n" +
+      "eutron.contractmanager.ParamsB\004\310\336\037\000R\006par" +
+      "ams\022K\n\rfailures_list\030\002 \003(\0132 .neutron.con" +
+      "tractmanager.FailureB\004\310\336\037\000R\014failuresList" +
+      "B\341\001\n\033com.neutron.contractmanagerB\014Genesi" +
+      "sProtoZ9github.com/neutron-org/neutron/v" +
+      "4/x/contractmanager/types\242\002\003NCX\252\002\027Neutro" +
+      "n.Contractmanager\312\002\027Neutron\\Contractmana" +
+      "ger\342\002#Neutron\\Contractmanager\\GPBMetadat" +
+      "a\352\002\030Neutron::Contractmanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.gogoproto.GogoProto.getDescriptor(),
+          com.neutron.contractmanager.FailureProto.getDescriptor(),
           com.neutron.contractmanager.ParamsProto.getDescriptor(),
         });
-    internal_static_neutron_contractmanager_Failure_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_neutron_contractmanager_Failure_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_neutron_contractmanager_Failure_descriptor,
-        new java.lang.String[] { "ChannelId", "Address", "Id", "AckId", "AckType", });
     internal_static_neutron_contractmanager_GenesisState_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_neutron_contractmanager_GenesisState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_neutron_contractmanager_GenesisState_descriptor,
@@ -2325,6 +1160,7 @@ public final class GenesisProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.gogoproto.GogoProto.getDescriptor();
+    com.neutron.contractmanager.FailureProto.getDescriptor();
     com.neutron.contractmanager.ParamsProto.getDescriptor();
   }
 

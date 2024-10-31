@@ -472,7 +472,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * DelegationTotalRewards queries the total rewards accrued by a each
+     * DelegationTotalRewards queries the total rewards accrued by each
      * validator.
      * </pre>
      */
@@ -623,7 +623,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * DelegationTotalRewards queries the total rewards accrued by a each
+     * DelegationTotalRewards queries the total rewards accrued by each
      * validator.
      * </pre>
      */
@@ -759,7 +759,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * DelegationTotalRewards queries the total rewards accrued by a each
+     * DelegationTotalRewards queries the total rewards accrued by each
      * validator.
      * </pre>
      */
@@ -896,7 +896,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * DelegationTotalRewards queries the total rewards accrued by a each
+     * DelegationTotalRewards queries the total rewards accrued by each
      * validator.
      * </pre>
      */

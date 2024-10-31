@@ -50,6 +50,37 @@ public final class QueryGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.neutron.contractmanager.QueryProto.QueryFailuresRequest,
+      com.neutron.contractmanager.QueryProto.QueryFailuresResponse> getAddressFailureMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddressFailure",
+      requestType = com.neutron.contractmanager.QueryProto.QueryFailuresRequest.class,
+      responseType = com.neutron.contractmanager.QueryProto.QueryFailuresResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.neutron.contractmanager.QueryProto.QueryFailuresRequest,
+      com.neutron.contractmanager.QueryProto.QueryFailuresResponse> getAddressFailureMethod() {
+    io.grpc.MethodDescriptor<com.neutron.contractmanager.QueryProto.QueryFailuresRequest, com.neutron.contractmanager.QueryProto.QueryFailuresResponse> getAddressFailureMethod;
+    if ((getAddressFailureMethod = QueryGrpc.getAddressFailureMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getAddressFailureMethod = QueryGrpc.getAddressFailureMethod) == null) {
+          QueryGrpc.getAddressFailureMethod = getAddressFailureMethod =
+              io.grpc.MethodDescriptor.<com.neutron.contractmanager.QueryProto.QueryFailuresRequest, com.neutron.contractmanager.QueryProto.QueryFailuresResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddressFailure"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.neutron.contractmanager.QueryProto.QueryFailuresRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.neutron.contractmanager.QueryProto.QueryFailuresResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("AddressFailure"))
+              .build();
+        }
+      }
+    }
+    return getAddressFailureMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.neutron.contractmanager.QueryProto.QueryFailuresRequest,
       com.neutron.contractmanager.QueryProto.QueryFailuresResponse> getAddressFailuresMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
@@ -174,7 +205,17 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * Queries a Failure by address.
+     * Queries a Failure by contract address and failure ID.
+     * </pre>
+     */
+    default void addressFailure(com.neutron.contractmanager.QueryProto.QueryFailuresRequest request,
+        io.grpc.stub.StreamObserver<com.neutron.contractmanager.QueryProto.QueryFailuresResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddressFailureMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Queries Failures by contract address.
      * </pre>
      */
     default void addressFailures(com.neutron.contractmanager.QueryProto.QueryFailuresRequest request,
@@ -184,7 +225,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * Queries a list of Failure items.
+     * Queries a list of Failures occurred on the network.
      * </pre>
      */
     default void failures(com.neutron.contractmanager.QueryProto.QueryFailuresRequest request,
@@ -239,7 +280,18 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * Queries a Failure by address.
+     * Queries a Failure by contract address and failure ID.
+     * </pre>
+     */
+    public void addressFailure(com.neutron.contractmanager.QueryProto.QueryFailuresRequest request,
+        io.grpc.stub.StreamObserver<com.neutron.contractmanager.QueryProto.QueryFailuresResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAddressFailureMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Queries Failures by contract address.
      * </pre>
      */
     public void addressFailures(com.neutron.contractmanager.QueryProto.QueryFailuresRequest request,
@@ -250,7 +302,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * Queries a list of Failure items.
+     * Queries a list of Failures occurred on the network.
      * </pre>
      */
     public void failures(com.neutron.contractmanager.QueryProto.QueryFailuresRequest request,
@@ -291,7 +343,17 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * Queries a Failure by address.
+     * Queries a Failure by contract address and failure ID.
+     * </pre>
+     */
+    public com.neutron.contractmanager.QueryProto.QueryFailuresResponse addressFailure(com.neutron.contractmanager.QueryProto.QueryFailuresRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAddressFailureMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Queries Failures by contract address.
      * </pre>
      */
     public com.neutron.contractmanager.QueryProto.QueryFailuresResponse addressFailures(com.neutron.contractmanager.QueryProto.QueryFailuresRequest request) {
@@ -301,7 +363,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * Queries a list of Failure items.
+     * Queries a list of Failures occurred on the network.
      * </pre>
      */
     public com.neutron.contractmanager.QueryProto.QueryFailuresResponse failures(com.neutron.contractmanager.QueryProto.QueryFailuresRequest request) {
@@ -342,7 +404,18 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * Queries a Failure by address.
+     * Queries a Failure by contract address and failure ID.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.neutron.contractmanager.QueryProto.QueryFailuresResponse> addressFailure(
+        com.neutron.contractmanager.QueryProto.QueryFailuresRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAddressFailureMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Queries Failures by contract address.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.neutron.contractmanager.QueryProto.QueryFailuresResponse> addressFailures(
@@ -353,7 +426,7 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * Queries a list of Failure items.
+     * Queries a list of Failures occurred on the network.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.neutron.contractmanager.QueryProto.QueryFailuresResponse> failures(
@@ -364,8 +437,9 @@ public final class QueryGrpc {
   }
 
   private static final int METHODID_PARAMS = 0;
-  private static final int METHODID_ADDRESS_FAILURES = 1;
-  private static final int METHODID_FAILURES = 2;
+  private static final int METHODID_ADDRESS_FAILURE = 1;
+  private static final int METHODID_ADDRESS_FAILURES = 2;
+  private static final int METHODID_FAILURES = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -387,6 +461,10 @@ public final class QueryGrpc {
         case METHODID_PARAMS:
           serviceImpl.params((com.neutron.contractmanager.QueryProto.QueryParamsRequest) request,
               (io.grpc.stub.StreamObserver<com.neutron.contractmanager.QueryProto.QueryParamsResponse>) responseObserver);
+          break;
+        case METHODID_ADDRESS_FAILURE:
+          serviceImpl.addressFailure((com.neutron.contractmanager.QueryProto.QueryFailuresRequest) request,
+              (io.grpc.stub.StreamObserver<com.neutron.contractmanager.QueryProto.QueryFailuresResponse>) responseObserver);
           break;
         case METHODID_ADDRESS_FAILURES:
           serviceImpl.addressFailures((com.neutron.contractmanager.QueryProto.QueryFailuresRequest) request,
@@ -421,6 +499,13 @@ public final class QueryGrpc {
               com.neutron.contractmanager.QueryProto.QueryParamsRequest,
               com.neutron.contractmanager.QueryProto.QueryParamsResponse>(
                 service, METHODID_PARAMS)))
+        .addMethod(
+          getAddressFailureMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.neutron.contractmanager.QueryProto.QueryFailuresRequest,
+              com.neutron.contractmanager.QueryProto.QueryFailuresResponse>(
+                service, METHODID_ADDRESS_FAILURE)))
         .addMethod(
           getAddressFailuresMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -484,6 +569,7 @@ public final class QueryGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new QueryFileDescriptorSupplier())
               .addMethod(getParamsMethod())
+              .addMethod(getAddressFailureMethod())
               .addMethod(getAddressFailuresMethod())
               .addMethod(getFailuresMethod())
               .build();

@@ -1092,11 +1092,19 @@ public final class QueryProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * address of the contract which Sudo call failed.
+     * </pre>
+     *
      * <code>string address = 1 [json_name = "address"];</code>
      * @return The address.
      */
     java.lang.String getAddress();
     /**
+     * <pre>
+     * address of the contract which Sudo call failed.
+     * </pre>
+     *
      * <code>string address = 1 [json_name = "address"];</code>
      * @return The bytes for address.
      */
@@ -1104,21 +1112,35 @@ public final class QueryProto {
         getAddressBytes();
 
     /**
-     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * <pre>
+     * ID of the failure for the given contract.
+     * </pre>
+     *
+     * <code>uint64 failure_id = 2 [json_name = "failureId"];</code>
+     * @return The failureId.
+     */
+    long getFailureId();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
      * @return Whether the pagination field is set.
      */
     boolean hasPagination();
     /**
-     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
      * @return The pagination.
      */
     com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
     /**
-     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
      */
     com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
   }
   /**
+   * <pre>
+   * QueryFailuresRequest is request type for the Query/Failures RPC method.
+   * </pre>
+   *
    * Protobuf type {@code neutron.contractmanager.QueryFailuresRequest}
    */
   public static final class QueryFailuresRequest extends
@@ -1158,6 +1180,10 @@ public final class QueryProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
     /**
+     * <pre>
+     * address of the contract which Sudo call failed.
+     * </pre>
+     *
      * <code>string address = 1 [json_name = "address"];</code>
      * @return The address.
      */
@@ -1175,6 +1201,10 @@ public final class QueryProto {
       }
     }
     /**
+     * <pre>
+     * address of the contract which Sudo call failed.
+     * </pre>
+     *
      * <code>string address = 1 [json_name = "address"];</code>
      * @return The bytes for address.
      */
@@ -1193,10 +1223,25 @@ public final class QueryProto {
       }
     }
 
-    public static final int PAGINATION_FIELD_NUMBER = 2;
+    public static final int FAILURE_ID_FIELD_NUMBER = 2;
+    private long failureId_ = 0L;
+    /**
+     * <pre>
+     * ID of the failure for the given contract.
+     * </pre>
+     *
+     * <code>uint64 failure_id = 2 [json_name = "failureId"];</code>
+     * @return The failureId.
+     */
+    @java.lang.Override
+    public long getFailureId() {
+      return failureId_;
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 3;
     private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
     /**
-     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
      * @return Whether the pagination field is set.
      */
     @java.lang.Override
@@ -1204,7 +1249,7 @@ public final class QueryProto {
       return pagination_ != null;
     }
     /**
-     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
      * @return The pagination.
      */
     @java.lang.Override
@@ -1212,7 +1257,7 @@ public final class QueryProto {
       return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
     }
     /**
-     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
      */
     @java.lang.Override
     public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
@@ -1236,8 +1281,11 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
       }
+      if (failureId_ != 0L) {
+        output.writeUInt64(2, failureId_);
+      }
       if (pagination_ != null) {
-        output.writeMessage(2, getPagination());
+        output.writeMessage(3, getPagination());
       }
       getUnknownFields().writeTo(output);
     }
@@ -1251,9 +1299,13 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
       }
+      if (failureId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, failureId_);
+      }
       if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getPagination());
+          .computeMessageSize(3, getPagination());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1272,6 +1324,8 @@ public final class QueryProto {
 
       if (!getAddress()
           .equals(other.getAddress())) return false;
+      if (getFailureId()
+          != other.getFailureId()) return false;
       if (hasPagination() != other.hasPagination()) return false;
       if (hasPagination()) {
         if (!getPagination()
@@ -1290,6 +1344,9 @@ public final class QueryProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
       hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + FAILURE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getFailureId());
       if (hasPagination()) {
         hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
         hash = (53 * hash) + getPagination().hashCode();
@@ -1392,6 +1449,10 @@ public final class QueryProto {
       return builder;
     }
     /**
+     * <pre>
+     * QueryFailuresRequest is request type for the Query/Failures RPC method.
+     * </pre>
+     *
      * Protobuf type {@code neutron.contractmanager.QueryFailuresRequest}
      */
     public static final class Builder extends
@@ -1426,6 +1487,7 @@ public final class QueryProto {
         super.clear();
         bitField0_ = 0;
         address_ = "";
+        failureId_ = 0L;
         pagination_ = null;
         if (paginationBuilder_ != null) {
           paginationBuilder_.dispose();
@@ -1468,6 +1530,9 @@ public final class QueryProto {
           result.address_ = address_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.failureId_ = failureId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.pagination_ = paginationBuilder_ == null
               ? pagination_
               : paginationBuilder_.build();
@@ -1523,6 +1588,9 @@ public final class QueryProto {
           bitField0_ |= 0x00000001;
           onChanged();
         }
+        if (other.getFailureId() != 0L) {
+          setFailureId(other.getFailureId());
+        }
         if (other.hasPagination()) {
           mergePagination(other.getPagination());
         }
@@ -1557,13 +1625,18 @@ public final class QueryProto {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
-              case 18: {
+              case 16: {
+                failureId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
                 input.readMessage(
                     getPaginationFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00000002;
+                bitField0_ |= 0x00000004;
                 break;
-              } // case 18
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1583,6 +1656,10 @@ public final class QueryProto {
 
       private java.lang.Object address_ = "";
       /**
+       * <pre>
+       * address of the contract which Sudo call failed.
+       * </pre>
+       *
        * <code>string address = 1 [json_name = "address"];</code>
        * @return The address.
        */
@@ -1599,6 +1676,10 @@ public final class QueryProto {
         }
       }
       /**
+       * <pre>
+       * address of the contract which Sudo call failed.
+       * </pre>
+       *
        * <code>string address = 1 [json_name = "address"];</code>
        * @return The bytes for address.
        */
@@ -1616,6 +1697,10 @@ public final class QueryProto {
         }
       }
       /**
+       * <pre>
+       * address of the contract which Sudo call failed.
+       * </pre>
+       *
        * <code>string address = 1 [json_name = "address"];</code>
        * @param value The address to set.
        * @return This builder for chaining.
@@ -1629,6 +1714,10 @@ public final class QueryProto {
         return this;
       }
       /**
+       * <pre>
+       * address of the contract which Sudo call failed.
+       * </pre>
+       *
        * <code>string address = 1 [json_name = "address"];</code>
        * @return This builder for chaining.
        */
@@ -1639,6 +1728,10 @@ public final class QueryProto {
         return this;
       }
       /**
+       * <pre>
+       * address of the contract which Sudo call failed.
+       * </pre>
+       *
        * <code>string address = 1 [json_name = "address"];</code>
        * @param value The bytes for address to set.
        * @return This builder for chaining.
@@ -1653,18 +1746,62 @@ public final class QueryProto {
         return this;
       }
 
+      private long failureId_ ;
+      /**
+       * <pre>
+       * ID of the failure for the given contract.
+       * </pre>
+       *
+       * <code>uint64 failure_id = 2 [json_name = "failureId"];</code>
+       * @return The failureId.
+       */
+      @java.lang.Override
+      public long getFailureId() {
+        return failureId_;
+      }
+      /**
+       * <pre>
+       * ID of the failure for the given contract.
+       * </pre>
+       *
+       * <code>uint64 failure_id = 2 [json_name = "failureId"];</code>
+       * @param value The failureId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFailureId(long value) {
+
+        failureId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the failure for the given contract.
+       * </pre>
+       *
+       * <code>uint64 failure_id = 2 [json_name = "failureId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFailureId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        failureId_ = 0L;
+        onChanged();
+        return this;
+      }
+
       private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
       /**
-       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
        * @return Whether the pagination field is set.
        */
       public boolean hasPagination() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
-       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
        * @return The pagination.
        */
       public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
@@ -1675,7 +1812,7 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
        */
       public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
         if (paginationBuilder_ == null) {
@@ -1686,12 +1823,12 @@ public final class QueryProto {
         } else {
           paginationBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
        */
       public Builder setPagination(
           com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
@@ -1700,16 +1837,16 @@ public final class QueryProto {
         } else {
           paginationBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
        */
       public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
         if (paginationBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
+          if (((bitField0_ & 0x00000004) != 0) &&
             pagination_ != null &&
             pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
             getPaginationBuilder().mergeFrom(value);
@@ -1719,15 +1856,15 @@ public final class QueryProto {
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
        */
       public Builder clearPagination() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         pagination_ = null;
         if (paginationBuilder_ != null) {
           paginationBuilder_.dispose();
@@ -1737,15 +1874,15 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
        */
       public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return getPaginationFieldBuilder().getBuilder();
       }
       /**
-       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
        */
       public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
         if (paginationBuilder_ != null) {
@@ -1756,7 +1893,7 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
@@ -1842,12 +1979,12 @@ public final class QueryProto {
     /**
      * <code>repeated .neutron.contractmanager.Failure failures = 1 [json_name = "failures", (.gogoproto.nullable) = false];</code>
      */
-    java.util.List<com.neutron.contractmanager.GenesisProto.Failure> 
+    java.util.List<com.neutron.contractmanager.FailureProto.Failure> 
         getFailuresList();
     /**
      * <code>repeated .neutron.contractmanager.Failure failures = 1 [json_name = "failures", (.gogoproto.nullable) = false];</code>
      */
-    com.neutron.contractmanager.GenesisProto.Failure getFailures(int index);
+    com.neutron.contractmanager.FailureProto.Failure getFailures(int index);
     /**
      * <code>repeated .neutron.contractmanager.Failure failures = 1 [json_name = "failures", (.gogoproto.nullable) = false];</code>
      */
@@ -1855,12 +1992,12 @@ public final class QueryProto {
     /**
      * <code>repeated .neutron.contractmanager.Failure failures = 1 [json_name = "failures", (.gogoproto.nullable) = false];</code>
      */
-    java.util.List<? extends com.neutron.contractmanager.GenesisProto.FailureOrBuilder> 
+    java.util.List<? extends com.neutron.contractmanager.FailureProto.FailureOrBuilder> 
         getFailuresOrBuilderList();
     /**
      * <code>repeated .neutron.contractmanager.Failure failures = 1 [json_name = "failures", (.gogoproto.nullable) = false];</code>
      */
-    com.neutron.contractmanager.GenesisProto.FailureOrBuilder getFailuresOrBuilder(
+    com.neutron.contractmanager.FailureProto.FailureOrBuilder getFailuresOrBuilder(
         int index);
 
     /**
@@ -1879,6 +2016,10 @@ public final class QueryProto {
     com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
   }
   /**
+   * <pre>
+   * QueryFailuresResponse is response type for the Query/Failures RPC method.
+   * </pre>
+   *
    * Protobuf type {@code neutron.contractmanager.QueryFailuresResponse}
    */
   public static final class QueryFailuresResponse extends
@@ -1916,19 +2057,19 @@ public final class QueryProto {
 
     public static final int FAILURES_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private java.util.List<com.neutron.contractmanager.GenesisProto.Failure> failures_;
+    private java.util.List<com.neutron.contractmanager.FailureProto.Failure> failures_;
     /**
      * <code>repeated .neutron.contractmanager.Failure failures = 1 [json_name = "failures", (.gogoproto.nullable) = false];</code>
      */
     @java.lang.Override
-    public java.util.List<com.neutron.contractmanager.GenesisProto.Failure> getFailuresList() {
+    public java.util.List<com.neutron.contractmanager.FailureProto.Failure> getFailuresList() {
       return failures_;
     }
     /**
      * <code>repeated .neutron.contractmanager.Failure failures = 1 [json_name = "failures", (.gogoproto.nullable) = false];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends com.neutron.contractmanager.GenesisProto.FailureOrBuilder> 
+    public java.util.List<? extends com.neutron.contractmanager.FailureProto.FailureOrBuilder> 
         getFailuresOrBuilderList() {
       return failures_;
     }
@@ -1943,14 +2084,14 @@ public final class QueryProto {
      * <code>repeated .neutron.contractmanager.Failure failures = 1 [json_name = "failures", (.gogoproto.nullable) = false];</code>
      */
     @java.lang.Override
-    public com.neutron.contractmanager.GenesisProto.Failure getFailures(int index) {
+    public com.neutron.contractmanager.FailureProto.Failure getFailures(int index) {
       return failures_.get(index);
     }
     /**
      * <code>repeated .neutron.contractmanager.Failure failures = 1 [json_name = "failures", (.gogoproto.nullable) = false];</code>
      */
     @java.lang.Override
-    public com.neutron.contractmanager.GenesisProto.FailureOrBuilder getFailuresOrBuilder(
+    public com.neutron.contractmanager.FailureProto.FailureOrBuilder getFailuresOrBuilder(
         int index) {
       return failures_.get(index);
     }
@@ -2157,6 +2298,10 @@ public final class QueryProto {
       return builder;
     }
     /**
+     * <pre>
+     * QueryFailuresResponse is response type for the Query/Failures RPC method.
+     * </pre>
+     *
      * Protobuf type {@code neutron.contractmanager.QueryFailuresResponse}
      */
     public static final class Builder extends
@@ -2355,9 +2500,9 @@ public final class QueryProto {
                 done = true;
                 break;
               case 10: {
-                com.neutron.contractmanager.GenesisProto.Failure m =
+                com.neutron.contractmanager.FailureProto.Failure m =
                     input.readMessage(
-                        com.neutron.contractmanager.GenesisProto.Failure.parser(),
+                        com.neutron.contractmanager.FailureProto.Failure.parser(),
                         extensionRegistry);
                 if (failuresBuilder_ == null) {
                   ensureFailuresIsMutable();
@@ -2391,22 +2536,22 @@ public final class QueryProto {
       }
       private int bitField0_;
 
-      private java.util.List<com.neutron.contractmanager.GenesisProto.Failure> failures_ =
+      private java.util.List<com.neutron.contractmanager.FailureProto.Failure> failures_ =
         java.util.Collections.emptyList();
       private void ensureFailuresIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          failures_ = new java.util.ArrayList<com.neutron.contractmanager.GenesisProto.Failure>(failures_);
+          failures_ = new java.util.ArrayList<com.neutron.contractmanager.FailureProto.Failure>(failures_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.neutron.contractmanager.GenesisProto.Failure, com.neutron.contractmanager.GenesisProto.Failure.Builder, com.neutron.contractmanager.GenesisProto.FailureOrBuilder> failuresBuilder_;
+          com.neutron.contractmanager.FailureProto.Failure, com.neutron.contractmanager.FailureProto.Failure.Builder, com.neutron.contractmanager.FailureProto.FailureOrBuilder> failuresBuilder_;
 
       /**
        * <code>repeated .neutron.contractmanager.Failure failures = 1 [json_name = "failures", (.gogoproto.nullable) = false];</code>
        */
-      public java.util.List<com.neutron.contractmanager.GenesisProto.Failure> getFailuresList() {
+      public java.util.List<com.neutron.contractmanager.FailureProto.Failure> getFailuresList() {
         if (failuresBuilder_ == null) {
           return java.util.Collections.unmodifiableList(failures_);
         } else {
@@ -2426,7 +2571,7 @@ public final class QueryProto {
       /**
        * <code>repeated .neutron.contractmanager.Failure failures = 1 [json_name = "failures", (.gogoproto.nullable) = false];</code>
        */
-      public com.neutron.contractmanager.GenesisProto.Failure getFailures(int index) {
+      public com.neutron.contractmanager.FailureProto.Failure getFailures(int index) {
         if (failuresBuilder_ == null) {
           return failures_.get(index);
         } else {
@@ -2437,7 +2582,7 @@ public final class QueryProto {
        * <code>repeated .neutron.contractmanager.Failure failures = 1 [json_name = "failures", (.gogoproto.nullable) = false];</code>
        */
       public Builder setFailures(
-          int index, com.neutron.contractmanager.GenesisProto.Failure value) {
+          int index, com.neutron.contractmanager.FailureProto.Failure value) {
         if (failuresBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2454,7 +2599,7 @@ public final class QueryProto {
        * <code>repeated .neutron.contractmanager.Failure failures = 1 [json_name = "failures", (.gogoproto.nullable) = false];</code>
        */
       public Builder setFailures(
-          int index, com.neutron.contractmanager.GenesisProto.Failure.Builder builderForValue) {
+          int index, com.neutron.contractmanager.FailureProto.Failure.Builder builderForValue) {
         if (failuresBuilder_ == null) {
           ensureFailuresIsMutable();
           failures_.set(index, builderForValue.build());
@@ -2467,7 +2612,7 @@ public final class QueryProto {
       /**
        * <code>repeated .neutron.contractmanager.Failure failures = 1 [json_name = "failures", (.gogoproto.nullable) = false];</code>
        */
-      public Builder addFailures(com.neutron.contractmanager.GenesisProto.Failure value) {
+      public Builder addFailures(com.neutron.contractmanager.FailureProto.Failure value) {
         if (failuresBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2484,7 +2629,7 @@ public final class QueryProto {
        * <code>repeated .neutron.contractmanager.Failure failures = 1 [json_name = "failures", (.gogoproto.nullable) = false];</code>
        */
       public Builder addFailures(
-          int index, com.neutron.contractmanager.GenesisProto.Failure value) {
+          int index, com.neutron.contractmanager.FailureProto.Failure value) {
         if (failuresBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2501,7 +2646,7 @@ public final class QueryProto {
        * <code>repeated .neutron.contractmanager.Failure failures = 1 [json_name = "failures", (.gogoproto.nullable) = false];</code>
        */
       public Builder addFailures(
-          com.neutron.contractmanager.GenesisProto.Failure.Builder builderForValue) {
+          com.neutron.contractmanager.FailureProto.Failure.Builder builderForValue) {
         if (failuresBuilder_ == null) {
           ensureFailuresIsMutable();
           failures_.add(builderForValue.build());
@@ -2515,7 +2660,7 @@ public final class QueryProto {
        * <code>repeated .neutron.contractmanager.Failure failures = 1 [json_name = "failures", (.gogoproto.nullable) = false];</code>
        */
       public Builder addFailures(
-          int index, com.neutron.contractmanager.GenesisProto.Failure.Builder builderForValue) {
+          int index, com.neutron.contractmanager.FailureProto.Failure.Builder builderForValue) {
         if (failuresBuilder_ == null) {
           ensureFailuresIsMutable();
           failures_.add(index, builderForValue.build());
@@ -2529,7 +2674,7 @@ public final class QueryProto {
        * <code>repeated .neutron.contractmanager.Failure failures = 1 [json_name = "failures", (.gogoproto.nullable) = false];</code>
        */
       public Builder addAllFailures(
-          java.lang.Iterable<? extends com.neutron.contractmanager.GenesisProto.Failure> values) {
+          java.lang.Iterable<? extends com.neutron.contractmanager.FailureProto.Failure> values) {
         if (failuresBuilder_ == null) {
           ensureFailuresIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -2569,14 +2714,14 @@ public final class QueryProto {
       /**
        * <code>repeated .neutron.contractmanager.Failure failures = 1 [json_name = "failures", (.gogoproto.nullable) = false];</code>
        */
-      public com.neutron.contractmanager.GenesisProto.Failure.Builder getFailuresBuilder(
+      public com.neutron.contractmanager.FailureProto.Failure.Builder getFailuresBuilder(
           int index) {
         return getFailuresFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .neutron.contractmanager.Failure failures = 1 [json_name = "failures", (.gogoproto.nullable) = false];</code>
        */
-      public com.neutron.contractmanager.GenesisProto.FailureOrBuilder getFailuresOrBuilder(
+      public com.neutron.contractmanager.FailureProto.FailureOrBuilder getFailuresOrBuilder(
           int index) {
         if (failuresBuilder_ == null) {
           return failures_.get(index);  } else {
@@ -2586,7 +2731,7 @@ public final class QueryProto {
       /**
        * <code>repeated .neutron.contractmanager.Failure failures = 1 [json_name = "failures", (.gogoproto.nullable) = false];</code>
        */
-      public java.util.List<? extends com.neutron.contractmanager.GenesisProto.FailureOrBuilder> 
+      public java.util.List<? extends com.neutron.contractmanager.FailureProto.FailureOrBuilder> 
            getFailuresOrBuilderList() {
         if (failuresBuilder_ != null) {
           return failuresBuilder_.getMessageOrBuilderList();
@@ -2597,31 +2742,31 @@ public final class QueryProto {
       /**
        * <code>repeated .neutron.contractmanager.Failure failures = 1 [json_name = "failures", (.gogoproto.nullable) = false];</code>
        */
-      public com.neutron.contractmanager.GenesisProto.Failure.Builder addFailuresBuilder() {
+      public com.neutron.contractmanager.FailureProto.Failure.Builder addFailuresBuilder() {
         return getFailuresFieldBuilder().addBuilder(
-            com.neutron.contractmanager.GenesisProto.Failure.getDefaultInstance());
+            com.neutron.contractmanager.FailureProto.Failure.getDefaultInstance());
       }
       /**
        * <code>repeated .neutron.contractmanager.Failure failures = 1 [json_name = "failures", (.gogoproto.nullable) = false];</code>
        */
-      public com.neutron.contractmanager.GenesisProto.Failure.Builder addFailuresBuilder(
+      public com.neutron.contractmanager.FailureProto.Failure.Builder addFailuresBuilder(
           int index) {
         return getFailuresFieldBuilder().addBuilder(
-            index, com.neutron.contractmanager.GenesisProto.Failure.getDefaultInstance());
+            index, com.neutron.contractmanager.FailureProto.Failure.getDefaultInstance());
       }
       /**
        * <code>repeated .neutron.contractmanager.Failure failures = 1 [json_name = "failures", (.gogoproto.nullable) = false];</code>
        */
-      public java.util.List<com.neutron.contractmanager.GenesisProto.Failure.Builder> 
+      public java.util.List<com.neutron.contractmanager.FailureProto.Failure.Builder> 
            getFailuresBuilderList() {
         return getFailuresFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.neutron.contractmanager.GenesisProto.Failure, com.neutron.contractmanager.GenesisProto.Failure.Builder, com.neutron.contractmanager.GenesisProto.FailureOrBuilder> 
+          com.neutron.contractmanager.FailureProto.Failure, com.neutron.contractmanager.FailureProto.Failure.Builder, com.neutron.contractmanager.FailureProto.FailureOrBuilder> 
           getFailuresFieldBuilder() {
         if (failuresBuilder_ == null) {
           failuresBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.neutron.contractmanager.GenesisProto.Failure, com.neutron.contractmanager.GenesisProto.Failure.Builder, com.neutron.contractmanager.GenesisProto.FailureOrBuilder>(
+              com.neutron.contractmanager.FailureProto.Failure, com.neutron.contractmanager.FailureProto.Failure.Builder, com.neutron.contractmanager.FailureProto.FailureOrBuilder>(
                   failures_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -2843,48 +2988,53 @@ public final class QueryProto {
   static {
     java.lang.String[] descriptorData = {
       "\n#neutron/contractmanager/query.proto\022\027n" +
-      "eutron.contractmanager\032\024gogoproto/gogo.p" +
-      "roto\032\034google/api/annotations.proto\032*cosm" +
-      "os/base/query/v1beta1/pagination.proto\032$" +
-      "neutron/contractmanager/params.proto\032%ne" +
-      "utron/contractmanager/genesis.proto\"\024\n\022Q" +
+      "eutron.contractmanager\032*cosmos/base/quer" +
+      "y/v1beta1/pagination.proto\032\024gogoproto/go" +
+      "go.proto\032\034google/api/annotations.proto\032%" +
+      "neutron/contractmanager/failure.proto\032$n" +
+      "eutron/contractmanager/params.proto\"\024\n\022Q" +
       "ueryParamsRequest\"T\n\023QueryParamsResponse" +
       "\022=\n\006params\030\001 \001(\0132\037.neutron.contractmanag" +
-      "er.ParamsB\004\310\336\037\000R\006params\"x\n\024QueryFailures" +
-      "Request\022\030\n\007address\030\001 \001(\tR\007address\022F\n\npag" +
-      "ination\030\002 \001(\0132&.cosmos.base.query.v1beta" +
-      "1.PageRequestR\npagination\"\244\001\n\025QueryFailu" +
-      "resResponse\022B\n\010failures\030\001 \003(\0132 .neutron." +
-      "contractmanager.FailureB\004\310\336\037\000R\010failures\022" +
-      "G\n\npagination\030\002 \001(\0132\'.cosmos.base.query." +
-      "v1beta1.PageResponseR\npagination2\325\003\n\005Que" +
-      "ry\022\214\001\n\006Params\022+.neutron.contractmanager." +
-      "QueryParamsRequest\032,.neutron.contractman" +
-      "ager.QueryParamsResponse\"\'\202\323\344\223\002!\022\037/neutr" +
-      "on/contractmanager/params\022\245\001\n\017AddressFai" +
-      "lures\022-.neutron.contractmanager.QueryFai" +
-      "luresRequest\032..neutron.contractmanager.Q" +
-      "ueryFailuresResponse\"3\202\323\344\223\002-\022+/neutron/c" +
-      "ontractmanager/failures/{address}\022\224\001\n\010Fa" +
-      "ilures\022-.neutron.contractmanager.QueryFa" +
-      "iluresRequest\032..neutron.contractmanager." +
-      "QueryFailuresResponse\")\202\323\344\223\002#\022!/neutron/" +
-      "contractmanager/failuresB\334\001\n\033com.neutron" +
-      ".contractmanagerB\nQueryProtoZ6github.com" +
-      "/neutron-org/neutron/x/contractmanager/t" +
-      "ypes\242\002\003NCX\252\002\027Neutron.Contractmanager\312\002\027N" +
-      "eutron\\Contractmanager\342\002#Neutron\\Contrac" +
-      "tmanager\\GPBMetadata\352\002\030Neutron::Contract" +
-      "managerb\006proto3"
+      "er.ParamsB\004\310\336\037\000R\006params\"\227\001\n\024QueryFailure" +
+      "sRequest\022\030\n\007address\030\001 \001(\tR\007address\022\035\n\nfa" +
+      "ilure_id\030\002 \001(\004R\tfailureId\022F\n\npagination\030" +
+      "\003 \001(\0132&.cosmos.base.query.v1beta1.PageRe" +
+      "questR\npagination\"\244\001\n\025QueryFailuresRespo" +
+      "nse\022B\n\010failures\030\001 \003(\0132 .neutron.contract" +
+      "manager.FailureB\004\310\336\037\000R\010failures\022G\n\npagin" +
+      "ation\030\002 \001(\0132\'.cosmos.base.query.v1beta1." +
+      "PageResponseR\npagination2\211\005\n\005Query\022\214\001\n\006P" +
+      "arams\022+.neutron.contractmanager.QueryPar" +
+      "amsRequest\032,.neutron.contractmanager.Que" +
+      "ryParamsResponse\"\'\202\323\344\223\002!\022\037/neutron/contr" +
+      "actmanager/params\022\261\001\n\016AddressFailure\022-.n" +
+      "eutron.contractmanager.QueryFailuresRequ" +
+      "est\032..neutron.contractmanager.QueryFailu" +
+      "resResponse\"@\202\323\344\223\002:\0228/neutron/contractma" +
+      "nager/failures/{address}/{failure_id}\022\245\001" +
+      "\n\017AddressFailures\022-.neutron.contractmana" +
+      "ger.QueryFailuresRequest\032..neutron.contr" +
+      "actmanager.QueryFailuresResponse\"3\202\323\344\223\002-" +
+      "\022+/neutron/contractmanager/failures/{add" +
+      "ress}\022\224\001\n\010Failures\022-.neutron.contractman" +
+      "ager.QueryFailuresRequest\032..neutron.cont" +
+      "ractmanager.QueryFailuresResponse\")\202\323\344\223\002" +
+      "#\022!/neutron/contractmanager/failuresB\337\001\n" +
+      "\033com.neutron.contractmanagerB\nQueryProto" +
+      "Z9github.com/neutron-org/neutron/v4/x/co" +
+      "ntractmanager/types\242\002\003NCX\252\002\027Neutron.Cont" +
+      "ractmanager\312\002\027Neutron\\Contractmanager\342\002#" +
+      "Neutron\\Contractmanager\\GPBMetadata\352\002\030Ne" +
+      "utron::Contractmanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor(),
           com.gogoproto.GogoProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor(),
+          com.neutron.contractmanager.FailureProto.getDescriptor(),
           com.neutron.contractmanager.ParamsProto.getDescriptor(),
-          com.neutron.contractmanager.GenesisProto.getDescriptor(),
         });
     internal_static_neutron_contractmanager_QueryParamsRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -2903,7 +3053,7 @@ public final class QueryProto {
     internal_static_neutron_contractmanager_QueryFailuresRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_neutron_contractmanager_QueryFailuresRequest_descriptor,
-        new java.lang.String[] { "Address", "Pagination", });
+        new java.lang.String[] { "Address", "FailureId", "Pagination", });
     internal_static_neutron_contractmanager_QueryFailuresResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_neutron_contractmanager_QueryFailuresResponse_fieldAccessorTable = new
@@ -2916,11 +3066,11 @@ public final class QueryProto {
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor();
     com.gogoproto.GogoProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor();
+    com.neutron.contractmanager.FailureProto.getDescriptor();
     com.neutron.contractmanager.ParamsProto.getDescriptor();
-    com.neutron.contractmanager.GenesisProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

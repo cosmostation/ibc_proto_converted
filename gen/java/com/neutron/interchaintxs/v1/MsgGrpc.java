@@ -80,6 +80,37 @@ public final class MsgGrpc {
     return getSubmitTxMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.neutron.interchaintxs.v1.TxProto.MsgUpdateParams,
+      com.neutron.interchaintxs.v1.TxProto.MsgUpdateParamsResponse> getUpdateParamsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateParams",
+      requestType = com.neutron.interchaintxs.v1.TxProto.MsgUpdateParams.class,
+      responseType = com.neutron.interchaintxs.v1.TxProto.MsgUpdateParamsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.neutron.interchaintxs.v1.TxProto.MsgUpdateParams,
+      com.neutron.interchaintxs.v1.TxProto.MsgUpdateParamsResponse> getUpdateParamsMethod() {
+    io.grpc.MethodDescriptor<com.neutron.interchaintxs.v1.TxProto.MsgUpdateParams, com.neutron.interchaintxs.v1.TxProto.MsgUpdateParamsResponse> getUpdateParamsMethod;
+    if ((getUpdateParamsMethod = MsgGrpc.getUpdateParamsMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getUpdateParamsMethod = MsgGrpc.getUpdateParamsMethod) == null) {
+          MsgGrpc.getUpdateParamsMethod = getUpdateParamsMethod =
+              io.grpc.MethodDescriptor.<com.neutron.interchaintxs.v1.TxProto.MsgUpdateParams, com.neutron.interchaintxs.v1.TxProto.MsgUpdateParamsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateParams"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.neutron.interchaintxs.v1.TxProto.MsgUpdateParams.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.neutron.interchaintxs.v1.TxProto.MsgUpdateParamsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("UpdateParams"))
+              .build();
+        }
+      }
+    }
+    return getUpdateParamsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -144,6 +175,13 @@ public final class MsgGrpc {
         io.grpc.stub.StreamObserver<com.neutron.interchaintxs.v1.TxProto.MsgSubmitTxResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSubmitTxMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void updateParams(com.neutron.interchaintxs.v1.TxProto.MsgUpdateParams request,
+        io.grpc.stub.StreamObserver<com.neutron.interchaintxs.v1.TxProto.MsgUpdateParamsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateParamsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -194,6 +232,14 @@ public final class MsgGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSubmitTxMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void updateParams(com.neutron.interchaintxs.v1.TxProto.MsgUpdateParams request,
+        io.grpc.stub.StreamObserver<com.neutron.interchaintxs.v1.TxProto.MsgUpdateParamsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateParamsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -227,6 +273,13 @@ public final class MsgGrpc {
     public com.neutron.interchaintxs.v1.TxProto.MsgSubmitTxResponse submitTx(com.neutron.interchaintxs.v1.TxProto.MsgSubmitTx request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSubmitTxMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.neutron.interchaintxs.v1.TxProto.MsgUpdateParamsResponse updateParams(com.neutron.interchaintxs.v1.TxProto.MsgUpdateParams request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateParamsMethod(), getCallOptions(), request);
     }
   }
 
@@ -264,10 +317,19 @@ public final class MsgGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSubmitTxMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.neutron.interchaintxs.v1.TxProto.MsgUpdateParamsResponse> updateParams(
+        com.neutron.interchaintxs.v1.TxProto.MsgUpdateParams request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateParamsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_REGISTER_INTERCHAIN_ACCOUNT = 0;
   private static final int METHODID_SUBMIT_TX = 1;
+  private static final int METHODID_UPDATE_PARAMS = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -293,6 +355,10 @@ public final class MsgGrpc {
         case METHODID_SUBMIT_TX:
           serviceImpl.submitTx((com.neutron.interchaintxs.v1.TxProto.MsgSubmitTx) request,
               (io.grpc.stub.StreamObserver<com.neutron.interchaintxs.v1.TxProto.MsgSubmitTxResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_PARAMS:
+          serviceImpl.updateParams((com.neutron.interchaintxs.v1.TxProto.MsgUpdateParams) request,
+              (io.grpc.stub.StreamObserver<com.neutron.interchaintxs.v1.TxProto.MsgUpdateParamsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -326,6 +392,13 @@ public final class MsgGrpc {
               com.neutron.interchaintxs.v1.TxProto.MsgSubmitTx,
               com.neutron.interchaintxs.v1.TxProto.MsgSubmitTxResponse>(
                 service, METHODID_SUBMIT_TX)))
+        .addMethod(
+          getUpdateParamsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.neutron.interchaintxs.v1.TxProto.MsgUpdateParams,
+              com.neutron.interchaintxs.v1.TxProto.MsgUpdateParamsResponse>(
+                service, METHODID_UPDATE_PARAMS)))
         .build();
   }
 
@@ -376,6 +449,7 @@ public final class MsgGrpc {
               .setSchemaDescriptor(new MsgFileDescriptorSupplier())
               .addMethod(getRegisterInterchainAccountMethod())
               .addMethod(getSubmitTxMethod())
+              .addMethod(getUpdateParamsMethod())
               .build();
         }
       }

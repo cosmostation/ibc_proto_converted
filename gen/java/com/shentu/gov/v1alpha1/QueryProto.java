@@ -2507,12 +2507,12 @@ public final class QueryProto {
       "ha1.QueryCertVotedRequest\032+.shentu.gov.v" +
       "1alpha1.QueryCertVotedResponse\"5\202\323\344\223\002/\022-" +
       "/shentu/gov/v1alpha1/cert_voted/{proposa" +
-      "l_id}B\301\001\n\027com.shentu.gov.v1alpha1B\nQuery" +
-      "ProtoZ.github.com/shentufoundation/shent" +
-      "u/x/gov/types\242\002\003SGX\252\002\023Shentu.Gov.V1alpha" +
-      "1\312\002\023Shentu\\Gov\\V1alpha1\342\002\037Shentu\\Gov\\V1a" +
-      "lpha1\\GPBMetadata\352\002\025Shentu::Gov::V1alpha" +
-      "1b\006proto3"
+      "l_id}B\312\001\n\027com.shentu.gov.v1alpha1B\nQuery" +
+      "ProtoZ7github.com/shentufoundation/shent" +
+      "u/x/gov/types/v1alpha1\242\002\003SGX\252\002\023Shentu.Go" +
+      "v.V1alpha1\312\002\023Shentu\\Gov\\V1alpha1\342\002\037Shent" +
+      "u\\Gov\\V1alpha1\\GPBMetadata\352\002\025Shentu::Gov" +
+      "::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

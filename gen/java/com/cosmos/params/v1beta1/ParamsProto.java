@@ -1980,20 +1980,20 @@ public final class ParamsProto {
       "\n\"cosmos/params/v1beta1/params.proto\022\025co" +
       "smos.params.v1beta1\032\024gogoproto/gogo.prot" +
       "o\032\031cosmos_proto/cosmos.proto\032\021amino/amin" +
-      "o.proto\"\351\001\n\027ParameterChangeProposal\022\024\n\005t" +
+      "o.proto\"\345\001\n\027ParameterChangeProposal\022\024\n\005t" +
       "itle\030\001 \001(\tR\005title\022 \n\013description\030\002 \001(\tR\013" +
       "description\022G\n\007changes\030\003 \003(\0132\".cosmos.pa" +
       "rams.v1beta1.ParamChangeB\t\310\336\037\000\250\347\260*\001R\007cha" +
-      "nges:M\210\240\037\000\230\240\037\000\312\264-\032cosmos.gov.v1beta1.Con" +
-      "tent\212\347\260*\"cosmos-sdk/ParameterChangePropo" +
-      "sal\"W\n\013ParamChange\022\032\n\010subspace\030\001 \001(\tR\010su" +
-      "bspace\022\020\n\003key\030\002 \001(\tR\003key\022\024\n\005value\030\003 \001(\tR" +
-      "\005value:\004\230\240\037\000B\326\001\n\031com.cosmos.params.v1bet" +
-      "a1B\013ParamsProtoZ4github.com/cosmos/cosmo" +
-      "s-sdk/x/params/types/proposal\242\002\003CPX\252\002\025Co" +
-      "smos.Params.V1beta1\312\002\025Cosmos\\Params\\V1be" +
-      "ta1\342\002!Cosmos\\Params\\V1beta1\\GPBMetadata\352" +
-      "\002\027Cosmos::Params::V1beta1\250\342\036\001b\006proto3"
+      "nges:I\210\240\037\000\312\264-\032cosmos.gov.v1beta1.Content" +
+      "\212\347\260*\"cosmos-sdk/ParameterChangeProposal\"" +
+      "Q\n\013ParamChange\022\032\n\010subspace\030\001 \001(\tR\010subspa" +
+      "ce\022\020\n\003key\030\002 \001(\tR\003key\022\024\n\005value\030\003 \001(\tR\005val" +
+      "ueB\326\001\n\031com.cosmos.params.v1beta1B\013Params" +
+      "ProtoZ4github.com/cosmos/cosmos-sdk/x/pa" +
+      "rams/types/proposal\242\002\003CPX\252\002\025Cosmos.Param" +
+      "s.V1beta1\312\002\025Cosmos\\Params\\V1beta1\342\002!Cosm" +
+      "os\\Params\\V1beta1\\GPBMetadata\352\002\027Cosmos::" +
+      "Params::V1beta1\250\342\036\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2021,7 +2021,6 @@ public final class ParamsProto {
     registry.add(com.cosmos_proto.CosmosProto.implementsInterface);
     registry.add(com.gogoproto.GogoProto.equalAll);
     registry.add(com.gogoproto.GogoProto.goprotoGetters);
-    registry.add(com.gogoproto.GogoProto.goprotoStringer);
     registry.add(com.gogoproto.GogoProto.nullable);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

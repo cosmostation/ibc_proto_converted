@@ -20,8 +20,8 @@ public final class ModuleProto {
 
     /**
      * <pre>
-     * blocked_module_accounts configures exceptional module accounts which should be blocked from receiving funds.
-     * If left empty it defaults to the list of account names supplied in the auth module configuration as
+     * blocked_module_accounts_override configures exceptional module accounts which should be blocked from receiving
+     * funds. If left empty it defaults to the list of account names supplied in the auth module configuration as
      * module_account_permissions
      * </pre>
      *
@@ -32,8 +32,8 @@ public final class ModuleProto {
         getBlockedModuleAccountsOverrideList();
     /**
      * <pre>
-     * blocked_module_accounts configures exceptional module accounts which should be blocked from receiving funds.
-     * If left empty it defaults to the list of account names supplied in the auth module configuration as
+     * blocked_module_accounts_override configures exceptional module accounts which should be blocked from receiving
+     * funds. If left empty it defaults to the list of account names supplied in the auth module configuration as
      * module_account_permissions
      * </pre>
      *
@@ -43,8 +43,8 @@ public final class ModuleProto {
     int getBlockedModuleAccountsOverrideCount();
     /**
      * <pre>
-     * blocked_module_accounts configures exceptional module accounts which should be blocked from receiving funds.
-     * If left empty it defaults to the list of account names supplied in the auth module configuration as
+     * blocked_module_accounts_override configures exceptional module accounts which should be blocked from receiving
+     * funds. If left empty it defaults to the list of account names supplied in the auth module configuration as
      * module_account_permissions
      * </pre>
      *
@@ -55,8 +55,8 @@ public final class ModuleProto {
     java.lang.String getBlockedModuleAccountsOverride(int index);
     /**
      * <pre>
-     * blocked_module_accounts configures exceptional module accounts which should be blocked from receiving funds.
-     * If left empty it defaults to the list of account names supplied in the auth module configuration as
+     * blocked_module_accounts_override configures exceptional module accounts which should be blocked from receiving
+     * funds. If left empty it defaults to the list of account names supplied in the auth module configuration as
      * module_account_permissions
      * </pre>
      *
@@ -86,6 +86,59 @@ public final class ModuleProto {
      */
     com.google.protobuf.ByteString
         getAuthorityBytes();
+
+    /**
+     * <pre>
+     * restrictions_order specifies the order of send restrictions and should be
+     * a list of module names which provide a send restriction instance. If no
+     * order is provided, then restrictions will be applied in alphabetical order
+     * of module names.
+     * </pre>
+     *
+     * <code>repeated string restrictions_order = 3 [json_name = "restrictionsOrder"];</code>
+     * @return A list containing the restrictionsOrder.
+     */
+    java.util.List<java.lang.String>
+        getRestrictionsOrderList();
+    /**
+     * <pre>
+     * restrictions_order specifies the order of send restrictions and should be
+     * a list of module names which provide a send restriction instance. If no
+     * order is provided, then restrictions will be applied in alphabetical order
+     * of module names.
+     * </pre>
+     *
+     * <code>repeated string restrictions_order = 3 [json_name = "restrictionsOrder"];</code>
+     * @return The count of restrictionsOrder.
+     */
+    int getRestrictionsOrderCount();
+    /**
+     * <pre>
+     * restrictions_order specifies the order of send restrictions and should be
+     * a list of module names which provide a send restriction instance. If no
+     * order is provided, then restrictions will be applied in alphabetical order
+     * of module names.
+     * </pre>
+     *
+     * <code>repeated string restrictions_order = 3 [json_name = "restrictionsOrder"];</code>
+     * @param index The index of the element to return.
+     * @return The restrictionsOrder at the given index.
+     */
+    java.lang.String getRestrictionsOrder(int index);
+    /**
+     * <pre>
+     * restrictions_order specifies the order of send restrictions and should be
+     * a list of module names which provide a send restriction instance. If no
+     * order is provided, then restrictions will be applied in alphabetical order
+     * of module names.
+     * </pre>
+     *
+     * <code>repeated string restrictions_order = 3 [json_name = "restrictionsOrder"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the restrictionsOrder at the given index.
+     */
+    com.google.protobuf.ByteString
+        getRestrictionsOrderBytes(int index);
   }
   /**
    * <pre>
@@ -107,6 +160,8 @@ public final class ModuleProto {
       blockedModuleAccountsOverride_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       authority_ = "";
+      restrictionsOrder_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
@@ -135,8 +190,8 @@ public final class ModuleProto {
         com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
-     * blocked_module_accounts configures exceptional module accounts which should be blocked from receiving funds.
-     * If left empty it defaults to the list of account names supplied in the auth module configuration as
+     * blocked_module_accounts_override configures exceptional module accounts which should be blocked from receiving
+     * funds. If left empty it defaults to the list of account names supplied in the auth module configuration as
      * module_account_permissions
      * </pre>
      *
@@ -149,8 +204,8 @@ public final class ModuleProto {
     }
     /**
      * <pre>
-     * blocked_module_accounts configures exceptional module accounts which should be blocked from receiving funds.
-     * If left empty it defaults to the list of account names supplied in the auth module configuration as
+     * blocked_module_accounts_override configures exceptional module accounts which should be blocked from receiving
+     * funds. If left empty it defaults to the list of account names supplied in the auth module configuration as
      * module_account_permissions
      * </pre>
      *
@@ -162,8 +217,8 @@ public final class ModuleProto {
     }
     /**
      * <pre>
-     * blocked_module_accounts configures exceptional module accounts which should be blocked from receiving funds.
-     * If left empty it defaults to the list of account names supplied in the auth module configuration as
+     * blocked_module_accounts_override configures exceptional module accounts which should be blocked from receiving
+     * funds. If left empty it defaults to the list of account names supplied in the auth module configuration as
      * module_account_permissions
      * </pre>
      *
@@ -176,8 +231,8 @@ public final class ModuleProto {
     }
     /**
      * <pre>
-     * blocked_module_accounts configures exceptional module accounts which should be blocked from receiving funds.
-     * If left empty it defaults to the list of account names supplied in the auth module configuration as
+     * blocked_module_accounts_override configures exceptional module accounts which should be blocked from receiving
+     * funds. If left empty it defaults to the list of account names supplied in the auth module configuration as
      * module_account_permissions
      * </pre>
      *
@@ -237,6 +292,71 @@ public final class ModuleProto {
       }
     }
 
+    public static final int RESTRICTIONS_ORDER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList restrictionsOrder_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * restrictions_order specifies the order of send restrictions and should be
+     * a list of module names which provide a send restriction instance. If no
+     * order is provided, then restrictions will be applied in alphabetical order
+     * of module names.
+     * </pre>
+     *
+     * <code>repeated string restrictions_order = 3 [json_name = "restrictionsOrder"];</code>
+     * @return A list containing the restrictionsOrder.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getRestrictionsOrderList() {
+      return restrictionsOrder_;
+    }
+    /**
+     * <pre>
+     * restrictions_order specifies the order of send restrictions and should be
+     * a list of module names which provide a send restriction instance. If no
+     * order is provided, then restrictions will be applied in alphabetical order
+     * of module names.
+     * </pre>
+     *
+     * <code>repeated string restrictions_order = 3 [json_name = "restrictionsOrder"];</code>
+     * @return The count of restrictionsOrder.
+     */
+    public int getRestrictionsOrderCount() {
+      return restrictionsOrder_.size();
+    }
+    /**
+     * <pre>
+     * restrictions_order specifies the order of send restrictions and should be
+     * a list of module names which provide a send restriction instance. If no
+     * order is provided, then restrictions will be applied in alphabetical order
+     * of module names.
+     * </pre>
+     *
+     * <code>repeated string restrictions_order = 3 [json_name = "restrictionsOrder"];</code>
+     * @param index The index of the element to return.
+     * @return The restrictionsOrder at the given index.
+     */
+    public java.lang.String getRestrictionsOrder(int index) {
+      return restrictionsOrder_.get(index);
+    }
+    /**
+     * <pre>
+     * restrictions_order specifies the order of send restrictions and should be
+     * a list of module names which provide a send restriction instance. If no
+     * order is provided, then restrictions will be applied in alphabetical order
+     * of module names.
+     * </pre>
+     *
+     * <code>repeated string restrictions_order = 3 [json_name = "restrictionsOrder"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the restrictionsOrder at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getRestrictionsOrderBytes(int index) {
+      return restrictionsOrder_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -256,6 +376,9 @@ public final class ModuleProto {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, authority_);
+      }
+      for (int i = 0; i < restrictionsOrder_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, restrictionsOrder_.getRaw(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -277,6 +400,14 @@ public final class ModuleProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, authority_);
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < restrictionsOrder_.size(); i++) {
+          dataSize += computeStringSizeNoTag(restrictionsOrder_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getRestrictionsOrderList().size();
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -296,6 +427,8 @@ public final class ModuleProto {
           .equals(other.getBlockedModuleAccountsOverrideList())) return false;
       if (!getAuthority()
           .equals(other.getAuthority())) return false;
+      if (!getRestrictionsOrderList()
+          .equals(other.getRestrictionsOrderList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -313,6 +446,10 @@ public final class ModuleProto {
       }
       hash = (37 * hash) + AUTHORITY_FIELD_NUMBER;
       hash = (53 * hash) + getAuthority().hashCode();
+      if (getRestrictionsOrderCount() > 0) {
+        hash = (37 * hash) + RESTRICTIONS_ORDER_FIELD_NUMBER;
+        hash = (53 * hash) + getRestrictionsOrderList().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -451,6 +588,8 @@ public final class ModuleProto {
         blockedModuleAccountsOverride_ =
             com.google.protobuf.LazyStringArrayList.emptyList();
         authority_ = "";
+        restrictionsOrder_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -490,6 +629,10 @@ public final class ModuleProto {
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.authority_ = authority_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          restrictionsOrder_.makeImmutable();
+          result.restrictionsOrder_ = restrictionsOrder_;
         }
       }
 
@@ -552,6 +695,16 @@ public final class ModuleProto {
           bitField0_ |= 0x00000002;
           onChanged();
         }
+        if (!other.restrictionsOrder_.isEmpty()) {
+          if (restrictionsOrder_.isEmpty()) {
+            restrictionsOrder_ = other.restrictionsOrder_;
+            bitField0_ |= 0x00000004;
+          } else {
+            ensureRestrictionsOrderIsMutable();
+            restrictionsOrder_.addAll(other.restrictionsOrder_);
+          }
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -589,6 +742,12 @@ public final class ModuleProto {
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureRestrictionsOrderIsMutable();
+                restrictionsOrder_.add(s);
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -616,8 +775,8 @@ public final class ModuleProto {
       }
       /**
        * <pre>
-       * blocked_module_accounts configures exceptional module accounts which should be blocked from receiving funds.
-       * If left empty it defaults to the list of account names supplied in the auth module configuration as
+       * blocked_module_accounts_override configures exceptional module accounts which should be blocked from receiving
+       * funds. If left empty it defaults to the list of account names supplied in the auth module configuration as
        * module_account_permissions
        * </pre>
        *
@@ -631,8 +790,8 @@ public final class ModuleProto {
       }
       /**
        * <pre>
-       * blocked_module_accounts configures exceptional module accounts which should be blocked from receiving funds.
-       * If left empty it defaults to the list of account names supplied in the auth module configuration as
+       * blocked_module_accounts_override configures exceptional module accounts which should be blocked from receiving
+       * funds. If left empty it defaults to the list of account names supplied in the auth module configuration as
        * module_account_permissions
        * </pre>
        *
@@ -644,8 +803,8 @@ public final class ModuleProto {
       }
       /**
        * <pre>
-       * blocked_module_accounts configures exceptional module accounts which should be blocked from receiving funds.
-       * If left empty it defaults to the list of account names supplied in the auth module configuration as
+       * blocked_module_accounts_override configures exceptional module accounts which should be blocked from receiving
+       * funds. If left empty it defaults to the list of account names supplied in the auth module configuration as
        * module_account_permissions
        * </pre>
        *
@@ -658,8 +817,8 @@ public final class ModuleProto {
       }
       /**
        * <pre>
-       * blocked_module_accounts configures exceptional module accounts which should be blocked from receiving funds.
-       * If left empty it defaults to the list of account names supplied in the auth module configuration as
+       * blocked_module_accounts_override configures exceptional module accounts which should be blocked from receiving
+       * funds. If left empty it defaults to the list of account names supplied in the auth module configuration as
        * module_account_permissions
        * </pre>
        *
@@ -673,8 +832,8 @@ public final class ModuleProto {
       }
       /**
        * <pre>
-       * blocked_module_accounts configures exceptional module accounts which should be blocked from receiving funds.
-       * If left empty it defaults to the list of account names supplied in the auth module configuration as
+       * blocked_module_accounts_override configures exceptional module accounts which should be blocked from receiving
+       * funds. If left empty it defaults to the list of account names supplied in the auth module configuration as
        * module_account_permissions
        * </pre>
        *
@@ -694,8 +853,8 @@ public final class ModuleProto {
       }
       /**
        * <pre>
-       * blocked_module_accounts configures exceptional module accounts which should be blocked from receiving funds.
-       * If left empty it defaults to the list of account names supplied in the auth module configuration as
+       * blocked_module_accounts_override configures exceptional module accounts which should be blocked from receiving
+       * funds. If left empty it defaults to the list of account names supplied in the auth module configuration as
        * module_account_permissions
        * </pre>
        *
@@ -714,8 +873,8 @@ public final class ModuleProto {
       }
       /**
        * <pre>
-       * blocked_module_accounts configures exceptional module accounts which should be blocked from receiving funds.
-       * If left empty it defaults to the list of account names supplied in the auth module configuration as
+       * blocked_module_accounts_override configures exceptional module accounts which should be blocked from receiving
+       * funds. If left empty it defaults to the list of account names supplied in the auth module configuration as
        * module_account_permissions
        * </pre>
        *
@@ -734,8 +893,8 @@ public final class ModuleProto {
       }
       /**
        * <pre>
-       * blocked_module_accounts configures exceptional module accounts which should be blocked from receiving funds.
-       * If left empty it defaults to the list of account names supplied in the auth module configuration as
+       * blocked_module_accounts_override configures exceptional module accounts which should be blocked from receiving
+       * funds. If left empty it defaults to the list of account names supplied in the auth module configuration as
        * module_account_permissions
        * </pre>
        *
@@ -751,8 +910,8 @@ public final class ModuleProto {
       }
       /**
        * <pre>
-       * blocked_module_accounts configures exceptional module accounts which should be blocked from receiving funds.
-       * If left empty it defaults to the list of account names supplied in the auth module configuration as
+       * blocked_module_accounts_override configures exceptional module accounts which should be blocked from receiving
+       * funds. If left empty it defaults to the list of account names supplied in the auth module configuration as
        * module_account_permissions
        * </pre>
        *
@@ -862,6 +1021,180 @@ public final class ModuleProto {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.LazyStringArrayList restrictionsOrder_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureRestrictionsOrderIsMutable() {
+        if (!restrictionsOrder_.isModifiable()) {
+          restrictionsOrder_ = new com.google.protobuf.LazyStringArrayList(restrictionsOrder_);
+        }
+        bitField0_ |= 0x00000004;
+      }
+      /**
+       * <pre>
+       * restrictions_order specifies the order of send restrictions and should be
+       * a list of module names which provide a send restriction instance. If no
+       * order is provided, then restrictions will be applied in alphabetical order
+       * of module names.
+       * </pre>
+       *
+       * <code>repeated string restrictions_order = 3 [json_name = "restrictionsOrder"];</code>
+       * @return A list containing the restrictionsOrder.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getRestrictionsOrderList() {
+        restrictionsOrder_.makeImmutable();
+        return restrictionsOrder_;
+      }
+      /**
+       * <pre>
+       * restrictions_order specifies the order of send restrictions and should be
+       * a list of module names which provide a send restriction instance. If no
+       * order is provided, then restrictions will be applied in alphabetical order
+       * of module names.
+       * </pre>
+       *
+       * <code>repeated string restrictions_order = 3 [json_name = "restrictionsOrder"];</code>
+       * @return The count of restrictionsOrder.
+       */
+      public int getRestrictionsOrderCount() {
+        return restrictionsOrder_.size();
+      }
+      /**
+       * <pre>
+       * restrictions_order specifies the order of send restrictions and should be
+       * a list of module names which provide a send restriction instance. If no
+       * order is provided, then restrictions will be applied in alphabetical order
+       * of module names.
+       * </pre>
+       *
+       * <code>repeated string restrictions_order = 3 [json_name = "restrictionsOrder"];</code>
+       * @param index The index of the element to return.
+       * @return The restrictionsOrder at the given index.
+       */
+      public java.lang.String getRestrictionsOrder(int index) {
+        return restrictionsOrder_.get(index);
+      }
+      /**
+       * <pre>
+       * restrictions_order specifies the order of send restrictions and should be
+       * a list of module names which provide a send restriction instance. If no
+       * order is provided, then restrictions will be applied in alphabetical order
+       * of module names.
+       * </pre>
+       *
+       * <code>repeated string restrictions_order = 3 [json_name = "restrictionsOrder"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the restrictionsOrder at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getRestrictionsOrderBytes(int index) {
+        return restrictionsOrder_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * restrictions_order specifies the order of send restrictions and should be
+       * a list of module names which provide a send restriction instance. If no
+       * order is provided, then restrictions will be applied in alphabetical order
+       * of module names.
+       * </pre>
+       *
+       * <code>repeated string restrictions_order = 3 [json_name = "restrictionsOrder"];</code>
+       * @param index The index to set the value at.
+       * @param value The restrictionsOrder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRestrictionsOrder(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureRestrictionsOrderIsMutable();
+        restrictionsOrder_.set(index, value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * restrictions_order specifies the order of send restrictions and should be
+       * a list of module names which provide a send restriction instance. If no
+       * order is provided, then restrictions will be applied in alphabetical order
+       * of module names.
+       * </pre>
+       *
+       * <code>repeated string restrictions_order = 3 [json_name = "restrictionsOrder"];</code>
+       * @param value The restrictionsOrder to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRestrictionsOrder(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureRestrictionsOrderIsMutable();
+        restrictionsOrder_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * restrictions_order specifies the order of send restrictions and should be
+       * a list of module names which provide a send restriction instance. If no
+       * order is provided, then restrictions will be applied in alphabetical order
+       * of module names.
+       * </pre>
+       *
+       * <code>repeated string restrictions_order = 3 [json_name = "restrictionsOrder"];</code>
+       * @param values The restrictionsOrder to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllRestrictionsOrder(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureRestrictionsOrderIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, restrictionsOrder_);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * restrictions_order specifies the order of send restrictions and should be
+       * a list of module names which provide a send restriction instance. If no
+       * order is provided, then restrictions will be applied in alphabetical order
+       * of module names.
+       * </pre>
+       *
+       * <code>repeated string restrictions_order = 3 [json_name = "restrictionsOrder"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRestrictionsOrder() {
+        restrictionsOrder_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * restrictions_order specifies the order of send restrictions and should be
+       * a list of module names which provide a send restriction instance. If no
+       * order is provided, then restrictions will be applied in alphabetical order
+       * of module names.
+       * </pre>
+       *
+       * <code>repeated string restrictions_order = 3 [json_name = "restrictionsOrder"];</code>
+       * @param value The bytes of the restrictionsOrder to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRestrictionsOrderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureRestrictionsOrderIsMutable();
+        restrictionsOrder_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -942,15 +1275,16 @@ public final class ModuleProto {
     java.lang.String[] descriptorData = {
       "\n\"cosmos/bank/module/v1/module.proto\022\025co" +
       "smos.bank.module.v1\032 cosmos/app/v1alpha1" +
-      "/module.proto\"\234\001\n\006Module\022G\n blocked_modu" +
+      "/module.proto\"\313\001\n\006Module\022G\n blocked_modu" +
       "le_accounts_override\030\001 \003(\tR\035blockedModul" +
       "eAccountsOverride\022\034\n\tauthority\030\002 \001(\tR\tau" +
-      "thority:+\272\300\226\332\001%\n#github.com/cosmos/cosmo" +
-      "s-sdk/x/bankB\235\001\n\031com.cosmos.bank.module." +
-      "v1B\013ModuleProto\242\002\003CBM\252\002\025Cosmos.Bank.Modu" +
-      "le.V1\312\002\025Cosmos\\Bank\\Module\\V1\342\002!Cosmos\\B" +
-      "ank\\Module\\V1\\GPBMetadata\352\002\030Cosmos::Bank" +
-      "::Module::V1b\006proto3"
+      "thority\022-\n\022restrictions_order\030\003 \003(\tR\021res" +
+      "trictionsOrder:+\272\300\226\332\001%\n#github.com/cosmo" +
+      "s/cosmos-sdk/x/bankB\235\001\n\031com.cosmos.bank." +
+      "module.v1B\013ModuleProto\242\002\003CBM\252\002\025Cosmos.Ba" +
+      "nk.Module.V1\312\002\025Cosmos\\Bank\\Module\\V1\342\002!C" +
+      "osmos\\Bank\\Module\\V1\\GPBMetadata\352\002\030Cosmo" +
+      "s::Bank::Module::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -962,7 +1296,7 @@ public final class ModuleProto {
     internal_static_cosmos_bank_module_v1_Module_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cosmos_bank_module_v1_Module_descriptor,
-        new java.lang.String[] { "BlockedModuleAccountsOverride", "Authority", });
+        new java.lang.String[] { "BlockedModuleAccountsOverride", "Authority", "RestrictionsOrder", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.cosmos.app.v1alpha1.ModuleProto.module);

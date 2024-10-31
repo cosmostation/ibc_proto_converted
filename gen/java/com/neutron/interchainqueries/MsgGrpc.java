@@ -142,6 +142,37 @@ public final class MsgGrpc {
     return getUpdateInterchainQueryMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.neutron.interchainqueries.TxProto.MsgUpdateParams,
+      com.neutron.interchainqueries.TxProto.MsgUpdateParamsResponse> getUpdateParamsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateParams",
+      requestType = com.neutron.interchainqueries.TxProto.MsgUpdateParams.class,
+      responseType = com.neutron.interchainqueries.TxProto.MsgUpdateParamsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.neutron.interchainqueries.TxProto.MsgUpdateParams,
+      com.neutron.interchainqueries.TxProto.MsgUpdateParamsResponse> getUpdateParamsMethod() {
+    io.grpc.MethodDescriptor<com.neutron.interchainqueries.TxProto.MsgUpdateParams, com.neutron.interchainqueries.TxProto.MsgUpdateParamsResponse> getUpdateParamsMethod;
+    if ((getUpdateParamsMethod = MsgGrpc.getUpdateParamsMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getUpdateParamsMethod = MsgGrpc.getUpdateParamsMethod) == null) {
+          MsgGrpc.getUpdateParamsMethod = getUpdateParamsMethod =
+              io.grpc.MethodDescriptor.<com.neutron.interchainqueries.TxProto.MsgUpdateParams, com.neutron.interchainqueries.TxProto.MsgUpdateParamsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateParams"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.neutron.interchainqueries.TxProto.MsgUpdateParams.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.neutron.interchainqueries.TxProto.MsgUpdateParamsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("UpdateParams"))
+              .build();
+        }
+      }
+    }
+    return getUpdateParamsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -220,6 +251,13 @@ public final class MsgGrpc {
         io.grpc.stub.StreamObserver<com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateInterchainQueryMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void updateParams(com.neutron.interchainqueries.TxProto.MsgUpdateParams request,
+        io.grpc.stub.StreamObserver<com.neutron.interchainqueries.TxProto.MsgUpdateParamsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateParamsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -286,6 +324,14 @@ public final class MsgGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateInterchainQueryMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void updateParams(com.neutron.interchainqueries.TxProto.MsgUpdateParams request,
+        io.grpc.stub.StreamObserver<com.neutron.interchainqueries.TxProto.MsgUpdateParamsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateParamsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -333,6 +379,13 @@ public final class MsgGrpc {
     public com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse updateInterchainQuery(com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateInterchainQueryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.neutron.interchainqueries.TxProto.MsgUpdateParamsResponse updateParams(com.neutron.interchainqueries.TxProto.MsgUpdateParams request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateParamsMethod(), getCallOptions(), request);
     }
   }
 
@@ -386,12 +439,21 @@ public final class MsgGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateInterchainQueryMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.neutron.interchainqueries.TxProto.MsgUpdateParamsResponse> updateParams(
+        com.neutron.interchainqueries.TxProto.MsgUpdateParams request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateParamsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_REGISTER_INTERCHAIN_QUERY = 0;
   private static final int METHODID_SUBMIT_QUERY_RESULT = 1;
   private static final int METHODID_REMOVE_INTERCHAIN_QUERY = 2;
   private static final int METHODID_UPDATE_INTERCHAIN_QUERY = 3;
+  private static final int METHODID_UPDATE_PARAMS = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -425,6 +487,10 @@ public final class MsgGrpc {
         case METHODID_UPDATE_INTERCHAIN_QUERY:
           serviceImpl.updateInterchainQuery((com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest) request,
               (io.grpc.stub.StreamObserver<com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_PARAMS:
+          serviceImpl.updateParams((com.neutron.interchainqueries.TxProto.MsgUpdateParams) request,
+              (io.grpc.stub.StreamObserver<com.neutron.interchainqueries.TxProto.MsgUpdateParamsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -472,6 +538,13 @@ public final class MsgGrpc {
               com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest,
               com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse>(
                 service, METHODID_UPDATE_INTERCHAIN_QUERY)))
+        .addMethod(
+          getUpdateParamsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.neutron.interchainqueries.TxProto.MsgUpdateParams,
+              com.neutron.interchainqueries.TxProto.MsgUpdateParamsResponse>(
+                service, METHODID_UPDATE_PARAMS)))
         .build();
   }
 
@@ -524,6 +597,7 @@ public final class MsgGrpc {
               .addMethod(getSubmitQueryResultMethod())
               .addMethod(getRemoveInterchainQueryMethod())
               .addMethod(getUpdateInterchainQueryMethod())
+              .addMethod(getUpdateParamsMethod())
               .build();
         }
       }

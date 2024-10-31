@@ -2139,7 +2139,7 @@ public final class TxProto {
 
     /**
      * <pre>
-     * channel src channel on neutron side trasaction was submitted from
+     * channel src channel on neutron side transaction was submitted from
      * </pre>
      *
      * <code>string channel = 2 [json_name = "channel"];</code>
@@ -2148,7 +2148,7 @@ public final class TxProto {
     java.lang.String getChannel();
     /**
      * <pre>
-     * channel src channel on neutron side trasaction was submitted from
+     * channel src channel on neutron side transaction was submitted from
      * </pre>
      *
      * <code>string channel = 2 [json_name = "channel"];</code>
@@ -2218,7 +2218,7 @@ public final class TxProto {
     private volatile java.lang.Object channel_ = "";
     /**
      * <pre>
-     * channel src channel on neutron side trasaction was submitted from
+     * channel src channel on neutron side transaction was submitted from
      * </pre>
      *
      * <code>string channel = 2 [json_name = "channel"];</code>
@@ -2239,7 +2239,7 @@ public final class TxProto {
     }
     /**
      * <pre>
-     * channel src channel on neutron side trasaction was submitted from
+     * channel src channel on neutron side transaction was submitted from
      * </pre>
      *
      * <code>string channel = 2 [json_name = "channel"];</code>
@@ -2662,7 +2662,7 @@ public final class TxProto {
       private java.lang.Object channel_ = "";
       /**
        * <pre>
-       * channel src channel on neutron side trasaction was submitted from
+       * channel src channel on neutron side transaction was submitted from
        * </pre>
        *
        * <code>string channel = 2 [json_name = "channel"];</code>
@@ -2682,7 +2682,7 @@ public final class TxProto {
       }
       /**
        * <pre>
-       * channel src channel on neutron side trasaction was submitted from
+       * channel src channel on neutron side transaction was submitted from
        * </pre>
        *
        * <code>string channel = 2 [json_name = "channel"];</code>
@@ -2703,7 +2703,7 @@ public final class TxProto {
       }
       /**
        * <pre>
-       * channel src channel on neutron side trasaction was submitted from
+       * channel src channel on neutron side transaction was submitted from
        * </pre>
        *
        * <code>string channel = 2 [json_name = "channel"];</code>
@@ -2720,7 +2720,7 @@ public final class TxProto {
       }
       /**
        * <pre>
-       * channel src channel on neutron side trasaction was submitted from
+       * channel src channel on neutron side transaction was submitted from
        * </pre>
        *
        * <code>string channel = 2 [json_name = "channel"];</code>
@@ -2734,7 +2734,7 @@ public final class TxProto {
       }
       /**
        * <pre>
-       * channel src channel on neutron side trasaction was submitted from
+       * channel src channel on neutron side transaction was submitted from
        * </pre>
        *
        * <code>string channel = 2 [json_name = "channel"];</code>
@@ -2814,6 +2814,1295 @@ public final class TxProto {
 
   }
 
+  public interface MsgUpdateParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.transfer.MsgUpdateParams)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * signer address
+     * </pre>
+     *
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The signer.
+     */
+    java.lang.String getSigner();
+    /**
+     * <pre>
+     * signer address
+     * </pre>
+     *
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The bytes for signer.
+     */
+    com.google.protobuf.ByteString
+        getSignerBytes();
+
+    /**
+     * <pre>
+     * params defines the transfer parameters to update.
+     *
+     * NOTE: All parameters must be supplied.
+     * </pre>
+     *
+     * <code>.ibc.applications.transfer.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params defines the transfer parameters to update.
+     *
+     * NOTE: All parameters must be supplied.
+     * </pre>
+     *
+     * <code>.ibc.applications.transfer.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.ibc.applications.transfer.v1.TransferProto.Params getParams();
+    /**
+     * <pre>
+     * params defines the transfer parameters to update.
+     *
+     * NOTE: All parameters must be supplied.
+     * </pre>
+     *
+     * <code>.ibc.applications.transfer.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.ibc.applications.transfer.v1.TransferProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgUpdateParams is the Msg/UpdateParams request type.
+   * </pre>
+   *
+   * Protobuf type {@code neutron.transfer.MsgUpdateParams}
+   */
+  public static final class MsgUpdateParams extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.transfer.MsgUpdateParams)
+      MsgUpdateParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateParams.newBuilder() to construct.
+    private MsgUpdateParams(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateParams() {
+      signer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateParams();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.transfer.TxProto.internal_static_neutron_transfer_MsgUpdateParams_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.transfer.TxProto.internal_static_neutron_transfer_MsgUpdateParams_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.transfer.TxProto.MsgUpdateParams.class, com.neutron.transfer.TxProto.MsgUpdateParams.Builder.class);
+    }
+
+    public static final int SIGNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object signer_ = "";
+    /**
+     * <pre>
+     * signer address
+     * </pre>
+     *
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The signer.
+     */
+    @java.lang.Override
+    public java.lang.String getSigner() {
+      java.lang.Object ref = signer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        signer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * signer address
+     * </pre>
+     *
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The bytes for signer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSignerBytes() {
+      java.lang.Object ref = signer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        signer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 2;
+    private com.ibc.applications.transfer.v1.TransferProto.Params params_;
+    /**
+     * <pre>
+     * params defines the transfer parameters to update.
+     *
+     * NOTE: All parameters must be supplied.
+     * </pre>
+     *
+     * <code>.ibc.applications.transfer.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params defines the transfer parameters to update.
+     *
+     * NOTE: All parameters must be supplied.
+     * </pre>
+     *
+     * <code>.ibc.applications.transfer.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.ibc.applications.transfer.v1.TransferProto.Params getParams() {
+      return params_ == null ? com.ibc.applications.transfer.v1.TransferProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params defines the transfer parameters to update.
+     *
+     * NOTE: All parameters must be supplied.
+     * </pre>
+     *
+     * <code>.ibc.applications.transfer.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.ibc.applications.transfer.v1.TransferProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.ibc.applications.transfer.v1.TransferProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, signer_);
+      }
+      if (params_ != null) {
+        output.writeMessage(2, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, signer_);
+      }
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.transfer.TxProto.MsgUpdateParams)) {
+        return super.equals(obj);
+      }
+      com.neutron.transfer.TxProto.MsgUpdateParams other = (com.neutron.transfer.TxProto.MsgUpdateParams) obj;
+
+      if (!getSigner()
+          .equals(other.getSigner())) return false;
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SIGNER_FIELD_NUMBER;
+      hash = (53 * hash) + getSigner().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.transfer.TxProto.MsgUpdateParams parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.transfer.TxProto.MsgUpdateParams parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.transfer.TxProto.MsgUpdateParams parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.transfer.TxProto.MsgUpdateParams parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.transfer.TxProto.MsgUpdateParams parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.transfer.TxProto.MsgUpdateParams parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.transfer.TxProto.MsgUpdateParams parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.transfer.TxProto.MsgUpdateParams parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.transfer.TxProto.MsgUpdateParams parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.transfer.TxProto.MsgUpdateParams parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.transfer.TxProto.MsgUpdateParams parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.transfer.TxProto.MsgUpdateParams parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.transfer.TxProto.MsgUpdateParams prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgUpdateParams is the Msg/UpdateParams request type.
+     * </pre>
+     *
+     * Protobuf type {@code neutron.transfer.MsgUpdateParams}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.transfer.MsgUpdateParams)
+        com.neutron.transfer.TxProto.MsgUpdateParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.transfer.TxProto.internal_static_neutron_transfer_MsgUpdateParams_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.transfer.TxProto.internal_static_neutron_transfer_MsgUpdateParams_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.transfer.TxProto.MsgUpdateParams.class, com.neutron.transfer.TxProto.MsgUpdateParams.Builder.class);
+      }
+
+      // Construct using com.neutron.transfer.TxProto.MsgUpdateParams.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        signer_ = "";
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.transfer.TxProto.internal_static_neutron_transfer_MsgUpdateParams_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.transfer.TxProto.MsgUpdateParams getDefaultInstanceForType() {
+        return com.neutron.transfer.TxProto.MsgUpdateParams.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.transfer.TxProto.MsgUpdateParams build() {
+        com.neutron.transfer.TxProto.MsgUpdateParams result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.transfer.TxProto.MsgUpdateParams buildPartial() {
+        com.neutron.transfer.TxProto.MsgUpdateParams result = new com.neutron.transfer.TxProto.MsgUpdateParams(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.neutron.transfer.TxProto.MsgUpdateParams result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.signer_ = signer_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.transfer.TxProto.MsgUpdateParams) {
+          return mergeFrom((com.neutron.transfer.TxProto.MsgUpdateParams)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.transfer.TxProto.MsgUpdateParams other) {
+        if (other == com.neutron.transfer.TxProto.MsgUpdateParams.getDefaultInstance()) return this;
+        if (!other.getSigner().isEmpty()) {
+          signer_ = other.signer_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                signer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object signer_ = "";
+      /**
+       * <pre>
+       * signer address
+       * </pre>
+       *
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @return The signer.
+       */
+      public java.lang.String getSigner() {
+        java.lang.Object ref = signer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          signer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * signer address
+       * </pre>
+       *
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @return The bytes for signer.
+       */
+      public com.google.protobuf.ByteString
+          getSignerBytes() {
+        java.lang.Object ref = signer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * signer address
+       * </pre>
+       *
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @param value The signer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        signer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * signer address
+       * </pre>
+       *
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSigner() {
+        signer_ = getDefaultInstance().getSigner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * signer address
+       * </pre>
+       *
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @param value The bytes for signer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        signer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.ibc.applications.transfer.v1.TransferProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ibc.applications.transfer.v1.TransferProto.Params, com.ibc.applications.transfer.v1.TransferProto.Params.Builder, com.ibc.applications.transfer.v1.TransferProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params defines the transfer parameters to update.
+       *
+       * NOTE: All parameters must be supplied.
+       * </pre>
+       *
+       * <code>.ibc.applications.transfer.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * params defines the transfer parameters to update.
+       *
+       * NOTE: All parameters must be supplied.
+       * </pre>
+       *
+       * <code>.ibc.applications.transfer.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.ibc.applications.transfer.v1.TransferProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.ibc.applications.transfer.v1.TransferProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines the transfer parameters to update.
+       *
+       * NOTE: All parameters must be supplied.
+       * </pre>
+       *
+       * <code>.ibc.applications.transfer.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.ibc.applications.transfer.v1.TransferProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the transfer parameters to update.
+       *
+       * NOTE: All parameters must be supplied.
+       * </pre>
+       *
+       * <code>.ibc.applications.transfer.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.ibc.applications.transfer.v1.TransferProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the transfer parameters to update.
+       *
+       * NOTE: All parameters must be supplied.
+       * </pre>
+       *
+       * <code>.ibc.applications.transfer.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.ibc.applications.transfer.v1.TransferProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            params_ != null &&
+            params_ != com.ibc.applications.transfer.v1.TransferProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the transfer parameters to update.
+       *
+       * NOTE: All parameters must be supplied.
+       * </pre>
+       *
+       * <code>.ibc.applications.transfer.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the transfer parameters to update.
+       *
+       * NOTE: All parameters must be supplied.
+       * </pre>
+       *
+       * <code>.ibc.applications.transfer.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.ibc.applications.transfer.v1.TransferProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines the transfer parameters to update.
+       *
+       * NOTE: All parameters must be supplied.
+       * </pre>
+       *
+       * <code>.ibc.applications.transfer.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.ibc.applications.transfer.v1.TransferProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.ibc.applications.transfer.v1.TransferProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines the transfer parameters to update.
+       *
+       * NOTE: All parameters must be supplied.
+       * </pre>
+       *
+       * <code>.ibc.applications.transfer.v1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ibc.applications.transfer.v1.TransferProto.Params, com.ibc.applications.transfer.v1.TransferProto.Params.Builder, com.ibc.applications.transfer.v1.TransferProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.ibc.applications.transfer.v1.TransferProto.Params, com.ibc.applications.transfer.v1.TransferProto.Params.Builder, com.ibc.applications.transfer.v1.TransferProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.transfer.MsgUpdateParams)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.transfer.MsgUpdateParams)
+    private static final com.neutron.transfer.TxProto.MsgUpdateParams DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.transfer.TxProto.MsgUpdateParams();
+    }
+
+    public static com.neutron.transfer.TxProto.MsgUpdateParams getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateParams>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateParams>() {
+      @java.lang.Override
+      public MsgUpdateParams parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateParams> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateParams> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.transfer.TxProto.MsgUpdateParams getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.transfer.MsgUpdateParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgUpdateParamsResponse defines the response structure for executing a
+   * MsgUpdateParams message.
+   * </pre>
+   *
+   * Protobuf type {@code neutron.transfer.MsgUpdateParamsResponse}
+   */
+  public static final class MsgUpdateParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.transfer.MsgUpdateParamsResponse)
+      MsgUpdateParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateParamsResponse.newBuilder() to construct.
+    private MsgUpdateParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.transfer.TxProto.internal_static_neutron_transfer_MsgUpdateParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.transfer.TxProto.internal_static_neutron_transfer_MsgUpdateParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.transfer.TxProto.MsgUpdateParamsResponse.class, com.neutron.transfer.TxProto.MsgUpdateParamsResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.transfer.TxProto.MsgUpdateParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.neutron.transfer.TxProto.MsgUpdateParamsResponse other = (com.neutron.transfer.TxProto.MsgUpdateParamsResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.transfer.TxProto.MsgUpdateParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.transfer.TxProto.MsgUpdateParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.transfer.TxProto.MsgUpdateParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.transfer.TxProto.MsgUpdateParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.transfer.TxProto.MsgUpdateParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.transfer.TxProto.MsgUpdateParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.transfer.TxProto.MsgUpdateParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.transfer.TxProto.MsgUpdateParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.transfer.TxProto.MsgUpdateParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.transfer.TxProto.MsgUpdateParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.transfer.TxProto.MsgUpdateParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.transfer.TxProto.MsgUpdateParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.transfer.TxProto.MsgUpdateParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgUpdateParamsResponse defines the response structure for executing a
+     * MsgUpdateParams message.
+     * </pre>
+     *
+     * Protobuf type {@code neutron.transfer.MsgUpdateParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.transfer.MsgUpdateParamsResponse)
+        com.neutron.transfer.TxProto.MsgUpdateParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.transfer.TxProto.internal_static_neutron_transfer_MsgUpdateParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.transfer.TxProto.internal_static_neutron_transfer_MsgUpdateParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.transfer.TxProto.MsgUpdateParamsResponse.class, com.neutron.transfer.TxProto.MsgUpdateParamsResponse.Builder.class);
+      }
+
+      // Construct using com.neutron.transfer.TxProto.MsgUpdateParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.transfer.TxProto.internal_static_neutron_transfer_MsgUpdateParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.transfer.TxProto.MsgUpdateParamsResponse getDefaultInstanceForType() {
+        return com.neutron.transfer.TxProto.MsgUpdateParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.transfer.TxProto.MsgUpdateParamsResponse build() {
+        com.neutron.transfer.TxProto.MsgUpdateParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.transfer.TxProto.MsgUpdateParamsResponse buildPartial() {
+        com.neutron.transfer.TxProto.MsgUpdateParamsResponse result = new com.neutron.transfer.TxProto.MsgUpdateParamsResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.transfer.TxProto.MsgUpdateParamsResponse) {
+          return mergeFrom((com.neutron.transfer.TxProto.MsgUpdateParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.transfer.TxProto.MsgUpdateParamsResponse other) {
+        if (other == com.neutron.transfer.TxProto.MsgUpdateParamsResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.transfer.MsgUpdateParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.transfer.MsgUpdateParamsResponse)
+    private static final com.neutron.transfer.TxProto.MsgUpdateParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.transfer.TxProto.MsgUpdateParamsResponse();
+    }
+
+    public static com.neutron.transfer.TxProto.MsgUpdateParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateParamsResponse>() {
+      @java.lang.Override
+      public MsgUpdateParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.transfer.TxProto.MsgUpdateParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_transfer_MsgTransfer_descriptor;
   private static final 
@@ -2824,6 +4113,16 @@ public final class TxProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_transfer_MsgTransferResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_neutron_transfer_MsgUpdateParams_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_neutron_transfer_MsgUpdateParams_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_neutron_transfer_MsgUpdateParamsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_neutron_transfer_MsgUpdateParamsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2834,37 +4133,48 @@ public final class TxProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\034neutron/transfer/v1/tx.proto\022\020neutron." +
-      "transfer\032\024gogoproto/gogo.proto\032\036cosmos/b" +
-      "ase/v1beta1/coin.proto\032\037ibc/core/client/" +
-      "v1/client.proto\032\035neutron/feerefunder/fee" +
-      ".proto\"\360\003\n\013MsgTransfer\0227\n\013source_port\030\001 " +
-      "\001(\tB\026\362\336\037\022yaml:\"source_port\"R\nsourcePort\022" +
-      "@\n\016source_channel\030\002 \001(\tB\031\362\336\037\025yaml:\"sourc" +
-      "e_channel\"R\rsourceChannel\0225\n\005token\030\003 \001(\013" +
-      "2\031.cosmos.base.v1beta1.CoinB\004\310\336\037\000R\005token" +
-      "\022\026\n\006sender\030\004 \001(\tR\006sender\022\032\n\010receiver\030\005 \001" +
-      "(\tR\010receiver\022`\n\016timeout_height\030\006 \001(\0132\032.i" +
-      "bc.core.client.v1.HeightB\035\310\336\037\000\362\336\037\025yaml:\"" +
-      "timeout_height\"R\rtimeoutHeight\022I\n\021timeou" +
-      "t_timestamp\030\007 \001(\004B\034\362\336\037\030yaml:\"timeout_tim" +
-      "estamp\"R\020timeoutTimestamp\022\022\n\004memo\030\010 \001(\tR" +
-      "\004memo\0220\n\003fee\030\t \001(\0132\030.neutron.feerefunder" +
-      ".FeeB\004\310\336\037\000R\003fee:\010\210\240\037\000\350\240\037\000\"P\n\023MsgTransfer" +
-      "Response\022\037\n\013sequence_id\030\001 \001(\004R\nsequenceI" +
-      "d\022\030\n\007channel\030\002 \001(\tR\007channel2W\n\003Msg\022P\n\010Tr" +
-      "ansfer\022\035.neutron.transfer.MsgTransfer\032%." +
-      "neutron.transfer.MsgTransferResponseB\257\001\n" +
-      "\024com.neutron.transferB\007TxProtoZ/github.c" +
-      "om/neutron-org/neutron/x/transfer/types\242" +
-      "\002\003NTX\252\002\020Neutron.Transfer\312\002\020Neutron\\Trans" +
-      "fer\342\002\034Neutron\\Transfer\\GPBMetadata\352\002\021Neu" +
-      "tron::Transferb\006proto3"
+      "transfer\032\036cosmos/base/v1beta1/coin.proto" +
+      "\032\027cosmos/msg/v1/msg.proto\032\024gogoproto/gog" +
+      "o.proto\032+ibc/applications/transfer/v1/tr" +
+      "ansfer.proto\032\037ibc/core/client/v1/client." +
+      "proto\032\035neutron/feerefunder/fee.proto\"\373\003\n" +
+      "\013MsgTransfer\0227\n\013source_port\030\001 \001(\tB\026\362\336\037\022y" +
+      "aml:\"source_port\"R\nsourcePort\022@\n\016source_" +
+      "channel\030\002 \001(\tB\031\362\336\037\025yaml:\"source_channel\"" +
+      "R\rsourceChannel\0225\n\005token\030\003 \001(\0132\031.cosmos." +
+      "base.v1beta1.CoinB\004\310\336\037\000R\005token\022\026\n\006sender" +
+      "\030\004 \001(\tR\006sender\022\032\n\010receiver\030\005 \001(\tR\010receiv" +
+      "er\022`\n\016timeout_height\030\006 \001(\0132\032.ibc.core.cl" +
+      "ient.v1.HeightB\035\310\336\037\000\362\336\037\025yaml:\"timeout_he" +
+      "ight\"R\rtimeoutHeight\022I\n\021timeout_timestam" +
+      "p\030\007 \001(\004B\034\362\336\037\030yaml:\"timeout_timestamp\"R\020t" +
+      "imeoutTimestamp\022\022\n\004memo\030\010 \001(\tR\004memo\0220\n\003f" +
+      "ee\030\t \001(\0132\030.neutron.feerefunder.FeeB\004\310\336\037\000" +
+      "R\003fee:\023\210\240\037\000\350\240\037\000\202\347\260*\006sender\"P\n\023MsgTransfe" +
+      "rResponse\022\037\n\013sequence_id\030\001 \001(\004R\nsequence" +
+      "Id\022\030\n\007channel\030\002 \001(\tR\007channel\"~\n\017MsgUpdat" +
+      "eParams\022\026\n\006signer\030\001 \001(\tR\006signer\022B\n\006param" +
+      "s\030\002 \001(\0132$.ibc.applications.transfer.v1.P" +
+      "aramsB\004\310\336\037\000R\006params:\017\210\240\037\000\202\347\260*\006signer\"\031\n\027" +
+      "MsgUpdateParamsResponse2\274\001\n\003Msg\022P\n\010Trans" +
+      "fer\022\035.neutron.transfer.MsgTransfer\032%.neu" +
+      "tron.transfer.MsgTransferResponse\022\\\n\014Upd" +
+      "ateParams\022!.neutron.transfer.MsgUpdatePa" +
+      "rams\032).neutron.transfer.MsgUpdateParamsR" +
+      "esponse\032\005\200\347\260*\001B\262\001\n\024com.neutron.transferB" +
+      "\007TxProtoZ2github.com/neutron-org/neutron" +
+      "/v4/x/transfer/types\242\002\003NTX\252\002\020Neutron.Tra" +
+      "nsfer\312\002\020Neutron\\Transfer\342\002\034Neutron\\Trans" +
+      "fer\\GPBMetadata\352\002\021Neutron::Transferb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.gogoproto.GogoProto.getDescriptor(),
           com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
+          com.cosmos.msg.v1.MsgProto.getDescriptor(),
+          com.gogoproto.GogoProto.getDescriptor(),
+          com.ibc.applications.transfer.v1.TransferProto.getDescriptor(),
           com.ibc.core.client.v1.ClientProto.getDescriptor(),
           com.neutron.feerefunder.FeeProto.getDescriptor(),
         });
@@ -2880,16 +4190,32 @@ public final class TxProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_neutron_transfer_MsgTransferResponse_descriptor,
         new java.lang.String[] { "SequenceId", "Channel", });
+    internal_static_neutron_transfer_MsgUpdateParams_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_neutron_transfer_MsgUpdateParams_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_neutron_transfer_MsgUpdateParams_descriptor,
+        new java.lang.String[] { "Signer", "Params", });
+    internal_static_neutron_transfer_MsgUpdateParamsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_neutron_transfer_MsgUpdateParamsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_neutron_transfer_MsgUpdateParamsResponse_descriptor,
+        new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.cosmos.msg.v1.MsgProto.service);
+    registry.add(com.cosmos.msg.v1.MsgProto.signer);
     registry.add(com.gogoproto.GogoProto.equal);
     registry.add(com.gogoproto.GogoProto.goprotoGetters);
     registry.add(com.gogoproto.GogoProto.moretags);
     registry.add(com.gogoproto.GogoProto.nullable);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.gogoproto.GogoProto.getDescriptor();
     com.cosmos.base.v1beta1.CoinProto.getDescriptor();
+    com.cosmos.msg.v1.MsgProto.getDescriptor();
+    com.gogoproto.GogoProto.getDescriptor();
+    com.ibc.applications.transfer.v1.TransferProto.getDescriptor();
     com.ibc.core.client.v1.ClientProto.getDescriptor();
     com.neutron.feerefunder.FeeProto.getDescriptor();
   }

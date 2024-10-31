@@ -32,6 +32,8 @@ struct Neutron_Interchaintxs_V1_MsgRegisterInterchainAccount {
 
   var interchainAccountID: String = String()
 
+  var registerFee: [Cosmos_Base_V1beta1_Coin] = []
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -43,6 +45,10 @@ struct Neutron_Interchaintxs_V1_MsgRegisterInterchainAccountResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
+
+  var channelID: String = String()
+
+  var portID: String = String()
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -97,8 +103,52 @@ struct Neutron_Interchaintxs_V1_MsgSubmitTxResponse {
   /// channel's sequence_id for outgoing ibc packet. Unique per a channel.
   var sequenceID: UInt64 = 0
 
-  /// channel src channel on neutron side trasaction was submitted from
+  /// channel src channel on neutron side transaction was submitted from
   var channel: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// MsgUpdateParams is the MsgUpdateParams request type.
+///
+/// Since: 0.47
+struct Neutron_Interchaintxs_V1_MsgUpdateParams {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// Authority is the address of the governance account.
+  var authority: String = String()
+
+  /// params defines the x/interchaintxs parameters to update.
+  ///
+  /// NOTE: All parameters must be supplied.
+  var params: Neutron_Interchaintxs_V1_Params {
+    get {return _params ?? Neutron_Interchaintxs_V1_Params()}
+    set {_params = newValue}
+  }
+  /// Returns true if `params` has been explicitly set.
+  var hasParams: Bool {return self._params != nil}
+  /// Clears the value of `params`. Subsequent reads from it will return its default value.
+  mutating func clearParams() {self._params = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _params: Neutron_Interchaintxs_V1_Params? = nil
+}
+
+/// MsgUpdateParamsResponse defines the response structure for executing a
+/// MsgUpdateParams message.
+///
+/// Since: 0.47
+struct Neutron_Interchaintxs_V1_MsgUpdateParamsResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -110,6 +160,8 @@ extension Neutron_Interchaintxs_V1_MsgRegisterInterchainAccount: @unchecked Send
 extension Neutron_Interchaintxs_V1_MsgRegisterInterchainAccountResponse: @unchecked Sendable {}
 extension Neutron_Interchaintxs_V1_MsgSubmitTx: @unchecked Sendable {}
 extension Neutron_Interchaintxs_V1_MsgSubmitTxResponse: @unchecked Sendable {}
+extension Neutron_Interchaintxs_V1_MsgUpdateParams: @unchecked Sendable {}
+extension Neutron_Interchaintxs_V1_MsgUpdateParamsResponse: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -122,6 +174,7 @@ extension Neutron_Interchaintxs_V1_MsgRegisterInterchainAccount: SwiftProtobuf.M
     1: .standard(proto: "from_address"),
     2: .standard(proto: "connection_id"),
     3: .standard(proto: "interchain_account_id"),
+    4: .standard(proto: "register_fee"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -133,6 +186,7 @@ extension Neutron_Interchaintxs_V1_MsgRegisterInterchainAccount: SwiftProtobuf.M
       case 1: try { try decoder.decodeSingularStringField(value: &self.fromAddress) }()
       case 2: try { try decoder.decodeSingularStringField(value: &self.connectionID) }()
       case 3: try { try decoder.decodeSingularStringField(value: &self.interchainAccountID) }()
+      case 4: try { try decoder.decodeRepeatedMessageField(value: &self.registerFee) }()
       default: break
       }
     }
@@ -148,6 +202,9 @@ extension Neutron_Interchaintxs_V1_MsgRegisterInterchainAccount: SwiftProtobuf.M
     if !self.interchainAccountID.isEmpty {
       try visitor.visitSingularStringField(value: self.interchainAccountID, fieldNumber: 3)
     }
+    if !self.registerFee.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.registerFee, fieldNumber: 4)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -155,6 +212,7 @@ extension Neutron_Interchaintxs_V1_MsgRegisterInterchainAccount: SwiftProtobuf.M
     if lhs.fromAddress != rhs.fromAddress {return false}
     if lhs.connectionID != rhs.connectionID {return false}
     if lhs.interchainAccountID != rhs.interchainAccountID {return false}
+    if lhs.registerFee != rhs.registerFee {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -162,18 +220,37 @@ extension Neutron_Interchaintxs_V1_MsgRegisterInterchainAccount: SwiftProtobuf.M
 
 extension Neutron_Interchaintxs_V1_MsgRegisterInterchainAccountResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".MsgRegisterInterchainAccountResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "channel_id"),
+    2: .standard(proto: "port_id"),
+  ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let _ = try decoder.nextFieldNumber() {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.channelID) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.portID) }()
+      default: break
+      }
     }
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.channelID.isEmpty {
+      try visitor.visitSingularStringField(value: self.channelID, fieldNumber: 1)
+    }
+    if !self.portID.isEmpty {
+      try visitor.visitSingularStringField(value: self.portID, fieldNumber: 2)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Neutron_Interchaintxs_V1_MsgRegisterInterchainAccountResponse, rhs: Neutron_Interchaintxs_V1_MsgRegisterInterchainAccountResponse) -> Bool {
+    if lhs.channelID != rhs.channelID {return false}
+    if lhs.portID != rhs.portID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -284,6 +361,67 @@ extension Neutron_Interchaintxs_V1_MsgSubmitTxResponse: SwiftProtobuf.Message, S
   static func ==(lhs: Neutron_Interchaintxs_V1_MsgSubmitTxResponse, rhs: Neutron_Interchaintxs_V1_MsgSubmitTxResponse) -> Bool {
     if lhs.sequenceID != rhs.sequenceID {return false}
     if lhs.channel != rhs.channel {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Neutron_Interchaintxs_V1_MsgUpdateParams: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgUpdateParams"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "authority"),
+    2: .same(proto: "params"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.authority) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._params) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if !self.authority.isEmpty {
+      try visitor.visitSingularStringField(value: self.authority, fieldNumber: 1)
+    }
+    try { if let v = self._params {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Neutron_Interchaintxs_V1_MsgUpdateParams, rhs: Neutron_Interchaintxs_V1_MsgUpdateParams) -> Bool {
+    if lhs.authority != rhs.authority {return false}
+    if lhs._params != rhs._params {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Neutron_Interchaintxs_V1_MsgUpdateParamsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgUpdateParamsResponse"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let _ = try decoder.nextFieldNumber() {
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Neutron_Interchaintxs_V1_MsgUpdateParamsResponse, rhs: Neutron_Interchaintxs_V1_MsgUpdateParamsResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

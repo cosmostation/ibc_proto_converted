@@ -32,11 +32,34 @@ import SwiftProtobuf
 internal protocol Neutron_Cron_MsgClientProtocol: GRPCClient {
   var serviceName: String { get }
   var interceptors: Neutron_Cron_MsgClientInterceptorFactoryProtocol? { get }
+
+  func updateParams(
+    _ request: Neutron_Cron_MsgUpdateParams,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Neutron_Cron_MsgUpdateParams, Neutron_Cron_MsgUpdateParamsResponse>
 }
 
 extension Neutron_Cron_MsgClientProtocol {
   internal var serviceName: String {
     return "neutron.cron.Msg"
+  }
+
+  /// this line is used by starport scaffolding # proto/tx/rpc
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to UpdateParams.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func updateParams(
+    _ request: Neutron_Cron_MsgUpdateParams,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Neutron_Cron_MsgUpdateParams, Neutron_Cron_MsgUpdateParamsResponse> {
+    return self.makeUnaryCall(
+      path: Neutron_Cron_MsgClientMetadata.Methods.updateParams.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? []
+    )
   }
 }
 
@@ -102,6 +125,11 @@ internal struct Neutron_Cron_MsgNIOClient: Neutron_Cron_MsgClientProtocol {
 internal protocol Neutron_Cron_MsgAsyncClientProtocol: GRPCClient {
   static var serviceDescriptor: GRPCServiceDescriptor { get }
   var interceptors: Neutron_Cron_MsgClientInterceptorFactoryProtocol? { get }
+
+  func makeUpdateParamsCall(
+    _ request: Neutron_Cron_MsgUpdateParams,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Neutron_Cron_MsgUpdateParams, Neutron_Cron_MsgUpdateParamsResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -113,10 +141,33 @@ extension Neutron_Cron_MsgAsyncClientProtocol {
   internal var interceptors: Neutron_Cron_MsgClientInterceptorFactoryProtocol? {
     return nil
   }
+
+  internal func makeUpdateParamsCall(
+    _ request: Neutron_Cron_MsgUpdateParams,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Neutron_Cron_MsgUpdateParams, Neutron_Cron_MsgUpdateParamsResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Neutron_Cron_MsgClientMetadata.Methods.updateParams.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension Neutron_Cron_MsgAsyncClientProtocol {
+  internal func updateParams(
+    _ request: Neutron_Cron_MsgUpdateParams,
+    callOptions: CallOptions? = nil
+  ) async throws -> Neutron_Cron_MsgUpdateParamsResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Neutron_Cron_MsgClientMetadata.Methods.updateParams.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -137,6 +188,9 @@ internal struct Neutron_Cron_MsgAsyncClient: Neutron_Cron_MsgAsyncClientProtocol
 }
 
 internal protocol Neutron_Cron_MsgClientInterceptorFactoryProtocol: Sendable {
+
+  /// - Returns: Interceptors to use when invoking 'updateParams'.
+  func makeUpdateParamsInterceptors() -> [ClientInterceptor<Neutron_Cron_MsgUpdateParams, Neutron_Cron_MsgUpdateParamsResponse>]
 }
 
 internal enum Neutron_Cron_MsgClientMetadata {
@@ -144,10 +198,16 @@ internal enum Neutron_Cron_MsgClientMetadata {
     name: "Msg",
     fullName: "neutron.cron.Msg",
     methods: [
+      Neutron_Cron_MsgClientMetadata.Methods.updateParams,
     ]
   )
 
   internal enum Methods {
+    internal static let updateParams = GRPCMethodDescriptor(
+      name: "UpdateParams",
+      path: "/neutron.cron.Msg/UpdateParams",
+      type: GRPCCallType.unary
+    )
   }
 }
 
@@ -156,6 +216,9 @@ internal enum Neutron_Cron_MsgClientMetadata {
 /// To build a server, implement a class that conforms to this protocol.
 internal protocol Neutron_Cron_MsgProvider: CallHandlerProvider {
   var interceptors: Neutron_Cron_MsgServerInterceptorFactoryProtocol? { get }
+
+  /// this line is used by starport scaffolding # proto/tx/rpc
+  func updateParams(request: Neutron_Cron_MsgUpdateParams, context: StatusOnlyCallContext) -> EventLoopFuture<Neutron_Cron_MsgUpdateParamsResponse>
 }
 
 extension Neutron_Cron_MsgProvider {
@@ -170,6 +233,15 @@ extension Neutron_Cron_MsgProvider {
     context: CallHandlerContext
   ) -> GRPCServerHandlerProtocol? {
     switch name {
+    case "UpdateParams":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Neutron_Cron_MsgUpdateParams>(),
+        responseSerializer: ProtobufSerializer<Neutron_Cron_MsgUpdateParamsResponse>(),
+        interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? [],
+        userFunction: self.updateParams(request:context:)
+      )
+
     default:
       return nil
     }
@@ -183,6 +255,12 @@ extension Neutron_Cron_MsgProvider {
 internal protocol Neutron_Cron_MsgAsyncProvider: CallHandlerProvider {
   static var serviceDescriptor: GRPCServiceDescriptor { get }
   var interceptors: Neutron_Cron_MsgServerInterceptorFactoryProtocol? { get }
+
+  /// this line is used by starport scaffolding # proto/tx/rpc
+  @Sendable func updateParams(
+    request: Neutron_Cron_MsgUpdateParams,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Neutron_Cron_MsgUpdateParamsResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -204,6 +282,15 @@ extension Neutron_Cron_MsgAsyncProvider {
     context: CallHandlerContext
   ) -> GRPCServerHandlerProtocol? {
     switch name {
+    case "UpdateParams":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Neutron_Cron_MsgUpdateParams>(),
+        responseSerializer: ProtobufSerializer<Neutron_Cron_MsgUpdateParamsResponse>(),
+        interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? [],
+        wrapping: self.updateParams(request:context:)
+      )
+
     default:
       return nil
     }
@@ -211,6 +298,10 @@ extension Neutron_Cron_MsgAsyncProvider {
 }
 
 internal protocol Neutron_Cron_MsgServerInterceptorFactoryProtocol {
+
+  /// - Returns: Interceptors to use when handling 'updateParams'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeUpdateParamsInterceptors() -> [ServerInterceptor<Neutron_Cron_MsgUpdateParams, Neutron_Cron_MsgUpdateParamsResponse>]
 }
 
 internal enum Neutron_Cron_MsgServerMetadata {
@@ -218,9 +309,15 @@ internal enum Neutron_Cron_MsgServerMetadata {
     name: "Msg",
     fullName: "neutron.cron.Msg",
     methods: [
+      Neutron_Cron_MsgServerMetadata.Methods.updateParams,
     ]
   )
 
   internal enum Methods {
+    internal static let updateParams = GRPCMethodDescriptor(
+      name: "UpdateParams",
+      path: "/neutron.cron.Msg/UpdateParams",
+      type: GRPCCallType.unary
+    )
   }
 }

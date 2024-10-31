@@ -640,12 +640,12 @@ public final class ParamsProto {
       "ron.feerefunder\032\024gogoproto/gogo.proto\032\035n" +
       "eutron/feerefunder/fee.proto\"G\n\006Params\0227" +
       "\n\007min_fee\030\001 \001(\0132\030.neutron.feerefunder.Fe" +
-      "eB\004\310\336\037\000R\006minFee:\004\230\240\037\000B\305\001\n\027com.neutron.fe" +
-      "erefunderB\013ParamsProtoZ2github.com/neutr" +
-      "on-org/neutron/x/feerefunder/types\242\002\003NFX" +
-      "\252\002\023Neutron.Feerefunder\312\002\023Neutron\\Feerefu" +
-      "nder\342\002\037Neutron\\Feerefunder\\GPBMetadata\352\002" +
-      "\024Neutron::Feerefunderb\006proto3"
+      "eB\004\310\336\037\000R\006minFee:\004\230\240\037\000B\310\001\n\027com.neutron.fe" +
+      "erefunderB\013ParamsProtoZ5github.com/neutr" +
+      "on-org/neutron/v4/x/feerefunder/types\242\002\003" +
+      "NFX\252\002\023Neutron.Feerefunder\312\002\023Neutron\\Feer" +
+      "efunder\342\002\037Neutron\\Feerefunder\\GPBMetadat" +
+      "a\352\002\024Neutron::Feerefunderb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

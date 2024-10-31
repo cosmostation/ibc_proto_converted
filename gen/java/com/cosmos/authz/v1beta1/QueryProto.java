@@ -4339,7 +4339,7 @@ public final class QueryProto {
   }
   /**
    * <pre>
-   * QueryGranteeGrantsRequest is the request type for the Query/IssuedGrants RPC method.
+   * QueryGranteeGrantsRequest is the request type for the Query/GranteeGrants RPC method.
    * </pre>
    *
    * Protobuf type {@code cosmos.authz.v1beta1.QueryGranteeGrantsRequest}
@@ -4628,7 +4628,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * QueryGranteeGrantsRequest is the request type for the Query/IssuedGrants RPC method.
+     * QueryGranteeGrantsRequest is the request type for the Query/GranteeGrants RPC method.
      * </pre>
      *
      * Protobuf type {@code cosmos.authz.v1beta1.QueryGranteeGrantsRequest}

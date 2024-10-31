@@ -393,6 +393,7 @@ struct Cosmos_Group_V1_GroupInfo {
   var admin: String = String()
 
   /// metadata is any arbitrary metadata to attached to the group.
+  /// the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/group#group-1
   var metadata: String = String()
 
   /// version is used to track changes to a group's membership structure that
@@ -651,7 +652,7 @@ struct Cosmos_Group_V1_TallyResult {
   init() {}
 }
 
-/// Vote represents a vote for a proposal.
+/// Vote represents a vote for a proposal.string metadata
 struct Cosmos_Group_V1_Vote {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -667,6 +668,7 @@ struct Cosmos_Group_V1_Vote {
   var option: Cosmos_Group_V1_VoteOption = .unspecified
 
   /// metadata is any arbitrary metadata attached to the vote.
+  /// the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/group#vote-2
   var metadata: String = String()
 
   /// submit_time is the timestamp when the vote was submitted.

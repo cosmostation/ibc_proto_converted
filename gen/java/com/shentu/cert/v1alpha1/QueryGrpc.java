@@ -173,6 +173,37 @@ public final class QueryGrpc {
     return getCertificatesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.shentu.cert.v1alpha1.QueryProto.ConversionToShentuAddrRequest,
+      com.shentu.cert.v1alpha1.QueryProto.ConversionToShentuAddrResponse> getAddrConversionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddrConversion",
+      requestType = com.shentu.cert.v1alpha1.QueryProto.ConversionToShentuAddrRequest.class,
+      responseType = com.shentu.cert.v1alpha1.QueryProto.ConversionToShentuAddrResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.shentu.cert.v1alpha1.QueryProto.ConversionToShentuAddrRequest,
+      com.shentu.cert.v1alpha1.QueryProto.ConversionToShentuAddrResponse> getAddrConversionMethod() {
+    io.grpc.MethodDescriptor<com.shentu.cert.v1alpha1.QueryProto.ConversionToShentuAddrRequest, com.shentu.cert.v1alpha1.QueryProto.ConversionToShentuAddrResponse> getAddrConversionMethod;
+    if ((getAddrConversionMethod = QueryGrpc.getAddrConversionMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getAddrConversionMethod = QueryGrpc.getAddrConversionMethod) == null) {
+          QueryGrpc.getAddrConversionMethod = getAddrConversionMethod =
+              io.grpc.MethodDescriptor.<com.shentu.cert.v1alpha1.QueryProto.ConversionToShentuAddrRequest, com.shentu.cert.v1alpha1.QueryProto.ConversionToShentuAddrResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddrConversion"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.shentu.cert.v1alpha1.QueryProto.ConversionToShentuAddrRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.shentu.cert.v1alpha1.QueryProto.ConversionToShentuAddrResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("AddrConversion"))
+              .build();
+        }
+      }
+    }
+    return getAddrConversionMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -258,6 +289,13 @@ public final class QueryGrpc {
         io.grpc.stub.StreamObserver<com.shentu.cert.v1alpha1.QueryProto.QueryCertificatesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCertificatesMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void addrConversion(com.shentu.cert.v1alpha1.QueryProto.ConversionToShentuAddrRequest request,
+        io.grpc.stub.StreamObserver<com.shentu.cert.v1alpha1.QueryProto.ConversionToShentuAddrResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddrConversionMethod(), responseObserver);
+    }
   }
 
   /**
@@ -332,6 +370,14 @@ public final class QueryGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCertificatesMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void addrConversion(com.shentu.cert.v1alpha1.QueryProto.ConversionToShentuAddrRequest request,
+        io.grpc.stub.StreamObserver<com.shentu.cert.v1alpha1.QueryProto.ConversionToShentuAddrResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAddrConversionMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -386,6 +432,13 @@ public final class QueryGrpc {
     public com.shentu.cert.v1alpha1.QueryProto.QueryCertificatesResponse certificates(com.shentu.cert.v1alpha1.QueryProto.QueryCertificatesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCertificatesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.shentu.cert.v1alpha1.QueryProto.ConversionToShentuAddrResponse addrConversion(com.shentu.cert.v1alpha1.QueryProto.ConversionToShentuAddrRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAddrConversionMethod(), getCallOptions(), request);
     }
   }
 
@@ -447,6 +500,14 @@ public final class QueryGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCertificatesMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.shentu.cert.v1alpha1.QueryProto.ConversionToShentuAddrResponse> addrConversion(
+        com.shentu.cert.v1alpha1.QueryProto.ConversionToShentuAddrRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAddrConversionMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CERTIFIER = 0;
@@ -454,6 +515,7 @@ public final class QueryGrpc {
   private static final int METHODID_PLATFORM = 2;
   private static final int METHODID_CERTIFICATE = 3;
   private static final int METHODID_CERTIFICATES = 4;
+  private static final int METHODID_ADDR_CONVERSION = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -491,6 +553,10 @@ public final class QueryGrpc {
         case METHODID_CERTIFICATES:
           serviceImpl.certificates((com.shentu.cert.v1alpha1.QueryProto.QueryCertificatesRequest) request,
               (io.grpc.stub.StreamObserver<com.shentu.cert.v1alpha1.QueryProto.QueryCertificatesResponse>) responseObserver);
+          break;
+        case METHODID_ADDR_CONVERSION:
+          serviceImpl.addrConversion((com.shentu.cert.v1alpha1.QueryProto.ConversionToShentuAddrRequest) request,
+              (io.grpc.stub.StreamObserver<com.shentu.cert.v1alpha1.QueryProto.ConversionToShentuAddrResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -545,6 +611,13 @@ public final class QueryGrpc {
               com.shentu.cert.v1alpha1.QueryProto.QueryCertificatesRequest,
               com.shentu.cert.v1alpha1.QueryProto.QueryCertificatesResponse>(
                 service, METHODID_CERTIFICATES)))
+        .addMethod(
+          getAddrConversionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.shentu.cert.v1alpha1.QueryProto.ConversionToShentuAddrRequest,
+              com.shentu.cert.v1alpha1.QueryProto.ConversionToShentuAddrResponse>(
+                service, METHODID_ADDR_CONVERSION)))
         .build();
   }
 
@@ -598,6 +671,7 @@ public final class QueryGrpc {
               .addMethod(getPlatformMethod())
               .addMethod(getCertificateMethod())
               .addMethod(getCertificatesMethod())
+              .addMethod(getAddrConversionMethod())
               .build();
         }
       }

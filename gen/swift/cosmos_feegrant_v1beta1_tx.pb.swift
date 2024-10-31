@@ -91,11 +91,42 @@ struct Cosmos_Feegrant_V1beta1_MsgRevokeAllowanceResponse {
   init() {}
 }
 
+/// MsgPruneAllowances prunes expired fee allowances.
+///
+/// Since cosmos-sdk 0.50
+struct Cosmos_Feegrant_V1beta1_MsgPruneAllowances {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// pruner is the address of the user pruning expired allowances.
+  var pruner: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// MsgPruneAllowancesResponse defines the Msg/PruneAllowancesResponse response type.
+///
+/// Since cosmos-sdk 0.50
+struct Cosmos_Feegrant_V1beta1_MsgPruneAllowancesResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Cosmos_Feegrant_V1beta1_MsgGrantAllowance: @unchecked Sendable {}
 extension Cosmos_Feegrant_V1beta1_MsgGrantAllowanceResponse: @unchecked Sendable {}
 extension Cosmos_Feegrant_V1beta1_MsgRevokeAllowance: @unchecked Sendable {}
 extension Cosmos_Feegrant_V1beta1_MsgRevokeAllowanceResponse: @unchecked Sendable {}
+extension Cosmos_Feegrant_V1beta1_MsgPruneAllowances: @unchecked Sendable {}
+extension Cosmos_Feegrant_V1beta1_MsgPruneAllowancesResponse: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -221,6 +252,57 @@ extension Cosmos_Feegrant_V1beta1_MsgRevokeAllowanceResponse: SwiftProtobuf.Mess
   }
 
   static func ==(lhs: Cosmos_Feegrant_V1beta1_MsgRevokeAllowanceResponse, rhs: Cosmos_Feegrant_V1beta1_MsgRevokeAllowanceResponse) -> Bool {
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Cosmos_Feegrant_V1beta1_MsgPruneAllowances: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgPruneAllowances"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "pruner"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.pruner) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.pruner.isEmpty {
+      try visitor.visitSingularStringField(value: self.pruner, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Cosmos_Feegrant_V1beta1_MsgPruneAllowances, rhs: Cosmos_Feegrant_V1beta1_MsgPruneAllowances) -> Bool {
+    if lhs.pruner != rhs.pruner {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Cosmos_Feegrant_V1beta1_MsgPruneAllowancesResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgPruneAllowancesResponse"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let _ = try decoder.nextFieldNumber() {
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Cosmos_Feegrant_V1beta1_MsgPruneAllowancesResponse, rhs: Cosmos_Feegrant_V1beta1_MsgPruneAllowancesResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

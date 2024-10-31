@@ -3841,9 +3841,9 @@ public final class QueryProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\030neutron/cron/query.proto\022\014neutron.cron" +
-      "\032\024gogoproto/gogo.proto\032\034google/api/annot" +
-      "ations.proto\032*cosmos/base/query/v1beta1/" +
-      "pagination.proto\032\031neutron/cron/params.pr" +
+      "\032*cosmos/base/query/v1beta1/pagination.p" +
+      "roto\032\024gogoproto/gogo.proto\032\034google/api/a" +
+      "nnotations.proto\032\031neutron/cron/params.pr" +
       "oto\032\033neutron/cron/schedule.proto\"\024\n\022Quer" +
       "yParamsRequest\"I\n\023QueryParamsResponse\0222\n" +
       "\006params\030\001 \001(\0132\024.neutron.cron.ParamsB\004\310\336\037" +
@@ -3866,18 +3866,18 @@ public final class QueryProto {
       "le/{name}\022v\n\tSchedules\022#.neutron.cron.Qu" +
       "erySchedulesRequest\032$.neutron.cron.Query" +
       "SchedulesResponse\"\036\202\323\344\223\002\030\022\026/neutron/cron" +
-      "/scheduleB\232\001\n\020com.neutron.cronB\nQueryPro" +
-      "toZ+github.com/neutron-org/neutron/x/cro" +
-      "n/types\242\002\003NCX\252\002\014Neutron.Cron\312\002\014Neutron\\C" +
-      "ron\342\002\030Neutron\\Cron\\GPBMetadata\352\002\rNeutron" +
-      "::Cronb\006proto3"
+      "/scheduleB\235\001\n\020com.neutron.cronB\nQueryPro" +
+      "toZ.github.com/neutron-org/neutron/v4/x/" +
+      "cron/types\242\002\003NCX\252\002\014Neutron.Cron\312\002\014Neutro" +
+      "n\\Cron\342\002\030Neutron\\Cron\\GPBMetadata\352\002\rNeut" +
+      "ron::Cronb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor(),
           com.gogoproto.GogoProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor(),
           com.neutron.cron.ParamsProto.getDescriptor(),
           com.neutron.cron.ScheduleProto.getDescriptor(),
         });
@@ -3923,9 +3923,9 @@ public final class QueryProto {
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor();
     com.gogoproto.GogoProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor();
     com.neutron.cron.ParamsProto.getDescriptor();
     com.neutron.cron.ScheduleProto.getDescriptor();
   }

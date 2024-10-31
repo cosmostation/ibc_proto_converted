@@ -1006,12 +1006,12 @@ public final class ParamsProto {
       "rams\022#\n\rneutron_denom\030\001 \001(\tR\014neutronDeno" +
       "m\022\'\n\017reserve_address\030\002 \001(\tR\016reserveAddre" +
       "ss\022)\n\020treasury_address\030\003 \001(\tR\017treasuryAd" +
-      "dress:\004\230\240\037\000B\271\001\n\025com.neutron.feeburnerB\013P" +
-      "aramsProtoZ0github.com/neutron-org/neutr" +
-      "on/x/feeburner/types\242\002\003NFX\252\002\021Neutron.Fee" +
-      "burner\312\002\021Neutron\\Feeburner\342\002\035Neutron\\Fee" +
-      "burner\\GPBMetadata\352\002\022Neutron::Feeburnerb" +
-      "\006proto3"
+      "dress:\004\230\240\037\000B\274\001\n\025com.neutron.feeburnerB\013P" +
+      "aramsProtoZ3github.com/neutron-org/neutr" +
+      "on/v4/x/feeburner/types\242\002\003NFX\252\002\021Neutron." +
+      "Feeburner\312\002\021Neutron\\Feeburner\342\002\035Neutron\\" +
+      "Feeburner\\GPBMetadata\352\002\022Neutron::Feeburn" +
+      "erb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

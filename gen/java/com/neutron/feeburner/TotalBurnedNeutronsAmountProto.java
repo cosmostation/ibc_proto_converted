@@ -641,12 +641,13 @@ public final class TotalBurnedNeutronsAmountProto {
       "s/base/v1beta1/coin.proto\032\024gogoproto/gog" +
       "o.proto\"_\n\031TotalBurnedNeutronsAmount\022B\n\004" +
       "coin\030\001 \001(\0132\031.cosmos.base.v1beta1.CoinB\023\310" +
-      "\336\037\000\362\336\037\013yaml:\"coin\"R\004coinB\314\001\n\025com.neutron" +
+      "\336\037\000\362\336\037\013yaml:\"coin\"R\004coinB\317\001\n\025com.neutron" +
       ".feeburnerB\036TotalBurnedNeutronsAmountPro" +
-      "toZ0github.com/neutron-org/neutron/x/fee" +
-      "burner/types\242\002\003NFX\252\002\021Neutron.Feeburner\312\002" +
-      "\021Neutron\\Feeburner\342\002\035Neutron\\Feeburner\\G" +
-      "PBMetadata\352\002\022Neutron::Feeburnerb\006proto3"
+      "toZ3github.com/neutron-org/neutron/v4/x/" +
+      "feeburner/types\242\002\003NFX\252\002\021Neutron.Feeburne" +
+      "r\312\002\021Neutron\\Feeburner\342\002\035Neutron\\Feeburne" +
+      "r\\GPBMetadata\352\002\022Neutron::Feeburnerb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

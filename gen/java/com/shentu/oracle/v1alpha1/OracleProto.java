@@ -1277,12 +1277,12 @@ public final class OracleProto {
         int index);
 
     /**
-     * <code>string result = 9 [json_name = "result", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"result&#92;""];</code>
+     * <code>string result = 9 [json_name = "result", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"result&#92;""];</code>
      * @return The result.
      */
     java.lang.String getResult();
     /**
-     * <code>string result = 9 [json_name = "result", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"result&#92;""];</code>
+     * <code>string result = 9 [json_name = "result", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"result&#92;""];</code>
      * @return The bytes for result.
      */
     com.google.protobuf.ByteString
@@ -1633,7 +1633,7 @@ public final class OracleProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object result_ = "";
     /**
-     * <code>string result = 9 [json_name = "result", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"result&#92;""];</code>
+     * <code>string result = 9 [json_name = "result", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"result&#92;""];</code>
      * @return The result.
      */
     @java.lang.Override
@@ -1650,7 +1650,7 @@ public final class OracleProto {
       }
     }
     /**
-     * <code>string result = 9 [json_name = "result", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"result&#92;""];</code>
+     * <code>string result = 9 [json_name = "result", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"result&#92;""];</code>
      * @return The bytes for result.
      */
     @java.lang.Override
@@ -3321,7 +3321,7 @@ public final class OracleProto {
 
       private java.lang.Object result_ = "";
       /**
-       * <code>string result = 9 [json_name = "result", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"result&#92;""];</code>
+       * <code>string result = 9 [json_name = "result", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"result&#92;""];</code>
        * @return The result.
        */
       public java.lang.String getResult() {
@@ -3337,7 +3337,7 @@ public final class OracleProto {
         }
       }
       /**
-       * <code>string result = 9 [json_name = "result", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"result&#92;""];</code>
+       * <code>string result = 9 [json_name = "result", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"result&#92;""];</code>
        * @return The bytes for result.
        */
       public com.google.protobuf.ByteString
@@ -3354,7 +3354,7 @@ public final class OracleProto {
         }
       }
       /**
-       * <code>string result = 9 [json_name = "result", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"result&#92;""];</code>
+       * <code>string result = 9 [json_name = "result", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"result&#92;""];</code>
        * @param value The result to set.
        * @return This builder for chaining.
        */
@@ -3367,7 +3367,7 @@ public final class OracleProto {
         return this;
       }
       /**
-       * <code>string result = 9 [json_name = "result", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"result&#92;""];</code>
+       * <code>string result = 9 [json_name = "result", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"result&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearResult() {
@@ -3377,7 +3377,7 @@ public final class OracleProto {
         return this;
       }
       /**
-       * <code>string result = 9 [json_name = "result", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"result&#92;""];</code>
+       * <code>string result = 9 [json_name = "result", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"result&#92;""];</code>
        * @param value The bytes for result to set.
        * @return This builder for chaining.
        */
@@ -3588,24 +3588,24 @@ public final class OracleProto {
         getOperatorBytes();
 
     /**
-     * <code>string score = 2 [json_name = "score", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"score&#92;""];</code>
+     * <code>string score = 2 [json_name = "score", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"score&#92;""];</code>
      * @return The score.
      */
     java.lang.String getScore();
     /**
-     * <code>string score = 2 [json_name = "score", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"score&#92;""];</code>
+     * <code>string score = 2 [json_name = "score", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"score&#92;""];</code>
      * @return The bytes for score.
      */
     com.google.protobuf.ByteString
         getScoreBytes();
 
     /**
-     * <code>string weight = 3 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+     * <code>string weight = 3 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
      * @return The weight.
      */
     java.lang.String getWeight();
     /**
-     * <code>string weight = 3 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+     * <code>string weight = 3 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
      * @return The bytes for weight.
      */
     com.google.protobuf.ByteString
@@ -3717,7 +3717,7 @@ public final class OracleProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object score_ = "";
     /**
-     * <code>string score = 2 [json_name = "score", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"score&#92;""];</code>
+     * <code>string score = 2 [json_name = "score", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"score&#92;""];</code>
      * @return The score.
      */
     @java.lang.Override
@@ -3734,7 +3734,7 @@ public final class OracleProto {
       }
     }
     /**
-     * <code>string score = 2 [json_name = "score", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"score&#92;""];</code>
+     * <code>string score = 2 [json_name = "score", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"score&#92;""];</code>
      * @return The bytes for score.
      */
     @java.lang.Override
@@ -3756,7 +3756,7 @@ public final class OracleProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object weight_ = "";
     /**
-     * <code>string weight = 3 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+     * <code>string weight = 3 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
      * @return The weight.
      */
     @java.lang.Override
@@ -3773,7 +3773,7 @@ public final class OracleProto {
       }
     }
     /**
-     * <code>string weight = 3 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+     * <code>string weight = 3 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
      * @return The bytes for weight.
      */
     @java.lang.Override
@@ -4352,7 +4352,7 @@ public final class OracleProto {
 
       private java.lang.Object score_ = "";
       /**
-       * <code>string score = 2 [json_name = "score", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"score&#92;""];</code>
+       * <code>string score = 2 [json_name = "score", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"score&#92;""];</code>
        * @return The score.
        */
       public java.lang.String getScore() {
@@ -4368,7 +4368,7 @@ public final class OracleProto {
         }
       }
       /**
-       * <code>string score = 2 [json_name = "score", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"score&#92;""];</code>
+       * <code>string score = 2 [json_name = "score", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"score&#92;""];</code>
        * @return The bytes for score.
        */
       public com.google.protobuf.ByteString
@@ -4385,7 +4385,7 @@ public final class OracleProto {
         }
       }
       /**
-       * <code>string score = 2 [json_name = "score", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"score&#92;""];</code>
+       * <code>string score = 2 [json_name = "score", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"score&#92;""];</code>
        * @param value The score to set.
        * @return This builder for chaining.
        */
@@ -4398,7 +4398,7 @@ public final class OracleProto {
         return this;
       }
       /**
-       * <code>string score = 2 [json_name = "score", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"score&#92;""];</code>
+       * <code>string score = 2 [json_name = "score", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"score&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearScore() {
@@ -4408,7 +4408,7 @@ public final class OracleProto {
         return this;
       }
       /**
-       * <code>string score = 2 [json_name = "score", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"score&#92;""];</code>
+       * <code>string score = 2 [json_name = "score", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"score&#92;""];</code>
        * @param value The bytes for score to set.
        * @return This builder for chaining.
        */
@@ -4424,7 +4424,7 @@ public final class OracleProto {
 
       private java.lang.Object weight_ = "";
       /**
-       * <code>string weight = 3 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+       * <code>string weight = 3 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
        * @return The weight.
        */
       public java.lang.String getWeight() {
@@ -4440,7 +4440,7 @@ public final class OracleProto {
         }
       }
       /**
-       * <code>string weight = 3 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+       * <code>string weight = 3 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
        * @return The bytes for weight.
        */
       public com.google.protobuf.ByteString
@@ -4457,7 +4457,7 @@ public final class OracleProto {
         }
       }
       /**
-       * <code>string weight = 3 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+       * <code>string weight = 3 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
        * @param value The weight to set.
        * @return This builder for chaining.
        */
@@ -4470,7 +4470,7 @@ public final class OracleProto {
         return this;
       }
       /**
-       * <code>string weight = 3 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+       * <code>string weight = 3 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearWeight() {
@@ -4480,7 +4480,7 @@ public final class OracleProto {
         return this;
       }
       /**
-       * <code>string weight = 3 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+       * <code>string weight = 3 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
        * @param value The bytes for weight to set.
        * @return This builder for chaining.
        */
@@ -6423,55 +6423,55 @@ public final class OracleProto {
     long getAggregationWindow();
 
     /**
-     * <code>string aggregation_result = 3 [json_name = "aggregationResult", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"aggregation_result&#92;""];</code>
+     * <code>string aggregation_result = 3 [json_name = "aggregationResult", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"aggregation_result&#92;""];</code>
      * @return The aggregationResult.
      */
     java.lang.String getAggregationResult();
     /**
-     * <code>string aggregation_result = 3 [json_name = "aggregationResult", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"aggregation_result&#92;""];</code>
+     * <code>string aggregation_result = 3 [json_name = "aggregationResult", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"aggregation_result&#92;""];</code>
      * @return The bytes for aggregationResult.
      */
     com.google.protobuf.ByteString
         getAggregationResultBytes();
 
     /**
-     * <code>string threshold_score = 4 [json_name = "thresholdScore", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"threshold_score&#92;""];</code>
+     * <code>string threshold_score = 4 [json_name = "thresholdScore", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"threshold_score&#92;""];</code>
      * @return The thresholdScore.
      */
     java.lang.String getThresholdScore();
     /**
-     * <code>string threshold_score = 4 [json_name = "thresholdScore", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"threshold_score&#92;""];</code>
+     * <code>string threshold_score = 4 [json_name = "thresholdScore", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"threshold_score&#92;""];</code>
      * @return The bytes for thresholdScore.
      */
     com.google.protobuf.ByteString
         getThresholdScoreBytes();
 
     /**
-     * <code>string epsilon1 = 5 [json_name = "epsilon1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon1&#92;""];</code>
+     * <code>string epsilon1 = 5 [json_name = "epsilon1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon1&#92;""];</code>
      * @return The epsilon1.
      */
     java.lang.String getEpsilon1();
     /**
-     * <code>string epsilon1 = 5 [json_name = "epsilon1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon1&#92;""];</code>
+     * <code>string epsilon1 = 5 [json_name = "epsilon1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon1&#92;""];</code>
      * @return The bytes for epsilon1.
      */
     com.google.protobuf.ByteString
         getEpsilon1Bytes();
 
     /**
-     * <code>string epsilon2 = 6 [json_name = "epsilon2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon2&#92;""];</code>
+     * <code>string epsilon2 = 6 [json_name = "epsilon2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon2&#92;""];</code>
      * @return The epsilon2.
      */
     java.lang.String getEpsilon2();
     /**
-     * <code>string epsilon2 = 6 [json_name = "epsilon2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon2&#92;""];</code>
+     * <code>string epsilon2 = 6 [json_name = "epsilon2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon2&#92;""];</code>
      * @return The bytes for epsilon2.
      */
     com.google.protobuf.ByteString
         getEpsilon2Bytes();
 
     /**
-     * <code>bytes shortcut_quorum = 7 [json_name = "shortcutQuorum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"shortcut_quorum&#92;""];</code>
+     * <code>bytes shortcut_quorum = 7 [json_name = "shortcutQuorum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"shortcut_quorum&#92;""];</code>
      * @return The shortcutQuorum.
      */
     com.google.protobuf.ByteString getShortcutQuorum();
@@ -6557,7 +6557,7 @@ public final class OracleProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object aggregationResult_ = "";
     /**
-     * <code>string aggregation_result = 3 [json_name = "aggregationResult", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"aggregation_result&#92;""];</code>
+     * <code>string aggregation_result = 3 [json_name = "aggregationResult", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"aggregation_result&#92;""];</code>
      * @return The aggregationResult.
      */
     @java.lang.Override
@@ -6574,7 +6574,7 @@ public final class OracleProto {
       }
     }
     /**
-     * <code>string aggregation_result = 3 [json_name = "aggregationResult", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"aggregation_result&#92;""];</code>
+     * <code>string aggregation_result = 3 [json_name = "aggregationResult", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"aggregation_result&#92;""];</code>
      * @return The bytes for aggregationResult.
      */
     @java.lang.Override
@@ -6596,7 +6596,7 @@ public final class OracleProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object thresholdScore_ = "";
     /**
-     * <code>string threshold_score = 4 [json_name = "thresholdScore", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"threshold_score&#92;""];</code>
+     * <code>string threshold_score = 4 [json_name = "thresholdScore", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"threshold_score&#92;""];</code>
      * @return The thresholdScore.
      */
     @java.lang.Override
@@ -6613,7 +6613,7 @@ public final class OracleProto {
       }
     }
     /**
-     * <code>string threshold_score = 4 [json_name = "thresholdScore", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"threshold_score&#92;""];</code>
+     * <code>string threshold_score = 4 [json_name = "thresholdScore", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"threshold_score&#92;""];</code>
      * @return The bytes for thresholdScore.
      */
     @java.lang.Override
@@ -6635,7 +6635,7 @@ public final class OracleProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object epsilon1_ = "";
     /**
-     * <code>string epsilon1 = 5 [json_name = "epsilon1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon1&#92;""];</code>
+     * <code>string epsilon1 = 5 [json_name = "epsilon1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon1&#92;""];</code>
      * @return The epsilon1.
      */
     @java.lang.Override
@@ -6652,7 +6652,7 @@ public final class OracleProto {
       }
     }
     /**
-     * <code>string epsilon1 = 5 [json_name = "epsilon1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon1&#92;""];</code>
+     * <code>string epsilon1 = 5 [json_name = "epsilon1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon1&#92;""];</code>
      * @return The bytes for epsilon1.
      */
     @java.lang.Override
@@ -6674,7 +6674,7 @@ public final class OracleProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object epsilon2_ = "";
     /**
-     * <code>string epsilon2 = 6 [json_name = "epsilon2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon2&#92;""];</code>
+     * <code>string epsilon2 = 6 [json_name = "epsilon2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon2&#92;""];</code>
      * @return The epsilon2.
      */
     @java.lang.Override
@@ -6691,7 +6691,7 @@ public final class OracleProto {
       }
     }
     /**
-     * <code>string epsilon2 = 6 [json_name = "epsilon2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon2&#92;""];</code>
+     * <code>string epsilon2 = 6 [json_name = "epsilon2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon2&#92;""];</code>
      * @return The bytes for epsilon2.
      */
     @java.lang.Override
@@ -6712,7 +6712,7 @@ public final class OracleProto {
     public static final int SHORTCUT_QUORUM_FIELD_NUMBER = 7;
     private com.google.protobuf.ByteString shortcutQuorum_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes shortcut_quorum = 7 [json_name = "shortcutQuorum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"shortcut_quorum&#92;""];</code>
+     * <code>bytes shortcut_quorum = 7 [json_name = "shortcutQuorum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"shortcut_quorum&#92;""];</code>
      * @return The shortcutQuorum.
      */
     @java.lang.Override
@@ -7354,7 +7354,7 @@ public final class OracleProto {
 
       private java.lang.Object aggregationResult_ = "";
       /**
-       * <code>string aggregation_result = 3 [json_name = "aggregationResult", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"aggregation_result&#92;""];</code>
+       * <code>string aggregation_result = 3 [json_name = "aggregationResult", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"aggregation_result&#92;""];</code>
        * @return The aggregationResult.
        */
       public java.lang.String getAggregationResult() {
@@ -7370,7 +7370,7 @@ public final class OracleProto {
         }
       }
       /**
-       * <code>string aggregation_result = 3 [json_name = "aggregationResult", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"aggregation_result&#92;""];</code>
+       * <code>string aggregation_result = 3 [json_name = "aggregationResult", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"aggregation_result&#92;""];</code>
        * @return The bytes for aggregationResult.
        */
       public com.google.protobuf.ByteString
@@ -7387,7 +7387,7 @@ public final class OracleProto {
         }
       }
       /**
-       * <code>string aggregation_result = 3 [json_name = "aggregationResult", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"aggregation_result&#92;""];</code>
+       * <code>string aggregation_result = 3 [json_name = "aggregationResult", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"aggregation_result&#92;""];</code>
        * @param value The aggregationResult to set.
        * @return This builder for chaining.
        */
@@ -7400,7 +7400,7 @@ public final class OracleProto {
         return this;
       }
       /**
-       * <code>string aggregation_result = 3 [json_name = "aggregationResult", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"aggregation_result&#92;""];</code>
+       * <code>string aggregation_result = 3 [json_name = "aggregationResult", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"aggregation_result&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearAggregationResult() {
@@ -7410,7 +7410,7 @@ public final class OracleProto {
         return this;
       }
       /**
-       * <code>string aggregation_result = 3 [json_name = "aggregationResult", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"aggregation_result&#92;""];</code>
+       * <code>string aggregation_result = 3 [json_name = "aggregationResult", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"aggregation_result&#92;""];</code>
        * @param value The bytes for aggregationResult to set.
        * @return This builder for chaining.
        */
@@ -7426,7 +7426,7 @@ public final class OracleProto {
 
       private java.lang.Object thresholdScore_ = "";
       /**
-       * <code>string threshold_score = 4 [json_name = "thresholdScore", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"threshold_score&#92;""];</code>
+       * <code>string threshold_score = 4 [json_name = "thresholdScore", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"threshold_score&#92;""];</code>
        * @return The thresholdScore.
        */
       public java.lang.String getThresholdScore() {
@@ -7442,7 +7442,7 @@ public final class OracleProto {
         }
       }
       /**
-       * <code>string threshold_score = 4 [json_name = "thresholdScore", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"threshold_score&#92;""];</code>
+       * <code>string threshold_score = 4 [json_name = "thresholdScore", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"threshold_score&#92;""];</code>
        * @return The bytes for thresholdScore.
        */
       public com.google.protobuf.ByteString
@@ -7459,7 +7459,7 @@ public final class OracleProto {
         }
       }
       /**
-       * <code>string threshold_score = 4 [json_name = "thresholdScore", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"threshold_score&#92;""];</code>
+       * <code>string threshold_score = 4 [json_name = "thresholdScore", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"threshold_score&#92;""];</code>
        * @param value The thresholdScore to set.
        * @return This builder for chaining.
        */
@@ -7472,7 +7472,7 @@ public final class OracleProto {
         return this;
       }
       /**
-       * <code>string threshold_score = 4 [json_name = "thresholdScore", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"threshold_score&#92;""];</code>
+       * <code>string threshold_score = 4 [json_name = "thresholdScore", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"threshold_score&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearThresholdScore() {
@@ -7482,7 +7482,7 @@ public final class OracleProto {
         return this;
       }
       /**
-       * <code>string threshold_score = 4 [json_name = "thresholdScore", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"threshold_score&#92;""];</code>
+       * <code>string threshold_score = 4 [json_name = "thresholdScore", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"threshold_score&#92;""];</code>
        * @param value The bytes for thresholdScore to set.
        * @return This builder for chaining.
        */
@@ -7498,7 +7498,7 @@ public final class OracleProto {
 
       private java.lang.Object epsilon1_ = "";
       /**
-       * <code>string epsilon1 = 5 [json_name = "epsilon1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon1&#92;""];</code>
+       * <code>string epsilon1 = 5 [json_name = "epsilon1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon1&#92;""];</code>
        * @return The epsilon1.
        */
       public java.lang.String getEpsilon1() {
@@ -7514,7 +7514,7 @@ public final class OracleProto {
         }
       }
       /**
-       * <code>string epsilon1 = 5 [json_name = "epsilon1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon1&#92;""];</code>
+       * <code>string epsilon1 = 5 [json_name = "epsilon1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon1&#92;""];</code>
        * @return The bytes for epsilon1.
        */
       public com.google.protobuf.ByteString
@@ -7531,7 +7531,7 @@ public final class OracleProto {
         }
       }
       /**
-       * <code>string epsilon1 = 5 [json_name = "epsilon1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon1&#92;""];</code>
+       * <code>string epsilon1 = 5 [json_name = "epsilon1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon1&#92;""];</code>
        * @param value The epsilon1 to set.
        * @return This builder for chaining.
        */
@@ -7544,7 +7544,7 @@ public final class OracleProto {
         return this;
       }
       /**
-       * <code>string epsilon1 = 5 [json_name = "epsilon1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon1&#92;""];</code>
+       * <code>string epsilon1 = 5 [json_name = "epsilon1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon1&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearEpsilon1() {
@@ -7554,7 +7554,7 @@ public final class OracleProto {
         return this;
       }
       /**
-       * <code>string epsilon1 = 5 [json_name = "epsilon1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon1&#92;""];</code>
+       * <code>string epsilon1 = 5 [json_name = "epsilon1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon1&#92;""];</code>
        * @param value The bytes for epsilon1 to set.
        * @return This builder for chaining.
        */
@@ -7570,7 +7570,7 @@ public final class OracleProto {
 
       private java.lang.Object epsilon2_ = "";
       /**
-       * <code>string epsilon2 = 6 [json_name = "epsilon2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon2&#92;""];</code>
+       * <code>string epsilon2 = 6 [json_name = "epsilon2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon2&#92;""];</code>
        * @return The epsilon2.
        */
       public java.lang.String getEpsilon2() {
@@ -7586,7 +7586,7 @@ public final class OracleProto {
         }
       }
       /**
-       * <code>string epsilon2 = 6 [json_name = "epsilon2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon2&#92;""];</code>
+       * <code>string epsilon2 = 6 [json_name = "epsilon2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon2&#92;""];</code>
        * @return The bytes for epsilon2.
        */
       public com.google.protobuf.ByteString
@@ -7603,7 +7603,7 @@ public final class OracleProto {
         }
       }
       /**
-       * <code>string epsilon2 = 6 [json_name = "epsilon2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon2&#92;""];</code>
+       * <code>string epsilon2 = 6 [json_name = "epsilon2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon2&#92;""];</code>
        * @param value The epsilon2 to set.
        * @return This builder for chaining.
        */
@@ -7616,7 +7616,7 @@ public final class OracleProto {
         return this;
       }
       /**
-       * <code>string epsilon2 = 6 [json_name = "epsilon2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon2&#92;""];</code>
+       * <code>string epsilon2 = 6 [json_name = "epsilon2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon2&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearEpsilon2() {
@@ -7626,7 +7626,7 @@ public final class OracleProto {
         return this;
       }
       /**
-       * <code>string epsilon2 = 6 [json_name = "epsilon2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon2&#92;""];</code>
+       * <code>string epsilon2 = 6 [json_name = "epsilon2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.gogoproto.moretags) = "yaml:&#92;"epsilon2&#92;""];</code>
        * @param value The bytes for epsilon2 to set.
        * @return This builder for chaining.
        */
@@ -7642,7 +7642,7 @@ public final class OracleProto {
 
       private com.google.protobuf.ByteString shortcutQuorum_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>bytes shortcut_quorum = 7 [json_name = "shortcutQuorum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"shortcut_quorum&#92;""];</code>
+       * <code>bytes shortcut_quorum = 7 [json_name = "shortcutQuorum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"shortcut_quorum&#92;""];</code>
        * @return The shortcutQuorum.
        */
       @java.lang.Override
@@ -7650,7 +7650,7 @@ public final class OracleProto {
         return shortcutQuorum_;
       }
       /**
-       * <code>bytes shortcut_quorum = 7 [json_name = "shortcutQuorum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"shortcut_quorum&#92;""];</code>
+       * <code>bytes shortcut_quorum = 7 [json_name = "shortcutQuorum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"shortcut_quorum&#92;""];</code>
        * @param value The shortcutQuorum to set.
        * @return This builder for chaining.
        */
@@ -7662,7 +7662,7 @@ public final class OracleProto {
         return this;
       }
       /**
-       * <code>bytes shortcut_quorum = 7 [json_name = "shortcutQuorum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"shortcut_quorum&#92;""];</code>
+       * <code>bytes shortcut_quorum = 7 [json_name = "shortcutQuorum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.gogoproto.moretags) = "yaml:&#92;"shortcut_quorum&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearShortcutQuorum() {
@@ -12343,7 +12343,7 @@ public final class OracleProto {
       "aml:\"amount\"\252\337\037(github.com/cosmos/cosmos" +
       "-sdk/types.CoinsR\006amount\0221\n\tdue_block\030\003 " +
       "\001(\003B\024\362\336\037\020yaml:\"due_block\"R\010dueBlock:\010\210\240\037" +
-      "\000\350\240\037\000\"\364\006\n\004Task\022/\n\010contract\030\001 \001(\tB\023\362\336\037\017ya" +
+      "\000\350\240\037\000\"\343\006\n\004Task\022/\n\010contract\030\001 \001(\tB\023\362\336\037\017ya" +
       "ml:\"contract\"R\010contract\022/\n\010function\030\002 \001(" +
       "\tB\023\362\336\037\017yaml:\"function\"R\010function\0227\n\013begi" +
       "n_block\030\003 \001(\003B\026\362\336\037\022yaml:\"begin_block\"R\nb" +
@@ -12357,95 +12357,91 @@ public final class OracleProto {
       "creator\030\007 \001(\tB\022\362\336\037\016yaml:\"creator\"R\007creat" +
       "or\022e\n\tresponses\030\010 \003(\0132 .shentu.oracle.v1" +
       "alpha1.ResponseB%\310\336\037\000\362\336\037\020yaml:\"responses" +
-      "\"\252\337\037\tResponsesR\tresponses\022W\n\006result\030\t \001(" +
-      "\tB?\310\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/" +
-      "types.Int\362\336\037\ryaml:\"result\"R\006result\022=\n\rex" +
-      "pire_height\030\n \001(\003B\030\362\336\037\024yaml:\"expire_heig" +
-      "ht\"R\014expireHeight\022@\n\016waiting_blocks\030\013 \001(" +
-      "\003B\031\362\336\037\025yaml:\"waiting_blocks\"R\rwaitingBlo" +
-      "cks\022M\n\006status\030\014 \001(\0162\".shentu.oracle.v1al" +
-      "pha1.TaskStatusB\021\362\336\037\ryaml:\"status\"R\006stat" +
-      "us:\010\210\240\037\000\350\240\037\000\"\352\002\n\010Response\022/\n\010operator\030\001 " +
-      "\001(\tB\023\362\336\037\017yaml:\"operator\"R\010operator\022T\n\005sc" +
-      "ore\030\002 \001(\tB>\310\336\037\000\332\336\037&github.com/cosmos/cos" +
-      "mos-sdk/types.Int\362\336\037\014yaml:\"score\"R\005score" +
-      "\022W\n\006weight\030\003 \001(\tB?\310\336\037\000\332\336\037&github.com/cos" +
-      "mos/cosmos-sdk/types.Int\362\336\037\ryaml:\"weight" +
-      "\"R\006weight\022t\n\006reward\030\004 \003(\0132\031.cosmos.base." +
-      "v1beta1.CoinBA\310\336\037\000\362\336\037\ryaml:\"reward\"\252\337\037(g" +
-      "ithub.com/cosmos/cosmos-sdk/types.CoinsR" +
-      "\006reward:\010\210\240\037\000\350\240\037\000\"\270\003\n\010Operator\022,\n\007addres" +
-      "s\030\001 \001(\tB\022\362\336\037\016yaml:\"address\"R\007address\022/\n\010" +
-      "proposer\030\002 \001(\tB\023\362\336\037\017yaml:\"proposer\"R\010pro" +
-      "poser\022\200\001\n\ncollateral\030\003 \003(\0132\031.cosmos.base" +
-      ".v1beta1.CoinBE\310\336\037\000\362\336\037\021yaml:\"collateral\"" +
-      "\252\337\037(github.com/cosmos/cosmos-sdk/types.C" +
-      "oinsR\ncollateral\022\232\001\n\023accumulated_rewards" +
-      "\030\004 \003(\0132\031.cosmos.base.v1beta1.CoinBN\310\336\037\000\362" +
-      "\336\037\032yaml:\"accumulated_rewards\"\252\337\037(github." +
-      "com/cosmos/cosmos-sdk/types.CoinsR\022accum" +
-      "ulatedRewards\022#\n\004name\030\005 \001(\tB\017\362\336\037\013yaml:\"n" +
-      "ame\"R\004name:\010\210\240\037\000\350\240\037\000\"\230\006\n\nTaskParams\022r\n\023e" +
-      "xpiration_duration\030\001 \001(\0132\031.google.protob" +
-      "uf.DurationB&\310\336\037\000\362\336\037\032yaml:\"expiration_du" +
-      "ration\"\230\337\037\001R\022expirationDuration\022l\n\022aggre" +
-      "gation_window\030\002 \001(\003B=\352\336\037\034aggregation_win" +
-      "dow,omitempty\362\336\037\031yaml:\"aggregation_windo" +
-      "w\"R\021aggregationWindow\022z\n\022aggregation_res" +
-      "ult\030\003 \001(\tBK\310\336\037\000\332\336\037&github.com/cosmos/cos" +
-      "mos-sdk/types.Int\362\336\037\031yaml:\"aggregation_r" +
-      "esult\"R\021aggregationResult\022q\n\017threshold_s" +
-      "core\030\004 \001(\tBH\310\336\037\000\332\336\037&github.com/cosmos/co" +
-      "smos-sdk/types.Int\362\336\037\026yaml:\"threshold_sc" +
-      "ore\"R\016thresholdScore\022]\n\010epsilon1\030\005 \001(\tBA" +
-      "\310\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/typ" +
-      "es.Int\362\336\037\017yaml:\"epsilon1\"R\010epsilon1\022]\n\010e" +
-      "psilon2\030\006 \001(\tBA\310\336\037\000\332\336\037&github.com/cosmos" +
-      "/cosmos-sdk/types.Int\362\336\037\017yaml:\"epsilon2\"" +
-      "R\010epsilon2\022q\n\017shortcut_quorum\030\007 \001(\014BH\310\336\037" +
-      "\000\332\336\037&github.com/cosmos/cosmos-sdk/types." +
-      "Dec\362\336\037\026yaml:\"shortcut_quorum\"R\016shortcutQ" +
-      "uorum:\010\210\240\037\000\350\240\037\000\"\357\001\n\020LockedPoolParams\022c\n\020" +
-      "locked_in_blocks\030\001 \001(\003B9\352\336\037\032locked_in_bl" +
-      "ocks,omitempty\362\336\037\027yaml:\"locked_in_blocks" +
-      "\"R\016lockedInBlocks\022l\n\022minimum_collateral\030" +
-      "\002 \001(\003B=\352\336\037\034minimum_collateral,omitempty\362" +
-      "\336\037\031yaml:\"minimum_collateral\"R\021minimumCol" +
-      "lateral:\010\210\240\037\000\350\240\037\000\"4\n\006TaskID\022 \n\003tid\030\001 \001(\014" +
-      "B\016\362\336\037\nyaml:\"tid\"R\003tid:\010\210\240\037\000\350\240\037\000\"J\n\007TaskI" +
-      "Ds\022?\n\010task_ids\030\001 \003(\0132\036.shentu.oracle.v1a" +
-      "lpha1.TaskIDB\004\310\336\037\000R\007taskIds\"\200\001\n\nCoinsPro" +
-      "to\022r\n\005coins\030\001 \003(\0132\031.cosmos.base.v1beta1." +
-      "CoinBA\310\336\037\000\362\336\037\ryaml:\"amount\"\252\337\037(github.co" +
-      "m/cosmos/cosmos-sdk/types.CoinsR\005coins\"\202" +
-      "\005\n\006TxTask\022.\n\010atx_hash\030\001 \001(\014B\023\362\336\037\017yaml:\"a" +
-      "tx_hash\"R\007atxHash\022,\n\007creator\030\002 \001(\tB\022\362\336\037\016" +
-      "yaml:\"creator\"R\007creator\022t\n\006bounty\030\003 \003(\0132" +
-      "\031.cosmos.base.v1beta1.CoinBA\310\336\037\000\362\336\037\ryaml" +
-      ":\"bounty\"\252\337\037(github.com/cosmos/cosmos-sd" +
-      "k/types.CoinsR\006bounty\022X\n\nvalid_time\030\004 \001(" +
+      "\"\252\337\037\tResponsesR\tresponses\022F\n\006result\030\t \001(" +
+      "\tB.\310\336\037\000\332\336\037\025cosmossdk.io/math.Int\362\336\037\ryaml" +
+      ":\"result\"R\006result\022=\n\rexpire_height\030\n \001(\003" +
+      "B\030\362\336\037\024yaml:\"expire_height\"R\014expireHeight" +
+      "\022@\n\016waiting_blocks\030\013 \001(\003B\031\362\336\037\025yaml:\"wait" +
+      "ing_blocks\"R\rwaitingBlocks\022M\n\006status\030\014 \001" +
+      "(\0162\".shentu.oracle.v1alpha1.TaskStatusB\021" +
+      "\362\336\037\ryaml:\"status\"R\006status:\010\210\240\037\000\350\240\037\000\"\310\002\n\010" +
+      "Response\022/\n\010operator\030\001 \001(\tB\023\362\336\037\017yaml:\"op" +
+      "erator\"R\010operator\022C\n\005score\030\002 \001(\tB-\310\336\037\000\332\336" +
+      "\037\025cosmossdk.io/math.Int\362\336\037\014yaml:\"score\"R" +
+      "\005score\022F\n\006weight\030\003 \001(\tB.\310\336\037\000\332\336\037\025cosmossd" +
+      "k.io/math.Int\362\336\037\ryaml:\"weight\"R\006weight\022t" +
+      "\n\006reward\030\004 \003(\0132\031.cosmos.base.v1beta1.Coi" +
+      "nBA\310\336\037\000\362\336\037\ryaml:\"reward\"\252\337\037(github.com/c" +
+      "osmos/cosmos-sdk/types.CoinsR\006reward:\010\210\240" +
+      "\037\000\350\240\037\000\"\270\003\n\010Operator\022,\n\007address\030\001 \001(\tB\022\362\336" +
+      "\037\016yaml:\"address\"R\007address\022/\n\010proposer\030\002 " +
+      "\001(\tB\023\362\336\037\017yaml:\"proposer\"R\010proposer\022\200\001\n\nc" +
+      "ollateral\030\003 \003(\0132\031.cosmos.base.v1beta1.Co" +
+      "inBE\310\336\037\000\362\336\037\021yaml:\"collateral\"\252\337\037(github." +
+      "com/cosmos/cosmos-sdk/types.CoinsR\ncolla" +
+      "teral\022\232\001\n\023accumulated_rewards\030\004 \003(\0132\031.co" +
+      "smos.base.v1beta1.CoinBN\310\336\037\000\362\336\037\032yaml:\"ac" +
+      "cumulated_rewards\"\252\337\037(github.com/cosmos/" +
+      "cosmos-sdk/types.CoinsR\022accumulatedRewar" +
+      "ds\022#\n\004name\030\005 \001(\tB\017\362\336\037\013yaml:\"name\"R\004name:" +
+      "\010\210\240\037\000\350\240\037\000\"\311\005\n\nTaskParams\022r\n\023expiration_d" +
+      "uration\030\001 \001(\0132\031.google.protobuf.Duration" +
+      "B&\310\336\037\000\362\336\037\032yaml:\"expiration_duration\"\230\337\037\001" +
+      "R\022expirationDuration\022l\n\022aggregation_wind" +
+      "ow\030\002 \001(\003B=\352\336\037\034aggregation_window,omitemp" +
+      "ty\362\336\037\031yaml:\"aggregation_window\"R\021aggrega" +
+      "tionWindow\022i\n\022aggregation_result\030\003 \001(\tB:" +
+      "\310\336\037\000\332\336\037\025cosmossdk.io/math.Int\362\336\037\031yaml:\"a" +
+      "ggregation_result\"R\021aggregationResult\022`\n" +
+      "\017threshold_score\030\004 \001(\tB7\310\336\037\000\332\336\037\025cosmossd" +
+      "k.io/math.Int\362\336\037\026yaml:\"threshold_score\"R" +
+      "\016thresholdScore\022L\n\010epsilon1\030\005 \001(\tB0\310\336\037\000\332" +
+      "\336\037\025cosmossdk.io/math.Int\362\336\037\017yaml:\"epsilo" +
+      "n1\"R\010epsilon1\022L\n\010epsilon2\030\006 \001(\tB0\310\336\037\000\332\336\037" +
+      "\025cosmossdk.io/math.Int\362\336\037\017yaml:\"epsilon2" +
+      "\"R\010epsilon2\022f\n\017shortcut_quorum\030\007 \001(\014B=\310\336" +
+      "\037\000\332\336\037\033cosmossdk.io/math.LegacyDec\362\336\037\026yam" +
+      "l:\"shortcut_quorum\"R\016shortcutQuorum:\010\210\240\037" +
+      "\000\350\240\037\000\"\357\001\n\020LockedPoolParams\022c\n\020locked_in_" +
+      "blocks\030\001 \001(\003B9\352\336\037\032locked_in_blocks,omite" +
+      "mpty\362\336\037\027yaml:\"locked_in_blocks\"R\016lockedI" +
+      "nBlocks\022l\n\022minimum_collateral\030\002 \001(\003B=\352\336\037" +
+      "\034minimum_collateral,omitempty\362\336\037\031yaml:\"m" +
+      "inimum_collateral\"R\021minimumCollateral:\010\210" +
+      "\240\037\000\350\240\037\000\"4\n\006TaskID\022 \n\003tid\030\001 \001(\014B\016\362\336\037\nyaml" +
+      ":\"tid\"R\003tid:\010\210\240\037\000\350\240\037\000\"J\n\007TaskIDs\022?\n\010task" +
+      "_ids\030\001 \003(\0132\036.shentu.oracle.v1alpha1.Task" +
+      "IDB\004\310\336\037\000R\007taskIds\"\200\001\n\nCoinsProto\022r\n\005coin" +
+      "s\030\001 \003(\0132\031.cosmos.base.v1beta1.CoinBA\310\336\037\000" +
+      "\362\336\037\ryaml:\"amount\"\252\337\037(github.com/cosmos/c" +
+      "osmos-sdk/types.CoinsR\005coins\"\202\005\n\006TxTask\022" +
+      ".\n\010atx_hash\030\001 \001(\014B\023\362\336\037\017yaml:\"atx_hash\"R\007" +
+      "atxHash\022,\n\007creator\030\002 \001(\tB\022\362\336\037\016yaml:\"crea" +
+      "tor\"R\007creator\022t\n\006bounty\030\003 \003(\0132\031.cosmos.b" +
+      "ase.v1beta1.CoinBA\310\336\037\000\362\336\037\ryaml:\"bounty\"\252" +
+      "\337\037(github.com/cosmos/cosmos-sdk/types.Co" +
+      "insR\006bounty\022X\n\nvalid_time\030\004 \001(\0132\032.google" +
+      ".protobuf.TimestampB\035\310\336\037\000\362\336\037\021yaml:\"valid" +
+      "_time\"\220\337\037\001R\tvalidTime\022Y\n\nexpiration\030\005 \001(" +
       "\0132\032.google.protobuf.TimestampB\035\310\336\037\000\362\336\037\021y" +
-      "aml:\"valid_time\"\220\337\037\001R\tvalidTime\022Y\n\nexpir" +
-      "ation\030\005 \001(\0132\032.google.protobuf.TimestampB" +
-      "\035\310\336\037\000\362\336\037\021yaml:\"expiration\"\220\337\037\001R\nexpirati" +
-      "on\022e\n\tresponses\030\006 \003(\0132 .shentu.oracle.v1" +
-      "alpha1.ResponseB%\310\336\037\000\362\336\037\020yaml:\"responses" +
-      "\"\252\337\037\tResponsesR\tresponses\022&\n\005score\030\007 \001(\003" +
-      "B\020\362\336\037\014yaml:\"score\"R\005score\022M\n\006status\030\010 \001(" +
-      "\0162\".shentu.oracle.v1alpha1.TaskStatusB\021\362" +
-      "\336\037\ryaml:\"status\"R\006status:\021\210\240\037\000\350\240\037\000\312\264-\005Ta" +
-      "skI*\324\001\n\nTaskStatus\022.\n\027TASK_STATUS_UNSPEC" +
-      "IFIED\020\000\032\021\212\235 \rTaskStatusNil\022.\n\023TASK_STATU" +
-      "S_PENDING\020\001\032\025\212\235 \021TaskStatusPending\0222\n\025TA" +
-      "SK_STATUS_SUCCEEDED\020\002\032\027\212\235 \023TaskStatusSuc" +
-      "ceeded\022,\n\022TASK_STATUS_FAILED\020\003\032\024\212\235 \020Task" +
-      "StatusFailed\032\004\210\243\036\000B\324\001\n\032com.shentu.oracle" +
-      ".v1alpha1B\013OracleProtoZ1github.com/shent" +
-      "ufoundation/shentu/x/oracle/types\242\002\003SOX\252" +
-      "\002\026Shentu.Oracle.V1alpha1\312\002\026Shentu\\Oracle" +
-      "\\V1alpha1\342\002\"Shentu\\Oracle\\V1alpha1\\GPBMe" +
-      "tadata\352\002\030Shentu::Oracle::V1alpha1b\006proto" +
-      "3"
+      "aml:\"expiration\"\220\337\037\001R\nexpiration\022e\n\tresp" +
+      "onses\030\006 \003(\0132 .shentu.oracle.v1alpha1.Res" +
+      "ponseB%\310\336\037\000\362\336\037\020yaml:\"responses\"\252\337\037\tRespo" +
+      "nsesR\tresponses\022&\n\005score\030\007 \001(\003B\020\362\336\037\014yaml" +
+      ":\"score\"R\005score\022M\n\006status\030\010 \001(\0162\".shentu" +
+      ".oracle.v1alpha1.TaskStatusB\021\362\336\037\ryaml:\"s" +
+      "tatus\"R\006status:\021\210\240\037\000\350\240\037\000\312\264-\005TaskI*\324\001\n\nTa" +
+      "skStatus\022.\n\027TASK_STATUS_UNSPECIFIED\020\000\032\021\212" +
+      "\235 \rTaskStatusNil\022.\n\023TASK_STATUS_PENDING\020" +
+      "\001\032\025\212\235 \021TaskStatusPending\0222\n\025TASK_STATUS_" +
+      "SUCCEEDED\020\002\032\027\212\235 \023TaskStatusSucceeded\022,\n\022" +
+      "TASK_STATUS_FAILED\020\003\032\024\212\235 \020TaskStatusFail" +
+      "ed\032\004\210\243\036\000B\324\001\n\032com.shentu.oracle.v1alpha1B" +
+      "\013OracleProtoZ1github.com/shentufoundatio" +
+      "n/shentu/x/oracle/types\242\002\003SOX\252\002\026Shentu.O" +
+      "racle.V1alpha1\312\002\026Shentu\\Oracle\\V1alpha1\342" +
+      "\002\"Shentu\\Oracle\\V1alpha1\\GPBMetadata\352\002\030S" +
+      "hentu::Oracle::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

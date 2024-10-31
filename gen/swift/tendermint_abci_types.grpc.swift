@@ -26,10 +26,10 @@ import NIOConcurrencyHelpers
 import SwiftProtobuf
 
 
-/// Usage: instantiate `Tendermint_Abci_ABCIApplicationClient`, then call methods of this protocol to make API calls.
-internal protocol Tendermint_Abci_ABCIApplicationClientProtocol: GRPCClient {
+/// Usage: instantiate `Tendermint_Abci_ABCIClient`, then call methods of this protocol to make API calls.
+internal protocol Tendermint_Abci_ABCIClientProtocol: GRPCClient {
   var serviceName: String { get }
-  var interceptors: Tendermint_Abci_ABCIApplicationClientInterceptorFactoryProtocol? { get }
+  var interceptors: Tendermint_Abci_ABCIClientInterceptorFactoryProtocol? { get }
 
   func echo(
     _ request: Tendermint_Abci_RequestEcho,
@@ -45,11 +45,6 @@ internal protocol Tendermint_Abci_ABCIApplicationClientProtocol: GRPCClient {
     _ request: Tendermint_Abci_RequestInfo,
     callOptions: CallOptions?
   ) -> UnaryCall<Tendermint_Abci_RequestInfo, Tendermint_Abci_ResponseInfo>
-
-  func deliverTx(
-    _ request: Tendermint_Abci_RequestDeliverTx,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tendermint_Abci_RequestDeliverTx, Tendermint_Abci_ResponseDeliverTx>
 
   func checkTx(
     _ request: Tendermint_Abci_RequestCheckTx,
@@ -70,16 +65,6 @@ internal protocol Tendermint_Abci_ABCIApplicationClientProtocol: GRPCClient {
     _ request: Tendermint_Abci_RequestInitChain,
     callOptions: CallOptions?
   ) -> UnaryCall<Tendermint_Abci_RequestInitChain, Tendermint_Abci_ResponseInitChain>
-
-  func beginBlock(
-    _ request: Tendermint_Abci_RequestBeginBlock,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tendermint_Abci_RequestBeginBlock, Tendermint_Abci_ResponseBeginBlock>
-
-  func endBlock(
-    _ request: Tendermint_Abci_RequestEndBlock,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tendermint_Abci_RequestEndBlock, Tendermint_Abci_ResponseEndBlock>
 
   func listSnapshots(
     _ request: Tendermint_Abci_RequestListSnapshots,
@@ -110,11 +95,26 @@ internal protocol Tendermint_Abci_ABCIApplicationClientProtocol: GRPCClient {
     _ request: Tendermint_Abci_RequestProcessProposal,
     callOptions: CallOptions?
   ) -> UnaryCall<Tendermint_Abci_RequestProcessProposal, Tendermint_Abci_ResponseProcessProposal>
+
+  func extendVote(
+    _ request: Tendermint_Abci_RequestExtendVote,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Tendermint_Abci_RequestExtendVote, Tendermint_Abci_ResponseExtendVote>
+
+  func verifyVoteExtension(
+    _ request: Tendermint_Abci_RequestVerifyVoteExtension,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Tendermint_Abci_RequestVerifyVoteExtension, Tendermint_Abci_ResponseVerifyVoteExtension>
+
+  func finalizeBlock(
+    _ request: Tendermint_Abci_RequestFinalizeBlock,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Tendermint_Abci_RequestFinalizeBlock, Tendermint_Abci_ResponseFinalizeBlock>
 }
 
-extension Tendermint_Abci_ABCIApplicationClientProtocol {
+extension Tendermint_Abci_ABCIClientProtocol {
   internal var serviceName: String {
-    return "tendermint.abci.ABCIApplication"
+    return "tendermint.abci.ABCI"
   }
 
   /// Unary call to Echo
@@ -128,7 +128,7 @@ extension Tendermint_Abci_ABCIApplicationClientProtocol {
     callOptions: CallOptions? = nil
   ) -> UnaryCall<Tendermint_Abci_RequestEcho, Tendermint_Abci_ResponseEcho> {
     return self.makeUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.echo.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.echo.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeEchoInterceptors() ?? []
@@ -146,7 +146,7 @@ extension Tendermint_Abci_ABCIApplicationClientProtocol {
     callOptions: CallOptions? = nil
   ) -> UnaryCall<Tendermint_Abci_RequestFlush, Tendermint_Abci_ResponseFlush> {
     return self.makeUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.flush.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.flush.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeFlushInterceptors() ?? []
@@ -164,28 +164,10 @@ extension Tendermint_Abci_ABCIApplicationClientProtocol {
     callOptions: CallOptions? = nil
   ) -> UnaryCall<Tendermint_Abci_RequestInfo, Tendermint_Abci_ResponseInfo> {
     return self.makeUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.info.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.info.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeInfoInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to DeliverTx
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to DeliverTx.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func deliverTx(
-    _ request: Tendermint_Abci_RequestDeliverTx,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tendermint_Abci_RequestDeliverTx, Tendermint_Abci_ResponseDeliverTx> {
-    return self.makeUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.deliverTx.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeDeliverTxInterceptors() ?? []
     )
   }
 
@@ -200,7 +182,7 @@ extension Tendermint_Abci_ABCIApplicationClientProtocol {
     callOptions: CallOptions? = nil
   ) -> UnaryCall<Tendermint_Abci_RequestCheckTx, Tendermint_Abci_ResponseCheckTx> {
     return self.makeUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.checkTx.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.checkTx.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeCheckTxInterceptors() ?? []
@@ -218,7 +200,7 @@ extension Tendermint_Abci_ABCIApplicationClientProtocol {
     callOptions: CallOptions? = nil
   ) -> UnaryCall<Tendermint_Abci_RequestQuery, Tendermint_Abci_ResponseQuery> {
     return self.makeUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.query.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.query.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeQueryInterceptors() ?? []
@@ -236,7 +218,7 @@ extension Tendermint_Abci_ABCIApplicationClientProtocol {
     callOptions: CallOptions? = nil
   ) -> UnaryCall<Tendermint_Abci_RequestCommit, Tendermint_Abci_ResponseCommit> {
     return self.makeUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.commit.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.commit.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeCommitInterceptors() ?? []
@@ -254,46 +236,10 @@ extension Tendermint_Abci_ABCIApplicationClientProtocol {
     callOptions: CallOptions? = nil
   ) -> UnaryCall<Tendermint_Abci_RequestInitChain, Tendermint_Abci_ResponseInitChain> {
     return self.makeUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.initChain.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.initChain.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeInitChainInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to BeginBlock
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to BeginBlock.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func beginBlock(
-    _ request: Tendermint_Abci_RequestBeginBlock,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tendermint_Abci_RequestBeginBlock, Tendermint_Abci_ResponseBeginBlock> {
-    return self.makeUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.beginBlock.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeBeginBlockInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to EndBlock
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to EndBlock.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func endBlock(
-    _ request: Tendermint_Abci_RequestEndBlock,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tendermint_Abci_RequestEndBlock, Tendermint_Abci_ResponseEndBlock> {
-    return self.makeUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.endBlock.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeEndBlockInterceptors() ?? []
     )
   }
 
@@ -308,7 +254,7 @@ extension Tendermint_Abci_ABCIApplicationClientProtocol {
     callOptions: CallOptions? = nil
   ) -> UnaryCall<Tendermint_Abci_RequestListSnapshots, Tendermint_Abci_ResponseListSnapshots> {
     return self.makeUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.listSnapshots.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.listSnapshots.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeListSnapshotsInterceptors() ?? []
@@ -326,7 +272,7 @@ extension Tendermint_Abci_ABCIApplicationClientProtocol {
     callOptions: CallOptions? = nil
   ) -> UnaryCall<Tendermint_Abci_RequestOfferSnapshot, Tendermint_Abci_ResponseOfferSnapshot> {
     return self.makeUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.offerSnapshot.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.offerSnapshot.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeOfferSnapshotInterceptors() ?? []
@@ -344,7 +290,7 @@ extension Tendermint_Abci_ABCIApplicationClientProtocol {
     callOptions: CallOptions? = nil
   ) -> UnaryCall<Tendermint_Abci_RequestLoadSnapshotChunk, Tendermint_Abci_ResponseLoadSnapshotChunk> {
     return self.makeUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.loadSnapshotChunk.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.loadSnapshotChunk.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeLoadSnapshotChunkInterceptors() ?? []
@@ -362,7 +308,7 @@ extension Tendermint_Abci_ABCIApplicationClientProtocol {
     callOptions: CallOptions? = nil
   ) -> UnaryCall<Tendermint_Abci_RequestApplySnapshotChunk, Tendermint_Abci_ResponseApplySnapshotChunk> {
     return self.makeUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.applySnapshotChunk.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.applySnapshotChunk.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeApplySnapshotChunkInterceptors() ?? []
@@ -380,7 +326,7 @@ extension Tendermint_Abci_ABCIApplicationClientProtocol {
     callOptions: CallOptions? = nil
   ) -> UnaryCall<Tendermint_Abci_RequestPrepareProposal, Tendermint_Abci_ResponsePrepareProposal> {
     return self.makeUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.prepareProposal.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.prepareProposal.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makePrepareProposalInterceptors() ?? []
@@ -398,33 +344,87 @@ extension Tendermint_Abci_ABCIApplicationClientProtocol {
     callOptions: CallOptions? = nil
   ) -> UnaryCall<Tendermint_Abci_RequestProcessProposal, Tendermint_Abci_ResponseProcessProposal> {
     return self.makeUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.processProposal.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.processProposal.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeProcessProposalInterceptors() ?? []
     )
   }
+
+  /// Unary call to ExtendVote
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to ExtendVote.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func extendVote(
+    _ request: Tendermint_Abci_RequestExtendVote,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Tendermint_Abci_RequestExtendVote, Tendermint_Abci_ResponseExtendVote> {
+    return self.makeUnaryCall(
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.extendVote.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeExtendVoteInterceptors() ?? []
+    )
+  }
+
+  /// Unary call to VerifyVoteExtension
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to VerifyVoteExtension.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func verifyVoteExtension(
+    _ request: Tendermint_Abci_RequestVerifyVoteExtension,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Tendermint_Abci_RequestVerifyVoteExtension, Tendermint_Abci_ResponseVerifyVoteExtension> {
+    return self.makeUnaryCall(
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.verifyVoteExtension.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeVerifyVoteExtensionInterceptors() ?? []
+    )
+  }
+
+  /// Unary call to FinalizeBlock
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to FinalizeBlock.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func finalizeBlock(
+    _ request: Tendermint_Abci_RequestFinalizeBlock,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Tendermint_Abci_RequestFinalizeBlock, Tendermint_Abci_ResponseFinalizeBlock> {
+    return self.makeUnaryCall(
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.finalizeBlock.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeFinalizeBlockInterceptors() ?? []
+    )
+  }
 }
 
 @available(*, deprecated)
-extension Tendermint_Abci_ABCIApplicationClient: @unchecked Sendable {}
+extension Tendermint_Abci_ABCIClient: @unchecked Sendable {}
 
-@available(*, deprecated, renamed: "Tendermint_Abci_ABCIApplicationNIOClient")
-internal final class Tendermint_Abci_ABCIApplicationClient: Tendermint_Abci_ABCIApplicationClientProtocol {
+@available(*, deprecated, renamed: "Tendermint_Abci_ABCINIOClient")
+internal final class Tendermint_Abci_ABCIClient: Tendermint_Abci_ABCIClientProtocol {
   private let lock = Lock()
   private var _defaultCallOptions: CallOptions
-  private var _interceptors: Tendermint_Abci_ABCIApplicationClientInterceptorFactoryProtocol?
+  private var _interceptors: Tendermint_Abci_ABCIClientInterceptorFactoryProtocol?
   internal let channel: GRPCChannel
   internal var defaultCallOptions: CallOptions {
     get { self.lock.withLock { return self._defaultCallOptions } }
     set { self.lock.withLockVoid { self._defaultCallOptions = newValue } }
   }
-  internal var interceptors: Tendermint_Abci_ABCIApplicationClientInterceptorFactoryProtocol? {
+  internal var interceptors: Tendermint_Abci_ABCIClientInterceptorFactoryProtocol? {
     get { self.lock.withLock { return self._interceptors } }
     set { self.lock.withLockVoid { self._interceptors = newValue } }
   }
 
-  /// Creates a client for the tendermint.abci.ABCIApplication service.
+  /// Creates a client for the tendermint.abci.ABCI service.
   ///
   /// - Parameters:
   ///   - channel: `GRPCChannel` to the service host.
@@ -433,7 +433,7 @@ internal final class Tendermint_Abci_ABCIApplicationClient: Tendermint_Abci_ABCI
   internal init(
     channel: GRPCChannel,
     defaultCallOptions: CallOptions = CallOptions(),
-    interceptors: Tendermint_Abci_ABCIApplicationClientInterceptorFactoryProtocol? = nil
+    interceptors: Tendermint_Abci_ABCIClientInterceptorFactoryProtocol? = nil
   ) {
     self.channel = channel
     self._defaultCallOptions = defaultCallOptions
@@ -441,12 +441,12 @@ internal final class Tendermint_Abci_ABCIApplicationClient: Tendermint_Abci_ABCI
   }
 }
 
-internal struct Tendermint_Abci_ABCIApplicationNIOClient: Tendermint_Abci_ABCIApplicationClientProtocol {
+internal struct Tendermint_Abci_ABCINIOClient: Tendermint_Abci_ABCIClientProtocol {
   internal var channel: GRPCChannel
   internal var defaultCallOptions: CallOptions
-  internal var interceptors: Tendermint_Abci_ABCIApplicationClientInterceptorFactoryProtocol?
+  internal var interceptors: Tendermint_Abci_ABCIClientInterceptorFactoryProtocol?
 
-  /// Creates a client for the tendermint.abci.ABCIApplication service.
+  /// Creates a client for the tendermint.abci.ABCI service.
   ///
   /// - Parameters:
   ///   - channel: `GRPCChannel` to the service host.
@@ -455,7 +455,7 @@ internal struct Tendermint_Abci_ABCIApplicationNIOClient: Tendermint_Abci_ABCIAp
   internal init(
     channel: GRPCChannel,
     defaultCallOptions: CallOptions = CallOptions(),
-    interceptors: Tendermint_Abci_ABCIApplicationClientInterceptorFactoryProtocol? = nil
+    interceptors: Tendermint_Abci_ABCIClientInterceptorFactoryProtocol? = nil
   ) {
     self.channel = channel
     self.defaultCallOptions = defaultCallOptions
@@ -464,9 +464,9 @@ internal struct Tendermint_Abci_ABCIApplicationNIOClient: Tendermint_Abci_ABCIAp
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
-internal protocol Tendermint_Abci_ABCIApplicationAsyncClientProtocol: GRPCClient {
+internal protocol Tendermint_Abci_ABCIAsyncClientProtocol: GRPCClient {
   static var serviceDescriptor: GRPCServiceDescriptor { get }
-  var interceptors: Tendermint_Abci_ABCIApplicationClientInterceptorFactoryProtocol? { get }
+  var interceptors: Tendermint_Abci_ABCIClientInterceptorFactoryProtocol? { get }
 
   func makeEchoCall(
     _ request: Tendermint_Abci_RequestEcho,
@@ -482,11 +482,6 @@ internal protocol Tendermint_Abci_ABCIApplicationAsyncClientProtocol: GRPCClient
     _ request: Tendermint_Abci_RequestInfo,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestInfo, Tendermint_Abci_ResponseInfo>
-
-  func makeDeliverTxCall(
-    _ request: Tendermint_Abci_RequestDeliverTx,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestDeliverTx, Tendermint_Abci_ResponseDeliverTx>
 
   func makeCheckTxCall(
     _ request: Tendermint_Abci_RequestCheckTx,
@@ -507,16 +502,6 @@ internal protocol Tendermint_Abci_ABCIApplicationAsyncClientProtocol: GRPCClient
     _ request: Tendermint_Abci_RequestInitChain,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestInitChain, Tendermint_Abci_ResponseInitChain>
-
-  func makeBeginBlockCall(
-    _ request: Tendermint_Abci_RequestBeginBlock,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestBeginBlock, Tendermint_Abci_ResponseBeginBlock>
-
-  func makeEndBlockCall(
-    _ request: Tendermint_Abci_RequestEndBlock,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestEndBlock, Tendermint_Abci_ResponseEndBlock>
 
   func makeListSnapshotsCall(
     _ request: Tendermint_Abci_RequestListSnapshots,
@@ -547,15 +532,30 @@ internal protocol Tendermint_Abci_ABCIApplicationAsyncClientProtocol: GRPCClient
     _ request: Tendermint_Abci_RequestProcessProposal,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestProcessProposal, Tendermint_Abci_ResponseProcessProposal>
+
+  func makeExtendVoteCall(
+    _ request: Tendermint_Abci_RequestExtendVote,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestExtendVote, Tendermint_Abci_ResponseExtendVote>
+
+  func makeVerifyVoteExtensionCall(
+    _ request: Tendermint_Abci_RequestVerifyVoteExtension,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestVerifyVoteExtension, Tendermint_Abci_ResponseVerifyVoteExtension>
+
+  func makeFinalizeBlockCall(
+    _ request: Tendermint_Abci_RequestFinalizeBlock,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestFinalizeBlock, Tendermint_Abci_ResponseFinalizeBlock>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
-extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
+extension Tendermint_Abci_ABCIAsyncClientProtocol {
   internal static var serviceDescriptor: GRPCServiceDescriptor {
-    return Tendermint_Abci_ABCIApplicationClientMetadata.serviceDescriptor
+    return Tendermint_Abci_ABCIClientMetadata.serviceDescriptor
   }
 
-  internal var interceptors: Tendermint_Abci_ABCIApplicationClientInterceptorFactoryProtocol? {
+  internal var interceptors: Tendermint_Abci_ABCIClientInterceptorFactoryProtocol? {
     return nil
   }
 
@@ -564,7 +564,7 @@ extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
     callOptions: CallOptions? = nil
   ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestEcho, Tendermint_Abci_ResponseEcho> {
     return self.makeAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.echo.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.echo.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeEchoInterceptors() ?? []
@@ -576,7 +576,7 @@ extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
     callOptions: CallOptions? = nil
   ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestFlush, Tendermint_Abci_ResponseFlush> {
     return self.makeAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.flush.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.flush.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeFlushInterceptors() ?? []
@@ -588,22 +588,10 @@ extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
     callOptions: CallOptions? = nil
   ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestInfo, Tendermint_Abci_ResponseInfo> {
     return self.makeAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.info.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.info.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeInfoInterceptors() ?? []
-    )
-  }
-
-  internal func makeDeliverTxCall(
-    _ request: Tendermint_Abci_RequestDeliverTx,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestDeliverTx, Tendermint_Abci_ResponseDeliverTx> {
-    return self.makeAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.deliverTx.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeDeliverTxInterceptors() ?? []
     )
   }
 
@@ -612,7 +600,7 @@ extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
     callOptions: CallOptions? = nil
   ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestCheckTx, Tendermint_Abci_ResponseCheckTx> {
     return self.makeAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.checkTx.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.checkTx.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeCheckTxInterceptors() ?? []
@@ -624,7 +612,7 @@ extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
     callOptions: CallOptions? = nil
   ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestQuery, Tendermint_Abci_ResponseQuery> {
     return self.makeAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.query.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.query.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeQueryInterceptors() ?? []
@@ -636,7 +624,7 @@ extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
     callOptions: CallOptions? = nil
   ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestCommit, Tendermint_Abci_ResponseCommit> {
     return self.makeAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.commit.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.commit.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeCommitInterceptors() ?? []
@@ -648,34 +636,10 @@ extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
     callOptions: CallOptions? = nil
   ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestInitChain, Tendermint_Abci_ResponseInitChain> {
     return self.makeAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.initChain.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.initChain.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeInitChainInterceptors() ?? []
-    )
-  }
-
-  internal func makeBeginBlockCall(
-    _ request: Tendermint_Abci_RequestBeginBlock,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestBeginBlock, Tendermint_Abci_ResponseBeginBlock> {
-    return self.makeAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.beginBlock.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeBeginBlockInterceptors() ?? []
-    )
-  }
-
-  internal func makeEndBlockCall(
-    _ request: Tendermint_Abci_RequestEndBlock,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestEndBlock, Tendermint_Abci_ResponseEndBlock> {
-    return self.makeAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.endBlock.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeEndBlockInterceptors() ?? []
     )
   }
 
@@ -684,7 +648,7 @@ extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
     callOptions: CallOptions? = nil
   ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestListSnapshots, Tendermint_Abci_ResponseListSnapshots> {
     return self.makeAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.listSnapshots.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.listSnapshots.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeListSnapshotsInterceptors() ?? []
@@ -696,7 +660,7 @@ extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
     callOptions: CallOptions? = nil
   ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestOfferSnapshot, Tendermint_Abci_ResponseOfferSnapshot> {
     return self.makeAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.offerSnapshot.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.offerSnapshot.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeOfferSnapshotInterceptors() ?? []
@@ -708,7 +672,7 @@ extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
     callOptions: CallOptions? = nil
   ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestLoadSnapshotChunk, Tendermint_Abci_ResponseLoadSnapshotChunk> {
     return self.makeAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.loadSnapshotChunk.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.loadSnapshotChunk.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeLoadSnapshotChunkInterceptors() ?? []
@@ -720,7 +684,7 @@ extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
     callOptions: CallOptions? = nil
   ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestApplySnapshotChunk, Tendermint_Abci_ResponseApplySnapshotChunk> {
     return self.makeAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.applySnapshotChunk.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.applySnapshotChunk.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeApplySnapshotChunkInterceptors() ?? []
@@ -732,7 +696,7 @@ extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
     callOptions: CallOptions? = nil
   ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestPrepareProposal, Tendermint_Abci_ResponsePrepareProposal> {
     return self.makeAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.prepareProposal.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.prepareProposal.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makePrepareProposalInterceptors() ?? []
@@ -744,22 +708,58 @@ extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
     callOptions: CallOptions? = nil
   ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestProcessProposal, Tendermint_Abci_ResponseProcessProposal> {
     return self.makeAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.processProposal.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.processProposal.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeProcessProposalInterceptors() ?? []
     )
   }
+
+  internal func makeExtendVoteCall(
+    _ request: Tendermint_Abci_RequestExtendVote,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestExtendVote, Tendermint_Abci_ResponseExtendVote> {
+    return self.makeAsyncUnaryCall(
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.extendVote.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeExtendVoteInterceptors() ?? []
+    )
+  }
+
+  internal func makeVerifyVoteExtensionCall(
+    _ request: Tendermint_Abci_RequestVerifyVoteExtension,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestVerifyVoteExtension, Tendermint_Abci_ResponseVerifyVoteExtension> {
+    return self.makeAsyncUnaryCall(
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.verifyVoteExtension.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeVerifyVoteExtensionInterceptors() ?? []
+    )
+  }
+
+  internal func makeFinalizeBlockCall(
+    _ request: Tendermint_Abci_RequestFinalizeBlock,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Tendermint_Abci_RequestFinalizeBlock, Tendermint_Abci_ResponseFinalizeBlock> {
+    return self.makeAsyncUnaryCall(
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.finalizeBlock.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeFinalizeBlockInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
-extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
+extension Tendermint_Abci_ABCIAsyncClientProtocol {
   internal func echo(
     _ request: Tendermint_Abci_RequestEcho,
     callOptions: CallOptions? = nil
   ) async throws -> Tendermint_Abci_ResponseEcho {
     return try await self.performAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.echo.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.echo.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeEchoInterceptors() ?? []
@@ -771,7 +771,7 @@ extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
     callOptions: CallOptions? = nil
   ) async throws -> Tendermint_Abci_ResponseFlush {
     return try await self.performAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.flush.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.flush.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeFlushInterceptors() ?? []
@@ -783,22 +783,10 @@ extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
     callOptions: CallOptions? = nil
   ) async throws -> Tendermint_Abci_ResponseInfo {
     return try await self.performAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.info.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.info.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeInfoInterceptors() ?? []
-    )
-  }
-
-  internal func deliverTx(
-    _ request: Tendermint_Abci_RequestDeliverTx,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tendermint_Abci_ResponseDeliverTx {
-    return try await self.performAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.deliverTx.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeDeliverTxInterceptors() ?? []
     )
   }
 
@@ -807,7 +795,7 @@ extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
     callOptions: CallOptions? = nil
   ) async throws -> Tendermint_Abci_ResponseCheckTx {
     return try await self.performAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.checkTx.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.checkTx.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeCheckTxInterceptors() ?? []
@@ -819,7 +807,7 @@ extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
     callOptions: CallOptions? = nil
   ) async throws -> Tendermint_Abci_ResponseQuery {
     return try await self.performAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.query.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.query.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeQueryInterceptors() ?? []
@@ -831,7 +819,7 @@ extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
     callOptions: CallOptions? = nil
   ) async throws -> Tendermint_Abci_ResponseCommit {
     return try await self.performAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.commit.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.commit.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeCommitInterceptors() ?? []
@@ -843,34 +831,10 @@ extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
     callOptions: CallOptions? = nil
   ) async throws -> Tendermint_Abci_ResponseInitChain {
     return try await self.performAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.initChain.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.initChain.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeInitChainInterceptors() ?? []
-    )
-  }
-
-  internal func beginBlock(
-    _ request: Tendermint_Abci_RequestBeginBlock,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tendermint_Abci_ResponseBeginBlock {
-    return try await self.performAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.beginBlock.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeBeginBlockInterceptors() ?? []
-    )
-  }
-
-  internal func endBlock(
-    _ request: Tendermint_Abci_RequestEndBlock,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tendermint_Abci_ResponseEndBlock {
-    return try await self.performAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.endBlock.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeEndBlockInterceptors() ?? []
     )
   }
 
@@ -879,7 +843,7 @@ extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
     callOptions: CallOptions? = nil
   ) async throws -> Tendermint_Abci_ResponseListSnapshots {
     return try await self.performAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.listSnapshots.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.listSnapshots.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeListSnapshotsInterceptors() ?? []
@@ -891,7 +855,7 @@ extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
     callOptions: CallOptions? = nil
   ) async throws -> Tendermint_Abci_ResponseOfferSnapshot {
     return try await self.performAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.offerSnapshot.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.offerSnapshot.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeOfferSnapshotInterceptors() ?? []
@@ -903,7 +867,7 @@ extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
     callOptions: CallOptions? = nil
   ) async throws -> Tendermint_Abci_ResponseLoadSnapshotChunk {
     return try await self.performAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.loadSnapshotChunk.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.loadSnapshotChunk.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeLoadSnapshotChunkInterceptors() ?? []
@@ -915,7 +879,7 @@ extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
     callOptions: CallOptions? = nil
   ) async throws -> Tendermint_Abci_ResponseApplySnapshotChunk {
     return try await self.performAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.applySnapshotChunk.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.applySnapshotChunk.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeApplySnapshotChunkInterceptors() ?? []
@@ -927,7 +891,7 @@ extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
     callOptions: CallOptions? = nil
   ) async throws -> Tendermint_Abci_ResponsePrepareProposal {
     return try await self.performAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.prepareProposal.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.prepareProposal.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makePrepareProposalInterceptors() ?? []
@@ -939,24 +903,60 @@ extension Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
     callOptions: CallOptions? = nil
   ) async throws -> Tendermint_Abci_ResponseProcessProposal {
     return try await self.performAsyncUnaryCall(
-      path: Tendermint_Abci_ABCIApplicationClientMetadata.Methods.processProposal.path,
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.processProposal.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeProcessProposalInterceptors() ?? []
     )
   }
+
+  internal func extendVote(
+    _ request: Tendermint_Abci_RequestExtendVote,
+    callOptions: CallOptions? = nil
+  ) async throws -> Tendermint_Abci_ResponseExtendVote {
+    return try await self.performAsyncUnaryCall(
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.extendVote.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeExtendVoteInterceptors() ?? []
+    )
+  }
+
+  internal func verifyVoteExtension(
+    _ request: Tendermint_Abci_RequestVerifyVoteExtension,
+    callOptions: CallOptions? = nil
+  ) async throws -> Tendermint_Abci_ResponseVerifyVoteExtension {
+    return try await self.performAsyncUnaryCall(
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.verifyVoteExtension.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeVerifyVoteExtensionInterceptors() ?? []
+    )
+  }
+
+  internal func finalizeBlock(
+    _ request: Tendermint_Abci_RequestFinalizeBlock,
+    callOptions: CallOptions? = nil
+  ) async throws -> Tendermint_Abci_ResponseFinalizeBlock {
+    return try await self.performAsyncUnaryCall(
+      path: Tendermint_Abci_ABCIClientMetadata.Methods.finalizeBlock.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeFinalizeBlockInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
-internal struct Tendermint_Abci_ABCIApplicationAsyncClient: Tendermint_Abci_ABCIApplicationAsyncClientProtocol {
+internal struct Tendermint_Abci_ABCIAsyncClient: Tendermint_Abci_ABCIAsyncClientProtocol {
   internal var channel: GRPCChannel
   internal var defaultCallOptions: CallOptions
-  internal var interceptors: Tendermint_Abci_ABCIApplicationClientInterceptorFactoryProtocol?
+  internal var interceptors: Tendermint_Abci_ABCIClientInterceptorFactoryProtocol?
 
   internal init(
     channel: GRPCChannel,
     defaultCallOptions: CallOptions = CallOptions(),
-    interceptors: Tendermint_Abci_ABCIApplicationClientInterceptorFactoryProtocol? = nil
+    interceptors: Tendermint_Abci_ABCIClientInterceptorFactoryProtocol? = nil
   ) {
     self.channel = channel
     self.defaultCallOptions = defaultCallOptions
@@ -964,7 +964,7 @@ internal struct Tendermint_Abci_ABCIApplicationAsyncClient: Tendermint_Abci_ABCI
   }
 }
 
-internal protocol Tendermint_Abci_ABCIApplicationClientInterceptorFactoryProtocol: Sendable {
+internal protocol Tendermint_Abci_ABCIClientInterceptorFactoryProtocol: Sendable {
 
   /// - Returns: Interceptors to use when invoking 'echo'.
   func makeEchoInterceptors() -> [ClientInterceptor<Tendermint_Abci_RequestEcho, Tendermint_Abci_ResponseEcho>]
@@ -974,9 +974,6 @@ internal protocol Tendermint_Abci_ABCIApplicationClientInterceptorFactoryProtoco
 
   /// - Returns: Interceptors to use when invoking 'info'.
   func makeInfoInterceptors() -> [ClientInterceptor<Tendermint_Abci_RequestInfo, Tendermint_Abci_ResponseInfo>]
-
-  /// - Returns: Interceptors to use when invoking 'deliverTx'.
-  func makeDeliverTxInterceptors() -> [ClientInterceptor<Tendermint_Abci_RequestDeliverTx, Tendermint_Abci_ResponseDeliverTx>]
 
   /// - Returns: Interceptors to use when invoking 'checkTx'.
   func makeCheckTxInterceptors() -> [ClientInterceptor<Tendermint_Abci_RequestCheckTx, Tendermint_Abci_ResponseCheckTx>]
@@ -989,12 +986,6 @@ internal protocol Tendermint_Abci_ABCIApplicationClientInterceptorFactoryProtoco
 
   /// - Returns: Interceptors to use when invoking 'initChain'.
   func makeInitChainInterceptors() -> [ClientInterceptor<Tendermint_Abci_RequestInitChain, Tendermint_Abci_ResponseInitChain>]
-
-  /// - Returns: Interceptors to use when invoking 'beginBlock'.
-  func makeBeginBlockInterceptors() -> [ClientInterceptor<Tendermint_Abci_RequestBeginBlock, Tendermint_Abci_ResponseBeginBlock>]
-
-  /// - Returns: Interceptors to use when invoking 'endBlock'.
-  func makeEndBlockInterceptors() -> [ClientInterceptor<Tendermint_Abci_RequestEndBlock, Tendermint_Abci_ResponseEndBlock>]
 
   /// - Returns: Interceptors to use when invoking 'listSnapshots'.
   func makeListSnapshotsInterceptors() -> [ClientInterceptor<Tendermint_Abci_RequestListSnapshots, Tendermint_Abci_ResponseListSnapshots>]
@@ -1013,142 +1004,149 @@ internal protocol Tendermint_Abci_ABCIApplicationClientInterceptorFactoryProtoco
 
   /// - Returns: Interceptors to use when invoking 'processProposal'.
   func makeProcessProposalInterceptors() -> [ClientInterceptor<Tendermint_Abci_RequestProcessProposal, Tendermint_Abci_ResponseProcessProposal>]
+
+  /// - Returns: Interceptors to use when invoking 'extendVote'.
+  func makeExtendVoteInterceptors() -> [ClientInterceptor<Tendermint_Abci_RequestExtendVote, Tendermint_Abci_ResponseExtendVote>]
+
+  /// - Returns: Interceptors to use when invoking 'verifyVoteExtension'.
+  func makeVerifyVoteExtensionInterceptors() -> [ClientInterceptor<Tendermint_Abci_RequestVerifyVoteExtension, Tendermint_Abci_ResponseVerifyVoteExtension>]
+
+  /// - Returns: Interceptors to use when invoking 'finalizeBlock'.
+  func makeFinalizeBlockInterceptors() -> [ClientInterceptor<Tendermint_Abci_RequestFinalizeBlock, Tendermint_Abci_ResponseFinalizeBlock>]
 }
 
-internal enum Tendermint_Abci_ABCIApplicationClientMetadata {
+internal enum Tendermint_Abci_ABCIClientMetadata {
   internal static let serviceDescriptor = GRPCServiceDescriptor(
-    name: "ABCIApplication",
-    fullName: "tendermint.abci.ABCIApplication",
+    name: "ABCI",
+    fullName: "tendermint.abci.ABCI",
     methods: [
-      Tendermint_Abci_ABCIApplicationClientMetadata.Methods.echo,
-      Tendermint_Abci_ABCIApplicationClientMetadata.Methods.flush,
-      Tendermint_Abci_ABCIApplicationClientMetadata.Methods.info,
-      Tendermint_Abci_ABCIApplicationClientMetadata.Methods.deliverTx,
-      Tendermint_Abci_ABCIApplicationClientMetadata.Methods.checkTx,
-      Tendermint_Abci_ABCIApplicationClientMetadata.Methods.query,
-      Tendermint_Abci_ABCIApplicationClientMetadata.Methods.commit,
-      Tendermint_Abci_ABCIApplicationClientMetadata.Methods.initChain,
-      Tendermint_Abci_ABCIApplicationClientMetadata.Methods.beginBlock,
-      Tendermint_Abci_ABCIApplicationClientMetadata.Methods.endBlock,
-      Tendermint_Abci_ABCIApplicationClientMetadata.Methods.listSnapshots,
-      Tendermint_Abci_ABCIApplicationClientMetadata.Methods.offerSnapshot,
-      Tendermint_Abci_ABCIApplicationClientMetadata.Methods.loadSnapshotChunk,
-      Tendermint_Abci_ABCIApplicationClientMetadata.Methods.applySnapshotChunk,
-      Tendermint_Abci_ABCIApplicationClientMetadata.Methods.prepareProposal,
-      Tendermint_Abci_ABCIApplicationClientMetadata.Methods.processProposal,
+      Tendermint_Abci_ABCIClientMetadata.Methods.echo,
+      Tendermint_Abci_ABCIClientMetadata.Methods.flush,
+      Tendermint_Abci_ABCIClientMetadata.Methods.info,
+      Tendermint_Abci_ABCIClientMetadata.Methods.checkTx,
+      Tendermint_Abci_ABCIClientMetadata.Methods.query,
+      Tendermint_Abci_ABCIClientMetadata.Methods.commit,
+      Tendermint_Abci_ABCIClientMetadata.Methods.initChain,
+      Tendermint_Abci_ABCIClientMetadata.Methods.listSnapshots,
+      Tendermint_Abci_ABCIClientMetadata.Methods.offerSnapshot,
+      Tendermint_Abci_ABCIClientMetadata.Methods.loadSnapshotChunk,
+      Tendermint_Abci_ABCIClientMetadata.Methods.applySnapshotChunk,
+      Tendermint_Abci_ABCIClientMetadata.Methods.prepareProposal,
+      Tendermint_Abci_ABCIClientMetadata.Methods.processProposal,
+      Tendermint_Abci_ABCIClientMetadata.Methods.extendVote,
+      Tendermint_Abci_ABCIClientMetadata.Methods.verifyVoteExtension,
+      Tendermint_Abci_ABCIClientMetadata.Methods.finalizeBlock,
     ]
   )
 
   internal enum Methods {
     internal static let echo = GRPCMethodDescriptor(
       name: "Echo",
-      path: "/tendermint.abci.ABCIApplication/Echo",
+      path: "/tendermint.abci.ABCI/Echo",
       type: GRPCCallType.unary
     )
 
     internal static let flush = GRPCMethodDescriptor(
       name: "Flush",
-      path: "/tendermint.abci.ABCIApplication/Flush",
+      path: "/tendermint.abci.ABCI/Flush",
       type: GRPCCallType.unary
     )
 
     internal static let info = GRPCMethodDescriptor(
       name: "Info",
-      path: "/tendermint.abci.ABCIApplication/Info",
-      type: GRPCCallType.unary
-    )
-
-    internal static let deliverTx = GRPCMethodDescriptor(
-      name: "DeliverTx",
-      path: "/tendermint.abci.ABCIApplication/DeliverTx",
+      path: "/tendermint.abci.ABCI/Info",
       type: GRPCCallType.unary
     )
 
     internal static let checkTx = GRPCMethodDescriptor(
       name: "CheckTx",
-      path: "/tendermint.abci.ABCIApplication/CheckTx",
+      path: "/tendermint.abci.ABCI/CheckTx",
       type: GRPCCallType.unary
     )
 
     internal static let query = GRPCMethodDescriptor(
       name: "Query",
-      path: "/tendermint.abci.ABCIApplication/Query",
+      path: "/tendermint.abci.ABCI/Query",
       type: GRPCCallType.unary
     )
 
     internal static let commit = GRPCMethodDescriptor(
       name: "Commit",
-      path: "/tendermint.abci.ABCIApplication/Commit",
+      path: "/tendermint.abci.ABCI/Commit",
       type: GRPCCallType.unary
     )
 
     internal static let initChain = GRPCMethodDescriptor(
       name: "InitChain",
-      path: "/tendermint.abci.ABCIApplication/InitChain",
-      type: GRPCCallType.unary
-    )
-
-    internal static let beginBlock = GRPCMethodDescriptor(
-      name: "BeginBlock",
-      path: "/tendermint.abci.ABCIApplication/BeginBlock",
-      type: GRPCCallType.unary
-    )
-
-    internal static let endBlock = GRPCMethodDescriptor(
-      name: "EndBlock",
-      path: "/tendermint.abci.ABCIApplication/EndBlock",
+      path: "/tendermint.abci.ABCI/InitChain",
       type: GRPCCallType.unary
     )
 
     internal static let listSnapshots = GRPCMethodDescriptor(
       name: "ListSnapshots",
-      path: "/tendermint.abci.ABCIApplication/ListSnapshots",
+      path: "/tendermint.abci.ABCI/ListSnapshots",
       type: GRPCCallType.unary
     )
 
     internal static let offerSnapshot = GRPCMethodDescriptor(
       name: "OfferSnapshot",
-      path: "/tendermint.abci.ABCIApplication/OfferSnapshot",
+      path: "/tendermint.abci.ABCI/OfferSnapshot",
       type: GRPCCallType.unary
     )
 
     internal static let loadSnapshotChunk = GRPCMethodDescriptor(
       name: "LoadSnapshotChunk",
-      path: "/tendermint.abci.ABCIApplication/LoadSnapshotChunk",
+      path: "/tendermint.abci.ABCI/LoadSnapshotChunk",
       type: GRPCCallType.unary
     )
 
     internal static let applySnapshotChunk = GRPCMethodDescriptor(
       name: "ApplySnapshotChunk",
-      path: "/tendermint.abci.ABCIApplication/ApplySnapshotChunk",
+      path: "/tendermint.abci.ABCI/ApplySnapshotChunk",
       type: GRPCCallType.unary
     )
 
     internal static let prepareProposal = GRPCMethodDescriptor(
       name: "PrepareProposal",
-      path: "/tendermint.abci.ABCIApplication/PrepareProposal",
+      path: "/tendermint.abci.ABCI/PrepareProposal",
       type: GRPCCallType.unary
     )
 
     internal static let processProposal = GRPCMethodDescriptor(
       name: "ProcessProposal",
-      path: "/tendermint.abci.ABCIApplication/ProcessProposal",
+      path: "/tendermint.abci.ABCI/ProcessProposal",
+      type: GRPCCallType.unary
+    )
+
+    internal static let extendVote = GRPCMethodDescriptor(
+      name: "ExtendVote",
+      path: "/tendermint.abci.ABCI/ExtendVote",
+      type: GRPCCallType.unary
+    )
+
+    internal static let verifyVoteExtension = GRPCMethodDescriptor(
+      name: "VerifyVoteExtension",
+      path: "/tendermint.abci.ABCI/VerifyVoteExtension",
+      type: GRPCCallType.unary
+    )
+
+    internal static let finalizeBlock = GRPCMethodDescriptor(
+      name: "FinalizeBlock",
+      path: "/tendermint.abci.ABCI/FinalizeBlock",
       type: GRPCCallType.unary
     )
   }
 }
 
 /// To build a server, implement a class that conforms to this protocol.
-internal protocol Tendermint_Abci_ABCIApplicationProvider: CallHandlerProvider {
-  var interceptors: Tendermint_Abci_ABCIApplicationServerInterceptorFactoryProtocol? { get }
+internal protocol Tendermint_Abci_ABCIProvider: CallHandlerProvider {
+  var interceptors: Tendermint_Abci_ABCIServerInterceptorFactoryProtocol? { get }
 
   func echo(request: Tendermint_Abci_RequestEcho, context: StatusOnlyCallContext) -> EventLoopFuture<Tendermint_Abci_ResponseEcho>
 
   func flush(request: Tendermint_Abci_RequestFlush, context: StatusOnlyCallContext) -> EventLoopFuture<Tendermint_Abci_ResponseFlush>
 
   func info(request: Tendermint_Abci_RequestInfo, context: StatusOnlyCallContext) -> EventLoopFuture<Tendermint_Abci_ResponseInfo>
-
-  func deliverTx(request: Tendermint_Abci_RequestDeliverTx, context: StatusOnlyCallContext) -> EventLoopFuture<Tendermint_Abci_ResponseDeliverTx>
 
   func checkTx(request: Tendermint_Abci_RequestCheckTx, context: StatusOnlyCallContext) -> EventLoopFuture<Tendermint_Abci_ResponseCheckTx>
 
@@ -1157,10 +1155,6 @@ internal protocol Tendermint_Abci_ABCIApplicationProvider: CallHandlerProvider {
   func commit(request: Tendermint_Abci_RequestCommit, context: StatusOnlyCallContext) -> EventLoopFuture<Tendermint_Abci_ResponseCommit>
 
   func initChain(request: Tendermint_Abci_RequestInitChain, context: StatusOnlyCallContext) -> EventLoopFuture<Tendermint_Abci_ResponseInitChain>
-
-  func beginBlock(request: Tendermint_Abci_RequestBeginBlock, context: StatusOnlyCallContext) -> EventLoopFuture<Tendermint_Abci_ResponseBeginBlock>
-
-  func endBlock(request: Tendermint_Abci_RequestEndBlock, context: StatusOnlyCallContext) -> EventLoopFuture<Tendermint_Abci_ResponseEndBlock>
 
   func listSnapshots(request: Tendermint_Abci_RequestListSnapshots, context: StatusOnlyCallContext) -> EventLoopFuture<Tendermint_Abci_ResponseListSnapshots>
 
@@ -1173,11 +1167,17 @@ internal protocol Tendermint_Abci_ABCIApplicationProvider: CallHandlerProvider {
   func prepareProposal(request: Tendermint_Abci_RequestPrepareProposal, context: StatusOnlyCallContext) -> EventLoopFuture<Tendermint_Abci_ResponsePrepareProposal>
 
   func processProposal(request: Tendermint_Abci_RequestProcessProposal, context: StatusOnlyCallContext) -> EventLoopFuture<Tendermint_Abci_ResponseProcessProposal>
+
+  func extendVote(request: Tendermint_Abci_RequestExtendVote, context: StatusOnlyCallContext) -> EventLoopFuture<Tendermint_Abci_ResponseExtendVote>
+
+  func verifyVoteExtension(request: Tendermint_Abci_RequestVerifyVoteExtension, context: StatusOnlyCallContext) -> EventLoopFuture<Tendermint_Abci_ResponseVerifyVoteExtension>
+
+  func finalizeBlock(request: Tendermint_Abci_RequestFinalizeBlock, context: StatusOnlyCallContext) -> EventLoopFuture<Tendermint_Abci_ResponseFinalizeBlock>
 }
 
-extension Tendermint_Abci_ABCIApplicationProvider {
+extension Tendermint_Abci_ABCIProvider {
   internal var serviceName: Substring {
-    return Tendermint_Abci_ABCIApplicationServerMetadata.serviceDescriptor.fullName[...]
+    return Tendermint_Abci_ABCIServerMetadata.serviceDescriptor.fullName[...]
   }
 
   /// Determines, calls and returns the appropriate request handler, depending on the request's method.
@@ -1214,15 +1214,6 @@ extension Tendermint_Abci_ABCIApplicationProvider {
         userFunction: self.info(request:context:)
       )
 
-    case "DeliverTx":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Tendermint_Abci_RequestDeliverTx>(),
-        responseSerializer: ProtobufSerializer<Tendermint_Abci_ResponseDeliverTx>(),
-        interceptors: self.interceptors?.makeDeliverTxInterceptors() ?? [],
-        userFunction: self.deliverTx(request:context:)
-      )
-
     case "CheckTx":
       return UnaryServerHandler(
         context: context,
@@ -1257,24 +1248,6 @@ extension Tendermint_Abci_ABCIApplicationProvider {
         responseSerializer: ProtobufSerializer<Tendermint_Abci_ResponseInitChain>(),
         interceptors: self.interceptors?.makeInitChainInterceptors() ?? [],
         userFunction: self.initChain(request:context:)
-      )
-
-    case "BeginBlock":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Tendermint_Abci_RequestBeginBlock>(),
-        responseSerializer: ProtobufSerializer<Tendermint_Abci_ResponseBeginBlock>(),
-        interceptors: self.interceptors?.makeBeginBlockInterceptors() ?? [],
-        userFunction: self.beginBlock(request:context:)
-      )
-
-    case "EndBlock":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Tendermint_Abci_RequestEndBlock>(),
-        responseSerializer: ProtobufSerializer<Tendermint_Abci_ResponseEndBlock>(),
-        interceptors: self.interceptors?.makeEndBlockInterceptors() ?? [],
-        userFunction: self.endBlock(request:context:)
       )
 
     case "ListSnapshots":
@@ -1331,6 +1304,33 @@ extension Tendermint_Abci_ABCIApplicationProvider {
         userFunction: self.processProposal(request:context:)
       )
 
+    case "ExtendVote":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Tendermint_Abci_RequestExtendVote>(),
+        responseSerializer: ProtobufSerializer<Tendermint_Abci_ResponseExtendVote>(),
+        interceptors: self.interceptors?.makeExtendVoteInterceptors() ?? [],
+        userFunction: self.extendVote(request:context:)
+      )
+
+    case "VerifyVoteExtension":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Tendermint_Abci_RequestVerifyVoteExtension>(),
+        responseSerializer: ProtobufSerializer<Tendermint_Abci_ResponseVerifyVoteExtension>(),
+        interceptors: self.interceptors?.makeVerifyVoteExtensionInterceptors() ?? [],
+        userFunction: self.verifyVoteExtension(request:context:)
+      )
+
+    case "FinalizeBlock":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Tendermint_Abci_RequestFinalizeBlock>(),
+        responseSerializer: ProtobufSerializer<Tendermint_Abci_ResponseFinalizeBlock>(),
+        interceptors: self.interceptors?.makeFinalizeBlockInterceptors() ?? [],
+        userFunction: self.finalizeBlock(request:context:)
+      )
+
     default:
       return nil
     }
@@ -1339,9 +1339,9 @@ extension Tendermint_Abci_ABCIApplicationProvider {
 
 /// To implement a server, implement an object which conforms to this protocol.
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
-internal protocol Tendermint_Abci_ABCIApplicationAsyncProvider: CallHandlerProvider {
+internal protocol Tendermint_Abci_ABCIAsyncProvider: CallHandlerProvider {
   static var serviceDescriptor: GRPCServiceDescriptor { get }
-  var interceptors: Tendermint_Abci_ABCIApplicationServerInterceptorFactoryProtocol? { get }
+  var interceptors: Tendermint_Abci_ABCIServerInterceptorFactoryProtocol? { get }
 
   @Sendable func echo(
     request: Tendermint_Abci_RequestEcho,
@@ -1357,11 +1357,6 @@ internal protocol Tendermint_Abci_ABCIApplicationAsyncProvider: CallHandlerProvi
     request: Tendermint_Abci_RequestInfo,
     context: GRPCAsyncServerCallContext
   ) async throws -> Tendermint_Abci_ResponseInfo
-
-  @Sendable func deliverTx(
-    request: Tendermint_Abci_RequestDeliverTx,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Tendermint_Abci_ResponseDeliverTx
 
   @Sendable func checkTx(
     request: Tendermint_Abci_RequestCheckTx,
@@ -1382,16 +1377,6 @@ internal protocol Tendermint_Abci_ABCIApplicationAsyncProvider: CallHandlerProvi
     request: Tendermint_Abci_RequestInitChain,
     context: GRPCAsyncServerCallContext
   ) async throws -> Tendermint_Abci_ResponseInitChain
-
-  @Sendable func beginBlock(
-    request: Tendermint_Abci_RequestBeginBlock,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Tendermint_Abci_ResponseBeginBlock
-
-  @Sendable func endBlock(
-    request: Tendermint_Abci_RequestEndBlock,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Tendermint_Abci_ResponseEndBlock
 
   @Sendable func listSnapshots(
     request: Tendermint_Abci_RequestListSnapshots,
@@ -1422,19 +1407,34 @@ internal protocol Tendermint_Abci_ABCIApplicationAsyncProvider: CallHandlerProvi
     request: Tendermint_Abci_RequestProcessProposal,
     context: GRPCAsyncServerCallContext
   ) async throws -> Tendermint_Abci_ResponseProcessProposal
+
+  @Sendable func extendVote(
+    request: Tendermint_Abci_RequestExtendVote,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Tendermint_Abci_ResponseExtendVote
+
+  @Sendable func verifyVoteExtension(
+    request: Tendermint_Abci_RequestVerifyVoteExtension,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Tendermint_Abci_ResponseVerifyVoteExtension
+
+  @Sendable func finalizeBlock(
+    request: Tendermint_Abci_RequestFinalizeBlock,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Tendermint_Abci_ResponseFinalizeBlock
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
-extension Tendermint_Abci_ABCIApplicationAsyncProvider {
+extension Tendermint_Abci_ABCIAsyncProvider {
   internal static var serviceDescriptor: GRPCServiceDescriptor {
-    return Tendermint_Abci_ABCIApplicationServerMetadata.serviceDescriptor
+    return Tendermint_Abci_ABCIServerMetadata.serviceDescriptor
   }
 
   internal var serviceName: Substring {
-    return Tendermint_Abci_ABCIApplicationServerMetadata.serviceDescriptor.fullName[...]
+    return Tendermint_Abci_ABCIServerMetadata.serviceDescriptor.fullName[...]
   }
 
-  internal var interceptors: Tendermint_Abci_ABCIApplicationServerInterceptorFactoryProtocol? {
+  internal var interceptors: Tendermint_Abci_ABCIServerInterceptorFactoryProtocol? {
     return nil
   }
 
@@ -1468,15 +1468,6 @@ extension Tendermint_Abci_ABCIApplicationAsyncProvider {
         responseSerializer: ProtobufSerializer<Tendermint_Abci_ResponseInfo>(),
         interceptors: self.interceptors?.makeInfoInterceptors() ?? [],
         wrapping: self.info(request:context:)
-      )
-
-    case "DeliverTx":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Tendermint_Abci_RequestDeliverTx>(),
-        responseSerializer: ProtobufSerializer<Tendermint_Abci_ResponseDeliverTx>(),
-        interceptors: self.interceptors?.makeDeliverTxInterceptors() ?? [],
-        wrapping: self.deliverTx(request:context:)
       )
 
     case "CheckTx":
@@ -1513,24 +1504,6 @@ extension Tendermint_Abci_ABCIApplicationAsyncProvider {
         responseSerializer: ProtobufSerializer<Tendermint_Abci_ResponseInitChain>(),
         interceptors: self.interceptors?.makeInitChainInterceptors() ?? [],
         wrapping: self.initChain(request:context:)
-      )
-
-    case "BeginBlock":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Tendermint_Abci_RequestBeginBlock>(),
-        responseSerializer: ProtobufSerializer<Tendermint_Abci_ResponseBeginBlock>(),
-        interceptors: self.interceptors?.makeBeginBlockInterceptors() ?? [],
-        wrapping: self.beginBlock(request:context:)
-      )
-
-    case "EndBlock":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Tendermint_Abci_RequestEndBlock>(),
-        responseSerializer: ProtobufSerializer<Tendermint_Abci_ResponseEndBlock>(),
-        interceptors: self.interceptors?.makeEndBlockInterceptors() ?? [],
-        wrapping: self.endBlock(request:context:)
       )
 
     case "ListSnapshots":
@@ -1587,13 +1560,40 @@ extension Tendermint_Abci_ABCIApplicationAsyncProvider {
         wrapping: self.processProposal(request:context:)
       )
 
+    case "ExtendVote":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Tendermint_Abci_RequestExtendVote>(),
+        responseSerializer: ProtobufSerializer<Tendermint_Abci_ResponseExtendVote>(),
+        interceptors: self.interceptors?.makeExtendVoteInterceptors() ?? [],
+        wrapping: self.extendVote(request:context:)
+      )
+
+    case "VerifyVoteExtension":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Tendermint_Abci_RequestVerifyVoteExtension>(),
+        responseSerializer: ProtobufSerializer<Tendermint_Abci_ResponseVerifyVoteExtension>(),
+        interceptors: self.interceptors?.makeVerifyVoteExtensionInterceptors() ?? [],
+        wrapping: self.verifyVoteExtension(request:context:)
+      )
+
+    case "FinalizeBlock":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Tendermint_Abci_RequestFinalizeBlock>(),
+        responseSerializer: ProtobufSerializer<Tendermint_Abci_ResponseFinalizeBlock>(),
+        interceptors: self.interceptors?.makeFinalizeBlockInterceptors() ?? [],
+        wrapping: self.finalizeBlock(request:context:)
+      )
+
     default:
       return nil
     }
   }
 }
 
-internal protocol Tendermint_Abci_ABCIApplicationServerInterceptorFactoryProtocol {
+internal protocol Tendermint_Abci_ABCIServerInterceptorFactoryProtocol {
 
   /// - Returns: Interceptors to use when handling 'echo'.
   ///   Defaults to calling `self.makeInterceptors()`.
@@ -1606,10 +1606,6 @@ internal protocol Tendermint_Abci_ABCIApplicationServerInterceptorFactoryProtoco
   /// - Returns: Interceptors to use when handling 'info'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeInfoInterceptors() -> [ServerInterceptor<Tendermint_Abci_RequestInfo, Tendermint_Abci_ResponseInfo>]
-
-  /// - Returns: Interceptors to use when handling 'deliverTx'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeDeliverTxInterceptors() -> [ServerInterceptor<Tendermint_Abci_RequestDeliverTx, Tendermint_Abci_ResponseDeliverTx>]
 
   /// - Returns: Interceptors to use when handling 'checkTx'.
   ///   Defaults to calling `self.makeInterceptors()`.
@@ -1626,14 +1622,6 @@ internal protocol Tendermint_Abci_ABCIApplicationServerInterceptorFactoryProtoco
   /// - Returns: Interceptors to use when handling 'initChain'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeInitChainInterceptors() -> [ServerInterceptor<Tendermint_Abci_RequestInitChain, Tendermint_Abci_ResponseInitChain>]
-
-  /// - Returns: Interceptors to use when handling 'beginBlock'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeBeginBlockInterceptors() -> [ServerInterceptor<Tendermint_Abci_RequestBeginBlock, Tendermint_Abci_ResponseBeginBlock>]
-
-  /// - Returns: Interceptors to use when handling 'endBlock'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeEndBlockInterceptors() -> [ServerInterceptor<Tendermint_Abci_RequestEndBlock, Tendermint_Abci_ResponseEndBlock>]
 
   /// - Returns: Interceptors to use when handling 'listSnapshots'.
   ///   Defaults to calling `self.makeInterceptors()`.
@@ -1658,126 +1646,138 @@ internal protocol Tendermint_Abci_ABCIApplicationServerInterceptorFactoryProtoco
   /// - Returns: Interceptors to use when handling 'processProposal'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeProcessProposalInterceptors() -> [ServerInterceptor<Tendermint_Abci_RequestProcessProposal, Tendermint_Abci_ResponseProcessProposal>]
+
+  /// - Returns: Interceptors to use when handling 'extendVote'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeExtendVoteInterceptors() -> [ServerInterceptor<Tendermint_Abci_RequestExtendVote, Tendermint_Abci_ResponseExtendVote>]
+
+  /// - Returns: Interceptors to use when handling 'verifyVoteExtension'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeVerifyVoteExtensionInterceptors() -> [ServerInterceptor<Tendermint_Abci_RequestVerifyVoteExtension, Tendermint_Abci_ResponseVerifyVoteExtension>]
+
+  /// - Returns: Interceptors to use when handling 'finalizeBlock'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeFinalizeBlockInterceptors() -> [ServerInterceptor<Tendermint_Abci_RequestFinalizeBlock, Tendermint_Abci_ResponseFinalizeBlock>]
 }
 
-internal enum Tendermint_Abci_ABCIApplicationServerMetadata {
+internal enum Tendermint_Abci_ABCIServerMetadata {
   internal static let serviceDescriptor = GRPCServiceDescriptor(
-    name: "ABCIApplication",
-    fullName: "tendermint.abci.ABCIApplication",
+    name: "ABCI",
+    fullName: "tendermint.abci.ABCI",
     methods: [
-      Tendermint_Abci_ABCIApplicationServerMetadata.Methods.echo,
-      Tendermint_Abci_ABCIApplicationServerMetadata.Methods.flush,
-      Tendermint_Abci_ABCIApplicationServerMetadata.Methods.info,
-      Tendermint_Abci_ABCIApplicationServerMetadata.Methods.deliverTx,
-      Tendermint_Abci_ABCIApplicationServerMetadata.Methods.checkTx,
-      Tendermint_Abci_ABCIApplicationServerMetadata.Methods.query,
-      Tendermint_Abci_ABCIApplicationServerMetadata.Methods.commit,
-      Tendermint_Abci_ABCIApplicationServerMetadata.Methods.initChain,
-      Tendermint_Abci_ABCIApplicationServerMetadata.Methods.beginBlock,
-      Tendermint_Abci_ABCIApplicationServerMetadata.Methods.endBlock,
-      Tendermint_Abci_ABCIApplicationServerMetadata.Methods.listSnapshots,
-      Tendermint_Abci_ABCIApplicationServerMetadata.Methods.offerSnapshot,
-      Tendermint_Abci_ABCIApplicationServerMetadata.Methods.loadSnapshotChunk,
-      Tendermint_Abci_ABCIApplicationServerMetadata.Methods.applySnapshotChunk,
-      Tendermint_Abci_ABCIApplicationServerMetadata.Methods.prepareProposal,
-      Tendermint_Abci_ABCIApplicationServerMetadata.Methods.processProposal,
+      Tendermint_Abci_ABCIServerMetadata.Methods.echo,
+      Tendermint_Abci_ABCIServerMetadata.Methods.flush,
+      Tendermint_Abci_ABCIServerMetadata.Methods.info,
+      Tendermint_Abci_ABCIServerMetadata.Methods.checkTx,
+      Tendermint_Abci_ABCIServerMetadata.Methods.query,
+      Tendermint_Abci_ABCIServerMetadata.Methods.commit,
+      Tendermint_Abci_ABCIServerMetadata.Methods.initChain,
+      Tendermint_Abci_ABCIServerMetadata.Methods.listSnapshots,
+      Tendermint_Abci_ABCIServerMetadata.Methods.offerSnapshot,
+      Tendermint_Abci_ABCIServerMetadata.Methods.loadSnapshotChunk,
+      Tendermint_Abci_ABCIServerMetadata.Methods.applySnapshotChunk,
+      Tendermint_Abci_ABCIServerMetadata.Methods.prepareProposal,
+      Tendermint_Abci_ABCIServerMetadata.Methods.processProposal,
+      Tendermint_Abci_ABCIServerMetadata.Methods.extendVote,
+      Tendermint_Abci_ABCIServerMetadata.Methods.verifyVoteExtension,
+      Tendermint_Abci_ABCIServerMetadata.Methods.finalizeBlock,
     ]
   )
 
   internal enum Methods {
     internal static let echo = GRPCMethodDescriptor(
       name: "Echo",
-      path: "/tendermint.abci.ABCIApplication/Echo",
+      path: "/tendermint.abci.ABCI/Echo",
       type: GRPCCallType.unary
     )
 
     internal static let flush = GRPCMethodDescriptor(
       name: "Flush",
-      path: "/tendermint.abci.ABCIApplication/Flush",
+      path: "/tendermint.abci.ABCI/Flush",
       type: GRPCCallType.unary
     )
 
     internal static let info = GRPCMethodDescriptor(
       name: "Info",
-      path: "/tendermint.abci.ABCIApplication/Info",
-      type: GRPCCallType.unary
-    )
-
-    internal static let deliverTx = GRPCMethodDescriptor(
-      name: "DeliverTx",
-      path: "/tendermint.abci.ABCIApplication/DeliverTx",
+      path: "/tendermint.abci.ABCI/Info",
       type: GRPCCallType.unary
     )
 
     internal static let checkTx = GRPCMethodDescriptor(
       name: "CheckTx",
-      path: "/tendermint.abci.ABCIApplication/CheckTx",
+      path: "/tendermint.abci.ABCI/CheckTx",
       type: GRPCCallType.unary
     )
 
     internal static let query = GRPCMethodDescriptor(
       name: "Query",
-      path: "/tendermint.abci.ABCIApplication/Query",
+      path: "/tendermint.abci.ABCI/Query",
       type: GRPCCallType.unary
     )
 
     internal static let commit = GRPCMethodDescriptor(
       name: "Commit",
-      path: "/tendermint.abci.ABCIApplication/Commit",
+      path: "/tendermint.abci.ABCI/Commit",
       type: GRPCCallType.unary
     )
 
     internal static let initChain = GRPCMethodDescriptor(
       name: "InitChain",
-      path: "/tendermint.abci.ABCIApplication/InitChain",
-      type: GRPCCallType.unary
-    )
-
-    internal static let beginBlock = GRPCMethodDescriptor(
-      name: "BeginBlock",
-      path: "/tendermint.abci.ABCIApplication/BeginBlock",
-      type: GRPCCallType.unary
-    )
-
-    internal static let endBlock = GRPCMethodDescriptor(
-      name: "EndBlock",
-      path: "/tendermint.abci.ABCIApplication/EndBlock",
+      path: "/tendermint.abci.ABCI/InitChain",
       type: GRPCCallType.unary
     )
 
     internal static let listSnapshots = GRPCMethodDescriptor(
       name: "ListSnapshots",
-      path: "/tendermint.abci.ABCIApplication/ListSnapshots",
+      path: "/tendermint.abci.ABCI/ListSnapshots",
       type: GRPCCallType.unary
     )
 
     internal static let offerSnapshot = GRPCMethodDescriptor(
       name: "OfferSnapshot",
-      path: "/tendermint.abci.ABCIApplication/OfferSnapshot",
+      path: "/tendermint.abci.ABCI/OfferSnapshot",
       type: GRPCCallType.unary
     )
 
     internal static let loadSnapshotChunk = GRPCMethodDescriptor(
       name: "LoadSnapshotChunk",
-      path: "/tendermint.abci.ABCIApplication/LoadSnapshotChunk",
+      path: "/tendermint.abci.ABCI/LoadSnapshotChunk",
       type: GRPCCallType.unary
     )
 
     internal static let applySnapshotChunk = GRPCMethodDescriptor(
       name: "ApplySnapshotChunk",
-      path: "/tendermint.abci.ABCIApplication/ApplySnapshotChunk",
+      path: "/tendermint.abci.ABCI/ApplySnapshotChunk",
       type: GRPCCallType.unary
     )
 
     internal static let prepareProposal = GRPCMethodDescriptor(
       name: "PrepareProposal",
-      path: "/tendermint.abci.ABCIApplication/PrepareProposal",
+      path: "/tendermint.abci.ABCI/PrepareProposal",
       type: GRPCCallType.unary
     )
 
     internal static let processProposal = GRPCMethodDescriptor(
       name: "ProcessProposal",
-      path: "/tendermint.abci.ABCIApplication/ProcessProposal",
+      path: "/tendermint.abci.ABCI/ProcessProposal",
+      type: GRPCCallType.unary
+    )
+
+    internal static let extendVote = GRPCMethodDescriptor(
+      name: "ExtendVote",
+      path: "/tendermint.abci.ABCI/ExtendVote",
+      type: GRPCCallType.unary
+    )
+
+    internal static let verifyVoteExtension = GRPCMethodDescriptor(
+      name: "VerifyVoteExtension",
+      path: "/tendermint.abci.ABCI/VerifyVoteExtension",
+      type: GRPCCallType.unary
+    )
+
+    internal static let finalizeBlock = GRPCMethodDescriptor(
+      name: "FinalizeBlock",
+      path: "/tendermint.abci.ABCI/FinalizeBlock",
       type: GRPCCallType.unary
     )
   }

@@ -504,10 +504,10 @@ struct Cosmos_Staking_V1beta1_Delegation {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// delegator_address is the bech32-encoded address of the delegator.
+  /// delegator_address is the encoded address of the delegator.
   var delegatorAddress: String = String()
 
-  /// validator_address is the bech32-encoded address of the validator.
+  /// validator_address is the encoded address of the validator.
   var validatorAddress: String = String()
 
   /// shares define the delegation shares received.
@@ -528,10 +528,10 @@ struct Cosmos_Staking_V1beta1_UnbondingDelegation {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// delegator_address is the bech32-encoded address of the delegator.
+  /// delegator_address is the encoded address of the delegator.
   var delegatorAddress: String = String()
 
-  /// validator_address is the bech32-encoded address of the validator.
+  /// validator_address is the encoded address of the validator.
   var validatorAddress: String = String()
 
   /// entries are the unbonding delegation entries.

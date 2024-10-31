@@ -57,6 +57,7 @@ struct Cosmos_Base_V1beta1_DecCoin {
 }
 
 /// IntProto defines a Protobuf wrapper around an Int object.
+/// Deprecated: Prefer to use math.Int directly. It supports binary Marshal and Unmarshal.
 struct Cosmos_Base_V1beta1_IntProto {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -70,6 +71,7 @@ struct Cosmos_Base_V1beta1_IntProto {
 }
 
 /// DecProto defines a Protobuf wrapper around a Dec object.
+/// Deprecated: Prefer to use math.LegacyDec directly. It supports binary Marshal and Unmarshal.
 struct Cosmos_Base_V1beta1_DecProto {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for

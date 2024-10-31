@@ -63,6 +63,11 @@ internal protocol Cosmos_Distribution_V1beta1_MsgClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> UnaryCall<Cosmos_Distribution_V1beta1_MsgCommunityPoolSpend, Cosmos_Distribution_V1beta1_MsgCommunityPoolSpendResponse>
 
+  func depositValidatorRewardsPool(
+    _ request: Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPool,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPool, Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPoolResponse>
+
   func withdrawTokenizeShareRecordReward(
     _ request: Cosmos_Distribution_V1beta1_MsgWithdrawTokenizeShareRecordReward,
     callOptions: CallOptions?
@@ -199,6 +204,27 @@ extension Cosmos_Distribution_V1beta1_MsgClientProtocol {
     )
   }
 
+  /// DepositValidatorRewardsPool defines a method to provide additional rewards
+  /// to delegators to a specific validator.
+  ///
+  /// Since: cosmos-sdk 0.50
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to DepositValidatorRewardsPool.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func depositValidatorRewardsPool(
+    _ request: Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPool,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPool, Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPoolResponse> {
+    return self.makeUnaryCall(
+      path: Cosmos_Distribution_V1beta1_MsgClientMetadata.Methods.depositValidatorRewardsPool.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeDepositValidatorRewardsPoolInterceptors() ?? []
+    )
+  }
+
   /// WithdrawTokenizeShareRecordReward defines a method to withdraw reward for an owning TokenizeShareRecord
   ///
   /// - Parameters:
@@ -329,6 +355,11 @@ internal protocol Cosmos_Distribution_V1beta1_MsgAsyncClientProtocol: GRPCClient
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Cosmos_Distribution_V1beta1_MsgCommunityPoolSpend, Cosmos_Distribution_V1beta1_MsgCommunityPoolSpendResponse>
 
+  func makeDepositValidatorRewardsPoolCall(
+    _ request: Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPool,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPool, Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPoolResponse>
+
   func makeWithdrawTokenizeShareRecordRewardCall(
     _ request: Cosmos_Distribution_V1beta1_MsgWithdrawTokenizeShareRecordReward,
     callOptions: CallOptions?
@@ -419,6 +450,18 @@ extension Cosmos_Distribution_V1beta1_MsgAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeCommunityPoolSpendInterceptors() ?? []
+    )
+  }
+
+  internal func makeDepositValidatorRewardsPoolCall(
+    _ request: Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPool,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPool, Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPoolResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Cosmos_Distribution_V1beta1_MsgClientMetadata.Methods.depositValidatorRewardsPool.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeDepositValidatorRewardsPoolInterceptors() ?? []
     )
   }
 
@@ -521,6 +564,18 @@ extension Cosmos_Distribution_V1beta1_MsgAsyncClientProtocol {
     )
   }
 
+  internal func depositValidatorRewardsPool(
+    _ request: Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPool,
+    callOptions: CallOptions? = nil
+  ) async throws -> Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPoolResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Cosmos_Distribution_V1beta1_MsgClientMetadata.Methods.depositValidatorRewardsPool.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeDepositValidatorRewardsPoolInterceptors() ?? []
+    )
+  }
+
   internal func withdrawTokenizeShareRecordReward(
     _ request: Cosmos_Distribution_V1beta1_MsgWithdrawTokenizeShareRecordReward,
     callOptions: CallOptions? = nil
@@ -583,6 +638,9 @@ internal protocol Cosmos_Distribution_V1beta1_MsgClientInterceptorFactoryProtoco
   /// - Returns: Interceptors to use when invoking 'communityPoolSpend'.
   func makeCommunityPoolSpendInterceptors() -> [ClientInterceptor<Cosmos_Distribution_V1beta1_MsgCommunityPoolSpend, Cosmos_Distribution_V1beta1_MsgCommunityPoolSpendResponse>]
 
+  /// - Returns: Interceptors to use when invoking 'depositValidatorRewardsPool'.
+  func makeDepositValidatorRewardsPoolInterceptors() -> [ClientInterceptor<Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPool, Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPoolResponse>]
+
   /// - Returns: Interceptors to use when invoking 'withdrawTokenizeShareRecordReward'.
   func makeWithdrawTokenizeShareRecordRewardInterceptors() -> [ClientInterceptor<Cosmos_Distribution_V1beta1_MsgWithdrawTokenizeShareRecordReward, Cosmos_Distribution_V1beta1_MsgWithdrawTokenizeShareRecordRewardResponse>]
 
@@ -601,6 +659,7 @@ internal enum Cosmos_Distribution_V1beta1_MsgClientMetadata {
       Cosmos_Distribution_V1beta1_MsgClientMetadata.Methods.fundCommunityPool,
       Cosmos_Distribution_V1beta1_MsgClientMetadata.Methods.updateParams,
       Cosmos_Distribution_V1beta1_MsgClientMetadata.Methods.communityPoolSpend,
+      Cosmos_Distribution_V1beta1_MsgClientMetadata.Methods.depositValidatorRewardsPool,
       Cosmos_Distribution_V1beta1_MsgClientMetadata.Methods.withdrawTokenizeShareRecordReward,
       Cosmos_Distribution_V1beta1_MsgClientMetadata.Methods.withdrawAllTokenizeShareRecordReward,
     ]
@@ -640,6 +699,12 @@ internal enum Cosmos_Distribution_V1beta1_MsgClientMetadata {
     internal static let communityPoolSpend = GRPCMethodDescriptor(
       name: "CommunityPoolSpend",
       path: "/cosmos.distribution.v1beta1.Msg/CommunityPoolSpend",
+      type: GRPCCallType.unary
+    )
+
+    internal static let depositValidatorRewardsPool = GRPCMethodDescriptor(
+      name: "DepositValidatorRewardsPool",
+      path: "/cosmos.distribution.v1beta1.Msg/DepositValidatorRewardsPool",
       type: GRPCCallType.unary
     )
 
@@ -692,6 +757,12 @@ internal protocol Cosmos_Distribution_V1beta1_MsgProvider: CallHandlerProvider {
   ///
   /// Since: cosmos-sdk 0.47
   func communityPoolSpend(request: Cosmos_Distribution_V1beta1_MsgCommunityPoolSpend, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Distribution_V1beta1_MsgCommunityPoolSpendResponse>
+
+  /// DepositValidatorRewardsPool defines a method to provide additional rewards
+  /// to delegators to a specific validator.
+  ///
+  /// Since: cosmos-sdk 0.50
+  func depositValidatorRewardsPool(request: Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPool, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPoolResponse>
 
   /// WithdrawTokenizeShareRecordReward defines a method to withdraw reward for an owning TokenizeShareRecord
   func withdrawTokenizeShareRecordReward(request: Cosmos_Distribution_V1beta1_MsgWithdrawTokenizeShareRecordReward, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Distribution_V1beta1_MsgWithdrawTokenizeShareRecordRewardResponse>
@@ -764,6 +835,15 @@ extension Cosmos_Distribution_V1beta1_MsgProvider {
         responseSerializer: ProtobufSerializer<Cosmos_Distribution_V1beta1_MsgCommunityPoolSpendResponse>(),
         interceptors: self.interceptors?.makeCommunityPoolSpendInterceptors() ?? [],
         userFunction: self.communityPoolSpend(request:context:)
+      )
+
+    case "DepositValidatorRewardsPool":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPool>(),
+        responseSerializer: ProtobufSerializer<Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPoolResponse>(),
+        interceptors: self.interceptors?.makeDepositValidatorRewardsPoolInterceptors() ?? [],
+        userFunction: self.depositValidatorRewardsPool(request:context:)
       )
 
     case "WithdrawTokenizeShareRecordReward":
@@ -845,6 +925,15 @@ internal protocol Cosmos_Distribution_V1beta1_MsgAsyncProvider: CallHandlerProvi
     request: Cosmos_Distribution_V1beta1_MsgCommunityPoolSpend,
     context: GRPCAsyncServerCallContext
   ) async throws -> Cosmos_Distribution_V1beta1_MsgCommunityPoolSpendResponse
+
+  /// DepositValidatorRewardsPool defines a method to provide additional rewards
+  /// to delegators to a specific validator.
+  ///
+  /// Since: cosmos-sdk 0.50
+  @Sendable func depositValidatorRewardsPool(
+    request: Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPool,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPoolResponse
 
   /// WithdrawTokenizeShareRecordReward defines a method to withdraw reward for an owning TokenizeShareRecord
   @Sendable func withdrawTokenizeShareRecordReward(
@@ -932,6 +1021,15 @@ extension Cosmos_Distribution_V1beta1_MsgAsyncProvider {
         wrapping: self.communityPoolSpend(request:context:)
       )
 
+    case "DepositValidatorRewardsPool":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPool>(),
+        responseSerializer: ProtobufSerializer<Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPoolResponse>(),
+        interceptors: self.interceptors?.makeDepositValidatorRewardsPoolInterceptors() ?? [],
+        wrapping: self.depositValidatorRewardsPool(request:context:)
+      )
+
     case "WithdrawTokenizeShareRecordReward":
       return GRPCAsyncServerHandler(
         context: context,
@@ -982,6 +1080,10 @@ internal protocol Cosmos_Distribution_V1beta1_MsgServerInterceptorFactoryProtoco
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeCommunityPoolSpendInterceptors() -> [ServerInterceptor<Cosmos_Distribution_V1beta1_MsgCommunityPoolSpend, Cosmos_Distribution_V1beta1_MsgCommunityPoolSpendResponse>]
 
+  /// - Returns: Interceptors to use when handling 'depositValidatorRewardsPool'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeDepositValidatorRewardsPoolInterceptors() -> [ServerInterceptor<Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPool, Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPoolResponse>]
+
   /// - Returns: Interceptors to use when handling 'withdrawTokenizeShareRecordReward'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeWithdrawTokenizeShareRecordRewardInterceptors() -> [ServerInterceptor<Cosmos_Distribution_V1beta1_MsgWithdrawTokenizeShareRecordReward, Cosmos_Distribution_V1beta1_MsgWithdrawTokenizeShareRecordRewardResponse>]
@@ -1002,6 +1104,7 @@ internal enum Cosmos_Distribution_V1beta1_MsgServerMetadata {
       Cosmos_Distribution_V1beta1_MsgServerMetadata.Methods.fundCommunityPool,
       Cosmos_Distribution_V1beta1_MsgServerMetadata.Methods.updateParams,
       Cosmos_Distribution_V1beta1_MsgServerMetadata.Methods.communityPoolSpend,
+      Cosmos_Distribution_V1beta1_MsgServerMetadata.Methods.depositValidatorRewardsPool,
       Cosmos_Distribution_V1beta1_MsgServerMetadata.Methods.withdrawTokenizeShareRecordReward,
       Cosmos_Distribution_V1beta1_MsgServerMetadata.Methods.withdrawAllTokenizeShareRecordReward,
     ]
@@ -1041,6 +1144,12 @@ internal enum Cosmos_Distribution_V1beta1_MsgServerMetadata {
     internal static let communityPoolSpend = GRPCMethodDescriptor(
       name: "CommunityPoolSpend",
       path: "/cosmos.distribution.v1beta1.Msg/CommunityPoolSpend",
+      type: GRPCCallType.unary
+    )
+
+    internal static let depositValidatorRewardsPool = GRPCMethodDescriptor(
+      name: "DepositValidatorRewardsPool",
+      path: "/cosmos.distribution.v1beta1.Msg/DepositValidatorRewardsPool",
       type: GRPCCallType.unary
     )
 

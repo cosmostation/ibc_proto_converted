@@ -282,6 +282,153 @@ public final class ModuleProto {
      */
     com.cosmos.app.runtime.v1alpha1.ModuleProto.StoreKeyConfigOrBuilder getOverrideStoreKeysOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * order_migrations defines the order in which module migrations are performed.
+     * If this is left empty, it uses the default migration order.
+     * https://pkg.go.dev/github.com/cosmos/cosmos-sdk&#64;v0.47.0-alpha2/types/module#DefaultMigrationsOrder
+     * </pre>
+     *
+     * <code>repeated string order_migrations = 7 [json_name = "orderMigrations"];</code>
+     * @return A list containing the orderMigrations.
+     */
+    java.util.List<java.lang.String>
+        getOrderMigrationsList();
+    /**
+     * <pre>
+     * order_migrations defines the order in which module migrations are performed.
+     * If this is left empty, it uses the default migration order.
+     * https://pkg.go.dev/github.com/cosmos/cosmos-sdk&#64;v0.47.0-alpha2/types/module#DefaultMigrationsOrder
+     * </pre>
+     *
+     * <code>repeated string order_migrations = 7 [json_name = "orderMigrations"];</code>
+     * @return The count of orderMigrations.
+     */
+    int getOrderMigrationsCount();
+    /**
+     * <pre>
+     * order_migrations defines the order in which module migrations are performed.
+     * If this is left empty, it uses the default migration order.
+     * https://pkg.go.dev/github.com/cosmos/cosmos-sdk&#64;v0.47.0-alpha2/types/module#DefaultMigrationsOrder
+     * </pre>
+     *
+     * <code>repeated string order_migrations = 7 [json_name = "orderMigrations"];</code>
+     * @param index The index of the element to return.
+     * @return The orderMigrations at the given index.
+     */
+    java.lang.String getOrderMigrations(int index);
+    /**
+     * <pre>
+     * order_migrations defines the order in which module migrations are performed.
+     * If this is left empty, it uses the default migration order.
+     * https://pkg.go.dev/github.com/cosmos/cosmos-sdk&#64;v0.47.0-alpha2/types/module#DefaultMigrationsOrder
+     * </pre>
+     *
+     * <code>repeated string order_migrations = 7 [json_name = "orderMigrations"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the orderMigrations at the given index.
+     */
+    com.google.protobuf.ByteString
+        getOrderMigrationsBytes(int index);
+
+    /**
+     * <pre>
+     * precommiters specifies the module names of the precommiters
+     * to call in the order in which they should be called. If this is left empty
+     * no precommit function will be registered.
+     * </pre>
+     *
+     * <code>repeated string precommiters = 8 [json_name = "precommiters"];</code>
+     * @return A list containing the precommiters.
+     */
+    java.util.List<java.lang.String>
+        getPrecommitersList();
+    /**
+     * <pre>
+     * precommiters specifies the module names of the precommiters
+     * to call in the order in which they should be called. If this is left empty
+     * no precommit function will be registered.
+     * </pre>
+     *
+     * <code>repeated string precommiters = 8 [json_name = "precommiters"];</code>
+     * @return The count of precommiters.
+     */
+    int getPrecommitersCount();
+    /**
+     * <pre>
+     * precommiters specifies the module names of the precommiters
+     * to call in the order in which they should be called. If this is left empty
+     * no precommit function will be registered.
+     * </pre>
+     *
+     * <code>repeated string precommiters = 8 [json_name = "precommiters"];</code>
+     * @param index The index of the element to return.
+     * @return The precommiters at the given index.
+     */
+    java.lang.String getPrecommiters(int index);
+    /**
+     * <pre>
+     * precommiters specifies the module names of the precommiters
+     * to call in the order in which they should be called. If this is left empty
+     * no precommit function will be registered.
+     * </pre>
+     *
+     * <code>repeated string precommiters = 8 [json_name = "precommiters"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the precommiters at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPrecommitersBytes(int index);
+
+    /**
+     * <pre>
+     * prepare_check_staters specifies the module names of the prepare_check_staters
+     * to call in the order in which they should be called. If this is left empty
+     * no preparecheckstate function will be registered.
+     * </pre>
+     *
+     * <code>repeated string prepare_check_staters = 9 [json_name = "prepareCheckStaters"];</code>
+     * @return A list containing the prepareCheckStaters.
+     */
+    java.util.List<java.lang.String>
+        getPrepareCheckStatersList();
+    /**
+     * <pre>
+     * prepare_check_staters specifies the module names of the prepare_check_staters
+     * to call in the order in which they should be called. If this is left empty
+     * no preparecheckstate function will be registered.
+     * </pre>
+     *
+     * <code>repeated string prepare_check_staters = 9 [json_name = "prepareCheckStaters"];</code>
+     * @return The count of prepareCheckStaters.
+     */
+    int getPrepareCheckStatersCount();
+    /**
+     * <pre>
+     * prepare_check_staters specifies the module names of the prepare_check_staters
+     * to call in the order in which they should be called. If this is left empty
+     * no preparecheckstate function will be registered.
+     * </pre>
+     *
+     * <code>repeated string prepare_check_staters = 9 [json_name = "prepareCheckStaters"];</code>
+     * @param index The index of the element to return.
+     * @return The prepareCheckStaters at the given index.
+     */
+    java.lang.String getPrepareCheckStaters(int index);
+    /**
+     * <pre>
+     * prepare_check_staters specifies the module names of the prepare_check_staters
+     * to call in the order in which they should be called. If this is left empty
+     * no preparecheckstate function will be registered.
+     * </pre>
+     *
+     * <code>repeated string prepare_check_staters = 9 [json_name = "prepareCheckStaters"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the prepareCheckStaters at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPrepareCheckStatersBytes(int index);
   }
   /**
    * <pre>
@@ -310,6 +457,12 @@ public final class ModuleProto {
       exportGenesis_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       overrideStoreKeys_ = java.util.Collections.emptyList();
+      orderMigrations_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      precommiters_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      prepareCheckStaters_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
@@ -689,6 +842,189 @@ public final class ModuleProto {
       return overrideStoreKeys_.get(index);
     }
 
+    public static final int ORDER_MIGRATIONS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList orderMigrations_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * order_migrations defines the order in which module migrations are performed.
+     * If this is left empty, it uses the default migration order.
+     * https://pkg.go.dev/github.com/cosmos/cosmos-sdk&#64;v0.47.0-alpha2/types/module#DefaultMigrationsOrder
+     * </pre>
+     *
+     * <code>repeated string order_migrations = 7 [json_name = "orderMigrations"];</code>
+     * @return A list containing the orderMigrations.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getOrderMigrationsList() {
+      return orderMigrations_;
+    }
+    /**
+     * <pre>
+     * order_migrations defines the order in which module migrations are performed.
+     * If this is left empty, it uses the default migration order.
+     * https://pkg.go.dev/github.com/cosmos/cosmos-sdk&#64;v0.47.0-alpha2/types/module#DefaultMigrationsOrder
+     * </pre>
+     *
+     * <code>repeated string order_migrations = 7 [json_name = "orderMigrations"];</code>
+     * @return The count of orderMigrations.
+     */
+    public int getOrderMigrationsCount() {
+      return orderMigrations_.size();
+    }
+    /**
+     * <pre>
+     * order_migrations defines the order in which module migrations are performed.
+     * If this is left empty, it uses the default migration order.
+     * https://pkg.go.dev/github.com/cosmos/cosmos-sdk&#64;v0.47.0-alpha2/types/module#DefaultMigrationsOrder
+     * </pre>
+     *
+     * <code>repeated string order_migrations = 7 [json_name = "orderMigrations"];</code>
+     * @param index The index of the element to return.
+     * @return The orderMigrations at the given index.
+     */
+    public java.lang.String getOrderMigrations(int index) {
+      return orderMigrations_.get(index);
+    }
+    /**
+     * <pre>
+     * order_migrations defines the order in which module migrations are performed.
+     * If this is left empty, it uses the default migration order.
+     * https://pkg.go.dev/github.com/cosmos/cosmos-sdk&#64;v0.47.0-alpha2/types/module#DefaultMigrationsOrder
+     * </pre>
+     *
+     * <code>repeated string order_migrations = 7 [json_name = "orderMigrations"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the orderMigrations at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getOrderMigrationsBytes(int index) {
+      return orderMigrations_.getByteString(index);
+    }
+
+    public static final int PRECOMMITERS_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList precommiters_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * precommiters specifies the module names of the precommiters
+     * to call in the order in which they should be called. If this is left empty
+     * no precommit function will be registered.
+     * </pre>
+     *
+     * <code>repeated string precommiters = 8 [json_name = "precommiters"];</code>
+     * @return A list containing the precommiters.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPrecommitersList() {
+      return precommiters_;
+    }
+    /**
+     * <pre>
+     * precommiters specifies the module names of the precommiters
+     * to call in the order in which they should be called. If this is left empty
+     * no precommit function will be registered.
+     * </pre>
+     *
+     * <code>repeated string precommiters = 8 [json_name = "precommiters"];</code>
+     * @return The count of precommiters.
+     */
+    public int getPrecommitersCount() {
+      return precommiters_.size();
+    }
+    /**
+     * <pre>
+     * precommiters specifies the module names of the precommiters
+     * to call in the order in which they should be called. If this is left empty
+     * no precommit function will be registered.
+     * </pre>
+     *
+     * <code>repeated string precommiters = 8 [json_name = "precommiters"];</code>
+     * @param index The index of the element to return.
+     * @return The precommiters at the given index.
+     */
+    public java.lang.String getPrecommiters(int index) {
+      return precommiters_.get(index);
+    }
+    /**
+     * <pre>
+     * precommiters specifies the module names of the precommiters
+     * to call in the order in which they should be called. If this is left empty
+     * no precommit function will be registered.
+     * </pre>
+     *
+     * <code>repeated string precommiters = 8 [json_name = "precommiters"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the precommiters at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPrecommitersBytes(int index) {
+      return precommiters_.getByteString(index);
+    }
+
+    public static final int PREPARE_CHECK_STATERS_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList prepareCheckStaters_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * prepare_check_staters specifies the module names of the prepare_check_staters
+     * to call in the order in which they should be called. If this is left empty
+     * no preparecheckstate function will be registered.
+     * </pre>
+     *
+     * <code>repeated string prepare_check_staters = 9 [json_name = "prepareCheckStaters"];</code>
+     * @return A list containing the prepareCheckStaters.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPrepareCheckStatersList() {
+      return prepareCheckStaters_;
+    }
+    /**
+     * <pre>
+     * prepare_check_staters specifies the module names of the prepare_check_staters
+     * to call in the order in which they should be called. If this is left empty
+     * no preparecheckstate function will be registered.
+     * </pre>
+     *
+     * <code>repeated string prepare_check_staters = 9 [json_name = "prepareCheckStaters"];</code>
+     * @return The count of prepareCheckStaters.
+     */
+    public int getPrepareCheckStatersCount() {
+      return prepareCheckStaters_.size();
+    }
+    /**
+     * <pre>
+     * prepare_check_staters specifies the module names of the prepare_check_staters
+     * to call in the order in which they should be called. If this is left empty
+     * no preparecheckstate function will be registered.
+     * </pre>
+     *
+     * <code>repeated string prepare_check_staters = 9 [json_name = "prepareCheckStaters"];</code>
+     * @param index The index of the element to return.
+     * @return The prepareCheckStaters at the given index.
+     */
+    public java.lang.String getPrepareCheckStaters(int index) {
+      return prepareCheckStaters_.get(index);
+    }
+    /**
+     * <pre>
+     * prepare_check_staters specifies the module names of the prepare_check_staters
+     * to call in the order in which they should be called. If this is left empty
+     * no preparecheckstate function will be registered.
+     * </pre>
+     *
+     * <code>repeated string prepare_check_staters = 9 [json_name = "prepareCheckStaters"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the prepareCheckStaters at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPrepareCheckStatersBytes(int index) {
+      return prepareCheckStaters_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -720,6 +1056,15 @@ public final class ModuleProto {
       }
       for (int i = 0; i < overrideStoreKeys_.size(); i++) {
         output.writeMessage(6, overrideStoreKeys_.get(i));
+      }
+      for (int i = 0; i < orderMigrations_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, orderMigrations_.getRaw(i));
+      }
+      for (int i = 0; i < precommiters_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, precommiters_.getRaw(i));
+      }
+      for (int i = 0; i < prepareCheckStaters_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, prepareCheckStaters_.getRaw(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -769,6 +1114,30 @@ public final class ModuleProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, overrideStoreKeys_.get(i));
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < orderMigrations_.size(); i++) {
+          dataSize += computeStringSizeNoTag(orderMigrations_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getOrderMigrationsList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < precommiters_.size(); i++) {
+          dataSize += computeStringSizeNoTag(precommiters_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getPrecommitersList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < prepareCheckStaters_.size(); i++) {
+          dataSize += computeStringSizeNoTag(prepareCheckStaters_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getPrepareCheckStatersList().size();
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -796,6 +1165,12 @@ public final class ModuleProto {
           .equals(other.getExportGenesisList())) return false;
       if (!getOverrideStoreKeysList()
           .equals(other.getOverrideStoreKeysList())) return false;
+      if (!getOrderMigrationsList()
+          .equals(other.getOrderMigrationsList())) return false;
+      if (!getPrecommitersList()
+          .equals(other.getPrecommitersList())) return false;
+      if (!getPrepareCheckStatersList()
+          .equals(other.getPrepareCheckStatersList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -828,6 +1203,18 @@ public final class ModuleProto {
       if (getOverrideStoreKeysCount() > 0) {
         hash = (37 * hash) + OVERRIDE_STORE_KEYS_FIELD_NUMBER;
         hash = (53 * hash) + getOverrideStoreKeysList().hashCode();
+      }
+      if (getOrderMigrationsCount() > 0) {
+        hash = (37 * hash) + ORDER_MIGRATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getOrderMigrationsList().hashCode();
+      }
+      if (getPrecommitersCount() > 0) {
+        hash = (37 * hash) + PRECOMMITERS_FIELD_NUMBER;
+        hash = (53 * hash) + getPrecommitersList().hashCode();
+      }
+      if (getPrepareCheckStatersCount() > 0) {
+        hash = (37 * hash) + PREPARE_CHECK_STATERS_FIELD_NUMBER;
+        hash = (53 * hash) + getPrepareCheckStatersList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -980,6 +1367,12 @@ public final class ModuleProto {
           overrideStoreKeysBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000020);
+        orderMigrations_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        precommiters_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        prepareCheckStaters_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -1044,6 +1437,18 @@ public final class ModuleProto {
         if (((from_bitField0_ & 0x00000010) != 0)) {
           exportGenesis_.makeImmutable();
           result.exportGenesis_ = exportGenesis_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          orderMigrations_.makeImmutable();
+          result.orderMigrations_ = orderMigrations_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          precommiters_.makeImmutable();
+          result.precommiters_ = precommiters_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          prepareCheckStaters_.makeImmutable();
+          result.prepareCheckStaters_ = prepareCheckStaters_;
         }
       }
 
@@ -1162,6 +1567,36 @@ public final class ModuleProto {
             }
           }
         }
+        if (!other.orderMigrations_.isEmpty()) {
+          if (orderMigrations_.isEmpty()) {
+            orderMigrations_ = other.orderMigrations_;
+            bitField0_ |= 0x00000040;
+          } else {
+            ensureOrderMigrationsIsMutable();
+            orderMigrations_.addAll(other.orderMigrations_);
+          }
+          onChanged();
+        }
+        if (!other.precommiters_.isEmpty()) {
+          if (precommiters_.isEmpty()) {
+            precommiters_ = other.precommiters_;
+            bitField0_ |= 0x00000080;
+          } else {
+            ensurePrecommitersIsMutable();
+            precommiters_.addAll(other.precommiters_);
+          }
+          onChanged();
+        }
+        if (!other.prepareCheckStaters_.isEmpty()) {
+          if (prepareCheckStaters_.isEmpty()) {
+            prepareCheckStaters_ = other.prepareCheckStaters_;
+            bitField0_ |= 0x00000100;
+          } else {
+            ensurePrepareCheckStatersIsMutable();
+            prepareCheckStaters_.addAll(other.prepareCheckStaters_);
+          }
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1230,6 +1665,24 @@ public final class ModuleProto {
                 }
                 break;
               } // case 50
+              case 58: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureOrderMigrationsIsMutable();
+                orderMigrations_.add(s);
+                break;
+              } // case 58
+              case 66: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensurePrecommitersIsMutable();
+                precommiters_.add(s);
+                break;
+              } // case 66
+              case 74: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensurePrepareCheckStatersIsMutable();
+                prepareCheckStaters_.add(s);
+                break;
+              } // case 74
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2328,6 +2781,501 @@ public final class ModuleProto {
         }
         return overrideStoreKeysBuilder_;
       }
+
+      private com.google.protobuf.LazyStringArrayList orderMigrations_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureOrderMigrationsIsMutable() {
+        if (!orderMigrations_.isModifiable()) {
+          orderMigrations_ = new com.google.protobuf.LazyStringArrayList(orderMigrations_);
+        }
+        bitField0_ |= 0x00000040;
+      }
+      /**
+       * <pre>
+       * order_migrations defines the order in which module migrations are performed.
+       * If this is left empty, it uses the default migration order.
+       * https://pkg.go.dev/github.com/cosmos/cosmos-sdk&#64;v0.47.0-alpha2/types/module#DefaultMigrationsOrder
+       * </pre>
+       *
+       * <code>repeated string order_migrations = 7 [json_name = "orderMigrations"];</code>
+       * @return A list containing the orderMigrations.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getOrderMigrationsList() {
+        orderMigrations_.makeImmutable();
+        return orderMigrations_;
+      }
+      /**
+       * <pre>
+       * order_migrations defines the order in which module migrations are performed.
+       * If this is left empty, it uses the default migration order.
+       * https://pkg.go.dev/github.com/cosmos/cosmos-sdk&#64;v0.47.0-alpha2/types/module#DefaultMigrationsOrder
+       * </pre>
+       *
+       * <code>repeated string order_migrations = 7 [json_name = "orderMigrations"];</code>
+       * @return The count of orderMigrations.
+       */
+      public int getOrderMigrationsCount() {
+        return orderMigrations_.size();
+      }
+      /**
+       * <pre>
+       * order_migrations defines the order in which module migrations are performed.
+       * If this is left empty, it uses the default migration order.
+       * https://pkg.go.dev/github.com/cosmos/cosmos-sdk&#64;v0.47.0-alpha2/types/module#DefaultMigrationsOrder
+       * </pre>
+       *
+       * <code>repeated string order_migrations = 7 [json_name = "orderMigrations"];</code>
+       * @param index The index of the element to return.
+       * @return The orderMigrations at the given index.
+       */
+      public java.lang.String getOrderMigrations(int index) {
+        return orderMigrations_.get(index);
+      }
+      /**
+       * <pre>
+       * order_migrations defines the order in which module migrations are performed.
+       * If this is left empty, it uses the default migration order.
+       * https://pkg.go.dev/github.com/cosmos/cosmos-sdk&#64;v0.47.0-alpha2/types/module#DefaultMigrationsOrder
+       * </pre>
+       *
+       * <code>repeated string order_migrations = 7 [json_name = "orderMigrations"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the orderMigrations at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getOrderMigrationsBytes(int index) {
+        return orderMigrations_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * order_migrations defines the order in which module migrations are performed.
+       * If this is left empty, it uses the default migration order.
+       * https://pkg.go.dev/github.com/cosmos/cosmos-sdk&#64;v0.47.0-alpha2/types/module#DefaultMigrationsOrder
+       * </pre>
+       *
+       * <code>repeated string order_migrations = 7 [json_name = "orderMigrations"];</code>
+       * @param index The index to set the value at.
+       * @param value The orderMigrations to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderMigrations(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureOrderMigrationsIsMutable();
+        orderMigrations_.set(index, value);
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * order_migrations defines the order in which module migrations are performed.
+       * If this is left empty, it uses the default migration order.
+       * https://pkg.go.dev/github.com/cosmos/cosmos-sdk&#64;v0.47.0-alpha2/types/module#DefaultMigrationsOrder
+       * </pre>
+       *
+       * <code>repeated string order_migrations = 7 [json_name = "orderMigrations"];</code>
+       * @param value The orderMigrations to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOrderMigrations(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureOrderMigrationsIsMutable();
+        orderMigrations_.add(value);
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * order_migrations defines the order in which module migrations are performed.
+       * If this is left empty, it uses the default migration order.
+       * https://pkg.go.dev/github.com/cosmos/cosmos-sdk&#64;v0.47.0-alpha2/types/module#DefaultMigrationsOrder
+       * </pre>
+       *
+       * <code>repeated string order_migrations = 7 [json_name = "orderMigrations"];</code>
+       * @param values The orderMigrations to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllOrderMigrations(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureOrderMigrationsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, orderMigrations_);
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * order_migrations defines the order in which module migrations are performed.
+       * If this is left empty, it uses the default migration order.
+       * https://pkg.go.dev/github.com/cosmos/cosmos-sdk&#64;v0.47.0-alpha2/types/module#DefaultMigrationsOrder
+       * </pre>
+       *
+       * <code>repeated string order_migrations = 7 [json_name = "orderMigrations"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrderMigrations() {
+        orderMigrations_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * order_migrations defines the order in which module migrations are performed.
+       * If this is left empty, it uses the default migration order.
+       * https://pkg.go.dev/github.com/cosmos/cosmos-sdk&#64;v0.47.0-alpha2/types/module#DefaultMigrationsOrder
+       * </pre>
+       *
+       * <code>repeated string order_migrations = 7 [json_name = "orderMigrations"];</code>
+       * @param value The bytes of the orderMigrations to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOrderMigrationsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureOrderMigrationsIsMutable();
+        orderMigrations_.add(value);
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList precommiters_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensurePrecommitersIsMutable() {
+        if (!precommiters_.isModifiable()) {
+          precommiters_ = new com.google.protobuf.LazyStringArrayList(precommiters_);
+        }
+        bitField0_ |= 0x00000080;
+      }
+      /**
+       * <pre>
+       * precommiters specifies the module names of the precommiters
+       * to call in the order in which they should be called. If this is left empty
+       * no precommit function will be registered.
+       * </pre>
+       *
+       * <code>repeated string precommiters = 8 [json_name = "precommiters"];</code>
+       * @return A list containing the precommiters.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getPrecommitersList() {
+        precommiters_.makeImmutable();
+        return precommiters_;
+      }
+      /**
+       * <pre>
+       * precommiters specifies the module names of the precommiters
+       * to call in the order in which they should be called. If this is left empty
+       * no precommit function will be registered.
+       * </pre>
+       *
+       * <code>repeated string precommiters = 8 [json_name = "precommiters"];</code>
+       * @return The count of precommiters.
+       */
+      public int getPrecommitersCount() {
+        return precommiters_.size();
+      }
+      /**
+       * <pre>
+       * precommiters specifies the module names of the precommiters
+       * to call in the order in which they should be called. If this is left empty
+       * no precommit function will be registered.
+       * </pre>
+       *
+       * <code>repeated string precommiters = 8 [json_name = "precommiters"];</code>
+       * @param index The index of the element to return.
+       * @return The precommiters at the given index.
+       */
+      public java.lang.String getPrecommiters(int index) {
+        return precommiters_.get(index);
+      }
+      /**
+       * <pre>
+       * precommiters specifies the module names of the precommiters
+       * to call in the order in which they should be called. If this is left empty
+       * no precommit function will be registered.
+       * </pre>
+       *
+       * <code>repeated string precommiters = 8 [json_name = "precommiters"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the precommiters at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getPrecommitersBytes(int index) {
+        return precommiters_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * precommiters specifies the module names of the precommiters
+       * to call in the order in which they should be called. If this is left empty
+       * no precommit function will be registered.
+       * </pre>
+       *
+       * <code>repeated string precommiters = 8 [json_name = "precommiters"];</code>
+       * @param index The index to set the value at.
+       * @param value The precommiters to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrecommiters(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePrecommitersIsMutable();
+        precommiters_.set(index, value);
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * precommiters specifies the module names of the precommiters
+       * to call in the order in which they should be called. If this is left empty
+       * no precommit function will be registered.
+       * </pre>
+       *
+       * <code>repeated string precommiters = 8 [json_name = "precommiters"];</code>
+       * @param value The precommiters to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPrecommiters(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePrecommitersIsMutable();
+        precommiters_.add(value);
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * precommiters specifies the module names of the precommiters
+       * to call in the order in which they should be called. If this is left empty
+       * no precommit function will be registered.
+       * </pre>
+       *
+       * <code>repeated string precommiters = 8 [json_name = "precommiters"];</code>
+       * @param values The precommiters to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPrecommiters(
+          java.lang.Iterable<java.lang.String> values) {
+        ensurePrecommitersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, precommiters_);
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * precommiters specifies the module names of the precommiters
+       * to call in the order in which they should be called. If this is left empty
+       * no precommit function will be registered.
+       * </pre>
+       *
+       * <code>repeated string precommiters = 8 [json_name = "precommiters"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrecommiters() {
+        precommiters_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000080);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * precommiters specifies the module names of the precommiters
+       * to call in the order in which they should be called. If this is left empty
+       * no precommit function will be registered.
+       * </pre>
+       *
+       * <code>repeated string precommiters = 8 [json_name = "precommiters"];</code>
+       * @param value The bytes of the precommiters to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPrecommitersBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensurePrecommitersIsMutable();
+        precommiters_.add(value);
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList prepareCheckStaters_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensurePrepareCheckStatersIsMutable() {
+        if (!prepareCheckStaters_.isModifiable()) {
+          prepareCheckStaters_ = new com.google.protobuf.LazyStringArrayList(prepareCheckStaters_);
+        }
+        bitField0_ |= 0x00000100;
+      }
+      /**
+       * <pre>
+       * prepare_check_staters specifies the module names of the prepare_check_staters
+       * to call in the order in which they should be called. If this is left empty
+       * no preparecheckstate function will be registered.
+       * </pre>
+       *
+       * <code>repeated string prepare_check_staters = 9 [json_name = "prepareCheckStaters"];</code>
+       * @return A list containing the prepareCheckStaters.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getPrepareCheckStatersList() {
+        prepareCheckStaters_.makeImmutable();
+        return prepareCheckStaters_;
+      }
+      /**
+       * <pre>
+       * prepare_check_staters specifies the module names of the prepare_check_staters
+       * to call in the order in which they should be called. If this is left empty
+       * no preparecheckstate function will be registered.
+       * </pre>
+       *
+       * <code>repeated string prepare_check_staters = 9 [json_name = "prepareCheckStaters"];</code>
+       * @return The count of prepareCheckStaters.
+       */
+      public int getPrepareCheckStatersCount() {
+        return prepareCheckStaters_.size();
+      }
+      /**
+       * <pre>
+       * prepare_check_staters specifies the module names of the prepare_check_staters
+       * to call in the order in which they should be called. If this is left empty
+       * no preparecheckstate function will be registered.
+       * </pre>
+       *
+       * <code>repeated string prepare_check_staters = 9 [json_name = "prepareCheckStaters"];</code>
+       * @param index The index of the element to return.
+       * @return The prepareCheckStaters at the given index.
+       */
+      public java.lang.String getPrepareCheckStaters(int index) {
+        return prepareCheckStaters_.get(index);
+      }
+      /**
+       * <pre>
+       * prepare_check_staters specifies the module names of the prepare_check_staters
+       * to call in the order in which they should be called. If this is left empty
+       * no preparecheckstate function will be registered.
+       * </pre>
+       *
+       * <code>repeated string prepare_check_staters = 9 [json_name = "prepareCheckStaters"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the prepareCheckStaters at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getPrepareCheckStatersBytes(int index) {
+        return prepareCheckStaters_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * prepare_check_staters specifies the module names of the prepare_check_staters
+       * to call in the order in which they should be called. If this is left empty
+       * no preparecheckstate function will be registered.
+       * </pre>
+       *
+       * <code>repeated string prepare_check_staters = 9 [json_name = "prepareCheckStaters"];</code>
+       * @param index The index to set the value at.
+       * @param value The prepareCheckStaters to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrepareCheckStaters(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePrepareCheckStatersIsMutable();
+        prepareCheckStaters_.set(index, value);
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * prepare_check_staters specifies the module names of the prepare_check_staters
+       * to call in the order in which they should be called. If this is left empty
+       * no preparecheckstate function will be registered.
+       * </pre>
+       *
+       * <code>repeated string prepare_check_staters = 9 [json_name = "prepareCheckStaters"];</code>
+       * @param value The prepareCheckStaters to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPrepareCheckStaters(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePrepareCheckStatersIsMutable();
+        prepareCheckStaters_.add(value);
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * prepare_check_staters specifies the module names of the prepare_check_staters
+       * to call in the order in which they should be called. If this is left empty
+       * no preparecheckstate function will be registered.
+       * </pre>
+       *
+       * <code>repeated string prepare_check_staters = 9 [json_name = "prepareCheckStaters"];</code>
+       * @param values The prepareCheckStaters to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPrepareCheckStaters(
+          java.lang.Iterable<java.lang.String> values) {
+        ensurePrepareCheckStatersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, prepareCheckStaters_);
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * prepare_check_staters specifies the module names of the prepare_check_staters
+       * to call in the order in which they should be called. If this is left empty
+       * no preparecheckstate function will be registered.
+       * </pre>
+       *
+       * <code>repeated string prepare_check_staters = 9 [json_name = "prepareCheckStaters"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrepareCheckStaters() {
+        prepareCheckStaters_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000100);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * prepare_check_staters specifies the module names of the prepare_check_staters
+       * to call in the order in which they should be called. If this is left empty
+       * no preparecheckstate function will be registered.
+       * </pre>
+       *
+       * <code>repeated string prepare_check_staters = 9 [json_name = "prepareCheckStaters"];</code>
+       * @param value The bytes of the prepareCheckStaters to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPrepareCheckStatersBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensurePrepareCheckStatersIsMutable();
+        prepareCheckStaters_.add(value);
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3195,23 +4143,26 @@ public final class ModuleProto {
     java.lang.String[] descriptorData = {
       "\n(cosmos/app/runtime/v1alpha1/module.pro" +
       "to\022\033cosmos.app.runtime.v1alpha1\032 cosmos/" +
-      "app/v1alpha1/module.proto\"\331\002\n\006Module\022\031\n\010" +
+      "app/v1alpha1/module.proto\"\334\003\n\006Module\022\031\n\010" +
       "app_name\030\001 \001(\tR\007appName\022%\n\016begin_blocker" +
       "s\030\002 \003(\tR\rbeginBlockers\022!\n\014end_blockers\030\003" +
       " \003(\tR\013endBlockers\022!\n\014init_genesis\030\004 \003(\tR" +
       "\013initGenesis\022%\n\016export_genesis\030\005 \003(\tR\rex" +
       "portGenesis\022[\n\023override_store_keys\030\006 \003(\013" +
       "2+.cosmos.app.runtime.v1alpha1.StoreKeyC" +
-      "onfigR\021overrideStoreKeys:C\272\300\226\332\001=\n$github" +
-      ".com/cosmos/cosmos-sdk/runtime\022\025\n\023cosmos" +
-      ".app.v1alpha1\"S\n\016StoreKeyConfig\022\037\n\013modul" +
-      "e_name\030\001 \001(\tR\nmoduleName\022 \n\014kv_store_key" +
-      "\030\002 \001(\tR\nkvStoreKeyB\273\001\n\037com.cosmos.app.ru" +
-      "ntime.v1alpha1B\013ModuleProto\242\002\003CAR\252\002\033Cosm" +
-      "os.App.Runtime.V1alpha1\312\002\033Cosmos\\App\\Run" +
-      "time\\V1alpha1\342\002\'Cosmos\\App\\Runtime\\V1alp" +
-      "ha1\\GPBMetadata\352\002\036Cosmos::App::Runtime::" +
-      "V1alpha1b\006proto3"
+      "onfigR\021overrideStoreKeys\022)\n\020order_migrat" +
+      "ions\030\007 \003(\tR\017orderMigrations\022\"\n\014precommit" +
+      "ers\030\010 \003(\tR\014precommiters\0222\n\025prepare_check" +
+      "_staters\030\t \003(\tR\023prepareCheckStaters:C\272\300\226" +
+      "\332\001=\n$github.com/cosmos/cosmos-sdk/runtim" +
+      "e\022\025\n\023cosmos.app.v1alpha1\"S\n\016StoreKeyConf" +
+      "ig\022\037\n\013module_name\030\001 \001(\tR\nmoduleName\022 \n\014k" +
+      "v_store_key\030\002 \001(\tR\nkvStoreKeyB\273\001\n\037com.co" +
+      "smos.app.runtime.v1alpha1B\013ModuleProto\242\002" +
+      "\003CAR\252\002\033Cosmos.App.Runtime.V1alpha1\312\002\033Cos" +
+      "mos\\App\\Runtime\\V1alpha1\342\002\'Cosmos\\App\\Ru" +
+      "ntime\\V1alpha1\\GPBMetadata\352\002\036Cosmos::App" +
+      "::Runtime::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3223,7 +4174,7 @@ public final class ModuleProto {
     internal_static_cosmos_app_runtime_v1alpha1_Module_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cosmos_app_runtime_v1alpha1_Module_descriptor,
-        new java.lang.String[] { "AppName", "BeginBlockers", "EndBlockers", "InitGenesis", "ExportGenesis", "OverrideStoreKeys", });
+        new java.lang.String[] { "AppName", "BeginBlockers", "EndBlockers", "InitGenesis", "ExportGenesis", "OverrideStoreKeys", "OrderMigrations", "Precommiters", "PrepareCheckStaters", });
     internal_static_cosmos_app_runtime_v1alpha1_StoreKeyConfig_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_cosmos_app_runtime_v1alpha1_StoreKeyConfig_fieldAccessorTable = new

@@ -6958,11 +6958,11 @@ public final class QueryProto {
   static {
     java.lang.String[] descriptorData = {
       "\n%neutron/interchainqueries/query.proto\022" +
-      "\031neutron.interchainqueries\032\024gogoproto/go" +
-      "go.proto\032\034google/api/annotations.proto\032*" +
-      "cosmos/base/query/v1beta1/pagination.pro" +
-      "to\032&neutron/interchainqueries/params.pro" +
+      "\031neutron.interchainqueries\032*cosmos/base/" +
+      "query/v1beta1/pagination.proto\032\024gogoprot" +
+      "o/gogo.proto\032\034google/api/annotations.pro" +
       "to\032\'neutron/interchainqueries/genesis.pr" +
+      "oto\032&neutron/interchainqueries/params.pr" +
       "oto\032\"neutron/interchainqueries/tx.proto\"" +
       "\024\n\022QueryParamsRequest\"V\n\023QueryParamsResp" +
       "onse\022?\n\006params\030\001 \001(\0132!.neutron.interchai" +
@@ -7012,22 +7012,22 @@ public final class QueryProto {
       "ryLastRemoteHeight\0328.neutron.interchainq" +
       "ueries.QueryLastRemoteHeightResponse\"0\202\323" +
       "\344\223\002*\022(/neutron/interchainqueries/remote_" +
-      "heightB\350\001\n\035com.neutron.interchainqueries" +
-      "B\nQueryProtoZ8github.com/neutron-org/neu" +
-      "tron/x/interchainqueries/types\242\002\003NIX\252\002\031N" +
-      "eutron.Interchainqueries\312\002\031Neutron\\Inter" +
-      "chainqueries\342\002%Neutron\\Interchainqueries" +
-      "\\GPBMetadata\352\002\032Neutron::Interchainquerie" +
-      "sb\006proto3"
+      "heightB\353\001\n\035com.neutron.interchainqueries" +
+      "B\nQueryProtoZ;github.com/neutron-org/neu" +
+      "tron/v4/x/interchainqueries/types\242\002\003NIX\252" +
+      "\002\031Neutron.Interchainqueries\312\002\031Neutron\\In" +
+      "terchainqueries\342\002%Neutron\\Interchainquer" +
+      "ies\\GPBMetadata\352\002\032Neutron::Interchainque" +
+      "riesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor(),
           com.gogoproto.GogoProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor(),
-          com.neutron.interchainqueries.ParamsProto.getDescriptor(),
           com.neutron.interchainqueries.GenesisProto.getDescriptor(),
+          com.neutron.interchainqueries.ParamsProto.getDescriptor(),
           com.neutron.interchainqueries.TxProto.getDescriptor(),
         });
     internal_static_neutron_interchainqueries_QueryParamsRequest_descriptor =
@@ -7102,11 +7102,11 @@ public final class QueryProto {
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor();
     com.gogoproto.GogoProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor();
-    com.neutron.interchainqueries.ParamsProto.getDescriptor();
     com.neutron.interchainqueries.GenesisProto.getDescriptor();
+    com.neutron.interchainqueries.ParamsProto.getDescriptor();
     com.neutron.interchainqueries.TxProto.getDescriptor();
   }
 

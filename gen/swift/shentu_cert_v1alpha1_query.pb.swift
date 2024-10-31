@@ -192,6 +192,30 @@ struct Shentu_Cert_V1alpha1_QueryCertificatesResponse {
   init() {}
 }
 
+struct Shentu_Cert_V1alpha1_ConversionToShentuAddrRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var address: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+struct Shentu_Cert_V1alpha1_ConversionToShentuAddrResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var address: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Shentu_Cert_V1alpha1_QueryCertifierRequest: @unchecked Sendable {}
 extension Shentu_Cert_V1alpha1_QueryCertifierResponse: @unchecked Sendable {}
@@ -203,6 +227,8 @@ extension Shentu_Cert_V1alpha1_QueryCertificateRequest: @unchecked Sendable {}
 extension Shentu_Cert_V1alpha1_QueryCertificateResponse: @unchecked Sendable {}
 extension Shentu_Cert_V1alpha1_QueryCertificatesRequest: @unchecked Sendable {}
 extension Shentu_Cert_V1alpha1_QueryCertificatesResponse: @unchecked Sendable {}
+extension Shentu_Cert_V1alpha1_ConversionToShentuAddrRequest: @unchecked Sendable {}
+extension Shentu_Cert_V1alpha1_ConversionToShentuAddrResponse: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -555,6 +581,70 @@ extension Shentu_Cert_V1alpha1_QueryCertificatesResponse: SwiftProtobuf.Message,
   static func ==(lhs: Shentu_Cert_V1alpha1_QueryCertificatesResponse, rhs: Shentu_Cert_V1alpha1_QueryCertificatesResponse) -> Bool {
     if lhs.total != rhs.total {return false}
     if lhs.certificates != rhs.certificates {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Shentu_Cert_V1alpha1_ConversionToShentuAddrRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ConversionToShentuAddrRequest"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "address"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.address) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.address.isEmpty {
+      try visitor.visitSingularStringField(value: self.address, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Shentu_Cert_V1alpha1_ConversionToShentuAddrRequest, rhs: Shentu_Cert_V1alpha1_ConversionToShentuAddrRequest) -> Bool {
+    if lhs.address != rhs.address {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Shentu_Cert_V1alpha1_ConversionToShentuAddrResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ConversionToShentuAddrResponse"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "address"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.address) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.address.isEmpty {
+      try visitor.visitSingularStringField(value: self.address, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Shentu_Cert_V1alpha1_ConversionToShentuAddrResponse, rhs: Shentu_Cert_V1alpha1_ConversionToShentuAddrResponse) -> Bool {
+    if lhs.address != rhs.address {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

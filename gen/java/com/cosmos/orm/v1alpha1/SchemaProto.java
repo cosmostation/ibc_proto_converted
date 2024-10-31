@@ -26,11 +26,8 @@ public final class SchemaProto {
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
      * <pre>
-     * STORAGE_TYPE_DEFAULT_UNSPECIFIED indicates the persistent
-     * KV-storage where primary key entries are stored in merkle-tree
-     * backed commitment storage and indexes and seqs are stored in
-     * fast index storage. Note that the Cosmos SDK before store/v2alpha1
-     * does not support this.
+     * STORAGE_TYPE_DEFAULT_UNSPECIFIED indicates the persistent storage where all
+     * data is stored in the regular Merkle-tree backed KV-store.
      * </pre>
      *
      * <code>STORAGE_TYPE_DEFAULT_UNSPECIFIED = 0;</code>
@@ -58,41 +55,13 @@ public final class SchemaProto {
      * <code>STORAGE_TYPE_TRANSIENT = 2;</code>
      */
     STORAGE_TYPE_TRANSIENT(2),
-    /**
-     * <pre>
-     * STORAGE_TYPE_INDEX indicates persistent storage which is not backed
-     * by a merkle-tree and won't affect the app hash. Note that the Cosmos SDK
-     * before store/v2alpha1 does not support this.
-     * </pre>
-     *
-     * <code>STORAGE_TYPE_INDEX = 3;</code>
-     */
-    STORAGE_TYPE_INDEX(3),
-    /**
-     * <pre>
-     * STORAGE_TYPE_INDEX indicates persistent storage which is backed by
-     * a merkle-tree. With this type of storage, both primary and index keys
-     * will affect the app hash and this is generally less efficient
-     * than using STORAGE_TYPE_DEFAULT_UNSPECIFIED which separates index
-     * keys into index storage. Note that modules built with the
-     * Cosmos SDK before store/v2alpha1 must specify STORAGE_TYPE_COMMITMENT
-     * instead of STORAGE_TYPE_DEFAULT_UNSPECIFIED or STORAGE_TYPE_INDEX
-     * because this is the only type of persistent storage available.
-     * </pre>
-     *
-     * <code>STORAGE_TYPE_COMMITMENT = 4;</code>
-     */
-    STORAGE_TYPE_COMMITMENT(4),
     UNRECOGNIZED(-1),
     ;
 
     /**
      * <pre>
-     * STORAGE_TYPE_DEFAULT_UNSPECIFIED indicates the persistent
-     * KV-storage where primary key entries are stored in merkle-tree
-     * backed commitment storage and indexes and seqs are stored in
-     * fast index storage. Note that the Cosmos SDK before store/v2alpha1
-     * does not support this.
+     * STORAGE_TYPE_DEFAULT_UNSPECIFIED indicates the persistent storage where all
+     * data is stored in the regular Merkle-tree backed KV-store.
      * </pre>
      *
      * <code>STORAGE_TYPE_DEFAULT_UNSPECIFIED = 0;</code>
@@ -120,31 +89,6 @@ public final class SchemaProto {
      * <code>STORAGE_TYPE_TRANSIENT = 2;</code>
      */
     public static final int STORAGE_TYPE_TRANSIENT_VALUE = 2;
-    /**
-     * <pre>
-     * STORAGE_TYPE_INDEX indicates persistent storage which is not backed
-     * by a merkle-tree and won't affect the app hash. Note that the Cosmos SDK
-     * before store/v2alpha1 does not support this.
-     * </pre>
-     *
-     * <code>STORAGE_TYPE_INDEX = 3;</code>
-     */
-    public static final int STORAGE_TYPE_INDEX_VALUE = 3;
-    /**
-     * <pre>
-     * STORAGE_TYPE_INDEX indicates persistent storage which is backed by
-     * a merkle-tree. With this type of storage, both primary and index keys
-     * will affect the app hash and this is generally less efficient
-     * than using STORAGE_TYPE_DEFAULT_UNSPECIFIED which separates index
-     * keys into index storage. Note that modules built with the
-     * Cosmos SDK before store/v2alpha1 must specify STORAGE_TYPE_COMMITMENT
-     * instead of STORAGE_TYPE_DEFAULT_UNSPECIFIED or STORAGE_TYPE_INDEX
-     * because this is the only type of persistent storage available.
-     * </pre>
-     *
-     * <code>STORAGE_TYPE_COMMITMENT = 4;</code>
-     */
-    public static final int STORAGE_TYPE_COMMITMENT_VALUE = 4;
 
 
     public final int getNumber() {
@@ -174,8 +118,6 @@ public final class SchemaProto {
         case 0: return STORAGE_TYPE_DEFAULT_UNSPECIFIED;
         case 1: return STORAGE_TYPE_MEMORY;
         case 2: return STORAGE_TYPE_TRANSIENT;
-        case 3: return STORAGE_TYPE_INDEX;
-        case 4: return STORAGE_TYPE_COMMITMENT;
         default: return null;
       }
     }
@@ -2036,18 +1978,16 @@ public final class SchemaProto {
       "ry\022\016\n\002id\030\001 \001(\rR\002id\022&\n\017proto_file_name\030\002 " +
       "\001(\tR\rprotoFileName\022C\n\014storage_type\030\003 \001(\016" +
       "2 .cosmos.orm.v1alpha1.StorageTypeR\013stor" +
-      "ageType*\235\001\n\013StorageType\022$\n STORAGE_TYPE_" +
-      "DEFAULT_UNSPECIFIED\020\000\022\027\n\023STORAGE_TYPE_ME" +
-      "MORY\020\001\022\032\n\026STORAGE_TYPE_TRANSIENT\020\002\022\026\n\022ST" +
-      "ORAGE_TYPE_INDEX\020\003\022\033\n\027STORAGE_TYPE_COMMI" +
-      "TMENT\020\004:t\n\rmodule_schema\022\037.google.protob" +
-      "uf.MessageOptions\030\360\263\3521 \001(\0132+.cosmos.orm." +
-      "v1alpha1.ModuleSchemaDescriptorR\014moduleS" +
-      "chemaB\222\001\n\027com.cosmos.orm.v1alpha1B\013Schem" +
-      "aProto\242\002\003COX\252\002\023Cosmos.Orm.V1alpha1\312\002\023Cos" +
-      "mos\\Orm\\V1alpha1\342\002\037Cosmos\\Orm\\V1alpha1\\G" +
-      "PBMetadata\352\002\025Cosmos::Orm::V1alpha1b\006prot" +
-      "o3"
+      "ageType*h\n\013StorageType\022$\n STORAGE_TYPE_D" +
+      "EFAULT_UNSPECIFIED\020\000\022\027\n\023STORAGE_TYPE_MEM" +
+      "ORY\020\001\022\032\n\026STORAGE_TYPE_TRANSIENT\020\002:t\n\rmod" +
+      "ule_schema\022\037.google.protobuf.MessageOpti" +
+      "ons\030\360\263\3521 \001(\0132+.cosmos.orm.v1alpha1.Modul" +
+      "eSchemaDescriptorR\014moduleSchemaB\222\001\n\027com." +
+      "cosmos.orm.v1alpha1B\013SchemaProto\242\002\003COX\252\002" +
+      "\023Cosmos.Orm.V1alpha1\312\002\023Cosmos\\Orm\\V1alph" +
+      "a1\342\002\037Cosmos\\Orm\\V1alpha1\\GPBMetadata\352\002\025C" +
+      "osmos::Orm::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

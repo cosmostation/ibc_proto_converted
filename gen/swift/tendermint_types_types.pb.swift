@@ -20,55 +20,6 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-/// BlockIdFlag indicates which BlcokID the signature is for
-enum Tendermint_Types_BlockIDFlag: SwiftProtobuf.Enum {
-  typealias RawValue = Int
-  case unknown // = 0
-  case absent // = 1
-  case commit // = 2
-  case `nil` // = 3
-  case UNRECOGNIZED(Int)
-
-  init() {
-    self = .unknown
-  }
-
-  init?(rawValue: Int) {
-    switch rawValue {
-    case 0: self = .unknown
-    case 1: self = .absent
-    case 2: self = .commit
-    case 3: self = .nil
-    default: self = .UNRECOGNIZED(rawValue)
-    }
-  }
-
-  var rawValue: Int {
-    switch self {
-    case .unknown: return 0
-    case .absent: return 1
-    case .commit: return 2
-    case .nil: return 3
-    case .UNRECOGNIZED(let i): return i
-    }
-  }
-
-}
-
-#if swift(>=4.2)
-
-extension Tendermint_Types_BlockIDFlag: CaseIterable {
-  // The compiler won't synthesize support with the UNRECOGNIZED case.
-  static var allCases: [Tendermint_Types_BlockIDFlag] = [
-    .unknown,
-    .absent,
-    .commit,
-    .nil,
-  ]
-}
-
-#endif  // swift(>=4.2)
-
 /// SignedMsgType is a type of signed message in the consensus.
 enum Tendermint_Types_SignedMsgType: SwiftProtobuf.Enum {
   typealias RawValue = Int
@@ -308,7 +259,7 @@ struct Tendermint_Types_Data {
   init() {}
 }
 
-/// Vote represents a prevote, precommit, or commit vote from validators for
+/// Vote represents a prevote or precommit vote from validators for
 /// consensus.
 struct Tendermint_Types_Vote {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
@@ -344,7 +295,18 @@ struct Tendermint_Types_Vote {
 
   var validatorIndex: Int32 = 0
 
+  /// Vote signature by the validator if they participated in consensus for the
+  /// associated block.
   var signature: Data = Data()
+
+  /// Vote extension provided by the application. Only valid for precommit
+  /// messages.
+  var `extension`: Data = Data()
+
+  /// Vote extension signature by the validator if they participated in
+  /// consensus for the associated block.
+  /// Only valid for precommit messages.
+  var extensionSignature: Data = Data()
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -402,6 +364,69 @@ struct Tendermint_Types_CommitSig {
   mutating func clearTimestamp() {self._timestamp = nil}
 
   var signature: Data = Data()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _timestamp: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+}
+
+struct Tendermint_Types_ExtendedCommit {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var height: Int64 = 0
+
+  var round: Int32 = 0
+
+  var blockID: Tendermint_Types_BlockID {
+    get {return _blockID ?? Tendermint_Types_BlockID()}
+    set {_blockID = newValue}
+  }
+  /// Returns true if `blockID` has been explicitly set.
+  var hasBlockID: Bool {return self._blockID != nil}
+  /// Clears the value of `blockID`. Subsequent reads from it will return its default value.
+  mutating func clearBlockID() {self._blockID = nil}
+
+  var extendedSignatures: [Tendermint_Types_ExtendedCommitSig] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _blockID: Tendermint_Types_BlockID? = nil
+}
+
+/// ExtendedCommitSig retains all the same fields as CommitSig but adds vote
+/// extension-related fields. We use two signatures to ensure backwards compatibility.
+/// That is the digest of the original signature is still the same in prior versions
+struct Tendermint_Types_ExtendedCommitSig {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var blockIDFlag: Tendermint_Types_BlockIDFlag = .unknown
+
+  var validatorAddress: Data = Data()
+
+  var timestamp: SwiftProtobuf.Google_Protobuf_Timestamp {
+    get {return _timestamp ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+    set {_timestamp = newValue}
+  }
+  /// Returns true if `timestamp` has been explicitly set.
+  var hasTimestamp: Bool {return self._timestamp != nil}
+  /// Clears the value of `timestamp`. Subsequent reads from it will return its default value.
+  mutating func clearTimestamp() {self._timestamp = nil}
+
+  var signature: Data = Data()
+
+  /// Vote extension data
+  var `extension`: Data = Data()
+
+  /// Vote extension signature
+  var extensionSignature: Data = Data()
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -575,7 +600,6 @@ struct Tendermint_Types_TxProof {
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
-extension Tendermint_Types_BlockIDFlag: @unchecked Sendable {}
 extension Tendermint_Types_SignedMsgType: @unchecked Sendable {}
 extension Tendermint_Types_PartSetHeader: @unchecked Sendable {}
 extension Tendermint_Types_Part: @unchecked Sendable {}
@@ -585,6 +609,8 @@ extension Tendermint_Types_Data: @unchecked Sendable {}
 extension Tendermint_Types_Vote: @unchecked Sendable {}
 extension Tendermint_Types_Commit: @unchecked Sendable {}
 extension Tendermint_Types_CommitSig: @unchecked Sendable {}
+extension Tendermint_Types_ExtendedCommit: @unchecked Sendable {}
+extension Tendermint_Types_ExtendedCommitSig: @unchecked Sendable {}
 extension Tendermint_Types_Proposal: @unchecked Sendable {}
 extension Tendermint_Types_SignedHeader: @unchecked Sendable {}
 extension Tendermint_Types_LightBlock: @unchecked Sendable {}
@@ -595,15 +621,6 @@ extension Tendermint_Types_TxProof: @unchecked Sendable {}
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 fileprivate let _protobuf_package = "tendermint.types"
-
-extension Tendermint_Types_BlockIDFlag: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    0: .same(proto: "BLOCK_ID_FLAG_UNKNOWN"),
-    1: .same(proto: "BLOCK_ID_FLAG_ABSENT"),
-    2: .same(proto: "BLOCK_ID_FLAG_COMMIT"),
-    3: .same(proto: "BLOCK_ID_FLAG_NIL"),
-  ]
-}
 
 extension Tendermint_Types_SignedMsgType: SwiftProtobuf._ProtoNameProviding {
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
@@ -957,6 +974,8 @@ extension Tendermint_Types_Vote: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     6: .standard(proto: "validator_address"),
     7: .standard(proto: "validator_index"),
     8: .same(proto: "signature"),
+    9: .same(proto: "extension"),
+    10: .standard(proto: "extension_signature"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -973,6 +992,8 @@ extension Tendermint_Types_Vote: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
       case 6: try { try decoder.decodeSingularBytesField(value: &self.validatorAddress) }()
       case 7: try { try decoder.decodeSingularInt32Field(value: &self.validatorIndex) }()
       case 8: try { try decoder.decodeSingularBytesField(value: &self.signature) }()
+      case 9: try { try decoder.decodeSingularBytesField(value: &self.`extension`) }()
+      case 10: try { try decoder.decodeSingularBytesField(value: &self.extensionSignature) }()
       default: break
       }
     }
@@ -1007,6 +1028,12 @@ extension Tendermint_Types_Vote: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     if !self.signature.isEmpty {
       try visitor.visitSingularBytesField(value: self.signature, fieldNumber: 8)
     }
+    if !self.`extension`.isEmpty {
+      try visitor.visitSingularBytesField(value: self.`extension`, fieldNumber: 9)
+    }
+    if !self.extensionSignature.isEmpty {
+      try visitor.visitSingularBytesField(value: self.extensionSignature, fieldNumber: 10)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -1019,6 +1046,8 @@ extension Tendermint_Types_Vote: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     if lhs.validatorAddress != rhs.validatorAddress {return false}
     if lhs.validatorIndex != rhs.validatorIndex {return false}
     if lhs.signature != rhs.signature {return false}
+    if lhs.`extension` != rhs.`extension` {return false}
+    if lhs.extensionSignature != rhs.extensionSignature {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -1127,6 +1156,126 @@ extension Tendermint_Types_CommitSig: SwiftProtobuf.Message, SwiftProtobuf._Mess
     if lhs.validatorAddress != rhs.validatorAddress {return false}
     if lhs._timestamp != rhs._timestamp {return false}
     if lhs.signature != rhs.signature {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tendermint_Types_ExtendedCommit: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ExtendedCommit"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "height"),
+    2: .same(proto: "round"),
+    3: .standard(proto: "block_id"),
+    4: .standard(proto: "extended_signatures"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularInt64Field(value: &self.height) }()
+      case 2: try { try decoder.decodeSingularInt32Field(value: &self.round) }()
+      case 3: try { try decoder.decodeSingularMessageField(value: &self._blockID) }()
+      case 4: try { try decoder.decodeRepeatedMessageField(value: &self.extendedSignatures) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if self.height != 0 {
+      try visitor.visitSingularInt64Field(value: self.height, fieldNumber: 1)
+    }
+    if self.round != 0 {
+      try visitor.visitSingularInt32Field(value: self.round, fieldNumber: 2)
+    }
+    try { if let v = self._blockID {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+    } }()
+    if !self.extendedSignatures.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.extendedSignatures, fieldNumber: 4)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Tendermint_Types_ExtendedCommit, rhs: Tendermint_Types_ExtendedCommit) -> Bool {
+    if lhs.height != rhs.height {return false}
+    if lhs.round != rhs.round {return false}
+    if lhs._blockID != rhs._blockID {return false}
+    if lhs.extendedSignatures != rhs.extendedSignatures {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tendermint_Types_ExtendedCommitSig: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ExtendedCommitSig"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "block_id_flag"),
+    2: .standard(proto: "validator_address"),
+    3: .same(proto: "timestamp"),
+    4: .same(proto: "signature"),
+    5: .same(proto: "extension"),
+    6: .standard(proto: "extension_signature"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularEnumField(value: &self.blockIDFlag) }()
+      case 2: try { try decoder.decodeSingularBytesField(value: &self.validatorAddress) }()
+      case 3: try { try decoder.decodeSingularMessageField(value: &self._timestamp) }()
+      case 4: try { try decoder.decodeSingularBytesField(value: &self.signature) }()
+      case 5: try { try decoder.decodeSingularBytesField(value: &self.`extension`) }()
+      case 6: try { try decoder.decodeSingularBytesField(value: &self.extensionSignature) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if self.blockIDFlag != .unknown {
+      try visitor.visitSingularEnumField(value: self.blockIDFlag, fieldNumber: 1)
+    }
+    if !self.validatorAddress.isEmpty {
+      try visitor.visitSingularBytesField(value: self.validatorAddress, fieldNumber: 2)
+    }
+    try { if let v = self._timestamp {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+    } }()
+    if !self.signature.isEmpty {
+      try visitor.visitSingularBytesField(value: self.signature, fieldNumber: 4)
+    }
+    if !self.`extension`.isEmpty {
+      try visitor.visitSingularBytesField(value: self.`extension`, fieldNumber: 5)
+    }
+    if !self.extensionSignature.isEmpty {
+      try visitor.visitSingularBytesField(value: self.extensionSignature, fieldNumber: 6)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Tendermint_Types_ExtendedCommitSig, rhs: Tendermint_Types_ExtendedCommitSig) -> Bool {
+    if lhs.blockIDFlag != rhs.blockIDFlag {return false}
+    if lhs.validatorAddress != rhs.validatorAddress {return false}
+    if lhs._timestamp != rhs._timestamp {return false}
+    if lhs.signature != rhs.signature {return false}
+    if lhs.`extension` != rhs.`extension` {return false}
+    if lhs.extensionSignature != rhs.extensionSignature {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

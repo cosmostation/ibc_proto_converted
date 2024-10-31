@@ -20,7 +20,7 @@ public final class ModuleProto {
 
     /**
      * <pre>
-     * max_metadata_len defines the maximum proposal metadata length. 
+     * max_metadata_len defines the maximum proposal metadata length.
      * Defaults to 255 if not explicitly set.
      * </pre>
      *
@@ -93,7 +93,7 @@ public final class ModuleProto {
     private long maxMetadataLen_ = 0L;
     /**
      * <pre>
-     * max_metadata_len defines the maximum proposal metadata length. 
+     * max_metadata_len defines the maximum proposal metadata length.
      * Defaults to 255 if not explicitly set.
      * </pre>
      *
@@ -509,7 +509,7 @@ public final class ModuleProto {
       private long maxMetadataLen_ ;
       /**
        * <pre>
-       * max_metadata_len defines the maximum proposal metadata length. 
+       * max_metadata_len defines the maximum proposal metadata length.
        * Defaults to 255 if not explicitly set.
        * </pre>
        *
@@ -522,7 +522,7 @@ public final class ModuleProto {
       }
       /**
        * <pre>
-       * max_metadata_len defines the maximum proposal metadata length. 
+       * max_metadata_len defines the maximum proposal metadata length.
        * Defaults to 255 if not explicitly set.
        * </pre>
        *
@@ -539,7 +539,7 @@ public final class ModuleProto {
       }
       /**
        * <pre>
-       * max_metadata_len defines the maximum proposal metadata length. 
+       * max_metadata_len defines the maximum proposal metadata length.
        * Defaults to 255 if not explicitly set.
        * </pre>
        *

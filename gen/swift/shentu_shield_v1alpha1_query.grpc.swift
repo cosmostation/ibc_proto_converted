@@ -33,41 +33,6 @@ internal protocol Shentu_Shield_V1alpha1_QueryClientProtocol: GRPCClient {
   var serviceName: String { get }
   var interceptors: Shentu_Shield_V1alpha1_QueryClientInterceptorFactoryProtocol? { get }
 
-  func pool(
-    _ request: Shentu_Shield_V1alpha1_QueryPoolRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryPoolRequest, Shentu_Shield_V1alpha1_QueryPoolResponse>
-
-  func sponsor(
-    _ request: Shentu_Shield_V1alpha1_QuerySponsorRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QuerySponsorRequest, Shentu_Shield_V1alpha1_QuerySponsorResponse>
-
-  func pools(
-    _ request: Shentu_Shield_V1alpha1_QueryPoolsRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryPoolsRequest, Shentu_Shield_V1alpha1_QueryPoolsResponse>
-
-  func poolPurchaseLists(
-    _ request: Shentu_Shield_V1alpha1_QueryPoolPurchaseListsRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryPoolPurchaseListsRequest, Shentu_Shield_V1alpha1_QueryPurchaseListsResponse>
-
-  func purchaseLists(
-    _ request: Shentu_Shield_V1alpha1_QueryPurchaseListsRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryPurchaseListsRequest, Shentu_Shield_V1alpha1_QueryPurchaseListsResponse>
-
-  func purchaseList(
-    _ request: Shentu_Shield_V1alpha1_QueryPurchaseListRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryPurchaseListRequest, Shentu_Shield_V1alpha1_QueryPurchaseListResponse>
-
-  func purchases(
-    _ request: Shentu_Shield_V1alpha1_QueryPurchasesRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryPurchasesRequest, Shentu_Shield_V1alpha1_QueryPurchasesResponse>
-
   func provider(
     _ request: Shentu_Shield_V1alpha1_QueryProviderRequest,
     callOptions: CallOptions?
@@ -78,176 +43,15 @@ internal protocol Shentu_Shield_V1alpha1_QueryClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryProvidersRequest, Shentu_Shield_V1alpha1_QueryProvidersResponse>
 
-  func poolParams(
-    _ request: Shentu_Shield_V1alpha1_QueryPoolParamsRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryPoolParamsRequest, Shentu_Shield_V1alpha1_QueryPoolParamsResponse>
-
-  func claimParams(
-    _ request: Shentu_Shield_V1alpha1_QueryClaimParamsRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryClaimParamsRequest, Shentu_Shield_V1alpha1_QueryClaimParamsResponse>
-
-  func distrParams(
-    _ request: Shentu_Shield_V1alpha1_QueryDistrParamsRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryDistrParamsRequest, Shentu_Shield_V1alpha1_QueryDistrParamsResponse>
-
   func shieldStatus(
     _ request: Shentu_Shield_V1alpha1_QueryShieldStatusRequest,
     callOptions: CallOptions?
   ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryShieldStatusRequest, Shentu_Shield_V1alpha1_QueryShieldStatusResponse>
-
-  func shieldStaking(
-    _ request: Shentu_Shield_V1alpha1_QueryShieldStakingRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryShieldStakingRequest, Shentu_Shield_V1alpha1_QueryShieldStakingResponse>
-
-  func shieldStakingRate(
-    _ request: Shentu_Shield_V1alpha1_QueryShieldStakingRateRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryShieldStakingRateRequest, Shentu_Shield_V1alpha1_QueryShieldStakingRateResponse>
-
-  func reimbursement(
-    _ request: Shentu_Shield_V1alpha1_QueryReimbursementRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryReimbursementRequest, Shentu_Shield_V1alpha1_QueryReimbursementResponse>
-
-  func reimbursements(
-    _ request: Shentu_Shield_V1alpha1_QueryReimbursementsRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryReimbursementsRequest, Shentu_Shield_V1alpha1_QueryReimbursementsResponse>
 }
 
 extension Shentu_Shield_V1alpha1_QueryClientProtocol {
   internal var serviceName: String {
     return "shentu.shield.v1alpha1.Query"
-  }
-
-  /// Unary call to Pool
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to Pool.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func pool(
-    _ request: Shentu_Shield_V1alpha1_QueryPoolRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryPoolRequest, Shentu_Shield_V1alpha1_QueryPoolResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.pool.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePoolInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to Sponsor
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to Sponsor.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func sponsor(
-    _ request: Shentu_Shield_V1alpha1_QuerySponsorRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QuerySponsorRequest, Shentu_Shield_V1alpha1_QuerySponsorResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.sponsor.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeSponsorInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to Pools
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to Pools.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func pools(
-    _ request: Shentu_Shield_V1alpha1_QueryPoolsRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryPoolsRequest, Shentu_Shield_V1alpha1_QueryPoolsResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.pools.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePoolsInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to PoolPurchaseLists
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to PoolPurchaseLists.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func poolPurchaseLists(
-    _ request: Shentu_Shield_V1alpha1_QueryPoolPurchaseListsRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryPoolPurchaseListsRequest, Shentu_Shield_V1alpha1_QueryPurchaseListsResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.poolPurchaseLists.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePoolPurchaseListsInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to PurchaseLists
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to PurchaseLists.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func purchaseLists(
-    _ request: Shentu_Shield_V1alpha1_QueryPurchaseListsRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryPurchaseListsRequest, Shentu_Shield_V1alpha1_QueryPurchaseListsResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.purchaseLists.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePurchaseListsInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to PurchaseList
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to PurchaseList.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func purchaseList(
-    _ request: Shentu_Shield_V1alpha1_QueryPurchaseListRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryPurchaseListRequest, Shentu_Shield_V1alpha1_QueryPurchaseListResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.purchaseList.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePurchaseListInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to Purchases
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to Purchases.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func purchases(
-    _ request: Shentu_Shield_V1alpha1_QueryPurchasesRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryPurchasesRequest, Shentu_Shield_V1alpha1_QueryPurchasesResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.purchases.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePurchasesInterceptors() ?? []
-    )
   }
 
   /// Unary call to Provider
@@ -286,60 +90,6 @@ extension Shentu_Shield_V1alpha1_QueryClientProtocol {
     )
   }
 
-  /// Unary call to PoolParams
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to PoolParams.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func poolParams(
-    _ request: Shentu_Shield_V1alpha1_QueryPoolParamsRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryPoolParamsRequest, Shentu_Shield_V1alpha1_QueryPoolParamsResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.poolParams.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePoolParamsInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to ClaimParams
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to ClaimParams.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func claimParams(
-    _ request: Shentu_Shield_V1alpha1_QueryClaimParamsRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryClaimParamsRequest, Shentu_Shield_V1alpha1_QueryClaimParamsResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.claimParams.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeClaimParamsInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to DistrParams
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to DistrParams.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func distrParams(
-    _ request: Shentu_Shield_V1alpha1_QueryDistrParamsRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryDistrParamsRequest, Shentu_Shield_V1alpha1_QueryDistrParamsResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.distrParams.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeDistrParamsInterceptors() ?? []
-    )
-  }
-
   /// Unary call to ShieldStatus
   ///
   /// - Parameters:
@@ -355,78 +105,6 @@ extension Shentu_Shield_V1alpha1_QueryClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeShieldStatusInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to ShieldStaking
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to ShieldStaking.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func shieldStaking(
-    _ request: Shentu_Shield_V1alpha1_QueryShieldStakingRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryShieldStakingRequest, Shentu_Shield_V1alpha1_QueryShieldStakingResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.shieldStaking.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeShieldStakingInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to ShieldStakingRate
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to ShieldStakingRate.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func shieldStakingRate(
-    _ request: Shentu_Shield_V1alpha1_QueryShieldStakingRateRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryShieldStakingRateRequest, Shentu_Shield_V1alpha1_QueryShieldStakingRateResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.shieldStakingRate.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeShieldStakingRateInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to Reimbursement
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to Reimbursement.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func reimbursement(
-    _ request: Shentu_Shield_V1alpha1_QueryReimbursementRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryReimbursementRequest, Shentu_Shield_V1alpha1_QueryReimbursementResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.reimbursement.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeReimbursementInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to Reimbursements
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to Reimbursements.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func reimbursements(
-    _ request: Shentu_Shield_V1alpha1_QueryReimbursementsRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_QueryReimbursementsRequest, Shentu_Shield_V1alpha1_QueryReimbursementsResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.reimbursements.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeReimbursementsInterceptors() ?? []
     )
   }
 }
@@ -494,41 +172,6 @@ internal protocol Shentu_Shield_V1alpha1_QueryAsyncClientProtocol: GRPCClient {
   static var serviceDescriptor: GRPCServiceDescriptor { get }
   var interceptors: Shentu_Shield_V1alpha1_QueryClientInterceptorFactoryProtocol? { get }
 
-  func makePoolCall(
-    _ request: Shentu_Shield_V1alpha1_QueryPoolRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryPoolRequest, Shentu_Shield_V1alpha1_QueryPoolResponse>
-
-  func makeSponsorCall(
-    _ request: Shentu_Shield_V1alpha1_QuerySponsorRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QuerySponsorRequest, Shentu_Shield_V1alpha1_QuerySponsorResponse>
-
-  func makePoolsCall(
-    _ request: Shentu_Shield_V1alpha1_QueryPoolsRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryPoolsRequest, Shentu_Shield_V1alpha1_QueryPoolsResponse>
-
-  func makePoolPurchaseListsCall(
-    _ request: Shentu_Shield_V1alpha1_QueryPoolPurchaseListsRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryPoolPurchaseListsRequest, Shentu_Shield_V1alpha1_QueryPurchaseListsResponse>
-
-  func makePurchaseListsCall(
-    _ request: Shentu_Shield_V1alpha1_QueryPurchaseListsRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryPurchaseListsRequest, Shentu_Shield_V1alpha1_QueryPurchaseListsResponse>
-
-  func makePurchaseListCall(
-    _ request: Shentu_Shield_V1alpha1_QueryPurchaseListRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryPurchaseListRequest, Shentu_Shield_V1alpha1_QueryPurchaseListResponse>
-
-  func makePurchasesCall(
-    _ request: Shentu_Shield_V1alpha1_QueryPurchasesRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryPurchasesRequest, Shentu_Shield_V1alpha1_QueryPurchasesResponse>
-
   func makeProviderCall(
     _ request: Shentu_Shield_V1alpha1_QueryProviderRequest,
     callOptions: CallOptions?
@@ -539,45 +182,10 @@ internal protocol Shentu_Shield_V1alpha1_QueryAsyncClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryProvidersRequest, Shentu_Shield_V1alpha1_QueryProvidersResponse>
 
-  func makePoolParamsCall(
-    _ request: Shentu_Shield_V1alpha1_QueryPoolParamsRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryPoolParamsRequest, Shentu_Shield_V1alpha1_QueryPoolParamsResponse>
-
-  func makeClaimParamsCall(
-    _ request: Shentu_Shield_V1alpha1_QueryClaimParamsRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryClaimParamsRequest, Shentu_Shield_V1alpha1_QueryClaimParamsResponse>
-
-  func makeDistrParamsCall(
-    _ request: Shentu_Shield_V1alpha1_QueryDistrParamsRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryDistrParamsRequest, Shentu_Shield_V1alpha1_QueryDistrParamsResponse>
-
   func makeShieldStatusCall(
     _ request: Shentu_Shield_V1alpha1_QueryShieldStatusRequest,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryShieldStatusRequest, Shentu_Shield_V1alpha1_QueryShieldStatusResponse>
-
-  func makeShieldStakingCall(
-    _ request: Shentu_Shield_V1alpha1_QueryShieldStakingRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryShieldStakingRequest, Shentu_Shield_V1alpha1_QueryShieldStakingResponse>
-
-  func makeShieldStakingRateCall(
-    _ request: Shentu_Shield_V1alpha1_QueryShieldStakingRateRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryShieldStakingRateRequest, Shentu_Shield_V1alpha1_QueryShieldStakingRateResponse>
-
-  func makeReimbursementCall(
-    _ request: Shentu_Shield_V1alpha1_QueryReimbursementRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryReimbursementRequest, Shentu_Shield_V1alpha1_QueryReimbursementResponse>
-
-  func makeReimbursementsCall(
-    _ request: Shentu_Shield_V1alpha1_QueryReimbursementsRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryReimbursementsRequest, Shentu_Shield_V1alpha1_QueryReimbursementsResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -588,90 +196,6 @@ extension Shentu_Shield_V1alpha1_QueryAsyncClientProtocol {
 
   internal var interceptors: Shentu_Shield_V1alpha1_QueryClientInterceptorFactoryProtocol? {
     return nil
-  }
-
-  internal func makePoolCall(
-    _ request: Shentu_Shield_V1alpha1_QueryPoolRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryPoolRequest, Shentu_Shield_V1alpha1_QueryPoolResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.pool.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePoolInterceptors() ?? []
-    )
-  }
-
-  internal func makeSponsorCall(
-    _ request: Shentu_Shield_V1alpha1_QuerySponsorRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QuerySponsorRequest, Shentu_Shield_V1alpha1_QuerySponsorResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.sponsor.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeSponsorInterceptors() ?? []
-    )
-  }
-
-  internal func makePoolsCall(
-    _ request: Shentu_Shield_V1alpha1_QueryPoolsRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryPoolsRequest, Shentu_Shield_V1alpha1_QueryPoolsResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.pools.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePoolsInterceptors() ?? []
-    )
-  }
-
-  internal func makePoolPurchaseListsCall(
-    _ request: Shentu_Shield_V1alpha1_QueryPoolPurchaseListsRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryPoolPurchaseListsRequest, Shentu_Shield_V1alpha1_QueryPurchaseListsResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.poolPurchaseLists.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePoolPurchaseListsInterceptors() ?? []
-    )
-  }
-
-  internal func makePurchaseListsCall(
-    _ request: Shentu_Shield_V1alpha1_QueryPurchaseListsRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryPurchaseListsRequest, Shentu_Shield_V1alpha1_QueryPurchaseListsResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.purchaseLists.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePurchaseListsInterceptors() ?? []
-    )
-  }
-
-  internal func makePurchaseListCall(
-    _ request: Shentu_Shield_V1alpha1_QueryPurchaseListRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryPurchaseListRequest, Shentu_Shield_V1alpha1_QueryPurchaseListResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.purchaseList.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePurchaseListInterceptors() ?? []
-    )
-  }
-
-  internal func makePurchasesCall(
-    _ request: Shentu_Shield_V1alpha1_QueryPurchasesRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryPurchasesRequest, Shentu_Shield_V1alpha1_QueryPurchasesResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.purchases.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePurchasesInterceptors() ?? []
-    )
   }
 
   internal func makeProviderCall(
@@ -698,42 +222,6 @@ extension Shentu_Shield_V1alpha1_QueryAsyncClientProtocol {
     )
   }
 
-  internal func makePoolParamsCall(
-    _ request: Shentu_Shield_V1alpha1_QueryPoolParamsRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryPoolParamsRequest, Shentu_Shield_V1alpha1_QueryPoolParamsResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.poolParams.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePoolParamsInterceptors() ?? []
-    )
-  }
-
-  internal func makeClaimParamsCall(
-    _ request: Shentu_Shield_V1alpha1_QueryClaimParamsRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryClaimParamsRequest, Shentu_Shield_V1alpha1_QueryClaimParamsResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.claimParams.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeClaimParamsInterceptors() ?? []
-    )
-  }
-
-  internal func makeDistrParamsCall(
-    _ request: Shentu_Shield_V1alpha1_QueryDistrParamsRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryDistrParamsRequest, Shentu_Shield_V1alpha1_QueryDistrParamsResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.distrParams.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeDistrParamsInterceptors() ?? []
-    )
-  }
-
   internal func makeShieldStatusCall(
     _ request: Shentu_Shield_V1alpha1_QueryShieldStatusRequest,
     callOptions: CallOptions? = nil
@@ -745,142 +233,10 @@ extension Shentu_Shield_V1alpha1_QueryAsyncClientProtocol {
       interceptors: self.interceptors?.makeShieldStatusInterceptors() ?? []
     )
   }
-
-  internal func makeShieldStakingCall(
-    _ request: Shentu_Shield_V1alpha1_QueryShieldStakingRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryShieldStakingRequest, Shentu_Shield_V1alpha1_QueryShieldStakingResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.shieldStaking.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeShieldStakingInterceptors() ?? []
-    )
-  }
-
-  internal func makeShieldStakingRateCall(
-    _ request: Shentu_Shield_V1alpha1_QueryShieldStakingRateRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryShieldStakingRateRequest, Shentu_Shield_V1alpha1_QueryShieldStakingRateResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.shieldStakingRate.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeShieldStakingRateInterceptors() ?? []
-    )
-  }
-
-  internal func makeReimbursementCall(
-    _ request: Shentu_Shield_V1alpha1_QueryReimbursementRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryReimbursementRequest, Shentu_Shield_V1alpha1_QueryReimbursementResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.reimbursement.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeReimbursementInterceptors() ?? []
-    )
-  }
-
-  internal func makeReimbursementsCall(
-    _ request: Shentu_Shield_V1alpha1_QueryReimbursementsRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_QueryReimbursementsRequest, Shentu_Shield_V1alpha1_QueryReimbursementsResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.reimbursements.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeReimbursementsInterceptors() ?? []
-    )
-  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension Shentu_Shield_V1alpha1_QueryAsyncClientProtocol {
-  internal func pool(
-    _ request: Shentu_Shield_V1alpha1_QueryPoolRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_QueryPoolResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.pool.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePoolInterceptors() ?? []
-    )
-  }
-
-  internal func sponsor(
-    _ request: Shentu_Shield_V1alpha1_QuerySponsorRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_QuerySponsorResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.sponsor.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeSponsorInterceptors() ?? []
-    )
-  }
-
-  internal func pools(
-    _ request: Shentu_Shield_V1alpha1_QueryPoolsRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_QueryPoolsResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.pools.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePoolsInterceptors() ?? []
-    )
-  }
-
-  internal func poolPurchaseLists(
-    _ request: Shentu_Shield_V1alpha1_QueryPoolPurchaseListsRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_QueryPurchaseListsResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.poolPurchaseLists.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePoolPurchaseListsInterceptors() ?? []
-    )
-  }
-
-  internal func purchaseLists(
-    _ request: Shentu_Shield_V1alpha1_QueryPurchaseListsRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_QueryPurchaseListsResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.purchaseLists.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePurchaseListsInterceptors() ?? []
-    )
-  }
-
-  internal func purchaseList(
-    _ request: Shentu_Shield_V1alpha1_QueryPurchaseListRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_QueryPurchaseListResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.purchaseList.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePurchaseListInterceptors() ?? []
-    )
-  }
-
-  internal func purchases(
-    _ request: Shentu_Shield_V1alpha1_QueryPurchasesRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_QueryPurchasesResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.purchases.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePurchasesInterceptors() ?? []
-    )
-  }
-
   internal func provider(
     _ request: Shentu_Shield_V1alpha1_QueryProviderRequest,
     callOptions: CallOptions? = nil
@@ -905,42 +261,6 @@ extension Shentu_Shield_V1alpha1_QueryAsyncClientProtocol {
     )
   }
 
-  internal func poolParams(
-    _ request: Shentu_Shield_V1alpha1_QueryPoolParamsRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_QueryPoolParamsResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.poolParams.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePoolParamsInterceptors() ?? []
-    )
-  }
-
-  internal func claimParams(
-    _ request: Shentu_Shield_V1alpha1_QueryClaimParamsRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_QueryClaimParamsResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.claimParams.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeClaimParamsInterceptors() ?? []
-    )
-  }
-
-  internal func distrParams(
-    _ request: Shentu_Shield_V1alpha1_QueryDistrParamsRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_QueryDistrParamsResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.distrParams.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeDistrParamsInterceptors() ?? []
-    )
-  }
-
   internal func shieldStatus(
     _ request: Shentu_Shield_V1alpha1_QueryShieldStatusRequest,
     callOptions: CallOptions? = nil
@@ -950,54 +270,6 @@ extension Shentu_Shield_V1alpha1_QueryAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeShieldStatusInterceptors() ?? []
-    )
-  }
-
-  internal func shieldStaking(
-    _ request: Shentu_Shield_V1alpha1_QueryShieldStakingRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_QueryShieldStakingResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.shieldStaking.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeShieldStakingInterceptors() ?? []
-    )
-  }
-
-  internal func shieldStakingRate(
-    _ request: Shentu_Shield_V1alpha1_QueryShieldStakingRateRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_QueryShieldStakingRateResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.shieldStakingRate.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeShieldStakingRateInterceptors() ?? []
-    )
-  }
-
-  internal func reimbursement(
-    _ request: Shentu_Shield_V1alpha1_QueryReimbursementRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_QueryReimbursementResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.reimbursement.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeReimbursementInterceptors() ?? []
-    )
-  }
-
-  internal func reimbursements(
-    _ request: Shentu_Shield_V1alpha1_QueryReimbursementsRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_QueryReimbursementsResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.reimbursements.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeReimbursementsInterceptors() ?? []
     )
   }
 }
@@ -1021,56 +293,14 @@ internal struct Shentu_Shield_V1alpha1_QueryAsyncClient: Shentu_Shield_V1alpha1_
 
 internal protocol Shentu_Shield_V1alpha1_QueryClientInterceptorFactoryProtocol: Sendable {
 
-  /// - Returns: Interceptors to use when invoking 'pool'.
-  func makePoolInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_QueryPoolRequest, Shentu_Shield_V1alpha1_QueryPoolResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'sponsor'.
-  func makeSponsorInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_QuerySponsorRequest, Shentu_Shield_V1alpha1_QuerySponsorResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'pools'.
-  func makePoolsInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_QueryPoolsRequest, Shentu_Shield_V1alpha1_QueryPoolsResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'poolPurchaseLists'.
-  func makePoolPurchaseListsInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_QueryPoolPurchaseListsRequest, Shentu_Shield_V1alpha1_QueryPurchaseListsResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'purchaseLists'.
-  func makePurchaseListsInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_QueryPurchaseListsRequest, Shentu_Shield_V1alpha1_QueryPurchaseListsResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'purchaseList'.
-  func makePurchaseListInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_QueryPurchaseListRequest, Shentu_Shield_V1alpha1_QueryPurchaseListResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'purchases'.
-  func makePurchasesInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_QueryPurchasesRequest, Shentu_Shield_V1alpha1_QueryPurchasesResponse>]
-
   /// - Returns: Interceptors to use when invoking 'provider'.
   func makeProviderInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_QueryProviderRequest, Shentu_Shield_V1alpha1_QueryProviderResponse>]
 
   /// - Returns: Interceptors to use when invoking 'providers'.
   func makeProvidersInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_QueryProvidersRequest, Shentu_Shield_V1alpha1_QueryProvidersResponse>]
 
-  /// - Returns: Interceptors to use when invoking 'poolParams'.
-  func makePoolParamsInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_QueryPoolParamsRequest, Shentu_Shield_V1alpha1_QueryPoolParamsResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'claimParams'.
-  func makeClaimParamsInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_QueryClaimParamsRequest, Shentu_Shield_V1alpha1_QueryClaimParamsResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'distrParams'.
-  func makeDistrParamsInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_QueryDistrParamsRequest, Shentu_Shield_V1alpha1_QueryDistrParamsResponse>]
-
   /// - Returns: Interceptors to use when invoking 'shieldStatus'.
   func makeShieldStatusInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_QueryShieldStatusRequest, Shentu_Shield_V1alpha1_QueryShieldStatusResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'shieldStaking'.
-  func makeShieldStakingInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_QueryShieldStakingRequest, Shentu_Shield_V1alpha1_QueryShieldStakingResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'shieldStakingRate'.
-  func makeShieldStakingRateInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_QueryShieldStakingRateRequest, Shentu_Shield_V1alpha1_QueryShieldStakingRateResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'reimbursement'.
-  func makeReimbursementInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_QueryReimbursementRequest, Shentu_Shield_V1alpha1_QueryReimbursementResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'reimbursements'.
-  func makeReimbursementsInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_QueryReimbursementsRequest, Shentu_Shield_V1alpha1_QueryReimbursementsResponse>]
 }
 
 internal enum Shentu_Shield_V1alpha1_QueryClientMetadata {
@@ -1078,69 +308,13 @@ internal enum Shentu_Shield_V1alpha1_QueryClientMetadata {
     name: "Query",
     fullName: "shentu.shield.v1alpha1.Query",
     methods: [
-      Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.pool,
-      Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.sponsor,
-      Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.pools,
-      Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.poolPurchaseLists,
-      Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.purchaseLists,
-      Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.purchaseList,
-      Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.purchases,
       Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.provider,
       Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.providers,
-      Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.poolParams,
-      Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.claimParams,
-      Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.distrParams,
       Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.shieldStatus,
-      Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.shieldStaking,
-      Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.shieldStakingRate,
-      Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.reimbursement,
-      Shentu_Shield_V1alpha1_QueryClientMetadata.Methods.reimbursements,
     ]
   )
 
   internal enum Methods {
-    internal static let pool = GRPCMethodDescriptor(
-      name: "Pool",
-      path: "/shentu.shield.v1alpha1.Query/Pool",
-      type: GRPCCallType.unary
-    )
-
-    internal static let sponsor = GRPCMethodDescriptor(
-      name: "Sponsor",
-      path: "/shentu.shield.v1alpha1.Query/Sponsor",
-      type: GRPCCallType.unary
-    )
-
-    internal static let pools = GRPCMethodDescriptor(
-      name: "Pools",
-      path: "/shentu.shield.v1alpha1.Query/Pools",
-      type: GRPCCallType.unary
-    )
-
-    internal static let poolPurchaseLists = GRPCMethodDescriptor(
-      name: "PoolPurchaseLists",
-      path: "/shentu.shield.v1alpha1.Query/PoolPurchaseLists",
-      type: GRPCCallType.unary
-    )
-
-    internal static let purchaseLists = GRPCMethodDescriptor(
-      name: "PurchaseLists",
-      path: "/shentu.shield.v1alpha1.Query/PurchaseLists",
-      type: GRPCCallType.unary
-    )
-
-    internal static let purchaseList = GRPCMethodDescriptor(
-      name: "PurchaseList",
-      path: "/shentu.shield.v1alpha1.Query/PurchaseList",
-      type: GRPCCallType.unary
-    )
-
-    internal static let purchases = GRPCMethodDescriptor(
-      name: "Purchases",
-      path: "/shentu.shield.v1alpha1.Query/Purchases",
-      type: GRPCCallType.unary
-    )
-
     internal static let provider = GRPCMethodDescriptor(
       name: "Provider",
       path: "/shentu.shield.v1alpha1.Query/Provider",
@@ -1153,51 +327,9 @@ internal enum Shentu_Shield_V1alpha1_QueryClientMetadata {
       type: GRPCCallType.unary
     )
 
-    internal static let poolParams = GRPCMethodDescriptor(
-      name: "PoolParams",
-      path: "/shentu.shield.v1alpha1.Query/PoolParams",
-      type: GRPCCallType.unary
-    )
-
-    internal static let claimParams = GRPCMethodDescriptor(
-      name: "ClaimParams",
-      path: "/shentu.shield.v1alpha1.Query/ClaimParams",
-      type: GRPCCallType.unary
-    )
-
-    internal static let distrParams = GRPCMethodDescriptor(
-      name: "DistrParams",
-      path: "/shentu.shield.v1alpha1.Query/DistrParams",
-      type: GRPCCallType.unary
-    )
-
     internal static let shieldStatus = GRPCMethodDescriptor(
       name: "ShieldStatus",
       path: "/shentu.shield.v1alpha1.Query/ShieldStatus",
-      type: GRPCCallType.unary
-    )
-
-    internal static let shieldStaking = GRPCMethodDescriptor(
-      name: "ShieldStaking",
-      path: "/shentu.shield.v1alpha1.Query/ShieldStaking",
-      type: GRPCCallType.unary
-    )
-
-    internal static let shieldStakingRate = GRPCMethodDescriptor(
-      name: "ShieldStakingRate",
-      path: "/shentu.shield.v1alpha1.Query/ShieldStakingRate",
-      type: GRPCCallType.unary
-    )
-
-    internal static let reimbursement = GRPCMethodDescriptor(
-      name: "Reimbursement",
-      path: "/shentu.shield.v1alpha1.Query/Reimbursement",
-      type: GRPCCallType.unary
-    )
-
-    internal static let reimbursements = GRPCMethodDescriptor(
-      name: "Reimbursements",
-      path: "/shentu.shield.v1alpha1.Query/Reimbursements",
       type: GRPCCallType.unary
     )
   }
@@ -1209,39 +341,11 @@ internal enum Shentu_Shield_V1alpha1_QueryClientMetadata {
 internal protocol Shentu_Shield_V1alpha1_QueryProvider: CallHandlerProvider {
   var interceptors: Shentu_Shield_V1alpha1_QueryServerInterceptorFactoryProtocol? { get }
 
-  func pool(request: Shentu_Shield_V1alpha1_QueryPoolRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_QueryPoolResponse>
-
-  func sponsor(request: Shentu_Shield_V1alpha1_QuerySponsorRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_QuerySponsorResponse>
-
-  func pools(request: Shentu_Shield_V1alpha1_QueryPoolsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_QueryPoolsResponse>
-
-  func poolPurchaseLists(request: Shentu_Shield_V1alpha1_QueryPoolPurchaseListsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_QueryPurchaseListsResponse>
-
-  func purchaseLists(request: Shentu_Shield_V1alpha1_QueryPurchaseListsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_QueryPurchaseListsResponse>
-
-  func purchaseList(request: Shentu_Shield_V1alpha1_QueryPurchaseListRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_QueryPurchaseListResponse>
-
-  func purchases(request: Shentu_Shield_V1alpha1_QueryPurchasesRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_QueryPurchasesResponse>
-
   func provider(request: Shentu_Shield_V1alpha1_QueryProviderRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_QueryProviderResponse>
 
   func providers(request: Shentu_Shield_V1alpha1_QueryProvidersRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_QueryProvidersResponse>
 
-  func poolParams(request: Shentu_Shield_V1alpha1_QueryPoolParamsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_QueryPoolParamsResponse>
-
-  func claimParams(request: Shentu_Shield_V1alpha1_QueryClaimParamsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_QueryClaimParamsResponse>
-
-  func distrParams(request: Shentu_Shield_V1alpha1_QueryDistrParamsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_QueryDistrParamsResponse>
-
   func shieldStatus(request: Shentu_Shield_V1alpha1_QueryShieldStatusRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_QueryShieldStatusResponse>
-
-  func shieldStaking(request: Shentu_Shield_V1alpha1_QueryShieldStakingRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_QueryShieldStakingResponse>
-
-  func shieldStakingRate(request: Shentu_Shield_V1alpha1_QueryShieldStakingRateRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_QueryShieldStakingRateResponse>
-
-  func reimbursement(request: Shentu_Shield_V1alpha1_QueryReimbursementRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_QueryReimbursementResponse>
-
-  func reimbursements(request: Shentu_Shield_V1alpha1_QueryReimbursementsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_QueryReimbursementsResponse>
 }
 
 extension Shentu_Shield_V1alpha1_QueryProvider {
@@ -1256,69 +360,6 @@ extension Shentu_Shield_V1alpha1_QueryProvider {
     context: CallHandlerContext
   ) -> GRPCServerHandlerProtocol? {
     switch name {
-    case "Pool":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryPoolRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryPoolResponse>(),
-        interceptors: self.interceptors?.makePoolInterceptors() ?? [],
-        userFunction: self.pool(request:context:)
-      )
-
-    case "Sponsor":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QuerySponsorRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QuerySponsorResponse>(),
-        interceptors: self.interceptors?.makeSponsorInterceptors() ?? [],
-        userFunction: self.sponsor(request:context:)
-      )
-
-    case "Pools":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryPoolsRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryPoolsResponse>(),
-        interceptors: self.interceptors?.makePoolsInterceptors() ?? [],
-        userFunction: self.pools(request:context:)
-      )
-
-    case "PoolPurchaseLists":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryPoolPurchaseListsRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryPurchaseListsResponse>(),
-        interceptors: self.interceptors?.makePoolPurchaseListsInterceptors() ?? [],
-        userFunction: self.poolPurchaseLists(request:context:)
-      )
-
-    case "PurchaseLists":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryPurchaseListsRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryPurchaseListsResponse>(),
-        interceptors: self.interceptors?.makePurchaseListsInterceptors() ?? [],
-        userFunction: self.purchaseLists(request:context:)
-      )
-
-    case "PurchaseList":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryPurchaseListRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryPurchaseListResponse>(),
-        interceptors: self.interceptors?.makePurchaseListInterceptors() ?? [],
-        userFunction: self.purchaseList(request:context:)
-      )
-
-    case "Purchases":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryPurchasesRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryPurchasesResponse>(),
-        interceptors: self.interceptors?.makePurchasesInterceptors() ?? [],
-        userFunction: self.purchases(request:context:)
-      )
-
     case "Provider":
       return UnaryServerHandler(
         context: context,
@@ -1337,33 +378,6 @@ extension Shentu_Shield_V1alpha1_QueryProvider {
         userFunction: self.providers(request:context:)
       )
 
-    case "PoolParams":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryPoolParamsRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryPoolParamsResponse>(),
-        interceptors: self.interceptors?.makePoolParamsInterceptors() ?? [],
-        userFunction: self.poolParams(request:context:)
-      )
-
-    case "ClaimParams":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryClaimParamsRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryClaimParamsResponse>(),
-        interceptors: self.interceptors?.makeClaimParamsInterceptors() ?? [],
-        userFunction: self.claimParams(request:context:)
-      )
-
-    case "DistrParams":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryDistrParamsRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryDistrParamsResponse>(),
-        interceptors: self.interceptors?.makeDistrParamsInterceptors() ?? [],
-        userFunction: self.distrParams(request:context:)
-      )
-
     case "ShieldStatus":
       return UnaryServerHandler(
         context: context,
@@ -1371,42 +385,6 @@ extension Shentu_Shield_V1alpha1_QueryProvider {
         responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryShieldStatusResponse>(),
         interceptors: self.interceptors?.makeShieldStatusInterceptors() ?? [],
         userFunction: self.shieldStatus(request:context:)
-      )
-
-    case "ShieldStaking":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryShieldStakingRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryShieldStakingResponse>(),
-        interceptors: self.interceptors?.makeShieldStakingInterceptors() ?? [],
-        userFunction: self.shieldStaking(request:context:)
-      )
-
-    case "ShieldStakingRate":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryShieldStakingRateRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryShieldStakingRateResponse>(),
-        interceptors: self.interceptors?.makeShieldStakingRateInterceptors() ?? [],
-        userFunction: self.shieldStakingRate(request:context:)
-      )
-
-    case "Reimbursement":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryReimbursementRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryReimbursementResponse>(),
-        interceptors: self.interceptors?.makeReimbursementInterceptors() ?? [],
-        userFunction: self.reimbursement(request:context:)
-      )
-
-    case "Reimbursements":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryReimbursementsRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryReimbursementsResponse>(),
-        interceptors: self.interceptors?.makeReimbursementsInterceptors() ?? [],
-        userFunction: self.reimbursements(request:context:)
       )
 
     default:
@@ -1423,41 +401,6 @@ internal protocol Shentu_Shield_V1alpha1_QueryAsyncProvider: CallHandlerProvider
   static var serviceDescriptor: GRPCServiceDescriptor { get }
   var interceptors: Shentu_Shield_V1alpha1_QueryServerInterceptorFactoryProtocol? { get }
 
-  @Sendable func pool(
-    request: Shentu_Shield_V1alpha1_QueryPoolRequest,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_QueryPoolResponse
-
-  @Sendable func sponsor(
-    request: Shentu_Shield_V1alpha1_QuerySponsorRequest,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_QuerySponsorResponse
-
-  @Sendable func pools(
-    request: Shentu_Shield_V1alpha1_QueryPoolsRequest,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_QueryPoolsResponse
-
-  @Sendable func poolPurchaseLists(
-    request: Shentu_Shield_V1alpha1_QueryPoolPurchaseListsRequest,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_QueryPurchaseListsResponse
-
-  @Sendable func purchaseLists(
-    request: Shentu_Shield_V1alpha1_QueryPurchaseListsRequest,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_QueryPurchaseListsResponse
-
-  @Sendable func purchaseList(
-    request: Shentu_Shield_V1alpha1_QueryPurchaseListRequest,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_QueryPurchaseListResponse
-
-  @Sendable func purchases(
-    request: Shentu_Shield_V1alpha1_QueryPurchasesRequest,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_QueryPurchasesResponse
-
   @Sendable func provider(
     request: Shentu_Shield_V1alpha1_QueryProviderRequest,
     context: GRPCAsyncServerCallContext
@@ -1468,45 +411,10 @@ internal protocol Shentu_Shield_V1alpha1_QueryAsyncProvider: CallHandlerProvider
     context: GRPCAsyncServerCallContext
   ) async throws -> Shentu_Shield_V1alpha1_QueryProvidersResponse
 
-  @Sendable func poolParams(
-    request: Shentu_Shield_V1alpha1_QueryPoolParamsRequest,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_QueryPoolParamsResponse
-
-  @Sendable func claimParams(
-    request: Shentu_Shield_V1alpha1_QueryClaimParamsRequest,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_QueryClaimParamsResponse
-
-  @Sendable func distrParams(
-    request: Shentu_Shield_V1alpha1_QueryDistrParamsRequest,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_QueryDistrParamsResponse
-
   @Sendable func shieldStatus(
     request: Shentu_Shield_V1alpha1_QueryShieldStatusRequest,
     context: GRPCAsyncServerCallContext
   ) async throws -> Shentu_Shield_V1alpha1_QueryShieldStatusResponse
-
-  @Sendable func shieldStaking(
-    request: Shentu_Shield_V1alpha1_QueryShieldStakingRequest,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_QueryShieldStakingResponse
-
-  @Sendable func shieldStakingRate(
-    request: Shentu_Shield_V1alpha1_QueryShieldStakingRateRequest,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_QueryShieldStakingRateResponse
-
-  @Sendable func reimbursement(
-    request: Shentu_Shield_V1alpha1_QueryReimbursementRequest,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_QueryReimbursementResponse
-
-  @Sendable func reimbursements(
-    request: Shentu_Shield_V1alpha1_QueryReimbursementsRequest,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_QueryReimbursementsResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -1528,69 +436,6 @@ extension Shentu_Shield_V1alpha1_QueryAsyncProvider {
     context: CallHandlerContext
   ) -> GRPCServerHandlerProtocol? {
     switch name {
-    case "Pool":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryPoolRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryPoolResponse>(),
-        interceptors: self.interceptors?.makePoolInterceptors() ?? [],
-        wrapping: self.pool(request:context:)
-      )
-
-    case "Sponsor":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QuerySponsorRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QuerySponsorResponse>(),
-        interceptors: self.interceptors?.makeSponsorInterceptors() ?? [],
-        wrapping: self.sponsor(request:context:)
-      )
-
-    case "Pools":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryPoolsRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryPoolsResponse>(),
-        interceptors: self.interceptors?.makePoolsInterceptors() ?? [],
-        wrapping: self.pools(request:context:)
-      )
-
-    case "PoolPurchaseLists":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryPoolPurchaseListsRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryPurchaseListsResponse>(),
-        interceptors: self.interceptors?.makePoolPurchaseListsInterceptors() ?? [],
-        wrapping: self.poolPurchaseLists(request:context:)
-      )
-
-    case "PurchaseLists":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryPurchaseListsRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryPurchaseListsResponse>(),
-        interceptors: self.interceptors?.makePurchaseListsInterceptors() ?? [],
-        wrapping: self.purchaseLists(request:context:)
-      )
-
-    case "PurchaseList":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryPurchaseListRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryPurchaseListResponse>(),
-        interceptors: self.interceptors?.makePurchaseListInterceptors() ?? [],
-        wrapping: self.purchaseList(request:context:)
-      )
-
-    case "Purchases":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryPurchasesRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryPurchasesResponse>(),
-        interceptors: self.interceptors?.makePurchasesInterceptors() ?? [],
-        wrapping: self.purchases(request:context:)
-      )
-
     case "Provider":
       return GRPCAsyncServerHandler(
         context: context,
@@ -1609,33 +454,6 @@ extension Shentu_Shield_V1alpha1_QueryAsyncProvider {
         wrapping: self.providers(request:context:)
       )
 
-    case "PoolParams":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryPoolParamsRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryPoolParamsResponse>(),
-        interceptors: self.interceptors?.makePoolParamsInterceptors() ?? [],
-        wrapping: self.poolParams(request:context:)
-      )
-
-    case "ClaimParams":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryClaimParamsRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryClaimParamsResponse>(),
-        interceptors: self.interceptors?.makeClaimParamsInterceptors() ?? [],
-        wrapping: self.claimParams(request:context:)
-      )
-
-    case "DistrParams":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryDistrParamsRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryDistrParamsResponse>(),
-        interceptors: self.interceptors?.makeDistrParamsInterceptors() ?? [],
-        wrapping: self.distrParams(request:context:)
-      )
-
     case "ShieldStatus":
       return GRPCAsyncServerHandler(
         context: context,
@@ -1643,42 +461,6 @@ extension Shentu_Shield_V1alpha1_QueryAsyncProvider {
         responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryShieldStatusResponse>(),
         interceptors: self.interceptors?.makeShieldStatusInterceptors() ?? [],
         wrapping: self.shieldStatus(request:context:)
-      )
-
-    case "ShieldStaking":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryShieldStakingRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryShieldStakingResponse>(),
-        interceptors: self.interceptors?.makeShieldStakingInterceptors() ?? [],
-        wrapping: self.shieldStaking(request:context:)
-      )
-
-    case "ShieldStakingRate":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryShieldStakingRateRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryShieldStakingRateResponse>(),
-        interceptors: self.interceptors?.makeShieldStakingRateInterceptors() ?? [],
-        wrapping: self.shieldStakingRate(request:context:)
-      )
-
-    case "Reimbursement":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryReimbursementRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryReimbursementResponse>(),
-        interceptors: self.interceptors?.makeReimbursementInterceptors() ?? [],
-        wrapping: self.reimbursement(request:context:)
-      )
-
-    case "Reimbursements":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_QueryReimbursementsRequest>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_QueryReimbursementsResponse>(),
-        interceptors: self.interceptors?.makeReimbursementsInterceptors() ?? [],
-        wrapping: self.reimbursements(request:context:)
       )
 
     default:
@@ -1689,34 +471,6 @@ extension Shentu_Shield_V1alpha1_QueryAsyncProvider {
 
 internal protocol Shentu_Shield_V1alpha1_QueryServerInterceptorFactoryProtocol {
 
-  /// - Returns: Interceptors to use when handling 'pool'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makePoolInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_QueryPoolRequest, Shentu_Shield_V1alpha1_QueryPoolResponse>]
-
-  /// - Returns: Interceptors to use when handling 'sponsor'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeSponsorInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_QuerySponsorRequest, Shentu_Shield_V1alpha1_QuerySponsorResponse>]
-
-  /// - Returns: Interceptors to use when handling 'pools'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makePoolsInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_QueryPoolsRequest, Shentu_Shield_V1alpha1_QueryPoolsResponse>]
-
-  /// - Returns: Interceptors to use when handling 'poolPurchaseLists'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makePoolPurchaseListsInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_QueryPoolPurchaseListsRequest, Shentu_Shield_V1alpha1_QueryPurchaseListsResponse>]
-
-  /// - Returns: Interceptors to use when handling 'purchaseLists'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makePurchaseListsInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_QueryPurchaseListsRequest, Shentu_Shield_V1alpha1_QueryPurchaseListsResponse>]
-
-  /// - Returns: Interceptors to use when handling 'purchaseList'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makePurchaseListInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_QueryPurchaseListRequest, Shentu_Shield_V1alpha1_QueryPurchaseListResponse>]
-
-  /// - Returns: Interceptors to use when handling 'purchases'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makePurchasesInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_QueryPurchasesRequest, Shentu_Shield_V1alpha1_QueryPurchasesResponse>]
-
   /// - Returns: Interceptors to use when handling 'provider'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeProviderInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_QueryProviderRequest, Shentu_Shield_V1alpha1_QueryProviderResponse>]
@@ -1725,37 +479,9 @@ internal protocol Shentu_Shield_V1alpha1_QueryServerInterceptorFactoryProtocol {
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeProvidersInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_QueryProvidersRequest, Shentu_Shield_V1alpha1_QueryProvidersResponse>]
 
-  /// - Returns: Interceptors to use when handling 'poolParams'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makePoolParamsInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_QueryPoolParamsRequest, Shentu_Shield_V1alpha1_QueryPoolParamsResponse>]
-
-  /// - Returns: Interceptors to use when handling 'claimParams'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeClaimParamsInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_QueryClaimParamsRequest, Shentu_Shield_V1alpha1_QueryClaimParamsResponse>]
-
-  /// - Returns: Interceptors to use when handling 'distrParams'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeDistrParamsInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_QueryDistrParamsRequest, Shentu_Shield_V1alpha1_QueryDistrParamsResponse>]
-
   /// - Returns: Interceptors to use when handling 'shieldStatus'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeShieldStatusInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_QueryShieldStatusRequest, Shentu_Shield_V1alpha1_QueryShieldStatusResponse>]
-
-  /// - Returns: Interceptors to use when handling 'shieldStaking'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeShieldStakingInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_QueryShieldStakingRequest, Shentu_Shield_V1alpha1_QueryShieldStakingResponse>]
-
-  /// - Returns: Interceptors to use when handling 'shieldStakingRate'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeShieldStakingRateInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_QueryShieldStakingRateRequest, Shentu_Shield_V1alpha1_QueryShieldStakingRateResponse>]
-
-  /// - Returns: Interceptors to use when handling 'reimbursement'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeReimbursementInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_QueryReimbursementRequest, Shentu_Shield_V1alpha1_QueryReimbursementResponse>]
-
-  /// - Returns: Interceptors to use when handling 'reimbursements'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeReimbursementsInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_QueryReimbursementsRequest, Shentu_Shield_V1alpha1_QueryReimbursementsResponse>]
 }
 
 internal enum Shentu_Shield_V1alpha1_QueryServerMetadata {
@@ -1763,69 +489,13 @@ internal enum Shentu_Shield_V1alpha1_QueryServerMetadata {
     name: "Query",
     fullName: "shentu.shield.v1alpha1.Query",
     methods: [
-      Shentu_Shield_V1alpha1_QueryServerMetadata.Methods.pool,
-      Shentu_Shield_V1alpha1_QueryServerMetadata.Methods.sponsor,
-      Shentu_Shield_V1alpha1_QueryServerMetadata.Methods.pools,
-      Shentu_Shield_V1alpha1_QueryServerMetadata.Methods.poolPurchaseLists,
-      Shentu_Shield_V1alpha1_QueryServerMetadata.Methods.purchaseLists,
-      Shentu_Shield_V1alpha1_QueryServerMetadata.Methods.purchaseList,
-      Shentu_Shield_V1alpha1_QueryServerMetadata.Methods.purchases,
       Shentu_Shield_V1alpha1_QueryServerMetadata.Methods.provider,
       Shentu_Shield_V1alpha1_QueryServerMetadata.Methods.providers,
-      Shentu_Shield_V1alpha1_QueryServerMetadata.Methods.poolParams,
-      Shentu_Shield_V1alpha1_QueryServerMetadata.Methods.claimParams,
-      Shentu_Shield_V1alpha1_QueryServerMetadata.Methods.distrParams,
       Shentu_Shield_V1alpha1_QueryServerMetadata.Methods.shieldStatus,
-      Shentu_Shield_V1alpha1_QueryServerMetadata.Methods.shieldStaking,
-      Shentu_Shield_V1alpha1_QueryServerMetadata.Methods.shieldStakingRate,
-      Shentu_Shield_V1alpha1_QueryServerMetadata.Methods.reimbursement,
-      Shentu_Shield_V1alpha1_QueryServerMetadata.Methods.reimbursements,
     ]
   )
 
   internal enum Methods {
-    internal static let pool = GRPCMethodDescriptor(
-      name: "Pool",
-      path: "/shentu.shield.v1alpha1.Query/Pool",
-      type: GRPCCallType.unary
-    )
-
-    internal static let sponsor = GRPCMethodDescriptor(
-      name: "Sponsor",
-      path: "/shentu.shield.v1alpha1.Query/Sponsor",
-      type: GRPCCallType.unary
-    )
-
-    internal static let pools = GRPCMethodDescriptor(
-      name: "Pools",
-      path: "/shentu.shield.v1alpha1.Query/Pools",
-      type: GRPCCallType.unary
-    )
-
-    internal static let poolPurchaseLists = GRPCMethodDescriptor(
-      name: "PoolPurchaseLists",
-      path: "/shentu.shield.v1alpha1.Query/PoolPurchaseLists",
-      type: GRPCCallType.unary
-    )
-
-    internal static let purchaseLists = GRPCMethodDescriptor(
-      name: "PurchaseLists",
-      path: "/shentu.shield.v1alpha1.Query/PurchaseLists",
-      type: GRPCCallType.unary
-    )
-
-    internal static let purchaseList = GRPCMethodDescriptor(
-      name: "PurchaseList",
-      path: "/shentu.shield.v1alpha1.Query/PurchaseList",
-      type: GRPCCallType.unary
-    )
-
-    internal static let purchases = GRPCMethodDescriptor(
-      name: "Purchases",
-      path: "/shentu.shield.v1alpha1.Query/Purchases",
-      type: GRPCCallType.unary
-    )
-
     internal static let provider = GRPCMethodDescriptor(
       name: "Provider",
       path: "/shentu.shield.v1alpha1.Query/Provider",
@@ -1838,51 +508,9 @@ internal enum Shentu_Shield_V1alpha1_QueryServerMetadata {
       type: GRPCCallType.unary
     )
 
-    internal static let poolParams = GRPCMethodDescriptor(
-      name: "PoolParams",
-      path: "/shentu.shield.v1alpha1.Query/PoolParams",
-      type: GRPCCallType.unary
-    )
-
-    internal static let claimParams = GRPCMethodDescriptor(
-      name: "ClaimParams",
-      path: "/shentu.shield.v1alpha1.Query/ClaimParams",
-      type: GRPCCallType.unary
-    )
-
-    internal static let distrParams = GRPCMethodDescriptor(
-      name: "DistrParams",
-      path: "/shentu.shield.v1alpha1.Query/DistrParams",
-      type: GRPCCallType.unary
-    )
-
     internal static let shieldStatus = GRPCMethodDescriptor(
       name: "ShieldStatus",
       path: "/shentu.shield.v1alpha1.Query/ShieldStatus",
-      type: GRPCCallType.unary
-    )
-
-    internal static let shieldStaking = GRPCMethodDescriptor(
-      name: "ShieldStaking",
-      path: "/shentu.shield.v1alpha1.Query/ShieldStaking",
-      type: GRPCCallType.unary
-    )
-
-    internal static let shieldStakingRate = GRPCMethodDescriptor(
-      name: "ShieldStakingRate",
-      path: "/shentu.shield.v1alpha1.Query/ShieldStakingRate",
-      type: GRPCCallType.unary
-    )
-
-    internal static let reimbursement = GRPCMethodDescriptor(
-      name: "Reimbursement",
-      path: "/shentu.shield.v1alpha1.Query/Reimbursement",
-      type: GRPCCallType.unary
-    )
-
-    internal static let reimbursements = GRPCMethodDescriptor(
-      name: "Reimbursements",
-      path: "/shentu.shield.v1alpha1.Query/Reimbursements",
       type: GRPCCallType.unary
     )
   }

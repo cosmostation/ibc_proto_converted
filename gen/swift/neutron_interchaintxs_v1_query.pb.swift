@@ -21,7 +21,7 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// QueryParamsRequest is request type for the Query/Params RPC method.
-struct Neutron_Interchaintxs_QueryParamsRequest {
+struct Neutron_Interchaintxs_V1_QueryParamsRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -32,14 +32,14 @@ struct Neutron_Interchaintxs_QueryParamsRequest {
 }
 
 /// QueryParamsResponse is response type for the Query/Params RPC method.
-struct Neutron_Interchaintxs_QueryParamsResponse {
+struct Neutron_Interchaintxs_V1_QueryParamsResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// params holds all the parameters of this module.
-  var params: Neutron_Interchaintxs_Params {
-    get {return _params ?? Neutron_Interchaintxs_Params()}
+  var params: Neutron_Interchaintxs_V1_Params {
+    get {return _params ?? Neutron_Interchaintxs_V1_Params()}
     set {_params = newValue}
   }
   /// Returns true if `params` has been explicitly set.
@@ -51,10 +51,10 @@ struct Neutron_Interchaintxs_QueryParamsResponse {
 
   init() {}
 
-  fileprivate var _params: Neutron_Interchaintxs_Params? = nil
+  fileprivate var _params: Neutron_Interchaintxs_V1_Params? = nil
 }
 
-struct Neutron_Interchaintxs_QueryInterchainAccountAddressRequest {
+struct Neutron_Interchaintxs_V1_QueryInterchainAccountAddressRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -77,7 +77,7 @@ struct Neutron_Interchaintxs_QueryInterchainAccountAddressRequest {
 }
 
 /// Query response for an interchain account address
-struct Neutron_Interchaintxs_QueryInterchainAccountAddressResponse {
+struct Neutron_Interchaintxs_V1_QueryInterchainAccountAddressResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -91,17 +91,17 @@ struct Neutron_Interchaintxs_QueryInterchainAccountAddressResponse {
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
-extension Neutron_Interchaintxs_QueryParamsRequest: @unchecked Sendable {}
-extension Neutron_Interchaintxs_QueryParamsResponse: @unchecked Sendable {}
-extension Neutron_Interchaintxs_QueryInterchainAccountAddressRequest: @unchecked Sendable {}
-extension Neutron_Interchaintxs_QueryInterchainAccountAddressResponse: @unchecked Sendable {}
+extension Neutron_Interchaintxs_V1_QueryParamsRequest: @unchecked Sendable {}
+extension Neutron_Interchaintxs_V1_QueryParamsResponse: @unchecked Sendable {}
+extension Neutron_Interchaintxs_V1_QueryInterchainAccountAddressRequest: @unchecked Sendable {}
+extension Neutron_Interchaintxs_V1_QueryInterchainAccountAddressResponse: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
-fileprivate let _protobuf_package = "neutron.interchaintxs"
+fileprivate let _protobuf_package = "neutron.interchaintxs.v1"
 
-extension Neutron_Interchaintxs_QueryParamsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+extension Neutron_Interchaintxs_V1_QueryParamsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".QueryParamsRequest"
   static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
@@ -114,13 +114,13 @@ extension Neutron_Interchaintxs_QueryParamsRequest: SwiftProtobuf.Message, Swift
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Neutron_Interchaintxs_QueryParamsRequest, rhs: Neutron_Interchaintxs_QueryParamsRequest) -> Bool {
+  static func ==(lhs: Neutron_Interchaintxs_V1_QueryParamsRequest, rhs: Neutron_Interchaintxs_V1_QueryParamsRequest) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
-extension Neutron_Interchaintxs_QueryParamsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+extension Neutron_Interchaintxs_V1_QueryParamsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".QueryParamsResponse"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "params"),
@@ -149,14 +149,14 @@ extension Neutron_Interchaintxs_QueryParamsResponse: SwiftProtobuf.Message, Swif
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Neutron_Interchaintxs_QueryParamsResponse, rhs: Neutron_Interchaintxs_QueryParamsResponse) -> Bool {
+  static func ==(lhs: Neutron_Interchaintxs_V1_QueryParamsResponse, rhs: Neutron_Interchaintxs_V1_QueryParamsResponse) -> Bool {
     if lhs._params != rhs._params {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
-extension Neutron_Interchaintxs_QueryInterchainAccountAddressRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+extension Neutron_Interchaintxs_V1_QueryInterchainAccountAddressRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".QueryInterchainAccountAddressRequest"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "owner_address"),
@@ -191,7 +191,7 @@ extension Neutron_Interchaintxs_QueryInterchainAccountAddressRequest: SwiftProto
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Neutron_Interchaintxs_QueryInterchainAccountAddressRequest, rhs: Neutron_Interchaintxs_QueryInterchainAccountAddressRequest) -> Bool {
+  static func ==(lhs: Neutron_Interchaintxs_V1_QueryInterchainAccountAddressRequest, rhs: Neutron_Interchaintxs_V1_QueryInterchainAccountAddressRequest) -> Bool {
     if lhs.ownerAddress != rhs.ownerAddress {return false}
     if lhs.interchainAccountID != rhs.interchainAccountID {return false}
     if lhs.connectionID != rhs.connectionID {return false}
@@ -200,7 +200,7 @@ extension Neutron_Interchaintxs_QueryInterchainAccountAddressRequest: SwiftProto
   }
 }
 
-extension Neutron_Interchaintxs_QueryInterchainAccountAddressResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+extension Neutron_Interchaintxs_V1_QueryInterchainAccountAddressResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".QueryInterchainAccountAddressResponse"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "interchain_account_address"),
@@ -225,7 +225,7 @@ extension Neutron_Interchaintxs_QueryInterchainAccountAddressResponse: SwiftProt
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Neutron_Interchaintxs_QueryInterchainAccountAddressResponse, rhs: Neutron_Interchaintxs_QueryInterchainAccountAddressResponse) -> Bool {
+  static func ==(lhs: Neutron_Interchaintxs_V1_QueryInterchainAccountAddressResponse, rhs: Neutron_Interchaintxs_V1_QueryInterchainAccountAddressResponse) -> Bool {
     if lhs.interchainAccountAddress != rhs.interchainAccountAddress {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

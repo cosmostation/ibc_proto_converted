@@ -18,6 +18,37 @@ public final class MsgGrpc {
   public static final String SERVICE_NAME = "neutron.cron.Msg";
 
   // Static method descriptors that strictly reflect the proto.
+  private static volatile io.grpc.MethodDescriptor<com.neutron.cron.TxProto.MsgUpdateParams,
+      com.neutron.cron.TxProto.MsgUpdateParamsResponse> getUpdateParamsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateParams",
+      requestType = com.neutron.cron.TxProto.MsgUpdateParams.class,
+      responseType = com.neutron.cron.TxProto.MsgUpdateParamsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.neutron.cron.TxProto.MsgUpdateParams,
+      com.neutron.cron.TxProto.MsgUpdateParamsResponse> getUpdateParamsMethod() {
+    io.grpc.MethodDescriptor<com.neutron.cron.TxProto.MsgUpdateParams, com.neutron.cron.TxProto.MsgUpdateParamsResponse> getUpdateParamsMethod;
+    if ((getUpdateParamsMethod = MsgGrpc.getUpdateParamsMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getUpdateParamsMethod = MsgGrpc.getUpdateParamsMethod) == null) {
+          MsgGrpc.getUpdateParamsMethod = getUpdateParamsMethod =
+              io.grpc.MethodDescriptor.<com.neutron.cron.TxProto.MsgUpdateParams, com.neutron.cron.TxProto.MsgUpdateParamsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateParams"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.neutron.cron.TxProto.MsgUpdateParams.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.neutron.cron.TxProto.MsgUpdateParamsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("UpdateParams"))
+              .build();
+        }
+      }
+    }
+    return getUpdateParamsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -68,6 +99,16 @@ public final class MsgGrpc {
    * </pre>
    */
   public interface AsyncService {
+
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # proto/tx/rpc
+     * </pre>
+     */
+    default void updateParams(com.neutron.cron.TxProto.MsgUpdateParams request,
+        io.grpc.stub.StreamObserver<com.neutron.cron.TxProto.MsgUpdateParamsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateParamsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -102,6 +143,17 @@ public final class MsgGrpc {
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MsgStub(channel, callOptions);
     }
+
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # proto/tx/rpc
+     * </pre>
+     */
+    public void updateParams(com.neutron.cron.TxProto.MsgUpdateParams request,
+        io.grpc.stub.StreamObserver<com.neutron.cron.TxProto.MsgUpdateParamsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateParamsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -121,6 +173,16 @@ public final class MsgGrpc {
     protected MsgBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MsgBlockingStub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # proto/tx/rpc
+     * </pre>
+     */
+    public com.neutron.cron.TxProto.MsgUpdateParamsResponse updateParams(com.neutron.cron.TxProto.MsgUpdateParams request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateParamsMethod(), getCallOptions(), request);
     }
   }
 
@@ -142,8 +204,20 @@ public final class MsgGrpc {
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MsgFutureStub(channel, callOptions);
     }
+
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # proto/tx/rpc
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.neutron.cron.TxProto.MsgUpdateParamsResponse> updateParams(
+        com.neutron.cron.TxProto.MsgUpdateParams request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateParamsMethod(), getCallOptions()), request);
+    }
   }
 
+  private static final int METHODID_UPDATE_PARAMS = 0;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -162,6 +236,10 @@ public final class MsgGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_UPDATE_PARAMS:
+          serviceImpl.updateParams((com.neutron.cron.TxProto.MsgUpdateParams) request,
+              (io.grpc.stub.StreamObserver<com.neutron.cron.TxProto.MsgUpdateParamsResponse>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -180,6 +258,13 @@ public final class MsgGrpc {
 
   public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
     return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getUpdateParamsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.neutron.cron.TxProto.MsgUpdateParams,
+              com.neutron.cron.TxProto.MsgUpdateParamsResponse>(
+                service, METHODID_UPDATE_PARAMS)))
         .build();
   }
 
@@ -228,6 +313,7 @@ public final class MsgGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new MsgFileDescriptorSupplier())
+              .addMethod(getUpdateParamsMethod())
               .build();
         }
       }

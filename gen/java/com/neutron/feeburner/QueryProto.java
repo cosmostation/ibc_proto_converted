@@ -2134,9 +2134,9 @@ public final class QueryProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\035neutron/feeburner/query.proto\022\021neutron" +
-      ".feeburner\032\024gogoproto/gogo.proto\032\034google" +
-      "/api/annotations.proto\032*cosmos/base/quer" +
-      "y/v1beta1/pagination.proto\032\036neutron/feeb" +
+      ".feeburner\032*cosmos/base/query/v1beta1/pa" +
+      "gination.proto\032\024gogoproto/gogo.proto\032\034go" +
+      "ogle/api/annotations.proto\032\036neutron/feeb" +
       "urner/params.proto\0324neutron/feeburner/to" +
       "tal_burned_neutrons_amount.proto\"\024\n\022Quer" +
       "yParamsRequest\"N\n\023QueryParamsResponse\0227\n" +
@@ -2154,19 +2154,19 @@ public final class QueryProto {
       "QueryTotalBurnedNeutronsAmountRequest\0329." +
       "neutron.feeburner.QueryTotalBurnedNeutro" +
       "nsAmountResponse\"7\202\323\344\223\0021\022//neutron/feebu" +
-      "rner/total_burned_neutrons_amountB\270\001\n\025co" +
-      "m.neutron.feeburnerB\nQueryProtoZ0github." +
-      "com/neutron-org/neutron/x/feeburner/type" +
-      "s\242\002\003NFX\252\002\021Neutron.Feeburner\312\002\021Neutron\\Fe" +
-      "eburner\342\002\035Neutron\\Feeburner\\GPBMetadata\352" +
-      "\002\022Neutron::Feeburnerb\006proto3"
+      "rner/total_burned_neutrons_amountB\273\001\n\025co" +
+      "m.neutron.feeburnerB\nQueryProtoZ3github." +
+      "com/neutron-org/neutron/v4/x/feeburner/t" +
+      "ypes\242\002\003NFX\252\002\021Neutron.Feeburner\312\002\021Neutron" +
+      "\\Feeburner\342\002\035Neutron\\Feeburner\\GPBMetada" +
+      "ta\352\002\022Neutron::Feeburnerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor(),
           com.gogoproto.GogoProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor(),
           com.neutron.feeburner.ParamsProto.getDescriptor(),
           com.neutron.feeburner.TotalBurnedNeutronsAmountProto.getDescriptor(),
         });
@@ -2200,9 +2200,9 @@ public final class QueryProto {
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor();
     com.gogoproto.GogoProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor();
     com.neutron.feeburner.ParamsProto.getDescriptor();
     com.neutron.feeburner.TotalBurnedNeutronsAmountProto.getDescriptor();
   }

@@ -52,6 +52,11 @@ internal protocol Neutron_Interchainqueries_MsgClientProtocol: GRPCClient {
     _ request: Neutron_Interchainqueries_MsgUpdateInterchainQueryRequest,
     callOptions: CallOptions?
   ) -> UnaryCall<Neutron_Interchainqueries_MsgUpdateInterchainQueryRequest, Neutron_Interchainqueries_MsgUpdateInterchainQueryResponse>
+
+  func updateParams(
+    _ request: Neutron_Interchainqueries_MsgUpdateParams,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Neutron_Interchainqueries_MsgUpdateParams, Neutron_Interchainqueries_MsgUpdateParamsResponse>
 }
 
 extension Neutron_Interchainqueries_MsgClientProtocol {
@@ -128,6 +133,24 @@ extension Neutron_Interchainqueries_MsgClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeUpdateInterchainQueryInterceptors() ?? []
+    )
+  }
+
+  /// Unary call to UpdateParams
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to UpdateParams.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func updateParams(
+    _ request: Neutron_Interchainqueries_MsgUpdateParams,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Neutron_Interchainqueries_MsgUpdateParams, Neutron_Interchainqueries_MsgUpdateParamsResponse> {
+    return self.makeUnaryCall(
+      path: Neutron_Interchainqueries_MsgClientMetadata.Methods.updateParams.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? []
     )
   }
 }
@@ -214,6 +237,11 @@ internal protocol Neutron_Interchainqueries_MsgAsyncClientProtocol: GRPCClient {
     _ request: Neutron_Interchainqueries_MsgUpdateInterchainQueryRequest,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Neutron_Interchainqueries_MsgUpdateInterchainQueryRequest, Neutron_Interchainqueries_MsgUpdateInterchainQueryResponse>
+
+  func makeUpdateParamsCall(
+    _ request: Neutron_Interchainqueries_MsgUpdateParams,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Neutron_Interchainqueries_MsgUpdateParams, Neutron_Interchainqueries_MsgUpdateParamsResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -273,6 +301,18 @@ extension Neutron_Interchainqueries_MsgAsyncClientProtocol {
       interceptors: self.interceptors?.makeUpdateInterchainQueryInterceptors() ?? []
     )
   }
+
+  internal func makeUpdateParamsCall(
+    _ request: Neutron_Interchainqueries_MsgUpdateParams,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Neutron_Interchainqueries_MsgUpdateParams, Neutron_Interchainqueries_MsgUpdateParamsResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Neutron_Interchainqueries_MsgClientMetadata.Methods.updateParams.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -324,6 +364,18 @@ extension Neutron_Interchainqueries_MsgAsyncClientProtocol {
       interceptors: self.interceptors?.makeUpdateInterchainQueryInterceptors() ?? []
     )
   }
+
+  internal func updateParams(
+    _ request: Neutron_Interchainqueries_MsgUpdateParams,
+    callOptions: CallOptions? = nil
+  ) async throws -> Neutron_Interchainqueries_MsgUpdateParamsResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Neutron_Interchainqueries_MsgClientMetadata.Methods.updateParams.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -356,6 +408,9 @@ internal protocol Neutron_Interchainqueries_MsgClientInterceptorFactoryProtocol:
 
   /// - Returns: Interceptors to use when invoking 'updateInterchainQuery'.
   func makeUpdateInterchainQueryInterceptors() -> [ClientInterceptor<Neutron_Interchainqueries_MsgUpdateInterchainQueryRequest, Neutron_Interchainqueries_MsgUpdateInterchainQueryResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'updateParams'.
+  func makeUpdateParamsInterceptors() -> [ClientInterceptor<Neutron_Interchainqueries_MsgUpdateParams, Neutron_Interchainqueries_MsgUpdateParamsResponse>]
 }
 
 internal enum Neutron_Interchainqueries_MsgClientMetadata {
@@ -367,6 +422,7 @@ internal enum Neutron_Interchainqueries_MsgClientMetadata {
       Neutron_Interchainqueries_MsgClientMetadata.Methods.submitQueryResult,
       Neutron_Interchainqueries_MsgClientMetadata.Methods.removeInterchainQuery,
       Neutron_Interchainqueries_MsgClientMetadata.Methods.updateInterchainQuery,
+      Neutron_Interchainqueries_MsgClientMetadata.Methods.updateParams,
     ]
   )
 
@@ -394,6 +450,12 @@ internal enum Neutron_Interchainqueries_MsgClientMetadata {
       path: "/neutron.interchainqueries.Msg/UpdateInterchainQuery",
       type: GRPCCallType.unary
     )
+
+    internal static let updateParams = GRPCMethodDescriptor(
+      name: "UpdateParams",
+      path: "/neutron.interchainqueries.Msg/UpdateParams",
+      type: GRPCCallType.unary
+    )
   }
 }
 
@@ -410,6 +472,8 @@ internal protocol Neutron_Interchainqueries_MsgProvider: CallHandlerProvider {
   func removeInterchainQuery(request: Neutron_Interchainqueries_MsgRemoveInterchainQueryRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Neutron_Interchainqueries_MsgRemoveInterchainQueryResponse>
 
   func updateInterchainQuery(request: Neutron_Interchainqueries_MsgUpdateInterchainQueryRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Neutron_Interchainqueries_MsgUpdateInterchainQueryResponse>
+
+  func updateParams(request: Neutron_Interchainqueries_MsgUpdateParams, context: StatusOnlyCallContext) -> EventLoopFuture<Neutron_Interchainqueries_MsgUpdateParamsResponse>
 }
 
 extension Neutron_Interchainqueries_MsgProvider {
@@ -460,6 +524,15 @@ extension Neutron_Interchainqueries_MsgProvider {
         userFunction: self.updateInterchainQuery(request:context:)
       )
 
+    case "UpdateParams":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Neutron_Interchainqueries_MsgUpdateParams>(),
+        responseSerializer: ProtobufSerializer<Neutron_Interchainqueries_MsgUpdateParamsResponse>(),
+        interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? [],
+        userFunction: self.updateParams(request:context:)
+      )
+
     default:
       return nil
     }
@@ -493,6 +566,11 @@ internal protocol Neutron_Interchainqueries_MsgAsyncProvider: CallHandlerProvide
     request: Neutron_Interchainqueries_MsgUpdateInterchainQueryRequest,
     context: GRPCAsyncServerCallContext
   ) async throws -> Neutron_Interchainqueries_MsgUpdateInterchainQueryResponse
+
+  @Sendable func updateParams(
+    request: Neutron_Interchainqueries_MsgUpdateParams,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Neutron_Interchainqueries_MsgUpdateParamsResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -550,6 +628,15 @@ extension Neutron_Interchainqueries_MsgAsyncProvider {
         wrapping: self.updateInterchainQuery(request:context:)
       )
 
+    case "UpdateParams":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Neutron_Interchainqueries_MsgUpdateParams>(),
+        responseSerializer: ProtobufSerializer<Neutron_Interchainqueries_MsgUpdateParamsResponse>(),
+        interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? [],
+        wrapping: self.updateParams(request:context:)
+      )
+
     default:
       return nil
     }
@@ -573,6 +660,10 @@ internal protocol Neutron_Interchainqueries_MsgServerInterceptorFactoryProtocol 
   /// - Returns: Interceptors to use when handling 'updateInterchainQuery'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeUpdateInterchainQueryInterceptors() -> [ServerInterceptor<Neutron_Interchainqueries_MsgUpdateInterchainQueryRequest, Neutron_Interchainqueries_MsgUpdateInterchainQueryResponse>]
+
+  /// - Returns: Interceptors to use when handling 'updateParams'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeUpdateParamsInterceptors() -> [ServerInterceptor<Neutron_Interchainqueries_MsgUpdateParams, Neutron_Interchainqueries_MsgUpdateParamsResponse>]
 }
 
 internal enum Neutron_Interchainqueries_MsgServerMetadata {
@@ -584,6 +675,7 @@ internal enum Neutron_Interchainqueries_MsgServerMetadata {
       Neutron_Interchainqueries_MsgServerMetadata.Methods.submitQueryResult,
       Neutron_Interchainqueries_MsgServerMetadata.Methods.removeInterchainQuery,
       Neutron_Interchainqueries_MsgServerMetadata.Methods.updateInterchainQuery,
+      Neutron_Interchainqueries_MsgServerMetadata.Methods.updateParams,
     ]
   )
 
@@ -609,6 +701,12 @@ internal enum Neutron_Interchainqueries_MsgServerMetadata {
     internal static let updateInterchainQuery = GRPCMethodDescriptor(
       name: "UpdateInterchainQuery",
       path: "/neutron.interchainqueries.Msg/UpdateInterchainQuery",
+      type: GRPCCallType.unary
+    )
+
+    internal static let updateParams = GRPCMethodDescriptor(
+      name: "UpdateParams",
+      path: "/neutron.interchainqueries.Msg/UpdateParams",
       type: GRPCCallType.unary
     )
   }

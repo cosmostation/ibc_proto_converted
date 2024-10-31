@@ -17,6 +17,12 @@ public final class ParamsProto {
   public interface ParamsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:neutron.contractmanager.Params)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 sudo_call_gas_limit = 1 [json_name = "sudoCallGasLimit"];</code>
+     * @return The sudoCallGasLimit.
+     */
+    long getSudoCallGasLimit();
   }
   /**
    * <pre>
@@ -57,6 +63,17 @@ public final class ParamsProto {
               com.neutron.contractmanager.ParamsProto.Params.class, com.neutron.contractmanager.ParamsProto.Params.Builder.class);
     }
 
+    public static final int SUDO_CALL_GAS_LIMIT_FIELD_NUMBER = 1;
+    private long sudoCallGasLimit_ = 0L;
+    /**
+     * <code>uint64 sudo_call_gas_limit = 1 [json_name = "sudoCallGasLimit"];</code>
+     * @return The sudoCallGasLimit.
+     */
+    @java.lang.Override
+    public long getSudoCallGasLimit() {
+      return sudoCallGasLimit_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -71,6 +88,9 @@ public final class ParamsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (sudoCallGasLimit_ != 0L) {
+        output.writeUInt64(1, sudoCallGasLimit_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -80,6 +100,10 @@ public final class ParamsProto {
       if (size != -1) return size;
 
       size = 0;
+      if (sudoCallGasLimit_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, sudoCallGasLimit_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -95,6 +119,8 @@ public final class ParamsProto {
       }
       com.neutron.contractmanager.ParamsProto.Params other = (com.neutron.contractmanager.ParamsProto.Params) obj;
 
+      if (getSudoCallGasLimit()
+          != other.getSudoCallGasLimit()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -106,6 +132,9 @@ public final class ParamsProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUDO_CALL_GAS_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSudoCallGasLimit());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -240,6 +269,8 @@ public final class ParamsProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
+        sudoCallGasLimit_ = 0L;
         return this;
       }
 
@@ -266,8 +297,16 @@ public final class ParamsProto {
       @java.lang.Override
       public com.neutron.contractmanager.ParamsProto.Params buildPartial() {
         com.neutron.contractmanager.ParamsProto.Params result = new com.neutron.contractmanager.ParamsProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.neutron.contractmanager.ParamsProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sudoCallGasLimit_ = sudoCallGasLimit_;
+        }
       }
 
       @java.lang.Override
@@ -314,6 +353,9 @@ public final class ParamsProto {
 
       public Builder mergeFrom(com.neutron.contractmanager.ParamsProto.Params other) {
         if (other == com.neutron.contractmanager.ParamsProto.Params.getDefaultInstance()) return this;
+        if (other.getSudoCallGasLimit() != 0L) {
+          setSudoCallGasLimit(other.getSudoCallGasLimit());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -340,6 +382,11 @@ public final class ParamsProto {
               case 0:
                 done = true;
                 break;
+              case 8: {
+                sudoCallGasLimit_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -353,6 +400,39 @@ public final class ParamsProto {
         } finally {
           onChanged();
         } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long sudoCallGasLimit_ ;
+      /**
+       * <code>uint64 sudo_call_gas_limit = 1 [json_name = "sudoCallGasLimit"];</code>
+       * @return The sudoCallGasLimit.
+       */
+      @java.lang.Override
+      public long getSudoCallGasLimit() {
+        return sudoCallGasLimit_;
+      }
+      /**
+       * <code>uint64 sudo_call_gas_limit = 1 [json_name = "sudoCallGasLimit"];</code>
+       * @param value The sudoCallGasLimit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSudoCallGasLimit(long value) {
+
+        sudoCallGasLimit_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 sudo_call_gas_limit = 1 [json_name = "sudoCallGasLimit"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSudoCallGasLimit() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sudoCallGasLimit_ = 0L;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -435,13 +515,14 @@ public final class ParamsProto {
     java.lang.String[] descriptorData = {
       "\n$neutron/contractmanager/params.proto\022\027" +
       "neutron.contractmanager\032\024gogoproto/gogo." +
-      "proto\"\016\n\006Params:\004\230\240\037\000B\335\001\n\033com.neutron.co" +
-      "ntractmanagerB\013ParamsProtoZ6github.com/n" +
-      "eutron-org/neutron/x/contractmanager/typ" +
-      "es\242\002\003NCX\252\002\027Neutron.Contractmanager\312\002\027Neu" +
-      "tron\\Contractmanager\342\002#Neutron\\Contractm" +
-      "anager\\GPBMetadata\352\002\030Neutron::Contractma" +
-      "nagerb\006proto3"
+      "proto\"=\n\006Params\022-\n\023sudo_call_gas_limit\030\001" +
+      " \001(\004R\020sudoCallGasLimit:\004\230\240\037\000B\340\001\n\033com.neu" +
+      "tron.contractmanagerB\013ParamsProtoZ9githu" +
+      "b.com/neutron-org/neutron/v4/x/contractm" +
+      "anager/types\242\002\003NCX\252\002\027Neutron.Contractman" +
+      "ager\312\002\027Neutron\\Contractmanager\342\002#Neutron" +
+      "\\Contractmanager\\GPBMetadata\352\002\030Neutron::" +
+      "Contractmanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -453,7 +534,7 @@ public final class ParamsProto {
     internal_static_neutron_contractmanager_Params_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_neutron_contractmanager_Params_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "SudoCallGasLimit", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.gogoproto.GogoProto.goprotoStringer);

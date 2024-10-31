@@ -1301,8 +1301,11 @@ public final class OrmProto {
      *   with a 32-bit unsigned varint in non-terminal segments.
      *   - int32, sint32, int64, sint64, sfixed32, sfixed64 are encoded as fixed width bytes with
      *   an encoding that enables sorted iteration.
-     *   - google.protobuf.Timestamp and google.protobuf.Duration are encoded
-     *   as 12 bytes using an encoding that enables sorted iteration.
+     *   - google.protobuf.Timestamp is encoded such that values with only seconds occupy 6 bytes,
+     *   values including nanos occupy 9 bytes, and nil values occupy 1 byte. When iterating, nil
+     *   values will always be ordered last. Seconds and nanos values must conform to the officially
+     *   specified ranges of 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z and 0 to 999,999,999 respectively.
+     *   - google.protobuf.Duration is encoded as 12 bytes using an encoding that enables sorted iteration.
      *   - enum fields are encoded using varint encoding and do not support sorted
      *   iteration.
      *   - bool fields are encoded as a single byte 0 or 1.
@@ -1339,8 +1342,11 @@ public final class OrmProto {
      *   with a 32-bit unsigned varint in non-terminal segments.
      *   - int32, sint32, int64, sint64, sfixed32, sfixed64 are encoded as fixed width bytes with
      *   an encoding that enables sorted iteration.
-     *   - google.protobuf.Timestamp and google.protobuf.Duration are encoded
-     *   as 12 bytes using an encoding that enables sorted iteration.
+     *   - google.protobuf.Timestamp is encoded such that values with only seconds occupy 6 bytes,
+     *   values including nanos occupy 9 bytes, and nil values occupy 1 byte. When iterating, nil
+     *   values will always be ordered last. Seconds and nanos values must conform to the officially
+     *   specified ranges of 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z and 0 to 999,999,999 respectively.
+     *   - google.protobuf.Duration is encoded as 12 bytes using an encoding that enables sorted iteration.
      *   - enum fields are encoded using varint encoding and do not support sorted
      *   iteration.
      *   - bool fields are encoded as a single byte 0 or 1.
@@ -1434,8 +1440,11 @@ public final class OrmProto {
      *   with a 32-bit unsigned varint in non-terminal segments.
      *   - int32, sint32, int64, sint64, sfixed32, sfixed64 are encoded as fixed width bytes with
      *   an encoding that enables sorted iteration.
-     *   - google.protobuf.Timestamp and google.protobuf.Duration are encoded
-     *   as 12 bytes using an encoding that enables sorted iteration.
+     *   - google.protobuf.Timestamp is encoded such that values with only seconds occupy 6 bytes,
+     *   values including nanos occupy 9 bytes, and nil values occupy 1 byte. When iterating, nil
+     *   values will always be ordered last. Seconds and nanos values must conform to the officially
+     *   specified ranges of 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z and 0 to 999,999,999 respectively.
+     *   - google.protobuf.Duration is encoded as 12 bytes using an encoding that enables sorted iteration.
      *   - enum fields are encoded using varint encoding and do not support sorted
      *   iteration.
      *   - bool fields are encoded as a single byte 0 or 1.
@@ -1484,8 +1493,11 @@ public final class OrmProto {
      *   with a 32-bit unsigned varint in non-terminal segments.
      *   - int32, sint32, int64, sint64, sfixed32, sfixed64 are encoded as fixed width bytes with
      *   an encoding that enables sorted iteration.
-     *   - google.protobuf.Timestamp and google.protobuf.Duration are encoded
-     *   as 12 bytes using an encoding that enables sorted iteration.
+     *   - google.protobuf.Timestamp is encoded such that values with only seconds occupy 6 bytes,
+     *   values including nanos occupy 9 bytes, and nil values occupy 1 byte. When iterating, nil
+     *   values will always be ordered last. Seconds and nanos values must conform to the officially
+     *   specified ranges of 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z and 0 to 999,999,999 respectively.
+     *   - google.protobuf.Duration is encoded as 12 bytes using an encoding that enables sorted iteration.
      *   - enum fields are encoded using varint encoding and do not support sorted
      *   iteration.
      *   - bool fields are encoded as a single byte 0 or 1.
@@ -1908,8 +1920,11 @@ public final class OrmProto {
        *   with a 32-bit unsigned varint in non-terminal segments.
        *   - int32, sint32, int64, sint64, sfixed32, sfixed64 are encoded as fixed width bytes with
        *   an encoding that enables sorted iteration.
-       *   - google.protobuf.Timestamp and google.protobuf.Duration are encoded
-       *   as 12 bytes using an encoding that enables sorted iteration.
+       *   - google.protobuf.Timestamp is encoded such that values with only seconds occupy 6 bytes,
+       *   values including nanos occupy 9 bytes, and nil values occupy 1 byte. When iterating, nil
+       *   values will always be ordered last. Seconds and nanos values must conform to the officially
+       *   specified ranges of 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z and 0 to 999,999,999 respectively.
+       *   - google.protobuf.Duration is encoded as 12 bytes using an encoding that enables sorted iteration.
        *   - enum fields are encoded using varint encoding and do not support sorted
        *   iteration.
        *   - bool fields are encoded as a single byte 0 or 1.
@@ -1957,8 +1972,11 @@ public final class OrmProto {
        *   with a 32-bit unsigned varint in non-terminal segments.
        *   - int32, sint32, int64, sint64, sfixed32, sfixed64 are encoded as fixed width bytes with
        *   an encoding that enables sorted iteration.
-       *   - google.protobuf.Timestamp and google.protobuf.Duration are encoded
-       *   as 12 bytes using an encoding that enables sorted iteration.
+       *   - google.protobuf.Timestamp is encoded such that values with only seconds occupy 6 bytes,
+       *   values including nanos occupy 9 bytes, and nil values occupy 1 byte. When iterating, nil
+       *   values will always be ordered last. Seconds and nanos values must conform to the officially
+       *   specified ranges of 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z and 0 to 999,999,999 respectively.
+       *   - google.protobuf.Duration is encoded as 12 bytes using an encoding that enables sorted iteration.
        *   - enum fields are encoded using varint encoding and do not support sorted
        *   iteration.
        *   - bool fields are encoded as a single byte 0 or 1.
@@ -2007,8 +2025,11 @@ public final class OrmProto {
        *   with a 32-bit unsigned varint in non-terminal segments.
        *   - int32, sint32, int64, sint64, sfixed32, sfixed64 are encoded as fixed width bytes with
        *   an encoding that enables sorted iteration.
-       *   - google.protobuf.Timestamp and google.protobuf.Duration are encoded
-       *   as 12 bytes using an encoding that enables sorted iteration.
+       *   - google.protobuf.Timestamp is encoded such that values with only seconds occupy 6 bytes,
+       *   values including nanos occupy 9 bytes, and nil values occupy 1 byte. When iterating, nil
+       *   values will always be ordered last. Seconds and nanos values must conform to the officially
+       *   specified ranges of 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z and 0 to 999,999,999 respectively.
+       *   - google.protobuf.Duration is encoded as 12 bytes using an encoding that enables sorted iteration.
        *   - enum fields are encoded using varint encoding and do not support sorted
        *   iteration.
        *   - bool fields are encoded as a single byte 0 or 1.
@@ -2053,8 +2074,11 @@ public final class OrmProto {
        *   with a 32-bit unsigned varint in non-terminal segments.
        *   - int32, sint32, int64, sint64, sfixed32, sfixed64 are encoded as fixed width bytes with
        *   an encoding that enables sorted iteration.
-       *   - google.protobuf.Timestamp and google.protobuf.Duration are encoded
-       *   as 12 bytes using an encoding that enables sorted iteration.
+       *   - google.protobuf.Timestamp is encoded such that values with only seconds occupy 6 bytes,
+       *   values including nanos occupy 9 bytes, and nil values occupy 1 byte. When iterating, nil
+       *   values will always be ordered last. Seconds and nanos values must conform to the officially
+       *   specified ranges of 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z and 0 to 999,999,999 respectively.
+       *   - google.protobuf.Duration is encoded as 12 bytes using an encoding that enables sorted iteration.
        *   - enum fields are encoded using varint encoding and do not support sorted
        *   iteration.
        *   - bool fields are encoded as a single byte 0 or 1.
@@ -2096,8 +2120,11 @@ public final class OrmProto {
        *   with a 32-bit unsigned varint in non-terminal segments.
        *   - int32, sint32, int64, sint64, sfixed32, sfixed64 are encoded as fixed width bytes with
        *   an encoding that enables sorted iteration.
-       *   - google.protobuf.Timestamp and google.protobuf.Duration are encoded
-       *   as 12 bytes using an encoding that enables sorted iteration.
+       *   - google.protobuf.Timestamp is encoded such that values with only seconds occupy 6 bytes,
+       *   values including nanos occupy 9 bytes, and nil values occupy 1 byte. When iterating, nil
+       *   values will always be ordered last. Seconds and nanos values must conform to the officially
+       *   specified ranges of 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z and 0 to 999,999,999 respectively.
+       *   - google.protobuf.Duration is encoded as 12 bytes using an encoding that enables sorted iteration.
        *   - enum fields are encoded using varint encoding and do not support sorted
        *   iteration.
        *   - bool fields are encoded as a single byte 0 or 1.

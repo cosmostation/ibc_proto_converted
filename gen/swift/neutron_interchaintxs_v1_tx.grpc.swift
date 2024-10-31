@@ -42,6 +42,11 @@ internal protocol Neutron_Interchaintxs_V1_MsgClientProtocol: GRPCClient {
     _ request: Neutron_Interchaintxs_V1_MsgSubmitTx,
     callOptions: CallOptions?
   ) -> UnaryCall<Neutron_Interchaintxs_V1_MsgSubmitTx, Neutron_Interchaintxs_V1_MsgSubmitTxResponse>
+
+  func updateParams(
+    _ request: Neutron_Interchaintxs_V1_MsgUpdateParams,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Neutron_Interchaintxs_V1_MsgUpdateParams, Neutron_Interchaintxs_V1_MsgUpdateParamsResponse>
 }
 
 extension Neutron_Interchaintxs_V1_MsgClientProtocol {
@@ -82,6 +87,24 @@ extension Neutron_Interchaintxs_V1_MsgClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeSubmitTxInterceptors() ?? []
+    )
+  }
+
+  /// Unary call to UpdateParams
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to UpdateParams.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func updateParams(
+    _ request: Neutron_Interchaintxs_V1_MsgUpdateParams,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Neutron_Interchaintxs_V1_MsgUpdateParams, Neutron_Interchaintxs_V1_MsgUpdateParamsResponse> {
+    return self.makeUnaryCall(
+      path: Neutron_Interchaintxs_V1_MsgClientMetadata.Methods.updateParams.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? []
     )
   }
 }
@@ -158,6 +181,11 @@ internal protocol Neutron_Interchaintxs_V1_MsgAsyncClientProtocol: GRPCClient {
     _ request: Neutron_Interchaintxs_V1_MsgSubmitTx,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Neutron_Interchaintxs_V1_MsgSubmitTx, Neutron_Interchaintxs_V1_MsgSubmitTxResponse>
+
+  func makeUpdateParamsCall(
+    _ request: Neutron_Interchaintxs_V1_MsgUpdateParams,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Neutron_Interchaintxs_V1_MsgUpdateParams, Neutron_Interchaintxs_V1_MsgUpdateParamsResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -193,6 +221,18 @@ extension Neutron_Interchaintxs_V1_MsgAsyncClientProtocol {
       interceptors: self.interceptors?.makeSubmitTxInterceptors() ?? []
     )
   }
+
+  internal func makeUpdateParamsCall(
+    _ request: Neutron_Interchaintxs_V1_MsgUpdateParams,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Neutron_Interchaintxs_V1_MsgUpdateParams, Neutron_Interchaintxs_V1_MsgUpdateParamsResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Neutron_Interchaintxs_V1_MsgClientMetadata.Methods.updateParams.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -218,6 +258,18 @@ extension Neutron_Interchaintxs_V1_MsgAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeSubmitTxInterceptors() ?? []
+    )
+  }
+
+  internal func updateParams(
+    _ request: Neutron_Interchaintxs_V1_MsgUpdateParams,
+    callOptions: CallOptions? = nil
+  ) async throws -> Neutron_Interchaintxs_V1_MsgUpdateParamsResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Neutron_Interchaintxs_V1_MsgClientMetadata.Methods.updateParams.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? []
     )
   }
 }
@@ -246,6 +298,9 @@ internal protocol Neutron_Interchaintxs_V1_MsgClientInterceptorFactoryProtocol: 
 
   /// - Returns: Interceptors to use when invoking 'submitTx'.
   func makeSubmitTxInterceptors() -> [ClientInterceptor<Neutron_Interchaintxs_V1_MsgSubmitTx, Neutron_Interchaintxs_V1_MsgSubmitTxResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'updateParams'.
+  func makeUpdateParamsInterceptors() -> [ClientInterceptor<Neutron_Interchaintxs_V1_MsgUpdateParams, Neutron_Interchaintxs_V1_MsgUpdateParamsResponse>]
 }
 
 internal enum Neutron_Interchaintxs_V1_MsgClientMetadata {
@@ -255,6 +310,7 @@ internal enum Neutron_Interchaintxs_V1_MsgClientMetadata {
     methods: [
       Neutron_Interchaintxs_V1_MsgClientMetadata.Methods.registerInterchainAccount,
       Neutron_Interchaintxs_V1_MsgClientMetadata.Methods.submitTx,
+      Neutron_Interchaintxs_V1_MsgClientMetadata.Methods.updateParams,
     ]
   )
 
@@ -270,6 +326,12 @@ internal enum Neutron_Interchaintxs_V1_MsgClientMetadata {
       path: "/neutron.interchaintxs.v1.Msg/SubmitTx",
       type: GRPCCallType.unary
     )
+
+    internal static let updateParams = GRPCMethodDescriptor(
+      name: "UpdateParams",
+      path: "/neutron.interchaintxs.v1.Msg/UpdateParams",
+      type: GRPCCallType.unary
+    )
   }
 }
 
@@ -282,6 +344,8 @@ internal protocol Neutron_Interchaintxs_V1_MsgProvider: CallHandlerProvider {
   func registerInterchainAccount(request: Neutron_Interchaintxs_V1_MsgRegisterInterchainAccount, context: StatusOnlyCallContext) -> EventLoopFuture<Neutron_Interchaintxs_V1_MsgRegisterInterchainAccountResponse>
 
   func submitTx(request: Neutron_Interchaintxs_V1_MsgSubmitTx, context: StatusOnlyCallContext) -> EventLoopFuture<Neutron_Interchaintxs_V1_MsgSubmitTxResponse>
+
+  func updateParams(request: Neutron_Interchaintxs_V1_MsgUpdateParams, context: StatusOnlyCallContext) -> EventLoopFuture<Neutron_Interchaintxs_V1_MsgUpdateParamsResponse>
 }
 
 extension Neutron_Interchaintxs_V1_MsgProvider {
@@ -314,6 +378,15 @@ extension Neutron_Interchaintxs_V1_MsgProvider {
         userFunction: self.submitTx(request:context:)
       )
 
+    case "UpdateParams":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Neutron_Interchaintxs_V1_MsgUpdateParams>(),
+        responseSerializer: ProtobufSerializer<Neutron_Interchaintxs_V1_MsgUpdateParamsResponse>(),
+        interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? [],
+        userFunction: self.updateParams(request:context:)
+      )
+
     default:
       return nil
     }
@@ -337,6 +410,11 @@ internal protocol Neutron_Interchaintxs_V1_MsgAsyncProvider: CallHandlerProvider
     request: Neutron_Interchaintxs_V1_MsgSubmitTx,
     context: GRPCAsyncServerCallContext
   ) async throws -> Neutron_Interchaintxs_V1_MsgSubmitTxResponse
+
+  @Sendable func updateParams(
+    request: Neutron_Interchaintxs_V1_MsgUpdateParams,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Neutron_Interchaintxs_V1_MsgUpdateParamsResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -376,6 +454,15 @@ extension Neutron_Interchaintxs_V1_MsgAsyncProvider {
         wrapping: self.submitTx(request:context:)
       )
 
+    case "UpdateParams":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Neutron_Interchaintxs_V1_MsgUpdateParams>(),
+        responseSerializer: ProtobufSerializer<Neutron_Interchaintxs_V1_MsgUpdateParamsResponse>(),
+        interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? [],
+        wrapping: self.updateParams(request:context:)
+      )
+
     default:
       return nil
     }
@@ -391,6 +478,10 @@ internal protocol Neutron_Interchaintxs_V1_MsgServerInterceptorFactoryProtocol {
   /// - Returns: Interceptors to use when handling 'submitTx'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeSubmitTxInterceptors() -> [ServerInterceptor<Neutron_Interchaintxs_V1_MsgSubmitTx, Neutron_Interchaintxs_V1_MsgSubmitTxResponse>]
+
+  /// - Returns: Interceptors to use when handling 'updateParams'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeUpdateParamsInterceptors() -> [ServerInterceptor<Neutron_Interchaintxs_V1_MsgUpdateParams, Neutron_Interchaintxs_V1_MsgUpdateParamsResponse>]
 }
 
 internal enum Neutron_Interchaintxs_V1_MsgServerMetadata {
@@ -400,6 +491,7 @@ internal enum Neutron_Interchaintxs_V1_MsgServerMetadata {
     methods: [
       Neutron_Interchaintxs_V1_MsgServerMetadata.Methods.registerInterchainAccount,
       Neutron_Interchaintxs_V1_MsgServerMetadata.Methods.submitTx,
+      Neutron_Interchaintxs_V1_MsgServerMetadata.Methods.updateParams,
     ]
   )
 
@@ -413,6 +505,12 @@ internal enum Neutron_Interchaintxs_V1_MsgServerMetadata {
     internal static let submitTx = GRPCMethodDescriptor(
       name: "SubmitTx",
       path: "/neutron.interchaintxs.v1.Msg/SubmitTx",
+      type: GRPCCallType.unary
+    )
+
+    internal static let updateParams = GRPCMethodDescriptor(
+      name: "UpdateParams",
+      path: "/neutron.interchaintxs.v1.Msg/UpdateParams",
       type: GRPCCallType.unary
     )
   }

@@ -2033,7 +2033,7 @@ public final class QueryProto {
      * validator_addr defines the validator address to query for.
      * </pre>
      *
-     * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorAddr.
      */
     java.lang.String getValidatorAddr();
@@ -2042,7 +2042,7 @@ public final class QueryProto {
      * validator_addr defines the validator address to query for.
      * </pre>
      *
-     * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorAddr.
      */
     com.google.protobuf.ByteString
@@ -2096,7 +2096,7 @@ public final class QueryProto {
      * validator_addr defines the validator address to query for.
      * </pre>
      *
-     * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorAddr.
      */
     @java.lang.Override
@@ -2117,7 +2117,7 @@ public final class QueryProto {
      * validator_addr defines the validator address to query for.
      * </pre>
      *
-     * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorAddr.
      */
     @java.lang.Override
@@ -2471,7 +2471,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The validatorAddr.
        */
       public java.lang.String getValidatorAddr() {
@@ -2491,7 +2491,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The bytes for validatorAddr.
        */
       public com.google.protobuf.ByteString
@@ -2512,7 +2512,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The validatorAddr to set.
        * @return This builder for chaining.
        */
@@ -2529,7 +2529,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return This builder for chaining.
        */
       public Builder clearValidatorAddr() {
@@ -2543,7 +2543,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The bytes for validatorAddr to set.
        * @return This builder for chaining.
        */
@@ -3297,7 +3297,7 @@ public final class QueryProto {
      * validator_addr defines the validator address to query for.
      * </pre>
      *
-     * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorAddr.
      */
     java.lang.String getValidatorAddr();
@@ -3306,7 +3306,7 @@ public final class QueryProto {
      * validator_addr defines the validator address to query for.
      * </pre>
      *
-     * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorAddr.
      */
     com.google.protobuf.ByteString
@@ -3388,7 +3388,7 @@ public final class QueryProto {
      * validator_addr defines the validator address to query for.
      * </pre>
      *
-     * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorAddr.
      */
     @java.lang.Override
@@ -3409,7 +3409,7 @@ public final class QueryProto {
      * validator_addr defines the validator address to query for.
      * </pre>
      *
-     * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorAddr.
      */
     @java.lang.Override
@@ -3838,7 +3838,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The validatorAddr.
        */
       public java.lang.String getValidatorAddr() {
@@ -3858,7 +3858,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The bytes for validatorAddr.
        */
       public com.google.protobuf.ByteString
@@ -3879,7 +3879,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The validatorAddr to set.
        * @return This builder for chaining.
        */
@@ -3896,7 +3896,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return This builder for chaining.
        */
       public Builder clearValidatorAddr() {
@@ -3910,7 +3910,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The bytes for validatorAddr to set.
        * @return This builder for chaining.
        */
@@ -5199,7 +5199,7 @@ public final class QueryProto {
      * validator_addr defines the validator address to query for.
      * </pre>
      *
-     * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorAddr.
      */
     java.lang.String getValidatorAddr();
@@ -5208,7 +5208,7 @@ public final class QueryProto {
      * validator_addr defines the validator address to query for.
      * </pre>
      *
-     * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorAddr.
      */
     com.google.protobuf.ByteString
@@ -5290,7 +5290,7 @@ public final class QueryProto {
      * validator_addr defines the validator address to query for.
      * </pre>
      *
-     * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorAddr.
      */
     @java.lang.Override
@@ -5311,7 +5311,7 @@ public final class QueryProto {
      * validator_addr defines the validator address to query for.
      * </pre>
      *
-     * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorAddr.
      */
     @java.lang.Override
@@ -5740,7 +5740,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The validatorAddr.
        */
       public java.lang.String getValidatorAddr() {
@@ -5760,7 +5760,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The bytes for validatorAddr.
        */
       public com.google.protobuf.ByteString
@@ -5781,7 +5781,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The validatorAddr to set.
        * @return This builder for chaining.
        */
@@ -5798,7 +5798,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return This builder for chaining.
        */
       public Builder clearValidatorAddr() {
@@ -5812,7 +5812,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 1 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The bytes for validatorAddr to set.
        * @return This builder for chaining.
        */
@@ -7121,7 +7121,7 @@ public final class QueryProto {
      * validator_addr defines the validator address to query for.
      * </pre>
      *
-     * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorAddr.
      */
     java.lang.String getValidatorAddr();
@@ -7130,7 +7130,7 @@ public final class QueryProto {
      * validator_addr defines the validator address to query for.
      * </pre>
      *
-     * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorAddr.
      */
     com.google.protobuf.ByteString
@@ -7232,7 +7232,7 @@ public final class QueryProto {
      * validator_addr defines the validator address to query for.
      * </pre>
      *
-     * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorAddr.
      */
     @java.lang.Override
@@ -7253,7 +7253,7 @@ public final class QueryProto {
      * validator_addr defines the validator address to query for.
      * </pre>
      *
-     * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorAddr.
      */
     @java.lang.Override
@@ -7723,7 +7723,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The validatorAddr.
        */
       public java.lang.String getValidatorAddr() {
@@ -7743,7 +7743,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The bytes for validatorAddr.
        */
       public com.google.protobuf.ByteString
@@ -7764,7 +7764,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The validatorAddr to set.
        * @return This builder for chaining.
        */
@@ -7781,7 +7781,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return This builder for chaining.
        */
       public Builder clearValidatorAddr() {
@@ -7795,7 +7795,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The bytes for validatorAddr to set.
        * @return This builder for chaining.
        */
@@ -8569,7 +8569,7 @@ public final class QueryProto {
      * validator_addr defines the validator address to query for.
      * </pre>
      *
-     * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorAddr.
      */
     java.lang.String getValidatorAddr();
@@ -8578,7 +8578,7 @@ public final class QueryProto {
      * validator_addr defines the validator address to query for.
      * </pre>
      *
-     * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorAddr.
      */
     com.google.protobuf.ByteString
@@ -8681,7 +8681,7 @@ public final class QueryProto {
      * validator_addr defines the validator address to query for.
      * </pre>
      *
-     * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorAddr.
      */
     @java.lang.Override
@@ -8702,7 +8702,7 @@ public final class QueryProto {
      * validator_addr defines the validator address to query for.
      * </pre>
      *
-     * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorAddr.
      */
     @java.lang.Override
@@ -9173,7 +9173,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The validatorAddr.
        */
       public java.lang.String getValidatorAddr() {
@@ -9193,7 +9193,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The bytes for validatorAddr.
        */
       public com.google.protobuf.ByteString
@@ -9214,7 +9214,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The validatorAddr to set.
        * @return This builder for chaining.
        */
@@ -9231,7 +9231,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return This builder for chaining.
        */
       public Builder clearValidatorAddr() {
@@ -9245,7 +9245,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The bytes for validatorAddr to set.
        * @return This builder for chaining.
        */
@@ -18221,7 +18221,7 @@ public final class QueryProto {
      * validator_addr defines the validator address to query for.
      * </pre>
      *
-     * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorAddr.
      */
     java.lang.String getValidatorAddr();
@@ -18230,7 +18230,7 @@ public final class QueryProto {
      * validator_addr defines the validator address to query for.
      * </pre>
      *
-     * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorAddr.
      */
     com.google.protobuf.ByteString
@@ -18333,7 +18333,7 @@ public final class QueryProto {
      * validator_addr defines the validator address to query for.
      * </pre>
      *
-     * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorAddr.
      */
     @java.lang.Override
@@ -18354,7 +18354,7 @@ public final class QueryProto {
      * validator_addr defines the validator address to query for.
      * </pre>
      *
-     * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorAddr.
      */
     @java.lang.Override
@@ -18825,7 +18825,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The validatorAddr.
        */
       public java.lang.String getValidatorAddr() {
@@ -18845,7 +18845,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The bytes for validatorAddr.
        */
       public com.google.protobuf.ByteString
@@ -18866,7 +18866,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The validatorAddr to set.
        * @return This builder for chaining.
        */
@@ -18883,7 +18883,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return This builder for chaining.
        */
       public Builder clearValidatorAddr() {
@@ -18897,7 +18897,7 @@ public final class QueryProto {
        * validator_addr defines the validator address to query for.
        * </pre>
        *
-       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_addr = 2 [json_name = "validatorAddr", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The bytes for validatorAddr to set.
        * @return This builder for chaining.
        */
@@ -32704,258 +32704,260 @@ public final class QueryProto {
       ".staking.v1beta1.ValidatorB\t\310\336\037\000\250\347\260*\001R\nv" +
       "alidators\022G\n\npagination\030\002 \001(\0132\'.cosmos.b" +
       "ase.query.v1beta1.PageResponseR\npaginati" +
-      "on\"X\n\025QueryValidatorRequest\022?\n\016validator" +
-      "_addr\030\001 \001(\tB\030\322\264-\024cosmos.AddressStringR\rv" +
-      "alidatorAddr\"d\n\026QueryValidatorResponse\022J" +
-      "\n\tvalidator\030\001 \001(\0132!.cosmos.staking.v1bet" +
-      "a1.ValidatorB\t\310\336\037\000\250\347\260*\001R\tvalidator\"\253\001\n Q" +
-      "ueryValidatorDelegationsRequest\022?\n\016valid" +
-      "ator_addr\030\001 \001(\tB\030\322\264-\024cosmos.AddressStrin" +
-      "gR\rvalidatorAddr\022F\n\npagination\030\002 \001(\0132&.c" +
-      "osmos.base.query.v1beta1.PageRequestR\npa" +
-      "gination\"\355\001\n!QueryValidatorDelegationsRe" +
-      "sponse\022\177\n\024delegation_responses\030\001 \003(\0132*.c" +
-      "osmos.staking.v1beta1.DelegationResponse" +
-      "B \310\336\037\000\252\337\037\023DelegationResponses\250\347\260*\001R\023dele" +
-      "gationResponses\022G\n\npagination\030\002 \001(\0132\'.co" +
-      "smos.base.query.v1beta1.PageResponseR\npa" +
-      "gination\"\264\001\n)QueryValidatorUnbondingDele" +
-      "gationsRequest\022?\n\016validator_addr\030\001 \001(\tB\030" +
-      "\322\264-\024cosmos.AddressStringR\rvalidatorAddr\022" +
-      "F\n\npagination\030\002 \001(\0132&.cosmos.base.query." +
-      "v1beta1.PageRequestR\npagination\"\336\001\n*Quer" +
-      "yValidatorUnbondingDelegationsResponse\022g" +
-      "\n\023unbonding_responses\030\001 \003(\0132+.cosmos.sta" +
-      "king.v1beta1.UnbondingDelegationB\t\310\336\037\000\250\347" +
-      "\260*\001R\022unbondingResponses\022G\n\npagination\030\002 " +
-      "\001(\0132\'.cosmos.base.query.v1beta1.PageResp" +
-      "onseR\npagination\"\244\001\n\026QueryDelegationRequ" +
-      "est\022?\n\016delegator_addr\030\001 \001(\tB\030\322\264-\024cosmos." +
-      "AddressStringR\rdelegatorAddr\022?\n\016validato" +
-      "r_addr\030\002 \001(\tB\030\322\264-\024cosmos.AddressStringR\r" +
-      "validatorAddr:\010\210\240\037\000\350\240\037\000\"v\n\027QueryDelegati" +
-      "onResponse\022[\n\023delegation_response\030\001 \001(\0132" +
-      "*.cosmos.staking.v1beta1.DelegationRespo" +
-      "nseR\022delegationResponse\"\255\001\n\037QueryUnbondi" +
-      "ngDelegationRequest\022?\n\016delegator_addr\030\001 " +
-      "\001(\tB\030\322\264-\024cosmos.AddressStringR\rdelegator" +
-      "Addr\022?\n\016validator_addr\030\002 \001(\tB\030\322\264-\024cosmos" +
-      ".AddressStringR\rvalidatorAddr:\010\210\240\037\000\350\240\037\000\"" +
-      "r\n QueryUnbondingDelegationResponse\022N\n\006u" +
-      "nbond\030\001 \001(\0132+.cosmos.staking.v1beta1.Unb" +
-      "ondingDelegationB\t\310\336\037\000\250\347\260*\001R\006unbond\"\265\001\n " +
-      "QueryDelegatorDelegationsRequest\022?\n\016dele" +
+      "on\"a\n\025QueryValidatorRequest\022H\n\016validator" +
+      "_addr\030\001 \001(\tB!\322\264-\035cosmos.ValidatorAddress" +
+      "StringR\rvalidatorAddr\"d\n\026QueryValidatorR" +
+      "esponse\022J\n\tvalidator\030\001 \001(\0132!.cosmos.stak" +
+      "ing.v1beta1.ValidatorB\t\310\336\037\000\250\347\260*\001R\tvalida" +
+      "tor\"\264\001\n QueryValidatorDelegationsRequest" +
+      "\022H\n\016validator_addr\030\001 \001(\tB!\322\264-\035cosmos.Val" +
+      "idatorAddressStringR\rvalidatorAddr\022F\n\npa" +
+      "gination\030\002 \001(\0132&.cosmos.base.query.v1bet" +
+      "a1.PageRequestR\npagination\"\355\001\n!QueryVali" +
+      "datorDelegationsResponse\022\177\n\024delegation_r" +
+      "esponses\030\001 \003(\0132*.cosmos.staking.v1beta1." +
+      "DelegationResponseB \310\336\037\000\252\337\037\023DelegationRe" +
+      "sponses\250\347\260*\001R\023delegationResponses\022G\n\npag" +
+      "ination\030\002 \001(\0132\'.cosmos.base.query.v1beta" +
+      "1.PageResponseR\npagination\"\275\001\n)QueryVali" +
+      "datorUnbondingDelegationsRequest\022H\n\016vali" +
+      "dator_addr\030\001 \001(\tB!\322\264-\035cosmos.ValidatorAd" +
+      "dressStringR\rvalidatorAddr\022F\n\npagination" +
+      "\030\002 \001(\0132&.cosmos.base.query.v1beta1.PageR" +
+      "equestR\npagination\"\336\001\n*QueryValidatorUnb" +
+      "ondingDelegationsResponse\022g\n\023unbonding_r" +
+      "esponses\030\001 \003(\0132+.cosmos.staking.v1beta1." +
+      "UnbondingDelegationB\t\310\336\037\000\250\347\260*\001R\022unbondin" +
+      "gResponses\022G\n\npagination\030\002 \001(\0132\'.cosmos." +
+      "base.query.v1beta1.PageResponseR\npaginat" +
+      "ion\"\255\001\n\026QueryDelegationRequest\022?\n\016delega" +
+      "tor_addr\030\001 \001(\tB\030\322\264-\024cosmos.AddressString" +
+      "R\rdelegatorAddr\022H\n\016validator_addr\030\002 \001(\tB" +
+      "!\322\264-\035cosmos.ValidatorAddressStringR\rvali" +
+      "datorAddr:\010\210\240\037\000\350\240\037\000\"v\n\027QueryDelegationRe" +
+      "sponse\022[\n\023delegation_response\030\001 \001(\0132*.co" +
+      "smos.staking.v1beta1.DelegationResponseR" +
+      "\022delegationResponse\"\266\001\n\037QueryUnbondingDe" +
+      "legationRequest\022?\n\016delegator_addr\030\001 \001(\tB" +
+      "\030\322\264-\024cosmos.AddressStringR\rdelegatorAddr" +
+      "\022H\n\016validator_addr\030\002 \001(\tB!\322\264-\035cosmos.Val" +
+      "idatorAddressStringR\rvalidatorAddr:\010\210\240\037\000" +
+      "\350\240\037\000\"r\n QueryUnbondingDelegationResponse" +
+      "\022N\n\006unbond\030\001 \001(\0132+.cosmos.staking.v1beta" +
+      "1.UnbondingDelegationB\t\310\336\037\000\250\347\260*\001R\006unbond" +
+      "\"\265\001\n QueryDelegatorDelegationsRequest\022?\n" +
+      "\016delegator_addr\030\001 \001(\tB\030\322\264-\024cosmos.Addres" +
+      "sStringR\rdelegatorAddr\022F\n\npagination\030\002 \001" +
+      "(\0132&.cosmos.base.query.v1beta1.PageReque" +
+      "stR\npagination:\010\210\240\037\000\350\240\037\000\"\326\001\n!QueryDelega" +
+      "torDelegationsResponse\022h\n\024delegation_res" +
+      "ponses\030\001 \003(\0132*.cosmos.staking.v1beta1.De" +
+      "legationResponseB\t\310\336\037\000\250\347\260*\001R\023delegationR" +
+      "esponses\022G\n\npagination\030\002 \001(\0132\'.cosmos.ba" +
+      "se.query.v1beta1.PageResponseR\npaginatio" +
+      "n\"\276\001\n)QueryDelegatorUnbondingDelegations" +
+      "Request\022?\n\016delegator_addr\030\001 \001(\tB\030\322\264-\024cos" +
+      "mos.AddressStringR\rdelegatorAddr\022F\n\npagi" +
+      "nation\030\002 \001(\0132&.cosmos.base.query.v1beta1" +
+      ".PageRequestR\npagination:\010\210\240\037\000\350\240\037\000\"\336\001\n*Q" +
+      "ueryDelegatorUnbondingDelegationsRespons" +
+      "e\022g\n\023unbonding_responses\030\001 \003(\0132+.cosmos." +
+      "staking.v1beta1.UnbondingDelegationB\t\310\336\037" +
+      "\000\250\347\260*\001R\022unbondingResponses\022G\n\npagination" +
+      "\030\002 \001(\0132\'.cosmos.base.query.v1beta1.PageR" +
+      "esponseR\npagination\"\276\002\n\031QueryRedelegatio" +
+      "nsRequest\022?\n\016delegator_addr\030\001 \001(\tB\030\322\264-\024c" +
+      "osmos.AddressStringR\rdelegatorAddr\022F\n\022sr" +
+      "c_validator_addr\030\002 \001(\tB\030\322\264-\024cosmos.Addre" +
+      "ssStringR\020srcValidatorAddr\022F\n\022dst_valida" +
+      "tor_addr\030\003 \001(\tB\030\322\264-\024cosmos.AddressString" +
+      "R\020dstValidatorAddr\022F\n\npagination\030\004 \001(\0132&" +
+      ".cosmos.base.query.v1beta1.PageRequestR\n" +
+      "pagination:\010\210\240\037\000\350\240\037\000\"\325\001\n\032QueryRedelegati" +
+      "onsResponse\022n\n\026redelegation_responses\030\001 " +
+      "\003(\0132,.cosmos.staking.v1beta1.Redelegatio" +
+      "nResponseB\t\310\336\037\000\250\347\260*\001R\025redelegationRespon" +
+      "ses\022G\n\npagination\030\002 \001(\0132\'.cosmos.base.qu" +
+      "ery.v1beta1.PageResponseR\npagination\"\264\001\n" +
+      "\037QueryDelegatorValidatorsRequest\022?\n\016dele" +
       "gator_addr\030\001 \001(\tB\030\322\264-\024cosmos.AddressStri" +
       "ngR\rdelegatorAddr\022F\n\npagination\030\002 \001(\0132&." +
       "cosmos.base.query.v1beta1.PageRequestR\np" +
-      "agination:\010\210\240\037\000\350\240\037\000\"\326\001\n!QueryDelegatorDe" +
-      "legationsResponse\022h\n\024delegation_response" +
-      "s\030\001 \003(\0132*.cosmos.staking.v1beta1.Delegat" +
-      "ionResponseB\t\310\336\037\000\250\347\260*\001R\023delegationRespon" +
-      "ses\022G\n\npagination\030\002 \001(\0132\'.cosmos.base.qu" +
-      "ery.v1beta1.PageResponseR\npagination\"\276\001\n" +
-      ")QueryDelegatorUnbondingDelegationsReque" +
+      "agination:\010\210\240\037\000\350\240\037\000\"\271\001\n QueryDelegatorVa" +
+      "lidatorsResponse\022L\n\nvalidators\030\001 \003(\0132!.c" +
+      "osmos.staking.v1beta1.ValidatorB\t\310\336\037\000\250\347\260" +
+      "*\001R\nvalidators\022G\n\npagination\030\002 \001(\0132\'.cos" +
+      "mos.base.query.v1beta1.PageResponseR\npag" +
+      "ination\"\265\001\n\036QueryDelegatorValidatorReque" +
       "st\022?\n\016delegator_addr\030\001 \001(\tB\030\322\264-\024cosmos.A" +
-      "ddressStringR\rdelegatorAddr\022F\n\npaginatio" +
-      "n\030\002 \001(\0132&.cosmos.base.query.v1beta1.Page" +
-      "RequestR\npagination:\010\210\240\037\000\350\240\037\000\"\336\001\n*QueryD" +
-      "elegatorUnbondingDelegationsResponse\022g\n\023" +
-      "unbonding_responses\030\001 \003(\0132+.cosmos.staki" +
-      "ng.v1beta1.UnbondingDelegationB\t\310\336\037\000\250\347\260*" +
-      "\001R\022unbondingResponses\022G\n\npagination\030\002 \001(" +
-      "\0132\'.cosmos.base.query.v1beta1.PageRespon" +
-      "seR\npagination\"\276\002\n\031QueryRedelegationsReq" +
-      "uest\022?\n\016delegator_addr\030\001 \001(\tB\030\322\264-\024cosmos" +
-      ".AddressStringR\rdelegatorAddr\022F\n\022src_val" +
-      "idator_addr\030\002 \001(\tB\030\322\264-\024cosmos.AddressStr" +
-      "ingR\020srcValidatorAddr\022F\n\022dst_validator_a" +
-      "ddr\030\003 \001(\tB\030\322\264-\024cosmos.AddressStringR\020dst" +
-      "ValidatorAddr\022F\n\npagination\030\004 \001(\0132&.cosm" +
-      "os.base.query.v1beta1.PageRequestR\npagin" +
-      "ation:\010\210\240\037\000\350\240\037\000\"\325\001\n\032QueryRedelegationsRe" +
-      "sponse\022n\n\026redelegation_responses\030\001 \003(\0132," +
-      ".cosmos.staking.v1beta1.RedelegationResp" +
-      "onseB\t\310\336\037\000\250\347\260*\001R\025redelegationResponses\022G" +
-      "\n\npagination\030\002 \001(\0132\'.cosmos.base.query.v" +
-      "1beta1.PageResponseR\npagination\"\264\001\n\037Quer" +
-      "yDelegatorValidatorsRequest\022?\n\016delegator" +
-      "_addr\030\001 \001(\tB\030\322\264-\024cosmos.AddressStringR\rd" +
-      "elegatorAddr\022F\n\npagination\030\002 \001(\0132&.cosmo" +
-      "s.base.query.v1beta1.PageRequestR\npagina" +
-      "tion:\010\210\240\037\000\350\240\037\000\"\271\001\n QueryDelegatorValidat" +
-      "orsResponse\022L\n\nvalidators\030\001 \003(\0132!.cosmos" +
-      ".staking.v1beta1.ValidatorB\t\310\336\037\000\250\347\260*\001R\nv" +
-      "alidators\022G\n\npagination\030\002 \001(\0132\'.cosmos.b" +
-      "ase.query.v1beta1.PageResponseR\npaginati" +
-      "on\"\254\001\n\036QueryDelegatorValidatorRequest\022?\n" +
-      "\016delegator_addr\030\001 \001(\tB\030\322\264-\024cosmos.Addres" +
-      "sStringR\rdelegatorAddr\022?\n\016validator_addr" +
-      "\030\002 \001(\tB\030\322\264-\024cosmos.AddressStringR\rvalida" +
-      "torAddr:\010\210\240\037\000\350\240\037\000\"m\n\037QueryDelegatorValid" +
-      "atorResponse\022J\n\tvalidator\030\001 \001(\0132!.cosmos" +
-      ".staking.v1beta1.ValidatorB\t\310\336\037\000\250\347\260*\001R\tv" +
-      "alidator\"4\n\032QueryHistoricalInfoRequest\022\026" +
-      "\n\006height\030\001 \001(\003R\006height\"Y\n\033QueryHistorica" +
-      "lInfoResponse\022:\n\004hist\030\001 \001(\0132&.cosmos.sta" +
-      "king.v1beta1.HistoricalInfoR\004hist\"\022\n\020Que" +
-      "ryPoolRequest\"P\n\021QueryPoolResponse\022;\n\004po" +
-      "ol\030\001 \001(\0132\034.cosmos.staking.v1beta1.PoolB\t" +
-      "\310\336\037\000\250\347\260*\001R\004pool\"\024\n\022QueryParamsRequest\"X\n" +
-      "\023QueryParamsResponse\022A\n\006params\030\001 \001(\0132\036.c" +
-      "osmos.staking.v1beta1.ParamsB\t\310\336\037\000\250\347\260*\001R" +
-      "\006params\"5\n#QueryTokenizeShareRecordByIdR" +
-      "equest\022\016\n\002id\030\001 \001(\004R\002id\"q\n$QueryTokenizeS" +
-      "hareRecordByIdResponse\022I\n\006record\030\001 \001(\0132+" +
-      ".cosmos.staking.v1beta1.TokenizeShareRec" +
-      "ordB\004\310\336\037\000R\006record\">\n&QueryTokenizeShareR" +
-      "ecordByDenomRequest\022\024\n\005denom\030\001 \001(\tR\005deno" +
-      "m\"t\n\'QueryTokenizeShareRecordByDenomResp" +
-      "onse\022I\n\006record\030\001 \001(\0132+.cosmos.staking.v1" +
-      "beta1.TokenizeShareRecordB\004\310\336\037\000R\006record\"" +
-      "=\n%QueryTokenizeShareRecordsOwnedRequest" +
-      "\022\024\n\005owner\030\001 \001(\tR\005owner\"u\n&QueryTokenizeS" +
-      "hareRecordsOwnedResponse\022K\n\007records\030\001 \003(" +
-      "\0132+.cosmos.staking.v1beta1.TokenizeShare" +
-      "RecordB\004\310\336\037\000R\007records\"m\n#QueryAllTokeniz" +
-      "eShareRecordsRequest\022F\n\npagination\030\001 \001(\013" +
-      "2&.cosmos.base.query.v1beta1.PageRequest" +
-      "R\npagination\"\274\001\n$QueryAllTokenizeShareRe" +
-      "cordsResponse\022K\n\007records\030\001 \003(\0132+.cosmos." +
-      "staking.v1beta1.TokenizeShareRecordB\004\310\336\037" +
-      "\000R\007records\022G\n\npagination\030\002 \001(\0132\'.cosmos." +
-      "base.query.v1beta1.PageResponseR\npaginat" +
-      "ion\"\'\n%QueryLastTokenizeShareRecordIdReq" +
-      "uest\"8\n&QueryLastTokenizeShareRecordIdRe" +
-      "sponse\022\016\n\002id\030\001 \001(\004R\002id\"\'\n%QueryTotalToke" +
-      "nizeSharedAssetsRequest\"_\n&QueryTotalTok" +
-      "enizeSharedAssetsResponse\0225\n\005value\030\001 \001(\013" +
-      "2\031.cosmos.base.v1beta1.CoinB\004\310\336\037\000R\005value" +
-      "\"\030\n\026QueryTotalLiquidStaked\"8\n\036QueryTotal" +
-      "LiquidStakedResponse\022\026\n\006tokens\030\001 \001(\tR\006to" +
-      "kens\"6\n\032QueryTokenizeShareLockInfo\022\030\n\007ad" +
-      "dress\030\001 \001(\tR\007address\"e\n\"QueryTokenizeSha" +
-      "reLockInfoResponse\022\026\n\006status\030\001 \001(\tR\006stat" +
-      "us\022\'\n\017expiration_time\030\002 \001(\tR\016expirationT" +
-      "ime2\332#\n\005Query\022\236\001\n\nValidators\022..cosmos.st" +
-      "aking.v1beta1.QueryValidatorsRequest\032/.c" +
-      "osmos.staking.v1beta1.QueryValidatorsRes" +
-      "ponse\"/\210\347\260*\001\202\323\344\223\002$\022\"/cosmos/staking/v1be" +
-      "ta1/validators\022\254\001\n\tValidator\022-.cosmos.st" +
-      "aking.v1beta1.QueryValidatorRequest\032..co" +
-      "smos.staking.v1beta1.QueryValidatorRespo" +
-      "nse\"@\210\347\260*\001\202\323\344\223\0025\0223/cosmos/staking/v1beta" +
-      "1/validators/{validator_addr}\022\331\001\n\024Valida" +
-      "torDelegations\0228.cosmos.staking.v1beta1." +
-      "QueryValidatorDelegationsRequest\0329.cosmo" +
-      "s.staking.v1beta1.QueryValidatorDelegati" +
-      "onsResponse\"L\210\347\260*\001\202\323\344\223\002A\022?/cosmos/stakin" +
-      "g/v1beta1/validators/{validator_addr}/de" +
-      "legations\022\376\001\n\035ValidatorUnbondingDelegati" +
-      "ons\022A.cosmos.staking.v1beta1.QueryValida" +
-      "torUnbondingDelegationsRequest\032B.cosmos." +
-      "staking.v1beta1.QueryValidatorUnbondingD" +
-      "elegationsResponse\"V\210\347\260*\001\202\323\344\223\002K\022I/cosmos" +
-      "/staking/v1beta1/validators/{validator_a" +
-      "ddr}/unbonding_delegations\022\314\001\n\nDelegatio" +
-      "n\022..cosmos.staking.v1beta1.QueryDelegati" +
-      "onRequest\032/.cosmos.staking.v1beta1.Query" +
-      "DelegationResponse\"]\210\347\260*\001\202\323\344\223\002R\022P/cosmos" +
-      "/staking/v1beta1/validators/{validator_a" +
-      "ddr}/delegations/{delegator_addr}\022\374\001\n\023Un" +
-      "bondingDelegation\0227.cosmos.staking.v1bet" +
-      "a1.QueryUnbondingDelegationRequest\0328.cos" +
-      "mos.staking.v1beta1.QueryUnbondingDelega" +
-      "tionResponse\"r\210\347\260*\001\202\323\344\223\002g\022e/cosmos/staki" +
-      "ng/v1beta1/validators/{validator_addr}/d" +
-      "elegations/{delegator_addr}/unbonding_de" +
-      "legation\022\316\001\n\024DelegatorDelegations\0228.cosm" +
-      "os.staking.v1beta1.QueryDelegatorDelegat" +
-      "ionsRequest\0329.cosmos.staking.v1beta1.Que" +
-      "ryDelegatorDelegationsResponse\"A\210\347\260*\001\202\323\344" +
-      "\223\0026\0224/cosmos/staking/v1beta1/delegations" +
-      "/{delegator_addr}\022\376\001\n\035DelegatorUnbonding" +
-      "Delegations\022A.cosmos.staking.v1beta1.Que" +
-      "ryDelegatorUnbondingDelegationsRequest\032B" +
-      ".cosmos.staking.v1beta1.QueryDelegatorUn" +
-      "bondingDelegationsResponse\"V\210\347\260*\001\202\323\344\223\002K\022" +
-      "I/cosmos/staking/v1beta1/delegators/{del" +
-      "egator_addr}/unbonding_delegations\022\306\001\n\rR" +
-      "edelegations\0221.cosmos.staking.v1beta1.Qu" +
-      "eryRedelegationsRequest\0322.cosmos.staking" +
-      ".v1beta1.QueryRedelegationsResponse\"N\210\347\260" +
-      "*\001\202\323\344\223\002C\022A/cosmos/staking/v1beta1/delega" +
-      "tors/{delegator_addr}/redelegations\022\325\001\n\023" +
-      "DelegatorValidators\0227.cosmos.staking.v1b" +
-      "eta1.QueryDelegatorValidatorsRequest\0328.c" +
-      "osmos.staking.v1beta1.QueryDelegatorVali" +
-      "datorsResponse\"K\210\347\260*\001\202\323\344\223\002@\022>/cosmos/sta" +
-      "king/v1beta1/delegators/{delegator_addr}" +
-      "/validators\022\343\001\n\022DelegatorValidator\0226.cos" +
-      "mos.staking.v1beta1.QueryDelegatorValida" +
-      "torRequest\0327.cosmos.staking.v1beta1.Quer" +
-      "yDelegatorValidatorResponse\"\\\210\347\260*\001\202\323\344\223\002Q" +
-      "\022O/cosmos/staking/v1beta1/delegators/{de" +
-      "legator_addr}/validators/{validator_addr" +
-      "}\022\326\001\n\027TokenizeShareRecordById\022;.cosmos.s" +
-      "taking.v1beta1.QueryTokenizeShareRecordB" +
-      "yIdRequest\032<.cosmos.staking.v1beta1.Quer" +
-      "yTokenizeShareRecordByIdResponse\"@\202\323\344\223\002:" +
-      "\0228/cosmos/staking/v1beta1/tokenize_share" +
-      "_record_by_id/{id}\022\345\001\n\032TokenizeShareReco" +
-      "rdByDenom\022>.cosmos.staking.v1beta1.Query" +
-      "TokenizeShareRecordByDenomRequest\032?.cosm" +
-      "os.staking.v1beta1.QueryTokenizeShareRec" +
-      "ordByDenomResponse\"F\202\323\344\223\002@\022>/cosmos/stak" +
-      "ing/v1beta1/tokenize_share_record_by_den" +
-      "om/{denom}\022\337\001\n\031TokenizeShareRecordsOwned" +
-      "\022=.cosmos.staking.v1beta1.QueryTokenizeS" +
-      "hareRecordsOwnedRequest\032>.cosmos.staking" +
-      ".v1beta1.QueryTokenizeShareRecordsOwnedR" +
-      "esponse\"C\202\323\344\223\002=\022;/cosmos/staking/v1beta1" +
-      "/tokenize_share_record_owned/{owner}\022\314\001\n" +
-      "\027AllTokenizeShareRecords\022;.cosmos.stakin" +
-      "g.v1beta1.QueryAllTokenizeShareRecordsRe" +
-      "quest\032<.cosmos.staking.v1beta1.QueryAllT" +
-      "okenizeShareRecordsResponse\"6\202\323\344\223\0020\022./co" +
-      "smos/staking/v1beta1/tokenize_share_reco" +
-      "rds\022\331\001\n\031LastTokenizeShareRecordId\022=.cosm" +
-      "os.staking.v1beta1.QueryLastTokenizeShar" +
-      "eRecordIdRequest\032>.cosmos.staking.v1beta" +
-      "1.QueryLastTokenizeShareRecordIdResponse" +
-      "\"=\202\323\344\223\0027\0225/cosmos/staking/v1beta1/last_t" +
-      "okenize_share_record_id\022\330\001\n\031TotalTokeniz" +
-      "eSharedAssets\022=.cosmos.staking.v1beta1.Q" +
-      "ueryTotalTokenizeSharedAssetsRequest\032>.c" +
-      "osmos.staking.v1beta1.QueryTotalTokenize" +
-      "SharedAssetsResponse\"<\202\323\344\223\0026\0224/cosmos/st" +
-      "aking/v1beta1/total_tokenize_shared_asse" +
-      "ts\022\260\001\n\021TotalLiquidStaked\022..cosmos.stakin" +
-      "g.v1beta1.QueryTotalLiquidStaked\0326.cosmo" +
-      "s.staking.v1beta1.QueryTotalLiquidStaked" +
-      "Response\"3\202\323\344\223\002-\022+/cosmos/staking/v1beta" +
-      "1/total_liquid_staked\022\313\001\n\025TokenizeShareL" +
-      "ockInfo\0222.cosmos.staking.v1beta1.QueryTo" +
-      "kenizeShareLockInfo\032:.cosmos.staking.v1b" +
-      "eta1.QueryTokenizeShareLockInfoResponse\"" +
-      "B\202\323\344\223\002<\022:/cosmos/staking/v1beta1/tokeniz" +
-      "e_share_lock_info/{address}\022\270\001\n\016Historic" +
-      "alInfo\0222.cosmos.staking.v1beta1.QueryHis" +
-      "toricalInfoRequest\0323.cosmos.staking.v1be" +
-      "ta1.QueryHistoricalInfoResponse\"=\210\347\260*\001\202\323" +
-      "\344\223\0022\0220/cosmos/staking/v1beta1/historical" +
-      "_info/{height}\022\206\001\n\004Pool\022(.cosmos.staking" +
-      ".v1beta1.QueryPoolRequest\032).cosmos.staki" +
-      "ng.v1beta1.QueryPoolResponse\")\210\347\260*\001\202\323\344\223\002" +
-      "\036\022\034/cosmos/staking/v1beta1/pool\022\216\001\n\006Para" +
-      "ms\022*.cosmos.staking.v1beta1.QueryParamsR" +
-      "equest\032+.cosmos.staking.v1beta1.QueryPar" +
-      "amsResponse\"+\210\347\260*\001\202\323\344\223\002 \022\036/cosmos/stakin" +
-      "g/v1beta1/paramsB\316\001\n\032com.cosmos.staking." +
-      "v1beta1B\nQueryProtoZ,github.com/cosmos/c" +
-      "osmos-sdk/x/staking/types\242\002\003CSX\252\002\026Cosmos" +
-      ".Staking.V1beta1\312\002\026Cosmos\\Staking\\V1beta" +
-      "1\342\002\"Cosmos\\Staking\\V1beta1\\GPBMetadata\352\002" +
-      "\030Cosmos::Staking::V1beta1b\006proto3"
+      "ddressStringR\rdelegatorAddr\022H\n\016validator" +
+      "_addr\030\002 \001(\tB!\322\264-\035cosmos.ValidatorAddress" +
+      "StringR\rvalidatorAddr:\010\210\240\037\000\350\240\037\000\"m\n\037Query" +
+      "DelegatorValidatorResponse\022J\n\tvalidator\030" +
+      "\001 \001(\0132!.cosmos.staking.v1beta1.Validator" +
+      "B\t\310\336\037\000\250\347\260*\001R\tvalidator\"4\n\032QueryHistorica" +
+      "lInfoRequest\022\026\n\006height\030\001 \001(\003R\006height\"Y\n\033" +
+      "QueryHistoricalInfoResponse\022:\n\004hist\030\001 \001(" +
+      "\0132&.cosmos.staking.v1beta1.HistoricalInf" +
+      "oR\004hist\"\022\n\020QueryPoolRequest\"P\n\021QueryPool" +
+      "Response\022;\n\004pool\030\001 \001(\0132\034.cosmos.staking." +
+      "v1beta1.PoolB\t\310\336\037\000\250\347\260*\001R\004pool\"\024\n\022QueryPa" +
+      "ramsRequest\"X\n\023QueryParamsResponse\022A\n\006pa" +
+      "rams\030\001 \001(\0132\036.cosmos.staking.v1beta1.Para" +
+      "msB\t\310\336\037\000\250\347\260*\001R\006params\"5\n#QueryTokenizeSh" +
+      "areRecordByIdRequest\022\016\n\002id\030\001 \001(\004R\002id\"q\n$" +
+      "QueryTokenizeShareRecordByIdResponse\022I\n\006" +
+      "record\030\001 \001(\0132+.cosmos.staking.v1beta1.To" +
+      "kenizeShareRecordB\004\310\336\037\000R\006record\">\n&Query" +
+      "TokenizeShareRecordByDenomRequest\022\024\n\005den" +
+      "om\030\001 \001(\tR\005denom\"t\n\'QueryTokenizeShareRec" +
+      "ordByDenomResponse\022I\n\006record\030\001 \001(\0132+.cos" +
+      "mos.staking.v1beta1.TokenizeShareRecordB" +
+      "\004\310\336\037\000R\006record\"=\n%QueryTokenizeShareRecor" +
+      "dsOwnedRequest\022\024\n\005owner\030\001 \001(\tR\005owner\"u\n&" +
+      "QueryTokenizeShareRecordsOwnedResponse\022K" +
+      "\n\007records\030\001 \003(\0132+.cosmos.staking.v1beta1" +
+      ".TokenizeShareRecordB\004\310\336\037\000R\007records\"m\n#Q" +
+      "ueryAllTokenizeShareRecordsRequest\022F\n\npa" +
+      "gination\030\001 \001(\0132&.cosmos.base.query.v1bet" +
+      "a1.PageRequestR\npagination\"\274\001\n$QueryAllT" +
+      "okenizeShareRecordsResponse\022K\n\007records\030\001" +
+      " \003(\0132+.cosmos.staking.v1beta1.TokenizeSh" +
+      "areRecordB\004\310\336\037\000R\007records\022G\n\npagination\030\002" +
+      " \001(\0132\'.cosmos.base.query.v1beta1.PageRes" +
+      "ponseR\npagination\"\'\n%QueryLastTokenizeSh" +
+      "areRecordIdRequest\"8\n&QueryLastTokenizeS" +
+      "hareRecordIdResponse\022\016\n\002id\030\001 \001(\004R\002id\"\'\n%" +
+      "QueryTotalTokenizeSharedAssetsRequest\"_\n" +
+      "&QueryTotalTokenizeSharedAssetsResponse\022" +
+      "5\n\005value\030\001 \001(\0132\031.cosmos.base.v1beta1.Coi" +
+      "nB\004\310\336\037\000R\005value\"\030\n\026QueryTotalLiquidStaked" +
+      "\"8\n\036QueryTotalLiquidStakedResponse\022\026\n\006to" +
+      "kens\030\001 \001(\tR\006tokens\"6\n\032QueryTokenizeShare" +
+      "LockInfo\022\030\n\007address\030\001 \001(\tR\007address\"e\n\"Qu" +
+      "eryTokenizeShareLockInfoResponse\022\026\n\006stat" +
+      "us\030\001 \001(\tR\006status\022\'\n\017expiration_time\030\002 \001(" +
+      "\tR\016expirationTime2\332#\n\005Query\022\236\001\n\nValidato" +
+      "rs\022..cosmos.staking.v1beta1.QueryValidat" +
+      "orsRequest\032/.cosmos.staking.v1beta1.Quer" +
+      "yValidatorsResponse\"/\210\347\260*\001\202\323\344\223\002$\022\"/cosmo" +
+      "s/staking/v1beta1/validators\022\254\001\n\tValidat" +
+      "or\022-.cosmos.staking.v1beta1.QueryValidat" +
+      "orRequest\032..cosmos.staking.v1beta1.Query" +
+      "ValidatorResponse\"@\210\347\260*\001\202\323\344\223\0025\0223/cosmos/" +
+      "staking/v1beta1/validators/{validator_ad" +
+      "dr}\022\331\001\n\024ValidatorDelegations\0228.cosmos.st" +
+      "aking.v1beta1.QueryValidatorDelegationsR" +
+      "equest\0329.cosmos.staking.v1beta1.QueryVal" +
+      "idatorDelegationsResponse\"L\210\347\260*\001\202\323\344\223\002A\022?" +
+      "/cosmos/staking/v1beta1/validators/{vali" +
+      "dator_addr}/delegations\022\376\001\n\035ValidatorUnb" +
+      "ondingDelegations\022A.cosmos.staking.v1bet" +
+      "a1.QueryValidatorUnbondingDelegationsReq" +
+      "uest\032B.cosmos.staking.v1beta1.QueryValid" +
+      "atorUnbondingDelegationsResponse\"V\210\347\260*\001\202" +
+      "\323\344\223\002K\022I/cosmos/staking/v1beta1/validator" +
+      "s/{validator_addr}/unbonding_delegations" +
+      "\022\314\001\n\nDelegation\022..cosmos.staking.v1beta1" +
+      ".QueryDelegationRequest\032/.cosmos.staking" +
+      ".v1beta1.QueryDelegationResponse\"]\210\347\260*\001\202" +
+      "\323\344\223\002R\022P/cosmos/staking/v1beta1/validator" +
+      "s/{validator_addr}/delegations/{delegato" +
+      "r_addr}\022\374\001\n\023UnbondingDelegation\0227.cosmos" +
+      ".staking.v1beta1.QueryUnbondingDelegatio" +
+      "nRequest\0328.cosmos.staking.v1beta1.QueryU" +
+      "nbondingDelegationResponse\"r\210\347\260*\001\202\323\344\223\002g\022" +
+      "e/cosmos/staking/v1beta1/validators/{val" +
+      "idator_addr}/delegations/{delegator_addr" +
+      "}/unbonding_delegation\022\316\001\n\024DelegatorDele" +
+      "gations\0228.cosmos.staking.v1beta1.QueryDe" +
+      "legatorDelegationsRequest\0329.cosmos.staki" +
+      "ng.v1beta1.QueryDelegatorDelegationsResp" +
+      "onse\"A\210\347\260*\001\202\323\344\223\0026\0224/cosmos/staking/v1bet" +
+      "a1/delegations/{delegator_addr}\022\376\001\n\035Dele" +
+      "gatorUnbondingDelegations\022A.cosmos.staki" +
+      "ng.v1beta1.QueryDelegatorUnbondingDelega" +
+      "tionsRequest\032B.cosmos.staking.v1beta1.Qu" +
+      "eryDelegatorUnbondingDelegationsResponse" +
+      "\"V\210\347\260*\001\202\323\344\223\002K\022I/cosmos/staking/v1beta1/d" +
+      "elegators/{delegator_addr}/unbonding_del" +
+      "egations\022\306\001\n\rRedelegations\0221.cosmos.stak" +
+      "ing.v1beta1.QueryRedelegationsRequest\0322." +
+      "cosmos.staking.v1beta1.QueryRedelegation" +
+      "sResponse\"N\210\347\260*\001\202\323\344\223\002C\022A/cosmos/staking/" +
+      "v1beta1/delegators/{delegator_addr}/rede" +
+      "legations\022\325\001\n\023DelegatorValidators\0227.cosm" +
+      "os.staking.v1beta1.QueryDelegatorValidat" +
+      "orsRequest\0328.cosmos.staking.v1beta1.Quer" +
+      "yDelegatorValidatorsResponse\"K\210\347\260*\001\202\323\344\223\002" +
+      "@\022>/cosmos/staking/v1beta1/delegators/{d" +
+      "elegator_addr}/validators\022\343\001\n\022DelegatorV" +
+      "alidator\0226.cosmos.staking.v1beta1.QueryD" +
+      "elegatorValidatorRequest\0327.cosmos.stakin" +
+      "g.v1beta1.QueryDelegatorValidatorRespons" +
+      "e\"\\\210\347\260*\001\202\323\344\223\002Q\022O/cosmos/staking/v1beta1/" +
+      "delegators/{delegator_addr}/validators/{" +
+      "validator_addr}\022\326\001\n\027TokenizeShareRecordB" +
+      "yId\022;.cosmos.staking.v1beta1.QueryTokeni" +
+      "zeShareRecordByIdRequest\032<.cosmos.stakin" +
+      "g.v1beta1.QueryTokenizeShareRecordByIdRe" +
+      "sponse\"@\202\323\344\223\002:\0228/cosmos/staking/v1beta1/" +
+      "tokenize_share_record_by_id/{id}\022\345\001\n\032Tok" +
+      "enizeShareRecordByDenom\022>.cosmos.staking" +
+      ".v1beta1.QueryTokenizeShareRecordByDenom" +
+      "Request\032?.cosmos.staking.v1beta1.QueryTo" +
+      "kenizeShareRecordByDenomResponse\"F\202\323\344\223\002@" +
+      "\022>/cosmos/staking/v1beta1/tokenize_share" +
+      "_record_by_denom/{denom}\022\337\001\n\031TokenizeSha" +
+      "reRecordsOwned\022=.cosmos.staking.v1beta1." +
+      "QueryTokenizeShareRecordsOwnedRequest\032>." +
+      "cosmos.staking.v1beta1.QueryTokenizeShar" +
+      "eRecordsOwnedResponse\"C\202\323\344\223\002=\022;/cosmos/s" +
+      "taking/v1beta1/tokenize_share_record_own" +
+      "ed/{owner}\022\314\001\n\027AllTokenizeShareRecords\022;" +
+      ".cosmos.staking.v1beta1.QueryAllTokenize" +
+      "ShareRecordsRequest\032<.cosmos.staking.v1b" +
+      "eta1.QueryAllTokenizeShareRecordsRespons" +
+      "e\"6\202\323\344\223\0020\022./cosmos/staking/v1beta1/token" +
+      "ize_share_records\022\331\001\n\031LastTokenizeShareR" +
+      "ecordId\022=.cosmos.staking.v1beta1.QueryLa" +
+      "stTokenizeShareRecordIdRequest\032>.cosmos." +
+      "staking.v1beta1.QueryLastTokenizeShareRe" +
+      "cordIdResponse\"=\202\323\344\223\0027\0225/cosmos/staking/" +
+      "v1beta1/last_tokenize_share_record_id\022\330\001" +
+      "\n\031TotalTokenizeSharedAssets\022=.cosmos.sta" +
+      "king.v1beta1.QueryTotalTokenizeSharedAss" +
+      "etsRequest\032>.cosmos.staking.v1beta1.Quer" +
+      "yTotalTokenizeSharedAssetsResponse\"<\202\323\344\223" +
+      "\0026\0224/cosmos/staking/v1beta1/total_tokeni" +
+      "ze_shared_assets\022\260\001\n\021TotalLiquidStaked\022." +
+      ".cosmos.staking.v1beta1.QueryTotalLiquid" +
+      "Staked\0326.cosmos.staking.v1beta1.QueryTot" +
+      "alLiquidStakedResponse\"3\202\323\344\223\002-\022+/cosmos/" +
+      "staking/v1beta1/total_liquid_staked\022\313\001\n\025" +
+      "TokenizeShareLockInfo\0222.cosmos.staking.v" +
+      "1beta1.QueryTokenizeShareLockInfo\032:.cosm" +
+      "os.staking.v1beta1.QueryTokenizeShareLoc" +
+      "kInfoResponse\"B\202\323\344\223\002<\022:/cosmos/staking/v" +
+      "1beta1/tokenize_share_lock_info/{address" +
+      "}\022\270\001\n\016HistoricalInfo\0222.cosmos.staking.v1" +
+      "beta1.QueryHistoricalInfoRequest\0323.cosmo" +
+      "s.staking.v1beta1.QueryHistoricalInfoRes" +
+      "ponse\"=\210\347\260*\001\202\323\344\223\0022\0220/cosmos/staking/v1be" +
+      "ta1/historical_info/{height}\022\206\001\n\004Pool\022(." +
+      "cosmos.staking.v1beta1.QueryPoolRequest\032" +
+      ").cosmos.staking.v1beta1.QueryPoolRespon" +
+      "se\")\210\347\260*\001\202\323\344\223\002\036\022\034/cosmos/staking/v1beta1" +
+      "/pool\022\216\001\n\006Params\022*.cosmos.staking.v1beta" +
+      "1.QueryParamsRequest\032+.cosmos.staking.v1" +
+      "beta1.QueryParamsResponse\"+\210\347\260*\001\202\323\344\223\002 \022\036" +
+      "/cosmos/staking/v1beta1/paramsB\316\001\n\032com.c" +
+      "osmos.staking.v1beta1B\nQueryProtoZ,githu" +
+      "b.com/cosmos/cosmos-sdk/x/staking/types\242" +
+      "\002\003CSX\252\002\026Cosmos.Staking.V1beta1\312\002\026Cosmos\\" +
+      "Staking\\V1beta1\342\002\"Cosmos\\Staking\\V1beta1" +
+      "\\GPBMetadata\352\002\030Cosmos::Staking::V1beta1b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

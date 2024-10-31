@@ -169,7 +169,7 @@ extension Cosmos_Gov_V1beta1_QueryClientProtocol {
     )
   }
 
-  /// Deposit queries single deposit information based proposalID, depositAddr.
+  /// Deposit queries single deposit information based on proposalID, depositor address.
   ///
   /// - Parameters:
   ///   - request: Request to send to Deposit.
@@ -666,7 +666,7 @@ internal protocol Cosmos_Gov_V1beta1_QueryProvider: CallHandlerProvider {
   /// Params queries all parameters of the gov module.
   func params(request: Cosmos_Gov_V1beta1_QueryParamsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Gov_V1beta1_QueryParamsResponse>
 
-  /// Deposit queries single deposit information based proposalID, depositAddr.
+  /// Deposit queries single deposit information based on proposalID, depositor address.
   func deposit(request: Cosmos_Gov_V1beta1_QueryDepositRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Gov_V1beta1_QueryDepositResponse>
 
   /// Deposits queries all deposits of a single proposal.
@@ -804,7 +804,7 @@ internal protocol Cosmos_Gov_V1beta1_QueryAsyncProvider: CallHandlerProvider {
     context: GRPCAsyncServerCallContext
   ) async throws -> Cosmos_Gov_V1beta1_QueryParamsResponse
 
-  /// Deposit queries single deposit information based proposalID, depositAddr.
+  /// Deposit queries single deposit information based on proposalID, depositor address.
   @Sendable func deposit(
     request: Cosmos_Gov_V1beta1_QueryDepositRequest,
     context: GRPCAsyncServerCallContext

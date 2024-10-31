@@ -1080,11 +1080,11 @@ public final class GenesisProto {
       "\"\204\001\n\014GenesisState\022@\n\014scheduleList\030\002 \003(\0132" +
       "\026.neutron.cron.ScheduleB\004\310\336\037\000R\014scheduleL" +
       "ist\0222\n\006params\030\001 \001(\0132\024.neutron.cron.Param" +
-      "sB\004\310\336\037\000R\006paramsB\234\001\n\020com.neutron.cronB\014Ge" +
-      "nesisProtoZ+github.com/neutron-org/neutr" +
-      "on/x/cron/types\242\002\003NCX\252\002\014Neutron.Cron\312\002\014N" +
-      "eutron\\Cron\342\002\030Neutron\\Cron\\GPBMetadata\352\002" +
-      "\rNeutron::Cronb\006proto3"
+      "sB\004\310\336\037\000R\006paramsB\237\001\n\020com.neutron.cronB\014Ge" +
+      "nesisProtoZ.github.com/neutron-org/neutr" +
+      "on/v4/x/cron/types\242\002\003NCX\252\002\014Neutron.Cron\312" +
+      "\002\014Neutron\\Cron\342\002\030Neutron\\Cron\\GPBMetadat" +
+      "a\352\002\rNeutron::Cronb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

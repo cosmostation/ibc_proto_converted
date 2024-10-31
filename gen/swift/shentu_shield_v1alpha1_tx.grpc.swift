@@ -33,183 +33,15 @@ internal protocol Shentu_Shield_V1alpha1_MsgClientProtocol: GRPCClient {
   var serviceName: String { get }
   var interceptors: Shentu_Shield_V1alpha1_MsgClientInterceptorFactoryProtocol? { get }
 
-  func createPool(
-    _ request: Shentu_Shield_V1alpha1_MsgCreatePool,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_MsgCreatePool, Shentu_Shield_V1alpha1_MsgCreatePoolResponse>
-
-  func updatePool(
-    _ request: Shentu_Shield_V1alpha1_MsgUpdatePool,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_MsgUpdatePool, Shentu_Shield_V1alpha1_MsgUpdatePoolResponse>
-
-  func pausePool(
-    _ request: Shentu_Shield_V1alpha1_MsgPausePool,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_MsgPausePool, Shentu_Shield_V1alpha1_MsgPausePoolResponse>
-
-  func resumePool(
-    _ request: Shentu_Shield_V1alpha1_MsgResumePool,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_MsgResumePool, Shentu_Shield_V1alpha1_MsgResumePoolResponse>
-
-  func depositCollateral(
-    _ request: Shentu_Shield_V1alpha1_MsgDepositCollateral,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_MsgDepositCollateral, Shentu_Shield_V1alpha1_MsgDepositCollateralResponse>
-
-  func withdrawCollateral(
-    _ request: Shentu_Shield_V1alpha1_MsgWithdrawCollateral,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_MsgWithdrawCollateral, Shentu_Shield_V1alpha1_MsgWithdrawCollateralResponse>
-
   func withdrawRewards(
     _ request: Shentu_Shield_V1alpha1_MsgWithdrawRewards,
     callOptions: CallOptions?
   ) -> UnaryCall<Shentu_Shield_V1alpha1_MsgWithdrawRewards, Shentu_Shield_V1alpha1_MsgWithdrawRewardsResponse>
-
-  func withdrawForeignRewards(
-    _ request: Shentu_Shield_V1alpha1_MsgWithdrawForeignRewards,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_MsgWithdrawForeignRewards, Shentu_Shield_V1alpha1_MsgWithdrawForeignRewardsResponse>
-
-  func purchaseShield(
-    _ request: Shentu_Shield_V1alpha1_MsgPurchaseShield,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_MsgPurchaseShield, Shentu_Shield_V1alpha1_MsgPurchaseShieldResponse>
-
-  func withdrawReimbursement(
-    _ request: Shentu_Shield_V1alpha1_MsgWithdrawReimbursement,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_MsgWithdrawReimbursement, Shentu_Shield_V1alpha1_MsgWithdrawReimbursementResponse>
-
-  func updateSponsor(
-    _ request: Shentu_Shield_V1alpha1_MsgUpdateSponsor,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_MsgUpdateSponsor, Shentu_Shield_V1alpha1_MsgUpdateSponsorResponse>
-
-  func stakeForShield(
-    _ request: Shentu_Shield_V1alpha1_MsgStakeForShield,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_MsgStakeForShield, Shentu_Shield_V1alpha1_MsgStakeForShieldResponse>
-
-  func unstakeFromShield(
-    _ request: Shentu_Shield_V1alpha1_MsgUnstakeFromShield,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_MsgUnstakeFromShield, Shentu_Shield_V1alpha1_MsgUnstakeFromShieldResponse>
 }
 
 extension Shentu_Shield_V1alpha1_MsgClientProtocol {
   internal var serviceName: String {
     return "shentu.shield.v1alpha1.Msg"
-  }
-
-  /// Unary call to CreatePool
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to CreatePool.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func createPool(
-    _ request: Shentu_Shield_V1alpha1_MsgCreatePool,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_MsgCreatePool, Shentu_Shield_V1alpha1_MsgCreatePoolResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.createPool.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeCreatePoolInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to UpdatePool
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to UpdatePool.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func updatePool(
-    _ request: Shentu_Shield_V1alpha1_MsgUpdatePool,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_MsgUpdatePool, Shentu_Shield_V1alpha1_MsgUpdatePoolResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.updatePool.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeUpdatePoolInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to PausePool
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to PausePool.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func pausePool(
-    _ request: Shentu_Shield_V1alpha1_MsgPausePool,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_MsgPausePool, Shentu_Shield_V1alpha1_MsgPausePoolResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.pausePool.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePausePoolInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to ResumePool
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to ResumePool.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func resumePool(
-    _ request: Shentu_Shield_V1alpha1_MsgResumePool,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_MsgResumePool, Shentu_Shield_V1alpha1_MsgResumePoolResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.resumePool.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeResumePoolInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to DepositCollateral
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to DepositCollateral.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func depositCollateral(
-    _ request: Shentu_Shield_V1alpha1_MsgDepositCollateral,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_MsgDepositCollateral, Shentu_Shield_V1alpha1_MsgDepositCollateralResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.depositCollateral.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeDepositCollateralInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to WithdrawCollateral
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to WithdrawCollateral.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func withdrawCollateral(
-    _ request: Shentu_Shield_V1alpha1_MsgWithdrawCollateral,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_MsgWithdrawCollateral, Shentu_Shield_V1alpha1_MsgWithdrawCollateralResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.withdrawCollateral.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeWithdrawCollateralInterceptors() ?? []
-    )
   }
 
   /// Unary call to WithdrawRewards
@@ -227,114 +59,6 @@ extension Shentu_Shield_V1alpha1_MsgClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeWithdrawRewardsInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to WithdrawForeignRewards
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to WithdrawForeignRewards.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func withdrawForeignRewards(
-    _ request: Shentu_Shield_V1alpha1_MsgWithdrawForeignRewards,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_MsgWithdrawForeignRewards, Shentu_Shield_V1alpha1_MsgWithdrawForeignRewardsResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.withdrawForeignRewards.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeWithdrawForeignRewardsInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to PurchaseShield
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to PurchaseShield.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func purchaseShield(
-    _ request: Shentu_Shield_V1alpha1_MsgPurchaseShield,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_MsgPurchaseShield, Shentu_Shield_V1alpha1_MsgPurchaseShieldResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.purchaseShield.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePurchaseShieldInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to WithdrawReimbursement
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to WithdrawReimbursement.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func withdrawReimbursement(
-    _ request: Shentu_Shield_V1alpha1_MsgWithdrawReimbursement,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_MsgWithdrawReimbursement, Shentu_Shield_V1alpha1_MsgWithdrawReimbursementResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.withdrawReimbursement.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeWithdrawReimbursementInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to UpdateSponsor
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to UpdateSponsor.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func updateSponsor(
-    _ request: Shentu_Shield_V1alpha1_MsgUpdateSponsor,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_MsgUpdateSponsor, Shentu_Shield_V1alpha1_MsgUpdateSponsorResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.updateSponsor.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeUpdateSponsorInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to StakeForShield
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to StakeForShield.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func stakeForShield(
-    _ request: Shentu_Shield_V1alpha1_MsgStakeForShield,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_MsgStakeForShield, Shentu_Shield_V1alpha1_MsgStakeForShieldResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.stakeForShield.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeStakeForShieldInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to UnstakeFromShield
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to UnstakeFromShield.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func unstakeFromShield(
-    _ request: Shentu_Shield_V1alpha1_MsgUnstakeFromShield,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Shentu_Shield_V1alpha1_MsgUnstakeFromShield, Shentu_Shield_V1alpha1_MsgUnstakeFromShieldResponse> {
-    return self.makeUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.unstakeFromShield.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeUnstakeFromShieldInterceptors() ?? []
     )
   }
 }
@@ -402,70 +126,10 @@ internal protocol Shentu_Shield_V1alpha1_MsgAsyncClientProtocol: GRPCClient {
   static var serviceDescriptor: GRPCServiceDescriptor { get }
   var interceptors: Shentu_Shield_V1alpha1_MsgClientInterceptorFactoryProtocol? { get }
 
-  func makeCreatePoolCall(
-    _ request: Shentu_Shield_V1alpha1_MsgCreatePool,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_MsgCreatePool, Shentu_Shield_V1alpha1_MsgCreatePoolResponse>
-
-  func makeUpdatePoolCall(
-    _ request: Shentu_Shield_V1alpha1_MsgUpdatePool,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_MsgUpdatePool, Shentu_Shield_V1alpha1_MsgUpdatePoolResponse>
-
-  func makePausePoolCall(
-    _ request: Shentu_Shield_V1alpha1_MsgPausePool,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_MsgPausePool, Shentu_Shield_V1alpha1_MsgPausePoolResponse>
-
-  func makeResumePoolCall(
-    _ request: Shentu_Shield_V1alpha1_MsgResumePool,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_MsgResumePool, Shentu_Shield_V1alpha1_MsgResumePoolResponse>
-
-  func makeDepositCollateralCall(
-    _ request: Shentu_Shield_V1alpha1_MsgDepositCollateral,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_MsgDepositCollateral, Shentu_Shield_V1alpha1_MsgDepositCollateralResponse>
-
-  func makeWithdrawCollateralCall(
-    _ request: Shentu_Shield_V1alpha1_MsgWithdrawCollateral,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_MsgWithdrawCollateral, Shentu_Shield_V1alpha1_MsgWithdrawCollateralResponse>
-
   func makeWithdrawRewardsCall(
     _ request: Shentu_Shield_V1alpha1_MsgWithdrawRewards,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_MsgWithdrawRewards, Shentu_Shield_V1alpha1_MsgWithdrawRewardsResponse>
-
-  func makeWithdrawForeignRewardsCall(
-    _ request: Shentu_Shield_V1alpha1_MsgWithdrawForeignRewards,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_MsgWithdrawForeignRewards, Shentu_Shield_V1alpha1_MsgWithdrawForeignRewardsResponse>
-
-  func makePurchaseShieldCall(
-    _ request: Shentu_Shield_V1alpha1_MsgPurchaseShield,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_MsgPurchaseShield, Shentu_Shield_V1alpha1_MsgPurchaseShieldResponse>
-
-  func makeWithdrawReimbursementCall(
-    _ request: Shentu_Shield_V1alpha1_MsgWithdrawReimbursement,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_MsgWithdrawReimbursement, Shentu_Shield_V1alpha1_MsgWithdrawReimbursementResponse>
-
-  func makeUpdateSponsorCall(
-    _ request: Shentu_Shield_V1alpha1_MsgUpdateSponsor,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_MsgUpdateSponsor, Shentu_Shield_V1alpha1_MsgUpdateSponsorResponse>
-
-  func makeStakeForShieldCall(
-    _ request: Shentu_Shield_V1alpha1_MsgStakeForShield,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_MsgStakeForShield, Shentu_Shield_V1alpha1_MsgStakeForShieldResponse>
-
-  func makeUnstakeFromShieldCall(
-    _ request: Shentu_Shield_V1alpha1_MsgUnstakeFromShield,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_MsgUnstakeFromShield, Shentu_Shield_V1alpha1_MsgUnstakeFromShieldResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -476,78 +140,6 @@ extension Shentu_Shield_V1alpha1_MsgAsyncClientProtocol {
 
   internal var interceptors: Shentu_Shield_V1alpha1_MsgClientInterceptorFactoryProtocol? {
     return nil
-  }
-
-  internal func makeCreatePoolCall(
-    _ request: Shentu_Shield_V1alpha1_MsgCreatePool,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_MsgCreatePool, Shentu_Shield_V1alpha1_MsgCreatePoolResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.createPool.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeCreatePoolInterceptors() ?? []
-    )
-  }
-
-  internal func makeUpdatePoolCall(
-    _ request: Shentu_Shield_V1alpha1_MsgUpdatePool,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_MsgUpdatePool, Shentu_Shield_V1alpha1_MsgUpdatePoolResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.updatePool.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeUpdatePoolInterceptors() ?? []
-    )
-  }
-
-  internal func makePausePoolCall(
-    _ request: Shentu_Shield_V1alpha1_MsgPausePool,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_MsgPausePool, Shentu_Shield_V1alpha1_MsgPausePoolResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.pausePool.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePausePoolInterceptors() ?? []
-    )
-  }
-
-  internal func makeResumePoolCall(
-    _ request: Shentu_Shield_V1alpha1_MsgResumePool,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_MsgResumePool, Shentu_Shield_V1alpha1_MsgResumePoolResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.resumePool.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeResumePoolInterceptors() ?? []
-    )
-  }
-
-  internal func makeDepositCollateralCall(
-    _ request: Shentu_Shield_V1alpha1_MsgDepositCollateral,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_MsgDepositCollateral, Shentu_Shield_V1alpha1_MsgDepositCollateralResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.depositCollateral.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeDepositCollateralInterceptors() ?? []
-    )
-  }
-
-  internal func makeWithdrawCollateralCall(
-    _ request: Shentu_Shield_V1alpha1_MsgWithdrawCollateral,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_MsgWithdrawCollateral, Shentu_Shield_V1alpha1_MsgWithdrawCollateralResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.withdrawCollateral.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeWithdrawCollateralInterceptors() ?? []
-    )
   }
 
   internal func makeWithdrawRewardsCall(
@@ -561,154 +153,10 @@ extension Shentu_Shield_V1alpha1_MsgAsyncClientProtocol {
       interceptors: self.interceptors?.makeWithdrawRewardsInterceptors() ?? []
     )
   }
-
-  internal func makeWithdrawForeignRewardsCall(
-    _ request: Shentu_Shield_V1alpha1_MsgWithdrawForeignRewards,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_MsgWithdrawForeignRewards, Shentu_Shield_V1alpha1_MsgWithdrawForeignRewardsResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.withdrawForeignRewards.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeWithdrawForeignRewardsInterceptors() ?? []
-    )
-  }
-
-  internal func makePurchaseShieldCall(
-    _ request: Shentu_Shield_V1alpha1_MsgPurchaseShield,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_MsgPurchaseShield, Shentu_Shield_V1alpha1_MsgPurchaseShieldResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.purchaseShield.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePurchaseShieldInterceptors() ?? []
-    )
-  }
-
-  internal func makeWithdrawReimbursementCall(
-    _ request: Shentu_Shield_V1alpha1_MsgWithdrawReimbursement,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_MsgWithdrawReimbursement, Shentu_Shield_V1alpha1_MsgWithdrawReimbursementResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.withdrawReimbursement.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeWithdrawReimbursementInterceptors() ?? []
-    )
-  }
-
-  internal func makeUpdateSponsorCall(
-    _ request: Shentu_Shield_V1alpha1_MsgUpdateSponsor,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_MsgUpdateSponsor, Shentu_Shield_V1alpha1_MsgUpdateSponsorResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.updateSponsor.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeUpdateSponsorInterceptors() ?? []
-    )
-  }
-
-  internal func makeStakeForShieldCall(
-    _ request: Shentu_Shield_V1alpha1_MsgStakeForShield,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_MsgStakeForShield, Shentu_Shield_V1alpha1_MsgStakeForShieldResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.stakeForShield.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeStakeForShieldInterceptors() ?? []
-    )
-  }
-
-  internal func makeUnstakeFromShieldCall(
-    _ request: Shentu_Shield_V1alpha1_MsgUnstakeFromShield,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Shentu_Shield_V1alpha1_MsgUnstakeFromShield, Shentu_Shield_V1alpha1_MsgUnstakeFromShieldResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.unstakeFromShield.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeUnstakeFromShieldInterceptors() ?? []
-    )
-  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension Shentu_Shield_V1alpha1_MsgAsyncClientProtocol {
-  internal func createPool(
-    _ request: Shentu_Shield_V1alpha1_MsgCreatePool,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_MsgCreatePoolResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.createPool.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeCreatePoolInterceptors() ?? []
-    )
-  }
-
-  internal func updatePool(
-    _ request: Shentu_Shield_V1alpha1_MsgUpdatePool,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_MsgUpdatePoolResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.updatePool.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeUpdatePoolInterceptors() ?? []
-    )
-  }
-
-  internal func pausePool(
-    _ request: Shentu_Shield_V1alpha1_MsgPausePool,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_MsgPausePoolResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.pausePool.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePausePoolInterceptors() ?? []
-    )
-  }
-
-  internal func resumePool(
-    _ request: Shentu_Shield_V1alpha1_MsgResumePool,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_MsgResumePoolResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.resumePool.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeResumePoolInterceptors() ?? []
-    )
-  }
-
-  internal func depositCollateral(
-    _ request: Shentu_Shield_V1alpha1_MsgDepositCollateral,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_MsgDepositCollateralResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.depositCollateral.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeDepositCollateralInterceptors() ?? []
-    )
-  }
-
-  internal func withdrawCollateral(
-    _ request: Shentu_Shield_V1alpha1_MsgWithdrawCollateral,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_MsgWithdrawCollateralResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.withdrawCollateral.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeWithdrawCollateralInterceptors() ?? []
-    )
-  }
-
   internal func withdrawRewards(
     _ request: Shentu_Shield_V1alpha1_MsgWithdrawRewards,
     callOptions: CallOptions? = nil
@@ -718,78 +166,6 @@ extension Shentu_Shield_V1alpha1_MsgAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeWithdrawRewardsInterceptors() ?? []
-    )
-  }
-
-  internal func withdrawForeignRewards(
-    _ request: Shentu_Shield_V1alpha1_MsgWithdrawForeignRewards,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_MsgWithdrawForeignRewardsResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.withdrawForeignRewards.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeWithdrawForeignRewardsInterceptors() ?? []
-    )
-  }
-
-  internal func purchaseShield(
-    _ request: Shentu_Shield_V1alpha1_MsgPurchaseShield,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_MsgPurchaseShieldResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.purchaseShield.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePurchaseShieldInterceptors() ?? []
-    )
-  }
-
-  internal func withdrawReimbursement(
-    _ request: Shentu_Shield_V1alpha1_MsgWithdrawReimbursement,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_MsgWithdrawReimbursementResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.withdrawReimbursement.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeWithdrawReimbursementInterceptors() ?? []
-    )
-  }
-
-  internal func updateSponsor(
-    _ request: Shentu_Shield_V1alpha1_MsgUpdateSponsor,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_MsgUpdateSponsorResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.updateSponsor.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeUpdateSponsorInterceptors() ?? []
-    )
-  }
-
-  internal func stakeForShield(
-    _ request: Shentu_Shield_V1alpha1_MsgStakeForShield,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_MsgStakeForShieldResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.stakeForShield.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeStakeForShieldInterceptors() ?? []
-    )
-  }
-
-  internal func unstakeFromShield(
-    _ request: Shentu_Shield_V1alpha1_MsgUnstakeFromShield,
-    callOptions: CallOptions? = nil
-  ) async throws -> Shentu_Shield_V1alpha1_MsgUnstakeFromShieldResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.unstakeFromShield.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeUnstakeFromShieldInterceptors() ?? []
     )
   }
 }
@@ -813,44 +189,8 @@ internal struct Shentu_Shield_V1alpha1_MsgAsyncClient: Shentu_Shield_V1alpha1_Ms
 
 internal protocol Shentu_Shield_V1alpha1_MsgClientInterceptorFactoryProtocol: Sendable {
 
-  /// - Returns: Interceptors to use when invoking 'createPool'.
-  func makeCreatePoolInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_MsgCreatePool, Shentu_Shield_V1alpha1_MsgCreatePoolResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'updatePool'.
-  func makeUpdatePoolInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_MsgUpdatePool, Shentu_Shield_V1alpha1_MsgUpdatePoolResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'pausePool'.
-  func makePausePoolInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_MsgPausePool, Shentu_Shield_V1alpha1_MsgPausePoolResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'resumePool'.
-  func makeResumePoolInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_MsgResumePool, Shentu_Shield_V1alpha1_MsgResumePoolResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'depositCollateral'.
-  func makeDepositCollateralInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_MsgDepositCollateral, Shentu_Shield_V1alpha1_MsgDepositCollateralResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'withdrawCollateral'.
-  func makeWithdrawCollateralInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_MsgWithdrawCollateral, Shentu_Shield_V1alpha1_MsgWithdrawCollateralResponse>]
-
   /// - Returns: Interceptors to use when invoking 'withdrawRewards'.
   func makeWithdrawRewardsInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_MsgWithdrawRewards, Shentu_Shield_V1alpha1_MsgWithdrawRewardsResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'withdrawForeignRewards'.
-  func makeWithdrawForeignRewardsInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_MsgWithdrawForeignRewards, Shentu_Shield_V1alpha1_MsgWithdrawForeignRewardsResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'purchaseShield'.
-  func makePurchaseShieldInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_MsgPurchaseShield, Shentu_Shield_V1alpha1_MsgPurchaseShieldResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'withdrawReimbursement'.
-  func makeWithdrawReimbursementInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_MsgWithdrawReimbursement, Shentu_Shield_V1alpha1_MsgWithdrawReimbursementResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'updateSponsor'.
-  func makeUpdateSponsorInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_MsgUpdateSponsor, Shentu_Shield_V1alpha1_MsgUpdateSponsorResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'stakeForShield'.
-  func makeStakeForShieldInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_MsgStakeForShield, Shentu_Shield_V1alpha1_MsgStakeForShieldResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'unstakeFromShield'.
-  func makeUnstakeFromShieldInterceptors() -> [ClientInterceptor<Shentu_Shield_V1alpha1_MsgUnstakeFromShield, Shentu_Shield_V1alpha1_MsgUnstakeFromShieldResponse>]
 }
 
 internal enum Shentu_Shield_V1alpha1_MsgClientMetadata {
@@ -858,98 +198,14 @@ internal enum Shentu_Shield_V1alpha1_MsgClientMetadata {
     name: "Msg",
     fullName: "shentu.shield.v1alpha1.Msg",
     methods: [
-      Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.createPool,
-      Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.updatePool,
-      Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.pausePool,
-      Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.resumePool,
-      Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.depositCollateral,
-      Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.withdrawCollateral,
       Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.withdrawRewards,
-      Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.withdrawForeignRewards,
-      Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.purchaseShield,
-      Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.withdrawReimbursement,
-      Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.updateSponsor,
-      Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.stakeForShield,
-      Shentu_Shield_V1alpha1_MsgClientMetadata.Methods.unstakeFromShield,
     ]
   )
 
   internal enum Methods {
-    internal static let createPool = GRPCMethodDescriptor(
-      name: "CreatePool",
-      path: "/shentu.shield.v1alpha1.Msg/CreatePool",
-      type: GRPCCallType.unary
-    )
-
-    internal static let updatePool = GRPCMethodDescriptor(
-      name: "UpdatePool",
-      path: "/shentu.shield.v1alpha1.Msg/UpdatePool",
-      type: GRPCCallType.unary
-    )
-
-    internal static let pausePool = GRPCMethodDescriptor(
-      name: "PausePool",
-      path: "/shentu.shield.v1alpha1.Msg/PausePool",
-      type: GRPCCallType.unary
-    )
-
-    internal static let resumePool = GRPCMethodDescriptor(
-      name: "ResumePool",
-      path: "/shentu.shield.v1alpha1.Msg/ResumePool",
-      type: GRPCCallType.unary
-    )
-
-    internal static let depositCollateral = GRPCMethodDescriptor(
-      name: "DepositCollateral",
-      path: "/shentu.shield.v1alpha1.Msg/DepositCollateral",
-      type: GRPCCallType.unary
-    )
-
-    internal static let withdrawCollateral = GRPCMethodDescriptor(
-      name: "WithdrawCollateral",
-      path: "/shentu.shield.v1alpha1.Msg/WithdrawCollateral",
-      type: GRPCCallType.unary
-    )
-
     internal static let withdrawRewards = GRPCMethodDescriptor(
       name: "WithdrawRewards",
       path: "/shentu.shield.v1alpha1.Msg/WithdrawRewards",
-      type: GRPCCallType.unary
-    )
-
-    internal static let withdrawForeignRewards = GRPCMethodDescriptor(
-      name: "WithdrawForeignRewards",
-      path: "/shentu.shield.v1alpha1.Msg/WithdrawForeignRewards",
-      type: GRPCCallType.unary
-    )
-
-    internal static let purchaseShield = GRPCMethodDescriptor(
-      name: "PurchaseShield",
-      path: "/shentu.shield.v1alpha1.Msg/PurchaseShield",
-      type: GRPCCallType.unary
-    )
-
-    internal static let withdrawReimbursement = GRPCMethodDescriptor(
-      name: "WithdrawReimbursement",
-      path: "/shentu.shield.v1alpha1.Msg/WithdrawReimbursement",
-      type: GRPCCallType.unary
-    )
-
-    internal static let updateSponsor = GRPCMethodDescriptor(
-      name: "UpdateSponsor",
-      path: "/shentu.shield.v1alpha1.Msg/UpdateSponsor",
-      type: GRPCCallType.unary
-    )
-
-    internal static let stakeForShield = GRPCMethodDescriptor(
-      name: "StakeForShield",
-      path: "/shentu.shield.v1alpha1.Msg/StakeForShield",
-      type: GRPCCallType.unary
-    )
-
-    internal static let unstakeFromShield = GRPCMethodDescriptor(
-      name: "UnstakeFromShield",
-      path: "/shentu.shield.v1alpha1.Msg/UnstakeFromShield",
       type: GRPCCallType.unary
     )
   }
@@ -961,31 +217,7 @@ internal enum Shentu_Shield_V1alpha1_MsgClientMetadata {
 internal protocol Shentu_Shield_V1alpha1_MsgProvider: CallHandlerProvider {
   var interceptors: Shentu_Shield_V1alpha1_MsgServerInterceptorFactoryProtocol? { get }
 
-  func createPool(request: Shentu_Shield_V1alpha1_MsgCreatePool, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_MsgCreatePoolResponse>
-
-  func updatePool(request: Shentu_Shield_V1alpha1_MsgUpdatePool, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_MsgUpdatePoolResponse>
-
-  func pausePool(request: Shentu_Shield_V1alpha1_MsgPausePool, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_MsgPausePoolResponse>
-
-  func resumePool(request: Shentu_Shield_V1alpha1_MsgResumePool, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_MsgResumePoolResponse>
-
-  func depositCollateral(request: Shentu_Shield_V1alpha1_MsgDepositCollateral, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_MsgDepositCollateralResponse>
-
-  func withdrawCollateral(request: Shentu_Shield_V1alpha1_MsgWithdrawCollateral, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_MsgWithdrawCollateralResponse>
-
   func withdrawRewards(request: Shentu_Shield_V1alpha1_MsgWithdrawRewards, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_MsgWithdrawRewardsResponse>
-
-  func withdrawForeignRewards(request: Shentu_Shield_V1alpha1_MsgWithdrawForeignRewards, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_MsgWithdrawForeignRewardsResponse>
-
-  func purchaseShield(request: Shentu_Shield_V1alpha1_MsgPurchaseShield, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_MsgPurchaseShieldResponse>
-
-  func withdrawReimbursement(request: Shentu_Shield_V1alpha1_MsgWithdrawReimbursement, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_MsgWithdrawReimbursementResponse>
-
-  func updateSponsor(request: Shentu_Shield_V1alpha1_MsgUpdateSponsor, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_MsgUpdateSponsorResponse>
-
-  func stakeForShield(request: Shentu_Shield_V1alpha1_MsgStakeForShield, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_MsgStakeForShieldResponse>
-
-  func unstakeFromShield(request: Shentu_Shield_V1alpha1_MsgUnstakeFromShield, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Shield_V1alpha1_MsgUnstakeFromShieldResponse>
 }
 
 extension Shentu_Shield_V1alpha1_MsgProvider {
@@ -1000,60 +232,6 @@ extension Shentu_Shield_V1alpha1_MsgProvider {
     context: CallHandlerContext
   ) -> GRPCServerHandlerProtocol? {
     switch name {
-    case "CreatePool":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_MsgCreatePool>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgCreatePoolResponse>(),
-        interceptors: self.interceptors?.makeCreatePoolInterceptors() ?? [],
-        userFunction: self.createPool(request:context:)
-      )
-
-    case "UpdatePool":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_MsgUpdatePool>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgUpdatePoolResponse>(),
-        interceptors: self.interceptors?.makeUpdatePoolInterceptors() ?? [],
-        userFunction: self.updatePool(request:context:)
-      )
-
-    case "PausePool":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_MsgPausePool>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgPausePoolResponse>(),
-        interceptors: self.interceptors?.makePausePoolInterceptors() ?? [],
-        userFunction: self.pausePool(request:context:)
-      )
-
-    case "ResumePool":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_MsgResumePool>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgResumePoolResponse>(),
-        interceptors: self.interceptors?.makeResumePoolInterceptors() ?? [],
-        userFunction: self.resumePool(request:context:)
-      )
-
-    case "DepositCollateral":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_MsgDepositCollateral>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgDepositCollateralResponse>(),
-        interceptors: self.interceptors?.makeDepositCollateralInterceptors() ?? [],
-        userFunction: self.depositCollateral(request:context:)
-      )
-
-    case "WithdrawCollateral":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_MsgWithdrawCollateral>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgWithdrawCollateralResponse>(),
-        interceptors: self.interceptors?.makeWithdrawCollateralInterceptors() ?? [],
-        userFunction: self.withdrawCollateral(request:context:)
-      )
-
     case "WithdrawRewards":
       return UnaryServerHandler(
         context: context,
@@ -1061,60 +239,6 @@ extension Shentu_Shield_V1alpha1_MsgProvider {
         responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgWithdrawRewardsResponse>(),
         interceptors: self.interceptors?.makeWithdrawRewardsInterceptors() ?? [],
         userFunction: self.withdrawRewards(request:context:)
-      )
-
-    case "WithdrawForeignRewards":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_MsgWithdrawForeignRewards>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgWithdrawForeignRewardsResponse>(),
-        interceptors: self.interceptors?.makeWithdrawForeignRewardsInterceptors() ?? [],
-        userFunction: self.withdrawForeignRewards(request:context:)
-      )
-
-    case "PurchaseShield":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_MsgPurchaseShield>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgPurchaseShieldResponse>(),
-        interceptors: self.interceptors?.makePurchaseShieldInterceptors() ?? [],
-        userFunction: self.purchaseShield(request:context:)
-      )
-
-    case "WithdrawReimbursement":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_MsgWithdrawReimbursement>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgWithdrawReimbursementResponse>(),
-        interceptors: self.interceptors?.makeWithdrawReimbursementInterceptors() ?? [],
-        userFunction: self.withdrawReimbursement(request:context:)
-      )
-
-    case "UpdateSponsor":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_MsgUpdateSponsor>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgUpdateSponsorResponse>(),
-        interceptors: self.interceptors?.makeUpdateSponsorInterceptors() ?? [],
-        userFunction: self.updateSponsor(request:context:)
-      )
-
-    case "StakeForShield":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_MsgStakeForShield>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgStakeForShieldResponse>(),
-        interceptors: self.interceptors?.makeStakeForShieldInterceptors() ?? [],
-        userFunction: self.stakeForShield(request:context:)
-      )
-
-    case "UnstakeFromShield":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_MsgUnstakeFromShield>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgUnstakeFromShieldResponse>(),
-        interceptors: self.interceptors?.makeUnstakeFromShieldInterceptors() ?? [],
-        userFunction: self.unstakeFromShield(request:context:)
       )
 
     default:
@@ -1131,70 +255,10 @@ internal protocol Shentu_Shield_V1alpha1_MsgAsyncProvider: CallHandlerProvider {
   static var serviceDescriptor: GRPCServiceDescriptor { get }
   var interceptors: Shentu_Shield_V1alpha1_MsgServerInterceptorFactoryProtocol? { get }
 
-  @Sendable func createPool(
-    request: Shentu_Shield_V1alpha1_MsgCreatePool,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_MsgCreatePoolResponse
-
-  @Sendable func updatePool(
-    request: Shentu_Shield_V1alpha1_MsgUpdatePool,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_MsgUpdatePoolResponse
-
-  @Sendable func pausePool(
-    request: Shentu_Shield_V1alpha1_MsgPausePool,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_MsgPausePoolResponse
-
-  @Sendable func resumePool(
-    request: Shentu_Shield_V1alpha1_MsgResumePool,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_MsgResumePoolResponse
-
-  @Sendable func depositCollateral(
-    request: Shentu_Shield_V1alpha1_MsgDepositCollateral,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_MsgDepositCollateralResponse
-
-  @Sendable func withdrawCollateral(
-    request: Shentu_Shield_V1alpha1_MsgWithdrawCollateral,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_MsgWithdrawCollateralResponse
-
   @Sendable func withdrawRewards(
     request: Shentu_Shield_V1alpha1_MsgWithdrawRewards,
     context: GRPCAsyncServerCallContext
   ) async throws -> Shentu_Shield_V1alpha1_MsgWithdrawRewardsResponse
-
-  @Sendable func withdrawForeignRewards(
-    request: Shentu_Shield_V1alpha1_MsgWithdrawForeignRewards,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_MsgWithdrawForeignRewardsResponse
-
-  @Sendable func purchaseShield(
-    request: Shentu_Shield_V1alpha1_MsgPurchaseShield,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_MsgPurchaseShieldResponse
-
-  @Sendable func withdrawReimbursement(
-    request: Shentu_Shield_V1alpha1_MsgWithdrawReimbursement,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_MsgWithdrawReimbursementResponse
-
-  @Sendable func updateSponsor(
-    request: Shentu_Shield_V1alpha1_MsgUpdateSponsor,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_MsgUpdateSponsorResponse
-
-  @Sendable func stakeForShield(
-    request: Shentu_Shield_V1alpha1_MsgStakeForShield,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_MsgStakeForShieldResponse
-
-  @Sendable func unstakeFromShield(
-    request: Shentu_Shield_V1alpha1_MsgUnstakeFromShield,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Shentu_Shield_V1alpha1_MsgUnstakeFromShieldResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -1216,60 +280,6 @@ extension Shentu_Shield_V1alpha1_MsgAsyncProvider {
     context: CallHandlerContext
   ) -> GRPCServerHandlerProtocol? {
     switch name {
-    case "CreatePool":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_MsgCreatePool>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgCreatePoolResponse>(),
-        interceptors: self.interceptors?.makeCreatePoolInterceptors() ?? [],
-        wrapping: self.createPool(request:context:)
-      )
-
-    case "UpdatePool":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_MsgUpdatePool>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgUpdatePoolResponse>(),
-        interceptors: self.interceptors?.makeUpdatePoolInterceptors() ?? [],
-        wrapping: self.updatePool(request:context:)
-      )
-
-    case "PausePool":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_MsgPausePool>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgPausePoolResponse>(),
-        interceptors: self.interceptors?.makePausePoolInterceptors() ?? [],
-        wrapping: self.pausePool(request:context:)
-      )
-
-    case "ResumePool":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_MsgResumePool>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgResumePoolResponse>(),
-        interceptors: self.interceptors?.makeResumePoolInterceptors() ?? [],
-        wrapping: self.resumePool(request:context:)
-      )
-
-    case "DepositCollateral":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_MsgDepositCollateral>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgDepositCollateralResponse>(),
-        interceptors: self.interceptors?.makeDepositCollateralInterceptors() ?? [],
-        wrapping: self.depositCollateral(request:context:)
-      )
-
-    case "WithdrawCollateral":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_MsgWithdrawCollateral>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgWithdrawCollateralResponse>(),
-        interceptors: self.interceptors?.makeWithdrawCollateralInterceptors() ?? [],
-        wrapping: self.withdrawCollateral(request:context:)
-      )
-
     case "WithdrawRewards":
       return GRPCAsyncServerHandler(
         context: context,
@@ -1277,60 +287,6 @@ extension Shentu_Shield_V1alpha1_MsgAsyncProvider {
         responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgWithdrawRewardsResponse>(),
         interceptors: self.interceptors?.makeWithdrawRewardsInterceptors() ?? [],
         wrapping: self.withdrawRewards(request:context:)
-      )
-
-    case "WithdrawForeignRewards":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_MsgWithdrawForeignRewards>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgWithdrawForeignRewardsResponse>(),
-        interceptors: self.interceptors?.makeWithdrawForeignRewardsInterceptors() ?? [],
-        wrapping: self.withdrawForeignRewards(request:context:)
-      )
-
-    case "PurchaseShield":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_MsgPurchaseShield>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgPurchaseShieldResponse>(),
-        interceptors: self.interceptors?.makePurchaseShieldInterceptors() ?? [],
-        wrapping: self.purchaseShield(request:context:)
-      )
-
-    case "WithdrawReimbursement":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_MsgWithdrawReimbursement>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgWithdrawReimbursementResponse>(),
-        interceptors: self.interceptors?.makeWithdrawReimbursementInterceptors() ?? [],
-        wrapping: self.withdrawReimbursement(request:context:)
-      )
-
-    case "UpdateSponsor":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_MsgUpdateSponsor>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgUpdateSponsorResponse>(),
-        interceptors: self.interceptors?.makeUpdateSponsorInterceptors() ?? [],
-        wrapping: self.updateSponsor(request:context:)
-      )
-
-    case "StakeForShield":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_MsgStakeForShield>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgStakeForShieldResponse>(),
-        interceptors: self.interceptors?.makeStakeForShieldInterceptors() ?? [],
-        wrapping: self.stakeForShield(request:context:)
-      )
-
-    case "UnstakeFromShield":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Shentu_Shield_V1alpha1_MsgUnstakeFromShield>(),
-        responseSerializer: ProtobufSerializer<Shentu_Shield_V1alpha1_MsgUnstakeFromShieldResponse>(),
-        interceptors: self.interceptors?.makeUnstakeFromShieldInterceptors() ?? [],
-        wrapping: self.unstakeFromShield(request:context:)
       )
 
     default:
@@ -1341,57 +297,9 @@ extension Shentu_Shield_V1alpha1_MsgAsyncProvider {
 
 internal protocol Shentu_Shield_V1alpha1_MsgServerInterceptorFactoryProtocol {
 
-  /// - Returns: Interceptors to use when handling 'createPool'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeCreatePoolInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_MsgCreatePool, Shentu_Shield_V1alpha1_MsgCreatePoolResponse>]
-
-  /// - Returns: Interceptors to use when handling 'updatePool'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeUpdatePoolInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_MsgUpdatePool, Shentu_Shield_V1alpha1_MsgUpdatePoolResponse>]
-
-  /// - Returns: Interceptors to use when handling 'pausePool'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makePausePoolInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_MsgPausePool, Shentu_Shield_V1alpha1_MsgPausePoolResponse>]
-
-  /// - Returns: Interceptors to use when handling 'resumePool'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeResumePoolInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_MsgResumePool, Shentu_Shield_V1alpha1_MsgResumePoolResponse>]
-
-  /// - Returns: Interceptors to use when handling 'depositCollateral'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeDepositCollateralInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_MsgDepositCollateral, Shentu_Shield_V1alpha1_MsgDepositCollateralResponse>]
-
-  /// - Returns: Interceptors to use when handling 'withdrawCollateral'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeWithdrawCollateralInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_MsgWithdrawCollateral, Shentu_Shield_V1alpha1_MsgWithdrawCollateralResponse>]
-
   /// - Returns: Interceptors to use when handling 'withdrawRewards'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeWithdrawRewardsInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_MsgWithdrawRewards, Shentu_Shield_V1alpha1_MsgWithdrawRewardsResponse>]
-
-  /// - Returns: Interceptors to use when handling 'withdrawForeignRewards'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeWithdrawForeignRewardsInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_MsgWithdrawForeignRewards, Shentu_Shield_V1alpha1_MsgWithdrawForeignRewardsResponse>]
-
-  /// - Returns: Interceptors to use when handling 'purchaseShield'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makePurchaseShieldInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_MsgPurchaseShield, Shentu_Shield_V1alpha1_MsgPurchaseShieldResponse>]
-
-  /// - Returns: Interceptors to use when handling 'withdrawReimbursement'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeWithdrawReimbursementInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_MsgWithdrawReimbursement, Shentu_Shield_V1alpha1_MsgWithdrawReimbursementResponse>]
-
-  /// - Returns: Interceptors to use when handling 'updateSponsor'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeUpdateSponsorInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_MsgUpdateSponsor, Shentu_Shield_V1alpha1_MsgUpdateSponsorResponse>]
-
-  /// - Returns: Interceptors to use when handling 'stakeForShield'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeStakeForShieldInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_MsgStakeForShield, Shentu_Shield_V1alpha1_MsgStakeForShieldResponse>]
-
-  /// - Returns: Interceptors to use when handling 'unstakeFromShield'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeUnstakeFromShieldInterceptors() -> [ServerInterceptor<Shentu_Shield_V1alpha1_MsgUnstakeFromShield, Shentu_Shield_V1alpha1_MsgUnstakeFromShieldResponse>]
 }
 
 internal enum Shentu_Shield_V1alpha1_MsgServerMetadata {
@@ -1399,98 +307,14 @@ internal enum Shentu_Shield_V1alpha1_MsgServerMetadata {
     name: "Msg",
     fullName: "shentu.shield.v1alpha1.Msg",
     methods: [
-      Shentu_Shield_V1alpha1_MsgServerMetadata.Methods.createPool,
-      Shentu_Shield_V1alpha1_MsgServerMetadata.Methods.updatePool,
-      Shentu_Shield_V1alpha1_MsgServerMetadata.Methods.pausePool,
-      Shentu_Shield_V1alpha1_MsgServerMetadata.Methods.resumePool,
-      Shentu_Shield_V1alpha1_MsgServerMetadata.Methods.depositCollateral,
-      Shentu_Shield_V1alpha1_MsgServerMetadata.Methods.withdrawCollateral,
       Shentu_Shield_V1alpha1_MsgServerMetadata.Methods.withdrawRewards,
-      Shentu_Shield_V1alpha1_MsgServerMetadata.Methods.withdrawForeignRewards,
-      Shentu_Shield_V1alpha1_MsgServerMetadata.Methods.purchaseShield,
-      Shentu_Shield_V1alpha1_MsgServerMetadata.Methods.withdrawReimbursement,
-      Shentu_Shield_V1alpha1_MsgServerMetadata.Methods.updateSponsor,
-      Shentu_Shield_V1alpha1_MsgServerMetadata.Methods.stakeForShield,
-      Shentu_Shield_V1alpha1_MsgServerMetadata.Methods.unstakeFromShield,
     ]
   )
 
   internal enum Methods {
-    internal static let createPool = GRPCMethodDescriptor(
-      name: "CreatePool",
-      path: "/shentu.shield.v1alpha1.Msg/CreatePool",
-      type: GRPCCallType.unary
-    )
-
-    internal static let updatePool = GRPCMethodDescriptor(
-      name: "UpdatePool",
-      path: "/shentu.shield.v1alpha1.Msg/UpdatePool",
-      type: GRPCCallType.unary
-    )
-
-    internal static let pausePool = GRPCMethodDescriptor(
-      name: "PausePool",
-      path: "/shentu.shield.v1alpha1.Msg/PausePool",
-      type: GRPCCallType.unary
-    )
-
-    internal static let resumePool = GRPCMethodDescriptor(
-      name: "ResumePool",
-      path: "/shentu.shield.v1alpha1.Msg/ResumePool",
-      type: GRPCCallType.unary
-    )
-
-    internal static let depositCollateral = GRPCMethodDescriptor(
-      name: "DepositCollateral",
-      path: "/shentu.shield.v1alpha1.Msg/DepositCollateral",
-      type: GRPCCallType.unary
-    )
-
-    internal static let withdrawCollateral = GRPCMethodDescriptor(
-      name: "WithdrawCollateral",
-      path: "/shentu.shield.v1alpha1.Msg/WithdrawCollateral",
-      type: GRPCCallType.unary
-    )
-
     internal static let withdrawRewards = GRPCMethodDescriptor(
       name: "WithdrawRewards",
       path: "/shentu.shield.v1alpha1.Msg/WithdrawRewards",
-      type: GRPCCallType.unary
-    )
-
-    internal static let withdrawForeignRewards = GRPCMethodDescriptor(
-      name: "WithdrawForeignRewards",
-      path: "/shentu.shield.v1alpha1.Msg/WithdrawForeignRewards",
-      type: GRPCCallType.unary
-    )
-
-    internal static let purchaseShield = GRPCMethodDescriptor(
-      name: "PurchaseShield",
-      path: "/shentu.shield.v1alpha1.Msg/PurchaseShield",
-      type: GRPCCallType.unary
-    )
-
-    internal static let withdrawReimbursement = GRPCMethodDescriptor(
-      name: "WithdrawReimbursement",
-      path: "/shentu.shield.v1alpha1.Msg/WithdrawReimbursement",
-      type: GRPCCallType.unary
-    )
-
-    internal static let updateSponsor = GRPCMethodDescriptor(
-      name: "UpdateSponsor",
-      path: "/shentu.shield.v1alpha1.Msg/UpdateSponsor",
-      type: GRPCCallType.unary
-    )
-
-    internal static let stakeForShield = GRPCMethodDescriptor(
-      name: "StakeForShield",
-      path: "/shentu.shield.v1alpha1.Msg/StakeForShield",
-      type: GRPCCallType.unary
-    )
-
-    internal static let unstakeFromShield = GRPCMethodDescriptor(
-      name: "UnstakeFromShield",
-      path: "/shentu.shield.v1alpha1.Msg/UnstakeFromShield",
       type: GRPCCallType.unary
     )
   }

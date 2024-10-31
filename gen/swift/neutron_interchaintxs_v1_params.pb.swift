@@ -21,7 +21,7 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// Params defines the parameters for the module.
-struct Neutron_Interchaintxs_Params {
+struct Neutron_Interchaintxs_V1_Params {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -29,23 +29,27 @@ struct Neutron_Interchaintxs_Params {
   /// Defines maximum amount of messages to be passed in MsgSubmitTx
   var msgSubmitTxMaxMessages: UInt64 = 0
 
+  /// Defines a minimum fee required to register interchain account
+  var registerFee: [Cosmos_Base_V1beta1_Coin] = []
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
-extension Neutron_Interchaintxs_Params: @unchecked Sendable {}
+extension Neutron_Interchaintxs_V1_Params: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
-fileprivate let _protobuf_package = "neutron.interchaintxs"
+fileprivate let _protobuf_package = "neutron.interchaintxs.v1"
 
-extension Neutron_Interchaintxs_Params: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+extension Neutron_Interchaintxs_V1_Params: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".Params"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "msg_submit_tx_max_messages"),
+    2: .standard(proto: "register_fee"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -55,6 +59,7 @@ extension Neutron_Interchaintxs_Params: SwiftProtobuf.Message, SwiftProtobuf._Me
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularUInt64Field(value: &self.msgSubmitTxMaxMessages) }()
+      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.registerFee) }()
       default: break
       }
     }
@@ -64,11 +69,15 @@ extension Neutron_Interchaintxs_Params: SwiftProtobuf.Message, SwiftProtobuf._Me
     if self.msgSubmitTxMaxMessages != 0 {
       try visitor.visitSingularUInt64Field(value: self.msgSubmitTxMaxMessages, fieldNumber: 1)
     }
+    if !self.registerFee.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.registerFee, fieldNumber: 2)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Neutron_Interchaintxs_Params, rhs: Neutron_Interchaintxs_Params) -> Bool {
+  static func ==(lhs: Neutron_Interchaintxs_V1_Params, rhs: Neutron_Interchaintxs_V1_Params) -> Bool {
     if lhs.msgSubmitTxMaxMessages != rhs.msgSubmitTxMaxMessages {return false}
+    if lhs.registerFee != rhs.registerFee {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

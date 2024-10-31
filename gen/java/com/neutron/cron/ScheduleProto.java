@@ -2578,11 +2578,11 @@ public final class ScheduleProto {
       "eight\030\004 \001(\004R\021lastExecuteHeight\"B\n\022MsgExe" +
       "cuteContract\022\032\n\010contract\030\001 \001(\tR\010contract" +
       "\022\020\n\003msg\030\002 \001(\tR\003msg\"%\n\rScheduleCount\022\024\n\005c" +
-      "ount\030\001 \001(\005R\005countB\235\001\n\020com.neutron.cronB\r" +
-      "ScheduleProtoZ+github.com/neutron-org/ne" +
-      "utron/x/cron/types\242\002\003NCX\252\002\014Neutron.Cron\312" +
-      "\002\014Neutron\\Cron\342\002\030Neutron\\Cron\\GPBMetadat" +
-      "a\352\002\rNeutron::Cronb\006proto3"
+      "ount\030\001 \001(\005R\005countB\240\001\n\020com.neutron.cronB\r" +
+      "ScheduleProtoZ.github.com/neutron-org/ne" +
+      "utron/v4/x/cron/types\242\002\003NCX\252\002\014Neutron.Cr" +
+      "on\312\002\014Neutron\\Cron\342\002\030Neutron\\Cron\\GPBMeta" +
+      "data\352\002\rNeutron::Cronb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

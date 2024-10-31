@@ -900,12 +900,12 @@ public final class GenesisProto {
       "ron.feeburner.ParamsB\004\310\336\037\000R\006params\022s\n\034to" +
       "tal_burned_neutrons_amount\030\002 \001(\0132,.neutr" +
       "on.feeburner.TotalBurnedNeutronsAmountB\004" +
-      "\310\336\037\000R\031totalBurnedNeutronsAmountB\272\001\n\025com." +
-      "neutron.feeburnerB\014GenesisProtoZ0github." +
-      "com/neutron-org/neutron/x/feeburner/type" +
-      "s\242\002\003NFX\252\002\021Neutron.Feeburner\312\002\021Neutron\\Fe" +
-      "eburner\342\002\035Neutron\\Feeburner\\GPBMetadata\352" +
-      "\002\022Neutron::Feeburnerb\006proto3"
+      "\310\336\037\000R\031totalBurnedNeutronsAmountB\275\001\n\025com." +
+      "neutron.feeburnerB\014GenesisProtoZ3github." +
+      "com/neutron-org/neutron/v4/x/feeburner/t" +
+      "ypes\242\002\003NFX\252\002\021Neutron.Feeburner\312\002\021Neutron" +
+      "\\Feeburner\342\002\035Neutron\\Feeburner\\GPBMetada" +
+      "ta\352\002\022Neutron::Feeburnerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

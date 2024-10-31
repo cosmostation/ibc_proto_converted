@@ -5619,6 +5619,7 @@ public final class TypesProto {
     /**
      * <pre>
      * metadata is any arbitrary metadata to attached to the group.
+     * the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/group#group-1
      * </pre>
      *
      * <code>string metadata = 3 [json_name = "metadata"];</code>
@@ -5628,6 +5629,7 @@ public final class TypesProto {
     /**
      * <pre>
      * metadata is any arbitrary metadata to attached to the group.
+     * the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/group#group-1
      * </pre>
      *
      * <code>string metadata = 3 [json_name = "metadata"];</code>
@@ -5806,6 +5808,7 @@ public final class TypesProto {
     /**
      * <pre>
      * metadata is any arbitrary metadata to attached to the group.
+     * the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/group#group-1
      * </pre>
      *
      * <code>string metadata = 3 [json_name = "metadata"];</code>
@@ -5827,6 +5830,7 @@ public final class TypesProto {
     /**
      * <pre>
      * metadata is any arbitrary metadata to attached to the group.
+     * the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/group#group-1
      * </pre>
      *
      * <code>string metadata = 3 [json_name = "metadata"];</code>
@@ -6552,6 +6556,7 @@ public final class TypesProto {
       /**
        * <pre>
        * metadata is any arbitrary metadata to attached to the group.
+       * the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/group#group-1
        * </pre>
        *
        * <code>string metadata = 3 [json_name = "metadata"];</code>
@@ -6572,6 +6577,7 @@ public final class TypesProto {
       /**
        * <pre>
        * metadata is any arbitrary metadata to attached to the group.
+       * the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/group#group-1
        * </pre>
        *
        * <code>string metadata = 3 [json_name = "metadata"];</code>
@@ -6593,6 +6599,7 @@ public final class TypesProto {
       /**
        * <pre>
        * metadata is any arbitrary metadata to attached to the group.
+       * the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/group#group-1
        * </pre>
        *
        * <code>string metadata = 3 [json_name = "metadata"];</code>
@@ -6610,6 +6617,7 @@ public final class TypesProto {
       /**
        * <pre>
        * metadata is any arbitrary metadata to attached to the group.
+       * the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/group#group-1
        * </pre>
        *
        * <code>string metadata = 3 [json_name = "metadata"];</code>
@@ -6624,6 +6632,7 @@ public final class TypesProto {
       /**
        * <pre>
        * metadata is any arbitrary metadata to attached to the group.
+       * the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/group#group-1
        * </pre>
        *
        * <code>string metadata = 3 [json_name = "metadata"];</code>
@@ -14087,6 +14096,7 @@ public final class TypesProto {
     /**
      * <pre>
      * metadata is any arbitrary metadata attached to the vote.
+     * the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/group#vote-2
      * </pre>
      *
      * <code>string metadata = 4 [json_name = "metadata"];</code>
@@ -14096,6 +14106,7 @@ public final class TypesProto {
     /**
      * <pre>
      * metadata is any arbitrary metadata attached to the vote.
+     * the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/group#vote-2
      * </pre>
      *
      * <code>string metadata = 4 [json_name = "metadata"];</code>
@@ -14133,7 +14144,7 @@ public final class TypesProto {
   }
   /**
    * <pre>
-   * Vote represents a vote for a proposal.
+   * Vote represents a vote for a proposal.string metadata
    * </pre>
    *
    * Protobuf type {@code cosmos.group.v1.Vote}
@@ -14267,6 +14278,7 @@ public final class TypesProto {
     /**
      * <pre>
      * metadata is any arbitrary metadata attached to the vote.
+     * the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/group#vote-2
      * </pre>
      *
      * <code>string metadata = 4 [json_name = "metadata"];</code>
@@ -14288,6 +14300,7 @@ public final class TypesProto {
     /**
      * <pre>
      * metadata is any arbitrary metadata attached to the vote.
+     * the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/group#vote-2
      * </pre>
      *
      * <code>string metadata = 4 [json_name = "metadata"];</code>
@@ -14552,7 +14565,7 @@ public final class TypesProto {
     }
     /**
      * <pre>
-     * Vote represents a vote for a proposal.
+     * Vote represents a vote for a proposal.string metadata
      * </pre>
      *
      * Protobuf type {@code cosmos.group.v1.Vote}
@@ -14995,6 +15008,7 @@ public final class TypesProto {
       /**
        * <pre>
        * metadata is any arbitrary metadata attached to the vote.
+       * the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/group#vote-2
        * </pre>
        *
        * <code>string metadata = 4 [json_name = "metadata"];</code>
@@ -15015,6 +15029,7 @@ public final class TypesProto {
       /**
        * <pre>
        * metadata is any arbitrary metadata attached to the vote.
+       * the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/group#vote-2
        * </pre>
        *
        * <code>string metadata = 4 [json_name = "metadata"];</code>
@@ -15036,6 +15051,7 @@ public final class TypesProto {
       /**
        * <pre>
        * metadata is any arbitrary metadata attached to the vote.
+       * the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/group#vote-2
        * </pre>
        *
        * <code>string metadata = 4 [json_name = "metadata"];</code>
@@ -15053,6 +15069,7 @@ public final class TypesProto {
       /**
        * <pre>
        * metadata is any arbitrary metadata attached to the vote.
+       * the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/group#vote-2
        * </pre>
        *
        * <code>string metadata = 4 [json_name = "metadata"];</code>
@@ -15067,6 +15084,7 @@ public final class TypesProto {
       /**
        * <pre>
        * metadata is any arbitrary metadata attached to the vote.
+       * the recommended format of the metadata is to be found here: https://docs.cosmos.network/v0.47/modules/group#vote-2
        * </pre>
        *
        * <code>string metadata = 4 [json_name = "metadata"];</code>

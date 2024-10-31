@@ -72,6 +72,7 @@ struct Neutron_Interchainqueries_MsgSubmitQueryResult {
 
   /// is the IBC client ID for an IBC connection between Neutron chain and target
   /// chain (where the result was obtained from)
+  /// Deprecated: populating this field does not make any affect
   var clientID: String = String()
 
   var result: Neutron_Interchainqueries_QueryResult {
@@ -201,8 +202,8 @@ struct Neutron_Interchainqueries_TxValue {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var response: Tendermint_Abci_ResponseDeliverTx {
-    get {return _storage._response ?? Tendermint_Abci_ResponseDeliverTx()}
+  var response: Tendermint_Abci_ExecTxResult {
+    get {return _storage._response ?? Tendermint_Abci_ExecTxResult()}
     set {_uniqueStorage()._response = newValue}
   }
   /// Returns true if `response` has been explicitly set.
@@ -311,6 +312,50 @@ struct Neutron_Interchainqueries_MsgUpdateInterchainQueryResponse {
   init() {}
 }
 
+/// MsgUpdateParams is the MsgUpdateParams request type.
+///
+/// Since: 0.47
+struct Neutron_Interchainqueries_MsgUpdateParams {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// Authority is the address of the governance account.
+  var authority: String = String()
+
+  /// params defines the x/interchainqueries parameters to update.
+  ///
+  /// NOTE: All parameters must be supplied.
+  var params: Neutron_Interchainqueries_Params {
+    get {return _params ?? Neutron_Interchainqueries_Params()}
+    set {_params = newValue}
+  }
+  /// Returns true if `params` has been explicitly set.
+  var hasParams: Bool {return self._params != nil}
+  /// Clears the value of `params`. Subsequent reads from it will return its default value.
+  mutating func clearParams() {self._params = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _params: Neutron_Interchainqueries_Params? = nil
+}
+
+/// MsgUpdateParamsResponse defines the response structure for executing a
+/// MsgUpdateParams message.
+///
+/// Since: 0.47
+struct Neutron_Interchainqueries_MsgUpdateParamsResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Neutron_Interchainqueries_MsgRegisterInterchainQuery: @unchecked Sendable {}
 extension Neutron_Interchainqueries_MsgRegisterInterchainQueryResponse: @unchecked Sendable {}
@@ -324,6 +369,8 @@ extension Neutron_Interchainqueries_MsgRemoveInterchainQueryRequest: @unchecked 
 extension Neutron_Interchainqueries_MsgRemoveInterchainQueryResponse: @unchecked Sendable {}
 extension Neutron_Interchainqueries_MsgUpdateInterchainQueryRequest: @unchecked Sendable {}
 extension Neutron_Interchainqueries_MsgUpdateInterchainQueryResponse: @unchecked Sendable {}
+extension Neutron_Interchainqueries_MsgUpdateParams: @unchecked Sendable {}
+extension Neutron_Interchainqueries_MsgUpdateParamsResponse: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -650,7 +697,7 @@ extension Neutron_Interchainqueries_TxValue: SwiftProtobuf.Message, SwiftProtobu
   ]
 
   fileprivate class _StorageClass {
-    var _response: Tendermint_Abci_ResponseDeliverTx? = nil
+    var _response: Tendermint_Abci_ExecTxResult? = nil
     var _deliveryProof: Tendermint_Crypto_Proof? = nil
     var _inclusionProof: Tendermint_Crypto_Proof? = nil
     var _data: Data = Data()
@@ -878,6 +925,67 @@ extension Neutron_Interchainqueries_MsgUpdateInterchainQueryResponse: SwiftProto
   }
 
   static func ==(lhs: Neutron_Interchainqueries_MsgUpdateInterchainQueryResponse, rhs: Neutron_Interchainqueries_MsgUpdateInterchainQueryResponse) -> Bool {
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Neutron_Interchainqueries_MsgUpdateParams: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgUpdateParams"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "authority"),
+    2: .same(proto: "params"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.authority) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._params) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if !self.authority.isEmpty {
+      try visitor.visitSingularStringField(value: self.authority, fieldNumber: 1)
+    }
+    try { if let v = self._params {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Neutron_Interchainqueries_MsgUpdateParams, rhs: Neutron_Interchainqueries_MsgUpdateParams) -> Bool {
+    if lhs.authority != rhs.authority {return false}
+    if lhs._params != rhs._params {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Neutron_Interchainqueries_MsgUpdateParamsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgUpdateParamsResponse"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let _ = try decoder.nextFieldNumber() {
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Neutron_Interchainqueries_MsgUpdateParamsResponse, rhs: Neutron_Interchainqueries_MsgUpdateParamsResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

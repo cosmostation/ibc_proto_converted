@@ -266,6 +266,40 @@ struct Cosmos_Distribution_V1beta1_MsgCommunityPoolSpendResponse {
   init() {}
 }
 
+/// DepositValidatorRewardsPool defines the request structure to provide
+/// additional rewards to delegators from a specific validator.
+///
+/// Since: cosmos-sdk 0.50
+struct Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPool {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var depositor: String = String()
+
+  var validatorAddress: String = String()
+
+  var amount: [Cosmos_Base_V1beta1_Coin] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// MsgDepositValidatorRewardsPoolResponse defines the response to executing a
+/// MsgDepositValidatorRewardsPool message.
+///
+/// Since: cosmos-sdk 0.50
+struct Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPoolResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Cosmos_Distribution_V1beta1_MsgSetWithdrawAddress: @unchecked Sendable {}
 extension Cosmos_Distribution_V1beta1_MsgSetWithdrawAddressResponse: @unchecked Sendable {}
@@ -283,6 +317,8 @@ extension Cosmos_Distribution_V1beta1_MsgWithdrawTokenizeShareRecordRewardRespon
 extension Cosmos_Distribution_V1beta1_MsgWithdrawAllTokenizeShareRecordReward: @unchecked Sendable {}
 extension Cosmos_Distribution_V1beta1_MsgWithdrawAllTokenizeShareRecordRewardResponse: @unchecked Sendable {}
 extension Cosmos_Distribution_V1beta1_MsgCommunityPoolSpendResponse: @unchecked Sendable {}
+extension Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPool: @unchecked Sendable {}
+extension Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPoolResponse: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -764,6 +800,69 @@ extension Cosmos_Distribution_V1beta1_MsgCommunityPoolSpendResponse: SwiftProtob
   }
 
   static func ==(lhs: Cosmos_Distribution_V1beta1_MsgCommunityPoolSpendResponse, rhs: Cosmos_Distribution_V1beta1_MsgCommunityPoolSpendResponse) -> Bool {
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPool: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgDepositValidatorRewardsPool"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "depositor"),
+    2: .standard(proto: "validator_address"),
+    3: .same(proto: "amount"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.depositor) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.validatorAddress) }()
+      case 3: try { try decoder.decodeRepeatedMessageField(value: &self.amount) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.depositor.isEmpty {
+      try visitor.visitSingularStringField(value: self.depositor, fieldNumber: 1)
+    }
+    if !self.validatorAddress.isEmpty {
+      try visitor.visitSingularStringField(value: self.validatorAddress, fieldNumber: 2)
+    }
+    if !self.amount.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.amount, fieldNumber: 3)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPool, rhs: Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPool) -> Bool {
+    if lhs.depositor != rhs.depositor {return false}
+    if lhs.validatorAddress != rhs.validatorAddress {return false}
+    if lhs.amount != rhs.amount {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPoolResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgDepositValidatorRewardsPoolResponse"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let _ = try decoder.nextFieldNumber() {
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPoolResponse, rhs: Cosmos_Distribution_V1beta1_MsgDepositValidatorRewardsPoolResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

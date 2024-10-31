@@ -26,13 +26,19 @@ struct Cosmos_Bank_Module_V1_Module {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// blocked_module_accounts configures exceptional module accounts which should be blocked from receiving funds.
-  /// If left empty it defaults to the list of account names supplied in the auth module configuration as
+  /// blocked_module_accounts_override configures exceptional module accounts which should be blocked from receiving
+  /// funds. If left empty it defaults to the list of account names supplied in the auth module configuration as
   /// module_account_permissions
   var blockedModuleAccountsOverride: [String] = []
 
   /// authority defines the custom module authority. If not set, defaults to the governance module.
   var authority: String = String()
+
+  /// restrictions_order specifies the order of send restrictions and should be
+  /// a list of module names which provide a send restriction instance. If no
+  /// order is provided, then restrictions will be applied in alphabetical order
+  /// of module names.
+  var restrictionsOrder: [String] = []
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -52,6 +58,7 @@ extension Cosmos_Bank_Module_V1_Module: SwiftProtobuf.Message, SwiftProtobuf._Me
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "blocked_module_accounts_override"),
     2: .same(proto: "authority"),
+    3: .standard(proto: "restrictions_order"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -62,6 +69,7 @@ extension Cosmos_Bank_Module_V1_Module: SwiftProtobuf.Message, SwiftProtobuf._Me
       switch fieldNumber {
       case 1: try { try decoder.decodeRepeatedStringField(value: &self.blockedModuleAccountsOverride) }()
       case 2: try { try decoder.decodeSingularStringField(value: &self.authority) }()
+      case 3: try { try decoder.decodeRepeatedStringField(value: &self.restrictionsOrder) }()
       default: break
       }
     }
@@ -74,12 +82,16 @@ extension Cosmos_Bank_Module_V1_Module: SwiftProtobuf.Message, SwiftProtobuf._Me
     if !self.authority.isEmpty {
       try visitor.visitSingularStringField(value: self.authority, fieldNumber: 2)
     }
+    if !self.restrictionsOrder.isEmpty {
+      try visitor.visitRepeatedStringField(value: self.restrictionsOrder, fieldNumber: 3)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Cosmos_Bank_Module_V1_Module, rhs: Cosmos_Bank_Module_V1_Module) -> Bool {
     if lhs.blockedModuleAccountsOverride != rhs.blockedModuleAccountsOverride {return false}
     if lhs.authority != rhs.authority {return false}
+    if lhs.restrictionsOrder != rhs.restrictionsOrder {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

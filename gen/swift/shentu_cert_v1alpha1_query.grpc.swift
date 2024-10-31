@@ -57,6 +57,11 @@ internal protocol Shentu_Cert_V1alpha1_QueryClientProtocol: GRPCClient {
     _ request: Shentu_Cert_V1alpha1_QueryCertificatesRequest,
     callOptions: CallOptions?
   ) -> UnaryCall<Shentu_Cert_V1alpha1_QueryCertificatesRequest, Shentu_Cert_V1alpha1_QueryCertificatesResponse>
+
+  func addrConversion(
+    _ request: Shentu_Cert_V1alpha1_ConversionToShentuAddrRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Shentu_Cert_V1alpha1_ConversionToShentuAddrRequest, Shentu_Cert_V1alpha1_ConversionToShentuAddrResponse>
 }
 
 extension Shentu_Cert_V1alpha1_QueryClientProtocol {
@@ -153,6 +158,24 @@ extension Shentu_Cert_V1alpha1_QueryClientProtocol {
       interceptors: self.interceptors?.makeCertificatesInterceptors() ?? []
     )
   }
+
+  /// Unary call to AddrConversion
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to AddrConversion.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func addrConversion(
+    _ request: Shentu_Cert_V1alpha1_ConversionToShentuAddrRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Shentu_Cert_V1alpha1_ConversionToShentuAddrRequest, Shentu_Cert_V1alpha1_ConversionToShentuAddrResponse> {
+    return self.makeUnaryCall(
+      path: Shentu_Cert_V1alpha1_QueryClientMetadata.Methods.addrConversion.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAddrConversionInterceptors() ?? []
+    )
+  }
 }
 
 @available(*, deprecated)
@@ -242,6 +265,11 @@ internal protocol Shentu_Cert_V1alpha1_QueryAsyncClientProtocol: GRPCClient {
     _ request: Shentu_Cert_V1alpha1_QueryCertificatesRequest,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Shentu_Cert_V1alpha1_QueryCertificatesRequest, Shentu_Cert_V1alpha1_QueryCertificatesResponse>
+
+  func makeAddrConversionCall(
+    _ request: Shentu_Cert_V1alpha1_ConversionToShentuAddrRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Shentu_Cert_V1alpha1_ConversionToShentuAddrRequest, Shentu_Cert_V1alpha1_ConversionToShentuAddrResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -313,6 +341,18 @@ extension Shentu_Cert_V1alpha1_QueryAsyncClientProtocol {
       interceptors: self.interceptors?.makeCertificatesInterceptors() ?? []
     )
   }
+
+  internal func makeAddrConversionCall(
+    _ request: Shentu_Cert_V1alpha1_ConversionToShentuAddrRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Shentu_Cert_V1alpha1_ConversionToShentuAddrRequest, Shentu_Cert_V1alpha1_ConversionToShentuAddrResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Shentu_Cert_V1alpha1_QueryClientMetadata.Methods.addrConversion.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAddrConversionInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -376,6 +416,18 @@ extension Shentu_Cert_V1alpha1_QueryAsyncClientProtocol {
       interceptors: self.interceptors?.makeCertificatesInterceptors() ?? []
     )
   }
+
+  internal func addrConversion(
+    _ request: Shentu_Cert_V1alpha1_ConversionToShentuAddrRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Shentu_Cert_V1alpha1_ConversionToShentuAddrResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Shentu_Cert_V1alpha1_QueryClientMetadata.Methods.addrConversion.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAddrConversionInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -411,6 +463,9 @@ internal protocol Shentu_Cert_V1alpha1_QueryClientInterceptorFactoryProtocol: Se
 
   /// - Returns: Interceptors to use when invoking 'certificates'.
   func makeCertificatesInterceptors() -> [ClientInterceptor<Shentu_Cert_V1alpha1_QueryCertificatesRequest, Shentu_Cert_V1alpha1_QueryCertificatesResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'addrConversion'.
+  func makeAddrConversionInterceptors() -> [ClientInterceptor<Shentu_Cert_V1alpha1_ConversionToShentuAddrRequest, Shentu_Cert_V1alpha1_ConversionToShentuAddrResponse>]
 }
 
 internal enum Shentu_Cert_V1alpha1_QueryClientMetadata {
@@ -423,6 +478,7 @@ internal enum Shentu_Cert_V1alpha1_QueryClientMetadata {
       Shentu_Cert_V1alpha1_QueryClientMetadata.Methods.platform,
       Shentu_Cert_V1alpha1_QueryClientMetadata.Methods.certificate,
       Shentu_Cert_V1alpha1_QueryClientMetadata.Methods.certificates,
+      Shentu_Cert_V1alpha1_QueryClientMetadata.Methods.addrConversion,
     ]
   )
 
@@ -456,6 +512,12 @@ internal enum Shentu_Cert_V1alpha1_QueryClientMetadata {
       path: "/shentu.cert.v1alpha1.Query/Certificates",
       type: GRPCCallType.unary
     )
+
+    internal static let addrConversion = GRPCMethodDescriptor(
+      name: "AddrConversion",
+      path: "/shentu.cert.v1alpha1.Query/AddrConversion",
+      type: GRPCCallType.unary
+    )
   }
 }
 
@@ -474,6 +536,8 @@ internal protocol Shentu_Cert_V1alpha1_QueryProvider: CallHandlerProvider {
   func certificate(request: Shentu_Cert_V1alpha1_QueryCertificateRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Cert_V1alpha1_QueryCertificateResponse>
 
   func certificates(request: Shentu_Cert_V1alpha1_QueryCertificatesRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Cert_V1alpha1_QueryCertificatesResponse>
+
+  func addrConversion(request: Shentu_Cert_V1alpha1_ConversionToShentuAddrRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Shentu_Cert_V1alpha1_ConversionToShentuAddrResponse>
 }
 
 extension Shentu_Cert_V1alpha1_QueryProvider {
@@ -533,6 +597,15 @@ extension Shentu_Cert_V1alpha1_QueryProvider {
         userFunction: self.certificates(request:context:)
       )
 
+    case "AddrConversion":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Shentu_Cert_V1alpha1_ConversionToShentuAddrRequest>(),
+        responseSerializer: ProtobufSerializer<Shentu_Cert_V1alpha1_ConversionToShentuAddrResponse>(),
+        interceptors: self.interceptors?.makeAddrConversionInterceptors() ?? [],
+        userFunction: self.addrConversion(request:context:)
+      )
+
     default:
       return nil
     }
@@ -571,6 +644,11 @@ internal protocol Shentu_Cert_V1alpha1_QueryAsyncProvider: CallHandlerProvider {
     request: Shentu_Cert_V1alpha1_QueryCertificatesRequest,
     context: GRPCAsyncServerCallContext
   ) async throws -> Shentu_Cert_V1alpha1_QueryCertificatesResponse
+
+  @Sendable func addrConversion(
+    request: Shentu_Cert_V1alpha1_ConversionToShentuAddrRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Shentu_Cert_V1alpha1_ConversionToShentuAddrResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -637,6 +715,15 @@ extension Shentu_Cert_V1alpha1_QueryAsyncProvider {
         wrapping: self.certificates(request:context:)
       )
 
+    case "AddrConversion":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Shentu_Cert_V1alpha1_ConversionToShentuAddrRequest>(),
+        responseSerializer: ProtobufSerializer<Shentu_Cert_V1alpha1_ConversionToShentuAddrResponse>(),
+        interceptors: self.interceptors?.makeAddrConversionInterceptors() ?? [],
+        wrapping: self.addrConversion(request:context:)
+      )
+
     default:
       return nil
     }
@@ -664,6 +751,10 @@ internal protocol Shentu_Cert_V1alpha1_QueryServerInterceptorFactoryProtocol {
   /// - Returns: Interceptors to use when handling 'certificates'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeCertificatesInterceptors() -> [ServerInterceptor<Shentu_Cert_V1alpha1_QueryCertificatesRequest, Shentu_Cert_V1alpha1_QueryCertificatesResponse>]
+
+  /// - Returns: Interceptors to use when handling 'addrConversion'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeAddrConversionInterceptors() -> [ServerInterceptor<Shentu_Cert_V1alpha1_ConversionToShentuAddrRequest, Shentu_Cert_V1alpha1_ConversionToShentuAddrResponse>]
 }
 
 internal enum Shentu_Cert_V1alpha1_QueryServerMetadata {
@@ -676,6 +767,7 @@ internal enum Shentu_Cert_V1alpha1_QueryServerMetadata {
       Shentu_Cert_V1alpha1_QueryServerMetadata.Methods.platform,
       Shentu_Cert_V1alpha1_QueryServerMetadata.Methods.certificate,
       Shentu_Cert_V1alpha1_QueryServerMetadata.Methods.certificates,
+      Shentu_Cert_V1alpha1_QueryServerMetadata.Methods.addrConversion,
     ]
   )
 
@@ -707,6 +799,12 @@ internal enum Shentu_Cert_V1alpha1_QueryServerMetadata {
     internal static let certificates = GRPCMethodDescriptor(
       name: "Certificates",
       path: "/shentu.cert.v1alpha1.Query/Certificates",
+      type: GRPCCallType.unary
+    )
+
+    internal static let addrConversion = GRPCMethodDescriptor(
+      name: "AddrConversion",
+      path: "/shentu.cert.v1alpha1.Query/AddrConversion",
       type: GRPCCallType.unary
     )
   }

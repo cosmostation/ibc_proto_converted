@@ -2076,29 +2076,29 @@ public final class GenesisProto {
   static {
     java.lang.String[] descriptorData = {
       "\n!neutron/feerefunder/genesis.proto\022\023neu" +
-      "tron.feerefunder\032\024gogoproto/gogo.proto\032 " +
-      "neutron/feerefunder/params.proto\032\035neutro" +
-      "n/feerefunder/fee.proto\"\212\001\n\014GenesisState" +
+      "tron.feerefunder\032\024gogoproto/gogo.proto\032\035" +
+      "neutron/feerefunder/fee.proto\032 neutron/f" +
+      "eerefunder/params.proto\"\212\001\n\014GenesisState" +
       "\0229\n\006params\030\001 \001(\0132\033.neutron.feerefunder.P" +
       "aramsB\004\310\336\037\000R\006params\022?\n\tfee_infos\030\002 \003(\0132\034" +
       ".neutron.feerefunder.FeeInfoB\004\310\336\037\000R\010feeI" +
       "nfos\"\223\001\n\007FeeInfo\022\024\n\005payer\030\001 \001(\tR\005payer\022@" +
       "\n\tpacket_id\030\002 \001(\0132\035.neutron.feerefunder." +
       "PacketIDB\004\310\336\037\000R\010packetId\0220\n\003fee\030\003 \001(\0132\030." +
-      "neutron.feerefunder.FeeB\004\310\336\037\000R\003feeB\306\001\n\027c" +
-      "om.neutron.feerefunderB\014GenesisProtoZ2gi" +
-      "thub.com/neutron-org/neutron/x/feerefund" +
-      "er/types\242\002\003NFX\252\002\023Neutron.Feerefunder\312\002\023N" +
-      "eutron\\Feerefunder\342\002\037Neutron\\Feerefunder" +
-      "\\GPBMetadata\352\002\024Neutron::Feerefunderb\006pro" +
-      "to3"
+      "neutron.feerefunder.FeeB\004\310\336\037\000R\003feeB\311\001\n\027c" +
+      "om.neutron.feerefunderB\014GenesisProtoZ5gi" +
+      "thub.com/neutron-org/neutron/v4/x/feeref" +
+      "under/types\242\002\003NFX\252\002\023Neutron.Feerefunder\312" +
+      "\002\023Neutron\\Feerefunder\342\002\037Neutron\\Feerefun" +
+      "der\\GPBMetadata\352\002\024Neutron::Feerefunderb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.gogoproto.GogoProto.getDescriptor(),
-          com.neutron.feerefunder.ParamsProto.getDescriptor(),
           com.neutron.feerefunder.FeeProto.getDescriptor(),
+          com.neutron.feerefunder.ParamsProto.getDescriptor(),
         });
     internal_static_neutron_feerefunder_GenesisState_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -2118,8 +2118,8 @@ public final class GenesisProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.gogoproto.GogoProto.getDescriptor();
-    com.neutron.feerefunder.ParamsProto.getDescriptor();
     com.neutron.feerefunder.FeeProto.getDescriptor();
+    com.neutron.feerefunder.ParamsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -57,6 +57,14 @@ public final class AuthzProto {
      * <code>AUTHORIZATION_TYPE_REDELEGATE = 3;</code>
      */
     AUTHORIZATION_TYPE_REDELEGATE(3),
+    /**
+     * <pre>
+     * AUTHORIZATION_TYPE_CANCEL_UNBONDING_DELEGATION defines an authorization type for Msg/MsgCancelUnbondingDelegation
+     * </pre>
+     *
+     * <code>AUTHORIZATION_TYPE_CANCEL_UNBONDING_DELEGATION = 4;</code>
+     */
+    AUTHORIZATION_TYPE_CANCEL_UNBONDING_DELEGATION(4),
     UNRECOGNIZED(-1),
     ;
 
@@ -92,6 +100,14 @@ public final class AuthzProto {
      * <code>AUTHORIZATION_TYPE_REDELEGATE = 3;</code>
      */
     public static final int AUTHORIZATION_TYPE_REDELEGATE_VALUE = 3;
+    /**
+     * <pre>
+     * AUTHORIZATION_TYPE_CANCEL_UNBONDING_DELEGATION defines an authorization type for Msg/MsgCancelUnbondingDelegation
+     * </pre>
+     *
+     * <code>AUTHORIZATION_TYPE_CANCEL_UNBONDING_DELEGATION = 4;</code>
+     */
+    public static final int AUTHORIZATION_TYPE_CANCEL_UNBONDING_DELEGATION_VALUE = 4;
 
 
     public final int getNumber() {
@@ -122,6 +138,7 @@ public final class AuthzProto {
         case 1: return AUTHORIZATION_TYPE_DELEGATE;
         case 2: return AUTHORIZATION_TYPE_UNDELEGATE;
         case 3: return AUTHORIZATION_TYPE_REDELEGATE;
+        case 4: return AUTHORIZATION_TYPE_CANCEL_UNBONDING_DELEGATION;
         default: return null;
       }
     }
@@ -218,7 +235,7 @@ public final class AuthzProto {
      * account.
      * </pre>
      *
-     * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList"];</code>
+     * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/AllowList"];</code>
      * @return Whether the allowList field is set.
      */
     boolean hasAllowList();
@@ -228,7 +245,7 @@ public final class AuthzProto {
      * account.
      * </pre>
      *
-     * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList"];</code>
+     * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/AllowList"];</code>
      * @return The allowList.
      */
     com.cosmos.staking.v1beta1.AuthzProto.StakeAuthorization.Validators getAllowList();
@@ -238,7 +255,7 @@ public final class AuthzProto {
      * account.
      * </pre>
      *
-     * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList"];</code>
+     * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/AllowList"];</code>
      */
     com.cosmos.staking.v1beta1.AuthzProto.StakeAuthorization.ValidatorsOrBuilder getAllowListOrBuilder();
 
@@ -247,7 +264,7 @@ public final class AuthzProto {
      * deny_list specifies list of validator addresses to whom grantee can not delegate tokens.
      * </pre>
      *
-     * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList"];</code>
+     * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/DenyList"];</code>
      * @return Whether the denyList field is set.
      */
     boolean hasDenyList();
@@ -256,7 +273,7 @@ public final class AuthzProto {
      * deny_list specifies list of validator addresses to whom grantee can not delegate tokens.
      * </pre>
      *
-     * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList"];</code>
+     * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/DenyList"];</code>
      * @return The denyList.
      */
     com.cosmos.staking.v1beta1.AuthzProto.StakeAuthorization.Validators getDenyList();
@@ -265,7 +282,7 @@ public final class AuthzProto {
      * deny_list specifies list of validator addresses to whom grantee can not delegate tokens.
      * </pre>
      *
-     * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList"];</code>
+     * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/DenyList"];</code>
      */
     com.cosmos.staking.v1beta1.AuthzProto.StakeAuthorization.ValidatorsOrBuilder getDenyListOrBuilder();
 
@@ -1048,7 +1065,7 @@ public final class AuthzProto {
      * account.
      * </pre>
      *
-     * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList"];</code>
+     * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/AllowList"];</code>
      * @return Whether the allowList field is set.
      */
     @java.lang.Override
@@ -1061,7 +1078,7 @@ public final class AuthzProto {
      * account.
      * </pre>
      *
-     * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList"];</code>
+     * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/AllowList"];</code>
      * @return The allowList.
      */
     @java.lang.Override
@@ -1077,7 +1094,7 @@ public final class AuthzProto {
      * account.
      * </pre>
      *
-     * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList"];</code>
+     * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/AllowList"];</code>
      */
     @java.lang.Override
     public com.cosmos.staking.v1beta1.AuthzProto.StakeAuthorization.ValidatorsOrBuilder getAllowListOrBuilder() {
@@ -1093,7 +1110,7 @@ public final class AuthzProto {
      * deny_list specifies list of validator addresses to whom grantee can not delegate tokens.
      * </pre>
      *
-     * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList"];</code>
+     * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/DenyList"];</code>
      * @return Whether the denyList field is set.
      */
     @java.lang.Override
@@ -1105,7 +1122,7 @@ public final class AuthzProto {
      * deny_list specifies list of validator addresses to whom grantee can not delegate tokens.
      * </pre>
      *
-     * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList"];</code>
+     * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/DenyList"];</code>
      * @return The denyList.
      */
     @java.lang.Override
@@ -1120,7 +1137,7 @@ public final class AuthzProto {
      * deny_list specifies list of validator addresses to whom grantee can not delegate tokens.
      * </pre>
      *
-     * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList"];</code>
+     * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/DenyList"];</code>
      */
     @java.lang.Override
     public com.cosmos.staking.v1beta1.AuthzProto.StakeAuthorization.ValidatorsOrBuilder getDenyListOrBuilder() {
@@ -1797,7 +1814,7 @@ public final class AuthzProto {
        * account.
        * </pre>
        *
-       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList"];</code>
+       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/AllowList"];</code>
        * @return Whether the allowList field is set.
        */
       @java.lang.Override
@@ -1810,7 +1827,7 @@ public final class AuthzProto {
        * account.
        * </pre>
        *
-       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList"];</code>
+       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/AllowList"];</code>
        * @return The allowList.
        */
       @java.lang.Override
@@ -1833,7 +1850,7 @@ public final class AuthzProto {
        * account.
        * </pre>
        *
-       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList"];</code>
+       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/AllowList"];</code>
        */
       public Builder setAllowList(com.cosmos.staking.v1beta1.AuthzProto.StakeAuthorization.Validators value) {
         if (allowListBuilder_ == null) {
@@ -1854,7 +1871,7 @@ public final class AuthzProto {
        * account.
        * </pre>
        *
-       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList"];</code>
+       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/AllowList"];</code>
        */
       public Builder setAllowList(
           com.cosmos.staking.v1beta1.AuthzProto.StakeAuthorization.Validators.Builder builderForValue) {
@@ -1873,7 +1890,7 @@ public final class AuthzProto {
        * account.
        * </pre>
        *
-       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList"];</code>
+       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/AllowList"];</code>
        */
       public Builder mergeAllowList(com.cosmos.staking.v1beta1.AuthzProto.StakeAuthorization.Validators value) {
         if (allowListBuilder_ == null) {
@@ -1901,7 +1918,7 @@ public final class AuthzProto {
        * account.
        * </pre>
        *
-       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList"];</code>
+       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/AllowList"];</code>
        */
       public Builder clearAllowList() {
         if (allowListBuilder_ == null) {
@@ -1925,7 +1942,7 @@ public final class AuthzProto {
        * account.
        * </pre>
        *
-       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList"];</code>
+       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/AllowList"];</code>
        */
       public com.cosmos.staking.v1beta1.AuthzProto.StakeAuthorization.Validators.Builder getAllowListBuilder() {
         return getAllowListFieldBuilder().getBuilder();
@@ -1936,7 +1953,7 @@ public final class AuthzProto {
        * account.
        * </pre>
        *
-       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList"];</code>
+       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/AllowList"];</code>
        */
       @java.lang.Override
       public com.cosmos.staking.v1beta1.AuthzProto.StakeAuthorization.ValidatorsOrBuilder getAllowListOrBuilder() {
@@ -1955,7 +1972,7 @@ public final class AuthzProto {
        * account.
        * </pre>
        *
-       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList"];</code>
+       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators allow_list = 2 [json_name = "allowList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/AllowList"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.cosmos.staking.v1beta1.AuthzProto.StakeAuthorization.Validators, com.cosmos.staking.v1beta1.AuthzProto.StakeAuthorization.Validators.Builder, com.cosmos.staking.v1beta1.AuthzProto.StakeAuthorization.ValidatorsOrBuilder> 
@@ -1983,7 +2000,7 @@ public final class AuthzProto {
        * deny_list specifies list of validator addresses to whom grantee can not delegate tokens.
        * </pre>
        *
-       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList"];</code>
+       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/DenyList"];</code>
        * @return Whether the denyList field is set.
        */
       @java.lang.Override
@@ -1995,7 +2012,7 @@ public final class AuthzProto {
        * deny_list specifies list of validator addresses to whom grantee can not delegate tokens.
        * </pre>
        *
-       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList"];</code>
+       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/DenyList"];</code>
        * @return The denyList.
        */
       @java.lang.Override
@@ -2017,7 +2034,7 @@ public final class AuthzProto {
        * deny_list specifies list of validator addresses to whom grantee can not delegate tokens.
        * </pre>
        *
-       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList"];</code>
+       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/DenyList"];</code>
        */
       public Builder setDenyList(com.cosmos.staking.v1beta1.AuthzProto.StakeAuthorization.Validators value) {
         if (denyListBuilder_ == null) {
@@ -2037,7 +2054,7 @@ public final class AuthzProto {
        * deny_list specifies list of validator addresses to whom grantee can not delegate tokens.
        * </pre>
        *
-       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList"];</code>
+       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/DenyList"];</code>
        */
       public Builder setDenyList(
           com.cosmos.staking.v1beta1.AuthzProto.StakeAuthorization.Validators.Builder builderForValue) {
@@ -2055,7 +2072,7 @@ public final class AuthzProto {
        * deny_list specifies list of validator addresses to whom grantee can not delegate tokens.
        * </pre>
        *
-       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList"];</code>
+       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/DenyList"];</code>
        */
       public Builder mergeDenyList(com.cosmos.staking.v1beta1.AuthzProto.StakeAuthorization.Validators value) {
         if (denyListBuilder_ == null) {
@@ -2082,7 +2099,7 @@ public final class AuthzProto {
        * deny_list specifies list of validator addresses to whom grantee can not delegate tokens.
        * </pre>
        *
-       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList"];</code>
+       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/DenyList"];</code>
        */
       public Builder clearDenyList() {
         if (denyListBuilder_ == null) {
@@ -2105,7 +2122,7 @@ public final class AuthzProto {
        * deny_list specifies list of validator addresses to whom grantee can not delegate tokens.
        * </pre>
        *
-       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList"];</code>
+       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/DenyList"];</code>
        */
       public com.cosmos.staking.v1beta1.AuthzProto.StakeAuthorization.Validators.Builder getDenyListBuilder() {
         return getDenyListFieldBuilder().getBuilder();
@@ -2115,7 +2132,7 @@ public final class AuthzProto {
        * deny_list specifies list of validator addresses to whom grantee can not delegate tokens.
        * </pre>
        *
-       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList"];</code>
+       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/DenyList"];</code>
        */
       @java.lang.Override
       public com.cosmos.staking.v1beta1.AuthzProto.StakeAuthorization.ValidatorsOrBuilder getDenyListOrBuilder() {
@@ -2133,7 +2150,7 @@ public final class AuthzProto {
        * deny_list specifies list of validator addresses to whom grantee can not delegate tokens.
        * </pre>
        *
-       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList"];</code>
+       * <code>.cosmos.staking.v1beta1.StakeAuthorization.Validators deny_list = 3 [json_name = "denyList", (.amino.oneof_name) = "cosmos-sdk/StakeAuthorization/DenyList"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.cosmos.staking.v1beta1.AuthzProto.StakeAuthorization.Validators, com.cosmos.staking.v1beta1.AuthzProto.StakeAuthorization.Validators.Builder, com.cosmos.staking.v1beta1.AuthzProto.StakeAuthorization.ValidatorsOrBuilder> 
@@ -2313,30 +2330,33 @@ public final class AuthzProto {
       "smos.staking.v1beta1\032\024gogoproto/gogo.pro" +
       "to\032\031cosmos_proto/cosmos.proto\032\036cosmos/ba" +
       "se/v1beta1/coin.proto\032\021amino/amino.proto" +
-      "\"\235\004\n\022StakeAuthorization\022e\n\nmax_tokens\030\001 " +
+      "\"\372\004\n\022StakeAuthorization\022e\n\nmax_tokens\030\001 " +
       "\001(\0132\031.cosmos.base.v1beta1.CoinB+\252\337\037\'gith" +
       "ub.com/cosmos/cosmos-sdk/types.CoinR\tmax" +
-      "Tokens\022V\n\nallow_list\030\002 \001(\01325.cosmos.stak" +
-      "ing.v1beta1.StakeAuthorization.Validator" +
-      "sH\000R\tallowList\022T\n\tdeny_list\030\003 \001(\01325.cosm" +
-      "os.staking.v1beta1.StakeAuthorization.Va" +
-      "lidatorsH\000R\010denyList\022X\n\022authorization_ty" +
-      "pe\030\004 \001(\0162).cosmos.staking.v1beta1.Author" +
-      "izationTypeR\021authorizationType\032@\n\nValida" +
-      "tors\0222\n\007address\030\001 \003(\tB\030\322\264-\024cosmos.Addres" +
-      "sStringR\007address:H\312\264-\"cosmos.authz.v1bet" +
-      "a1.Authorization\212\347\260*\035cosmos-sdk/StakeAut" +
-      "horizationB\014\n\nvalidators*\236\001\n\021Authorizati" +
-      "onType\022\"\n\036AUTHORIZATION_TYPE_UNSPECIFIED" +
-      "\020\000\022\037\n\033AUTHORIZATION_TYPE_DELEGATE\020\001\022!\n\035A" +
-      "UTHORIZATION_TYPE_UNDELEGATE\020\002\022!\n\035AUTHOR" +
-      "IZATION_TYPE_REDELEGATE\020\003B\316\001\n\032com.cosmos" +
-      ".staking.v1beta1B\nAuthzProtoZ,github.com" +
-      "/cosmos/cosmos-sdk/x/staking/types\242\002\003CSX" +
-      "\252\002\026Cosmos.Staking.V1beta1\312\002\026Cosmos\\Staki" +
-      "ng\\V1beta1\342\002\"Cosmos\\Staking\\V1beta1\\GPBM" +
-      "etadata\352\002\030Cosmos::Staking::V1beta1b\006prot" +
-      "o3"
+      "Tokens\022\204\001\n\nallow_list\030\002 \001(\01325.cosmos.sta" +
+      "king.v1beta1.StakeAuthorization.Validato" +
+      "rsB,\262\347\260*\'cosmos-sdk/StakeAuthorization/A" +
+      "llowListH\000R\tallowList\022\201\001\n\tdeny_list\030\003 \001(" +
+      "\01325.cosmos.staking.v1beta1.StakeAuthoriz" +
+      "ation.ValidatorsB+\262\347\260*&cosmos-sdk/StakeA" +
+      "uthorization/DenyListH\000R\010denyList\022X\n\022aut" +
+      "horization_type\030\004 \001(\0162).cosmos.staking.v" +
+      "1beta1.AuthorizationTypeR\021authorizationT" +
+      "ype\032@\n\nValidators\0222\n\007address\030\001 \003(\tB\030\322\264-\024" +
+      "cosmos.AddressStringR\007address:H\312\264-\"cosmo" +
+      "s.authz.v1beta1.Authorization\212\347\260*\035cosmos" +
+      "-sdk/StakeAuthorizationB\014\n\nvalidators*\322\001" +
+      "\n\021AuthorizationType\022\"\n\036AUTHORIZATION_TYP" +
+      "E_UNSPECIFIED\020\000\022\037\n\033AUTHORIZATION_TYPE_DE" +
+      "LEGATE\020\001\022!\n\035AUTHORIZATION_TYPE_UNDELEGAT" +
+      "E\020\002\022!\n\035AUTHORIZATION_TYPE_REDELEGATE\020\003\0222" +
+      "\n.AUTHORIZATION_TYPE_CANCEL_UNBONDING_DE" +
+      "LEGATION\020\004B\316\001\n\032com.cosmos.staking.v1beta" +
+      "1B\nAuthzProtoZ,github.com/cosmos/cosmos-" +
+      "sdk/x/staking/types\242\002\003CSX\252\002\026Cosmos.Staki" +
+      "ng.V1beta1\312\002\026Cosmos\\Staking\\V1beta1\342\002\"Co" +
+      "smos\\Staking\\V1beta1\\GPBMetadata\352\002\030Cosmo" +
+      "s::Staking::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2361,6 +2381,7 @@ public final class AuthzProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.amino.AminoProto.name);
+    registry.add(com.amino.AminoProto.oneofName);
     registry.add(com.cosmos_proto.CosmosProto.implementsInterface);
     registry.add(com.cosmos_proto.CosmosProto.scalar);
     registry.add(com.gogoproto.GogoProto.castrepeated);

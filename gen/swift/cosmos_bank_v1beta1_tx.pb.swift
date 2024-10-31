@@ -132,6 +132,7 @@ struct Cosmos_Bank_V1beta1_MsgSetSendEnabled {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
+  /// authority is the address that controls the module.
   var authority: String = String()
 
   /// send_enabled is the list of entries to add or update.

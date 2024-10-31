@@ -24,8 +24,8 @@ public final class QueryProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\037neutron/transfer/v1/query.proto\022\020neutr" +
-      "on.transfer\032(ibc/applications/transfer/v" +
-      "1/query.proto\032\034google/api/annotations.pr" +
+      "on.transfer\032\034google/api/annotations.prot" +
+      "o\032(ibc/applications/transfer/v1/query.pr" +
       "oto2\244\005\n\005Query\022\254\001\n\nDenomTrace\0224.ibc.appli" +
       "cations.transfer.v1.QueryDenomTraceReque" +
       "st\0325.ibc.applications.transfer.v1.QueryD" +
@@ -43,25 +43,25 @@ public final class QueryProto {
       "DenomHashRequest\0324.ibc.applications.tran" +
       "sfer.v1.QueryDenomHashResponse\"2\202\323\344\223\002,\022*" +
       "/ibc/apps/transfer/v1/denom_hashes/{trac" +
-      "e}B\262\001\n\024com.neutron.transferB\nQueryProtoZ" +
-      "/github.com/neutron-org/neutron/x/transf" +
-      "er/types\242\002\003NTX\252\002\020Neutron.Transfer\312\002\020Neut" +
-      "ron\\Transfer\342\002\034Neutron\\Transfer\\GPBMetad" +
-      "ata\352\002\021Neutron::Transferb\006proto3"
+      "e}B\265\001\n\024com.neutron.transferB\nQueryProtoZ" +
+      "2github.com/neutron-org/neutron/v4/x/tra" +
+      "nsfer/types\242\002\003NTX\252\002\020Neutron.Transfer\312\002\020N" +
+      "eutron\\Transfer\342\002\034Neutron\\Transfer\\GPBMe" +
+      "tadata\352\002\021Neutron::Transferb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.ibc.applications.transfer.v1.QueryProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.ibc.applications.transfer.v1.QueryProto.getDescriptor(),
         });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.ibc.applications.transfer.v1.QueryProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.ibc.applications.transfer.v1.QueryProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

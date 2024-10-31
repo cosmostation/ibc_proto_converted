@@ -2337,12 +2337,11 @@ public final class TxProto {
       "nse\022k\n\rCancelUpgrade\022(.cosmos.upgrade.v1" +
       "beta1.MsgCancelUpgrade\0320.cosmos.upgrade." +
       "v1beta1.MsgCancelUpgradeResponse\032\005\200\347\260*\001B" +
-      "\313\001\n\032com.cosmos.upgrade.v1beta1B\007TxProtoZ" +
-      ",github.com/cosmos/cosmos-sdk/x/upgrade/" +
-      "types\242\002\003CUX\252\002\026Cosmos.Upgrade.V1beta1\312\002\026C" +
-      "osmos\\Upgrade\\V1beta1\342\002\"Cosmos\\Upgrade\\V" +
-      "1beta1\\GPBMetadata\352\002\030Cosmos::Upgrade::V1" +
-      "beta1b\006proto3"
+      "\273\001\n\032com.cosmos.upgrade.v1beta1B\007TxProtoZ" +
+      "\034cosmossdk.io/x/upgrade/types\242\002\003CUX\252\002\026Co" +
+      "smos.Upgrade.V1beta1\312\002\026Cosmos\\Upgrade\\V1" +
+      "beta1\342\002\"Cosmos\\Upgrade\\V1beta1\\GPBMetada" +
+      "ta\352\002\030Cosmos::Upgrade::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

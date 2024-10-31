@@ -54,12 +54,17 @@ struct Neutron_Contractmanager_QueryParamsResponse {
   fileprivate var _params: Neutron_Contractmanager_Params? = nil
 }
 
+/// QueryFailuresRequest is request type for the Query/Failures RPC method.
 struct Neutron_Contractmanager_QueryFailuresRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
+  /// address of the contract which Sudo call failed.
   var address: String = String()
+
+  /// ID of the failure for the given contract.
+  var failureID: UInt64 = 0
 
   var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageRequest()}
@@ -77,6 +82,7 @@ struct Neutron_Contractmanager_QueryFailuresRequest {
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageRequest? = nil
 }
 
+/// QueryFailuresResponse is response type for the Query/Failures RPC method.
 struct Neutron_Contractmanager_QueryFailuresResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -170,7 +176,8 @@ extension Neutron_Contractmanager_QueryFailuresRequest: SwiftProtobuf.Message, S
   static let protoMessageName: String = _protobuf_package + ".QueryFailuresRequest"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "address"),
-    2: .same(proto: "pagination"),
+    2: .standard(proto: "failure_id"),
+    3: .same(proto: "pagination"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -180,7 +187,8 @@ extension Neutron_Contractmanager_QueryFailuresRequest: SwiftProtobuf.Message, S
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.address) }()
-      case 2: try { try decoder.decodeSingularMessageField(value: &self._pagination) }()
+      case 2: try { try decoder.decodeSingularUInt64Field(value: &self.failureID) }()
+      case 3: try { try decoder.decodeSingularMessageField(value: &self._pagination) }()
       default: break
       }
     }
@@ -194,14 +202,18 @@ extension Neutron_Contractmanager_QueryFailuresRequest: SwiftProtobuf.Message, S
     if !self.address.isEmpty {
       try visitor.visitSingularStringField(value: self.address, fieldNumber: 1)
     }
+    if self.failureID != 0 {
+      try visitor.visitSingularUInt64Field(value: self.failureID, fieldNumber: 2)
+    }
     try { if let v = self._pagination {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
     } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Neutron_Contractmanager_QueryFailuresRequest, rhs: Neutron_Contractmanager_QueryFailuresRequest) -> Bool {
     if lhs.address != rhs.address {return false}
+    if lhs.failureID != rhs.failureID {return false}
     if lhs._pagination != rhs._pagination {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

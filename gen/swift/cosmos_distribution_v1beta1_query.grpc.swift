@@ -202,7 +202,7 @@ extension Cosmos_Distribution_V1beta1_QueryClientProtocol {
     )
   }
 
-  /// DelegationTotalRewards queries the total rewards accrued by a each
+  /// DelegationTotalRewards queries the total rewards accrued by each
   /// validator.
   ///
   /// - Parameters:
@@ -856,7 +856,7 @@ internal protocol Cosmos_Distribution_V1beta1_QueryProvider: CallHandlerProvider
   /// DelegationRewards queries the total rewards accrued by a delegation.
   func delegationRewards(request: Cosmos_Distribution_V1beta1_QueryDelegationRewardsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Distribution_V1beta1_QueryDelegationRewardsResponse>
 
-  /// DelegationTotalRewards queries the total rewards accrued by a each
+  /// DelegationTotalRewards queries the total rewards accrued by each
   /// validator.
   func delegationTotalRewards(request: Cosmos_Distribution_V1beta1_QueryDelegationTotalRewardsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Distribution_V1beta1_QueryDelegationTotalRewardsResponse>
 
@@ -1034,7 +1034,7 @@ internal protocol Cosmos_Distribution_V1beta1_QueryAsyncProvider: CallHandlerPro
     context: GRPCAsyncServerCallContext
   ) async throws -> Cosmos_Distribution_V1beta1_QueryDelegationRewardsResponse
 
-  /// DelegationTotalRewards queries the total rewards accrued by a each
+  /// DelegationTotalRewards queries the total rewards accrued by each
   /// validator.
   @Sendable func delegationTotalRewards(
     request: Cosmos_Distribution_V1beta1_QueryDelegationTotalRewardsRequest,

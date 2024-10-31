@@ -30,6 +30,7 @@ enum Shentu_Cert_V1alpha1_CertificateType: SwiftProtobuf.Enum {
   case certTypeShieldPoolCreator // = 5
   case certTypeIdentity // = 6
   case certTypeGeneral // = 7
+  case certTypeBountyAdmin // = 8
   case UNRECOGNIZED(Int)
 
   init() {
@@ -46,6 +47,7 @@ enum Shentu_Cert_V1alpha1_CertificateType: SwiftProtobuf.Enum {
     case 5: self = .certTypeShieldPoolCreator
     case 6: self = .certTypeIdentity
     case 7: self = .certTypeGeneral
+    case 8: self = .certTypeBountyAdmin
     default: self = .UNRECOGNIZED(rawValue)
     }
   }
@@ -60,6 +62,7 @@ enum Shentu_Cert_V1alpha1_CertificateType: SwiftProtobuf.Enum {
     case .certTypeShieldPoolCreator: return 5
     case .certTypeIdentity: return 6
     case .certTypeGeneral: return 7
+    case .certTypeBountyAdmin: return 8
     case .UNRECOGNIZED(let i): return i
     }
   }
@@ -79,6 +82,7 @@ extension Shentu_Cert_V1alpha1_CertificateType: CaseIterable {
     .certTypeShieldPoolCreator,
     .certTypeIdentity,
     .certTypeGeneral,
+    .certTypeBountyAdmin,
   ]
 }
 
@@ -252,6 +256,18 @@ struct Shentu_Cert_V1alpha1_General {
   init() {}
 }
 
+struct Shentu_Cert_V1alpha1_BountyAdmin {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var content: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 /// Platform is a genesis type for certified platform of a validator
 struct Shentu_Cert_V1alpha1_Platform {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
@@ -326,6 +342,7 @@ extension Shentu_Cert_V1alpha1_OracleOperator: @unchecked Sendable {}
 extension Shentu_Cert_V1alpha1_ShieldPoolCreator: @unchecked Sendable {}
 extension Shentu_Cert_V1alpha1_Identity: @unchecked Sendable {}
 extension Shentu_Cert_V1alpha1_General: @unchecked Sendable {}
+extension Shentu_Cert_V1alpha1_BountyAdmin: @unchecked Sendable {}
 extension Shentu_Cert_V1alpha1_Platform: @unchecked Sendable {}
 extension Shentu_Cert_V1alpha1_CertifierUpdateProposal: @unchecked Sendable {}
 extension Shentu_Cert_V1alpha1_KVPair: @unchecked Sendable {}
@@ -345,6 +362,7 @@ extension Shentu_Cert_V1alpha1_CertificateType: SwiftProtobuf._ProtoNameProvidin
     5: .same(proto: "CERT_TYPE_SHIELD_POOL_CREATOR"),
     6: .same(proto: "CERT_TYPE_IDENTITY"),
     7: .same(proto: "CERT_TYPE_GENERAL"),
+    8: .same(proto: "CERT_TYPE_BOUNTY_ADMIN"),
   ]
 }
 
@@ -752,6 +770,38 @@ extension Shentu_Cert_V1alpha1_General: SwiftProtobuf.Message, SwiftProtobuf._Me
   }
 
   static func ==(lhs: Shentu_Cert_V1alpha1_General, rhs: Shentu_Cert_V1alpha1_General) -> Bool {
+    if lhs.content != rhs.content {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Shentu_Cert_V1alpha1_BountyAdmin: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".BountyAdmin"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "content"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.content) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.content.isEmpty {
+      try visitor.visitSingularStringField(value: self.content, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Shentu_Cert_V1alpha1_BountyAdmin, rhs: Shentu_Cert_V1alpha1_BountyAdmin) -> Bool {
     if lhs.content != rhs.content {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

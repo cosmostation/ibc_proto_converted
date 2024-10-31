@@ -31,12 +31,12 @@ public final class CoinProto {
         getDenomBytes();
 
     /**
-     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
      * @return The amount.
      */
     java.lang.String getAmount();
     /**
-     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
      * @return The bytes for amount.
      */
     com.google.protobuf.ByteString
@@ -129,7 +129,7 @@ public final class CoinProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object amount_ = "";
     /**
-     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
      * @return The amount.
      */
     @java.lang.Override
@@ -146,7 +146,7 @@ public final class CoinProto {
       }
     }
     /**
-     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
      * @return The bytes for amount.
      */
     @java.lang.Override
@@ -595,7 +595,7 @@ public final class CoinProto {
 
       private java.lang.Object amount_ = "";
       /**
-       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
        * @return The amount.
        */
       public java.lang.String getAmount() {
@@ -611,7 +611,7 @@ public final class CoinProto {
         }
       }
       /**
-       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
        * @return The bytes for amount.
        */
       public com.google.protobuf.ByteString
@@ -628,7 +628,7 @@ public final class CoinProto {
         }
       }
       /**
-       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
        * @param value The amount to set.
        * @return This builder for chaining.
        */
@@ -641,7 +641,7 @@ public final class CoinProto {
         return this;
       }
       /**
-       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearAmount() {
@@ -651,7 +651,7 @@ public final class CoinProto {
         return this;
       }
       /**
-       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
        * @param value The bytes for amount to set.
        * @return This builder for chaining.
        */
@@ -745,12 +745,12 @@ public final class CoinProto {
         getDenomBytes();
 
     /**
-     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
      * @return The amount.
      */
     java.lang.String getAmount();
     /**
-     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
      * @return The bytes for amount.
      */
     com.google.protobuf.ByteString
@@ -843,7 +843,7 @@ public final class CoinProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object amount_ = "";
     /**
-     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
      * @return The amount.
      */
     @java.lang.Override
@@ -860,7 +860,7 @@ public final class CoinProto {
       }
     }
     /**
-     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
      * @return The bytes for amount.
      */
     @java.lang.Override
@@ -1309,7 +1309,7 @@ public final class CoinProto {
 
       private java.lang.Object amount_ = "";
       /**
-       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @return The amount.
        */
       public java.lang.String getAmount() {
@@ -1325,7 +1325,7 @@ public final class CoinProto {
         }
       }
       /**
-       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @return The bytes for amount.
        */
       public com.google.protobuf.ByteString
@@ -1342,7 +1342,7 @@ public final class CoinProto {
         }
       }
       /**
-       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @param value The amount to set.
        * @return This builder for chaining.
        */
@@ -1355,7 +1355,7 @@ public final class CoinProto {
         return this;
       }
       /**
-       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @return This builder for chaining.
        */
       public Builder clearAmount() {
@@ -1365,7 +1365,7 @@ public final class CoinProto {
         return this;
       }
       /**
-       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @param value The bytes for amount to set.
        * @return This builder for chaining.
        */
@@ -1447,12 +1447,12 @@ public final class CoinProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string int = 1 [json_name = "int", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * <code>string int = 1 [json_name = "int", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
      * @return The int.
      */
     java.lang.String getInt();
     /**
-     * <code>string int = 1 [json_name = "int", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * <code>string int = 1 [json_name = "int", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
      * @return The bytes for int.
      */
     com.google.protobuf.ByteString
@@ -1461,6 +1461,7 @@ public final class CoinProto {
   /**
    * <pre>
    * IntProto defines a Protobuf wrapper around an Int object.
+   * Deprecated: Prefer to use math.Int directly. It supports binary Marshal and Unmarshal.
    * </pre>
    *
    * Protobuf type {@code cosmos.base.v1beta1.IntProto}
@@ -1502,7 +1503,7 @@ public final class CoinProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object int_ = "";
     /**
-     * <code>string int = 1 [json_name = "int", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * <code>string int = 1 [json_name = "int", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
      * @return The int.
      */
     @java.lang.Override
@@ -1519,7 +1520,7 @@ public final class CoinProto {
       }
     }
     /**
-     * <code>string int = 1 [json_name = "int", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * <code>string int = 1 [json_name = "int", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
      * @return The bytes for int.
      */
     @java.lang.Override
@@ -1696,6 +1697,7 @@ public final class CoinProto {
     /**
      * <pre>
      * IntProto defines a Protobuf wrapper around an Int object.
+     * Deprecated: Prefer to use math.Int directly. It supports binary Marshal and Unmarshal.
      * </pre>
      *
      * Protobuf type {@code cosmos.base.v1beta1.IntProto}
@@ -1869,7 +1871,7 @@ public final class CoinProto {
 
       private java.lang.Object int_ = "";
       /**
-       * <code>string int = 1 [json_name = "int", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * <code>string int = 1 [json_name = "int", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
        * @return The int.
        */
       public java.lang.String getInt() {
@@ -1885,7 +1887,7 @@ public final class CoinProto {
         }
       }
       /**
-       * <code>string int = 1 [json_name = "int", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * <code>string int = 1 [json_name = "int", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
        * @return The bytes for int.
        */
       public com.google.protobuf.ByteString
@@ -1902,7 +1904,7 @@ public final class CoinProto {
         }
       }
       /**
-       * <code>string int = 1 [json_name = "int", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * <code>string int = 1 [json_name = "int", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
        * @param value The int to set.
        * @return This builder for chaining.
        */
@@ -1915,7 +1917,7 @@ public final class CoinProto {
         return this;
       }
       /**
-       * <code>string int = 1 [json_name = "int", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * <code>string int = 1 [json_name = "int", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
        * @return This builder for chaining.
        */
       public Builder clearInt() {
@@ -1925,7 +1927,7 @@ public final class CoinProto {
         return this;
       }
       /**
-       * <code>string int = 1 [json_name = "int", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * <code>string int = 1 [json_name = "int", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
        * @param value The bytes for int to set.
        * @return This builder for chaining.
        */
@@ -2007,12 +2009,12 @@ public final class CoinProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string dec = 1 [json_name = "dec", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * <code>string dec = 1 [json_name = "dec", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
      * @return The dec.
      */
     java.lang.String getDec();
     /**
-     * <code>string dec = 1 [json_name = "dec", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * <code>string dec = 1 [json_name = "dec", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
      * @return The bytes for dec.
      */
     com.google.protobuf.ByteString
@@ -2021,6 +2023,7 @@ public final class CoinProto {
   /**
    * <pre>
    * DecProto defines a Protobuf wrapper around a Dec object.
+   * Deprecated: Prefer to use math.LegacyDec directly. It supports binary Marshal and Unmarshal.
    * </pre>
    *
    * Protobuf type {@code cosmos.base.v1beta1.DecProto}
@@ -2062,7 +2065,7 @@ public final class CoinProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object dec_ = "";
     /**
-     * <code>string dec = 1 [json_name = "dec", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * <code>string dec = 1 [json_name = "dec", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
      * @return The dec.
      */
     @java.lang.Override
@@ -2079,7 +2082,7 @@ public final class CoinProto {
       }
     }
     /**
-     * <code>string dec = 1 [json_name = "dec", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * <code>string dec = 1 [json_name = "dec", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
      * @return The bytes for dec.
      */
     @java.lang.Override
@@ -2256,6 +2259,7 @@ public final class CoinProto {
     /**
      * <pre>
      * DecProto defines a Protobuf wrapper around a Dec object.
+     * Deprecated: Prefer to use math.LegacyDec directly. It supports binary Marshal and Unmarshal.
      * </pre>
      *
      * Protobuf type {@code cosmos.base.v1beta1.DecProto}
@@ -2429,7 +2433,7 @@ public final class CoinProto {
 
       private java.lang.Object dec_ = "";
       /**
-       * <code>string dec = 1 [json_name = "dec", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string dec = 1 [json_name = "dec", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @return The dec.
        */
       public java.lang.String getDec() {
@@ -2445,7 +2449,7 @@ public final class CoinProto {
         }
       }
       /**
-       * <code>string dec = 1 [json_name = "dec", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string dec = 1 [json_name = "dec", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @return The bytes for dec.
        */
       public com.google.protobuf.ByteString
@@ -2462,7 +2466,7 @@ public final class CoinProto {
         }
       }
       /**
-       * <code>string dec = 1 [json_name = "dec", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string dec = 1 [json_name = "dec", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @param value The dec to set.
        * @return This builder for chaining.
        */
@@ -2475,7 +2479,7 @@ public final class CoinProto {
         return this;
       }
       /**
-       * <code>string dec = 1 [json_name = "dec", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string dec = 1 [json_name = "dec", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDec() {
@@ -2485,7 +2489,7 @@ public final class CoinProto {
         return this;
       }
       /**
-       * <code>string dec = 1 [json_name = "dec", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string dec = 1 [json_name = "dec", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @param value The bytes for dec to set.
        * @return This builder for chaining.
        */
@@ -2594,19 +2598,21 @@ public final class CoinProto {
       "\n\036cosmos/base/v1beta1/coin.proto\022\023cosmos" +
       ".base.v1beta1\032\024gogoproto/gogo.proto\032\031cos" +
       "mos_proto/cosmos.proto\032\021amino/amino.prot" +
-      "o\"Z\n\004Coin\022\024\n\005denom\030\001 \001(\tR\005denom\0226\n\006amoun" +
-      "t\030\002 \001(\tB\036\310\336\037\000\332\336\037\003Int\322\264-\ncosmos.Int\250\347\260*\001R" +
-      "\006amount:\004\350\240\037\001\"X\n\007DecCoin\022\024\n\005denom\030\001 \001(\tR" +
-      "\005denom\0221\n\006amount\030\002 \001(\tB\031\310\336\037\000\332\336\037\003Dec\322\264-\nc" +
-      "osmos.DecR\006amount:\004\350\240\037\001\"7\n\010IntProto\022+\n\003i" +
-      "nt\030\001 \001(\tB\031\310\336\037\000\332\336\037\003Int\322\264-\ncosmos.IntR\003int" +
-      "\"7\n\010DecProto\022+\n\003dec\030\001 \001(\tB\031\310\336\037\000\332\336\037\003Dec\322\264" +
-      "-\ncosmos.DecR\003decB\274\001\n\027com.cosmos.base.v1" +
-      "beta1B\tCoinProtoZ\"github.com/cosmos/cosm" +
-      "os-sdk/types\242\002\003CBX\252\002\023Cosmos.Base.V1beta1" +
-      "\312\002\023Cosmos\\Base\\V1beta1\342\002\037Cosmos\\Base\\V1b" +
-      "eta1\\GPBMetadata\352\002\025Cosmos::Base::V1beta1" +
-      "\330\341\036\000\200\342\036\000b\006proto3"
+      "o\"l\n\004Coin\022\024\n\005denom\030\001 \001(\tR\005denom\022H\n\006amoun" +
+      "t\030\002 \001(\tB0\310\336\037\000\332\336\037\025cosmossdk.io/math.Int\322\264" +
+      "-\ncosmos.Int\250\347\260*\001R\006amount:\004\350\240\037\001\"p\n\007DecCo" +
+      "in\022\024\n\005denom\030\001 \001(\tR\005denom\022I\n\006amount\030\002 \001(\t" +
+      "B1\310\336\037\000\332\336\037\033cosmossdk.io/math.LegacyDec\322\264-" +
+      "\ncosmos.DecR\006amount:\004\350\240\037\001\"I\n\010IntProto\022=\n" +
+      "\003int\030\001 \001(\tB+\310\336\037\000\332\336\037\025cosmossdk.io/math.In" +
+      "t\322\264-\ncosmos.IntR\003int\"O\n\010DecProto\022C\n\003dec\030" +
+      "\001 \001(\tB1\310\336\037\000\332\336\037\033cosmossdk.io/math.LegacyD" +
+      "ec\322\264-\ncosmos.DecR\003decB\274\001\n\027com.cosmos.bas" +
+      "e.v1beta1B\tCoinProtoZ\"github.com/cosmos/" +
+      "cosmos-sdk/types\242\002\003CBX\252\002\023Cosmos.Base.V1b" +
+      "eta1\312\002\023Cosmos\\Base\\V1beta1\342\002\037Cosmos\\Base" +
+      "\\V1beta1\\GPBMetadata\352\002\025Cosmos::Base::V1b" +
+      "eta1\330\341\036\000\200\342\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -53,9 +53,9 @@ public final class TxProto {
      * Deprecated: This field has been deprecated with LSM in favor of the validator bond
      * </pre>
      *
-     * <code>string min_self_delegation = 3 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * <code>string min_self_delegation = 3 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
      * @deprecated cosmos.staking.v1beta1.MsgCreateValidator.min_self_delegation is deprecated.
-     *     See cosmos/staking/v1beta1/tx.proto;l=91
+     *     See cosmos/staking/v1beta1/tx.proto;l=87
      * @return The minSelfDelegation.
      */
     @java.lang.Deprecated java.lang.String getMinSelfDelegation();
@@ -64,33 +64,49 @@ public final class TxProto {
      * Deprecated: This field has been deprecated with LSM in favor of the validator bond
      * </pre>
      *
-     * <code>string min_self_delegation = 3 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * <code>string min_self_delegation = 3 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
      * @deprecated cosmos.staking.v1beta1.MsgCreateValidator.min_self_delegation is deprecated.
-     *     See cosmos/staking/v1beta1/tx.proto;l=91
+     *     See cosmos/staking/v1beta1/tx.proto;l=87
      * @return The bytes for minSelfDelegation.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
         getMinSelfDelegationBytes();
 
     /**
-     * <code>string delegator_address = 4 [json_name = "delegatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <pre>
+     * Deprecated: Use of Delegator Address in MsgCreateValidator is deprecated.
+     * The validator address bytes and delegator address bytes refer to the same account while creating validator (defer
+     * only in bech32 notation).
+     * </pre>
+     *
+     * <code>string delegator_address = 4 [json_name = "delegatorAddress", deprecated = true, (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @deprecated cosmos.staking.v1beta1.MsgCreateValidator.delegator_address is deprecated.
+     *     See cosmos/staking/v1beta1/tx.proto;l=97
      * @return The delegatorAddress.
      */
-    java.lang.String getDelegatorAddress();
+    @java.lang.Deprecated java.lang.String getDelegatorAddress();
     /**
-     * <code>string delegator_address = 4 [json_name = "delegatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <pre>
+     * Deprecated: Use of Delegator Address in MsgCreateValidator is deprecated.
+     * The validator address bytes and delegator address bytes refer to the same account while creating validator (defer
+     * only in bech32 notation).
+     * </pre>
+     *
+     * <code>string delegator_address = 4 [json_name = "delegatorAddress", deprecated = true, (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @deprecated cosmos.staking.v1beta1.MsgCreateValidator.delegator_address is deprecated.
+     *     See cosmos/staking/v1beta1/tx.proto;l=97
      * @return The bytes for delegatorAddress.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getDelegatorAddressBytes();
 
     /**
-     * <code>string validator_address = 5 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_address = 5 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorAddress.
      */
     java.lang.String getValidatorAddress();
     /**
-     * <code>string validator_address = 5 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_address = 5 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorAddress.
      */
     com.google.protobuf.ByteString
@@ -228,9 +244,9 @@ public final class TxProto {
      * Deprecated: This field has been deprecated with LSM in favor of the validator bond
      * </pre>
      *
-     * <code>string min_self_delegation = 3 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * <code>string min_self_delegation = 3 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
      * @deprecated cosmos.staking.v1beta1.MsgCreateValidator.min_self_delegation is deprecated.
-     *     See cosmos/staking/v1beta1/tx.proto;l=91
+     *     See cosmos/staking/v1beta1/tx.proto;l=87
      * @return The minSelfDelegation.
      */
     @java.lang.Override
@@ -251,9 +267,9 @@ public final class TxProto {
      * Deprecated: This field has been deprecated with LSM in favor of the validator bond
      * </pre>
      *
-     * <code>string min_self_delegation = 3 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * <code>string min_self_delegation = 3 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
      * @deprecated cosmos.staking.v1beta1.MsgCreateValidator.min_self_delegation is deprecated.
-     *     See cosmos/staking/v1beta1/tx.proto;l=91
+     *     See cosmos/staking/v1beta1/tx.proto;l=87
      * @return The bytes for minSelfDelegation.
      */
     @java.lang.Override
@@ -275,11 +291,19 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object delegatorAddress_ = "";
     /**
-     * <code>string delegator_address = 4 [json_name = "delegatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <pre>
+     * Deprecated: Use of Delegator Address in MsgCreateValidator is deprecated.
+     * The validator address bytes and delegator address bytes refer to the same account while creating validator (defer
+     * only in bech32 notation).
+     * </pre>
+     *
+     * <code>string delegator_address = 4 [json_name = "delegatorAddress", deprecated = true, (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @deprecated cosmos.staking.v1beta1.MsgCreateValidator.delegator_address is deprecated.
+     *     See cosmos/staking/v1beta1/tx.proto;l=97
      * @return The delegatorAddress.
      */
     @java.lang.Override
-    public java.lang.String getDelegatorAddress() {
+    @java.lang.Deprecated public java.lang.String getDelegatorAddress() {
       java.lang.Object ref = delegatorAddress_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -292,11 +316,19 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string delegator_address = 4 [json_name = "delegatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <pre>
+     * Deprecated: Use of Delegator Address in MsgCreateValidator is deprecated.
+     * The validator address bytes and delegator address bytes refer to the same account while creating validator (defer
+     * only in bech32 notation).
+     * </pre>
+     *
+     * <code>string delegator_address = 4 [json_name = "delegatorAddress", deprecated = true, (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @deprecated cosmos.staking.v1beta1.MsgCreateValidator.delegator_address is deprecated.
+     *     See cosmos/staking/v1beta1/tx.proto;l=97
      * @return The bytes for delegatorAddress.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getDelegatorAddressBytes() {
       java.lang.Object ref = delegatorAddress_;
       if (ref instanceof java.lang.String) {
@@ -314,7 +346,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object validatorAddress_ = "";
     /**
-     * <code>string validator_address = 5 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_address = 5 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorAddress.
      */
     @java.lang.Override
@@ -331,7 +363,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string validator_address = 5 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_address = 5 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorAddress.
      */
     @java.lang.Override
@@ -1167,9 +1199,9 @@ public final class TxProto {
        * Deprecated: This field has been deprecated with LSM in favor of the validator bond
        * </pre>
        *
-       * <code>string min_self_delegation = 3 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * <code>string min_self_delegation = 3 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
        * @deprecated cosmos.staking.v1beta1.MsgCreateValidator.min_self_delegation is deprecated.
-       *     See cosmos/staking/v1beta1/tx.proto;l=91
+       *     See cosmos/staking/v1beta1/tx.proto;l=87
        * @return The minSelfDelegation.
        */
       @java.lang.Deprecated public java.lang.String getMinSelfDelegation() {
@@ -1189,9 +1221,9 @@ public final class TxProto {
        * Deprecated: This field has been deprecated with LSM in favor of the validator bond
        * </pre>
        *
-       * <code>string min_self_delegation = 3 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * <code>string min_self_delegation = 3 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
        * @deprecated cosmos.staking.v1beta1.MsgCreateValidator.min_self_delegation is deprecated.
-       *     See cosmos/staking/v1beta1/tx.proto;l=91
+       *     See cosmos/staking/v1beta1/tx.proto;l=87
        * @return The bytes for minSelfDelegation.
        */
       @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -1212,9 +1244,9 @@ public final class TxProto {
        * Deprecated: This field has been deprecated with LSM in favor of the validator bond
        * </pre>
        *
-       * <code>string min_self_delegation = 3 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * <code>string min_self_delegation = 3 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
        * @deprecated cosmos.staking.v1beta1.MsgCreateValidator.min_self_delegation is deprecated.
-       *     See cosmos/staking/v1beta1/tx.proto;l=91
+       *     See cosmos/staking/v1beta1/tx.proto;l=87
        * @param value The minSelfDelegation to set.
        * @return This builder for chaining.
        */
@@ -1231,9 +1263,9 @@ public final class TxProto {
        * Deprecated: This field has been deprecated with LSM in favor of the validator bond
        * </pre>
        *
-       * <code>string min_self_delegation = 3 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * <code>string min_self_delegation = 3 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
        * @deprecated cosmos.staking.v1beta1.MsgCreateValidator.min_self_delegation is deprecated.
-       *     See cosmos/staking/v1beta1/tx.proto;l=91
+       *     See cosmos/staking/v1beta1/tx.proto;l=87
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearMinSelfDelegation() {
@@ -1247,9 +1279,9 @@ public final class TxProto {
        * Deprecated: This field has been deprecated with LSM in favor of the validator bond
        * </pre>
        *
-       * <code>string min_self_delegation = 3 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * <code>string min_self_delegation = 3 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int", (.amino.dont_omitempty) = true];</code>
        * @deprecated cosmos.staking.v1beta1.MsgCreateValidator.min_self_delegation is deprecated.
-       *     See cosmos/staking/v1beta1/tx.proto;l=91
+       *     See cosmos/staking/v1beta1/tx.proto;l=87
        * @param value The bytes for minSelfDelegation to set.
        * @return This builder for chaining.
        */
@@ -1265,10 +1297,18 @@ public final class TxProto {
 
       private java.lang.Object delegatorAddress_ = "";
       /**
-       * <code>string delegator_address = 4 [json_name = "delegatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <pre>
+       * Deprecated: Use of Delegator Address in MsgCreateValidator is deprecated.
+       * The validator address bytes and delegator address bytes refer to the same account while creating validator (defer
+       * only in bech32 notation).
+       * </pre>
+       *
+       * <code>string delegator_address = 4 [json_name = "delegatorAddress", deprecated = true, (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @deprecated cosmos.staking.v1beta1.MsgCreateValidator.delegator_address is deprecated.
+       *     See cosmos/staking/v1beta1/tx.proto;l=97
        * @return The delegatorAddress.
        */
-      public java.lang.String getDelegatorAddress() {
+      @java.lang.Deprecated public java.lang.String getDelegatorAddress() {
         java.lang.Object ref = delegatorAddress_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -1281,10 +1321,18 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string delegator_address = 4 [json_name = "delegatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <pre>
+       * Deprecated: Use of Delegator Address in MsgCreateValidator is deprecated.
+       * The validator address bytes and delegator address bytes refer to the same account while creating validator (defer
+       * only in bech32 notation).
+       * </pre>
+       *
+       * <code>string delegator_address = 4 [json_name = "delegatorAddress", deprecated = true, (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @deprecated cosmos.staking.v1beta1.MsgCreateValidator.delegator_address is deprecated.
+       *     See cosmos/staking/v1beta1/tx.proto;l=97
        * @return The bytes for delegatorAddress.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getDelegatorAddressBytes() {
         java.lang.Object ref = delegatorAddress_;
         if (ref instanceof String) {
@@ -1298,11 +1346,19 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string delegator_address = 4 [json_name = "delegatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <pre>
+       * Deprecated: Use of Delegator Address in MsgCreateValidator is deprecated.
+       * The validator address bytes and delegator address bytes refer to the same account while creating validator (defer
+       * only in bech32 notation).
+       * </pre>
+       *
+       * <code>string delegator_address = 4 [json_name = "delegatorAddress", deprecated = true, (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @deprecated cosmos.staking.v1beta1.MsgCreateValidator.delegator_address is deprecated.
+       *     See cosmos/staking/v1beta1/tx.proto;l=97
        * @param value The delegatorAddress to set.
        * @return This builder for chaining.
        */
-      public Builder setDelegatorAddress(
+      @java.lang.Deprecated public Builder setDelegatorAddress(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         delegatorAddress_ = value;
@@ -1311,21 +1367,37 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string delegator_address = 4 [json_name = "delegatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <pre>
+       * Deprecated: Use of Delegator Address in MsgCreateValidator is deprecated.
+       * The validator address bytes and delegator address bytes refer to the same account while creating validator (defer
+       * only in bech32 notation).
+       * </pre>
+       *
+       * <code>string delegator_address = 4 [json_name = "delegatorAddress", deprecated = true, (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @deprecated cosmos.staking.v1beta1.MsgCreateValidator.delegator_address is deprecated.
+       *     See cosmos/staking/v1beta1/tx.proto;l=97
        * @return This builder for chaining.
        */
-      public Builder clearDelegatorAddress() {
+      @java.lang.Deprecated public Builder clearDelegatorAddress() {
         delegatorAddress_ = getDefaultInstance().getDelegatorAddress();
         bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
       /**
-       * <code>string delegator_address = 4 [json_name = "delegatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <pre>
+       * Deprecated: Use of Delegator Address in MsgCreateValidator is deprecated.
+       * The validator address bytes and delegator address bytes refer to the same account while creating validator (defer
+       * only in bech32 notation).
+       * </pre>
+       *
+       * <code>string delegator_address = 4 [json_name = "delegatorAddress", deprecated = true, (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @deprecated cosmos.staking.v1beta1.MsgCreateValidator.delegator_address is deprecated.
+       *     See cosmos/staking/v1beta1/tx.proto;l=97
        * @param value The bytes for delegatorAddress to set.
        * @return This builder for chaining.
        */
-      public Builder setDelegatorAddressBytes(
+      @java.lang.Deprecated public Builder setDelegatorAddressBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
@@ -1337,7 +1409,7 @@ public final class TxProto {
 
       private java.lang.Object validatorAddress_ = "";
       /**
-       * <code>string validator_address = 5 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_address = 5 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The validatorAddress.
        */
       public java.lang.String getValidatorAddress() {
@@ -1353,7 +1425,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string validator_address = 5 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_address = 5 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The bytes for validatorAddress.
        */
       public com.google.protobuf.ByteString
@@ -1370,7 +1442,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string validator_address = 5 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_address = 5 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The validatorAddress to set.
        * @return This builder for chaining.
        */
@@ -1383,7 +1455,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string validator_address = 5 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_address = 5 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return This builder for chaining.
        */
       public Builder clearValidatorAddress() {
@@ -1393,7 +1465,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string validator_address = 5 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_address = 5 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The bytes for validatorAddress to set.
        * @return This builder for chaining.
        */
@@ -2133,12 +2205,12 @@ public final class TxProto {
     com.cosmos.staking.v1beta1.StakingProto.DescriptionOrBuilder getDescriptionOrBuilder();
 
     /**
-     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorAddress.
      */
     java.lang.String getValidatorAddress();
     /**
-     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorAddress.
      */
     com.google.protobuf.ByteString
@@ -2152,7 +2224,7 @@ public final class TxProto {
      * REF: #2373
      * </pre>
      *
-     * <code>string commission_rate = 3 [json_name = "commissionRate", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * <code>string commission_rate = 3 [json_name = "commissionRate", (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
      * @return The commissionRate.
      */
     java.lang.String getCommissionRate();
@@ -2164,7 +2236,7 @@ public final class TxProto {
      * REF: #2373
      * </pre>
      *
-     * <code>string commission_rate = 3 [json_name = "commissionRate", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * <code>string commission_rate = 3 [json_name = "commissionRate", (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
      * @return The bytes for commissionRate.
      */
     com.google.protobuf.ByteString
@@ -2175,7 +2247,7 @@ public final class TxProto {
      * Deprecated: This field has been deprecated with LSM in favor of the validator bond
      * </pre>
      *
-     * <code>string min_self_delegation = 4 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * <code>string min_self_delegation = 4 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
      * @deprecated cosmos.staking.v1beta1.MsgEditValidator.min_self_delegation is deprecated.
      *     See cosmos/staking/v1beta1/tx.proto;l=124
      * @return The minSelfDelegation.
@@ -2186,7 +2258,7 @@ public final class TxProto {
      * Deprecated: This field has been deprecated with LSM in favor of the validator bond
      * </pre>
      *
-     * <code>string min_self_delegation = 4 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * <code>string min_self_delegation = 4 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
      * @deprecated cosmos.staking.v1beta1.MsgEditValidator.min_self_delegation is deprecated.
      *     See cosmos/staking/v1beta1/tx.proto;l=124
      * @return The bytes for minSelfDelegation.
@@ -2266,7 +2338,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object validatorAddress_ = "";
     /**
-     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorAddress.
      */
     @java.lang.Override
@@ -2283,7 +2355,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorAddress.
      */
     @java.lang.Override
@@ -2312,7 +2384,7 @@ public final class TxProto {
      * REF: #2373
      * </pre>
      *
-     * <code>string commission_rate = 3 [json_name = "commissionRate", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * <code>string commission_rate = 3 [json_name = "commissionRate", (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
      * @return The commissionRate.
      */
     @java.lang.Override
@@ -2336,7 +2408,7 @@ public final class TxProto {
      * REF: #2373
      * </pre>
      *
-     * <code>string commission_rate = 3 [json_name = "commissionRate", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * <code>string commission_rate = 3 [json_name = "commissionRate", (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
      * @return The bytes for commissionRate.
      */
     @java.lang.Override
@@ -2362,7 +2434,7 @@ public final class TxProto {
      * Deprecated: This field has been deprecated with LSM in favor of the validator bond
      * </pre>
      *
-     * <code>string min_self_delegation = 4 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * <code>string min_self_delegation = 4 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
      * @deprecated cosmos.staking.v1beta1.MsgEditValidator.min_self_delegation is deprecated.
      *     See cosmos/staking/v1beta1/tx.proto;l=124
      * @return The minSelfDelegation.
@@ -2385,7 +2457,7 @@ public final class TxProto {
      * Deprecated: This field has been deprecated with LSM in favor of the validator bond
      * </pre>
      *
-     * <code>string min_self_delegation = 4 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * <code>string min_self_delegation = 4 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
      * @deprecated cosmos.staking.v1beta1.MsgEditValidator.min_self_delegation is deprecated.
      *     See cosmos/staking/v1beta1/tx.proto;l=124
      * @return The bytes for minSelfDelegation.
@@ -2940,7 +3012,7 @@ public final class TxProto {
 
       private java.lang.Object validatorAddress_ = "";
       /**
-       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The validatorAddress.
        */
       public java.lang.String getValidatorAddress() {
@@ -2956,7 +3028,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The bytes for validatorAddress.
        */
       public com.google.protobuf.ByteString
@@ -2973,7 +3045,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The validatorAddress to set.
        * @return This builder for chaining.
        */
@@ -2986,7 +3058,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return This builder for chaining.
        */
       public Builder clearValidatorAddress() {
@@ -2996,7 +3068,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The bytes for validatorAddress to set.
        * @return This builder for chaining.
        */
@@ -3019,7 +3091,7 @@ public final class TxProto {
        * REF: #2373
        * </pre>
        *
-       * <code>string commission_rate = 3 [json_name = "commissionRate", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string commission_rate = 3 [json_name = "commissionRate", (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @return The commissionRate.
        */
       public java.lang.String getCommissionRate() {
@@ -3042,7 +3114,7 @@ public final class TxProto {
        * REF: #2373
        * </pre>
        *
-       * <code>string commission_rate = 3 [json_name = "commissionRate", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string commission_rate = 3 [json_name = "commissionRate", (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @return The bytes for commissionRate.
        */
       public com.google.protobuf.ByteString
@@ -3066,7 +3138,7 @@ public final class TxProto {
        * REF: #2373
        * </pre>
        *
-       * <code>string commission_rate = 3 [json_name = "commissionRate", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string commission_rate = 3 [json_name = "commissionRate", (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @param value The commissionRate to set.
        * @return This builder for chaining.
        */
@@ -3086,7 +3158,7 @@ public final class TxProto {
        * REF: #2373
        * </pre>
        *
-       * <code>string commission_rate = 3 [json_name = "commissionRate", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string commission_rate = 3 [json_name = "commissionRate", (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @return This builder for chaining.
        */
       public Builder clearCommissionRate() {
@@ -3103,7 +3175,7 @@ public final class TxProto {
        * REF: #2373
        * </pre>
        *
-       * <code>string commission_rate = 3 [json_name = "commissionRate", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string commission_rate = 3 [json_name = "commissionRate", (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @param value The bytes for commissionRate to set.
        * @return This builder for chaining.
        */
@@ -3123,7 +3195,7 @@ public final class TxProto {
        * Deprecated: This field has been deprecated with LSM in favor of the validator bond
        * </pre>
        *
-       * <code>string min_self_delegation = 4 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * <code>string min_self_delegation = 4 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
        * @deprecated cosmos.staking.v1beta1.MsgEditValidator.min_self_delegation is deprecated.
        *     See cosmos/staking/v1beta1/tx.proto;l=124
        * @return The minSelfDelegation.
@@ -3145,7 +3217,7 @@ public final class TxProto {
        * Deprecated: This field has been deprecated with LSM in favor of the validator bond
        * </pre>
        *
-       * <code>string min_self_delegation = 4 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * <code>string min_self_delegation = 4 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
        * @deprecated cosmos.staking.v1beta1.MsgEditValidator.min_self_delegation is deprecated.
        *     See cosmos/staking/v1beta1/tx.proto;l=124
        * @return The bytes for minSelfDelegation.
@@ -3168,7 +3240,7 @@ public final class TxProto {
        * Deprecated: This field has been deprecated with LSM in favor of the validator bond
        * </pre>
        *
-       * <code>string min_self_delegation = 4 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * <code>string min_self_delegation = 4 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
        * @deprecated cosmos.staking.v1beta1.MsgEditValidator.min_self_delegation is deprecated.
        *     See cosmos/staking/v1beta1/tx.proto;l=124
        * @param value The minSelfDelegation to set.
@@ -3187,7 +3259,7 @@ public final class TxProto {
        * Deprecated: This field has been deprecated with LSM in favor of the validator bond
        * </pre>
        *
-       * <code>string min_self_delegation = 4 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * <code>string min_self_delegation = 4 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
        * @deprecated cosmos.staking.v1beta1.MsgEditValidator.min_self_delegation is deprecated.
        *     See cosmos/staking/v1beta1/tx.proto;l=124
        * @return This builder for chaining.
@@ -3203,7 +3275,7 @@ public final class TxProto {
        * Deprecated: This field has been deprecated with LSM in favor of the validator bond
        * </pre>
        *
-       * <code>string min_self_delegation = 4 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * <code>string min_self_delegation = 4 [json_name = "minSelfDelegation", deprecated = true, (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
        * @deprecated cosmos.staking.v1beta1.MsgEditValidator.min_self_delegation is deprecated.
        *     See cosmos/staking/v1beta1/tx.proto;l=124
        * @param value The bytes for minSelfDelegation to set.
@@ -3704,12 +3776,12 @@ public final class TxProto {
         getDelegatorAddressBytes();
 
     /**
-     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorAddress.
      */
     java.lang.String getValidatorAddress();
     /**
-     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorAddress.
      */
     com.google.protobuf.ByteString
@@ -3815,7 +3887,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object validatorAddress_ = "";
     /**
-     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorAddress.
      */
     @java.lang.Override
@@ -3832,7 +3904,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorAddress.
      */
     @java.lang.Override
@@ -4341,7 +4413,7 @@ public final class TxProto {
 
       private java.lang.Object validatorAddress_ = "";
       /**
-       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The validatorAddress.
        */
       public java.lang.String getValidatorAddress() {
@@ -4357,7 +4429,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The bytes for validatorAddress.
        */
       public com.google.protobuf.ByteString
@@ -4374,7 +4446,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The validatorAddress to set.
        * @return This builder for chaining.
        */
@@ -4387,7 +4459,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return This builder for chaining.
        */
       public Builder clearValidatorAddress() {
@@ -4397,7 +4469,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The bytes for validatorAddress to set.
        * @return This builder for chaining.
        */
@@ -5015,24 +5087,24 @@ public final class TxProto {
         getDelegatorAddressBytes();
 
     /**
-     * <code>string validator_src_address = 2 [json_name = "validatorSrcAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_src_address = 2 [json_name = "validatorSrcAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorSrcAddress.
      */
     java.lang.String getValidatorSrcAddress();
     /**
-     * <code>string validator_src_address = 2 [json_name = "validatorSrcAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_src_address = 2 [json_name = "validatorSrcAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorSrcAddress.
      */
     com.google.protobuf.ByteString
         getValidatorSrcAddressBytes();
 
     /**
-     * <code>string validator_dst_address = 3 [json_name = "validatorDstAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_dst_address = 3 [json_name = "validatorDstAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorDstAddress.
      */
     java.lang.String getValidatorDstAddress();
     /**
-     * <code>string validator_dst_address = 3 [json_name = "validatorDstAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_dst_address = 3 [json_name = "validatorDstAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorDstAddress.
      */
     com.google.protobuf.ByteString
@@ -5139,7 +5211,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object validatorSrcAddress_ = "";
     /**
-     * <code>string validator_src_address = 2 [json_name = "validatorSrcAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_src_address = 2 [json_name = "validatorSrcAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorSrcAddress.
      */
     @java.lang.Override
@@ -5156,7 +5228,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string validator_src_address = 2 [json_name = "validatorSrcAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_src_address = 2 [json_name = "validatorSrcAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorSrcAddress.
      */
     @java.lang.Override
@@ -5178,7 +5250,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object validatorDstAddress_ = "";
     /**
-     * <code>string validator_dst_address = 3 [json_name = "validatorDstAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_dst_address = 3 [json_name = "validatorDstAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorDstAddress.
      */
     @java.lang.Override
@@ -5195,7 +5267,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string validator_dst_address = 3 [json_name = "validatorDstAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_dst_address = 3 [json_name = "validatorDstAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorDstAddress.
      */
     @java.lang.Override
@@ -5728,7 +5800,7 @@ public final class TxProto {
 
       private java.lang.Object validatorSrcAddress_ = "";
       /**
-       * <code>string validator_src_address = 2 [json_name = "validatorSrcAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_src_address = 2 [json_name = "validatorSrcAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The validatorSrcAddress.
        */
       public java.lang.String getValidatorSrcAddress() {
@@ -5744,7 +5816,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string validator_src_address = 2 [json_name = "validatorSrcAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_src_address = 2 [json_name = "validatorSrcAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The bytes for validatorSrcAddress.
        */
       public com.google.protobuf.ByteString
@@ -5761,7 +5833,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string validator_src_address = 2 [json_name = "validatorSrcAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_src_address = 2 [json_name = "validatorSrcAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The validatorSrcAddress to set.
        * @return This builder for chaining.
        */
@@ -5774,7 +5846,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string validator_src_address = 2 [json_name = "validatorSrcAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_src_address = 2 [json_name = "validatorSrcAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return This builder for chaining.
        */
       public Builder clearValidatorSrcAddress() {
@@ -5784,7 +5856,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string validator_src_address = 2 [json_name = "validatorSrcAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_src_address = 2 [json_name = "validatorSrcAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The bytes for validatorSrcAddress to set.
        * @return This builder for chaining.
        */
@@ -5800,7 +5872,7 @@ public final class TxProto {
 
       private java.lang.Object validatorDstAddress_ = "";
       /**
-       * <code>string validator_dst_address = 3 [json_name = "validatorDstAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_dst_address = 3 [json_name = "validatorDstAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The validatorDstAddress.
        */
       public java.lang.String getValidatorDstAddress() {
@@ -5816,7 +5888,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string validator_dst_address = 3 [json_name = "validatorDstAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_dst_address = 3 [json_name = "validatorDstAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The bytes for validatorDstAddress.
        */
       public com.google.protobuf.ByteString
@@ -5833,7 +5905,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string validator_dst_address = 3 [json_name = "validatorDstAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_dst_address = 3 [json_name = "validatorDstAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The validatorDstAddress to set.
        * @return This builder for chaining.
        */
@@ -5846,7 +5918,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string validator_dst_address = 3 [json_name = "validatorDstAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_dst_address = 3 [json_name = "validatorDstAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return This builder for chaining.
        */
       public Builder clearValidatorDstAddress() {
@@ -5856,7 +5928,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string validator_dst_address = 3 [json_name = "validatorDstAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_dst_address = 3 [json_name = "validatorDstAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The bytes for validatorDstAddress to set.
        * @return This builder for chaining.
        */
@@ -6677,12 +6749,12 @@ public final class TxProto {
         getDelegatorAddressBytes();
 
     /**
-     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorAddress.
      */
     java.lang.String getValidatorAddress();
     /**
-     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorAddress.
      */
     com.google.protobuf.ByteString
@@ -6788,7 +6860,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object validatorAddress_ = "";
     /**
-     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorAddress.
      */
     @java.lang.Override
@@ -6805,7 +6877,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorAddress.
      */
     @java.lang.Override
@@ -7314,7 +7386,7 @@ public final class TxProto {
 
       private java.lang.Object validatorAddress_ = "";
       /**
-       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The validatorAddress.
        */
       public java.lang.String getValidatorAddress() {
@@ -7330,7 +7402,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The bytes for validatorAddress.
        */
       public com.google.protobuf.ByteString
@@ -7347,7 +7419,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The validatorAddress to set.
        * @return This builder for chaining.
        */
@@ -7360,7 +7432,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return This builder for chaining.
        */
       public Builder clearValidatorAddress() {
@@ -7370,7 +7442,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The bytes for validatorAddress to set.
        * @return This builder for chaining.
        */
@@ -7584,6 +7656,39 @@ public final class TxProto {
      * <code>.google.protobuf.Timestamp completion_time = 1 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true, (.amino.dont_omitempty) = true];</code>
      */
     com.google.protobuf.TimestampOrBuilder getCompletionTimeOrBuilder();
+
+    /**
+     * <pre>
+     * amount returns the amount of undelegated coins
+     *
+     * Since: cosmos-sdk 0.50
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     * @return Whether the amount field is set.
+     */
+    boolean hasAmount();
+    /**
+     * <pre>
+     * amount returns the amount of undelegated coins
+     *
+     * Since: cosmos-sdk 0.50
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     * @return The amount.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getAmount();
+    /**
+     * <pre>
+     * amount returns the amount of undelegated coins
+     *
+     * Since: cosmos-sdk 0.50
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder();
   }
   /**
    * <pre>
@@ -7650,6 +7755,50 @@ public final class TxProto {
       return completionTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : completionTime_;
     }
 
+    public static final int AMOUNT_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin amount_;
+    /**
+     * <pre>
+     * amount returns the amount of undelegated coins
+     *
+     * Since: cosmos-sdk 0.50
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     * @return Whether the amount field is set.
+     */
+    @java.lang.Override
+    public boolean hasAmount() {
+      return amount_ != null;
+    }
+    /**
+     * <pre>
+     * amount returns the amount of undelegated coins
+     *
+     * Since: cosmos-sdk 0.50
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getAmount() {
+      return amount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+    }
+    /**
+     * <pre>
+     * amount returns the amount of undelegated coins
+     *
+     * Since: cosmos-sdk 0.50
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder() {
+      return amount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7667,6 +7816,9 @@ public final class TxProto {
       if (completionTime_ != null) {
         output.writeMessage(1, getCompletionTime());
       }
+      if (amount_ != null) {
+        output.writeMessage(2, getAmount());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -7679,6 +7831,10 @@ public final class TxProto {
       if (completionTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCompletionTime());
+      }
+      if (amount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getAmount());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -7700,6 +7856,11 @@ public final class TxProto {
         if (!getCompletionTime()
             .equals(other.getCompletionTime())) return false;
       }
+      if (hasAmount() != other.hasAmount()) return false;
+      if (hasAmount()) {
+        if (!getAmount()
+            .equals(other.getAmount())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -7714,6 +7875,10 @@ public final class TxProto {
       if (hasCompletionTime()) {
         hash = (37 * hash) + COMPLETION_TIME_FIELD_NUMBER;
         hash = (53 * hash) + getCompletionTime().hashCode();
+      }
+      if (hasAmount()) {
+        hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getAmount().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -7855,6 +8020,11 @@ public final class TxProto {
           completionTimeBuilder_.dispose();
           completionTimeBuilder_ = null;
         }
+        amount_ = null;
+        if (amountBuilder_ != null) {
+          amountBuilder_.dispose();
+          amountBuilder_ = null;
+        }
         return this;
       }
 
@@ -7892,6 +8062,11 @@ public final class TxProto {
           result.completionTime_ = completionTimeBuilder_ == null
               ? completionTime_
               : completionTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.amount_ = amountBuilder_ == null
+              ? amount_
+              : amountBuilder_.build();
         }
       }
 
@@ -7942,6 +8117,9 @@ public final class TxProto {
         if (other.hasCompletionTime()) {
           mergeCompletionTime(other.getCompletionTime());
         }
+        if (other.hasAmount()) {
+          mergeAmount(other.getAmount());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -7975,6 +8153,13 @@ public final class TxProto {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
+              case 18: {
+                input.readMessage(
+                    getAmountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -8110,6 +8295,179 @@ public final class TxProto {
         }
         return completionTimeBuilder_;
       }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin amount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> amountBuilder_;
+      /**
+       * <pre>
+       * amount returns the amount of undelegated coins
+       *
+       * Since: cosmos-sdk 0.50
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       * @return Whether the amount field is set.
+       */
+      public boolean hasAmount() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * amount returns the amount of undelegated coins
+       *
+       * Since: cosmos-sdk 0.50
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       * @return The amount.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getAmount() {
+        if (amountBuilder_ == null) {
+          return amount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+        } else {
+          return amountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * amount returns the amount of undelegated coins
+       *
+       * Since: cosmos-sdk 0.50
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder setAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          amount_ = value;
+        } else {
+          amountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount returns the amount of undelegated coins
+       *
+       * Since: cosmos-sdk 0.50
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder setAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (amountBuilder_ == null) {
+          amount_ = builderForValue.build();
+        } else {
+          amountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount returns the amount of undelegated coins
+       *
+       * Since: cosmos-sdk 0.50
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder mergeAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            amount_ != null &&
+            amount_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getAmountBuilder().mergeFrom(value);
+          } else {
+            amount_ = value;
+          }
+        } else {
+          amountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount returns the amount of undelegated coins
+       *
+       * Since: cosmos-sdk 0.50
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder clearAmount() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        amount_ = null;
+        if (amountBuilder_ != null) {
+          amountBuilder_.dispose();
+          amountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount returns the amount of undelegated coins
+       *
+       * Since: cosmos-sdk 0.50
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getAmountBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getAmountFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * amount returns the amount of undelegated coins
+       *
+       * Since: cosmos-sdk 0.50
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder() {
+        if (amountBuilder_ != null) {
+          return amountBuilder_.getMessageOrBuilder();
+        } else {
+          return amount_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+        }
+      }
+      /**
+       * <pre>
+       * amount returns the amount of undelegated coins
+       *
+       * Since: cosmos-sdk 0.50
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getAmountFieldBuilder() {
+        if (amountBuilder_ == null) {
+          amountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getAmount(),
+                  getParentForChildren(),
+                  isClean());
+          amount_ = null;
+        }
+        return amountBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8191,12 +8549,12 @@ public final class TxProto {
         getDelegatorAddressBytes();
 
     /**
-     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorAddress.
      */
     java.lang.String getValidatorAddress();
     /**
-     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorAddress.
      */
     com.google.protobuf.ByteString
@@ -8325,7 +8683,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object validatorAddress_ = "";
     /**
-     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The validatorAddress.
      */
     @java.lang.Override
@@ -8342,7 +8700,7 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
      * @return The bytes for validatorAddress.
      */
     @java.lang.Override
@@ -8903,7 +9261,7 @@ public final class TxProto {
 
       private java.lang.Object validatorAddress_ = "";
       /**
-       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The validatorAddress.
        */
       public java.lang.String getValidatorAddress() {
@@ -8919,7 +9277,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return The bytes for validatorAddress.
        */
       public com.google.protobuf.ByteString
@@ -8936,7 +9294,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The validatorAddress to set.
        * @return This builder for chaining.
        */
@@ -8949,7 +9307,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @return This builder for chaining.
        */
       public Builder clearValidatorAddress() {
@@ -8959,7 +9317,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * <code>string validator_address = 2 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.ValidatorAddressString"];</code>
        * @param value The bytes for validatorAddress to set.
        * @return This builder for chaining.
        */
@@ -10946,12 +11304,24 @@ public final class TxProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string validator_address = 1 [json_name = "validatorAddress", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * <pre>
+     * the provider address must be bech32 account address (e.g. 'cosmos')
+     * providing an operator address (e.g. 'cosmosvaloper') or consensus address will result in an error
+     * this field is populated by the CLI during Tx generation using the `--from` flag
+     * </pre>
+     *
+     * <code>string validator_address = 1 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
      * @return The validatorAddress.
      */
     java.lang.String getValidatorAddress();
     /**
-     * <code>string validator_address = 1 [json_name = "validatorAddress", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * <pre>
+     * the provider address must be bech32 account address (e.g. 'cosmos')
+     * providing an operator address (e.g. 'cosmosvaloper') or consensus address will result in an error
+     * this field is populated by the CLI during Tx generation using the `--from` flag
+     * </pre>
+     *
+     * <code>string validator_address = 1 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
      * @return The bytes for validatorAddress.
      */
     com.google.protobuf.ByteString
@@ -11004,7 +11374,13 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private volatile java.lang.Object validatorAddress_ = "";
     /**
-     * <code>string validator_address = 1 [json_name = "validatorAddress", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * <pre>
+     * the provider address must be bech32 account address (e.g. 'cosmos')
+     * providing an operator address (e.g. 'cosmosvaloper') or consensus address will result in an error
+     * this field is populated by the CLI during Tx generation using the `--from` flag
+     * </pre>
+     *
+     * <code>string validator_address = 1 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
      * @return The validatorAddress.
      */
     @java.lang.Override
@@ -11021,7 +11397,13 @@ public final class TxProto {
       }
     }
     /**
-     * <code>string validator_address = 1 [json_name = "validatorAddress", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * <pre>
+     * the provider address must be bech32 account address (e.g. 'cosmos')
+     * providing an operator address (e.g. 'cosmosvaloper') or consensus address will result in an error
+     * this field is populated by the CLI during Tx generation using the `--from` flag
+     * </pre>
+     *
+     * <code>string validator_address = 1 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
      * @return The bytes for validatorAddress.
      */
     @java.lang.Override
@@ -11374,7 +11756,13 @@ public final class TxProto {
 
       private java.lang.Object validatorAddress_ = "";
       /**
-       * <code>string validator_address = 1 [json_name = "validatorAddress", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * <pre>
+       * the provider address must be bech32 account address (e.g. 'cosmos')
+       * providing an operator address (e.g. 'cosmosvaloper') or consensus address will result in an error
+       * this field is populated by the CLI during Tx generation using the `--from` flag
+       * </pre>
+       *
+       * <code>string validator_address = 1 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
        * @return The validatorAddress.
        */
       public java.lang.String getValidatorAddress() {
@@ -11390,7 +11778,13 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string validator_address = 1 [json_name = "validatorAddress", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * <pre>
+       * the provider address must be bech32 account address (e.g. 'cosmos')
+       * providing an operator address (e.g. 'cosmosvaloper') or consensus address will result in an error
+       * this field is populated by the CLI during Tx generation using the `--from` flag
+       * </pre>
+       *
+       * <code>string validator_address = 1 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
        * @return The bytes for validatorAddress.
        */
       public com.google.protobuf.ByteString
@@ -11407,7 +11801,13 @@ public final class TxProto {
         }
       }
       /**
-       * <code>string validator_address = 1 [json_name = "validatorAddress", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * <pre>
+       * the provider address must be bech32 account address (e.g. 'cosmos')
+       * providing an operator address (e.g. 'cosmosvaloper') or consensus address will result in an error
+       * this field is populated by the CLI during Tx generation using the `--from` flag
+       * </pre>
+       *
+       * <code>string validator_address = 1 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
        * @param value The validatorAddress to set.
        * @return This builder for chaining.
        */
@@ -11420,7 +11820,13 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string validator_address = 1 [json_name = "validatorAddress", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * <pre>
+       * the provider address must be bech32 account address (e.g. 'cosmos')
+       * providing an operator address (e.g. 'cosmosvaloper') or consensus address will result in an error
+       * this field is populated by the CLI during Tx generation using the `--from` flag
+       * </pre>
+       *
+       * <code>string validator_address = 1 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
        * @return This builder for chaining.
        */
       public Builder clearValidatorAddress() {
@@ -11430,7 +11836,13 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>string validator_address = 1 [json_name = "validatorAddress", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * <pre>
+       * the provider address must be bech32 account address (e.g. 'cosmos')
+       * providing an operator address (e.g. 'cosmosvaloper') or consensus address will result in an error
+       * this field is populated by the CLI during Tx generation using the `--from` flag
+       * </pre>
+       *
+       * <code>string validator_address = 1 [json_name = "validatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
        * @param value The bytes for validatorAddress to set.
        * @return This builder for chaining.
        */
@@ -19526,177 +19938,179 @@ public final class TxProto {
       ".proto\032\036cosmos/base/v1beta1/coin.proto\032$" +
       "cosmos/staking/v1beta1/staking.proto\032\027co" +
       "smos/msg/v1/msg.proto\032\021amino/amino.proto" +
-      "\"\224\005\n\022MsgCreateValidator\022P\n\013description\030\001" +
+      "\"\375\004\n\022MsgCreateValidator\022P\n\013description\030\001" +
       " \001(\0132#.cosmos.staking.v1beta1.Descriptio" +
       "nB\t\310\336\037\000\250\347\260*\001R\013description\022R\n\ncommission\030" +
       "\002 \001(\0132\'.cosmos.staking.v1beta1.Commissio" +
-      "nRatesB\t\310\336\037\000\250\347\260*\001R\ncommission\022n\n\023min_sel" +
-      "f_delegation\030\003 \001(\tB>\030\001\310\336\037\000\332\336\037&github.com" +
-      "/cosmos/cosmos-sdk/types.Int\322\264-\ncosmos.I" +
-      "ntR\021minSelfDelegation\022E\n\021delegator_addre" +
-      "ss\030\004 \001(\tB\030\322\264-\024cosmos.AddressStringR\020dele" +
-      "gatorAddress\022E\n\021validator_address\030\005 \001(\tB" +
-      "\030\322\264-\024cosmos.AddressStringR\020validatorAddr" +
-      "ess\022F\n\006pubkey\030\006 \001(\0132\024.google.protobuf.An" +
-      "yB\030\312\264-\024cosmos.crypto.PubKeyR\006pubkey\022:\n\005v" +
-      "alue\030\007 \001(\0132\031.cosmos.base.v1beta1.CoinB\t\310" +
-      "\336\037\000\250\347\260*\001R\005value:V\210\240\037\000\350\240\037\000\202\347\260*\021delegator_" +
-      "address\202\347\260*\021validator_address\212\347\260*\035cosmos" +
-      "-sdk/MsgCreateValidator\"\034\n\032MsgCreateVali" +
-      "datorResponse\"\276\003\n\020MsgEditValidator\022P\n\013de" +
-      "scription\030\001 \001(\0132#.cosmos.staking.v1beta1" +
-      ".DescriptionB\t\310\336\037\000\250\347\260*\001R\013description\022E\n\021" +
-      "validator_address\030\002 \001(\tB\030\322\264-\024cosmos.Addr" +
-      "essStringR\020validatorAddress\022a\n\017commissio" +
-      "n_rate\030\003 \001(\tB8\332\336\037&github.com/cosmos/cosm" +
-      "os-sdk/types.Dec\322\264-\ncosmos.DecR\016commissi" +
-      "onRate\022n\n\023min_self_delegation\030\004 \001(\tB>\030\001\310" +
-      "\336\037\000\332\336\037&github.com/cosmos/cosmos-sdk/type" +
-      "s.Int\322\264-\ncosmos.IntR\021minSelfDelegation:>" +
-      "\210\240\037\000\350\240\037\000\202\347\260*\021validator_address\212\347\260*\033cosmo" +
-      "s-sdk/MsgEditValidator\"\032\n\030MsgEditValidat" +
-      "orResponse\"\224\002\n\013MsgDelegate\022E\n\021delegator_" +
-      "address\030\001 \001(\tB\030\322\264-\024cosmos.AddressStringR" +
-      "\020delegatorAddress\022E\n\021validator_address\030\002" +
-      " \001(\tB\030\322\264-\024cosmos.AddressStringR\020validato" +
-      "rAddress\022<\n\006amount\030\003 \001(\0132\031.cosmos.base.v" +
-      "1beta1.CoinB\t\310\336\037\000\250\347\260*\001R\006amount:9\210\240\037\000\350\240\037\000" +
-      "\202\347\260*\021delegator_address\212\347\260*\026cosmos-sdk/Ms" +
-      "gDelegate\"\025\n\023MsgDelegateResponse\"\367\002\n\022Msg" +
-      "BeginRedelegate\022E\n\021delegator_address\030\001 \001" +
-      "(\tB\030\322\264-\024cosmos.AddressStringR\020delegatorA" +
-      "ddress\022L\n\025validator_src_address\030\002 \001(\tB\030\322" +
-      "\264-\024cosmos.AddressStringR\023validatorSrcAdd" +
-      "ress\022L\n\025validator_dst_address\030\003 \001(\tB\030\322\264-" +
-      "\024cosmos.AddressStringR\023validatorDstAddre" +
-      "ss\022<\n\006amount\030\004 \001(\0132\031.cosmos.base.v1beta1" +
-      ".CoinB\t\310\336\037\000\250\347\260*\001R\006amount:@\210\240\037\000\350\240\037\000\202\347\260*\021d" +
-      "elegator_address\212\347\260*\035cosmos-sdk/MsgBegin" +
-      "Redelegate\"p\n\032MsgBeginRedelegateResponse" +
-      "\022R\n\017completion_time\030\001 \001(\0132\032.google.proto" +
-      "buf.TimestampB\r\310\336\037\000\220\337\037\001\250\347\260*\001R\016completion" +
-      "Time\"\230\002\n\rMsgUndelegate\022E\n\021delegator_addr" +
+      "nRatesB\t\310\336\037\000\250\347\260*\001R\ncommission\022b\n\023min_sel" +
+      "f_delegation\030\003 \001(\tB2\030\001\310\336\037\000\332\336\037\025cosmossdk." +
+      "io/math.Int\322\264-\ncosmos.Int\250\347\260*\001R\021minSelfD" +
+      "elegation\022G\n\021delegator_address\030\004 \001(\tB\032\030\001" +
+      "\322\264-\024cosmos.AddressStringR\020delegatorAddre" +
+      "ss\022N\n\021validator_address\030\005 \001(\tB!\322\264-\035cosmo" +
+      "s.ValidatorAddressStringR\020validatorAddre" +
+      "ss\022F\n\006pubkey\030\006 \001(\0132\024.google.protobuf.Any" +
+      "B\030\312\264-\024cosmos.crypto.PubKeyR\006pubkey\022:\n\005va" +
+      "lue\030\007 \001(\0132\031.cosmos.base.v1beta1.CoinB\t\310\336" +
+      "\037\000\250\347\260*\001R\005value:@\210\240\037\000\350\240\037\000\202\347\260*\021validator_a" +
+      "ddress\212\347\260*\035cosmos-sdk/MsgCreateValidator" +
+      "\"\034\n\032MsgCreateValidatorResponse\"\253\003\n\020MsgEd" +
+      "itValidator\022P\n\013description\030\001 \001(\0132#.cosmo" +
+      "s.staking.v1beta1.DescriptionB\t\310\336\037\000\250\347\260*\001" +
+      "R\013description\022N\n\021validator_address\030\002 \001(\t" +
+      "B!\322\264-\035cosmos.ValidatorAddressStringR\020val" +
+      "idatorAddress\022V\n\017commission_rate\030\003 \001(\tB-" +
+      "\332\336\037\033cosmossdk.io/math.LegacyDec\322\264-\ncosmo" +
+      "s.DecR\016commissionRate\022]\n\023min_self_delega" +
+      "tion\030\004 \001(\tB-\030\001\310\336\037\000\332\336\037\025cosmossdk.io/math." +
+      "Int\322\264-\ncosmos.IntR\021minSelfDelegation:>\210\240" +
+      "\037\000\350\240\037\000\202\347\260*\021validator_address\212\347\260*\033cosmos-" +
+      "sdk/MsgEditValidator\"\032\n\030MsgEditValidator" +
+      "Response\"\235\002\n\013MsgDelegate\022E\n\021delegator_ad" +
+      "dress\030\001 \001(\tB\030\322\264-\024cosmos.AddressStringR\020d" +
+      "elegatorAddress\022N\n\021validator_address\030\002 \001" +
+      "(\tB!\322\264-\035cosmos.ValidatorAddressStringR\020v" +
+      "alidatorAddress\022<\n\006amount\030\003 \001(\0132\031.cosmos" +
+      ".base.v1beta1.CoinB\t\310\336\037\000\250\347\260*\001R\006amount:9\210" +
+      "\240\037\000\350\240\037\000\202\347\260*\021delegator_address\212\347\260*\026cosmos" +
+      "-sdk/MsgDelegate\"\025\n\023MsgDelegateResponse\"" +
+      "\211\003\n\022MsgBeginRedelegate\022E\n\021delegator_addr" +
       "ess\030\001 \001(\tB\030\322\264-\024cosmos.AddressStringR\020del" +
-      "egatorAddress\022E\n\021validator_address\030\002 \001(\t" +
-      "B\030\322\264-\024cosmos.AddressStringR\020validatorAdd" +
-      "ress\022<\n\006amount\030\003 \001(\0132\031.cosmos.base.v1bet" +
-      "a1.CoinB\t\310\336\037\000\250\347\260*\001R\006amount:;\210\240\037\000\350\240\037\000\202\347\260*" +
-      "\021delegator_address\212\347\260*\030cosmos-sdk/MsgUnd" +
-      "elegate\"k\n\025MsgUndelegateResponse\022R\n\017comp" +
-      "letion_time\030\001 \001(\0132\032.google.protobuf.Time" +
-      "stampB\r\310\336\037\000\220\337\037\001\250\347\260*\001R\016completionTime\"\337\002\n" +
-      "\034MsgCancelUnbondingDelegation\022E\n\021delegat" +
-      "or_address\030\001 \001(\tB\030\322\264-\024cosmos.AddressStri" +
-      "ngR\020delegatorAddress\022E\n\021validator_addres" +
-      "s\030\002 \001(\tB\030\322\264-\024cosmos.AddressStringR\020valid" +
-      "atorAddress\022<\n\006amount\030\003 \001(\0132\031.cosmos.bas" +
-      "e.v1beta1.CoinB\t\310\336\037\000\250\347\260*\001R\006amount\022\'\n\017cre" +
-      "ation_height\030\004 \001(\003R\016creationHeight:J\210\240\037\000" +
-      "\350\240\037\000\202\347\260*\021delegator_address\212\347\260*\'cosmos-sd" +
-      "k/MsgCancelUnbondingDelegation\"&\n$MsgCan" +
-      "celUnbondingDelegationResponse\"\305\001\n\017MsgUp" +
-      "dateParams\0226\n\tauthority\030\001 \001(\tB\030\322\264-\024cosmo" +
-      "s.AddressStringR\tauthority\022A\n\006params\030\002 \001" +
-      "(\0132\036.cosmos.staking.v1beta1.ParamsB\t\310\336\037\000" +
-      "\250\347\260*\001R\006params:7\202\347\260*\tauthority\212\347\260*$cosmos" +
-      "-sdk/x/staking/MsgUpdateParams\"\031\n\027MsgUpd" +
-      "ateParamsResponse\"\217\001\n\022MsgUnbondValidator" +
-      "\022?\n\021validator_address\030\001 \001(\tB\022\362\336\037\016yaml:\"a" +
-      "ddress\"R\020validatorAddress:8\202\347\260*\021validato" +
-      "r_address\212\347\260*\035cosmos-sdk/MsgUnbondValida" +
-      "tor\"\034\n\032MsgUnbondValidatorResponse\"\327\002\n\021Ms" +
-      "gTokenizeShares\022I\n\021delegator_address\030\001 \001" +
-      "(\tB\034\362\336\037\030yaml:\"delegator_address\"R\020delega" +
-      "torAddress\022I\n\021validator_address\030\002 \001(\tB\034\362" +
-      "\336\037\030yaml:\"validator_address\"R\020validatorAd" +
-      "dress\0227\n\006amount\030\003 \001(\0132\031.cosmos.base.v1be" +
-      "ta1.CoinB\004\310\336\037\000R\006amount\0222\n\025tokenized_shar" +
-      "e_owner\030\004 \001(\tR\023tokenizedShareOwner:?\210\240\037\000" +
-      "\350\240\037\000\202\347\260*\021delegator_address\212\347\260*\034cosmos-sd" +
-      "k/MsgTokenizeShares\"T\n\031MsgTokenizeShares" +
-      "Response\0227\n\006amount\030\001 \001(\0132\031.cosmos.base.v" +
-      "1beta1.CoinB\004\310\336\037\000R\006amount\"\346\001\n\030MsgRedeemT" +
-      "okensForShares\022I\n\021delegator_address\030\001 \001(" +
-      "\tB\034\362\336\037\030yaml:\"delegator_address\"R\020delegat" +
-      "orAddress\0227\n\006amount\030\002 \001(\0132\031.cosmos.base." +
-      "v1beta1.CoinB\004\310\336\037\000R\006amount:F\210\240\037\000\350\240\037\000\202\347\260*" +
-      "\021delegator_address\212\347\260*#cosmos-sdk/MsgRed" +
-      "eemTokensForShares\"[\n MsgRedeemTokensFor" +
-      "SharesResponse\0227\n\006amount\030\001 \001(\0132\031.cosmos." +
-      "base.v1beta1.CoinB\004\310\336\037\000R\006amount\"\321\001\n\036MsgT" +
-      "ransferTokenizeShareRecord\0227\n\030tokenize_s" +
-      "hare_record_id\030\001 \001(\004R\025tokenizeShareRecor" +
-      "dId\022\026\n\006sender\030\002 \001(\tR\006sender\022\033\n\tnew_owner" +
-      "\030\003 \001(\tR\010newOwner:A\210\240\037\000\350\240\037\000\202\347\260*\006sender\212\347\260" +
-      "*)cosmos-sdk/MsgTransferTokenizeShareRec" +
-      "ord\"(\n&MsgTransferTokenizeShareRecordRes" +
-      "ponse\"\255\001\n\030MsgDisableTokenizeShares\022I\n\021de" +
-      "legator_address\030\001 \001(\tB\034\362\336\037\030yaml:\"delegat" +
-      "or_address\"R\020delegatorAddress:F\210\240\037\000\350\240\037\000\202" +
-      "\347\260*\021delegator_address\212\347\260*#cosmos-sdk/Msg" +
-      "DisableTokenizeShares\"\"\n MsgDisableToken" +
-      "izeSharesResponse\"\253\001\n\027MsgEnableTokenizeS" +
-      "hares\022I\n\021delegator_address\030\001 \001(\tB\034\362\336\037\030ya" +
-      "ml:\"delegator_address\"R\020delegatorAddress" +
-      ":E\210\240\037\000\350\240\037\000\202\347\260*\021delegator_address\212\347\260*\"cos" +
-      "mos-sdk/MsgEnableTokenizeShares\"p\n\037MsgEn" +
-      "ableTokenizeSharesResponse\022M\n\017completion" +
-      "_time\030\001 \001(\0132\032.google.protobuf.TimestampB" +
-      "\010\310\336\037\000\220\337\037\001R\016completionTime\"\350\001\n\020MsgValidat" +
-      "orBond\022I\n\021delegator_address\030\001 \001(\tB\034\362\336\037\030y" +
+      "egatorAddress\022U\n\025validator_src_address\030\002" +
+      " \001(\tB!\322\264-\035cosmos.ValidatorAddressStringR" +
+      "\023validatorSrcAddress\022U\n\025validator_dst_ad" +
+      "dress\030\003 \001(\tB!\322\264-\035cosmos.ValidatorAddress" +
+      "StringR\023validatorDstAddress\022<\n\006amount\030\004 " +
+      "\001(\0132\031.cosmos.base.v1beta1.CoinB\t\310\336\037\000\250\347\260*" +
+      "\001R\006amount:@\210\240\037\000\350\240\037\000\202\347\260*\021delegator_addres" +
+      "s\212\347\260*\035cosmos-sdk/MsgBeginRedelegate\"p\n\032M" +
+      "sgBeginRedelegateResponse\022R\n\017completion_" +
+      "time\030\001 \001(\0132\032.google.protobuf.TimestampB\r" +
+      "\310\336\037\000\220\337\037\001\250\347\260*\001R\016completionTime\"\241\002\n\rMsgUnd" +
+      "elegate\022E\n\021delegator_address\030\001 \001(\tB\030\322\264-\024" +
+      "cosmos.AddressStringR\020delegatorAddress\022N" +
+      "\n\021validator_address\030\002 \001(\tB!\322\264-\035cosmos.Va" +
+      "lidatorAddressStringR\020validatorAddress\022<" +
+      "\n\006amount\030\003 \001(\0132\031.cosmos.base.v1beta1.Coi" +
+      "nB\t\310\336\037\000\250\347\260*\001R\006amount:;\210\240\037\000\350\240\037\000\202\347\260*\021deleg" +
+      "ator_address\212\347\260*\030cosmos-sdk/MsgUndelegat" +
+      "e\"\251\001\n\025MsgUndelegateResponse\022R\n\017completio" +
+      "n_time\030\001 \001(\0132\032.google.protobuf.Timestamp" +
+      "B\r\310\336\037\000\220\337\037\001\250\347\260*\001R\016completionTime\022<\n\006amoun" +
+      "t\030\002 \001(\0132\031.cosmos.base.v1beta1.CoinB\t\310\336\037\000" +
+      "\250\347\260*\001R\006amount\"\350\002\n\034MsgCancelUnbondingDele" +
+      "gation\022E\n\021delegator_address\030\001 \001(\tB\030\322\264-\024c" +
+      "osmos.AddressStringR\020delegatorAddress\022N\n" +
+      "\021validator_address\030\002 \001(\tB!\322\264-\035cosmos.Val" +
+      "idatorAddressStringR\020validatorAddress\022<\n" +
+      "\006amount\030\003 \001(\0132\031.cosmos.base.v1beta1.Coin" +
+      "B\t\310\336\037\000\250\347\260*\001R\006amount\022\'\n\017creation_height\030\004" +
+      " \001(\003R\016creationHeight:J\210\240\037\000\350\240\037\000\202\347\260*\021deleg" +
+      "ator_address\212\347\260*\'cosmos-sdk/MsgCancelUnb" +
+      "ondingDelegation\"&\n$MsgCancelUnbondingDe" +
+      "legationResponse\"\305\001\n\017MsgUpdateParams\0226\n\t" +
+      "authority\030\001 \001(\tB\030\322\264-\024cosmos.AddressStrin" +
+      "gR\tauthority\022A\n\006params\030\002 \001(\0132\036.cosmos.st" +
+      "aking.v1beta1.ParamsB\t\310\336\037\000\250\347\260*\001R\006params:" +
+      "7\202\347\260*\tauthority\212\347\260*$cosmos-sdk/x/staking" +
+      "/MsgUpdateParams\"\031\n\027MsgUpdateParamsRespo" +
+      "nse\"\225\001\n\022MsgUnbondValidator\022E\n\021validator_" +
+      "address\030\001 \001(\tB\030\322\264-\024cosmos.AddressStringR" +
+      "\020validatorAddress:8\202\347\260*\021validator_addres" +
+      "s\212\347\260*\035cosmos-sdk/MsgUnbondValidator\"\034\n\032M" +
+      "sgUnbondValidatorResponse\"\327\002\n\021MsgTokeniz" +
+      "eShares\022I\n\021delegator_address\030\001 \001(\tB\034\362\336\037\030" +
+      "yaml:\"delegator_address\"R\020delegatorAddre" +
+      "ss\022I\n\021validator_address\030\002 \001(\tB\034\362\336\037\030yaml:" +
+      "\"validator_address\"R\020validatorAddress\0227\n" +
+      "\006amount\030\003 \001(\0132\031.cosmos.base.v1beta1.Coin" +
+      "B\004\310\336\037\000R\006amount\0222\n\025tokenized_share_owner\030" +
+      "\004 \001(\tR\023tokenizedShareOwner:?\210\240\037\000\350\240\037\000\202\347\260*" +
+      "\021delegator_address\212\347\260*\034cosmos-sdk/MsgTok" +
+      "enizeShares\"T\n\031MsgTokenizeSharesResponse" +
+      "\0227\n\006amount\030\001 \001(\0132\031.cosmos.base.v1beta1.C" +
+      "oinB\004\310\336\037\000R\006amount\"\346\001\n\030MsgRedeemTokensFor" +
+      "Shares\022I\n\021delegator_address\030\001 \001(\tB\034\362\336\037\030y" +
       "aml:\"delegator_address\"R\020delegatorAddres" +
-      "s\022I\n\021validator_address\030\002 \001(\tB\034\362\336\037\030yaml:\"" +
-      "validator_address\"R\020validatorAddress:>\210\240" +
-      "\037\000\350\240\037\000\202\347\260*\021delegator_address\212\347\260*\033cosmos-" +
-      "sdk/MsgValidatorBond\"\032\n\030MsgValidatorBond" +
-      "Response2\224\r\n\003Msg\022q\n\017CreateValidator\022*.co" +
-      "smos.staking.v1beta1.MsgCreateValidator\032" +
-      "2.cosmos.staking.v1beta1.MsgCreateValida" +
-      "torResponse\022k\n\rEditValidator\022(.cosmos.st" +
-      "aking.v1beta1.MsgEditValidator\0320.cosmos." +
-      "staking.v1beta1.MsgEditValidatorResponse" +
-      "\022\\\n\010Delegate\022#.cosmos.staking.v1beta1.Ms" +
-      "gDelegate\032+.cosmos.staking.v1beta1.MsgDe" +
-      "legateResponse\022q\n\017BeginRedelegate\022*.cosm" +
-      "os.staking.v1beta1.MsgBeginRedelegate\0322." +
-      "cosmos.staking.v1beta1.MsgBeginRedelegat" +
-      "eResponse\022b\n\nUndelegate\022%.cosmos.staking" +
-      ".v1beta1.MsgUndelegate\032-.cosmos.staking." +
-      "v1beta1.MsgUndelegateResponse\022\217\001\n\031Cancel" +
-      "UnbondingDelegation\0224.cosmos.staking.v1b" +
-      "eta1.MsgCancelUnbondingDelegation\032<.cosm" +
-      "os.staking.v1beta1.MsgCancelUnbondingDel" +
-      "egationResponse\022h\n\014UpdateParams\022\'.cosmos" +
-      ".staking.v1beta1.MsgUpdateParams\032/.cosmo" +
-      "s.staking.v1beta1.MsgUpdateParamsRespons" +
-      "e\022q\n\017UnbondValidator\022*.cosmos.staking.v1" +
-      "beta1.MsgUnbondValidator\0322.cosmos.stakin" +
-      "g.v1beta1.MsgUnbondValidatorResponse\022n\n\016" +
-      "TokenizeShares\022).cosmos.staking.v1beta1." +
-      "MsgTokenizeShares\0321.cosmos.staking.v1bet" +
-      "a1.MsgTokenizeSharesResponse\022\203\001\n\025RedeemT" +
-      "okensForShares\0220.cosmos.staking.v1beta1." +
-      "MsgRedeemTokensForShares\0328.cosmos.stakin" +
-      "g.v1beta1.MsgRedeemTokensForSharesRespon" +
-      "se\022\225\001\n\033TransferTokenizeShareRecord\0226.cos" +
-      "mos.staking.v1beta1.MsgTransferTokenizeS" +
-      "hareRecord\032>.cosmos.staking.v1beta1.MsgT" +
-      "ransferTokenizeShareRecordResponse\022\203\001\n\025D" +
-      "isableTokenizeShares\0220.cosmos.staking.v1" +
-      "beta1.MsgDisableTokenizeShares\0328.cosmos." +
-      "staking.v1beta1.MsgDisableTokenizeShares" +
-      "Response\022\200\001\n\024EnableTokenizeShares\022/.cosm" +
-      "os.staking.v1beta1.MsgEnableTokenizeShar" +
-      "es\0327.cosmos.staking.v1beta1.MsgEnableTok" +
-      "enizeSharesResponse\022k\n\rValidatorBond\022(.c" +
-      "osmos.staking.v1beta1.MsgValidatorBond\0320" +
-      ".cosmos.staking.v1beta1.MsgValidatorBond" +
-      "Response\032\005\200\347\260*\001B\313\001\n\032com.cosmos.staking.v" +
-      "1beta1B\007TxProtoZ,github.com/cosmos/cosmo" +
-      "s-sdk/x/staking/types\242\002\003CSX\252\002\026Cosmos.Sta" +
-      "king.V1beta1\312\002\026Cosmos\\Staking\\V1beta1\342\002\"" +
-      "Cosmos\\Staking\\V1beta1\\GPBMetadata\352\002\030Cos" +
-      "mos::Staking::V1beta1b\006proto3"
+      "s\0227\n\006amount\030\002 \001(\0132\031.cosmos.base.v1beta1." +
+      "CoinB\004\310\336\037\000R\006amount:F\210\240\037\000\350\240\037\000\202\347\260*\021delegat" +
+      "or_address\212\347\260*#cosmos-sdk/MsgRedeemToken" +
+      "sForShares\"[\n MsgRedeemTokensForSharesRe" +
+      "sponse\0227\n\006amount\030\001 \001(\0132\031.cosmos.base.v1b" +
+      "eta1.CoinB\004\310\336\037\000R\006amount\"\321\001\n\036MsgTransferT" +
+      "okenizeShareRecord\0227\n\030tokenize_share_rec" +
+      "ord_id\030\001 \001(\004R\025tokenizeShareRecordId\022\026\n\006s" +
+      "ender\030\002 \001(\tR\006sender\022\033\n\tnew_owner\030\003 \001(\tR\010" +
+      "newOwner:A\210\240\037\000\350\240\037\000\202\347\260*\006sender\212\347\260*)cosmos" +
+      "-sdk/MsgTransferTokenizeShareRecord\"(\n&M" +
+      "sgTransferTokenizeShareRecordResponse\"\255\001" +
+      "\n\030MsgDisableTokenizeShares\022I\n\021delegator_" +
+      "address\030\001 \001(\tB\034\362\336\037\030yaml:\"delegator_addre" +
+      "ss\"R\020delegatorAddress:F\210\240\037\000\350\240\037\000\202\347\260*\021dele" +
+      "gator_address\212\347\260*#cosmos-sdk/MsgDisableT" +
+      "okenizeShares\"\"\n MsgDisableTokenizeShare" +
+      "sResponse\"\253\001\n\027MsgEnableTokenizeShares\022I\n" +
+      "\021delegator_address\030\001 \001(\tB\034\362\336\037\030yaml:\"dele" +
+      "gator_address\"R\020delegatorAddress:E\210\240\037\000\350\240" +
+      "\037\000\202\347\260*\021delegator_address\212\347\260*\"cosmos-sdk/" +
+      "MsgEnableTokenizeShares\"p\n\037MsgEnableToke" +
+      "nizeSharesResponse\022M\n\017completion_time\030\001 " +
+      "\001(\0132\032.google.protobuf.TimestampB\010\310\336\037\000\220\337\037" +
+      "\001R\016completionTime\"\350\001\n\020MsgValidatorBond\022I" +
+      "\n\021delegator_address\030\001 \001(\tB\034\362\336\037\030yaml:\"del" +
+      "egator_address\"R\020delegatorAddress\022I\n\021val" +
+      "idator_address\030\002 \001(\tB\034\362\336\037\030yaml:\"validato" +
+      "r_address\"R\020validatorAddress:>\210\240\037\000\350\240\037\000\202\347" +
+      "\260*\021delegator_address\212\347\260*\033cosmos-sdk/MsgV" +
+      "alidatorBond\"\032\n\030MsgValidatorBondResponse" +
+      "2\224\r\n\003Msg\022q\n\017CreateValidator\022*.cosmos.sta" +
+      "king.v1beta1.MsgCreateValidator\0322.cosmos" +
+      ".staking.v1beta1.MsgCreateValidatorRespo" +
+      "nse\022k\n\rEditValidator\022(.cosmos.staking.v1" +
+      "beta1.MsgEditValidator\0320.cosmos.staking." +
+      "v1beta1.MsgEditValidatorResponse\022\\\n\010Dele" +
+      "gate\022#.cosmos.staking.v1beta1.MsgDelegat" +
+      "e\032+.cosmos.staking.v1beta1.MsgDelegateRe" +
+      "sponse\022q\n\017BeginRedelegate\022*.cosmos.staki" +
+      "ng.v1beta1.MsgBeginRedelegate\0322.cosmos.s" +
+      "taking.v1beta1.MsgBeginRedelegateRespons" +
+      "e\022b\n\nUndelegate\022%.cosmos.staking.v1beta1" +
+      ".MsgUndelegate\032-.cosmos.staking.v1beta1." +
+      "MsgUndelegateResponse\022\217\001\n\031CancelUnbondin" +
+      "gDelegation\0224.cosmos.staking.v1beta1.Msg" +
+      "CancelUnbondingDelegation\032<.cosmos.staki" +
+      "ng.v1beta1.MsgCancelUnbondingDelegationR" +
+      "esponse\022h\n\014UpdateParams\022\'.cosmos.staking" +
+      ".v1beta1.MsgUpdateParams\032/.cosmos.stakin" +
+      "g.v1beta1.MsgUpdateParamsResponse\022q\n\017Unb" +
+      "ondValidator\022*.cosmos.staking.v1beta1.Ms" +
+      "gUnbondValidator\0322.cosmos.staking.v1beta" +
+      "1.MsgUnbondValidatorResponse\022n\n\016Tokenize" +
+      "Shares\022).cosmos.staking.v1beta1.MsgToken" +
+      "izeShares\0321.cosmos.staking.v1beta1.MsgTo" +
+      "kenizeSharesResponse\022\203\001\n\025RedeemTokensFor" +
+      "Shares\0220.cosmos.staking.v1beta1.MsgRedee" +
+      "mTokensForShares\0328.cosmos.staking.v1beta" +
+      "1.MsgRedeemTokensForSharesResponse\022\225\001\n\033T" +
+      "ransferTokenizeShareRecord\0226.cosmos.stak" +
+      "ing.v1beta1.MsgTransferTokenizeShareReco" +
+      "rd\032>.cosmos.staking.v1beta1.MsgTransferT" +
+      "okenizeShareRecordResponse\022\203\001\n\025DisableTo" +
+      "kenizeShares\0220.cosmos.staking.v1beta1.Ms" +
+      "gDisableTokenizeShares\0328.cosmos.staking." +
+      "v1beta1.MsgDisableTokenizeSharesResponse" +
+      "\022\200\001\n\024EnableTokenizeShares\022/.cosmos.staki" +
+      "ng.v1beta1.MsgEnableTokenizeShares\0327.cos" +
+      "mos.staking.v1beta1.MsgEnableTokenizeSha" +
+      "resResponse\022k\n\rValidatorBond\022(.cosmos.st" +
+      "aking.v1beta1.MsgValidatorBond\0320.cosmos." +
+      "staking.v1beta1.MsgValidatorBondResponse" +
+      "\032\005\200\347\260*\001B\313\001\n\032com.cosmos.staking.v1beta1B\007" +
+      "TxProtoZ,github.com/cosmos/cosmos-sdk/x/" +
+      "staking/types\242\002\003CSX\252\002\026Cosmos.Staking.V1b" +
+      "eta1\312\002\026Cosmos\\Staking\\V1beta1\342\002\"Cosmos\\S" +
+      "taking\\V1beta1\\GPBMetadata\352\002\030Cosmos::Sta" +
+      "king::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -19769,7 +20183,7 @@ public final class TxProto {
     internal_static_cosmos_staking_v1beta1_MsgUndelegateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cosmos_staking_v1beta1_MsgUndelegateResponse_descriptor,
-        new java.lang.String[] { "CompletionTime", });
+        new java.lang.String[] { "CompletionTime", "Amount", });
     internal_static_cosmos_staking_v1beta1_MsgCancelUnbondingDelegation_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_cosmos_staking_v1beta1_MsgCancelUnbondingDelegation_fieldAccessorTable = new

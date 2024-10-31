@@ -28,25 +28,25 @@ import SwiftProtobuf
 
 /// Query defines the gRPC querier service.
 ///
-/// Usage: instantiate `Neutron_Interchaintxs_QueryClient`, then call methods of this protocol to make API calls.
-internal protocol Neutron_Interchaintxs_QueryClientProtocol: GRPCClient {
+/// Usage: instantiate `Neutron_Interchaintxs_V1_QueryClient`, then call methods of this protocol to make API calls.
+internal protocol Neutron_Interchaintxs_V1_QueryClientProtocol: GRPCClient {
   var serviceName: String { get }
-  var interceptors: Neutron_Interchaintxs_QueryClientInterceptorFactoryProtocol? { get }
+  var interceptors: Neutron_Interchaintxs_V1_QueryClientInterceptorFactoryProtocol? { get }
 
   func params(
-    _ request: Neutron_Interchaintxs_QueryParamsRequest,
+    _ request: Neutron_Interchaintxs_V1_QueryParamsRequest,
     callOptions: CallOptions?
-  ) -> UnaryCall<Neutron_Interchaintxs_QueryParamsRequest, Neutron_Interchaintxs_QueryParamsResponse>
+  ) -> UnaryCall<Neutron_Interchaintxs_V1_QueryParamsRequest, Neutron_Interchaintxs_V1_QueryParamsResponse>
 
   func interchainAccountAddress(
-    _ request: Neutron_Interchaintxs_QueryInterchainAccountAddressRequest,
+    _ request: Neutron_Interchaintxs_V1_QueryInterchainAccountAddressRequest,
     callOptions: CallOptions?
-  ) -> UnaryCall<Neutron_Interchaintxs_QueryInterchainAccountAddressRequest, Neutron_Interchaintxs_QueryInterchainAccountAddressResponse>
+  ) -> UnaryCall<Neutron_Interchaintxs_V1_QueryInterchainAccountAddressRequest, Neutron_Interchaintxs_V1_QueryInterchainAccountAddressResponse>
 }
 
-extension Neutron_Interchaintxs_QueryClientProtocol {
+extension Neutron_Interchaintxs_V1_QueryClientProtocol {
   internal var serviceName: String {
-    return "neutron.interchaintxs.Query"
+    return "neutron.interchaintxs.v1.Query"
   }
 
   /// Parameters queries the parameters of the module.
@@ -56,11 +56,11 @@ extension Neutron_Interchaintxs_QueryClientProtocol {
   ///   - callOptions: Call options.
   /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
   internal func params(
-    _ request: Neutron_Interchaintxs_QueryParamsRequest,
+    _ request: Neutron_Interchaintxs_V1_QueryParamsRequest,
     callOptions: CallOptions? = nil
-  ) -> UnaryCall<Neutron_Interchaintxs_QueryParamsRequest, Neutron_Interchaintxs_QueryParamsResponse> {
+  ) -> UnaryCall<Neutron_Interchaintxs_V1_QueryParamsRequest, Neutron_Interchaintxs_V1_QueryParamsResponse> {
     return self.makeUnaryCall(
-      path: Neutron_Interchaintxs_QueryClientMetadata.Methods.params.path,
+      path: Neutron_Interchaintxs_V1_QueryClientMetadata.Methods.params.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeParamsInterceptors() ?? []
@@ -74,11 +74,11 @@ extension Neutron_Interchaintxs_QueryClientProtocol {
   ///   - callOptions: Call options.
   /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
   internal func interchainAccountAddress(
-    _ request: Neutron_Interchaintxs_QueryInterchainAccountAddressRequest,
+    _ request: Neutron_Interchaintxs_V1_QueryInterchainAccountAddressRequest,
     callOptions: CallOptions? = nil
-  ) -> UnaryCall<Neutron_Interchaintxs_QueryInterchainAccountAddressRequest, Neutron_Interchaintxs_QueryInterchainAccountAddressResponse> {
+  ) -> UnaryCall<Neutron_Interchaintxs_V1_QueryInterchainAccountAddressRequest, Neutron_Interchaintxs_V1_QueryInterchainAccountAddressResponse> {
     return self.makeUnaryCall(
-      path: Neutron_Interchaintxs_QueryClientMetadata.Methods.interchainAccountAddress.path,
+      path: Neutron_Interchaintxs_V1_QueryClientMetadata.Methods.interchainAccountAddress.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeInterchainAccountAddressInterceptors() ?? []
@@ -87,24 +87,24 @@ extension Neutron_Interchaintxs_QueryClientProtocol {
 }
 
 @available(*, deprecated)
-extension Neutron_Interchaintxs_QueryClient: @unchecked Sendable {}
+extension Neutron_Interchaintxs_V1_QueryClient: @unchecked Sendable {}
 
-@available(*, deprecated, renamed: "Neutron_Interchaintxs_QueryNIOClient")
-internal final class Neutron_Interchaintxs_QueryClient: Neutron_Interchaintxs_QueryClientProtocol {
+@available(*, deprecated, renamed: "Neutron_Interchaintxs_V1_QueryNIOClient")
+internal final class Neutron_Interchaintxs_V1_QueryClient: Neutron_Interchaintxs_V1_QueryClientProtocol {
   private let lock = Lock()
   private var _defaultCallOptions: CallOptions
-  private var _interceptors: Neutron_Interchaintxs_QueryClientInterceptorFactoryProtocol?
+  private var _interceptors: Neutron_Interchaintxs_V1_QueryClientInterceptorFactoryProtocol?
   internal let channel: GRPCChannel
   internal var defaultCallOptions: CallOptions {
     get { self.lock.withLock { return self._defaultCallOptions } }
     set { self.lock.withLockVoid { self._defaultCallOptions = newValue } }
   }
-  internal var interceptors: Neutron_Interchaintxs_QueryClientInterceptorFactoryProtocol? {
+  internal var interceptors: Neutron_Interchaintxs_V1_QueryClientInterceptorFactoryProtocol? {
     get { self.lock.withLock { return self._interceptors } }
     set { self.lock.withLockVoid { self._interceptors = newValue } }
   }
 
-  /// Creates a client for the neutron.interchaintxs.Query service.
+  /// Creates a client for the neutron.interchaintxs.v1.Query service.
   ///
   /// - Parameters:
   ///   - channel: `GRPCChannel` to the service host.
@@ -113,7 +113,7 @@ internal final class Neutron_Interchaintxs_QueryClient: Neutron_Interchaintxs_Qu
   internal init(
     channel: GRPCChannel,
     defaultCallOptions: CallOptions = CallOptions(),
-    interceptors: Neutron_Interchaintxs_QueryClientInterceptorFactoryProtocol? = nil
+    interceptors: Neutron_Interchaintxs_V1_QueryClientInterceptorFactoryProtocol? = nil
   ) {
     self.channel = channel
     self._defaultCallOptions = defaultCallOptions
@@ -121,12 +121,12 @@ internal final class Neutron_Interchaintxs_QueryClient: Neutron_Interchaintxs_Qu
   }
 }
 
-internal struct Neutron_Interchaintxs_QueryNIOClient: Neutron_Interchaintxs_QueryClientProtocol {
+internal struct Neutron_Interchaintxs_V1_QueryNIOClient: Neutron_Interchaintxs_V1_QueryClientProtocol {
   internal var channel: GRPCChannel
   internal var defaultCallOptions: CallOptions
-  internal var interceptors: Neutron_Interchaintxs_QueryClientInterceptorFactoryProtocol?
+  internal var interceptors: Neutron_Interchaintxs_V1_QueryClientInterceptorFactoryProtocol?
 
-  /// Creates a client for the neutron.interchaintxs.Query service.
+  /// Creates a client for the neutron.interchaintxs.v1.Query service.
   ///
   /// - Parameters:
   ///   - channel: `GRPCChannel` to the service host.
@@ -135,7 +135,7 @@ internal struct Neutron_Interchaintxs_QueryNIOClient: Neutron_Interchaintxs_Quer
   internal init(
     channel: GRPCChannel,
     defaultCallOptions: CallOptions = CallOptions(),
-    interceptors: Neutron_Interchaintxs_QueryClientInterceptorFactoryProtocol? = nil
+    interceptors: Neutron_Interchaintxs_V1_QueryClientInterceptorFactoryProtocol? = nil
   ) {
     self.channel = channel
     self.defaultCallOptions = defaultCallOptions
@@ -145,37 +145,37 @@ internal struct Neutron_Interchaintxs_QueryNIOClient: Neutron_Interchaintxs_Quer
 
 /// Query defines the gRPC querier service.
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
-internal protocol Neutron_Interchaintxs_QueryAsyncClientProtocol: GRPCClient {
+internal protocol Neutron_Interchaintxs_V1_QueryAsyncClientProtocol: GRPCClient {
   static var serviceDescriptor: GRPCServiceDescriptor { get }
-  var interceptors: Neutron_Interchaintxs_QueryClientInterceptorFactoryProtocol? { get }
+  var interceptors: Neutron_Interchaintxs_V1_QueryClientInterceptorFactoryProtocol? { get }
 
   func makeParamsCall(
-    _ request: Neutron_Interchaintxs_QueryParamsRequest,
+    _ request: Neutron_Interchaintxs_V1_QueryParamsRequest,
     callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Neutron_Interchaintxs_QueryParamsRequest, Neutron_Interchaintxs_QueryParamsResponse>
+  ) -> GRPCAsyncUnaryCall<Neutron_Interchaintxs_V1_QueryParamsRequest, Neutron_Interchaintxs_V1_QueryParamsResponse>
 
   func makeInterchainAccountAddressCall(
-    _ request: Neutron_Interchaintxs_QueryInterchainAccountAddressRequest,
+    _ request: Neutron_Interchaintxs_V1_QueryInterchainAccountAddressRequest,
     callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Neutron_Interchaintxs_QueryInterchainAccountAddressRequest, Neutron_Interchaintxs_QueryInterchainAccountAddressResponse>
+  ) -> GRPCAsyncUnaryCall<Neutron_Interchaintxs_V1_QueryInterchainAccountAddressRequest, Neutron_Interchaintxs_V1_QueryInterchainAccountAddressResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
-extension Neutron_Interchaintxs_QueryAsyncClientProtocol {
+extension Neutron_Interchaintxs_V1_QueryAsyncClientProtocol {
   internal static var serviceDescriptor: GRPCServiceDescriptor {
-    return Neutron_Interchaintxs_QueryClientMetadata.serviceDescriptor
+    return Neutron_Interchaintxs_V1_QueryClientMetadata.serviceDescriptor
   }
 
-  internal var interceptors: Neutron_Interchaintxs_QueryClientInterceptorFactoryProtocol? {
+  internal var interceptors: Neutron_Interchaintxs_V1_QueryClientInterceptorFactoryProtocol? {
     return nil
   }
 
   internal func makeParamsCall(
-    _ request: Neutron_Interchaintxs_QueryParamsRequest,
+    _ request: Neutron_Interchaintxs_V1_QueryParamsRequest,
     callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Neutron_Interchaintxs_QueryParamsRequest, Neutron_Interchaintxs_QueryParamsResponse> {
+  ) -> GRPCAsyncUnaryCall<Neutron_Interchaintxs_V1_QueryParamsRequest, Neutron_Interchaintxs_V1_QueryParamsResponse> {
     return self.makeAsyncUnaryCall(
-      path: Neutron_Interchaintxs_QueryClientMetadata.Methods.params.path,
+      path: Neutron_Interchaintxs_V1_QueryClientMetadata.Methods.params.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeParamsInterceptors() ?? []
@@ -183,11 +183,11 @@ extension Neutron_Interchaintxs_QueryAsyncClientProtocol {
   }
 
   internal func makeInterchainAccountAddressCall(
-    _ request: Neutron_Interchaintxs_QueryInterchainAccountAddressRequest,
+    _ request: Neutron_Interchaintxs_V1_QueryInterchainAccountAddressRequest,
     callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Neutron_Interchaintxs_QueryInterchainAccountAddressRequest, Neutron_Interchaintxs_QueryInterchainAccountAddressResponse> {
+  ) -> GRPCAsyncUnaryCall<Neutron_Interchaintxs_V1_QueryInterchainAccountAddressRequest, Neutron_Interchaintxs_V1_QueryInterchainAccountAddressResponse> {
     return self.makeAsyncUnaryCall(
-      path: Neutron_Interchaintxs_QueryClientMetadata.Methods.interchainAccountAddress.path,
+      path: Neutron_Interchaintxs_V1_QueryClientMetadata.Methods.interchainAccountAddress.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeInterchainAccountAddressInterceptors() ?? []
@@ -196,13 +196,13 @@ extension Neutron_Interchaintxs_QueryAsyncClientProtocol {
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
-extension Neutron_Interchaintxs_QueryAsyncClientProtocol {
+extension Neutron_Interchaintxs_V1_QueryAsyncClientProtocol {
   internal func params(
-    _ request: Neutron_Interchaintxs_QueryParamsRequest,
+    _ request: Neutron_Interchaintxs_V1_QueryParamsRequest,
     callOptions: CallOptions? = nil
-  ) async throws -> Neutron_Interchaintxs_QueryParamsResponse {
+  ) async throws -> Neutron_Interchaintxs_V1_QueryParamsResponse {
     return try await self.performAsyncUnaryCall(
-      path: Neutron_Interchaintxs_QueryClientMetadata.Methods.params.path,
+      path: Neutron_Interchaintxs_V1_QueryClientMetadata.Methods.params.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeParamsInterceptors() ?? []
@@ -210,11 +210,11 @@ extension Neutron_Interchaintxs_QueryAsyncClientProtocol {
   }
 
   internal func interchainAccountAddress(
-    _ request: Neutron_Interchaintxs_QueryInterchainAccountAddressRequest,
+    _ request: Neutron_Interchaintxs_V1_QueryInterchainAccountAddressRequest,
     callOptions: CallOptions? = nil
-  ) async throws -> Neutron_Interchaintxs_QueryInterchainAccountAddressResponse {
+  ) async throws -> Neutron_Interchaintxs_V1_QueryInterchainAccountAddressResponse {
     return try await self.performAsyncUnaryCall(
-      path: Neutron_Interchaintxs_QueryClientMetadata.Methods.interchainAccountAddress.path,
+      path: Neutron_Interchaintxs_V1_QueryClientMetadata.Methods.interchainAccountAddress.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeInterchainAccountAddressInterceptors() ?? []
@@ -223,15 +223,15 @@ extension Neutron_Interchaintxs_QueryAsyncClientProtocol {
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
-internal struct Neutron_Interchaintxs_QueryAsyncClient: Neutron_Interchaintxs_QueryAsyncClientProtocol {
+internal struct Neutron_Interchaintxs_V1_QueryAsyncClient: Neutron_Interchaintxs_V1_QueryAsyncClientProtocol {
   internal var channel: GRPCChannel
   internal var defaultCallOptions: CallOptions
-  internal var interceptors: Neutron_Interchaintxs_QueryClientInterceptorFactoryProtocol?
+  internal var interceptors: Neutron_Interchaintxs_V1_QueryClientInterceptorFactoryProtocol?
 
   internal init(
     channel: GRPCChannel,
     defaultCallOptions: CallOptions = CallOptions(),
-    interceptors: Neutron_Interchaintxs_QueryClientInterceptorFactoryProtocol? = nil
+    interceptors: Neutron_Interchaintxs_V1_QueryClientInterceptorFactoryProtocol? = nil
   ) {
     self.channel = channel
     self.defaultCallOptions = defaultCallOptions
@@ -239,35 +239,35 @@ internal struct Neutron_Interchaintxs_QueryAsyncClient: Neutron_Interchaintxs_Qu
   }
 }
 
-internal protocol Neutron_Interchaintxs_QueryClientInterceptorFactoryProtocol: Sendable {
+internal protocol Neutron_Interchaintxs_V1_QueryClientInterceptorFactoryProtocol: Sendable {
 
   /// - Returns: Interceptors to use when invoking 'params'.
-  func makeParamsInterceptors() -> [ClientInterceptor<Neutron_Interchaintxs_QueryParamsRequest, Neutron_Interchaintxs_QueryParamsResponse>]
+  func makeParamsInterceptors() -> [ClientInterceptor<Neutron_Interchaintxs_V1_QueryParamsRequest, Neutron_Interchaintxs_V1_QueryParamsResponse>]
 
   /// - Returns: Interceptors to use when invoking 'interchainAccountAddress'.
-  func makeInterchainAccountAddressInterceptors() -> [ClientInterceptor<Neutron_Interchaintxs_QueryInterchainAccountAddressRequest, Neutron_Interchaintxs_QueryInterchainAccountAddressResponse>]
+  func makeInterchainAccountAddressInterceptors() -> [ClientInterceptor<Neutron_Interchaintxs_V1_QueryInterchainAccountAddressRequest, Neutron_Interchaintxs_V1_QueryInterchainAccountAddressResponse>]
 }
 
-internal enum Neutron_Interchaintxs_QueryClientMetadata {
+internal enum Neutron_Interchaintxs_V1_QueryClientMetadata {
   internal static let serviceDescriptor = GRPCServiceDescriptor(
     name: "Query",
-    fullName: "neutron.interchaintxs.Query",
+    fullName: "neutron.interchaintxs.v1.Query",
     methods: [
-      Neutron_Interchaintxs_QueryClientMetadata.Methods.params,
-      Neutron_Interchaintxs_QueryClientMetadata.Methods.interchainAccountAddress,
+      Neutron_Interchaintxs_V1_QueryClientMetadata.Methods.params,
+      Neutron_Interchaintxs_V1_QueryClientMetadata.Methods.interchainAccountAddress,
     ]
   )
 
   internal enum Methods {
     internal static let params = GRPCMethodDescriptor(
       name: "Params",
-      path: "/neutron.interchaintxs.Query/Params",
+      path: "/neutron.interchaintxs.v1.Query/Params",
       type: GRPCCallType.unary
     )
 
     internal static let interchainAccountAddress = GRPCMethodDescriptor(
       name: "InterchainAccountAddress",
-      path: "/neutron.interchaintxs.Query/InterchainAccountAddress",
+      path: "/neutron.interchaintxs.v1.Query/InterchainAccountAddress",
       type: GRPCCallType.unary
     )
   }
@@ -276,18 +276,18 @@ internal enum Neutron_Interchaintxs_QueryClientMetadata {
 /// Query defines the gRPC querier service.
 ///
 /// To build a server, implement a class that conforms to this protocol.
-internal protocol Neutron_Interchaintxs_QueryProvider: CallHandlerProvider {
-  var interceptors: Neutron_Interchaintxs_QueryServerInterceptorFactoryProtocol? { get }
+internal protocol Neutron_Interchaintxs_V1_QueryProvider: CallHandlerProvider {
+  var interceptors: Neutron_Interchaintxs_V1_QueryServerInterceptorFactoryProtocol? { get }
 
   /// Parameters queries the parameters of the module.
-  func params(request: Neutron_Interchaintxs_QueryParamsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Neutron_Interchaintxs_QueryParamsResponse>
+  func params(request: Neutron_Interchaintxs_V1_QueryParamsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Neutron_Interchaintxs_V1_QueryParamsResponse>
 
-  func interchainAccountAddress(request: Neutron_Interchaintxs_QueryInterchainAccountAddressRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Neutron_Interchaintxs_QueryInterchainAccountAddressResponse>
+  func interchainAccountAddress(request: Neutron_Interchaintxs_V1_QueryInterchainAccountAddressRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Neutron_Interchaintxs_V1_QueryInterchainAccountAddressResponse>
 }
 
-extension Neutron_Interchaintxs_QueryProvider {
+extension Neutron_Interchaintxs_V1_QueryProvider {
   internal var serviceName: Substring {
-    return Neutron_Interchaintxs_QueryServerMetadata.serviceDescriptor.fullName[...]
+    return Neutron_Interchaintxs_V1_QueryServerMetadata.serviceDescriptor.fullName[...]
   }
 
   /// Determines, calls and returns the appropriate request handler, depending on the request's method.
@@ -300,8 +300,8 @@ extension Neutron_Interchaintxs_QueryProvider {
     case "Params":
       return UnaryServerHandler(
         context: context,
-        requestDeserializer: ProtobufDeserializer<Neutron_Interchaintxs_QueryParamsRequest>(),
-        responseSerializer: ProtobufSerializer<Neutron_Interchaintxs_QueryParamsResponse>(),
+        requestDeserializer: ProtobufDeserializer<Neutron_Interchaintxs_V1_QueryParamsRequest>(),
+        responseSerializer: ProtobufSerializer<Neutron_Interchaintxs_V1_QueryParamsResponse>(),
         interceptors: self.interceptors?.makeParamsInterceptors() ?? [],
         userFunction: self.params(request:context:)
       )
@@ -309,8 +309,8 @@ extension Neutron_Interchaintxs_QueryProvider {
     case "InterchainAccountAddress":
       return UnaryServerHandler(
         context: context,
-        requestDeserializer: ProtobufDeserializer<Neutron_Interchaintxs_QueryInterchainAccountAddressRequest>(),
-        responseSerializer: ProtobufSerializer<Neutron_Interchaintxs_QueryInterchainAccountAddressResponse>(),
+        requestDeserializer: ProtobufDeserializer<Neutron_Interchaintxs_V1_QueryInterchainAccountAddressRequest>(),
+        responseSerializer: ProtobufSerializer<Neutron_Interchaintxs_V1_QueryInterchainAccountAddressResponse>(),
         interceptors: self.interceptors?.makeInterchainAccountAddressInterceptors() ?? [],
         userFunction: self.interchainAccountAddress(request:context:)
       )
@@ -325,33 +325,33 @@ extension Neutron_Interchaintxs_QueryProvider {
 ///
 /// To implement a server, implement an object which conforms to this protocol.
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
-internal protocol Neutron_Interchaintxs_QueryAsyncProvider: CallHandlerProvider {
+internal protocol Neutron_Interchaintxs_V1_QueryAsyncProvider: CallHandlerProvider {
   static var serviceDescriptor: GRPCServiceDescriptor { get }
-  var interceptors: Neutron_Interchaintxs_QueryServerInterceptorFactoryProtocol? { get }
+  var interceptors: Neutron_Interchaintxs_V1_QueryServerInterceptorFactoryProtocol? { get }
 
   /// Parameters queries the parameters of the module.
   @Sendable func params(
-    request: Neutron_Interchaintxs_QueryParamsRequest,
+    request: Neutron_Interchaintxs_V1_QueryParamsRequest,
     context: GRPCAsyncServerCallContext
-  ) async throws -> Neutron_Interchaintxs_QueryParamsResponse
+  ) async throws -> Neutron_Interchaintxs_V1_QueryParamsResponse
 
   @Sendable func interchainAccountAddress(
-    request: Neutron_Interchaintxs_QueryInterchainAccountAddressRequest,
+    request: Neutron_Interchaintxs_V1_QueryInterchainAccountAddressRequest,
     context: GRPCAsyncServerCallContext
-  ) async throws -> Neutron_Interchaintxs_QueryInterchainAccountAddressResponse
+  ) async throws -> Neutron_Interchaintxs_V1_QueryInterchainAccountAddressResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
-extension Neutron_Interchaintxs_QueryAsyncProvider {
+extension Neutron_Interchaintxs_V1_QueryAsyncProvider {
   internal static var serviceDescriptor: GRPCServiceDescriptor {
-    return Neutron_Interchaintxs_QueryServerMetadata.serviceDescriptor
+    return Neutron_Interchaintxs_V1_QueryServerMetadata.serviceDescriptor
   }
 
   internal var serviceName: Substring {
-    return Neutron_Interchaintxs_QueryServerMetadata.serviceDescriptor.fullName[...]
+    return Neutron_Interchaintxs_V1_QueryServerMetadata.serviceDescriptor.fullName[...]
   }
 
-  internal var interceptors: Neutron_Interchaintxs_QueryServerInterceptorFactoryProtocol? {
+  internal var interceptors: Neutron_Interchaintxs_V1_QueryServerInterceptorFactoryProtocol? {
     return nil
   }
 
@@ -363,8 +363,8 @@ extension Neutron_Interchaintxs_QueryAsyncProvider {
     case "Params":
       return GRPCAsyncServerHandler(
         context: context,
-        requestDeserializer: ProtobufDeserializer<Neutron_Interchaintxs_QueryParamsRequest>(),
-        responseSerializer: ProtobufSerializer<Neutron_Interchaintxs_QueryParamsResponse>(),
+        requestDeserializer: ProtobufDeserializer<Neutron_Interchaintxs_V1_QueryParamsRequest>(),
+        responseSerializer: ProtobufSerializer<Neutron_Interchaintxs_V1_QueryParamsResponse>(),
         interceptors: self.interceptors?.makeParamsInterceptors() ?? [],
         wrapping: self.params(request:context:)
       )
@@ -372,8 +372,8 @@ extension Neutron_Interchaintxs_QueryAsyncProvider {
     case "InterchainAccountAddress":
       return GRPCAsyncServerHandler(
         context: context,
-        requestDeserializer: ProtobufDeserializer<Neutron_Interchaintxs_QueryInterchainAccountAddressRequest>(),
-        responseSerializer: ProtobufSerializer<Neutron_Interchaintxs_QueryInterchainAccountAddressResponse>(),
+        requestDeserializer: ProtobufDeserializer<Neutron_Interchaintxs_V1_QueryInterchainAccountAddressRequest>(),
+        responseSerializer: ProtobufSerializer<Neutron_Interchaintxs_V1_QueryInterchainAccountAddressResponse>(),
         interceptors: self.interceptors?.makeInterchainAccountAddressInterceptors() ?? [],
         wrapping: self.interchainAccountAddress(request:context:)
       )
@@ -384,37 +384,37 @@ extension Neutron_Interchaintxs_QueryAsyncProvider {
   }
 }
 
-internal protocol Neutron_Interchaintxs_QueryServerInterceptorFactoryProtocol {
+internal protocol Neutron_Interchaintxs_V1_QueryServerInterceptorFactoryProtocol {
 
   /// - Returns: Interceptors to use when handling 'params'.
   ///   Defaults to calling `self.makeInterceptors()`.
-  func makeParamsInterceptors() -> [ServerInterceptor<Neutron_Interchaintxs_QueryParamsRequest, Neutron_Interchaintxs_QueryParamsResponse>]
+  func makeParamsInterceptors() -> [ServerInterceptor<Neutron_Interchaintxs_V1_QueryParamsRequest, Neutron_Interchaintxs_V1_QueryParamsResponse>]
 
   /// - Returns: Interceptors to use when handling 'interchainAccountAddress'.
   ///   Defaults to calling `self.makeInterceptors()`.
-  func makeInterchainAccountAddressInterceptors() -> [ServerInterceptor<Neutron_Interchaintxs_QueryInterchainAccountAddressRequest, Neutron_Interchaintxs_QueryInterchainAccountAddressResponse>]
+  func makeInterchainAccountAddressInterceptors() -> [ServerInterceptor<Neutron_Interchaintxs_V1_QueryInterchainAccountAddressRequest, Neutron_Interchaintxs_V1_QueryInterchainAccountAddressResponse>]
 }
 
-internal enum Neutron_Interchaintxs_QueryServerMetadata {
+internal enum Neutron_Interchaintxs_V1_QueryServerMetadata {
   internal static let serviceDescriptor = GRPCServiceDescriptor(
     name: "Query",
-    fullName: "neutron.interchaintxs.Query",
+    fullName: "neutron.interchaintxs.v1.Query",
     methods: [
-      Neutron_Interchaintxs_QueryServerMetadata.Methods.params,
-      Neutron_Interchaintxs_QueryServerMetadata.Methods.interchainAccountAddress,
+      Neutron_Interchaintxs_V1_QueryServerMetadata.Methods.params,
+      Neutron_Interchaintxs_V1_QueryServerMetadata.Methods.interchainAccountAddress,
     ]
   )
 
   internal enum Methods {
     internal static let params = GRPCMethodDescriptor(
       name: "Params",
-      path: "/neutron.interchaintxs.Query/Params",
+      path: "/neutron.interchaintxs.v1.Query/Params",
       type: GRPCCallType.unary
     )
 
     internal static let interchainAccountAddress = GRPCMethodDescriptor(
       name: "InterchainAccountAddress",
-      path: "/neutron.interchaintxs.Query/InterchainAccountAddress",
+      path: "/neutron.interchaintxs.v1.Query/InterchainAccountAddress",
       type: GRPCCallType.unary
     )
   }

@@ -63,6 +63,15 @@ struct Tendermint_Types_ConsensusParams {
   /// Clears the value of `version`. Subsequent reads from it will return its default value.
   mutating func clearVersion() {self._version = nil}
 
+  var abci: Tendermint_Types_ABCIParams {
+    get {return _abci ?? Tendermint_Types_ABCIParams()}
+    set {_abci = newValue}
+  }
+  /// Returns true if `abci` has been explicitly set.
+  var hasAbci: Bool {return self._abci != nil}
+  /// Clears the value of `abci`. Subsequent reads from it will return its default value.
+  mutating func clearAbci() {self._abci = nil}
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -71,6 +80,7 @@ struct Tendermint_Types_ConsensusParams {
   fileprivate var _evidence: Tendermint_Types_EvidenceParams? = nil
   fileprivate var _validator: Tendermint_Types_ValidatorParams? = nil
   fileprivate var _version: Tendermint_Types_VersionParams? = nil
+  fileprivate var _abci: Tendermint_Types_ABCIParams? = nil
 }
 
 /// BlockParams contains limits on the block size.
@@ -174,6 +184,28 @@ struct Tendermint_Types_HashedParams {
   init() {}
 }
 
+/// ABCIParams configure functionality specific to the Application Blockchain Interface.
+struct Tendermint_Types_ABCIParams {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// vote_extensions_enable_height configures the first height during which
+  /// vote extensions will be enabled. During this specified height, and for all
+  /// subsequent heights, precommit messages that do not contain valid extension data
+  /// will be considered invalid. Prior to this height, vote extensions will not
+  /// be used or accepted by validators on the network.
+  ///
+  /// Once enabled, vote extensions will be created by the application in ExtendVote,
+  /// passed to the application for validation in VerifyVoteExtension and given
+  /// to the application to use when proposing a block during PrepareProposal.
+  var voteExtensionsEnableHeight: Int64 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Tendermint_Types_ConsensusParams: @unchecked Sendable {}
 extension Tendermint_Types_BlockParams: @unchecked Sendable {}
@@ -181,6 +213,7 @@ extension Tendermint_Types_EvidenceParams: @unchecked Sendable {}
 extension Tendermint_Types_ValidatorParams: @unchecked Sendable {}
 extension Tendermint_Types_VersionParams: @unchecked Sendable {}
 extension Tendermint_Types_HashedParams: @unchecked Sendable {}
+extension Tendermint_Types_ABCIParams: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -194,6 +227,7 @@ extension Tendermint_Types_ConsensusParams: SwiftProtobuf.Message, SwiftProtobuf
     2: .same(proto: "evidence"),
     3: .same(proto: "validator"),
     4: .same(proto: "version"),
+    5: .same(proto: "abci"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -206,6 +240,7 @@ extension Tendermint_Types_ConsensusParams: SwiftProtobuf.Message, SwiftProtobuf
       case 2: try { try decoder.decodeSingularMessageField(value: &self._evidence) }()
       case 3: try { try decoder.decodeSingularMessageField(value: &self._validator) }()
       case 4: try { try decoder.decodeSingularMessageField(value: &self._version) }()
+      case 5: try { try decoder.decodeSingularMessageField(value: &self._abci) }()
       default: break
       }
     }
@@ -228,6 +263,9 @@ extension Tendermint_Types_ConsensusParams: SwiftProtobuf.Message, SwiftProtobuf
     try { if let v = self._version {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
     } }()
+    try { if let v = self._abci {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -236,6 +274,7 @@ extension Tendermint_Types_ConsensusParams: SwiftProtobuf.Message, SwiftProtobuf
     if lhs._evidence != rhs._evidence {return false}
     if lhs._validator != rhs._validator {return false}
     if lhs._version != rhs._version {return false}
+    if lhs._abci != rhs._abci {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -424,6 +463,38 @@ extension Tendermint_Types_HashedParams: SwiftProtobuf.Message, SwiftProtobuf._M
   static func ==(lhs: Tendermint_Types_HashedParams, rhs: Tendermint_Types_HashedParams) -> Bool {
     if lhs.blockMaxBytes != rhs.blockMaxBytes {return false}
     if lhs.blockMaxGas != rhs.blockMaxGas {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tendermint_Types_ABCIParams: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ABCIParams"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "vote_extensions_enable_height"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularInt64Field(value: &self.voteExtensionsEnableHeight) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.voteExtensionsEnableHeight != 0 {
+      try visitor.visitSingularInt64Field(value: self.voteExtensionsEnableHeight, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Tendermint_Types_ABCIParams, rhs: Tendermint_Types_ABCIParams) -> Bool {
+    if lhs.voteExtensionsEnableHeight != rhs.voteExtensionsEnableHeight {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
