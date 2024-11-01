@@ -510,10 +510,10 @@ public final class QueryProto {
      * height of btc light client when epoch ended
      * </pre>
      *
-     * <code>uint64 btc_light_client_height = 1 [json_name = "btcLightClientHeight"];</code>
+     * <code>uint32 btc_light_client_height = 1 [json_name = "btcLightClientHeight"];</code>
      * @return The btcLightClientHeight.
      */
-    long getBtcLightClientHeight();
+    int getBtcLightClientHeight();
   }
   /**
    * <pre>
@@ -556,17 +556,17 @@ public final class QueryProto {
     }
 
     public static final int BTC_LIGHT_CLIENT_HEIGHT_FIELD_NUMBER = 1;
-    private long btcLightClientHeight_ = 0L;
+    private int btcLightClientHeight_ = 0;
     /**
      * <pre>
      * height of btc light client when epoch ended
      * </pre>
      *
-     * <code>uint64 btc_light_client_height = 1 [json_name = "btcLightClientHeight"];</code>
+     * <code>uint32 btc_light_client_height = 1 [json_name = "btcLightClientHeight"];</code>
      * @return The btcLightClientHeight.
      */
     @java.lang.Override
-    public long getBtcLightClientHeight() {
+    public int getBtcLightClientHeight() {
       return btcLightClientHeight_;
     }
 
@@ -584,8 +584,8 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (btcLightClientHeight_ != 0L) {
-        output.writeUInt64(1, btcLightClientHeight_);
+      if (btcLightClientHeight_ != 0) {
+        output.writeUInt32(1, btcLightClientHeight_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -596,9 +596,9 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (btcLightClientHeight_ != 0L) {
+      if (btcLightClientHeight_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1, btcLightClientHeight_);
+          .computeUInt32Size(1, btcLightClientHeight_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -629,8 +629,7 @@ public final class QueryProto {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + BTC_LIGHT_CLIENT_HEIGHT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getBtcLightClientHeight());
+      hash = (53 * hash) + getBtcLightClientHeight();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -767,7 +766,7 @@ public final class QueryProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        btcLightClientHeight_ = 0L;
+        btcLightClientHeight_ = 0;
         return this;
       }
 
@@ -850,7 +849,7 @@ public final class QueryProto {
 
       public Builder mergeFrom(com.babylon.monitor.v1.QueryProto.QueryEndedEpochBtcHeightResponse other) {
         if (other == com.babylon.monitor.v1.QueryProto.QueryEndedEpochBtcHeightResponse.getDefaultInstance()) return this;
-        if (other.getBtcLightClientHeight() != 0L) {
+        if (other.getBtcLightClientHeight() != 0) {
           setBtcLightClientHeight(other.getBtcLightClientHeight());
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -880,7 +879,7 @@ public final class QueryProto {
                 done = true;
                 break;
               case 8: {
-                btcLightClientHeight_ = input.readUInt64();
+                btcLightClientHeight_ = input.readUInt32();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 8
@@ -901,17 +900,17 @@ public final class QueryProto {
       }
       private int bitField0_;
 
-      private long btcLightClientHeight_ ;
+      private int btcLightClientHeight_ ;
       /**
        * <pre>
        * height of btc light client when epoch ended
        * </pre>
        *
-       * <code>uint64 btc_light_client_height = 1 [json_name = "btcLightClientHeight"];</code>
+       * <code>uint32 btc_light_client_height = 1 [json_name = "btcLightClientHeight"];</code>
        * @return The btcLightClientHeight.
        */
       @java.lang.Override
-      public long getBtcLightClientHeight() {
+      public int getBtcLightClientHeight() {
         return btcLightClientHeight_;
       }
       /**
@@ -919,11 +918,11 @@ public final class QueryProto {
        * height of btc light client when epoch ended
        * </pre>
        *
-       * <code>uint64 btc_light_client_height = 1 [json_name = "btcLightClientHeight"];</code>
+       * <code>uint32 btc_light_client_height = 1 [json_name = "btcLightClientHeight"];</code>
        * @param value The btcLightClientHeight to set.
        * @return This builder for chaining.
        */
-      public Builder setBtcLightClientHeight(long value) {
+      public Builder setBtcLightClientHeight(int value) {
 
         btcLightClientHeight_ = value;
         bitField0_ |= 0x00000001;
@@ -935,12 +934,12 @@ public final class QueryProto {
        * height of btc light client when epoch ended
        * </pre>
        *
-       * <code>uint64 btc_light_client_height = 1 [json_name = "btcLightClientHeight"];</code>
+       * <code>uint32 btc_light_client_height = 1 [json_name = "btcLightClientHeight"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBtcLightClientHeight() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        btcLightClientHeight_ = 0L;
+        btcLightClientHeight_ = 0;
         onChanged();
         return this;
       }
@@ -1615,10 +1614,10 @@ public final class QueryProto {
      * height of btc light client when checkpoint is reported
      * </pre>
      *
-     * <code>uint64 btc_light_client_height = 1 [json_name = "btcLightClientHeight"];</code>
+     * <code>uint32 btc_light_client_height = 1 [json_name = "btcLightClientHeight"];</code>
      * @return The btcLightClientHeight.
      */
-    long getBtcLightClientHeight();
+    int getBtcLightClientHeight();
   }
   /**
    * <pre>
@@ -1661,17 +1660,17 @@ public final class QueryProto {
     }
 
     public static final int BTC_LIGHT_CLIENT_HEIGHT_FIELD_NUMBER = 1;
-    private long btcLightClientHeight_ = 0L;
+    private int btcLightClientHeight_ = 0;
     /**
      * <pre>
      * height of btc light client when checkpoint is reported
      * </pre>
      *
-     * <code>uint64 btc_light_client_height = 1 [json_name = "btcLightClientHeight"];</code>
+     * <code>uint32 btc_light_client_height = 1 [json_name = "btcLightClientHeight"];</code>
      * @return The btcLightClientHeight.
      */
     @java.lang.Override
-    public long getBtcLightClientHeight() {
+    public int getBtcLightClientHeight() {
       return btcLightClientHeight_;
     }
 
@@ -1689,8 +1688,8 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (btcLightClientHeight_ != 0L) {
-        output.writeUInt64(1, btcLightClientHeight_);
+      if (btcLightClientHeight_ != 0) {
+        output.writeUInt32(1, btcLightClientHeight_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1701,9 +1700,9 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (btcLightClientHeight_ != 0L) {
+      if (btcLightClientHeight_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1, btcLightClientHeight_);
+          .computeUInt32Size(1, btcLightClientHeight_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1734,8 +1733,7 @@ public final class QueryProto {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + BTC_LIGHT_CLIENT_HEIGHT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getBtcLightClientHeight());
+      hash = (53 * hash) + getBtcLightClientHeight();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1872,7 +1870,7 @@ public final class QueryProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        btcLightClientHeight_ = 0L;
+        btcLightClientHeight_ = 0;
         return this;
       }
 
@@ -1955,7 +1953,7 @@ public final class QueryProto {
 
       public Builder mergeFrom(com.babylon.monitor.v1.QueryProto.QueryReportedCheckpointBtcHeightResponse other) {
         if (other == com.babylon.monitor.v1.QueryProto.QueryReportedCheckpointBtcHeightResponse.getDefaultInstance()) return this;
-        if (other.getBtcLightClientHeight() != 0L) {
+        if (other.getBtcLightClientHeight() != 0) {
           setBtcLightClientHeight(other.getBtcLightClientHeight());
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -1985,7 +1983,7 @@ public final class QueryProto {
                 done = true;
                 break;
               case 8: {
-                btcLightClientHeight_ = input.readUInt64();
+                btcLightClientHeight_ = input.readUInt32();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 8
@@ -2006,17 +2004,17 @@ public final class QueryProto {
       }
       private int bitField0_;
 
-      private long btcLightClientHeight_ ;
+      private int btcLightClientHeight_ ;
       /**
        * <pre>
        * height of btc light client when checkpoint is reported
        * </pre>
        *
-       * <code>uint64 btc_light_client_height = 1 [json_name = "btcLightClientHeight"];</code>
+       * <code>uint32 btc_light_client_height = 1 [json_name = "btcLightClientHeight"];</code>
        * @return The btcLightClientHeight.
        */
       @java.lang.Override
-      public long getBtcLightClientHeight() {
+      public int getBtcLightClientHeight() {
         return btcLightClientHeight_;
       }
       /**
@@ -2024,11 +2022,11 @@ public final class QueryProto {
        * height of btc light client when checkpoint is reported
        * </pre>
        *
-       * <code>uint64 btc_light_client_height = 1 [json_name = "btcLightClientHeight"];</code>
+       * <code>uint32 btc_light_client_height = 1 [json_name = "btcLightClientHeight"];</code>
        * @param value The btcLightClientHeight to set.
        * @return This builder for chaining.
        */
-      public Builder setBtcLightClientHeight(long value) {
+      public Builder setBtcLightClientHeight(int value) {
 
         btcLightClientHeight_ = value;
         bitField0_ |= 0x00000001;
@@ -2040,12 +2038,12 @@ public final class QueryProto {
        * height of btc light client when checkpoint is reported
        * </pre>
        *
-       * <code>uint64 btc_light_client_height = 1 [json_name = "btcLightClientHeight"];</code>
+       * <code>uint32 btc_light_client_height = 1 [json_name = "btcLightClientHeight"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBtcLightClientHeight() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        btcLightClientHeight_ = 0L;
+        btcLightClientHeight_ = 0;
         onChanged();
         return this;
       }
@@ -2147,11 +2145,11 @@ public final class QueryProto {
       "to\">\n\037QueryEndedEpochBtcHeightRequest\022\033\n" +
       "\tepoch_num\030\001 \001(\004R\010epochNum\"Y\n QueryEnded" +
       "EpochBtcHeightResponse\0225\n\027btc_light_clie" +
-      "nt_height\030\001 \001(\004R\024btcLightClientHeight\"F\n" +
+      "nt_height\030\001 \001(\rR\024btcLightClientHeight\"F\n" +
       "\'QueryReportedCheckpointBtcHeightRequest" +
       "\022\033\n\tckpt_hash\030\001 \001(\tR\010ckptHash\"a\n(QueryRe" +
       "portedCheckpointBtcHeightResponse\0225\n\027btc" +
-      "_light_client_height\030\001 \001(\004R\024btcLightClie" +
+      "_light_client_height\030\001 \001(\rR\024btcLightClie" +
       "ntHeight2\212\003\n\005Query\022\260\001\n\023EndedEpochBtcHeig" +
       "ht\0223.babylon.monitor.v1.QueryEndedEpochB" +
       "tcHeightRequest\0324.babylon.monitor.v1.Que" +
@@ -2162,12 +2160,12 @@ public final class QueryProto {
       "ghtRequest\032<.babylon.monitor.v1.QueryRep" +
       "ortedCheckpointBtcHeightResponse\"3\202\323\344\223\002-" +
       "\022+/babylon/monitor/v1/checkpoints/{ckpt_" +
-      "hash}B\275\001\n\026com.babylon.monitor.v1B\nQueryP" +
-      "rotoZ/github.com/babylonchain/babylon/x/" +
-      "monitor/types\242\002\003BMX\252\002\022Babylon.Monitor.V1" +
-      "\312\002\022Babylon\\Monitor\\V1\342\002\036Babylon\\Monitor\\" +
-      "V1\\GPBMetadata\352\002\024Babylon::Monitor::V1b\006p" +
-      "roto3"
+      "hash}B\277\001\n\026com.babylon.monitor.v1B\nQueryP" +
+      "rotoZ1github.com/babylonlabs-io/babylon/" +
+      "x/monitor/types\242\002\003BMX\252\002\022Babylon.Monitor." +
+      "V1\312\002\022Babylon\\Monitor\\V1\342\002\036Babylon\\Monito" +
+      "r\\V1\\GPBMetadata\352\002\024Babylon::Monitor::V1b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

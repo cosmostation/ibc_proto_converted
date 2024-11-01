@@ -29,7 +29,7 @@ struct Babylon_Btccheckpoint_V1_Params {
   /// btc_confirmation_depth is the confirmation depth in BTC.
   /// A block is considered irreversible only when it is at least k-deep in BTC
   /// (k in research paper)
-  var btcConfirmationDepth: UInt64 = 0
+  var btcConfirmationDepth: UInt32 = 0
 
   /// checkpoint_finalization_timeout is the maximum time window (measured in BTC
   /// blocks) between a checkpoint
@@ -37,7 +37,7 @@ struct Babylon_Btccheckpoint_V1_Params {
   /// - being reported back to BBN
   /// If a checkpoint has not been reported back within w BTC blocks, then BBN
   /// has dishonest majority and is stalling checkpoints (w in research paper)
-  var checkpointFinalizationTimeout: UInt64 = 0
+  var checkpointFinalizationTimeout: UInt32 = 0
 
   /// 4byte tag in hex format, required to be present in the OP_RETURN transaction
   /// related to babylon
@@ -70,8 +70,8 @@ extension Babylon_Btccheckpoint_V1_Params: SwiftProtobuf.Message, SwiftProtobuf.
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.btcConfirmationDepth) }()
-      case 2: try { try decoder.decodeSingularUInt64Field(value: &self.checkpointFinalizationTimeout) }()
+      case 1: try { try decoder.decodeSingularUInt32Field(value: &self.btcConfirmationDepth) }()
+      case 2: try { try decoder.decodeSingularUInt32Field(value: &self.checkpointFinalizationTimeout) }()
       case 3: try { try decoder.decodeSingularStringField(value: &self.checkpointTag) }()
       default: break
       }
@@ -80,10 +80,10 @@ extension Babylon_Btccheckpoint_V1_Params: SwiftProtobuf.Message, SwiftProtobuf.
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.btcConfirmationDepth != 0 {
-      try visitor.visitSingularUInt64Field(value: self.btcConfirmationDepth, fieldNumber: 1)
+      try visitor.visitSingularUInt32Field(value: self.btcConfirmationDepth, fieldNumber: 1)
     }
     if self.checkpointFinalizationTimeout != 0 {
-      try visitor.visitSingularUInt64Field(value: self.checkpointFinalizationTimeout, fieldNumber: 2)
+      try visitor.visitSingularUInt32Field(value: self.checkpointFinalizationTimeout, fieldNumber: 2)
     }
     if !self.checkpointTag.isEmpty {
       try visitor.visitSingularStringField(value: self.checkpointTag, fieldNumber: 3)

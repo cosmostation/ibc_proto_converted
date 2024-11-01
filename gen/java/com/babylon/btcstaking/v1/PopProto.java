@@ -1533,12 +1533,12 @@ public final class PopProto {
       "\030\002 \001(\014R\006btcSig\"7\n\tBIP322Sig\022\030\n\007address\030\001" +
       " \001(\tR\007address\022\020\n\003sig\030\002 \001(\014R\003sig*/\n\nBTCSi" +
       "gType\022\n\n\006BIP340\020\000\022\n\n\006BIP322\020\001\022\t\n\005ECDSA\020\002" +
-      "B\315\001\n\031com.babylon.btcstaking.v1B\010PopProto" +
-      "Z2github.com/babylonchain/babylon/x/btcs" +
-      "taking/types\242\002\003BBX\252\002\025Babylon.Btcstaking." +
-      "V1\312\002\025Babylon\\Btcstaking\\V1\342\002!Babylon\\Btc" +
-      "staking\\V1\\GPBMetadata\352\002\027Babylon::Btcsta" +
-      "king::V1b\006proto3"
+      "B\317\001\n\031com.babylon.btcstaking.v1B\010PopProto" +
+      "Z4github.com/babylonlabs-io/babylon/x/bt" +
+      "cstaking/types\242\002\003BBX\252\002\025Babylon.Btcstakin" +
+      "g.V1\312\002\025Babylon\\Btcstaking\\V1\342\002!Babylon\\B" +
+      "tcstaking\\V1\\GPBMetadata\352\002\027Babylon::Btcs" +
+      "taking::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

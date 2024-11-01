@@ -16,10 +16,16 @@ public final class BtcstakingProto {
   }
   /**
    * <pre>
-   * BTCDelegationStatus is the status of a delegation. The state transition path is
-   * PENDING -&gt; ACTIVE -&gt; UNBONDED with two possibilities:
-   * 1. the typical path when timelock of staking transaction expires.
-   * 2. the path when staker requests early undelegation through MsgBTCUndelegate message.
+   * BTCDelegationStatus is the status of a delegation.
+   * There are two possible valid state transition paths for a BTC delegation:
+   * - PENDING -&gt; ACTIVE -&gt; UNBONDED
+   * - PENDING -&gt; VERIFIED -&gt; ACTIVE -&gt; UNBONDED
+   * and one invalid state transition path:
+   * - PENDING -&gt; VERIFIED -&gt; UNBONDED i.e the staker unbonded before
+   * activating delegation on Babylon chain.
+   * In valid transition paths, the delegation becomes UNBONDED when:
+   * - either the staking transaction timelock expires
+   * - or the staker requests early undelegation through MsgBTCUndelegate message.
    * </pre>
    *
    * Protobuf enum {@code babylon.btcstaking.v1.BTCDelegationStatus}
@@ -28,7 +34,7 @@ public final class BtcstakingProto {
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
      * <pre>
-     * PENDING defines a delegation that is waiting for covenant signatures to become active.
+     * PENDING defines a delegation that is waiting for covenant signatures.
      * </pre>
      *
      * <code>PENDING = 0;</code>
@@ -36,12 +42,21 @@ public final class BtcstakingProto {
     PENDING(0),
     /**
      * <pre>
+     * VERIFIED defines a delegation that has covenant signatures but is not yet
+     * included in the BTC chain.
+     * </pre>
+     *
+     * <code>VERIFIED = 1;</code>
+     */
+    VERIFIED(1),
+    /**
+     * <pre>
      * ACTIVE defines a delegation that has voting power
      * </pre>
      *
-     * <code>ACTIVE = 1;</code>
+     * <code>ACTIVE = 2;</code>
      */
-    ACTIVE(1),
+    ACTIVE(2),
     /**
      * <pre>
      * UNBONDED defines a delegation no longer has voting power:
@@ -49,23 +64,23 @@ public final class BtcstakingProto {
      * - or receiving unbonding tx with signatures from staker and covenant committee
      * </pre>
      *
-     * <code>UNBONDED = 2;</code>
+     * <code>UNBONDED = 3;</code>
      */
-    UNBONDED(2),
+    UNBONDED(3),
     /**
      * <pre>
      * ANY is any of the above status
      * </pre>
      *
-     * <code>ANY = 3;</code>
+     * <code>ANY = 4;</code>
      */
-    ANY(3),
+    ANY(4),
     UNRECOGNIZED(-1),
     ;
 
     /**
      * <pre>
-     * PENDING defines a delegation that is waiting for covenant signatures to become active.
+     * PENDING defines a delegation that is waiting for covenant signatures.
      * </pre>
      *
      * <code>PENDING = 0;</code>
@@ -73,12 +88,21 @@ public final class BtcstakingProto {
     public static final int PENDING_VALUE = 0;
     /**
      * <pre>
+     * VERIFIED defines a delegation that has covenant signatures but is not yet
+     * included in the BTC chain.
+     * </pre>
+     *
+     * <code>VERIFIED = 1;</code>
+     */
+    public static final int VERIFIED_VALUE = 1;
+    /**
+     * <pre>
      * ACTIVE defines a delegation that has voting power
      * </pre>
      *
-     * <code>ACTIVE = 1;</code>
+     * <code>ACTIVE = 2;</code>
      */
-    public static final int ACTIVE_VALUE = 1;
+    public static final int ACTIVE_VALUE = 2;
     /**
      * <pre>
      * UNBONDED defines a delegation no longer has voting power:
@@ -86,17 +110,17 @@ public final class BtcstakingProto {
      * - or receiving unbonding tx with signatures from staker and covenant committee
      * </pre>
      *
-     * <code>UNBONDED = 2;</code>
+     * <code>UNBONDED = 3;</code>
      */
-    public static final int UNBONDED_VALUE = 2;
+    public static final int UNBONDED_VALUE = 3;
     /**
      * <pre>
      * ANY is any of the above status
      * </pre>
      *
-     * <code>ANY = 3;</code>
+     * <code>ANY = 4;</code>
      */
-    public static final int ANY_VALUE = 3;
+    public static final int ANY_VALUE = 4;
 
 
     public final int getNumber() {
@@ -124,9 +148,10 @@ public final class BtcstakingProto {
     public static BTCDelegationStatus forNumber(int value) {
       switch (value) {
         case 0: return PENDING;
-        case 1: return ACTIVE;
-        case 2: return UNBONDED;
-        case 3: return ANY;
+        case 1: return VERIFIED;
+        case 2: return ACTIVE;
+        case 3: return UNBONDED;
+        case 4: return ANY;
         default: return null;
       }
     }
@@ -260,7 +285,7 @@ public final class BtcstakingProto {
      * the PK follows encoding in BIP-340 spec
      * </pre>
      *
-     * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The btcPk.
      */
     com.google.protobuf.ByteString getBtcPk();
@@ -314,20 +339,20 @@ public final class BtcstakingProto {
      * if it's 0 then the finality provider is not slashed
      * </pre>
      *
-     * <code>uint64 slashed_btc_height = 7 [json_name = "slashedBtcHeight"];</code>
+     * <code>uint32 slashed_btc_height = 7 [json_name = "slashedBtcHeight"];</code>
      * @return The slashedBtcHeight.
      */
-    long getSlashedBtcHeight();
+    int getSlashedBtcHeight();
 
     /**
      * <pre>
-     * sluggish defines whether the finality provider is detected sluggish
+     * jailed defines whether the finality provider is jailed
      * </pre>
      *
-     * <code>bool sluggish = 8 [json_name = "sluggish"];</code>
-     * @return The sluggish.
+     * <code>bool jailed = 8 [json_name = "jailed"];</code>
+     * @return The jailed.
      */
-    boolean getSluggish();
+    boolean getJailed();
   }
   /**
    * <pre>
@@ -511,7 +536,7 @@ public final class BtcstakingProto {
      * the PK follows encoding in BIP-340 spec
      * </pre>
      *
-     * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The btcPk.
      */
     @java.lang.Override
@@ -578,7 +603,7 @@ public final class BtcstakingProto {
     }
 
     public static final int SLASHED_BTC_HEIGHT_FIELD_NUMBER = 7;
-    private long slashedBtcHeight_ = 0L;
+    private int slashedBtcHeight_ = 0;
     /**
      * <pre>
      * slashed_btc_height indicates the BTC height when
@@ -586,27 +611,27 @@ public final class BtcstakingProto {
      * if it's 0 then the finality provider is not slashed
      * </pre>
      *
-     * <code>uint64 slashed_btc_height = 7 [json_name = "slashedBtcHeight"];</code>
+     * <code>uint32 slashed_btc_height = 7 [json_name = "slashedBtcHeight"];</code>
      * @return The slashedBtcHeight.
      */
     @java.lang.Override
-    public long getSlashedBtcHeight() {
+    public int getSlashedBtcHeight() {
       return slashedBtcHeight_;
     }
 
-    public static final int SLUGGISH_FIELD_NUMBER = 8;
-    private boolean sluggish_ = false;
+    public static final int JAILED_FIELD_NUMBER = 8;
+    private boolean jailed_ = false;
     /**
      * <pre>
-     * sluggish defines whether the finality provider is detected sluggish
+     * jailed defines whether the finality provider is jailed
      * </pre>
      *
-     * <code>bool sluggish = 8 [json_name = "sluggish"];</code>
-     * @return The sluggish.
+     * <code>bool jailed = 8 [json_name = "jailed"];</code>
+     * @return The jailed.
      */
     @java.lang.Override
-    public boolean getSluggish() {
-      return sluggish_;
+    public boolean getJailed() {
+      return jailed_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -641,11 +666,11 @@ public final class BtcstakingProto {
       if (slashedBabylonHeight_ != 0L) {
         output.writeUInt64(6, slashedBabylonHeight_);
       }
-      if (slashedBtcHeight_ != 0L) {
-        output.writeUInt64(7, slashedBtcHeight_);
+      if (slashedBtcHeight_ != 0) {
+        output.writeUInt32(7, slashedBtcHeight_);
       }
-      if (sluggish_ != false) {
-        output.writeBool(8, sluggish_);
+      if (jailed_ != false) {
+        output.writeBool(8, jailed_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -678,13 +703,13 @@ public final class BtcstakingProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(6, slashedBabylonHeight_);
       }
-      if (slashedBtcHeight_ != 0L) {
+      if (slashedBtcHeight_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(7, slashedBtcHeight_);
+          .computeUInt32Size(7, slashedBtcHeight_);
       }
-      if (sluggish_ != false) {
+      if (jailed_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(8, sluggish_);
+          .computeBoolSize(8, jailed_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -721,8 +746,8 @@ public final class BtcstakingProto {
           != other.getSlashedBabylonHeight()) return false;
       if (getSlashedBtcHeight()
           != other.getSlashedBtcHeight()) return false;
-      if (getSluggish()
-          != other.getSluggish()) return false;
+      if (getJailed()
+          != other.getJailed()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -752,11 +777,10 @@ public final class BtcstakingProto {
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getSlashedBabylonHeight());
       hash = (37 * hash) + SLASHED_BTC_HEIGHT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getSlashedBtcHeight());
-      hash = (37 * hash) + SLUGGISH_FIELD_NUMBER;
+      hash = (53 * hash) + getSlashedBtcHeight();
+      hash = (37 * hash) + JAILED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getSluggish());
+          getJailed());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -906,8 +930,8 @@ public final class BtcstakingProto {
           popBuilder_ = null;
         }
         slashedBabylonHeight_ = 0L;
-        slashedBtcHeight_ = 0L;
-        sluggish_ = false;
+        slashedBtcHeight_ = 0;
+        jailed_ = false;
         return this;
       }
 
@@ -967,7 +991,7 @@ public final class BtcstakingProto {
           result.slashedBtcHeight_ = slashedBtcHeight_;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.sluggish_ = sluggish_;
+          result.jailed_ = jailed_;
         }
       }
 
@@ -1037,11 +1061,11 @@ public final class BtcstakingProto {
         if (other.getSlashedBabylonHeight() != 0L) {
           setSlashedBabylonHeight(other.getSlashedBabylonHeight());
         }
-        if (other.getSlashedBtcHeight() != 0L) {
+        if (other.getSlashedBtcHeight() != 0) {
           setSlashedBtcHeight(other.getSlashedBtcHeight());
         }
-        if (other.getSluggish() != false) {
-          setSluggish(other.getSluggish());
+        if (other.getJailed() != false) {
+          setJailed(other.getJailed());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -1104,12 +1128,12 @@ public final class BtcstakingProto {
                 break;
               } // case 48
               case 56: {
-                slashedBtcHeight_ = input.readUInt64();
+                slashedBtcHeight_ = input.readUInt32();
                 bitField0_ |= 0x00000040;
                 break;
               } // case 56
               case 64: {
-                sluggish_ = input.readBool();
+                jailed_ = input.readBool();
                 bitField0_ |= 0x00000080;
                 break;
               } // case 64
@@ -1476,7 +1500,7 @@ public final class BtcstakingProto {
        * the PK follows encoding in BIP-340 spec
        * </pre>
        *
-       * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The btcPk.
        */
       @java.lang.Override
@@ -1489,7 +1513,7 @@ public final class BtcstakingProto {
        * the PK follows encoding in BIP-340 spec
        * </pre>
        *
-       * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param value The btcPk to set.
        * @return This builder for chaining.
        */
@@ -1506,7 +1530,7 @@ public final class BtcstakingProto {
        * the PK follows encoding in BIP-340 spec
        * </pre>
        *
-       * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBtcPk() {
@@ -1730,7 +1754,7 @@ public final class BtcstakingProto {
         return this;
       }
 
-      private long slashedBtcHeight_ ;
+      private int slashedBtcHeight_ ;
       /**
        * <pre>
        * slashed_btc_height indicates the BTC height when
@@ -1738,11 +1762,11 @@ public final class BtcstakingProto {
        * if it's 0 then the finality provider is not slashed
        * </pre>
        *
-       * <code>uint64 slashed_btc_height = 7 [json_name = "slashedBtcHeight"];</code>
+       * <code>uint32 slashed_btc_height = 7 [json_name = "slashedBtcHeight"];</code>
        * @return The slashedBtcHeight.
        */
       @java.lang.Override
-      public long getSlashedBtcHeight() {
+      public int getSlashedBtcHeight() {
         return slashedBtcHeight_;
       }
       /**
@@ -1752,11 +1776,11 @@ public final class BtcstakingProto {
        * if it's 0 then the finality provider is not slashed
        * </pre>
        *
-       * <code>uint64 slashed_btc_height = 7 [json_name = "slashedBtcHeight"];</code>
+       * <code>uint32 slashed_btc_height = 7 [json_name = "slashedBtcHeight"];</code>
        * @param value The slashedBtcHeight to set.
        * @return This builder for chaining.
        */
-      public Builder setSlashedBtcHeight(long value) {
+      public Builder setSlashedBtcHeight(int value) {
 
         slashedBtcHeight_ = value;
         bitField0_ |= 0x00000040;
@@ -1770,56 +1794,56 @@ public final class BtcstakingProto {
        * if it's 0 then the finality provider is not slashed
        * </pre>
        *
-       * <code>uint64 slashed_btc_height = 7 [json_name = "slashedBtcHeight"];</code>
+       * <code>uint32 slashed_btc_height = 7 [json_name = "slashedBtcHeight"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSlashedBtcHeight() {
         bitField0_ = (bitField0_ & ~0x00000040);
-        slashedBtcHeight_ = 0L;
+        slashedBtcHeight_ = 0;
         onChanged();
         return this;
       }
 
-      private boolean sluggish_ ;
+      private boolean jailed_ ;
       /**
        * <pre>
-       * sluggish defines whether the finality provider is detected sluggish
+       * jailed defines whether the finality provider is jailed
        * </pre>
        *
-       * <code>bool sluggish = 8 [json_name = "sluggish"];</code>
-       * @return The sluggish.
+       * <code>bool jailed = 8 [json_name = "jailed"];</code>
+       * @return The jailed.
        */
       @java.lang.Override
-      public boolean getSluggish() {
-        return sluggish_;
+      public boolean getJailed() {
+        return jailed_;
       }
       /**
        * <pre>
-       * sluggish defines whether the finality provider is detected sluggish
+       * jailed defines whether the finality provider is jailed
        * </pre>
        *
-       * <code>bool sluggish = 8 [json_name = "sluggish"];</code>
-       * @param value The sluggish to set.
+       * <code>bool jailed = 8 [json_name = "jailed"];</code>
+       * @param value The jailed to set.
        * @return This builder for chaining.
        */
-      public Builder setSluggish(boolean value) {
+      public Builder setJailed(boolean value) {
 
-        sluggish_ = value;
+        jailed_ = value;
         bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * sluggish defines whether the finality provider is detected sluggish
+       * jailed defines whether the finality provider is jailed
        * </pre>
        *
-       * <code>bool sluggish = 8 [json_name = "sluggish"];</code>
+       * <code>bool jailed = 8 [json_name = "jailed"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearSluggish() {
+      public Builder clearJailed() {
         bitField0_ = (bitField0_ & ~0x00000080);
-        sluggish_ = false;
+        jailed_ = false;
         onChanged();
         return this;
       }
@@ -1897,7 +1921,7 @@ public final class BtcstakingProto {
      * the PK follows encoding in BIP-340 spec
      * </pre>
      *
-     * <code>bytes btc_pk = 1 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes btc_pk = 1 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The btcPk.
      */
     com.google.protobuf.ByteString getBtcPk();
@@ -1941,20 +1965,20 @@ public final class BtcstakingProto {
      * if it's 0 then the finality provider is not slashed
      * </pre>
      *
-     * <code>uint64 slashed_btc_height = 5 [json_name = "slashedBtcHeight"];</code>
+     * <code>uint32 slashed_btc_height = 5 [json_name = "slashedBtcHeight"];</code>
      * @return The slashedBtcHeight.
      */
-    long getSlashedBtcHeight();
+    int getSlashedBtcHeight();
 
     /**
      * <pre>
-     * sluggish defines whether the finality provider is detected sluggish
+     * jailed defines whether the finality provider is detected jailed
      * </pre>
      *
-     * <code>bool sluggish = 6 [json_name = "sluggish"];</code>
-     * @return The sluggish.
+     * <code>bool jailed = 6 [json_name = "jailed"];</code>
+     * @return The jailed.
      */
-    boolean getSluggish();
+    boolean getJailed();
   }
   /**
    * <pre>
@@ -2004,7 +2028,7 @@ public final class BtcstakingProto {
      * the PK follows encoding in BIP-340 spec
      * </pre>
      *
-     * <code>bytes btc_pk = 1 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes btc_pk = 1 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The btcPk.
      */
     @java.lang.Override
@@ -2060,7 +2084,7 @@ public final class BtcstakingProto {
     }
 
     public static final int SLASHED_BTC_HEIGHT_FIELD_NUMBER = 5;
-    private long slashedBtcHeight_ = 0L;
+    private int slashedBtcHeight_ = 0;
     /**
      * <pre>
      * slashed_btc_height indicates the BTC height when
@@ -2068,27 +2092,27 @@ public final class BtcstakingProto {
      * if it's 0 then the finality provider is not slashed
      * </pre>
      *
-     * <code>uint64 slashed_btc_height = 5 [json_name = "slashedBtcHeight"];</code>
+     * <code>uint32 slashed_btc_height = 5 [json_name = "slashedBtcHeight"];</code>
      * @return The slashedBtcHeight.
      */
     @java.lang.Override
-    public long getSlashedBtcHeight() {
+    public int getSlashedBtcHeight() {
       return slashedBtcHeight_;
     }
 
-    public static final int SLUGGISH_FIELD_NUMBER = 6;
-    private boolean sluggish_ = false;
+    public static final int JAILED_FIELD_NUMBER = 6;
+    private boolean jailed_ = false;
     /**
      * <pre>
-     * sluggish defines whether the finality provider is detected sluggish
+     * jailed defines whether the finality provider is detected jailed
      * </pre>
      *
-     * <code>bool sluggish = 6 [json_name = "sluggish"];</code>
-     * @return The sluggish.
+     * <code>bool jailed = 6 [json_name = "jailed"];</code>
+     * @return The jailed.
      */
     @java.lang.Override
-    public boolean getSluggish() {
-      return sluggish_;
+    public boolean getJailed() {
+      return jailed_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2117,11 +2141,11 @@ public final class BtcstakingProto {
       if (slashedBabylonHeight_ != 0L) {
         output.writeUInt64(4, slashedBabylonHeight_);
       }
-      if (slashedBtcHeight_ != 0L) {
-        output.writeUInt64(5, slashedBtcHeight_);
+      if (slashedBtcHeight_ != 0) {
+        output.writeUInt32(5, slashedBtcHeight_);
       }
-      if (sluggish_ != false) {
-        output.writeBool(6, sluggish_);
+      if (jailed_ != false) {
+        output.writeBool(6, jailed_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -2148,13 +2172,13 @@ public final class BtcstakingProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(4, slashedBabylonHeight_);
       }
-      if (slashedBtcHeight_ != 0L) {
+      if (slashedBtcHeight_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(5, slashedBtcHeight_);
+          .computeUInt32Size(5, slashedBtcHeight_);
       }
-      if (sluggish_ != false) {
+      if (jailed_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(6, sluggish_);
+          .computeBoolSize(6, jailed_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2181,8 +2205,8 @@ public final class BtcstakingProto {
           != other.getSlashedBabylonHeight()) return false;
       if (getSlashedBtcHeight()
           != other.getSlashedBtcHeight()) return false;
-      if (getSluggish()
-          != other.getSluggish()) return false;
+      if (getJailed()
+          != other.getJailed()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2206,11 +2230,10 @@ public final class BtcstakingProto {
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getSlashedBabylonHeight());
       hash = (37 * hash) + SLASHED_BTC_HEIGHT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getSlashedBtcHeight());
-      hash = (37 * hash) + SLUGGISH_FIELD_NUMBER;
+      hash = (53 * hash) + getSlashedBtcHeight();
+      hash = (37 * hash) + JAILED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getSluggish());
+          getJailed());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2350,8 +2373,8 @@ public final class BtcstakingProto {
         height_ = 0L;
         votingPower_ = 0L;
         slashedBabylonHeight_ = 0L;
-        slashedBtcHeight_ = 0L;
-        sluggish_ = false;
+        slashedBtcHeight_ = 0;
+        jailed_ = false;
         return this;
       }
 
@@ -2401,7 +2424,7 @@ public final class BtcstakingProto {
           result.slashedBtcHeight_ = slashedBtcHeight_;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.sluggish_ = sluggish_;
+          result.jailed_ = jailed_;
         }
       }
 
@@ -2461,11 +2484,11 @@ public final class BtcstakingProto {
         if (other.getSlashedBabylonHeight() != 0L) {
           setSlashedBabylonHeight(other.getSlashedBabylonHeight());
         }
-        if (other.getSlashedBtcHeight() != 0L) {
+        if (other.getSlashedBtcHeight() != 0) {
           setSlashedBtcHeight(other.getSlashedBtcHeight());
         }
-        if (other.getSluggish() != false) {
-          setSluggish(other.getSluggish());
+        if (other.getJailed() != false) {
+          setJailed(other.getJailed());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -2514,12 +2537,12 @@ public final class BtcstakingProto {
                 break;
               } // case 32
               case 40: {
-                slashedBtcHeight_ = input.readUInt64();
+                slashedBtcHeight_ = input.readUInt32();
                 bitField0_ |= 0x00000010;
                 break;
               } // case 40
               case 48: {
-                sluggish_ = input.readBool();
+                jailed_ = input.readBool();
                 bitField0_ |= 0x00000020;
                 break;
               } // case 48
@@ -2547,7 +2570,7 @@ public final class BtcstakingProto {
        * the PK follows encoding in BIP-340 spec
        * </pre>
        *
-       * <code>bytes btc_pk = 1 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes btc_pk = 1 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The btcPk.
        */
       @java.lang.Override
@@ -2560,7 +2583,7 @@ public final class BtcstakingProto {
        * the PK follows encoding in BIP-340 spec
        * </pre>
        *
-       * <code>bytes btc_pk = 1 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes btc_pk = 1 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param value The btcPk to set.
        * @return This builder for chaining.
        */
@@ -2577,7 +2600,7 @@ public final class BtcstakingProto {
        * the PK follows encoding in BIP-340 spec
        * </pre>
        *
-       * <code>bytes btc_pk = 1 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes btc_pk = 1 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBtcPk() {
@@ -2725,7 +2748,7 @@ public final class BtcstakingProto {
         return this;
       }
 
-      private long slashedBtcHeight_ ;
+      private int slashedBtcHeight_ ;
       /**
        * <pre>
        * slashed_btc_height indicates the BTC height when
@@ -2733,11 +2756,11 @@ public final class BtcstakingProto {
        * if it's 0 then the finality provider is not slashed
        * </pre>
        *
-       * <code>uint64 slashed_btc_height = 5 [json_name = "slashedBtcHeight"];</code>
+       * <code>uint32 slashed_btc_height = 5 [json_name = "slashedBtcHeight"];</code>
        * @return The slashedBtcHeight.
        */
       @java.lang.Override
-      public long getSlashedBtcHeight() {
+      public int getSlashedBtcHeight() {
         return slashedBtcHeight_;
       }
       /**
@@ -2747,11 +2770,11 @@ public final class BtcstakingProto {
        * if it's 0 then the finality provider is not slashed
        * </pre>
        *
-       * <code>uint64 slashed_btc_height = 5 [json_name = "slashedBtcHeight"];</code>
+       * <code>uint32 slashed_btc_height = 5 [json_name = "slashedBtcHeight"];</code>
        * @param value The slashedBtcHeight to set.
        * @return This builder for chaining.
        */
-      public Builder setSlashedBtcHeight(long value) {
+      public Builder setSlashedBtcHeight(int value) {
 
         slashedBtcHeight_ = value;
         bitField0_ |= 0x00000010;
@@ -2765,56 +2788,56 @@ public final class BtcstakingProto {
        * if it's 0 then the finality provider is not slashed
        * </pre>
        *
-       * <code>uint64 slashed_btc_height = 5 [json_name = "slashedBtcHeight"];</code>
+       * <code>uint32 slashed_btc_height = 5 [json_name = "slashedBtcHeight"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSlashedBtcHeight() {
         bitField0_ = (bitField0_ & ~0x00000010);
-        slashedBtcHeight_ = 0L;
+        slashedBtcHeight_ = 0;
         onChanged();
         return this;
       }
 
-      private boolean sluggish_ ;
+      private boolean jailed_ ;
       /**
        * <pre>
-       * sluggish defines whether the finality provider is detected sluggish
+       * jailed defines whether the finality provider is detected jailed
        * </pre>
        *
-       * <code>bool sluggish = 6 [json_name = "sluggish"];</code>
-       * @return The sluggish.
+       * <code>bool jailed = 6 [json_name = "jailed"];</code>
+       * @return The jailed.
        */
       @java.lang.Override
-      public boolean getSluggish() {
-        return sluggish_;
+      public boolean getJailed() {
+        return jailed_;
       }
       /**
        * <pre>
-       * sluggish defines whether the finality provider is detected sluggish
+       * jailed defines whether the finality provider is detected jailed
        * </pre>
        *
-       * <code>bool sluggish = 6 [json_name = "sluggish"];</code>
-       * @param value The sluggish to set.
+       * <code>bool jailed = 6 [json_name = "jailed"];</code>
+       * @param value The jailed to set.
        * @return This builder for chaining.
        */
-      public Builder setSluggish(boolean value) {
+      public Builder setJailed(boolean value) {
 
-        sluggish_ = value;
+        jailed_ = value;
         bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * sluggish defines whether the finality provider is detected sluggish
+       * jailed defines whether the finality provider is detected jailed
        * </pre>
        *
-       * <code>bool sluggish = 6 [json_name = "sluggish"];</code>
+       * <code>bool jailed = 6 [json_name = "jailed"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearSluggish() {
+      public Builder clearJailed() {
         bitField0_ = (bitField0_ & ~0x00000020);
-        sluggish_ = false;
+        jailed_ = false;
         onChanged();
         return this;
       }
@@ -2912,7 +2935,7 @@ public final class BtcstakingProto {
      * the PK follows encoding in BIP-340 spec
      * </pre>
      *
-     * <code>bytes btc_pk = 2 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes btc_pk = 2 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The btcPk.
      */
     com.google.protobuf.ByteString getBtcPk();
@@ -2952,7 +2975,7 @@ public final class BtcstakingProto {
      * to multiple finality providers
      * </pre>
      *
-     * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return A list containing the fpBtcPkList.
      */
     java.util.List<com.google.protobuf.ByteString> getFpBtcPkListList();
@@ -2964,7 +2987,7 @@ public final class BtcstakingProto {
      * to multiple finality providers
      * </pre>
      *
-     * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The count of fpBtcPkList.
      */
     int getFpBtcPkListCount();
@@ -2976,7 +2999,7 @@ public final class BtcstakingProto {
      * to multiple finality providers
      * </pre>
      *
-     * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @param index The index of the element to return.
      * @return The fpBtcPkList at the given index.
      */
@@ -2984,25 +3007,35 @@ public final class BtcstakingProto {
 
     /**
      * <pre>
+     * staking_time is the number of blocks for which the delegation is locked on BTC chain
+     * </pre>
+     *
+     * <code>uint32 staking_time = 5 [json_name = "stakingTime"];</code>
+     * @return The stakingTime.
+     */
+    int getStakingTime();
+
+    /**
+     * <pre>
      * start_height is the start BTC height of the BTC delegation
      * it is the start BTC height of the timelock
      * </pre>
      *
-     * <code>uint64 start_height = 5 [json_name = "startHeight"];</code>
+     * <code>uint32 start_height = 6 [json_name = "startHeight"];</code>
      * @return The startHeight.
      */
-    long getStartHeight();
+    int getStartHeight();
 
     /**
      * <pre>
      * end_height is the end height of the BTC delegation
-     * it is the end BTC height of the timelock - w
+     * it is calculated by end_height = start_height + staking_time
      * </pre>
      *
-     * <code>uint64 end_height = 6 [json_name = "endHeight"];</code>
+     * <code>uint32 end_height = 7 [json_name = "endHeight"];</code>
      * @return The endHeight.
      */
-    long getEndHeight();
+    int getEndHeight();
 
     /**
      * <pre>
@@ -3010,7 +3043,7 @@ public final class BtcstakingProto {
      * quantified in satoshi
      * </pre>
      *
-     * <code>uint64 total_sat = 7 [json_name = "totalSat"];</code>
+     * <code>uint64 total_sat = 8 [json_name = "totalSat"];</code>
      * @return The totalSat.
      */
     long getTotalSat();
@@ -3020,7 +3053,7 @@ public final class BtcstakingProto {
      * staking_tx is the staking tx
      * </pre>
      *
-     * <code>bytes staking_tx = 8 [json_name = "stakingTx"];</code>
+     * <code>bytes staking_tx = 9 [json_name = "stakingTx"];</code>
      * @return The stakingTx.
      */
     com.google.protobuf.ByteString getStakingTx();
@@ -3030,7 +3063,7 @@ public final class BtcstakingProto {
      * staking_output_idx is the index of the staking output in the staking tx
      * </pre>
      *
-     * <code>uint32 staking_output_idx = 9 [json_name = "stakingOutputIdx"];</code>
+     * <code>uint32 staking_output_idx = 10 [json_name = "stakingOutputIdx"];</code>
      * @return The stakingOutputIdx.
      */
     int getStakingOutputIdx();
@@ -3042,7 +3075,7 @@ public final class BtcstakingProto {
      * finality provider or covenant yet.
      * </pre>
      *
-     * <code>bytes slashing_tx = 10 [json_name = "slashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
+     * <code>bytes slashing_tx = 11 [json_name = "slashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
      * @return The slashingTx.
      */
     com.google.protobuf.ByteString getSlashingTx();
@@ -3054,7 +3087,7 @@ public final class BtcstakingProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>bytes delegator_sig = 11 [json_name = "delegatorSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+     * <code>bytes delegator_sig = 12 [json_name = "delegatorSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
      * @return The delegatorSig.
      */
     com.google.protobuf.ByteString getDelegatorSig();
@@ -3066,7 +3099,7 @@ public final class BtcstakingProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
      */
     java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures> 
         getCovenantSigsList();
@@ -3077,7 +3110,7 @@ public final class BtcstakingProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
      */
     com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures getCovenantSigs(int index);
     /**
@@ -3087,7 +3120,7 @@ public final class BtcstakingProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
      */
     int getCovenantSigsCount();
     /**
@@ -3097,7 +3130,7 @@ public final class BtcstakingProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
      */
     java.util.List<? extends com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder> 
         getCovenantSigsOrBuilderList();
@@ -3108,7 +3141,7 @@ public final class BtcstakingProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
      */
     com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder getCovenantSigsOrBuilder(
         int index);
@@ -3119,7 +3152,7 @@ public final class BtcstakingProto {
      * or slashing change output
      * </pre>
      *
-     * <code>uint32 unbonding_time = 13 [json_name = "unbondingTime"];</code>
+     * <code>uint32 unbonding_time = 14 [json_name = "unbondingTime"];</code>
      * @return The unbondingTime.
      */
     int getUnbondingTime();
@@ -3129,7 +3162,7 @@ public final class BtcstakingProto {
      * btc_undelegation is the information about the early unbonding path of the BTC delegation
      * </pre>
      *
-     * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 14 [json_name = "btcUndelegation"];</code>
+     * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 15 [json_name = "btcUndelegation"];</code>
      * @return Whether the btcUndelegation field is set.
      */
     boolean hasBtcUndelegation();
@@ -3138,7 +3171,7 @@ public final class BtcstakingProto {
      * btc_undelegation is the information about the early unbonding path of the BTC delegation
      * </pre>
      *
-     * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 14 [json_name = "btcUndelegation"];</code>
+     * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 15 [json_name = "btcUndelegation"];</code>
      * @return The btcUndelegation.
      */
     com.babylon.btcstaking.v1.BtcstakingProto.BTCUndelegation getBtcUndelegation();
@@ -3147,7 +3180,7 @@ public final class BtcstakingProto {
      * btc_undelegation is the information about the early unbonding path of the BTC delegation
      * </pre>
      *
-     * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 14 [json_name = "btcUndelegation"];</code>
+     * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 15 [json_name = "btcUndelegation"];</code>
      */
     com.babylon.btcstaking.v1.BtcstakingProto.BTCUndelegationOrBuilder getBtcUndelegationOrBuilder();
 
@@ -3156,7 +3189,7 @@ public final class BtcstakingProto {
      * version of the params used to validate the delegation
      * </pre>
      *
-     * <code>uint32 params_version = 15 [json_name = "paramsVersion"];</code>
+     * <code>uint32 params_version = 16 [json_name = "paramsVersion"];</code>
      * @return The paramsVersion.
      */
     int getParamsVersion();
@@ -3262,7 +3295,7 @@ public final class BtcstakingProto {
      * the PK follows encoding in BIP-340 spec
      * </pre>
      *
-     * <code>bytes btc_pk = 2 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes btc_pk = 2 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The btcPk.
      */
     @java.lang.Override
@@ -3319,7 +3352,7 @@ public final class BtcstakingProto {
      * to multiple finality providers
      * </pre>
      *
-     * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return A list containing the fpBtcPkList.
      */
     @java.lang.Override
@@ -3335,7 +3368,7 @@ public final class BtcstakingProto {
      * to multiple finality providers
      * </pre>
      *
-     * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The count of fpBtcPkList.
      */
     public int getFpBtcPkListCount() {
@@ -3349,7 +3382,7 @@ public final class BtcstakingProto {
      * to multiple finality providers
      * </pre>
      *
-     * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @param index The index of the element to return.
      * @return The fpBtcPkList at the given index.
      */
@@ -3357,39 +3390,54 @@ public final class BtcstakingProto {
       return fpBtcPkList_.get(index);
     }
 
-    public static final int START_HEIGHT_FIELD_NUMBER = 5;
-    private long startHeight_ = 0L;
+    public static final int STAKING_TIME_FIELD_NUMBER = 5;
+    private int stakingTime_ = 0;
+    /**
+     * <pre>
+     * staking_time is the number of blocks for which the delegation is locked on BTC chain
+     * </pre>
+     *
+     * <code>uint32 staking_time = 5 [json_name = "stakingTime"];</code>
+     * @return The stakingTime.
+     */
+    @java.lang.Override
+    public int getStakingTime() {
+      return stakingTime_;
+    }
+
+    public static final int START_HEIGHT_FIELD_NUMBER = 6;
+    private int startHeight_ = 0;
     /**
      * <pre>
      * start_height is the start BTC height of the BTC delegation
      * it is the start BTC height of the timelock
      * </pre>
      *
-     * <code>uint64 start_height = 5 [json_name = "startHeight"];</code>
+     * <code>uint32 start_height = 6 [json_name = "startHeight"];</code>
      * @return The startHeight.
      */
     @java.lang.Override
-    public long getStartHeight() {
+    public int getStartHeight() {
       return startHeight_;
     }
 
-    public static final int END_HEIGHT_FIELD_NUMBER = 6;
-    private long endHeight_ = 0L;
+    public static final int END_HEIGHT_FIELD_NUMBER = 7;
+    private int endHeight_ = 0;
     /**
      * <pre>
      * end_height is the end height of the BTC delegation
-     * it is the end BTC height of the timelock - w
+     * it is calculated by end_height = start_height + staking_time
      * </pre>
      *
-     * <code>uint64 end_height = 6 [json_name = "endHeight"];</code>
+     * <code>uint32 end_height = 7 [json_name = "endHeight"];</code>
      * @return The endHeight.
      */
     @java.lang.Override
-    public long getEndHeight() {
+    public int getEndHeight() {
       return endHeight_;
     }
 
-    public static final int TOTAL_SAT_FIELD_NUMBER = 7;
+    public static final int TOTAL_SAT_FIELD_NUMBER = 8;
     private long totalSat_ = 0L;
     /**
      * <pre>
@@ -3397,7 +3445,7 @@ public final class BtcstakingProto {
      * quantified in satoshi
      * </pre>
      *
-     * <code>uint64 total_sat = 7 [json_name = "totalSat"];</code>
+     * <code>uint64 total_sat = 8 [json_name = "totalSat"];</code>
      * @return The totalSat.
      */
     @java.lang.Override
@@ -3405,14 +3453,14 @@ public final class BtcstakingProto {
       return totalSat_;
     }
 
-    public static final int STAKING_TX_FIELD_NUMBER = 8;
+    public static final int STAKING_TX_FIELD_NUMBER = 9;
     private com.google.protobuf.ByteString stakingTx_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <pre>
      * staking_tx is the staking tx
      * </pre>
      *
-     * <code>bytes staking_tx = 8 [json_name = "stakingTx"];</code>
+     * <code>bytes staking_tx = 9 [json_name = "stakingTx"];</code>
      * @return The stakingTx.
      */
     @java.lang.Override
@@ -3420,14 +3468,14 @@ public final class BtcstakingProto {
       return stakingTx_;
     }
 
-    public static final int STAKING_OUTPUT_IDX_FIELD_NUMBER = 9;
+    public static final int STAKING_OUTPUT_IDX_FIELD_NUMBER = 10;
     private int stakingOutputIdx_ = 0;
     /**
      * <pre>
      * staking_output_idx is the index of the staking output in the staking tx
      * </pre>
      *
-     * <code>uint32 staking_output_idx = 9 [json_name = "stakingOutputIdx"];</code>
+     * <code>uint32 staking_output_idx = 10 [json_name = "stakingOutputIdx"];</code>
      * @return The stakingOutputIdx.
      */
     @java.lang.Override
@@ -3435,7 +3483,7 @@ public final class BtcstakingProto {
       return stakingOutputIdx_;
     }
 
-    public static final int SLASHING_TX_FIELD_NUMBER = 10;
+    public static final int SLASHING_TX_FIELD_NUMBER = 11;
     private com.google.protobuf.ByteString slashingTx_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <pre>
@@ -3444,7 +3492,7 @@ public final class BtcstakingProto {
      * finality provider or covenant yet.
      * </pre>
      *
-     * <code>bytes slashing_tx = 10 [json_name = "slashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
+     * <code>bytes slashing_tx = 11 [json_name = "slashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
      * @return The slashingTx.
      */
     @java.lang.Override
@@ -3452,7 +3500,7 @@ public final class BtcstakingProto {
       return slashingTx_;
     }
 
-    public static final int DELEGATOR_SIG_FIELD_NUMBER = 11;
+    public static final int DELEGATOR_SIG_FIELD_NUMBER = 12;
     private com.google.protobuf.ByteString delegatorSig_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <pre>
@@ -3461,7 +3509,7 @@ public final class BtcstakingProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>bytes delegator_sig = 11 [json_name = "delegatorSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+     * <code>bytes delegator_sig = 12 [json_name = "delegatorSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
      * @return The delegatorSig.
      */
     @java.lang.Override
@@ -3469,7 +3517,7 @@ public final class BtcstakingProto {
       return delegatorSig_;
     }
 
-    public static final int COVENANT_SIGS_FIELD_NUMBER = 12;
+    public static final int COVENANT_SIGS_FIELD_NUMBER = 13;
     @SuppressWarnings("serial")
     private java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures> covenantSigs_;
     /**
@@ -3479,7 +3527,7 @@ public final class BtcstakingProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
      */
     @java.lang.Override
     public java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures> getCovenantSigsList() {
@@ -3492,7 +3540,7 @@ public final class BtcstakingProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder> 
@@ -3506,7 +3554,7 @@ public final class BtcstakingProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
      */
     @java.lang.Override
     public int getCovenantSigsCount() {
@@ -3519,7 +3567,7 @@ public final class BtcstakingProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
      */
     @java.lang.Override
     public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures getCovenantSigs(int index) {
@@ -3532,7 +3580,7 @@ public final class BtcstakingProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
      */
     @java.lang.Override
     public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder getCovenantSigsOrBuilder(
@@ -3540,7 +3588,7 @@ public final class BtcstakingProto {
       return covenantSigs_.get(index);
     }
 
-    public static final int UNBONDING_TIME_FIELD_NUMBER = 13;
+    public static final int UNBONDING_TIME_FIELD_NUMBER = 14;
     private int unbondingTime_ = 0;
     /**
      * <pre>
@@ -3548,7 +3596,7 @@ public final class BtcstakingProto {
      * or slashing change output
      * </pre>
      *
-     * <code>uint32 unbonding_time = 13 [json_name = "unbondingTime"];</code>
+     * <code>uint32 unbonding_time = 14 [json_name = "unbondingTime"];</code>
      * @return The unbondingTime.
      */
     @java.lang.Override
@@ -3556,14 +3604,14 @@ public final class BtcstakingProto {
       return unbondingTime_;
     }
 
-    public static final int BTC_UNDELEGATION_FIELD_NUMBER = 14;
+    public static final int BTC_UNDELEGATION_FIELD_NUMBER = 15;
     private com.babylon.btcstaking.v1.BtcstakingProto.BTCUndelegation btcUndelegation_;
     /**
      * <pre>
      * btc_undelegation is the information about the early unbonding path of the BTC delegation
      * </pre>
      *
-     * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 14 [json_name = "btcUndelegation"];</code>
+     * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 15 [json_name = "btcUndelegation"];</code>
      * @return Whether the btcUndelegation field is set.
      */
     @java.lang.Override
@@ -3575,7 +3623,7 @@ public final class BtcstakingProto {
      * btc_undelegation is the information about the early unbonding path of the BTC delegation
      * </pre>
      *
-     * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 14 [json_name = "btcUndelegation"];</code>
+     * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 15 [json_name = "btcUndelegation"];</code>
      * @return The btcUndelegation.
      */
     @java.lang.Override
@@ -3587,21 +3635,21 @@ public final class BtcstakingProto {
      * btc_undelegation is the information about the early unbonding path of the BTC delegation
      * </pre>
      *
-     * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 14 [json_name = "btcUndelegation"];</code>
+     * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 15 [json_name = "btcUndelegation"];</code>
      */
     @java.lang.Override
     public com.babylon.btcstaking.v1.BtcstakingProto.BTCUndelegationOrBuilder getBtcUndelegationOrBuilder() {
       return btcUndelegation_ == null ? com.babylon.btcstaking.v1.BtcstakingProto.BTCUndelegation.getDefaultInstance() : btcUndelegation_;
     }
 
-    public static final int PARAMS_VERSION_FIELD_NUMBER = 15;
+    public static final int PARAMS_VERSION_FIELD_NUMBER = 16;
     private int paramsVersion_ = 0;
     /**
      * <pre>
      * version of the params used to validate the delegation
      * </pre>
      *
-     * <code>uint32 params_version = 15 [json_name = "paramsVersion"];</code>
+     * <code>uint32 params_version = 16 [json_name = "paramsVersion"];</code>
      * @return The paramsVersion.
      */
     @java.lang.Override
@@ -3635,38 +3683,41 @@ public final class BtcstakingProto {
       for (int i = 0; i < fpBtcPkList_.size(); i++) {
         output.writeBytes(4, fpBtcPkList_.get(i));
       }
-      if (startHeight_ != 0L) {
-        output.writeUInt64(5, startHeight_);
+      if (stakingTime_ != 0) {
+        output.writeUInt32(5, stakingTime_);
       }
-      if (endHeight_ != 0L) {
-        output.writeUInt64(6, endHeight_);
+      if (startHeight_ != 0) {
+        output.writeUInt32(6, startHeight_);
+      }
+      if (endHeight_ != 0) {
+        output.writeUInt32(7, endHeight_);
       }
       if (totalSat_ != 0L) {
-        output.writeUInt64(7, totalSat_);
+        output.writeUInt64(8, totalSat_);
       }
       if (!stakingTx_.isEmpty()) {
-        output.writeBytes(8, stakingTx_);
+        output.writeBytes(9, stakingTx_);
       }
       if (stakingOutputIdx_ != 0) {
-        output.writeUInt32(9, stakingOutputIdx_);
+        output.writeUInt32(10, stakingOutputIdx_);
       }
       if (!slashingTx_.isEmpty()) {
-        output.writeBytes(10, slashingTx_);
+        output.writeBytes(11, slashingTx_);
       }
       if (!delegatorSig_.isEmpty()) {
-        output.writeBytes(11, delegatorSig_);
+        output.writeBytes(12, delegatorSig_);
       }
       for (int i = 0; i < covenantSigs_.size(); i++) {
-        output.writeMessage(12, covenantSigs_.get(i));
+        output.writeMessage(13, covenantSigs_.get(i));
       }
       if (unbondingTime_ != 0) {
-        output.writeUInt32(13, unbondingTime_);
+        output.writeUInt32(14, unbondingTime_);
       }
       if (btcUndelegation_ != null) {
-        output.writeMessage(14, getBtcUndelegation());
+        output.writeMessage(15, getBtcUndelegation());
       }
       if (paramsVersion_ != 0) {
-        output.writeUInt32(15, paramsVersion_);
+        output.writeUInt32(16, paramsVersion_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3697,49 +3748,53 @@ public final class BtcstakingProto {
         size += dataSize;
         size += 1 * getFpBtcPkListList().size();
       }
-      if (startHeight_ != 0L) {
+      if (stakingTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(5, startHeight_);
+          .computeUInt32Size(5, stakingTime_);
       }
-      if (endHeight_ != 0L) {
+      if (startHeight_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(6, endHeight_);
+          .computeUInt32Size(6, startHeight_);
+      }
+      if (endHeight_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(7, endHeight_);
       }
       if (totalSat_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(7, totalSat_);
+          .computeUInt64Size(8, totalSat_);
       }
       if (!stakingTx_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(8, stakingTx_);
+          .computeBytesSize(9, stakingTx_);
       }
       if (stakingOutputIdx_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, stakingOutputIdx_);
+          .computeUInt32Size(10, stakingOutputIdx_);
       }
       if (!slashingTx_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(10, slashingTx_);
+          .computeBytesSize(11, slashingTx_);
       }
       if (!delegatorSig_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(11, delegatorSig_);
+          .computeBytesSize(12, delegatorSig_);
       }
       for (int i = 0; i < covenantSigs_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, covenantSigs_.get(i));
+          .computeMessageSize(13, covenantSigs_.get(i));
       }
       if (unbondingTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, unbondingTime_);
+          .computeUInt32Size(14, unbondingTime_);
       }
       if (btcUndelegation_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, getBtcUndelegation());
+          .computeMessageSize(15, getBtcUndelegation());
       }
       if (paramsVersion_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, paramsVersion_);
+          .computeUInt32Size(16, paramsVersion_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3767,6 +3822,8 @@ public final class BtcstakingProto {
       }
       if (!getFpBtcPkListList()
           .equals(other.getFpBtcPkListList())) return false;
+      if (getStakingTime()
+          != other.getStakingTime()) return false;
       if (getStartHeight()
           != other.getStartHeight()) return false;
       if (getEndHeight()
@@ -3815,12 +3872,12 @@ public final class BtcstakingProto {
         hash = (37 * hash) + FP_BTC_PK_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getFpBtcPkListList().hashCode();
       }
+      hash = (37 * hash) + STAKING_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingTime();
       hash = (37 * hash) + START_HEIGHT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getStartHeight());
+      hash = (53 * hash) + getStartHeight();
       hash = (37 * hash) + END_HEIGHT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getEndHeight());
+      hash = (53 * hash) + getEndHeight();
       hash = (37 * hash) + TOTAL_SAT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getTotalSat());
@@ -3987,8 +4044,9 @@ public final class BtcstakingProto {
           popBuilder_ = null;
         }
         fpBtcPkList_ = java.util.Collections.emptyList();
-        startHeight_ = 0L;
-        endHeight_ = 0L;
+        stakingTime_ = 0;
+        startHeight_ = 0;
+        endHeight_ = 0;
         totalSat_ = 0L;
         stakingTx_ = com.google.protobuf.ByteString.EMPTY;
         stakingOutputIdx_ = 0;
@@ -4000,7 +4058,7 @@ public final class BtcstakingProto {
           covenantSigs_ = null;
           covenantSigsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00001000);
         unbondingTime_ = 0;
         btcUndelegation_ = null;
         if (btcUndelegationBuilder_ != null) {
@@ -4047,9 +4105,9 @@ public final class BtcstakingProto {
         }
         result.fpBtcPkList_ = fpBtcPkList_;
         if (covenantSigsBuilder_ == null) {
-          if (((bitField0_ & 0x00000800) != 0)) {
+          if (((bitField0_ & 0x00001000) != 0)) {
             covenantSigs_ = java.util.Collections.unmodifiableList(covenantSigs_);
-            bitField0_ = (bitField0_ & ~0x00000800);
+            bitField0_ = (bitField0_ & ~0x00001000);
           }
           result.covenantSigs_ = covenantSigs_;
         } else {
@@ -4071,35 +4129,38 @@ public final class BtcstakingProto {
               : popBuilder_.build();
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.startHeight_ = startHeight_;
+          result.stakingTime_ = stakingTime_;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.endHeight_ = endHeight_;
+          result.startHeight_ = startHeight_;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.totalSat_ = totalSat_;
+          result.endHeight_ = endHeight_;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.stakingTx_ = stakingTx_;
+          result.totalSat_ = totalSat_;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
-          result.stakingOutputIdx_ = stakingOutputIdx_;
+          result.stakingTx_ = stakingTx_;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
-          result.slashingTx_ = slashingTx_;
+          result.stakingOutputIdx_ = stakingOutputIdx_;
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.slashingTx_ = slashingTx_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
           result.delegatorSig_ = delegatorSig_;
         }
-        if (((from_bitField0_ & 0x00001000) != 0)) {
+        if (((from_bitField0_ & 0x00002000) != 0)) {
           result.unbondingTime_ = unbondingTime_;
         }
-        if (((from_bitField0_ & 0x00002000) != 0)) {
+        if (((from_bitField0_ & 0x00004000) != 0)) {
           result.btcUndelegation_ = btcUndelegationBuilder_ == null
               ? btcUndelegation_
               : btcUndelegationBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00004000) != 0)) {
+        if (((from_bitField0_ & 0x00008000) != 0)) {
           result.paramsVersion_ = paramsVersion_;
         }
       }
@@ -4169,10 +4230,13 @@ public final class BtcstakingProto {
           }
           onChanged();
         }
-        if (other.getStartHeight() != 0L) {
+        if (other.getStakingTime() != 0) {
+          setStakingTime(other.getStakingTime());
+        }
+        if (other.getStartHeight() != 0) {
           setStartHeight(other.getStartHeight());
         }
-        if (other.getEndHeight() != 0L) {
+        if (other.getEndHeight() != 0) {
           setEndHeight(other.getEndHeight());
         }
         if (other.getTotalSat() != 0L) {
@@ -4194,7 +4258,7 @@ public final class BtcstakingProto {
           if (!other.covenantSigs_.isEmpty()) {
             if (covenantSigs_.isEmpty()) {
               covenantSigs_ = other.covenantSigs_;
-              bitField0_ = (bitField0_ & ~0x00000800);
+              bitField0_ = (bitField0_ & ~0x00001000);
             } else {
               ensureCovenantSigsIsMutable();
               covenantSigs_.addAll(other.covenantSigs_);
@@ -4207,7 +4271,7 @@ public final class BtcstakingProto {
               covenantSigsBuilder_.dispose();
               covenantSigsBuilder_ = null;
               covenantSigs_ = other.covenantSigs_;
-              bitField0_ = (bitField0_ & ~0x00000800);
+              bitField0_ = (bitField0_ & ~0x00001000);
               covenantSigsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getCovenantSigsFieldBuilder() : null;
@@ -4275,41 +4339,46 @@ public final class BtcstakingProto {
                 break;
               } // case 34
               case 40: {
-                startHeight_ = input.readUInt64();
+                stakingTime_ = input.readUInt32();
                 bitField0_ |= 0x00000010;
                 break;
               } // case 40
               case 48: {
-                endHeight_ = input.readUInt64();
+                startHeight_ = input.readUInt32();
                 bitField0_ |= 0x00000020;
                 break;
               } // case 48
               case 56: {
-                totalSat_ = input.readUInt64();
+                endHeight_ = input.readUInt32();
                 bitField0_ |= 0x00000040;
                 break;
               } // case 56
-              case 66: {
-                stakingTx_ = input.readBytes();
+              case 64: {
+                totalSat_ = input.readUInt64();
                 bitField0_ |= 0x00000080;
                 break;
-              } // case 66
-              case 72: {
-                stakingOutputIdx_ = input.readUInt32();
+              } // case 64
+              case 74: {
+                stakingTx_ = input.readBytes();
                 bitField0_ |= 0x00000100;
                 break;
-              } // case 72
-              case 82: {
-                slashingTx_ = input.readBytes();
+              } // case 74
+              case 80: {
+                stakingOutputIdx_ = input.readUInt32();
                 bitField0_ |= 0x00000200;
                 break;
-              } // case 82
+              } // case 80
               case 90: {
-                delegatorSig_ = input.readBytes();
+                slashingTx_ = input.readBytes();
                 bitField0_ |= 0x00000400;
                 break;
               } // case 90
               case 98: {
+                delegatorSig_ = input.readBytes();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 98
+              case 106: {
                 com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures m =
                     input.readMessage(
                         com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.parser(),
@@ -4321,24 +4390,24 @@ public final class BtcstakingProto {
                   covenantSigsBuilder_.addMessage(m);
                 }
                 break;
-              } // case 98
-              case 104: {
+              } // case 106
+              case 112: {
                 unbondingTime_ = input.readUInt32();
-                bitField0_ |= 0x00001000;
+                bitField0_ |= 0x00002000;
                 break;
-              } // case 104
-              case 114: {
+              } // case 112
+              case 122: {
                 input.readMessage(
                     getBtcUndelegationFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00002000;
-                break;
-              } // case 114
-              case 120: {
-                paramsVersion_ = input.readUInt32();
                 bitField0_ |= 0x00004000;
                 break;
-              } // case 120
+              } // case 122
+              case 128: {
+                paramsVersion_ = input.readUInt32();
+                bitField0_ |= 0x00008000;
+                break;
+              } // case 128
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4455,7 +4524,7 @@ public final class BtcstakingProto {
        * the PK follows encoding in BIP-340 spec
        * </pre>
        *
-       * <code>bytes btc_pk = 2 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes btc_pk = 2 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The btcPk.
        */
       @java.lang.Override
@@ -4468,7 +4537,7 @@ public final class BtcstakingProto {
        * the PK follows encoding in BIP-340 spec
        * </pre>
        *
-       * <code>bytes btc_pk = 2 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes btc_pk = 2 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param value The btcPk to set.
        * @return This builder for chaining.
        */
@@ -4485,7 +4554,7 @@ public final class BtcstakingProto {
        * the PK follows encoding in BIP-340 spec
        * </pre>
        *
-       * <code>bytes btc_pk = 2 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes btc_pk = 2 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBtcPk() {
@@ -4665,7 +4734,7 @@ public final class BtcstakingProto {
        * to multiple finality providers
        * </pre>
        *
-       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return A list containing the fpBtcPkList.
        */
       public java.util.List<com.google.protobuf.ByteString>
@@ -4681,7 +4750,7 @@ public final class BtcstakingProto {
        * to multiple finality providers
        * </pre>
        *
-       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The count of fpBtcPkList.
        */
       public int getFpBtcPkListCount() {
@@ -4695,7 +4764,7 @@ public final class BtcstakingProto {
        * to multiple finality providers
        * </pre>
        *
-       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param index The index of the element to return.
        * @return The fpBtcPkList at the given index.
        */
@@ -4710,7 +4779,7 @@ public final class BtcstakingProto {
        * to multiple finality providers
        * </pre>
        *
-       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param index The index to set the value at.
        * @param value The fpBtcPkList to set.
        * @return This builder for chaining.
@@ -4731,7 +4800,7 @@ public final class BtcstakingProto {
        * to multiple finality providers
        * </pre>
        *
-       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param value The fpBtcPkList to add.
        * @return This builder for chaining.
        */
@@ -4750,7 +4819,7 @@ public final class BtcstakingProto {
        * to multiple finality providers
        * </pre>
        *
-       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param values The fpBtcPkList to add.
        * @return This builder for chaining.
        */
@@ -4770,7 +4839,7 @@ public final class BtcstakingProto {
        * to multiple finality providers
        * </pre>
        *
-       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFpBtcPkList() {
@@ -4780,18 +4849,62 @@ public final class BtcstakingProto {
         return this;
       }
 
-      private long startHeight_ ;
+      private int stakingTime_ ;
+      /**
+       * <pre>
+       * staking_time is the number of blocks for which the delegation is locked on BTC chain
+       * </pre>
+       *
+       * <code>uint32 staking_time = 5 [json_name = "stakingTime"];</code>
+       * @return The stakingTime.
+       */
+      @java.lang.Override
+      public int getStakingTime() {
+        return stakingTime_;
+      }
+      /**
+       * <pre>
+       * staking_time is the number of blocks for which the delegation is locked on BTC chain
+       * </pre>
+       *
+       * <code>uint32 staking_time = 5 [json_name = "stakingTime"];</code>
+       * @param value The stakingTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingTime(int value) {
+
+        stakingTime_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_time is the number of blocks for which the delegation is locked on BTC chain
+       * </pre>
+       *
+       * <code>uint32 staking_time = 5 [json_name = "stakingTime"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingTime() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        stakingTime_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int startHeight_ ;
       /**
        * <pre>
        * start_height is the start BTC height of the BTC delegation
        * it is the start BTC height of the timelock
        * </pre>
        *
-       * <code>uint64 start_height = 5 [json_name = "startHeight"];</code>
+       * <code>uint32 start_height = 6 [json_name = "startHeight"];</code>
        * @return The startHeight.
        */
       @java.lang.Override
-      public long getStartHeight() {
+      public int getStartHeight() {
         return startHeight_;
       }
       /**
@@ -4800,14 +4913,14 @@ public final class BtcstakingProto {
        * it is the start BTC height of the timelock
        * </pre>
        *
-       * <code>uint64 start_height = 5 [json_name = "startHeight"];</code>
+       * <code>uint32 start_height = 6 [json_name = "startHeight"];</code>
        * @param value The startHeight to set.
        * @return This builder for chaining.
        */
-      public Builder setStartHeight(long value) {
+      public Builder setStartHeight(int value) {
 
         startHeight_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -4817,59 +4930,59 @@ public final class BtcstakingProto {
        * it is the start BTC height of the timelock
        * </pre>
        *
-       * <code>uint64 start_height = 5 [json_name = "startHeight"];</code>
+       * <code>uint32 start_height = 6 [json_name = "startHeight"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStartHeight() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        startHeight_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        startHeight_ = 0;
         onChanged();
         return this;
       }
 
-      private long endHeight_ ;
+      private int endHeight_ ;
       /**
        * <pre>
        * end_height is the end height of the BTC delegation
-       * it is the end BTC height of the timelock - w
+       * it is calculated by end_height = start_height + staking_time
        * </pre>
        *
-       * <code>uint64 end_height = 6 [json_name = "endHeight"];</code>
+       * <code>uint32 end_height = 7 [json_name = "endHeight"];</code>
        * @return The endHeight.
        */
       @java.lang.Override
-      public long getEndHeight() {
+      public int getEndHeight() {
         return endHeight_;
       }
       /**
        * <pre>
        * end_height is the end height of the BTC delegation
-       * it is the end BTC height of the timelock - w
+       * it is calculated by end_height = start_height + staking_time
        * </pre>
        *
-       * <code>uint64 end_height = 6 [json_name = "endHeight"];</code>
+       * <code>uint32 end_height = 7 [json_name = "endHeight"];</code>
        * @param value The endHeight to set.
        * @return This builder for chaining.
        */
-      public Builder setEndHeight(long value) {
+      public Builder setEndHeight(int value) {
 
         endHeight_ = value;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
       /**
        * <pre>
        * end_height is the end height of the BTC delegation
-       * it is the end BTC height of the timelock - w
+       * it is calculated by end_height = start_height + staking_time
        * </pre>
        *
-       * <code>uint64 end_height = 6 [json_name = "endHeight"];</code>
+       * <code>uint32 end_height = 7 [json_name = "endHeight"];</code>
        * @return This builder for chaining.
        */
       public Builder clearEndHeight() {
-        bitField0_ = (bitField0_ & ~0x00000020);
-        endHeight_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        endHeight_ = 0;
         onChanged();
         return this;
       }
@@ -4881,7 +4994,7 @@ public final class BtcstakingProto {
        * quantified in satoshi
        * </pre>
        *
-       * <code>uint64 total_sat = 7 [json_name = "totalSat"];</code>
+       * <code>uint64 total_sat = 8 [json_name = "totalSat"];</code>
        * @return The totalSat.
        */
       @java.lang.Override
@@ -4894,14 +5007,14 @@ public final class BtcstakingProto {
        * quantified in satoshi
        * </pre>
        *
-       * <code>uint64 total_sat = 7 [json_name = "totalSat"];</code>
+       * <code>uint64 total_sat = 8 [json_name = "totalSat"];</code>
        * @param value The totalSat to set.
        * @return This builder for chaining.
        */
       public Builder setTotalSat(long value) {
 
         totalSat_ = value;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -4911,11 +5024,11 @@ public final class BtcstakingProto {
        * quantified in satoshi
        * </pre>
        *
-       * <code>uint64 total_sat = 7 [json_name = "totalSat"];</code>
+       * <code>uint64 total_sat = 8 [json_name = "totalSat"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTotalSat() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000080);
         totalSat_ = 0L;
         onChanged();
         return this;
@@ -4927,7 +5040,7 @@ public final class BtcstakingProto {
        * staking_tx is the staking tx
        * </pre>
        *
-       * <code>bytes staking_tx = 8 [json_name = "stakingTx"];</code>
+       * <code>bytes staking_tx = 9 [json_name = "stakingTx"];</code>
        * @return The stakingTx.
        */
       @java.lang.Override
@@ -4939,14 +5052,14 @@ public final class BtcstakingProto {
        * staking_tx is the staking tx
        * </pre>
        *
-       * <code>bytes staking_tx = 8 [json_name = "stakingTx"];</code>
+       * <code>bytes staking_tx = 9 [json_name = "stakingTx"];</code>
        * @param value The stakingTx to set.
        * @return This builder for chaining.
        */
       public Builder setStakingTx(com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         stakingTx_ = value;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -4955,11 +5068,11 @@ public final class BtcstakingProto {
        * staking_tx is the staking tx
        * </pre>
        *
-       * <code>bytes staking_tx = 8 [json_name = "stakingTx"];</code>
+       * <code>bytes staking_tx = 9 [json_name = "stakingTx"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStakingTx() {
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000100);
         stakingTx_ = getDefaultInstance().getStakingTx();
         onChanged();
         return this;
@@ -4971,7 +5084,7 @@ public final class BtcstakingProto {
        * staking_output_idx is the index of the staking output in the staking tx
        * </pre>
        *
-       * <code>uint32 staking_output_idx = 9 [json_name = "stakingOutputIdx"];</code>
+       * <code>uint32 staking_output_idx = 10 [json_name = "stakingOutputIdx"];</code>
        * @return The stakingOutputIdx.
        */
       @java.lang.Override
@@ -4983,14 +5096,14 @@ public final class BtcstakingProto {
        * staking_output_idx is the index of the staking output in the staking tx
        * </pre>
        *
-       * <code>uint32 staking_output_idx = 9 [json_name = "stakingOutputIdx"];</code>
+       * <code>uint32 staking_output_idx = 10 [json_name = "stakingOutputIdx"];</code>
        * @param value The stakingOutputIdx to set.
        * @return This builder for chaining.
        */
       public Builder setStakingOutputIdx(int value) {
 
         stakingOutputIdx_ = value;
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -4999,11 +5112,11 @@ public final class BtcstakingProto {
        * staking_output_idx is the index of the staking output in the staking tx
        * </pre>
        *
-       * <code>uint32 staking_output_idx = 9 [json_name = "stakingOutputIdx"];</code>
+       * <code>uint32 staking_output_idx = 10 [json_name = "stakingOutputIdx"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStakingOutputIdx() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000200);
         stakingOutputIdx_ = 0;
         onChanged();
         return this;
@@ -5017,7 +5130,7 @@ public final class BtcstakingProto {
        * finality provider or covenant yet.
        * </pre>
        *
-       * <code>bytes slashing_tx = 10 [json_name = "slashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
+       * <code>bytes slashing_tx = 11 [json_name = "slashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
        * @return The slashingTx.
        */
       @java.lang.Override
@@ -5031,14 +5144,14 @@ public final class BtcstakingProto {
        * finality provider or covenant yet.
        * </pre>
        *
-       * <code>bytes slashing_tx = 10 [json_name = "slashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
+       * <code>bytes slashing_tx = 11 [json_name = "slashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
        * @param value The slashingTx to set.
        * @return This builder for chaining.
        */
       public Builder setSlashingTx(com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         slashingTx_ = value;
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -5049,11 +5162,11 @@ public final class BtcstakingProto {
        * finality provider or covenant yet.
        * </pre>
        *
-       * <code>bytes slashing_tx = 10 [json_name = "slashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
+       * <code>bytes slashing_tx = 11 [json_name = "slashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSlashingTx() {
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000400);
         slashingTx_ = getDefaultInstance().getSlashingTx();
         onChanged();
         return this;
@@ -5067,7 +5180,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>bytes delegator_sig = 11 [json_name = "delegatorSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+       * <code>bytes delegator_sig = 12 [json_name = "delegatorSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
        * @return The delegatorSig.
        */
       @java.lang.Override
@@ -5081,14 +5194,14 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>bytes delegator_sig = 11 [json_name = "delegatorSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+       * <code>bytes delegator_sig = 12 [json_name = "delegatorSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
        * @param value The delegatorSig to set.
        * @return This builder for chaining.
        */
       public Builder setDelegatorSig(com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         delegatorSig_ = value;
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -5099,11 +5212,11 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>bytes delegator_sig = 11 [json_name = "delegatorSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+       * <code>bytes delegator_sig = 12 [json_name = "delegatorSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDelegatorSig() {
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000800);
         delegatorSig_ = getDefaultInstance().getDelegatorSig();
         onChanged();
         return this;
@@ -5112,9 +5225,9 @@ public final class BtcstakingProto {
       private java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures> covenantSigs_ =
         java.util.Collections.emptyList();
       private void ensureCovenantSigsIsMutable() {
-        if (!((bitField0_ & 0x00000800) != 0)) {
+        if (!((bitField0_ & 0x00001000) != 0)) {
           covenantSigs_ = new java.util.ArrayList<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures>(covenantSigs_);
-          bitField0_ |= 0x00000800;
+          bitField0_ |= 0x00001000;
          }
       }
 
@@ -5128,7 +5241,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
        */
       public java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures> getCovenantSigsList() {
         if (covenantSigsBuilder_ == null) {
@@ -5144,7 +5257,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
        */
       public int getCovenantSigsCount() {
         if (covenantSigsBuilder_ == null) {
@@ -5160,7 +5273,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures getCovenantSigs(int index) {
         if (covenantSigsBuilder_ == null) {
@@ -5176,7 +5289,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
        */
       public Builder setCovenantSigs(
           int index, com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures value) {
@@ -5199,7 +5312,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
        */
       public Builder setCovenantSigs(
           int index, com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder builderForValue) {
@@ -5219,7 +5332,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
        */
       public Builder addCovenantSigs(com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures value) {
         if (covenantSigsBuilder_ == null) {
@@ -5241,7 +5354,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
        */
       public Builder addCovenantSigs(
           int index, com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures value) {
@@ -5264,7 +5377,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
        */
       public Builder addCovenantSigs(
           com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder builderForValue) {
@@ -5284,7 +5397,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
        */
       public Builder addCovenantSigs(
           int index, com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder builderForValue) {
@@ -5304,7 +5417,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
        */
       public Builder addAllCovenantSigs(
           java.lang.Iterable<? extends com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures> values) {
@@ -5325,12 +5438,12 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
        */
       public Builder clearCovenantSigs() {
         if (covenantSigsBuilder_ == null) {
           covenantSigs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000800);
+          bitField0_ = (bitField0_ & ~0x00001000);
           onChanged();
         } else {
           covenantSigsBuilder_.clear();
@@ -5344,7 +5457,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
        */
       public Builder removeCovenantSigs(int index) {
         if (covenantSigsBuilder_ == null) {
@@ -5363,7 +5476,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder getCovenantSigsBuilder(
           int index) {
@@ -5376,7 +5489,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder getCovenantSigsOrBuilder(
           int index) {
@@ -5392,7 +5505,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
        */
       public java.util.List<? extends com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder> 
            getCovenantSigsOrBuilderList() {
@@ -5409,7 +5522,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder addCovenantSigsBuilder() {
         return getCovenantSigsFieldBuilder().addBuilder(
@@ -5422,7 +5535,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder addCovenantSigsBuilder(
           int index) {
@@ -5436,7 +5549,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 12 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 13 [json_name = "covenantSigs"];</code>
        */
       public java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder> 
            getCovenantSigsBuilderList() {
@@ -5449,7 +5562,7 @@ public final class BtcstakingProto {
           covenantSigsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures, com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder, com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder>(
                   covenantSigs_,
-                  ((bitField0_ & 0x00000800) != 0),
+                  ((bitField0_ & 0x00001000) != 0),
                   getParentForChildren(),
                   isClean());
           covenantSigs_ = null;
@@ -5464,7 +5577,7 @@ public final class BtcstakingProto {
        * or slashing change output
        * </pre>
        *
-       * <code>uint32 unbonding_time = 13 [json_name = "unbondingTime"];</code>
+       * <code>uint32 unbonding_time = 14 [json_name = "unbondingTime"];</code>
        * @return The unbondingTime.
        */
       @java.lang.Override
@@ -5477,14 +5590,14 @@ public final class BtcstakingProto {
        * or slashing change output
        * </pre>
        *
-       * <code>uint32 unbonding_time = 13 [json_name = "unbondingTime"];</code>
+       * <code>uint32 unbonding_time = 14 [json_name = "unbondingTime"];</code>
        * @param value The unbondingTime to set.
        * @return This builder for chaining.
        */
       public Builder setUnbondingTime(int value) {
 
         unbondingTime_ = value;
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
@@ -5494,11 +5607,11 @@ public final class BtcstakingProto {
        * or slashing change output
        * </pre>
        *
-       * <code>uint32 unbonding_time = 13 [json_name = "unbondingTime"];</code>
+       * <code>uint32 unbonding_time = 14 [json_name = "unbondingTime"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUnbondingTime() {
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00002000);
         unbondingTime_ = 0;
         onChanged();
         return this;
@@ -5512,18 +5625,18 @@ public final class BtcstakingProto {
        * btc_undelegation is the information about the early unbonding path of the BTC delegation
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 14 [json_name = "btcUndelegation"];</code>
+       * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 15 [json_name = "btcUndelegation"];</code>
        * @return Whether the btcUndelegation field is set.
        */
       public boolean hasBtcUndelegation() {
-        return ((bitField0_ & 0x00002000) != 0);
+        return ((bitField0_ & 0x00004000) != 0);
       }
       /**
        * <pre>
        * btc_undelegation is the information about the early unbonding path of the BTC delegation
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 14 [json_name = "btcUndelegation"];</code>
+       * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 15 [json_name = "btcUndelegation"];</code>
        * @return The btcUndelegation.
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.BTCUndelegation getBtcUndelegation() {
@@ -5538,7 +5651,7 @@ public final class BtcstakingProto {
        * btc_undelegation is the information about the early unbonding path of the BTC delegation
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 14 [json_name = "btcUndelegation"];</code>
+       * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 15 [json_name = "btcUndelegation"];</code>
        */
       public Builder setBtcUndelegation(com.babylon.btcstaking.v1.BtcstakingProto.BTCUndelegation value) {
         if (btcUndelegationBuilder_ == null) {
@@ -5549,7 +5662,7 @@ public final class BtcstakingProto {
         } else {
           btcUndelegationBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -5558,7 +5671,7 @@ public final class BtcstakingProto {
        * btc_undelegation is the information about the early unbonding path of the BTC delegation
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 14 [json_name = "btcUndelegation"];</code>
+       * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 15 [json_name = "btcUndelegation"];</code>
        */
       public Builder setBtcUndelegation(
           com.babylon.btcstaking.v1.BtcstakingProto.BTCUndelegation.Builder builderForValue) {
@@ -5567,7 +5680,7 @@ public final class BtcstakingProto {
         } else {
           btcUndelegationBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -5576,11 +5689,11 @@ public final class BtcstakingProto {
        * btc_undelegation is the information about the early unbonding path of the BTC delegation
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 14 [json_name = "btcUndelegation"];</code>
+       * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 15 [json_name = "btcUndelegation"];</code>
        */
       public Builder mergeBtcUndelegation(com.babylon.btcstaking.v1.BtcstakingProto.BTCUndelegation value) {
         if (btcUndelegationBuilder_ == null) {
-          if (((bitField0_ & 0x00002000) != 0) &&
+          if (((bitField0_ & 0x00004000) != 0) &&
             btcUndelegation_ != null &&
             btcUndelegation_ != com.babylon.btcstaking.v1.BtcstakingProto.BTCUndelegation.getDefaultInstance()) {
             getBtcUndelegationBuilder().mergeFrom(value);
@@ -5590,7 +5703,7 @@ public final class BtcstakingProto {
         } else {
           btcUndelegationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -5599,10 +5712,10 @@ public final class BtcstakingProto {
        * btc_undelegation is the information about the early unbonding path of the BTC delegation
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 14 [json_name = "btcUndelegation"];</code>
+       * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 15 [json_name = "btcUndelegation"];</code>
        */
       public Builder clearBtcUndelegation() {
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00004000);
         btcUndelegation_ = null;
         if (btcUndelegationBuilder_ != null) {
           btcUndelegationBuilder_.dispose();
@@ -5616,10 +5729,10 @@ public final class BtcstakingProto {
        * btc_undelegation is the information about the early unbonding path of the BTC delegation
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 14 [json_name = "btcUndelegation"];</code>
+       * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 15 [json_name = "btcUndelegation"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.BTCUndelegation.Builder getBtcUndelegationBuilder() {
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00004000;
         onChanged();
         return getBtcUndelegationFieldBuilder().getBuilder();
       }
@@ -5628,7 +5741,7 @@ public final class BtcstakingProto {
        * btc_undelegation is the information about the early unbonding path of the BTC delegation
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 14 [json_name = "btcUndelegation"];</code>
+       * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 15 [json_name = "btcUndelegation"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.BTCUndelegationOrBuilder getBtcUndelegationOrBuilder() {
         if (btcUndelegationBuilder_ != null) {
@@ -5643,7 +5756,7 @@ public final class BtcstakingProto {
        * btc_undelegation is the information about the early unbonding path of the BTC delegation
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 14 [json_name = "btcUndelegation"];</code>
+       * <code>.babylon.btcstaking.v1.BTCUndelegation btc_undelegation = 15 [json_name = "btcUndelegation"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.babylon.btcstaking.v1.BtcstakingProto.BTCUndelegation, com.babylon.btcstaking.v1.BtcstakingProto.BTCUndelegation.Builder, com.babylon.btcstaking.v1.BtcstakingProto.BTCUndelegationOrBuilder> 
@@ -5665,7 +5778,7 @@ public final class BtcstakingProto {
        * version of the params used to validate the delegation
        * </pre>
        *
-       * <code>uint32 params_version = 15 [json_name = "paramsVersion"];</code>
+       * <code>uint32 params_version = 16 [json_name = "paramsVersion"];</code>
        * @return The paramsVersion.
        */
       @java.lang.Override
@@ -5677,14 +5790,14 @@ public final class BtcstakingProto {
        * version of the params used to validate the delegation
        * </pre>
        *
-       * <code>uint32 params_version = 15 [json_name = "paramsVersion"];</code>
+       * <code>uint32 params_version = 16 [json_name = "paramsVersion"];</code>
        * @param value The paramsVersion to set.
        * @return This builder for chaining.
        */
       public Builder setParamsVersion(int value) {
 
         paramsVersion_ = value;
-        bitField0_ |= 0x00004000;
+        bitField0_ |= 0x00008000;
         onChanged();
         return this;
       }
@@ -5693,11 +5806,11 @@ public final class BtcstakingProto {
        * version of the params used to validate the delegation
        * </pre>
        *
-       * <code>uint32 params_version = 15 [json_name = "paramsVersion"];</code>
+       * <code>uint32 params_version = 16 [json_name = "paramsVersion"];</code>
        * @return This builder for chaining.
        */
       public Builder clearParamsVersion() {
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00008000);
         paramsVersion_ = 0;
         onChanged();
         return this;
@@ -5766,6 +5879,525 @@ public final class BtcstakingProto {
 
   }
 
+  public interface DelegatorUnbondingInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.DelegatorUnbondingInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * spend_stake_tx is the transaction which spent the staking output. It is
+     * filled only if spend_stake_tx is different than unbonding_tx registered
+     * on the Babylon chain.
+     * </pre>
+     *
+     * <code>bytes spend_stake_tx = 1 [json_name = "spendStakeTx"];</code>
+     * @return The spendStakeTx.
+     */
+    com.google.protobuf.ByteString getSpendStakeTx();
+  }
+  /**
+   * <pre>
+   * DelegatorUnbondingInfo contains the information about transaction which spent
+   * the staking output. It contains:
+   * - spend_stake_tx: the transaction which spent the staking output
+   * </pre>
+   *
+   * Protobuf type {@code babylon.btcstaking.v1.DelegatorUnbondingInfo}
+   */
+  public static final class DelegatorUnbondingInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.DelegatorUnbondingInfo)
+      DelegatorUnbondingInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DelegatorUnbondingInfo.newBuilder() to construct.
+    private DelegatorUnbondingInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DelegatorUnbondingInfo() {
+      spendStakeTx_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DelegatorUnbondingInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.btcstaking.v1.BtcstakingProto.internal_static_babylon_btcstaking_v1_DelegatorUnbondingInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.btcstaking.v1.BtcstakingProto.internal_static_babylon_btcstaking_v1_DelegatorUnbondingInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo.class, com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo.Builder.class);
+    }
+
+    public static final int SPEND_STAKE_TX_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString spendStakeTx_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * spend_stake_tx is the transaction which spent the staking output. It is
+     * filled only if spend_stake_tx is different than unbonding_tx registered
+     * on the Babylon chain.
+     * </pre>
+     *
+     * <code>bytes spend_stake_tx = 1 [json_name = "spendStakeTx"];</code>
+     * @return The spendStakeTx.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSpendStakeTx() {
+      return spendStakeTx_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!spendStakeTx_.isEmpty()) {
+        output.writeBytes(1, spendStakeTx_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!spendStakeTx_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, spendStakeTx_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo)) {
+        return super.equals(obj);
+      }
+      com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo other = (com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo) obj;
+
+      if (!getSpendStakeTx()
+          .equals(other.getSpendStakeTx())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SPEND_STAKE_TX_FIELD_NUMBER;
+      hash = (53 * hash) + getSpendStakeTx().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * DelegatorUnbondingInfo contains the information about transaction which spent
+     * the staking output. It contains:
+     * - spend_stake_tx: the transaction which spent the staking output
+     * </pre>
+     *
+     * Protobuf type {@code babylon.btcstaking.v1.DelegatorUnbondingInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.DelegatorUnbondingInfo)
+        com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.btcstaking.v1.BtcstakingProto.internal_static_babylon_btcstaking_v1_DelegatorUnbondingInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.btcstaking.v1.BtcstakingProto.internal_static_babylon_btcstaking_v1_DelegatorUnbondingInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo.class, com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo.Builder.class);
+      }
+
+      // Construct using com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        spendStakeTx_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.btcstaking.v1.BtcstakingProto.internal_static_babylon_btcstaking_v1_DelegatorUnbondingInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo getDefaultInstanceForType() {
+        return com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo build() {
+        com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo buildPartial() {
+        com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo result = new com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.spendStakeTx_ = spendStakeTx_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo) {
+          return mergeFrom((com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo other) {
+        if (other == com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo.getDefaultInstance()) return this;
+        if (other.getSpendStakeTx() != com.google.protobuf.ByteString.EMPTY) {
+          setSpendStakeTx(other.getSpendStakeTx());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                spendStakeTx_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString spendStakeTx_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * spend_stake_tx is the transaction which spent the staking output. It is
+       * filled only if spend_stake_tx is different than unbonding_tx registered
+       * on the Babylon chain.
+       * </pre>
+       *
+       * <code>bytes spend_stake_tx = 1 [json_name = "spendStakeTx"];</code>
+       * @return The spendStakeTx.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSpendStakeTx() {
+        return spendStakeTx_;
+      }
+      /**
+       * <pre>
+       * spend_stake_tx is the transaction which spent the staking output. It is
+       * filled only if spend_stake_tx is different than unbonding_tx registered
+       * on the Babylon chain.
+       * </pre>
+       *
+       * <code>bytes spend_stake_tx = 1 [json_name = "spendStakeTx"];</code>
+       * @param value The spendStakeTx to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpendStakeTx(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        spendStakeTx_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * spend_stake_tx is the transaction which spent the staking output. It is
+       * filled only if spend_stake_tx is different than unbonding_tx registered
+       * on the Babylon chain.
+       * </pre>
+       *
+       * <code>bytes spend_stake_tx = 1 [json_name = "spendStakeTx"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSpendStakeTx() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        spendStakeTx_ = getDefaultInstance().getSpendStakeTx();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.DelegatorUnbondingInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.DelegatorUnbondingInfo)
+    private static final com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo();
+    }
+
+    public static com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DelegatorUnbondingInfo>
+        PARSER = new com.google.protobuf.AbstractParser<DelegatorUnbondingInfo>() {
+      @java.lang.Override
+      public DelegatorUnbondingInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DelegatorUnbondingInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DelegatorUnbondingInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface BTCUndelegationOrBuilder extends
       // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.BTCUndelegation)
       com.google.protobuf.MessageOrBuilder {
@@ -5796,26 +6428,12 @@ public final class BtcstakingProto {
 
     /**
      * <pre>
-     * delegator_unbonding_sig is the signature on the unbonding tx
-     * by the delegator (i.e., SK corresponding to btc_pk).
-     * It effectively proves that the delegator wants to unbond and thus
-     * Babylon will consider this BTC delegation unbonded. Delegator's BTC
-     * on Bitcoin will be unbonded after timelock
-     * </pre>
-     *
-     * <code>bytes delegator_unbonding_sig = 3 [json_name = "delegatorUnbondingSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
-     * @return The delegatorUnbondingSig.
-     */
-    com.google.protobuf.ByteString getDelegatorUnbondingSig();
-
-    /**
-     * <pre>
      * delegator_slashing_sig is the signature on the slashing tx
      * by the delegator (i.e., SK corresponding to btc_pk).
      * It will be a part of the witness for the unbonding tx output.
      * </pre>
      *
-     * <code>bytes delegator_slashing_sig = 4 [json_name = "delegatorSlashingSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+     * <code>bytes delegator_slashing_sig = 3 [json_name = "delegatorSlashingSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
      * @return The delegatorSlashingSig.
      */
     com.google.protobuf.ByteString getDelegatorSlashingSig();
@@ -5827,7 +6445,7 @@ public final class BtcstakingProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
      */
     java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures> 
         getCovenantSlashingSigsList();
@@ -5838,7 +6456,7 @@ public final class BtcstakingProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
      */
     com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures getCovenantSlashingSigs(int index);
     /**
@@ -5848,7 +6466,7 @@ public final class BtcstakingProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
      */
     int getCovenantSlashingSigsCount();
     /**
@@ -5858,7 +6476,7 @@ public final class BtcstakingProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
      */
     java.util.List<? extends com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder> 
         getCovenantSlashingSigsOrBuilderList();
@@ -5869,7 +6487,7 @@ public final class BtcstakingProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
      */
     com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder getCovenantSlashingSigsOrBuilder(
         int index);
@@ -5881,7 +6499,7 @@ public final class BtcstakingProto {
      * It must be provided after processing undelegate message by Babylon
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
      */
     java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo> 
         getCovenantUnbondingSigListList();
@@ -5892,7 +6510,7 @@ public final class BtcstakingProto {
      * It must be provided after processing undelegate message by Babylon
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
      */
     com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo getCovenantUnbondingSigList(int index);
     /**
@@ -5902,7 +6520,7 @@ public final class BtcstakingProto {
      * It must be provided after processing undelegate message by Babylon
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
      */
     int getCovenantUnbondingSigListCount();
     /**
@@ -5912,7 +6530,7 @@ public final class BtcstakingProto {
      * It must be provided after processing undelegate message by Babylon
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
      */
     java.util.List<? extends com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfoOrBuilder> 
         getCovenantUnbondingSigListOrBuilderList();
@@ -5923,10 +6541,40 @@ public final class BtcstakingProto {
      * It must be provided after processing undelegate message by Babylon
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
      */
     com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfoOrBuilder getCovenantUnbondingSigListOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * delegator_unbonding_info is the information about transaction which spent
+     * the staking output
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfo delegator_unbonding_info = 6 [json_name = "delegatorUnbondingInfo"];</code>
+     * @return Whether the delegatorUnbondingInfo field is set.
+     */
+    boolean hasDelegatorUnbondingInfo();
+    /**
+     * <pre>
+     * delegator_unbonding_info is the information about transaction which spent
+     * the staking output
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfo delegator_unbonding_info = 6 [json_name = "delegatorUnbondingInfo"];</code>
+     * @return The delegatorUnbondingInfo.
+     */
+    com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo getDelegatorUnbondingInfo();
+    /**
+     * <pre>
+     * delegator_unbonding_info is the information about transaction which spent
+     * the staking output
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfo delegator_unbonding_info = 6 [json_name = "delegatorUnbondingInfo"];</code>
+     */
+    com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfoOrBuilder getDelegatorUnbondingInfoOrBuilder();
   }
   /**
    * <pre>
@@ -5947,7 +6595,6 @@ public final class BtcstakingProto {
     private BTCUndelegation() {
       unbondingTx_ = com.google.protobuf.ByteString.EMPTY;
       slashingTx_ = com.google.protobuf.ByteString.EMPTY;
-      delegatorUnbondingSig_ = com.google.protobuf.ByteString.EMPTY;
       delegatorSlashingSig_ = com.google.protobuf.ByteString.EMPTY;
       covenantSlashingSigs_ = java.util.Collections.emptyList();
       covenantUnbondingSigList_ = java.util.Collections.emptyList();
@@ -6007,26 +6654,7 @@ public final class BtcstakingProto {
       return slashingTx_;
     }
 
-    public static final int DELEGATOR_UNBONDING_SIG_FIELD_NUMBER = 3;
-    private com.google.protobuf.ByteString delegatorUnbondingSig_ = com.google.protobuf.ByteString.EMPTY;
-    /**
-     * <pre>
-     * delegator_unbonding_sig is the signature on the unbonding tx
-     * by the delegator (i.e., SK corresponding to btc_pk).
-     * It effectively proves that the delegator wants to unbond and thus
-     * Babylon will consider this BTC delegation unbonded. Delegator's BTC
-     * on Bitcoin will be unbonded after timelock
-     * </pre>
-     *
-     * <code>bytes delegator_unbonding_sig = 3 [json_name = "delegatorUnbondingSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
-     * @return The delegatorUnbondingSig.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString getDelegatorUnbondingSig() {
-      return delegatorUnbondingSig_;
-    }
-
-    public static final int DELEGATOR_SLASHING_SIG_FIELD_NUMBER = 4;
+    public static final int DELEGATOR_SLASHING_SIG_FIELD_NUMBER = 3;
     private com.google.protobuf.ByteString delegatorSlashingSig_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <pre>
@@ -6035,7 +6663,7 @@ public final class BtcstakingProto {
      * It will be a part of the witness for the unbonding tx output.
      * </pre>
      *
-     * <code>bytes delegator_slashing_sig = 4 [json_name = "delegatorSlashingSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+     * <code>bytes delegator_slashing_sig = 3 [json_name = "delegatorSlashingSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
      * @return The delegatorSlashingSig.
      */
     @java.lang.Override
@@ -6043,7 +6671,7 @@ public final class BtcstakingProto {
       return delegatorSlashingSig_;
     }
 
-    public static final int COVENANT_SLASHING_SIGS_FIELD_NUMBER = 5;
+    public static final int COVENANT_SLASHING_SIGS_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
     private java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures> covenantSlashingSigs_;
     /**
@@ -6053,7 +6681,7 @@ public final class BtcstakingProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
      */
     @java.lang.Override
     public java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures> getCovenantSlashingSigsList() {
@@ -6066,7 +6694,7 @@ public final class BtcstakingProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder> 
@@ -6080,7 +6708,7 @@ public final class BtcstakingProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
      */
     @java.lang.Override
     public int getCovenantSlashingSigsCount() {
@@ -6093,7 +6721,7 @@ public final class BtcstakingProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
      */
     @java.lang.Override
     public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures getCovenantSlashingSigs(int index) {
@@ -6106,7 +6734,7 @@ public final class BtcstakingProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
      */
     @java.lang.Override
     public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder getCovenantSlashingSigsOrBuilder(
@@ -6114,7 +6742,7 @@ public final class BtcstakingProto {
       return covenantSlashingSigs_.get(index);
     }
 
-    public static final int COVENANT_UNBONDING_SIG_LIST_FIELD_NUMBER = 6;
+    public static final int COVENANT_UNBONDING_SIG_LIST_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
     private java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo> covenantUnbondingSigList_;
     /**
@@ -6124,7 +6752,7 @@ public final class BtcstakingProto {
      * It must be provided after processing undelegate message by Babylon
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
      */
     @java.lang.Override
     public java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo> getCovenantUnbondingSigListList() {
@@ -6137,7 +6765,7 @@ public final class BtcstakingProto {
      * It must be provided after processing undelegate message by Babylon
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfoOrBuilder> 
@@ -6151,7 +6779,7 @@ public final class BtcstakingProto {
      * It must be provided after processing undelegate message by Babylon
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
      */
     @java.lang.Override
     public int getCovenantUnbondingSigListCount() {
@@ -6164,7 +6792,7 @@ public final class BtcstakingProto {
      * It must be provided after processing undelegate message by Babylon
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
      */
     @java.lang.Override
     public com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo getCovenantUnbondingSigList(int index) {
@@ -6177,12 +6805,53 @@ public final class BtcstakingProto {
      * It must be provided after processing undelegate message by Babylon
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
      */
     @java.lang.Override
     public com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfoOrBuilder getCovenantUnbondingSigListOrBuilder(
         int index) {
       return covenantUnbondingSigList_.get(index);
+    }
+
+    public static final int DELEGATOR_UNBONDING_INFO_FIELD_NUMBER = 6;
+    private com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo delegatorUnbondingInfo_;
+    /**
+     * <pre>
+     * delegator_unbonding_info is the information about transaction which spent
+     * the staking output
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfo delegator_unbonding_info = 6 [json_name = "delegatorUnbondingInfo"];</code>
+     * @return Whether the delegatorUnbondingInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasDelegatorUnbondingInfo() {
+      return delegatorUnbondingInfo_ != null;
+    }
+    /**
+     * <pre>
+     * delegator_unbonding_info is the information about transaction which spent
+     * the staking output
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfo delegator_unbonding_info = 6 [json_name = "delegatorUnbondingInfo"];</code>
+     * @return The delegatorUnbondingInfo.
+     */
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo getDelegatorUnbondingInfo() {
+      return delegatorUnbondingInfo_ == null ? com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo.getDefaultInstance() : delegatorUnbondingInfo_;
+    }
+    /**
+     * <pre>
+     * delegator_unbonding_info is the information about transaction which spent
+     * the staking output
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfo delegator_unbonding_info = 6 [json_name = "delegatorUnbondingInfo"];</code>
+     */
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfoOrBuilder getDelegatorUnbondingInfoOrBuilder() {
+      return delegatorUnbondingInfo_ == null ? com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo.getDefaultInstance() : delegatorUnbondingInfo_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -6205,17 +6874,17 @@ public final class BtcstakingProto {
       if (!slashingTx_.isEmpty()) {
         output.writeBytes(2, slashingTx_);
       }
-      if (!delegatorUnbondingSig_.isEmpty()) {
-        output.writeBytes(3, delegatorUnbondingSig_);
-      }
       if (!delegatorSlashingSig_.isEmpty()) {
-        output.writeBytes(4, delegatorSlashingSig_);
+        output.writeBytes(3, delegatorSlashingSig_);
       }
       for (int i = 0; i < covenantSlashingSigs_.size(); i++) {
-        output.writeMessage(5, covenantSlashingSigs_.get(i));
+        output.writeMessage(4, covenantSlashingSigs_.get(i));
       }
       for (int i = 0; i < covenantUnbondingSigList_.size(); i++) {
-        output.writeMessage(6, covenantUnbondingSigList_.get(i));
+        output.writeMessage(5, covenantUnbondingSigList_.get(i));
+      }
+      if (delegatorUnbondingInfo_ != null) {
+        output.writeMessage(6, getDelegatorUnbondingInfo());
       }
       getUnknownFields().writeTo(output);
     }
@@ -6234,21 +6903,21 @@ public final class BtcstakingProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, slashingTx_);
       }
-      if (!delegatorUnbondingSig_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, delegatorUnbondingSig_);
-      }
       if (!delegatorSlashingSig_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, delegatorSlashingSig_);
+          .computeBytesSize(3, delegatorSlashingSig_);
       }
       for (int i = 0; i < covenantSlashingSigs_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, covenantSlashingSigs_.get(i));
+          .computeMessageSize(4, covenantSlashingSigs_.get(i));
       }
       for (int i = 0; i < covenantUnbondingSigList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, covenantUnbondingSigList_.get(i));
+          .computeMessageSize(5, covenantUnbondingSigList_.get(i));
+      }
+      if (delegatorUnbondingInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getDelegatorUnbondingInfo());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -6269,14 +6938,17 @@ public final class BtcstakingProto {
           .equals(other.getUnbondingTx())) return false;
       if (!getSlashingTx()
           .equals(other.getSlashingTx())) return false;
-      if (!getDelegatorUnbondingSig()
-          .equals(other.getDelegatorUnbondingSig())) return false;
       if (!getDelegatorSlashingSig()
           .equals(other.getDelegatorSlashingSig())) return false;
       if (!getCovenantSlashingSigsList()
           .equals(other.getCovenantSlashingSigsList())) return false;
       if (!getCovenantUnbondingSigListList()
           .equals(other.getCovenantUnbondingSigListList())) return false;
+      if (hasDelegatorUnbondingInfo() != other.hasDelegatorUnbondingInfo()) return false;
+      if (hasDelegatorUnbondingInfo()) {
+        if (!getDelegatorUnbondingInfo()
+            .equals(other.getDelegatorUnbondingInfo())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -6292,8 +6964,6 @@ public final class BtcstakingProto {
       hash = (53 * hash) + getUnbondingTx().hashCode();
       hash = (37 * hash) + SLASHING_TX_FIELD_NUMBER;
       hash = (53 * hash) + getSlashingTx().hashCode();
-      hash = (37 * hash) + DELEGATOR_UNBONDING_SIG_FIELD_NUMBER;
-      hash = (53 * hash) + getDelegatorUnbondingSig().hashCode();
       hash = (37 * hash) + DELEGATOR_SLASHING_SIG_FIELD_NUMBER;
       hash = (53 * hash) + getDelegatorSlashingSig().hashCode();
       if (getCovenantSlashingSigsCount() > 0) {
@@ -6303,6 +6973,10 @@ public final class BtcstakingProto {
       if (getCovenantUnbondingSigListCount() > 0) {
         hash = (37 * hash) + COVENANT_UNBONDING_SIG_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getCovenantUnbondingSigListList().hashCode();
+      }
+      if (hasDelegatorUnbondingInfo()) {
+        hash = (37 * hash) + DELEGATOR_UNBONDING_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getDelegatorUnbondingInfo().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -6441,7 +7115,6 @@ public final class BtcstakingProto {
         bitField0_ = 0;
         unbondingTx_ = com.google.protobuf.ByteString.EMPTY;
         slashingTx_ = com.google.protobuf.ByteString.EMPTY;
-        delegatorUnbondingSig_ = com.google.protobuf.ByteString.EMPTY;
         delegatorSlashingSig_ = com.google.protobuf.ByteString.EMPTY;
         if (covenantSlashingSigsBuilder_ == null) {
           covenantSlashingSigs_ = java.util.Collections.emptyList();
@@ -6449,14 +7122,19 @@ public final class BtcstakingProto {
           covenantSlashingSigs_ = null;
           covenantSlashingSigsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (covenantUnbondingSigListBuilder_ == null) {
           covenantUnbondingSigList_ = java.util.Collections.emptyList();
         } else {
           covenantUnbondingSigList_ = null;
           covenantUnbondingSigListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
+        delegatorUnbondingInfo_ = null;
+        if (delegatorUnbondingInfoBuilder_ != null) {
+          delegatorUnbondingInfoBuilder_.dispose();
+          delegatorUnbondingInfoBuilder_ = null;
+        }
         return this;
       }
 
@@ -6491,18 +7169,18 @@ public final class BtcstakingProto {
 
       private void buildPartialRepeatedFields(com.babylon.btcstaking.v1.BtcstakingProto.BTCUndelegation result) {
         if (covenantSlashingSigsBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             covenantSlashingSigs_ = java.util.Collections.unmodifiableList(covenantSlashingSigs_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.covenantSlashingSigs_ = covenantSlashingSigs_;
         } else {
           result.covenantSlashingSigs_ = covenantSlashingSigsBuilder_.build();
         }
         if (covenantUnbondingSigListBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             covenantUnbondingSigList_ = java.util.Collections.unmodifiableList(covenantUnbondingSigList_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.covenantUnbondingSigList_ = covenantUnbondingSigList_;
         } else {
@@ -6519,10 +7197,12 @@ public final class BtcstakingProto {
           result.slashingTx_ = slashingTx_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.delegatorUnbondingSig_ = delegatorUnbondingSig_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
           result.delegatorSlashingSig_ = delegatorSlashingSig_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.delegatorUnbondingInfo_ = delegatorUnbondingInfoBuilder_ == null
+              ? delegatorUnbondingInfo_
+              : delegatorUnbondingInfoBuilder_.build();
         }
       }
 
@@ -6576,9 +7256,6 @@ public final class BtcstakingProto {
         if (other.getSlashingTx() != com.google.protobuf.ByteString.EMPTY) {
           setSlashingTx(other.getSlashingTx());
         }
-        if (other.getDelegatorUnbondingSig() != com.google.protobuf.ByteString.EMPTY) {
-          setDelegatorUnbondingSig(other.getDelegatorUnbondingSig());
-        }
         if (other.getDelegatorSlashingSig() != com.google.protobuf.ByteString.EMPTY) {
           setDelegatorSlashingSig(other.getDelegatorSlashingSig());
         }
@@ -6586,7 +7263,7 @@ public final class BtcstakingProto {
           if (!other.covenantSlashingSigs_.isEmpty()) {
             if (covenantSlashingSigs_.isEmpty()) {
               covenantSlashingSigs_ = other.covenantSlashingSigs_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureCovenantSlashingSigsIsMutable();
               covenantSlashingSigs_.addAll(other.covenantSlashingSigs_);
@@ -6599,7 +7276,7 @@ public final class BtcstakingProto {
               covenantSlashingSigsBuilder_.dispose();
               covenantSlashingSigsBuilder_ = null;
               covenantSlashingSigs_ = other.covenantSlashingSigs_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000008);
               covenantSlashingSigsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getCovenantSlashingSigsFieldBuilder() : null;
@@ -6612,7 +7289,7 @@ public final class BtcstakingProto {
           if (!other.covenantUnbondingSigList_.isEmpty()) {
             if (covenantUnbondingSigList_.isEmpty()) {
               covenantUnbondingSigList_ = other.covenantUnbondingSigList_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureCovenantUnbondingSigListIsMutable();
               covenantUnbondingSigList_.addAll(other.covenantUnbondingSigList_);
@@ -6625,7 +7302,7 @@ public final class BtcstakingProto {
               covenantUnbondingSigListBuilder_.dispose();
               covenantUnbondingSigListBuilder_ = null;
               covenantUnbondingSigList_ = other.covenantUnbondingSigList_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000010);
               covenantUnbondingSigListBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getCovenantUnbondingSigListFieldBuilder() : null;
@@ -6633,6 +7310,9 @@ public final class BtcstakingProto {
               covenantUnbondingSigListBuilder_.addAllMessages(other.covenantUnbondingSigList_);
             }
           }
+        }
+        if (other.hasDelegatorUnbondingInfo()) {
+          mergeDelegatorUnbondingInfo(other.getDelegatorUnbondingInfo());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -6671,16 +7351,11 @@ public final class BtcstakingProto {
                 break;
               } // case 18
               case 26: {
-                delegatorUnbondingSig_ = input.readBytes();
+                delegatorSlashingSig_ = input.readBytes();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
-                delegatorSlashingSig_ = input.readBytes();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 34
-              case 42: {
                 com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures m =
                     input.readMessage(
                         com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.parser(),
@@ -6692,8 +7367,8 @@ public final class BtcstakingProto {
                   covenantSlashingSigsBuilder_.addMessage(m);
                 }
                 break;
-              } // case 42
-              case 50: {
+              } // case 34
+              case 42: {
                 com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo m =
                     input.readMessage(
                         com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo.parser(),
@@ -6704,6 +7379,13 @@ public final class BtcstakingProto {
                 } else {
                   covenantUnbondingSigListBuilder_.addMessage(m);
                 }
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getDelegatorUnbondingInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               default: {
@@ -6823,62 +7505,6 @@ public final class BtcstakingProto {
         return this;
       }
 
-      private com.google.protobuf.ByteString delegatorUnbondingSig_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <pre>
-       * delegator_unbonding_sig is the signature on the unbonding tx
-       * by the delegator (i.e., SK corresponding to btc_pk).
-       * It effectively proves that the delegator wants to unbond and thus
-       * Babylon will consider this BTC delegation unbonded. Delegator's BTC
-       * on Bitcoin will be unbonded after timelock
-       * </pre>
-       *
-       * <code>bytes delegator_unbonding_sig = 3 [json_name = "delegatorUnbondingSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
-       * @return The delegatorUnbondingSig.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString getDelegatorUnbondingSig() {
-        return delegatorUnbondingSig_;
-      }
-      /**
-       * <pre>
-       * delegator_unbonding_sig is the signature on the unbonding tx
-       * by the delegator (i.e., SK corresponding to btc_pk).
-       * It effectively proves that the delegator wants to unbond and thus
-       * Babylon will consider this BTC delegation unbonded. Delegator's BTC
-       * on Bitcoin will be unbonded after timelock
-       * </pre>
-       *
-       * <code>bytes delegator_unbonding_sig = 3 [json_name = "delegatorUnbondingSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
-       * @param value The delegatorUnbondingSig to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDelegatorUnbondingSig(com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        delegatorUnbondingSig_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * delegator_unbonding_sig is the signature on the unbonding tx
-       * by the delegator (i.e., SK corresponding to btc_pk).
-       * It effectively proves that the delegator wants to unbond and thus
-       * Babylon will consider this BTC delegation unbonded. Delegator's BTC
-       * on Bitcoin will be unbonded after timelock
-       * </pre>
-       *
-       * <code>bytes delegator_unbonding_sig = 3 [json_name = "delegatorUnbondingSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDelegatorUnbondingSig() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        delegatorUnbondingSig_ = getDefaultInstance().getDelegatorUnbondingSig();
-        onChanged();
-        return this;
-      }
-
       private com.google.protobuf.ByteString delegatorSlashingSig_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <pre>
@@ -6887,7 +7513,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the unbonding tx output.
        * </pre>
        *
-       * <code>bytes delegator_slashing_sig = 4 [json_name = "delegatorSlashingSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+       * <code>bytes delegator_slashing_sig = 3 [json_name = "delegatorSlashingSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
        * @return The delegatorSlashingSig.
        */
       @java.lang.Override
@@ -6901,14 +7527,14 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the unbonding tx output.
        * </pre>
        *
-       * <code>bytes delegator_slashing_sig = 4 [json_name = "delegatorSlashingSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+       * <code>bytes delegator_slashing_sig = 3 [json_name = "delegatorSlashingSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
        * @param value The delegatorSlashingSig to set.
        * @return This builder for chaining.
        */
       public Builder setDelegatorSlashingSig(com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         delegatorSlashingSig_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -6919,11 +7545,11 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the unbonding tx output.
        * </pre>
        *
-       * <code>bytes delegator_slashing_sig = 4 [json_name = "delegatorSlashingSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+       * <code>bytes delegator_slashing_sig = 3 [json_name = "delegatorSlashingSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDelegatorSlashingSig() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         delegatorSlashingSig_ = getDefaultInstance().getDelegatorSlashingSig();
         onChanged();
         return this;
@@ -6932,9 +7558,9 @@ public final class BtcstakingProto {
       private java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures> covenantSlashingSigs_ =
         java.util.Collections.emptyList();
       private void ensureCovenantSlashingSigsIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           covenantSlashingSigs_ = new java.util.ArrayList<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures>(covenantSlashingSigs_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -6948,7 +7574,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
        */
       public java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures> getCovenantSlashingSigsList() {
         if (covenantSlashingSigsBuilder_ == null) {
@@ -6964,7 +7590,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
        */
       public int getCovenantSlashingSigsCount() {
         if (covenantSlashingSigsBuilder_ == null) {
@@ -6980,7 +7606,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures getCovenantSlashingSigs(int index) {
         if (covenantSlashingSigsBuilder_ == null) {
@@ -6996,7 +7622,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
        */
       public Builder setCovenantSlashingSigs(
           int index, com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures value) {
@@ -7019,7 +7645,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
        */
       public Builder setCovenantSlashingSigs(
           int index, com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder builderForValue) {
@@ -7039,7 +7665,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
        */
       public Builder addCovenantSlashingSigs(com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures value) {
         if (covenantSlashingSigsBuilder_ == null) {
@@ -7061,7 +7687,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
        */
       public Builder addCovenantSlashingSigs(
           int index, com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures value) {
@@ -7084,7 +7710,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
        */
       public Builder addCovenantSlashingSigs(
           com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder builderForValue) {
@@ -7104,7 +7730,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
        */
       public Builder addCovenantSlashingSigs(
           int index, com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder builderForValue) {
@@ -7124,7 +7750,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
        */
       public Builder addAllCovenantSlashingSigs(
           java.lang.Iterable<? extends com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures> values) {
@@ -7145,12 +7771,12 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
        */
       public Builder clearCovenantSlashingSigs() {
         if (covenantSlashingSigsBuilder_ == null) {
           covenantSlashingSigs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           covenantSlashingSigsBuilder_.clear();
@@ -7164,7 +7790,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
        */
       public Builder removeCovenantSlashingSigs(int index) {
         if (covenantSlashingSigsBuilder_ == null) {
@@ -7183,7 +7809,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder getCovenantSlashingSigsBuilder(
           int index) {
@@ -7196,7 +7822,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder getCovenantSlashingSigsOrBuilder(
           int index) {
@@ -7212,7 +7838,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
        */
       public java.util.List<? extends com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder> 
            getCovenantSlashingSigsOrBuilderList() {
@@ -7229,7 +7855,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder addCovenantSlashingSigsBuilder() {
         return getCovenantSlashingSigsFieldBuilder().addBuilder(
@@ -7242,7 +7868,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder addCovenantSlashingSigsBuilder(
           int index) {
@@ -7256,7 +7882,7 @@ public final class BtcstakingProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 4 [json_name = "covenantSlashingSigs"];</code>
        */
       public java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder> 
            getCovenantSlashingSigsBuilderList() {
@@ -7269,7 +7895,7 @@ public final class BtcstakingProto {
           covenantSlashingSigsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures, com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder, com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder>(
                   covenantSlashingSigs_,
-                  ((bitField0_ & 0x00000010) != 0),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           covenantSlashingSigs_ = null;
@@ -7280,9 +7906,9 @@ public final class BtcstakingProto {
       private java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo> covenantUnbondingSigList_ =
         java.util.Collections.emptyList();
       private void ensureCovenantUnbondingSigListIsMutable() {
-        if (!((bitField0_ & 0x00000020) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           covenantUnbondingSigList_ = new java.util.ArrayList<com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo>(covenantUnbondingSigList_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -7296,7 +7922,7 @@ public final class BtcstakingProto {
        * It must be provided after processing undelegate message by Babylon
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
        */
       public java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo> getCovenantUnbondingSigListList() {
         if (covenantUnbondingSigListBuilder_ == null) {
@@ -7312,7 +7938,7 @@ public final class BtcstakingProto {
        * It must be provided after processing undelegate message by Babylon
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
        */
       public int getCovenantUnbondingSigListCount() {
         if (covenantUnbondingSigListBuilder_ == null) {
@@ -7328,7 +7954,7 @@ public final class BtcstakingProto {
        * It must be provided after processing undelegate message by Babylon
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo getCovenantUnbondingSigList(int index) {
         if (covenantUnbondingSigListBuilder_ == null) {
@@ -7344,7 +7970,7 @@ public final class BtcstakingProto {
        * It must be provided after processing undelegate message by Babylon
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
        */
       public Builder setCovenantUnbondingSigList(
           int index, com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo value) {
@@ -7367,7 +7993,7 @@ public final class BtcstakingProto {
        * It must be provided after processing undelegate message by Babylon
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
        */
       public Builder setCovenantUnbondingSigList(
           int index, com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo.Builder builderForValue) {
@@ -7387,7 +8013,7 @@ public final class BtcstakingProto {
        * It must be provided after processing undelegate message by Babylon
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
        */
       public Builder addCovenantUnbondingSigList(com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo value) {
         if (covenantUnbondingSigListBuilder_ == null) {
@@ -7409,7 +8035,7 @@ public final class BtcstakingProto {
        * It must be provided after processing undelegate message by Babylon
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
        */
       public Builder addCovenantUnbondingSigList(
           int index, com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo value) {
@@ -7432,7 +8058,7 @@ public final class BtcstakingProto {
        * It must be provided after processing undelegate message by Babylon
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
        */
       public Builder addCovenantUnbondingSigList(
           com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo.Builder builderForValue) {
@@ -7452,7 +8078,7 @@ public final class BtcstakingProto {
        * It must be provided after processing undelegate message by Babylon
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
        */
       public Builder addCovenantUnbondingSigList(
           int index, com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo.Builder builderForValue) {
@@ -7472,7 +8098,7 @@ public final class BtcstakingProto {
        * It must be provided after processing undelegate message by Babylon
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
        */
       public Builder addAllCovenantUnbondingSigList(
           java.lang.Iterable<? extends com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo> values) {
@@ -7493,12 +8119,12 @@ public final class BtcstakingProto {
        * It must be provided after processing undelegate message by Babylon
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
        */
       public Builder clearCovenantUnbondingSigList() {
         if (covenantUnbondingSigListBuilder_ == null) {
           covenantUnbondingSigList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           covenantUnbondingSigListBuilder_.clear();
@@ -7512,7 +8138,7 @@ public final class BtcstakingProto {
        * It must be provided after processing undelegate message by Babylon
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
        */
       public Builder removeCovenantUnbondingSigList(int index) {
         if (covenantUnbondingSigListBuilder_ == null) {
@@ -7531,7 +8157,7 @@ public final class BtcstakingProto {
        * It must be provided after processing undelegate message by Babylon
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo.Builder getCovenantUnbondingSigListBuilder(
           int index) {
@@ -7544,7 +8170,7 @@ public final class BtcstakingProto {
        * It must be provided after processing undelegate message by Babylon
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfoOrBuilder getCovenantUnbondingSigListOrBuilder(
           int index) {
@@ -7560,7 +8186,7 @@ public final class BtcstakingProto {
        * It must be provided after processing undelegate message by Babylon
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
        */
       public java.util.List<? extends com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfoOrBuilder> 
            getCovenantUnbondingSigListOrBuilderList() {
@@ -7577,7 +8203,7 @@ public final class BtcstakingProto {
        * It must be provided after processing undelegate message by Babylon
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo.Builder addCovenantUnbondingSigListBuilder() {
         return getCovenantUnbondingSigListFieldBuilder().addBuilder(
@@ -7590,7 +8216,7 @@ public final class BtcstakingProto {
        * It must be provided after processing undelegate message by Babylon
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo.Builder addCovenantUnbondingSigListBuilder(
           int index) {
@@ -7604,7 +8230,7 @@ public final class BtcstakingProto {
        * It must be provided after processing undelegate message by Babylon
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 6 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 5 [json_name = "covenantUnbondingSigList"];</code>
        */
       public java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo.Builder> 
            getCovenantUnbondingSigListBuilderList() {
@@ -7617,12 +8243,176 @@ public final class BtcstakingProto {
           covenantUnbondingSigListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo, com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo.Builder, com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfoOrBuilder>(
                   covenantUnbondingSigList_,
-                  ((bitField0_ & 0x00000020) != 0),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           covenantUnbondingSigList_ = null;
         }
         return covenantUnbondingSigListBuilder_;
+      }
+
+      private com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo delegatorUnbondingInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo, com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo.Builder, com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfoOrBuilder> delegatorUnbondingInfoBuilder_;
+      /**
+       * <pre>
+       * delegator_unbonding_info is the information about transaction which spent
+       * the staking output
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfo delegator_unbonding_info = 6 [json_name = "delegatorUnbondingInfo"];</code>
+       * @return Whether the delegatorUnbondingInfo field is set.
+       */
+      public boolean hasDelegatorUnbondingInfo() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * delegator_unbonding_info is the information about transaction which spent
+       * the staking output
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfo delegator_unbonding_info = 6 [json_name = "delegatorUnbondingInfo"];</code>
+       * @return The delegatorUnbondingInfo.
+       */
+      public com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo getDelegatorUnbondingInfo() {
+        if (delegatorUnbondingInfoBuilder_ == null) {
+          return delegatorUnbondingInfo_ == null ? com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo.getDefaultInstance() : delegatorUnbondingInfo_;
+        } else {
+          return delegatorUnbondingInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * delegator_unbonding_info is the information about transaction which spent
+       * the staking output
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfo delegator_unbonding_info = 6 [json_name = "delegatorUnbondingInfo"];</code>
+       */
+      public Builder setDelegatorUnbondingInfo(com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo value) {
+        if (delegatorUnbondingInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          delegatorUnbondingInfo_ = value;
+        } else {
+          delegatorUnbondingInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * delegator_unbonding_info is the information about transaction which spent
+       * the staking output
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfo delegator_unbonding_info = 6 [json_name = "delegatorUnbondingInfo"];</code>
+       */
+      public Builder setDelegatorUnbondingInfo(
+          com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo.Builder builderForValue) {
+        if (delegatorUnbondingInfoBuilder_ == null) {
+          delegatorUnbondingInfo_ = builderForValue.build();
+        } else {
+          delegatorUnbondingInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * delegator_unbonding_info is the information about transaction which spent
+       * the staking output
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfo delegator_unbonding_info = 6 [json_name = "delegatorUnbondingInfo"];</code>
+       */
+      public Builder mergeDelegatorUnbondingInfo(com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo value) {
+        if (delegatorUnbondingInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            delegatorUnbondingInfo_ != null &&
+            delegatorUnbondingInfo_ != com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo.getDefaultInstance()) {
+            getDelegatorUnbondingInfoBuilder().mergeFrom(value);
+          } else {
+            delegatorUnbondingInfo_ = value;
+          }
+        } else {
+          delegatorUnbondingInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * delegator_unbonding_info is the information about transaction which spent
+       * the staking output
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfo delegator_unbonding_info = 6 [json_name = "delegatorUnbondingInfo"];</code>
+       */
+      public Builder clearDelegatorUnbondingInfo() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        delegatorUnbondingInfo_ = null;
+        if (delegatorUnbondingInfoBuilder_ != null) {
+          delegatorUnbondingInfoBuilder_.dispose();
+          delegatorUnbondingInfoBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * delegator_unbonding_info is the information about transaction which spent
+       * the staking output
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfo delegator_unbonding_info = 6 [json_name = "delegatorUnbondingInfo"];</code>
+       */
+      public com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo.Builder getDelegatorUnbondingInfoBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getDelegatorUnbondingInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * delegator_unbonding_info is the information about transaction which spent
+       * the staking output
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfo delegator_unbonding_info = 6 [json_name = "delegatorUnbondingInfo"];</code>
+       */
+      public com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfoOrBuilder getDelegatorUnbondingInfoOrBuilder() {
+        if (delegatorUnbondingInfoBuilder_ != null) {
+          return delegatorUnbondingInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return delegatorUnbondingInfo_ == null ?
+              com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo.getDefaultInstance() : delegatorUnbondingInfo_;
+        }
+      }
+      /**
+       * <pre>
+       * delegator_unbonding_info is the information about transaction which spent
+       * the staking output
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfo delegator_unbonding_info = 6 [json_name = "delegatorUnbondingInfo"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo, com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo.Builder, com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfoOrBuilder> 
+          getDelegatorUnbondingInfoFieldBuilder() {
+        if (delegatorUnbondingInfoBuilder_ == null) {
+          delegatorUnbondingInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo, com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfo.Builder, com.babylon.btcstaking.v1.BtcstakingProto.DelegatorUnbondingInfoOrBuilder>(
+                  getDelegatorUnbondingInfo(),
+                  getParentForChildren(),
+                  isClean());
+          delegatorUnbondingInfo_ = null;
+        }
+        return delegatorUnbondingInfoBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -9066,13 +9856,13 @@ public final class BtcstakingProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The pk.
      */
     com.google.protobuf.ByteString getPk();
 
     /**
-     * <code>bytes sig = 2 [json_name = "sig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+     * <code>bytes sig = 2 [json_name = "sig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
      * @return The sig.
      */
     com.google.protobuf.ByteString getSig();
@@ -9121,7 +9911,7 @@ public final class BtcstakingProto {
     public static final int PK_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString pk_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The pk.
      */
     @java.lang.Override
@@ -9132,7 +9922,7 @@ public final class BtcstakingProto {
     public static final int SIG_FIELD_NUMBER = 2;
     private com.google.protobuf.ByteString sig_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes sig = 2 [json_name = "sig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+     * <code>bytes sig = 2 [json_name = "sig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
      * @return The sig.
      */
     @java.lang.Override
@@ -9494,7 +10284,7 @@ public final class BtcstakingProto {
 
       private com.google.protobuf.ByteString pk_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The pk.
        */
       @java.lang.Override
@@ -9502,7 +10292,7 @@ public final class BtcstakingProto {
         return pk_;
       }
       /**
-       * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param value The pk to set.
        * @return This builder for chaining.
        */
@@ -9514,7 +10304,7 @@ public final class BtcstakingProto {
         return this;
       }
       /**
-       * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPk() {
@@ -9526,7 +10316,7 @@ public final class BtcstakingProto {
 
       private com.google.protobuf.ByteString sig_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>bytes sig = 2 [json_name = "sig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+       * <code>bytes sig = 2 [json_name = "sig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
        * @return The sig.
        */
       @java.lang.Override
@@ -9534,7 +10324,7 @@ public final class BtcstakingProto {
         return sig_;
       }
       /**
-       * <code>bytes sig = 2 [json_name = "sig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+       * <code>bytes sig = 2 [json_name = "sig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
        * @param value The sig to set.
        * @return This builder for chaining.
        */
@@ -9546,7 +10336,7 @@ public final class BtcstakingProto {
         return this;
       }
       /**
-       * <code>bytes sig = 2 [json_name = "sig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+       * <code>bytes sig = 2 [json_name = "sig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSig() {
@@ -9628,7 +10418,7 @@ public final class BtcstakingProto {
      * cov_pk is the public key of the covenant emulator, used as the public key of the adaptor signature
      * </pre>
      *
-     * <code>bytes cov_pk = 1 [json_name = "covPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes cov_pk = 1 [json_name = "covPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The covPk.
      */
     com.google.protobuf.ByteString getCovPk();
@@ -9711,7 +10501,7 @@ public final class BtcstakingProto {
      * cov_pk is the public key of the covenant emulator, used as the public key of the adaptor signature
      * </pre>
      *
-     * <code>bytes cov_pk = 1 [json_name = "covPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes cov_pk = 1 [json_name = "covPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The covPk.
      */
     @java.lang.Override
@@ -10139,7 +10929,7 @@ public final class BtcstakingProto {
        * cov_pk is the public key of the covenant emulator, used as the public key of the adaptor signature
        * </pre>
        *
-       * <code>bytes cov_pk = 1 [json_name = "covPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes cov_pk = 1 [json_name = "covPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The covPk.
        */
       @java.lang.Override
@@ -10151,7 +10941,7 @@ public final class BtcstakingProto {
        * cov_pk is the public key of the covenant emulator, used as the public key of the adaptor signature
        * </pre>
        *
-       * <code>bytes cov_pk = 1 [json_name = "covPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes cov_pk = 1 [json_name = "covPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param value The covPk to set.
        * @return This builder for chaining.
        */
@@ -10167,7 +10957,7 @@ public final class BtcstakingProto {
        * cov_pk is the public key of the covenant emulator, used as the public key of the adaptor signature
        * </pre>
        *
-       * <code>bytes cov_pk = 1 [json_name = "covPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes cov_pk = 1 [json_name = "covPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearCovPk() {
@@ -10381,7 +11171,7 @@ public final class BtcstakingProto {
      * launches the selective slashing offence
      * </pre>
      *
-     * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The fpBtcPk.
      */
     com.google.protobuf.ByteString getFpBtcPk();
@@ -10502,7 +11292,7 @@ public final class BtcstakingProto {
      * launches the selective slashing offence
      * </pre>
      *
-     * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The fpBtcPk.
      */
     @java.lang.Override
@@ -11012,7 +11802,7 @@ public final class BtcstakingProto {
        * launches the selective slashing offence
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The fpBtcPk.
        */
       @java.lang.Override
@@ -11025,7 +11815,7 @@ public final class BtcstakingProto {
        * launches the selective slashing offence
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param value The fpBtcPk to set.
        * @return This builder for chaining.
        */
@@ -11042,7 +11832,7 @@ public final class BtcstakingProto {
        * launches the selective slashing offence
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFpBtcPk() {
@@ -11165,6 +11955,773 @@ public final class BtcstakingProto {
 
   }
 
+  public interface InclusionProofOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.InclusionProof)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * key is the position (txIdx, blockHash) of this tx on BTC blockchain
+     * </pre>
+     *
+     * <code>.babylon.btccheckpoint.v1.TransactionKey key = 1 [json_name = "key"];</code>
+     * @return Whether the key field is set.
+     */
+    boolean hasKey();
+    /**
+     * <pre>
+     * key is the position (txIdx, blockHash) of this tx on BTC blockchain
+     * </pre>
+     *
+     * <code>.babylon.btccheckpoint.v1.TransactionKey key = 1 [json_name = "key"];</code>
+     * @return The key.
+     */
+    com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKey getKey();
+    /**
+     * <pre>
+     * key is the position (txIdx, blockHash) of this tx on BTC blockchain
+     * </pre>
+     *
+     * <code>.babylon.btccheckpoint.v1.TransactionKey key = 1 [json_name = "key"];</code>
+     */
+    com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKeyOrBuilder getKeyOrBuilder();
+
+    /**
+     * <pre>
+     * proof is the Merkle proof that this tx is included in the position in `key`
+     * </pre>
+     *
+     * <code>bytes proof = 2 [json_name = "proof"];</code>
+     * @return The proof.
+     */
+    com.google.protobuf.ByteString getProof();
+  }
+  /**
+   * <pre>
+   * InclusionProof proves the existence of tx on BTC blockchain
+   * including
+   * - the position of the tx on BTC blockchain
+   * - the Merkle proof that this tx is on the above position
+   * </pre>
+   *
+   * Protobuf type {@code babylon.btcstaking.v1.InclusionProof}
+   */
+  public static final class InclusionProof extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.InclusionProof)
+      InclusionProofOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use InclusionProof.newBuilder() to construct.
+    private InclusionProof(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private InclusionProof() {
+      proof_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InclusionProof();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.btcstaking.v1.BtcstakingProto.internal_static_babylon_btcstaking_v1_InclusionProof_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.btcstaking.v1.BtcstakingProto.internal_static_babylon_btcstaking_v1_InclusionProof_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.class, com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.Builder.class);
+    }
+
+    public static final int KEY_FIELD_NUMBER = 1;
+    private com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKey key_;
+    /**
+     * <pre>
+     * key is the position (txIdx, blockHash) of this tx on BTC blockchain
+     * </pre>
+     *
+     * <code>.babylon.btccheckpoint.v1.TransactionKey key = 1 [json_name = "key"];</code>
+     * @return Whether the key field is set.
+     */
+    @java.lang.Override
+    public boolean hasKey() {
+      return key_ != null;
+    }
+    /**
+     * <pre>
+     * key is the position (txIdx, blockHash) of this tx on BTC blockchain
+     * </pre>
+     *
+     * <code>.babylon.btccheckpoint.v1.TransactionKey key = 1 [json_name = "key"];</code>
+     * @return The key.
+     */
+    @java.lang.Override
+    public com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKey getKey() {
+      return key_ == null ? com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKey.getDefaultInstance() : key_;
+    }
+    /**
+     * <pre>
+     * key is the position (txIdx, blockHash) of this tx on BTC blockchain
+     * </pre>
+     *
+     * <code>.babylon.btccheckpoint.v1.TransactionKey key = 1 [json_name = "key"];</code>
+     */
+    @java.lang.Override
+    public com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKeyOrBuilder getKeyOrBuilder() {
+      return key_ == null ? com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKey.getDefaultInstance() : key_;
+    }
+
+    public static final int PROOF_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString proof_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * proof is the Merkle proof that this tx is included in the position in `key`
+     * </pre>
+     *
+     * <code>bytes proof = 2 [json_name = "proof"];</code>
+     * @return The proof.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getProof() {
+      return proof_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (key_ != null) {
+        output.writeMessage(1, getKey());
+      }
+      if (!proof_.isEmpty()) {
+        output.writeBytes(2, proof_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (key_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getKey());
+      }
+      if (!proof_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, proof_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof)) {
+        return super.equals(obj);
+      }
+      com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof other = (com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof) obj;
+
+      if (hasKey() != other.hasKey()) return false;
+      if (hasKey()) {
+        if (!getKey()
+            .equals(other.getKey())) return false;
+      }
+      if (!getProof()
+          .equals(other.getProof())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasKey()) {
+        hash = (37 * hash) + KEY_FIELD_NUMBER;
+        hash = (53 * hash) + getKey().hashCode();
+      }
+      hash = (37 * hash) + PROOF_FIELD_NUMBER;
+      hash = (53 * hash) + getProof().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * InclusionProof proves the existence of tx on BTC blockchain
+     * including
+     * - the position of the tx on BTC blockchain
+     * - the Merkle proof that this tx is on the above position
+     * </pre>
+     *
+     * Protobuf type {@code babylon.btcstaking.v1.InclusionProof}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.InclusionProof)
+        com.babylon.btcstaking.v1.BtcstakingProto.InclusionProofOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.btcstaking.v1.BtcstakingProto.internal_static_babylon_btcstaking_v1_InclusionProof_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.btcstaking.v1.BtcstakingProto.internal_static_babylon_btcstaking_v1_InclusionProof_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.class, com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.Builder.class);
+      }
+
+      // Construct using com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        key_ = null;
+        if (keyBuilder_ != null) {
+          keyBuilder_.dispose();
+          keyBuilder_ = null;
+        }
+        proof_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.btcstaking.v1.BtcstakingProto.internal_static_babylon_btcstaking_v1_InclusionProof_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof getDefaultInstanceForType() {
+        return com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof build() {
+        com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof buildPartial() {
+        com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof result = new com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.key_ = keyBuilder_ == null
+              ? key_
+              : keyBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.proof_ = proof_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof) {
+          return mergeFrom((com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof other) {
+        if (other == com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.getDefaultInstance()) return this;
+        if (other.hasKey()) {
+          mergeKey(other.getKey());
+        }
+        if (other.getProof() != com.google.protobuf.ByteString.EMPTY) {
+          setProof(other.getProof());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getKeyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                proof_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKey key_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKey, com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKey.Builder, com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKeyOrBuilder> keyBuilder_;
+      /**
+       * <pre>
+       * key is the position (txIdx, blockHash) of this tx on BTC blockchain
+       * </pre>
+       *
+       * <code>.babylon.btccheckpoint.v1.TransactionKey key = 1 [json_name = "key"];</code>
+       * @return Whether the key field is set.
+       */
+      public boolean hasKey() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * key is the position (txIdx, blockHash) of this tx on BTC blockchain
+       * </pre>
+       *
+       * <code>.babylon.btccheckpoint.v1.TransactionKey key = 1 [json_name = "key"];</code>
+       * @return The key.
+       */
+      public com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKey getKey() {
+        if (keyBuilder_ == null) {
+          return key_ == null ? com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKey.getDefaultInstance() : key_;
+        } else {
+          return keyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * key is the position (txIdx, blockHash) of this tx on BTC blockchain
+       * </pre>
+       *
+       * <code>.babylon.btccheckpoint.v1.TransactionKey key = 1 [json_name = "key"];</code>
+       */
+      public Builder setKey(com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKey value) {
+        if (keyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          key_ = value;
+        } else {
+          keyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * key is the position (txIdx, blockHash) of this tx on BTC blockchain
+       * </pre>
+       *
+       * <code>.babylon.btccheckpoint.v1.TransactionKey key = 1 [json_name = "key"];</code>
+       */
+      public Builder setKey(
+          com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKey.Builder builderForValue) {
+        if (keyBuilder_ == null) {
+          key_ = builderForValue.build();
+        } else {
+          keyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * key is the position (txIdx, blockHash) of this tx on BTC blockchain
+       * </pre>
+       *
+       * <code>.babylon.btccheckpoint.v1.TransactionKey key = 1 [json_name = "key"];</code>
+       */
+      public Builder mergeKey(com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKey value) {
+        if (keyBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            key_ != null &&
+            key_ != com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKey.getDefaultInstance()) {
+            getKeyBuilder().mergeFrom(value);
+          } else {
+            key_ = value;
+          }
+        } else {
+          keyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * key is the position (txIdx, blockHash) of this tx on BTC blockchain
+       * </pre>
+       *
+       * <code>.babylon.btccheckpoint.v1.TransactionKey key = 1 [json_name = "key"];</code>
+       */
+      public Builder clearKey() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        key_ = null;
+        if (keyBuilder_ != null) {
+          keyBuilder_.dispose();
+          keyBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * key is the position (txIdx, blockHash) of this tx on BTC blockchain
+       * </pre>
+       *
+       * <code>.babylon.btccheckpoint.v1.TransactionKey key = 1 [json_name = "key"];</code>
+       */
+      public com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKey.Builder getKeyBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getKeyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * key is the position (txIdx, blockHash) of this tx on BTC blockchain
+       * </pre>
+       *
+       * <code>.babylon.btccheckpoint.v1.TransactionKey key = 1 [json_name = "key"];</code>
+       */
+      public com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKeyOrBuilder getKeyOrBuilder() {
+        if (keyBuilder_ != null) {
+          return keyBuilder_.getMessageOrBuilder();
+        } else {
+          return key_ == null ?
+              com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKey.getDefaultInstance() : key_;
+        }
+      }
+      /**
+       * <pre>
+       * key is the position (txIdx, blockHash) of this tx on BTC blockchain
+       * </pre>
+       *
+       * <code>.babylon.btccheckpoint.v1.TransactionKey key = 1 [json_name = "key"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKey, com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKey.Builder, com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKeyOrBuilder> 
+          getKeyFieldBuilder() {
+        if (keyBuilder_ == null) {
+          keyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKey, com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKey.Builder, com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionKeyOrBuilder>(
+                  getKey(),
+                  getParentForChildren(),
+                  isClean());
+          key_ = null;
+        }
+        return keyBuilder_;
+      }
+
+      private com.google.protobuf.ByteString proof_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * proof is the Merkle proof that this tx is included in the position in `key`
+       * </pre>
+       *
+       * <code>bytes proof = 2 [json_name = "proof"];</code>
+       * @return The proof.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getProof() {
+        return proof_;
+      }
+      /**
+       * <pre>
+       * proof is the Merkle proof that this tx is included in the position in `key`
+       * </pre>
+       *
+       * <code>bytes proof = 2 [json_name = "proof"];</code>
+       * @param value The proof to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProof(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        proof_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proof is the Merkle proof that this tx is included in the position in `key`
+       * </pre>
+       *
+       * <code>bytes proof = 2 [json_name = "proof"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProof() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        proof_ = getDefaultInstance().getProof();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.InclusionProof)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.InclusionProof)
+    private static final com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof();
+    }
+
+    public static com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<InclusionProof>
+        PARSER = new com.google.protobuf.AbstractParser<InclusionProof>() {
+      @java.lang.Override
+      public InclusionProof parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<InclusionProof> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InclusionProof> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_babylon_btcstaking_v1_FinalityProvider_descriptor;
   private static final 
@@ -11180,6 +12737,11 @@ public final class BtcstakingProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_babylon_btcstaking_v1_BTCDelegation_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_btcstaking_v1_DelegatorUnbondingInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_btcstaking_v1_DelegatorUnbondingInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_babylon_btcstaking_v1_BTCUndelegation_descriptor;
   private static final 
@@ -11210,6 +12772,11 @@ public final class BtcstakingProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_babylon_btcstaking_v1_SelectiveSlashingEvidence_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_btcstaking_v1_InclusionProof_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_btcstaking_v1_InclusionProof_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -11223,86 +12790,93 @@ public final class BtcstakingProto {
       "\022\025babylon.btcstaking.v1\032\024gogoproto/gogo." +
       "proto\032\031cosmos_proto/cosmos.proto\032$cosmos" +
       "/staking/v1beta1/staking.proto\032\037babylon/" +
-      "btcstaking/v1/pop.proto\"\344\003\n\020FinalityProv" +
-      "ider\022,\n\004addr\030\001 \001(\tB\030\322\264-\024cosmos.AddressSt" +
-      "ringR\004addr\022E\n\013description\030\002 \001(\0132#.cosmos" +
-      ".staking.v1beta1.DescriptionR\013descriptio" +
-      "n\022M\n\ncommission\030\003 \001(\tB-\332\336\037\033cosmossdk.io/" +
-      "math.LegacyDec\322\264-\ncosmos.DecR\ncommission" +
-      "\022M\n\006btc_pk\030\004 \001(\014B6\332\336\0372github.com/babylon" +
-      "chain/babylon/types.BIP340PubKeyR\005btcPk\022" +
-      "=\n\003pop\030\005 \001(\0132+.babylon.btcstaking.v1.Pro" +
-      "ofOfPossessionBTCR\003pop\0224\n\026slashed_babylo" +
-      "n_height\030\006 \001(\004R\024slashedBabylonHeight\022,\n\022" +
-      "slashed_btc_height\030\007 \001(\004R\020slashedBtcHeig" +
-      "ht\022\032\n\010sluggish\030\010 \001(\010R\010sluggish\"\244\002\n\030Final" +
-      "ityProviderWithMeta\022M\n\006btc_pk\030\001 \001(\014B6\332\336\037" +
-      "2github.com/babylonchain/babylon/types.B" +
-      "IP340PubKeyR\005btcPk\022\026\n\006height\030\002 \001(\004R\006heig" +
-      "ht\022!\n\014voting_power\030\003 \001(\004R\013votingPower\0224\n" +
-      "\026slashed_babylon_height\030\004 \001(\004R\024slashedBa" +
-      "bylonHeight\022,\n\022slashed_btc_height\030\005 \001(\004R" +
-      "\020slashedBtcHeight\022\032\n\010sluggish\030\006 \001(\010R\010slu" +
-      "ggish\"\355\006\n\rBTCDelegation\0229\n\013staker_addr\030\001" +
-      " \001(\tB\030\322\264-\024cosmos.AddressStringR\nstakerAd" +
-      "dr\022M\n\006btc_pk\030\002 \001(\014B6\332\336\0372github.com/babyl" +
-      "onchain/babylon/types.BIP340PubKeyR\005btcP" +
-      "k\022=\n\003pop\030\003 \001(\0132+.babylon.btcstaking.v1.P" +
-      "roofOfPossessionBTCR\003pop\022[\n\016fp_btc_pk_li" +
-      "st\030\004 \003(\014B6\332\336\0372github.com/babylonchain/ba" +
-      "bylon/types.BIP340PubKeyR\013fpBtcPkList\022!\n" +
-      "\014start_height\030\005 \001(\004R\013startHeight\022\035\n\nend_" +
-      "height\030\006 \001(\004R\tendHeight\022\033\n\ttotal_sat\030\007 \001" +
-      "(\004R\010totalSat\022\035\n\nstaking_tx\030\010 \001(\014R\tstakin" +
-      "gTx\022,\n\022staking_output_idx\030\t \001(\rR\020staking" +
-      "OutputIdx\0222\n\013slashing_tx\030\n \001(\014B\021\332\336\037\rBTCS" +
-      "lashingTxR\nslashingTx\022^\n\rdelegator_sig\030\013" +
-      " \001(\014B9\332\336\0375github.com/babylonchain/babylo" +
-      "n/types.BIP340SignatureR\014delegatorSig\022U\n" +
-      "\rcovenant_sigs\030\014 \003(\01320.babylon.btcstakin" +
-      "g.v1.CovenantAdaptorSignaturesR\014covenant" +
-      "Sigs\022%\n\016unbonding_time\030\r \001(\rR\runbondingT" +
-      "ime\022Q\n\020btc_undelegation\030\016 \001(\0132&.babylon." +
-      "btcstaking.v1.BTCUndelegationR\017btcUndele" +
-      "gation\022%\n\016params_version\030\017 \001(\rR\rparamsVe" +
-      "rsion\"\231\004\n\017BTCUndelegation\022!\n\014unbonding_t" +
-      "x\030\001 \001(\014R\013unbondingTx\0222\n\013slashing_tx\030\002 \001(" +
-      "\014B\021\332\336\037\rBTCSlashingTxR\nslashingTx\022q\n\027dele" +
-      "gator_unbonding_sig\030\003 \001(\014B9\332\336\0375github.co" +
-      "m/babylonchain/babylon/types.BIP340Signa" +
-      "tureR\025delegatorUnbondingSig\022o\n\026delegator" +
-      "_slashing_sig\030\004 \001(\014B9\332\336\0375github.com/baby" +
-      "lonchain/babylon/types.BIP340SignatureR\024" +
-      "delegatorSlashingSig\022f\n\026covenant_slashin" +
-      "g_sigs\030\005 \003(\01320.babylon.btcstaking.v1.Cov" +
-      "enantAdaptorSignaturesR\024covenantSlashing" +
-      "Sigs\022c\n\033covenant_unbonding_sig_list\030\006 \003(" +
-      "\0132$.babylon.btcstaking.v1.SignatureInfoR" +
-      "\030covenantUnbondingSigList\"S\n\027BTCDelegato" +
-      "rDelegations\0228\n\004dels\030\001 \003(\0132$.babylon.btc" +
-      "staking.v1.BTCDelegationR\004dels\"N\n\033BTCDel" +
-      "egatorDelegationIndex\022/\n\024staking_tx_hash" +
-      "_list\030\001 \003(\014R\021stakingTxHashList\"\244\001\n\rSigna" +
-      "tureInfo\022F\n\002pk\030\001 \001(\014B6\332\336\0372github.com/bab" +
-      "ylonchain/babylon/types.BIP340PubKeyR\002pk" +
-      "\022K\n\003sig\030\002 \001(\014B9\332\336\0375github.com/babyloncha" +
-      "in/babylon/types.BIP340SignatureR\003sig\"\215\001" +
-      "\n\031CovenantAdaptorSignatures\022M\n\006cov_pk\030\001 " +
-      "\001(\014B6\332\336\0372github.com/babylonchain/babylon" +
-      "/types.BIP340PubKeyR\005covPk\022!\n\014adaptor_si" +
-      "gs\030\002 \003(\014R\013adaptorSigs\"\306\001\n\031SelectiveSlash" +
-      "ingEvidence\022&\n\017staking_tx_hash\030\001 \001(\tR\rst" +
-      "akingTxHash\022R\n\tfp_btc_pk\030\002 \001(\014B6\332\336\0372gith" +
-      "ub.com/babylonchain/babylon/types.BIP340" +
-      "PubKeyR\007fpBtcPk\022-\n\023recovered_fp_btc_sk\030\003" +
-      " \001(\014R\020recoveredFpBtcSk*E\n\023BTCDelegationS" +
-      "tatus\022\013\n\007PENDING\020\000\022\n\n\006ACTIVE\020\001\022\014\n\010UNBOND" +
-      "ED\020\002\022\007\n\003ANY\020\003B\324\001\n\031com.babylon.btcstaking" +
-      ".v1B\017BtcstakingProtoZ2github.com/babylon" +
-      "chain/babylon/x/btcstaking/types\242\002\003BBX\252\002" +
-      "\025Babylon.Btcstaking.V1\312\002\025Babylon\\Btcstak" +
-      "ing\\V1\342\002!Babylon\\Btcstaking\\V1\\GPBMetada" +
-      "ta\352\002\027Babylon::Btcstaking::V1b\006proto3"
+      "btcstaking/v1/pop.proto\032,babylon/btcchec" +
+      "kpoint/v1/btccheckpoint.proto\"\342\003\n\020Finali" +
+      "tyProvider\022,\n\004addr\030\001 \001(\tB\030\322\264-\024cosmos.Add" +
+      "ressStringR\004addr\022E\n\013description\030\002 \001(\0132#." +
+      "cosmos.staking.v1beta1.DescriptionR\013desc" +
+      "ription\022M\n\ncommission\030\003 \001(\tB-\332\336\037\033cosmoss" +
+      "dk.io/math.LegacyDec\322\264-\ncosmos.DecR\ncomm" +
+      "ission\022O\n\006btc_pk\030\004 \001(\014B8\332\336\0374github.com/b" +
+      "abylonlabs-io/babylon/types.BIP340PubKey" +
+      "R\005btcPk\022=\n\003pop\030\005 \001(\0132+.babylon.btcstakin" +
+      "g.v1.ProofOfPossessionBTCR\003pop\0224\n\026slashe" +
+      "d_babylon_height\030\006 \001(\004R\024slashedBabylonHe" +
+      "ight\022,\n\022slashed_btc_height\030\007 \001(\rR\020slashe" +
+      "dBtcHeight\022\026\n\006jailed\030\010 \001(\010R\006jailed\"\242\002\n\030F" +
+      "inalityProviderWithMeta\022O\n\006btc_pk\030\001 \001(\014B" +
+      "8\332\336\0374github.com/babylonlabs-io/babylon/t" +
+      "ypes.BIP340PubKeyR\005btcPk\022\026\n\006height\030\002 \001(\004" +
+      "R\006height\022!\n\014voting_power\030\003 \001(\004R\013votingPo" +
+      "wer\0224\n\026slashed_babylon_height\030\004 \001(\004R\024sla" +
+      "shedBabylonHeight\022,\n\022slashed_btc_height\030" +
+      "\005 \001(\rR\020slashedBtcHeight\022\026\n\006jailed\030\006 \001(\010R" +
+      "\006jailed\"\226\007\n\rBTCDelegation\0229\n\013staker_addr" +
+      "\030\001 \001(\tB\030\322\264-\024cosmos.AddressStringR\nstaker" +
+      "Addr\022O\n\006btc_pk\030\002 \001(\014B8\332\336\0374github.com/bab" +
+      "ylonlabs-io/babylon/types.BIP340PubKeyR\005" +
+      "btcPk\022=\n\003pop\030\003 \001(\0132+.babylon.btcstaking." +
+      "v1.ProofOfPossessionBTCR\003pop\022]\n\016fp_btc_p" +
+      "k_list\030\004 \003(\014B8\332\336\0374github.com/babylonlabs" +
+      "-io/babylon/types.BIP340PubKeyR\013fpBtcPkL" +
+      "ist\022!\n\014staking_time\030\005 \001(\rR\013stakingTime\022!" +
+      "\n\014start_height\030\006 \001(\rR\013startHeight\022\035\n\nend" +
+      "_height\030\007 \001(\rR\tendHeight\022\033\n\ttotal_sat\030\010 " +
+      "\001(\004R\010totalSat\022\035\n\nstaking_tx\030\t \001(\014R\tstaki" +
+      "ngTx\022,\n\022staking_output_idx\030\n \001(\rR\020stakin" +
+      "gOutputIdx\0222\n\013slashing_tx\030\013 \001(\014B\021\332\336\037\rBTC" +
+      "SlashingTxR\nslashingTx\022`\n\rdelegator_sig\030" +
+      "\014 \001(\014B;\332\336\0377github.com/babylonlabs-io/bab" +
+      "ylon/types.BIP340SignatureR\014delegatorSig" +
+      "\022U\n\rcovenant_sigs\030\r \003(\01320.babylon.btcsta" +
+      "king.v1.CovenantAdaptorSignaturesR\014coven" +
+      "antSigs\022%\n\016unbonding_time\030\016 \001(\rR\runbondi" +
+      "ngTime\022Q\n\020btc_undelegation\030\017 \001(\0132&.babyl" +
+      "on.btcstaking.v1.BTCUndelegationR\017btcUnd" +
+      "elegation\022%\n\016params_version\030\020 \001(\rR\rparam" +
+      "sVersion\">\n\026DelegatorUnbondingInfo\022$\n\016sp" +
+      "end_stake_tx\030\001 \001(\014R\014spendStakeTx\"\221\004\n\017BTC" +
+      "Undelegation\022!\n\014unbonding_tx\030\001 \001(\014R\013unbo" +
+      "ndingTx\0222\n\013slashing_tx\030\002 \001(\014B\021\332\336\037\rBTCSla" +
+      "shingTxR\nslashingTx\022q\n\026delegator_slashin" +
+      "g_sig\030\003 \001(\014B;\332\336\0377github.com/babylonlabs-" +
+      "io/babylon/types.BIP340SignatureR\024delega" +
+      "torSlashingSig\022f\n\026covenant_slashing_sigs" +
+      "\030\004 \003(\01320.babylon.btcstaking.v1.CovenantA" +
+      "daptorSignaturesR\024covenantSlashingSigs\022c" +
+      "\n\033covenant_unbonding_sig_list\030\005 \003(\0132$.ba" +
+      "bylon.btcstaking.v1.SignatureInfoR\030coven" +
+      "antUnbondingSigList\022g\n\030delegator_unbondi" +
+      "ng_info\030\006 \001(\0132-.babylon.btcstaking.v1.De" +
+      "legatorUnbondingInfoR\026delegatorUnbonding" +
+      "Info\"S\n\027BTCDelegatorDelegations\0228\n\004dels\030" +
+      "\001 \003(\0132$.babylon.btcstaking.v1.BTCDelegat" +
+      "ionR\004dels\"N\n\033BTCDelegatorDelegationIndex" +
+      "\022/\n\024staking_tx_hash_list\030\001 \003(\014R\021stakingT" +
+      "xHashList\"\250\001\n\rSignatureInfo\022H\n\002pk\030\001 \001(\014B" +
+      "8\332\336\0374github.com/babylonlabs-io/babylon/t" +
+      "ypes.BIP340PubKeyR\002pk\022M\n\003sig\030\002 \001(\014B;\332\336\0377" +
+      "github.com/babylonlabs-io/babylon/types." +
+      "BIP340SignatureR\003sig\"\217\001\n\031CovenantAdaptor" +
+      "Signatures\022O\n\006cov_pk\030\001 \001(\014B8\332\336\0374github.c" +
+      "om/babylonlabs-io/babylon/types.BIP340Pu" +
+      "bKeyR\005covPk\022!\n\014adaptor_sigs\030\002 \003(\014R\013adapt" +
+      "orSigs\"\310\001\n\031SelectiveSlashingEvidence\022&\n\017" +
+      "staking_tx_hash\030\001 \001(\tR\rstakingTxHash\022T\n\t" +
+      "fp_btc_pk\030\002 \001(\014B8\332\336\0374github.com/babylonl" +
+      "abs-io/babylon/types.BIP340PubKeyR\007fpBtc" +
+      "Pk\022-\n\023recovered_fp_btc_sk\030\003 \001(\014R\020recover" +
+      "edFpBtcSk\"b\n\016InclusionProof\022:\n\003key\030\001 \001(\013" +
+      "2(.babylon.btccheckpoint.v1.TransactionK" +
+      "eyR\003key\022\024\n\005proof\030\002 \001(\014R\005proof*S\n\023BTCDele" +
+      "gationStatus\022\013\n\007PENDING\020\000\022\014\n\010VERIFIED\020\001\022" +
+      "\n\n\006ACTIVE\020\002\022\014\n\010UNBONDED\020\003\022\007\n\003ANY\020\004B\326\001\n\031c" +
+      "om.babylon.btcstaking.v1B\017BtcstakingProt" +
+      "oZ4github.com/babylonlabs-io/babylon/x/b" +
+      "tcstaking/types\242\002\003BBX\252\002\025Babylon.Btcstaki" +
+      "ng.V1\312\002\025Babylon\\Btcstaking\\V1\342\002!Babylon\\" +
+      "Btcstaking\\V1\\GPBMetadata\352\002\027Babylon::Btc" +
+      "staking::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11311,61 +12885,74 @@ public final class BtcstakingProto {
           com.cosmos_proto.CosmosProto.getDescriptor(),
           com.cosmos.staking.v1beta1.StakingProto.getDescriptor(),
           com.babylon.btcstaking.v1.PopProto.getDescriptor(),
+          com.babylon.btccheckpoint.v1.BtccheckpointProto.getDescriptor(),
         });
     internal_static_babylon_btcstaking_v1_FinalityProvider_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_babylon_btcstaking_v1_FinalityProvider_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_FinalityProvider_descriptor,
-        new java.lang.String[] { "Addr", "Description", "Commission", "BtcPk", "Pop", "SlashedBabylonHeight", "SlashedBtcHeight", "Sluggish", });
+        new java.lang.String[] { "Addr", "Description", "Commission", "BtcPk", "Pop", "SlashedBabylonHeight", "SlashedBtcHeight", "Jailed", });
     internal_static_babylon_btcstaking_v1_FinalityProviderWithMeta_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_babylon_btcstaking_v1_FinalityProviderWithMeta_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_FinalityProviderWithMeta_descriptor,
-        new java.lang.String[] { "BtcPk", "Height", "VotingPower", "SlashedBabylonHeight", "SlashedBtcHeight", "Sluggish", });
+        new java.lang.String[] { "BtcPk", "Height", "VotingPower", "SlashedBabylonHeight", "SlashedBtcHeight", "Jailed", });
     internal_static_babylon_btcstaking_v1_BTCDelegation_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_babylon_btcstaking_v1_BTCDelegation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_BTCDelegation_descriptor,
-        new java.lang.String[] { "StakerAddr", "BtcPk", "Pop", "FpBtcPkList", "StartHeight", "EndHeight", "TotalSat", "StakingTx", "StakingOutputIdx", "SlashingTx", "DelegatorSig", "CovenantSigs", "UnbondingTime", "BtcUndelegation", "ParamsVersion", });
-    internal_static_babylon_btcstaking_v1_BTCUndelegation_descriptor =
+        new java.lang.String[] { "StakerAddr", "BtcPk", "Pop", "FpBtcPkList", "StakingTime", "StartHeight", "EndHeight", "TotalSat", "StakingTx", "StakingOutputIdx", "SlashingTx", "DelegatorSig", "CovenantSigs", "UnbondingTime", "BtcUndelegation", "ParamsVersion", });
+    internal_static_babylon_btcstaking_v1_DelegatorUnbondingInfo_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_babylon_btcstaking_v1_DelegatorUnbondingInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_btcstaking_v1_DelegatorUnbondingInfo_descriptor,
+        new java.lang.String[] { "SpendStakeTx", });
+    internal_static_babylon_btcstaking_v1_BTCUndelegation_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_babylon_btcstaking_v1_BTCUndelegation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_BTCUndelegation_descriptor,
-        new java.lang.String[] { "UnbondingTx", "SlashingTx", "DelegatorUnbondingSig", "DelegatorSlashingSig", "CovenantSlashingSigs", "CovenantUnbondingSigList", });
+        new java.lang.String[] { "UnbondingTx", "SlashingTx", "DelegatorSlashingSig", "CovenantSlashingSigs", "CovenantUnbondingSigList", "DelegatorUnbondingInfo", });
     internal_static_babylon_btcstaking_v1_BTCDelegatorDelegations_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_babylon_btcstaking_v1_BTCDelegatorDelegations_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_BTCDelegatorDelegations_descriptor,
         new java.lang.String[] { "Dels", });
     internal_static_babylon_btcstaking_v1_BTCDelegatorDelegationIndex_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_babylon_btcstaking_v1_BTCDelegatorDelegationIndex_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_BTCDelegatorDelegationIndex_descriptor,
         new java.lang.String[] { "StakingTxHashList", });
     internal_static_babylon_btcstaking_v1_SignatureInfo_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_babylon_btcstaking_v1_SignatureInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_SignatureInfo_descriptor,
         new java.lang.String[] { "Pk", "Sig", });
     internal_static_babylon_btcstaking_v1_CovenantAdaptorSignatures_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_babylon_btcstaking_v1_CovenantAdaptorSignatures_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_CovenantAdaptorSignatures_descriptor,
         new java.lang.String[] { "CovPk", "AdaptorSigs", });
     internal_static_babylon_btcstaking_v1_SelectiveSlashingEvidence_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_babylon_btcstaking_v1_SelectiveSlashingEvidence_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_SelectiveSlashingEvidence_descriptor,
         new java.lang.String[] { "StakingTxHash", "FpBtcPk", "RecoveredFpBtcSk", });
+    internal_static_babylon_btcstaking_v1_InclusionProof_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_babylon_btcstaking_v1_InclusionProof_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_btcstaking_v1_InclusionProof_descriptor,
+        new java.lang.String[] { "Key", "Proof", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.cosmos_proto.CosmosProto.scalar);
@@ -11376,6 +12963,7 @@ public final class BtcstakingProto {
     com.cosmos_proto.CosmosProto.getDescriptor();
     com.cosmos.staking.v1beta1.StakingProto.getDescriptor();
     com.babylon.btcstaking.v1.PopProto.getDescriptor();
+    com.babylon.btccheckpoint.v1.BtccheckpointProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

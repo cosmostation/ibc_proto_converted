@@ -49,6 +49,130 @@ public final class QueryGrpc {
     return getParamsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.babylon.finality.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest,
+      com.babylon.finality.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse> getActiveFinalityProvidersAtHeightMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ActiveFinalityProvidersAtHeight",
+      requestType = com.babylon.finality.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest.class,
+      responseType = com.babylon.finality.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.babylon.finality.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest,
+      com.babylon.finality.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse> getActiveFinalityProvidersAtHeightMethod() {
+    io.grpc.MethodDescriptor<com.babylon.finality.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest, com.babylon.finality.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse> getActiveFinalityProvidersAtHeightMethod;
+    if ((getActiveFinalityProvidersAtHeightMethod = QueryGrpc.getActiveFinalityProvidersAtHeightMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getActiveFinalityProvidersAtHeightMethod = QueryGrpc.getActiveFinalityProvidersAtHeightMethod) == null) {
+          QueryGrpc.getActiveFinalityProvidersAtHeightMethod = getActiveFinalityProvidersAtHeightMethod =
+              io.grpc.MethodDescriptor.<com.babylon.finality.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest, com.babylon.finality.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ActiveFinalityProvidersAtHeight"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.babylon.finality.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.babylon.finality.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("ActiveFinalityProvidersAtHeight"))
+              .build();
+        }
+      }
+    }
+    return getActiveFinalityProvidersAtHeightMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.babylon.finality.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest,
+      com.babylon.finality.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse> getFinalityProviderPowerAtHeightMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "FinalityProviderPowerAtHeight",
+      requestType = com.babylon.finality.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest.class,
+      responseType = com.babylon.finality.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.babylon.finality.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest,
+      com.babylon.finality.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse> getFinalityProviderPowerAtHeightMethod() {
+    io.grpc.MethodDescriptor<com.babylon.finality.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest, com.babylon.finality.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse> getFinalityProviderPowerAtHeightMethod;
+    if ((getFinalityProviderPowerAtHeightMethod = QueryGrpc.getFinalityProviderPowerAtHeightMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getFinalityProviderPowerAtHeightMethod = QueryGrpc.getFinalityProviderPowerAtHeightMethod) == null) {
+          QueryGrpc.getFinalityProviderPowerAtHeightMethod = getFinalityProviderPowerAtHeightMethod =
+              io.grpc.MethodDescriptor.<com.babylon.finality.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest, com.babylon.finality.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FinalityProviderPowerAtHeight"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.babylon.finality.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.babylon.finality.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("FinalityProviderPowerAtHeight"))
+              .build();
+        }
+      }
+    }
+    return getFinalityProviderPowerAtHeightMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.babylon.finality.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest,
+      com.babylon.finality.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse> getFinalityProviderCurrentPowerMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "FinalityProviderCurrentPower",
+      requestType = com.babylon.finality.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest.class,
+      responseType = com.babylon.finality.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.babylon.finality.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest,
+      com.babylon.finality.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse> getFinalityProviderCurrentPowerMethod() {
+    io.grpc.MethodDescriptor<com.babylon.finality.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest, com.babylon.finality.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse> getFinalityProviderCurrentPowerMethod;
+    if ((getFinalityProviderCurrentPowerMethod = QueryGrpc.getFinalityProviderCurrentPowerMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getFinalityProviderCurrentPowerMethod = QueryGrpc.getFinalityProviderCurrentPowerMethod) == null) {
+          QueryGrpc.getFinalityProviderCurrentPowerMethod = getFinalityProviderCurrentPowerMethod =
+              io.grpc.MethodDescriptor.<com.babylon.finality.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest, com.babylon.finality.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FinalityProviderCurrentPower"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.babylon.finality.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.babylon.finality.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("FinalityProviderCurrentPower"))
+              .build();
+        }
+      }
+    }
+    return getFinalityProviderCurrentPowerMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.babylon.finality.v1.QueryProto.QueryActivatedHeightRequest,
+      com.babylon.finality.v1.QueryProto.QueryActivatedHeightResponse> getActivatedHeightMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ActivatedHeight",
+      requestType = com.babylon.finality.v1.QueryProto.QueryActivatedHeightRequest.class,
+      responseType = com.babylon.finality.v1.QueryProto.QueryActivatedHeightResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.babylon.finality.v1.QueryProto.QueryActivatedHeightRequest,
+      com.babylon.finality.v1.QueryProto.QueryActivatedHeightResponse> getActivatedHeightMethod() {
+    io.grpc.MethodDescriptor<com.babylon.finality.v1.QueryProto.QueryActivatedHeightRequest, com.babylon.finality.v1.QueryProto.QueryActivatedHeightResponse> getActivatedHeightMethod;
+    if ((getActivatedHeightMethod = QueryGrpc.getActivatedHeightMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getActivatedHeightMethod = QueryGrpc.getActivatedHeightMethod) == null) {
+          QueryGrpc.getActivatedHeightMethod = getActivatedHeightMethod =
+              io.grpc.MethodDescriptor.<com.babylon.finality.v1.QueryProto.QueryActivatedHeightRequest, com.babylon.finality.v1.QueryProto.QueryActivatedHeightResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ActivatedHeight"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.babylon.finality.v1.QueryProto.QueryActivatedHeightRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.babylon.finality.v1.QueryProto.QueryActivatedHeightResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("ActivatedHeight"))
+              .build();
+        }
+      }
+    }
+    return getActivatedHeightMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.babylon.finality.v1.QueryProto.QueryListPublicRandomnessRequest,
       com.babylon.finality.v1.QueryProto.QueryListPublicRandomnessResponse> getListPublicRandomnessMethod;
 
@@ -391,11 +515,51 @@ public final class QueryGrpc {
 
     /**
      * <pre>
+     * ActiveFinalityProvidersAtHeight queries finality providers with non zero voting power at given height.
+     * </pre>
+     */
+    default void activeFinalityProvidersAtHeight(com.babylon.finality.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest request,
+        io.grpc.stub.StreamObserver<com.babylon.finality.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getActiveFinalityProvidersAtHeightMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * FinalityProviderPowerAtHeight queries the voting power of a finality provider at a given height
+     * </pre>
+     */
+    default void finalityProviderPowerAtHeight(com.babylon.finality.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest request,
+        io.grpc.stub.StreamObserver<com.babylon.finality.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFinalityProviderPowerAtHeightMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * FinalityProviderCurrentPower queries the voting power of a finality provider at the current height
+     * </pre>
+     */
+    default void finalityProviderCurrentPower(com.babylon.finality.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest request,
+        io.grpc.stub.StreamObserver<com.babylon.finality.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFinalityProviderCurrentPowerMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ActivatedHeight queries the height when BTC staking protocol is activated, i.e., the first height when
+     * there exists 1 finality provider with voting power
+     * </pre>
+     */
+    default void activatedHeight(com.babylon.finality.v1.QueryProto.QueryActivatedHeightRequest request,
+        io.grpc.stub.StreamObserver<com.babylon.finality.v1.QueryProto.QueryActivatedHeightResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getActivatedHeightMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * ListPublicRandomness is a range query for public randomness of a given finality provider
      * NOTE: Babylon only has the knowledge of public randomness that is already revealed by
-     * finality providers, i.e., the finality provider alreayd provides a finality signature
+     * finality providers, i.e., the finality provider already provides a finality signature
      * at the corresponding height
-     * TODO: remove public randomness storage?
      * </pre>
      */
     default void listPublicRandomness(com.babylon.finality.v1.QueryProto.QueryListPublicRandomnessRequest request,
@@ -530,11 +694,55 @@ public final class QueryGrpc {
 
     /**
      * <pre>
+     * ActiveFinalityProvidersAtHeight queries finality providers with non zero voting power at given height.
+     * </pre>
+     */
+    public void activeFinalityProvidersAtHeight(com.babylon.finality.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest request,
+        io.grpc.stub.StreamObserver<com.babylon.finality.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getActiveFinalityProvidersAtHeightMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * FinalityProviderPowerAtHeight queries the voting power of a finality provider at a given height
+     * </pre>
+     */
+    public void finalityProviderPowerAtHeight(com.babylon.finality.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest request,
+        io.grpc.stub.StreamObserver<com.babylon.finality.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getFinalityProviderPowerAtHeightMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * FinalityProviderCurrentPower queries the voting power of a finality provider at the current height
+     * </pre>
+     */
+    public void finalityProviderCurrentPower(com.babylon.finality.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest request,
+        io.grpc.stub.StreamObserver<com.babylon.finality.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getFinalityProviderCurrentPowerMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ActivatedHeight queries the height when BTC staking protocol is activated, i.e., the first height when
+     * there exists 1 finality provider with voting power
+     * </pre>
+     */
+    public void activatedHeight(com.babylon.finality.v1.QueryProto.QueryActivatedHeightRequest request,
+        io.grpc.stub.StreamObserver<com.babylon.finality.v1.QueryProto.QueryActivatedHeightResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getActivatedHeightMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * ListPublicRandomness is a range query for public randomness of a given finality provider
      * NOTE: Babylon only has the knowledge of public randomness that is already revealed by
-     * finality providers, i.e., the finality provider alreayd provides a finality signature
+     * finality providers, i.e., the finality provider already provides a finality signature
      * at the corresponding height
-     * TODO: remove public randomness storage?
      * </pre>
      */
     public void listPublicRandomness(com.babylon.finality.v1.QueryProto.QueryListPublicRandomnessRequest request,
@@ -663,11 +871,51 @@ public final class QueryGrpc {
 
     /**
      * <pre>
+     * ActiveFinalityProvidersAtHeight queries finality providers with non zero voting power at given height.
+     * </pre>
+     */
+    public com.babylon.finality.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse activeFinalityProvidersAtHeight(com.babylon.finality.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getActiveFinalityProvidersAtHeightMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * FinalityProviderPowerAtHeight queries the voting power of a finality provider at a given height
+     * </pre>
+     */
+    public com.babylon.finality.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse finalityProviderPowerAtHeight(com.babylon.finality.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getFinalityProviderPowerAtHeightMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * FinalityProviderCurrentPower queries the voting power of a finality provider at the current height
+     * </pre>
+     */
+    public com.babylon.finality.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse finalityProviderCurrentPower(com.babylon.finality.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getFinalityProviderCurrentPowerMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ActivatedHeight queries the height when BTC staking protocol is activated, i.e., the first height when
+     * there exists 1 finality provider with voting power
+     * </pre>
+     */
+    public com.babylon.finality.v1.QueryProto.QueryActivatedHeightResponse activatedHeight(com.babylon.finality.v1.QueryProto.QueryActivatedHeightRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getActivatedHeightMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * ListPublicRandomness is a range query for public randomness of a given finality provider
      * NOTE: Babylon only has the knowledge of public randomness that is already revealed by
-     * finality providers, i.e., the finality provider alreayd provides a finality signature
+     * finality providers, i.e., the finality provider already provides a finality signature
      * at the corresponding height
-     * TODO: remove public randomness storage?
      * </pre>
      */
     public com.babylon.finality.v1.QueryProto.QueryListPublicRandomnessResponse listPublicRandomness(com.babylon.finality.v1.QueryProto.QueryListPublicRandomnessRequest request) {
@@ -788,11 +1036,55 @@ public final class QueryGrpc {
 
     /**
      * <pre>
+     * ActiveFinalityProvidersAtHeight queries finality providers with non zero voting power at given height.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.babylon.finality.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse> activeFinalityProvidersAtHeight(
+        com.babylon.finality.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getActiveFinalityProvidersAtHeightMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * FinalityProviderPowerAtHeight queries the voting power of a finality provider at a given height
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.babylon.finality.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse> finalityProviderPowerAtHeight(
+        com.babylon.finality.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getFinalityProviderPowerAtHeightMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * FinalityProviderCurrentPower queries the voting power of a finality provider at the current height
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.babylon.finality.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse> finalityProviderCurrentPower(
+        com.babylon.finality.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getFinalityProviderCurrentPowerMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * ActivatedHeight queries the height when BTC staking protocol is activated, i.e., the first height when
+     * there exists 1 finality provider with voting power
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.babylon.finality.v1.QueryProto.QueryActivatedHeightResponse> activatedHeight(
+        com.babylon.finality.v1.QueryProto.QueryActivatedHeightRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getActivatedHeightMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * ListPublicRandomness is a range query for public randomness of a given finality provider
      * NOTE: Babylon only has the knowledge of public randomness that is already revealed by
-     * finality providers, i.e., the finality provider alreayd provides a finality signature
+     * finality providers, i.e., the finality provider already provides a finality signature
      * at the corresponding height
-     * TODO: remove public randomness storage?
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.babylon.finality.v1.QueryProto.QueryListPublicRandomnessResponse> listPublicRandomness(
@@ -891,15 +1183,19 @@ public final class QueryGrpc {
   }
 
   private static final int METHODID_PARAMS = 0;
-  private static final int METHODID_LIST_PUBLIC_RANDOMNESS = 1;
-  private static final int METHODID_LIST_PUB_RAND_COMMIT = 2;
-  private static final int METHODID_BLOCK = 3;
-  private static final int METHODID_LIST_BLOCKS = 4;
-  private static final int METHODID_VOTES_AT_HEIGHT = 5;
-  private static final int METHODID_EVIDENCE = 6;
-  private static final int METHODID_LIST_EVIDENCES = 7;
-  private static final int METHODID_SIGNING_INFO = 8;
-  private static final int METHODID_SIGNING_INFOS = 9;
+  private static final int METHODID_ACTIVE_FINALITY_PROVIDERS_AT_HEIGHT = 1;
+  private static final int METHODID_FINALITY_PROVIDER_POWER_AT_HEIGHT = 2;
+  private static final int METHODID_FINALITY_PROVIDER_CURRENT_POWER = 3;
+  private static final int METHODID_ACTIVATED_HEIGHT = 4;
+  private static final int METHODID_LIST_PUBLIC_RANDOMNESS = 5;
+  private static final int METHODID_LIST_PUB_RAND_COMMIT = 6;
+  private static final int METHODID_BLOCK = 7;
+  private static final int METHODID_LIST_BLOCKS = 8;
+  private static final int METHODID_VOTES_AT_HEIGHT = 9;
+  private static final int METHODID_EVIDENCE = 10;
+  private static final int METHODID_LIST_EVIDENCES = 11;
+  private static final int METHODID_SIGNING_INFO = 12;
+  private static final int METHODID_SIGNING_INFOS = 13;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -921,6 +1217,22 @@ public final class QueryGrpc {
         case METHODID_PARAMS:
           serviceImpl.params((com.babylon.finality.v1.QueryProto.QueryParamsRequest) request,
               (io.grpc.stub.StreamObserver<com.babylon.finality.v1.QueryProto.QueryParamsResponse>) responseObserver);
+          break;
+        case METHODID_ACTIVE_FINALITY_PROVIDERS_AT_HEIGHT:
+          serviceImpl.activeFinalityProvidersAtHeight((com.babylon.finality.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest) request,
+              (io.grpc.stub.StreamObserver<com.babylon.finality.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse>) responseObserver);
+          break;
+        case METHODID_FINALITY_PROVIDER_POWER_AT_HEIGHT:
+          serviceImpl.finalityProviderPowerAtHeight((com.babylon.finality.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest) request,
+              (io.grpc.stub.StreamObserver<com.babylon.finality.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse>) responseObserver);
+          break;
+        case METHODID_FINALITY_PROVIDER_CURRENT_POWER:
+          serviceImpl.finalityProviderCurrentPower((com.babylon.finality.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest) request,
+              (io.grpc.stub.StreamObserver<com.babylon.finality.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse>) responseObserver);
+          break;
+        case METHODID_ACTIVATED_HEIGHT:
+          serviceImpl.activatedHeight((com.babylon.finality.v1.QueryProto.QueryActivatedHeightRequest) request,
+              (io.grpc.stub.StreamObserver<com.babylon.finality.v1.QueryProto.QueryActivatedHeightResponse>) responseObserver);
           break;
         case METHODID_LIST_PUBLIC_RANDOMNESS:
           serviceImpl.listPublicRandomness((com.babylon.finality.v1.QueryProto.QueryListPublicRandomnessRequest) request,
@@ -983,6 +1295,34 @@ public final class QueryGrpc {
               com.babylon.finality.v1.QueryProto.QueryParamsRequest,
               com.babylon.finality.v1.QueryProto.QueryParamsResponse>(
                 service, METHODID_PARAMS)))
+        .addMethod(
+          getActiveFinalityProvidersAtHeightMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.babylon.finality.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest,
+              com.babylon.finality.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse>(
+                service, METHODID_ACTIVE_FINALITY_PROVIDERS_AT_HEIGHT)))
+        .addMethod(
+          getFinalityProviderPowerAtHeightMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.babylon.finality.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest,
+              com.babylon.finality.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse>(
+                service, METHODID_FINALITY_PROVIDER_POWER_AT_HEIGHT)))
+        .addMethod(
+          getFinalityProviderCurrentPowerMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.babylon.finality.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest,
+              com.babylon.finality.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse>(
+                service, METHODID_FINALITY_PROVIDER_CURRENT_POWER)))
+        .addMethod(
+          getActivatedHeightMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.babylon.finality.v1.QueryProto.QueryActivatedHeightRequest,
+              com.babylon.finality.v1.QueryProto.QueryActivatedHeightResponse>(
+                service, METHODID_ACTIVATED_HEIGHT)))
         .addMethod(
           getListPublicRandomnessMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1095,6 +1435,10 @@ public final class QueryGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new QueryFileDescriptorSupplier())
               .addMethod(getParamsMethod())
+              .addMethod(getActiveFinalityProvidersAtHeightMethod())
+              .addMethod(getFinalityProviderPowerAtHeightMethod())
+              .addMethod(getFinalityProviderCurrentPowerMethod())
+              .addMethod(getActivatedHeightMethod())
               .addMethod(getListPublicRandomnessMethod())
               .addMethod(getListPubRandCommitMethod())
               .addMethod(getBlockMethod())

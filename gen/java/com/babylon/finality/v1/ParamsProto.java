@@ -20,10 +20,20 @@ public final class ParamsProto {
 
     /**
      * <pre>
+     * max_active_finality_providers is the maximum number of active finality providers in the BTC staking protocol
+     * </pre>
+     *
+     * <code>uint32 max_active_finality_providers = 1 [json_name = "maxActiveFinalityProviders"];</code>
+     * @return The maxActiveFinalityProviders.
+     */
+    int getMaxActiveFinalityProviders();
+
+    /**
+     * <pre>
      * signed_blocks_window defines the size of the sliding window for tracking finality provider liveness
      * </pre>
      *
-     * <code>int64 signed_blocks_window = 1 [json_name = "signedBlocksWindow"];</code>
+     * <code>int64 signed_blocks_window = 2 [json_name = "signedBlocksWindow"];</code>
      * @return The signedBlocksWindow.
      */
     long getSignedBlocksWindow();
@@ -34,7 +44,7 @@ public final class ParamsProto {
      * vote before being judged as missing their voting turn on the given block
      * </pre>
      *
-     * <code>int64 finality_sig_timeout = 2 [json_name = "finalitySigTimeout"];</code>
+     * <code>int64 finality_sig_timeout = 3 [json_name = "finalitySigTimeout"];</code>
      * @return The finalitySigTimeout.
      */
     long getFinalitySigTimeout();
@@ -42,10 +52,10 @@ public final class ParamsProto {
     /**
      * <pre>
      * min_signed_per_window defines the minimum number of blocks that a finality provider is required to sign
-     * within the sliding window to avoid being detected as sluggish
+     * within the sliding window to avoid being jailed
      * </pre>
      *
-     * <code>bytes min_signed_per_window = 3 [json_name = "minSignedPerWindow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec", (.amino.dont_omitempty) = true];</code>
+     * <code>bytes min_signed_per_window = 4 [json_name = "minSignedPerWindow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec", (.amino.dont_omitempty) = true];</code>
      * @return The minSignedPerWindow.
      */
     com.google.protobuf.ByteString getMinSignedPerWindow();
@@ -56,10 +66,49 @@ public final class ParamsProto {
      * message should commit
      * </pre>
      *
-     * <code>uint64 min_pub_rand = 4 [json_name = "minPubRand"];</code>
+     * <code>uint64 min_pub_rand = 5 [json_name = "minPubRand"];</code>
      * @return The minPubRand.
      */
     long getMinPubRand();
+
+    /**
+     * <pre>
+     * jail_duration is the minimum period of time that a finality provider remains jailed
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration jail_duration = 6 [json_name = "jailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true, (.amino.dont_omitempty) = true];</code>
+     * @return Whether the jailDuration field is set.
+     */
+    boolean hasJailDuration();
+    /**
+     * <pre>
+     * jail_duration is the minimum period of time that a finality provider remains jailed
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration jail_duration = 6 [json_name = "jailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true, (.amino.dont_omitempty) = true];</code>
+     * @return The jailDuration.
+     */
+    com.google.protobuf.Duration getJailDuration();
+    /**
+     * <pre>
+     * jail_duration is the minimum period of time that a finality provider remains jailed
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration jail_duration = 6 [json_name = "jailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true, (.amino.dont_omitempty) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getJailDurationOrBuilder();
+
+    /**
+     * <pre>
+     * finality_activation_height is the babylon block height which the finality module will
+     * start to accept finality voting and the minimum allowed value for the public randomness
+     * commit start height.
+     * </pre>
+     *
+     * <code>uint64 finality_activation_height = 7 [json_name = "finalityActivationHeight"];</code>
+     * @return The finalityActivationHeight.
+     */
+    long getFinalityActivationHeight();
   }
   /**
    * <pre>
@@ -101,14 +150,29 @@ public final class ParamsProto {
               com.babylon.finality.v1.ParamsProto.Params.class, com.babylon.finality.v1.ParamsProto.Params.Builder.class);
     }
 
-    public static final int SIGNED_BLOCKS_WINDOW_FIELD_NUMBER = 1;
+    public static final int MAX_ACTIVE_FINALITY_PROVIDERS_FIELD_NUMBER = 1;
+    private int maxActiveFinalityProviders_ = 0;
+    /**
+     * <pre>
+     * max_active_finality_providers is the maximum number of active finality providers in the BTC staking protocol
+     * </pre>
+     *
+     * <code>uint32 max_active_finality_providers = 1 [json_name = "maxActiveFinalityProviders"];</code>
+     * @return The maxActiveFinalityProviders.
+     */
+    @java.lang.Override
+    public int getMaxActiveFinalityProviders() {
+      return maxActiveFinalityProviders_;
+    }
+
+    public static final int SIGNED_BLOCKS_WINDOW_FIELD_NUMBER = 2;
     private long signedBlocksWindow_ = 0L;
     /**
      * <pre>
      * signed_blocks_window defines the size of the sliding window for tracking finality provider liveness
      * </pre>
      *
-     * <code>int64 signed_blocks_window = 1 [json_name = "signedBlocksWindow"];</code>
+     * <code>int64 signed_blocks_window = 2 [json_name = "signedBlocksWindow"];</code>
      * @return The signedBlocksWindow.
      */
     @java.lang.Override
@@ -116,7 +180,7 @@ public final class ParamsProto {
       return signedBlocksWindow_;
     }
 
-    public static final int FINALITY_SIG_TIMEOUT_FIELD_NUMBER = 2;
+    public static final int FINALITY_SIG_TIMEOUT_FIELD_NUMBER = 3;
     private long finalitySigTimeout_ = 0L;
     /**
      * <pre>
@@ -124,7 +188,7 @@ public final class ParamsProto {
      * vote before being judged as missing their voting turn on the given block
      * </pre>
      *
-     * <code>int64 finality_sig_timeout = 2 [json_name = "finalitySigTimeout"];</code>
+     * <code>int64 finality_sig_timeout = 3 [json_name = "finalitySigTimeout"];</code>
      * @return The finalitySigTimeout.
      */
     @java.lang.Override
@@ -132,15 +196,15 @@ public final class ParamsProto {
       return finalitySigTimeout_;
     }
 
-    public static final int MIN_SIGNED_PER_WINDOW_FIELD_NUMBER = 3;
+    public static final int MIN_SIGNED_PER_WINDOW_FIELD_NUMBER = 4;
     private com.google.protobuf.ByteString minSignedPerWindow_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <pre>
      * min_signed_per_window defines the minimum number of blocks that a finality provider is required to sign
-     * within the sliding window to avoid being detected as sluggish
+     * within the sliding window to avoid being jailed
      * </pre>
      *
-     * <code>bytes min_signed_per_window = 3 [json_name = "minSignedPerWindow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec", (.amino.dont_omitempty) = true];</code>
+     * <code>bytes min_signed_per_window = 4 [json_name = "minSignedPerWindow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec", (.amino.dont_omitempty) = true];</code>
      * @return The minSignedPerWindow.
      */
     @java.lang.Override
@@ -148,7 +212,7 @@ public final class ParamsProto {
       return minSignedPerWindow_;
     }
 
-    public static final int MIN_PUB_RAND_FIELD_NUMBER = 4;
+    public static final int MIN_PUB_RAND_FIELD_NUMBER = 5;
     private long minPubRand_ = 0L;
     /**
      * <pre>
@@ -156,12 +220,67 @@ public final class ParamsProto {
      * message should commit
      * </pre>
      *
-     * <code>uint64 min_pub_rand = 4 [json_name = "minPubRand"];</code>
+     * <code>uint64 min_pub_rand = 5 [json_name = "minPubRand"];</code>
      * @return The minPubRand.
      */
     @java.lang.Override
     public long getMinPubRand() {
       return minPubRand_;
+    }
+
+    public static final int JAIL_DURATION_FIELD_NUMBER = 6;
+    private com.google.protobuf.Duration jailDuration_;
+    /**
+     * <pre>
+     * jail_duration is the minimum period of time that a finality provider remains jailed
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration jail_duration = 6 [json_name = "jailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true, (.amino.dont_omitempty) = true];</code>
+     * @return Whether the jailDuration field is set.
+     */
+    @java.lang.Override
+    public boolean hasJailDuration() {
+      return jailDuration_ != null;
+    }
+    /**
+     * <pre>
+     * jail_duration is the minimum period of time that a finality provider remains jailed
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration jail_duration = 6 [json_name = "jailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true, (.amino.dont_omitempty) = true];</code>
+     * @return The jailDuration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getJailDuration() {
+      return jailDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : jailDuration_;
+    }
+    /**
+     * <pre>
+     * jail_duration is the minimum period of time that a finality provider remains jailed
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration jail_duration = 6 [json_name = "jailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true, (.amino.dont_omitempty) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getJailDurationOrBuilder() {
+      return jailDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : jailDuration_;
+    }
+
+    public static final int FINALITY_ACTIVATION_HEIGHT_FIELD_NUMBER = 7;
+    private long finalityActivationHeight_ = 0L;
+    /**
+     * <pre>
+     * finality_activation_height is the babylon block height which the finality module will
+     * start to accept finality voting and the minimum allowed value for the public randomness
+     * commit start height.
+     * </pre>
+     *
+     * <code>uint64 finality_activation_height = 7 [json_name = "finalityActivationHeight"];</code>
+     * @return The finalityActivationHeight.
+     */
+    @java.lang.Override
+    public long getFinalityActivationHeight() {
+      return finalityActivationHeight_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -178,17 +297,26 @@ public final class ParamsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (maxActiveFinalityProviders_ != 0) {
+        output.writeUInt32(1, maxActiveFinalityProviders_);
+      }
       if (signedBlocksWindow_ != 0L) {
-        output.writeInt64(1, signedBlocksWindow_);
+        output.writeInt64(2, signedBlocksWindow_);
       }
       if (finalitySigTimeout_ != 0L) {
-        output.writeInt64(2, finalitySigTimeout_);
+        output.writeInt64(3, finalitySigTimeout_);
       }
       if (!minSignedPerWindow_.isEmpty()) {
-        output.writeBytes(3, minSignedPerWindow_);
+        output.writeBytes(4, minSignedPerWindow_);
       }
       if (minPubRand_ != 0L) {
-        output.writeUInt64(4, minPubRand_);
+        output.writeUInt64(5, minPubRand_);
+      }
+      if (jailDuration_ != null) {
+        output.writeMessage(6, getJailDuration());
+      }
+      if (finalityActivationHeight_ != 0L) {
+        output.writeUInt64(7, finalityActivationHeight_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -199,21 +327,33 @@ public final class ParamsProto {
       if (size != -1) return size;
 
       size = 0;
+      if (maxActiveFinalityProviders_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, maxActiveFinalityProviders_);
+      }
       if (signedBlocksWindow_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, signedBlocksWindow_);
+          .computeInt64Size(2, signedBlocksWindow_);
       }
       if (finalitySigTimeout_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, finalitySigTimeout_);
+          .computeInt64Size(3, finalitySigTimeout_);
       }
       if (!minSignedPerWindow_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, minSignedPerWindow_);
+          .computeBytesSize(4, minSignedPerWindow_);
       }
       if (minPubRand_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(4, minPubRand_);
+          .computeUInt64Size(5, minPubRand_);
+      }
+      if (jailDuration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getJailDuration());
+      }
+      if (finalityActivationHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(7, finalityActivationHeight_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -230,6 +370,8 @@ public final class ParamsProto {
       }
       com.babylon.finality.v1.ParamsProto.Params other = (com.babylon.finality.v1.ParamsProto.Params) obj;
 
+      if (getMaxActiveFinalityProviders()
+          != other.getMaxActiveFinalityProviders()) return false;
       if (getSignedBlocksWindow()
           != other.getSignedBlocksWindow()) return false;
       if (getFinalitySigTimeout()
@@ -238,6 +380,13 @@ public final class ParamsProto {
           .equals(other.getMinSignedPerWindow())) return false;
       if (getMinPubRand()
           != other.getMinPubRand()) return false;
+      if (hasJailDuration() != other.hasJailDuration()) return false;
+      if (hasJailDuration()) {
+        if (!getJailDuration()
+            .equals(other.getJailDuration())) return false;
+      }
+      if (getFinalityActivationHeight()
+          != other.getFinalityActivationHeight()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -249,6 +398,8 @@ public final class ParamsProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MAX_ACTIVE_FINALITY_PROVIDERS_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxActiveFinalityProviders();
       hash = (37 * hash) + SIGNED_BLOCKS_WINDOW_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getSignedBlocksWindow());
@@ -260,6 +411,13 @@ public final class ParamsProto {
       hash = (37 * hash) + MIN_PUB_RAND_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getMinPubRand());
+      if (hasJailDuration()) {
+        hash = (37 * hash) + JAIL_DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getJailDuration().hashCode();
+      }
+      hash = (37 * hash) + FINALITY_ACTIVATION_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getFinalityActivationHeight());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -395,10 +553,17 @@ public final class ParamsProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
+        maxActiveFinalityProviders_ = 0;
         signedBlocksWindow_ = 0L;
         finalitySigTimeout_ = 0L;
         minSignedPerWindow_ = com.google.protobuf.ByteString.EMPTY;
         minPubRand_ = 0L;
+        jailDuration_ = null;
+        if (jailDurationBuilder_ != null) {
+          jailDurationBuilder_.dispose();
+          jailDurationBuilder_ = null;
+        }
+        finalityActivationHeight_ = 0L;
         return this;
       }
 
@@ -433,16 +598,27 @@ public final class ParamsProto {
       private void buildPartial0(com.babylon.finality.v1.ParamsProto.Params result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.signedBlocksWindow_ = signedBlocksWindow_;
+          result.maxActiveFinalityProviders_ = maxActiveFinalityProviders_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.finalitySigTimeout_ = finalitySigTimeout_;
+          result.signedBlocksWindow_ = signedBlocksWindow_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.minSignedPerWindow_ = minSignedPerWindow_;
+          result.finalitySigTimeout_ = finalitySigTimeout_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.minSignedPerWindow_ = minSignedPerWindow_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
           result.minPubRand_ = minPubRand_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.jailDuration_ = jailDurationBuilder_ == null
+              ? jailDuration_
+              : jailDurationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.finalityActivationHeight_ = finalityActivationHeight_;
         }
       }
 
@@ -490,6 +666,9 @@ public final class ParamsProto {
 
       public Builder mergeFrom(com.babylon.finality.v1.ParamsProto.Params other) {
         if (other == com.babylon.finality.v1.ParamsProto.Params.getDefaultInstance()) return this;
+        if (other.getMaxActiveFinalityProviders() != 0) {
+          setMaxActiveFinalityProviders(other.getMaxActiveFinalityProviders());
+        }
         if (other.getSignedBlocksWindow() != 0L) {
           setSignedBlocksWindow(other.getSignedBlocksWindow());
         }
@@ -501,6 +680,12 @@ public final class ParamsProto {
         }
         if (other.getMinPubRand() != 0L) {
           setMinPubRand(other.getMinPubRand());
+        }
+        if (other.hasJailDuration()) {
+          mergeJailDuration(other.getJailDuration());
+        }
+        if (other.getFinalityActivationHeight() != 0L) {
+          setFinalityActivationHeight(other.getFinalityActivationHeight());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -529,25 +714,42 @@ public final class ParamsProto {
                 done = true;
                 break;
               case 8: {
-                signedBlocksWindow_ = input.readInt64();
+                maxActiveFinalityProviders_ = input.readUInt32();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 16: {
-                finalitySigTimeout_ = input.readInt64();
+                signedBlocksWindow_ = input.readInt64();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 16
-              case 26: {
-                minSignedPerWindow_ = input.readBytes();
+              case 24: {
+                finalitySigTimeout_ = input.readInt64();
                 bitField0_ |= 0x00000004;
                 break;
-              } // case 26
-              case 32: {
-                minPubRand_ = input.readUInt64();
+              } // case 24
+              case 34: {
+                minSignedPerWindow_ = input.readBytes();
                 bitField0_ |= 0x00000008;
                 break;
-              } // case 32
+              } // case 34
+              case 40: {
+                minPubRand_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 50: {
+                input.readMessage(
+                    getJailDurationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 56: {
+                finalityActivationHeight_ = input.readUInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -565,13 +767,57 @@ public final class ParamsProto {
       }
       private int bitField0_;
 
+      private int maxActiveFinalityProviders_ ;
+      /**
+       * <pre>
+       * max_active_finality_providers is the maximum number of active finality providers in the BTC staking protocol
+       * </pre>
+       *
+       * <code>uint32 max_active_finality_providers = 1 [json_name = "maxActiveFinalityProviders"];</code>
+       * @return The maxActiveFinalityProviders.
+       */
+      @java.lang.Override
+      public int getMaxActiveFinalityProviders() {
+        return maxActiveFinalityProviders_;
+      }
+      /**
+       * <pre>
+       * max_active_finality_providers is the maximum number of active finality providers in the BTC staking protocol
+       * </pre>
+       *
+       * <code>uint32 max_active_finality_providers = 1 [json_name = "maxActiveFinalityProviders"];</code>
+       * @param value The maxActiveFinalityProviders to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxActiveFinalityProviders(int value) {
+
+        maxActiveFinalityProviders_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * max_active_finality_providers is the maximum number of active finality providers in the BTC staking protocol
+       * </pre>
+       *
+       * <code>uint32 max_active_finality_providers = 1 [json_name = "maxActiveFinalityProviders"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxActiveFinalityProviders() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        maxActiveFinalityProviders_ = 0;
+        onChanged();
+        return this;
+      }
+
       private long signedBlocksWindow_ ;
       /**
        * <pre>
        * signed_blocks_window defines the size of the sliding window for tracking finality provider liveness
        * </pre>
        *
-       * <code>int64 signed_blocks_window = 1 [json_name = "signedBlocksWindow"];</code>
+       * <code>int64 signed_blocks_window = 2 [json_name = "signedBlocksWindow"];</code>
        * @return The signedBlocksWindow.
        */
       @java.lang.Override
@@ -583,14 +829,14 @@ public final class ParamsProto {
        * signed_blocks_window defines the size of the sliding window for tracking finality provider liveness
        * </pre>
        *
-       * <code>int64 signed_blocks_window = 1 [json_name = "signedBlocksWindow"];</code>
+       * <code>int64 signed_blocks_window = 2 [json_name = "signedBlocksWindow"];</code>
        * @param value The signedBlocksWindow to set.
        * @return This builder for chaining.
        */
       public Builder setSignedBlocksWindow(long value) {
 
         signedBlocksWindow_ = value;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -599,11 +845,11 @@ public final class ParamsProto {
        * signed_blocks_window defines the size of the sliding window for tracking finality provider liveness
        * </pre>
        *
-       * <code>int64 signed_blocks_window = 1 [json_name = "signedBlocksWindow"];</code>
+       * <code>int64 signed_blocks_window = 2 [json_name = "signedBlocksWindow"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSignedBlocksWindow() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         signedBlocksWindow_ = 0L;
         onChanged();
         return this;
@@ -616,7 +862,7 @@ public final class ParamsProto {
        * vote before being judged as missing their voting turn on the given block
        * </pre>
        *
-       * <code>int64 finality_sig_timeout = 2 [json_name = "finalitySigTimeout"];</code>
+       * <code>int64 finality_sig_timeout = 3 [json_name = "finalitySigTimeout"];</code>
        * @return The finalitySigTimeout.
        */
       @java.lang.Override
@@ -629,14 +875,14 @@ public final class ParamsProto {
        * vote before being judged as missing their voting turn on the given block
        * </pre>
        *
-       * <code>int64 finality_sig_timeout = 2 [json_name = "finalitySigTimeout"];</code>
+       * <code>int64 finality_sig_timeout = 3 [json_name = "finalitySigTimeout"];</code>
        * @param value The finalitySigTimeout to set.
        * @return This builder for chaining.
        */
       public Builder setFinalitySigTimeout(long value) {
 
         finalitySigTimeout_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -646,11 +892,11 @@ public final class ParamsProto {
        * vote before being judged as missing their voting turn on the given block
        * </pre>
        *
-       * <code>int64 finality_sig_timeout = 2 [json_name = "finalitySigTimeout"];</code>
+       * <code>int64 finality_sig_timeout = 3 [json_name = "finalitySigTimeout"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFinalitySigTimeout() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         finalitySigTimeout_ = 0L;
         onChanged();
         return this;
@@ -660,10 +906,10 @@ public final class ParamsProto {
       /**
        * <pre>
        * min_signed_per_window defines the minimum number of blocks that a finality provider is required to sign
-       * within the sliding window to avoid being detected as sluggish
+       * within the sliding window to avoid being jailed
        * </pre>
        *
-       * <code>bytes min_signed_per_window = 3 [json_name = "minSignedPerWindow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec", (.amino.dont_omitempty) = true];</code>
+       * <code>bytes min_signed_per_window = 4 [json_name = "minSignedPerWindow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec", (.amino.dont_omitempty) = true];</code>
        * @return The minSignedPerWindow.
        */
       @java.lang.Override
@@ -673,31 +919,31 @@ public final class ParamsProto {
       /**
        * <pre>
        * min_signed_per_window defines the minimum number of blocks that a finality provider is required to sign
-       * within the sliding window to avoid being detected as sluggish
+       * within the sliding window to avoid being jailed
        * </pre>
        *
-       * <code>bytes min_signed_per_window = 3 [json_name = "minSignedPerWindow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec", (.amino.dont_omitempty) = true];</code>
+       * <code>bytes min_signed_per_window = 4 [json_name = "minSignedPerWindow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec", (.amino.dont_omitempty) = true];</code>
        * @param value The minSignedPerWindow to set.
        * @return This builder for chaining.
        */
       public Builder setMinSignedPerWindow(com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         minSignedPerWindow_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
        * <pre>
        * min_signed_per_window defines the minimum number of blocks that a finality provider is required to sign
-       * within the sliding window to avoid being detected as sluggish
+       * within the sliding window to avoid being jailed
        * </pre>
        *
-       * <code>bytes min_signed_per_window = 3 [json_name = "minSignedPerWindow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec", (.amino.dont_omitempty) = true];</code>
+       * <code>bytes min_signed_per_window = 4 [json_name = "minSignedPerWindow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec", (.amino.dont_omitempty) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearMinSignedPerWindow() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         minSignedPerWindow_ = getDefaultInstance().getMinSignedPerWindow();
         onChanged();
         return this;
@@ -710,7 +956,7 @@ public final class ParamsProto {
        * message should commit
        * </pre>
        *
-       * <code>uint64 min_pub_rand = 4 [json_name = "minPubRand"];</code>
+       * <code>uint64 min_pub_rand = 5 [json_name = "minPubRand"];</code>
        * @return The minPubRand.
        */
       @java.lang.Override
@@ -723,14 +969,14 @@ public final class ParamsProto {
        * message should commit
        * </pre>
        *
-       * <code>uint64 min_pub_rand = 4 [json_name = "minPubRand"];</code>
+       * <code>uint64 min_pub_rand = 5 [json_name = "minPubRand"];</code>
        * @param value The minPubRand to set.
        * @return This builder for chaining.
        */
       public Builder setMinPubRand(long value) {
 
         minPubRand_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -740,12 +986,217 @@ public final class ParamsProto {
        * message should commit
        * </pre>
        *
-       * <code>uint64 min_pub_rand = 4 [json_name = "minPubRand"];</code>
+       * <code>uint64 min_pub_rand = 5 [json_name = "minPubRand"];</code>
        * @return This builder for chaining.
        */
       public Builder clearMinPubRand() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         minPubRand_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration jailDuration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> jailDurationBuilder_;
+      /**
+       * <pre>
+       * jail_duration is the minimum period of time that a finality provider remains jailed
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration jail_duration = 6 [json_name = "jailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true, (.amino.dont_omitempty) = true];</code>
+       * @return Whether the jailDuration field is set.
+       */
+      public boolean hasJailDuration() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * jail_duration is the minimum period of time that a finality provider remains jailed
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration jail_duration = 6 [json_name = "jailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true, (.amino.dont_omitempty) = true];</code>
+       * @return The jailDuration.
+       */
+      public com.google.protobuf.Duration getJailDuration() {
+        if (jailDurationBuilder_ == null) {
+          return jailDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : jailDuration_;
+        } else {
+          return jailDurationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * jail_duration is the minimum period of time that a finality provider remains jailed
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration jail_duration = 6 [json_name = "jailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder setJailDuration(com.google.protobuf.Duration value) {
+        if (jailDurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          jailDuration_ = value;
+        } else {
+          jailDurationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * jail_duration is the minimum period of time that a finality provider remains jailed
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration jail_duration = 6 [json_name = "jailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder setJailDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (jailDurationBuilder_ == null) {
+          jailDuration_ = builderForValue.build();
+        } else {
+          jailDurationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * jail_duration is the minimum period of time that a finality provider remains jailed
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration jail_duration = 6 [json_name = "jailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder mergeJailDuration(com.google.protobuf.Duration value) {
+        if (jailDurationBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            jailDuration_ != null &&
+            jailDuration_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getJailDurationBuilder().mergeFrom(value);
+          } else {
+            jailDuration_ = value;
+          }
+        } else {
+          jailDurationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * jail_duration is the minimum period of time that a finality provider remains jailed
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration jail_duration = 6 [json_name = "jailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder clearJailDuration() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        jailDuration_ = null;
+        if (jailDurationBuilder_ != null) {
+          jailDurationBuilder_.dispose();
+          jailDurationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * jail_duration is the minimum period of time that a finality provider remains jailed
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration jail_duration = 6 [json_name = "jailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true, (.amino.dont_omitempty) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getJailDurationBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getJailDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * jail_duration is the minimum period of time that a finality provider remains jailed
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration jail_duration = 6 [json_name = "jailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true, (.amino.dont_omitempty) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getJailDurationOrBuilder() {
+        if (jailDurationBuilder_ != null) {
+          return jailDurationBuilder_.getMessageOrBuilder();
+        } else {
+          return jailDuration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : jailDuration_;
+        }
+      }
+      /**
+       * <pre>
+       * jail_duration is the minimum period of time that a finality provider remains jailed
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration jail_duration = 6 [json_name = "jailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true, (.amino.dont_omitempty) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getJailDurationFieldBuilder() {
+        if (jailDurationBuilder_ == null) {
+          jailDurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getJailDuration(),
+                  getParentForChildren(),
+                  isClean());
+          jailDuration_ = null;
+        }
+        return jailDurationBuilder_;
+      }
+
+      private long finalityActivationHeight_ ;
+      /**
+       * <pre>
+       * finality_activation_height is the babylon block height which the finality module will
+       * start to accept finality voting and the minimum allowed value for the public randomness
+       * commit start height.
+       * </pre>
+       *
+       * <code>uint64 finality_activation_height = 7 [json_name = "finalityActivationHeight"];</code>
+       * @return The finalityActivationHeight.
+       */
+      @java.lang.Override
+      public long getFinalityActivationHeight() {
+        return finalityActivationHeight_;
+      }
+      /**
+       * <pre>
+       * finality_activation_height is the babylon block height which the finality module will
+       * start to accept finality voting and the minimum allowed value for the public randomness
+       * commit start height.
+       * </pre>
+       *
+       * <code>uint64 finality_activation_height = 7 [json_name = "finalityActivationHeight"];</code>
+       * @param value The finalityActivationHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFinalityActivationHeight(long value) {
+
+        finalityActivationHeight_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * finality_activation_height is the babylon block height which the finality module will
+       * start to accept finality voting and the minimum allowed value for the public randomness
+       * commit start height.
+       * </pre>
+       *
+       * <code>uint64 finality_activation_height = 7 [json_name = "finalityActivationHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFinalityActivationHeight() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        finalityActivationHeight_ = 0L;
         onChanged();
         return this;
       }
@@ -830,18 +1281,24 @@ public final class ParamsProto {
       "\n babylon/finality/v1/params.proto\022\023baby" +
       "lon.finality.v1\032\024gogoproto/gogo.proto\032\021a" +
       "mino/amino.proto\032\031cosmos_proto/cosmos.pr" +
-      "oto\"\377\001\n\006Params\0220\n\024signed_blocks_window\030\001" +
-      " \001(\003R\022signedBlocksWindow\0220\n\024finality_sig" +
-      "_timeout\030\002 \001(\003R\022finalitySigTimeout\022i\n\025mi" +
-      "n_signed_per_window\030\003 \001(\014B6\310\336\037\000\332\336\037\033cosmo" +
-      "ssdk.io/math.LegacyDec\322\264-\ncosmos.Dec\250\347\260*" +
-      "\001R\022minSignedPerWindow\022 \n\014min_pub_rand\030\004 " +
-      "\001(\004R\nminPubRand:\004\230\240\037\000B\304\001\n\027com.babylon.fi" +
-      "nality.v1B\013ParamsProtoZ0github.com/babyl" +
-      "onchain/babylon/x/finality/types\242\002\003BFX\252\002" +
-      "\023Babylon.Finality.V1\312\002\023Babylon\\Finality\\" +
-      "V1\342\002\037Babylon\\Finality\\V1\\GPBMetadata\352\002\025B" +
-      "abylon::Finality::V1b\006proto3"
+      "oto\032\036google/protobuf/duration.proto\"\317\003\n\006" +
+      "Params\022A\n\035max_active_finality_providers\030" +
+      "\001 \001(\rR\032maxActiveFinalityProviders\0220\n\024sig" +
+      "ned_blocks_window\030\002 \001(\003R\022signedBlocksWin" +
+      "dow\0220\n\024finality_sig_timeout\030\003 \001(\003R\022final" +
+      "itySigTimeout\022i\n\025min_signed_per_window\030\004" +
+      " \001(\014B6\310\336\037\000\332\336\037\033cosmossdk.io/math.LegacyDe" +
+      "c\322\264-\ncosmos.Dec\250\347\260*\001R\022minSignedPerWindow" +
+      "\022 \n\014min_pub_rand\030\005 \001(\004R\nminPubRand\022M\n\rja" +
+      "il_duration\030\006 \001(\0132\031.google.protobuf.Dura" +
+      "tionB\r\310\336\037\000\230\337\037\001\250\347\260*\001R\014jailDuration\022<\n\032fin" +
+      "ality_activation_height\030\007 \001(\004R\030finalityA" +
+      "ctivationHeight:\004\230\240\037\000B\306\001\n\027com.babylon.fi" +
+      "nality.v1B\013ParamsProtoZ2github.com/babyl" +
+      "onlabs-io/babylon/x/finality/types\242\002\003BFX" +
+      "\252\002\023Babylon.Finality.V1\312\002\023Babylon\\Finalit" +
+      "y\\V1\342\002\037Babylon\\Finality\\V1\\GPBMetadata\352\002" +
+      "\025Babylon::Finality::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -849,13 +1306,14 @@ public final class ParamsProto {
           com.gogoproto.GogoProto.getDescriptor(),
           com.amino.AminoProto.getDescriptor(),
           com.cosmos_proto.CosmosProto.getDescriptor(),
+          com.google.protobuf.DurationProto.getDescriptor(),
         });
     internal_static_babylon_finality_v1_Params_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_babylon_finality_v1_Params_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_finality_v1_Params_descriptor,
-        new java.lang.String[] { "SignedBlocksWindow", "FinalitySigTimeout", "MinSignedPerWindow", "MinPubRand", });
+        new java.lang.String[] { "MaxActiveFinalityProviders", "SignedBlocksWindow", "FinalitySigTimeout", "MinSignedPerWindow", "MinPubRand", "JailDuration", "FinalityActivationHeight", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.amino.AminoProto.dontOmitempty);
@@ -863,11 +1321,13 @@ public final class ParamsProto {
     registry.add(com.gogoproto.GogoProto.customtype);
     registry.add(com.gogoproto.GogoProto.goprotoStringer);
     registry.add(com.gogoproto.GogoProto.nullable);
+    registry.add(com.gogoproto.GogoProto.stdduration);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.gogoproto.GogoProto.getDescriptor();
     com.amino.AminoProto.getDescriptor();
     com.cosmos_proto.CosmosProto.getDescriptor();
+    com.google.protobuf.DurationProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

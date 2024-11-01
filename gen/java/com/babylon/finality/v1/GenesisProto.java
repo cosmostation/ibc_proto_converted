@@ -179,7 +179,7 @@ public final class GenesisProto {
 
     /**
      * <pre>
-     * public_randomness contains all the public randomness ever commited from the finality providers.
+     * public_randomness contains all the public randomness ever committed from the finality providers.
      * </pre>
      *
      * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -188,7 +188,7 @@ public final class GenesisProto {
         getPublicRandomnessList();
     /**
      * <pre>
-     * public_randomness contains all the public randomness ever commited from the finality providers.
+     * public_randomness contains all the public randomness ever committed from the finality providers.
      * </pre>
      *
      * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -196,7 +196,7 @@ public final class GenesisProto {
     com.babylon.finality.v1.GenesisProto.PublicRandomness getPublicRandomness(int index);
     /**
      * <pre>
-     * public_randomness contains all the public randomness ever commited from the finality providers.
+     * public_randomness contains all the public randomness ever committed from the finality providers.
      * </pre>
      *
      * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -204,7 +204,7 @@ public final class GenesisProto {
     int getPublicRandomnessCount();
     /**
      * <pre>
-     * public_randomness contains all the public randomness ever commited from the finality providers.
+     * public_randomness contains all the public randomness ever committed from the finality providers.
      * </pre>
      *
      * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -213,7 +213,7 @@ public final class GenesisProto {
         getPublicRandomnessOrBuilderList();
     /**
      * <pre>
-     * public_randomness contains all the public randomness ever commited from the finality providers.
+     * public_randomness contains all the public randomness ever committed from the finality providers.
      * </pre>
      *
      * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -223,7 +223,7 @@ public final class GenesisProto {
 
     /**
      * <pre>
-     * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+     * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
      * </pre>
      *
      * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -232,7 +232,7 @@ public final class GenesisProto {
         getPubRandCommitList();
     /**
      * <pre>
-     * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+     * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
      * </pre>
      *
      * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -240,7 +240,7 @@ public final class GenesisProto {
     com.babylon.finality.v1.GenesisProto.PubRandCommitWithPK getPubRandCommit(int index);
     /**
      * <pre>
-     * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+     * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
      * </pre>
      *
      * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -248,7 +248,7 @@ public final class GenesisProto {
     int getPubRandCommitCount();
     /**
      * <pre>
-     * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+     * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
      * </pre>
      *
      * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -257,7 +257,7 @@ public final class GenesisProto {
         getPubRandCommitOrBuilderList();
     /**
      * <pre>
-     * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+     * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
      * </pre>
      *
      * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -362,6 +362,94 @@ public final class GenesisProto {
      */
     com.babylon.finality.v1.GenesisProto.FinalityProviderMissedBlocksOrBuilder getMissedBlocksOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * voting_powers the voting power of every finality provider at every block height.
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+     */
+    java.util.List<com.babylon.finality.v1.GenesisProto.VotingPowerFP> 
+        getVotingPowersList();
+    /**
+     * <pre>
+     * voting_powers the voting power of every finality provider at every block height.
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+     */
+    com.babylon.finality.v1.GenesisProto.VotingPowerFP getVotingPowers(int index);
+    /**
+     * <pre>
+     * voting_powers the voting power of every finality provider at every block height.
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+     */
+    int getVotingPowersCount();
+    /**
+     * <pre>
+     * voting_powers the voting power of every finality provider at every block height.
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+     */
+    java.util.List<? extends com.babylon.finality.v1.GenesisProto.VotingPowerFPOrBuilder> 
+        getVotingPowersOrBuilderList();
+    /**
+     * <pre>
+     * voting_powers the voting power of every finality provider at every block height.
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+     */
+    com.babylon.finality.v1.GenesisProto.VotingPowerFPOrBuilder getVotingPowersOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+     */
+    java.util.List<com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight> 
+        getVpDstCacheList();
+    /**
+     * <pre>
+     * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+     */
+    com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight getVpDstCache(int index);
+    /**
+     * <pre>
+     * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+     */
+    int getVpDstCacheCount();
+    /**
+     * <pre>
+     * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+     */
+    java.util.List<? extends com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeightOrBuilder> 
+        getVpDstCacheOrBuilderList();
+    /**
+     * <pre>
+     * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+     */
+    com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeightOrBuilder getVpDstCacheOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -387,6 +475,8 @@ public final class GenesisProto {
       pubRandCommit_ = java.util.Collections.emptyList();
       signingInfos_ = java.util.Collections.emptyList();
       missedBlocks_ = java.util.Collections.emptyList();
+      votingPowers_ = java.util.Collections.emptyList();
+      vpDstCache_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -635,7 +725,7 @@ public final class GenesisProto {
     private java.util.List<com.babylon.finality.v1.GenesisProto.PublicRandomness> publicRandomness_;
     /**
      * <pre>
-     * public_randomness contains all the public randomness ever commited from the finality providers.
+     * public_randomness contains all the public randomness ever committed from the finality providers.
      * </pre>
      *
      * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -646,7 +736,7 @@ public final class GenesisProto {
     }
     /**
      * <pre>
-     * public_randomness contains all the public randomness ever commited from the finality providers.
+     * public_randomness contains all the public randomness ever committed from the finality providers.
      * </pre>
      *
      * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -658,7 +748,7 @@ public final class GenesisProto {
     }
     /**
      * <pre>
-     * public_randomness contains all the public randomness ever commited from the finality providers.
+     * public_randomness contains all the public randomness ever committed from the finality providers.
      * </pre>
      *
      * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -669,7 +759,7 @@ public final class GenesisProto {
     }
     /**
      * <pre>
-     * public_randomness contains all the public randomness ever commited from the finality providers.
+     * public_randomness contains all the public randomness ever committed from the finality providers.
      * </pre>
      *
      * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -680,7 +770,7 @@ public final class GenesisProto {
     }
     /**
      * <pre>
-     * public_randomness contains all the public randomness ever commited from the finality providers.
+     * public_randomness contains all the public randomness ever committed from the finality providers.
      * </pre>
      *
      * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -696,7 +786,7 @@ public final class GenesisProto {
     private java.util.List<com.babylon.finality.v1.GenesisProto.PubRandCommitWithPK> pubRandCommit_;
     /**
      * <pre>
-     * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+     * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
      * </pre>
      *
      * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -707,7 +797,7 @@ public final class GenesisProto {
     }
     /**
      * <pre>
-     * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+     * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
      * </pre>
      *
      * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -719,7 +809,7 @@ public final class GenesisProto {
     }
     /**
      * <pre>
-     * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+     * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
      * </pre>
      *
      * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -730,7 +820,7 @@ public final class GenesisProto {
     }
     /**
      * <pre>
-     * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+     * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
      * </pre>
      *
      * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -741,7 +831,7 @@ public final class GenesisProto {
     }
     /**
      * <pre>
-     * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+     * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
      * </pre>
      *
      * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -884,6 +974,128 @@ public final class GenesisProto {
       return missedBlocks_.get(index);
     }
 
+    public static final int VOTING_POWERS_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private java.util.List<com.babylon.finality.v1.GenesisProto.VotingPowerFP> votingPowers_;
+    /**
+     * <pre>
+     * voting_powers the voting power of every finality provider at every block height.
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.babylon.finality.v1.GenesisProto.VotingPowerFP> getVotingPowersList() {
+      return votingPowers_;
+    }
+    /**
+     * <pre>
+     * voting_powers the voting power of every finality provider at every block height.
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.babylon.finality.v1.GenesisProto.VotingPowerFPOrBuilder> 
+        getVotingPowersOrBuilderList() {
+      return votingPowers_;
+    }
+    /**
+     * <pre>
+     * voting_powers the voting power of every finality provider at every block height.
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+     */
+    @java.lang.Override
+    public int getVotingPowersCount() {
+      return votingPowers_.size();
+    }
+    /**
+     * <pre>
+     * voting_powers the voting power of every finality provider at every block height.
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+     */
+    @java.lang.Override
+    public com.babylon.finality.v1.GenesisProto.VotingPowerFP getVotingPowers(int index) {
+      return votingPowers_.get(index);
+    }
+    /**
+     * <pre>
+     * voting_powers the voting power of every finality provider at every block height.
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+     */
+    @java.lang.Override
+    public com.babylon.finality.v1.GenesisProto.VotingPowerFPOrBuilder getVotingPowersOrBuilder(
+        int index) {
+      return votingPowers_.get(index);
+    }
+
+    public static final int VP_DST_CACHE_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private java.util.List<com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight> vpDstCache_;
+    /**
+     * <pre>
+     * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight> getVpDstCacheList() {
+      return vpDstCache_;
+    }
+    /**
+     * <pre>
+     * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeightOrBuilder> 
+        getVpDstCacheOrBuilderList() {
+      return vpDstCache_;
+    }
+    /**
+     * <pre>
+     * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+     */
+    @java.lang.Override
+    public int getVpDstCacheCount() {
+      return vpDstCache_.size();
+    }
+    /**
+     * <pre>
+     * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+     */
+    @java.lang.Override
+    public com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight getVpDstCache(int index) {
+      return vpDstCache_.get(index);
+    }
+    /**
+     * <pre>
+     * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+     */
+    @java.lang.Override
+    public com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeightOrBuilder getVpDstCacheOrBuilder(
+        int index) {
+      return vpDstCache_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -921,6 +1133,12 @@ public final class GenesisProto {
       }
       for (int i = 0; i < missedBlocks_.size(); i++) {
         output.writeMessage(8, missedBlocks_.get(i));
+      }
+      for (int i = 0; i < votingPowers_.size(); i++) {
+        output.writeMessage(9, votingPowers_.get(i));
+      }
+      for (int i = 0; i < vpDstCache_.size(); i++) {
+        output.writeMessage(10, vpDstCache_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -963,6 +1181,14 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, missedBlocks_.get(i));
       }
+      for (int i = 0; i < votingPowers_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, votingPowers_.get(i));
+      }
+      for (int i = 0; i < vpDstCache_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, vpDstCache_.get(i));
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -997,6 +1223,10 @@ public final class GenesisProto {
           .equals(other.getSigningInfosList())) return false;
       if (!getMissedBlocksList()
           .equals(other.getMissedBlocksList())) return false;
+      if (!getVotingPowersList()
+          .equals(other.getVotingPowersList())) return false;
+      if (!getVpDstCacheList()
+          .equals(other.getVpDstCacheList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1039,6 +1269,14 @@ public final class GenesisProto {
       if (getMissedBlocksCount() > 0) {
         hash = (37 * hash) + MISSED_BLOCKS_FIELD_NUMBER;
         hash = (53 * hash) + getMissedBlocksList().hashCode();
+      }
+      if (getVotingPowersCount() > 0) {
+        hash = (37 * hash) + VOTING_POWERS_FIELD_NUMBER;
+        hash = (53 * hash) + getVotingPowersList().hashCode();
+      }
+      if (getVpDstCacheCount() > 0) {
+        hash = (37 * hash) + VP_DST_CACHE_FIELD_NUMBER;
+        hash = (53 * hash) + getVpDstCacheList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -1229,6 +1467,20 @@ public final class GenesisProto {
           missedBlocksBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000080);
+        if (votingPowersBuilder_ == null) {
+          votingPowers_ = java.util.Collections.emptyList();
+        } else {
+          votingPowers_ = null;
+          votingPowersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
+        if (vpDstCacheBuilder_ == null) {
+          vpDstCache_ = java.util.Collections.emptyList();
+        } else {
+          vpDstCache_ = null;
+          vpDstCacheBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
 
@@ -1324,6 +1576,24 @@ public final class GenesisProto {
           result.missedBlocks_ = missedBlocks_;
         } else {
           result.missedBlocks_ = missedBlocksBuilder_.build();
+        }
+        if (votingPowersBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0)) {
+            votingPowers_ = java.util.Collections.unmodifiableList(votingPowers_);
+            bitField0_ = (bitField0_ & ~0x00000100);
+          }
+          result.votingPowers_ = votingPowers_;
+        } else {
+          result.votingPowers_ = votingPowersBuilder_.build();
+        }
+        if (vpDstCacheBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0)) {
+            vpDstCache_ = java.util.Collections.unmodifiableList(vpDstCache_);
+            bitField0_ = (bitField0_ & ~0x00000200);
+          }
+          result.vpDstCache_ = vpDstCache_;
+        } else {
+          result.vpDstCache_ = vpDstCacheBuilder_.build();
         }
       }
 
@@ -1565,6 +1835,58 @@ public final class GenesisProto {
             }
           }
         }
+        if (votingPowersBuilder_ == null) {
+          if (!other.votingPowers_.isEmpty()) {
+            if (votingPowers_.isEmpty()) {
+              votingPowers_ = other.votingPowers_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+            } else {
+              ensureVotingPowersIsMutable();
+              votingPowers_.addAll(other.votingPowers_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.votingPowers_.isEmpty()) {
+            if (votingPowersBuilder_.isEmpty()) {
+              votingPowersBuilder_.dispose();
+              votingPowersBuilder_ = null;
+              votingPowers_ = other.votingPowers_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+              votingPowersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getVotingPowersFieldBuilder() : null;
+            } else {
+              votingPowersBuilder_.addAllMessages(other.votingPowers_);
+            }
+          }
+        }
+        if (vpDstCacheBuilder_ == null) {
+          if (!other.vpDstCache_.isEmpty()) {
+            if (vpDstCache_.isEmpty()) {
+              vpDstCache_ = other.vpDstCache_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+            } else {
+              ensureVpDstCacheIsMutable();
+              vpDstCache_.addAll(other.vpDstCache_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.vpDstCache_.isEmpty()) {
+            if (vpDstCacheBuilder_.isEmpty()) {
+              vpDstCacheBuilder_.dispose();
+              vpDstCacheBuilder_ = null;
+              vpDstCache_ = other.vpDstCache_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+              vpDstCacheBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getVpDstCacheFieldBuilder() : null;
+            } else {
+              vpDstCacheBuilder_.addAllMessages(other.vpDstCache_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1689,6 +2011,32 @@ public final class GenesisProto {
                 }
                 break;
               } // case 66
+              case 74: {
+                com.babylon.finality.v1.GenesisProto.VotingPowerFP m =
+                    input.readMessage(
+                        com.babylon.finality.v1.GenesisProto.VotingPowerFP.parser(),
+                        extensionRegistry);
+                if (votingPowersBuilder_ == null) {
+                  ensureVotingPowersIsMutable();
+                  votingPowers_.add(m);
+                } else {
+                  votingPowersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 74
+              case 82: {
+                com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight m =
+                    input.readMessage(
+                        com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight.parser(),
+                        extensionRegistry);
+                if (vpDstCacheBuilder_ == null) {
+                  ensureVpDstCacheIsMutable();
+                  vpDstCache_.add(m);
+                } else {
+                  vpDstCacheBuilder_.addMessage(m);
+                }
+                break;
+              } // case 82
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2811,7 +3159,7 @@ public final class GenesisProto {
 
       /**
        * <pre>
-       * public_randomness contains all the public randomness ever commited from the finality providers.
+       * public_randomness contains all the public randomness ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -2825,7 +3173,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * public_randomness contains all the public randomness ever commited from the finality providers.
+       * public_randomness contains all the public randomness ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -2839,7 +3187,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * public_randomness contains all the public randomness ever commited from the finality providers.
+       * public_randomness contains all the public randomness ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -2853,7 +3201,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * public_randomness contains all the public randomness ever commited from the finality providers.
+       * public_randomness contains all the public randomness ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -2874,7 +3222,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * public_randomness contains all the public randomness ever commited from the finality providers.
+       * public_randomness contains all the public randomness ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -2892,7 +3240,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * public_randomness contains all the public randomness ever commited from the finality providers.
+       * public_randomness contains all the public randomness ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -2912,7 +3260,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * public_randomness contains all the public randomness ever commited from the finality providers.
+       * public_randomness contains all the public randomness ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -2933,7 +3281,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * public_randomness contains all the public randomness ever commited from the finality providers.
+       * public_randomness contains all the public randomness ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -2951,7 +3299,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * public_randomness contains all the public randomness ever commited from the finality providers.
+       * public_randomness contains all the public randomness ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -2969,7 +3317,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * public_randomness contains all the public randomness ever commited from the finality providers.
+       * public_randomness contains all the public randomness ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -2988,7 +3336,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * public_randomness contains all the public randomness ever commited from the finality providers.
+       * public_randomness contains all the public randomness ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -3005,7 +3353,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * public_randomness contains all the public randomness ever commited from the finality providers.
+       * public_randomness contains all the public randomness ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -3022,7 +3370,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * public_randomness contains all the public randomness ever commited from the finality providers.
+       * public_randomness contains all the public randomness ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -3033,7 +3381,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * public_randomness contains all the public randomness ever commited from the finality providers.
+       * public_randomness contains all the public randomness ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -3047,7 +3395,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * public_randomness contains all the public randomness ever commited from the finality providers.
+       * public_randomness contains all the public randomness ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -3062,7 +3410,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * public_randomness contains all the public randomness ever commited from the finality providers.
+       * public_randomness contains all the public randomness ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -3073,7 +3421,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * public_randomness contains all the public randomness ever commited from the finality providers.
+       * public_randomness contains all the public randomness ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -3085,7 +3433,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * public_randomness contains all the public randomness ever commited from the finality providers.
+       * public_randomness contains all the public randomness ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PublicRandomness public_randomness = 5 [json_name = "publicRandomness"];</code>
@@ -3123,7 +3471,7 @@ public final class GenesisProto {
 
       /**
        * <pre>
-       * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+       * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -3137,7 +3485,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+       * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -3151,7 +3499,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+       * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -3165,7 +3513,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+       * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -3186,7 +3534,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+       * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -3204,7 +3552,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+       * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -3224,7 +3572,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+       * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -3245,7 +3593,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+       * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -3263,7 +3611,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+       * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -3281,7 +3629,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+       * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -3300,7 +3648,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+       * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -3317,7 +3665,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+       * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -3334,7 +3682,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+       * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -3345,7 +3693,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+       * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -3359,7 +3707,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+       * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -3374,7 +3722,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+       * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -3385,7 +3733,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+       * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -3397,7 +3745,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * pub_rand_commit contains all the public randomness commitment ever commited from the finality providers.
+       * pub_rand_commit contains all the public randomness commitment ever committed from the finality providers.
        * </pre>
        *
        * <code>repeated .babylon.finality.v1.PubRandCommitWithPK pub_rand_commit = 6 [json_name = "pubRandCommit"];</code>
@@ -4080,6 +4428,630 @@ public final class GenesisProto {
         }
         return missedBlocksBuilder_;
       }
+
+      private java.util.List<com.babylon.finality.v1.GenesisProto.VotingPowerFP> votingPowers_ =
+        java.util.Collections.emptyList();
+      private void ensureVotingPowersIsMutable() {
+        if (!((bitField0_ & 0x00000100) != 0)) {
+          votingPowers_ = new java.util.ArrayList<com.babylon.finality.v1.GenesisProto.VotingPowerFP>(votingPowers_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.babylon.finality.v1.GenesisProto.VotingPowerFP, com.babylon.finality.v1.GenesisProto.VotingPowerFP.Builder, com.babylon.finality.v1.GenesisProto.VotingPowerFPOrBuilder> votingPowersBuilder_;
+
+      /**
+       * <pre>
+       * voting_powers the voting power of every finality provider at every block height.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+       */
+      public java.util.List<com.babylon.finality.v1.GenesisProto.VotingPowerFP> getVotingPowersList() {
+        if (votingPowersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(votingPowers_);
+        } else {
+          return votingPowersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * voting_powers the voting power of every finality provider at every block height.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+       */
+      public int getVotingPowersCount() {
+        if (votingPowersBuilder_ == null) {
+          return votingPowers_.size();
+        } else {
+          return votingPowersBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * voting_powers the voting power of every finality provider at every block height.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+       */
+      public com.babylon.finality.v1.GenesisProto.VotingPowerFP getVotingPowers(int index) {
+        if (votingPowersBuilder_ == null) {
+          return votingPowers_.get(index);
+        } else {
+          return votingPowersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * voting_powers the voting power of every finality provider at every block height.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+       */
+      public Builder setVotingPowers(
+          int index, com.babylon.finality.v1.GenesisProto.VotingPowerFP value) {
+        if (votingPowersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVotingPowersIsMutable();
+          votingPowers_.set(index, value);
+          onChanged();
+        } else {
+          votingPowersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * voting_powers the voting power of every finality provider at every block height.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+       */
+      public Builder setVotingPowers(
+          int index, com.babylon.finality.v1.GenesisProto.VotingPowerFP.Builder builderForValue) {
+        if (votingPowersBuilder_ == null) {
+          ensureVotingPowersIsMutable();
+          votingPowers_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          votingPowersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * voting_powers the voting power of every finality provider at every block height.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+       */
+      public Builder addVotingPowers(com.babylon.finality.v1.GenesisProto.VotingPowerFP value) {
+        if (votingPowersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVotingPowersIsMutable();
+          votingPowers_.add(value);
+          onChanged();
+        } else {
+          votingPowersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * voting_powers the voting power of every finality provider at every block height.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+       */
+      public Builder addVotingPowers(
+          int index, com.babylon.finality.v1.GenesisProto.VotingPowerFP value) {
+        if (votingPowersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVotingPowersIsMutable();
+          votingPowers_.add(index, value);
+          onChanged();
+        } else {
+          votingPowersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * voting_powers the voting power of every finality provider at every block height.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+       */
+      public Builder addVotingPowers(
+          com.babylon.finality.v1.GenesisProto.VotingPowerFP.Builder builderForValue) {
+        if (votingPowersBuilder_ == null) {
+          ensureVotingPowersIsMutable();
+          votingPowers_.add(builderForValue.build());
+          onChanged();
+        } else {
+          votingPowersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * voting_powers the voting power of every finality provider at every block height.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+       */
+      public Builder addVotingPowers(
+          int index, com.babylon.finality.v1.GenesisProto.VotingPowerFP.Builder builderForValue) {
+        if (votingPowersBuilder_ == null) {
+          ensureVotingPowersIsMutable();
+          votingPowers_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          votingPowersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * voting_powers the voting power of every finality provider at every block height.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+       */
+      public Builder addAllVotingPowers(
+          java.lang.Iterable<? extends com.babylon.finality.v1.GenesisProto.VotingPowerFP> values) {
+        if (votingPowersBuilder_ == null) {
+          ensureVotingPowersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, votingPowers_);
+          onChanged();
+        } else {
+          votingPowersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * voting_powers the voting power of every finality provider at every block height.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+       */
+      public Builder clearVotingPowers() {
+        if (votingPowersBuilder_ == null) {
+          votingPowers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000100);
+          onChanged();
+        } else {
+          votingPowersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * voting_powers the voting power of every finality provider at every block height.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+       */
+      public Builder removeVotingPowers(int index) {
+        if (votingPowersBuilder_ == null) {
+          ensureVotingPowersIsMutable();
+          votingPowers_.remove(index);
+          onChanged();
+        } else {
+          votingPowersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * voting_powers the voting power of every finality provider at every block height.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+       */
+      public com.babylon.finality.v1.GenesisProto.VotingPowerFP.Builder getVotingPowersBuilder(
+          int index) {
+        return getVotingPowersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * voting_powers the voting power of every finality provider at every block height.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+       */
+      public com.babylon.finality.v1.GenesisProto.VotingPowerFPOrBuilder getVotingPowersOrBuilder(
+          int index) {
+        if (votingPowersBuilder_ == null) {
+          return votingPowers_.get(index);  } else {
+          return votingPowersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * voting_powers the voting power of every finality provider at every block height.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+       */
+      public java.util.List<? extends com.babylon.finality.v1.GenesisProto.VotingPowerFPOrBuilder> 
+           getVotingPowersOrBuilderList() {
+        if (votingPowersBuilder_ != null) {
+          return votingPowersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(votingPowers_);
+        }
+      }
+      /**
+       * <pre>
+       * voting_powers the voting power of every finality provider at every block height.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+       */
+      public com.babylon.finality.v1.GenesisProto.VotingPowerFP.Builder addVotingPowersBuilder() {
+        return getVotingPowersFieldBuilder().addBuilder(
+            com.babylon.finality.v1.GenesisProto.VotingPowerFP.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * voting_powers the voting power of every finality provider at every block height.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+       */
+      public com.babylon.finality.v1.GenesisProto.VotingPowerFP.Builder addVotingPowersBuilder(
+          int index) {
+        return getVotingPowersFieldBuilder().addBuilder(
+            index, com.babylon.finality.v1.GenesisProto.VotingPowerFP.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * voting_powers the voting power of every finality provider at every block height.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerFP voting_powers = 9 [json_name = "votingPowers"];</code>
+       */
+      public java.util.List<com.babylon.finality.v1.GenesisProto.VotingPowerFP.Builder> 
+           getVotingPowersBuilderList() {
+        return getVotingPowersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.babylon.finality.v1.GenesisProto.VotingPowerFP, com.babylon.finality.v1.GenesisProto.VotingPowerFP.Builder, com.babylon.finality.v1.GenesisProto.VotingPowerFPOrBuilder> 
+          getVotingPowersFieldBuilder() {
+        if (votingPowersBuilder_ == null) {
+          votingPowersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.babylon.finality.v1.GenesisProto.VotingPowerFP, com.babylon.finality.v1.GenesisProto.VotingPowerFP.Builder, com.babylon.finality.v1.GenesisProto.VotingPowerFPOrBuilder>(
+                  votingPowers_,
+                  ((bitField0_ & 0x00000100) != 0),
+                  getParentForChildren(),
+                  isClean());
+          votingPowers_ = null;
+        }
+        return votingPowersBuilder_;
+      }
+
+      private java.util.List<com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight> vpDstCache_ =
+        java.util.Collections.emptyList();
+      private void ensureVpDstCacheIsMutable() {
+        if (!((bitField0_ & 0x00000200) != 0)) {
+          vpDstCache_ = new java.util.ArrayList<com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight>(vpDstCache_);
+          bitField0_ |= 0x00000200;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight, com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight.Builder, com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeightOrBuilder> vpDstCacheBuilder_;
+
+      /**
+       * <pre>
+       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+       */
+      public java.util.List<com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight> getVpDstCacheList() {
+        if (vpDstCacheBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(vpDstCache_);
+        } else {
+          return vpDstCacheBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+       */
+      public int getVpDstCacheCount() {
+        if (vpDstCacheBuilder_ == null) {
+          return vpDstCache_.size();
+        } else {
+          return vpDstCacheBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+       */
+      public com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight getVpDstCache(int index) {
+        if (vpDstCacheBuilder_ == null) {
+          return vpDstCache_.get(index);
+        } else {
+          return vpDstCacheBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+       */
+      public Builder setVpDstCache(
+          int index, com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight value) {
+        if (vpDstCacheBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVpDstCacheIsMutable();
+          vpDstCache_.set(index, value);
+          onChanged();
+        } else {
+          vpDstCacheBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+       */
+      public Builder setVpDstCache(
+          int index, com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight.Builder builderForValue) {
+        if (vpDstCacheBuilder_ == null) {
+          ensureVpDstCacheIsMutable();
+          vpDstCache_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          vpDstCacheBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+       */
+      public Builder addVpDstCache(com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight value) {
+        if (vpDstCacheBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVpDstCacheIsMutable();
+          vpDstCache_.add(value);
+          onChanged();
+        } else {
+          vpDstCacheBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+       */
+      public Builder addVpDstCache(
+          int index, com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight value) {
+        if (vpDstCacheBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVpDstCacheIsMutable();
+          vpDstCache_.add(index, value);
+          onChanged();
+        } else {
+          vpDstCacheBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+       */
+      public Builder addVpDstCache(
+          com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight.Builder builderForValue) {
+        if (vpDstCacheBuilder_ == null) {
+          ensureVpDstCacheIsMutable();
+          vpDstCache_.add(builderForValue.build());
+          onChanged();
+        } else {
+          vpDstCacheBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+       */
+      public Builder addVpDstCache(
+          int index, com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight.Builder builderForValue) {
+        if (vpDstCacheBuilder_ == null) {
+          ensureVpDstCacheIsMutable();
+          vpDstCache_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          vpDstCacheBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+       */
+      public Builder addAllVpDstCache(
+          java.lang.Iterable<? extends com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight> values) {
+        if (vpDstCacheBuilder_ == null) {
+          ensureVpDstCacheIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, vpDstCache_);
+          onChanged();
+        } else {
+          vpDstCacheBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+       */
+      public Builder clearVpDstCache() {
+        if (vpDstCacheBuilder_ == null) {
+          vpDstCache_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000200);
+          onChanged();
+        } else {
+          vpDstCacheBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+       */
+      public Builder removeVpDstCache(int index) {
+        if (vpDstCacheBuilder_ == null) {
+          ensureVpDstCacheIsMutable();
+          vpDstCache_.remove(index);
+          onChanged();
+        } else {
+          vpDstCacheBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+       */
+      public com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight.Builder getVpDstCacheBuilder(
+          int index) {
+        return getVpDstCacheFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+       */
+      public com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeightOrBuilder getVpDstCacheOrBuilder(
+          int index) {
+        if (vpDstCacheBuilder_ == null) {
+          return vpDstCache_.get(index);  } else {
+          return vpDstCacheBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+       */
+      public java.util.List<? extends com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeightOrBuilder> 
+           getVpDstCacheOrBuilderList() {
+        if (vpDstCacheBuilder_ != null) {
+          return vpDstCacheBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(vpDstCache_);
+        }
+      }
+      /**
+       * <pre>
+       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+       */
+      public com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight.Builder addVpDstCacheBuilder() {
+        return getVpDstCacheFieldBuilder().addBuilder(
+            com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+       */
+      public com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight.Builder addVpDstCacheBuilder(
+          int index) {
+        return getVpDstCacheFieldBuilder().addBuilder(
+            index, com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 10 [json_name = "vpDstCache"];</code>
+       */
+      public java.util.List<com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight.Builder> 
+           getVpDstCacheBuilderList() {
+        return getVpDstCacheFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight, com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight.Builder, com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeightOrBuilder> 
+          getVpDstCacheFieldBuilder() {
+        if (vpDstCacheBuilder_ == null) {
+          vpDstCacheBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight, com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight.Builder, com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeightOrBuilder>(
+                  vpDstCache_,
+                  ((bitField0_ & 0x00000200) != 0),
+                  getParentForChildren(),
+                  isClean());
+          vpDstCache_ = null;
+        }
+        return vpDstCacheBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4163,7 +5135,7 @@ public final class GenesisProto {
      * fp_btc_pk is the BTC PK of the finality provider that casts this vote
      * </pre>
      *
-     * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The fpBtcPk.
      */
     com.google.protobuf.ByteString getFpBtcPk();
@@ -4174,7 +5146,7 @@ public final class GenesisProto {
      * where finality signature is an EOTS signature, i.e.
      * </pre>
      *
-     * <code>bytes finality_sig = 3 [json_name = "finalitySig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.SchnorrEOTSSig"];</code>
+     * <code>bytes finality_sig = 3 [json_name = "finalitySig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrEOTSSig"];</code>
      * @return The finalitySig.
      */
     com.google.protobuf.ByteString getFinalitySig();
@@ -4243,7 +5215,7 @@ public final class GenesisProto {
      * fp_btc_pk is the BTC PK of the finality provider that casts this vote
      * </pre>
      *
-     * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The fpBtcPk.
      */
     @java.lang.Override
@@ -4259,7 +5231,7 @@ public final class GenesisProto {
      * where finality signature is an EOTS signature, i.e.
      * </pre>
      *
-     * <code>bytes finality_sig = 3 [json_name = "finalitySig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.SchnorrEOTSSig"];</code>
+     * <code>bytes finality_sig = 3 [json_name = "finalitySig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrEOTSSig"];</code>
      * @return The finalitySig.
      */
     @java.lang.Override
@@ -4694,7 +5666,7 @@ public final class GenesisProto {
        * fp_btc_pk is the BTC PK of the finality provider that casts this vote
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The fpBtcPk.
        */
       @java.lang.Override
@@ -4706,7 +5678,7 @@ public final class GenesisProto {
        * fp_btc_pk is the BTC PK of the finality provider that casts this vote
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param value The fpBtcPk to set.
        * @return This builder for chaining.
        */
@@ -4722,7 +5694,7 @@ public final class GenesisProto {
        * fp_btc_pk is the BTC PK of the finality provider that casts this vote
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFpBtcPk() {
@@ -4739,7 +5711,7 @@ public final class GenesisProto {
        * where finality signature is an EOTS signature, i.e.
        * </pre>
        *
-       * <code>bytes finality_sig = 3 [json_name = "finalitySig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.SchnorrEOTSSig"];</code>
+       * <code>bytes finality_sig = 3 [json_name = "finalitySig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrEOTSSig"];</code>
        * @return The finalitySig.
        */
       @java.lang.Override
@@ -4752,7 +5724,7 @@ public final class GenesisProto {
        * where finality signature is an EOTS signature, i.e.
        * </pre>
        *
-       * <code>bytes finality_sig = 3 [json_name = "finalitySig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.SchnorrEOTSSig"];</code>
+       * <code>bytes finality_sig = 3 [json_name = "finalitySig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrEOTSSig"];</code>
        * @param value The finalitySig to set.
        * @return This builder for chaining.
        */
@@ -4769,7 +5741,7 @@ public final class GenesisProto {
        * where finality signature is an EOTS signature, i.e.
        * </pre>
        *
-       * <code>bytes finality_sig = 3 [json_name = "finalitySig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.SchnorrEOTSSig"];</code>
+       * <code>bytes finality_sig = 3 [json_name = "finalitySig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrEOTSSig"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFinalitySig() {
@@ -4848,7 +5820,7 @@ public final class GenesisProto {
 
     /**
      * <pre>
-     * block_height is the height of block which the finality provider submited public randomness.
+     * block_height is the height of block which the finality provider submitted public randomness.
      * </pre>
      *
      * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
@@ -4861,7 +5833,7 @@ public final class GenesisProto {
      * fp_btc_pk is the BTC PK of the finality provider that casts this vote.
      * </pre>
      *
-     * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The fpBtcPk.
      */
     com.google.protobuf.ByteString getFpBtcPk();
@@ -4871,7 +5843,7 @@ public final class GenesisProto {
      * pub_rand is the public randomness the finality provider has committed to.
      * </pre>
      *
-     * <code>bytes pub_rand = 3 [json_name = "pubRand", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.SchnorrPubRand"];</code>
+     * <code>bytes pub_rand = 3 [json_name = "pubRand", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrPubRand"];</code>
      * @return The pubRand.
      */
     com.google.protobuf.ByteString getPubRand();
@@ -4921,7 +5893,7 @@ public final class GenesisProto {
     private long blockHeight_ = 0L;
     /**
      * <pre>
-     * block_height is the height of block which the finality provider submited public randomness.
+     * block_height is the height of block which the finality provider submitted public randomness.
      * </pre>
      *
      * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
@@ -4939,7 +5911,7 @@ public final class GenesisProto {
      * fp_btc_pk is the BTC PK of the finality provider that casts this vote.
      * </pre>
      *
-     * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The fpBtcPk.
      */
     @java.lang.Override
@@ -4954,7 +5926,7 @@ public final class GenesisProto {
      * pub_rand is the public randomness the finality provider has committed to.
      * </pre>
      *
-     * <code>bytes pub_rand = 3 [json_name = "pubRand", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.SchnorrPubRand"];</code>
+     * <code>bytes pub_rand = 3 [json_name = "pubRand", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrPubRand"];</code>
      * @return The pubRand.
      */
     @java.lang.Override
@@ -5341,7 +6313,7 @@ public final class GenesisProto {
       private long blockHeight_ ;
       /**
        * <pre>
-       * block_height is the height of block which the finality provider submited public randomness.
+       * block_height is the height of block which the finality provider submitted public randomness.
        * </pre>
        *
        * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
@@ -5353,7 +6325,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * block_height is the height of block which the finality provider submited public randomness.
+       * block_height is the height of block which the finality provider submitted public randomness.
        * </pre>
        *
        * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
@@ -5369,7 +6341,7 @@ public final class GenesisProto {
       }
       /**
        * <pre>
-       * block_height is the height of block which the finality provider submited public randomness.
+       * block_height is the height of block which the finality provider submitted public randomness.
        * </pre>
        *
        * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
@@ -5388,7 +6360,7 @@ public final class GenesisProto {
        * fp_btc_pk is the BTC PK of the finality provider that casts this vote.
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The fpBtcPk.
        */
       @java.lang.Override
@@ -5400,7 +6372,7 @@ public final class GenesisProto {
        * fp_btc_pk is the BTC PK of the finality provider that casts this vote.
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param value The fpBtcPk to set.
        * @return This builder for chaining.
        */
@@ -5416,7 +6388,7 @@ public final class GenesisProto {
        * fp_btc_pk is the BTC PK of the finality provider that casts this vote.
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFpBtcPk() {
@@ -5432,7 +6404,7 @@ public final class GenesisProto {
        * pub_rand is the public randomness the finality provider has committed to.
        * </pre>
        *
-       * <code>bytes pub_rand = 3 [json_name = "pubRand", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.SchnorrPubRand"];</code>
+       * <code>bytes pub_rand = 3 [json_name = "pubRand", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrPubRand"];</code>
        * @return The pubRand.
        */
       @java.lang.Override
@@ -5444,7 +6416,7 @@ public final class GenesisProto {
        * pub_rand is the public randomness the finality provider has committed to.
        * </pre>
        *
-       * <code>bytes pub_rand = 3 [json_name = "pubRand", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.SchnorrPubRand"];</code>
+       * <code>bytes pub_rand = 3 [json_name = "pubRand", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrPubRand"];</code>
        * @param value The pubRand to set.
        * @return This builder for chaining.
        */
@@ -5460,7 +6432,7 @@ public final class GenesisProto {
        * pub_rand is the public randomness the finality provider has committed to.
        * </pre>
        *
-       * <code>bytes pub_rand = 3 [json_name = "pubRand", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.SchnorrPubRand"];</code>
+       * <code>bytes pub_rand = 3 [json_name = "pubRand", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrPubRand"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPubRand() {
@@ -5542,7 +6514,7 @@ public final class GenesisProto {
      * fp_btc_pk is the BTC PK of the finality provider that commits the public randomness
      * </pre>
      *
-     * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The fpBtcPk.
      */
     com.google.protobuf.ByteString getFpBtcPk();
@@ -5621,7 +6593,7 @@ public final class GenesisProto {
      * fp_btc_pk is the BTC PK of the finality provider that commits the public randomness
      * </pre>
      *
-     * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The fpBtcPk.
      */
     @java.lang.Override
@@ -6038,7 +7010,7 @@ public final class GenesisProto {
        * fp_btc_pk is the BTC PK of the finality provider that commits the public randomness
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The fpBtcPk.
        */
       @java.lang.Override
@@ -6050,7 +7022,7 @@ public final class GenesisProto {
        * fp_btc_pk is the BTC PK of the finality provider that commits the public randomness
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param value The fpBtcPk to set.
        * @return This builder for chaining.
        */
@@ -6066,7 +7038,7 @@ public final class GenesisProto {
        * fp_btc_pk is the BTC PK of the finality provider that commits the public randomness
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFpBtcPk() {
@@ -6303,7 +7275,7 @@ public final class GenesisProto {
      * fp_btc_pk is the BTC PK of the finality provider
      * </pre>
      *
-     * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The fpBtcPk.
      */
     com.google.protobuf.ByteString getFpBtcPk();
@@ -6382,7 +7354,7 @@ public final class GenesisProto {
      * fp_btc_pk is the BTC PK of the finality provider
      * </pre>
      *
-     * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The fpBtcPk.
      */
     @java.lang.Override
@@ -6799,7 +7771,7 @@ public final class GenesisProto {
        * fp_btc_pk is the BTC PK of the finality provider
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The fpBtcPk.
        */
       @java.lang.Override
@@ -6811,7 +7783,7 @@ public final class GenesisProto {
        * fp_btc_pk is the BTC PK of the finality provider
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param value The fpBtcPk to set.
        * @return This builder for chaining.
        */
@@ -6827,7 +7799,7 @@ public final class GenesisProto {
        * fp_btc_pk is the BTC PK of the finality provider
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFpBtcPk() {
@@ -7064,7 +8036,7 @@ public final class GenesisProto {
      * fp_btc_pk is the BTC PK of the finality provider
      * </pre>
      *
-     * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The fpBtcPk.
      */
     com.google.protobuf.ByteString getFpBtcPk();
@@ -7162,7 +8134,7 @@ public final class GenesisProto {
      * fp_btc_pk is the BTC PK of the finality provider
      * </pre>
      *
-     * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The fpBtcPk.
      */
     @java.lang.Override
@@ -7639,7 +8611,7 @@ public final class GenesisProto {
        * fp_btc_pk is the BTC PK of the finality provider
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The fpBtcPk.
        */
       @java.lang.Override
@@ -7651,7 +8623,7 @@ public final class GenesisProto {
        * fp_btc_pk is the BTC PK of the finality provider
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param value The fpBtcPk to set.
        * @return This builder for chaining.
        */
@@ -7667,7 +8639,7 @@ public final class GenesisProto {
        * fp_btc_pk is the BTC PK of the finality provider
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFpBtcPk() {
@@ -8650,6 +9622,1460 @@ public final class GenesisProto {
 
   }
 
+  public interface VotingPowerFPOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.finality.v1.VotingPowerFP)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * block_height is the height of the block the voting power was stored.
+     * </pre>
+     *
+     * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+     * @return The blockHeight.
+     */
+    long getBlockHeight();
+
+    /**
+     * <pre>
+     * fp_btc_pk the finality provider btc public key.
+     * </pre>
+     *
+     * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+     * @return The fpBtcPk.
+     */
+    com.google.protobuf.ByteString getFpBtcPk();
+
+    /**
+     * <pre>
+     * voting_power is the power of the finality provider at this specific block height.
+     * </pre>
+     *
+     * <code>uint64 voting_power = 3 [json_name = "votingPower"];</code>
+     * @return The votingPower.
+     */
+    long getVotingPower();
+  }
+  /**
+   * <pre>
+   * VotingPowerFP contains the information about the voting power
+   * of an finality provider in a specific block height.
+   * </pre>
+   *
+   * Protobuf type {@code babylon.finality.v1.VotingPowerFP}
+   */
+  public static final class VotingPowerFP extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.finality.v1.VotingPowerFP)
+      VotingPowerFPOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VotingPowerFP.newBuilder() to construct.
+    private VotingPowerFP(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VotingPowerFP() {
+      fpBtcPk_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VotingPowerFP();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.finality.v1.GenesisProto.internal_static_babylon_finality_v1_VotingPowerFP_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.finality.v1.GenesisProto.internal_static_babylon_finality_v1_VotingPowerFP_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.finality.v1.GenesisProto.VotingPowerFP.class, com.babylon.finality.v1.GenesisProto.VotingPowerFP.Builder.class);
+    }
+
+    public static final int BLOCK_HEIGHT_FIELD_NUMBER = 1;
+    private long blockHeight_ = 0L;
+    /**
+     * <pre>
+     * block_height is the height of the block the voting power was stored.
+     * </pre>
+     *
+     * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+     * @return The blockHeight.
+     */
+    @java.lang.Override
+    public long getBlockHeight() {
+      return blockHeight_;
+    }
+
+    public static final int FP_BTC_PK_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString fpBtcPk_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * fp_btc_pk the finality provider btc public key.
+     * </pre>
+     *
+     * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+     * @return The fpBtcPk.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getFpBtcPk() {
+      return fpBtcPk_;
+    }
+
+    public static final int VOTING_POWER_FIELD_NUMBER = 3;
+    private long votingPower_ = 0L;
+    /**
+     * <pre>
+     * voting_power is the power of the finality provider at this specific block height.
+     * </pre>
+     *
+     * <code>uint64 voting_power = 3 [json_name = "votingPower"];</code>
+     * @return The votingPower.
+     */
+    @java.lang.Override
+    public long getVotingPower() {
+      return votingPower_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (blockHeight_ != 0L) {
+        output.writeUInt64(1, blockHeight_);
+      }
+      if (!fpBtcPk_.isEmpty()) {
+        output.writeBytes(2, fpBtcPk_);
+      }
+      if (votingPower_ != 0L) {
+        output.writeUInt64(3, votingPower_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (blockHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, blockHeight_);
+      }
+      if (!fpBtcPk_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, fpBtcPk_);
+      }
+      if (votingPower_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, votingPower_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.finality.v1.GenesisProto.VotingPowerFP)) {
+        return super.equals(obj);
+      }
+      com.babylon.finality.v1.GenesisProto.VotingPowerFP other = (com.babylon.finality.v1.GenesisProto.VotingPowerFP) obj;
+
+      if (getBlockHeight()
+          != other.getBlockHeight()) return false;
+      if (!getFpBtcPk()
+          .equals(other.getFpBtcPk())) return false;
+      if (getVotingPower()
+          != other.getVotingPower()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BLOCK_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBlockHeight());
+      hash = (37 * hash) + FP_BTC_PK_FIELD_NUMBER;
+      hash = (53 * hash) + getFpBtcPk().hashCode();
+      hash = (37 * hash) + VOTING_POWER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getVotingPower());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerFP parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerFP parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerFP parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerFP parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerFP parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerFP parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerFP parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerFP parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerFP parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerFP parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerFP parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerFP parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.finality.v1.GenesisProto.VotingPowerFP prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * VotingPowerFP contains the information about the voting power
+     * of an finality provider in a specific block height.
+     * </pre>
+     *
+     * Protobuf type {@code babylon.finality.v1.VotingPowerFP}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.finality.v1.VotingPowerFP)
+        com.babylon.finality.v1.GenesisProto.VotingPowerFPOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.finality.v1.GenesisProto.internal_static_babylon_finality_v1_VotingPowerFP_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.finality.v1.GenesisProto.internal_static_babylon_finality_v1_VotingPowerFP_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.finality.v1.GenesisProto.VotingPowerFP.class, com.babylon.finality.v1.GenesisProto.VotingPowerFP.Builder.class);
+      }
+
+      // Construct using com.babylon.finality.v1.GenesisProto.VotingPowerFP.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        blockHeight_ = 0L;
+        fpBtcPk_ = com.google.protobuf.ByteString.EMPTY;
+        votingPower_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.finality.v1.GenesisProto.internal_static_babylon_finality_v1_VotingPowerFP_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.GenesisProto.VotingPowerFP getDefaultInstanceForType() {
+        return com.babylon.finality.v1.GenesisProto.VotingPowerFP.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.GenesisProto.VotingPowerFP build() {
+        com.babylon.finality.v1.GenesisProto.VotingPowerFP result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.GenesisProto.VotingPowerFP buildPartial() {
+        com.babylon.finality.v1.GenesisProto.VotingPowerFP result = new com.babylon.finality.v1.GenesisProto.VotingPowerFP(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.finality.v1.GenesisProto.VotingPowerFP result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.blockHeight_ = blockHeight_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.fpBtcPk_ = fpBtcPk_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.votingPower_ = votingPower_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.finality.v1.GenesisProto.VotingPowerFP) {
+          return mergeFrom((com.babylon.finality.v1.GenesisProto.VotingPowerFP)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.finality.v1.GenesisProto.VotingPowerFP other) {
+        if (other == com.babylon.finality.v1.GenesisProto.VotingPowerFP.getDefaultInstance()) return this;
+        if (other.getBlockHeight() != 0L) {
+          setBlockHeight(other.getBlockHeight());
+        }
+        if (other.getFpBtcPk() != com.google.protobuf.ByteString.EMPTY) {
+          setFpBtcPk(other.getFpBtcPk());
+        }
+        if (other.getVotingPower() != 0L) {
+          setVotingPower(other.getVotingPower());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                blockHeight_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                fpBtcPk_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                votingPower_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long blockHeight_ ;
+      /**
+       * <pre>
+       * block_height is the height of the block the voting power was stored.
+       * </pre>
+       *
+       * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+       * @return The blockHeight.
+       */
+      @java.lang.Override
+      public long getBlockHeight() {
+        return blockHeight_;
+      }
+      /**
+       * <pre>
+       * block_height is the height of the block the voting power was stored.
+       * </pre>
+       *
+       * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+       * @param value The blockHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBlockHeight(long value) {
+
+        blockHeight_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * block_height is the height of the block the voting power was stored.
+       * </pre>
+       *
+       * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBlockHeight() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        blockHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString fpBtcPk_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * fp_btc_pk the finality provider btc public key.
+       * </pre>
+       *
+       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+       * @return The fpBtcPk.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getFpBtcPk() {
+        return fpBtcPk_;
+      }
+      /**
+       * <pre>
+       * fp_btc_pk the finality provider btc public key.
+       * </pre>
+       *
+       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+       * @param value The fpBtcPk to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFpBtcPk(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        fpBtcPk_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * fp_btc_pk the finality provider btc public key.
+       * </pre>
+       *
+       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFpBtcPk() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        fpBtcPk_ = getDefaultInstance().getFpBtcPk();
+        onChanged();
+        return this;
+      }
+
+      private long votingPower_ ;
+      /**
+       * <pre>
+       * voting_power is the power of the finality provider at this specific block height.
+       * </pre>
+       *
+       * <code>uint64 voting_power = 3 [json_name = "votingPower"];</code>
+       * @return The votingPower.
+       */
+      @java.lang.Override
+      public long getVotingPower() {
+        return votingPower_;
+      }
+      /**
+       * <pre>
+       * voting_power is the power of the finality provider at this specific block height.
+       * </pre>
+       *
+       * <code>uint64 voting_power = 3 [json_name = "votingPower"];</code>
+       * @param value The votingPower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVotingPower(long value) {
+
+        votingPower_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * voting_power is the power of the finality provider at this specific block height.
+       * </pre>
+       *
+       * <code>uint64 voting_power = 3 [json_name = "votingPower"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVotingPower() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        votingPower_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.finality.v1.VotingPowerFP)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.finality.v1.VotingPowerFP)
+    private static final com.babylon.finality.v1.GenesisProto.VotingPowerFP DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.finality.v1.GenesisProto.VotingPowerFP();
+    }
+
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerFP getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VotingPowerFP>
+        PARSER = new com.google.protobuf.AbstractParser<VotingPowerFP>() {
+      @java.lang.Override
+      public VotingPowerFP parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<VotingPowerFP> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VotingPowerFP> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.finality.v1.GenesisProto.VotingPowerFP getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface VotingPowerDistCacheBlkHeightOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.finality.v1.VotingPowerDistCacheBlkHeight)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * block_height is the height of the block the voting power distribution cached was stored.
+     * </pre>
+     *
+     * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+     * @return The blockHeight.
+     */
+    long getBlockHeight();
+
+    /**
+     * <pre>
+     * vp_distribution the finality providers distribution cache at that height.
+     * </pre>
+     *
+     * <code>.babylon.finality.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
+     * @return Whether the vpDistribution field is set.
+     */
+    boolean hasVpDistribution();
+    /**
+     * <pre>
+     * vp_distribution the finality providers distribution cache at that height.
+     * </pre>
+     *
+     * <code>.babylon.finality.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
+     * @return The vpDistribution.
+     */
+    com.babylon.finality.v1.FinalityProto.VotingPowerDistCache getVpDistribution();
+    /**
+     * <pre>
+     * vp_distribution the finality providers distribution cache at that height.
+     * </pre>
+     *
+     * <code>.babylon.finality.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
+     */
+    com.babylon.finality.v1.FinalityProto.VotingPowerDistCacheOrBuilder getVpDistributionOrBuilder();
+  }
+  /**
+   * <pre>
+   * VotingPowerDistCacheBlkHeight the total voting power of the finality providers at one specific block height
+   * </pre>
+   *
+   * Protobuf type {@code babylon.finality.v1.VotingPowerDistCacheBlkHeight}
+   */
+  public static final class VotingPowerDistCacheBlkHeight extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.finality.v1.VotingPowerDistCacheBlkHeight)
+      VotingPowerDistCacheBlkHeightOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VotingPowerDistCacheBlkHeight.newBuilder() to construct.
+    private VotingPowerDistCacheBlkHeight(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VotingPowerDistCacheBlkHeight() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VotingPowerDistCacheBlkHeight();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.finality.v1.GenesisProto.internal_static_babylon_finality_v1_VotingPowerDistCacheBlkHeight_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.finality.v1.GenesisProto.internal_static_babylon_finality_v1_VotingPowerDistCacheBlkHeight_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight.class, com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight.Builder.class);
+    }
+
+    public static final int BLOCK_HEIGHT_FIELD_NUMBER = 1;
+    private long blockHeight_ = 0L;
+    /**
+     * <pre>
+     * block_height is the height of the block the voting power distribution cached was stored.
+     * </pre>
+     *
+     * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+     * @return The blockHeight.
+     */
+    @java.lang.Override
+    public long getBlockHeight() {
+      return blockHeight_;
+    }
+
+    public static final int VP_DISTRIBUTION_FIELD_NUMBER = 2;
+    private com.babylon.finality.v1.FinalityProto.VotingPowerDistCache vpDistribution_;
+    /**
+     * <pre>
+     * vp_distribution the finality providers distribution cache at that height.
+     * </pre>
+     *
+     * <code>.babylon.finality.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
+     * @return Whether the vpDistribution field is set.
+     */
+    @java.lang.Override
+    public boolean hasVpDistribution() {
+      return vpDistribution_ != null;
+    }
+    /**
+     * <pre>
+     * vp_distribution the finality providers distribution cache at that height.
+     * </pre>
+     *
+     * <code>.babylon.finality.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
+     * @return The vpDistribution.
+     */
+    @java.lang.Override
+    public com.babylon.finality.v1.FinalityProto.VotingPowerDistCache getVpDistribution() {
+      return vpDistribution_ == null ? com.babylon.finality.v1.FinalityProto.VotingPowerDistCache.getDefaultInstance() : vpDistribution_;
+    }
+    /**
+     * <pre>
+     * vp_distribution the finality providers distribution cache at that height.
+     * </pre>
+     *
+     * <code>.babylon.finality.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
+     */
+    @java.lang.Override
+    public com.babylon.finality.v1.FinalityProto.VotingPowerDistCacheOrBuilder getVpDistributionOrBuilder() {
+      return vpDistribution_ == null ? com.babylon.finality.v1.FinalityProto.VotingPowerDistCache.getDefaultInstance() : vpDistribution_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (blockHeight_ != 0L) {
+        output.writeUInt64(1, blockHeight_);
+      }
+      if (vpDistribution_ != null) {
+        output.writeMessage(2, getVpDistribution());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (blockHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, blockHeight_);
+      }
+      if (vpDistribution_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getVpDistribution());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight)) {
+        return super.equals(obj);
+      }
+      com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight other = (com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight) obj;
+
+      if (getBlockHeight()
+          != other.getBlockHeight()) return false;
+      if (hasVpDistribution() != other.hasVpDistribution()) return false;
+      if (hasVpDistribution()) {
+        if (!getVpDistribution()
+            .equals(other.getVpDistribution())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BLOCK_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBlockHeight());
+      if (hasVpDistribution()) {
+        hash = (37 * hash) + VP_DISTRIBUTION_FIELD_NUMBER;
+        hash = (53 * hash) + getVpDistribution().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * VotingPowerDistCacheBlkHeight the total voting power of the finality providers at one specific block height
+     * </pre>
+     *
+     * Protobuf type {@code babylon.finality.v1.VotingPowerDistCacheBlkHeight}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.finality.v1.VotingPowerDistCacheBlkHeight)
+        com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeightOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.finality.v1.GenesisProto.internal_static_babylon_finality_v1_VotingPowerDistCacheBlkHeight_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.finality.v1.GenesisProto.internal_static_babylon_finality_v1_VotingPowerDistCacheBlkHeight_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight.class, com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight.Builder.class);
+      }
+
+      // Construct using com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        blockHeight_ = 0L;
+        vpDistribution_ = null;
+        if (vpDistributionBuilder_ != null) {
+          vpDistributionBuilder_.dispose();
+          vpDistributionBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.finality.v1.GenesisProto.internal_static_babylon_finality_v1_VotingPowerDistCacheBlkHeight_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight getDefaultInstanceForType() {
+        return com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight build() {
+        com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight buildPartial() {
+        com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight result = new com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.blockHeight_ = blockHeight_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.vpDistribution_ = vpDistributionBuilder_ == null
+              ? vpDistribution_
+              : vpDistributionBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight) {
+          return mergeFrom((com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight other) {
+        if (other == com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight.getDefaultInstance()) return this;
+        if (other.getBlockHeight() != 0L) {
+          setBlockHeight(other.getBlockHeight());
+        }
+        if (other.hasVpDistribution()) {
+          mergeVpDistribution(other.getVpDistribution());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                blockHeight_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getVpDistributionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long blockHeight_ ;
+      /**
+       * <pre>
+       * block_height is the height of the block the voting power distribution cached was stored.
+       * </pre>
+       *
+       * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+       * @return The blockHeight.
+       */
+      @java.lang.Override
+      public long getBlockHeight() {
+        return blockHeight_;
+      }
+      /**
+       * <pre>
+       * block_height is the height of the block the voting power distribution cached was stored.
+       * </pre>
+       *
+       * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+       * @param value The blockHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBlockHeight(long value) {
+
+        blockHeight_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * block_height is the height of the block the voting power distribution cached was stored.
+       * </pre>
+       *
+       * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBlockHeight() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        blockHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.babylon.finality.v1.FinalityProto.VotingPowerDistCache vpDistribution_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.finality.v1.FinalityProto.VotingPowerDistCache, com.babylon.finality.v1.FinalityProto.VotingPowerDistCache.Builder, com.babylon.finality.v1.FinalityProto.VotingPowerDistCacheOrBuilder> vpDistributionBuilder_;
+      /**
+       * <pre>
+       * vp_distribution the finality providers distribution cache at that height.
+       * </pre>
+       *
+       * <code>.babylon.finality.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
+       * @return Whether the vpDistribution field is set.
+       */
+      public boolean hasVpDistribution() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * vp_distribution the finality providers distribution cache at that height.
+       * </pre>
+       *
+       * <code>.babylon.finality.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
+       * @return The vpDistribution.
+       */
+      public com.babylon.finality.v1.FinalityProto.VotingPowerDistCache getVpDistribution() {
+        if (vpDistributionBuilder_ == null) {
+          return vpDistribution_ == null ? com.babylon.finality.v1.FinalityProto.VotingPowerDistCache.getDefaultInstance() : vpDistribution_;
+        } else {
+          return vpDistributionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * vp_distribution the finality providers distribution cache at that height.
+       * </pre>
+       *
+       * <code>.babylon.finality.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
+       */
+      public Builder setVpDistribution(com.babylon.finality.v1.FinalityProto.VotingPowerDistCache value) {
+        if (vpDistributionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          vpDistribution_ = value;
+        } else {
+          vpDistributionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * vp_distribution the finality providers distribution cache at that height.
+       * </pre>
+       *
+       * <code>.babylon.finality.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
+       */
+      public Builder setVpDistribution(
+          com.babylon.finality.v1.FinalityProto.VotingPowerDistCache.Builder builderForValue) {
+        if (vpDistributionBuilder_ == null) {
+          vpDistribution_ = builderForValue.build();
+        } else {
+          vpDistributionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * vp_distribution the finality providers distribution cache at that height.
+       * </pre>
+       *
+       * <code>.babylon.finality.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
+       */
+      public Builder mergeVpDistribution(com.babylon.finality.v1.FinalityProto.VotingPowerDistCache value) {
+        if (vpDistributionBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            vpDistribution_ != null &&
+            vpDistribution_ != com.babylon.finality.v1.FinalityProto.VotingPowerDistCache.getDefaultInstance()) {
+            getVpDistributionBuilder().mergeFrom(value);
+          } else {
+            vpDistribution_ = value;
+          }
+        } else {
+          vpDistributionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * vp_distribution the finality providers distribution cache at that height.
+       * </pre>
+       *
+       * <code>.babylon.finality.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
+       */
+      public Builder clearVpDistribution() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        vpDistribution_ = null;
+        if (vpDistributionBuilder_ != null) {
+          vpDistributionBuilder_.dispose();
+          vpDistributionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * vp_distribution the finality providers distribution cache at that height.
+       * </pre>
+       *
+       * <code>.babylon.finality.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
+       */
+      public com.babylon.finality.v1.FinalityProto.VotingPowerDistCache.Builder getVpDistributionBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getVpDistributionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * vp_distribution the finality providers distribution cache at that height.
+       * </pre>
+       *
+       * <code>.babylon.finality.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
+       */
+      public com.babylon.finality.v1.FinalityProto.VotingPowerDistCacheOrBuilder getVpDistributionOrBuilder() {
+        if (vpDistributionBuilder_ != null) {
+          return vpDistributionBuilder_.getMessageOrBuilder();
+        } else {
+          return vpDistribution_ == null ?
+              com.babylon.finality.v1.FinalityProto.VotingPowerDistCache.getDefaultInstance() : vpDistribution_;
+        }
+      }
+      /**
+       * <pre>
+       * vp_distribution the finality providers distribution cache at that height.
+       * </pre>
+       *
+       * <code>.babylon.finality.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.finality.v1.FinalityProto.VotingPowerDistCache, com.babylon.finality.v1.FinalityProto.VotingPowerDistCache.Builder, com.babylon.finality.v1.FinalityProto.VotingPowerDistCacheOrBuilder> 
+          getVpDistributionFieldBuilder() {
+        if (vpDistributionBuilder_ == null) {
+          vpDistributionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.babylon.finality.v1.FinalityProto.VotingPowerDistCache, com.babylon.finality.v1.FinalityProto.VotingPowerDistCache.Builder, com.babylon.finality.v1.FinalityProto.VotingPowerDistCacheOrBuilder>(
+                  getVpDistribution(),
+                  getParentForChildren(),
+                  isClean());
+          vpDistribution_ = null;
+        }
+        return vpDistributionBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.finality.v1.VotingPowerDistCacheBlkHeight)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.finality.v1.VotingPowerDistCacheBlkHeight)
+    private static final com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight();
+    }
+
+    public static com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VotingPowerDistCacheBlkHeight>
+        PARSER = new com.google.protobuf.AbstractParser<VotingPowerDistCacheBlkHeight>() {
+      @java.lang.Override
+      public VotingPowerDistCacheBlkHeight parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<VotingPowerDistCacheBlkHeight> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VotingPowerDistCacheBlkHeight> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.finality.v1.GenesisProto.VotingPowerDistCacheBlkHeight getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_babylon_finality_v1_GenesisState_descriptor;
   private static final 
@@ -8685,6 +11111,16 @@ public final class GenesisProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_babylon_finality_v1_MissedBlock_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_finality_v1_VotingPowerFP_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_finality_v1_VotingPowerFP_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_finality_v1_VotingPowerDistCacheBlkHeight_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_finality_v1_VotingPowerDistCacheBlkHeight_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -8697,7 +11133,7 @@ public final class GenesisProto {
       "\n!babylon/finality/v1/genesis.proto\022\023bab" +
       "ylon.finality.v1\032\024gogoproto/gogo.proto\032 " +
       "babylon/finality/v1/params.proto\032\"babylo" +
-      "n/finality/v1/finality.proto\"\334\004\n\014Genesis" +
+      "n/finality/v1/finality.proto\"\373\005\n\014Genesis" +
       "State\0229\n\006params\030\001 \001(\0132\033.babylon.finality" +
       ".v1.ParamsB\004\310\336\037\000R\006params\022H\n\016indexed_bloc" +
       "ks\030\002 \003(\0132!.babylon.finality.v1.IndexedBl" +
@@ -8712,40 +11148,52 @@ public final class GenesisProto {
       "s\030\007 \003(\0132 .babylon.finality.v1.SigningInf" +
       "oB\004\310\336\037\000R\014signingInfos\022\\\n\rmissed_blocks\030\010" +
       " \003(\01321.babylon.finality.v1.FinalityProvi" +
-      "derMissedBlocksB\004\310\336\037\000R\014missedBlocks\"\335\001\n\007" +
-      "VoteSig\022!\n\014block_height\030\001 \001(\004R\013blockHeig" +
-      "ht\022R\n\tfp_btc_pk\030\002 \001(\014B6\332\336\0372github.com/ba" +
-      "bylonchain/babylon/types.BIP340PubKeyR\007f" +
-      "pBtcPk\022[\n\014finality_sig\030\003 \001(\014B8\332\336\0374github" +
-      ".com/babylonchain/babylon/types.SchnorrE" +
-      "OTSSigR\013finalitySig\"\336\001\n\020PublicRandomness" +
-      "\022!\n\014block_height\030\001 \001(\004R\013blockHeight\022R\n\tf" +
-      "p_btc_pk\030\002 \001(\014B6\332\336\0372github.com/babylonch" +
-      "ain/babylon/types.BIP340PubKeyR\007fpBtcPk\022" +
-      "S\n\010pub_rand\030\003 \001(\014B8\332\336\0374github.com/babylo" +
-      "nchain/babylon/types.SchnorrPubRandR\007pub" +
-      "Rand\"\265\001\n\023PubRandCommitWithPK\022R\n\tfp_btc_p" +
-      "k\030\001 \001(\014B6\332\336\0372github.com/babylonchain/bab" +
-      "ylon/types.BIP340PubKeyR\007fpBtcPk\022J\n\017pub_" +
-      "rand_commit\030\002 \001(\0132\".babylon.finality.v1." +
-      "PubRandCommitR\rpubRandCommit\"\301\001\n\013Signing" +
-      "Info\022R\n\tfp_btc_pk\030\001 \001(\014B6\332\336\0372github.com/" +
-      "babylonchain/babylon/types.BIP340PubKeyR" +
-      "\007fpBtcPk\022^\n\017fp_signing_info\030\002 \001(\01320.baby" +
-      "lon.finality.v1.FinalityProviderSigningI" +
-      "nfoB\004\310\336\037\000R\rfpSigningInfo\"\277\001\n\034FinalityPro" +
-      "viderMissedBlocks\022R\n\tfp_btc_pk\030\001 \001(\014B6\332\336" +
-      "\0372github.com/babylonchain/babylon/types." +
-      "BIP340PubKeyR\007fpBtcPk\022K\n\rmissed_blocks\030\002" +
-      " \003(\0132 .babylon.finality.v1.MissedBlockB\004" +
-      "\310\336\037\000R\014missedBlocks\";\n\013MissedBlock\022\024\n\005ind" +
-      "ex\030\001 \001(\003R\005index\022\026\n\006missed\030\002 \001(\010R\006missedB" +
-      "\305\001\n\027com.babylon.finality.v1B\014GenesisProt" +
-      "oZ0github.com/babylonchain/babylon/x/fin" +
-      "ality/types\242\002\003BFX\252\002\023Babylon.Finality.V1\312" +
-      "\002\023Babylon\\Finality\\V1\342\002\037Babylon\\Finality" +
-      "\\V1\\GPBMetadata\352\002\025Babylon::Finality::V1b" +
-      "\006proto3"
+      "derMissedBlocksB\004\310\336\037\000R\014missedBlocks\022G\n\rv" +
+      "oting_powers\030\t \003(\0132\".babylon.finality.v1" +
+      ".VotingPowerFPR\014votingPowers\022T\n\014vp_dst_c" +
+      "ache\030\n \003(\01322.babylon.finality.v1.VotingP" +
+      "owerDistCacheBlkHeightR\nvpDstCache\"\341\001\n\007V" +
+      "oteSig\022!\n\014block_height\030\001 \001(\004R\013blockHeigh" +
+      "t\022T\n\tfp_btc_pk\030\002 \001(\014B8\332\336\0374github.com/bab" +
+      "ylonlabs-io/babylon/types.BIP340PubKeyR\007" +
+      "fpBtcPk\022]\n\014finality_sig\030\003 \001(\014B:\332\336\0376githu" +
+      "b.com/babylonlabs-io/babylon/types.Schno" +
+      "rrEOTSSigR\013finalitySig\"\342\001\n\020PublicRandomn" +
+      "ess\022!\n\014block_height\030\001 \001(\004R\013blockHeight\022T" +
+      "\n\tfp_btc_pk\030\002 \001(\014B8\332\336\0374github.com/babylo" +
+      "nlabs-io/babylon/types.BIP340PubKeyR\007fpB" +
+      "tcPk\022U\n\010pub_rand\030\003 \001(\014B:\332\336\0376github.com/b" +
+      "abylonlabs-io/babylon/types.SchnorrPubRa" +
+      "ndR\007pubRand\"\267\001\n\023PubRandCommitWithPK\022T\n\tf" +
+      "p_btc_pk\030\001 \001(\014B8\332\336\0374github.com/babylonla" +
+      "bs-io/babylon/types.BIP340PubKeyR\007fpBtcP" +
+      "k\022J\n\017pub_rand_commit\030\002 \001(\0132\".babylon.fin" +
+      "ality.v1.PubRandCommitR\rpubRandCommit\"\303\001" +
+      "\n\013SigningInfo\022T\n\tfp_btc_pk\030\001 \001(\014B8\332\336\0374gi" +
+      "thub.com/babylonlabs-io/babylon/types.BI" +
+      "P340PubKeyR\007fpBtcPk\022^\n\017fp_signing_info\030\002" +
+      " \001(\01320.babylon.finality.v1.FinalityProvi" +
+      "derSigningInfoB\004\310\336\037\000R\rfpSigningInfo\"\301\001\n\034" +
+      "FinalityProviderMissedBlocks\022T\n\tfp_btc_p" +
+      "k\030\001 \001(\014B8\332\336\0374github.com/babylonlabs-io/b" +
+      "abylon/types.BIP340PubKeyR\007fpBtcPk\022K\n\rmi" +
+      "ssed_blocks\030\002 \003(\0132 .babylon.finality.v1." +
+      "MissedBlockB\004\310\336\037\000R\014missedBlocks\";\n\013Misse" +
+      "dBlock\022\024\n\005index\030\001 \001(\003R\005index\022\026\n\006missed\030\002" +
+      " \001(\010R\006missed\"\253\001\n\rVotingPowerFP\022!\n\014block_" +
+      "height\030\001 \001(\004R\013blockHeight\022T\n\tfp_btc_pk\030\002" +
+      " \001(\014B8\332\336\0374github.com/babylonlabs-io/baby" +
+      "lon/types.BIP340PubKeyR\007fpBtcPk\022!\n\014votin" +
+      "g_power\030\003 \001(\004R\013votingPower\"\226\001\n\035VotingPow" +
+      "erDistCacheBlkHeight\022!\n\014block_height\030\001 \001" +
+      "(\004R\013blockHeight\022R\n\017vp_distribution\030\002 \001(\013" +
+      "2).babylon.finality.v1.VotingPowerDistCa" +
+      "cheR\016vpDistributionB\307\001\n\027com.babylon.fina" +
+      "lity.v1B\014GenesisProtoZ2github.com/babylo" +
+      "nlabs-io/babylon/x/finality/types\242\002\003BFX\252" +
+      "\002\023Babylon.Finality.V1\312\002\023Babylon\\Finality" +
+      "\\V1\342\002\037Babylon\\Finality\\V1\\GPBMetadata\352\002\025" +
+      "Babylon::Finality::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8759,7 +11207,7 @@ public final class GenesisProto {
     internal_static_babylon_finality_v1_GenesisState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_finality_v1_GenesisState_descriptor,
-        new java.lang.String[] { "Params", "IndexedBlocks", "Evidences", "VoteSigs", "PublicRandomness", "PubRandCommit", "SigningInfos", "MissedBlocks", });
+        new java.lang.String[] { "Params", "IndexedBlocks", "Evidences", "VoteSigs", "PublicRandomness", "PubRandCommit", "SigningInfos", "MissedBlocks", "VotingPowers", "VpDstCache", });
     internal_static_babylon_finality_v1_VoteSig_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_babylon_finality_v1_VoteSig_fieldAccessorTable = new
@@ -8796,6 +11244,18 @@ public final class GenesisProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_finality_v1_MissedBlock_descriptor,
         new java.lang.String[] { "Index", "Missed", });
+    internal_static_babylon_finality_v1_VotingPowerFP_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_babylon_finality_v1_VotingPowerFP_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_finality_v1_VotingPowerFP_descriptor,
+        new java.lang.String[] { "BlockHeight", "FpBtcPk", "VotingPower", });
+    internal_static_babylon_finality_v1_VotingPowerDistCacheBlkHeight_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_babylon_finality_v1_VotingPowerDistCacheBlkHeight_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_finality_v1_VotingPowerDistCacheBlkHeight_descriptor,
+        new java.lang.String[] { "BlockHeight", "VpDistribution", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.gogoproto.GogoProto.customtype);

@@ -26,6 +26,7 @@ struct Babylon_Btcstaking_V1_Params {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
+  /// PARAMETERS COVERING STAKING
   /// covenant_pks is the list of public keys held by the covenant committee
   /// each PK follows encoding in BIP-340 spec on Bitcoin
   var covenantPks: [Data] = []
@@ -34,34 +35,48 @@ struct Babylon_Btcstaking_V1_Params {
   /// multisignature
   var covenantQuorum: UInt32 = 0
 
-  /// slashing address is the address that the slashed BTC goes to
-  /// the address is in string on Bitcoin
-  var slashingAddress: String = String()
+  /// min_staking_value_sat is the minimum of satoshis locked in staking output
+  var minStakingValueSat: Int64 = 0
+
+  /// max_staking_value_sat is the maximum of satoshis locked in staking output
+  var maxStakingValueSat: Int64 = 0
+
+  /// min_staking_time is the minimum lock time specified in staking output script
+  var minStakingTimeBlocks: UInt32 = 0
+
+  /// max_staking_time_blocks is the maximum lock time time specified in staking output script
+  var maxStakingTimeBlocks: UInt32 = 0
+
+  /// PARAMETERS COVERING SLASHING
+  /// slashing_pk_script is the pk_script expected in slashing output ie. the first
+  /// output of slashing transaction
+  var slashingPkScript: Data = Data()
 
   /// min_slashing_tx_fee_sat is the minimum amount of tx fee (quantified
-  /// in Satoshi) needed for the pre-signed slashing tx
-  /// TODO: change to satoshi per byte?
+  /// in Satoshi) needed for the pre-signed slashing tx. It covers both:
+  /// staking slashing transaction and unbonding slashing transaction
   var minSlashingTxFeeSat: Int64 = 0
 
-  /// min_commission_rate is the chain-wide minimum commission rate that a finality provider can charge their delegators
-  var minCommissionRate: String = String()
-
   /// slashing_rate determines the portion of the staked amount to be slashed,
-  /// expressed as a decimal (e.g., 0.5 for 50%).
+  /// expressed as a decimal (e.g., 0.5 for 50%). Maximal precion is 2 decimal
+  /// places
   var slashingRate: String = String()
 
-  /// max_active_finality_providers is the maximum number of active finality providers in the BTC staking protocol
-  var maxActiveFinalityProviders: UInt32 = 0
-
+  /// PARAMETERS COVERING UNBONDING
   /// min_unbonding_time is the minimum time for unbonding transaction timelock in BTC blocks
-  var minUnbondingTime: UInt32 = 0
+  var minUnbondingTimeBlocks: UInt32 = 0
 
-  /// min_unbonding_rate is the minimum amount of BTC that are required in unbonding
-  /// output, expressed as a fraction of staking output
-  /// example: if min_unbonding_rate=0.9, then the unbonding output value
-  /// must be at least 90% of staking output, for staking request to be considered
-  /// valid
-  var minUnbondingRate: String = String()
+  /// unbonding_fee exact fee required for unbonding transaction
+  var unbondingFeeSat: Int64 = 0
+
+  /// PARAMETERS COVERING FINALITY PROVIDERS
+  /// min_commission_rate is the chain-wide minimum commission rate that a finality provider
+  /// can charge their delegators expressed as a decimal (e.g., 0.5 for 50%). Maximal precion
+  /// is 2 decimal places
+  var minCommissionRate: String = String()
+
+  /// base gas fee for delegation creation
+  var delegationCreationBaseGasFee: UInt64 = 0
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -109,13 +124,17 @@ extension Babylon_Btcstaking_V1_Params: SwiftProtobuf.Message, SwiftProtobuf._Me
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "covenant_pks"),
     2: .standard(proto: "covenant_quorum"),
-    3: .standard(proto: "slashing_address"),
-    4: .standard(proto: "min_slashing_tx_fee_sat"),
-    5: .standard(proto: "min_commission_rate"),
-    6: .standard(proto: "slashing_rate"),
-    7: .standard(proto: "max_active_finality_providers"),
-    8: .standard(proto: "min_unbonding_time"),
-    9: .standard(proto: "min_unbonding_rate"),
+    3: .standard(proto: "min_staking_value_sat"),
+    4: .standard(proto: "max_staking_value_sat"),
+    5: .standard(proto: "min_staking_time_blocks"),
+    6: .standard(proto: "max_staking_time_blocks"),
+    7: .standard(proto: "slashing_pk_script"),
+    8: .standard(proto: "min_slashing_tx_fee_sat"),
+    9: .standard(proto: "slashing_rate"),
+    10: .standard(proto: "min_unbonding_time_blocks"),
+    11: .standard(proto: "unbonding_fee_sat"),
+    12: .standard(proto: "min_commission_rate"),
+    13: .standard(proto: "delegation_creation_base_gas_fee"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -126,13 +145,17 @@ extension Babylon_Btcstaking_V1_Params: SwiftProtobuf.Message, SwiftProtobuf._Me
       switch fieldNumber {
       case 1: try { try decoder.decodeRepeatedBytesField(value: &self.covenantPks) }()
       case 2: try { try decoder.decodeSingularUInt32Field(value: &self.covenantQuorum) }()
-      case 3: try { try decoder.decodeSingularStringField(value: &self.slashingAddress) }()
-      case 4: try { try decoder.decodeSingularInt64Field(value: &self.minSlashingTxFeeSat) }()
-      case 5: try { try decoder.decodeSingularStringField(value: &self.minCommissionRate) }()
-      case 6: try { try decoder.decodeSingularStringField(value: &self.slashingRate) }()
-      case 7: try { try decoder.decodeSingularUInt32Field(value: &self.maxActiveFinalityProviders) }()
-      case 8: try { try decoder.decodeSingularUInt32Field(value: &self.minUnbondingTime) }()
-      case 9: try { try decoder.decodeSingularStringField(value: &self.minUnbondingRate) }()
+      case 3: try { try decoder.decodeSingularInt64Field(value: &self.minStakingValueSat) }()
+      case 4: try { try decoder.decodeSingularInt64Field(value: &self.maxStakingValueSat) }()
+      case 5: try { try decoder.decodeSingularUInt32Field(value: &self.minStakingTimeBlocks) }()
+      case 6: try { try decoder.decodeSingularUInt32Field(value: &self.maxStakingTimeBlocks) }()
+      case 7: try { try decoder.decodeSingularBytesField(value: &self.slashingPkScript) }()
+      case 8: try { try decoder.decodeSingularInt64Field(value: &self.minSlashingTxFeeSat) }()
+      case 9: try { try decoder.decodeSingularStringField(value: &self.slashingRate) }()
+      case 10: try { try decoder.decodeSingularUInt32Field(value: &self.minUnbondingTimeBlocks) }()
+      case 11: try { try decoder.decodeSingularInt64Field(value: &self.unbondingFeeSat) }()
+      case 12: try { try decoder.decodeSingularStringField(value: &self.minCommissionRate) }()
+      case 13: try { try decoder.decodeSingularUInt64Field(value: &self.delegationCreationBaseGasFee) }()
       default: break
       }
     }
@@ -145,26 +168,38 @@ extension Babylon_Btcstaking_V1_Params: SwiftProtobuf.Message, SwiftProtobuf._Me
     if self.covenantQuorum != 0 {
       try visitor.visitSingularUInt32Field(value: self.covenantQuorum, fieldNumber: 2)
     }
-    if !self.slashingAddress.isEmpty {
-      try visitor.visitSingularStringField(value: self.slashingAddress, fieldNumber: 3)
+    if self.minStakingValueSat != 0 {
+      try visitor.visitSingularInt64Field(value: self.minStakingValueSat, fieldNumber: 3)
+    }
+    if self.maxStakingValueSat != 0 {
+      try visitor.visitSingularInt64Field(value: self.maxStakingValueSat, fieldNumber: 4)
+    }
+    if self.minStakingTimeBlocks != 0 {
+      try visitor.visitSingularUInt32Field(value: self.minStakingTimeBlocks, fieldNumber: 5)
+    }
+    if self.maxStakingTimeBlocks != 0 {
+      try visitor.visitSingularUInt32Field(value: self.maxStakingTimeBlocks, fieldNumber: 6)
+    }
+    if !self.slashingPkScript.isEmpty {
+      try visitor.visitSingularBytesField(value: self.slashingPkScript, fieldNumber: 7)
     }
     if self.minSlashingTxFeeSat != 0 {
-      try visitor.visitSingularInt64Field(value: self.minSlashingTxFeeSat, fieldNumber: 4)
-    }
-    if !self.minCommissionRate.isEmpty {
-      try visitor.visitSingularStringField(value: self.minCommissionRate, fieldNumber: 5)
+      try visitor.visitSingularInt64Field(value: self.minSlashingTxFeeSat, fieldNumber: 8)
     }
     if !self.slashingRate.isEmpty {
-      try visitor.visitSingularStringField(value: self.slashingRate, fieldNumber: 6)
+      try visitor.visitSingularStringField(value: self.slashingRate, fieldNumber: 9)
     }
-    if self.maxActiveFinalityProviders != 0 {
-      try visitor.visitSingularUInt32Field(value: self.maxActiveFinalityProviders, fieldNumber: 7)
+    if self.minUnbondingTimeBlocks != 0 {
+      try visitor.visitSingularUInt32Field(value: self.minUnbondingTimeBlocks, fieldNumber: 10)
     }
-    if self.minUnbondingTime != 0 {
-      try visitor.visitSingularUInt32Field(value: self.minUnbondingTime, fieldNumber: 8)
+    if self.unbondingFeeSat != 0 {
+      try visitor.visitSingularInt64Field(value: self.unbondingFeeSat, fieldNumber: 11)
     }
-    if !self.minUnbondingRate.isEmpty {
-      try visitor.visitSingularStringField(value: self.minUnbondingRate, fieldNumber: 9)
+    if !self.minCommissionRate.isEmpty {
+      try visitor.visitSingularStringField(value: self.minCommissionRate, fieldNumber: 12)
+    }
+    if self.delegationCreationBaseGasFee != 0 {
+      try visitor.visitSingularUInt64Field(value: self.delegationCreationBaseGasFee, fieldNumber: 13)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -172,13 +207,17 @@ extension Babylon_Btcstaking_V1_Params: SwiftProtobuf.Message, SwiftProtobuf._Me
   static func ==(lhs: Babylon_Btcstaking_V1_Params, rhs: Babylon_Btcstaking_V1_Params) -> Bool {
     if lhs.covenantPks != rhs.covenantPks {return false}
     if lhs.covenantQuorum != rhs.covenantQuorum {return false}
-    if lhs.slashingAddress != rhs.slashingAddress {return false}
+    if lhs.minStakingValueSat != rhs.minStakingValueSat {return false}
+    if lhs.maxStakingValueSat != rhs.maxStakingValueSat {return false}
+    if lhs.minStakingTimeBlocks != rhs.minStakingTimeBlocks {return false}
+    if lhs.maxStakingTimeBlocks != rhs.maxStakingTimeBlocks {return false}
+    if lhs.slashingPkScript != rhs.slashingPkScript {return false}
     if lhs.minSlashingTxFeeSat != rhs.minSlashingTxFeeSat {return false}
-    if lhs.minCommissionRate != rhs.minCommissionRate {return false}
     if lhs.slashingRate != rhs.slashingRate {return false}
-    if lhs.maxActiveFinalityProviders != rhs.maxActiveFinalityProviders {return false}
-    if lhs.minUnbondingTime != rhs.minUnbondingTime {return false}
-    if lhs.minUnbondingRate != rhs.minUnbondingRate {return false}
+    if lhs.minUnbondingTimeBlocks != rhs.minUnbondingTimeBlocks {return false}
+    if lhs.unbondingFeeSat != rhs.unbondingFeeSat {return false}
+    if lhs.minCommissionRate != rhs.minCommissionRate {return false}
+    if lhs.delegationCreationBaseGasFee != rhs.delegationCreationBaseGasFee {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

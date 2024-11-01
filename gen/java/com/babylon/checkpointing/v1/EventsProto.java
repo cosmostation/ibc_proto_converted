@@ -4548,13 +4548,13 @@ public final class EventsProto {
       "kpointing.v1.RawCheckpointR\025conflictingC" +
       "heckpoint\022Z\n\020local_checkpoint\030\002 \001(\0132/.ba" +
       "bylon.checkpointing.v1.RawCheckpointWith" +
-      "MetaR\017localCheckpointB\342\001\n\034com.babylon.ch" +
-      "eckpointing.v1B\013EventsProtoZ5github.com/" +
-      "babylonchain/babylon/x/checkpointing/typ" +
-      "es\242\002\003BCX\252\002\030Babylon.Checkpointing.V1\312\002\030Ba" +
-      "bylon\\Checkpointing\\V1\342\002$Babylon\\Checkpo" +
-      "inting\\V1\\GPBMetadata\352\002\032Babylon::Checkpo" +
-      "inting::V1b\006proto3"
+      "MetaR\017localCheckpointB\344\001\n\034com.babylon.ch" +
+      "eckpointing.v1B\013EventsProtoZ7github.com/" +
+      "babylonlabs-io/babylon/x/checkpointing/t" +
+      "ypes\242\002\003BCX\252\002\030Babylon.Checkpointing.V1\312\002\030" +
+      "Babylon\\Checkpointing\\V1\342\002$Babylon\\Check" +
+      "pointing\\V1\\GPBMetadata\352\002\032Babylon::Check" +
+      "pointing::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

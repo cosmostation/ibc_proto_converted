@@ -743,13 +743,13 @@ public final class ParamsProto {
       "\022\031babylon.btclightclient.v1\032\024gogoproto/g" +
       "ogo.proto\"I\n\006Params\0229\n\031insert_headers_al" +
       "low_list\030\001 \003(\tR\026insertHeadersAllowList:\004" +
-      "\350\240\037\001B\350\001\n\035com.babylon.btclightclient.v1B\013" +
-      "ParamsProtoZ6github.com/babylonchain/bab" +
-      "ylon/x/btclightclient/types\242\002\003BBX\252\002\031Baby" +
-      "lon.Btclightclient.V1\312\002\031Babylon\\Btclight" +
-      "client\\V1\342\002%Babylon\\Btclightclient\\V1\\GP" +
-      "BMetadata\352\002\033Babylon::Btclightclient::V1b" +
-      "\006proto3"
+      "\350\240\037\001B\352\001\n\035com.babylon.btclightclient.v1B\013" +
+      "ParamsProtoZ8github.com/babylonlabs-io/b" +
+      "abylon/x/btclightclient/types\242\002\003BBX\252\002\031Ba" +
+      "bylon.Btclightclient.V1\312\002\031Babylon\\Btclig" +
+      "htclient\\V1\342\002%Babylon\\Btclightclient\\V1\\" +
+      "GPBMetadata\352\002\033Babylon::Btclightclient::V" +
+      "1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

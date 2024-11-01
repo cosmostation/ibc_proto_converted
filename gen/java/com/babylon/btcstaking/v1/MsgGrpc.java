@@ -112,6 +112,37 @@ public final class MsgGrpc {
     return getCreateBTCDelegationMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof,
+      com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse> getAddBTCDelegationInclusionProofMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddBTCDelegationInclusionProof",
+      requestType = com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof.class,
+      responseType = com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof,
+      com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse> getAddBTCDelegationInclusionProofMethod() {
+    io.grpc.MethodDescriptor<com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof, com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse> getAddBTCDelegationInclusionProofMethod;
+    if ((getAddBTCDelegationInclusionProofMethod = MsgGrpc.getAddBTCDelegationInclusionProofMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getAddBTCDelegationInclusionProofMethod = MsgGrpc.getAddBTCDelegationInclusionProofMethod) == null) {
+          MsgGrpc.getAddBTCDelegationInclusionProofMethod = getAddBTCDelegationInclusionProofMethod =
+              io.grpc.MethodDescriptor.<com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof, com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddBTCDelegationInclusionProof"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("AddBTCDelegationInclusionProof"))
+              .build();
+        }
+      }
+    }
+    return getAddBTCDelegationInclusionProofMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.babylon.btcstaking.v1.TxProto.MsgAddCovenantSigs,
       com.babylon.btcstaking.v1.TxProto.MsgAddCovenantSigsResponse> getAddCovenantSigsMethod;
 
@@ -320,6 +351,16 @@ public final class MsgGrpc {
 
     /**
      * <pre>
+     * AddBTCDelegationInclusionProof adds inclusion proof of a given delegation on BTC chain
+     * </pre>
+     */
+    default void addBTCDelegationInclusionProof(com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof request,
+        io.grpc.stub.StreamObserver<com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddBTCDelegationInclusionProofMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * AddCovenantSigs handles signatures from a covenant member
      * </pre>
      */
@@ -430,6 +471,17 @@ public final class MsgGrpc {
 
     /**
      * <pre>
+     * AddBTCDelegationInclusionProof adds inclusion proof of a given delegation on BTC chain
+     * </pre>
+     */
+    public void addBTCDelegationInclusionProof(com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof request,
+        io.grpc.stub.StreamObserver<com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAddBTCDelegationInclusionProofMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * AddCovenantSigs handles signatures from a covenant member
      * </pre>
      */
@@ -522,6 +574,16 @@ public final class MsgGrpc {
     public com.babylon.btcstaking.v1.TxProto.MsgCreateBTCDelegationResponse createBTCDelegation(com.babylon.btcstaking.v1.TxProto.MsgCreateBTCDelegation request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateBTCDelegationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AddBTCDelegationInclusionProof adds inclusion proof of a given delegation on BTC chain
+     * </pre>
+     */
+    public com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse addBTCDelegationInclusionProof(com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAddBTCDelegationInclusionProofMethod(), getCallOptions(), request);
     }
 
     /**
@@ -621,6 +683,17 @@ public final class MsgGrpc {
 
     /**
      * <pre>
+     * AddBTCDelegationInclusionProof adds inclusion proof of a given delegation on BTC chain
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse> addBTCDelegationInclusionProof(
+        com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAddBTCDelegationInclusionProofMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * AddCovenantSigs handles signatures from a covenant member
      * </pre>
      */
@@ -668,10 +741,11 @@ public final class MsgGrpc {
   private static final int METHODID_CREATE_FINALITY_PROVIDER = 0;
   private static final int METHODID_EDIT_FINALITY_PROVIDER = 1;
   private static final int METHODID_CREATE_BTCDELEGATION = 2;
-  private static final int METHODID_ADD_COVENANT_SIGS = 3;
-  private static final int METHODID_BTCUNDELEGATE = 4;
-  private static final int METHODID_SELECTIVE_SLASHING_EVIDENCE = 5;
-  private static final int METHODID_UPDATE_PARAMS = 6;
+  private static final int METHODID_ADD_BTCDELEGATION_INCLUSION_PROOF = 3;
+  private static final int METHODID_ADD_COVENANT_SIGS = 4;
+  private static final int METHODID_BTCUNDELEGATE = 5;
+  private static final int METHODID_SELECTIVE_SLASHING_EVIDENCE = 6;
+  private static final int METHODID_UPDATE_PARAMS = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -701,6 +775,10 @@ public final class MsgGrpc {
         case METHODID_CREATE_BTCDELEGATION:
           serviceImpl.createBTCDelegation((com.babylon.btcstaking.v1.TxProto.MsgCreateBTCDelegation) request,
               (io.grpc.stub.StreamObserver<com.babylon.btcstaking.v1.TxProto.MsgCreateBTCDelegationResponse>) responseObserver);
+          break;
+        case METHODID_ADD_BTCDELEGATION_INCLUSION_PROOF:
+          serviceImpl.addBTCDelegationInclusionProof((com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof) request,
+              (io.grpc.stub.StreamObserver<com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse>) responseObserver);
           break;
         case METHODID_ADD_COVENANT_SIGS:
           serviceImpl.addCovenantSigs((com.babylon.btcstaking.v1.TxProto.MsgAddCovenantSigs) request,
@@ -757,6 +835,13 @@ public final class MsgGrpc {
               com.babylon.btcstaking.v1.TxProto.MsgCreateBTCDelegation,
               com.babylon.btcstaking.v1.TxProto.MsgCreateBTCDelegationResponse>(
                 service, METHODID_CREATE_BTCDELEGATION)))
+        .addMethod(
+          getAddBTCDelegationInclusionProofMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof,
+              com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse>(
+                service, METHODID_ADD_BTCDELEGATION_INCLUSION_PROOF)))
         .addMethod(
           getAddCovenantSigsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -836,6 +921,7 @@ public final class MsgGrpc {
               .addMethod(getCreateFinalityProviderMethod())
               .addMethod(getEditFinalityProviderMethod())
               .addMethod(getCreateBTCDelegationMethod())
+              .addMethod(getAddBTCDelegationInclusionProofMethod())
               .addMethod(getAddCovenantSigsMethod())
               .addMethod(getBTCUndelegateMethod())
               .addMethod(getSelectiveSlashingEvidenceMethod())

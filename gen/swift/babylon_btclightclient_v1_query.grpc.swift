@@ -135,7 +135,7 @@ extension Babylon_Btclightclient_V1_QueryClientProtocol {
 
   /// ContainsBytes is a temporary method that
   /// checks whether a hash is maintained by the module.
-  /// See discussion at https://github.com/babylonchain/babylon/pull/132
+  /// See discussion at https://github.com/babylonlabs-io/babylon/pull/132
   /// for more details.
   ///
   /// - Parameters:
@@ -667,7 +667,7 @@ internal protocol Babylon_Btclightclient_V1_QueryProvider: CallHandlerProvider {
 
   /// ContainsBytes is a temporary method that
   /// checks whether a hash is maintained by the module.
-  /// See discussion at https://github.com/babylonchain/babylon/pull/132
+  /// See discussion at https://github.com/babylonlabs-io/babylon/pull/132
   /// for more details.
   func containsBytes(request: Babylon_Btclightclient_V1_QueryContainsBytesRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Btclightclient_V1_QueryContainsBytesResponse>
 
@@ -804,7 +804,7 @@ internal protocol Babylon_Btclightclient_V1_QueryAsyncProvider: CallHandlerProvi
 
   /// ContainsBytes is a temporary method that
   /// checks whether a hash is maintained by the module.
-  /// See discussion at https://github.com/babylonchain/babylon/pull/132
+  /// See discussion at https://github.com/babylonlabs-io/babylon/pull/132
   /// for more details.
   @Sendable func containsBytes(
     request: Babylon_Btclightclient_V1_QueryContainsBytesRequest,

@@ -173,130 +173,6 @@ public final class QueryGrpc {
     return getBTCDelegationsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest,
-      com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse> getActiveFinalityProvidersAtHeightMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ActiveFinalityProvidersAtHeight",
-      requestType = com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest.class,
-      responseType = com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest,
-      com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse> getActiveFinalityProvidersAtHeightMethod() {
-    io.grpc.MethodDescriptor<com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest, com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse> getActiveFinalityProvidersAtHeightMethod;
-    if ((getActiveFinalityProvidersAtHeightMethod = QueryGrpc.getActiveFinalityProvidersAtHeightMethod) == null) {
-      synchronized (QueryGrpc.class) {
-        if ((getActiveFinalityProvidersAtHeightMethod = QueryGrpc.getActiveFinalityProvidersAtHeightMethod) == null) {
-          QueryGrpc.getActiveFinalityProvidersAtHeightMethod = getActiveFinalityProvidersAtHeightMethod =
-              io.grpc.MethodDescriptor.<com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest, com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ActiveFinalityProvidersAtHeight"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("ActiveFinalityProvidersAtHeight"))
-              .build();
-        }
-      }
-    }
-    return getActiveFinalityProvidersAtHeightMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest,
-      com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse> getFinalityProviderPowerAtHeightMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "FinalityProviderPowerAtHeight",
-      requestType = com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest.class,
-      responseType = com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest,
-      com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse> getFinalityProviderPowerAtHeightMethod() {
-    io.grpc.MethodDescriptor<com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest, com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse> getFinalityProviderPowerAtHeightMethod;
-    if ((getFinalityProviderPowerAtHeightMethod = QueryGrpc.getFinalityProviderPowerAtHeightMethod) == null) {
-      synchronized (QueryGrpc.class) {
-        if ((getFinalityProviderPowerAtHeightMethod = QueryGrpc.getFinalityProviderPowerAtHeightMethod) == null) {
-          QueryGrpc.getFinalityProviderPowerAtHeightMethod = getFinalityProviderPowerAtHeightMethod =
-              io.grpc.MethodDescriptor.<com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest, com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FinalityProviderPowerAtHeight"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("FinalityProviderPowerAtHeight"))
-              .build();
-        }
-      }
-    }
-    return getFinalityProviderPowerAtHeightMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest,
-      com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse> getFinalityProviderCurrentPowerMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "FinalityProviderCurrentPower",
-      requestType = com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest.class,
-      responseType = com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest,
-      com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse> getFinalityProviderCurrentPowerMethod() {
-    io.grpc.MethodDescriptor<com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest, com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse> getFinalityProviderCurrentPowerMethod;
-    if ((getFinalityProviderCurrentPowerMethod = QueryGrpc.getFinalityProviderCurrentPowerMethod) == null) {
-      synchronized (QueryGrpc.class) {
-        if ((getFinalityProviderCurrentPowerMethod = QueryGrpc.getFinalityProviderCurrentPowerMethod) == null) {
-          QueryGrpc.getFinalityProviderCurrentPowerMethod = getFinalityProviderCurrentPowerMethod =
-              io.grpc.MethodDescriptor.<com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest, com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FinalityProviderCurrentPower"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("FinalityProviderCurrentPower"))
-              .build();
-        }
-      }
-    }
-    return getFinalityProviderCurrentPowerMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest,
-      com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse> getActivatedHeightMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ActivatedHeight",
-      requestType = com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest.class,
-      responseType = com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest,
-      com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse> getActivatedHeightMethod() {
-    io.grpc.MethodDescriptor<com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest, com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse> getActivatedHeightMethod;
-    if ((getActivatedHeightMethod = QueryGrpc.getActivatedHeightMethod) == null) {
-      synchronized (QueryGrpc.class) {
-        if ((getActivatedHeightMethod = QueryGrpc.getActivatedHeightMethod) == null) {
-          QueryGrpc.getActivatedHeightMethod = getActivatedHeightMethod =
-              io.grpc.MethodDescriptor.<com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest, com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ActivatedHeight"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("ActivatedHeight"))
-              .build();
-        }
-      }
-    }
-    return getActivatedHeightMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderDelegationsRequest,
       com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderDelegationsResponse> getFinalityProviderDelegationsMethod;
 
@@ -462,47 +338,6 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * ActiveFinalityProvidersAtHeight queries finality providers with non zero voting power at given height.
-     * </pre>
-     */
-    default void activeFinalityProvidersAtHeight(com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest request,
-        io.grpc.stub.StreamObserver<com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getActiveFinalityProvidersAtHeightMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * FinalityProviderPowerAtHeight queries the voting power of a finality provider at a given height
-     * </pre>
-     */
-    default void finalityProviderPowerAtHeight(com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest request,
-        io.grpc.stub.StreamObserver<com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFinalityProviderPowerAtHeightMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * FinalityProviderCurrentPower queries the voting power of a finality provider at the current height
-     * </pre>
-     */
-    default void finalityProviderCurrentPower(com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest request,
-        io.grpc.stub.StreamObserver<com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFinalityProviderCurrentPowerMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * ActivatedHeight queries the height when BTC staking protocol is activated, i.e., the first height when
-     * there exists 1 finality provider with voting power
-     * </pre>
-     */
-    default void activatedHeight(com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest request,
-        io.grpc.stub.StreamObserver<com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getActivatedHeightMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * FinalityProviderDelegations queries all BTC delegations of the given finality provider
      * </pre>
      */
@@ -612,51 +447,6 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * ActiveFinalityProvidersAtHeight queries finality providers with non zero voting power at given height.
-     * </pre>
-     */
-    public void activeFinalityProvidersAtHeight(com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest request,
-        io.grpc.stub.StreamObserver<com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getActiveFinalityProvidersAtHeightMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * FinalityProviderPowerAtHeight queries the voting power of a finality provider at a given height
-     * </pre>
-     */
-    public void finalityProviderPowerAtHeight(com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest request,
-        io.grpc.stub.StreamObserver<com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getFinalityProviderPowerAtHeightMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * FinalityProviderCurrentPower queries the voting power of a finality provider at the current height
-     * </pre>
-     */
-    public void finalityProviderCurrentPower(com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest request,
-        io.grpc.stub.StreamObserver<com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getFinalityProviderCurrentPowerMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * ActivatedHeight queries the height when BTC staking protocol is activated, i.e., the first height when
-     * there exists 1 finality provider with voting power
-     * </pre>
-     */
-    public void activatedHeight(com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest request,
-        io.grpc.stub.StreamObserver<com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getActivatedHeightMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
      * FinalityProviderDelegations queries all BTC delegations of the given finality provider
      * </pre>
      */
@@ -745,47 +535,6 @@ public final class QueryGrpc {
     public com.babylon.btcstaking.v1.QueryProto.QueryBTCDelegationsResponse bTCDelegations(com.babylon.btcstaking.v1.QueryProto.QueryBTCDelegationsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBTCDelegationsMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * ActiveFinalityProvidersAtHeight queries finality providers with non zero voting power at given height.
-     * </pre>
-     */
-    public com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse activeFinalityProvidersAtHeight(com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getActiveFinalityProvidersAtHeightMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * FinalityProviderPowerAtHeight queries the voting power of a finality provider at a given height
-     * </pre>
-     */
-    public com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse finalityProviderPowerAtHeight(com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getFinalityProviderPowerAtHeightMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * FinalityProviderCurrentPower queries the voting power of a finality provider at the current height
-     * </pre>
-     */
-    public com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse finalityProviderCurrentPower(com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getFinalityProviderCurrentPowerMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * ActivatedHeight queries the height when BTC staking protocol is activated, i.e., the first height when
-     * there exists 1 finality provider with voting power
-     * </pre>
-     */
-    public com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse activatedHeight(com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getActivatedHeightMethod(), getCallOptions(), request);
     }
 
     /**
@@ -885,51 +634,6 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * ActiveFinalityProvidersAtHeight queries finality providers with non zero voting power at given height.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse> activeFinalityProvidersAtHeight(
-        com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getActiveFinalityProvidersAtHeightMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * FinalityProviderPowerAtHeight queries the voting power of a finality provider at a given height
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse> finalityProviderPowerAtHeight(
-        com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getFinalityProviderPowerAtHeightMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * FinalityProviderCurrentPower queries the voting power of a finality provider at the current height
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse> finalityProviderCurrentPower(
-        com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getFinalityProviderCurrentPowerMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * ActivatedHeight queries the height when BTC staking protocol is activated, i.e., the first height when
-     * there exists 1 finality provider with voting power
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse> activatedHeight(
-        com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getActivatedHeightMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * FinalityProviderDelegations queries all BTC delegations of the given finality provider
      * </pre>
      */
@@ -956,12 +660,8 @@ public final class QueryGrpc {
   private static final int METHODID_FINALITY_PROVIDERS = 2;
   private static final int METHODID_FINALITY_PROVIDER = 3;
   private static final int METHODID_BTCDELEGATIONS = 4;
-  private static final int METHODID_ACTIVE_FINALITY_PROVIDERS_AT_HEIGHT = 5;
-  private static final int METHODID_FINALITY_PROVIDER_POWER_AT_HEIGHT = 6;
-  private static final int METHODID_FINALITY_PROVIDER_CURRENT_POWER = 7;
-  private static final int METHODID_ACTIVATED_HEIGHT = 8;
-  private static final int METHODID_FINALITY_PROVIDER_DELEGATIONS = 9;
-  private static final int METHODID_BTCDELEGATION = 10;
+  private static final int METHODID_FINALITY_PROVIDER_DELEGATIONS = 5;
+  private static final int METHODID_BTCDELEGATION = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -999,22 +699,6 @@ public final class QueryGrpc {
         case METHODID_BTCDELEGATIONS:
           serviceImpl.bTCDelegations((com.babylon.btcstaking.v1.QueryProto.QueryBTCDelegationsRequest) request,
               (io.grpc.stub.StreamObserver<com.babylon.btcstaking.v1.QueryProto.QueryBTCDelegationsResponse>) responseObserver);
-          break;
-        case METHODID_ACTIVE_FINALITY_PROVIDERS_AT_HEIGHT:
-          serviceImpl.activeFinalityProvidersAtHeight((com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest) request,
-              (io.grpc.stub.StreamObserver<com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse>) responseObserver);
-          break;
-        case METHODID_FINALITY_PROVIDER_POWER_AT_HEIGHT:
-          serviceImpl.finalityProviderPowerAtHeight((com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest) request,
-              (io.grpc.stub.StreamObserver<com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse>) responseObserver);
-          break;
-        case METHODID_FINALITY_PROVIDER_CURRENT_POWER:
-          serviceImpl.finalityProviderCurrentPower((com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest) request,
-              (io.grpc.stub.StreamObserver<com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse>) responseObserver);
-          break;
-        case METHODID_ACTIVATED_HEIGHT:
-          serviceImpl.activatedHeight((com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest) request,
-              (io.grpc.stub.StreamObserver<com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse>) responseObserver);
           break;
         case METHODID_FINALITY_PROVIDER_DELEGATIONS:
           serviceImpl.finalityProviderDelegations((com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderDelegationsRequest) request,
@@ -1077,34 +761,6 @@ public final class QueryGrpc {
               com.babylon.btcstaking.v1.QueryProto.QueryBTCDelegationsRequest,
               com.babylon.btcstaking.v1.QueryProto.QueryBTCDelegationsResponse>(
                 service, METHODID_BTCDELEGATIONS)))
-        .addMethod(
-          getActiveFinalityProvidersAtHeightMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest,
-              com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse>(
-                service, METHODID_ACTIVE_FINALITY_PROVIDERS_AT_HEIGHT)))
-        .addMethod(
-          getFinalityProviderPowerAtHeightMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest,
-              com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse>(
-                service, METHODID_FINALITY_PROVIDER_POWER_AT_HEIGHT)))
-        .addMethod(
-          getFinalityProviderCurrentPowerMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest,
-              com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse>(
-                service, METHODID_FINALITY_PROVIDER_CURRENT_POWER)))
-        .addMethod(
-          getActivatedHeightMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest,
-              com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse>(
-                service, METHODID_ACTIVATED_HEIGHT)))
         .addMethod(
           getFinalityProviderDelegationsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1172,10 +828,6 @@ public final class QueryGrpc {
               .addMethod(getFinalityProvidersMethod())
               .addMethod(getFinalityProviderMethod())
               .addMethod(getBTCDelegationsMethod())
-              .addMethod(getActiveFinalityProvidersAtHeightMethod())
-              .addMethod(getFinalityProviderPowerAtHeightMethod())
-              .addMethod(getFinalityProviderCurrentPowerMethod())
-              .addMethod(getActivatedHeightMethod())
               .addMethod(getFinalityProviderDelegationsMethod())
               .addMethod(getBTCDelegationMethod())
               .build();

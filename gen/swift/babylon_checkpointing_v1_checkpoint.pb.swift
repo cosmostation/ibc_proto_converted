@@ -144,8 +144,10 @@ struct Babylon_Checkpointing_V1_RawCheckpointWithMeta {
   fileprivate var _ckpt: Babylon_Checkpointing_V1_RawCheckpoint? = nil
 }
 
-/// InjectedCheckpoint wraps the checkpoint and the extended votes
-struct Babylon_Checkpointing_V1_InjectedCheckpoint {
+/// MsgInjectedCheckpoint wraps the checkpoint and the extended votes
+/// Note: this is a special message type that is only for internal ABCI++ usage
+/// for inserting checkpoint into the block
+struct Babylon_Checkpointing_V1_MsgInjectedCheckpoint {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -243,7 +245,7 @@ struct Babylon_Checkpointing_V1_BlsSig {
 extension Babylon_Checkpointing_V1_CheckpointStatus: @unchecked Sendable {}
 extension Babylon_Checkpointing_V1_RawCheckpoint: @unchecked Sendable {}
 extension Babylon_Checkpointing_V1_RawCheckpointWithMeta: @unchecked Sendable {}
-extension Babylon_Checkpointing_V1_InjectedCheckpoint: @unchecked Sendable {}
+extension Babylon_Checkpointing_V1_MsgInjectedCheckpoint: @unchecked Sendable {}
 extension Babylon_Checkpointing_V1_CheckpointStateUpdate: @unchecked Sendable {}
 extension Babylon_Checkpointing_V1_BlsSig: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
@@ -372,8 +374,8 @@ extension Babylon_Checkpointing_V1_RawCheckpointWithMeta: SwiftProtobuf.Message,
   }
 }
 
-extension Babylon_Checkpointing_V1_InjectedCheckpoint: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".InjectedCheckpoint"
+extension Babylon_Checkpointing_V1_MsgInjectedCheckpoint: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgInjectedCheckpoint"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "ckpt"),
     2: .standard(proto: "extended_commit_info"),
@@ -406,7 +408,7 @@ extension Babylon_Checkpointing_V1_InjectedCheckpoint: SwiftProtobuf.Message, Sw
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Babylon_Checkpointing_V1_InjectedCheckpoint, rhs: Babylon_Checkpointing_V1_InjectedCheckpoint) -> Bool {
+  static func ==(lhs: Babylon_Checkpointing_V1_MsgInjectedCheckpoint, rhs: Babylon_Checkpointing_V1_MsgInjectedCheckpoint) -> Bool {
     if lhs._ckpt != rhs._ckpt {return false}
     if lhs._extendedCommitInfo != rhs._extendedCommitInfo {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}

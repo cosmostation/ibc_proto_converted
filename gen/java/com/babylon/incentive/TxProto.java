@@ -3067,12 +3067,12 @@ public final class TxProto {
       "ylon.incentive.MsgWithdrawRewardResponse" +
       "\022^\n\014UpdateParams\022\".babylon.incentive.Msg" +
       "UpdateParams\032*.babylon.incentive.MsgUpda" +
-      "teParamsResponse\032\005\200\347\260*\001B\266\001\n\025com.babylon." +
-      "incentiveB\007TxProtoZ1github.com/babylonch" +
-      "ain/babylon/x/incentive/types\242\002\003BIX\252\002\021Ba" +
-      "bylon.Incentive\312\002\021Babylon\\Incentive\342\002\035Ba" +
-      "bylon\\Incentive\\GPBMetadata\352\002\022Babylon::I" +
-      "ncentiveb\006proto3"
+      "teParamsResponse\032\005\200\347\260*\001B\270\001\n\025com.babylon." +
+      "incentiveB\007TxProtoZ3github.com/babylonla" +
+      "bs-io/babylon/x/incentive/types\242\002\003BIX\252\002\021" +
+      "Babylon.Incentive\312\002\021Babylon\\Incentive\342\002\035" +
+      "Babylon\\Incentive\\GPBMetadata\352\002\022Babylon:" +
+      ":Incentiveb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

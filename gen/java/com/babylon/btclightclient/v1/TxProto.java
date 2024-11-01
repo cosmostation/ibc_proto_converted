@@ -31,17 +31,17 @@ public final class TxProto {
         getSignerBytes();
 
     /**
-     * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderBytes"];</code>
+     * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderBytes"];</code>
      * @return A list containing the headers.
      */
     java.util.List<com.google.protobuf.ByteString> getHeadersList();
     /**
-     * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderBytes"];</code>
+     * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderBytes"];</code>
      * @return The count of headers.
      */
     int getHeadersCount();
     /**
-     * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderBytes"];</code>
+     * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderBytes"];</code>
      * @param index The index of the element to return.
      * @return The headers at the given index.
      */
@@ -131,7 +131,7 @@ public final class TxProto {
     @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.ByteString> headers_;
     /**
-     * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderBytes"];</code>
+     * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderBytes"];</code>
      * @return A list containing the headers.
      */
     @java.lang.Override
@@ -140,14 +140,14 @@ public final class TxProto {
       return headers_;
     }
     /**
-     * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderBytes"];</code>
+     * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderBytes"];</code>
      * @return The count of headers.
      */
     public int getHeadersCount() {
       return headers_.size();
     }
     /**
-     * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderBytes"];</code>
+     * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderBytes"];</code>
      * @param index The index of the element to return.
      * @return The headers at the given index.
      */
@@ -609,7 +609,7 @@ public final class TxProto {
         }
       }
       /**
-       * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderBytes"];</code>
+       * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderBytes"];</code>
        * @return A list containing the headers.
        */
       public java.util.List<com.google.protobuf.ByteString>
@@ -618,14 +618,14 @@ public final class TxProto {
                  java.util.Collections.unmodifiableList(headers_) : headers_;
       }
       /**
-       * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderBytes"];</code>
+       * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderBytes"];</code>
        * @return The count of headers.
        */
       public int getHeadersCount() {
         return headers_.size();
       }
       /**
-       * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderBytes"];</code>
+       * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderBytes"];</code>
        * @param index The index of the element to return.
        * @return The headers at the given index.
        */
@@ -633,7 +633,7 @@ public final class TxProto {
         return headers_.get(index);
       }
       /**
-       * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderBytes"];</code>
+       * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderBytes"];</code>
        * @param index The index to set the value at.
        * @param value The headers to set.
        * @return This builder for chaining.
@@ -647,7 +647,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderBytes"];</code>
+       * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderBytes"];</code>
        * @param value The headers to add.
        * @return This builder for chaining.
        */
@@ -659,7 +659,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderBytes"];</code>
+       * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderBytes"];</code>
        * @param values The headers to add.
        * @return This builder for chaining.
        */
@@ -672,7 +672,7 @@ public final class TxProto {
         return this;
       }
       /**
-       * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderBytes"];</code>
+       * <code>repeated bytes headers = 2 [json_name = "headers", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderBytes"];</code>
        * @return This builder for chaining.
        */
       public Builder clearHeaders() {
@@ -2497,28 +2497,28 @@ public final class TxProto {
       "bylon.btclightclient.v1\032\024gogoproto/gogo." +
       "proto\032\027cosmos/msg/v1/msg.proto\032&babylon/" +
       "btclightclient/v1/params.proto\032\031cosmos_p" +
-      "roto/cosmos.proto\"\213\001\n\020MsgInsertHeaders\022\026" +
-      "\n\006signer\030\001 \001(\tR\006signer\022R\n\007headers\030\002 \003(\014B" +
-      "8\332\336\0374github.com/babylonchain/babylon/typ" +
-      "es.BTCHeaderBytesR\007headers:\013\202\347\260*\006signer\"" +
-      "\032\n\030MsgInsertHeadersResponse\"\232\001\n\017MsgUpdat" +
-      "eParams\0226\n\tauthority\030\001 \001(\tB\030\322\264-\024cosmos.A" +
-      "ddressStringR\tauthority\022?\n\006params\030\002 \001(\0132" +
-      "!.babylon.btclightclient.v1.ParamsB\004\310\336\037\000" +
-      "R\006params:\016\202\347\260*\tauthority\"\031\n\027MsgUpdatePar" +
-      "amsResponse2\361\001\n\003Msg\022s\n\rInsertHeaders\022+.b" +
-      "abylon.btclightclient.v1.MsgInsertHeader" +
-      "s\0323.babylon.btclightclient.v1.MsgInsertH" +
-      "eadersResponse\"\000\022n\n\014UpdateParams\022*.babyl" +
-      "on.btclightclient.v1.MsgUpdateParams\0322.b" +
-      "abylon.btclightclient.v1.MsgUpdateParams" +
-      "Response\032\005\200\347\260*\001B\344\001\n\035com.babylon.btclight" +
-      "client.v1B\007TxProtoZ6github.com/babylonch" +
-      "ain/babylon/x/btclightclient/types\242\002\003BBX" +
-      "\252\002\031Babylon.Btclightclient.V1\312\002\031Babylon\\B" +
-      "tclightclient\\V1\342\002%Babylon\\Btclightclien" +
-      "t\\V1\\GPBMetadata\352\002\033Babylon::Btclightclie" +
-      "nt::V1b\006proto3"
+      "roto/cosmos.proto\"\215\001\n\020MsgInsertHeaders\022\026" +
+      "\n\006signer\030\001 \001(\tR\006signer\022T\n\007headers\030\002 \003(\014B" +
+      ":\332\336\0376github.com/babylonlabs-io/babylon/t" +
+      "ypes.BTCHeaderBytesR\007headers:\013\202\347\260*\006signe" +
+      "r\"\032\n\030MsgInsertHeadersResponse\"\232\001\n\017MsgUpd" +
+      "ateParams\0226\n\tauthority\030\001 \001(\tB\030\322\264-\024cosmos" +
+      ".AddressStringR\tauthority\022?\n\006params\030\002 \001(" +
+      "\0132!.babylon.btclightclient.v1.ParamsB\004\310\336" +
+      "\037\000R\006params:\016\202\347\260*\tauthority\"\031\n\027MsgUpdateP" +
+      "aramsResponse2\361\001\n\003Msg\022s\n\rInsertHeaders\022+" +
+      ".babylon.btclightclient.v1.MsgInsertHead" +
+      "ers\0323.babylon.btclightclient.v1.MsgInser" +
+      "tHeadersResponse\"\000\022n\n\014UpdateParams\022*.bab" +
+      "ylon.btclightclient.v1.MsgUpdateParams\0322" +
+      ".babylon.btclightclient.v1.MsgUpdatePara" +
+      "msResponse\032\005\200\347\260*\001B\346\001\n\035com.babylon.btclig" +
+      "htclient.v1B\007TxProtoZ8github.com/babylon" +
+      "labs-io/babylon/x/btclightclient/types\242\002" +
+      "\003BBX\252\002\031Babylon.Btclightclient.V1\312\002\031Babyl" +
+      "on\\Btclightclient\\V1\342\002%Babylon\\Btclightc" +
+      "lient\\V1\\GPBMetadata\352\002\033Babylon::Btclight" +
+      "client::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

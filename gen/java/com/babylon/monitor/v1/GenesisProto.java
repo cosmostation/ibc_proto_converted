@@ -434,12 +434,12 @@ public final class GenesisProto {
   static {
     java.lang.String[] descriptorData = {
       "\n babylon/monitor/v1/genesis.proto\022\022baby" +
-      "lon.monitor.v1\"\016\n\014GenesisStateB\277\001\n\026com.b" +
-      "abylon.monitor.v1B\014GenesisProtoZ/github." +
-      "com/babylonchain/babylon/x/monitor/types" +
-      "\242\002\003BMX\252\002\022Babylon.Monitor.V1\312\002\022Babylon\\Mo" +
-      "nitor\\V1\342\002\036Babylon\\Monitor\\V1\\GPBMetadat" +
-      "a\352\002\024Babylon::Monitor::V1b\006proto3"
+      "lon.monitor.v1\"\016\n\014GenesisStateB\301\001\n\026com.b" +
+      "abylon.monitor.v1B\014GenesisProtoZ1github." +
+      "com/babylonlabs-io/babylon/x/monitor/typ" +
+      "es\242\002\003BMX\252\002\022Babylon.Monitor.V1\312\002\022Babylon\\" +
+      "Monitor\\V1\342\002\036Babylon\\Monitor\\V1\\GPBMetad" +
+      "ata\352\002\024Babylon::Monitor::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

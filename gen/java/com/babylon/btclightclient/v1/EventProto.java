@@ -1887,13 +1887,13 @@ public final class EventProto {
       "(.babylon.btclightclient.v1.BTCHeaderInf" +
       "oR\006header\"Z\n\026EventBTCHeaderInserted\022@\n\006h" +
       "eader\030\001 \001(\0132(.babylon.btclightclient.v1." +
-      "BTCHeaderInfoR\006headerB\347\001\n\035com.babylon.bt" +
-      "clightclient.v1B\nEventProtoZ6github.com/" +
-      "babylonchain/babylon/x/btclightclient/ty" +
-      "pes\242\002\003BBX\252\002\031Babylon.Btclightclient.V1\312\002\031" +
-      "Babylon\\Btclightclient\\V1\342\002%Babylon\\Btcl" +
-      "ightclient\\V1\\GPBMetadata\352\002\033Babylon::Btc" +
-      "lightclient::V1b\006proto3"
+      "BTCHeaderInfoR\006headerB\351\001\n\035com.babylon.bt" +
+      "clightclient.v1B\nEventProtoZ8github.com/" +
+      "babylonlabs-io/babylon/x/btclightclient/" +
+      "types\242\002\003BBX\252\002\031Babylon.Btclightclient.V1\312" +
+      "\002\031Babylon\\Btclightclient\\V1\342\002%Babylon\\Bt" +
+      "clightclient\\V1\\GPBMetadata\352\002\033Babylon::B" +
+      "tclightclient::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -5488,12 +5488,12 @@ public final class TxProto {
       "ancelUnbondingDelegationResponse\022b\n\014Upda" +
       "teParams\022$.babylon.epoching.v1.MsgUpdate" +
       "Params\032,.babylon.epoching.v1.MsgUpdatePa" +
-      "ramsResponse\032\005\200\347\260*\001B\300\001\n\027com.babylon.epoc" +
-      "hing.v1B\007TxProtoZ0github.com/babylonchai" +
-      "n/babylon/x/epoching/types\242\002\003BEX\252\002\023Babyl" +
-      "on.Epoching.V1\312\002\023Babylon\\Epoching\\V1\342\002\037B" +
-      "abylon\\Epoching\\V1\\GPBMetadata\352\002\025Babylon" +
-      "::Epoching::V1b\006proto3"
+      "ramsResponse\032\005\200\347\260*\001B\302\001\n\027com.babylon.epoc" +
+      "hing.v1B\007TxProtoZ2github.com/babylonlabs" +
+      "-io/babylon/x/epoching/types\242\002\003BEX\252\002\023Bab" +
+      "ylon.Epoching.V1\312\002\023Babylon\\Epoching\\V1\342\002" +
+      "\037Babylon\\Epoching\\V1\\GPBMetadata\352\002\025Babyl" +
+      "on::Epoching::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

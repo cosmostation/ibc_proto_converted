@@ -20,31 +20,34 @@ public final class ParamsProto {
 
     /**
      * <pre>
+     * PARAMETERS COVERING STAKING
      * covenant_pks is the list of public keys held by the covenant committee
      * each PK follows encoding in BIP-340 spec on Bitcoin
      * </pre>
      *
-     * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return A list containing the covenantPks.
      */
     java.util.List<com.google.protobuf.ByteString> getCovenantPksList();
     /**
      * <pre>
+     * PARAMETERS COVERING STAKING
      * covenant_pks is the list of public keys held by the covenant committee
      * each PK follows encoding in BIP-340 spec on Bitcoin
      * </pre>
      *
-     * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The count of covenantPks.
      */
     int getCovenantPksCount();
     /**
      * <pre>
+     * PARAMETERS COVERING STAKING
      * covenant_pks is the list of public keys held by the covenant committee
      * each PK follows encoding in BIP-340 spec on Bitcoin
      * </pre>
      *
-     * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @param index The index of the element to return.
      * @return The covenantPks at the given index.
      */
@@ -63,75 +66,87 @@ public final class ParamsProto {
 
     /**
      * <pre>
-     * slashing address is the address that the slashed BTC goes to
-     * the address is in string on Bitcoin
+     * min_staking_value_sat is the minimum of satoshis locked in staking output
      * </pre>
      *
-     * <code>string slashing_address = 3 [json_name = "slashingAddress"];</code>
-     * @return The slashingAddress.
+     * <code>int64 min_staking_value_sat = 3 [json_name = "minStakingValueSat"];</code>
+     * @return The minStakingValueSat.
      */
-    java.lang.String getSlashingAddress();
+    long getMinStakingValueSat();
+
     /**
      * <pre>
-     * slashing address is the address that the slashed BTC goes to
-     * the address is in string on Bitcoin
+     * max_staking_value_sat is the maximum of satoshis locked in staking output
      * </pre>
      *
-     * <code>string slashing_address = 3 [json_name = "slashingAddress"];</code>
-     * @return The bytes for slashingAddress.
+     * <code>int64 max_staking_value_sat = 4 [json_name = "maxStakingValueSat"];</code>
+     * @return The maxStakingValueSat.
      */
-    com.google.protobuf.ByteString
-        getSlashingAddressBytes();
+    long getMaxStakingValueSat();
+
+    /**
+     * <pre>
+     * min_staking_time is the minimum lock time specified in staking output script
+     * </pre>
+     *
+     * <code>uint32 min_staking_time_blocks = 5 [json_name = "minStakingTimeBlocks"];</code>
+     * @return The minStakingTimeBlocks.
+     */
+    int getMinStakingTimeBlocks();
+
+    /**
+     * <pre>
+     * max_staking_time_blocks is the maximum lock time time specified in staking output script
+     * </pre>
+     *
+     * <code>uint32 max_staking_time_blocks = 6 [json_name = "maxStakingTimeBlocks"];</code>
+     * @return The maxStakingTimeBlocks.
+     */
+    int getMaxStakingTimeBlocks();
+
+    /**
+     * <pre>
+     * PARAMETERS COVERING SLASHING
+     * slashing_pk_script is the pk_script expected in slashing output ie. the first
+     * output of slashing transaction
+     * </pre>
+     *
+     * <code>bytes slashing_pk_script = 7 [json_name = "slashingPkScript"];</code>
+     * @return The slashingPkScript.
+     */
+    com.google.protobuf.ByteString getSlashingPkScript();
 
     /**
      * <pre>
      * min_slashing_tx_fee_sat is the minimum amount of tx fee (quantified
-     * in Satoshi) needed for the pre-signed slashing tx
-     * TODO: change to satoshi per byte?
+     * in Satoshi) needed for the pre-signed slashing tx. It covers both:
+     * staking slashing transaction and unbonding slashing transaction
      * </pre>
      *
-     * <code>int64 min_slashing_tx_fee_sat = 4 [json_name = "minSlashingTxFeeSat"];</code>
+     * <code>int64 min_slashing_tx_fee_sat = 8 [json_name = "minSlashingTxFeeSat"];</code>
      * @return The minSlashingTxFeeSat.
      */
     long getMinSlashingTxFeeSat();
 
     /**
      * <pre>
-     * min_commission_rate is the chain-wide minimum commission rate that a finality provider can charge their delegators
-     * </pre>
-     *
-     * <code>string min_commission_rate = 5 [json_name = "minCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
-     * @return The minCommissionRate.
-     */
-    java.lang.String getMinCommissionRate();
-    /**
-     * <pre>
-     * min_commission_rate is the chain-wide minimum commission rate that a finality provider can charge their delegators
-     * </pre>
-     *
-     * <code>string min_commission_rate = 5 [json_name = "minCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
-     * @return The bytes for minCommissionRate.
-     */
-    com.google.protobuf.ByteString
-        getMinCommissionRateBytes();
-
-    /**
-     * <pre>
      * slashing_rate determines the portion of the staked amount to be slashed,
-     * expressed as a decimal (e.g., 0.5 for 50%).
+     * expressed as a decimal (e.g., 0.5 for 50%). Maximal precion is 2 decimal
+     * places
      * </pre>
      *
-     * <code>string slashing_rate = 6 [json_name = "slashingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * <code>string slashing_rate = 9 [json_name = "slashingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
      * @return The slashingRate.
      */
     java.lang.String getSlashingRate();
     /**
      * <pre>
      * slashing_rate determines the portion of the staked amount to be slashed,
-     * expressed as a decimal (e.g., 0.5 for 50%).
+     * expressed as a decimal (e.g., 0.5 for 50%). Maximal precion is 2 decimal
+     * places
      * </pre>
      *
-     * <code>string slashing_rate = 6 [json_name = "slashingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * <code>string slashing_rate = 9 [json_name = "slashingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
      * @return The bytes for slashingRate.
      */
     com.google.protobuf.ByteString
@@ -139,51 +154,60 @@ public final class ParamsProto {
 
     /**
      * <pre>
-     * max_active_finality_providers is the maximum number of active finality providers in the BTC staking protocol
-     * </pre>
-     *
-     * <code>uint32 max_active_finality_providers = 7 [json_name = "maxActiveFinalityProviders"];</code>
-     * @return The maxActiveFinalityProviders.
-     */
-    int getMaxActiveFinalityProviders();
-
-    /**
-     * <pre>
+     * PARAMETERS COVERING UNBONDING
      * min_unbonding_time is the minimum time for unbonding transaction timelock in BTC blocks
      * </pre>
      *
-     * <code>uint32 min_unbonding_time = 8 [json_name = "minUnbondingTime"];</code>
-     * @return The minUnbondingTime.
+     * <code>uint32 min_unbonding_time_blocks = 10 [json_name = "minUnbondingTimeBlocks"];</code>
+     * @return The minUnbondingTimeBlocks.
      */
-    int getMinUnbondingTime();
+    int getMinUnbondingTimeBlocks();
 
     /**
      * <pre>
-     * min_unbonding_rate is the minimum amount of BTC that are required in unbonding
-     * output, expressed as a fraction of staking output
-     * example: if min_unbonding_rate=0.9, then the unbonding output value
-     * must be at least 90% of staking output, for staking request to be considered
-     * valid
+     * unbonding_fee exact fee required for unbonding transaction
      * </pre>
      *
-     * <code>string min_unbonding_rate = 9 [json_name = "minUnbondingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-     * @return The minUnbondingRate.
+     * <code>int64 unbonding_fee_sat = 11 [json_name = "unbondingFeeSat"];</code>
+     * @return The unbondingFeeSat.
      */
-    java.lang.String getMinUnbondingRate();
+    long getUnbondingFeeSat();
+
     /**
      * <pre>
-     * min_unbonding_rate is the minimum amount of BTC that are required in unbonding
-     * output, expressed as a fraction of staking output
-     * example: if min_unbonding_rate=0.9, then the unbonding output value
-     * must be at least 90% of staking output, for staking request to be considered
-     * valid
+     * PARAMETERS COVERING FINALITY PROVIDERS
+     * min_commission_rate is the chain-wide minimum commission rate that a finality provider
+     * can charge their delegators expressed as a decimal (e.g., 0.5 for 50%). Maximal precion
+     * is 2 decimal places
      * </pre>
      *
-     * <code>string min_unbonding_rate = 9 [json_name = "minUnbondingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-     * @return The bytes for minUnbondingRate.
+     * <code>string min_commission_rate = 12 [json_name = "minCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+     * @return The minCommissionRate.
+     */
+    java.lang.String getMinCommissionRate();
+    /**
+     * <pre>
+     * PARAMETERS COVERING FINALITY PROVIDERS
+     * min_commission_rate is the chain-wide minimum commission rate that a finality provider
+     * can charge their delegators expressed as a decimal (e.g., 0.5 for 50%). Maximal precion
+     * is 2 decimal places
+     * </pre>
+     *
+     * <code>string min_commission_rate = 12 [json_name = "minCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+     * @return The bytes for minCommissionRate.
      */
     com.google.protobuf.ByteString
-        getMinUnbondingRateBytes();
+        getMinCommissionRateBytes();
+
+    /**
+     * <pre>
+     * base gas fee for delegation creation
+     * </pre>
+     *
+     * <code>uint64 delegation_creation_base_gas_fee = 13 [json_name = "delegationCreationBaseGasFee"];</code>
+     * @return The delegationCreationBaseGasFee.
+     */
+    long getDelegationCreationBaseGasFee();
   }
   /**
    * <pre>
@@ -203,10 +227,9 @@ public final class ParamsProto {
     }
     private Params() {
       covenantPks_ = java.util.Collections.emptyList();
-      slashingAddress_ = "";
-      minCommissionRate_ = "";
+      slashingPkScript_ = com.google.protobuf.ByteString.EMPTY;
       slashingRate_ = "";
-      minUnbondingRate_ = "";
+      minCommissionRate_ = "";
     }
 
     @java.lang.Override
@@ -234,11 +257,12 @@ public final class ParamsProto {
     private java.util.List<com.google.protobuf.ByteString> covenantPks_;
     /**
      * <pre>
+     * PARAMETERS COVERING STAKING
      * covenant_pks is the list of public keys held by the covenant committee
      * each PK follows encoding in BIP-340 spec on Bitcoin
      * </pre>
      *
-     * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return A list containing the covenantPks.
      */
     @java.lang.Override
@@ -248,11 +272,12 @@ public final class ParamsProto {
     }
     /**
      * <pre>
+     * PARAMETERS COVERING STAKING
      * covenant_pks is the list of public keys held by the covenant committee
      * each PK follows encoding in BIP-340 spec on Bitcoin
      * </pre>
      *
-     * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The count of covenantPks.
      */
     public int getCovenantPksCount() {
@@ -260,11 +285,12 @@ public final class ParamsProto {
     }
     /**
      * <pre>
+     * PARAMETERS COVERING STAKING
      * covenant_pks is the list of public keys held by the covenant committee
      * each PK follows encoding in BIP-340 spec on Bitcoin
      * </pre>
      *
-     * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @param index The index of the element to return.
      * @return The covenantPks at the given index.
      */
@@ -288,65 +314,93 @@ public final class ParamsProto {
       return covenantQuorum_;
     }
 
-    public static final int SLASHING_ADDRESS_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object slashingAddress_ = "";
+    public static final int MIN_STAKING_VALUE_SAT_FIELD_NUMBER = 3;
+    private long minStakingValueSat_ = 0L;
     /**
      * <pre>
-     * slashing address is the address that the slashed BTC goes to
-     * the address is in string on Bitcoin
+     * min_staking_value_sat is the minimum of satoshis locked in staking output
      * </pre>
      *
-     * <code>string slashing_address = 3 [json_name = "slashingAddress"];</code>
-     * @return The slashingAddress.
+     * <code>int64 min_staking_value_sat = 3 [json_name = "minStakingValueSat"];</code>
+     * @return The minStakingValueSat.
      */
     @java.lang.Override
-    public java.lang.String getSlashingAddress() {
-      java.lang.Object ref = slashingAddress_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        slashingAddress_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * slashing address is the address that the slashed BTC goes to
-     * the address is in string on Bitcoin
-     * </pre>
-     *
-     * <code>string slashing_address = 3 [json_name = "slashingAddress"];</code>
-     * @return The bytes for slashingAddress.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getSlashingAddressBytes() {
-      java.lang.Object ref = slashingAddress_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        slashingAddress_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public long getMinStakingValueSat() {
+      return minStakingValueSat_;
     }
 
-    public static final int MIN_SLASHING_TX_FEE_SAT_FIELD_NUMBER = 4;
+    public static final int MAX_STAKING_VALUE_SAT_FIELD_NUMBER = 4;
+    private long maxStakingValueSat_ = 0L;
+    /**
+     * <pre>
+     * max_staking_value_sat is the maximum of satoshis locked in staking output
+     * </pre>
+     *
+     * <code>int64 max_staking_value_sat = 4 [json_name = "maxStakingValueSat"];</code>
+     * @return The maxStakingValueSat.
+     */
+    @java.lang.Override
+    public long getMaxStakingValueSat() {
+      return maxStakingValueSat_;
+    }
+
+    public static final int MIN_STAKING_TIME_BLOCKS_FIELD_NUMBER = 5;
+    private int minStakingTimeBlocks_ = 0;
+    /**
+     * <pre>
+     * min_staking_time is the minimum lock time specified in staking output script
+     * </pre>
+     *
+     * <code>uint32 min_staking_time_blocks = 5 [json_name = "minStakingTimeBlocks"];</code>
+     * @return The minStakingTimeBlocks.
+     */
+    @java.lang.Override
+    public int getMinStakingTimeBlocks() {
+      return minStakingTimeBlocks_;
+    }
+
+    public static final int MAX_STAKING_TIME_BLOCKS_FIELD_NUMBER = 6;
+    private int maxStakingTimeBlocks_ = 0;
+    /**
+     * <pre>
+     * max_staking_time_blocks is the maximum lock time time specified in staking output script
+     * </pre>
+     *
+     * <code>uint32 max_staking_time_blocks = 6 [json_name = "maxStakingTimeBlocks"];</code>
+     * @return The maxStakingTimeBlocks.
+     */
+    @java.lang.Override
+    public int getMaxStakingTimeBlocks() {
+      return maxStakingTimeBlocks_;
+    }
+
+    public static final int SLASHING_PK_SCRIPT_FIELD_NUMBER = 7;
+    private com.google.protobuf.ByteString slashingPkScript_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * PARAMETERS COVERING SLASHING
+     * slashing_pk_script is the pk_script expected in slashing output ie. the first
+     * output of slashing transaction
+     * </pre>
+     *
+     * <code>bytes slashing_pk_script = 7 [json_name = "slashingPkScript"];</code>
+     * @return The slashingPkScript.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSlashingPkScript() {
+      return slashingPkScript_;
+    }
+
+    public static final int MIN_SLASHING_TX_FEE_SAT_FIELD_NUMBER = 8;
     private long minSlashingTxFeeSat_ = 0L;
     /**
      * <pre>
      * min_slashing_tx_fee_sat is the minimum amount of tx fee (quantified
-     * in Satoshi) needed for the pre-signed slashing tx
-     * TODO: change to satoshi per byte?
+     * in Satoshi) needed for the pre-signed slashing tx. It covers both:
+     * staking slashing transaction and unbonding slashing transaction
      * </pre>
      *
-     * <code>int64 min_slashing_tx_fee_sat = 4 [json_name = "minSlashingTxFeeSat"];</code>
+     * <code>int64 min_slashing_tx_fee_sat = 8 [json_name = "minSlashingTxFeeSat"];</code>
      * @return The minSlashingTxFeeSat.
      */
     @java.lang.Override
@@ -354,63 +408,17 @@ public final class ParamsProto {
       return minSlashingTxFeeSat_;
     }
 
-    public static final int MIN_COMMISSION_RATE_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object minCommissionRate_ = "";
-    /**
-     * <pre>
-     * min_commission_rate is the chain-wide minimum commission rate that a finality provider can charge their delegators
-     * </pre>
-     *
-     * <code>string min_commission_rate = 5 [json_name = "minCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
-     * @return The minCommissionRate.
-     */
-    @java.lang.Override
-    public java.lang.String getMinCommissionRate() {
-      java.lang.Object ref = minCommissionRate_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        minCommissionRate_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * min_commission_rate is the chain-wide minimum commission rate that a finality provider can charge their delegators
-     * </pre>
-     *
-     * <code>string min_commission_rate = 5 [json_name = "minCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
-     * @return The bytes for minCommissionRate.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getMinCommissionRateBytes() {
-      java.lang.Object ref = minCommissionRate_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        minCommissionRate_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int SLASHING_RATE_FIELD_NUMBER = 6;
+    public static final int SLASHING_RATE_FIELD_NUMBER = 9;
     @SuppressWarnings("serial")
     private volatile java.lang.Object slashingRate_ = "";
     /**
      * <pre>
      * slashing_rate determines the portion of the staked amount to be slashed,
-     * expressed as a decimal (e.g., 0.5 for 50%).
+     * expressed as a decimal (e.g., 0.5 for 50%). Maximal precion is 2 decimal
+     * places
      * </pre>
      *
-     * <code>string slashing_rate = 6 [json_name = "slashingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * <code>string slashing_rate = 9 [json_name = "slashingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
      * @return The slashingRate.
      */
     @java.lang.Override
@@ -429,10 +437,11 @@ public final class ParamsProto {
     /**
      * <pre>
      * slashing_rate determines the portion of the staked amount to be slashed,
-     * expressed as a decimal (e.g., 0.5 for 50%).
+     * expressed as a decimal (e.g., 0.5 for 50%). Maximal precion is 2 decimal
+     * places
      * </pre>
      *
-     * <code>string slashing_rate = 6 [json_name = "slashingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * <code>string slashing_rate = 9 [json_name = "slashingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
      * @return The bytes for slashingRate.
      */
     @java.lang.Override
@@ -450,89 +459,103 @@ public final class ParamsProto {
       }
     }
 
-    public static final int MAX_ACTIVE_FINALITY_PROVIDERS_FIELD_NUMBER = 7;
-    private int maxActiveFinalityProviders_ = 0;
+    public static final int MIN_UNBONDING_TIME_BLOCKS_FIELD_NUMBER = 10;
+    private int minUnbondingTimeBlocks_ = 0;
     /**
      * <pre>
-     * max_active_finality_providers is the maximum number of active finality providers in the BTC staking protocol
-     * </pre>
-     *
-     * <code>uint32 max_active_finality_providers = 7 [json_name = "maxActiveFinalityProviders"];</code>
-     * @return The maxActiveFinalityProviders.
-     */
-    @java.lang.Override
-    public int getMaxActiveFinalityProviders() {
-      return maxActiveFinalityProviders_;
-    }
-
-    public static final int MIN_UNBONDING_TIME_FIELD_NUMBER = 8;
-    private int minUnbondingTime_ = 0;
-    /**
-     * <pre>
+     * PARAMETERS COVERING UNBONDING
      * min_unbonding_time is the minimum time for unbonding transaction timelock in BTC blocks
      * </pre>
      *
-     * <code>uint32 min_unbonding_time = 8 [json_name = "minUnbondingTime"];</code>
-     * @return The minUnbondingTime.
+     * <code>uint32 min_unbonding_time_blocks = 10 [json_name = "minUnbondingTimeBlocks"];</code>
+     * @return The minUnbondingTimeBlocks.
      */
     @java.lang.Override
-    public int getMinUnbondingTime() {
-      return minUnbondingTime_;
+    public int getMinUnbondingTimeBlocks() {
+      return minUnbondingTimeBlocks_;
     }
 
-    public static final int MIN_UNBONDING_RATE_FIELD_NUMBER = 9;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object minUnbondingRate_ = "";
+    public static final int UNBONDING_FEE_SAT_FIELD_NUMBER = 11;
+    private long unbondingFeeSat_ = 0L;
     /**
      * <pre>
-     * min_unbonding_rate is the minimum amount of BTC that are required in unbonding
-     * output, expressed as a fraction of staking output
-     * example: if min_unbonding_rate=0.9, then the unbonding output value
-     * must be at least 90% of staking output, for staking request to be considered
-     * valid
+     * unbonding_fee exact fee required for unbonding transaction
      * </pre>
      *
-     * <code>string min_unbonding_rate = 9 [json_name = "minUnbondingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-     * @return The minUnbondingRate.
+     * <code>int64 unbonding_fee_sat = 11 [json_name = "unbondingFeeSat"];</code>
+     * @return The unbondingFeeSat.
      */
     @java.lang.Override
-    public java.lang.String getMinUnbondingRate() {
-      java.lang.Object ref = minUnbondingRate_;
+    public long getUnbondingFeeSat() {
+      return unbondingFeeSat_;
+    }
+
+    public static final int MIN_COMMISSION_RATE_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minCommissionRate_ = "";
+    /**
+     * <pre>
+     * PARAMETERS COVERING FINALITY PROVIDERS
+     * min_commission_rate is the chain-wide minimum commission rate that a finality provider
+     * can charge their delegators expressed as a decimal (e.g., 0.5 for 50%). Maximal precion
+     * is 2 decimal places
+     * </pre>
+     *
+     * <code>string min_commission_rate = 12 [json_name = "minCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+     * @return The minCommissionRate.
+     */
+    @java.lang.Override
+    public java.lang.String getMinCommissionRate() {
+      java.lang.Object ref = minCommissionRate_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        minUnbondingRate_ = s;
+        minCommissionRate_ = s;
         return s;
       }
     }
     /**
      * <pre>
-     * min_unbonding_rate is the minimum amount of BTC that are required in unbonding
-     * output, expressed as a fraction of staking output
-     * example: if min_unbonding_rate=0.9, then the unbonding output value
-     * must be at least 90% of staking output, for staking request to be considered
-     * valid
+     * PARAMETERS COVERING FINALITY PROVIDERS
+     * min_commission_rate is the chain-wide minimum commission rate that a finality provider
+     * can charge their delegators expressed as a decimal (e.g., 0.5 for 50%). Maximal precion
+     * is 2 decimal places
      * </pre>
      *
-     * <code>string min_unbonding_rate = 9 [json_name = "minUnbondingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-     * @return The bytes for minUnbondingRate.
+     * <code>string min_commission_rate = 12 [json_name = "minCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+     * @return The bytes for minCommissionRate.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getMinUnbondingRateBytes() {
-      java.lang.Object ref = minUnbondingRate_;
+        getMinCommissionRateBytes() {
+      java.lang.Object ref = minCommissionRate_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        minUnbondingRate_ = b;
+        minCommissionRate_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int DELEGATION_CREATION_BASE_GAS_FEE_FIELD_NUMBER = 13;
+    private long delegationCreationBaseGasFee_ = 0L;
+    /**
+     * <pre>
+     * base gas fee for delegation creation
+     * </pre>
+     *
+     * <code>uint64 delegation_creation_base_gas_fee = 13 [json_name = "delegationCreationBaseGasFee"];</code>
+     * @return The delegationCreationBaseGasFee.
+     */
+    @java.lang.Override
+    public long getDelegationCreationBaseGasFee() {
+      return delegationCreationBaseGasFee_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -555,26 +578,38 @@ public final class ParamsProto {
       if (covenantQuorum_ != 0) {
         output.writeUInt32(2, covenantQuorum_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(slashingAddress_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, slashingAddress_);
+      if (minStakingValueSat_ != 0L) {
+        output.writeInt64(3, minStakingValueSat_);
+      }
+      if (maxStakingValueSat_ != 0L) {
+        output.writeInt64(4, maxStakingValueSat_);
+      }
+      if (minStakingTimeBlocks_ != 0) {
+        output.writeUInt32(5, minStakingTimeBlocks_);
+      }
+      if (maxStakingTimeBlocks_ != 0) {
+        output.writeUInt32(6, maxStakingTimeBlocks_);
+      }
+      if (!slashingPkScript_.isEmpty()) {
+        output.writeBytes(7, slashingPkScript_);
       }
       if (minSlashingTxFeeSat_ != 0L) {
-        output.writeInt64(4, minSlashingTxFeeSat_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minCommissionRate_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, minCommissionRate_);
+        output.writeInt64(8, minSlashingTxFeeSat_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(slashingRate_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, slashingRate_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, slashingRate_);
       }
-      if (maxActiveFinalityProviders_ != 0) {
-        output.writeUInt32(7, maxActiveFinalityProviders_);
+      if (minUnbondingTimeBlocks_ != 0) {
+        output.writeUInt32(10, minUnbondingTimeBlocks_);
       }
-      if (minUnbondingTime_ != 0) {
-        output.writeUInt32(8, minUnbondingTime_);
+      if (unbondingFeeSat_ != 0L) {
+        output.writeInt64(11, unbondingFeeSat_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minUnbondingRate_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, minUnbondingRate_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minCommissionRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, minCommissionRate_);
+      }
+      if (delegationCreationBaseGasFee_ != 0L) {
+        output.writeUInt64(13, delegationCreationBaseGasFee_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -598,29 +633,47 @@ public final class ParamsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(2, covenantQuorum_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(slashingAddress_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, slashingAddress_);
+      if (minStakingValueSat_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, minStakingValueSat_);
+      }
+      if (maxStakingValueSat_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, maxStakingValueSat_);
+      }
+      if (minStakingTimeBlocks_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, minStakingTimeBlocks_);
+      }
+      if (maxStakingTimeBlocks_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(6, maxStakingTimeBlocks_);
+      }
+      if (!slashingPkScript_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(7, slashingPkScript_);
       }
       if (minSlashingTxFeeSat_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(4, minSlashingTxFeeSat_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minCommissionRate_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, minCommissionRate_);
+          .computeInt64Size(8, minSlashingTxFeeSat_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(slashingRate_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, slashingRate_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, slashingRate_);
       }
-      if (maxActiveFinalityProviders_ != 0) {
+      if (minUnbondingTimeBlocks_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, maxActiveFinalityProviders_);
+          .computeUInt32Size(10, minUnbondingTimeBlocks_);
       }
-      if (minUnbondingTime_ != 0) {
+      if (unbondingFeeSat_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, minUnbondingTime_);
+          .computeInt64Size(11, unbondingFeeSat_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minUnbondingRate_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, minUnbondingRate_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minCommissionRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, minCommissionRate_);
+      }
+      if (delegationCreationBaseGasFee_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(13, delegationCreationBaseGasFee_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -641,20 +694,28 @@ public final class ParamsProto {
           .equals(other.getCovenantPksList())) return false;
       if (getCovenantQuorum()
           != other.getCovenantQuorum()) return false;
-      if (!getSlashingAddress()
-          .equals(other.getSlashingAddress())) return false;
+      if (getMinStakingValueSat()
+          != other.getMinStakingValueSat()) return false;
+      if (getMaxStakingValueSat()
+          != other.getMaxStakingValueSat()) return false;
+      if (getMinStakingTimeBlocks()
+          != other.getMinStakingTimeBlocks()) return false;
+      if (getMaxStakingTimeBlocks()
+          != other.getMaxStakingTimeBlocks()) return false;
+      if (!getSlashingPkScript()
+          .equals(other.getSlashingPkScript())) return false;
       if (getMinSlashingTxFeeSat()
           != other.getMinSlashingTxFeeSat()) return false;
-      if (!getMinCommissionRate()
-          .equals(other.getMinCommissionRate())) return false;
       if (!getSlashingRate()
           .equals(other.getSlashingRate())) return false;
-      if (getMaxActiveFinalityProviders()
-          != other.getMaxActiveFinalityProviders()) return false;
-      if (getMinUnbondingTime()
-          != other.getMinUnbondingTime()) return false;
-      if (!getMinUnbondingRate()
-          .equals(other.getMinUnbondingRate())) return false;
+      if (getMinUnbondingTimeBlocks()
+          != other.getMinUnbondingTimeBlocks()) return false;
+      if (getUnbondingFeeSat()
+          != other.getUnbondingFeeSat()) return false;
+      if (!getMinCommissionRate()
+          .equals(other.getMinCommissionRate())) return false;
+      if (getDelegationCreationBaseGasFee()
+          != other.getDelegationCreationBaseGasFee()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -672,21 +733,33 @@ public final class ParamsProto {
       }
       hash = (37 * hash) + COVENANT_QUORUM_FIELD_NUMBER;
       hash = (53 * hash) + getCovenantQuorum();
-      hash = (37 * hash) + SLASHING_ADDRESS_FIELD_NUMBER;
-      hash = (53 * hash) + getSlashingAddress().hashCode();
+      hash = (37 * hash) + MIN_STAKING_VALUE_SAT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMinStakingValueSat());
+      hash = (37 * hash) + MAX_STAKING_VALUE_SAT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMaxStakingValueSat());
+      hash = (37 * hash) + MIN_STAKING_TIME_BLOCKS_FIELD_NUMBER;
+      hash = (53 * hash) + getMinStakingTimeBlocks();
+      hash = (37 * hash) + MAX_STAKING_TIME_BLOCKS_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxStakingTimeBlocks();
+      hash = (37 * hash) + SLASHING_PK_SCRIPT_FIELD_NUMBER;
+      hash = (53 * hash) + getSlashingPkScript().hashCode();
       hash = (37 * hash) + MIN_SLASHING_TX_FEE_SAT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getMinSlashingTxFeeSat());
-      hash = (37 * hash) + MIN_COMMISSION_RATE_FIELD_NUMBER;
-      hash = (53 * hash) + getMinCommissionRate().hashCode();
       hash = (37 * hash) + SLASHING_RATE_FIELD_NUMBER;
       hash = (53 * hash) + getSlashingRate().hashCode();
-      hash = (37 * hash) + MAX_ACTIVE_FINALITY_PROVIDERS_FIELD_NUMBER;
-      hash = (53 * hash) + getMaxActiveFinalityProviders();
-      hash = (37 * hash) + MIN_UNBONDING_TIME_FIELD_NUMBER;
-      hash = (53 * hash) + getMinUnbondingTime();
-      hash = (37 * hash) + MIN_UNBONDING_RATE_FIELD_NUMBER;
-      hash = (53 * hash) + getMinUnbondingRate().hashCode();
+      hash = (37 * hash) + MIN_UNBONDING_TIME_BLOCKS_FIELD_NUMBER;
+      hash = (53 * hash) + getMinUnbondingTimeBlocks();
+      hash = (37 * hash) + UNBONDING_FEE_SAT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUnbondingFeeSat());
+      hash = (37 * hash) + MIN_COMMISSION_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getMinCommissionRate().hashCode();
+      hash = (37 * hash) + DELEGATION_CREATION_BASE_GAS_FEE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDelegationCreationBaseGasFee());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -824,13 +897,17 @@ public final class ParamsProto {
         bitField0_ = 0;
         covenantPks_ = java.util.Collections.emptyList();
         covenantQuorum_ = 0;
-        slashingAddress_ = "";
+        minStakingValueSat_ = 0L;
+        maxStakingValueSat_ = 0L;
+        minStakingTimeBlocks_ = 0;
+        maxStakingTimeBlocks_ = 0;
+        slashingPkScript_ = com.google.protobuf.ByteString.EMPTY;
         minSlashingTxFeeSat_ = 0L;
-        minCommissionRate_ = "";
         slashingRate_ = "";
-        maxActiveFinalityProviders_ = 0;
-        minUnbondingTime_ = 0;
-        minUnbondingRate_ = "";
+        minUnbondingTimeBlocks_ = 0;
+        unbondingFeeSat_ = 0L;
+        minCommissionRate_ = "";
+        delegationCreationBaseGasFee_ = 0L;
         return this;
       }
 
@@ -877,25 +954,37 @@ public final class ParamsProto {
           result.covenantQuorum_ = covenantQuorum_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.slashingAddress_ = slashingAddress_;
+          result.minStakingValueSat_ = minStakingValueSat_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.minSlashingTxFeeSat_ = minSlashingTxFeeSat_;
+          result.maxStakingValueSat_ = maxStakingValueSat_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.minCommissionRate_ = minCommissionRate_;
+          result.minStakingTimeBlocks_ = minStakingTimeBlocks_;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.slashingRate_ = slashingRate_;
+          result.maxStakingTimeBlocks_ = maxStakingTimeBlocks_;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.maxActiveFinalityProviders_ = maxActiveFinalityProviders_;
+          result.slashingPkScript_ = slashingPkScript_;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.minUnbondingTime_ = minUnbondingTime_;
+          result.minSlashingTxFeeSat_ = minSlashingTxFeeSat_;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
-          result.minUnbondingRate_ = minUnbondingRate_;
+          result.slashingRate_ = slashingRate_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.minUnbondingTimeBlocks_ = minUnbondingTimeBlocks_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.unbondingFeeSat_ = unbondingFeeSat_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.minCommissionRate_ = minCommissionRate_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.delegationCreationBaseGasFee_ = delegationCreationBaseGasFee_;
         }
       }
 
@@ -956,34 +1045,42 @@ public final class ParamsProto {
         if (other.getCovenantQuorum() != 0) {
           setCovenantQuorum(other.getCovenantQuorum());
         }
-        if (!other.getSlashingAddress().isEmpty()) {
-          slashingAddress_ = other.slashingAddress_;
-          bitField0_ |= 0x00000004;
-          onChanged();
+        if (other.getMinStakingValueSat() != 0L) {
+          setMinStakingValueSat(other.getMinStakingValueSat());
+        }
+        if (other.getMaxStakingValueSat() != 0L) {
+          setMaxStakingValueSat(other.getMaxStakingValueSat());
+        }
+        if (other.getMinStakingTimeBlocks() != 0) {
+          setMinStakingTimeBlocks(other.getMinStakingTimeBlocks());
+        }
+        if (other.getMaxStakingTimeBlocks() != 0) {
+          setMaxStakingTimeBlocks(other.getMaxStakingTimeBlocks());
+        }
+        if (other.getSlashingPkScript() != com.google.protobuf.ByteString.EMPTY) {
+          setSlashingPkScript(other.getSlashingPkScript());
         }
         if (other.getMinSlashingTxFeeSat() != 0L) {
           setMinSlashingTxFeeSat(other.getMinSlashingTxFeeSat());
         }
-        if (!other.getMinCommissionRate().isEmpty()) {
-          minCommissionRate_ = other.minCommissionRate_;
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
         if (!other.getSlashingRate().isEmpty()) {
           slashingRate_ = other.slashingRate_;
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
-        if (other.getMaxActiveFinalityProviders() != 0) {
-          setMaxActiveFinalityProviders(other.getMaxActiveFinalityProviders());
-        }
-        if (other.getMinUnbondingTime() != 0) {
-          setMinUnbondingTime(other.getMinUnbondingTime());
-        }
-        if (!other.getMinUnbondingRate().isEmpty()) {
-          minUnbondingRate_ = other.minUnbondingRate_;
           bitField0_ |= 0x00000100;
           onChanged();
+        }
+        if (other.getMinUnbondingTimeBlocks() != 0) {
+          setMinUnbondingTimeBlocks(other.getMinUnbondingTimeBlocks());
+        }
+        if (other.getUnbondingFeeSat() != 0L) {
+          setUnbondingFeeSat(other.getUnbondingFeeSat());
+        }
+        if (!other.getMinCommissionRate().isEmpty()) {
+          minCommissionRate_ = other.minCommissionRate_;
+          bitField0_ |= 0x00000800;
+          onChanged();
+        }
+        if (other.getDelegationCreationBaseGasFee() != 0L) {
+          setDelegationCreationBaseGasFee(other.getDelegationCreationBaseGasFee());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -1022,41 +1119,61 @@ public final class ParamsProto {
                 bitField0_ |= 0x00000002;
                 break;
               } // case 16
-              case 26: {
-                slashingAddress_ = input.readStringRequireUtf8();
+              case 24: {
+                minStakingValueSat_ = input.readInt64();
                 bitField0_ |= 0x00000004;
                 break;
-              } // case 26
+              } // case 24
               case 32: {
-                minSlashingTxFeeSat_ = input.readInt64();
+                maxStakingValueSat_ = input.readInt64();
                 bitField0_ |= 0x00000008;
                 break;
               } // case 32
-              case 42: {
-                minCommissionRate_ = input.readStringRequireUtf8();
+              case 40: {
+                minStakingTimeBlocks_ = input.readUInt32();
                 bitField0_ |= 0x00000010;
                 break;
-              } // case 42
-              case 50: {
-                slashingRate_ = input.readStringRequireUtf8();
+              } // case 40
+              case 48: {
+                maxStakingTimeBlocks_ = input.readUInt32();
                 bitField0_ |= 0x00000020;
                 break;
-              } // case 50
-              case 56: {
-                maxActiveFinalityProviders_ = input.readUInt32();
+              } // case 48
+              case 58: {
+                slashingPkScript_ = input.readBytes();
                 bitField0_ |= 0x00000040;
                 break;
-              } // case 56
+              } // case 58
               case 64: {
-                minUnbondingTime_ = input.readUInt32();
+                minSlashingTxFeeSat_ = input.readInt64();
                 bitField0_ |= 0x00000080;
                 break;
               } // case 64
               case 74: {
-                minUnbondingRate_ = input.readStringRequireUtf8();
+                slashingRate_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000100;
                 break;
               } // case 74
+              case 80: {
+                minUnbondingTimeBlocks_ = input.readUInt32();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 80
+              case 88: {
+                unbondingFeeSat_ = input.readInt64();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 88
+              case 98: {
+                minCommissionRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 98
+              case 104: {
+                delegationCreationBaseGasFee_ = input.readUInt64();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 104
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1083,11 +1200,12 @@ public final class ParamsProto {
       }
       /**
        * <pre>
+       * PARAMETERS COVERING STAKING
        * covenant_pks is the list of public keys held by the covenant committee
        * each PK follows encoding in BIP-340 spec on Bitcoin
        * </pre>
        *
-       * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return A list containing the covenantPks.
        */
       public java.util.List<com.google.protobuf.ByteString>
@@ -1097,11 +1215,12 @@ public final class ParamsProto {
       }
       /**
        * <pre>
+       * PARAMETERS COVERING STAKING
        * covenant_pks is the list of public keys held by the covenant committee
        * each PK follows encoding in BIP-340 spec on Bitcoin
        * </pre>
        *
-       * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The count of covenantPks.
        */
       public int getCovenantPksCount() {
@@ -1109,11 +1228,12 @@ public final class ParamsProto {
       }
       /**
        * <pre>
+       * PARAMETERS COVERING STAKING
        * covenant_pks is the list of public keys held by the covenant committee
        * each PK follows encoding in BIP-340 spec on Bitcoin
        * </pre>
        *
-       * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param index The index of the element to return.
        * @return The covenantPks at the given index.
        */
@@ -1122,11 +1242,12 @@ public final class ParamsProto {
       }
       /**
        * <pre>
+       * PARAMETERS COVERING STAKING
        * covenant_pks is the list of public keys held by the covenant committee
        * each PK follows encoding in BIP-340 spec on Bitcoin
        * </pre>
        *
-       * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param index The index to set the value at.
        * @param value The covenantPks to set.
        * @return This builder for chaining.
@@ -1141,11 +1262,12 @@ public final class ParamsProto {
       }
       /**
        * <pre>
+       * PARAMETERS COVERING STAKING
        * covenant_pks is the list of public keys held by the covenant committee
        * each PK follows encoding in BIP-340 spec on Bitcoin
        * </pre>
        *
-       * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param value The covenantPks to add.
        * @return This builder for chaining.
        */
@@ -1158,11 +1280,12 @@ public final class ParamsProto {
       }
       /**
        * <pre>
+       * PARAMETERS COVERING STAKING
        * covenant_pks is the list of public keys held by the covenant committee
        * each PK follows encoding in BIP-340 spec on Bitcoin
        * </pre>
        *
-       * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param values The covenantPks to add.
        * @return This builder for chaining.
        */
@@ -1176,11 +1299,12 @@ public final class ParamsProto {
       }
       /**
        * <pre>
+       * PARAMETERS COVERING STAKING
        * covenant_pks is the list of public keys held by the covenant committee
        * each PK follows encoding in BIP-340 spec on Bitcoin
        * </pre>
        *
-       * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes covenant_pks = 1 [json_name = "covenantPks", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearCovenantPks() {
@@ -1237,99 +1361,228 @@ public final class ParamsProto {
         return this;
       }
 
-      private java.lang.Object slashingAddress_ = "";
+      private long minStakingValueSat_ ;
       /**
        * <pre>
-       * slashing address is the address that the slashed BTC goes to
-       * the address is in string on Bitcoin
+       * min_staking_value_sat is the minimum of satoshis locked in staking output
        * </pre>
        *
-       * <code>string slashing_address = 3 [json_name = "slashingAddress"];</code>
-       * @return The slashingAddress.
+       * <code>int64 min_staking_value_sat = 3 [json_name = "minStakingValueSat"];</code>
+       * @return The minStakingValueSat.
        */
-      public java.lang.String getSlashingAddress() {
-        java.lang.Object ref = slashingAddress_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          slashingAddress_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override
+      public long getMinStakingValueSat() {
+        return minStakingValueSat_;
       }
       /**
        * <pre>
-       * slashing address is the address that the slashed BTC goes to
-       * the address is in string on Bitcoin
+       * min_staking_value_sat is the minimum of satoshis locked in staking output
        * </pre>
        *
-       * <code>string slashing_address = 3 [json_name = "slashingAddress"];</code>
-       * @return The bytes for slashingAddress.
-       */
-      public com.google.protobuf.ByteString
-          getSlashingAddressBytes() {
-        java.lang.Object ref = slashingAddress_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          slashingAddress_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * slashing address is the address that the slashed BTC goes to
-       * the address is in string on Bitcoin
-       * </pre>
-       *
-       * <code>string slashing_address = 3 [json_name = "slashingAddress"];</code>
-       * @param value The slashingAddress to set.
+       * <code>int64 min_staking_value_sat = 3 [json_name = "minStakingValueSat"];</code>
+       * @param value The minStakingValueSat to set.
        * @return This builder for chaining.
        */
-      public Builder setSlashingAddress(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        slashingAddress_ = value;
+      public Builder setMinStakingValueSat(long value) {
+
+        minStakingValueSat_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * slashing address is the address that the slashed BTC goes to
-       * the address is in string on Bitcoin
+       * min_staking_value_sat is the minimum of satoshis locked in staking output
        * </pre>
        *
-       * <code>string slashing_address = 3 [json_name = "slashingAddress"];</code>
+       * <code>int64 min_staking_value_sat = 3 [json_name = "minStakingValueSat"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearSlashingAddress() {
-        slashingAddress_ = getDefaultInstance().getSlashingAddress();
+      public Builder clearMinStakingValueSat() {
         bitField0_ = (bitField0_ & ~0x00000004);
+        minStakingValueSat_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long maxStakingValueSat_ ;
+      /**
+       * <pre>
+       * max_staking_value_sat is the maximum of satoshis locked in staking output
+       * </pre>
+       *
+       * <code>int64 max_staking_value_sat = 4 [json_name = "maxStakingValueSat"];</code>
+       * @return The maxStakingValueSat.
+       */
+      @java.lang.Override
+      public long getMaxStakingValueSat() {
+        return maxStakingValueSat_;
+      }
+      /**
+       * <pre>
+       * max_staking_value_sat is the maximum of satoshis locked in staking output
+       * </pre>
+       *
+       * <code>int64 max_staking_value_sat = 4 [json_name = "maxStakingValueSat"];</code>
+       * @param value The maxStakingValueSat to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxStakingValueSat(long value) {
+
+        maxStakingValueSat_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * slashing address is the address that the slashed BTC goes to
-       * the address is in string on Bitcoin
+       * max_staking_value_sat is the maximum of satoshis locked in staking output
        * </pre>
        *
-       * <code>string slashing_address = 3 [json_name = "slashingAddress"];</code>
-       * @param value The bytes for slashingAddress to set.
+       * <code>int64 max_staking_value_sat = 4 [json_name = "maxStakingValueSat"];</code>
        * @return This builder for chaining.
        */
-      public Builder setSlashingAddressBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder clearMaxStakingValueSat() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        maxStakingValueSat_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int minStakingTimeBlocks_ ;
+      /**
+       * <pre>
+       * min_staking_time is the minimum lock time specified in staking output script
+       * </pre>
+       *
+       * <code>uint32 min_staking_time_blocks = 5 [json_name = "minStakingTimeBlocks"];</code>
+       * @return The minStakingTimeBlocks.
+       */
+      @java.lang.Override
+      public int getMinStakingTimeBlocks() {
+        return minStakingTimeBlocks_;
+      }
+      /**
+       * <pre>
+       * min_staking_time is the minimum lock time specified in staking output script
+       * </pre>
+       *
+       * <code>uint32 min_staking_time_blocks = 5 [json_name = "minStakingTimeBlocks"];</code>
+       * @param value The minStakingTimeBlocks to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinStakingTimeBlocks(int value) {
+
+        minStakingTimeBlocks_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * min_staking_time is the minimum lock time specified in staking output script
+       * </pre>
+       *
+       * <code>uint32 min_staking_time_blocks = 5 [json_name = "minStakingTimeBlocks"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinStakingTimeBlocks() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        minStakingTimeBlocks_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int maxStakingTimeBlocks_ ;
+      /**
+       * <pre>
+       * max_staking_time_blocks is the maximum lock time time specified in staking output script
+       * </pre>
+       *
+       * <code>uint32 max_staking_time_blocks = 6 [json_name = "maxStakingTimeBlocks"];</code>
+       * @return The maxStakingTimeBlocks.
+       */
+      @java.lang.Override
+      public int getMaxStakingTimeBlocks() {
+        return maxStakingTimeBlocks_;
+      }
+      /**
+       * <pre>
+       * max_staking_time_blocks is the maximum lock time time specified in staking output script
+       * </pre>
+       *
+       * <code>uint32 max_staking_time_blocks = 6 [json_name = "maxStakingTimeBlocks"];</code>
+       * @param value The maxStakingTimeBlocks to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxStakingTimeBlocks(int value) {
+
+        maxStakingTimeBlocks_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * max_staking_time_blocks is the maximum lock time time specified in staking output script
+       * </pre>
+       *
+       * <code>uint32 max_staking_time_blocks = 6 [json_name = "maxStakingTimeBlocks"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxStakingTimeBlocks() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        maxStakingTimeBlocks_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString slashingPkScript_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * PARAMETERS COVERING SLASHING
+       * slashing_pk_script is the pk_script expected in slashing output ie. the first
+       * output of slashing transaction
+       * </pre>
+       *
+       * <code>bytes slashing_pk_script = 7 [json_name = "slashingPkScript"];</code>
+       * @return The slashingPkScript.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSlashingPkScript() {
+        return slashingPkScript_;
+      }
+      /**
+       * <pre>
+       * PARAMETERS COVERING SLASHING
+       * slashing_pk_script is the pk_script expected in slashing output ie. the first
+       * output of slashing transaction
+       * </pre>
+       *
+       * <code>bytes slashing_pk_script = 7 [json_name = "slashingPkScript"];</code>
+       * @param value The slashingPkScript to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSlashingPkScript(com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        slashingAddress_ = value;
-        bitField0_ |= 0x00000004;
+        slashingPkScript_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * PARAMETERS COVERING SLASHING
+       * slashing_pk_script is the pk_script expected in slashing output ie. the first
+       * output of slashing transaction
+       * </pre>
+       *
+       * <code>bytes slashing_pk_script = 7 [json_name = "slashingPkScript"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSlashingPkScript() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        slashingPkScript_ = getDefaultInstance().getSlashingPkScript();
         onChanged();
         return this;
       }
@@ -1338,11 +1591,11 @@ public final class ParamsProto {
       /**
        * <pre>
        * min_slashing_tx_fee_sat is the minimum amount of tx fee (quantified
-       * in Satoshi) needed for the pre-signed slashing tx
-       * TODO: change to satoshi per byte?
+       * in Satoshi) needed for the pre-signed slashing tx. It covers both:
+       * staking slashing transaction and unbonding slashing transaction
        * </pre>
        *
-       * <code>int64 min_slashing_tx_fee_sat = 4 [json_name = "minSlashingTxFeeSat"];</code>
+       * <code>int64 min_slashing_tx_fee_sat = 8 [json_name = "minSlashingTxFeeSat"];</code>
        * @return The minSlashingTxFeeSat.
        */
       @java.lang.Override
@@ -1352,126 +1605,34 @@ public final class ParamsProto {
       /**
        * <pre>
        * min_slashing_tx_fee_sat is the minimum amount of tx fee (quantified
-       * in Satoshi) needed for the pre-signed slashing tx
-       * TODO: change to satoshi per byte?
+       * in Satoshi) needed for the pre-signed slashing tx. It covers both:
+       * staking slashing transaction and unbonding slashing transaction
        * </pre>
        *
-       * <code>int64 min_slashing_tx_fee_sat = 4 [json_name = "minSlashingTxFeeSat"];</code>
+       * <code>int64 min_slashing_tx_fee_sat = 8 [json_name = "minSlashingTxFeeSat"];</code>
        * @param value The minSlashingTxFeeSat to set.
        * @return This builder for chaining.
        */
       public Builder setMinSlashingTxFeeSat(long value) {
 
         minSlashingTxFeeSat_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
       /**
        * <pre>
        * min_slashing_tx_fee_sat is the minimum amount of tx fee (quantified
-       * in Satoshi) needed for the pre-signed slashing tx
-       * TODO: change to satoshi per byte?
+       * in Satoshi) needed for the pre-signed slashing tx. It covers both:
+       * staking slashing transaction and unbonding slashing transaction
        * </pre>
        *
-       * <code>int64 min_slashing_tx_fee_sat = 4 [json_name = "minSlashingTxFeeSat"];</code>
+       * <code>int64 min_slashing_tx_fee_sat = 8 [json_name = "minSlashingTxFeeSat"];</code>
        * @return This builder for chaining.
        */
       public Builder clearMinSlashingTxFeeSat() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000080);
         minSlashingTxFeeSat_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object minCommissionRate_ = "";
-      /**
-       * <pre>
-       * min_commission_rate is the chain-wide minimum commission rate that a finality provider can charge their delegators
-       * </pre>
-       *
-       * <code>string min_commission_rate = 5 [json_name = "minCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
-       * @return The minCommissionRate.
-       */
-      public java.lang.String getMinCommissionRate() {
-        java.lang.Object ref = minCommissionRate_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          minCommissionRate_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * min_commission_rate is the chain-wide minimum commission rate that a finality provider can charge their delegators
-       * </pre>
-       *
-       * <code>string min_commission_rate = 5 [json_name = "minCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
-       * @return The bytes for minCommissionRate.
-       */
-      public com.google.protobuf.ByteString
-          getMinCommissionRateBytes() {
-        java.lang.Object ref = minCommissionRate_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          minCommissionRate_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * min_commission_rate is the chain-wide minimum commission rate that a finality provider can charge their delegators
-       * </pre>
-       *
-       * <code>string min_commission_rate = 5 [json_name = "minCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
-       * @param value The minCommissionRate to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMinCommissionRate(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        minCommissionRate_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * min_commission_rate is the chain-wide minimum commission rate that a finality provider can charge their delegators
-       * </pre>
-       *
-       * <code>string min_commission_rate = 5 [json_name = "minCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMinCommissionRate() {
-        minCommissionRate_ = getDefaultInstance().getMinCommissionRate();
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * min_commission_rate is the chain-wide minimum commission rate that a finality provider can charge their delegators
-       * </pre>
-       *
-       * <code>string min_commission_rate = 5 [json_name = "minCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
-       * @param value The bytes for minCommissionRate to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMinCommissionRateBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        minCommissionRate_ = value;
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1480,10 +1641,11 @@ public final class ParamsProto {
       /**
        * <pre>
        * slashing_rate determines the portion of the staked amount to be slashed,
-       * expressed as a decimal (e.g., 0.5 for 50%).
+       * expressed as a decimal (e.g., 0.5 for 50%). Maximal precion is 2 decimal
+       * places
        * </pre>
        *
-       * <code>string slashing_rate = 6 [json_name = "slashingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string slashing_rate = 9 [json_name = "slashingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @return The slashingRate.
        */
       public java.lang.String getSlashingRate() {
@@ -1501,10 +1663,11 @@ public final class ParamsProto {
       /**
        * <pre>
        * slashing_rate determines the portion of the staked amount to be slashed,
-       * expressed as a decimal (e.g., 0.5 for 50%).
+       * expressed as a decimal (e.g., 0.5 for 50%). Maximal precion is 2 decimal
+       * places
        * </pre>
        *
-       * <code>string slashing_rate = 6 [json_name = "slashingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string slashing_rate = 9 [json_name = "slashingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @return The bytes for slashingRate.
        */
       public com.google.protobuf.ByteString
@@ -1523,10 +1686,11 @@ public final class ParamsProto {
       /**
        * <pre>
        * slashing_rate determines the portion of the staked amount to be slashed,
-       * expressed as a decimal (e.g., 0.5 for 50%).
+       * expressed as a decimal (e.g., 0.5 for 50%). Maximal precion is 2 decimal
+       * places
        * </pre>
        *
-       * <code>string slashing_rate = 6 [json_name = "slashingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string slashing_rate = 9 [json_name = "slashingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @param value The slashingRate to set.
        * @return This builder for chaining.
        */
@@ -1534,32 +1698,34 @@ public final class ParamsProto {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         slashingRate_ = value;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
       /**
        * <pre>
        * slashing_rate determines the portion of the staked amount to be slashed,
-       * expressed as a decimal (e.g., 0.5 for 50%).
+       * expressed as a decimal (e.g., 0.5 for 50%). Maximal precion is 2 decimal
+       * places
        * </pre>
        *
-       * <code>string slashing_rate = 6 [json_name = "slashingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string slashing_rate = 9 [json_name = "slashingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSlashingRate() {
         slashingRate_ = getDefaultInstance().getSlashingRate();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
       /**
        * <pre>
        * slashing_rate determines the portion of the staked amount to be slashed,
-       * expressed as a decimal (e.g., 0.5 for 50%).
+       * expressed as a decimal (e.g., 0.5 for 50%). Maximal precion is 2 decimal
+       * places
        * </pre>
        *
-       * <code>string slashing_rate = 6 [json_name = "slashingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string slashing_rate = 9 [json_name = "slashingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @param value The bytes for slashingRate to set.
        * @return This builder for chaining.
        */
@@ -1568,119 +1734,121 @@ public final class ParamsProto {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         slashingRate_ = value;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
 
-      private int maxActiveFinalityProviders_ ;
+      private int minUnbondingTimeBlocks_ ;
       /**
        * <pre>
-       * max_active_finality_providers is the maximum number of active finality providers in the BTC staking protocol
+       * PARAMETERS COVERING UNBONDING
+       * min_unbonding_time is the minimum time for unbonding transaction timelock in BTC blocks
        * </pre>
        *
-       * <code>uint32 max_active_finality_providers = 7 [json_name = "maxActiveFinalityProviders"];</code>
-       * @return The maxActiveFinalityProviders.
+       * <code>uint32 min_unbonding_time_blocks = 10 [json_name = "minUnbondingTimeBlocks"];</code>
+       * @return The minUnbondingTimeBlocks.
        */
       @java.lang.Override
-      public int getMaxActiveFinalityProviders() {
-        return maxActiveFinalityProviders_;
+      public int getMinUnbondingTimeBlocks() {
+        return minUnbondingTimeBlocks_;
       }
       /**
        * <pre>
-       * max_active_finality_providers is the maximum number of active finality providers in the BTC staking protocol
-       * </pre>
-       *
-       * <code>uint32 max_active_finality_providers = 7 [json_name = "maxActiveFinalityProviders"];</code>
-       * @param value The maxActiveFinalityProviders to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMaxActiveFinalityProviders(int value) {
-
-        maxActiveFinalityProviders_ = value;
-        bitField0_ |= 0x00000040;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * max_active_finality_providers is the maximum number of active finality providers in the BTC staking protocol
-       * </pre>
-       *
-       * <code>uint32 max_active_finality_providers = 7 [json_name = "maxActiveFinalityProviders"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMaxActiveFinalityProviders() {
-        bitField0_ = (bitField0_ & ~0x00000040);
-        maxActiveFinalityProviders_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int minUnbondingTime_ ;
-      /**
-       * <pre>
+       * PARAMETERS COVERING UNBONDING
        * min_unbonding_time is the minimum time for unbonding transaction timelock in BTC blocks
        * </pre>
        *
-       * <code>uint32 min_unbonding_time = 8 [json_name = "minUnbondingTime"];</code>
-       * @return The minUnbondingTime.
+       * <code>uint32 min_unbonding_time_blocks = 10 [json_name = "minUnbondingTimeBlocks"];</code>
+       * @param value The minUnbondingTimeBlocks to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinUnbondingTimeBlocks(int value) {
+
+        minUnbondingTimeBlocks_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * PARAMETERS COVERING UNBONDING
+       * min_unbonding_time is the minimum time for unbonding transaction timelock in BTC blocks
+       * </pre>
+       *
+       * <code>uint32 min_unbonding_time_blocks = 10 [json_name = "minUnbondingTimeBlocks"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinUnbondingTimeBlocks() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        minUnbondingTimeBlocks_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long unbondingFeeSat_ ;
+      /**
+       * <pre>
+       * unbonding_fee exact fee required for unbonding transaction
+       * </pre>
+       *
+       * <code>int64 unbonding_fee_sat = 11 [json_name = "unbondingFeeSat"];</code>
+       * @return The unbondingFeeSat.
        */
       @java.lang.Override
-      public int getMinUnbondingTime() {
-        return minUnbondingTime_;
+      public long getUnbondingFeeSat() {
+        return unbondingFeeSat_;
       }
       /**
        * <pre>
-       * min_unbonding_time is the minimum time for unbonding transaction timelock in BTC blocks
+       * unbonding_fee exact fee required for unbonding transaction
        * </pre>
        *
-       * <code>uint32 min_unbonding_time = 8 [json_name = "minUnbondingTime"];</code>
-       * @param value The minUnbondingTime to set.
+       * <code>int64 unbonding_fee_sat = 11 [json_name = "unbondingFeeSat"];</code>
+       * @param value The unbondingFeeSat to set.
        * @return This builder for chaining.
        */
-      public Builder setMinUnbondingTime(int value) {
+      public Builder setUnbondingFeeSat(long value) {
 
-        minUnbondingTime_ = value;
-        bitField0_ |= 0x00000080;
+        unbondingFeeSat_ = value;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * min_unbonding_time is the minimum time for unbonding transaction timelock in BTC blocks
+       * unbonding_fee exact fee required for unbonding transaction
        * </pre>
        *
-       * <code>uint32 min_unbonding_time = 8 [json_name = "minUnbondingTime"];</code>
+       * <code>int64 unbonding_fee_sat = 11 [json_name = "unbondingFeeSat"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearMinUnbondingTime() {
-        bitField0_ = (bitField0_ & ~0x00000080);
-        minUnbondingTime_ = 0;
+      public Builder clearUnbondingFeeSat() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        unbondingFeeSat_ = 0L;
         onChanged();
         return this;
       }
 
-      private java.lang.Object minUnbondingRate_ = "";
+      private java.lang.Object minCommissionRate_ = "";
       /**
        * <pre>
-       * min_unbonding_rate is the minimum amount of BTC that are required in unbonding
-       * output, expressed as a fraction of staking output
-       * example: if min_unbonding_rate=0.9, then the unbonding output value
-       * must be at least 90% of staking output, for staking request to be considered
-       * valid
+       * PARAMETERS COVERING FINALITY PROVIDERS
+       * min_commission_rate is the chain-wide minimum commission rate that a finality provider
+       * can charge their delegators expressed as a decimal (e.g., 0.5 for 50%). Maximal precion
+       * is 2 decimal places
        * </pre>
        *
-       * <code>string min_unbonding_rate = 9 [json_name = "minUnbondingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @return The minUnbondingRate.
+       * <code>string min_commission_rate = 12 [json_name = "minCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+       * @return The minCommissionRate.
        */
-      public java.lang.String getMinUnbondingRate() {
-        java.lang.Object ref = minUnbondingRate_;
+      public java.lang.String getMinCommissionRate() {
+        java.lang.Object ref = minCommissionRate_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          minUnbondingRate_ = s;
+          minCommissionRate_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1688,24 +1856,23 @@ public final class ParamsProto {
       }
       /**
        * <pre>
-       * min_unbonding_rate is the minimum amount of BTC that are required in unbonding
-       * output, expressed as a fraction of staking output
-       * example: if min_unbonding_rate=0.9, then the unbonding output value
-       * must be at least 90% of staking output, for staking request to be considered
-       * valid
+       * PARAMETERS COVERING FINALITY PROVIDERS
+       * min_commission_rate is the chain-wide minimum commission rate that a finality provider
+       * can charge their delegators expressed as a decimal (e.g., 0.5 for 50%). Maximal precion
+       * is 2 decimal places
        * </pre>
        *
-       * <code>string min_unbonding_rate = 9 [json_name = "minUnbondingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @return The bytes for minUnbondingRate.
+       * <code>string min_commission_rate = 12 [json_name = "minCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+       * @return The bytes for minCommissionRate.
        */
       public com.google.protobuf.ByteString
-          getMinUnbondingRateBytes() {
-        java.lang.Object ref = minUnbondingRate_;
+          getMinCommissionRateBytes() {
+        java.lang.Object ref = minCommissionRate_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          minUnbondingRate_ = b;
+          minCommissionRate_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -1713,62 +1880,103 @@ public final class ParamsProto {
       }
       /**
        * <pre>
-       * min_unbonding_rate is the minimum amount of BTC that are required in unbonding
-       * output, expressed as a fraction of staking output
-       * example: if min_unbonding_rate=0.9, then the unbonding output value
-       * must be at least 90% of staking output, for staking request to be considered
-       * valid
+       * PARAMETERS COVERING FINALITY PROVIDERS
+       * min_commission_rate is the chain-wide minimum commission rate that a finality provider
+       * can charge their delegators expressed as a decimal (e.g., 0.5 for 50%). Maximal precion
+       * is 2 decimal places
        * </pre>
        *
-       * <code>string min_unbonding_rate = 9 [json_name = "minUnbondingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @param value The minUnbondingRate to set.
+       * <code>string min_commission_rate = 12 [json_name = "minCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+       * @param value The minCommissionRate to set.
        * @return This builder for chaining.
        */
-      public Builder setMinUnbondingRate(
+      public Builder setMinCommissionRate(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        minUnbondingRate_ = value;
-        bitField0_ |= 0x00000100;
+        minCommissionRate_ = value;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * min_unbonding_rate is the minimum amount of BTC that are required in unbonding
-       * output, expressed as a fraction of staking output
-       * example: if min_unbonding_rate=0.9, then the unbonding output value
-       * must be at least 90% of staking output, for staking request to be considered
-       * valid
+       * PARAMETERS COVERING FINALITY PROVIDERS
+       * min_commission_rate is the chain-wide minimum commission rate that a finality provider
+       * can charge their delegators expressed as a decimal (e.g., 0.5 for 50%). Maximal precion
+       * is 2 decimal places
        * </pre>
        *
-       * <code>string min_unbonding_rate = 9 [json_name = "minUnbondingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string min_commission_rate = 12 [json_name = "minCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearMinUnbondingRate() {
-        minUnbondingRate_ = getDefaultInstance().getMinUnbondingRate();
-        bitField0_ = (bitField0_ & ~0x00000100);
+      public Builder clearMinCommissionRate() {
+        minCommissionRate_ = getDefaultInstance().getMinCommissionRate();
+        bitField0_ = (bitField0_ & ~0x00000800);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * min_unbonding_rate is the minimum amount of BTC that are required in unbonding
-       * output, expressed as a fraction of staking output
-       * example: if min_unbonding_rate=0.9, then the unbonding output value
-       * must be at least 90% of staking output, for staking request to be considered
-       * valid
+       * PARAMETERS COVERING FINALITY PROVIDERS
+       * min_commission_rate is the chain-wide minimum commission rate that a finality provider
+       * can charge their delegators expressed as a decimal (e.g., 0.5 for 50%). Maximal precion
+       * is 2 decimal places
        * </pre>
        *
-       * <code>string min_unbonding_rate = 9 [json_name = "minUnbondingRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @param value The bytes for minUnbondingRate to set.
+       * <code>string min_commission_rate = 12 [json_name = "minCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec"];</code>
+       * @param value The bytes for minCommissionRate to set.
        * @return This builder for chaining.
        */
-      public Builder setMinUnbondingRateBytes(
+      public Builder setMinCommissionRateBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        minUnbondingRate_ = value;
-        bitField0_ |= 0x00000100;
+        minCommissionRate_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+
+      private long delegationCreationBaseGasFee_ ;
+      /**
+       * <pre>
+       * base gas fee for delegation creation
+       * </pre>
+       *
+       * <code>uint64 delegation_creation_base_gas_fee = 13 [json_name = "delegationCreationBaseGasFee"];</code>
+       * @return The delegationCreationBaseGasFee.
+       */
+      @java.lang.Override
+      public long getDelegationCreationBaseGasFee() {
+        return delegationCreationBaseGasFee_;
+      }
+      /**
+       * <pre>
+       * base gas fee for delegation creation
+       * </pre>
+       *
+       * <code>uint64 delegation_creation_base_gas_fee = 13 [json_name = "delegationCreationBaseGasFee"];</code>
+       * @param value The delegationCreationBaseGasFee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegationCreationBaseGasFee(long value) {
+
+        delegationCreationBaseGasFee_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * base gas fee for delegation creation
+       * </pre>
+       *
+       * <code>uint64 delegation_creation_base_gas_fee = 13 [json_name = "delegationCreationBaseGasFee"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelegationCreationBaseGasFee() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        delegationCreationBaseGasFee_ = 0L;
         onChanged();
         return this;
       }
@@ -2622,31 +2830,36 @@ public final class ParamsProto {
     java.lang.String[] descriptorData = {
       "\n\"babylon/btcstaking/v1/params.proto\022\025ba" +
       "bylon.btcstaking.v1\032\024gogoproto/gogo.prot" +
-      "o\032\031cosmos_proto/cosmos.proto\"\362\004\n\006Params\022" +
-      "Y\n\014covenant_pks\030\001 \003(\014B6\332\336\0372github.com/ba" +
-      "bylonchain/babylon/types.BIP340PubKeyR\013c" +
-      "ovenantPks\022\'\n\017covenant_quorum\030\002 \001(\rR\016cov" +
-      "enantQuorum\022)\n\020slashing_address\030\003 \001(\tR\017s" +
-      "lashingAddress\0224\n\027min_slashing_tx_fee_sa" +
-      "t\030\004 \001(\003R\023minSlashingTxFeeSat\022S\n\023min_comm" +
-      "ission_rate\030\005 \001(\tB#\310\336\037\000\332\336\037\033cosmossdk.io/" +
-      "math.LegacyDecR\021minCommissionRate\022V\n\rsla" +
-      "shing_rate\030\006 \001(\tB1\310\336\037\000\332\336\037\033cosmossdk.io/m" +
-      "ath.LegacyDec\322\264-\ncosmos.DecR\014slashingRat" +
-      "e\022A\n\035max_active_finality_providers\030\007 \001(\r" +
-      "R\032maxActiveFinalityProviders\022,\n\022min_unbo" +
-      "nding_time\030\010 \001(\rR\020minUnbondingTime\022_\n\022mi" +
-      "n_unbonding_rate\030\t \001(\tB1\310\336\037\000\332\336\037\033cosmossd" +
-      "k.io/math.LegacyDec\322\264-\ncosmos.DecR\020minUn" +
-      "bondingRate:\004\230\240\037\000\"e\n\014StoredParams\022\030\n\007ver" +
-      "sion\030\001 \001(\rR\007version\022;\n\006params\030\002 \001(\0132\035.ba" +
-      "bylon.btcstaking.v1.ParamsB\004\310\336\037\000R\006params" +
-      "B\320\001\n\031com.babylon.btcstaking.v1B\013ParamsPr" +
-      "otoZ2github.com/babylonchain/babylon/x/b" +
-      "tcstaking/types\242\002\003BBX\252\002\025Babylon.Btcstaki" +
-      "ng.V1\312\002\025Babylon\\Btcstaking\\V1\342\002!Babylon\\" +
-      "Btcstaking\\V1\\GPBMetadata\352\002\027Babylon::Btc" +
-      "staking::V1b\006proto3"
+      "o\032\031cosmos_proto/cosmos.proto\"\250\006\n\006Params\022" +
+      "[\n\014covenant_pks\030\001 \003(\014B8\332\336\0374github.com/ba" +
+      "bylonlabs-io/babylon/types.BIP340PubKeyR" +
+      "\013covenantPks\022\'\n\017covenant_quorum\030\002 \001(\rR\016c" +
+      "ovenantQuorum\0221\n\025min_staking_value_sat\030\003" +
+      " \001(\003R\022minStakingValueSat\0221\n\025max_staking_" +
+      "value_sat\030\004 \001(\003R\022maxStakingValueSat\0225\n\027m" +
+      "in_staking_time_blocks\030\005 \001(\rR\024minStaking" +
+      "TimeBlocks\0225\n\027max_staking_time_blocks\030\006 " +
+      "\001(\rR\024maxStakingTimeBlocks\022,\n\022slashing_pk" +
+      "_script\030\007 \001(\014R\020slashingPkScript\0224\n\027min_s" +
+      "lashing_tx_fee_sat\030\010 \001(\003R\023minSlashingTxF" +
+      "eeSat\022V\n\rslashing_rate\030\t \001(\tB1\310\336\037\000\332\336\037\033co" +
+      "smossdk.io/math.LegacyDec\322\264-\ncosmos.DecR" +
+      "\014slashingRate\0229\n\031min_unbonding_time_bloc" +
+      "ks\030\n \001(\rR\026minUnbondingTimeBlocks\022*\n\021unbo" +
+      "nding_fee_sat\030\013 \001(\003R\017unbondingFeeSat\022S\n\023" +
+      "min_commission_rate\030\014 \001(\tB#\310\336\037\000\332\336\037\033cosmo" +
+      "ssdk.io/math.LegacyDecR\021minCommissionRat" +
+      "e\022F\n delegation_creation_base_gas_fee\030\r " +
+      "\001(\004R\034delegationCreationBaseGasFee:\004\230\240\037\000\"" +
+      "e\n\014StoredParams\022\030\n\007version\030\001 \001(\rR\007versio" +
+      "n\022;\n\006params\030\002 \001(\0132\035.babylon.btcstaking.v" +
+      "1.ParamsB\004\310\336\037\000R\006paramsB\322\001\n\031com.babylon.b" +
+      "tcstaking.v1B\013ParamsProtoZ4github.com/ba" +
+      "bylonlabs-io/babylon/x/btcstaking/types\242" +
+      "\002\003BBX\252\002\025Babylon.Btcstaking.V1\312\002\025Babylon\\" +
+      "Btcstaking\\V1\342\002!Babylon\\Btcstaking\\V1\\GP" +
+      "BMetadata\352\002\027Babylon::Btcstaking::V1b\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2659,7 +2872,7 @@ public final class ParamsProto {
     internal_static_babylon_btcstaking_v1_Params_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_Params_descriptor,
-        new java.lang.String[] { "CovenantPks", "CovenantQuorum", "SlashingAddress", "MinSlashingTxFeeSat", "MinCommissionRate", "SlashingRate", "MaxActiveFinalityProviders", "MinUnbondingTime", "MinUnbondingRate", });
+        new java.lang.String[] { "CovenantPks", "CovenantQuorum", "MinStakingValueSat", "MaxStakingValueSat", "MinStakingTimeBlocks", "MaxStakingTimeBlocks", "SlashingPkScript", "MinSlashingTxFeeSat", "SlashingRate", "MinUnbondingTimeBlocks", "UnbondingFeeSat", "MinCommissionRate", "DelegationCreationBaseGasFee", });
     internal_static_babylon_btcstaking_v1_StoredParams_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_babylon_btcstaking_v1_StoredParams_fieldAccessorTable = new

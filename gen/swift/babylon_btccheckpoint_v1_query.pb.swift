@@ -184,7 +184,7 @@ struct Babylon_Btccheckpoint_V1_BTCCheckpointInfoResponse {
   var epochNumber: UInt64 = 0
 
   /// btc height of the best submission of the epoch
-  var bestSubmissionBtcBlockHeight: UInt64 = 0
+  var bestSubmissionBtcBlockHeight: UInt32 = 0
 
   /// hash of the btc block which determines checkpoint btc block height i.e.
   /// youngest block of best submission Hexadecimal
@@ -576,7 +576,7 @@ extension Babylon_Btccheckpoint_V1_BTCCheckpointInfoResponse: SwiftProtobuf.Mess
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularUInt64Field(value: &self.epochNumber) }()
-      case 2: try { try decoder.decodeSingularUInt64Field(value: &self.bestSubmissionBtcBlockHeight) }()
+      case 2: try { try decoder.decodeSingularUInt32Field(value: &self.bestSubmissionBtcBlockHeight) }()
       case 3: try { try decoder.decodeSingularStringField(value: &self.bestSubmissionBtcBlockHash) }()
       case 4: try { try decoder.decodeRepeatedMessageField(value: &self.bestSubmissionTransactions) }()
       case 5: try { try decoder.decodeRepeatedMessageField(value: &self.bestSubmissionVigilanteAddressList) }()
@@ -590,7 +590,7 @@ extension Babylon_Btccheckpoint_V1_BTCCheckpointInfoResponse: SwiftProtobuf.Mess
       try visitor.visitSingularUInt64Field(value: self.epochNumber, fieldNumber: 1)
     }
     if self.bestSubmissionBtcBlockHeight != 0 {
-      try visitor.visitSingularUInt64Field(value: self.bestSubmissionBtcBlockHeight, fieldNumber: 2)
+      try visitor.visitSingularUInt32Field(value: self.bestSubmissionBtcBlockHeight, fieldNumber: 2)
     }
     if !self.bestSubmissionBtcBlockHash.isEmpty {
       try visitor.visitSingularStringField(value: self.bestSubmissionBtcBlockHash, fieldNumber: 3)

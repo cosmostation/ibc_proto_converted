@@ -1026,12 +1026,12 @@ public final class ParamsProto {
       ".DecR\017reporterPortion\022a\n\023btc_staking_por" +
       "tion\030\003 \001(\tB1\310\336\037\000\332\336\037\033cosmossdk.io/math.Le" +
       "gacyDec\322\264-\ncosmos.DecR\021btcStakingPortion" +
-      ":\004\230\240\037\000B\272\001\n\025com.babylon.incentiveB\013Params" +
-      "ProtoZ1github.com/babylonchain/babylon/x" +
-      "/incentive/types\242\002\003BIX\252\002\021Babylon.Incenti" +
-      "ve\312\002\021Babylon\\Incentive\342\002\035Babylon\\Incenti" +
-      "ve\\GPBMetadata\352\002\022Babylon::Incentiveb\006pro" +
-      "to3"
+      ":\004\230\240\037\000B\274\001\n\025com.babylon.incentiveB\013Params" +
+      "ProtoZ3github.com/babylonlabs-io/babylon" +
+      "/x/incentive/types\242\002\003BIX\252\002\021Babylon.Incen" +
+      "tive\312\002\021Babylon\\Incentive\342\002\035Babylon\\Incen" +
+      "tive\\GPBMetadata\352\002\022Babylon::Incentiveb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

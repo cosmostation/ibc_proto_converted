@@ -537,12 +537,12 @@ public final class ParamsProto {
       "lon.epoching.v1\032\024gogoproto/gogo.proto\"P\n" +
       "\006Params\022@\n\016epoch_interval\030\001 \001(\004B\031\362\336\037\025yam" +
       "l:\"epoch_interval\"R\repochInterval:\004\350\240\037\001B" +
-      "\304\001\n\027com.babylon.epoching.v1B\013ParamsProto" +
-      "Z0github.com/babylonchain/babylon/x/epoc" +
-      "hing/types\242\002\003BEX\252\002\023Babylon.Epoching.V1\312\002" +
-      "\023Babylon\\Epoching\\V1\342\002\037Babylon\\Epoching\\" +
-      "V1\\GPBMetadata\352\002\025Babylon::Epoching::V1b\006" +
-      "proto3"
+      "\306\001\n\027com.babylon.epoching.v1B\013ParamsProto" +
+      "Z2github.com/babylonlabs-io/babylon/x/ep" +
+      "oching/types\242\002\003BEX\252\002\023Babylon.Epoching.V1" +
+      "\312\002\023Babylon\\Epoching\\V1\342\002\037Babylon\\Epochin" +
+      "g\\V1\\GPBMetadata\352\002\025Babylon::Epoching::V1" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

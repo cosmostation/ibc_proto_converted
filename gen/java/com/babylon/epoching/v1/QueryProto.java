@@ -17862,12 +17862,12 @@ public final class QueryProto {
       "lon.epoching.v1.QueryEpochValSetRequest\032" +
       "-.babylon.epoching.v1.QueryEpochValSetRe" +
       "sponse\"?\202\323\344\223\0029\0227/babylon/epoching/v1/epo" +
-      "chs/{epoch_num=*}/validator_setB\303\001\n\027com." +
-      "babylon.epoching.v1B\nQueryProtoZ0github." +
-      "com/babylonchain/babylon/x/epoching/type" +
-      "s\242\002\003BEX\252\002\023Babylon.Epoching.V1\312\002\023Babylon\\" +
-      "Epoching\\V1\342\002\037Babylon\\Epoching\\V1\\GPBMet" +
-      "adata\352\002\025Babylon::Epoching::V1b\006proto3"
+      "chs/{epoch_num=*}/validator_setB\305\001\n\027com." +
+      "babylon.epoching.v1B\nQueryProtoZ2github." +
+      "com/babylonlabs-io/babylon/x/epoching/ty" +
+      "pes\242\002\003BEX\252\002\023Babylon.Epoching.V1\312\002\023Babylo" +
+      "n\\Epoching\\V1\342\002\037Babylon\\Epoching\\V1\\GPBM" +
+      "etadata\352\002\025Babylon::Epoching::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

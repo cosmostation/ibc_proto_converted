@@ -5695,32 +5695,907 @@ public final class QueryProto {
 
   }
 
+  public interface BlsPublicKeyListResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.checkpointing.v1.BlsPublicKeyListResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * validator_address is the address of the validator
+     * </pre>
+     *
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The validatorAddress.
+     */
+    java.lang.String getValidatorAddress();
+    /**
+     * <pre>
+     * validator_address is the address of the validator
+     * </pre>
+     *
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The bytes for validatorAddress.
+     */
+    com.google.protobuf.ByteString
+        getValidatorAddressBytes();
+
+    /**
+     * <pre>
+     * bls_pub_key is the BLS public key of the validator
+     * </pre>
+     *
+     * <code>string bls_pub_key_hex = 2 [json_name = "blsPubKeyHex"];</code>
+     * @return The blsPubKeyHex.
+     */
+    java.lang.String getBlsPubKeyHex();
+    /**
+     * <pre>
+     * bls_pub_key is the BLS public key of the validator
+     * </pre>
+     *
+     * <code>string bls_pub_key_hex = 2 [json_name = "blsPubKeyHex"];</code>
+     * @return The bytes for blsPubKeyHex.
+     */
+    com.google.protobuf.ByteString
+        getBlsPubKeyHexBytes();
+
+    /**
+     * <pre>
+     * voting_power is the voting power of the validator at the given epoch
+     * </pre>
+     *
+     * <code>uint64 voting_power = 3 [json_name = "votingPower"];</code>
+     * @return The votingPower.
+     */
+    long getVotingPower();
+  }
+  /**
+   * <pre>
+   * BlsPublicKeyListResponse couples validator address, voting power, and its bls
+   * public key
+   * </pre>
+   *
+   * Protobuf type {@code babylon.checkpointing.v1.BlsPublicKeyListResponse}
+   */
+  public static final class BlsPublicKeyListResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.checkpointing.v1.BlsPublicKeyListResponse)
+      BlsPublicKeyListResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BlsPublicKeyListResponse.newBuilder() to construct.
+    private BlsPublicKeyListResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BlsPublicKeyListResponse() {
+      validatorAddress_ = "";
+      blsPubKeyHex_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BlsPublicKeyListResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.checkpointing.v1.QueryProto.internal_static_babylon_checkpointing_v1_BlsPublicKeyListResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.checkpointing.v1.QueryProto.internal_static_babylon_checkpointing_v1_BlsPublicKeyListResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse.class, com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse.Builder.class);
+    }
+
+    public static final int VALIDATOR_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validatorAddress_ = "";
+    /**
+     * <pre>
+     * validator_address is the address of the validator
+     * </pre>
+     *
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The validatorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getValidatorAddress() {
+      java.lang.Object ref = validatorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validatorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * validator_address is the address of the validator
+     * </pre>
+     *
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The bytes for validatorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidatorAddressBytes() {
+      java.lang.Object ref = validatorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validatorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BLS_PUB_KEY_HEX_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object blsPubKeyHex_ = "";
+    /**
+     * <pre>
+     * bls_pub_key is the BLS public key of the validator
+     * </pre>
+     *
+     * <code>string bls_pub_key_hex = 2 [json_name = "blsPubKeyHex"];</code>
+     * @return The blsPubKeyHex.
+     */
+    @java.lang.Override
+    public java.lang.String getBlsPubKeyHex() {
+      java.lang.Object ref = blsPubKeyHex_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        blsPubKeyHex_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * bls_pub_key is the BLS public key of the validator
+     * </pre>
+     *
+     * <code>string bls_pub_key_hex = 2 [json_name = "blsPubKeyHex"];</code>
+     * @return The bytes for blsPubKeyHex.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBlsPubKeyHexBytes() {
+      java.lang.Object ref = blsPubKeyHex_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        blsPubKeyHex_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VOTING_POWER_FIELD_NUMBER = 3;
+    private long votingPower_ = 0L;
+    /**
+     * <pre>
+     * voting_power is the voting power of the validator at the given epoch
+     * </pre>
+     *
+     * <code>uint64 voting_power = 3 [json_name = "votingPower"];</code>
+     * @return The votingPower.
+     */
+    @java.lang.Override
+    public long getVotingPower() {
+      return votingPower_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, validatorAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(blsPubKeyHex_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, blsPubKeyHex_);
+      }
+      if (votingPower_ != 0L) {
+        output.writeUInt64(3, votingPower_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, validatorAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(blsPubKeyHex_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, blsPubKeyHex_);
+      }
+      if (votingPower_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, votingPower_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse)) {
+        return super.equals(obj);
+      }
+      com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse other = (com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse) obj;
+
+      if (!getValidatorAddress()
+          .equals(other.getValidatorAddress())) return false;
+      if (!getBlsPubKeyHex()
+          .equals(other.getBlsPubKeyHex())) return false;
+      if (getVotingPower()
+          != other.getVotingPower()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VALIDATOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getValidatorAddress().hashCode();
+      hash = (37 * hash) + BLS_PUB_KEY_HEX_FIELD_NUMBER;
+      hash = (53 * hash) + getBlsPubKeyHex().hashCode();
+      hash = (37 * hash) + VOTING_POWER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getVotingPower());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * BlsPublicKeyListResponse couples validator address, voting power, and its bls
+     * public key
+     * </pre>
+     *
+     * Protobuf type {@code babylon.checkpointing.v1.BlsPublicKeyListResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.checkpointing.v1.BlsPublicKeyListResponse)
+        com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.checkpointing.v1.QueryProto.internal_static_babylon_checkpointing_v1_BlsPublicKeyListResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.checkpointing.v1.QueryProto.internal_static_babylon_checkpointing_v1_BlsPublicKeyListResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse.class, com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse.Builder.class);
+      }
+
+      // Construct using com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        validatorAddress_ = "";
+        blsPubKeyHex_ = "";
+        votingPower_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.checkpointing.v1.QueryProto.internal_static_babylon_checkpointing_v1_BlsPublicKeyListResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse getDefaultInstanceForType() {
+        return com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse build() {
+        com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse buildPartial() {
+        com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse result = new com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.validatorAddress_ = validatorAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.blsPubKeyHex_ = blsPubKeyHex_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.votingPower_ = votingPower_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse) {
+          return mergeFrom((com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse other) {
+        if (other == com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse.getDefaultInstance()) return this;
+        if (!other.getValidatorAddress().isEmpty()) {
+          validatorAddress_ = other.validatorAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getBlsPubKeyHex().isEmpty()) {
+          blsPubKeyHex_ = other.blsPubKeyHex_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getVotingPower() != 0L) {
+          setVotingPower(other.getVotingPower());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                validatorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                blsPubKeyHex_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                votingPower_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object validatorAddress_ = "";
+      /**
+       * <pre>
+       * validator_address is the address of the validator
+       * </pre>
+       *
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @return The validatorAddress.
+       */
+      public java.lang.String getValidatorAddress() {
+        java.lang.Object ref = validatorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validatorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * validator_address is the address of the validator
+       * </pre>
+       *
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @return The bytes for validatorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getValidatorAddressBytes() {
+        java.lang.Object ref = validatorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * validator_address is the address of the validator
+       * </pre>
+       *
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @param value The validatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * validator_address is the address of the validator
+       * </pre>
+       *
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidatorAddress() {
+        validatorAddress_ = getDefaultInstance().getValidatorAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * validator_address is the address of the validator
+       * </pre>
+       *
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @param value The bytes for validatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object blsPubKeyHex_ = "";
+      /**
+       * <pre>
+       * bls_pub_key is the BLS public key of the validator
+       * </pre>
+       *
+       * <code>string bls_pub_key_hex = 2 [json_name = "blsPubKeyHex"];</code>
+       * @return The blsPubKeyHex.
+       */
+      public java.lang.String getBlsPubKeyHex() {
+        java.lang.Object ref = blsPubKeyHex_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          blsPubKeyHex_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * bls_pub_key is the BLS public key of the validator
+       * </pre>
+       *
+       * <code>string bls_pub_key_hex = 2 [json_name = "blsPubKeyHex"];</code>
+       * @return The bytes for blsPubKeyHex.
+       */
+      public com.google.protobuf.ByteString
+          getBlsPubKeyHexBytes() {
+        java.lang.Object ref = blsPubKeyHex_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          blsPubKeyHex_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * bls_pub_key is the BLS public key of the validator
+       * </pre>
+       *
+       * <code>string bls_pub_key_hex = 2 [json_name = "blsPubKeyHex"];</code>
+       * @param value The blsPubKeyHex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBlsPubKeyHex(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        blsPubKeyHex_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bls_pub_key is the BLS public key of the validator
+       * </pre>
+       *
+       * <code>string bls_pub_key_hex = 2 [json_name = "blsPubKeyHex"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBlsPubKeyHex() {
+        blsPubKeyHex_ = getDefaultInstance().getBlsPubKeyHex();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bls_pub_key is the BLS public key of the validator
+       * </pre>
+       *
+       * <code>string bls_pub_key_hex = 2 [json_name = "blsPubKeyHex"];</code>
+       * @param value The bytes for blsPubKeyHex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBlsPubKeyHexBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        blsPubKeyHex_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long votingPower_ ;
+      /**
+       * <pre>
+       * voting_power is the voting power of the validator at the given epoch
+       * </pre>
+       *
+       * <code>uint64 voting_power = 3 [json_name = "votingPower"];</code>
+       * @return The votingPower.
+       */
+      @java.lang.Override
+      public long getVotingPower() {
+        return votingPower_;
+      }
+      /**
+       * <pre>
+       * voting_power is the voting power of the validator at the given epoch
+       * </pre>
+       *
+       * <code>uint64 voting_power = 3 [json_name = "votingPower"];</code>
+       * @param value The votingPower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVotingPower(long value) {
+
+        votingPower_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * voting_power is the voting power of the validator at the given epoch
+       * </pre>
+       *
+       * <code>uint64 voting_power = 3 [json_name = "votingPower"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVotingPower() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        votingPower_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.checkpointing.v1.BlsPublicKeyListResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.checkpointing.v1.BlsPublicKeyListResponse)
+    private static final com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse();
+    }
+
+    public static com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BlsPublicKeyListResponse>
+        PARSER = new com.google.protobuf.AbstractParser<BlsPublicKeyListResponse>() {
+      @java.lang.Override
+      public BlsPublicKeyListResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<BlsPublicKeyListResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BlsPublicKeyListResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface QueryBlsPublicKeyListResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:babylon.checkpointing.v1.QueryBlsPublicKeyListResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+     * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
      */
-    java.util.List<com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey> 
+    java.util.List<com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse> 
         getValidatorWithBlsKeysList();
     /**
-     * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+     * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
      */
-    com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey getValidatorWithBlsKeys(int index);
+    com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse getValidatorWithBlsKeys(int index);
     /**
-     * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+     * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
      */
     int getValidatorWithBlsKeysCount();
     /**
-     * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+     * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
      */
-    java.util.List<? extends com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKeyOrBuilder> 
+    java.util.List<? extends com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponseOrBuilder> 
         getValidatorWithBlsKeysOrBuilderList();
     /**
-     * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+     * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
      */
-    com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKeyOrBuilder getValidatorWithBlsKeysOrBuilder(
+    com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponseOrBuilder getValidatorWithBlsKeysOrBuilder(
         int index);
 
     /**
@@ -5793,41 +6668,41 @@ public final class QueryProto {
 
     public static final int VALIDATOR_WITH_BLS_KEYS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private java.util.List<com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey> validatorWithBlsKeys_;
+    private java.util.List<com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse> validatorWithBlsKeys_;
     /**
-     * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+     * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
      */
     @java.lang.Override
-    public java.util.List<com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey> getValidatorWithBlsKeysList() {
+    public java.util.List<com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse> getValidatorWithBlsKeysList() {
       return validatorWithBlsKeys_;
     }
     /**
-     * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+     * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKeyOrBuilder> 
+    public java.util.List<? extends com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponseOrBuilder> 
         getValidatorWithBlsKeysOrBuilderList() {
       return validatorWithBlsKeys_;
     }
     /**
-     * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+     * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
      */
     @java.lang.Override
     public int getValidatorWithBlsKeysCount() {
       return validatorWithBlsKeys_.size();
     }
     /**
-     * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+     * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
      */
     @java.lang.Override
-    public com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey getValidatorWithBlsKeys(int index) {
+    public com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse getValidatorWithBlsKeys(int index) {
       return validatorWithBlsKeys_.get(index);
     }
     /**
-     * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+     * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
      */
     @java.lang.Override
-    public com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKeyOrBuilder getValidatorWithBlsKeysOrBuilder(
+    public com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponseOrBuilder getValidatorWithBlsKeysOrBuilder(
         int index) {
       return validatorWithBlsKeys_.get(index);
     }
@@ -6249,9 +7124,9 @@ public final class QueryProto {
                 done = true;
                 break;
               case 10: {
-                com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey m =
+                com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse m =
                     input.readMessage(
-                        com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey.parser(),
+                        com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse.parser(),
                         extensionRegistry);
                 if (validatorWithBlsKeysBuilder_ == null) {
                   ensureValidatorWithBlsKeysIsMutable();
@@ -6285,22 +7160,22 @@ public final class QueryProto {
       }
       private int bitField0_;
 
-      private java.util.List<com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey> validatorWithBlsKeys_ =
+      private java.util.List<com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse> validatorWithBlsKeys_ =
         java.util.Collections.emptyList();
       private void ensureValidatorWithBlsKeysIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          validatorWithBlsKeys_ = new java.util.ArrayList<com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey>(validatorWithBlsKeys_);
+          validatorWithBlsKeys_ = new java.util.ArrayList<com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse>(validatorWithBlsKeys_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey, com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey.Builder, com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKeyOrBuilder> validatorWithBlsKeysBuilder_;
+          com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse, com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse.Builder, com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponseOrBuilder> validatorWithBlsKeysBuilder_;
 
       /**
-       * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+       * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
        */
-      public java.util.List<com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey> getValidatorWithBlsKeysList() {
+      public java.util.List<com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse> getValidatorWithBlsKeysList() {
         if (validatorWithBlsKeysBuilder_ == null) {
           return java.util.Collections.unmodifiableList(validatorWithBlsKeys_);
         } else {
@@ -6308,7 +7183,7 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+       * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
        */
       public int getValidatorWithBlsKeysCount() {
         if (validatorWithBlsKeysBuilder_ == null) {
@@ -6318,9 +7193,9 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+       * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
        */
-      public com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey getValidatorWithBlsKeys(int index) {
+      public com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse getValidatorWithBlsKeys(int index) {
         if (validatorWithBlsKeysBuilder_ == null) {
           return validatorWithBlsKeys_.get(index);
         } else {
@@ -6328,10 +7203,10 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+       * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
        */
       public Builder setValidatorWithBlsKeys(
-          int index, com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey value) {
+          int index, com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse value) {
         if (validatorWithBlsKeysBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6345,10 +7220,10 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+       * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
        */
       public Builder setValidatorWithBlsKeys(
-          int index, com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey.Builder builderForValue) {
+          int index, com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse.Builder builderForValue) {
         if (validatorWithBlsKeysBuilder_ == null) {
           ensureValidatorWithBlsKeysIsMutable();
           validatorWithBlsKeys_.set(index, builderForValue.build());
@@ -6359,9 +7234,9 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+       * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
        */
-      public Builder addValidatorWithBlsKeys(com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey value) {
+      public Builder addValidatorWithBlsKeys(com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse value) {
         if (validatorWithBlsKeysBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6375,10 +7250,10 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+       * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
        */
       public Builder addValidatorWithBlsKeys(
-          int index, com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey value) {
+          int index, com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse value) {
         if (validatorWithBlsKeysBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6392,10 +7267,10 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+       * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
        */
       public Builder addValidatorWithBlsKeys(
-          com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey.Builder builderForValue) {
+          com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse.Builder builderForValue) {
         if (validatorWithBlsKeysBuilder_ == null) {
           ensureValidatorWithBlsKeysIsMutable();
           validatorWithBlsKeys_.add(builderForValue.build());
@@ -6406,10 +7281,10 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+       * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
        */
       public Builder addValidatorWithBlsKeys(
-          int index, com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey.Builder builderForValue) {
+          int index, com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse.Builder builderForValue) {
         if (validatorWithBlsKeysBuilder_ == null) {
           ensureValidatorWithBlsKeysIsMutable();
           validatorWithBlsKeys_.add(index, builderForValue.build());
@@ -6420,10 +7295,10 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+       * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
        */
       public Builder addAllValidatorWithBlsKeys(
-          java.lang.Iterable<? extends com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey> values) {
+          java.lang.Iterable<? extends com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse> values) {
         if (validatorWithBlsKeysBuilder_ == null) {
           ensureValidatorWithBlsKeysIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -6435,7 +7310,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+       * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
        */
       public Builder clearValidatorWithBlsKeys() {
         if (validatorWithBlsKeysBuilder_ == null) {
@@ -6448,7 +7323,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+       * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
        */
       public Builder removeValidatorWithBlsKeys(int index) {
         if (validatorWithBlsKeysBuilder_ == null) {
@@ -6461,16 +7336,16 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+       * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
        */
-      public com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey.Builder getValidatorWithBlsKeysBuilder(
+      public com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse.Builder getValidatorWithBlsKeysBuilder(
           int index) {
         return getValidatorWithBlsKeysFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+       * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
        */
-      public com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKeyOrBuilder getValidatorWithBlsKeysOrBuilder(
+      public com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponseOrBuilder getValidatorWithBlsKeysOrBuilder(
           int index) {
         if (validatorWithBlsKeysBuilder_ == null) {
           return validatorWithBlsKeys_.get(index);  } else {
@@ -6478,9 +7353,9 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+       * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
        */
-      public java.util.List<? extends com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKeyOrBuilder> 
+      public java.util.List<? extends com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponseOrBuilder> 
            getValidatorWithBlsKeysOrBuilderList() {
         if (validatorWithBlsKeysBuilder_ != null) {
           return validatorWithBlsKeysBuilder_.getMessageOrBuilderList();
@@ -6489,33 +7364,33 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+       * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
        */
-      public com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey.Builder addValidatorWithBlsKeysBuilder() {
+      public com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse.Builder addValidatorWithBlsKeysBuilder() {
         return getValidatorWithBlsKeysFieldBuilder().addBuilder(
-            com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey.getDefaultInstance());
+            com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse.getDefaultInstance());
       }
       /**
-       * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+       * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
        */
-      public com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey.Builder addValidatorWithBlsKeysBuilder(
+      public com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse.Builder addValidatorWithBlsKeysBuilder(
           int index) {
         return getValidatorWithBlsKeysFieldBuilder().addBuilder(
-            index, com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey.getDefaultInstance());
+            index, com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse.getDefaultInstance());
       }
       /**
-       * <code>repeated .babylon.checkpointing.v1.ValidatorWithBlsKey validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
+       * <code>repeated .babylon.checkpointing.v1.BlsPublicKeyListResponse validator_with_bls_keys = 1 [json_name = "validatorWithBlsKeys"];</code>
        */
-      public java.util.List<com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey.Builder> 
+      public java.util.List<com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse.Builder> 
            getValidatorWithBlsKeysBuilderList() {
         return getValidatorWithBlsKeysFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey, com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey.Builder, com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKeyOrBuilder> 
+          com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse, com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse.Builder, com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponseOrBuilder> 
           getValidatorWithBlsKeysFieldBuilder() {
         if (validatorWithBlsKeysBuilder_ == null) {
           validatorWithBlsKeysBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey, com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKey.Builder, com.babylon.checkpointing.v1.BlsKeyProto.ValidatorWithBlsKeyOrBuilder>(
+              com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse, com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponse.Builder, com.babylon.checkpointing.v1.QueryProto.BlsPublicKeyListResponseOrBuilder>(
                   validatorWithBlsKeys_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -10309,7 +11184,7 @@ public final class QueryProto {
      * sigs
      * </pre>
      *
-     * <code>bytes bls_multi_sig = 4 [json_name = "blsMultiSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.Signature"];</code>
+     * <code>bytes bls_multi_sig = 4 [json_name = "blsMultiSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.Signature"];</code>
      * @return The blsMultiSig.
      */
     com.google.protobuf.ByteString getBlsMultiSig();
@@ -10443,7 +11318,7 @@ public final class QueryProto {
      * sigs
      * </pre>
      *
-     * <code>bytes bls_multi_sig = 4 [json_name = "blsMultiSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.Signature"];</code>
+     * <code>bytes bls_multi_sig = 4 [json_name = "blsMultiSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.Signature"];</code>
      * @return The blsMultiSig.
      */
     @java.lang.Override
@@ -11043,7 +11918,7 @@ public final class QueryProto {
        * sigs
        * </pre>
        *
-       * <code>bytes bls_multi_sig = 4 [json_name = "blsMultiSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.Signature"];</code>
+       * <code>bytes bls_multi_sig = 4 [json_name = "blsMultiSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.Signature"];</code>
        * @return The blsMultiSig.
        */
       @java.lang.Override
@@ -11056,7 +11931,7 @@ public final class QueryProto {
        * sigs
        * </pre>
        *
-       * <code>bytes bls_multi_sig = 4 [json_name = "blsMultiSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.Signature"];</code>
+       * <code>bytes bls_multi_sig = 4 [json_name = "blsMultiSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.Signature"];</code>
        * @param value The blsMultiSig to set.
        * @return This builder for chaining.
        */
@@ -11073,7 +11948,7 @@ public final class QueryProto {
        * sigs
        * </pre>
        *
-       * <code>bytes bls_multi_sig = 4 [json_name = "blsMultiSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.Signature"];</code>
+       * <code>bytes bls_multi_sig = 4 [json_name = "blsMultiSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.Signature"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBlsMultiSig() {
@@ -11171,7 +12046,7 @@ public final class QueryProto {
 
     /**
      * <pre>
-     * status_desc respresents the description of status enum.
+     * status_desc represents the description of status enum.
      * </pre>
      *
      * <code>string status_desc = 2 [json_name = "statusDesc"];</code>
@@ -11180,7 +12055,7 @@ public final class QueryProto {
     java.lang.String getStatusDesc();
     /**
      * <pre>
-     * status_desc respresents the description of status enum.
+     * status_desc represents the description of status enum.
      * </pre>
      *
      * <code>string status_desc = 2 [json_name = "statusDesc"];</code>
@@ -11302,7 +12177,7 @@ public final class QueryProto {
     private volatile java.lang.Object statusDesc_ = "";
     /**
      * <pre>
-     * status_desc respresents the description of status enum.
+     * status_desc represents the description of status enum.
      * </pre>
      *
      * <code>string status_desc = 2 [json_name = "statusDesc"];</code>
@@ -11323,7 +12198,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * status_desc respresents the description of status enum.
+     * status_desc represents the description of status enum.
      * </pre>
      *
      * <code>string status_desc = 2 [json_name = "statusDesc"];</code>
@@ -11889,7 +12764,7 @@ public final class QueryProto {
       private java.lang.Object statusDesc_ = "";
       /**
        * <pre>
-       * status_desc respresents the description of status enum.
+       * status_desc represents the description of status enum.
        * </pre>
        *
        * <code>string status_desc = 2 [json_name = "statusDesc"];</code>
@@ -11909,7 +12784,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * status_desc respresents the description of status enum.
+       * status_desc represents the description of status enum.
        * </pre>
        *
        * <code>string status_desc = 2 [json_name = "statusDesc"];</code>
@@ -11930,7 +12805,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * status_desc respresents the description of status enum.
+       * status_desc represents the description of status enum.
        * </pre>
        *
        * <code>string status_desc = 2 [json_name = "statusDesc"];</code>
@@ -11947,7 +12822,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * status_desc respresents the description of status enum.
+       * status_desc represents the description of status enum.
        * </pre>
        *
        * <code>string status_desc = 2 [json_name = "statusDesc"];</code>
@@ -11961,7 +12836,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * status_desc respresents the description of status enum.
+       * status_desc represents the description of status enum.
        * </pre>
        *
        * <code>string status_desc = 2 [json_name = "statusDesc"];</code>
@@ -12292,7 +13167,7 @@ public final class QueryProto {
 
     /**
      * <pre>
-     * status_desc respresents the description of status enum.
+     * status_desc represents the description of status enum.
      * </pre>
      *
      * <code>string status_desc = 3 [json_name = "statusDesc"];</code>
@@ -12301,7 +13176,7 @@ public final class QueryProto {
     java.lang.String getStatusDesc();
     /**
      * <pre>
-     * status_desc respresents the description of status enum.
+     * status_desc represents the description of status enum.
      * </pre>
      *
      * <code>string status_desc = 3 [json_name = "statusDesc"];</code>
@@ -12315,7 +13190,7 @@ public final class QueryProto {
      * bls_aggr_pk defines the aggregated BLS public key
      * </pre>
      *
-     * <code>bytes bls_aggr_pk = 4 [json_name = "blsAggrPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.PublicKey"];</code>
+     * <code>bytes bls_aggr_pk = 4 [json_name = "blsAggrPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.PublicKey"];</code>
      * @return The blsAggrPk.
      */
     com.google.protobuf.ByteString getBlsAggrPk();
@@ -12484,7 +13359,7 @@ public final class QueryProto {
     private volatile java.lang.Object statusDesc_ = "";
     /**
      * <pre>
-     * status_desc respresents the description of status enum.
+     * status_desc represents the description of status enum.
      * </pre>
      *
      * <code>string status_desc = 3 [json_name = "statusDesc"];</code>
@@ -12505,7 +13380,7 @@ public final class QueryProto {
     }
     /**
      * <pre>
-     * status_desc respresents the description of status enum.
+     * status_desc represents the description of status enum.
      * </pre>
      *
      * <code>string status_desc = 3 [json_name = "statusDesc"];</code>
@@ -12533,7 +13408,7 @@ public final class QueryProto {
      * bls_aggr_pk defines the aggregated BLS public key
      * </pre>
      *
-     * <code>bytes bls_aggr_pk = 4 [json_name = "blsAggrPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.PublicKey"];</code>
+     * <code>bytes bls_aggr_pk = 4 [json_name = "blsAggrPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.PublicKey"];</code>
      * @return The blsAggrPk.
      */
     @java.lang.Override
@@ -13329,7 +14204,7 @@ public final class QueryProto {
       private java.lang.Object statusDesc_ = "";
       /**
        * <pre>
-       * status_desc respresents the description of status enum.
+       * status_desc represents the description of status enum.
        * </pre>
        *
        * <code>string status_desc = 3 [json_name = "statusDesc"];</code>
@@ -13349,7 +14224,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * status_desc respresents the description of status enum.
+       * status_desc represents the description of status enum.
        * </pre>
        *
        * <code>string status_desc = 3 [json_name = "statusDesc"];</code>
@@ -13370,7 +14245,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * status_desc respresents the description of status enum.
+       * status_desc represents the description of status enum.
        * </pre>
        *
        * <code>string status_desc = 3 [json_name = "statusDesc"];</code>
@@ -13387,7 +14262,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * status_desc respresents the description of status enum.
+       * status_desc represents the description of status enum.
        * </pre>
        *
        * <code>string status_desc = 3 [json_name = "statusDesc"];</code>
@@ -13401,7 +14276,7 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * status_desc respresents the description of status enum.
+       * status_desc represents the description of status enum.
        * </pre>
        *
        * <code>string status_desc = 3 [json_name = "statusDesc"];</code>
@@ -13424,7 +14299,7 @@ public final class QueryProto {
        * bls_aggr_pk defines the aggregated BLS public key
        * </pre>
        *
-       * <code>bytes bls_aggr_pk = 4 [json_name = "blsAggrPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.PublicKey"];</code>
+       * <code>bytes bls_aggr_pk = 4 [json_name = "blsAggrPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.PublicKey"];</code>
        * @return The blsAggrPk.
        */
       @java.lang.Override
@@ -13436,7 +14311,7 @@ public final class QueryProto {
        * bls_aggr_pk defines the aggregated BLS public key
        * </pre>
        *
-       * <code>bytes bls_aggr_pk = 4 [json_name = "blsAggrPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.PublicKey"];</code>
+       * <code>bytes bls_aggr_pk = 4 [json_name = "blsAggrPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.PublicKey"];</code>
        * @param value The blsAggrPk to set.
        * @return This builder for chaining.
        */
@@ -13452,7 +14327,7 @@ public final class QueryProto {
        * bls_aggr_pk defines the aggregated BLS public key
        * </pre>
        *
-       * <code>bytes bls_aggr_pk = 4 [json_name = "blsAggrPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.PublicKey"];</code>
+       * <code>bytes bls_aggr_pk = 4 [json_name = "blsAggrPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.PublicKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBlsAggrPk() {
@@ -13953,6 +14828,11 @@ public final class QueryProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_babylon_checkpointing_v1_QueryBlsPublicKeyListRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_checkpointing_v1_BlsPublicKeyListResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_checkpointing_v1_BlsPublicKeyListResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_babylon_checkpointing_v1_QueryBlsPublicKeyListResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -14048,92 +14928,96 @@ public final class QueryProto {
       "blicKeyListRequest\022\033\n\tepoch_num\030\001 \001(\004R\010e" +
       "pochNum\022F\n\npagination\030\002 \001(\0132&.cosmos.bas" +
       "e.query.v1beta1.PageRequestR\npagination\"" +
-      "\316\001\n\035QueryBlsPublicKeyListResponse\022d\n\027val" +
-      "idator_with_bls_keys\030\001 \003(\0132-.babylon.che" +
-      "ckpointing.v1.ValidatorWithBlsKeyR\024valid" +
-      "atorWithBlsKeys\022G\n\npagination\030\002 \001(\0132\'.co" +
-      "smos.base.query.v1beta1.PageResponseR\npa" +
-      "gination\"6\n\027QueryEpochStatusRequest\022\033\n\te" +
-      "poch_num\030\001 \001(\004R\010epochNum\"^\n\030QueryEpochSt" +
-      "atusResponse\022B\n\006status\030\001 \001(\0162*.babylon.c" +
-      "heckpointing.v1.CheckpointStatusR\006status" +
-      "\"E\n\"QueryRecentEpochStatusCountRequest\022\037" +
-      "\n\013epoch_count\030\001 \001(\004R\nepochCount\"\226\002\n#Quer" +
-      "yRecentEpochStatusCountResponse\022\033\n\ttip_e" +
-      "poch\030\001 \001(\004R\010tipEpoch\022\037\n\013epoch_count\030\002 \001(" +
-      "\004R\nepochCount\022q\n\014status_count\030\003 \003(\0132N.ba" +
-      "bylon.checkpointing.v1.QueryRecentEpochS" +
-      "tatusCountResponse.StatusCountEntryR\013sta" +
-      "tusCount\032>\n\020StatusCountEntry\022\020\n\003key\030\001 \001(" +
-      "\tR\003key\022\024\n\005value\030\002 \001(\004R\005value:\0028\001\"j\n$Quer" +
-      "yLastCheckpointWithStatusRequest\022B\n\006stat" +
-      "us\030\001 \001(\0162*.babylon.checkpointing.v1.Chec" +
-      "kpointStatusR\006status\"\177\n%QueryLastCheckpo" +
-      "intWithStatusResponse\022V\n\016raw_checkpoint\030" +
-      "\001 \001(\0132/.babylon.checkpointing.v1.RawChec" +
-      "kpointResponseR\rrawCheckpoint\"\325\001\n\025RawChe" +
-      "ckpointResponse\022\033\n\tepoch_num\030\001 \001(\004R\010epoc" +
-      "hNum\022$\n\016block_hash_hex\030\002 \001(\tR\014blockHashH" +
-      "ex\022\026\n\006bitmap\030\003 \001(\014R\006bitmap\022a\n\rbls_multi_" +
-      "sig\030\004 \001(\014B=\332\336\0379github.com/babylonchain/b" +
-      "abylon/crypto/bls12381.SignatureR\013blsMul" +
-      "tiSig\"\346\001\n\035CheckpointStateUpdateResponse\022" +
-      "@\n\005state\030\001 \001(\0162*.babylon.checkpointing.v" +
-      "1.CheckpointStatusR\005state\022\037\n\013status_desc" +
-      "\030\002 \001(\tR\nstatusDesc\022!\n\014block_height\030\003 \001(\004" +
-      "R\013blockHeight\022?\n\nblock_time\030\004 \001(\0132\032.goog" +
-      "le.protobuf.TimestampB\004\220\337\037\001R\tblockTime\"\234" +
-      "\003\n\035RawCheckpointWithMetaResponse\022C\n\004ckpt" +
-      "\030\001 \001(\0132/.babylon.checkpointing.v1.RawChe" +
-      "ckpointResponseR\004ckpt\022B\n\006status\030\002 \001(\0162*." +
-      "babylon.checkpointing.v1.CheckpointStatu" +
-      "sR\006status\022\037\n\013status_desc\030\003 \001(\tR\nstatusDe" +
-      "sc\022]\n\013bls_aggr_pk\030\004 \001(\014B=\332\336\0379github.com/" +
-      "babylonchain/babylon/crypto/bls12381.Pub" +
-      "licKeyR\tblsAggrPk\022\033\n\tpower_sum\030\005 \001(\004R\010po" +
-      "werSum\022U\n\tlifecycle\030\006 \003(\01327.babylon.chec" +
-      "kpointing.v1.CheckpointStateUpdateRespon" +
-      "seR\tlifecycle2\340\n\n\005Query\022\302\001\n\021RawCheckpoin" +
-      "tList\0227.babylon.checkpointing.v1.QueryRa" +
-      "wCheckpointListRequest\0328.babylon.checkpo" +
-      "inting.v1.QueryRawCheckpointListResponse" +
-      "\":\202\323\344\223\0024\0222/babylon/checkpointing/v1/raw_" +
-      "checkpoints/{status}\022\270\001\n\rRawCheckpoint\0223" +
-      ".babylon.checkpointing.v1.QueryRawCheckp" +
-      "ointRequest\0324.babylon.checkpointing.v1.Q" +
-      "ueryRawCheckpointResponse\"<\202\323\344\223\0026\0224/baby" +
-      "lon/checkpointing/v1/raw_checkpoint/{epo" +
-      "ch_num}\022\260\001\n\016RawCheckpoints\0224.babylon.che" +
-      "ckpointing.v1.QueryRawCheckpointsRequest" +
-      "\0325.babylon.checkpointing.v1.QueryRawChec" +
-      "kpointsResponse\"1\202\323\344\223\002+\022)/babylon/checkp" +
-      "ointing/v1/raw_checkpoints\022\302\001\n\020BlsPublic" +
-      "KeyList\0226.babylon.checkpointing.v1.Query" +
-      "BlsPublicKeyListRequest\0327.babylon.checkp" +
-      "ointing.v1.QueryBlsPublicKeyListResponse" +
-      "\"=\202\323\344\223\0027\0225/babylon/checkpointing/v1/bls_" +
-      "public_keys/{epoch_num}\022\261\001\n\013EpochStatus\022" +
-      "1.babylon.checkpointing.v1.QueryEpochSta" +
-      "tusRequest\0322.babylon.checkpointing.v1.Qu" +
-      "eryEpochStatusResponse\";\202\323\344\223\0025\0223/babylon" +
-      "/checkpointing/v1/epochs/{epoch_num}/sta" +
-      "tus\022\314\001\n\026RecentEpochStatusCount\022<.babylon" +
-      ".checkpointing.v1.QueryRecentEpochStatus" +
-      "CountRequest\032=.babylon.checkpointing.v1." +
-      "QueryRecentEpochStatusCountResponse\"5\202\323\344" +
-      "\223\002/\022-/babylon/checkpointing/v1/epochs:st" +
-      "atus_count\022\333\001\n\030LastCheckpointWithStatus\022" +
-      ">.babylon.checkpointing.v1.QueryLastChec" +
-      "kpointWithStatusRequest\032?.babylon.checkp" +
-      "ointing.v1.QueryLastCheckpointWithStatus" +
-      "Response\">\202\323\344\223\0028\0226/babylon/checkpointing" +
-      "/v1/last_raw_checkpoint/{status}B\341\001\n\034com" +
-      ".babylon.checkpointing.v1B\nQueryProtoZ5g" +
-      "ithub.com/babylonchain/babylon/x/checkpo" +
-      "inting/types\242\002\003BCX\252\002\030Babylon.Checkpointi" +
-      "ng.V1\312\002\030Babylon\\Checkpointing\\V1\342\002$Babyl" +
-      "on\\Checkpointing\\V1\\GPBMetadata\352\002\032Babylo" +
-      "n::Checkpointing::V1b\006proto3"
+      "\221\001\n\030BlsPublicKeyListResponse\022+\n\021validato" +
+      "r_address\030\001 \001(\tR\020validatorAddress\022%\n\017bls" +
+      "_pub_key_hex\030\002 \001(\tR\014blsPubKeyHex\022!\n\014voti" +
+      "ng_power\030\003 \001(\004R\013votingPower\"\323\001\n\035QueryBls" +
+      "PublicKeyListResponse\022i\n\027validator_with_" +
+      "bls_keys\030\001 \003(\01322.babylon.checkpointing.v" +
+      "1.BlsPublicKeyListResponseR\024validatorWit" +
+      "hBlsKeys\022G\n\npagination\030\002 \001(\0132\'.cosmos.ba" +
+      "se.query.v1beta1.PageResponseR\npaginatio" +
+      "n\"6\n\027QueryEpochStatusRequest\022\033\n\tepoch_nu" +
+      "m\030\001 \001(\004R\010epochNum\"^\n\030QueryEpochStatusRes" +
+      "ponse\022B\n\006status\030\001 \001(\0162*.babylon.checkpoi" +
+      "nting.v1.CheckpointStatusR\006status\"E\n\"Que" +
+      "ryRecentEpochStatusCountRequest\022\037\n\013epoch" +
+      "_count\030\001 \001(\004R\nepochCount\"\226\002\n#QueryRecent" +
+      "EpochStatusCountResponse\022\033\n\ttip_epoch\030\001 " +
+      "\001(\004R\010tipEpoch\022\037\n\013epoch_count\030\002 \001(\004R\nepoc" +
+      "hCount\022q\n\014status_count\030\003 \003(\0132N.babylon.c" +
+      "heckpointing.v1.QueryRecentEpochStatusCo" +
+      "untResponse.StatusCountEntryR\013statusCoun" +
+      "t\032>\n\020StatusCountEntry\022\020\n\003key\030\001 \001(\tR\003key\022" +
+      "\024\n\005value\030\002 \001(\004R\005value:\0028\001\"j\n$QueryLastCh" +
+      "eckpointWithStatusRequest\022B\n\006status\030\001 \001(" +
+      "\0162*.babylon.checkpointing.v1.CheckpointS" +
+      "tatusR\006status\"\177\n%QueryLastCheckpointWith" +
+      "StatusResponse\022V\n\016raw_checkpoint\030\001 \001(\0132/" +
+      ".babylon.checkpointing.v1.RawCheckpointR" +
+      "esponseR\rrawCheckpoint\"\327\001\n\025RawCheckpoint" +
+      "Response\022\033\n\tepoch_num\030\001 \001(\004R\010epochNum\022$\n" +
+      "\016block_hash_hex\030\002 \001(\tR\014blockHashHex\022\026\n\006b" +
+      "itmap\030\003 \001(\014R\006bitmap\022c\n\rbls_multi_sig\030\004 \001" +
+      "(\014B?\332\336\037;github.com/babylonlabs-io/babylo" +
+      "n/crypto/bls12381.SignatureR\013blsMultiSig" +
+      "\"\346\001\n\035CheckpointStateUpdateResponse\022@\n\005st" +
+      "ate\030\001 \001(\0162*.babylon.checkpointing.v1.Che" +
+      "ckpointStatusR\005state\022\037\n\013status_desc\030\002 \001(" +
+      "\tR\nstatusDesc\022!\n\014block_height\030\003 \001(\004R\013blo" +
+      "ckHeight\022?\n\nblock_time\030\004 \001(\0132\032.google.pr" +
+      "otobuf.TimestampB\004\220\337\037\001R\tblockTime\"\236\003\n\035Ra" +
+      "wCheckpointWithMetaResponse\022C\n\004ckpt\030\001 \001(" +
+      "\0132/.babylon.checkpointing.v1.RawCheckpoi" +
+      "ntResponseR\004ckpt\022B\n\006status\030\002 \001(\0162*.babyl" +
+      "on.checkpointing.v1.CheckpointStatusR\006st" +
+      "atus\022\037\n\013status_desc\030\003 \001(\tR\nstatusDesc\022_\n" +
+      "\013bls_aggr_pk\030\004 \001(\014B?\332\336\037;github.com/babyl" +
+      "onlabs-io/babylon/crypto/bls12381.Public" +
+      "KeyR\tblsAggrPk\022\033\n\tpower_sum\030\005 \001(\004R\010power" +
+      "Sum\022U\n\tlifecycle\030\006 \003(\01327.babylon.checkpo" +
+      "inting.v1.CheckpointStateUpdateResponseR" +
+      "\tlifecycle2\340\n\n\005Query\022\302\001\n\021RawCheckpointLi" +
+      "st\0227.babylon.checkpointing.v1.QueryRawCh" +
+      "eckpointListRequest\0328.babylon.checkpoint" +
+      "ing.v1.QueryRawCheckpointListResponse\":\202" +
+      "\323\344\223\0024\0222/babylon/checkpointing/v1/raw_che" +
+      "ckpoints/{status}\022\270\001\n\rRawCheckpoint\0223.ba" +
+      "bylon.checkpointing.v1.QueryRawCheckpoin" +
+      "tRequest\0324.babylon.checkpointing.v1.Quer" +
+      "yRawCheckpointResponse\"<\202\323\344\223\0026\0224/babylon" +
+      "/checkpointing/v1/raw_checkpoint/{epoch_" +
+      "num}\022\260\001\n\016RawCheckpoints\0224.babylon.checkp" +
+      "ointing.v1.QueryRawCheckpointsRequest\0325." +
+      "babylon.checkpointing.v1.QueryRawCheckpo" +
+      "intsResponse\"1\202\323\344\223\002+\022)/babylon/checkpoin" +
+      "ting/v1/raw_checkpoints\022\302\001\n\020BlsPublicKey" +
+      "List\0226.babylon.checkpointing.v1.QueryBls" +
+      "PublicKeyListRequest\0327.babylon.checkpoin" +
+      "ting.v1.QueryBlsPublicKeyListResponse\"=\202" +
+      "\323\344\223\0027\0225/babylon/checkpointing/v1/bls_pub" +
+      "lic_keys/{epoch_num}\022\261\001\n\013EpochStatus\0221.b" +
+      "abylon.checkpointing.v1.QueryEpochStatus" +
+      "Request\0322.babylon.checkpointing.v1.Query" +
+      "EpochStatusResponse\";\202\323\344\223\0025\0223/babylon/ch" +
+      "eckpointing/v1/epochs/{epoch_num}/status" +
+      "\022\314\001\n\026RecentEpochStatusCount\022<.babylon.ch" +
+      "eckpointing.v1.QueryRecentEpochStatusCou" +
+      "ntRequest\032=.babylon.checkpointing.v1.Que" +
+      "ryRecentEpochStatusCountResponse\"5\202\323\344\223\002/" +
+      "\022-/babylon/checkpointing/v1/epochs:statu" +
+      "s_count\022\333\001\n\030LastCheckpointWithStatus\022>.b" +
+      "abylon.checkpointing.v1.QueryLastCheckpo" +
+      "intWithStatusRequest\032?.babylon.checkpoin" +
+      "ting.v1.QueryLastCheckpointWithStatusRes" +
+      "ponse\">\202\323\344\223\0028\0226/babylon/checkpointing/v1" +
+      "/last_raw_checkpoint/{status}B\343\001\n\034com.ba" +
+      "bylon.checkpointing.v1B\nQueryProtoZ7gith" +
+      "ub.com/babylonlabs-io/babylon/x/checkpoi" +
+      "nting/types\242\002\003BCX\252\002\030Babylon.Checkpointin" +
+      "g.V1\312\002\030Babylon\\Checkpointing\\V1\342\002$Babylo" +
+      "n\\Checkpointing\\V1\\GPBMetadata\352\002\032Babylon" +
+      "::Checkpointing::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14187,32 +15071,38 @@ public final class QueryProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_checkpointing_v1_QueryBlsPublicKeyListRequest_descriptor,
         new java.lang.String[] { "EpochNum", "Pagination", });
-    internal_static_babylon_checkpointing_v1_QueryBlsPublicKeyListResponse_descriptor =
+    internal_static_babylon_checkpointing_v1_BlsPublicKeyListResponse_descriptor =
       getDescriptor().getMessageTypes().get(7);
+    internal_static_babylon_checkpointing_v1_BlsPublicKeyListResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_checkpointing_v1_BlsPublicKeyListResponse_descriptor,
+        new java.lang.String[] { "ValidatorAddress", "BlsPubKeyHex", "VotingPower", });
+    internal_static_babylon_checkpointing_v1_QueryBlsPublicKeyListResponse_descriptor =
+      getDescriptor().getMessageTypes().get(8);
     internal_static_babylon_checkpointing_v1_QueryBlsPublicKeyListResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_checkpointing_v1_QueryBlsPublicKeyListResponse_descriptor,
         new java.lang.String[] { "ValidatorWithBlsKeys", "Pagination", });
     internal_static_babylon_checkpointing_v1_QueryEpochStatusRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_babylon_checkpointing_v1_QueryEpochStatusRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_checkpointing_v1_QueryEpochStatusRequest_descriptor,
         new java.lang.String[] { "EpochNum", });
     internal_static_babylon_checkpointing_v1_QueryEpochStatusResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_babylon_checkpointing_v1_QueryEpochStatusResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_checkpointing_v1_QueryEpochStatusResponse_descriptor,
         new java.lang.String[] { "Status", });
     internal_static_babylon_checkpointing_v1_QueryRecentEpochStatusCountRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_babylon_checkpointing_v1_QueryRecentEpochStatusCountRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_checkpointing_v1_QueryRecentEpochStatusCountRequest_descriptor,
         new java.lang.String[] { "EpochCount", });
     internal_static_babylon_checkpointing_v1_QueryRecentEpochStatusCountResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_babylon_checkpointing_v1_QueryRecentEpochStatusCountResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_checkpointing_v1_QueryRecentEpochStatusCountResponse_descriptor,
@@ -14224,31 +15114,31 @@ public final class QueryProto {
         internal_static_babylon_checkpointing_v1_QueryRecentEpochStatusCountResponse_StatusCountEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_babylon_checkpointing_v1_QueryLastCheckpointWithStatusRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_babylon_checkpointing_v1_QueryLastCheckpointWithStatusRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_checkpointing_v1_QueryLastCheckpointWithStatusRequest_descriptor,
         new java.lang.String[] { "Status", });
     internal_static_babylon_checkpointing_v1_QueryLastCheckpointWithStatusResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_babylon_checkpointing_v1_QueryLastCheckpointWithStatusResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_checkpointing_v1_QueryLastCheckpointWithStatusResponse_descriptor,
         new java.lang.String[] { "RawCheckpoint", });
     internal_static_babylon_checkpointing_v1_RawCheckpointResponse_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_babylon_checkpointing_v1_RawCheckpointResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_checkpointing_v1_RawCheckpointResponse_descriptor,
         new java.lang.String[] { "EpochNum", "BlockHashHex", "Bitmap", "BlsMultiSig", });
     internal_static_babylon_checkpointing_v1_CheckpointStateUpdateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_babylon_checkpointing_v1_CheckpointStateUpdateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_checkpointing_v1_CheckpointStateUpdateResponse_descriptor,
         new java.lang.String[] { "State", "StatusDesc", "BlockHeight", "BlockTime", });
     internal_static_babylon_checkpointing_v1_RawCheckpointWithMetaResponse_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_babylon_checkpointing_v1_RawCheckpointWithMetaResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_checkpointing_v1_RawCheckpointWithMetaResponse_descriptor,

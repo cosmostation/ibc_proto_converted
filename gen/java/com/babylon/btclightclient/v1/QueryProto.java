@@ -1702,17 +1702,17 @@ public final class QueryProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+     * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
      * @return A list containing the hashes.
      */
     java.util.List<com.google.protobuf.ByteString> getHashesList();
     /**
-     * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+     * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
      * @return The count of hashes.
      */
     int getHashesCount();
     /**
-     * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+     * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
      * @param index The index of the element to return.
      * @return The hashes at the given index.
      */
@@ -1777,7 +1777,7 @@ public final class QueryProto {
     @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.ByteString> hashes_;
     /**
-     * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+     * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
      * @return A list containing the hashes.
      */
     @java.lang.Override
@@ -1786,14 +1786,14 @@ public final class QueryProto {
       return hashes_;
     }
     /**
-     * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+     * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
      * @return The count of hashes.
      */
     public int getHashesCount() {
       return hashes_.size();
     }
     /**
-     * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+     * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
      * @param index The index of the element to return.
      * @return The hashes at the given index.
      */
@@ -2221,7 +2221,7 @@ public final class QueryProto {
         }
       }
       /**
-       * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+       * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
        * @return A list containing the hashes.
        */
       public java.util.List<com.google.protobuf.ByteString>
@@ -2230,14 +2230,14 @@ public final class QueryProto {
                  java.util.Collections.unmodifiableList(hashes_) : hashes_;
       }
       /**
-       * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+       * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
        * @return The count of hashes.
        */
       public int getHashesCount() {
         return hashes_.size();
       }
       /**
-       * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+       * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
        * @param index The index of the element to return.
        * @return The hashes at the given index.
        */
@@ -2245,7 +2245,7 @@ public final class QueryProto {
         return hashes_.get(index);
       }
       /**
-       * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+       * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
        * @param index The index to set the value at.
        * @param value The hashes to set.
        * @return This builder for chaining.
@@ -2259,7 +2259,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+       * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
        * @param value The hashes to add.
        * @return This builder for chaining.
        */
@@ -2271,7 +2271,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+       * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
        * @param values The hashes to add.
        * @return This builder for chaining.
        */
@@ -2284,7 +2284,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+       * <code>repeated bytes hashes = 1 [json_name = "hashes", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
        * @return This builder for chaining.
        */
       public Builder clearHashes() {
@@ -2481,7 +2481,7 @@ public final class QueryProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bytes hash = 1 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+     * <code>bytes hash = 1 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
      * @return The hash.
      */
     com.google.protobuf.ByteString getHash();
@@ -2530,7 +2530,7 @@ public final class QueryProto {
     public static final int HASH_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString hash_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes hash = 1 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+     * <code>bytes hash = 1 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
      * @return The hash.
      */
     @java.lang.Override
@@ -2870,7 +2870,7 @@ public final class QueryProto {
 
       private com.google.protobuf.ByteString hash_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>bytes hash = 1 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+       * <code>bytes hash = 1 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
        * @return The hash.
        */
       @java.lang.Override
@@ -2878,7 +2878,7 @@ public final class QueryProto {
         return hash_;
       }
       /**
-       * <code>bytes hash = 1 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+       * <code>bytes hash = 1 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
        * @param value The hash to set.
        * @return This builder for chaining.
        */
@@ -2890,7 +2890,7 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>bytes hash = 1 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+       * <code>bytes hash = 1 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
        * @return This builder for chaining.
        */
       public Builder clearHash() {
@@ -8615,10 +8615,10 @@ public final class QueryProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint64 depth = 1 [json_name = "depth"];</code>
+     * <code>uint32 depth = 1 [json_name = "depth"];</code>
      * @return The depth.
      */
-    long getDepth();
+    int getDepth();
   }
   /**
    * <pre>
@@ -8661,13 +8661,13 @@ public final class QueryProto {
     }
 
     public static final int DEPTH_FIELD_NUMBER = 1;
-    private long depth_ = 0L;
+    private int depth_ = 0;
     /**
-     * <code>uint64 depth = 1 [json_name = "depth"];</code>
+     * <code>uint32 depth = 1 [json_name = "depth"];</code>
      * @return The depth.
      */
     @java.lang.Override
-    public long getDepth() {
+    public int getDepth() {
       return depth_;
     }
 
@@ -8685,8 +8685,8 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (depth_ != 0L) {
-        output.writeUInt64(1, depth_);
+      if (depth_ != 0) {
+        output.writeUInt32(1, depth_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -8697,9 +8697,9 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (depth_ != 0L) {
+      if (depth_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1, depth_);
+          .computeUInt32Size(1, depth_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -8730,8 +8730,7 @@ public final class QueryProto {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + DEPTH_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getDepth());
+      hash = (53 * hash) + getDepth();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8868,7 +8867,7 @@ public final class QueryProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        depth_ = 0L;
+        depth_ = 0;
         return this;
       }
 
@@ -8951,7 +8950,7 @@ public final class QueryProto {
 
       public Builder mergeFrom(com.babylon.btclightclient.v1.QueryProto.QueryHeaderDepthResponse other) {
         if (other == com.babylon.btclightclient.v1.QueryProto.QueryHeaderDepthResponse.getDefaultInstance()) return this;
-        if (other.getDepth() != 0L) {
+        if (other.getDepth() != 0) {
           setDepth(other.getDepth());
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -8981,7 +8980,7 @@ public final class QueryProto {
                 done = true;
                 break;
               case 8: {
-                depth_ = input.readUInt64();
+                depth_ = input.readUInt32();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 8
@@ -9002,21 +9001,21 @@ public final class QueryProto {
       }
       private int bitField0_;
 
-      private long depth_ ;
+      private int depth_ ;
       /**
-       * <code>uint64 depth = 1 [json_name = "depth"];</code>
+       * <code>uint32 depth = 1 [json_name = "depth"];</code>
        * @return The depth.
        */
       @java.lang.Override
-      public long getDepth() {
+      public int getDepth() {
         return depth_;
       }
       /**
-       * <code>uint64 depth = 1 [json_name = "depth"];</code>
+       * <code>uint32 depth = 1 [json_name = "depth"];</code>
        * @param value The depth to set.
        * @return This builder for chaining.
        */
-      public Builder setDepth(long value) {
+      public Builder setDepth(int value) {
 
         depth_ = value;
         bitField0_ |= 0x00000001;
@@ -9024,12 +9023,12 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>uint64 depth = 1 [json_name = "depth"];</code>
+       * <code>uint32 depth = 1 [json_name = "depth"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDepth() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        depth_ = 0L;
+        depth_ = 0;
         onChanged();
         return this;
       }
@@ -9126,10 +9125,10 @@ public final class QueryProto {
         getHashHexBytes();
 
     /**
-     * <code>uint64 height = 3 [json_name = "height"];</code>
+     * <code>uint32 height = 3 [json_name = "height"];</code>
      * @return The height.
      */
-    long getHeight();
+    int getHeight();
 
     /**
      * <pre>
@@ -9279,13 +9278,13 @@ public final class QueryProto {
     }
 
     public static final int HEIGHT_FIELD_NUMBER = 3;
-    private long height_ = 0L;
+    private int height_ = 0;
     /**
-     * <code>uint64 height = 3 [json_name = "height"];</code>
+     * <code>uint32 height = 3 [json_name = "height"];</code>
      * @return The height.
      */
     @java.lang.Override
-    public long getHeight() {
+    public int getHeight() {
       return height_;
     }
 
@@ -9356,8 +9355,8 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hashHex_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, hashHex_);
       }
-      if (height_ != 0L) {
-        output.writeUInt64(3, height_);
+      if (height_ != 0) {
+        output.writeUInt32(3, height_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(work_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, work_);
@@ -9377,9 +9376,9 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hashHex_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, hashHex_);
       }
-      if (height_ != 0L) {
+      if (height_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(3, height_);
+          .computeUInt32Size(3, height_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(work_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, work_);
@@ -9423,8 +9422,7 @@ public final class QueryProto {
       hash = (37 * hash) + HASH_HEX_FIELD_NUMBER;
       hash = (53 * hash) + getHashHex().hashCode();
       hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getHeight());
+      hash = (53 * hash) + getHeight();
       hash = (37 * hash) + WORK_FIELD_NUMBER;
       hash = (53 * hash) + getWork().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -9571,7 +9569,7 @@ public final class QueryProto {
         bitField0_ = 0;
         headerHex_ = "";
         hashHex_ = "";
-        height_ = 0L;
+        height_ = 0;
         work_ = "";
         return this;
       }
@@ -9674,7 +9672,7 @@ public final class QueryProto {
           bitField0_ |= 0x00000002;
           onChanged();
         }
-        if (other.getHeight() != 0L) {
+        if (other.getHeight() != 0) {
           setHeight(other.getHeight());
         }
         if (!other.getWork().isEmpty()) {
@@ -9719,7 +9717,7 @@ public final class QueryProto {
                 break;
               } // case 18
               case 24: {
-                height_ = input.readUInt64();
+                height_ = input.readUInt32();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 24
@@ -9889,21 +9887,21 @@ public final class QueryProto {
         return this;
       }
 
-      private long height_ ;
+      private int height_ ;
       /**
-       * <code>uint64 height = 3 [json_name = "height"];</code>
+       * <code>uint32 height = 3 [json_name = "height"];</code>
        * @return The height.
        */
       @java.lang.Override
-      public long getHeight() {
+      public int getHeight() {
         return height_;
       }
       /**
-       * <code>uint64 height = 3 [json_name = "height"];</code>
+       * <code>uint32 height = 3 [json_name = "height"];</code>
        * @param value The height to set.
        * @return This builder for chaining.
        */
-      public Builder setHeight(long value) {
+      public Builder setHeight(int value) {
 
         height_ = value;
         bitField0_ |= 0x00000004;
@@ -9911,12 +9909,12 @@ public final class QueryProto {
         return this;
       }
       /**
-       * <code>uint64 height = 3 [json_name = "height"];</code>
+       * <code>uint32 height = 3 [json_name = "height"];</code>
        * @return This builder for chaining.
        */
       public Builder clearHeight() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        height_ = 0L;
+        height_ = 0;
         onChanged();
         return this;
       }
@@ -10180,76 +10178,76 @@ public final class QueryProto {
       "rams\030\001 \001(\0132!.babylon.btclightclient.v1.P" +
       "aramsB\004\310\336\037\000R\006params\"\\\n\022QueryHashesReques" +
       "t\022F\n\npagination\030\001 \001(\0132&.cosmos.base.quer" +
-      "y.v1beta1.PageRequestR\npagination\"\264\001\n\023Qu" +
-      "eryHashesResponse\022T\n\006hashes\030\001 \003(\014B<\332\336\0378g" +
-      "ithub.com/babylonchain/babylon/types.BTC" +
-      "HeaderHashBytesR\006hashes\022G\n\npagination\030\002 " +
-      "\001(\0132\'.cosmos.base.query.v1beta1.PageResp" +
-      "onseR\npagination\"h\n\024QueryContainsRequest" +
-      "\022P\n\004hash\030\001 \001(\014B<\332\336\0378github.com/babylonch" +
-      "ain/babylon/types.BTCHeaderHashBytesR\004ha" +
-      "sh\"3\n\025QueryContainsResponse\022\032\n\010contains\030" +
-      "\001 \001(\010R\010contains\"/\n\031QueryContainsBytesReq" +
-      "uest\022\022\n\004hash\030\001 \001(\014R\004hash\"8\n\032QueryContain" +
-      "sBytesResponse\022\032\n\010contains\030\001 \001(\010R\010contai" +
-      "ns\"_\n\025QueryMainChainRequest\022F\n\npaginatio" +
-      "n\030\001 \001(\0132&.cosmos.base.query.v1beta1.Page" +
-      "RequestR\npagination\"\255\001\n\026QueryMainChainRe" +
-      "sponse\022J\n\007headers\030\001 \003(\01320.babylon.btclig" +
-      "htclient.v1.BTCHeaderInfoResponseR\007heade" +
-      "rs\022G\n\npagination\030\002 \001(\0132\'.cosmos.base.que" +
-      "ry.v1beta1.PageResponseR\npagination\"\021\n\017Q" +
-      "ueryTipRequest\"\\\n\020QueryTipResponse\022H\n\006he" +
-      "ader\030\001 \001(\01320.babylon.btclightclient.v1.B" +
-      "TCHeaderInfoResponseR\006header\"\030\n\026QueryBas" +
-      "eHeaderRequest\"c\n\027QueryBaseHeaderRespons" +
-      "e\022H\n\006header\030\001 \001(\01320.babylon.btclightclie" +
-      "nt.v1.BTCHeaderInfoResponseR\006header\"-\n\027Q" +
-      "ueryHeaderDepthRequest\022\022\n\004hash\030\001 \001(\tR\004ha" +
-      "sh\"0\n\030QueryHeaderDepthResponse\022\024\n\005depth\030" +
-      "\001 \001(\004R\005depth\"\254\001\n\025BTCHeaderInfoResponse\022\035" +
-      "\n\nheader_hex\030\001 \001(\tR\theaderHex\022\031\n\010hash_he" +
-      "x\030\002 \001(\tR\007hashHex\022\026\n\006height\030\003 \001(\004R\006height" +
-      "\022A\n\004work\030\004 \001(\tB-\310\336\037\000\332\336\037\026cosmossdk.io/mat" +
-      "h.Uint\322\264-\013cosmos.UintR\004work2\370\t\n\005Query\022\222\001" +
-      "\n\006Params\022-.babylon.btclightclient.v1.Que" +
-      "ryParamsRequest\032..babylon.btclightclient" +
-      ".v1.QueryParamsResponse\")\202\323\344\223\002#\022!/babylo" +
-      "n/btclightclient/v1/params\022\222\001\n\006Hashes\022-." +
-      "babylon.btclightclient.v1.QueryHashesReq" +
-      "uest\032..babylon.btclightclient.v1.QueryHa" +
-      "shesResponse\")\202\323\344\223\002#\022!/babylon/btclightc" +
-      "lient/v1/hashes\022\232\001\n\010Contains\022/.babylon.b" +
-      "tclightclient.v1.QueryContainsRequest\0320." +
-      "babylon.btclightclient.v1.QueryContainsR" +
-      "esponse\"+\202\323\344\223\002%\022#/babylon/btclightclient" +
-      "/v1/contains\022\256\001\n\rContainsBytes\0224.babylon" +
-      ".btclightclient.v1.QueryContainsBytesReq" +
-      "uest\0325.babylon.btclightclient.v1.QueryCo" +
-      "ntainsBytesResponse\"0\202\323\344\223\002*\022(/babylon/bt" +
-      "clightclient/v1/containsBytes\022\236\001\n\tMainCh" +
-      "ain\0220.babylon.btclightclient.v1.QueryMai" +
-      "nChainRequest\0321.babylon.btclightclient.v" +
-      "1.QueryMainChainResponse\",\202\323\344\223\002&\022$/babyl" +
-      "on/btclightclient/v1/mainchain\022\206\001\n\003Tip\022*" +
-      ".babylon.btclightclient.v1.QueryTipReque" +
-      "st\032+.babylon.btclightclient.v1.QueryTipR" +
-      "esponse\"&\202\323\344\223\002 \022\036/babylon/btclightclient" +
-      "/v1/tip\022\242\001\n\nBaseHeader\0221.babylon.btcligh" +
-      "tclient.v1.QueryBaseHeaderRequest\0322.baby" +
-      "lon.btclightclient.v1.QueryBaseHeaderRes" +
-      "ponse\"-\202\323\344\223\002\'\022%/babylon/btclightclient/v" +
-      "1/baseheader\022\247\001\n\013HeaderDepth\0222.babylon.b" +
-      "tclightclient.v1.QueryHeaderDepthRequest" +
-      "\0323.babylon.btclightclient.v1.QueryHeader" +
-      "DepthResponse\"/\202\323\344\223\002)\022\'/babylon/btclight" +
-      "client/v1/depth/{hash}B\347\001\n\035com.babylon.b" +
-      "tclightclient.v1B\nQueryProtoZ6github.com" +
-      "/babylonchain/babylon/x/btclightclient/t" +
-      "ypes\242\002\003BBX\252\002\031Babylon.Btclightclient.V1\312\002" +
-      "\031Babylon\\Btclightclient\\V1\342\002%Babylon\\Btc" +
-      "lightclient\\V1\\GPBMetadata\352\002\033Babylon::Bt" +
-      "clightclient::V1b\006proto3"
+      "y.v1beta1.PageRequestR\npagination\"\266\001\n\023Qu" +
+      "eryHashesResponse\022V\n\006hashes\030\001 \003(\014B>\332\336\037:g" +
+      "ithub.com/babylonlabs-io/babylon/types.B" +
+      "TCHeaderHashBytesR\006hashes\022G\n\npagination\030" +
+      "\002 \001(\0132\'.cosmos.base.query.v1beta1.PageRe" +
+      "sponseR\npagination\"j\n\024QueryContainsReque" +
+      "st\022R\n\004hash\030\001 \001(\014B>\332\336\037:github.com/babylon" +
+      "labs-io/babylon/types.BTCHeaderHashBytes" +
+      "R\004hash\"3\n\025QueryContainsResponse\022\032\n\010conta" +
+      "ins\030\001 \001(\010R\010contains\"/\n\031QueryContainsByte" +
+      "sRequest\022\022\n\004hash\030\001 \001(\014R\004hash\"8\n\032QueryCon" +
+      "tainsBytesResponse\022\032\n\010contains\030\001 \001(\010R\010co" +
+      "ntains\"_\n\025QueryMainChainRequest\022F\n\npagin" +
+      "ation\030\001 \001(\0132&.cosmos.base.query.v1beta1." +
+      "PageRequestR\npagination\"\255\001\n\026QueryMainCha" +
+      "inResponse\022J\n\007headers\030\001 \003(\01320.babylon.bt" +
+      "clightclient.v1.BTCHeaderInfoResponseR\007h" +
+      "eaders\022G\n\npagination\030\002 \001(\0132\'.cosmos.base" +
+      ".query.v1beta1.PageResponseR\npagination\"" +
+      "\021\n\017QueryTipRequest\"\\\n\020QueryTipResponse\022H" +
+      "\n\006header\030\001 \001(\01320.babylon.btclightclient." +
+      "v1.BTCHeaderInfoResponseR\006header\"\030\n\026Quer" +
+      "yBaseHeaderRequest\"c\n\027QueryBaseHeaderRes" +
+      "ponse\022H\n\006header\030\001 \001(\01320.babylon.btclight" +
+      "client.v1.BTCHeaderInfoResponseR\006header\"" +
+      "-\n\027QueryHeaderDepthRequest\022\022\n\004hash\030\001 \001(\t" +
+      "R\004hash\"0\n\030QueryHeaderDepthResponse\022\024\n\005de" +
+      "pth\030\001 \001(\rR\005depth\"\254\001\n\025BTCHeaderInfoRespon" +
+      "se\022\035\n\nheader_hex\030\001 \001(\tR\theaderHex\022\031\n\010has" +
+      "h_hex\030\002 \001(\tR\007hashHex\022\026\n\006height\030\003 \001(\rR\006he" +
+      "ight\022A\n\004work\030\004 \001(\tB-\310\336\037\000\332\336\037\026cosmossdk.io" +
+      "/math.Uint\322\264-\013cosmos.UintR\004work2\370\t\n\005Quer" +
+      "y\022\222\001\n\006Params\022-.babylon.btclightclient.v1" +
+      ".QueryParamsRequest\032..babylon.btclightcl" +
+      "ient.v1.QueryParamsResponse\")\202\323\344\223\002#\022!/ba" +
+      "bylon/btclightclient/v1/params\022\222\001\n\006Hashe" +
+      "s\022-.babylon.btclightclient.v1.QueryHashe" +
+      "sRequest\032..babylon.btclightclient.v1.Que" +
+      "ryHashesResponse\")\202\323\344\223\002#\022!/babylon/btcli" +
+      "ghtclient/v1/hashes\022\232\001\n\010Contains\022/.babyl" +
+      "on.btclightclient.v1.QueryContainsReques" +
+      "t\0320.babylon.btclightclient.v1.QueryConta" +
+      "insResponse\"+\202\323\344\223\002%\022#/babylon/btclightcl" +
+      "ient/v1/contains\022\256\001\n\rContainsBytes\0224.bab" +
+      "ylon.btclightclient.v1.QueryContainsByte" +
+      "sRequest\0325.babylon.btclightclient.v1.Que" +
+      "ryContainsBytesResponse\"0\202\323\344\223\002*\022(/babylo" +
+      "n/btclightclient/v1/containsBytes\022\236\001\n\tMa" +
+      "inChain\0220.babylon.btclightclient.v1.Quer" +
+      "yMainChainRequest\0321.babylon.btclightclie" +
+      "nt.v1.QueryMainChainResponse\",\202\323\344\223\002&\022$/b" +
+      "abylon/btclightclient/v1/mainchain\022\206\001\n\003T" +
+      "ip\022*.babylon.btclightclient.v1.QueryTipR" +
+      "equest\032+.babylon.btclightclient.v1.Query" +
+      "TipResponse\"&\202\323\344\223\002 \022\036/babylon/btclightcl" +
+      "ient/v1/tip\022\242\001\n\nBaseHeader\0221.babylon.btc" +
+      "lightclient.v1.QueryBaseHeaderRequest\0322." +
+      "babylon.btclightclient.v1.QueryBaseHeade" +
+      "rResponse\"-\202\323\344\223\002\'\022%/babylon/btclightclie" +
+      "nt/v1/baseheader\022\247\001\n\013HeaderDepth\0222.babyl" +
+      "on.btclightclient.v1.QueryHeaderDepthReq" +
+      "uest\0323.babylon.btclightclient.v1.QueryHe" +
+      "aderDepthResponse\"/\202\323\344\223\002)\022\'/babylon/btcl" +
+      "ightclient/v1/depth/{hash}B\351\001\n\035com.babyl" +
+      "on.btclightclient.v1B\nQueryProtoZ8github" +
+      ".com/babylonlabs-io/babylon/x/btclightcl" +
+      "ient/types\242\002\003BBX\252\002\031Babylon.Btclightclien" +
+      "t.V1\312\002\031Babylon\\Btclightclient\\V1\342\002%Babyl" +
+      "on\\Btclightclient\\V1\\GPBMetadata\352\002\033Babyl" +
+      "on::Btclightclient::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

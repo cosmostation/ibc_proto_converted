@@ -37,7 +37,7 @@ struct Babylon_Btclightclient_V1_BTCHeaderInfo {
 
   var hash: Data = Data()
 
-  var height: UInt64 = 0
+  var height: UInt32 = 0
 
   var work: Data = Data()
 
@@ -71,7 +71,7 @@ extension Babylon_Btclightclient_V1_BTCHeaderInfo: SwiftProtobuf.Message, SwiftP
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularBytesField(value: &self.header) }()
       case 2: try { try decoder.decodeSingularBytesField(value: &self.hash) }()
-      case 3: try { try decoder.decodeSingularUInt64Field(value: &self.height) }()
+      case 3: try { try decoder.decodeSingularUInt32Field(value: &self.height) }()
       case 4: try { try decoder.decodeSingularBytesField(value: &self.work) }()
       default: break
       }
@@ -86,7 +86,7 @@ extension Babylon_Btclightclient_V1_BTCHeaderInfo: SwiftProtobuf.Message, SwiftP
       try visitor.visitSingularBytesField(value: self.hash, fieldNumber: 2)
     }
     if self.height != 0 {
-      try visitor.visitSingularUInt64Field(value: self.height, fieldNumber: 3)
+      try visitor.visitSingularUInt32Field(value: self.height, fieldNumber: 3)
     }
     if !self.work.isEmpty {
       try visitor.visitSingularBytesField(value: self.work, fieldNumber: 4)

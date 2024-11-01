@@ -42,7 +42,7 @@ struct Babylon_Monitor_V1_QueryEndedEpochBtcHeightResponse {
   // methods supported on all messages.
 
   /// height of btc light client when epoch ended
-  var btcLightClientHeight: UInt64 = 0
+  var btcLightClientHeight: UInt32 = 0
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -72,7 +72,7 @@ struct Babylon_Monitor_V1_QueryReportedCheckpointBtcHeightResponse {
   // methods supported on all messages.
 
   /// height of btc light client when checkpoint is reported
-  var btcLightClientHeight: UInt64 = 0
+  var btcLightClientHeight: UInt32 = 0
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -134,7 +134,7 @@ extension Babylon_Monitor_V1_QueryEndedEpochBtcHeightResponse: SwiftProtobuf.Mes
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.btcLightClientHeight) }()
+      case 1: try { try decoder.decodeSingularUInt32Field(value: &self.btcLightClientHeight) }()
       default: break
       }
     }
@@ -142,7 +142,7 @@ extension Babylon_Monitor_V1_QueryEndedEpochBtcHeightResponse: SwiftProtobuf.Mes
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.btcLightClientHeight != 0 {
-      try visitor.visitSingularUInt64Field(value: self.btcLightClientHeight, fieldNumber: 1)
+      try visitor.visitSingularUInt32Field(value: self.btcLightClientHeight, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -198,7 +198,7 @@ extension Babylon_Monitor_V1_QueryReportedCheckpointBtcHeightResponse: SwiftProt
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.btcLightClientHeight) }()
+      case 1: try { try decoder.decodeSingularUInt32Field(value: &self.btcLightClientHeight) }()
       default: break
       }
     }
@@ -206,7 +206,7 @@ extension Babylon_Monitor_V1_QueryReportedCheckpointBtcHeightResponse: SwiftProt
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.btcLightClientHeight != 0 {
-      try visitor.visitSingularUInt64Field(value: self.btcLightClientHeight, fieldNumber: 1)
+      try visitor.visitSingularUInt32Field(value: self.btcLightClientHeight, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }

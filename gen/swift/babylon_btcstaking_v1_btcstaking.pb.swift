@@ -20,26 +20,36 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-/// BTCDelegationStatus is the status of a delegation. The state transition path is
-/// PENDING -> ACTIVE -> UNBONDED with two possibilities:
-/// 1. the typical path when timelock of staking transaction expires.
-/// 2. the path when staker requests early undelegation through MsgBTCUndelegate message.
+/// BTCDelegationStatus is the status of a delegation.
+/// There are two possible valid state transition paths for a BTC delegation:
+/// - PENDING -> ACTIVE -> UNBONDED
+/// - PENDING -> VERIFIED -> ACTIVE -> UNBONDED
+/// and one invalid state transition path:
+/// - PENDING -> VERIFIED -> UNBONDED i.e the staker unbonded before
+/// activating delegation on Babylon chain.
+/// In valid transition paths, the delegation becomes UNBONDED when:
+/// - either the staking transaction timelock expires
+/// - or the staker requests early undelegation through MsgBTCUndelegate message.
 enum Babylon_Btcstaking_V1_BTCDelegationStatus: SwiftProtobuf.Enum {
   typealias RawValue = Int
 
-  /// PENDING defines a delegation that is waiting for covenant signatures to become active.
+  /// PENDING defines a delegation that is waiting for covenant signatures.
   case pending // = 0
 
+  /// VERIFIED defines a delegation that has covenant signatures but is not yet
+  /// included in the BTC chain.
+  case verified // = 1
+
   /// ACTIVE defines a delegation that has voting power
-  case active // = 1
+  case active // = 2
 
   /// UNBONDED defines a delegation no longer has voting power:
   /// - either reaching the end of staking transaction timelock
   /// - or receiving unbonding tx with signatures from staker and covenant committee
-  case unbonded // = 2
+  case unbonded // = 3
 
   /// ANY is any of the above status
-  case any // = 3
+  case any // = 4
   case UNRECOGNIZED(Int)
 
   init() {
@@ -49,9 +59,10 @@ enum Babylon_Btcstaking_V1_BTCDelegationStatus: SwiftProtobuf.Enum {
   init?(rawValue: Int) {
     switch rawValue {
     case 0: self = .pending
-    case 1: self = .active
-    case 2: self = .unbonded
-    case 3: self = .any
+    case 1: self = .verified
+    case 2: self = .active
+    case 3: self = .unbonded
+    case 4: self = .any
     default: self = .UNRECOGNIZED(rawValue)
     }
   }
@@ -59,9 +70,10 @@ enum Babylon_Btcstaking_V1_BTCDelegationStatus: SwiftProtobuf.Enum {
   var rawValue: Int {
     switch self {
     case .pending: return 0
-    case .active: return 1
-    case .unbonded: return 2
-    case .any: return 3
+    case .verified: return 1
+    case .active: return 2
+    case .unbonded: return 3
+    case .any: return 4
     case .UNRECOGNIZED(let i): return i
     }
   }
@@ -74,6 +86,7 @@ extension Babylon_Btcstaking_V1_BTCDelegationStatus: CaseIterable {
   // The compiler won't synthesize support with the UNRECOGNIZED case.
   static var allCases: [Babylon_Btcstaking_V1_BTCDelegationStatus] = [
     .pending,
+    .verified,
     .active,
     .unbonded,
     .any,
@@ -127,10 +140,10 @@ struct Babylon_Btcstaking_V1_FinalityProvider {
   /// slashed_btc_height indicates the BTC height when
   /// the finality provider is slashed.
   /// if it's 0 then the finality provider is not slashed
-  var slashedBtcHeight: UInt64 = 0
+  var slashedBtcHeight: UInt32 = 0
 
-  /// sluggish defines whether the finality provider is detected sluggish
-  var sluggish: Bool = false
+  /// jailed defines whether the finality provider is jailed
+  var jailed: Bool = false
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -164,10 +177,10 @@ struct Babylon_Btcstaking_V1_FinalityProviderWithMeta {
   /// slashed_btc_height indicates the BTC height when
   /// the finality provider is slashed.
   /// if it's 0 then the finality provider is not slashed
-  var slashedBtcHeight: UInt64 = 0
+  var slashedBtcHeight: UInt32 = 0
 
-  /// sluggish defines whether the finality provider is detected sluggish
-  var sluggish: Bool = false
+  /// jailed defines whether the finality provider is detected jailed
+  var jailed: Bool = false
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -212,16 +225,22 @@ struct Babylon_Btcstaking_V1_BTCDelegation {
     set {_uniqueStorage()._fpBtcPkList = newValue}
   }
 
+  /// staking_time is the number of blocks for which the delegation is locked on BTC chain
+  var stakingTime: UInt32 {
+    get {return _storage._stakingTime}
+    set {_uniqueStorage()._stakingTime = newValue}
+  }
+
   /// start_height is the start BTC height of the BTC delegation
   /// it is the start BTC height of the timelock
-  var startHeight: UInt64 {
+  var startHeight: UInt32 {
     get {return _storage._startHeight}
     set {_uniqueStorage()._startHeight = newValue}
   }
 
   /// end_height is the end height of the BTC delegation
-  /// it is the end BTC height of the timelock - w
-  var endHeight: UInt64 {
+  /// it is calculated by end_height = start_height + staking_time
+  var endHeight: UInt32 {
     get {return _storage._endHeight}
     set {_uniqueStorage()._endHeight = newValue}
   }
@@ -299,6 +318,24 @@ struct Babylon_Btcstaking_V1_BTCDelegation {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
+/// DelegatorUnbondingInfo contains the information about transaction which spent
+/// the staking output. It contains:
+/// - spend_stake_tx: the transaction which spent the staking output
+struct Babylon_Btcstaking_V1_DelegatorUnbondingInfo {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// spend_stake_tx is the transaction which spent the staking output. It is
+  /// filled only if spend_stake_tx is different than unbonding_tx registered
+  /// on the Babylon chain.
+  var spendStakeTx: Data = Data()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 /// BTCUndelegation contains the information about the early unbonding path of the BTC delegation
 struct Babylon_Btcstaking_V1_BTCUndelegation {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
@@ -315,13 +352,6 @@ struct Babylon_Btcstaking_V1_BTCUndelegation {
   /// finality provider or covenant yet.
   var slashingTx: Data = Data()
 
-  /// delegator_unbonding_sig is the signature on the unbonding tx
-  /// by the delegator (i.e., SK corresponding to btc_pk).
-  /// It effectively proves that the delegator wants to unbond and thus
-  /// Babylon will consider this BTC delegation unbonded. Delegator's BTC
-  /// on Bitcoin will be unbonded after timelock
-  var delegatorUnbondingSig: Data = Data()
-
   /// delegator_slashing_sig is the signature on the slashing tx
   /// by the delegator (i.e., SK corresponding to btc_pk).
   /// It will be a part of the witness for the unbonding tx output.
@@ -337,9 +367,22 @@ struct Babylon_Btcstaking_V1_BTCUndelegation {
   /// It must be provided after processing undelegate message by Babylon
   var covenantUnbondingSigList: [Babylon_Btcstaking_V1_SignatureInfo] = []
 
+  /// delegator_unbonding_info is the information about transaction which spent
+  /// the staking output
+  var delegatorUnbondingInfo: Babylon_Btcstaking_V1_DelegatorUnbondingInfo {
+    get {return _delegatorUnbondingInfo ?? Babylon_Btcstaking_V1_DelegatorUnbondingInfo()}
+    set {_delegatorUnbondingInfo = newValue}
+  }
+  /// Returns true if `delegatorUnbondingInfo` has been explicitly set.
+  var hasDelegatorUnbondingInfo: Bool {return self._delegatorUnbondingInfo != nil}
+  /// Clears the value of `delegatorUnbondingInfo`. Subsequent reads from it will return its default value.
+  mutating func clearDelegatorUnbondingInfo() {self._delegatorUnbondingInfo = nil}
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
+
+  fileprivate var _delegatorUnbondingInfo: Babylon_Btcstaking_V1_DelegatorUnbondingInfo? = nil
 }
 
 /// BTCDelegatorDelegations is a collection of BTC delegations from the same delegator.
@@ -430,17 +473,48 @@ struct Babylon_Btcstaking_V1_SelectiveSlashingEvidence {
   init() {}
 }
 
+/// InclusionProof proves the existence of tx on BTC blockchain
+/// including
+/// - the position of the tx on BTC blockchain
+/// - the Merkle proof that this tx is on the above position
+struct Babylon_Btcstaking_V1_InclusionProof {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// key is the position (txIdx, blockHash) of this tx on BTC blockchain
+  var key: Babylon_Btccheckpoint_V1_TransactionKey {
+    get {return _key ?? Babylon_Btccheckpoint_V1_TransactionKey()}
+    set {_key = newValue}
+  }
+  /// Returns true if `key` has been explicitly set.
+  var hasKey: Bool {return self._key != nil}
+  /// Clears the value of `key`. Subsequent reads from it will return its default value.
+  mutating func clearKey() {self._key = nil}
+
+  /// proof is the Merkle proof that this tx is included in the position in `key`
+  var proof: Data = Data()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _key: Babylon_Btccheckpoint_V1_TransactionKey? = nil
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Babylon_Btcstaking_V1_BTCDelegationStatus: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_FinalityProvider: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_FinalityProviderWithMeta: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_BTCDelegation: @unchecked Sendable {}
+extension Babylon_Btcstaking_V1_DelegatorUnbondingInfo: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_BTCUndelegation: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_BTCDelegatorDelegations: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_BTCDelegatorDelegationIndex: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_SignatureInfo: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_CovenantAdaptorSignatures: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_SelectiveSlashingEvidence: @unchecked Sendable {}
+extension Babylon_Btcstaking_V1_InclusionProof: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -450,9 +524,10 @@ fileprivate let _protobuf_package = "babylon.btcstaking.v1"
 extension Babylon_Btcstaking_V1_BTCDelegationStatus: SwiftProtobuf._ProtoNameProviding {
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "PENDING"),
-    1: .same(proto: "ACTIVE"),
-    2: .same(proto: "UNBONDED"),
-    3: .same(proto: "ANY"),
+    1: .same(proto: "VERIFIED"),
+    2: .same(proto: "ACTIVE"),
+    3: .same(proto: "UNBONDED"),
+    4: .same(proto: "ANY"),
   ]
 }
 
@@ -466,7 +541,7 @@ extension Babylon_Btcstaking_V1_FinalityProvider: SwiftProtobuf.Message, SwiftPr
     5: .same(proto: "pop"),
     6: .standard(proto: "slashed_babylon_height"),
     7: .standard(proto: "slashed_btc_height"),
-    8: .same(proto: "sluggish"),
+    8: .same(proto: "jailed"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -481,8 +556,8 @@ extension Babylon_Btcstaking_V1_FinalityProvider: SwiftProtobuf.Message, SwiftPr
       case 4: try { try decoder.decodeSingularBytesField(value: &self.btcPk) }()
       case 5: try { try decoder.decodeSingularMessageField(value: &self._pop) }()
       case 6: try { try decoder.decodeSingularUInt64Field(value: &self.slashedBabylonHeight) }()
-      case 7: try { try decoder.decodeSingularUInt64Field(value: &self.slashedBtcHeight) }()
-      case 8: try { try decoder.decodeSingularBoolField(value: &self.sluggish) }()
+      case 7: try { try decoder.decodeSingularUInt32Field(value: &self.slashedBtcHeight) }()
+      case 8: try { try decoder.decodeSingularBoolField(value: &self.jailed) }()
       default: break
       }
     }
@@ -512,10 +587,10 @@ extension Babylon_Btcstaking_V1_FinalityProvider: SwiftProtobuf.Message, SwiftPr
       try visitor.visitSingularUInt64Field(value: self.slashedBabylonHeight, fieldNumber: 6)
     }
     if self.slashedBtcHeight != 0 {
-      try visitor.visitSingularUInt64Field(value: self.slashedBtcHeight, fieldNumber: 7)
+      try visitor.visitSingularUInt32Field(value: self.slashedBtcHeight, fieldNumber: 7)
     }
-    if self.sluggish != false {
-      try visitor.visitSingularBoolField(value: self.sluggish, fieldNumber: 8)
+    if self.jailed != false {
+      try visitor.visitSingularBoolField(value: self.jailed, fieldNumber: 8)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -528,7 +603,7 @@ extension Babylon_Btcstaking_V1_FinalityProvider: SwiftProtobuf.Message, SwiftPr
     if lhs._pop != rhs._pop {return false}
     if lhs.slashedBabylonHeight != rhs.slashedBabylonHeight {return false}
     if lhs.slashedBtcHeight != rhs.slashedBtcHeight {return false}
-    if lhs.sluggish != rhs.sluggish {return false}
+    if lhs.jailed != rhs.jailed {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -542,7 +617,7 @@ extension Babylon_Btcstaking_V1_FinalityProviderWithMeta: SwiftProtobuf.Message,
     3: .standard(proto: "voting_power"),
     4: .standard(proto: "slashed_babylon_height"),
     5: .standard(proto: "slashed_btc_height"),
-    6: .same(proto: "sluggish"),
+    6: .same(proto: "jailed"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -555,8 +630,8 @@ extension Babylon_Btcstaking_V1_FinalityProviderWithMeta: SwiftProtobuf.Message,
       case 2: try { try decoder.decodeSingularUInt64Field(value: &self.height) }()
       case 3: try { try decoder.decodeSingularUInt64Field(value: &self.votingPower) }()
       case 4: try { try decoder.decodeSingularUInt64Field(value: &self.slashedBabylonHeight) }()
-      case 5: try { try decoder.decodeSingularUInt64Field(value: &self.slashedBtcHeight) }()
-      case 6: try { try decoder.decodeSingularBoolField(value: &self.sluggish) }()
+      case 5: try { try decoder.decodeSingularUInt32Field(value: &self.slashedBtcHeight) }()
+      case 6: try { try decoder.decodeSingularBoolField(value: &self.jailed) }()
       default: break
       }
     }
@@ -576,10 +651,10 @@ extension Babylon_Btcstaking_V1_FinalityProviderWithMeta: SwiftProtobuf.Message,
       try visitor.visitSingularUInt64Field(value: self.slashedBabylonHeight, fieldNumber: 4)
     }
     if self.slashedBtcHeight != 0 {
-      try visitor.visitSingularUInt64Field(value: self.slashedBtcHeight, fieldNumber: 5)
+      try visitor.visitSingularUInt32Field(value: self.slashedBtcHeight, fieldNumber: 5)
     }
-    if self.sluggish != false {
-      try visitor.visitSingularBoolField(value: self.sluggish, fieldNumber: 6)
+    if self.jailed != false {
+      try visitor.visitSingularBoolField(value: self.jailed, fieldNumber: 6)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -590,7 +665,7 @@ extension Babylon_Btcstaking_V1_FinalityProviderWithMeta: SwiftProtobuf.Message,
     if lhs.votingPower != rhs.votingPower {return false}
     if lhs.slashedBabylonHeight != rhs.slashedBabylonHeight {return false}
     if lhs.slashedBtcHeight != rhs.slashedBtcHeight {return false}
-    if lhs.sluggish != rhs.sluggish {return false}
+    if lhs.jailed != rhs.jailed {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -603,17 +678,18 @@ extension Babylon_Btcstaking_V1_BTCDelegation: SwiftProtobuf.Message, SwiftProto
     2: .standard(proto: "btc_pk"),
     3: .same(proto: "pop"),
     4: .standard(proto: "fp_btc_pk_list"),
-    5: .standard(proto: "start_height"),
-    6: .standard(proto: "end_height"),
-    7: .standard(proto: "total_sat"),
-    8: .standard(proto: "staking_tx"),
-    9: .standard(proto: "staking_output_idx"),
-    10: .standard(proto: "slashing_tx"),
-    11: .standard(proto: "delegator_sig"),
-    12: .standard(proto: "covenant_sigs"),
-    13: .standard(proto: "unbonding_time"),
-    14: .standard(proto: "btc_undelegation"),
-    15: .standard(proto: "params_version"),
+    5: .standard(proto: "staking_time"),
+    6: .standard(proto: "start_height"),
+    7: .standard(proto: "end_height"),
+    8: .standard(proto: "total_sat"),
+    9: .standard(proto: "staking_tx"),
+    10: .standard(proto: "staking_output_idx"),
+    11: .standard(proto: "slashing_tx"),
+    12: .standard(proto: "delegator_sig"),
+    13: .standard(proto: "covenant_sigs"),
+    14: .standard(proto: "unbonding_time"),
+    15: .standard(proto: "btc_undelegation"),
+    16: .standard(proto: "params_version"),
   ]
 
   fileprivate class _StorageClass {
@@ -621,8 +697,9 @@ extension Babylon_Btcstaking_V1_BTCDelegation: SwiftProtobuf.Message, SwiftProto
     var _btcPk: Data = Data()
     var _pop: Babylon_Btcstaking_V1_ProofOfPossessionBTC? = nil
     var _fpBtcPkList: [Data] = []
-    var _startHeight: UInt64 = 0
-    var _endHeight: UInt64 = 0
+    var _stakingTime: UInt32 = 0
+    var _startHeight: UInt32 = 0
+    var _endHeight: UInt32 = 0
     var _totalSat: UInt64 = 0
     var _stakingTx: Data = Data()
     var _stakingOutputIdx: UInt32 = 0
@@ -642,6 +719,7 @@ extension Babylon_Btcstaking_V1_BTCDelegation: SwiftProtobuf.Message, SwiftProto
       _btcPk = source._btcPk
       _pop = source._pop
       _fpBtcPkList = source._fpBtcPkList
+      _stakingTime = source._stakingTime
       _startHeight = source._startHeight
       _endHeight = source._endHeight
       _totalSat = source._totalSat
@@ -675,17 +753,18 @@ extension Babylon_Btcstaking_V1_BTCDelegation: SwiftProtobuf.Message, SwiftProto
         case 2: try { try decoder.decodeSingularBytesField(value: &_storage._btcPk) }()
         case 3: try { try decoder.decodeSingularMessageField(value: &_storage._pop) }()
         case 4: try { try decoder.decodeRepeatedBytesField(value: &_storage._fpBtcPkList) }()
-        case 5: try { try decoder.decodeSingularUInt64Field(value: &_storage._startHeight) }()
-        case 6: try { try decoder.decodeSingularUInt64Field(value: &_storage._endHeight) }()
-        case 7: try { try decoder.decodeSingularUInt64Field(value: &_storage._totalSat) }()
-        case 8: try { try decoder.decodeSingularBytesField(value: &_storage._stakingTx) }()
-        case 9: try { try decoder.decodeSingularUInt32Field(value: &_storage._stakingOutputIdx) }()
-        case 10: try { try decoder.decodeSingularBytesField(value: &_storage._slashingTx) }()
-        case 11: try { try decoder.decodeSingularBytesField(value: &_storage._delegatorSig) }()
-        case 12: try { try decoder.decodeRepeatedMessageField(value: &_storage._covenantSigs) }()
-        case 13: try { try decoder.decodeSingularUInt32Field(value: &_storage._unbondingTime) }()
-        case 14: try { try decoder.decodeSingularMessageField(value: &_storage._btcUndelegation) }()
-        case 15: try { try decoder.decodeSingularUInt32Field(value: &_storage._paramsVersion) }()
+        case 5: try { try decoder.decodeSingularUInt32Field(value: &_storage._stakingTime) }()
+        case 6: try { try decoder.decodeSingularUInt32Field(value: &_storage._startHeight) }()
+        case 7: try { try decoder.decodeSingularUInt32Field(value: &_storage._endHeight) }()
+        case 8: try { try decoder.decodeSingularUInt64Field(value: &_storage._totalSat) }()
+        case 9: try { try decoder.decodeSingularBytesField(value: &_storage._stakingTx) }()
+        case 10: try { try decoder.decodeSingularUInt32Field(value: &_storage._stakingOutputIdx) }()
+        case 11: try { try decoder.decodeSingularBytesField(value: &_storage._slashingTx) }()
+        case 12: try { try decoder.decodeSingularBytesField(value: &_storage._delegatorSig) }()
+        case 13: try { try decoder.decodeRepeatedMessageField(value: &_storage._covenantSigs) }()
+        case 14: try { try decoder.decodeSingularUInt32Field(value: &_storage._unbondingTime) }()
+        case 15: try { try decoder.decodeSingularMessageField(value: &_storage._btcUndelegation) }()
+        case 16: try { try decoder.decodeSingularUInt32Field(value: &_storage._paramsVersion) }()
         default: break
         }
       }
@@ -710,38 +789,41 @@ extension Babylon_Btcstaking_V1_BTCDelegation: SwiftProtobuf.Message, SwiftProto
       if !_storage._fpBtcPkList.isEmpty {
         try visitor.visitRepeatedBytesField(value: _storage._fpBtcPkList, fieldNumber: 4)
       }
+      if _storage._stakingTime != 0 {
+        try visitor.visitSingularUInt32Field(value: _storage._stakingTime, fieldNumber: 5)
+      }
       if _storage._startHeight != 0 {
-        try visitor.visitSingularUInt64Field(value: _storage._startHeight, fieldNumber: 5)
+        try visitor.visitSingularUInt32Field(value: _storage._startHeight, fieldNumber: 6)
       }
       if _storage._endHeight != 0 {
-        try visitor.visitSingularUInt64Field(value: _storage._endHeight, fieldNumber: 6)
+        try visitor.visitSingularUInt32Field(value: _storage._endHeight, fieldNumber: 7)
       }
       if _storage._totalSat != 0 {
-        try visitor.visitSingularUInt64Field(value: _storage._totalSat, fieldNumber: 7)
+        try visitor.visitSingularUInt64Field(value: _storage._totalSat, fieldNumber: 8)
       }
       if !_storage._stakingTx.isEmpty {
-        try visitor.visitSingularBytesField(value: _storage._stakingTx, fieldNumber: 8)
+        try visitor.visitSingularBytesField(value: _storage._stakingTx, fieldNumber: 9)
       }
       if _storage._stakingOutputIdx != 0 {
-        try visitor.visitSingularUInt32Field(value: _storage._stakingOutputIdx, fieldNumber: 9)
+        try visitor.visitSingularUInt32Field(value: _storage._stakingOutputIdx, fieldNumber: 10)
       }
       if !_storage._slashingTx.isEmpty {
-        try visitor.visitSingularBytesField(value: _storage._slashingTx, fieldNumber: 10)
+        try visitor.visitSingularBytesField(value: _storage._slashingTx, fieldNumber: 11)
       }
       if !_storage._delegatorSig.isEmpty {
-        try visitor.visitSingularBytesField(value: _storage._delegatorSig, fieldNumber: 11)
+        try visitor.visitSingularBytesField(value: _storage._delegatorSig, fieldNumber: 12)
       }
       if !_storage._covenantSigs.isEmpty {
-        try visitor.visitRepeatedMessageField(value: _storage._covenantSigs, fieldNumber: 12)
+        try visitor.visitRepeatedMessageField(value: _storage._covenantSigs, fieldNumber: 13)
       }
       if _storage._unbondingTime != 0 {
-        try visitor.visitSingularUInt32Field(value: _storage._unbondingTime, fieldNumber: 13)
+        try visitor.visitSingularUInt32Field(value: _storage._unbondingTime, fieldNumber: 14)
       }
       try { if let v = _storage._btcUndelegation {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 14)
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 15)
       } }()
       if _storage._paramsVersion != 0 {
-        try visitor.visitSingularUInt32Field(value: _storage._paramsVersion, fieldNumber: 15)
+        try visitor.visitSingularUInt32Field(value: _storage._paramsVersion, fieldNumber: 16)
       }
     }
     try unknownFields.traverse(visitor: &visitor)
@@ -756,6 +838,7 @@ extension Babylon_Btcstaking_V1_BTCDelegation: SwiftProtobuf.Message, SwiftProto
         if _storage._btcPk != rhs_storage._btcPk {return false}
         if _storage._pop != rhs_storage._pop {return false}
         if _storage._fpBtcPkList != rhs_storage._fpBtcPkList {return false}
+        if _storage._stakingTime != rhs_storage._stakingTime {return false}
         if _storage._startHeight != rhs_storage._startHeight {return false}
         if _storage._endHeight != rhs_storage._endHeight {return false}
         if _storage._totalSat != rhs_storage._totalSat {return false}
@@ -776,15 +859,47 @@ extension Babylon_Btcstaking_V1_BTCDelegation: SwiftProtobuf.Message, SwiftProto
   }
 }
 
+extension Babylon_Btcstaking_V1_DelegatorUnbondingInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".DelegatorUnbondingInfo"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "spend_stake_tx"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularBytesField(value: &self.spendStakeTx) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.spendStakeTx.isEmpty {
+      try visitor.visitSingularBytesField(value: self.spendStakeTx, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Btcstaking_V1_DelegatorUnbondingInfo, rhs: Babylon_Btcstaking_V1_DelegatorUnbondingInfo) -> Bool {
+    if lhs.spendStakeTx != rhs.spendStakeTx {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
 extension Babylon_Btcstaking_V1_BTCUndelegation: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".BTCUndelegation"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "unbonding_tx"),
     2: .standard(proto: "slashing_tx"),
-    3: .standard(proto: "delegator_unbonding_sig"),
-    4: .standard(proto: "delegator_slashing_sig"),
-    5: .standard(proto: "covenant_slashing_sigs"),
-    6: .standard(proto: "covenant_unbonding_sig_list"),
+    3: .standard(proto: "delegator_slashing_sig"),
+    4: .standard(proto: "covenant_slashing_sigs"),
+    5: .standard(proto: "covenant_unbonding_sig_list"),
+    6: .standard(proto: "delegator_unbonding_info"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -795,44 +910,48 @@ extension Babylon_Btcstaking_V1_BTCUndelegation: SwiftProtobuf.Message, SwiftPro
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularBytesField(value: &self.unbondingTx) }()
       case 2: try { try decoder.decodeSingularBytesField(value: &self.slashingTx) }()
-      case 3: try { try decoder.decodeSingularBytesField(value: &self.delegatorUnbondingSig) }()
-      case 4: try { try decoder.decodeSingularBytesField(value: &self.delegatorSlashingSig) }()
-      case 5: try { try decoder.decodeRepeatedMessageField(value: &self.covenantSlashingSigs) }()
-      case 6: try { try decoder.decodeRepeatedMessageField(value: &self.covenantUnbondingSigList) }()
+      case 3: try { try decoder.decodeSingularBytesField(value: &self.delegatorSlashingSig) }()
+      case 4: try { try decoder.decodeRepeatedMessageField(value: &self.covenantSlashingSigs) }()
+      case 5: try { try decoder.decodeRepeatedMessageField(value: &self.covenantUnbondingSigList) }()
+      case 6: try { try decoder.decodeSingularMessageField(value: &self._delegatorUnbondingInfo) }()
       default: break
       }
     }
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
     if !self.unbondingTx.isEmpty {
       try visitor.visitSingularBytesField(value: self.unbondingTx, fieldNumber: 1)
     }
     if !self.slashingTx.isEmpty {
       try visitor.visitSingularBytesField(value: self.slashingTx, fieldNumber: 2)
     }
-    if !self.delegatorUnbondingSig.isEmpty {
-      try visitor.visitSingularBytesField(value: self.delegatorUnbondingSig, fieldNumber: 3)
-    }
     if !self.delegatorSlashingSig.isEmpty {
-      try visitor.visitSingularBytesField(value: self.delegatorSlashingSig, fieldNumber: 4)
+      try visitor.visitSingularBytesField(value: self.delegatorSlashingSig, fieldNumber: 3)
     }
     if !self.covenantSlashingSigs.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.covenantSlashingSigs, fieldNumber: 5)
+      try visitor.visitRepeatedMessageField(value: self.covenantSlashingSigs, fieldNumber: 4)
     }
     if !self.covenantUnbondingSigList.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.covenantUnbondingSigList, fieldNumber: 6)
+      try visitor.visitRepeatedMessageField(value: self.covenantUnbondingSigList, fieldNumber: 5)
     }
+    try { if let v = self._delegatorUnbondingInfo {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Babylon_Btcstaking_V1_BTCUndelegation, rhs: Babylon_Btcstaking_V1_BTCUndelegation) -> Bool {
     if lhs.unbondingTx != rhs.unbondingTx {return false}
     if lhs.slashingTx != rhs.slashingTx {return false}
-    if lhs.delegatorUnbondingSig != rhs.delegatorUnbondingSig {return false}
     if lhs.delegatorSlashingSig != rhs.delegatorSlashingSig {return false}
     if lhs.covenantSlashingSigs != rhs.covenantSlashingSigs {return false}
     if lhs.covenantUnbondingSigList != rhs.covenantUnbondingSigList {return false}
+    if lhs._delegatorUnbondingInfo != rhs._delegatorUnbondingInfo {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -1017,6 +1136,48 @@ extension Babylon_Btcstaking_V1_SelectiveSlashingEvidence: SwiftProtobuf.Message
     if lhs.stakingTxHash != rhs.stakingTxHash {return false}
     if lhs.fpBtcPk != rhs.fpBtcPk {return false}
     if lhs.recoveredFpBtcSk != rhs.recoveredFpBtcSk {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Btcstaking_V1_InclusionProof: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".InclusionProof"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "key"),
+    2: .same(proto: "proof"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._key) }()
+      case 2: try { try decoder.decodeSingularBytesField(value: &self.proof) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._key {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
+    if !self.proof.isEmpty {
+      try visitor.visitSingularBytesField(value: self.proof, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Btcstaking_V1_InclusionProof, rhs: Babylon_Btcstaking_V1_InclusionProof) -> Bool {
+    if lhs._key != rhs._key {return false}
+    if lhs.proof != rhs.proof {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

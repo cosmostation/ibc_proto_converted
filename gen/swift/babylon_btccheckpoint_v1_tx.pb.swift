@@ -20,7 +20,7 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-/// MsgInsertBTCSpvProof defines resquest to insert a new checkpoint into the
+/// MsgInsertBTCSpvProof defines request to insert a new checkpoint into the
 /// store
 struct Babylon_Btccheckpoint_V1_MsgInsertBTCSpvProof {
   // SwiftProtobuf.Message conformance is added in an extension below. See the

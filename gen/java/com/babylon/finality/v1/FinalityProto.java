@@ -14,6 +14,3836 @@ public final class FinalityProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface VotingPowerDistCacheOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.finality.v1.VotingPowerDistCache)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * total_sat is the total amount of bonded BTC stake (in Satoshi) of all the finality providers
+     * in the cache
+     * </pre>
+     *
+     * <code>uint64 total_bonded_sat = 1 [json_name = "totalBondedSat"];</code>
+     * @return The totalBondedSat.
+     */
+    long getTotalBondedSat();
+
+    /**
+     * <pre>
+     * finality_providers is a list of finality providers' voting power information
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+     */
+    java.util.List<com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo> 
+        getFinalityProvidersList();
+    /**
+     * <pre>
+     * finality_providers is a list of finality providers' voting power information
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+     */
+    com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo getFinalityProviders(int index);
+    /**
+     * <pre>
+     * finality_providers is a list of finality providers' voting power information
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+     */
+    int getFinalityProvidersCount();
+    /**
+     * <pre>
+     * finality_providers is a list of finality providers' voting power information
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+     */
+    java.util.List<? extends com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfoOrBuilder> 
+        getFinalityProvidersOrBuilderList();
+    /**
+     * <pre>
+     * finality_providers is a list of finality providers' voting power information
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+     */
+    com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfoOrBuilder getFinalityProvidersOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * num_active_fps is the number of finality providers that have active BTC
+     * delegations as well as timestamped public randomness
+     * </pre>
+     *
+     * <code>uint32 num_active_fps = 3 [json_name = "numActiveFps"];</code>
+     * @return The numActiveFps.
+     */
+    int getNumActiveFps();
+  }
+  /**
+   * <pre>
+   * VotingPowerDistCache is the cache for voting power distribution of finality providers
+   * and their BTC delegations at a height
+   * </pre>
+   *
+   * Protobuf type {@code babylon.finality.v1.VotingPowerDistCache}
+   */
+  public static final class VotingPowerDistCache extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.finality.v1.VotingPowerDistCache)
+      VotingPowerDistCacheOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VotingPowerDistCache.newBuilder() to construct.
+    private VotingPowerDistCache(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VotingPowerDistCache() {
+      finalityProviders_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VotingPowerDistCache();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.finality.v1.FinalityProto.internal_static_babylon_finality_v1_VotingPowerDistCache_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.finality.v1.FinalityProto.internal_static_babylon_finality_v1_VotingPowerDistCache_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.finality.v1.FinalityProto.VotingPowerDistCache.class, com.babylon.finality.v1.FinalityProto.VotingPowerDistCache.Builder.class);
+    }
+
+    public static final int TOTAL_BONDED_SAT_FIELD_NUMBER = 1;
+    private long totalBondedSat_ = 0L;
+    /**
+     * <pre>
+     * total_sat is the total amount of bonded BTC stake (in Satoshi) of all the finality providers
+     * in the cache
+     * </pre>
+     *
+     * <code>uint64 total_bonded_sat = 1 [json_name = "totalBondedSat"];</code>
+     * @return The totalBondedSat.
+     */
+    @java.lang.Override
+    public long getTotalBondedSat() {
+      return totalBondedSat_;
+    }
+
+    public static final int FINALITY_PROVIDERS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo> finalityProviders_;
+    /**
+     * <pre>
+     * finality_providers is a list of finality providers' voting power information
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo> getFinalityProvidersList() {
+      return finalityProviders_;
+    }
+    /**
+     * <pre>
+     * finality_providers is a list of finality providers' voting power information
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfoOrBuilder> 
+        getFinalityProvidersOrBuilderList() {
+      return finalityProviders_;
+    }
+    /**
+     * <pre>
+     * finality_providers is a list of finality providers' voting power information
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+     */
+    @java.lang.Override
+    public int getFinalityProvidersCount() {
+      return finalityProviders_.size();
+    }
+    /**
+     * <pre>
+     * finality_providers is a list of finality providers' voting power information
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+     */
+    @java.lang.Override
+    public com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo getFinalityProviders(int index) {
+      return finalityProviders_.get(index);
+    }
+    /**
+     * <pre>
+     * finality_providers is a list of finality providers' voting power information
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+     */
+    @java.lang.Override
+    public com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfoOrBuilder getFinalityProvidersOrBuilder(
+        int index) {
+      return finalityProviders_.get(index);
+    }
+
+    public static final int NUM_ACTIVE_FPS_FIELD_NUMBER = 3;
+    private int numActiveFps_ = 0;
+    /**
+     * <pre>
+     * num_active_fps is the number of finality providers that have active BTC
+     * delegations as well as timestamped public randomness
+     * </pre>
+     *
+     * <code>uint32 num_active_fps = 3 [json_name = "numActiveFps"];</code>
+     * @return The numActiveFps.
+     */
+    @java.lang.Override
+    public int getNumActiveFps() {
+      return numActiveFps_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (totalBondedSat_ != 0L) {
+        output.writeUInt64(1, totalBondedSat_);
+      }
+      for (int i = 0; i < finalityProviders_.size(); i++) {
+        output.writeMessage(2, finalityProviders_.get(i));
+      }
+      if (numActiveFps_ != 0) {
+        output.writeUInt32(3, numActiveFps_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (totalBondedSat_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, totalBondedSat_);
+      }
+      for (int i = 0; i < finalityProviders_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, finalityProviders_.get(i));
+      }
+      if (numActiveFps_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, numActiveFps_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.finality.v1.FinalityProto.VotingPowerDistCache)) {
+        return super.equals(obj);
+      }
+      com.babylon.finality.v1.FinalityProto.VotingPowerDistCache other = (com.babylon.finality.v1.FinalityProto.VotingPowerDistCache) obj;
+
+      if (getTotalBondedSat()
+          != other.getTotalBondedSat()) return false;
+      if (!getFinalityProvidersList()
+          .equals(other.getFinalityProvidersList())) return false;
+      if (getNumActiveFps()
+          != other.getNumActiveFps()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TOTAL_BONDED_SAT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotalBondedSat());
+      if (getFinalityProvidersCount() > 0) {
+        hash = (37 * hash) + FINALITY_PROVIDERS_FIELD_NUMBER;
+        hash = (53 * hash) + getFinalityProvidersList().hashCode();
+      }
+      hash = (37 * hash) + NUM_ACTIVE_FPS_FIELD_NUMBER;
+      hash = (53 * hash) + getNumActiveFps();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.finality.v1.FinalityProto.VotingPowerDistCache parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.FinalityProto.VotingPowerDistCache parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.FinalityProto.VotingPowerDistCache parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.FinalityProto.VotingPowerDistCache parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.FinalityProto.VotingPowerDistCache parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.FinalityProto.VotingPowerDistCache parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.FinalityProto.VotingPowerDistCache parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.finality.v1.FinalityProto.VotingPowerDistCache parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.finality.v1.FinalityProto.VotingPowerDistCache parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.finality.v1.FinalityProto.VotingPowerDistCache parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.FinalityProto.VotingPowerDistCache parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.finality.v1.FinalityProto.VotingPowerDistCache parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.finality.v1.FinalityProto.VotingPowerDistCache prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * VotingPowerDistCache is the cache for voting power distribution of finality providers
+     * and their BTC delegations at a height
+     * </pre>
+     *
+     * Protobuf type {@code babylon.finality.v1.VotingPowerDistCache}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.finality.v1.VotingPowerDistCache)
+        com.babylon.finality.v1.FinalityProto.VotingPowerDistCacheOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.finality.v1.FinalityProto.internal_static_babylon_finality_v1_VotingPowerDistCache_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.finality.v1.FinalityProto.internal_static_babylon_finality_v1_VotingPowerDistCache_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.finality.v1.FinalityProto.VotingPowerDistCache.class, com.babylon.finality.v1.FinalityProto.VotingPowerDistCache.Builder.class);
+      }
+
+      // Construct using com.babylon.finality.v1.FinalityProto.VotingPowerDistCache.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        totalBondedSat_ = 0L;
+        if (finalityProvidersBuilder_ == null) {
+          finalityProviders_ = java.util.Collections.emptyList();
+        } else {
+          finalityProviders_ = null;
+          finalityProvidersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        numActiveFps_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.finality.v1.FinalityProto.internal_static_babylon_finality_v1_VotingPowerDistCache_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.FinalityProto.VotingPowerDistCache getDefaultInstanceForType() {
+        return com.babylon.finality.v1.FinalityProto.VotingPowerDistCache.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.FinalityProto.VotingPowerDistCache build() {
+        com.babylon.finality.v1.FinalityProto.VotingPowerDistCache result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.FinalityProto.VotingPowerDistCache buildPartial() {
+        com.babylon.finality.v1.FinalityProto.VotingPowerDistCache result = new com.babylon.finality.v1.FinalityProto.VotingPowerDistCache(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.babylon.finality.v1.FinalityProto.VotingPowerDistCache result) {
+        if (finalityProvidersBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            finalityProviders_ = java.util.Collections.unmodifiableList(finalityProviders_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.finalityProviders_ = finalityProviders_;
+        } else {
+          result.finalityProviders_ = finalityProvidersBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.babylon.finality.v1.FinalityProto.VotingPowerDistCache result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.totalBondedSat_ = totalBondedSat_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.numActiveFps_ = numActiveFps_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.finality.v1.FinalityProto.VotingPowerDistCache) {
+          return mergeFrom((com.babylon.finality.v1.FinalityProto.VotingPowerDistCache)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.finality.v1.FinalityProto.VotingPowerDistCache other) {
+        if (other == com.babylon.finality.v1.FinalityProto.VotingPowerDistCache.getDefaultInstance()) return this;
+        if (other.getTotalBondedSat() != 0L) {
+          setTotalBondedSat(other.getTotalBondedSat());
+        }
+        if (finalityProvidersBuilder_ == null) {
+          if (!other.finalityProviders_.isEmpty()) {
+            if (finalityProviders_.isEmpty()) {
+              finalityProviders_ = other.finalityProviders_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureFinalityProvidersIsMutable();
+              finalityProviders_.addAll(other.finalityProviders_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.finalityProviders_.isEmpty()) {
+            if (finalityProvidersBuilder_.isEmpty()) {
+              finalityProvidersBuilder_.dispose();
+              finalityProvidersBuilder_ = null;
+              finalityProviders_ = other.finalityProviders_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              finalityProvidersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFinalityProvidersFieldBuilder() : null;
+            } else {
+              finalityProvidersBuilder_.addAllMessages(other.finalityProviders_);
+            }
+          }
+        }
+        if (other.getNumActiveFps() != 0) {
+          setNumActiveFps(other.getNumActiveFps());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                totalBondedSat_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo m =
+                    input.readMessage(
+                        com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo.parser(),
+                        extensionRegistry);
+                if (finalityProvidersBuilder_ == null) {
+                  ensureFinalityProvidersIsMutable();
+                  finalityProviders_.add(m);
+                } else {
+                  finalityProvidersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 24: {
+                numActiveFps_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long totalBondedSat_ ;
+      /**
+       * <pre>
+       * total_sat is the total amount of bonded BTC stake (in Satoshi) of all the finality providers
+       * in the cache
+       * </pre>
+       *
+       * <code>uint64 total_bonded_sat = 1 [json_name = "totalBondedSat"];</code>
+       * @return The totalBondedSat.
+       */
+      @java.lang.Override
+      public long getTotalBondedSat() {
+        return totalBondedSat_;
+      }
+      /**
+       * <pre>
+       * total_sat is the total amount of bonded BTC stake (in Satoshi) of all the finality providers
+       * in the cache
+       * </pre>
+       *
+       * <code>uint64 total_bonded_sat = 1 [json_name = "totalBondedSat"];</code>
+       * @param value The totalBondedSat to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalBondedSat(long value) {
+
+        totalBondedSat_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_sat is the total amount of bonded BTC stake (in Satoshi) of all the finality providers
+       * in the cache
+       * </pre>
+       *
+       * <code>uint64 total_bonded_sat = 1 [json_name = "totalBondedSat"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalBondedSat() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        totalBondedSat_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo> finalityProviders_ =
+        java.util.Collections.emptyList();
+      private void ensureFinalityProvidersIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          finalityProviders_ = new java.util.ArrayList<com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo>(finalityProviders_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo, com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo.Builder, com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfoOrBuilder> finalityProvidersBuilder_;
+
+      /**
+       * <pre>
+       * finality_providers is a list of finality providers' voting power information
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+       */
+      public java.util.List<com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo> getFinalityProvidersList() {
+        if (finalityProvidersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(finalityProviders_);
+        } else {
+          return finalityProvidersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * finality_providers is a list of finality providers' voting power information
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+       */
+      public int getFinalityProvidersCount() {
+        if (finalityProvidersBuilder_ == null) {
+          return finalityProviders_.size();
+        } else {
+          return finalityProvidersBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * finality_providers is a list of finality providers' voting power information
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+       */
+      public com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo getFinalityProviders(int index) {
+        if (finalityProvidersBuilder_ == null) {
+          return finalityProviders_.get(index);
+        } else {
+          return finalityProvidersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * finality_providers is a list of finality providers' voting power information
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+       */
+      public Builder setFinalityProviders(
+          int index, com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo value) {
+        if (finalityProvidersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFinalityProvidersIsMutable();
+          finalityProviders_.set(index, value);
+          onChanged();
+        } else {
+          finalityProvidersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finality_providers is a list of finality providers' voting power information
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+       */
+      public Builder setFinalityProviders(
+          int index, com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo.Builder builderForValue) {
+        if (finalityProvidersBuilder_ == null) {
+          ensureFinalityProvidersIsMutable();
+          finalityProviders_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          finalityProvidersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finality_providers is a list of finality providers' voting power information
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+       */
+      public Builder addFinalityProviders(com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo value) {
+        if (finalityProvidersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFinalityProvidersIsMutable();
+          finalityProviders_.add(value);
+          onChanged();
+        } else {
+          finalityProvidersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finality_providers is a list of finality providers' voting power information
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+       */
+      public Builder addFinalityProviders(
+          int index, com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo value) {
+        if (finalityProvidersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFinalityProvidersIsMutable();
+          finalityProviders_.add(index, value);
+          onChanged();
+        } else {
+          finalityProvidersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finality_providers is a list of finality providers' voting power information
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+       */
+      public Builder addFinalityProviders(
+          com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo.Builder builderForValue) {
+        if (finalityProvidersBuilder_ == null) {
+          ensureFinalityProvidersIsMutable();
+          finalityProviders_.add(builderForValue.build());
+          onChanged();
+        } else {
+          finalityProvidersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finality_providers is a list of finality providers' voting power information
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+       */
+      public Builder addFinalityProviders(
+          int index, com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo.Builder builderForValue) {
+        if (finalityProvidersBuilder_ == null) {
+          ensureFinalityProvidersIsMutable();
+          finalityProviders_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          finalityProvidersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finality_providers is a list of finality providers' voting power information
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+       */
+      public Builder addAllFinalityProviders(
+          java.lang.Iterable<? extends com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo> values) {
+        if (finalityProvidersBuilder_ == null) {
+          ensureFinalityProvidersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, finalityProviders_);
+          onChanged();
+        } else {
+          finalityProvidersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finality_providers is a list of finality providers' voting power information
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+       */
+      public Builder clearFinalityProviders() {
+        if (finalityProvidersBuilder_ == null) {
+          finalityProviders_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          finalityProvidersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finality_providers is a list of finality providers' voting power information
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+       */
+      public Builder removeFinalityProviders(int index) {
+        if (finalityProvidersBuilder_ == null) {
+          ensureFinalityProvidersIsMutable();
+          finalityProviders_.remove(index);
+          onChanged();
+        } else {
+          finalityProvidersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finality_providers is a list of finality providers' voting power information
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+       */
+      public com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo.Builder getFinalityProvidersBuilder(
+          int index) {
+        return getFinalityProvidersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * finality_providers is a list of finality providers' voting power information
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+       */
+      public com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfoOrBuilder getFinalityProvidersOrBuilder(
+          int index) {
+        if (finalityProvidersBuilder_ == null) {
+          return finalityProviders_.get(index);  } else {
+          return finalityProvidersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * finality_providers is a list of finality providers' voting power information
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+       */
+      public java.util.List<? extends com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfoOrBuilder> 
+           getFinalityProvidersOrBuilderList() {
+        if (finalityProvidersBuilder_ != null) {
+          return finalityProvidersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(finalityProviders_);
+        }
+      }
+      /**
+       * <pre>
+       * finality_providers is a list of finality providers' voting power information
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+       */
+      public com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo.Builder addFinalityProvidersBuilder() {
+        return getFinalityProvidersFieldBuilder().addBuilder(
+            com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * finality_providers is a list of finality providers' voting power information
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+       */
+      public com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo.Builder addFinalityProvidersBuilder(
+          int index) {
+        return getFinalityProvidersFieldBuilder().addBuilder(
+            index, com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * finality_providers is a list of finality providers' voting power information
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.FinalityProviderDistInfo finality_providers = 2 [json_name = "finalityProviders"];</code>
+       */
+      public java.util.List<com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo.Builder> 
+           getFinalityProvidersBuilderList() {
+        return getFinalityProvidersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo, com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo.Builder, com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfoOrBuilder> 
+          getFinalityProvidersFieldBuilder() {
+        if (finalityProvidersBuilder_ == null) {
+          finalityProvidersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo, com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo.Builder, com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfoOrBuilder>(
+                  finalityProviders_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          finalityProviders_ = null;
+        }
+        return finalityProvidersBuilder_;
+      }
+
+      private int numActiveFps_ ;
+      /**
+       * <pre>
+       * num_active_fps is the number of finality providers that have active BTC
+       * delegations as well as timestamped public randomness
+       * </pre>
+       *
+       * <code>uint32 num_active_fps = 3 [json_name = "numActiveFps"];</code>
+       * @return The numActiveFps.
+       */
+      @java.lang.Override
+      public int getNumActiveFps() {
+        return numActiveFps_;
+      }
+      /**
+       * <pre>
+       * num_active_fps is the number of finality providers that have active BTC
+       * delegations as well as timestamped public randomness
+       * </pre>
+       *
+       * <code>uint32 num_active_fps = 3 [json_name = "numActiveFps"];</code>
+       * @param value The numActiveFps to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumActiveFps(int value) {
+
+        numActiveFps_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * num_active_fps is the number of finality providers that have active BTC
+       * delegations as well as timestamped public randomness
+       * </pre>
+       *
+       * <code>uint32 num_active_fps = 3 [json_name = "numActiveFps"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumActiveFps() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        numActiveFps_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.finality.v1.VotingPowerDistCache)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.finality.v1.VotingPowerDistCache)
+    private static final com.babylon.finality.v1.FinalityProto.VotingPowerDistCache DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.finality.v1.FinalityProto.VotingPowerDistCache();
+    }
+
+    public static com.babylon.finality.v1.FinalityProto.VotingPowerDistCache getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VotingPowerDistCache>
+        PARSER = new com.google.protobuf.AbstractParser<VotingPowerDistCache>() {
+      @java.lang.Override
+      public VotingPowerDistCache parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<VotingPowerDistCache> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VotingPowerDistCache> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.finality.v1.FinalityProto.VotingPowerDistCache getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FinalityProviderDistInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.finality.v1.FinalityProviderDistInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * btc_pk is the Bitcoin secp256k1 PK of this finality provider
+     * the PK follows encoding in BIP-340 spec
+     * </pre>
+     *
+     * <code>bytes btc_pk = 1 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+     * @return The btcPk.
+     */
+    com.google.protobuf.ByteString getBtcPk();
+
+    /**
+     * <pre>
+     * addr is the address to receive commission from delegations.
+     * </pre>
+     *
+     * <code>string addr = 2 [json_name = "addr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The addr.
+     */
+    java.lang.String getAddr();
+    /**
+     * <pre>
+     * addr is the address to receive commission from delegations.
+     * </pre>
+     *
+     * <code>string addr = 2 [json_name = "addr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for addr.
+     */
+    com.google.protobuf.ByteString
+        getAddrBytes();
+
+    /**
+     * <pre>
+     * commission defines the commission rate of finality provider
+     * </pre>
+     *
+     * <code>string commission = 3 [json_name = "commission", (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The commission.
+     */
+    java.lang.String getCommission();
+    /**
+     * <pre>
+     * commission defines the commission rate of finality provider
+     * </pre>
+     *
+     * <code>string commission = 3 [json_name = "commission", (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for commission.
+     */
+    com.google.protobuf.ByteString
+        getCommissionBytes();
+
+    /**
+     * <pre>
+     * total_bonded_sat is the total amount of bonded BTC stake (in Satoshi) of the finality provider
+     * </pre>
+     *
+     * <code>uint64 total_bonded_sat = 4 [json_name = "totalBondedSat"];</code>
+     * @return The totalBondedSat.
+     */
+    long getTotalBondedSat();
+
+    /**
+     * <pre>
+     * btc_dels is a list of BTC delegations' voting power information under this finality provider
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+     */
+    java.util.List<com.babylon.finality.v1.FinalityProto.BTCDelDistInfo> 
+        getBtcDelsList();
+    /**
+     * <pre>
+     * btc_dels is a list of BTC delegations' voting power information under this finality provider
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+     */
+    com.babylon.finality.v1.FinalityProto.BTCDelDistInfo getBtcDels(int index);
+    /**
+     * <pre>
+     * btc_dels is a list of BTC delegations' voting power information under this finality provider
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+     */
+    int getBtcDelsCount();
+    /**
+     * <pre>
+     * btc_dels is a list of BTC delegations' voting power information under this finality provider
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+     */
+    java.util.List<? extends com.babylon.finality.v1.FinalityProto.BTCDelDistInfoOrBuilder> 
+        getBtcDelsOrBuilderList();
+    /**
+     * <pre>
+     * btc_dels is a list of BTC delegations' voting power information under this finality provider
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+     */
+    com.babylon.finality.v1.FinalityProto.BTCDelDistInfoOrBuilder getBtcDelsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * is_timestamped indicates whether the finality provider
+     * has timestamped public randomness committed
+     * if no, it should not be assigned voting power
+     * </pre>
+     *
+     * <code>bool is_timestamped = 6 [json_name = "isTimestamped"];</code>
+     * @return The isTimestamped.
+     */
+    boolean getIsTimestamped();
+
+    /**
+     * <pre>
+     * is_jailed indicates whether the finality provider
+     * is jailed, if so, it should not be assigned voting power
+     * </pre>
+     *
+     * <code>bool is_jailed = 7 [json_name = "isJailed"];</code>
+     * @return The isJailed.
+     */
+    boolean getIsJailed();
+
+    /**
+     * <pre>
+     * is_slashed indicates whether the finality provider
+     * is slashed, if so, it should not be assigned voting power
+     * </pre>
+     *
+     * <code>bool is_slashed = 8 [json_name = "isSlashed"];</code>
+     * @return The isSlashed.
+     */
+    boolean getIsSlashed();
+  }
+  /**
+   * <pre>
+   * FinalityProviderDistInfo is the reward distribution of a finality provider and its BTC delegations
+   * </pre>
+   *
+   * Protobuf type {@code babylon.finality.v1.FinalityProviderDistInfo}
+   */
+  public static final class FinalityProviderDistInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.finality.v1.FinalityProviderDistInfo)
+      FinalityProviderDistInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FinalityProviderDistInfo.newBuilder() to construct.
+    private FinalityProviderDistInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FinalityProviderDistInfo() {
+      btcPk_ = com.google.protobuf.ByteString.EMPTY;
+      addr_ = "";
+      commission_ = "";
+      btcDels_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FinalityProviderDistInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.finality.v1.FinalityProto.internal_static_babylon_finality_v1_FinalityProviderDistInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.finality.v1.FinalityProto.internal_static_babylon_finality_v1_FinalityProviderDistInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo.class, com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo.Builder.class);
+    }
+
+    public static final int BTC_PK_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString btcPk_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * btc_pk is the Bitcoin secp256k1 PK of this finality provider
+     * the PK follows encoding in BIP-340 spec
+     * </pre>
+     *
+     * <code>bytes btc_pk = 1 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+     * @return The btcPk.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getBtcPk() {
+      return btcPk_;
+    }
+
+    public static final int ADDR_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object addr_ = "";
+    /**
+     * <pre>
+     * addr is the address to receive commission from delegations.
+     * </pre>
+     *
+     * <code>string addr = 2 [json_name = "addr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The addr.
+     */
+    @java.lang.Override
+    public java.lang.String getAddr() {
+      java.lang.Object ref = addr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        addr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * addr is the address to receive commission from delegations.
+     * </pre>
+     *
+     * <code>string addr = 2 [json_name = "addr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for addr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddrBytes() {
+      java.lang.Object ref = addr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        addr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COMMISSION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object commission_ = "";
+    /**
+     * <pre>
+     * commission defines the commission rate of finality provider
+     * </pre>
+     *
+     * <code>string commission = 3 [json_name = "commission", (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The commission.
+     */
+    @java.lang.Override
+    public java.lang.String getCommission() {
+      java.lang.Object ref = commission_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        commission_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * commission defines the commission rate of finality provider
+     * </pre>
+     *
+     * <code>string commission = 3 [json_name = "commission", (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for commission.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCommissionBytes() {
+      java.lang.Object ref = commission_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        commission_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOTAL_BONDED_SAT_FIELD_NUMBER = 4;
+    private long totalBondedSat_ = 0L;
+    /**
+     * <pre>
+     * total_bonded_sat is the total amount of bonded BTC stake (in Satoshi) of the finality provider
+     * </pre>
+     *
+     * <code>uint64 total_bonded_sat = 4 [json_name = "totalBondedSat"];</code>
+     * @return The totalBondedSat.
+     */
+    @java.lang.Override
+    public long getTotalBondedSat() {
+      return totalBondedSat_;
+    }
+
+    public static final int BTC_DELS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.babylon.finality.v1.FinalityProto.BTCDelDistInfo> btcDels_;
+    /**
+     * <pre>
+     * btc_dels is a list of BTC delegations' voting power information under this finality provider
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.babylon.finality.v1.FinalityProto.BTCDelDistInfo> getBtcDelsList() {
+      return btcDels_;
+    }
+    /**
+     * <pre>
+     * btc_dels is a list of BTC delegations' voting power information under this finality provider
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.babylon.finality.v1.FinalityProto.BTCDelDistInfoOrBuilder> 
+        getBtcDelsOrBuilderList() {
+      return btcDels_;
+    }
+    /**
+     * <pre>
+     * btc_dels is a list of BTC delegations' voting power information under this finality provider
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+     */
+    @java.lang.Override
+    public int getBtcDelsCount() {
+      return btcDels_.size();
+    }
+    /**
+     * <pre>
+     * btc_dels is a list of BTC delegations' voting power information under this finality provider
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+     */
+    @java.lang.Override
+    public com.babylon.finality.v1.FinalityProto.BTCDelDistInfo getBtcDels(int index) {
+      return btcDels_.get(index);
+    }
+    /**
+     * <pre>
+     * btc_dels is a list of BTC delegations' voting power information under this finality provider
+     * </pre>
+     *
+     * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+     */
+    @java.lang.Override
+    public com.babylon.finality.v1.FinalityProto.BTCDelDistInfoOrBuilder getBtcDelsOrBuilder(
+        int index) {
+      return btcDels_.get(index);
+    }
+
+    public static final int IS_TIMESTAMPED_FIELD_NUMBER = 6;
+    private boolean isTimestamped_ = false;
+    /**
+     * <pre>
+     * is_timestamped indicates whether the finality provider
+     * has timestamped public randomness committed
+     * if no, it should not be assigned voting power
+     * </pre>
+     *
+     * <code>bool is_timestamped = 6 [json_name = "isTimestamped"];</code>
+     * @return The isTimestamped.
+     */
+    @java.lang.Override
+    public boolean getIsTimestamped() {
+      return isTimestamped_;
+    }
+
+    public static final int IS_JAILED_FIELD_NUMBER = 7;
+    private boolean isJailed_ = false;
+    /**
+     * <pre>
+     * is_jailed indicates whether the finality provider
+     * is jailed, if so, it should not be assigned voting power
+     * </pre>
+     *
+     * <code>bool is_jailed = 7 [json_name = "isJailed"];</code>
+     * @return The isJailed.
+     */
+    @java.lang.Override
+    public boolean getIsJailed() {
+      return isJailed_;
+    }
+
+    public static final int IS_SLASHED_FIELD_NUMBER = 8;
+    private boolean isSlashed_ = false;
+    /**
+     * <pre>
+     * is_slashed indicates whether the finality provider
+     * is slashed, if so, it should not be assigned voting power
+     * </pre>
+     *
+     * <code>bool is_slashed = 8 [json_name = "isSlashed"];</code>
+     * @return The isSlashed.
+     */
+    @java.lang.Override
+    public boolean getIsSlashed() {
+      return isSlashed_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!btcPk_.isEmpty()) {
+        output.writeBytes(1, btcPk_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(addr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, addr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(commission_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, commission_);
+      }
+      if (totalBondedSat_ != 0L) {
+        output.writeUInt64(4, totalBondedSat_);
+      }
+      for (int i = 0; i < btcDels_.size(); i++) {
+        output.writeMessage(5, btcDels_.get(i));
+      }
+      if (isTimestamped_ != false) {
+        output.writeBool(6, isTimestamped_);
+      }
+      if (isJailed_ != false) {
+        output.writeBool(7, isJailed_);
+      }
+      if (isSlashed_ != false) {
+        output.writeBool(8, isSlashed_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!btcPk_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, btcPk_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(addr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, addr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(commission_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, commission_);
+      }
+      if (totalBondedSat_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, totalBondedSat_);
+      }
+      for (int i = 0; i < btcDels_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, btcDels_.get(i));
+      }
+      if (isTimestamped_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, isTimestamped_);
+      }
+      if (isJailed_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, isJailed_);
+      }
+      if (isSlashed_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, isSlashed_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo)) {
+        return super.equals(obj);
+      }
+      com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo other = (com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo) obj;
+
+      if (!getBtcPk()
+          .equals(other.getBtcPk())) return false;
+      if (!getAddr()
+          .equals(other.getAddr())) return false;
+      if (!getCommission()
+          .equals(other.getCommission())) return false;
+      if (getTotalBondedSat()
+          != other.getTotalBondedSat()) return false;
+      if (!getBtcDelsList()
+          .equals(other.getBtcDelsList())) return false;
+      if (getIsTimestamped()
+          != other.getIsTimestamped()) return false;
+      if (getIsJailed()
+          != other.getIsJailed()) return false;
+      if (getIsSlashed()
+          != other.getIsSlashed()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BTC_PK_FIELD_NUMBER;
+      hash = (53 * hash) + getBtcPk().hashCode();
+      hash = (37 * hash) + ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getAddr().hashCode();
+      hash = (37 * hash) + COMMISSION_FIELD_NUMBER;
+      hash = (53 * hash) + getCommission().hashCode();
+      hash = (37 * hash) + TOTAL_BONDED_SAT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotalBondedSat());
+      if (getBtcDelsCount() > 0) {
+        hash = (37 * hash) + BTC_DELS_FIELD_NUMBER;
+        hash = (53 * hash) + getBtcDelsList().hashCode();
+      }
+      hash = (37 * hash) + IS_TIMESTAMPED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsTimestamped());
+      hash = (37 * hash) + IS_JAILED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsJailed());
+      hash = (37 * hash) + IS_SLASHED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsSlashed());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * FinalityProviderDistInfo is the reward distribution of a finality provider and its BTC delegations
+     * </pre>
+     *
+     * Protobuf type {@code babylon.finality.v1.FinalityProviderDistInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.finality.v1.FinalityProviderDistInfo)
+        com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.finality.v1.FinalityProto.internal_static_babylon_finality_v1_FinalityProviderDistInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.finality.v1.FinalityProto.internal_static_babylon_finality_v1_FinalityProviderDistInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo.class, com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo.Builder.class);
+      }
+
+      // Construct using com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        btcPk_ = com.google.protobuf.ByteString.EMPTY;
+        addr_ = "";
+        commission_ = "";
+        totalBondedSat_ = 0L;
+        if (btcDelsBuilder_ == null) {
+          btcDels_ = java.util.Collections.emptyList();
+        } else {
+          btcDels_ = null;
+          btcDelsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        isTimestamped_ = false;
+        isJailed_ = false;
+        isSlashed_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.finality.v1.FinalityProto.internal_static_babylon_finality_v1_FinalityProviderDistInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo getDefaultInstanceForType() {
+        return com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo build() {
+        com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo buildPartial() {
+        com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo result = new com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo result) {
+        if (btcDelsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            btcDels_ = java.util.Collections.unmodifiableList(btcDels_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.btcDels_ = btcDels_;
+        } else {
+          result.btcDels_ = btcDelsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.btcPk_ = btcPk_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.addr_ = addr_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.commission_ = commission_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.totalBondedSat_ = totalBondedSat_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.isTimestamped_ = isTimestamped_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.isJailed_ = isJailed_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.isSlashed_ = isSlashed_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo) {
+          return mergeFrom((com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo other) {
+        if (other == com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo.getDefaultInstance()) return this;
+        if (other.getBtcPk() != com.google.protobuf.ByteString.EMPTY) {
+          setBtcPk(other.getBtcPk());
+        }
+        if (!other.getAddr().isEmpty()) {
+          addr_ = other.addr_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getCommission().isEmpty()) {
+          commission_ = other.commission_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getTotalBondedSat() != 0L) {
+          setTotalBondedSat(other.getTotalBondedSat());
+        }
+        if (btcDelsBuilder_ == null) {
+          if (!other.btcDels_.isEmpty()) {
+            if (btcDels_.isEmpty()) {
+              btcDels_ = other.btcDels_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureBtcDelsIsMutable();
+              btcDels_.addAll(other.btcDels_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.btcDels_.isEmpty()) {
+            if (btcDelsBuilder_.isEmpty()) {
+              btcDelsBuilder_.dispose();
+              btcDelsBuilder_ = null;
+              btcDels_ = other.btcDels_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              btcDelsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBtcDelsFieldBuilder() : null;
+            } else {
+              btcDelsBuilder_.addAllMessages(other.btcDels_);
+            }
+          }
+        }
+        if (other.getIsTimestamped() != false) {
+          setIsTimestamped(other.getIsTimestamped());
+        }
+        if (other.getIsJailed() != false) {
+          setIsJailed(other.getIsJailed());
+        }
+        if (other.getIsSlashed() != false) {
+          setIsSlashed(other.getIsSlashed());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                btcPk_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                addr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                commission_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                totalBondedSat_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                com.babylon.finality.v1.FinalityProto.BTCDelDistInfo m =
+                    input.readMessage(
+                        com.babylon.finality.v1.FinalityProto.BTCDelDistInfo.parser(),
+                        extensionRegistry);
+                if (btcDelsBuilder_ == null) {
+                  ensureBtcDelsIsMutable();
+                  btcDels_.add(m);
+                } else {
+                  btcDelsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 48: {
+                isTimestamped_ = input.readBool();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 56: {
+                isJailed_ = input.readBool();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 64: {
+                isSlashed_ = input.readBool();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString btcPk_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * btc_pk is the Bitcoin secp256k1 PK of this finality provider
+       * the PK follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>bytes btc_pk = 1 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+       * @return The btcPk.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getBtcPk() {
+        return btcPk_;
+      }
+      /**
+       * <pre>
+       * btc_pk is the Bitcoin secp256k1 PK of this finality provider
+       * the PK follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>bytes btc_pk = 1 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+       * @param value The btcPk to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBtcPk(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        btcPk_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * btc_pk is the Bitcoin secp256k1 PK of this finality provider
+       * the PK follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>bytes btc_pk = 1 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBtcPk() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        btcPk_ = getDefaultInstance().getBtcPk();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object addr_ = "";
+      /**
+       * <pre>
+       * addr is the address to receive commission from delegations.
+       * </pre>
+       *
+       * <code>string addr = 2 [json_name = "addr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The addr.
+       */
+      public java.lang.String getAddr() {
+        java.lang.Object ref = addr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          addr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * addr is the address to receive commission from delegations.
+       * </pre>
+       *
+       * <code>string addr = 2 [json_name = "addr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for addr.
+       */
+      public com.google.protobuf.ByteString
+          getAddrBytes() {
+        java.lang.Object ref = addr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          addr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * addr is the address to receive commission from delegations.
+       * </pre>
+       *
+       * <code>string addr = 2 [json_name = "addr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The addr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        addr_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * addr is the address to receive commission from delegations.
+       * </pre>
+       *
+       * <code>string addr = 2 [json_name = "addr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddr() {
+        addr_ = getDefaultInstance().getAddr();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * addr is the address to receive commission from delegations.
+       * </pre>
+       *
+       * <code>string addr = 2 [json_name = "addr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for addr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        addr_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object commission_ = "";
+      /**
+       * <pre>
+       * commission defines the commission rate of finality provider
+       * </pre>
+       *
+       * <code>string commission = 3 [json_name = "commission", (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The commission.
+       */
+      public java.lang.String getCommission() {
+        java.lang.Object ref = commission_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          commission_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * commission defines the commission rate of finality provider
+       * </pre>
+       *
+       * <code>string commission = 3 [json_name = "commission", (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The bytes for commission.
+       */
+      public com.google.protobuf.ByteString
+          getCommissionBytes() {
+        java.lang.Object ref = commission_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          commission_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * commission defines the commission rate of finality provider
+       * </pre>
+       *
+       * <code>string commission = 3 [json_name = "commission", (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The commission to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommission(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        commission_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * commission defines the commission rate of finality provider
+       * </pre>
+       *
+       * <code>string commission = 3 [json_name = "commission", (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCommission() {
+        commission_ = getDefaultInstance().getCommission();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * commission defines the commission rate of finality provider
+       * </pre>
+       *
+       * <code>string commission = 3 [json_name = "commission", (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The bytes for commission to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommissionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        commission_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private long totalBondedSat_ ;
+      /**
+       * <pre>
+       * total_bonded_sat is the total amount of bonded BTC stake (in Satoshi) of the finality provider
+       * </pre>
+       *
+       * <code>uint64 total_bonded_sat = 4 [json_name = "totalBondedSat"];</code>
+       * @return The totalBondedSat.
+       */
+      @java.lang.Override
+      public long getTotalBondedSat() {
+        return totalBondedSat_;
+      }
+      /**
+       * <pre>
+       * total_bonded_sat is the total amount of bonded BTC stake (in Satoshi) of the finality provider
+       * </pre>
+       *
+       * <code>uint64 total_bonded_sat = 4 [json_name = "totalBondedSat"];</code>
+       * @param value The totalBondedSat to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalBondedSat(long value) {
+
+        totalBondedSat_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_bonded_sat is the total amount of bonded BTC stake (in Satoshi) of the finality provider
+       * </pre>
+       *
+       * <code>uint64 total_bonded_sat = 4 [json_name = "totalBondedSat"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalBondedSat() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        totalBondedSat_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.babylon.finality.v1.FinalityProto.BTCDelDistInfo> btcDels_ =
+        java.util.Collections.emptyList();
+      private void ensureBtcDelsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          btcDels_ = new java.util.ArrayList<com.babylon.finality.v1.FinalityProto.BTCDelDistInfo>(btcDels_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.babylon.finality.v1.FinalityProto.BTCDelDistInfo, com.babylon.finality.v1.FinalityProto.BTCDelDistInfo.Builder, com.babylon.finality.v1.FinalityProto.BTCDelDistInfoOrBuilder> btcDelsBuilder_;
+
+      /**
+       * <pre>
+       * btc_dels is a list of BTC delegations' voting power information under this finality provider
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+       */
+      public java.util.List<com.babylon.finality.v1.FinalityProto.BTCDelDistInfo> getBtcDelsList() {
+        if (btcDelsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(btcDels_);
+        } else {
+          return btcDelsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * btc_dels is a list of BTC delegations' voting power information under this finality provider
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+       */
+      public int getBtcDelsCount() {
+        if (btcDelsBuilder_ == null) {
+          return btcDels_.size();
+        } else {
+          return btcDelsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * btc_dels is a list of BTC delegations' voting power information under this finality provider
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+       */
+      public com.babylon.finality.v1.FinalityProto.BTCDelDistInfo getBtcDels(int index) {
+        if (btcDelsBuilder_ == null) {
+          return btcDels_.get(index);
+        } else {
+          return btcDelsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * btc_dels is a list of BTC delegations' voting power information under this finality provider
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+       */
+      public Builder setBtcDels(
+          int index, com.babylon.finality.v1.FinalityProto.BTCDelDistInfo value) {
+        if (btcDelsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBtcDelsIsMutable();
+          btcDels_.set(index, value);
+          onChanged();
+        } else {
+          btcDelsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * btc_dels is a list of BTC delegations' voting power information under this finality provider
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+       */
+      public Builder setBtcDels(
+          int index, com.babylon.finality.v1.FinalityProto.BTCDelDistInfo.Builder builderForValue) {
+        if (btcDelsBuilder_ == null) {
+          ensureBtcDelsIsMutable();
+          btcDels_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          btcDelsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * btc_dels is a list of BTC delegations' voting power information under this finality provider
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+       */
+      public Builder addBtcDels(com.babylon.finality.v1.FinalityProto.BTCDelDistInfo value) {
+        if (btcDelsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBtcDelsIsMutable();
+          btcDels_.add(value);
+          onChanged();
+        } else {
+          btcDelsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * btc_dels is a list of BTC delegations' voting power information under this finality provider
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+       */
+      public Builder addBtcDels(
+          int index, com.babylon.finality.v1.FinalityProto.BTCDelDistInfo value) {
+        if (btcDelsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBtcDelsIsMutable();
+          btcDels_.add(index, value);
+          onChanged();
+        } else {
+          btcDelsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * btc_dels is a list of BTC delegations' voting power information under this finality provider
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+       */
+      public Builder addBtcDels(
+          com.babylon.finality.v1.FinalityProto.BTCDelDistInfo.Builder builderForValue) {
+        if (btcDelsBuilder_ == null) {
+          ensureBtcDelsIsMutable();
+          btcDels_.add(builderForValue.build());
+          onChanged();
+        } else {
+          btcDelsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * btc_dels is a list of BTC delegations' voting power information under this finality provider
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+       */
+      public Builder addBtcDels(
+          int index, com.babylon.finality.v1.FinalityProto.BTCDelDistInfo.Builder builderForValue) {
+        if (btcDelsBuilder_ == null) {
+          ensureBtcDelsIsMutable();
+          btcDels_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          btcDelsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * btc_dels is a list of BTC delegations' voting power information under this finality provider
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+       */
+      public Builder addAllBtcDels(
+          java.lang.Iterable<? extends com.babylon.finality.v1.FinalityProto.BTCDelDistInfo> values) {
+        if (btcDelsBuilder_ == null) {
+          ensureBtcDelsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, btcDels_);
+          onChanged();
+        } else {
+          btcDelsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * btc_dels is a list of BTC delegations' voting power information under this finality provider
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+       */
+      public Builder clearBtcDels() {
+        if (btcDelsBuilder_ == null) {
+          btcDels_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          btcDelsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * btc_dels is a list of BTC delegations' voting power information under this finality provider
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+       */
+      public Builder removeBtcDels(int index) {
+        if (btcDelsBuilder_ == null) {
+          ensureBtcDelsIsMutable();
+          btcDels_.remove(index);
+          onChanged();
+        } else {
+          btcDelsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * btc_dels is a list of BTC delegations' voting power information under this finality provider
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+       */
+      public com.babylon.finality.v1.FinalityProto.BTCDelDistInfo.Builder getBtcDelsBuilder(
+          int index) {
+        return getBtcDelsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * btc_dels is a list of BTC delegations' voting power information under this finality provider
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+       */
+      public com.babylon.finality.v1.FinalityProto.BTCDelDistInfoOrBuilder getBtcDelsOrBuilder(
+          int index) {
+        if (btcDelsBuilder_ == null) {
+          return btcDels_.get(index);  } else {
+          return btcDelsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * btc_dels is a list of BTC delegations' voting power information under this finality provider
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+       */
+      public java.util.List<? extends com.babylon.finality.v1.FinalityProto.BTCDelDistInfoOrBuilder> 
+           getBtcDelsOrBuilderList() {
+        if (btcDelsBuilder_ != null) {
+          return btcDelsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(btcDels_);
+        }
+      }
+      /**
+       * <pre>
+       * btc_dels is a list of BTC delegations' voting power information under this finality provider
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+       */
+      public com.babylon.finality.v1.FinalityProto.BTCDelDistInfo.Builder addBtcDelsBuilder() {
+        return getBtcDelsFieldBuilder().addBuilder(
+            com.babylon.finality.v1.FinalityProto.BTCDelDistInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * btc_dels is a list of BTC delegations' voting power information under this finality provider
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+       */
+      public com.babylon.finality.v1.FinalityProto.BTCDelDistInfo.Builder addBtcDelsBuilder(
+          int index) {
+        return getBtcDelsFieldBuilder().addBuilder(
+            index, com.babylon.finality.v1.FinalityProto.BTCDelDistInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * btc_dels is a list of BTC delegations' voting power information under this finality provider
+       * </pre>
+       *
+       * <code>repeated .babylon.finality.v1.BTCDelDistInfo btc_dels = 5 [json_name = "btcDels"];</code>
+       */
+      public java.util.List<com.babylon.finality.v1.FinalityProto.BTCDelDistInfo.Builder> 
+           getBtcDelsBuilderList() {
+        return getBtcDelsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.babylon.finality.v1.FinalityProto.BTCDelDistInfo, com.babylon.finality.v1.FinalityProto.BTCDelDistInfo.Builder, com.babylon.finality.v1.FinalityProto.BTCDelDistInfoOrBuilder> 
+          getBtcDelsFieldBuilder() {
+        if (btcDelsBuilder_ == null) {
+          btcDelsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.babylon.finality.v1.FinalityProto.BTCDelDistInfo, com.babylon.finality.v1.FinalityProto.BTCDelDistInfo.Builder, com.babylon.finality.v1.FinalityProto.BTCDelDistInfoOrBuilder>(
+                  btcDels_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          btcDels_ = null;
+        }
+        return btcDelsBuilder_;
+      }
+
+      private boolean isTimestamped_ ;
+      /**
+       * <pre>
+       * is_timestamped indicates whether the finality provider
+       * has timestamped public randomness committed
+       * if no, it should not be assigned voting power
+       * </pre>
+       *
+       * <code>bool is_timestamped = 6 [json_name = "isTimestamped"];</code>
+       * @return The isTimestamped.
+       */
+      @java.lang.Override
+      public boolean getIsTimestamped() {
+        return isTimestamped_;
+      }
+      /**
+       * <pre>
+       * is_timestamped indicates whether the finality provider
+       * has timestamped public randomness committed
+       * if no, it should not be assigned voting power
+       * </pre>
+       *
+       * <code>bool is_timestamped = 6 [json_name = "isTimestamped"];</code>
+       * @param value The isTimestamped to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsTimestamped(boolean value) {
+
+        isTimestamped_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is_timestamped indicates whether the finality provider
+       * has timestamped public randomness committed
+       * if no, it should not be assigned voting power
+       * </pre>
+       *
+       * <code>bool is_timestamped = 6 [json_name = "isTimestamped"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsTimestamped() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        isTimestamped_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean isJailed_ ;
+      /**
+       * <pre>
+       * is_jailed indicates whether the finality provider
+       * is jailed, if so, it should not be assigned voting power
+       * </pre>
+       *
+       * <code>bool is_jailed = 7 [json_name = "isJailed"];</code>
+       * @return The isJailed.
+       */
+      @java.lang.Override
+      public boolean getIsJailed() {
+        return isJailed_;
+      }
+      /**
+       * <pre>
+       * is_jailed indicates whether the finality provider
+       * is jailed, if so, it should not be assigned voting power
+       * </pre>
+       *
+       * <code>bool is_jailed = 7 [json_name = "isJailed"];</code>
+       * @param value The isJailed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsJailed(boolean value) {
+
+        isJailed_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is_jailed indicates whether the finality provider
+       * is jailed, if so, it should not be assigned voting power
+       * </pre>
+       *
+       * <code>bool is_jailed = 7 [json_name = "isJailed"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsJailed() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        isJailed_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean isSlashed_ ;
+      /**
+       * <pre>
+       * is_slashed indicates whether the finality provider
+       * is slashed, if so, it should not be assigned voting power
+       * </pre>
+       *
+       * <code>bool is_slashed = 8 [json_name = "isSlashed"];</code>
+       * @return The isSlashed.
+       */
+      @java.lang.Override
+      public boolean getIsSlashed() {
+        return isSlashed_;
+      }
+      /**
+       * <pre>
+       * is_slashed indicates whether the finality provider
+       * is slashed, if so, it should not be assigned voting power
+       * </pre>
+       *
+       * <code>bool is_slashed = 8 [json_name = "isSlashed"];</code>
+       * @param value The isSlashed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsSlashed(boolean value) {
+
+        isSlashed_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is_slashed indicates whether the finality provider
+       * is slashed, if so, it should not be assigned voting power
+       * </pre>
+       *
+       * <code>bool is_slashed = 8 [json_name = "isSlashed"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsSlashed() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        isSlashed_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.finality.v1.FinalityProviderDistInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.finality.v1.FinalityProviderDistInfo)
+    private static final com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo();
+    }
+
+    public static com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FinalityProviderDistInfo>
+        PARSER = new com.google.protobuf.AbstractParser<FinalityProviderDistInfo>() {
+      @java.lang.Override
+      public FinalityProviderDistInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<FinalityProviderDistInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FinalityProviderDistInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.finality.v1.FinalityProto.FinalityProviderDistInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BTCDelDistInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.finality.v1.BTCDelDistInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * btc_pk is the Bitcoin secp256k1 PK of this BTC delegation
+     * the PK follows encoding in BIP-340 spec
+     * </pre>
+     *
+     * <code>bytes btc_pk = 1 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+     * @return The btcPk.
+     */
+    com.google.protobuf.ByteString getBtcPk();
+
+    /**
+     * <pre>
+     * staker_addr is the address to receive rewards from BTC delegation.
+     * </pre>
+     *
+     * <code>string staker_addr = 2 [json_name = "stakerAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The stakerAddr.
+     */
+    java.lang.String getStakerAddr();
+    /**
+     * <pre>
+     * staker_addr is the address to receive rewards from BTC delegation.
+     * </pre>
+     *
+     * <code>string staker_addr = 2 [json_name = "stakerAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for stakerAddr.
+     */
+    com.google.protobuf.ByteString
+        getStakerAddrBytes();
+
+    /**
+     * <pre>
+     * staking_tx_hash is the staking tx hash of the BTC delegation
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 3 [json_name = "stakingTxHash"];</code>
+     * @return The stakingTxHash.
+     */
+    java.lang.String getStakingTxHash();
+    /**
+     * <pre>
+     * staking_tx_hash is the staking tx hash of the BTC delegation
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 3 [json_name = "stakingTxHash"];</code>
+     * @return The bytes for stakingTxHash.
+     */
+    com.google.protobuf.ByteString
+        getStakingTxHashBytes();
+
+    /**
+     * <pre>
+     * total_sat is the amount of BTC stake (in Satoshi) of the BTC delegation
+     * </pre>
+     *
+     * <code>uint64 total_sat = 4 [json_name = "totalSat"];</code>
+     * @return The totalSat.
+     */
+    long getTotalSat();
+  }
+  /**
+   * <pre>
+   * BTCDelDistInfo contains the information related to voting power distribution for a BTC delegation
+   * </pre>
+   *
+   * Protobuf type {@code babylon.finality.v1.BTCDelDistInfo}
+   */
+  public static final class BTCDelDistInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.finality.v1.BTCDelDistInfo)
+      BTCDelDistInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BTCDelDistInfo.newBuilder() to construct.
+    private BTCDelDistInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BTCDelDistInfo() {
+      btcPk_ = com.google.protobuf.ByteString.EMPTY;
+      stakerAddr_ = "";
+      stakingTxHash_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BTCDelDistInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.finality.v1.FinalityProto.internal_static_babylon_finality_v1_BTCDelDistInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.finality.v1.FinalityProto.internal_static_babylon_finality_v1_BTCDelDistInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.finality.v1.FinalityProto.BTCDelDistInfo.class, com.babylon.finality.v1.FinalityProto.BTCDelDistInfo.Builder.class);
+    }
+
+    public static final int BTC_PK_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString btcPk_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * btc_pk is the Bitcoin secp256k1 PK of this BTC delegation
+     * the PK follows encoding in BIP-340 spec
+     * </pre>
+     *
+     * <code>bytes btc_pk = 1 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+     * @return The btcPk.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getBtcPk() {
+      return btcPk_;
+    }
+
+    public static final int STAKER_ADDR_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakerAddr_ = "";
+    /**
+     * <pre>
+     * staker_addr is the address to receive rewards from BTC delegation.
+     * </pre>
+     *
+     * <code>string staker_addr = 2 [json_name = "stakerAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The stakerAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getStakerAddr() {
+      java.lang.Object ref = stakerAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakerAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staker_addr is the address to receive rewards from BTC delegation.
+     * </pre>
+     *
+     * <code>string staker_addr = 2 [json_name = "stakerAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for stakerAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakerAddrBytes() {
+      java.lang.Object ref = stakerAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakerAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAKING_TX_HASH_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingTxHash_ = "";
+    /**
+     * <pre>
+     * staking_tx_hash is the staking tx hash of the BTC delegation
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 3 [json_name = "stakingTxHash"];</code>
+     * @return The stakingTxHash.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingTxHash() {
+      java.lang.Object ref = stakingTxHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingTxHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staking_tx_hash is the staking tx hash of the BTC delegation
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 3 [json_name = "stakingTxHash"];</code>
+     * @return The bytes for stakingTxHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingTxHashBytes() {
+      java.lang.Object ref = stakingTxHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingTxHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOTAL_SAT_FIELD_NUMBER = 4;
+    private long totalSat_ = 0L;
+    /**
+     * <pre>
+     * total_sat is the amount of BTC stake (in Satoshi) of the BTC delegation
+     * </pre>
+     *
+     * <code>uint64 total_sat = 4 [json_name = "totalSat"];</code>
+     * @return The totalSat.
+     */
+    @java.lang.Override
+    public long getTotalSat() {
+      return totalSat_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!btcPk_.isEmpty()) {
+        output.writeBytes(1, btcPk_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakerAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, stakerAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingTxHash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, stakingTxHash_);
+      }
+      if (totalSat_ != 0L) {
+        output.writeUInt64(4, totalSat_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!btcPk_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, btcPk_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakerAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, stakerAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingTxHash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, stakingTxHash_);
+      }
+      if (totalSat_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, totalSat_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.finality.v1.FinalityProto.BTCDelDistInfo)) {
+        return super.equals(obj);
+      }
+      com.babylon.finality.v1.FinalityProto.BTCDelDistInfo other = (com.babylon.finality.v1.FinalityProto.BTCDelDistInfo) obj;
+
+      if (!getBtcPk()
+          .equals(other.getBtcPk())) return false;
+      if (!getStakerAddr()
+          .equals(other.getStakerAddr())) return false;
+      if (!getStakingTxHash()
+          .equals(other.getStakingTxHash())) return false;
+      if (getTotalSat()
+          != other.getTotalSat()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BTC_PK_FIELD_NUMBER;
+      hash = (53 * hash) + getBtcPk().hashCode();
+      hash = (37 * hash) + STAKER_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getStakerAddr().hashCode();
+      hash = (37 * hash) + STAKING_TX_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingTxHash().hashCode();
+      hash = (37 * hash) + TOTAL_SAT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotalSat());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.finality.v1.FinalityProto.BTCDelDistInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.FinalityProto.BTCDelDistInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.FinalityProto.BTCDelDistInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.FinalityProto.BTCDelDistInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.FinalityProto.BTCDelDistInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.FinalityProto.BTCDelDistInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.FinalityProto.BTCDelDistInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.finality.v1.FinalityProto.BTCDelDistInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.finality.v1.FinalityProto.BTCDelDistInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.finality.v1.FinalityProto.BTCDelDistInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.FinalityProto.BTCDelDistInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.finality.v1.FinalityProto.BTCDelDistInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.finality.v1.FinalityProto.BTCDelDistInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * BTCDelDistInfo contains the information related to voting power distribution for a BTC delegation
+     * </pre>
+     *
+     * Protobuf type {@code babylon.finality.v1.BTCDelDistInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.finality.v1.BTCDelDistInfo)
+        com.babylon.finality.v1.FinalityProto.BTCDelDistInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.finality.v1.FinalityProto.internal_static_babylon_finality_v1_BTCDelDistInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.finality.v1.FinalityProto.internal_static_babylon_finality_v1_BTCDelDistInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.finality.v1.FinalityProto.BTCDelDistInfo.class, com.babylon.finality.v1.FinalityProto.BTCDelDistInfo.Builder.class);
+      }
+
+      // Construct using com.babylon.finality.v1.FinalityProto.BTCDelDistInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        btcPk_ = com.google.protobuf.ByteString.EMPTY;
+        stakerAddr_ = "";
+        stakingTxHash_ = "";
+        totalSat_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.finality.v1.FinalityProto.internal_static_babylon_finality_v1_BTCDelDistInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.FinalityProto.BTCDelDistInfo getDefaultInstanceForType() {
+        return com.babylon.finality.v1.FinalityProto.BTCDelDistInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.FinalityProto.BTCDelDistInfo build() {
+        com.babylon.finality.v1.FinalityProto.BTCDelDistInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.FinalityProto.BTCDelDistInfo buildPartial() {
+        com.babylon.finality.v1.FinalityProto.BTCDelDistInfo result = new com.babylon.finality.v1.FinalityProto.BTCDelDistInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.finality.v1.FinalityProto.BTCDelDistInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.btcPk_ = btcPk_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.stakerAddr_ = stakerAddr_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.stakingTxHash_ = stakingTxHash_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.totalSat_ = totalSat_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.finality.v1.FinalityProto.BTCDelDistInfo) {
+          return mergeFrom((com.babylon.finality.v1.FinalityProto.BTCDelDistInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.finality.v1.FinalityProto.BTCDelDistInfo other) {
+        if (other == com.babylon.finality.v1.FinalityProto.BTCDelDistInfo.getDefaultInstance()) return this;
+        if (other.getBtcPk() != com.google.protobuf.ByteString.EMPTY) {
+          setBtcPk(other.getBtcPk());
+        }
+        if (!other.getStakerAddr().isEmpty()) {
+          stakerAddr_ = other.stakerAddr_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getStakingTxHash().isEmpty()) {
+          stakingTxHash_ = other.stakingTxHash_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getTotalSat() != 0L) {
+          setTotalSat(other.getTotalSat());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                btcPk_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                stakerAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                stakingTxHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                totalSat_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString btcPk_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * btc_pk is the Bitcoin secp256k1 PK of this BTC delegation
+       * the PK follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>bytes btc_pk = 1 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+       * @return The btcPk.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getBtcPk() {
+        return btcPk_;
+      }
+      /**
+       * <pre>
+       * btc_pk is the Bitcoin secp256k1 PK of this BTC delegation
+       * the PK follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>bytes btc_pk = 1 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+       * @param value The btcPk to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBtcPk(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        btcPk_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * btc_pk is the Bitcoin secp256k1 PK of this BTC delegation
+       * the PK follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>bytes btc_pk = 1 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBtcPk() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        btcPk_ = getDefaultInstance().getBtcPk();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object stakerAddr_ = "";
+      /**
+       * <pre>
+       * staker_addr is the address to receive rewards from BTC delegation.
+       * </pre>
+       *
+       * <code>string staker_addr = 2 [json_name = "stakerAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The stakerAddr.
+       */
+      public java.lang.String getStakerAddr() {
+        java.lang.Object ref = stakerAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakerAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker_addr is the address to receive rewards from BTC delegation.
+       * </pre>
+       *
+       * <code>string staker_addr = 2 [json_name = "stakerAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for stakerAddr.
+       */
+      public com.google.protobuf.ByteString
+          getStakerAddrBytes() {
+        java.lang.Object ref = stakerAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakerAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker_addr is the address to receive rewards from BTC delegation.
+       * </pre>
+       *
+       * <code>string staker_addr = 2 [json_name = "stakerAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The stakerAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakerAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakerAddr_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker_addr is the address to receive rewards from BTC delegation.
+       * </pre>
+       *
+       * <code>string staker_addr = 2 [json_name = "stakerAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakerAddr() {
+        stakerAddr_ = getDefaultInstance().getStakerAddr();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker_addr is the address to receive rewards from BTC delegation.
+       * </pre>
+       *
+       * <code>string staker_addr = 2 [json_name = "stakerAddr", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for stakerAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakerAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakerAddr_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object stakingTxHash_ = "";
+      /**
+       * <pre>
+       * staking_tx_hash is the staking tx hash of the BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 3 [json_name = "stakingTxHash"];</code>
+       * @return The stakingTxHash.
+       */
+      public java.lang.String getStakingTxHash() {
+        java.lang.Object ref = stakingTxHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingTxHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the staking tx hash of the BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 3 [json_name = "stakingTxHash"];</code>
+       * @return The bytes for stakingTxHash.
+       */
+      public com.google.protobuf.ByteString
+          getStakingTxHashBytes() {
+        java.lang.Object ref = stakingTxHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingTxHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the staking tx hash of the BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 3 [json_name = "stakingTxHash"];</code>
+       * @param value The stakingTxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingTxHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingTxHash_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the staking tx hash of the BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 3 [json_name = "stakingTxHash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingTxHash() {
+        stakingTxHash_ = getDefaultInstance().getStakingTxHash();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the staking tx hash of the BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 3 [json_name = "stakingTxHash"];</code>
+       * @param value The bytes for stakingTxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingTxHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingTxHash_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private long totalSat_ ;
+      /**
+       * <pre>
+       * total_sat is the amount of BTC stake (in Satoshi) of the BTC delegation
+       * </pre>
+       *
+       * <code>uint64 total_sat = 4 [json_name = "totalSat"];</code>
+       * @return The totalSat.
+       */
+      @java.lang.Override
+      public long getTotalSat() {
+        return totalSat_;
+      }
+      /**
+       * <pre>
+       * total_sat is the amount of BTC stake (in Satoshi) of the BTC delegation
+       * </pre>
+       *
+       * <code>uint64 total_sat = 4 [json_name = "totalSat"];</code>
+       * @param value The totalSat to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalSat(long value) {
+
+        totalSat_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_sat is the amount of BTC stake (in Satoshi) of the BTC delegation
+       * </pre>
+       *
+       * <code>uint64 total_sat = 4 [json_name = "totalSat"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalSat() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        totalSat_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.finality.v1.BTCDelDistInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.finality.v1.BTCDelDistInfo)
+    private static final com.babylon.finality.v1.FinalityProto.BTCDelDistInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.finality.v1.FinalityProto.BTCDelDistInfo();
+    }
+
+    public static com.babylon.finality.v1.FinalityProto.BTCDelDistInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BTCDelDistInfo>
+        PARSER = new com.google.protobuf.AbstractParser<BTCDelDistInfo>() {
+      @java.lang.Override
+      public BTCDelDistInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<BTCDelDistInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BTCDelDistInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.finality.v1.FinalityProto.BTCDelDistInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface IndexedBlockOrBuilder extends
       // @@protoc_insertion_point(interface_extends:babylon.finality.v1.IndexedBlock)
       com.google.protobuf.MessageOrBuilder {
@@ -744,6 +4574,16 @@ public final class FinalityProto {
      * @return The commitment.
      */
     com.google.protobuf.ByteString getCommitment();
+
+    /**
+     * <pre>
+     * epoch_num defines the epoch number that the commit falls into
+     * </pre>
+     *
+     * <code>uint64 epoch_num = 4 [json_name = "epochNum"];</code>
+     * @return The epochNum.
+     */
+    long getEpochNum();
   }
   /**
    * <pre>
@@ -833,6 +4673,21 @@ public final class FinalityProto {
       return commitment_;
     }
 
+    public static final int EPOCH_NUM_FIELD_NUMBER = 4;
+    private long epochNum_ = 0L;
+    /**
+     * <pre>
+     * epoch_num defines the epoch number that the commit falls into
+     * </pre>
+     *
+     * <code>uint64 epoch_num = 4 [json_name = "epochNum"];</code>
+     * @return The epochNum.
+     */
+    @java.lang.Override
+    public long getEpochNum() {
+      return epochNum_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -856,6 +4711,9 @@ public final class FinalityProto {
       if (!commitment_.isEmpty()) {
         output.writeBytes(3, commitment_);
       }
+      if (epochNum_ != 0L) {
+        output.writeUInt64(4, epochNum_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -876,6 +4734,10 @@ public final class FinalityProto {
       if (!commitment_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, commitment_);
+      }
+      if (epochNum_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, epochNum_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -898,6 +4760,8 @@ public final class FinalityProto {
           != other.getNumPubRand()) return false;
       if (!getCommitment()
           .equals(other.getCommitment())) return false;
+      if (getEpochNum()
+          != other.getEpochNum()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -917,6 +4781,9 @@ public final class FinalityProto {
           getNumPubRand());
       hash = (37 * hash) + COMMITMENT_FIELD_NUMBER;
       hash = (53 * hash) + getCommitment().hashCode();
+      hash = (37 * hash) + EPOCH_NUM_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEpochNum());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1057,6 +4924,7 @@ public final class FinalityProto {
         startHeight_ = 0L;
         numPubRand_ = 0L;
         commitment_ = com.google.protobuf.ByteString.EMPTY;
+        epochNum_ = 0L;
         return this;
       }
 
@@ -1098,6 +4966,9 @@ public final class FinalityProto {
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.commitment_ = commitment_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.epochNum_ = epochNum_;
         }
       }
 
@@ -1154,6 +5025,9 @@ public final class FinalityProto {
         if (other.getCommitment() != com.google.protobuf.ByteString.EMPTY) {
           setCommitment(other.getCommitment());
         }
+        if (other.getEpochNum() != 0L) {
+          setEpochNum(other.getEpochNum());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1195,6 +5069,11 @@ public final class FinalityProto {
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
+              case 32: {
+                epochNum_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1346,6 +5225,50 @@ public final class FinalityProto {
         onChanged();
         return this;
       }
+
+      private long epochNum_ ;
+      /**
+       * <pre>
+       * epoch_num defines the epoch number that the commit falls into
+       * </pre>
+       *
+       * <code>uint64 epoch_num = 4 [json_name = "epochNum"];</code>
+       * @return The epochNum.
+       */
+      @java.lang.Override
+      public long getEpochNum() {
+        return epochNum_;
+      }
+      /**
+       * <pre>
+       * epoch_num defines the epoch number that the commit falls into
+       * </pre>
+       *
+       * <code>uint64 epoch_num = 4 [json_name = "epochNum"];</code>
+       * @param value The epochNum to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpochNum(long value) {
+
+        epochNum_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * epoch_num defines the epoch number that the commit falls into
+       * </pre>
+       *
+       * <code>uint64 epoch_num = 4 [json_name = "epochNum"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEpochNum() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        epochNum_ = 0L;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1419,7 +5342,7 @@ public final class FinalityProto {
      * fp_btc_pk is the BTC PK of the finality provider that casts this vote
      * </pre>
      *
-     * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The fpBtcPk.
      */
     com.google.protobuf.ByteString getFpBtcPk();
@@ -1439,7 +5362,7 @@ public final class FinalityProto {
      * pub_rand is the public randomness the finality provider has committed to
      * </pre>
      *
-     * <code>bytes pub_rand = 3 [json_name = "pubRand", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.SchnorrPubRand"];</code>
+     * <code>bytes pub_rand = 3 [json_name = "pubRand", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrPubRand"];</code>
      * @return The pubRand.
      */
     com.google.protobuf.ByteString getPubRand();
@@ -1472,7 +5395,7 @@ public final class FinalityProto {
      * `r` is the public randomness that is already committed by the finality provider
      * </pre>
      *
-     * <code>bytes canonical_finality_sig = 6 [json_name = "canonicalFinalitySig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.SchnorrEOTSSig"];</code>
+     * <code>bytes canonical_finality_sig = 6 [json_name = "canonicalFinalitySig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrEOTSSig"];</code>
      * @return The canonicalFinalitySig.
      */
     com.google.protobuf.ByteString getCanonicalFinalitySig();
@@ -1483,7 +5406,7 @@ public final class FinalityProto {
      * where finality signature is an EOTS signature
      * </pre>
      *
-     * <code>bytes fork_finality_sig = 7 [json_name = "forkFinalitySig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.SchnorrEOTSSig"];</code>
+     * <code>bytes fork_finality_sig = 7 [json_name = "forkFinalitySig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrEOTSSig"];</code>
      * @return The forkFinalitySig.
      */
     com.google.protobuf.ByteString getForkFinalitySig();
@@ -1541,7 +5464,7 @@ public final class FinalityProto {
      * fp_btc_pk is the BTC PK of the finality provider that casts this vote
      * </pre>
      *
-     * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The fpBtcPk.
      */
     @java.lang.Override
@@ -1571,7 +5494,7 @@ public final class FinalityProto {
      * pub_rand is the public randomness the finality provider has committed to
      * </pre>
      *
-     * <code>bytes pub_rand = 3 [json_name = "pubRand", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.SchnorrPubRand"];</code>
+     * <code>bytes pub_rand = 3 [json_name = "pubRand", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrPubRand"];</code>
      * @return The pubRand.
      */
     @java.lang.Override
@@ -1619,7 +5542,7 @@ public final class FinalityProto {
      * `r` is the public randomness that is already committed by the finality provider
      * </pre>
      *
-     * <code>bytes canonical_finality_sig = 6 [json_name = "canonicalFinalitySig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.SchnorrEOTSSig"];</code>
+     * <code>bytes canonical_finality_sig = 6 [json_name = "canonicalFinalitySig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrEOTSSig"];</code>
      * @return The canonicalFinalitySig.
      */
     @java.lang.Override
@@ -1635,7 +5558,7 @@ public final class FinalityProto {
      * where finality signature is an EOTS signature
      * </pre>
      *
-     * <code>bytes fork_finality_sig = 7 [json_name = "forkFinalitySig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.SchnorrEOTSSig"];</code>
+     * <code>bytes fork_finality_sig = 7 [json_name = "forkFinalitySig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrEOTSSig"];</code>
      * @return The forkFinalitySig.
      */
     @java.lang.Override
@@ -2118,7 +6041,7 @@ public final class FinalityProto {
        * fp_btc_pk is the BTC PK of the finality provider that casts this vote
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The fpBtcPk.
        */
       @java.lang.Override
@@ -2130,7 +6053,7 @@ public final class FinalityProto {
        * fp_btc_pk is the BTC PK of the finality provider that casts this vote
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param value The fpBtcPk to set.
        * @return This builder for chaining.
        */
@@ -2146,7 +6069,7 @@ public final class FinalityProto {
        * fp_btc_pk is the BTC PK of the finality provider that casts this vote
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFpBtcPk() {
@@ -2206,7 +6129,7 @@ public final class FinalityProto {
        * pub_rand is the public randomness the finality provider has committed to
        * </pre>
        *
-       * <code>bytes pub_rand = 3 [json_name = "pubRand", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.SchnorrPubRand"];</code>
+       * <code>bytes pub_rand = 3 [json_name = "pubRand", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrPubRand"];</code>
        * @return The pubRand.
        */
       @java.lang.Override
@@ -2218,7 +6141,7 @@ public final class FinalityProto {
        * pub_rand is the public randomness the finality provider has committed to
        * </pre>
        *
-       * <code>bytes pub_rand = 3 [json_name = "pubRand", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.SchnorrPubRand"];</code>
+       * <code>bytes pub_rand = 3 [json_name = "pubRand", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrPubRand"];</code>
        * @param value The pubRand to set.
        * @return This builder for chaining.
        */
@@ -2234,7 +6157,7 @@ public final class FinalityProto {
        * pub_rand is the public randomness the finality provider has committed to
        * </pre>
        *
-       * <code>bytes pub_rand = 3 [json_name = "pubRand", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.SchnorrPubRand"];</code>
+       * <code>bytes pub_rand = 3 [json_name = "pubRand", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrPubRand"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPubRand() {
@@ -2341,7 +6264,7 @@ public final class FinalityProto {
        * `r` is the public randomness that is already committed by the finality provider
        * </pre>
        *
-       * <code>bytes canonical_finality_sig = 6 [json_name = "canonicalFinalitySig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.SchnorrEOTSSig"];</code>
+       * <code>bytes canonical_finality_sig = 6 [json_name = "canonicalFinalitySig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrEOTSSig"];</code>
        * @return The canonicalFinalitySig.
        */
       @java.lang.Override
@@ -2356,7 +6279,7 @@ public final class FinalityProto {
        * `r` is the public randomness that is already committed by the finality provider
        * </pre>
        *
-       * <code>bytes canonical_finality_sig = 6 [json_name = "canonicalFinalitySig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.SchnorrEOTSSig"];</code>
+       * <code>bytes canonical_finality_sig = 6 [json_name = "canonicalFinalitySig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrEOTSSig"];</code>
        * @param value The canonicalFinalitySig to set.
        * @return This builder for chaining.
        */
@@ -2375,7 +6298,7 @@ public final class FinalityProto {
        * `r` is the public randomness that is already committed by the finality provider
        * </pre>
        *
-       * <code>bytes canonical_finality_sig = 6 [json_name = "canonicalFinalitySig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.SchnorrEOTSSig"];</code>
+       * <code>bytes canonical_finality_sig = 6 [json_name = "canonicalFinalitySig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrEOTSSig"];</code>
        * @return This builder for chaining.
        */
       public Builder clearCanonicalFinalitySig() {
@@ -2392,7 +6315,7 @@ public final class FinalityProto {
        * where finality signature is an EOTS signature
        * </pre>
        *
-       * <code>bytes fork_finality_sig = 7 [json_name = "forkFinalitySig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.SchnorrEOTSSig"];</code>
+       * <code>bytes fork_finality_sig = 7 [json_name = "forkFinalitySig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrEOTSSig"];</code>
        * @return The forkFinalitySig.
        */
       @java.lang.Override
@@ -2405,7 +6328,7 @@ public final class FinalityProto {
        * where finality signature is an EOTS signature
        * </pre>
        *
-       * <code>bytes fork_finality_sig = 7 [json_name = "forkFinalitySig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.SchnorrEOTSSig"];</code>
+       * <code>bytes fork_finality_sig = 7 [json_name = "forkFinalitySig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrEOTSSig"];</code>
        * @param value The forkFinalitySig to set.
        * @return This builder for chaining.
        */
@@ -2422,7 +6345,7 @@ public final class FinalityProto {
        * where finality signature is an EOTS signature
        * </pre>
        *
-       * <code>bytes fork_finality_sig = 7 [json_name = "forkFinalitySig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.SchnorrEOTSSig"];</code>
+       * <code>bytes fork_finality_sig = 7 [json_name = "forkFinalitySig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrEOTSSig"];</code>
        * @return This builder for chaining.
        */
       public Builder clearForkFinalitySig() {
@@ -2504,7 +6427,7 @@ public final class FinalityProto {
      * fp_btc_pk is the BTC PK of the finality provider that casts this vote
      * </pre>
      *
-     * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The fpBtcPk.
      */
     com.google.protobuf.ByteString getFpBtcPk();
@@ -2529,6 +6452,33 @@ public final class FinalityProto {
      * @return The missedBlocksCounter.
      */
     long getMissedBlocksCounter();
+
+    /**
+     * <pre>
+     * Timestamp until which the validator is jailed due to liveness downtime.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp jailed_until = 4 [json_name = "jailedUntil", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true, (.amino.dont_omitempty) = true];</code>
+     * @return Whether the jailedUntil field is set.
+     */
+    boolean hasJailedUntil();
+    /**
+     * <pre>
+     * Timestamp until which the validator is jailed due to liveness downtime.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp jailed_until = 4 [json_name = "jailedUntil", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true, (.amino.dont_omitempty) = true];</code>
+     * @return The jailedUntil.
+     */
+    com.google.protobuf.Timestamp getJailedUntil();
+    /**
+     * <pre>
+     * Timestamp until which the validator is jailed due to liveness downtime.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp jailed_until = 4 [json_name = "jailedUntil", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true, (.amino.dont_omitempty) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getJailedUntilOrBuilder();
   }
   /**
    * <pre>
@@ -2578,7 +6528,7 @@ public final class FinalityProto {
      * fp_btc_pk is the BTC PK of the finality provider that casts this vote
      * </pre>
      *
-     * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The fpBtcPk.
      */
     @java.lang.Override
@@ -2617,6 +6567,44 @@ public final class FinalityProto {
       return missedBlocksCounter_;
     }
 
+    public static final int JAILED_UNTIL_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp jailedUntil_;
+    /**
+     * <pre>
+     * Timestamp until which the validator is jailed due to liveness downtime.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp jailed_until = 4 [json_name = "jailedUntil", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true, (.amino.dont_omitempty) = true];</code>
+     * @return Whether the jailedUntil field is set.
+     */
+    @java.lang.Override
+    public boolean hasJailedUntil() {
+      return jailedUntil_ != null;
+    }
+    /**
+     * <pre>
+     * Timestamp until which the validator is jailed due to liveness downtime.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp jailed_until = 4 [json_name = "jailedUntil", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true, (.amino.dont_omitempty) = true];</code>
+     * @return The jailedUntil.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getJailedUntil() {
+      return jailedUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : jailedUntil_;
+    }
+    /**
+     * <pre>
+     * Timestamp until which the validator is jailed due to liveness downtime.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp jailed_until = 4 [json_name = "jailedUntil", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true, (.amino.dont_omitempty) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getJailedUntilOrBuilder() {
+      return jailedUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : jailedUntil_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2640,6 +6628,9 @@ public final class FinalityProto {
       if (missedBlocksCounter_ != 0L) {
         output.writeInt64(3, missedBlocksCounter_);
       }
+      if (jailedUntil_ != null) {
+        output.writeMessage(4, getJailedUntil());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -2660,6 +6651,10 @@ public final class FinalityProto {
       if (missedBlocksCounter_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, missedBlocksCounter_);
+      }
+      if (jailedUntil_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getJailedUntil());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2682,6 +6677,11 @@ public final class FinalityProto {
           != other.getStartHeight()) return false;
       if (getMissedBlocksCounter()
           != other.getMissedBlocksCounter()) return false;
+      if (hasJailedUntil() != other.hasJailedUntil()) return false;
+      if (hasJailedUntil()) {
+        if (!getJailedUntil()
+            .equals(other.getJailedUntil())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2701,6 +6701,10 @@ public final class FinalityProto {
       hash = (37 * hash) + MISSED_BLOCKS_COUNTER_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getMissedBlocksCounter());
+      if (hasJailedUntil()) {
+        hash = (37 * hash) + JAILED_UNTIL_FIELD_NUMBER;
+        hash = (53 * hash) + getJailedUntil().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2840,6 +6844,11 @@ public final class FinalityProto {
         fpBtcPk_ = com.google.protobuf.ByteString.EMPTY;
         startHeight_ = 0L;
         missedBlocksCounter_ = 0L;
+        jailedUntil_ = null;
+        if (jailedUntilBuilder_ != null) {
+          jailedUntilBuilder_.dispose();
+          jailedUntilBuilder_ = null;
+        }
         return this;
       }
 
@@ -2881,6 +6890,11 @@ public final class FinalityProto {
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.missedBlocksCounter_ = missedBlocksCounter_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.jailedUntil_ = jailedUntilBuilder_ == null
+              ? jailedUntil_
+              : jailedUntilBuilder_.build();
         }
       }
 
@@ -2937,6 +6951,9 @@ public final class FinalityProto {
         if (other.getMissedBlocksCounter() != 0L) {
           setMissedBlocksCounter(other.getMissedBlocksCounter());
         }
+        if (other.hasJailedUntil()) {
+          mergeJailedUntil(other.getJailedUntil());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -2978,6 +6995,13 @@ public final class FinalityProto {
                 bitField0_ |= 0x00000004;
                 break;
               } // case 24
+              case 34: {
+                input.readMessage(
+                    getJailedUntilFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3001,7 +7025,7 @@ public final class FinalityProto {
        * fp_btc_pk is the BTC PK of the finality provider that casts this vote
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The fpBtcPk.
        */
       @java.lang.Override
@@ -3013,7 +7037,7 @@ public final class FinalityProto {
        * fp_btc_pk is the BTC PK of the finality provider that casts this vote
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param value The fpBtcPk to set.
        * @return This builder for chaining.
        */
@@ -3029,7 +7053,7 @@ public final class FinalityProto {
        * fp_btc_pk is the BTC PK of the finality provider that casts this vote
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 1 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFpBtcPk() {
@@ -3129,6 +7153,161 @@ public final class FinalityProto {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.Timestamp jailedUntil_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> jailedUntilBuilder_;
+      /**
+       * <pre>
+       * Timestamp until which the validator is jailed due to liveness downtime.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp jailed_until = 4 [json_name = "jailedUntil", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true, (.amino.dont_omitempty) = true];</code>
+       * @return Whether the jailedUntil field is set.
+       */
+      public boolean hasJailedUntil() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * Timestamp until which the validator is jailed due to liveness downtime.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp jailed_until = 4 [json_name = "jailedUntil", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true, (.amino.dont_omitempty) = true];</code>
+       * @return The jailedUntil.
+       */
+      public com.google.protobuf.Timestamp getJailedUntil() {
+        if (jailedUntilBuilder_ == null) {
+          return jailedUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : jailedUntil_;
+        } else {
+          return jailedUntilBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp until which the validator is jailed due to liveness downtime.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp jailed_until = 4 [json_name = "jailedUntil", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder setJailedUntil(com.google.protobuf.Timestamp value) {
+        if (jailedUntilBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          jailedUntil_ = value;
+        } else {
+          jailedUntilBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp until which the validator is jailed due to liveness downtime.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp jailed_until = 4 [json_name = "jailedUntil", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder setJailedUntil(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (jailedUntilBuilder_ == null) {
+          jailedUntil_ = builderForValue.build();
+        } else {
+          jailedUntilBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp until which the validator is jailed due to liveness downtime.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp jailed_until = 4 [json_name = "jailedUntil", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder mergeJailedUntil(com.google.protobuf.Timestamp value) {
+        if (jailedUntilBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            jailedUntil_ != null &&
+            jailedUntil_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getJailedUntilBuilder().mergeFrom(value);
+          } else {
+            jailedUntil_ = value;
+          }
+        } else {
+          jailedUntilBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp until which the validator is jailed due to liveness downtime.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp jailed_until = 4 [json_name = "jailedUntil", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder clearJailedUntil() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        jailedUntil_ = null;
+        if (jailedUntilBuilder_ != null) {
+          jailedUntilBuilder_.dispose();
+          jailedUntilBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp until which the validator is jailed due to liveness downtime.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp jailed_until = 4 [json_name = "jailedUntil", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true, (.amino.dont_omitempty) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getJailedUntilBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getJailedUntilFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timestamp until which the validator is jailed due to liveness downtime.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp jailed_until = 4 [json_name = "jailedUntil", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true, (.amino.dont_omitempty) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getJailedUntilOrBuilder() {
+        if (jailedUntilBuilder_ != null) {
+          return jailedUntilBuilder_.getMessageOrBuilder();
+        } else {
+          return jailedUntil_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : jailedUntil_;
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp until which the validator is jailed due to liveness downtime.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp jailed_until = 4 [json_name = "jailedUntil", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true, (.amino.dont_omitempty) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getJailedUntilFieldBuilder() {
+        if (jailedUntilBuilder_ == null) {
+          jailedUntilBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getJailedUntil(),
+                  getParentForChildren(),
+                  isClean());
+          jailedUntil_ = null;
+        }
+        return jailedUntilBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3194,6 +7373,21 @@ public final class FinalityProto {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_finality_v1_VotingPowerDistCache_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_finality_v1_VotingPowerDistCache_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_finality_v1_FinalityProviderDistInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_finality_v1_FinalityProviderDistInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_finality_v1_BTCDelDistInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_finality_v1_BTCDelDistInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_babylon_finality_v1_IndexedBlock_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -3223,72 +7417,128 @@ public final class FinalityProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\"babylon/finality/v1/finality.proto\022\023ba" +
-      "bylon.finality.v1\032\024gogoproto/gogo.proto\"" +
-      "_\n\014IndexedBlock\022\026\n\006height\030\001 \001(\004R\006height\022" +
-      "\031\n\010app_hash\030\002 \001(\014R\007appHash\022\034\n\tfinalized\030" +
-      "\003 \001(\010R\tfinalized\"t\n\rPubRandCommit\022!\n\014sta" +
-      "rt_height\030\001 \001(\004R\013startHeight\022 \n\014num_pub_" +
-      "rand\030\002 \001(\004R\nnumPubRand\022\036\n\ncommitment\030\003 \001" +
-      "(\014R\ncommitment\"\376\003\n\010Evidence\022R\n\tfp_btc_pk" +
-      "\030\001 \001(\014B6\332\336\0372github.com/babylonchain/baby" +
-      "lon/types.BIP340PubKeyR\007fpBtcPk\022!\n\014block" +
-      "_height\030\002 \001(\004R\013blockHeight\022S\n\010pub_rand\030\003" +
-      " \001(\014B8\332\336\0374github.com/babylonchain/babylo" +
-      "n/types.SchnorrPubRandR\007pubRand\022,\n\022canon" +
-      "ical_app_hash\030\004 \001(\014R\020canonicalAppHash\022\"\n" +
-      "\rfork_app_hash\030\005 \001(\014R\013forkAppHash\022n\n\026can" +
-      "onical_finality_sig\030\006 \001(\014B8\332\336\0374github.co" +
-      "m/babylonchain/babylon/types.SchnorrEOTS" +
-      "SigR\024canonicalFinalitySig\022d\n\021fork_finali" +
-      "ty_sig\030\007 \001(\014B8\332\336\0374github.com/babylonchai" +
-      "n/babylon/types.SchnorrEOTSSigR\017forkFina" +
-      "litySig\"\310\001\n\033FinalityProviderSigningInfo\022" +
-      "R\n\tfp_btc_pk\030\001 \001(\014B6\332\336\0372github.com/babyl" +
-      "onchain/babylon/types.BIP340PubKeyR\007fpBt" +
-      "cPk\022!\n\014start_height\030\002 \001(\003R\013startHeight\0222" +
-      "\n\025missed_blocks_counter\030\003 \001(\003R\023missedBlo" +
-      "cksCounterB\306\001\n\027com.babylon.finality.v1B\r" +
-      "FinalityProtoZ0github.com/babylonchain/b" +
-      "abylon/x/finality/types\242\002\003BFX\252\002\023Babylon." +
-      "Finality.V1\312\002\023Babylon\\Finality\\V1\342\002\037Baby" +
-      "lon\\Finality\\V1\\GPBMetadata\352\002\025Babylon::F" +
-      "inality::V1b\006proto3"
+      "bylon.finality.v1\032\031cosmos_proto/cosmos.p" +
+      "roto\032\024gogoproto/gogo.proto\032\021amino/amino." +
+      "proto\032\037google/protobuf/timestamp.proto\"\312" +
+      "\001\n\024VotingPowerDistCache\022(\n\020total_bonded_" +
+      "sat\030\001 \001(\004R\016totalBondedSat\022\\\n\022finality_pr" +
+      "oviders\030\002 \003(\0132-.babylon.finality.v1.Fina" +
+      "lityProviderDistInfoR\021finalityProviders\022" +
+      "$\n\016num_active_fps\030\003 \001(\rR\014numActiveFps:\004\210" +
+      "\240\037\000\"\265\003\n\030FinalityProviderDistInfo\022O\n\006btc_" +
+      "pk\030\001 \001(\014B8\332\336\0374github.com/babylonlabs-io/" +
+      "babylon/types.BIP340PubKeyR\005btcPk\022,\n\004add" +
+      "r\030\002 \001(\tB\030\322\264-\024cosmos.AddressStringR\004addr\022" +
+      "M\n\ncommission\030\003 \001(\tB-\332\336\037\033cosmossdk.io/ma" +
+      "th.LegacyDec\322\264-\ncosmos.DecR\ncommission\022(" +
+      "\n\020total_bonded_sat\030\004 \001(\004R\016totalBondedSat" +
+      "\022>\n\010btc_dels\030\005 \003(\0132#.babylon.finality.v1" +
+      ".BTCDelDistInfoR\007btcDels\022%\n\016is_timestamp" +
+      "ed\030\006 \001(\010R\risTimestamped\022\033\n\tis_jailed\030\007 \001" +
+      "(\010R\010isJailed\022\035\n\nis_slashed\030\010 \001(\010R\tisSlas" +
+      "hed\"\341\001\n\016BTCDelDistInfo\022O\n\006btc_pk\030\001 \001(\014B8" +
+      "\332\336\0374github.com/babylonlabs-io/babylon/ty" +
+      "pes.BIP340PubKeyR\005btcPk\0229\n\013staker_addr\030\002" +
+      " \001(\tB\030\322\264-\024cosmos.AddressStringR\nstakerAd" +
+      "dr\022&\n\017staking_tx_hash\030\003 \001(\tR\rstakingTxHa" +
+      "sh\022\033\n\ttotal_sat\030\004 \001(\004R\010totalSat\"_\n\014Index" +
+      "edBlock\022\026\n\006height\030\001 \001(\004R\006height\022\031\n\010app_h" +
+      "ash\030\002 \001(\014R\007appHash\022\034\n\tfinalized\030\003 \001(\010R\tf" +
+      "inalized\"\221\001\n\rPubRandCommit\022!\n\014start_heig" +
+      "ht\030\001 \001(\004R\013startHeight\022 \n\014num_pub_rand\030\002 " +
+      "\001(\004R\nnumPubRand\022\036\n\ncommitment\030\003 \001(\014R\ncom" +
+      "mitment\022\033\n\tepoch_num\030\004 \001(\004R\010epochNum\"\206\004\n" +
+      "\010Evidence\022T\n\tfp_btc_pk\030\001 \001(\014B8\332\336\0374github" +
+      ".com/babylonlabs-io/babylon/types.BIP340" +
+      "PubKeyR\007fpBtcPk\022!\n\014block_height\030\002 \001(\004R\013b" +
+      "lockHeight\022U\n\010pub_rand\030\003 \001(\014B:\332\336\0376github" +
+      ".com/babylonlabs-io/babylon/types.Schnor" +
+      "rPubRandR\007pubRand\022,\n\022canonical_app_hash\030" +
+      "\004 \001(\014R\020canonicalAppHash\022\"\n\rfork_app_hash" +
+      "\030\005 \001(\014R\013forkAppHash\022p\n\026canonical_finalit" +
+      "y_sig\030\006 \001(\014B:\332\336\0376github.com/babylonlabs-" +
+      "io/babylon/types.SchnorrEOTSSigR\024canonic" +
+      "alFinalitySig\022f\n\021fork_finality_sig\030\007 \001(\014" +
+      "B:\332\336\0376github.com/babylonlabs-io/babylon/" +
+      "types.SchnorrEOTSSigR\017forkFinalitySig\"\230\002" +
+      "\n\033FinalityProviderSigningInfo\022T\n\tfp_btc_" +
+      "pk\030\001 \001(\014B8\332\336\0374github.com/babylonlabs-io/" +
+      "babylon/types.BIP340PubKeyR\007fpBtcPk\022!\n\014s" +
+      "tart_height\030\002 \001(\003R\013startHeight\0222\n\025missed" +
+      "_blocks_counter\030\003 \001(\003R\023missedBlocksCount" +
+      "er\022L\n\014jailed_until\030\004 \001(\0132\032.google.protob" +
+      "uf.TimestampB\r\310\336\037\000\220\337\037\001\250\347\260*\001R\013jailedUntil" +
+      "B\310\001\n\027com.babylon.finality.v1B\rFinalityPr" +
+      "otoZ2github.com/babylonlabs-io/babylon/x" +
+      "/finality/types\242\002\003BFX\252\002\023Babylon.Finality" +
+      ".V1\312\002\023Babylon\\Finality\\V1\342\002\037Babylon\\Fina" +
+      "lity\\V1\\GPBMetadata\352\002\025Babylon::Finality:" +
+      ":V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.cosmos_proto.CosmosProto.getDescriptor(),
           com.gogoproto.GogoProto.getDescriptor(),
+          com.amino.AminoProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
-    internal_static_babylon_finality_v1_IndexedBlock_descriptor =
+    internal_static_babylon_finality_v1_VotingPowerDistCache_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_babylon_finality_v1_VotingPowerDistCache_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_finality_v1_VotingPowerDistCache_descriptor,
+        new java.lang.String[] { "TotalBondedSat", "FinalityProviders", "NumActiveFps", });
+    internal_static_babylon_finality_v1_FinalityProviderDistInfo_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_babylon_finality_v1_FinalityProviderDistInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_finality_v1_FinalityProviderDistInfo_descriptor,
+        new java.lang.String[] { "BtcPk", "Addr", "Commission", "TotalBondedSat", "BtcDels", "IsTimestamped", "IsJailed", "IsSlashed", });
+    internal_static_babylon_finality_v1_BTCDelDistInfo_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_babylon_finality_v1_BTCDelDistInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_finality_v1_BTCDelDistInfo_descriptor,
+        new java.lang.String[] { "BtcPk", "StakerAddr", "StakingTxHash", "TotalSat", });
+    internal_static_babylon_finality_v1_IndexedBlock_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_babylon_finality_v1_IndexedBlock_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_finality_v1_IndexedBlock_descriptor,
         new java.lang.String[] { "Height", "AppHash", "Finalized", });
     internal_static_babylon_finality_v1_PubRandCommit_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_babylon_finality_v1_PubRandCommit_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_finality_v1_PubRandCommit_descriptor,
-        new java.lang.String[] { "StartHeight", "NumPubRand", "Commitment", });
+        new java.lang.String[] { "StartHeight", "NumPubRand", "Commitment", "EpochNum", });
     internal_static_babylon_finality_v1_Evidence_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_babylon_finality_v1_Evidence_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_finality_v1_Evidence_descriptor,
         new java.lang.String[] { "FpBtcPk", "BlockHeight", "PubRand", "CanonicalAppHash", "ForkAppHash", "CanonicalFinalitySig", "ForkFinalitySig", });
     internal_static_babylon_finality_v1_FinalityProviderSigningInfo_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_babylon_finality_v1_FinalityProviderSigningInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_finality_v1_FinalityProviderSigningInfo_descriptor,
-        new java.lang.String[] { "FpBtcPk", "StartHeight", "MissedBlocksCounter", });
+        new java.lang.String[] { "FpBtcPk", "StartHeight", "MissedBlocksCounter", "JailedUntil", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.amino.AminoProto.dontOmitempty);
+    registry.add(com.cosmos_proto.CosmosProto.scalar);
     registry.add(com.gogoproto.GogoProto.customtype);
+    registry.add(com.gogoproto.GogoProto.goprotoGetters);
+    registry.add(com.gogoproto.GogoProto.nullable);
+    registry.add(com.gogoproto.GogoProto.stdtime);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.cosmos_proto.CosmosProto.getDescriptor();
     com.gogoproto.GogoProto.getDescriptor();
+    com.amino.AminoProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

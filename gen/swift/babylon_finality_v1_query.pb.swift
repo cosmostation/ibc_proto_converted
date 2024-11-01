@@ -105,6 +105,188 @@ struct Babylon_Finality_V1_QueryParamsResponse {
   fileprivate var _params: Babylon_Finality_V1_Params? = nil
 }
 
+/// QueryFinalityProviderPowerAtHeightRequest is the request type for the
+/// Query/FinalityProviderPowerAtHeight RPC method.
+struct Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// fp_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the finality provider that
+  /// this BTC delegation delegates to
+  /// the PK follows encoding in BIP-340 spec
+  var fpBtcPkHex: String = String()
+
+  /// height is used for querying the given finality provider's voting power at this height
+  var height: UInt64 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// QueryFinalityProviderPowerAtHeightResponse is the response type for the
+/// Query/FinalityProviderPowerAtHeight RPC method.
+struct Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// voting_power is the voting power of the finality provider
+  var votingPower: UInt64 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// QueryFinalityProviderCurrentPowerRequest is the request type for the
+/// Query/FinalityProviderCurrentPower RPC method.
+struct Babylon_Finality_V1_QueryFinalityProviderCurrentPowerRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// fp_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the finality provider that
+  /// this BTC delegation delegates to
+  /// the PK follows encoding in BIP-340 spec
+  var fpBtcPkHex: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// QueryFinalityProviderCurrentPowerResponse is the response type for the
+/// Query/FinalityProviderCurrentPower RPC method.
+struct Babylon_Finality_V1_QueryFinalityProviderCurrentPowerResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// height is the current height
+  var height: UInt64 = 0
+
+  /// voting_power is the voting power of the finality provider
+  var votingPower: UInt64 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// QueryActiveFinalityProvidersAtHeightRequest is the request type for the
+/// Query/ActiveFinalityProvidersAtHeight RPC method.
+struct Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// height defines at which Babylon height to query the finality providers info.
+  var height: UInt64 = 0
+
+  /// pagination defines an optional pagination for the request.
+  var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
+    get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageRequest()}
+    set {_pagination = newValue}
+  }
+  /// Returns true if `pagination` has been explicitly set.
+  var hasPagination: Bool {return self._pagination != nil}
+  /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
+  mutating func clearPagination() {self._pagination = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageRequest? = nil
+}
+
+/// ActiveFinalityProvidersAtHeightResponse wraps the FinalityProvider with metadata.
+struct Babylon_Finality_V1_ActiveFinalityProvidersAtHeightResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// btc_pk is the Bitcoin secp256k1 PK of thisfinality provider
+  /// the PK follows encoding in BIP-340 spec
+  var btcPkHex: String = String()
+
+  /// height is the queried Babylon height
+  var height: UInt64 = 0
+
+  /// voting_power is the voting power of this finality provider at the given height
+  var votingPower: UInt64 = 0
+
+  /// slashed_babylon_height indicates the Babylon height when
+  /// the finality provider is slashed.
+  /// if it's 0 then the finality provider is not slashed
+  var slashedBabylonHeight: UInt64 = 0
+
+  /// slashed_btc_height indicates the BTC height when
+  /// the finality provider is slashed.
+  /// if it's 0 then the finality provider is not slashed
+  var slashedBtcHeight: UInt32 = 0
+
+  /// jailed defines whether the finality provider is detected jailed
+  var jailed: Bool = false
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// QueryActiveFinalityProvidersAtHeightResponse is the response type for the
+/// Query/ActiveFinalityProvidersAtHeight RPC method.
+struct Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// finality_providers contains all the queried finality providersn.
+  var finalityProviders: [Babylon_Finality_V1_ActiveFinalityProvidersAtHeightResponse] = []
+
+  /// pagination defines the pagination in the response.
+  var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
+    get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageResponse()}
+    set {_pagination = newValue}
+  }
+  /// Returns true if `pagination` has been explicitly set.
+  var hasPagination: Bool {return self._pagination != nil}
+  /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
+  mutating func clearPagination() {self._pagination = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageResponse? = nil
+}
+
+/// QueryActivatedHeightRequest is the request type for the Query/ActivatedHeight RPC method.
+struct Babylon_Finality_V1_QueryActivatedHeightRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// QueryActivatedHeightResponse is the response type for the Query/ActivatedHeight RPC method.
+struct Babylon_Finality_V1_QueryActivatedHeightResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var height: UInt64 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 /// QueryListPublicRandomnessRequest is the request type for the
 /// Query/ListPublicRandomness RPC method.
 struct Babylon_Finality_V1_QueryListPublicRandomnessRequest {
@@ -171,6 +353,9 @@ struct Babylon_Finality_V1_PubRandCommitResponse {
 
   /// commitment is the value of the commitment
   var commitment: Data = Data()
+
+  /// epoch_num defines the epoch number that the commit falls into
+  var epochNum: UInt64 = 0
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -372,6 +557,43 @@ struct Babylon_Finality_V1_QueryEvidenceRequest {
   init() {}
 }
 
+/// Evidence is the evidence that a finality provider has signed finality
+/// signatures with correct public randomness on two conflicting Babylon headers
+struct Babylon_Finality_V1_EvidenceResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// fp_btc_pk_hex is the BTC PK of the finality provider that casts this vote
+  var fpBtcPkHex: String = String()
+
+  /// block_height is the height of the conflicting blocks
+  var blockHeight: UInt64 = 0
+
+  /// pub_rand is the public randomness the finality provider has committed to
+  var pubRand: Data = Data()
+
+  /// canonical_app_hash is the AppHash of the canonical block
+  var canonicalAppHash: Data = Data()
+
+  /// fork_app_hash is the AppHash of the fork block
+  var forkAppHash: Data = Data()
+
+  /// canonical_finality_sig is the finality signature to the canonical block
+  /// where finality signature is an EOTS signature, i.e.,
+  /// the `s` in a Schnorr signature `(r, s)`
+  /// `r` is the public randomness that is already committed by the finality provider
+  var canonicalFinalitySig: Data = Data()
+
+  /// fork_finality_sig is the finality signature to the fork block
+  /// where finality signature is an EOTS signature
+  var forkFinalitySig: Data = Data()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 /// QueryEvidenceResponse is the response type for the
 /// Query/Evidence RPC method.
 struct Babylon_Finality_V1_QueryEvidenceResponse {
@@ -379,8 +601,8 @@ struct Babylon_Finality_V1_QueryEvidenceResponse {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var evidence: Babylon_Finality_V1_Evidence {
-    get {return _evidence ?? Babylon_Finality_V1_Evidence()}
+  var evidence: Babylon_Finality_V1_EvidenceResponse {
+    get {return _evidence ?? Babylon_Finality_V1_EvidenceResponse()}
     set {_evidence = newValue}
   }
   /// Returns true if `evidence` has been explicitly set.
@@ -392,7 +614,7 @@ struct Babylon_Finality_V1_QueryEvidenceResponse {
 
   init() {}
 
-  fileprivate var _evidence: Babylon_Finality_V1_Evidence? = nil
+  fileprivate var _evidence: Babylon_Finality_V1_EvidenceResponse? = nil
 }
 
 /// QueryListEvidencesRequest is the request type for the
@@ -431,7 +653,7 @@ struct Babylon_Finality_V1_QueryListEvidencesResponse {
   // methods supported on all messages.
 
   /// blocks is the list of evidences
-  var evidences: [Babylon_Finality_V1_Evidence] = []
+  var evidences: [Babylon_Finality_V1_EvidenceResponse] = []
 
   /// pagination defines the pagination in the response.
   var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
@@ -466,6 +688,40 @@ struct Babylon_Finality_V1_QuerySigningInfoRequest {
   init() {}
 }
 
+/// SigningInfoResponse defines the API response containing a finality provider's signing info
+/// for monitoring their liveness activity.
+struct Babylon_Finality_V1_SigningInfoResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// fp_btc_pk is the BTC PK of the finality provider that casts this vote
+  var fpBtcPkHex: String = String()
+
+  /// start_height is the block height at which finality provider become active
+  var startHeight: Int64 = 0
+
+  /// missed_blocks_counter defines a counter to avoid unnecessary array reads.
+  /// Note that `Sum(MissedBlocksBitArray)` always equals `MissedBlocksCounter`.
+  var missedBlocksCounter: Int64 = 0
+
+  /// Timestamp until which the validator is jailed due to liveness downtime.
+  var jailedUntil: SwiftProtobuf.Google_Protobuf_Timestamp {
+    get {return _jailedUntil ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+    set {_jailedUntil = newValue}
+  }
+  /// Returns true if `jailedUntil` has been explicitly set.
+  var hasJailedUntil: Bool {return self._jailedUntil != nil}
+  /// Clears the value of `jailedUntil`. Subsequent reads from it will return its default value.
+  mutating func clearJailedUntil() {self._jailedUntil = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _jailedUntil: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+}
+
 /// QuerySigningInfoResponse is the response type for the Query/SigningInfo RPC
 /// method
 struct Babylon_Finality_V1_QuerySigningInfoResponse {
@@ -473,21 +729,20 @@ struct Babylon_Finality_V1_QuerySigningInfoResponse {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// fp_signing_info is the signing info of requested finality provider BTC public key
-  var fpSigningInfo: Babylon_Finality_V1_FinalityProviderSigningInfo {
-    get {return _fpSigningInfo ?? Babylon_Finality_V1_FinalityProviderSigningInfo()}
-    set {_fpSigningInfo = newValue}
+  var signingInfo: Babylon_Finality_V1_SigningInfoResponse {
+    get {return _signingInfo ?? Babylon_Finality_V1_SigningInfoResponse()}
+    set {_signingInfo = newValue}
   }
-  /// Returns true if `fpSigningInfo` has been explicitly set.
-  var hasFpSigningInfo: Bool {return self._fpSigningInfo != nil}
-  /// Clears the value of `fpSigningInfo`. Subsequent reads from it will return its default value.
-  mutating func clearFpSigningInfo() {self._fpSigningInfo = nil}
+  /// Returns true if `signingInfo` has been explicitly set.
+  var hasSigningInfo: Bool {return self._signingInfo != nil}
+  /// Clears the value of `signingInfo`. Subsequent reads from it will return its default value.
+  mutating func clearSigningInfo() {self._signingInfo = nil}
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
 
-  fileprivate var _fpSigningInfo: Babylon_Finality_V1_FinalityProviderSigningInfo? = nil
+  fileprivate var _signingInfo: Babylon_Finality_V1_SigningInfoResponse? = nil
 }
 
 /// QuerySigningInfosRequest is the request type for the Query/SigningInfos RPC
@@ -521,7 +776,7 @@ struct Babylon_Finality_V1_QuerySigningInfosResponse {
   // methods supported on all messages.
 
   /// info is the signing info of all finality providers with signing info
-  var fpSigningInfos: [Babylon_Finality_V1_FinalityProviderSigningInfo] = []
+  var signingInfos: [Babylon_Finality_V1_SigningInfoResponse] = []
 
   var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageResponse()}
@@ -543,6 +798,15 @@ struct Babylon_Finality_V1_QuerySigningInfosResponse {
 extension Babylon_Finality_V1_QueriedBlockStatus: @unchecked Sendable {}
 extension Babylon_Finality_V1_QueryParamsRequest: @unchecked Sendable {}
 extension Babylon_Finality_V1_QueryParamsResponse: @unchecked Sendable {}
+extension Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightRequest: @unchecked Sendable {}
+extension Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightResponse: @unchecked Sendable {}
+extension Babylon_Finality_V1_QueryFinalityProviderCurrentPowerRequest: @unchecked Sendable {}
+extension Babylon_Finality_V1_QueryFinalityProviderCurrentPowerResponse: @unchecked Sendable {}
+extension Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightRequest: @unchecked Sendable {}
+extension Babylon_Finality_V1_ActiveFinalityProvidersAtHeightResponse: @unchecked Sendable {}
+extension Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightResponse: @unchecked Sendable {}
+extension Babylon_Finality_V1_QueryActivatedHeightRequest: @unchecked Sendable {}
+extension Babylon_Finality_V1_QueryActivatedHeightResponse: @unchecked Sendable {}
 extension Babylon_Finality_V1_QueryListPublicRandomnessRequest: @unchecked Sendable {}
 extension Babylon_Finality_V1_QueryListPublicRandomnessResponse: @unchecked Sendable {}
 extension Babylon_Finality_V1_PubRandCommitResponse: @unchecked Sendable {}
@@ -555,10 +819,12 @@ extension Babylon_Finality_V1_QueryListBlocksResponse: @unchecked Sendable {}
 extension Babylon_Finality_V1_QueryVotesAtHeightRequest: @unchecked Sendable {}
 extension Babylon_Finality_V1_QueryVotesAtHeightResponse: @unchecked Sendable {}
 extension Babylon_Finality_V1_QueryEvidenceRequest: @unchecked Sendable {}
+extension Babylon_Finality_V1_EvidenceResponse: @unchecked Sendable {}
 extension Babylon_Finality_V1_QueryEvidenceResponse: @unchecked Sendable {}
 extension Babylon_Finality_V1_QueryListEvidencesRequest: @unchecked Sendable {}
 extension Babylon_Finality_V1_QueryListEvidencesResponse: @unchecked Sendable {}
 extension Babylon_Finality_V1_QuerySigningInfoRequest: @unchecked Sendable {}
+extension Babylon_Finality_V1_SigningInfoResponse: @unchecked Sendable {}
 extension Babylon_Finality_V1_QuerySigningInfoResponse: @unchecked Sendable {}
 extension Babylon_Finality_V1_QuerySigningInfosRequest: @unchecked Sendable {}
 extension Babylon_Finality_V1_QuerySigningInfosResponse: @unchecked Sendable {}
@@ -626,6 +892,343 @@ extension Babylon_Finality_V1_QueryParamsResponse: SwiftProtobuf.Message, SwiftP
 
   static func ==(lhs: Babylon_Finality_V1_QueryParamsResponse, rhs: Babylon_Finality_V1_QueryParamsResponse) -> Bool {
     if lhs._params != rhs._params {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".QueryFinalityProviderPowerAtHeightRequest"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "fp_btc_pk_hex"),
+    2: .same(proto: "height"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.fpBtcPkHex) }()
+      case 2: try { try decoder.decodeSingularUInt64Field(value: &self.height) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.fpBtcPkHex.isEmpty {
+      try visitor.visitSingularStringField(value: self.fpBtcPkHex, fieldNumber: 1)
+    }
+    if self.height != 0 {
+      try visitor.visitSingularUInt64Field(value: self.height, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightRequest, rhs: Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightRequest) -> Bool {
+    if lhs.fpBtcPkHex != rhs.fpBtcPkHex {return false}
+    if lhs.height != rhs.height {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".QueryFinalityProviderPowerAtHeightResponse"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "voting_power"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.votingPower) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.votingPower != 0 {
+      try visitor.visitSingularUInt64Field(value: self.votingPower, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightResponse, rhs: Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightResponse) -> Bool {
+    if lhs.votingPower != rhs.votingPower {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Finality_V1_QueryFinalityProviderCurrentPowerRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".QueryFinalityProviderCurrentPowerRequest"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "fp_btc_pk_hex"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.fpBtcPkHex) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.fpBtcPkHex.isEmpty {
+      try visitor.visitSingularStringField(value: self.fpBtcPkHex, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Finality_V1_QueryFinalityProviderCurrentPowerRequest, rhs: Babylon_Finality_V1_QueryFinalityProviderCurrentPowerRequest) -> Bool {
+    if lhs.fpBtcPkHex != rhs.fpBtcPkHex {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Finality_V1_QueryFinalityProviderCurrentPowerResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".QueryFinalityProviderCurrentPowerResponse"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "height"),
+    2: .standard(proto: "voting_power"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.height) }()
+      case 2: try { try decoder.decodeSingularUInt64Field(value: &self.votingPower) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.height != 0 {
+      try visitor.visitSingularUInt64Field(value: self.height, fieldNumber: 1)
+    }
+    if self.votingPower != 0 {
+      try visitor.visitSingularUInt64Field(value: self.votingPower, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Finality_V1_QueryFinalityProviderCurrentPowerResponse, rhs: Babylon_Finality_V1_QueryFinalityProviderCurrentPowerResponse) -> Bool {
+    if lhs.height != rhs.height {return false}
+    if lhs.votingPower != rhs.votingPower {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".QueryActiveFinalityProvidersAtHeightRequest"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "height"),
+    2: .same(proto: "pagination"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.height) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._pagination) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if self.height != 0 {
+      try visitor.visitSingularUInt64Field(value: self.height, fieldNumber: 1)
+    }
+    try { if let v = self._pagination {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightRequest, rhs: Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightRequest) -> Bool {
+    if lhs.height != rhs.height {return false}
+    if lhs._pagination != rhs._pagination {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Finality_V1_ActiveFinalityProvidersAtHeightResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ActiveFinalityProvidersAtHeightResponse"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "btc_pk_hex"),
+    2: .same(proto: "height"),
+    3: .standard(proto: "voting_power"),
+    4: .standard(proto: "slashed_babylon_height"),
+    5: .standard(proto: "slashed_btc_height"),
+    6: .same(proto: "jailed"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.btcPkHex) }()
+      case 2: try { try decoder.decodeSingularUInt64Field(value: &self.height) }()
+      case 3: try { try decoder.decodeSingularUInt64Field(value: &self.votingPower) }()
+      case 4: try { try decoder.decodeSingularUInt64Field(value: &self.slashedBabylonHeight) }()
+      case 5: try { try decoder.decodeSingularUInt32Field(value: &self.slashedBtcHeight) }()
+      case 6: try { try decoder.decodeSingularBoolField(value: &self.jailed) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.btcPkHex.isEmpty {
+      try visitor.visitSingularStringField(value: self.btcPkHex, fieldNumber: 1)
+    }
+    if self.height != 0 {
+      try visitor.visitSingularUInt64Field(value: self.height, fieldNumber: 2)
+    }
+    if self.votingPower != 0 {
+      try visitor.visitSingularUInt64Field(value: self.votingPower, fieldNumber: 3)
+    }
+    if self.slashedBabylonHeight != 0 {
+      try visitor.visitSingularUInt64Field(value: self.slashedBabylonHeight, fieldNumber: 4)
+    }
+    if self.slashedBtcHeight != 0 {
+      try visitor.visitSingularUInt32Field(value: self.slashedBtcHeight, fieldNumber: 5)
+    }
+    if self.jailed != false {
+      try visitor.visitSingularBoolField(value: self.jailed, fieldNumber: 6)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Finality_V1_ActiveFinalityProvidersAtHeightResponse, rhs: Babylon_Finality_V1_ActiveFinalityProvidersAtHeightResponse) -> Bool {
+    if lhs.btcPkHex != rhs.btcPkHex {return false}
+    if lhs.height != rhs.height {return false}
+    if lhs.votingPower != rhs.votingPower {return false}
+    if lhs.slashedBabylonHeight != rhs.slashedBabylonHeight {return false}
+    if lhs.slashedBtcHeight != rhs.slashedBtcHeight {return false}
+    if lhs.jailed != rhs.jailed {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".QueryActiveFinalityProvidersAtHeightResponse"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "finality_providers"),
+    2: .same(proto: "pagination"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.finalityProviders) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._pagination) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if !self.finalityProviders.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.finalityProviders, fieldNumber: 1)
+    }
+    try { if let v = self._pagination {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightResponse, rhs: Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightResponse) -> Bool {
+    if lhs.finalityProviders != rhs.finalityProviders {return false}
+    if lhs._pagination != rhs._pagination {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Finality_V1_QueryActivatedHeightRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".QueryActivatedHeightRequest"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let _ = try decoder.nextFieldNumber() {
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Finality_V1_QueryActivatedHeightRequest, rhs: Babylon_Finality_V1_QueryActivatedHeightRequest) -> Bool {
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Finality_V1_QueryActivatedHeightResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".QueryActivatedHeightResponse"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "height"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.height) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.height != 0 {
+      try visitor.visitSingularUInt64Field(value: self.height, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Finality_V1_QueryActivatedHeightResponse, rhs: Babylon_Finality_V1_QueryActivatedHeightResponse) -> Bool {
+    if lhs.height != rhs.height {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -720,6 +1323,7 @@ extension Babylon_Finality_V1_PubRandCommitResponse: SwiftProtobuf.Message, Swif
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "num_pub_rand"),
     2: .same(proto: "commitment"),
+    3: .standard(proto: "epoch_num"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -730,6 +1334,7 @@ extension Babylon_Finality_V1_PubRandCommitResponse: SwiftProtobuf.Message, Swif
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularUInt64Field(value: &self.numPubRand) }()
       case 2: try { try decoder.decodeSingularBytesField(value: &self.commitment) }()
+      case 3: try { try decoder.decodeSingularUInt64Field(value: &self.epochNum) }()
       default: break
       }
     }
@@ -742,12 +1347,16 @@ extension Babylon_Finality_V1_PubRandCommitResponse: SwiftProtobuf.Message, Swif
     if !self.commitment.isEmpty {
       try visitor.visitSingularBytesField(value: self.commitment, fieldNumber: 2)
     }
+    if self.epochNum != 0 {
+      try visitor.visitSingularUInt64Field(value: self.epochNum, fieldNumber: 3)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Babylon_Finality_V1_PubRandCommitResponse, rhs: Babylon_Finality_V1_PubRandCommitResponse) -> Bool {
     if lhs.numPubRand != rhs.numPubRand {return false}
     if lhs.commitment != rhs.commitment {return false}
+    if lhs.epochNum != rhs.epochNum {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -1085,6 +1694,74 @@ extension Babylon_Finality_V1_QueryEvidenceRequest: SwiftProtobuf.Message, Swift
   }
 }
 
+extension Babylon_Finality_V1_EvidenceResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".EvidenceResponse"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "fp_btc_pk_hex"),
+    2: .standard(proto: "block_height"),
+    3: .standard(proto: "pub_rand"),
+    4: .standard(proto: "canonical_app_hash"),
+    5: .standard(proto: "fork_app_hash"),
+    6: .standard(proto: "canonical_finality_sig"),
+    7: .standard(proto: "fork_finality_sig"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.fpBtcPkHex) }()
+      case 2: try { try decoder.decodeSingularUInt64Field(value: &self.blockHeight) }()
+      case 3: try { try decoder.decodeSingularBytesField(value: &self.pubRand) }()
+      case 4: try { try decoder.decodeSingularBytesField(value: &self.canonicalAppHash) }()
+      case 5: try { try decoder.decodeSingularBytesField(value: &self.forkAppHash) }()
+      case 6: try { try decoder.decodeSingularBytesField(value: &self.canonicalFinalitySig) }()
+      case 7: try { try decoder.decodeSingularBytesField(value: &self.forkFinalitySig) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.fpBtcPkHex.isEmpty {
+      try visitor.visitSingularStringField(value: self.fpBtcPkHex, fieldNumber: 1)
+    }
+    if self.blockHeight != 0 {
+      try visitor.visitSingularUInt64Field(value: self.blockHeight, fieldNumber: 2)
+    }
+    if !self.pubRand.isEmpty {
+      try visitor.visitSingularBytesField(value: self.pubRand, fieldNumber: 3)
+    }
+    if !self.canonicalAppHash.isEmpty {
+      try visitor.visitSingularBytesField(value: self.canonicalAppHash, fieldNumber: 4)
+    }
+    if !self.forkAppHash.isEmpty {
+      try visitor.visitSingularBytesField(value: self.forkAppHash, fieldNumber: 5)
+    }
+    if !self.canonicalFinalitySig.isEmpty {
+      try visitor.visitSingularBytesField(value: self.canonicalFinalitySig, fieldNumber: 6)
+    }
+    if !self.forkFinalitySig.isEmpty {
+      try visitor.visitSingularBytesField(value: self.forkFinalitySig, fieldNumber: 7)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Finality_V1_EvidenceResponse, rhs: Babylon_Finality_V1_EvidenceResponse) -> Bool {
+    if lhs.fpBtcPkHex != rhs.fpBtcPkHex {return false}
+    if lhs.blockHeight != rhs.blockHeight {return false}
+    if lhs.pubRand != rhs.pubRand {return false}
+    if lhs.canonicalAppHash != rhs.canonicalAppHash {return false}
+    if lhs.forkAppHash != rhs.forkAppHash {return false}
+    if lhs.canonicalFinalitySig != rhs.canonicalFinalitySig {return false}
+    if lhs.forkFinalitySig != rhs.forkFinalitySig {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
 extension Babylon_Finality_V1_QueryEvidenceResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".QueryEvidenceResponse"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
@@ -1237,10 +1914,13 @@ extension Babylon_Finality_V1_QuerySigningInfoRequest: SwiftProtobuf.Message, Sw
   }
 }
 
-extension Babylon_Finality_V1_QuerySigningInfoResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QuerySigningInfoResponse"
+extension Babylon_Finality_V1_SigningInfoResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".SigningInfoResponse"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "fp_signing_info"),
+    1: .standard(proto: "fp_btc_pk_hex"),
+    2: .standard(proto: "start_height"),
+    3: .standard(proto: "missed_blocks_counter"),
+    4: .standard(proto: "jailed_until"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -1249,7 +1929,10 @@ extension Babylon_Finality_V1_QuerySigningInfoResponse: SwiftProtobuf.Message, S
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularMessageField(value: &self._fpSigningInfo) }()
+      case 1: try { try decoder.decodeSingularStringField(value: &self.fpBtcPkHex) }()
+      case 2: try { try decoder.decodeSingularInt64Field(value: &self.startHeight) }()
+      case 3: try { try decoder.decodeSingularInt64Field(value: &self.missedBlocksCounter) }()
+      case 4: try { try decoder.decodeSingularMessageField(value: &self._jailedUntil) }()
       default: break
       }
     }
@@ -1260,14 +1943,62 @@ extension Babylon_Finality_V1_QuerySigningInfoResponse: SwiftProtobuf.Message, S
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
     // https://github.com/apple/swift-protobuf/issues/1182
-    try { if let v = self._fpSigningInfo {
+    if !self.fpBtcPkHex.isEmpty {
+      try visitor.visitSingularStringField(value: self.fpBtcPkHex, fieldNumber: 1)
+    }
+    if self.startHeight != 0 {
+      try visitor.visitSingularInt64Field(value: self.startHeight, fieldNumber: 2)
+    }
+    if self.missedBlocksCounter != 0 {
+      try visitor.visitSingularInt64Field(value: self.missedBlocksCounter, fieldNumber: 3)
+    }
+    try { if let v = self._jailedUntil {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Finality_V1_SigningInfoResponse, rhs: Babylon_Finality_V1_SigningInfoResponse) -> Bool {
+    if lhs.fpBtcPkHex != rhs.fpBtcPkHex {return false}
+    if lhs.startHeight != rhs.startHeight {return false}
+    if lhs.missedBlocksCounter != rhs.missedBlocksCounter {return false}
+    if lhs._jailedUntil != rhs._jailedUntil {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Finality_V1_QuerySigningInfoResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".QuerySigningInfoResponse"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "signing_info"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._signingInfo) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._signingInfo {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
     } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Babylon_Finality_V1_QuerySigningInfoResponse, rhs: Babylon_Finality_V1_QuerySigningInfoResponse) -> Bool {
-    if lhs._fpSigningInfo != rhs._fpSigningInfo {return false}
+    if lhs._signingInfo != rhs._signingInfo {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -1312,7 +2043,7 @@ extension Babylon_Finality_V1_QuerySigningInfosRequest: SwiftProtobuf.Message, S
 extension Babylon_Finality_V1_QuerySigningInfosResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".QuerySigningInfosResponse"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "fp_signing_infos"),
+    1: .standard(proto: "signing_infos"),
     2: .same(proto: "pagination"),
   ]
 
@@ -1322,7 +2053,7 @@ extension Babylon_Finality_V1_QuerySigningInfosResponse: SwiftProtobuf.Message, 
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.fpSigningInfos) }()
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.signingInfos) }()
       case 2: try { try decoder.decodeSingularMessageField(value: &self._pagination) }()
       default: break
       }
@@ -1334,8 +2065,8 @@ extension Babylon_Finality_V1_QuerySigningInfosResponse: SwiftProtobuf.Message, 
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
     // https://github.com/apple/swift-protobuf/issues/1182
-    if !self.fpSigningInfos.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.fpSigningInfos, fieldNumber: 1)
+    if !self.signingInfos.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.signingInfos, fieldNumber: 1)
     }
     try { if let v = self._pagination {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
@@ -1344,7 +2075,7 @@ extension Babylon_Finality_V1_QuerySigningInfosResponse: SwiftProtobuf.Message, 
   }
 
   static func ==(lhs: Babylon_Finality_V1_QuerySigningInfosResponse, rhs: Babylon_Finality_V1_QuerySigningInfosResponse) -> Bool {
-    if lhs.fpSigningInfos != rhs.fpSigningInfos {return false}
+    if lhs.signingInfos != rhs.signingInfos {return false}
     if lhs._pagination != rhs._pagination {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

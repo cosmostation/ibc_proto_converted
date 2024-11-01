@@ -684,8 +684,8 @@ public final class EventsProto {
 
   }
 
-  public interface EventSluggishFinalityProviderDetectedOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:babylon.finality.v1.EventSluggishFinalityProviderDetected)
+  public interface EventJailedFinalityProviderOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.finality.v1.EventJailedFinalityProvider)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -710,22 +710,22 @@ public final class EventsProto {
   }
   /**
    * <pre>
-   * EventSluggishFinalityProviderDetected is the event emitted when a finality provider is
-   * detected as sluggish
+   * EventJailedFinalityProvider is the event emitted when a finality provider is
+   * jailed due to inactivity
    * </pre>
    *
-   * Protobuf type {@code babylon.finality.v1.EventSluggishFinalityProviderDetected}
+   * Protobuf type {@code babylon.finality.v1.EventJailedFinalityProvider}
    */
-  public static final class EventSluggishFinalityProviderDetected extends
+  public static final class EventJailedFinalityProvider extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:babylon.finality.v1.EventSluggishFinalityProviderDetected)
-      EventSluggishFinalityProviderDetectedOrBuilder {
+      // @@protoc_insertion_point(message_implements:babylon.finality.v1.EventJailedFinalityProvider)
+      EventJailedFinalityProviderOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use EventSluggishFinalityProviderDetected.newBuilder() to construct.
-    private EventSluggishFinalityProviderDetected(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use EventJailedFinalityProvider.newBuilder() to construct.
+    private EventJailedFinalityProvider(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private EventSluggishFinalityProviderDetected() {
+    private EventJailedFinalityProvider() {
       publicKey_ = "";
     }
 
@@ -733,20 +733,20 @@ public final class EventsProto {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new EventSluggishFinalityProviderDetected();
+      return new EventJailedFinalityProvider();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.babylon.finality.v1.EventsProto.internal_static_babylon_finality_v1_EventSluggishFinalityProviderDetected_descriptor;
+      return com.babylon.finality.v1.EventsProto.internal_static_babylon_finality_v1_EventJailedFinalityProvider_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.babylon.finality.v1.EventsProto.internal_static_babylon_finality_v1_EventSluggishFinalityProviderDetected_fieldAccessorTable
+      return com.babylon.finality.v1.EventsProto.internal_static_babylon_finality_v1_EventJailedFinalityProvider_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected.class, com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected.Builder.class);
+              com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider.class, com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider.Builder.class);
     }
 
     public static final int PUBLIC_KEY_FIELD_NUMBER = 1;
@@ -835,10 +835,10 @@ public final class EventsProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected)) {
+      if (!(obj instanceof com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider)) {
         return super.equals(obj);
       }
-      com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected other = (com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected) obj;
+      com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider other = (com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider) obj;
 
       if (!getPublicKey()
           .equals(other.getPublicKey())) return false;
@@ -860,44 +860,44 @@ public final class EventsProto {
       return hash;
     }
 
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected parseFrom(
+    public static com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected parseFrom(
+    public static com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected parseFrom(
+    public static com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected parseFrom(
+    public static com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected parseFrom(byte[] data)
+    public static com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected parseFrom(
+    public static com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected parseFrom(java.io.InputStream input)
+    public static com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected parseFrom(
+    public static com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -905,26 +905,26 @@ public final class EventsProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected parseDelimitedFrom(java.io.InputStream input)
+    public static com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected parseDelimitedFrom(
+    public static com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected parseFrom(
+    public static com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected parseFrom(
+    public static com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -937,7 +937,7 @@ public final class EventsProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected prototype) {
+    public static Builder newBuilder(com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -954,30 +954,30 @@ public final class EventsProto {
     }
     /**
      * <pre>
-     * EventSluggishFinalityProviderDetected is the event emitted when a finality provider is
-     * detected as sluggish
+     * EventJailedFinalityProvider is the event emitted when a finality provider is
+     * jailed due to inactivity
      * </pre>
      *
-     * Protobuf type {@code babylon.finality.v1.EventSluggishFinalityProviderDetected}
+     * Protobuf type {@code babylon.finality.v1.EventJailedFinalityProvider}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:babylon.finality.v1.EventSluggishFinalityProviderDetected)
-        com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetectedOrBuilder {
+        // @@protoc_insertion_point(builder_implements:babylon.finality.v1.EventJailedFinalityProvider)
+        com.babylon.finality.v1.EventsProto.EventJailedFinalityProviderOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.babylon.finality.v1.EventsProto.internal_static_babylon_finality_v1_EventSluggishFinalityProviderDetected_descriptor;
+        return com.babylon.finality.v1.EventsProto.internal_static_babylon_finality_v1_EventJailedFinalityProvider_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.babylon.finality.v1.EventsProto.internal_static_babylon_finality_v1_EventSluggishFinalityProviderDetected_fieldAccessorTable
+        return com.babylon.finality.v1.EventsProto.internal_static_babylon_finality_v1_EventJailedFinalityProvider_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected.class, com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected.Builder.class);
+                com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider.class, com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider.Builder.class);
       }
 
-      // Construct using com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected.newBuilder()
+      // Construct using com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider.newBuilder()
       private Builder() {
 
       }
@@ -998,17 +998,17 @@ public final class EventsProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.babylon.finality.v1.EventsProto.internal_static_babylon_finality_v1_EventSluggishFinalityProviderDetected_descriptor;
+        return com.babylon.finality.v1.EventsProto.internal_static_babylon_finality_v1_EventJailedFinalityProvider_descriptor;
       }
 
       @java.lang.Override
-      public com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected getDefaultInstanceForType() {
-        return com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected.getDefaultInstance();
+      public com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider getDefaultInstanceForType() {
+        return com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected build() {
-        com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected result = buildPartial();
+      public com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider build() {
+        com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1016,14 +1016,14 @@ public final class EventsProto {
       }
 
       @java.lang.Override
-      public com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected buildPartial() {
-        com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected result = new com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected(this);
+      public com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider buildPartial() {
+        com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider result = new com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected result) {
+      private void buildPartial0(com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.publicKey_ = publicKey_;
@@ -1064,16 +1064,16 @@ public final class EventsProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected) {
-          return mergeFrom((com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected)other);
+        if (other instanceof com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider) {
+          return mergeFrom((com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected other) {
-        if (other == com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider other) {
+        if (other == com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider.getDefaultInstance()) return this;
         if (!other.getPublicKey().isEmpty()) {
           publicKey_ = other.publicKey_;
           bitField0_ |= 0x00000001;
@@ -1231,23 +1231,23 @@ public final class EventsProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:babylon.finality.v1.EventSluggishFinalityProviderDetected)
+      // @@protoc_insertion_point(builder_scope:babylon.finality.v1.EventJailedFinalityProvider)
     }
 
-    // @@protoc_insertion_point(class_scope:babylon.finality.v1.EventSluggishFinalityProviderDetected)
-    private static final com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:babylon.finality.v1.EventJailedFinalityProvider)
+    private static final com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected();
+      DEFAULT_INSTANCE = new com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider();
     }
 
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected getDefaultInstance() {
+    public static com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<EventSluggishFinalityProviderDetected>
-        PARSER = new com.google.protobuf.AbstractParser<EventSluggishFinalityProviderDetected>() {
+    private static final com.google.protobuf.Parser<EventJailedFinalityProvider>
+        PARSER = new com.google.protobuf.AbstractParser<EventJailedFinalityProvider>() {
       @java.lang.Override
-      public EventSluggishFinalityProviderDetected parsePartialFrom(
+      public EventJailedFinalityProvider parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1266,615 +1266,17 @@ public final class EventsProto {
       }
     };
 
-    public static com.google.protobuf.Parser<EventSluggishFinalityProviderDetected> parser() {
+    public static com.google.protobuf.Parser<EventJailedFinalityProvider> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<EventSluggishFinalityProviderDetected> getParserForType() {
+    public com.google.protobuf.Parser<EventJailedFinalityProvider> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderDetected getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface EventSluggishFinalityProviderRevertedOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:babylon.finality.v1.EventSluggishFinalityProviderReverted)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * public_key is the BTC public key of the finality provider
-     * </pre>
-     *
-     * <code>string public_key = 1 [json_name = "publicKey"];</code>
-     * @return The publicKey.
-     */
-    java.lang.String getPublicKey();
-    /**
-     * <pre>
-     * public_key is the BTC public key of the finality provider
-     * </pre>
-     *
-     * <code>string public_key = 1 [json_name = "publicKey"];</code>
-     * @return The bytes for publicKey.
-     */
-    com.google.protobuf.ByteString
-        getPublicKeyBytes();
-  }
-  /**
-   * <pre>
-   * EventSluggishFinalityProviderReverted is the event emitted when a sluggish finality
-   * provider is no longer considered sluggish
-   * </pre>
-   *
-   * Protobuf type {@code babylon.finality.v1.EventSluggishFinalityProviderReverted}
-   */
-  public static final class EventSluggishFinalityProviderReverted extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:babylon.finality.v1.EventSluggishFinalityProviderReverted)
-      EventSluggishFinalityProviderRevertedOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use EventSluggishFinalityProviderReverted.newBuilder() to construct.
-    private EventSluggishFinalityProviderReverted(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private EventSluggishFinalityProviderReverted() {
-      publicKey_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new EventSluggishFinalityProviderReverted();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.babylon.finality.v1.EventsProto.internal_static_babylon_finality_v1_EventSluggishFinalityProviderReverted_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.babylon.finality.v1.EventsProto.internal_static_babylon_finality_v1_EventSluggishFinalityProviderReverted_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted.class, com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted.Builder.class);
-    }
-
-    public static final int PUBLIC_KEY_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object publicKey_ = "";
-    /**
-     * <pre>
-     * public_key is the BTC public key of the finality provider
-     * </pre>
-     *
-     * <code>string public_key = 1 [json_name = "publicKey"];</code>
-     * @return The publicKey.
-     */
-    @java.lang.Override
-    public java.lang.String getPublicKey() {
-      java.lang.Object ref = publicKey_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        publicKey_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * public_key is the BTC public key of the finality provider
-     * </pre>
-     *
-     * <code>string public_key = 1 [json_name = "publicKey"];</code>
-     * @return The bytes for publicKey.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPublicKeyBytes() {
-      java.lang.Object ref = publicKey_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        publicKey_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKey_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, publicKey_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKey_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, publicKey_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted)) {
-        return super.equals(obj);
-      }
-      com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted other = (com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted) obj;
-
-      if (!getPublicKey()
-          .equals(other.getPublicKey())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + PUBLIC_KEY_FIELD_NUMBER;
-      hash = (53 * hash) + getPublicKey().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * EventSluggishFinalityProviderReverted is the event emitted when a sluggish finality
-     * provider is no longer considered sluggish
-     * </pre>
-     *
-     * Protobuf type {@code babylon.finality.v1.EventSluggishFinalityProviderReverted}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:babylon.finality.v1.EventSluggishFinalityProviderReverted)
-        com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderRevertedOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.babylon.finality.v1.EventsProto.internal_static_babylon_finality_v1_EventSluggishFinalityProviderReverted_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.babylon.finality.v1.EventsProto.internal_static_babylon_finality_v1_EventSluggishFinalityProviderReverted_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted.class, com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted.Builder.class);
-      }
-
-      // Construct using com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        publicKey_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.babylon.finality.v1.EventsProto.internal_static_babylon_finality_v1_EventSluggishFinalityProviderReverted_descriptor;
-      }
-
-      @java.lang.Override
-      public com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted getDefaultInstanceForType() {
-        return com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted build() {
-        com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted buildPartial() {
-        com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted result = new com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.publicKey_ = publicKey_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted) {
-          return mergeFrom((com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted other) {
-        if (other == com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted.getDefaultInstance()) return this;
-        if (!other.getPublicKey().isEmpty()) {
-          publicKey_ = other.publicKey_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                publicKey_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object publicKey_ = "";
-      /**
-       * <pre>
-       * public_key is the BTC public key of the finality provider
-       * </pre>
-       *
-       * <code>string public_key = 1 [json_name = "publicKey"];</code>
-       * @return The publicKey.
-       */
-      public java.lang.String getPublicKey() {
-        java.lang.Object ref = publicKey_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          publicKey_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * public_key is the BTC public key of the finality provider
-       * </pre>
-       *
-       * <code>string public_key = 1 [json_name = "publicKey"];</code>
-       * @return The bytes for publicKey.
-       */
-      public com.google.protobuf.ByteString
-          getPublicKeyBytes() {
-        java.lang.Object ref = publicKey_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          publicKey_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * public_key is the BTC public key of the finality provider
-       * </pre>
-       *
-       * <code>string public_key = 1 [json_name = "publicKey"];</code>
-       * @param value The publicKey to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPublicKey(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        publicKey_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * public_key is the BTC public key of the finality provider
-       * </pre>
-       *
-       * <code>string public_key = 1 [json_name = "publicKey"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPublicKey() {
-        publicKey_ = getDefaultInstance().getPublicKey();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * public_key is the BTC public key of the finality provider
-       * </pre>
-       *
-       * <code>string public_key = 1 [json_name = "publicKey"];</code>
-       * @param value The bytes for publicKey to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPublicKeyBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        publicKey_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:babylon.finality.v1.EventSluggishFinalityProviderReverted)
-    }
-
-    // @@protoc_insertion_point(class_scope:babylon.finality.v1.EventSluggishFinalityProviderReverted)
-    private static final com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted();
-    }
-
-    public static com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<EventSluggishFinalityProviderReverted>
-        PARSER = new com.google.protobuf.AbstractParser<EventSluggishFinalityProviderReverted>() {
-      @java.lang.Override
-      public EventSluggishFinalityProviderReverted parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<EventSluggishFinalityProviderReverted> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<EventSluggishFinalityProviderReverted> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.babylon.finality.v1.EventsProto.EventSluggishFinalityProviderReverted getDefaultInstanceForType() {
+    public com.babylon.finality.v1.EventsProto.EventJailedFinalityProvider getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1886,15 +1288,10 @@ public final class EventsProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_babylon_finality_v1_EventSlashedFinalityProvider_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_babylon_finality_v1_EventSluggishFinalityProviderDetected_descriptor;
+    internal_static_babylon_finality_v1_EventJailedFinalityProvider_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_babylon_finality_v1_EventSluggishFinalityProviderDetected_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_babylon_finality_v1_EventSluggishFinalityProviderReverted_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_babylon_finality_v1_EventSluggishFinalityProviderReverted_fieldAccessorTable;
+      internal_static_babylon_finality_v1_EventJailedFinalityProvider_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1908,12 +1305,10 @@ public final class EventsProto {
       "lon.finality.v1\032\"babylon/finality/v1/fin" +
       "ality.proto\"Y\n\034EventSlashedFinalityProvi" +
       "der\0229\n\010evidence\030\001 \001(\0132\035.babylon.finality" +
-      ".v1.EvidenceR\010evidence\"F\n%EventSluggishF" +
-      "inalityProviderDetected\022\035\n\npublic_key\030\001 " +
-      "\001(\tR\tpublicKey\"F\n%EventSluggishFinalityP" +
-      "roviderReverted\022\035\n\npublic_key\030\001 \001(\tR\tpub" +
-      "licKeyB\304\001\n\027com.babylon.finality.v1B\013Even" +
-      "tsProtoZ0github.com/babylonchain/babylon" +
+      ".v1.EvidenceR\010evidence\"<\n\033EventJailedFin" +
+      "alityProvider\022\035\n\npublic_key\030\001 \001(\tR\tpubli" +
+      "cKeyB\306\001\n\027com.babylon.finality.v1B\013Events" +
+      "ProtoZ2github.com/babylonlabs-io/babylon" +
       "/x/finality/types\242\002\003BFX\252\002\023Babylon.Finali" +
       "ty.V1\312\002\023Babylon\\Finality\\V1\342\002\037Babylon\\Fi" +
       "nality\\V1\\GPBMetadata\352\002\025Babylon::Finalit" +
@@ -1930,17 +1325,11 @@ public final class EventsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_finality_v1_EventSlashedFinalityProvider_descriptor,
         new java.lang.String[] { "Evidence", });
-    internal_static_babylon_finality_v1_EventSluggishFinalityProviderDetected_descriptor =
+    internal_static_babylon_finality_v1_EventJailedFinalityProvider_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_babylon_finality_v1_EventSluggishFinalityProviderDetected_fieldAccessorTable = new
+    internal_static_babylon_finality_v1_EventJailedFinalityProvider_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_babylon_finality_v1_EventSluggishFinalityProviderDetected_descriptor,
-        new java.lang.String[] { "PublicKey", });
-    internal_static_babylon_finality_v1_EventSluggishFinalityProviderReverted_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_babylon_finality_v1_EventSluggishFinalityProviderReverted_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_babylon_finality_v1_EventSluggishFinalityProviderReverted_descriptor,
+        internal_static_babylon_finality_v1_EventJailedFinalityProvider_descriptor,
         new java.lang.String[] { "PublicKey", });
     com.babylon.finality.v1.FinalityProto.getDescriptor();
   }

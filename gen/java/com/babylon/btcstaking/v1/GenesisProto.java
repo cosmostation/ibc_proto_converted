@@ -152,50 +152,6 @@ public final class GenesisProto {
 
     /**
      * <pre>
-     * voting_powers the voting power of every finality provider at every block height.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-     */
-    java.util.List<com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP> 
-        getVotingPowersList();
-    /**
-     * <pre>
-     * voting_powers the voting power of every finality provider at every block height.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-     */
-    com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP getVotingPowers(int index);
-    /**
-     * <pre>
-     * voting_powers the voting power of every finality provider at every block height.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-     */
-    int getVotingPowersCount();
-    /**
-     * <pre>
-     * voting_powers the voting power of every finality provider at every block height.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-     */
-    java.util.List<? extends com.babylon.btcstaking.v1.GenesisProto.VotingPowerFPOrBuilder> 
-        getVotingPowersOrBuilderList();
-    /**
-     * <pre>
-     * voting_powers the voting power of every finality provider at every block height.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-     */
-    com.babylon.btcstaking.v1.GenesisProto.VotingPowerFPOrBuilder getVotingPowersOrBuilder(
-        int index);
-
-    /**
-     * <pre>
      * block_height_chains the block height of babylon and bitcoin.
      * </pre>
      *
@@ -325,55 +281,6 @@ public final class GenesisProto {
      */
     com.babylon.btcstaking.v1.GenesisProto.EventIndexOrBuilder getEventsOrBuilder(
         int index);
-
-    /**
-     * <pre>
-     * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-     * TODO: remove this after not storing in the keeper store it anymore.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-     */
-    java.util.List<com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight> 
-        getVpDstCacheList();
-    /**
-     * <pre>
-     * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-     * TODO: remove this after not storing in the keeper store it anymore.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-     */
-    com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight getVpDstCache(int index);
-    /**
-     * <pre>
-     * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-     * TODO: remove this after not storing in the keeper store it anymore.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-     */
-    int getVpDstCacheCount();
-    /**
-     * <pre>
-     * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-     * TODO: remove this after not storing in the keeper store it anymore.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-     */
-    java.util.List<? extends com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeightOrBuilder> 
-        getVpDstCacheOrBuilderList();
-    /**
-     * <pre>
-     * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-     * TODO: remove this after not storing in the keeper store it anymore.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-     */
-    com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeightOrBuilder getVpDstCacheOrBuilder(
-        int index);
   }
   /**
    * <pre>
@@ -395,11 +302,9 @@ public final class GenesisProto {
       params_ = java.util.Collections.emptyList();
       finalityProviders_ = java.util.Collections.emptyList();
       btcDelegations_ = java.util.Collections.emptyList();
-      votingPowers_ = java.util.Collections.emptyList();
       blockHeightChains_ = java.util.Collections.emptyList();
       btcDelegators_ = java.util.Collections.emptyList();
       events_ = java.util.Collections.emptyList();
-      vpDstCache_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -605,67 +510,6 @@ public final class GenesisProto {
       return btcDelegations_.get(index);
     }
 
-    public static final int VOTING_POWERS_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private java.util.List<com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP> votingPowers_;
-    /**
-     * <pre>
-     * voting_powers the voting power of every finality provider at every block height.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-     */
-    @java.lang.Override
-    public java.util.List<com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP> getVotingPowersList() {
-      return votingPowers_;
-    }
-    /**
-     * <pre>
-     * voting_powers the voting power of every finality provider at every block height.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends com.babylon.btcstaking.v1.GenesisProto.VotingPowerFPOrBuilder> 
-        getVotingPowersOrBuilderList() {
-      return votingPowers_;
-    }
-    /**
-     * <pre>
-     * voting_powers the voting power of every finality provider at every block height.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-     */
-    @java.lang.Override
-    public int getVotingPowersCount() {
-      return votingPowers_.size();
-    }
-    /**
-     * <pre>
-     * voting_powers the voting power of every finality provider at every block height.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-     */
-    @java.lang.Override
-    public com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP getVotingPowers(int index) {
-      return votingPowers_.get(index);
-    }
-    /**
-     * <pre>
-     * voting_powers the voting power of every finality provider at every block height.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-     */
-    @java.lang.Override
-    public com.babylon.btcstaking.v1.GenesisProto.VotingPowerFPOrBuilder getVotingPowersOrBuilder(
-        int index) {
-      return votingPowers_.get(index);
-    }
-
     public static final int BLOCK_HEIGHT_CHAINS_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
     private java.util.List<com.babylon.btcstaking.v1.GenesisProto.BlockHeightBbnToBtc> blockHeightChains_;
@@ -849,72 +693,6 @@ public final class GenesisProto {
       return events_.get(index);
     }
 
-    public static final int VP_DST_CACHE_FIELD_NUMBER = 8;
-    @SuppressWarnings("serial")
-    private java.util.List<com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight> vpDstCache_;
-    /**
-     * <pre>
-     * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-     * TODO: remove this after not storing in the keeper store it anymore.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-     */
-    @java.lang.Override
-    public java.util.List<com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight> getVpDstCacheList() {
-      return vpDstCache_;
-    }
-    /**
-     * <pre>
-     * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-     * TODO: remove this after not storing in the keeper store it anymore.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeightOrBuilder> 
-        getVpDstCacheOrBuilderList() {
-      return vpDstCache_;
-    }
-    /**
-     * <pre>
-     * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-     * TODO: remove this after not storing in the keeper store it anymore.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-     */
-    @java.lang.Override
-    public int getVpDstCacheCount() {
-      return vpDstCache_.size();
-    }
-    /**
-     * <pre>
-     * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-     * TODO: remove this after not storing in the keeper store it anymore.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-     */
-    @java.lang.Override
-    public com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight getVpDstCache(int index) {
-      return vpDstCache_.get(index);
-    }
-    /**
-     * <pre>
-     * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-     * TODO: remove this after not storing in the keeper store it anymore.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-     */
-    @java.lang.Override
-    public com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeightOrBuilder getVpDstCacheOrBuilder(
-        int index) {
-      return vpDstCache_.get(index);
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -938,9 +716,6 @@ public final class GenesisProto {
       for (int i = 0; i < btcDelegations_.size(); i++) {
         output.writeMessage(3, btcDelegations_.get(i));
       }
-      for (int i = 0; i < votingPowers_.size(); i++) {
-        output.writeMessage(4, votingPowers_.get(i));
-      }
       for (int i = 0; i < blockHeightChains_.size(); i++) {
         output.writeMessage(5, blockHeightChains_.get(i));
       }
@@ -949,9 +724,6 @@ public final class GenesisProto {
       }
       for (int i = 0; i < events_.size(); i++) {
         output.writeMessage(7, events_.get(i));
-      }
-      for (int i = 0; i < vpDstCache_.size(); i++) {
-        output.writeMessage(8, vpDstCache_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -974,10 +746,6 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, btcDelegations_.get(i));
       }
-      for (int i = 0; i < votingPowers_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, votingPowers_.get(i));
-      }
       for (int i = 0; i < blockHeightChains_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, blockHeightChains_.get(i));
@@ -989,10 +757,6 @@ public final class GenesisProto {
       for (int i = 0; i < events_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, events_.get(i));
-      }
-      for (int i = 0; i < vpDstCache_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, vpDstCache_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1015,16 +779,12 @@ public final class GenesisProto {
           .equals(other.getFinalityProvidersList())) return false;
       if (!getBtcDelegationsList()
           .equals(other.getBtcDelegationsList())) return false;
-      if (!getVotingPowersList()
-          .equals(other.getVotingPowersList())) return false;
       if (!getBlockHeightChainsList()
           .equals(other.getBlockHeightChainsList())) return false;
       if (!getBtcDelegatorsList()
           .equals(other.getBtcDelegatorsList())) return false;
       if (!getEventsList()
           .equals(other.getEventsList())) return false;
-      if (!getVpDstCacheList()
-          .equals(other.getVpDstCacheList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1048,10 +808,6 @@ public final class GenesisProto {
         hash = (37 * hash) + BTC_DELEGATIONS_FIELD_NUMBER;
         hash = (53 * hash) + getBtcDelegationsList().hashCode();
       }
-      if (getVotingPowersCount() > 0) {
-        hash = (37 * hash) + VOTING_POWERS_FIELD_NUMBER;
-        hash = (53 * hash) + getVotingPowersList().hashCode();
-      }
       if (getBlockHeightChainsCount() > 0) {
         hash = (37 * hash) + BLOCK_HEIGHT_CHAINS_FIELD_NUMBER;
         hash = (53 * hash) + getBlockHeightChainsList().hashCode();
@@ -1063,10 +819,6 @@ public final class GenesisProto {
       if (getEventsCount() > 0) {
         hash = (37 * hash) + EVENTS_FIELD_NUMBER;
         hash = (53 * hash) + getEventsList().hashCode();
-      }
-      if (getVpDstCacheCount() > 0) {
-        hash = (37 * hash) + VP_DST_CACHE_FIELD_NUMBER;
-        hash = (53 * hash) + getVpDstCacheList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -1224,41 +976,27 @@ public final class GenesisProto {
           btcDelegationsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
-        if (votingPowersBuilder_ == null) {
-          votingPowers_ = java.util.Collections.emptyList();
-        } else {
-          votingPowers_ = null;
-          votingPowersBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000008);
         if (blockHeightChainsBuilder_ == null) {
           blockHeightChains_ = java.util.Collections.emptyList();
         } else {
           blockHeightChains_ = null;
           blockHeightChainsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (btcDelegatorsBuilder_ == null) {
           btcDelegators_ = java.util.Collections.emptyList();
         } else {
           btcDelegators_ = null;
           btcDelegatorsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         if (eventsBuilder_ == null) {
           events_ = java.util.Collections.emptyList();
         } else {
           events_ = null;
           eventsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000040);
-        if (vpDstCacheBuilder_ == null) {
-          vpDstCache_ = java.util.Collections.emptyList();
-        } else {
-          vpDstCache_ = null;
-          vpDstCacheBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -1319,50 +1057,32 @@ public final class GenesisProto {
         } else {
           result.btcDelegations_ = btcDelegationsBuilder_.build();
         }
-        if (votingPowersBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0)) {
-            votingPowers_ = java.util.Collections.unmodifiableList(votingPowers_);
-            bitField0_ = (bitField0_ & ~0x00000008);
-          }
-          result.votingPowers_ = votingPowers_;
-        } else {
-          result.votingPowers_ = votingPowersBuilder_.build();
-        }
         if (blockHeightChainsBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             blockHeightChains_ = java.util.Collections.unmodifiableList(blockHeightChains_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.blockHeightChains_ = blockHeightChains_;
         } else {
           result.blockHeightChains_ = blockHeightChainsBuilder_.build();
         }
         if (btcDelegatorsBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             btcDelegators_ = java.util.Collections.unmodifiableList(btcDelegators_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.btcDelegators_ = btcDelegators_;
         } else {
           result.btcDelegators_ = btcDelegatorsBuilder_.build();
         }
         if (eventsBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) != 0)) {
+          if (((bitField0_ & 0x00000020) != 0)) {
             events_ = java.util.Collections.unmodifiableList(events_);
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000020);
           }
           result.events_ = events_;
         } else {
           result.events_ = eventsBuilder_.build();
-        }
-        if (vpDstCacheBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) != 0)) {
-            vpDstCache_ = java.util.Collections.unmodifiableList(vpDstCache_);
-            bitField0_ = (bitField0_ & ~0x00000080);
-          }
-          result.vpDstCache_ = vpDstCache_;
-        } else {
-          result.vpDstCache_ = vpDstCacheBuilder_.build();
         }
       }
 
@@ -1492,37 +1212,11 @@ public final class GenesisProto {
             }
           }
         }
-        if (votingPowersBuilder_ == null) {
-          if (!other.votingPowers_.isEmpty()) {
-            if (votingPowers_.isEmpty()) {
-              votingPowers_ = other.votingPowers_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-            } else {
-              ensureVotingPowersIsMutable();
-              votingPowers_.addAll(other.votingPowers_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.votingPowers_.isEmpty()) {
-            if (votingPowersBuilder_.isEmpty()) {
-              votingPowersBuilder_.dispose();
-              votingPowersBuilder_ = null;
-              votingPowers_ = other.votingPowers_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-              votingPowersBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getVotingPowersFieldBuilder() : null;
-            } else {
-              votingPowersBuilder_.addAllMessages(other.votingPowers_);
-            }
-          }
-        }
         if (blockHeightChainsBuilder_ == null) {
           if (!other.blockHeightChains_.isEmpty()) {
             if (blockHeightChains_.isEmpty()) {
               blockHeightChains_ = other.blockHeightChains_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureBlockHeightChainsIsMutable();
               blockHeightChains_.addAll(other.blockHeightChains_);
@@ -1535,7 +1229,7 @@ public final class GenesisProto {
               blockHeightChainsBuilder_.dispose();
               blockHeightChainsBuilder_ = null;
               blockHeightChains_ = other.blockHeightChains_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000008);
               blockHeightChainsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getBlockHeightChainsFieldBuilder() : null;
@@ -1548,7 +1242,7 @@ public final class GenesisProto {
           if (!other.btcDelegators_.isEmpty()) {
             if (btcDelegators_.isEmpty()) {
               btcDelegators_ = other.btcDelegators_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureBtcDelegatorsIsMutable();
               btcDelegators_.addAll(other.btcDelegators_);
@@ -1561,7 +1255,7 @@ public final class GenesisProto {
               btcDelegatorsBuilder_.dispose();
               btcDelegatorsBuilder_ = null;
               btcDelegators_ = other.btcDelegators_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000010);
               btcDelegatorsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getBtcDelegatorsFieldBuilder() : null;
@@ -1574,7 +1268,7 @@ public final class GenesisProto {
           if (!other.events_.isEmpty()) {
             if (events_.isEmpty()) {
               events_ = other.events_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000020);
             } else {
               ensureEventsIsMutable();
               events_.addAll(other.events_);
@@ -1587,38 +1281,12 @@ public final class GenesisProto {
               eventsBuilder_.dispose();
               eventsBuilder_ = null;
               events_ = other.events_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000020);
               eventsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getEventsFieldBuilder() : null;
             } else {
               eventsBuilder_.addAllMessages(other.events_);
-            }
-          }
-        }
-        if (vpDstCacheBuilder_ == null) {
-          if (!other.vpDstCache_.isEmpty()) {
-            if (vpDstCache_.isEmpty()) {
-              vpDstCache_ = other.vpDstCache_;
-              bitField0_ = (bitField0_ & ~0x00000080);
-            } else {
-              ensureVpDstCacheIsMutable();
-              vpDstCache_.addAll(other.vpDstCache_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.vpDstCache_.isEmpty()) {
-            if (vpDstCacheBuilder_.isEmpty()) {
-              vpDstCacheBuilder_.dispose();
-              vpDstCacheBuilder_ = null;
-              vpDstCache_ = other.vpDstCache_;
-              bitField0_ = (bitField0_ & ~0x00000080);
-              vpDstCacheBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getVpDstCacheFieldBuilder() : null;
-            } else {
-              vpDstCacheBuilder_.addAllMessages(other.vpDstCache_);
             }
           }
         }
@@ -1687,19 +1355,6 @@ public final class GenesisProto {
                 }
                 break;
               } // case 26
-              case 34: {
-                com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP m =
-                    input.readMessage(
-                        com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP.parser(),
-                        extensionRegistry);
-                if (votingPowersBuilder_ == null) {
-                  ensureVotingPowersIsMutable();
-                  votingPowers_.add(m);
-                } else {
-                  votingPowersBuilder_.addMessage(m);
-                }
-                break;
-              } // case 34
               case 42: {
                 com.babylon.btcstaking.v1.GenesisProto.BlockHeightBbnToBtc m =
                     input.readMessage(
@@ -1739,19 +1394,6 @@ public final class GenesisProto {
                 }
                 break;
               } // case 58
-              case 66: {
-                com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight m =
-                    input.readMessage(
-                        com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight.parser(),
-                        extensionRegistry);
-                if (vpDstCacheBuilder_ == null) {
-                  ensureVpDstCacheIsMutable();
-                  vpDstCache_.add(m);
-                } else {
-                  vpDstCacheBuilder_.addMessage(m);
-                }
-                break;
-              } // case 66
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2705,324 +2347,12 @@ public final class GenesisProto {
         return btcDelegationsBuilder_;
       }
 
-      private java.util.List<com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP> votingPowers_ =
-        java.util.Collections.emptyList();
-      private void ensureVotingPowersIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
-          votingPowers_ = new java.util.ArrayList<com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP>(votingPowers_);
-          bitField0_ |= 0x00000008;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP, com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP.Builder, com.babylon.btcstaking.v1.GenesisProto.VotingPowerFPOrBuilder> votingPowersBuilder_;
-
-      /**
-       * <pre>
-       * voting_powers the voting power of every finality provider at every block height.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-       */
-      public java.util.List<com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP> getVotingPowersList() {
-        if (votingPowersBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(votingPowers_);
-        } else {
-          return votingPowersBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <pre>
-       * voting_powers the voting power of every finality provider at every block height.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-       */
-      public int getVotingPowersCount() {
-        if (votingPowersBuilder_ == null) {
-          return votingPowers_.size();
-        } else {
-          return votingPowersBuilder_.getCount();
-        }
-      }
-      /**
-       * <pre>
-       * voting_powers the voting power of every finality provider at every block height.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-       */
-      public com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP getVotingPowers(int index) {
-        if (votingPowersBuilder_ == null) {
-          return votingPowers_.get(index);
-        } else {
-          return votingPowersBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <pre>
-       * voting_powers the voting power of every finality provider at every block height.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-       */
-      public Builder setVotingPowers(
-          int index, com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP value) {
-        if (votingPowersBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureVotingPowersIsMutable();
-          votingPowers_.set(index, value);
-          onChanged();
-        } else {
-          votingPowersBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * voting_powers the voting power of every finality provider at every block height.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-       */
-      public Builder setVotingPowers(
-          int index, com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP.Builder builderForValue) {
-        if (votingPowersBuilder_ == null) {
-          ensureVotingPowersIsMutable();
-          votingPowers_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          votingPowersBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * voting_powers the voting power of every finality provider at every block height.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-       */
-      public Builder addVotingPowers(com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP value) {
-        if (votingPowersBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureVotingPowersIsMutable();
-          votingPowers_.add(value);
-          onChanged();
-        } else {
-          votingPowersBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * voting_powers the voting power of every finality provider at every block height.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-       */
-      public Builder addVotingPowers(
-          int index, com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP value) {
-        if (votingPowersBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureVotingPowersIsMutable();
-          votingPowers_.add(index, value);
-          onChanged();
-        } else {
-          votingPowersBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * voting_powers the voting power of every finality provider at every block height.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-       */
-      public Builder addVotingPowers(
-          com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP.Builder builderForValue) {
-        if (votingPowersBuilder_ == null) {
-          ensureVotingPowersIsMutable();
-          votingPowers_.add(builderForValue.build());
-          onChanged();
-        } else {
-          votingPowersBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * voting_powers the voting power of every finality provider at every block height.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-       */
-      public Builder addVotingPowers(
-          int index, com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP.Builder builderForValue) {
-        if (votingPowersBuilder_ == null) {
-          ensureVotingPowersIsMutable();
-          votingPowers_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          votingPowersBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * voting_powers the voting power of every finality provider at every block height.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-       */
-      public Builder addAllVotingPowers(
-          java.lang.Iterable<? extends com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP> values) {
-        if (votingPowersBuilder_ == null) {
-          ensureVotingPowersIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, votingPowers_);
-          onChanged();
-        } else {
-          votingPowersBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * voting_powers the voting power of every finality provider at every block height.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-       */
-      public Builder clearVotingPowers() {
-        if (votingPowersBuilder_ == null) {
-          votingPowers_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
-          onChanged();
-        } else {
-          votingPowersBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * voting_powers the voting power of every finality provider at every block height.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-       */
-      public Builder removeVotingPowers(int index) {
-        if (votingPowersBuilder_ == null) {
-          ensureVotingPowersIsMutable();
-          votingPowers_.remove(index);
-          onChanged();
-        } else {
-          votingPowersBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * voting_powers the voting power of every finality provider at every block height.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-       */
-      public com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP.Builder getVotingPowersBuilder(
-          int index) {
-        return getVotingPowersFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * voting_powers the voting power of every finality provider at every block height.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-       */
-      public com.babylon.btcstaking.v1.GenesisProto.VotingPowerFPOrBuilder getVotingPowersOrBuilder(
-          int index) {
-        if (votingPowersBuilder_ == null) {
-          return votingPowers_.get(index);  } else {
-          return votingPowersBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * voting_powers the voting power of every finality provider at every block height.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-       */
-      public java.util.List<? extends com.babylon.btcstaking.v1.GenesisProto.VotingPowerFPOrBuilder> 
-           getVotingPowersOrBuilderList() {
-        if (votingPowersBuilder_ != null) {
-          return votingPowersBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(votingPowers_);
-        }
-      }
-      /**
-       * <pre>
-       * voting_powers the voting power of every finality provider at every block height.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-       */
-      public com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP.Builder addVotingPowersBuilder() {
-        return getVotingPowersFieldBuilder().addBuilder(
-            com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * voting_powers the voting power of every finality provider at every block height.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-       */
-      public com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP.Builder addVotingPowersBuilder(
-          int index) {
-        return getVotingPowersFieldBuilder().addBuilder(
-            index, com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * voting_powers the voting power of every finality provider at every block height.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerFP voting_powers = 4 [json_name = "votingPowers"];</code>
-       */
-      public java.util.List<com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP.Builder> 
-           getVotingPowersBuilderList() {
-        return getVotingPowersFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP, com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP.Builder, com.babylon.btcstaking.v1.GenesisProto.VotingPowerFPOrBuilder> 
-          getVotingPowersFieldBuilder() {
-        if (votingPowersBuilder_ == null) {
-          votingPowersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP, com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP.Builder, com.babylon.btcstaking.v1.GenesisProto.VotingPowerFPOrBuilder>(
-                  votingPowers_,
-                  ((bitField0_ & 0x00000008) != 0),
-                  getParentForChildren(),
-                  isClean());
-          votingPowers_ = null;
-        }
-        return votingPowersBuilder_;
-      }
-
       private java.util.List<com.babylon.btcstaking.v1.GenesisProto.BlockHeightBbnToBtc> blockHeightChains_ =
         java.util.Collections.emptyList();
       private void ensureBlockHeightChainsIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           blockHeightChains_ = new java.util.ArrayList<com.babylon.btcstaking.v1.GenesisProto.BlockHeightBbnToBtc>(blockHeightChains_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -3216,7 +2546,7 @@ public final class GenesisProto {
       public Builder clearBlockHeightChains() {
         if (blockHeightChainsBuilder_ == null) {
           blockHeightChains_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           blockHeightChainsBuilder_.clear();
@@ -3321,7 +2651,7 @@ public final class GenesisProto {
           blockHeightChainsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.babylon.btcstaking.v1.GenesisProto.BlockHeightBbnToBtc, com.babylon.btcstaking.v1.GenesisProto.BlockHeightBbnToBtc.Builder, com.babylon.btcstaking.v1.GenesisProto.BlockHeightBbnToBtcOrBuilder>(
                   blockHeightChains_,
-                  ((bitField0_ & 0x00000010) != 0),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           blockHeightChains_ = null;
@@ -3332,9 +2662,9 @@ public final class GenesisProto {
       private java.util.List<com.babylon.btcstaking.v1.GenesisProto.BTCDelegator> btcDelegators_ =
         java.util.Collections.emptyList();
       private void ensureBtcDelegatorsIsMutable() {
-        if (!((bitField0_ & 0x00000020) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           btcDelegators_ = new java.util.ArrayList<com.babylon.btcstaking.v1.GenesisProto.BTCDelegator>(btcDelegators_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -3528,7 +2858,7 @@ public final class GenesisProto {
       public Builder clearBtcDelegators() {
         if (btcDelegatorsBuilder_ == null) {
           btcDelegators_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           btcDelegatorsBuilder_.clear();
@@ -3633,7 +2963,7 @@ public final class GenesisProto {
           btcDelegatorsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.babylon.btcstaking.v1.GenesisProto.BTCDelegator, com.babylon.btcstaking.v1.GenesisProto.BTCDelegator.Builder, com.babylon.btcstaking.v1.GenesisProto.BTCDelegatorOrBuilder>(
                   btcDelegators_,
-                  ((bitField0_ & 0x00000020) != 0),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           btcDelegators_ = null;
@@ -3644,9 +2974,9 @@ public final class GenesisProto {
       private java.util.List<com.babylon.btcstaking.v1.GenesisProto.EventIndex> events_ =
         java.util.Collections.emptyList();
       private void ensureEventsIsMutable() {
-        if (!((bitField0_ & 0x00000040) != 0)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           events_ = new java.util.ArrayList<com.babylon.btcstaking.v1.GenesisProto.EventIndex>(events_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000020;
          }
       }
 
@@ -3840,7 +3170,7 @@ public final class GenesisProto {
       public Builder clearEvents() {
         if (eventsBuilder_ == null) {
           events_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000020);
           onChanged();
         } else {
           eventsBuilder_.clear();
@@ -3945,342 +3275,12 @@ public final class GenesisProto {
           eventsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.babylon.btcstaking.v1.GenesisProto.EventIndex, com.babylon.btcstaking.v1.GenesisProto.EventIndex.Builder, com.babylon.btcstaking.v1.GenesisProto.EventIndexOrBuilder>(
                   events_,
-                  ((bitField0_ & 0x00000040) != 0),
+                  ((bitField0_ & 0x00000020) != 0),
                   getParentForChildren(),
                   isClean());
           events_ = null;
         }
         return eventsBuilder_;
-      }
-
-      private java.util.List<com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight> vpDstCache_ =
-        java.util.Collections.emptyList();
-      private void ensureVpDstCacheIsMutable() {
-        if (!((bitField0_ & 0x00000080) != 0)) {
-          vpDstCache_ = new java.util.ArrayList<com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight>(vpDstCache_);
-          bitField0_ |= 0x00000080;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight, com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight.Builder, com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeightOrBuilder> vpDstCacheBuilder_;
-
-      /**
-       * <pre>
-       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-       * TODO: remove this after not storing in the keeper store it anymore.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-       */
-      public java.util.List<com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight> getVpDstCacheList() {
-        if (vpDstCacheBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(vpDstCache_);
-        } else {
-          return vpDstCacheBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <pre>
-       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-       * TODO: remove this after not storing in the keeper store it anymore.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-       */
-      public int getVpDstCacheCount() {
-        if (vpDstCacheBuilder_ == null) {
-          return vpDstCache_.size();
-        } else {
-          return vpDstCacheBuilder_.getCount();
-        }
-      }
-      /**
-       * <pre>
-       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-       * TODO: remove this after not storing in the keeper store it anymore.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-       */
-      public com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight getVpDstCache(int index) {
-        if (vpDstCacheBuilder_ == null) {
-          return vpDstCache_.get(index);
-        } else {
-          return vpDstCacheBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <pre>
-       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-       * TODO: remove this after not storing in the keeper store it anymore.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-       */
-      public Builder setVpDstCache(
-          int index, com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight value) {
-        if (vpDstCacheBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureVpDstCacheIsMutable();
-          vpDstCache_.set(index, value);
-          onChanged();
-        } else {
-          vpDstCacheBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-       * TODO: remove this after not storing in the keeper store it anymore.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-       */
-      public Builder setVpDstCache(
-          int index, com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight.Builder builderForValue) {
-        if (vpDstCacheBuilder_ == null) {
-          ensureVpDstCacheIsMutable();
-          vpDstCache_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          vpDstCacheBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-       * TODO: remove this after not storing in the keeper store it anymore.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-       */
-      public Builder addVpDstCache(com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight value) {
-        if (vpDstCacheBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureVpDstCacheIsMutable();
-          vpDstCache_.add(value);
-          onChanged();
-        } else {
-          vpDstCacheBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-       * TODO: remove this after not storing in the keeper store it anymore.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-       */
-      public Builder addVpDstCache(
-          int index, com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight value) {
-        if (vpDstCacheBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureVpDstCacheIsMutable();
-          vpDstCache_.add(index, value);
-          onChanged();
-        } else {
-          vpDstCacheBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-       * TODO: remove this after not storing in the keeper store it anymore.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-       */
-      public Builder addVpDstCache(
-          com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight.Builder builderForValue) {
-        if (vpDstCacheBuilder_ == null) {
-          ensureVpDstCacheIsMutable();
-          vpDstCache_.add(builderForValue.build());
-          onChanged();
-        } else {
-          vpDstCacheBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-       * TODO: remove this after not storing in the keeper store it anymore.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-       */
-      public Builder addVpDstCache(
-          int index, com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight.Builder builderForValue) {
-        if (vpDstCacheBuilder_ == null) {
-          ensureVpDstCacheIsMutable();
-          vpDstCache_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          vpDstCacheBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-       * TODO: remove this after not storing in the keeper store it anymore.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-       */
-      public Builder addAllVpDstCache(
-          java.lang.Iterable<? extends com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight> values) {
-        if (vpDstCacheBuilder_ == null) {
-          ensureVpDstCacheIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, vpDstCache_);
-          onChanged();
-        } else {
-          vpDstCacheBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-       * TODO: remove this after not storing in the keeper store it anymore.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-       */
-      public Builder clearVpDstCache() {
-        if (vpDstCacheBuilder_ == null) {
-          vpDstCache_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
-          onChanged();
-        } else {
-          vpDstCacheBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-       * TODO: remove this after not storing in the keeper store it anymore.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-       */
-      public Builder removeVpDstCache(int index) {
-        if (vpDstCacheBuilder_ == null) {
-          ensureVpDstCacheIsMutable();
-          vpDstCache_.remove(index);
-          onChanged();
-        } else {
-          vpDstCacheBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-       * TODO: remove this after not storing in the keeper store it anymore.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-       */
-      public com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight.Builder getVpDstCacheBuilder(
-          int index) {
-        return getVpDstCacheFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-       * TODO: remove this after not storing in the keeper store it anymore.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-       */
-      public com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeightOrBuilder getVpDstCacheOrBuilder(
-          int index) {
-        if (vpDstCacheBuilder_ == null) {
-          return vpDstCache_.get(index);  } else {
-          return vpDstCacheBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-       * TODO: remove this after not storing in the keeper store it anymore.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-       */
-      public java.util.List<? extends com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeightOrBuilder> 
-           getVpDstCacheOrBuilderList() {
-        if (vpDstCacheBuilder_ != null) {
-          return vpDstCacheBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(vpDstCache_);
-        }
-      }
-      /**
-       * <pre>
-       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-       * TODO: remove this after not storing in the keeper store it anymore.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-       */
-      public com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight.Builder addVpDstCacheBuilder() {
-        return getVpDstCacheFieldBuilder().addBuilder(
-            com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-       * TODO: remove this after not storing in the keeper store it anymore.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-       */
-      public com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight.Builder addVpDstCacheBuilder(
-          int index) {
-        return getVpDstCacheFieldBuilder().addBuilder(
-            index, com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * vp_dst_cache is the table of all providers voting power with the total at one specific block.
-       * TODO: remove this after not storing in the keeper store it anymore.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight vp_dst_cache = 8 [json_name = "vpDstCache"];</code>
-       */
-      public java.util.List<com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight.Builder> 
-           getVpDstCacheBuilderList() {
-        return getVpDstCacheFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight, com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight.Builder, com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeightOrBuilder> 
-          getVpDstCacheFieldBuilder() {
-        if (vpDstCacheBuilder_ == null) {
-          vpDstCacheBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight, com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight.Builder, com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeightOrBuilder>(
-                  vpDstCache_,
-                  ((bitField0_ & 0x00000080) != 0),
-                  getParentForChildren(),
-                  isClean());
-          vpDstCache_ = null;
-        }
-        return vpDstCacheBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4346,1460 +3346,6 @@ public final class GenesisProto {
 
   }
 
-  public interface VotingPowerFPOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.VotingPowerFP)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * block_height is the height of the block the voting power was stored.
-     * </pre>
-     *
-     * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
-     * @return The blockHeight.
-     */
-    long getBlockHeight();
-
-    /**
-     * <pre>
-     * fp_btc_pk the finality provider btc public key.
-     * </pre>
-     *
-     * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
-     * @return The fpBtcPk.
-     */
-    com.google.protobuf.ByteString getFpBtcPk();
-
-    /**
-     * <pre>
-     * voting_power is the power of the finality provider at this specific block height.
-     * </pre>
-     *
-     * <code>uint64 voting_power = 3 [json_name = "votingPower"];</code>
-     * @return The votingPower.
-     */
-    long getVotingPower();
-  }
-  /**
-   * <pre>
-   * VotingPowerFP contains the information about the voting power
-   * of an finality provider in a specific block height.
-   * </pre>
-   *
-   * Protobuf type {@code babylon.btcstaking.v1.VotingPowerFP}
-   */
-  public static final class VotingPowerFP extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.VotingPowerFP)
-      VotingPowerFPOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use VotingPowerFP.newBuilder() to construct.
-    private VotingPowerFP(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private VotingPowerFP() {
-      fpBtcPk_ = com.google.protobuf.ByteString.EMPTY;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new VotingPowerFP();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.babylon.btcstaking.v1.GenesisProto.internal_static_babylon_btcstaking_v1_VotingPowerFP_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.babylon.btcstaking.v1.GenesisProto.internal_static_babylon_btcstaking_v1_VotingPowerFP_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP.class, com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP.Builder.class);
-    }
-
-    public static final int BLOCK_HEIGHT_FIELD_NUMBER = 1;
-    private long blockHeight_ = 0L;
-    /**
-     * <pre>
-     * block_height is the height of the block the voting power was stored.
-     * </pre>
-     *
-     * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
-     * @return The blockHeight.
-     */
-    @java.lang.Override
-    public long getBlockHeight() {
-      return blockHeight_;
-    }
-
-    public static final int FP_BTC_PK_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString fpBtcPk_ = com.google.protobuf.ByteString.EMPTY;
-    /**
-     * <pre>
-     * fp_btc_pk the finality provider btc public key.
-     * </pre>
-     *
-     * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
-     * @return The fpBtcPk.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString getFpBtcPk() {
-      return fpBtcPk_;
-    }
-
-    public static final int VOTING_POWER_FIELD_NUMBER = 3;
-    private long votingPower_ = 0L;
-    /**
-     * <pre>
-     * voting_power is the power of the finality provider at this specific block height.
-     * </pre>
-     *
-     * <code>uint64 voting_power = 3 [json_name = "votingPower"];</code>
-     * @return The votingPower.
-     */
-    @java.lang.Override
-    public long getVotingPower() {
-      return votingPower_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (blockHeight_ != 0L) {
-        output.writeUInt64(1, blockHeight_);
-      }
-      if (!fpBtcPk_.isEmpty()) {
-        output.writeBytes(2, fpBtcPk_);
-      }
-      if (votingPower_ != 0L) {
-        output.writeUInt64(3, votingPower_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (blockHeight_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1, blockHeight_);
-      }
-      if (!fpBtcPk_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, fpBtcPk_);
-      }
-      if (votingPower_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(3, votingPower_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP)) {
-        return super.equals(obj);
-      }
-      com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP other = (com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP) obj;
-
-      if (getBlockHeight()
-          != other.getBlockHeight()) return false;
-      if (!getFpBtcPk()
-          .equals(other.getFpBtcPk())) return false;
-      if (getVotingPower()
-          != other.getVotingPower()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + BLOCK_HEIGHT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getBlockHeight());
-      hash = (37 * hash) + FP_BTC_PK_FIELD_NUMBER;
-      hash = (53 * hash) + getFpBtcPk().hashCode();
-      hash = (37 * hash) + VOTING_POWER_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getVotingPower());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * VotingPowerFP contains the information about the voting power
-     * of an finality provider in a specific block height.
-     * </pre>
-     *
-     * Protobuf type {@code babylon.btcstaking.v1.VotingPowerFP}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.VotingPowerFP)
-        com.babylon.btcstaking.v1.GenesisProto.VotingPowerFPOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.babylon.btcstaking.v1.GenesisProto.internal_static_babylon_btcstaking_v1_VotingPowerFP_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.babylon.btcstaking.v1.GenesisProto.internal_static_babylon_btcstaking_v1_VotingPowerFP_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP.class, com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP.Builder.class);
-      }
-
-      // Construct using com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        blockHeight_ = 0L;
-        fpBtcPk_ = com.google.protobuf.ByteString.EMPTY;
-        votingPower_ = 0L;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.babylon.btcstaking.v1.GenesisProto.internal_static_babylon_btcstaking_v1_VotingPowerFP_descriptor;
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP getDefaultInstanceForType() {
-        return com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP build() {
-        com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP buildPartial() {
-        com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP result = new com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.blockHeight_ = blockHeight_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.fpBtcPk_ = fpBtcPk_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.votingPower_ = votingPower_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP) {
-          return mergeFrom((com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP other) {
-        if (other == com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP.getDefaultInstance()) return this;
-        if (other.getBlockHeight() != 0L) {
-          setBlockHeight(other.getBlockHeight());
-        }
-        if (other.getFpBtcPk() != com.google.protobuf.ByteString.EMPTY) {
-          setFpBtcPk(other.getFpBtcPk());
-        }
-        if (other.getVotingPower() != 0L) {
-          setVotingPower(other.getVotingPower());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                blockHeight_ = input.readUInt64();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              case 18: {
-                fpBtcPk_ = input.readBytes();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 24: {
-                votingPower_ = input.readUInt64();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private long blockHeight_ ;
-      /**
-       * <pre>
-       * block_height is the height of the block the voting power was stored.
-       * </pre>
-       *
-       * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
-       * @return The blockHeight.
-       */
-      @java.lang.Override
-      public long getBlockHeight() {
-        return blockHeight_;
-      }
-      /**
-       * <pre>
-       * block_height is the height of the block the voting power was stored.
-       * </pre>
-       *
-       * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
-       * @param value The blockHeight to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBlockHeight(long value) {
-
-        blockHeight_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * block_height is the height of the block the voting power was stored.
-       * </pre>
-       *
-       * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearBlockHeight() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        blockHeight_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.ByteString fpBtcPk_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <pre>
-       * fp_btc_pk the finality provider btc public key.
-       * </pre>
-       *
-       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
-       * @return The fpBtcPk.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString getFpBtcPk() {
-        return fpBtcPk_;
-      }
-      /**
-       * <pre>
-       * fp_btc_pk the finality provider btc public key.
-       * </pre>
-       *
-       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
-       * @param value The fpBtcPk to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFpBtcPk(com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        fpBtcPk_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * fp_btc_pk the finality provider btc public key.
-       * </pre>
-       *
-       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearFpBtcPk() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        fpBtcPk_ = getDefaultInstance().getFpBtcPk();
-        onChanged();
-        return this;
-      }
-
-      private long votingPower_ ;
-      /**
-       * <pre>
-       * voting_power is the power of the finality provider at this specific block height.
-       * </pre>
-       *
-       * <code>uint64 voting_power = 3 [json_name = "votingPower"];</code>
-       * @return The votingPower.
-       */
-      @java.lang.Override
-      public long getVotingPower() {
-        return votingPower_;
-      }
-      /**
-       * <pre>
-       * voting_power is the power of the finality provider at this specific block height.
-       * </pre>
-       *
-       * <code>uint64 voting_power = 3 [json_name = "votingPower"];</code>
-       * @param value The votingPower to set.
-       * @return This builder for chaining.
-       */
-      public Builder setVotingPower(long value) {
-
-        votingPower_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * voting_power is the power of the finality provider at this specific block height.
-       * </pre>
-       *
-       * <code>uint64 voting_power = 3 [json_name = "votingPower"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearVotingPower() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        votingPower_ = 0L;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.VotingPowerFP)
-    }
-
-    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.VotingPowerFP)
-    private static final com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP();
-    }
-
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<VotingPowerFP>
-        PARSER = new com.google.protobuf.AbstractParser<VotingPowerFP>() {
-      @java.lang.Override
-      public VotingPowerFP parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<VotingPowerFP> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<VotingPowerFP> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.babylon.btcstaking.v1.GenesisProto.VotingPowerFP getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface VotingPowerDistCacheBlkHeightOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * block_height is the height of the block the voting power distribution cached was stored.
-     * </pre>
-     *
-     * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
-     * @return The blockHeight.
-     */
-    long getBlockHeight();
-
-    /**
-     * <pre>
-     * vp_distribution the finality providers distribution cache at that height.
-     * </pre>
-     *
-     * <code>.babylon.btcstaking.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
-     * @return Whether the vpDistribution field is set.
-     */
-    boolean hasVpDistribution();
-    /**
-     * <pre>
-     * vp_distribution the finality providers distribution cache at that height.
-     * </pre>
-     *
-     * <code>.babylon.btcstaking.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
-     * @return The vpDistribution.
-     */
-    com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCache getVpDistribution();
-    /**
-     * <pre>
-     * vp_distribution the finality providers distribution cache at that height.
-     * </pre>
-     *
-     * <code>.babylon.btcstaking.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
-     */
-    com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCacheOrBuilder getVpDistributionOrBuilder();
-  }
-  /**
-   * <pre>
-   * VotingPowerDistCacheBlkHeight the total voting power of the finality providers at one specific block height
-   * </pre>
-   *
-   * Protobuf type {@code babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight}
-   */
-  public static final class VotingPowerDistCacheBlkHeight extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight)
-      VotingPowerDistCacheBlkHeightOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use VotingPowerDistCacheBlkHeight.newBuilder() to construct.
-    private VotingPowerDistCacheBlkHeight(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private VotingPowerDistCacheBlkHeight() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new VotingPowerDistCacheBlkHeight();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.babylon.btcstaking.v1.GenesisProto.internal_static_babylon_btcstaking_v1_VotingPowerDistCacheBlkHeight_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.babylon.btcstaking.v1.GenesisProto.internal_static_babylon_btcstaking_v1_VotingPowerDistCacheBlkHeight_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight.class, com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight.Builder.class);
-    }
-
-    public static final int BLOCK_HEIGHT_FIELD_NUMBER = 1;
-    private long blockHeight_ = 0L;
-    /**
-     * <pre>
-     * block_height is the height of the block the voting power distribution cached was stored.
-     * </pre>
-     *
-     * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
-     * @return The blockHeight.
-     */
-    @java.lang.Override
-    public long getBlockHeight() {
-      return blockHeight_;
-    }
-
-    public static final int VP_DISTRIBUTION_FIELD_NUMBER = 2;
-    private com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCache vpDistribution_;
-    /**
-     * <pre>
-     * vp_distribution the finality providers distribution cache at that height.
-     * </pre>
-     *
-     * <code>.babylon.btcstaking.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
-     * @return Whether the vpDistribution field is set.
-     */
-    @java.lang.Override
-    public boolean hasVpDistribution() {
-      return vpDistribution_ != null;
-    }
-    /**
-     * <pre>
-     * vp_distribution the finality providers distribution cache at that height.
-     * </pre>
-     *
-     * <code>.babylon.btcstaking.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
-     * @return The vpDistribution.
-     */
-    @java.lang.Override
-    public com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCache getVpDistribution() {
-      return vpDistribution_ == null ? com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCache.getDefaultInstance() : vpDistribution_;
-    }
-    /**
-     * <pre>
-     * vp_distribution the finality providers distribution cache at that height.
-     * </pre>
-     *
-     * <code>.babylon.btcstaking.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
-     */
-    @java.lang.Override
-    public com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCacheOrBuilder getVpDistributionOrBuilder() {
-      return vpDistribution_ == null ? com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCache.getDefaultInstance() : vpDistribution_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (blockHeight_ != 0L) {
-        output.writeUInt64(1, blockHeight_);
-      }
-      if (vpDistribution_ != null) {
-        output.writeMessage(2, getVpDistribution());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (blockHeight_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1, blockHeight_);
-      }
-      if (vpDistribution_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getVpDistribution());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight)) {
-        return super.equals(obj);
-      }
-      com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight other = (com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight) obj;
-
-      if (getBlockHeight()
-          != other.getBlockHeight()) return false;
-      if (hasVpDistribution() != other.hasVpDistribution()) return false;
-      if (hasVpDistribution()) {
-        if (!getVpDistribution()
-            .equals(other.getVpDistribution())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + BLOCK_HEIGHT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getBlockHeight());
-      if (hasVpDistribution()) {
-        hash = (37 * hash) + VP_DISTRIBUTION_FIELD_NUMBER;
-        hash = (53 * hash) + getVpDistribution().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * VotingPowerDistCacheBlkHeight the total voting power of the finality providers at one specific block height
-     * </pre>
-     *
-     * Protobuf type {@code babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight)
-        com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeightOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.babylon.btcstaking.v1.GenesisProto.internal_static_babylon_btcstaking_v1_VotingPowerDistCacheBlkHeight_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.babylon.btcstaking.v1.GenesisProto.internal_static_babylon_btcstaking_v1_VotingPowerDistCacheBlkHeight_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight.class, com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight.Builder.class);
-      }
-
-      // Construct using com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        blockHeight_ = 0L;
-        vpDistribution_ = null;
-        if (vpDistributionBuilder_ != null) {
-          vpDistributionBuilder_.dispose();
-          vpDistributionBuilder_ = null;
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.babylon.btcstaking.v1.GenesisProto.internal_static_babylon_btcstaking_v1_VotingPowerDistCacheBlkHeight_descriptor;
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight getDefaultInstanceForType() {
-        return com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight build() {
-        com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight buildPartial() {
-        com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight result = new com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.blockHeight_ = blockHeight_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.vpDistribution_ = vpDistributionBuilder_ == null
-              ? vpDistribution_
-              : vpDistributionBuilder_.build();
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight) {
-          return mergeFrom((com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight other) {
-        if (other == com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight.getDefaultInstance()) return this;
-        if (other.getBlockHeight() != 0L) {
-          setBlockHeight(other.getBlockHeight());
-        }
-        if (other.hasVpDistribution()) {
-          mergeVpDistribution(other.getVpDistribution());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                blockHeight_ = input.readUInt64();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              case 18: {
-                input.readMessage(
-                    getVpDistributionFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private long blockHeight_ ;
-      /**
-       * <pre>
-       * block_height is the height of the block the voting power distribution cached was stored.
-       * </pre>
-       *
-       * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
-       * @return The blockHeight.
-       */
-      @java.lang.Override
-      public long getBlockHeight() {
-        return blockHeight_;
-      }
-      /**
-       * <pre>
-       * block_height is the height of the block the voting power distribution cached was stored.
-       * </pre>
-       *
-       * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
-       * @param value The blockHeight to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBlockHeight(long value) {
-
-        blockHeight_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * block_height is the height of the block the voting power distribution cached was stored.
-       * </pre>
-       *
-       * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearBlockHeight() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        blockHeight_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCache vpDistribution_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCache, com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCache.Builder, com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCacheOrBuilder> vpDistributionBuilder_;
-      /**
-       * <pre>
-       * vp_distribution the finality providers distribution cache at that height.
-       * </pre>
-       *
-       * <code>.babylon.btcstaking.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
-       * @return Whether the vpDistribution field is set.
-       */
-      public boolean hasVpDistribution() {
-        return ((bitField0_ & 0x00000002) != 0);
-      }
-      /**
-       * <pre>
-       * vp_distribution the finality providers distribution cache at that height.
-       * </pre>
-       *
-       * <code>.babylon.btcstaking.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
-       * @return The vpDistribution.
-       */
-      public com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCache getVpDistribution() {
-        if (vpDistributionBuilder_ == null) {
-          return vpDistribution_ == null ? com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCache.getDefaultInstance() : vpDistribution_;
-        } else {
-          return vpDistributionBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * vp_distribution the finality providers distribution cache at that height.
-       * </pre>
-       *
-       * <code>.babylon.btcstaking.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
-       */
-      public Builder setVpDistribution(com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCache value) {
-        if (vpDistributionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          vpDistribution_ = value;
-        } else {
-          vpDistributionBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * vp_distribution the finality providers distribution cache at that height.
-       * </pre>
-       *
-       * <code>.babylon.btcstaking.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
-       */
-      public Builder setVpDistribution(
-          com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCache.Builder builderForValue) {
-        if (vpDistributionBuilder_ == null) {
-          vpDistribution_ = builderForValue.build();
-        } else {
-          vpDistributionBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * vp_distribution the finality providers distribution cache at that height.
-       * </pre>
-       *
-       * <code>.babylon.btcstaking.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
-       */
-      public Builder mergeVpDistribution(com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCache value) {
-        if (vpDistributionBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            vpDistribution_ != null &&
-            vpDistribution_ != com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCache.getDefaultInstance()) {
-            getVpDistributionBuilder().mergeFrom(value);
-          } else {
-            vpDistribution_ = value;
-          }
-        } else {
-          vpDistributionBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * vp_distribution the finality providers distribution cache at that height.
-       * </pre>
-       *
-       * <code>.babylon.btcstaking.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
-       */
-      public Builder clearVpDistribution() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        vpDistribution_ = null;
-        if (vpDistributionBuilder_ != null) {
-          vpDistributionBuilder_.dispose();
-          vpDistributionBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * vp_distribution the finality providers distribution cache at that height.
-       * </pre>
-       *
-       * <code>.babylon.btcstaking.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
-       */
-      public com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCache.Builder getVpDistributionBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getVpDistributionFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * vp_distribution the finality providers distribution cache at that height.
-       * </pre>
-       *
-       * <code>.babylon.btcstaking.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
-       */
-      public com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCacheOrBuilder getVpDistributionOrBuilder() {
-        if (vpDistributionBuilder_ != null) {
-          return vpDistributionBuilder_.getMessageOrBuilder();
-        } else {
-          return vpDistribution_ == null ?
-              com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCache.getDefaultInstance() : vpDistribution_;
-        }
-      }
-      /**
-       * <pre>
-       * vp_distribution the finality providers distribution cache at that height.
-       * </pre>
-       *
-       * <code>.babylon.btcstaking.v1.VotingPowerDistCache vp_distribution = 2 [json_name = "vpDistribution"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCache, com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCache.Builder, com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCacheOrBuilder> 
-          getVpDistributionFieldBuilder() {
-        if (vpDistributionBuilder_ == null) {
-          vpDistributionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCache, com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCache.Builder, com.babylon.btcstaking.v1.IncentiveProto.VotingPowerDistCacheOrBuilder>(
-                  getVpDistribution(),
-                  getParentForChildren(),
-                  isClean());
-          vpDistribution_ = null;
-        }
-        return vpDistributionBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight)
-    }
-
-    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.VotingPowerDistCacheBlkHeight)
-    private static final com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight();
-    }
-
-    public static com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<VotingPowerDistCacheBlkHeight>
-        PARSER = new com.google.protobuf.AbstractParser<VotingPowerDistCacheBlkHeight>() {
-      @java.lang.Override
-      public VotingPowerDistCacheBlkHeight parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<VotingPowerDistCacheBlkHeight> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<VotingPowerDistCacheBlkHeight> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.babylon.btcstaking.v1.GenesisProto.VotingPowerDistCacheBlkHeight getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface BlockHeightBbnToBtcOrBuilder extends
       // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.BlockHeightBbnToBtc)
       com.google.protobuf.MessageOrBuilder {
@@ -5819,10 +3365,10 @@ public final class GenesisProto {
      * block_height_btc is the height of the block in the BTC.
      * </pre>
      *
-     * <code>uint64 block_height_btc = 2 [json_name = "blockHeightBtc"];</code>
+     * <code>uint32 block_height_btc = 2 [json_name = "blockHeightBtc"];</code>
      * @return The blockHeightBtc.
      */
-    long getBlockHeightBtc();
+    int getBlockHeightBtc();
   }
   /**
    * <pre>
@@ -5879,17 +3425,17 @@ public final class GenesisProto {
     }
 
     public static final int BLOCK_HEIGHT_BTC_FIELD_NUMBER = 2;
-    private long blockHeightBtc_ = 0L;
+    private int blockHeightBtc_ = 0;
     /**
      * <pre>
      * block_height_btc is the height of the block in the BTC.
      * </pre>
      *
-     * <code>uint64 block_height_btc = 2 [json_name = "blockHeightBtc"];</code>
+     * <code>uint32 block_height_btc = 2 [json_name = "blockHeightBtc"];</code>
      * @return The blockHeightBtc.
      */
     @java.lang.Override
-    public long getBlockHeightBtc() {
+    public int getBlockHeightBtc() {
       return blockHeightBtc_;
     }
 
@@ -5910,8 +3456,8 @@ public final class GenesisProto {
       if (blockHeightBbn_ != 0L) {
         output.writeUInt64(1, blockHeightBbn_);
       }
-      if (blockHeightBtc_ != 0L) {
-        output.writeUInt64(2, blockHeightBtc_);
+      if (blockHeightBtc_ != 0) {
+        output.writeUInt32(2, blockHeightBtc_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -5926,9 +3472,9 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, blockHeightBbn_);
       }
-      if (blockHeightBtc_ != 0L) {
+      if (blockHeightBtc_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(2, blockHeightBtc_);
+          .computeUInt32Size(2, blockHeightBtc_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -5964,8 +3510,7 @@ public final class GenesisProto {
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getBlockHeightBbn());
       hash = (37 * hash) + BLOCK_HEIGHT_BTC_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getBlockHeightBtc());
+      hash = (53 * hash) + getBlockHeightBtc();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6102,7 +3647,7 @@ public final class GenesisProto {
         super.clear();
         bitField0_ = 0;
         blockHeightBbn_ = 0L;
-        blockHeightBtc_ = 0L;
+        blockHeightBtc_ = 0;
         return this;
       }
 
@@ -6191,7 +3736,7 @@ public final class GenesisProto {
         if (other.getBlockHeightBbn() != 0L) {
           setBlockHeightBbn(other.getBlockHeightBbn());
         }
-        if (other.getBlockHeightBtc() != 0L) {
+        if (other.getBlockHeightBtc() != 0) {
           setBlockHeightBtc(other.getBlockHeightBtc());
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -6226,7 +3771,7 @@ public final class GenesisProto {
                 break;
               } // case 8
               case 16: {
-                blockHeightBtc_ = input.readUInt64();
+                blockHeightBtc_ = input.readUInt32();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 16
@@ -6291,17 +3836,17 @@ public final class GenesisProto {
         return this;
       }
 
-      private long blockHeightBtc_ ;
+      private int blockHeightBtc_ ;
       /**
        * <pre>
        * block_height_btc is the height of the block in the BTC.
        * </pre>
        *
-       * <code>uint64 block_height_btc = 2 [json_name = "blockHeightBtc"];</code>
+       * <code>uint32 block_height_btc = 2 [json_name = "blockHeightBtc"];</code>
        * @return The blockHeightBtc.
        */
       @java.lang.Override
-      public long getBlockHeightBtc() {
+      public int getBlockHeightBtc() {
         return blockHeightBtc_;
       }
       /**
@@ -6309,11 +3854,11 @@ public final class GenesisProto {
        * block_height_btc is the height of the block in the BTC.
        * </pre>
        *
-       * <code>uint64 block_height_btc = 2 [json_name = "blockHeightBtc"];</code>
+       * <code>uint32 block_height_btc = 2 [json_name = "blockHeightBtc"];</code>
        * @param value The blockHeightBtc to set.
        * @return This builder for chaining.
        */
-      public Builder setBlockHeightBtc(long value) {
+      public Builder setBlockHeightBtc(int value) {
 
         blockHeightBtc_ = value;
         bitField0_ |= 0x00000002;
@@ -6325,12 +3870,12 @@ public final class GenesisProto {
        * block_height_btc is the height of the block in the BTC.
        * </pre>
        *
-       * <code>uint64 block_height_btc = 2 [json_name = "blockHeightBtc"];</code>
+       * <code>uint32 block_height_btc = 2 [json_name = "blockHeightBtc"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBlockHeightBtc() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        blockHeightBtc_ = 0L;
+        blockHeightBtc_ = 0;
         onChanged();
         return this;
       }
@@ -6434,7 +3979,7 @@ public final class GenesisProto {
      * fp_btc_pk the finality provider btc public key.
      * </pre>
      *
-     * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The fpBtcPk.
      */
     com.google.protobuf.ByteString getFpBtcPk();
@@ -6444,7 +3989,7 @@ public final class GenesisProto {
      * del_btc_pk the delegator btc public key.
      * </pre>
      *
-     * <code>bytes del_btc_pk = 3 [json_name = "delBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes del_btc_pk = 3 [json_name = "delBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The delBtcPk.
      */
     com.google.protobuf.ByteString getDelBtcPk();
@@ -6535,7 +4080,7 @@ public final class GenesisProto {
      * fp_btc_pk the finality provider btc public key.
      * </pre>
      *
-     * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The fpBtcPk.
      */
     @java.lang.Override
@@ -6550,7 +4095,7 @@ public final class GenesisProto {
      * del_btc_pk the delegator btc public key.
      * </pre>
      *
-     * <code>bytes del_btc_pk = 3 [json_name = "delBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes del_btc_pk = 3 [json_name = "delBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The delBtcPk.
      */
     @java.lang.Override
@@ -7107,7 +4652,7 @@ public final class GenesisProto {
        * fp_btc_pk the finality provider btc public key.
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The fpBtcPk.
        */
       @java.lang.Override
@@ -7119,7 +4664,7 @@ public final class GenesisProto {
        * fp_btc_pk the finality provider btc public key.
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param value The fpBtcPk to set.
        * @return This builder for chaining.
        */
@@ -7135,7 +4680,7 @@ public final class GenesisProto {
        * fp_btc_pk the finality provider btc public key.
        * </pre>
        *
-       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFpBtcPk() {
@@ -7151,7 +4696,7 @@ public final class GenesisProto {
        * del_btc_pk the delegator btc public key.
        * </pre>
        *
-       * <code>bytes del_btc_pk = 3 [json_name = "delBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes del_btc_pk = 3 [json_name = "delBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The delBtcPk.
        */
       @java.lang.Override
@@ -7163,7 +4708,7 @@ public final class GenesisProto {
        * del_btc_pk the delegator btc public key.
        * </pre>
        *
-       * <code>bytes del_btc_pk = 3 [json_name = "delBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes del_btc_pk = 3 [json_name = "delBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param value The delBtcPk to set.
        * @return This builder for chaining.
        */
@@ -7179,7 +4724,7 @@ public final class GenesisProto {
        * del_btc_pk the delegator btc public key.
        * </pre>
        *
-       * <code>bytes del_btc_pk = 3 [json_name = "delBtcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes del_btc_pk = 3 [json_name = "delBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDelBtcPk() {
@@ -7271,10 +4816,10 @@ public final class GenesisProto {
      * block_height_btc is the height of the block in the BTC chain.
      * </pre>
      *
-     * <code>uint64 block_height_btc = 2 [json_name = "blockHeightBtc"];</code>
+     * <code>uint32 block_height_btc = 2 [json_name = "blockHeightBtc"];</code>
      * @return The blockHeightBtc.
      */
-    long getBlockHeightBtc();
+    int getBlockHeightBtc();
 
     /**
      * <pre>
@@ -7358,17 +4903,17 @@ public final class GenesisProto {
     }
 
     public static final int BLOCK_HEIGHT_BTC_FIELD_NUMBER = 2;
-    private long blockHeightBtc_ = 0L;
+    private int blockHeightBtc_ = 0;
     /**
      * <pre>
      * block_height_btc is the height of the block in the BTC chain.
      * </pre>
      *
-     * <code>uint64 block_height_btc = 2 [json_name = "blockHeightBtc"];</code>
+     * <code>uint32 block_height_btc = 2 [json_name = "blockHeightBtc"];</code>
      * @return The blockHeightBtc.
      */
     @java.lang.Override
-    public long getBlockHeightBtc() {
+    public int getBlockHeightBtc() {
       return blockHeightBtc_;
     }
 
@@ -7427,8 +4972,8 @@ public final class GenesisProto {
       if (idx_ != 0L) {
         output.writeUInt64(1, idx_);
       }
-      if (blockHeightBtc_ != 0L) {
-        output.writeUInt64(2, blockHeightBtc_);
+      if (blockHeightBtc_ != 0) {
+        output.writeUInt32(2, blockHeightBtc_);
       }
       if (event_ != null) {
         output.writeMessage(3, getEvent());
@@ -7446,9 +4991,9 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, idx_);
       }
-      if (blockHeightBtc_ != 0L) {
+      if (blockHeightBtc_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(2, blockHeightBtc_);
+          .computeUInt32Size(2, blockHeightBtc_);
       }
       if (event_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -7493,8 +5038,7 @@ public final class GenesisProto {
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getIdx());
       hash = (37 * hash) + BLOCK_HEIGHT_BTC_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getBlockHeightBtc());
+      hash = (53 * hash) + getBlockHeightBtc();
       if (hasEvent()) {
         hash = (37 * hash) + EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getEvent().hashCode();
@@ -7635,7 +5179,7 @@ public final class GenesisProto {
         super.clear();
         bitField0_ = 0;
         idx_ = 0L;
-        blockHeightBtc_ = 0L;
+        blockHeightBtc_ = 0;
         event_ = null;
         if (eventBuilder_ != null) {
           eventBuilder_.dispose();
@@ -7734,7 +5278,7 @@ public final class GenesisProto {
         if (other.getIdx() != 0L) {
           setIdx(other.getIdx());
         }
-        if (other.getBlockHeightBtc() != 0L) {
+        if (other.getBlockHeightBtc() != 0) {
           setBlockHeightBtc(other.getBlockHeightBtc());
         }
         if (other.hasEvent()) {
@@ -7772,7 +5316,7 @@ public final class GenesisProto {
                 break;
               } // case 8
               case 16: {
-                blockHeightBtc_ = input.readUInt64();
+                blockHeightBtc_ = input.readUInt32();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 16
@@ -7844,17 +5388,17 @@ public final class GenesisProto {
         return this;
       }
 
-      private long blockHeightBtc_ ;
+      private int blockHeightBtc_ ;
       /**
        * <pre>
        * block_height_btc is the height of the block in the BTC chain.
        * </pre>
        *
-       * <code>uint64 block_height_btc = 2 [json_name = "blockHeightBtc"];</code>
+       * <code>uint32 block_height_btc = 2 [json_name = "blockHeightBtc"];</code>
        * @return The blockHeightBtc.
        */
       @java.lang.Override
-      public long getBlockHeightBtc() {
+      public int getBlockHeightBtc() {
         return blockHeightBtc_;
       }
       /**
@@ -7862,11 +5406,11 @@ public final class GenesisProto {
        * block_height_btc is the height of the block in the BTC chain.
        * </pre>
        *
-       * <code>uint64 block_height_btc = 2 [json_name = "blockHeightBtc"];</code>
+       * <code>uint32 block_height_btc = 2 [json_name = "blockHeightBtc"];</code>
        * @param value The blockHeightBtc to set.
        * @return This builder for chaining.
        */
-      public Builder setBlockHeightBtc(long value) {
+      public Builder setBlockHeightBtc(int value) {
 
         blockHeightBtc_ = value;
         bitField0_ |= 0x00000002;
@@ -7878,12 +5422,12 @@ public final class GenesisProto {
        * block_height_btc is the height of the block in the BTC chain.
        * </pre>
        *
-       * <code>uint64 block_height_btc = 2 [json_name = "blockHeightBtc"];</code>
+       * <code>uint32 block_height_btc = 2 [json_name = "blockHeightBtc"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBlockHeightBtc() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        blockHeightBtc_ = 0L;
+        blockHeightBtc_ = 0;
         onChanged();
         return this;
       }
@@ -8112,16 +5656,6 @@ public final class GenesisProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_babylon_btcstaking_v1_GenesisState_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_babylon_btcstaking_v1_VotingPowerFP_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_babylon_btcstaking_v1_VotingPowerFP_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_babylon_btcstaking_v1_VotingPowerDistCacheBlkHeight_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_babylon_btcstaking_v1_VotingPowerDistCacheBlkHeight_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_babylon_btcstaking_v1_BlockHeightBbnToBtc_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -8148,51 +5682,38 @@ public final class GenesisProto {
       "\n#babylon/btcstaking/v1/genesis.proto\022\025b" +
       "abylon.btcstaking.v1\032\024gogoproto/gogo.pro" +
       "to\032\"babylon/btcstaking/v1/params.proto\032&" +
-      "babylon/btcstaking/v1/btcstaking.proto\032%" +
-      "babylon/btcstaking/v1/incentive.proto\032\"b" +
-      "abylon/btcstaking/v1/events.proto\"\362\004\n\014Ge" +
-      "nesisState\0225\n\006params\030\001 \003(\0132\035.babylon.btc" +
-      "staking.v1.ParamsR\006params\022V\n\022finality_pr" +
-      "oviders\030\002 \003(\0132\'.babylon.btcstaking.v1.Fi" +
-      "nalityProviderR\021finalityProviders\022M\n\017btc" +
-      "_delegations\030\003 \003(\0132$.babylon.btcstaking." +
-      "v1.BTCDelegationR\016btcDelegations\022I\n\rvoti" +
-      "ng_powers\030\004 \003(\0132$.babylon.btcstaking.v1." +
-      "VotingPowerFPR\014votingPowers\022Z\n\023block_hei" +
-      "ght_chains\030\005 \003(\0132*.babylon.btcstaking.v1" +
-      ".BlockHeightBbnToBtcR\021blockHeightChains\022" +
-      "J\n\016btc_delegators\030\006 \003(\0132#.babylon.btcsta" +
-      "king.v1.BTCDelegatorR\rbtcDelegators\0229\n\006e" +
-      "vents\030\007 \003(\0132!.babylon.btcstaking.v1.Even" +
-      "tIndexR\006events\022V\n\014vp_dst_cache\030\010 \003(\01324.b" +
-      "abylon.btcstaking.v1.VotingPowerDistCach" +
-      "eBlkHeightR\nvpDstCache\"\251\001\n\rVotingPowerFP" +
-      "\022!\n\014block_height\030\001 \001(\004R\013blockHeight\022R\n\tf" +
-      "p_btc_pk\030\002 \001(\014B6\332\336\0372github.com/babylonch" +
-      "ain/babylon/types.BIP340PubKeyR\007fpBtcPk\022" +
-      "!\n\014voting_power\030\003 \001(\004R\013votingPower\"\230\001\n\035V" +
-      "otingPowerDistCacheBlkHeight\022!\n\014block_he" +
-      "ight\030\001 \001(\004R\013blockHeight\022T\n\017vp_distributi" +
-      "on\030\002 \001(\0132+.babylon.btcstaking.v1.VotingP" +
-      "owerDistCacheR\016vpDistribution\"i\n\023BlockHe" +
-      "ightBbnToBtc\022(\n\020block_height_bbn\030\001 \001(\004R\016" +
-      "blockHeightBbn\022(\n\020block_height_btc\030\002 \001(\004" +
-      "R\016blockHeightBtc\"\376\001\n\014BTCDelegator\022D\n\003idx" +
-      "\030\001 \001(\01322.babylon.btcstaking.v1.BTCDelega" +
-      "torDelegationIndexR\003idx\022R\n\tfp_btc_pk\030\002 \001" +
-      "(\014B6\332\336\0372github.com/babylonchain/babylon/" +
-      "types.BIP340PubKeyR\007fpBtcPk\022T\n\ndel_btc_p" +
-      "k\030\003 \001(\014B6\332\336\0372github.com/babylonchain/bab" +
-      "ylon/types.BIP340PubKeyR\010delBtcPk\"\213\001\n\nEv" +
-      "entIndex\022\020\n\003idx\030\001 \001(\004R\003idx\022(\n\020block_heig" +
-      "ht_btc\030\002 \001(\004R\016blockHeightBtc\022A\n\005event\030\003 " +
-      "\001(\0132+.babylon.btcstaking.v1.EventPowerDi" +
-      "stUpdateR\005eventB\321\001\n\031com.babylon.btcstaki" +
-      "ng.v1B\014GenesisProtoZ2github.com/babylonc" +
-      "hain/babylon/x/btcstaking/types\242\002\003BBX\252\002\025" +
-      "Babylon.Btcstaking.V1\312\002\025Babylon\\Btcstaki" +
-      "ng\\V1\342\002!Babylon\\Btcstaking\\V1\\GPBMetadat" +
-      "a\352\002\027Babylon::Btcstaking::V1b\006proto3"
+      "babylon/btcstaking/v1/btcstaking.proto\032\"" +
+      "babylon/btcstaking/v1/events.proto\"\317\003\n\014G" +
+      "enesisState\0225\n\006params\030\001 \003(\0132\035.babylon.bt" +
+      "cstaking.v1.ParamsR\006params\022V\n\022finality_p" +
+      "roviders\030\002 \003(\0132\'.babylon.btcstaking.v1.F" +
+      "inalityProviderR\021finalityProviders\022M\n\017bt" +
+      "c_delegations\030\003 \003(\0132$.babylon.btcstaking" +
+      ".v1.BTCDelegationR\016btcDelegations\022Z\n\023blo" +
+      "ck_height_chains\030\005 \003(\0132*.babylon.btcstak" +
+      "ing.v1.BlockHeightBbnToBtcR\021blockHeightC" +
+      "hains\022J\n\016btc_delegators\030\006 \003(\0132#.babylon." +
+      "btcstaking.v1.BTCDelegatorR\rbtcDelegator" +
+      "s\0229\n\006events\030\007 \003(\0132!.babylon.btcstaking.v" +
+      "1.EventIndexR\006events\"i\n\023BlockHeightBbnTo" +
+      "Btc\022(\n\020block_height_bbn\030\001 \001(\004R\016blockHeig" +
+      "htBbn\022(\n\020block_height_btc\030\002 \001(\rR\016blockHe" +
+      "ightBtc\"\202\002\n\014BTCDelegator\022D\n\003idx\030\001 \001(\01322." +
+      "babylon.btcstaking.v1.BTCDelegatorDelega" +
+      "tionIndexR\003idx\022T\n\tfp_btc_pk\030\002 \001(\014B8\332\336\0374g" +
+      "ithub.com/babylonlabs-io/babylon/types.B" +
+      "IP340PubKeyR\007fpBtcPk\022V\n\ndel_btc_pk\030\003 \001(\014" +
+      "B8\332\336\0374github.com/babylonlabs-io/babylon/" +
+      "types.BIP340PubKeyR\010delBtcPk\"\213\001\n\nEventIn" +
+      "dex\022\020\n\003idx\030\001 \001(\004R\003idx\022(\n\020block_height_bt" +
+      "c\030\002 \001(\rR\016blockHeightBtc\022A\n\005event\030\003 \001(\0132+" +
+      ".babylon.btcstaking.v1.EventPowerDistUpd" +
+      "ateR\005eventB\323\001\n\031com.babylon.btcstaking.v1" +
+      "B\014GenesisProtoZ4github.com/babylonlabs-i" +
+      "o/babylon/x/btcstaking/types\242\002\003BBX\252\002\025Bab" +
+      "ylon.Btcstaking.V1\312\002\025Babylon\\Btcstaking\\" +
+      "V1\342\002!Babylon\\Btcstaking\\V1\\GPBMetadata\352\002" +
+      "\027Babylon::Btcstaking::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8200,7 +5721,6 @@ public final class GenesisProto {
           com.gogoproto.GogoProto.getDescriptor(),
           com.babylon.btcstaking.v1.ParamsProto.getDescriptor(),
           com.babylon.btcstaking.v1.BtcstakingProto.getDescriptor(),
-          com.babylon.btcstaking.v1.IncentiveProto.getDescriptor(),
           com.babylon.btcstaking.v1.EventsProto.getDescriptor(),
         });
     internal_static_babylon_btcstaking_v1_GenesisState_descriptor =
@@ -8208,33 +5728,21 @@ public final class GenesisProto {
     internal_static_babylon_btcstaking_v1_GenesisState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_GenesisState_descriptor,
-        new java.lang.String[] { "Params", "FinalityProviders", "BtcDelegations", "VotingPowers", "BlockHeightChains", "BtcDelegators", "Events", "VpDstCache", });
-    internal_static_babylon_btcstaking_v1_VotingPowerFP_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_babylon_btcstaking_v1_VotingPowerFP_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_babylon_btcstaking_v1_VotingPowerFP_descriptor,
-        new java.lang.String[] { "BlockHeight", "FpBtcPk", "VotingPower", });
-    internal_static_babylon_btcstaking_v1_VotingPowerDistCacheBlkHeight_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_babylon_btcstaking_v1_VotingPowerDistCacheBlkHeight_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_babylon_btcstaking_v1_VotingPowerDistCacheBlkHeight_descriptor,
-        new java.lang.String[] { "BlockHeight", "VpDistribution", });
+        new java.lang.String[] { "Params", "FinalityProviders", "BtcDelegations", "BlockHeightChains", "BtcDelegators", "Events", });
     internal_static_babylon_btcstaking_v1_BlockHeightBbnToBtc_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_babylon_btcstaking_v1_BlockHeightBbnToBtc_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_BlockHeightBbnToBtc_descriptor,
         new java.lang.String[] { "BlockHeightBbn", "BlockHeightBtc", });
     internal_static_babylon_btcstaking_v1_BTCDelegator_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_babylon_btcstaking_v1_BTCDelegator_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_BTCDelegator_descriptor,
         new java.lang.String[] { "Idx", "FpBtcPk", "DelBtcPk", });
     internal_static_babylon_btcstaking_v1_EventIndex_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_babylon_btcstaking_v1_EventIndex_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_EventIndex_descriptor,
@@ -8247,7 +5755,6 @@ public final class GenesisProto {
     com.gogoproto.GogoProto.getDescriptor();
     com.babylon.btcstaking.v1.ParamsProto.getDescriptor();
     com.babylon.btcstaking.v1.BtcstakingProto.getDescriptor();
-    com.babylon.btcstaking.v1.IncentiveProto.getDescriptor();
     com.babylon.btcstaking.v1.EventsProto.getDescriptor();
   }
 

@@ -210,7 +210,7 @@ public final class BtccheckpointProto {
      * Should have exactly 80 bytes
      * </pre>
      *
-     * <code>bytes confirming_btc_header = 4 [json_name = "confirmingBtcHeader", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderBytes"];</code>
+     * <code>bytes confirming_btc_header = 4 [json_name = "confirmingBtcHeader", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderBytes"];</code>
      * @return The confirmingBtcHeader.
      */
     com.google.protobuf.ByteString getConfirmingBtcHeader();
@@ -329,7 +329,7 @@ public final class BtccheckpointProto {
      * Should have exactly 80 bytes
      * </pre>
      *
-     * <code>bytes confirming_btc_header = 4 [json_name = "confirmingBtcHeader", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderBytes"];</code>
+     * <code>bytes confirming_btc_header = 4 [json_name = "confirmingBtcHeader", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderBytes"];</code>
      * @return The confirmingBtcHeader.
      */
     @java.lang.Override
@@ -903,7 +903,7 @@ public final class BtccheckpointProto {
        * Should have exactly 80 bytes
        * </pre>
        *
-       * <code>bytes confirming_btc_header = 4 [json_name = "confirmingBtcHeader", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderBytes"];</code>
+       * <code>bytes confirming_btc_header = 4 [json_name = "confirmingBtcHeader", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderBytes"];</code>
        * @return The confirmingBtcHeader.
        */
       @java.lang.Override
@@ -916,7 +916,7 @@ public final class BtccheckpointProto {
        * Should have exactly 80 bytes
        * </pre>
        *
-       * <code>bytes confirming_btc_header = 4 [json_name = "confirmingBtcHeader", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderBytes"];</code>
+       * <code>bytes confirming_btc_header = 4 [json_name = "confirmingBtcHeader", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderBytes"];</code>
        * @param value The confirmingBtcHeader to set.
        * @return This builder for chaining.
        */
@@ -933,7 +933,7 @@ public final class BtccheckpointProto {
        * Should have exactly 80 bytes
        * </pre>
        *
-       * <code>bytes confirming_btc_header = 4 [json_name = "confirmingBtcHeader", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderBytes"];</code>
+       * <code>bytes confirming_btc_header = 4 [json_name = "confirmingBtcHeader", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderBytes"];</code>
        * @return This builder for chaining.
        */
       public Builder clearConfirmingBtcHeader() {
@@ -1017,7 +1017,7 @@ public final class BtccheckpointProto {
     int getIndex();
 
     /**
-     * <code>bytes hash = 2 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+     * <code>bytes hash = 2 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
      * @return The hash.
      */
     com.google.protobuf.ByteString getHash();
@@ -1077,7 +1077,7 @@ public final class BtccheckpointProto {
     public static final int HASH_FIELD_NUMBER = 2;
     private com.google.protobuf.ByteString hash_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes hash = 2 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+     * <code>bytes hash = 2 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
      * @return The hash.
      */
     @java.lang.Override
@@ -1472,7 +1472,7 @@ public final class BtccheckpointProto {
 
       private com.google.protobuf.ByteString hash_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>bytes hash = 2 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+       * <code>bytes hash = 2 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
        * @return The hash.
        */
       @java.lang.Override
@@ -1480,7 +1480,7 @@ public final class BtccheckpointProto {
         return hash_;
       }
       /**
-       * <code>bytes hash = 2 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+       * <code>bytes hash = 2 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
        * @param value The hash to set.
        * @return This builder for chaining.
        */
@@ -1492,7 +1492,7 @@ public final class BtccheckpointProto {
         return this;
       }
       /**
-       * <code>bytes hash = 2 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+       * <code>bytes hash = 2 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
        * @return This builder for chaining.
        */
       public Builder clearHash() {
@@ -6372,10 +6372,10 @@ public final class BtccheckpointProto {
      * btc height of the best submission of the epoch
      * </pre>
      *
-     * <code>uint64 best_submission_btc_block_height = 2 [json_name = "bestSubmissionBtcBlockHeight"];</code>
+     * <code>uint32 best_submission_btc_block_height = 2 [json_name = "bestSubmissionBtcBlockHeight"];</code>
      * @return The bestSubmissionBtcBlockHeight.
      */
-    long getBestSubmissionBtcBlockHeight();
+    int getBestSubmissionBtcBlockHeight();
 
     /**
      * <pre>
@@ -6383,7 +6383,7 @@ public final class BtccheckpointProto {
      * youngest block of best submission
      * </pre>
      *
-     * <code>bytes best_submission_btc_block_hash = 3 [json_name = "bestSubmissionBtcBlockHash", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+     * <code>bytes best_submission_btc_block_hash = 3 [json_name = "bestSubmissionBtcBlockHash", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
      * @return The bestSubmissionBtcBlockHash.
      */
     com.google.protobuf.ByteString getBestSubmissionBtcBlockHash();
@@ -6535,17 +6535,17 @@ public final class BtccheckpointProto {
     }
 
     public static final int BEST_SUBMISSION_BTC_BLOCK_HEIGHT_FIELD_NUMBER = 2;
-    private long bestSubmissionBtcBlockHeight_ = 0L;
+    private int bestSubmissionBtcBlockHeight_ = 0;
     /**
      * <pre>
      * btc height of the best submission of the epoch
      * </pre>
      *
-     * <code>uint64 best_submission_btc_block_height = 2 [json_name = "bestSubmissionBtcBlockHeight"];</code>
+     * <code>uint32 best_submission_btc_block_height = 2 [json_name = "bestSubmissionBtcBlockHeight"];</code>
      * @return The bestSubmissionBtcBlockHeight.
      */
     @java.lang.Override
-    public long getBestSubmissionBtcBlockHeight() {
+    public int getBestSubmissionBtcBlockHeight() {
       return bestSubmissionBtcBlockHeight_;
     }
 
@@ -6557,7 +6557,7 @@ public final class BtccheckpointProto {
      * youngest block of best submission
      * </pre>
      *
-     * <code>bytes best_submission_btc_block_hash = 3 [json_name = "bestSubmissionBtcBlockHash", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+     * <code>bytes best_submission_btc_block_hash = 3 [json_name = "bestSubmissionBtcBlockHash", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
      * @return The bestSubmissionBtcBlockHash.
      */
     @java.lang.Override
@@ -6704,8 +6704,8 @@ public final class BtccheckpointProto {
       if (epochNumber_ != 0L) {
         output.writeUInt64(1, epochNumber_);
       }
-      if (bestSubmissionBtcBlockHeight_ != 0L) {
-        output.writeUInt64(2, bestSubmissionBtcBlockHeight_);
+      if (bestSubmissionBtcBlockHeight_ != 0) {
+        output.writeUInt32(2, bestSubmissionBtcBlockHeight_);
       }
       if (!bestSubmissionBtcBlockHash_.isEmpty()) {
         output.writeBytes(3, bestSubmissionBtcBlockHash_);
@@ -6729,9 +6729,9 @@ public final class BtccheckpointProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, epochNumber_);
       }
-      if (bestSubmissionBtcBlockHeight_ != 0L) {
+      if (bestSubmissionBtcBlockHeight_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(2, bestSubmissionBtcBlockHeight_);
+          .computeUInt32Size(2, bestSubmissionBtcBlockHeight_);
       }
       if (!bestSubmissionBtcBlockHash_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
@@ -6785,8 +6785,7 @@ public final class BtccheckpointProto {
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getEpochNumber());
       hash = (37 * hash) + BEST_SUBMISSION_BTC_BLOCK_HEIGHT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getBestSubmissionBtcBlockHeight());
+      hash = (53 * hash) + getBestSubmissionBtcBlockHeight();
       hash = (37 * hash) + BEST_SUBMISSION_BTC_BLOCK_HASH_FIELD_NUMBER;
       hash = (53 * hash) + getBestSubmissionBtcBlockHash().hashCode();
       if (getBestSubmissionTransactionsCount() > 0) {
@@ -6934,7 +6933,7 @@ public final class BtccheckpointProto {
         super.clear();
         bitField0_ = 0;
         epochNumber_ = 0L;
-        bestSubmissionBtcBlockHeight_ = 0L;
+        bestSubmissionBtcBlockHeight_ = 0;
         bestSubmissionBtcBlockHash_ = com.google.protobuf.ByteString.EMPTY;
         if (bestSubmissionTransactionsBuilder_ == null) {
           bestSubmissionTransactions_ = java.util.Collections.emptyList();
@@ -7063,7 +7062,7 @@ public final class BtccheckpointProto {
         if (other.getEpochNumber() != 0L) {
           setEpochNumber(other.getEpochNumber());
         }
-        if (other.getBestSubmissionBtcBlockHeight() != 0L) {
+        if (other.getBestSubmissionBtcBlockHeight() != 0) {
           setBestSubmissionBtcBlockHeight(other.getBestSubmissionBtcBlockHeight());
         }
         if (other.getBestSubmissionBtcBlockHash() != com.google.protobuf.ByteString.EMPTY) {
@@ -7153,7 +7152,7 @@ public final class BtccheckpointProto {
                 break;
               } // case 8
               case 16: {
-                bestSubmissionBtcBlockHeight_ = input.readUInt64();
+                bestSubmissionBtcBlockHeight_ = input.readUInt32();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 16
@@ -7249,17 +7248,17 @@ public final class BtccheckpointProto {
         return this;
       }
 
-      private long bestSubmissionBtcBlockHeight_ ;
+      private int bestSubmissionBtcBlockHeight_ ;
       /**
        * <pre>
        * btc height of the best submission of the epoch
        * </pre>
        *
-       * <code>uint64 best_submission_btc_block_height = 2 [json_name = "bestSubmissionBtcBlockHeight"];</code>
+       * <code>uint32 best_submission_btc_block_height = 2 [json_name = "bestSubmissionBtcBlockHeight"];</code>
        * @return The bestSubmissionBtcBlockHeight.
        */
       @java.lang.Override
-      public long getBestSubmissionBtcBlockHeight() {
+      public int getBestSubmissionBtcBlockHeight() {
         return bestSubmissionBtcBlockHeight_;
       }
       /**
@@ -7267,11 +7266,11 @@ public final class BtccheckpointProto {
        * btc height of the best submission of the epoch
        * </pre>
        *
-       * <code>uint64 best_submission_btc_block_height = 2 [json_name = "bestSubmissionBtcBlockHeight"];</code>
+       * <code>uint32 best_submission_btc_block_height = 2 [json_name = "bestSubmissionBtcBlockHeight"];</code>
        * @param value The bestSubmissionBtcBlockHeight to set.
        * @return This builder for chaining.
        */
-      public Builder setBestSubmissionBtcBlockHeight(long value) {
+      public Builder setBestSubmissionBtcBlockHeight(int value) {
 
         bestSubmissionBtcBlockHeight_ = value;
         bitField0_ |= 0x00000002;
@@ -7283,12 +7282,12 @@ public final class BtccheckpointProto {
        * btc height of the best submission of the epoch
        * </pre>
        *
-       * <code>uint64 best_submission_btc_block_height = 2 [json_name = "bestSubmissionBtcBlockHeight"];</code>
+       * <code>uint32 best_submission_btc_block_height = 2 [json_name = "bestSubmissionBtcBlockHeight"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBestSubmissionBtcBlockHeight() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        bestSubmissionBtcBlockHeight_ = 0L;
+        bestSubmissionBtcBlockHeight_ = 0;
         onChanged();
         return this;
       }
@@ -7300,7 +7299,7 @@ public final class BtccheckpointProto {
        * youngest block of best submission
        * </pre>
        *
-       * <code>bytes best_submission_btc_block_hash = 3 [json_name = "bestSubmissionBtcBlockHash", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+       * <code>bytes best_submission_btc_block_hash = 3 [json_name = "bestSubmissionBtcBlockHash", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
        * @return The bestSubmissionBtcBlockHash.
        */
       @java.lang.Override
@@ -7313,7 +7312,7 @@ public final class BtccheckpointProto {
        * youngest block of best submission
        * </pre>
        *
-       * <code>bytes best_submission_btc_block_hash = 3 [json_name = "bestSubmissionBtcBlockHash", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+       * <code>bytes best_submission_btc_block_hash = 3 [json_name = "bestSubmissionBtcBlockHash", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
        * @param value The bestSubmissionBtcBlockHash to set.
        * @return This builder for chaining.
        */
@@ -7330,7 +7329,7 @@ public final class BtccheckpointProto {
        * youngest block of best submission
        * </pre>
        *
-       * <code>bytes best_submission_btc_block_hash = 3 [json_name = "bestSubmissionBtcBlockHash", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+       * <code>bytes best_submission_btc_block_hash = 3 [json_name = "bestSubmissionBtcBlockHash", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBestSubmissionBtcBlockHash() {
@@ -8078,55 +8077,55 @@ public final class BtccheckpointProto {
     java.lang.String[] descriptorData = {
       "\n,babylon/btccheckpoint/v1/btccheckpoint" +
       ".proto\022\030babylon.btccheckpoint.v1\032\024gogopr" +
-      "oto/gogo.proto\"\373\001\n\013BTCSpvProof\022\'\n\017btc_tr" +
+      "oto/gogo.proto\"\375\001\n\013BTCSpvProof\022\'\n\017btc_tr" +
       "ansaction\030\001 \001(\014R\016btcTransaction\0222\n\025btc_t" +
       "ransaction_index\030\002 \001(\rR\023btcTransactionIn" +
-      "dex\022!\n\014merkle_nodes\030\003 \001(\014R\013merkleNodes\022l" +
-      "\n\025confirming_btc_header\030\004 \001(\014B8\332\336\0374githu" +
-      "b.com/babylonchain/babylon/types.BTCHead" +
-      "erBytesR\023confirmingBtcHeader\"x\n\016Transact" +
-      "ionKey\022\024\n\005index\030\001 \001(\rR\005index\022P\n\004hash\030\002 \001" +
-      "(\014B<\332\336\0378github.com/babylonchain/babylon/" +
-      "types.BTCHeaderHashBytesR\004hash\"K\n\rSubmis" +
-      "sionKey\022:\n\003key\030\001 \003(\0132(.babylon.btccheckp" +
-      "oint.v1.TransactionKeyR\003key\"\205\001\n\017Transact" +
-      "ionInfo\022:\n\003key\030\001 \001(\0132(.babylon.btccheckp" +
-      "oint.v1.TransactionKeyR\003key\022 \n\013transacti" +
-      "on\030\002 \001(\014R\013transaction\022\024\n\005proof\030\003 \001(\014R\005pr" +
-      "oof\"\314\001\n\016SubmissionData\022^\n\023vigilante_addr" +
-      "esses\030\001 \001(\0132-.babylon.btccheckpoint.v1.C" +
-      "heckpointAddressesR\022vigilanteAddresses\022D" +
-      "\n\010txs_info\030\002 \003(\0132).babylon.btccheckpoint" +
-      ".v1.TransactionInfoR\007txsInfo\022\024\n\005epoch\030\003 " +
-      "\001(\004R\005epoch\"\205\001\n\tEpochData\022;\n\004keys\030\001 \003(\0132\'" +
-      ".babylon.btccheckpoint.v1.SubmissionKeyR" +
-      "\004keys\022;\n\006status\030\002 \001(\0162#.babylon.btccheck" +
-      "point.v1.BtcStatusR\006status\"O\n\023Checkpoint" +
-      "Addresses\022\034\n\tsubmitter\030\001 \001(\014R\tsubmitter\022" +
-      "\032\n\010reporter\030\002 \001(\014R\010reporter\"\362\003\n\021BTCCheck" +
-      "pointInfo\022!\n\014epoch_number\030\001 \001(\004R\013epochNu" +
-      "mber\022F\n best_submission_btc_block_height" +
-      "\030\002 \001(\004R\034bestSubmissionBtcBlockHeight\022\200\001\n" +
-      "\036best_submission_btc_block_hash\030\003 \001(\014B<\332" +
-      "\336\0378github.com/babylonchain/babylon/types" +
-      ".BTCHeaderHashBytesR\032bestSubmissionBtcBl" +
-      "ockHash\022k\n\034best_submission_transactions\030" +
-      "\004 \003(\0132).babylon.btccheckpoint.v1.Transac" +
-      "tionInfoR\032bestSubmissionTransactions\022\201\001\n" +
-      "&best_submission_vigilante_address_list\030" +
-      "\005 \003(\0132-.babylon.btccheckpoint.v1.Checkpo" +
-      "intAddressesR\"bestSubmissionVigilanteAdd" +
-      "ressList*\222\001\n\tBtcStatus\022)\n\026EPOCH_STATUS_S" +
-      "UBMITTED\020\000\032\r\212\235 \tSubmitted\022)\n\026EPOCH_STATU" +
-      "S_CONFIRMED\020\001\032\r\212\235 \tConfirmed\022)\n\026EPOCH_ST" +
-      "ATUS_FINALIZED\020\002\032\r\212\235 \tFinalized\032\004\210\243\036\000B\351\001" +
-      "\n\034com.babylon.btccheckpoint.v1B\022Btccheck" +
-      "pointProtoZ5github.com/babylonchain/baby" +
-      "lon/x/btccheckpoint/types\242\002\003BBX\252\002\030Babylo" +
-      "n.Btccheckpoint.V1\312\002\030Babylon\\Btccheckpoi" +
-      "nt\\V1\342\002$Babylon\\Btccheckpoint\\V1\\GPBMeta" +
-      "data\352\002\032Babylon::Btccheckpoint::V1b\006proto" +
-      "3"
+      "dex\022!\n\014merkle_nodes\030\003 \001(\014R\013merkleNodes\022n" +
+      "\n\025confirming_btc_header\030\004 \001(\014B:\332\336\0376githu" +
+      "b.com/babylonlabs-io/babylon/types.BTCHe" +
+      "aderBytesR\023confirmingBtcHeader\"z\n\016Transa" +
+      "ctionKey\022\024\n\005index\030\001 \001(\rR\005index\022R\n\004hash\030\002" +
+      " \001(\014B>\332\336\037:github.com/babylonlabs-io/baby" +
+      "lon/types.BTCHeaderHashBytesR\004hash\"K\n\rSu" +
+      "bmissionKey\022:\n\003key\030\001 \003(\0132(.babylon.btcch" +
+      "eckpoint.v1.TransactionKeyR\003key\"\205\001\n\017Tran" +
+      "sactionInfo\022:\n\003key\030\001 \001(\0132(.babylon.btcch" +
+      "eckpoint.v1.TransactionKeyR\003key\022 \n\013trans" +
+      "action\030\002 \001(\014R\013transaction\022\024\n\005proof\030\003 \001(\014" +
+      "R\005proof\"\314\001\n\016SubmissionData\022^\n\023vigilante_" +
+      "addresses\030\001 \001(\0132-.babylon.btccheckpoint." +
+      "v1.CheckpointAddressesR\022vigilanteAddress" +
+      "es\022D\n\010txs_info\030\002 \003(\0132).babylon.btccheckp" +
+      "oint.v1.TransactionInfoR\007txsInfo\022\024\n\005epoc" +
+      "h\030\003 \001(\004R\005epoch\"\205\001\n\tEpochData\022;\n\004keys\030\001 \003" +
+      "(\0132\'.babylon.btccheckpoint.v1.Submission" +
+      "KeyR\004keys\022;\n\006status\030\002 \001(\0162#.babylon.btcc" +
+      "heckpoint.v1.BtcStatusR\006status\"O\n\023Checkp" +
+      "ointAddresses\022\034\n\tsubmitter\030\001 \001(\014R\tsubmit" +
+      "ter\022\032\n\010reporter\030\002 \001(\014R\010reporter\"\364\003\n\021BTCC" +
+      "heckpointInfo\022!\n\014epoch_number\030\001 \001(\004R\013epo" +
+      "chNumber\022F\n best_submission_btc_block_he" +
+      "ight\030\002 \001(\rR\034bestSubmissionBtcBlockHeight" +
+      "\022\202\001\n\036best_submission_btc_block_hash\030\003 \001(" +
+      "\014B>\332\336\037:github.com/babylonlabs-io/babylon" +
+      "/types.BTCHeaderHashBytesR\032bestSubmissio" +
+      "nBtcBlockHash\022k\n\034best_submission_transac" +
+      "tions\030\004 \003(\0132).babylon.btccheckpoint.v1.T" +
+      "ransactionInfoR\032bestSubmissionTransactio" +
+      "ns\022\201\001\n&best_submission_vigilante_address" +
+      "_list\030\005 \003(\0132-.babylon.btccheckpoint.v1.C" +
+      "heckpointAddressesR\"bestSubmissionVigila" +
+      "nteAddressList*\222\001\n\tBtcStatus\022)\n\026EPOCH_ST" +
+      "ATUS_SUBMITTED\020\000\032\r\212\235 \tSubmitted\022)\n\026EPOCH" +
+      "_STATUS_CONFIRMED\020\001\032\r\212\235 \tConfirmed\022)\n\026EP" +
+      "OCH_STATUS_FINALIZED\020\002\032\r\212\235 \tFinalized\032\004\210" +
+      "\243\036\000B\353\001\n\034com.babylon.btccheckpoint.v1B\022Bt" +
+      "ccheckpointProtoZ7github.com/babylonlabs" +
+      "-io/babylon/x/btccheckpoint/types\242\002\003BBX\252" +
+      "\002\030Babylon.Btccheckpoint.V1\312\002\030Babylon\\Btc" +
+      "checkpoint\\V1\342\002$Babylon\\Btccheckpoint\\V1" +
+      "\\GPBMetadata\352\002\032Babylon::Btccheckpoint::V" +
+      "1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

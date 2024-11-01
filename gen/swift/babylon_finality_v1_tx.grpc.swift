@@ -47,6 +47,11 @@ internal protocol Babylon_Finality_V1_MsgClientProtocol: GRPCClient {
     _ request: Babylon_Finality_V1_MsgUpdateParams,
     callOptions: CallOptions?
   ) -> UnaryCall<Babylon_Finality_V1_MsgUpdateParams, Babylon_Finality_V1_MsgUpdateParamsResponse>
+
+  func unjailFinalityProvider(
+    _ request: Babylon_Finality_V1_MsgUnjailFinalityProvider,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Babylon_Finality_V1_MsgUnjailFinalityProvider, Babylon_Finality_V1_MsgUnjailFinalityProviderResponse>
 }
 
 extension Babylon_Finality_V1_MsgClientProtocol {
@@ -106,6 +111,25 @@ extension Babylon_Finality_V1_MsgClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? []
+    )
+  }
+
+  /// UnjailFinalityProvider defines a method for unjailing a jailed
+  /// finality provider, thus it can receive voting power
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to UnjailFinalityProvider.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func unjailFinalityProvider(
+    _ request: Babylon_Finality_V1_MsgUnjailFinalityProvider,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Babylon_Finality_V1_MsgUnjailFinalityProvider, Babylon_Finality_V1_MsgUnjailFinalityProviderResponse> {
+    return self.makeUnaryCall(
+      path: Babylon_Finality_V1_MsgClientMetadata.Methods.unjailFinalityProvider.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeUnjailFinalityProviderInterceptors() ?? []
     )
   }
 }
@@ -187,6 +211,11 @@ internal protocol Babylon_Finality_V1_MsgAsyncClientProtocol: GRPCClient {
     _ request: Babylon_Finality_V1_MsgUpdateParams,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Babylon_Finality_V1_MsgUpdateParams, Babylon_Finality_V1_MsgUpdateParamsResponse>
+
+  func makeUnjailFinalityProviderCall(
+    _ request: Babylon_Finality_V1_MsgUnjailFinalityProvider,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Babylon_Finality_V1_MsgUnjailFinalityProvider, Babylon_Finality_V1_MsgUnjailFinalityProviderResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -234,6 +263,18 @@ extension Babylon_Finality_V1_MsgAsyncClientProtocol {
       interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? []
     )
   }
+
+  internal func makeUnjailFinalityProviderCall(
+    _ request: Babylon_Finality_V1_MsgUnjailFinalityProvider,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Babylon_Finality_V1_MsgUnjailFinalityProvider, Babylon_Finality_V1_MsgUnjailFinalityProviderResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Babylon_Finality_V1_MsgClientMetadata.Methods.unjailFinalityProvider.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeUnjailFinalityProviderInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -273,6 +314,18 @@ extension Babylon_Finality_V1_MsgAsyncClientProtocol {
       interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? []
     )
   }
+
+  internal func unjailFinalityProvider(
+    _ request: Babylon_Finality_V1_MsgUnjailFinalityProvider,
+    callOptions: CallOptions? = nil
+  ) async throws -> Babylon_Finality_V1_MsgUnjailFinalityProviderResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Babylon_Finality_V1_MsgClientMetadata.Methods.unjailFinalityProvider.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeUnjailFinalityProviderInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -302,6 +355,9 @@ internal protocol Babylon_Finality_V1_MsgClientInterceptorFactoryProtocol: Senda
 
   /// - Returns: Interceptors to use when invoking 'updateParams'.
   func makeUpdateParamsInterceptors() -> [ClientInterceptor<Babylon_Finality_V1_MsgUpdateParams, Babylon_Finality_V1_MsgUpdateParamsResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'unjailFinalityProvider'.
+  func makeUnjailFinalityProviderInterceptors() -> [ClientInterceptor<Babylon_Finality_V1_MsgUnjailFinalityProvider, Babylon_Finality_V1_MsgUnjailFinalityProviderResponse>]
 }
 
 internal enum Babylon_Finality_V1_MsgClientMetadata {
@@ -312,6 +368,7 @@ internal enum Babylon_Finality_V1_MsgClientMetadata {
       Babylon_Finality_V1_MsgClientMetadata.Methods.commitPubRandList,
       Babylon_Finality_V1_MsgClientMetadata.Methods.addFinalitySig,
       Babylon_Finality_V1_MsgClientMetadata.Methods.updateParams,
+      Babylon_Finality_V1_MsgClientMetadata.Methods.unjailFinalityProvider,
     ]
   )
 
@@ -333,6 +390,12 @@ internal enum Babylon_Finality_V1_MsgClientMetadata {
       path: "/babylon.finality.v1.Msg/UpdateParams",
       type: GRPCCallType.unary
     )
+
+    internal static let unjailFinalityProvider = GRPCMethodDescriptor(
+      name: "UnjailFinalityProvider",
+      path: "/babylon.finality.v1.Msg/UnjailFinalityProvider",
+      type: GRPCCallType.unary
+    )
   }
 }
 
@@ -351,6 +414,10 @@ internal protocol Babylon_Finality_V1_MsgProvider: CallHandlerProvider {
   /// TODO: msg for evidence of equivocation. this is not specified yet
   /// UpdateParams updates the finality module parameters.
   func updateParams(request: Babylon_Finality_V1_MsgUpdateParams, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Finality_V1_MsgUpdateParamsResponse>
+
+  /// UnjailFinalityProvider defines a method for unjailing a jailed
+  /// finality provider, thus it can receive voting power
+  func unjailFinalityProvider(request: Babylon_Finality_V1_MsgUnjailFinalityProvider, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Finality_V1_MsgUnjailFinalityProviderResponse>
 }
 
 extension Babylon_Finality_V1_MsgProvider {
@@ -392,6 +459,15 @@ extension Babylon_Finality_V1_MsgProvider {
         userFunction: self.updateParams(request:context:)
       )
 
+    case "UnjailFinalityProvider":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Babylon_Finality_V1_MsgUnjailFinalityProvider>(),
+        responseSerializer: ProtobufSerializer<Babylon_Finality_V1_MsgUnjailFinalityProviderResponse>(),
+        interceptors: self.interceptors?.makeUnjailFinalityProviderInterceptors() ?? [],
+        userFunction: self.unjailFinalityProvider(request:context:)
+      )
+
     default:
       return nil
     }
@@ -424,6 +500,13 @@ internal protocol Babylon_Finality_V1_MsgAsyncProvider: CallHandlerProvider {
     request: Babylon_Finality_V1_MsgUpdateParams,
     context: GRPCAsyncServerCallContext
   ) async throws -> Babylon_Finality_V1_MsgUpdateParamsResponse
+
+  /// UnjailFinalityProvider defines a method for unjailing a jailed
+  /// finality provider, thus it can receive voting power
+  @Sendable func unjailFinalityProvider(
+    request: Babylon_Finality_V1_MsgUnjailFinalityProvider,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Babylon_Finality_V1_MsgUnjailFinalityProviderResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -472,6 +555,15 @@ extension Babylon_Finality_V1_MsgAsyncProvider {
         wrapping: self.updateParams(request:context:)
       )
 
+    case "UnjailFinalityProvider":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Babylon_Finality_V1_MsgUnjailFinalityProvider>(),
+        responseSerializer: ProtobufSerializer<Babylon_Finality_V1_MsgUnjailFinalityProviderResponse>(),
+        interceptors: self.interceptors?.makeUnjailFinalityProviderInterceptors() ?? [],
+        wrapping: self.unjailFinalityProvider(request:context:)
+      )
+
     default:
       return nil
     }
@@ -491,6 +583,10 @@ internal protocol Babylon_Finality_V1_MsgServerInterceptorFactoryProtocol {
   /// - Returns: Interceptors to use when handling 'updateParams'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeUpdateParamsInterceptors() -> [ServerInterceptor<Babylon_Finality_V1_MsgUpdateParams, Babylon_Finality_V1_MsgUpdateParamsResponse>]
+
+  /// - Returns: Interceptors to use when handling 'unjailFinalityProvider'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeUnjailFinalityProviderInterceptors() -> [ServerInterceptor<Babylon_Finality_V1_MsgUnjailFinalityProvider, Babylon_Finality_V1_MsgUnjailFinalityProviderResponse>]
 }
 
 internal enum Babylon_Finality_V1_MsgServerMetadata {
@@ -501,6 +597,7 @@ internal enum Babylon_Finality_V1_MsgServerMetadata {
       Babylon_Finality_V1_MsgServerMetadata.Methods.commitPubRandList,
       Babylon_Finality_V1_MsgServerMetadata.Methods.addFinalitySig,
       Babylon_Finality_V1_MsgServerMetadata.Methods.updateParams,
+      Babylon_Finality_V1_MsgServerMetadata.Methods.unjailFinalityProvider,
     ]
   )
 
@@ -520,6 +617,12 @@ internal enum Babylon_Finality_V1_MsgServerMetadata {
     internal static let updateParams = GRPCMethodDescriptor(
       name: "UpdateParams",
       path: "/babylon.finality.v1.Msg/UpdateParams",
+      type: GRPCCallType.unary
+    )
+
+    internal static let unjailFinalityProvider = GRPCMethodDescriptor(
+      name: "UnjailFinalityProvider",
+      path: "/babylon.finality.v1.Msg/UnjailFinalityProvider",
       type: GRPCCallType.unary
     )
   }

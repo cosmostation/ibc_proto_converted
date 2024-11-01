@@ -35,9 +35,6 @@ struct Babylon_Btcstaking_V1_GenesisState {
   /// btc_delegations all the btc delegations in the state.
   var btcDelegations: [Babylon_Btcstaking_V1_BTCDelegation] = []
 
-  /// voting_powers the voting power of every finality provider at every block height.
-  var votingPowers: [Babylon_Btcstaking_V1_VotingPowerFP] = []
-
   /// block_height_chains the block height of babylon and bitcoin.
   var blockHeightChains: [Babylon_Btcstaking_V1_BlockHeightBbnToBtc] = []
 
@@ -47,60 +44,9 @@ struct Babylon_Btcstaking_V1_GenesisState {
   /// all the events and its indexes.
   var events: [Babylon_Btcstaking_V1_EventIndex] = []
 
-  /// vp_dst_cache is the table of all providers voting power with the total at one specific block.
-  /// TODO: remove this after not storing in the keeper store it anymore.
-  var vpDstCache: [Babylon_Btcstaking_V1_VotingPowerDistCacheBlkHeight] = []
-
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
-}
-
-/// VotingPowerFP contains the information about the voting power
-/// of an finality provider in a specific block height.
-struct Babylon_Btcstaking_V1_VotingPowerFP {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  /// block_height is the height of the block the voting power was stored.
-  var blockHeight: UInt64 = 0
-
-  /// fp_btc_pk the finality provider btc public key.
-  var fpBtcPk: Data = Data()
-
-  /// voting_power is the power of the finality provider at this specific block height.
-  var votingPower: UInt64 = 0
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-}
-
-/// VotingPowerDistCacheBlkHeight the total voting power of the finality providers at one specific block height
-struct Babylon_Btcstaking_V1_VotingPowerDistCacheBlkHeight {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  /// block_height is the height of the block the voting power distribution cached was stored.
-  var blockHeight: UInt64 = 0
-
-  /// vp_distribution the finality providers distribution cache at that height.
-  var vpDistribution: Babylon_Btcstaking_V1_VotingPowerDistCache {
-    get {return _vpDistribution ?? Babylon_Btcstaking_V1_VotingPowerDistCache()}
-    set {_vpDistribution = newValue}
-  }
-  /// Returns true if `vpDistribution` has been explicitly set.
-  var hasVpDistribution: Bool {return self._vpDistribution != nil}
-  /// Clears the value of `vpDistribution`. Subsequent reads from it will return its default value.
-  mutating func clearVpDistribution() {self._vpDistribution = nil}
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-
-  fileprivate var _vpDistribution: Babylon_Btcstaking_V1_VotingPowerDistCache? = nil
 }
 
 /// BlockHeightBbnToBtc stores the btc <-> bbn block.
@@ -113,7 +59,7 @@ struct Babylon_Btcstaking_V1_BlockHeightBbnToBtc {
   var blockHeightBbn: UInt64 = 0
 
   /// block_height_btc is the height of the block in the BTC.
-  var blockHeightBtc: UInt64 = 0
+  var blockHeightBtc: UInt32 = 0
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -159,7 +105,7 @@ struct Babylon_Btcstaking_V1_EventIndex {
   var idx: UInt64 = 0
 
   /// block_height_btc is the height of the block in the BTC chain.
-  var blockHeightBtc: UInt64 = 0
+  var blockHeightBtc: UInt32 = 0
 
   /// event the event stored.
   var event: Babylon_Btcstaking_V1_EventPowerDistUpdate {
@@ -180,8 +126,6 @@ struct Babylon_Btcstaking_V1_EventIndex {
 
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Babylon_Btcstaking_V1_GenesisState: @unchecked Sendable {}
-extension Babylon_Btcstaking_V1_VotingPowerFP: @unchecked Sendable {}
-extension Babylon_Btcstaking_V1_VotingPowerDistCacheBlkHeight: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_BlockHeightBbnToBtc: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_BTCDelegator: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_EventIndex: @unchecked Sendable {}
@@ -197,11 +141,9 @@ extension Babylon_Btcstaking_V1_GenesisState: SwiftProtobuf.Message, SwiftProtob
     1: .same(proto: "params"),
     2: .standard(proto: "finality_providers"),
     3: .standard(proto: "btc_delegations"),
-    4: .standard(proto: "voting_powers"),
     5: .standard(proto: "block_height_chains"),
     6: .standard(proto: "btc_delegators"),
     7: .same(proto: "events"),
-    8: .standard(proto: "vp_dst_cache"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -213,11 +155,9 @@ extension Babylon_Btcstaking_V1_GenesisState: SwiftProtobuf.Message, SwiftProtob
       case 1: try { try decoder.decodeRepeatedMessageField(value: &self.params) }()
       case 2: try { try decoder.decodeRepeatedMessageField(value: &self.finalityProviders) }()
       case 3: try { try decoder.decodeRepeatedMessageField(value: &self.btcDelegations) }()
-      case 4: try { try decoder.decodeRepeatedMessageField(value: &self.votingPowers) }()
       case 5: try { try decoder.decodeRepeatedMessageField(value: &self.blockHeightChains) }()
       case 6: try { try decoder.decodeRepeatedMessageField(value: &self.btcDelegators) }()
       case 7: try { try decoder.decodeRepeatedMessageField(value: &self.events) }()
-      case 8: try { try decoder.decodeRepeatedMessageField(value: &self.vpDstCache) }()
       default: break
       }
     }
@@ -233,9 +173,6 @@ extension Babylon_Btcstaking_V1_GenesisState: SwiftProtobuf.Message, SwiftProtob
     if !self.btcDelegations.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.btcDelegations, fieldNumber: 3)
     }
-    if !self.votingPowers.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.votingPowers, fieldNumber: 4)
-    }
     if !self.blockHeightChains.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.blockHeightChains, fieldNumber: 5)
     }
@@ -245,9 +182,6 @@ extension Babylon_Btcstaking_V1_GenesisState: SwiftProtobuf.Message, SwiftProtob
     if !self.events.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.events, fieldNumber: 7)
     }
-    if !self.vpDstCache.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.vpDstCache, fieldNumber: 8)
-    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -255,97 +189,9 @@ extension Babylon_Btcstaking_V1_GenesisState: SwiftProtobuf.Message, SwiftProtob
     if lhs.params != rhs.params {return false}
     if lhs.finalityProviders != rhs.finalityProviders {return false}
     if lhs.btcDelegations != rhs.btcDelegations {return false}
-    if lhs.votingPowers != rhs.votingPowers {return false}
     if lhs.blockHeightChains != rhs.blockHeightChains {return false}
     if lhs.btcDelegators != rhs.btcDelegators {return false}
     if lhs.events != rhs.events {return false}
-    if lhs.vpDstCache != rhs.vpDstCache {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension Babylon_Btcstaking_V1_VotingPowerFP: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".VotingPowerFP"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "block_height"),
-    2: .standard(proto: "fp_btc_pk"),
-    3: .standard(proto: "voting_power"),
-  ]
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.blockHeight) }()
-      case 2: try { try decoder.decodeSingularBytesField(value: &self.fpBtcPk) }()
-      case 3: try { try decoder.decodeSingularUInt64Field(value: &self.votingPower) }()
-      default: break
-      }
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if self.blockHeight != 0 {
-      try visitor.visitSingularUInt64Field(value: self.blockHeight, fieldNumber: 1)
-    }
-    if !self.fpBtcPk.isEmpty {
-      try visitor.visitSingularBytesField(value: self.fpBtcPk, fieldNumber: 2)
-    }
-    if self.votingPower != 0 {
-      try visitor.visitSingularUInt64Field(value: self.votingPower, fieldNumber: 3)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Babylon_Btcstaking_V1_VotingPowerFP, rhs: Babylon_Btcstaking_V1_VotingPowerFP) -> Bool {
-    if lhs.blockHeight != rhs.blockHeight {return false}
-    if lhs.fpBtcPk != rhs.fpBtcPk {return false}
-    if lhs.votingPower != rhs.votingPower {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension Babylon_Btcstaking_V1_VotingPowerDistCacheBlkHeight: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".VotingPowerDistCacheBlkHeight"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "block_height"),
-    2: .standard(proto: "vp_distribution"),
-  ]
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.blockHeight) }()
-      case 2: try { try decoder.decodeSingularMessageField(value: &self._vpDistribution) }()
-      default: break
-      }
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    if self.blockHeight != 0 {
-      try visitor.visitSingularUInt64Field(value: self.blockHeight, fieldNumber: 1)
-    }
-    try { if let v = self._vpDistribution {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
-    } }()
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Babylon_Btcstaking_V1_VotingPowerDistCacheBlkHeight, rhs: Babylon_Btcstaking_V1_VotingPowerDistCacheBlkHeight) -> Bool {
-    if lhs.blockHeight != rhs.blockHeight {return false}
-    if lhs._vpDistribution != rhs._vpDistribution {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -365,7 +211,7 @@ extension Babylon_Btcstaking_V1_BlockHeightBbnToBtc: SwiftProtobuf.Message, Swif
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularUInt64Field(value: &self.blockHeightBbn) }()
-      case 2: try { try decoder.decodeSingularUInt64Field(value: &self.blockHeightBtc) }()
+      case 2: try { try decoder.decodeSingularUInt32Field(value: &self.blockHeightBtc) }()
       default: break
       }
     }
@@ -376,7 +222,7 @@ extension Babylon_Btcstaking_V1_BlockHeightBbnToBtc: SwiftProtobuf.Message, Swif
       try visitor.visitSingularUInt64Field(value: self.blockHeightBbn, fieldNumber: 1)
     }
     if self.blockHeightBtc != 0 {
-      try visitor.visitSingularUInt64Field(value: self.blockHeightBtc, fieldNumber: 2)
+      try visitor.visitSingularUInt32Field(value: self.blockHeightBtc, fieldNumber: 2)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -452,7 +298,7 @@ extension Babylon_Btcstaking_V1_EventIndex: SwiftProtobuf.Message, SwiftProtobuf
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularUInt64Field(value: &self.idx) }()
-      case 2: try { try decoder.decodeSingularUInt64Field(value: &self.blockHeightBtc) }()
+      case 2: try { try decoder.decodeSingularUInt32Field(value: &self.blockHeightBtc) }()
       case 3: try { try decoder.decodeSingularMessageField(value: &self._event) }()
       default: break
       }
@@ -468,7 +314,7 @@ extension Babylon_Btcstaking_V1_EventIndex: SwiftProtobuf.Message, SwiftProtobuf
       try visitor.visitSingularUInt64Field(value: self.idx, fieldNumber: 1)
     }
     if self.blockHeightBtc != 0 {
-      try visitor.visitSingularUInt64Field(value: self.blockHeightBtc, fieldNumber: 2)
+      try visitor.visitSingularUInt32Field(value: self.blockHeightBtc, fieldNumber: 2)
     }
     try { if let v = self._event {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 3)

@@ -19,22 +19,22 @@ public final class BtclightclientProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bytes header = 1 [json_name = "header", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderBytes"];</code>
+     * <code>bytes header = 1 [json_name = "header", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderBytes"];</code>
      * @return The header.
      */
     com.google.protobuf.ByteString getHeader();
 
     /**
-     * <code>bytes hash = 2 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+     * <code>bytes hash = 2 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
      * @return The hash.
      */
     com.google.protobuf.ByteString getHash();
 
     /**
-     * <code>uint64 height = 3 [json_name = "height"];</code>
+     * <code>uint32 height = 3 [json_name = "height"];</code>
      * @return The height.
      */
-    long getHeight();
+    int getHeight();
 
     /**
      * <code>bytes work = 4 [json_name = "work", (.gogoproto.customtype) = "cosmossdk.io/math.Uint"];</code>
@@ -94,7 +94,7 @@ public final class BtclightclientProto {
     public static final int HEADER_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString header_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes header = 1 [json_name = "header", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderBytes"];</code>
+     * <code>bytes header = 1 [json_name = "header", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderBytes"];</code>
      * @return The header.
      */
     @java.lang.Override
@@ -105,7 +105,7 @@ public final class BtclightclientProto {
     public static final int HASH_FIELD_NUMBER = 2;
     private com.google.protobuf.ByteString hash_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes hash = 2 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+     * <code>bytes hash = 2 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
      * @return The hash.
      */
     @java.lang.Override
@@ -114,13 +114,13 @@ public final class BtclightclientProto {
     }
 
     public static final int HEIGHT_FIELD_NUMBER = 3;
-    private long height_ = 0L;
+    private int height_ = 0;
     /**
-     * <code>uint64 height = 3 [json_name = "height"];</code>
+     * <code>uint32 height = 3 [json_name = "height"];</code>
      * @return The height.
      */
     @java.lang.Override
-    public long getHeight() {
+    public int getHeight() {
       return height_;
     }
 
@@ -155,8 +155,8 @@ public final class BtclightclientProto {
       if (!hash_.isEmpty()) {
         output.writeBytes(2, hash_);
       }
-      if (height_ != 0L) {
-        output.writeUInt64(3, height_);
+      if (height_ != 0) {
+        output.writeUInt32(3, height_);
       }
       if (!work_.isEmpty()) {
         output.writeBytes(4, work_);
@@ -178,9 +178,9 @@ public final class BtclightclientProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, hash_);
       }
-      if (height_ != 0L) {
+      if (height_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(3, height_);
+          .computeUInt32Size(3, height_);
       }
       if (!work_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
@@ -225,8 +225,7 @@ public final class BtclightclientProto {
       hash = (37 * hash) + HASH_FIELD_NUMBER;
       hash = (53 * hash) + getHash().hashCode();
       hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getHeight());
+      hash = (53 * hash) + getHeight();
       hash = (37 * hash) + WORK_FIELD_NUMBER;
       hash = (53 * hash) + getWork().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -373,7 +372,7 @@ public final class BtclightclientProto {
         bitField0_ = 0;
         header_ = com.google.protobuf.ByteString.EMPTY;
         hash_ = com.google.protobuf.ByteString.EMPTY;
-        height_ = 0L;
+        height_ = 0;
         work_ = com.google.protobuf.ByteString.EMPTY;
         return this;
       }
@@ -472,7 +471,7 @@ public final class BtclightclientProto {
         if (other.getHash() != com.google.protobuf.ByteString.EMPTY) {
           setHash(other.getHash());
         }
-        if (other.getHeight() != 0L) {
+        if (other.getHeight() != 0) {
           setHeight(other.getHeight());
         }
         if (other.getWork() != com.google.protobuf.ByteString.EMPTY) {
@@ -515,7 +514,7 @@ public final class BtclightclientProto {
                 break;
               } // case 18
               case 24: {
-                height_ = input.readUInt64();
+                height_ = input.readUInt32();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 24
@@ -543,7 +542,7 @@ public final class BtclightclientProto {
 
       private com.google.protobuf.ByteString header_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>bytes header = 1 [json_name = "header", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderBytes"];</code>
+       * <code>bytes header = 1 [json_name = "header", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderBytes"];</code>
        * @return The header.
        */
       @java.lang.Override
@@ -551,7 +550,7 @@ public final class BtclightclientProto {
         return header_;
       }
       /**
-       * <code>bytes header = 1 [json_name = "header", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderBytes"];</code>
+       * <code>bytes header = 1 [json_name = "header", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderBytes"];</code>
        * @param value The header to set.
        * @return This builder for chaining.
        */
@@ -563,7 +562,7 @@ public final class BtclightclientProto {
         return this;
       }
       /**
-       * <code>bytes header = 1 [json_name = "header", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderBytes"];</code>
+       * <code>bytes header = 1 [json_name = "header", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderBytes"];</code>
        * @return This builder for chaining.
        */
       public Builder clearHeader() {
@@ -575,7 +574,7 @@ public final class BtclightclientProto {
 
       private com.google.protobuf.ByteString hash_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>bytes hash = 2 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+       * <code>bytes hash = 2 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
        * @return The hash.
        */
       @java.lang.Override
@@ -583,7 +582,7 @@ public final class BtclightclientProto {
         return hash_;
       }
       /**
-       * <code>bytes hash = 2 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+       * <code>bytes hash = 2 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
        * @param value The hash to set.
        * @return This builder for chaining.
        */
@@ -595,7 +594,7 @@ public final class BtclightclientProto {
         return this;
       }
       /**
-       * <code>bytes hash = 2 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BTCHeaderHashBytes"];</code>
+       * <code>bytes hash = 2 [json_name = "hash", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BTCHeaderHashBytes"];</code>
        * @return This builder for chaining.
        */
       public Builder clearHash() {
@@ -605,21 +604,21 @@ public final class BtclightclientProto {
         return this;
       }
 
-      private long height_ ;
+      private int height_ ;
       /**
-       * <code>uint64 height = 3 [json_name = "height"];</code>
+       * <code>uint32 height = 3 [json_name = "height"];</code>
        * @return The height.
        */
       @java.lang.Override
-      public long getHeight() {
+      public int getHeight() {
         return height_;
       }
       /**
-       * <code>uint64 height = 3 [json_name = "height"];</code>
+       * <code>uint32 height = 3 [json_name = "height"];</code>
        * @param value The height to set.
        * @return This builder for chaining.
        */
-      public Builder setHeight(long value) {
+      public Builder setHeight(int value) {
 
         height_ = value;
         bitField0_ |= 0x00000004;
@@ -627,12 +626,12 @@ public final class BtclightclientProto {
         return this;
       }
       /**
-       * <code>uint64 height = 3 [json_name = "height"];</code>
+       * <code>uint32 height = 3 [json_name = "height"];</code>
        * @return This builder for chaining.
        */
       public Builder clearHeight() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        height_ = 0L;
+        height_ = 0;
         onChanged();
         return this;
       }
@@ -748,20 +747,20 @@ public final class BtclightclientProto {
     java.lang.String[] descriptorData = {
       "\n.babylon/btclightclient/v1/btclightclie" +
       "nt.proto\022\031babylon.btclightclient.v1\032\024gog" +
-      "oproto/gogo.proto\"\373\001\n\rBTCHeaderInfo\022P\n\006h" +
-      "eader\030\001 \001(\014B8\332\336\0374github.com/babylonchain" +
-      "/babylon/types.BTCHeaderBytesR\006header\022P\n" +
-      "\004hash\030\002 \001(\014B<\332\336\0378github.com/babylonchain" +
-      "/babylon/types.BTCHeaderHashBytesR\004hash\022" +
-      "\026\n\006height\030\003 \001(\004R\006height\022.\n\004work\030\004 \001(\014B\032\332" +
-      "\336\037\026cosmossdk.io/math.UintR\004workB\360\001\n\035com." +
-      "babylon.btclightclient.v1B\023Btclightclien" +
-      "tProtoZ6github.com/babylonchain/babylon/" +
-      "x/btclightclient/types\242\002\003BBX\252\002\031Babylon.B" +
-      "tclightclient.V1\312\002\031Babylon\\Btclightclien" +
-      "t\\V1\342\002%Babylon\\Btclightclient\\V1\\GPBMeta" +
-      "data\352\002\033Babylon::Btclightclient::V1b\006prot" +
-      "o3"
+      "oproto/gogo.proto\"\377\001\n\rBTCHeaderInfo\022R\n\006h" +
+      "eader\030\001 \001(\014B:\332\336\0376github.com/babylonlabs-" +
+      "io/babylon/types.BTCHeaderBytesR\006header\022" +
+      "R\n\004hash\030\002 \001(\014B>\332\336\037:github.com/babylonlab" +
+      "s-io/babylon/types.BTCHeaderHashBytesR\004h" +
+      "ash\022\026\n\006height\030\003 \001(\rR\006height\022.\n\004work\030\004 \001(" +
+      "\014B\032\332\336\037\026cosmossdk.io/math.UintR\004workB\362\001\n\035" +
+      "com.babylon.btclightclient.v1B\023Btclightc" +
+      "lientProtoZ8github.com/babylonlabs-io/ba" +
+      "bylon/x/btclightclient/types\242\002\003BBX\252\002\031Bab" +
+      "ylon.Btclightclient.V1\312\002\031Babylon\\Btcligh" +
+      "tclient\\V1\342\002%Babylon\\Btclightclient\\V1\\G" +
+      "PBMetadata\352\002\033Babylon::Btclightclient::V1" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

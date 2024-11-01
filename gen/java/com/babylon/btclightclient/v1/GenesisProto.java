@@ -1022,13 +1022,13 @@ public final class GenesisProto {
       "arams\030\001 \001(\0132!.babylon.btclightclient.v1." +
       "ParamsB\004\310\336\037\000R\006params\022I\n\013btc_headers\030\002 \003(" +
       "\0132(.babylon.btclightclient.v1.BTCHeaderI" +
-      "nfoR\nbtcHeadersB\351\001\n\035com.babylon.btclight" +
-      "client.v1B\014GenesisProtoZ6github.com/baby" +
-      "lonchain/babylon/x/btclightclient/types\242" +
-      "\002\003BBX\252\002\031Babylon.Btclightclient.V1\312\002\031Baby" +
-      "lon\\Btclightclient\\V1\342\002%Babylon\\Btclight" +
-      "client\\V1\\GPBMetadata\352\002\033Babylon::Btcligh" +
-      "tclient::V1b\006proto3"
+      "nfoR\nbtcHeadersB\353\001\n\035com.babylon.btclight" +
+      "client.v1B\014GenesisProtoZ8github.com/baby" +
+      "lonlabs-io/babylon/x/btclightclient/type" +
+      "s\242\002\003BBX\252\002\031Babylon.Btclightclient.V1\312\002\031Ba" +
+      "bylon\\Btclightclient\\V1\342\002%Babylon\\Btclig" +
+      "htclient\\V1\\GPBMetadata\352\002\033Babylon::Btcli" +
+      "ghtclient::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

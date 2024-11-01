@@ -7065,12 +7065,12 @@ public final class EventsProto {
       "lidator_address\030\002 \001(\tR\020validatorAddress\022" +
       "\026\n\006amount\030\003 \001(\004R\006amount\022\'\n\017creation_heig" +
       "ht\030\004 \001(\003R\016creationHeight\022%\n\016epoch_bounda" +
-      "ry\030\005 \001(\004R\repochBoundaryB\304\001\n\027com.babylon." +
-      "epoching.v1B\013EventsProtoZ0github.com/bab" +
-      "ylonchain/babylon/x/epoching/types\242\002\003BEX" +
-      "\252\002\023Babylon.Epoching.V1\312\002\023Babylon\\Epochin" +
-      "g\\V1\342\002\037Babylon\\Epoching\\V1\\GPBMetadata\352\002" +
-      "\025Babylon::Epoching::V1b\006proto3"
+      "ry\030\005 \001(\004R\repochBoundaryB\306\001\n\027com.babylon." +
+      "epoching.v1B\013EventsProtoZ2github.com/bab" +
+      "ylonlabs-io/babylon/x/epoching/types\242\002\003B" +
+      "EX\252\002\023Babylon.Epoching.V1\312\002\023Babylon\\Epoch" +
+      "ing\\V1\342\002\037Babylon\\Epoching\\V1\\GPBMetadata" +
+      "\352\002\025Babylon::Epoching::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

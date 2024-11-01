@@ -23,7 +23,7 @@ public final class BlsKeyProto {
      * pubkey is the BLS public key of a validator
      * </pre>
      *
-     * <code>bytes pubkey = 1 [json_name = "pubkey", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.PublicKey"];</code>
+     * <code>bytes pubkey = 1 [json_name = "pubkey", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.PublicKey"];</code>
      * @return The pubkey.
      */
     com.google.protobuf.ByteString getPubkey();
@@ -102,7 +102,7 @@ public final class BlsKeyProto {
      * pubkey is the BLS public key of a validator
      * </pre>
      *
-     * <code>bytes pubkey = 1 [json_name = "pubkey", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.PublicKey"];</code>
+     * <code>bytes pubkey = 1 [json_name = "pubkey", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.PublicKey"];</code>
      * @return The pubkey.
      */
     @java.lang.Override
@@ -519,7 +519,7 @@ public final class BlsKeyProto {
        * pubkey is the BLS public key of a validator
        * </pre>
        *
-       * <code>bytes pubkey = 1 [json_name = "pubkey", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.PublicKey"];</code>
+       * <code>bytes pubkey = 1 [json_name = "pubkey", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.PublicKey"];</code>
        * @return The pubkey.
        */
       @java.lang.Override
@@ -531,7 +531,7 @@ public final class BlsKeyProto {
        * pubkey is the BLS public key of a validator
        * </pre>
        *
-       * <code>bytes pubkey = 1 [json_name = "pubkey", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.PublicKey"];</code>
+       * <code>bytes pubkey = 1 [json_name = "pubkey", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.PublicKey"];</code>
        * @param value The pubkey to set.
        * @return This builder for chaining.
        */
@@ -547,7 +547,7 @@ public final class BlsKeyProto {
        * pubkey is the BLS public key of a validator
        * </pre>
        *
-       * <code>bytes pubkey = 1 [json_name = "pubkey", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.PublicKey"];</code>
+       * <code>bytes pubkey = 1 [json_name = "pubkey", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.PublicKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPubkey() {
@@ -796,7 +796,7 @@ public final class BlsKeyProto {
      * ed25519_sig)
      * </pre>
      *
-     * <code>bytes bls_sig = 2 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.Signature"];</code>
+     * <code>bytes bls_sig = 2 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.Signature"];</code>
      * @return The blsSig.
      */
     com.google.protobuf.ByteString getBlsSig();
@@ -867,7 +867,7 @@ public final class BlsKeyProto {
      * ed25519_sig)
      * </pre>
      *
-     * <code>bytes bls_sig = 2 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.Signature"];</code>
+     * <code>bytes bls_sig = 2 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.Signature"];</code>
      * @return The blsSig.
      */
     @java.lang.Override
@@ -1282,7 +1282,7 @@ public final class BlsKeyProto {
        * ed25519_sig)
        * </pre>
        *
-       * <code>bytes bls_sig = 2 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.Signature"];</code>
+       * <code>bytes bls_sig = 2 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.Signature"];</code>
        * @return The blsSig.
        */
       @java.lang.Override
@@ -1295,7 +1295,7 @@ public final class BlsKeyProto {
        * ed25519_sig)
        * </pre>
        *
-       * <code>bytes bls_sig = 2 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.Signature"];</code>
+       * <code>bytes bls_sig = 2 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.Signature"];</code>
        * @param value The blsSig to set.
        * @return This builder for chaining.
        */
@@ -1312,7 +1312,7 @@ public final class BlsKeyProto {
        * ed25519_sig)
        * </pre>
        *
-       * <code>bytes bls_sig = 2 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.Signature"];</code>
+       * <code>bytes bls_sig = 2 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.Signature"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBlsSig() {
@@ -3038,7 +3038,7 @@ public final class BlsKeyProto {
      * bls_sig is the BLS signature
      * </pre>
      *
-     * <code>bytes bls_sig = 6 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.Signature"];</code>
+     * <code>bytes bls_sig = 6 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.Signature"];</code>
      * @return The blsSig.
      */
     com.google.protobuf.ByteString getBlsSig();
@@ -3232,7 +3232,7 @@ public final class BlsKeyProto {
      * bls_sig is the BLS signature
      * </pre>
      *
-     * <code>bytes bls_sig = 6 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.Signature"];</code>
+     * <code>bytes bls_sig = 6 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.Signature"];</code>
      * @return The blsSig.
      */
     @java.lang.Override
@@ -4010,7 +4010,7 @@ public final class BlsKeyProto {
        * bls_sig is the BLS signature
        * </pre>
        *
-       * <code>bytes bls_sig = 6 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.Signature"];</code>
+       * <code>bytes bls_sig = 6 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.Signature"];</code>
        * @return The blsSig.
        */
       @java.lang.Override
@@ -4022,7 +4022,7 @@ public final class BlsKeyProto {
        * bls_sig is the BLS signature
        * </pre>
        *
-       * <code>bytes bls_sig = 6 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.Signature"];</code>
+       * <code>bytes bls_sig = 6 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.Signature"];</code>
        * @param value The blsSig to set.
        * @return This builder for chaining.
        */
@@ -4038,7 +4038,7 @@ public final class BlsKeyProto {
        * bls_sig is the BLS signature
        * </pre>
        *
-       * <code>bytes bls_sig = 6 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.Signature"];</code>
+       * <code>bytes bls_sig = 6 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.Signature"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBlsSig() {
@@ -4147,33 +4147,33 @@ public final class BlsKeyProto {
     java.lang.String[] descriptorData = {
       "\n&babylon/checkpointing/v1/bls_key.proto" +
       "\022\030babylon.checkpointing.v1\032\024gogoproto/go" +
-      "go.proto\"\236\001\n\006BlsKey\022U\n\006pubkey\030\001 \001(\014B=\332\336\037" +
-      "9github.com/babylonchain/babylon/crypto/" +
-      "bls12381.PublicKeyR\006pubkey\022=\n\003pop\030\002 \001(\0132" +
-      "+.babylon.checkpointing.v1.ProofOfPosses" +
-      "sionR\003pop\"\214\001\n\021ProofOfPossession\022\037\n\013ed255" +
-      "19_sig\030\001 \001(\014R\ned25519Sig\022V\n\007bls_sig\030\002 \001(" +
-      "\014B=\332\336\0379github.com/babylonchain/babylon/c" +
-      "rypto/bls12381.SignatureR\006blsSig\"`\n\026Vali" +
-      "datorWithBlsKeySet\022F\n\007val_set\030\001 \003(\0132-.ba" +
-      "bylon.checkpointing.v1.ValidatorWithBlsK" +
-      "eyR\006valSet\"\205\001\n\023ValidatorWithBlsKey\022+\n\021va" +
-      "lidator_address\030\001 \001(\tR\020validatorAddress\022" +
-      "\036\n\013bls_pub_key\030\002 \001(\014R\tblsPubKey\022!\n\014votin" +
-      "g_power\030\003 \001(\004R\013votingPower\"\217\002\n\rVoteExten" +
-      "sion\022\026\n\006signer\030\001 \001(\tR\006signer\022+\n\021validato" +
-      "r_address\030\002 \001(\tR\020validatorAddress\022,\n\nblo" +
-      "ck_hash\030\003 \001(\014B\r\332\336\037\tBlockHashR\tblockHash\022" +
-      "\033\n\tepoch_num\030\004 \001(\004R\010epochNum\022\026\n\006height\030\005" +
-      " \001(\004R\006height\022V\n\007bls_sig\030\006 \001(\014B=\332\336\0379githu" +
-      "b.com/babylonchain/babylon/crypto/bls123" +
-      "81.SignatureR\006blsSigB\342\001\n\034com.babylon.che" +
-      "ckpointing.v1B\013BlsKeyProtoZ5github.com/b" +
-      "abylonchain/babylon/x/checkpointing/type" +
-      "s\242\002\003BCX\252\002\030Babylon.Checkpointing.V1\312\002\030Bab" +
-      "ylon\\Checkpointing\\V1\342\002$Babylon\\Checkpoi" +
-      "nting\\V1\\GPBMetadata\352\002\032Babylon::Checkpoi" +
-      "nting::V1b\006proto3"
+      "go.proto\"\240\001\n\006BlsKey\022W\n\006pubkey\030\001 \001(\014B?\332\336\037" +
+      ";github.com/babylonlabs-io/babylon/crypt" +
+      "o/bls12381.PublicKeyR\006pubkey\022=\n\003pop\030\002 \001(" +
+      "\0132+.babylon.checkpointing.v1.ProofOfPoss" +
+      "essionR\003pop\"\216\001\n\021ProofOfPossession\022\037\n\013ed2" +
+      "5519_sig\030\001 \001(\014R\ned25519Sig\022X\n\007bls_sig\030\002 " +
+      "\001(\014B?\332\336\037;github.com/babylonlabs-io/babyl" +
+      "on/crypto/bls12381.SignatureR\006blsSig\"`\n\026" +
+      "ValidatorWithBlsKeySet\022F\n\007val_set\030\001 \003(\0132" +
+      "-.babylon.checkpointing.v1.ValidatorWith" +
+      "BlsKeyR\006valSet\"\205\001\n\023ValidatorWithBlsKey\022+" +
+      "\n\021validator_address\030\001 \001(\tR\020validatorAddr" +
+      "ess\022\036\n\013bls_pub_key\030\002 \001(\014R\tblsPubKey\022!\n\014v" +
+      "oting_power\030\003 \001(\004R\013votingPower\"\221\002\n\rVoteE" +
+      "xtension\022\026\n\006signer\030\001 \001(\tR\006signer\022+\n\021vali" +
+      "dator_address\030\002 \001(\tR\020validatorAddress\022,\n" +
+      "\nblock_hash\030\003 \001(\014B\r\332\336\037\tBlockHashR\tblockH" +
+      "ash\022\033\n\tepoch_num\030\004 \001(\004R\010epochNum\022\026\n\006heig" +
+      "ht\030\005 \001(\004R\006height\022X\n\007bls_sig\030\006 \001(\014B?\332\336\037;g" +
+      "ithub.com/babylonlabs-io/babylon/crypto/" +
+      "bls12381.SignatureR\006blsSigB\344\001\n\034com.babyl" +
+      "on.checkpointing.v1B\013BlsKeyProtoZ7github" +
+      ".com/babylonlabs-io/babylon/x/checkpoint" +
+      "ing/types\242\002\003BCX\252\002\030Babylon.Checkpointing." +
+      "V1\312\002\030Babylon\\Checkpointing\\V1\342\002$Babylon\\" +
+      "Checkpointing\\V1\\GPBMetadata\352\002\032Babylon::" +
+      "Checkpointing::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

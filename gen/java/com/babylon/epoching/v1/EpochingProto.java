@@ -8035,12 +8035,12 @@ public final class EpochingProto {
       "\022\022\n\004addr\030\001 \001(\014R\004addr\022\024\n\005power\030\002 \001(\003R\005pow" +
       "er*N\n\tBondState\022\013\n\007CREATED\020\000\022\n\n\006BONDED\020\001" +
       "\022\r\n\tUNBONDING\020\002\022\014\n\010UNBONDED\020\003\022\013\n\007REMOVED" +
-      "\020\004B\306\001\n\027com.babylon.epoching.v1B\rEpoching" +
-      "ProtoZ0github.com/babylonchain/babylon/x" +
-      "/epoching/types\242\002\003BEX\252\002\023Babylon.Epoching" +
-      ".V1\312\002\023Babylon\\Epoching\\V1\342\002\037Babylon\\Epoc" +
-      "hing\\V1\\GPBMetadata\352\002\025Babylon::Epoching:" +
-      ":V1b\006proto3"
+      "\020\004B\310\001\n\027com.babylon.epoching.v1B\rEpoching" +
+      "ProtoZ2github.com/babylonlabs-io/babylon" +
+      "/x/epoching/types\242\002\003BEX\252\002\023Babylon.Epochi" +
+      "ng.V1\312\002\023Babylon\\Epoching\\V1\342\002\037Babylon\\Ep" +
+      "oching\\V1\\GPBMetadata\352\002\025Babylon::Epochin" +
+      "g::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

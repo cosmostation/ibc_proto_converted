@@ -190,6 +190,27 @@ struct Babylon_Checkpointing_V1_QueryBlsPublicKeyListRequest {
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageRequest? = nil
 }
 
+/// BlsPublicKeyListResponse couples validator address, voting power, and its bls
+/// public key
+struct Babylon_Checkpointing_V1_BlsPublicKeyListResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// validator_address is the address of the validator
+  var validatorAddress: String = String()
+
+  /// bls_pub_key is the BLS public key of the validator
+  var blsPubKeyHex: String = String()
+
+  /// voting_power is the voting power of the validator at the given epoch
+  var votingPower: UInt64 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 /// QueryBlsPublicKeyListResponse is the response type for the
 /// Query/BlsPublicKeys RPC method.
 struct Babylon_Checkpointing_V1_QueryBlsPublicKeyListResponse {
@@ -197,7 +218,7 @@ struct Babylon_Checkpointing_V1_QueryBlsPublicKeyListResponse {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var validatorWithBlsKeys: [Babylon_Checkpointing_V1_ValidatorWithBlsKey] = []
+  var validatorWithBlsKeys: [Babylon_Checkpointing_V1_BlsPublicKeyListResponse] = []
 
   /// pagination defines the pagination in the response.
   var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
@@ -349,7 +370,7 @@ struct Babylon_Checkpointing_V1_CheckpointStateUpdateResponse {
   /// state defines the event of a state transition towards this state
   var state: Babylon_Checkpointing_V1_CheckpointStatus = .ckptStatusAccumulating
 
-  /// status_desc respresents the description of status enum.
+  /// status_desc represents the description of status enum.
   var statusDesc: String = String()
 
   /// block_height is the height of the Babylon block that triggers the state
@@ -392,7 +413,7 @@ struct Babylon_Checkpointing_V1_RawCheckpointWithMetaResponse {
   /// status defines the status of the checkpoint
   var status: Babylon_Checkpointing_V1_CheckpointStatus = .ckptStatusAccumulating
 
-  /// status_desc respresents the description of status enum.
+  /// status_desc represents the description of status enum.
   var statusDesc: String = String()
 
   /// bls_aggr_pk defines the aggregated BLS public key
@@ -421,6 +442,7 @@ extension Babylon_Checkpointing_V1_QueryRawCheckpointResponse: @unchecked Sendab
 extension Babylon_Checkpointing_V1_QueryRawCheckpointsRequest: @unchecked Sendable {}
 extension Babylon_Checkpointing_V1_QueryRawCheckpointsResponse: @unchecked Sendable {}
 extension Babylon_Checkpointing_V1_QueryBlsPublicKeyListRequest: @unchecked Sendable {}
+extension Babylon_Checkpointing_V1_BlsPublicKeyListResponse: @unchecked Sendable {}
 extension Babylon_Checkpointing_V1_QueryBlsPublicKeyListResponse: @unchecked Sendable {}
 extension Babylon_Checkpointing_V1_QueryEpochStatusRequest: @unchecked Sendable {}
 extension Babylon_Checkpointing_V1_QueryEpochStatusResponse: @unchecked Sendable {}
@@ -704,6 +726,50 @@ extension Babylon_Checkpointing_V1_QueryBlsPublicKeyListRequest: SwiftProtobuf.M
   static func ==(lhs: Babylon_Checkpointing_V1_QueryBlsPublicKeyListRequest, rhs: Babylon_Checkpointing_V1_QueryBlsPublicKeyListRequest) -> Bool {
     if lhs.epochNum != rhs.epochNum {return false}
     if lhs._pagination != rhs._pagination {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Checkpointing_V1_BlsPublicKeyListResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".BlsPublicKeyListResponse"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "validator_address"),
+    2: .standard(proto: "bls_pub_key_hex"),
+    3: .standard(proto: "voting_power"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.validatorAddress) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.blsPubKeyHex) }()
+      case 3: try { try decoder.decodeSingularUInt64Field(value: &self.votingPower) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.validatorAddress.isEmpty {
+      try visitor.visitSingularStringField(value: self.validatorAddress, fieldNumber: 1)
+    }
+    if !self.blsPubKeyHex.isEmpty {
+      try visitor.visitSingularStringField(value: self.blsPubKeyHex, fieldNumber: 2)
+    }
+    if self.votingPower != 0 {
+      try visitor.visitSingularUInt64Field(value: self.votingPower, fieldNumber: 3)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Checkpointing_V1_BlsPublicKeyListResponse, rhs: Babylon_Checkpointing_V1_BlsPublicKeyListResponse) -> Bool {
+    if lhs.validatorAddress != rhs.validatorAddress {return false}
+    if lhs.blsPubKeyHex != rhs.blsPubKeyHex {return false}
+    if lhs.votingPower != rhs.votingPower {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

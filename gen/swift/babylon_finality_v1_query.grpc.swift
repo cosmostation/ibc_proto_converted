@@ -38,6 +38,26 @@ internal protocol Babylon_Finality_V1_QueryClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> UnaryCall<Babylon_Finality_V1_QueryParamsRequest, Babylon_Finality_V1_QueryParamsResponse>
 
+  func activeFinalityProvidersAtHeight(
+    _ request: Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightRequest, Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightResponse>
+
+  func finalityProviderPowerAtHeight(
+    _ request: Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightRequest, Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightResponse>
+
+  func finalityProviderCurrentPower(
+    _ request: Babylon_Finality_V1_QueryFinalityProviderCurrentPowerRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Babylon_Finality_V1_QueryFinalityProviderCurrentPowerRequest, Babylon_Finality_V1_QueryFinalityProviderCurrentPowerResponse>
+
+  func activatedHeight(
+    _ request: Babylon_Finality_V1_QueryActivatedHeightRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Babylon_Finality_V1_QueryActivatedHeightRequest, Babylon_Finality_V1_QueryActivatedHeightResponse>
+
   func listPublicRandomness(
     _ request: Babylon_Finality_V1_QueryListPublicRandomnessRequest,
     callOptions: CallOptions?
@@ -107,11 +127,83 @@ extension Babylon_Finality_V1_QueryClientProtocol {
     )
   }
 
+  /// ActiveFinalityProvidersAtHeight queries finality providers with non zero voting power at given height.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to ActiveFinalityProvidersAtHeight.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func activeFinalityProvidersAtHeight(
+    _ request: Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightRequest, Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightResponse> {
+    return self.makeUnaryCall(
+      path: Babylon_Finality_V1_QueryClientMetadata.Methods.activeFinalityProvidersAtHeight.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeActiveFinalityProvidersAtHeightInterceptors() ?? []
+    )
+  }
+
+  /// FinalityProviderPowerAtHeight queries the voting power of a finality provider at a given height
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to FinalityProviderPowerAtHeight.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func finalityProviderPowerAtHeight(
+    _ request: Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightRequest, Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightResponse> {
+    return self.makeUnaryCall(
+      path: Babylon_Finality_V1_QueryClientMetadata.Methods.finalityProviderPowerAtHeight.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeFinalityProviderPowerAtHeightInterceptors() ?? []
+    )
+  }
+
+  /// FinalityProviderCurrentPower queries the voting power of a finality provider at the current height
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to FinalityProviderCurrentPower.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func finalityProviderCurrentPower(
+    _ request: Babylon_Finality_V1_QueryFinalityProviderCurrentPowerRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Babylon_Finality_V1_QueryFinalityProviderCurrentPowerRequest, Babylon_Finality_V1_QueryFinalityProviderCurrentPowerResponse> {
+    return self.makeUnaryCall(
+      path: Babylon_Finality_V1_QueryClientMetadata.Methods.finalityProviderCurrentPower.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeFinalityProviderCurrentPowerInterceptors() ?? []
+    )
+  }
+
+  /// ActivatedHeight queries the height when BTC staking protocol is activated, i.e., the first height when
+  /// there exists 1 finality provider with voting power
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to ActivatedHeight.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func activatedHeight(
+    _ request: Babylon_Finality_V1_QueryActivatedHeightRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Babylon_Finality_V1_QueryActivatedHeightRequest, Babylon_Finality_V1_QueryActivatedHeightResponse> {
+    return self.makeUnaryCall(
+      path: Babylon_Finality_V1_QueryClientMetadata.Methods.activatedHeight.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeActivatedHeightInterceptors() ?? []
+    )
+  }
+
   /// ListPublicRandomness is a range query for public randomness of a given finality provider
   /// NOTE: Babylon only has the knowledge of public randomness that is already revealed by
-  /// finality providers, i.e., the finality provider alreayd provides a finality signature
+  /// finality providers, i.e., the finality provider already provides a finality signature
   /// at the corresponding height
-  /// TODO: remove public randomness storage?
   ///
   /// - Parameters:
   ///   - request: Request to send to ListPublicRandomness.
@@ -342,6 +434,26 @@ internal protocol Babylon_Finality_V1_QueryAsyncClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Babylon_Finality_V1_QueryParamsRequest, Babylon_Finality_V1_QueryParamsResponse>
 
+  func makeActiveFinalityProvidersAtHeightCall(
+    _ request: Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightRequest, Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightResponse>
+
+  func makeFinalityProviderPowerAtHeightCall(
+    _ request: Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightRequest, Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightResponse>
+
+  func makeFinalityProviderCurrentPowerCall(
+    _ request: Babylon_Finality_V1_QueryFinalityProviderCurrentPowerRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Babylon_Finality_V1_QueryFinalityProviderCurrentPowerRequest, Babylon_Finality_V1_QueryFinalityProviderCurrentPowerResponse>
+
+  func makeActivatedHeightCall(
+    _ request: Babylon_Finality_V1_QueryActivatedHeightRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Babylon_Finality_V1_QueryActivatedHeightRequest, Babylon_Finality_V1_QueryActivatedHeightResponse>
+
   func makeListPublicRandomnessCall(
     _ request: Babylon_Finality_V1_QueryListPublicRandomnessRequest,
     callOptions: CallOptions?
@@ -407,6 +519,54 @@ extension Babylon_Finality_V1_QueryAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeParamsInterceptors() ?? []
+    )
+  }
+
+  internal func makeActiveFinalityProvidersAtHeightCall(
+    _ request: Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightRequest, Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Babylon_Finality_V1_QueryClientMetadata.Methods.activeFinalityProvidersAtHeight.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeActiveFinalityProvidersAtHeightInterceptors() ?? []
+    )
+  }
+
+  internal func makeFinalityProviderPowerAtHeightCall(
+    _ request: Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightRequest, Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Babylon_Finality_V1_QueryClientMetadata.Methods.finalityProviderPowerAtHeight.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeFinalityProviderPowerAtHeightInterceptors() ?? []
+    )
+  }
+
+  internal func makeFinalityProviderCurrentPowerCall(
+    _ request: Babylon_Finality_V1_QueryFinalityProviderCurrentPowerRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Babylon_Finality_V1_QueryFinalityProviderCurrentPowerRequest, Babylon_Finality_V1_QueryFinalityProviderCurrentPowerResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Babylon_Finality_V1_QueryClientMetadata.Methods.finalityProviderCurrentPower.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeFinalityProviderCurrentPowerInterceptors() ?? []
+    )
+  }
+
+  internal func makeActivatedHeightCall(
+    _ request: Babylon_Finality_V1_QueryActivatedHeightRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Babylon_Finality_V1_QueryActivatedHeightRequest, Babylon_Finality_V1_QueryActivatedHeightResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Babylon_Finality_V1_QueryClientMetadata.Methods.activatedHeight.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeActivatedHeightInterceptors() ?? []
     )
   }
 
@@ -530,6 +690,54 @@ extension Babylon_Finality_V1_QueryAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeParamsInterceptors() ?? []
+    )
+  }
+
+  internal func activeFinalityProvidersAtHeight(
+    _ request: Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Babylon_Finality_V1_QueryClientMetadata.Methods.activeFinalityProvidersAtHeight.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeActiveFinalityProvidersAtHeightInterceptors() ?? []
+    )
+  }
+
+  internal func finalityProviderPowerAtHeight(
+    _ request: Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Babylon_Finality_V1_QueryClientMetadata.Methods.finalityProviderPowerAtHeight.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeFinalityProviderPowerAtHeightInterceptors() ?? []
+    )
+  }
+
+  internal func finalityProviderCurrentPower(
+    _ request: Babylon_Finality_V1_QueryFinalityProviderCurrentPowerRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Babylon_Finality_V1_QueryFinalityProviderCurrentPowerResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Babylon_Finality_V1_QueryClientMetadata.Methods.finalityProviderCurrentPower.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeFinalityProviderCurrentPowerInterceptors() ?? []
+    )
+  }
+
+  internal func activatedHeight(
+    _ request: Babylon_Finality_V1_QueryActivatedHeightRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Babylon_Finality_V1_QueryActivatedHeightResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Babylon_Finality_V1_QueryClientMetadata.Methods.activatedHeight.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeActivatedHeightInterceptors() ?? []
     )
   }
 
@@ -664,6 +872,18 @@ internal protocol Babylon_Finality_V1_QueryClientInterceptorFactoryProtocol: Sen
   /// - Returns: Interceptors to use when invoking 'params'.
   func makeParamsInterceptors() -> [ClientInterceptor<Babylon_Finality_V1_QueryParamsRequest, Babylon_Finality_V1_QueryParamsResponse>]
 
+  /// - Returns: Interceptors to use when invoking 'activeFinalityProvidersAtHeight'.
+  func makeActiveFinalityProvidersAtHeightInterceptors() -> [ClientInterceptor<Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightRequest, Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'finalityProviderPowerAtHeight'.
+  func makeFinalityProviderPowerAtHeightInterceptors() -> [ClientInterceptor<Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightRequest, Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'finalityProviderCurrentPower'.
+  func makeFinalityProviderCurrentPowerInterceptors() -> [ClientInterceptor<Babylon_Finality_V1_QueryFinalityProviderCurrentPowerRequest, Babylon_Finality_V1_QueryFinalityProviderCurrentPowerResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'activatedHeight'.
+  func makeActivatedHeightInterceptors() -> [ClientInterceptor<Babylon_Finality_V1_QueryActivatedHeightRequest, Babylon_Finality_V1_QueryActivatedHeightResponse>]
+
   /// - Returns: Interceptors to use when invoking 'listPublicRandomness'.
   func makeListPublicRandomnessInterceptors() -> [ClientInterceptor<Babylon_Finality_V1_QueryListPublicRandomnessRequest, Babylon_Finality_V1_QueryListPublicRandomnessResponse>]
 
@@ -698,6 +918,10 @@ internal enum Babylon_Finality_V1_QueryClientMetadata {
     fullName: "babylon.finality.v1.Query",
     methods: [
       Babylon_Finality_V1_QueryClientMetadata.Methods.params,
+      Babylon_Finality_V1_QueryClientMetadata.Methods.activeFinalityProvidersAtHeight,
+      Babylon_Finality_V1_QueryClientMetadata.Methods.finalityProviderPowerAtHeight,
+      Babylon_Finality_V1_QueryClientMetadata.Methods.finalityProviderCurrentPower,
+      Babylon_Finality_V1_QueryClientMetadata.Methods.activatedHeight,
       Babylon_Finality_V1_QueryClientMetadata.Methods.listPublicRandomness,
       Babylon_Finality_V1_QueryClientMetadata.Methods.listPubRandCommit,
       Babylon_Finality_V1_QueryClientMetadata.Methods.block,
@@ -714,6 +938,30 @@ internal enum Babylon_Finality_V1_QueryClientMetadata {
     internal static let params = GRPCMethodDescriptor(
       name: "Params",
       path: "/babylon.finality.v1.Query/Params",
+      type: GRPCCallType.unary
+    )
+
+    internal static let activeFinalityProvidersAtHeight = GRPCMethodDescriptor(
+      name: "ActiveFinalityProvidersAtHeight",
+      path: "/babylon.finality.v1.Query/ActiveFinalityProvidersAtHeight",
+      type: GRPCCallType.unary
+    )
+
+    internal static let finalityProviderPowerAtHeight = GRPCMethodDescriptor(
+      name: "FinalityProviderPowerAtHeight",
+      path: "/babylon.finality.v1.Query/FinalityProviderPowerAtHeight",
+      type: GRPCCallType.unary
+    )
+
+    internal static let finalityProviderCurrentPower = GRPCMethodDescriptor(
+      name: "FinalityProviderCurrentPower",
+      path: "/babylon.finality.v1.Query/FinalityProviderCurrentPower",
+      type: GRPCCallType.unary
+    )
+
+    internal static let activatedHeight = GRPCMethodDescriptor(
+      name: "ActivatedHeight",
+      path: "/babylon.finality.v1.Query/ActivatedHeight",
       type: GRPCCallType.unary
     )
 
@@ -782,11 +1030,23 @@ internal protocol Babylon_Finality_V1_QueryProvider: CallHandlerProvider {
   /// Parameters queries the parameters of the module.
   func params(request: Babylon_Finality_V1_QueryParamsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Finality_V1_QueryParamsResponse>
 
+  /// ActiveFinalityProvidersAtHeight queries finality providers with non zero voting power at given height.
+  func activeFinalityProvidersAtHeight(request: Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightResponse>
+
+  /// FinalityProviderPowerAtHeight queries the voting power of a finality provider at a given height
+  func finalityProviderPowerAtHeight(request: Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightResponse>
+
+  /// FinalityProviderCurrentPower queries the voting power of a finality provider at the current height
+  func finalityProviderCurrentPower(request: Babylon_Finality_V1_QueryFinalityProviderCurrentPowerRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Finality_V1_QueryFinalityProviderCurrentPowerResponse>
+
+  /// ActivatedHeight queries the height when BTC staking protocol is activated, i.e., the first height when
+  /// there exists 1 finality provider with voting power
+  func activatedHeight(request: Babylon_Finality_V1_QueryActivatedHeightRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Finality_V1_QueryActivatedHeightResponse>
+
   /// ListPublicRandomness is a range query for public randomness of a given finality provider
   /// NOTE: Babylon only has the knowledge of public randomness that is already revealed by
-  /// finality providers, i.e., the finality provider alreayd provides a finality signature
+  /// finality providers, i.e., the finality provider already provides a finality signature
   /// at the corresponding height
-  /// TODO: remove public randomness storage?
   func listPublicRandomness(request: Babylon_Finality_V1_QueryListPublicRandomnessRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Finality_V1_QueryListPublicRandomnessResponse>
 
   /// ListPubRandCommit is a range query for public randomness commitments of a given finality provider
@@ -833,6 +1093,42 @@ extension Babylon_Finality_V1_QueryProvider {
         responseSerializer: ProtobufSerializer<Babylon_Finality_V1_QueryParamsResponse>(),
         interceptors: self.interceptors?.makeParamsInterceptors() ?? [],
         userFunction: self.params(request:context:)
+      )
+
+    case "ActiveFinalityProvidersAtHeight":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightRequest>(),
+        responseSerializer: ProtobufSerializer<Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightResponse>(),
+        interceptors: self.interceptors?.makeActiveFinalityProvidersAtHeightInterceptors() ?? [],
+        userFunction: self.activeFinalityProvidersAtHeight(request:context:)
+      )
+
+    case "FinalityProviderPowerAtHeight":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightRequest>(),
+        responseSerializer: ProtobufSerializer<Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightResponse>(),
+        interceptors: self.interceptors?.makeFinalityProviderPowerAtHeightInterceptors() ?? [],
+        userFunction: self.finalityProviderPowerAtHeight(request:context:)
+      )
+
+    case "FinalityProviderCurrentPower":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Babylon_Finality_V1_QueryFinalityProviderCurrentPowerRequest>(),
+        responseSerializer: ProtobufSerializer<Babylon_Finality_V1_QueryFinalityProviderCurrentPowerResponse>(),
+        interceptors: self.interceptors?.makeFinalityProviderCurrentPowerInterceptors() ?? [],
+        userFunction: self.finalityProviderCurrentPower(request:context:)
+      )
+
+    case "ActivatedHeight":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Babylon_Finality_V1_QueryActivatedHeightRequest>(),
+        responseSerializer: ProtobufSerializer<Babylon_Finality_V1_QueryActivatedHeightResponse>(),
+        interceptors: self.interceptors?.makeActivatedHeightInterceptors() ?? [],
+        userFunction: self.activatedHeight(request:context:)
       )
 
     case "ListPublicRandomness":
@@ -936,11 +1232,35 @@ internal protocol Babylon_Finality_V1_QueryAsyncProvider: CallHandlerProvider {
     context: GRPCAsyncServerCallContext
   ) async throws -> Babylon_Finality_V1_QueryParamsResponse
 
+  /// ActiveFinalityProvidersAtHeight queries finality providers with non zero voting power at given height.
+  @Sendable func activeFinalityProvidersAtHeight(
+    request: Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightResponse
+
+  /// FinalityProviderPowerAtHeight queries the voting power of a finality provider at a given height
+  @Sendable func finalityProviderPowerAtHeight(
+    request: Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightResponse
+
+  /// FinalityProviderCurrentPower queries the voting power of a finality provider at the current height
+  @Sendable func finalityProviderCurrentPower(
+    request: Babylon_Finality_V1_QueryFinalityProviderCurrentPowerRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Babylon_Finality_V1_QueryFinalityProviderCurrentPowerResponse
+
+  /// ActivatedHeight queries the height when BTC staking protocol is activated, i.e., the first height when
+  /// there exists 1 finality provider with voting power
+  @Sendable func activatedHeight(
+    request: Babylon_Finality_V1_QueryActivatedHeightRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Babylon_Finality_V1_QueryActivatedHeightResponse
+
   /// ListPublicRandomness is a range query for public randomness of a given finality provider
   /// NOTE: Babylon only has the knowledge of public randomness that is already revealed by
-  /// finality providers, i.e., the finality provider alreayd provides a finality signature
+  /// finality providers, i.e., the finality provider already provides a finality signature
   /// at the corresponding height
-  /// TODO: remove public randomness storage?
   @Sendable func listPublicRandomness(
     request: Babylon_Finality_V1_QueryListPublicRandomnessRequest,
     context: GRPCAsyncServerCallContext
@@ -1021,6 +1341,42 @@ extension Babylon_Finality_V1_QueryAsyncProvider {
         responseSerializer: ProtobufSerializer<Babylon_Finality_V1_QueryParamsResponse>(),
         interceptors: self.interceptors?.makeParamsInterceptors() ?? [],
         wrapping: self.params(request:context:)
+      )
+
+    case "ActiveFinalityProvidersAtHeight":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightRequest>(),
+        responseSerializer: ProtobufSerializer<Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightResponse>(),
+        interceptors: self.interceptors?.makeActiveFinalityProvidersAtHeightInterceptors() ?? [],
+        wrapping: self.activeFinalityProvidersAtHeight(request:context:)
+      )
+
+    case "FinalityProviderPowerAtHeight":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightRequest>(),
+        responseSerializer: ProtobufSerializer<Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightResponse>(),
+        interceptors: self.interceptors?.makeFinalityProviderPowerAtHeightInterceptors() ?? [],
+        wrapping: self.finalityProviderPowerAtHeight(request:context:)
+      )
+
+    case "FinalityProviderCurrentPower":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Babylon_Finality_V1_QueryFinalityProviderCurrentPowerRequest>(),
+        responseSerializer: ProtobufSerializer<Babylon_Finality_V1_QueryFinalityProviderCurrentPowerResponse>(),
+        interceptors: self.interceptors?.makeFinalityProviderCurrentPowerInterceptors() ?? [],
+        wrapping: self.finalityProviderCurrentPower(request:context:)
+      )
+
+    case "ActivatedHeight":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Babylon_Finality_V1_QueryActivatedHeightRequest>(),
+        responseSerializer: ProtobufSerializer<Babylon_Finality_V1_QueryActivatedHeightResponse>(),
+        interceptors: self.interceptors?.makeActivatedHeightInterceptors() ?? [],
+        wrapping: self.activatedHeight(request:context:)
       )
 
     case "ListPublicRandomness":
@@ -1116,6 +1472,22 @@ internal protocol Babylon_Finality_V1_QueryServerInterceptorFactoryProtocol {
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeParamsInterceptors() -> [ServerInterceptor<Babylon_Finality_V1_QueryParamsRequest, Babylon_Finality_V1_QueryParamsResponse>]
 
+  /// - Returns: Interceptors to use when handling 'activeFinalityProvidersAtHeight'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeActiveFinalityProvidersAtHeightInterceptors() -> [ServerInterceptor<Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightRequest, Babylon_Finality_V1_QueryActiveFinalityProvidersAtHeightResponse>]
+
+  /// - Returns: Interceptors to use when handling 'finalityProviderPowerAtHeight'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeFinalityProviderPowerAtHeightInterceptors() -> [ServerInterceptor<Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightRequest, Babylon_Finality_V1_QueryFinalityProviderPowerAtHeightResponse>]
+
+  /// - Returns: Interceptors to use when handling 'finalityProviderCurrentPower'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeFinalityProviderCurrentPowerInterceptors() -> [ServerInterceptor<Babylon_Finality_V1_QueryFinalityProviderCurrentPowerRequest, Babylon_Finality_V1_QueryFinalityProviderCurrentPowerResponse>]
+
+  /// - Returns: Interceptors to use when handling 'activatedHeight'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeActivatedHeightInterceptors() -> [ServerInterceptor<Babylon_Finality_V1_QueryActivatedHeightRequest, Babylon_Finality_V1_QueryActivatedHeightResponse>]
+
   /// - Returns: Interceptors to use when handling 'listPublicRandomness'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeListPublicRandomnessInterceptors() -> [ServerInterceptor<Babylon_Finality_V1_QueryListPublicRandomnessRequest, Babylon_Finality_V1_QueryListPublicRandomnessResponse>]
@@ -1159,6 +1531,10 @@ internal enum Babylon_Finality_V1_QueryServerMetadata {
     fullName: "babylon.finality.v1.Query",
     methods: [
       Babylon_Finality_V1_QueryServerMetadata.Methods.params,
+      Babylon_Finality_V1_QueryServerMetadata.Methods.activeFinalityProvidersAtHeight,
+      Babylon_Finality_V1_QueryServerMetadata.Methods.finalityProviderPowerAtHeight,
+      Babylon_Finality_V1_QueryServerMetadata.Methods.finalityProviderCurrentPower,
+      Babylon_Finality_V1_QueryServerMetadata.Methods.activatedHeight,
       Babylon_Finality_V1_QueryServerMetadata.Methods.listPublicRandomness,
       Babylon_Finality_V1_QueryServerMetadata.Methods.listPubRandCommit,
       Babylon_Finality_V1_QueryServerMetadata.Methods.block,
@@ -1175,6 +1551,30 @@ internal enum Babylon_Finality_V1_QueryServerMetadata {
     internal static let params = GRPCMethodDescriptor(
       name: "Params",
       path: "/babylon.finality.v1.Query/Params",
+      type: GRPCCallType.unary
+    )
+
+    internal static let activeFinalityProvidersAtHeight = GRPCMethodDescriptor(
+      name: "ActiveFinalityProvidersAtHeight",
+      path: "/babylon.finality.v1.Query/ActiveFinalityProvidersAtHeight",
+      type: GRPCCallType.unary
+    )
+
+    internal static let finalityProviderPowerAtHeight = GRPCMethodDescriptor(
+      name: "FinalityProviderPowerAtHeight",
+      path: "/babylon.finality.v1.Query/FinalityProviderPowerAtHeight",
+      type: GRPCCallType.unary
+    )
+
+    internal static let finalityProviderCurrentPower = GRPCMethodDescriptor(
+      name: "FinalityProviderCurrentPower",
+      path: "/babylon.finality.v1.Query/FinalityProviderCurrentPower",
+      type: GRPCCallType.unary
+    )
+
+    internal static let activatedHeight = GRPCMethodDescriptor(
+      name: "ActivatedHeight",
+      path: "/babylon.finality.v1.Query/ActivatedHeight",
       type: GRPCCallType.unary
     )
 

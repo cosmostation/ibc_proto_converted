@@ -640,12 +640,12 @@ public final class GenesisProto {
       "on.incentive\032\024gogoproto/gogo.proto\032\036baby" +
       "lon/incentive/params.proto\"G\n\014GenesisSta" +
       "te\0227\n\006params\030\001 \001(\0132\031.babylon.incentive.P" +
-      "aramsB\004\310\336\037\000R\006paramsB\273\001\n\025com.babylon.ince" +
-      "ntiveB\014GenesisProtoZ1github.com/babylonc" +
-      "hain/babylon/x/incentive/types\242\002\003BIX\252\002\021B" +
-      "abylon.Incentive\312\002\021Babylon\\Incentive\342\002\035B" +
-      "abylon\\Incentive\\GPBMetadata\352\002\022Babylon::" +
-      "Incentiveb\006proto3"
+      "aramsB\004\310\336\037\000R\006paramsB\275\001\n\025com.babylon.ince" +
+      "ntiveB\014GenesisProtoZ3github.com/babylonl" +
+      "abs-io/babylon/x/incentive/types\242\002\003BIX\252\002" +
+      "\021Babylon.Incentive\312\002\021Babylon\\Incentive\342\002" +
+      "\035Babylon\\Incentive\\GPBMetadata\352\002\022Babylon" +
+      "::Incentiveb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

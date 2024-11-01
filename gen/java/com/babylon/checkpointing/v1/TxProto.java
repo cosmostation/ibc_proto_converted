@@ -1258,13 +1258,13 @@ public final class TxProto {
       "\n\026WrappedCreateValidator\0223.babylon.check" +
       "pointing.v1.MsgWrappedCreateValidator\032;." +
       "babylon.checkpointing.v1.MsgWrappedCreat" +
-      "eValidatorResponse\032\005\200\347\260*\001B\336\001\n\034com.babylo" +
-      "n.checkpointing.v1B\007TxProtoZ5github.com/" +
-      "babylonchain/babylon/x/checkpointing/typ" +
-      "es\242\002\003BCX\252\002\030Babylon.Checkpointing.V1\312\002\030Ba" +
-      "bylon\\Checkpointing\\V1\342\002$Babylon\\Checkpo" +
-      "inting\\V1\\GPBMetadata\352\002\032Babylon::Checkpo" +
-      "inting::V1b\006proto3"
+      "eValidatorResponse\032\005\200\347\260*\001B\340\001\n\034com.babylo" +
+      "n.checkpointing.v1B\007TxProtoZ7github.com/" +
+      "babylonlabs-io/babylon/x/checkpointing/t" +
+      "ypes\242\002\003BCX\252\002\030Babylon.Checkpointing.V1\312\002\030" +
+      "Babylon\\Checkpointing\\V1\342\002$Babylon\\Check" +
+      "pointing\\V1\\GPBMetadata\352\002\032Babylon::Check" +
+      "pointing::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

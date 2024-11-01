@@ -166,15 +166,21 @@ struct Babylon_Btcstaking_V1_MsgCreateBTCDelegation {
     set {_uniqueStorage()._stakingValue = newValue}
   }
 
-  /// staking_tx is the staking tx along with the merkle proof of inclusion in btc block
-  var stakingTx: Babylon_Btccheckpoint_V1_TransactionInfo {
-    get {return _storage._stakingTx ?? Babylon_Btccheckpoint_V1_TransactionInfo()}
+  /// staking_tx is a bitcoin staking transaction i.e transaction that locks funds
+  var stakingTx: Data {
+    get {return _storage._stakingTx}
     set {_uniqueStorage()._stakingTx = newValue}
   }
-  /// Returns true if `stakingTx` has been explicitly set.
-  var hasStakingTx: Bool {return _storage._stakingTx != nil}
-  /// Clears the value of `stakingTx`. Subsequent reads from it will return its default value.
-  mutating func clearStakingTx() {_uniqueStorage()._stakingTx = nil}
+
+  /// staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+  var stakingTxInclusionProof: Babylon_Btcstaking_V1_InclusionProof {
+    get {return _storage._stakingTxInclusionProof ?? Babylon_Btcstaking_V1_InclusionProof()}
+    set {_uniqueStorage()._stakingTxInclusionProof = newValue}
+  }
+  /// Returns true if `stakingTxInclusionProof` has been explicitly set.
+  var hasStakingTxInclusionProof: Bool {return _storage._stakingTxInclusionProof != nil}
+  /// Clears the value of `stakingTxInclusionProof`. Subsequent reads from it will return its default value.
+  mutating func clearStakingTxInclusionProof() {_uniqueStorage()._stakingTxInclusionProof = nil}
 
   /// slashing_tx is the slashing tx
   /// Note that the tx itself does not contain signatures, which are off-chain.
@@ -248,6 +254,46 @@ struct Babylon_Btcstaking_V1_MsgCreateBTCDelegationResponse {
   init() {}
 }
 
+/// MsgAddBTCDelegationInclusionProof is the message for adding proof of inclusion of BTC delegation on BTC chain
+struct Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProof {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var signer: String = String()
+
+  /// staking_tx_hash is the hash of the staking tx.
+  /// It uniquely identifies a BTC delegation
+  var stakingTxHash: String = String()
+
+  /// staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+  var stakingTxInclusionProof: Babylon_Btcstaking_V1_InclusionProof {
+    get {return _stakingTxInclusionProof ?? Babylon_Btcstaking_V1_InclusionProof()}
+    set {_stakingTxInclusionProof = newValue}
+  }
+  /// Returns true if `stakingTxInclusionProof` has been explicitly set.
+  var hasStakingTxInclusionProof: Bool {return self._stakingTxInclusionProof != nil}
+  /// Clears the value of `stakingTxInclusionProof`. Subsequent reads from it will return its default value.
+  mutating func clearStakingTxInclusionProof() {self._stakingTxInclusionProof = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _stakingTxInclusionProof: Babylon_Btcstaking_V1_InclusionProof? = nil
+}
+
+/// MsgAddBTCDelegationInclusionProofResponse is the response for MsgAddBTCDelegationInclusionProof
+struct Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProofResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 /// MsgAddCovenantSigs is the message for handling signatures from a covenant member
 struct Babylon_Btcstaking_V1_MsgAddCovenantSigs {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
@@ -308,13 +354,26 @@ struct Babylon_Btcstaking_V1_MsgBTCUndelegate {
   /// It uniquely identifies a BTC delegation
   var stakingTxHash: String = String()
 
-  /// unbonding_tx_sig is the signature of the staker on the unbonding tx submitted to babylon
-  /// the signature follows encoding in BIP-340 spec
-  var unbondingTxSig: Data = Data()
+  /// stake_spending_tx is a bitcoin transaction that spends the staking transaction
+  /// i.e it has staking output as an input
+  var stakeSpendingTx: Data = Data()
+
+  /// spend_spending_tx_inclusion_proof is the proof of inclusion of the
+  /// stake_spending_tx in the BTC chain
+  var stakeSpendingTxInclusionProof: Babylon_Btcstaking_V1_InclusionProof {
+    get {return _stakeSpendingTxInclusionProof ?? Babylon_Btcstaking_V1_InclusionProof()}
+    set {_stakeSpendingTxInclusionProof = newValue}
+  }
+  /// Returns true if `stakeSpendingTxInclusionProof` has been explicitly set.
+  var hasStakeSpendingTxInclusionProof: Bool {return self._stakeSpendingTxInclusionProof != nil}
+  /// Clears the value of `stakeSpendingTxInclusionProof`. Subsequent reads from it will return its default value.
+  mutating func clearStakeSpendingTxInclusionProof() {self._stakeSpendingTxInclusionProof = nil}
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
+
+  fileprivate var _stakeSpendingTxInclusionProof: Babylon_Btcstaking_V1_InclusionProof? = nil
 }
 
 /// MsgBTCUndelegateResponse is the response for MsgBTCUndelegate
@@ -412,6 +471,8 @@ extension Babylon_Btcstaking_V1_MsgEditFinalityProvider: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_MsgEditFinalityProviderResponse: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_MsgCreateBTCDelegation: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_MsgCreateBTCDelegationResponse: @unchecked Sendable {}
+extension Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProof: @unchecked Sendable {}
+extension Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProofResponse: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_MsgAddCovenantSigs: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_MsgAddCovenantSigsResponse: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_MsgBTCUndelegate: @unchecked Sendable {}
@@ -588,13 +649,14 @@ extension Babylon_Btcstaking_V1_MsgCreateBTCDelegation: SwiftProtobuf.Message, S
     5: .standard(proto: "staking_time"),
     6: .standard(proto: "staking_value"),
     7: .standard(proto: "staking_tx"),
-    8: .standard(proto: "slashing_tx"),
-    9: .standard(proto: "delegator_slashing_sig"),
-    10: .standard(proto: "unbonding_time"),
-    11: .standard(proto: "unbonding_tx"),
-    12: .standard(proto: "unbonding_value"),
-    13: .standard(proto: "unbonding_slashing_tx"),
-    14: .standard(proto: "delegator_unbonding_slashing_sig"),
+    8: .standard(proto: "staking_tx_inclusion_proof"),
+    9: .standard(proto: "slashing_tx"),
+    10: .standard(proto: "delegator_slashing_sig"),
+    11: .standard(proto: "unbonding_time"),
+    12: .standard(proto: "unbonding_tx"),
+    13: .standard(proto: "unbonding_value"),
+    14: .standard(proto: "unbonding_slashing_tx"),
+    15: .standard(proto: "delegator_unbonding_slashing_sig"),
   ]
 
   fileprivate class _StorageClass {
@@ -604,7 +666,8 @@ extension Babylon_Btcstaking_V1_MsgCreateBTCDelegation: SwiftProtobuf.Message, S
     var _fpBtcPkList: [Data] = []
     var _stakingTime: UInt32 = 0
     var _stakingValue: Int64 = 0
-    var _stakingTx: Babylon_Btccheckpoint_V1_TransactionInfo? = nil
+    var _stakingTx: Data = Data()
+    var _stakingTxInclusionProof: Babylon_Btcstaking_V1_InclusionProof? = nil
     var _slashingTx: Data = Data()
     var _delegatorSlashingSig: Data = Data()
     var _unbondingTime: UInt32 = 0
@@ -625,6 +688,7 @@ extension Babylon_Btcstaking_V1_MsgCreateBTCDelegation: SwiftProtobuf.Message, S
       _stakingTime = source._stakingTime
       _stakingValue = source._stakingValue
       _stakingTx = source._stakingTx
+      _stakingTxInclusionProof = source._stakingTxInclusionProof
       _slashingTx = source._slashingTx
       _delegatorSlashingSig = source._delegatorSlashingSig
       _unbondingTime = source._unbondingTime
@@ -656,14 +720,15 @@ extension Babylon_Btcstaking_V1_MsgCreateBTCDelegation: SwiftProtobuf.Message, S
         case 4: try { try decoder.decodeRepeatedBytesField(value: &_storage._fpBtcPkList) }()
         case 5: try { try decoder.decodeSingularUInt32Field(value: &_storage._stakingTime) }()
         case 6: try { try decoder.decodeSingularInt64Field(value: &_storage._stakingValue) }()
-        case 7: try { try decoder.decodeSingularMessageField(value: &_storage._stakingTx) }()
-        case 8: try { try decoder.decodeSingularBytesField(value: &_storage._slashingTx) }()
-        case 9: try { try decoder.decodeSingularBytesField(value: &_storage._delegatorSlashingSig) }()
-        case 10: try { try decoder.decodeSingularUInt32Field(value: &_storage._unbondingTime) }()
-        case 11: try { try decoder.decodeSingularBytesField(value: &_storage._unbondingTx) }()
-        case 12: try { try decoder.decodeSingularInt64Field(value: &_storage._unbondingValue) }()
-        case 13: try { try decoder.decodeSingularBytesField(value: &_storage._unbondingSlashingTx) }()
-        case 14: try { try decoder.decodeSingularBytesField(value: &_storage._delegatorUnbondingSlashingSig) }()
+        case 7: try { try decoder.decodeSingularBytesField(value: &_storage._stakingTx) }()
+        case 8: try { try decoder.decodeSingularMessageField(value: &_storage._stakingTxInclusionProof) }()
+        case 9: try { try decoder.decodeSingularBytesField(value: &_storage._slashingTx) }()
+        case 10: try { try decoder.decodeSingularBytesField(value: &_storage._delegatorSlashingSig) }()
+        case 11: try { try decoder.decodeSingularUInt32Field(value: &_storage._unbondingTime) }()
+        case 12: try { try decoder.decodeSingularBytesField(value: &_storage._unbondingTx) }()
+        case 13: try { try decoder.decodeSingularInt64Field(value: &_storage._unbondingValue) }()
+        case 14: try { try decoder.decodeSingularBytesField(value: &_storage._unbondingSlashingTx) }()
+        case 15: try { try decoder.decodeSingularBytesField(value: &_storage._delegatorUnbondingSlashingSig) }()
         default: break
         }
       }
@@ -694,29 +759,32 @@ extension Babylon_Btcstaking_V1_MsgCreateBTCDelegation: SwiftProtobuf.Message, S
       if _storage._stakingValue != 0 {
         try visitor.visitSingularInt64Field(value: _storage._stakingValue, fieldNumber: 6)
       }
-      try { if let v = _storage._stakingTx {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 7)
+      if !_storage._stakingTx.isEmpty {
+        try visitor.visitSingularBytesField(value: _storage._stakingTx, fieldNumber: 7)
+      }
+      try { if let v = _storage._stakingTxInclusionProof {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
       } }()
       if !_storage._slashingTx.isEmpty {
-        try visitor.visitSingularBytesField(value: _storage._slashingTx, fieldNumber: 8)
+        try visitor.visitSingularBytesField(value: _storage._slashingTx, fieldNumber: 9)
       }
       if !_storage._delegatorSlashingSig.isEmpty {
-        try visitor.visitSingularBytesField(value: _storage._delegatorSlashingSig, fieldNumber: 9)
+        try visitor.visitSingularBytesField(value: _storage._delegatorSlashingSig, fieldNumber: 10)
       }
       if _storage._unbondingTime != 0 {
-        try visitor.visitSingularUInt32Field(value: _storage._unbondingTime, fieldNumber: 10)
+        try visitor.visitSingularUInt32Field(value: _storage._unbondingTime, fieldNumber: 11)
       }
       if !_storage._unbondingTx.isEmpty {
-        try visitor.visitSingularBytesField(value: _storage._unbondingTx, fieldNumber: 11)
+        try visitor.visitSingularBytesField(value: _storage._unbondingTx, fieldNumber: 12)
       }
       if _storage._unbondingValue != 0 {
-        try visitor.visitSingularInt64Field(value: _storage._unbondingValue, fieldNumber: 12)
+        try visitor.visitSingularInt64Field(value: _storage._unbondingValue, fieldNumber: 13)
       }
       if !_storage._unbondingSlashingTx.isEmpty {
-        try visitor.visitSingularBytesField(value: _storage._unbondingSlashingTx, fieldNumber: 13)
+        try visitor.visitSingularBytesField(value: _storage._unbondingSlashingTx, fieldNumber: 14)
       }
       if !_storage._delegatorUnbondingSlashingSig.isEmpty {
-        try visitor.visitSingularBytesField(value: _storage._delegatorUnbondingSlashingSig, fieldNumber: 14)
+        try visitor.visitSingularBytesField(value: _storage._delegatorUnbondingSlashingSig, fieldNumber: 15)
       }
     }
     try unknownFields.traverse(visitor: &visitor)
@@ -734,6 +802,7 @@ extension Babylon_Btcstaking_V1_MsgCreateBTCDelegation: SwiftProtobuf.Message, S
         if _storage._stakingTime != rhs_storage._stakingTime {return false}
         if _storage._stakingValue != rhs_storage._stakingValue {return false}
         if _storage._stakingTx != rhs_storage._stakingTx {return false}
+        if _storage._stakingTxInclusionProof != rhs_storage._stakingTxInclusionProof {return false}
         if _storage._slashingTx != rhs_storage._slashingTx {return false}
         if _storage._delegatorSlashingSig != rhs_storage._delegatorSlashingSig {return false}
         if _storage._unbondingTime != rhs_storage._unbondingTime {return false}
@@ -764,6 +833,73 @@ extension Babylon_Btcstaking_V1_MsgCreateBTCDelegationResponse: SwiftProtobuf.Me
   }
 
   static func ==(lhs: Babylon_Btcstaking_V1_MsgCreateBTCDelegationResponse, rhs: Babylon_Btcstaking_V1_MsgCreateBTCDelegationResponse) -> Bool {
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProof: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgAddBTCDelegationInclusionProof"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "signer"),
+    2: .standard(proto: "staking_tx_hash"),
+    3: .standard(proto: "staking_tx_inclusion_proof"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.signer) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.stakingTxHash) }()
+      case 3: try { try decoder.decodeSingularMessageField(value: &self._stakingTxInclusionProof) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if !self.signer.isEmpty {
+      try visitor.visitSingularStringField(value: self.signer, fieldNumber: 1)
+    }
+    if !self.stakingTxHash.isEmpty {
+      try visitor.visitSingularStringField(value: self.stakingTxHash, fieldNumber: 2)
+    }
+    try { if let v = self._stakingTxInclusionProof {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProof, rhs: Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProof) -> Bool {
+    if lhs.signer != rhs.signer {return false}
+    if lhs.stakingTxHash != rhs.stakingTxHash {return false}
+    if lhs._stakingTxInclusionProof != rhs._stakingTxInclusionProof {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProofResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgAddBTCDelegationInclusionProofResponse"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let _ = try decoder.nextFieldNumber() {
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProofResponse, rhs: Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProofResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -855,7 +991,8 @@ extension Babylon_Btcstaking_V1_MsgBTCUndelegate: SwiftProtobuf.Message, SwiftPr
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "signer"),
     2: .standard(proto: "staking_tx_hash"),
-    3: .standard(proto: "unbonding_tx_sig"),
+    3: .standard(proto: "stake_spending_tx"),
+    4: .standard(proto: "stake_spending_tx_inclusion_proof"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -866,29 +1003,38 @@ extension Babylon_Btcstaking_V1_MsgBTCUndelegate: SwiftProtobuf.Message, SwiftPr
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.signer) }()
       case 2: try { try decoder.decodeSingularStringField(value: &self.stakingTxHash) }()
-      case 3: try { try decoder.decodeSingularBytesField(value: &self.unbondingTxSig) }()
+      case 3: try { try decoder.decodeSingularBytesField(value: &self.stakeSpendingTx) }()
+      case 4: try { try decoder.decodeSingularMessageField(value: &self._stakeSpendingTxInclusionProof) }()
       default: break
       }
     }
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
     if !self.signer.isEmpty {
       try visitor.visitSingularStringField(value: self.signer, fieldNumber: 1)
     }
     if !self.stakingTxHash.isEmpty {
       try visitor.visitSingularStringField(value: self.stakingTxHash, fieldNumber: 2)
     }
-    if !self.unbondingTxSig.isEmpty {
-      try visitor.visitSingularBytesField(value: self.unbondingTxSig, fieldNumber: 3)
+    if !self.stakeSpendingTx.isEmpty {
+      try visitor.visitSingularBytesField(value: self.stakeSpendingTx, fieldNumber: 3)
     }
+    try { if let v = self._stakeSpendingTxInclusionProof {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Babylon_Btcstaking_V1_MsgBTCUndelegate, rhs: Babylon_Btcstaking_V1_MsgBTCUndelegate) -> Bool {
     if lhs.signer != rhs.signer {return false}
     if lhs.stakingTxHash != rhs.stakingTxHash {return false}
-    if lhs.unbondingTxSig != rhs.unbondingTxSig {return false}
+    if lhs.stakeSpendingTx != rhs.stakeSpendingTx {return false}
+    if lhs._stakeSpendingTxInclusionProof != rhs._stakeSpendingTxInclusionProof {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

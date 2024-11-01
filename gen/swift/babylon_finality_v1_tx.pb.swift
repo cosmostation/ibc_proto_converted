@@ -41,7 +41,7 @@ struct Babylon_Finality_V1_MsgCommitPubRandList {
   /// currently it's the root of the Merkle tree that includes these public randomness
   var commitment: Data = Data()
 
-  /// sig is the signature on (start_height || num_pub_rand || commitment) signed by 
+  /// sig is the signature on (start_height || num_pub_rand || commitment) signed by
   /// SK corresponding to fp_btc_pk. This prevents others to commit public
   /// randomness on behalf of fp_btc_pk
   /// TODO: another option is to restrict signer to correspond to fp_btc_pk. This restricts
@@ -160,6 +160,33 @@ struct Babylon_Finality_V1_MsgUpdateParamsResponse {
   init() {}
 }
 
+/// MsgUnjailFinalityProvider defines the Msg/UnjailFinalityProvider request type
+struct Babylon_Finality_V1_MsgUnjailFinalityProvider {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var signer: String = String()
+
+  /// fp_btc_pk is the BTC PK of the finality provider that commits the public randomness
+  var fpBtcPk: Data = Data()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// MsgUnjailFinalityProviderResponse defines the Msg/UnjailFinalityProvider response type
+struct Babylon_Finality_V1_MsgUnjailFinalityProviderResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Babylon_Finality_V1_MsgCommitPubRandList: @unchecked Sendable {}
 extension Babylon_Finality_V1_MsgCommitPubRandListResponse: @unchecked Sendable {}
@@ -167,6 +194,8 @@ extension Babylon_Finality_V1_MsgAddFinalitySig: @unchecked Sendable {}
 extension Babylon_Finality_V1_MsgAddFinalitySigResponse: @unchecked Sendable {}
 extension Babylon_Finality_V1_MsgUpdateParams: @unchecked Sendable {}
 extension Babylon_Finality_V1_MsgUpdateParamsResponse: @unchecked Sendable {}
+extension Babylon_Finality_V1_MsgUnjailFinalityProvider: @unchecked Sendable {}
+extension Babylon_Finality_V1_MsgUnjailFinalityProviderResponse: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -401,6 +430,63 @@ extension Babylon_Finality_V1_MsgUpdateParamsResponse: SwiftProtobuf.Message, Sw
   }
 
   static func ==(lhs: Babylon_Finality_V1_MsgUpdateParamsResponse, rhs: Babylon_Finality_V1_MsgUpdateParamsResponse) -> Bool {
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Finality_V1_MsgUnjailFinalityProvider: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgUnjailFinalityProvider"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "signer"),
+    2: .standard(proto: "fp_btc_pk"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.signer) }()
+      case 2: try { try decoder.decodeSingularBytesField(value: &self.fpBtcPk) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.signer.isEmpty {
+      try visitor.visitSingularStringField(value: self.signer, fieldNumber: 1)
+    }
+    if !self.fpBtcPk.isEmpty {
+      try visitor.visitSingularBytesField(value: self.fpBtcPk, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Finality_V1_MsgUnjailFinalityProvider, rhs: Babylon_Finality_V1_MsgUnjailFinalityProvider) -> Bool {
+    if lhs.signer != rhs.signer {return false}
+    if lhs.fpBtcPk != rhs.fpBtcPk {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Finality_V1_MsgUnjailFinalityProviderResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgUnjailFinalityProviderResponse"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let _ = try decoder.nextFieldNumber() {
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Finality_V1_MsgUnjailFinalityProviderResponse, rhs: Babylon_Finality_V1_MsgUnjailFinalityProviderResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

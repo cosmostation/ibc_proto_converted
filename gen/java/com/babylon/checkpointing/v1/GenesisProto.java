@@ -2053,13 +2053,13 @@ public final class GenesisProto {
       "orAddress\0229\n\007bls_key\030\002 \001(\0132 .babylon.che" +
       "ckpointing.v1.BlsKeyR\006blsKey\022<\n\nval_pubk" +
       "ey\030\003 \001(\0132\035.cosmos.crypto.ed25519.PubKeyR" +
-      "\tvalPubkeyB\343\001\n\034com.babylon.checkpointing" +
-      ".v1B\014GenesisProtoZ5github.com/babyloncha" +
-      "in/babylon/x/checkpointing/types\242\002\003BCX\252\002" +
-      "\030Babylon.Checkpointing.V1\312\002\030Babylon\\Chec" +
-      "kpointing\\V1\342\002$Babylon\\Checkpointing\\V1\\" +
-      "GPBMetadata\352\002\032Babylon::Checkpointing::V1" +
-      "b\006proto3"
+      "\tvalPubkeyB\345\001\n\034com.babylon.checkpointing" +
+      ".v1B\014GenesisProtoZ7github.com/babylonlab" +
+      "s-io/babylon/x/checkpointing/types\242\002\003BCX" +
+      "\252\002\030Babylon.Checkpointing.V1\312\002\030Babylon\\Ch" +
+      "eckpointing\\V1\342\002$Babylon\\Checkpointing\\V" +
+      "1\\GPBMetadata\352\002\032Babylon::Checkpointing::" +
+      "V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

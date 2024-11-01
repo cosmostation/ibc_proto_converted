@@ -1683,6 +1683,1422 @@ public final class QueryProto {
 
   }
 
+  public interface RewardGaugesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.incentive.RewardGaugesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * coins are coins that have been in the gauge
+     * Can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getCoinsList();
+    /**
+     * <pre>
+     * coins are coins that have been in the gauge
+     * Can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index);
+    /**
+     * <pre>
+     * coins are coins that have been in the gauge
+     * Can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getCoinsCount();
+    /**
+     * <pre>
+     * coins are coins that have been in the gauge
+     * Can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getCoinsOrBuilderList();
+    /**
+     * <pre>
+     * coins are coins that have been in the gauge
+     * Can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getWithdrawnCoinsList();
+    /**
+     * <pre>
+     * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getWithdrawnCoins(int index);
+    /**
+     * <pre>
+     * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getWithdrawnCoinsCount();
+    /**
+     * <pre>
+     * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getWithdrawnCoinsOrBuilderList();
+    /**
+     * <pre>
+     * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getWithdrawnCoinsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * RewardGaugesResponse is an object that stores rewards distributed to a BTC staking/timestamping stakeholder
+   * </pre>
+   *
+   * Protobuf type {@code babylon.incentive.RewardGaugesResponse}
+   */
+  public static final class RewardGaugesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.incentive.RewardGaugesResponse)
+      RewardGaugesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RewardGaugesResponse.newBuilder() to construct.
+    private RewardGaugesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RewardGaugesResponse() {
+      coins_ = java.util.Collections.emptyList();
+      withdrawnCoins_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RewardGaugesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.incentive.QueryProto.internal_static_babylon_incentive_RewardGaugesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.incentive.QueryProto.internal_static_babylon_incentive_RewardGaugesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.incentive.QueryProto.RewardGaugesResponse.class, com.babylon.incentive.QueryProto.RewardGaugesResponse.Builder.class);
+    }
+
+    public static final int COINS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> coins_;
+    /**
+     * <pre>
+     * coins are coins that have been in the gauge
+     * Can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getCoinsList() {
+      return coins_;
+    }
+    /**
+     * <pre>
+     * coins are coins that have been in the gauge
+     * Can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getCoinsOrBuilderList() {
+      return coins_;
+    }
+    /**
+     * <pre>
+     * coins are coins that have been in the gauge
+     * Can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getCoinsCount() {
+      return coins_.size();
+    }
+    /**
+     * <pre>
+     * coins are coins that have been in the gauge
+     * Can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index) {
+      return coins_.get(index);
+    }
+    /**
+     * <pre>
+     * coins are coins that have been in the gauge
+     * Can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+        int index) {
+      return coins_.get(index);
+    }
+
+    public static final int WITHDRAWN_COINS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> withdrawnCoins_;
+    /**
+     * <pre>
+     * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getWithdrawnCoinsList() {
+      return withdrawnCoins_;
+    }
+    /**
+     * <pre>
+     * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getWithdrawnCoinsOrBuilderList() {
+      return withdrawnCoins_;
+    }
+    /**
+     * <pre>
+     * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getWithdrawnCoinsCount() {
+      return withdrawnCoins_.size();
+    }
+    /**
+     * <pre>
+     * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getWithdrawnCoins(int index) {
+      return withdrawnCoins_.get(index);
+    }
+    /**
+     * <pre>
+     * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getWithdrawnCoinsOrBuilder(
+        int index) {
+      return withdrawnCoins_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < coins_.size(); i++) {
+        output.writeMessage(1, coins_.get(i));
+      }
+      for (int i = 0; i < withdrawnCoins_.size(); i++) {
+        output.writeMessage(2, withdrawnCoins_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < coins_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, coins_.get(i));
+      }
+      for (int i = 0; i < withdrawnCoins_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, withdrawnCoins_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.incentive.QueryProto.RewardGaugesResponse)) {
+        return super.equals(obj);
+      }
+      com.babylon.incentive.QueryProto.RewardGaugesResponse other = (com.babylon.incentive.QueryProto.RewardGaugesResponse) obj;
+
+      if (!getCoinsList()
+          .equals(other.getCoinsList())) return false;
+      if (!getWithdrawnCoinsList()
+          .equals(other.getWithdrawnCoinsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getCoinsCount() > 0) {
+        hash = (37 * hash) + COINS_FIELD_NUMBER;
+        hash = (53 * hash) + getCoinsList().hashCode();
+      }
+      if (getWithdrawnCoinsCount() > 0) {
+        hash = (37 * hash) + WITHDRAWN_COINS_FIELD_NUMBER;
+        hash = (53 * hash) + getWithdrawnCoinsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.incentive.QueryProto.RewardGaugesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.incentive.QueryProto.RewardGaugesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.incentive.QueryProto.RewardGaugesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.incentive.QueryProto.RewardGaugesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.incentive.QueryProto.RewardGaugesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.incentive.QueryProto.RewardGaugesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.incentive.QueryProto.RewardGaugesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.incentive.QueryProto.RewardGaugesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.incentive.QueryProto.RewardGaugesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.incentive.QueryProto.RewardGaugesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.incentive.QueryProto.RewardGaugesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.incentive.QueryProto.RewardGaugesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.incentive.QueryProto.RewardGaugesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * RewardGaugesResponse is an object that stores rewards distributed to a BTC staking/timestamping stakeholder
+     * </pre>
+     *
+     * Protobuf type {@code babylon.incentive.RewardGaugesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.incentive.RewardGaugesResponse)
+        com.babylon.incentive.QueryProto.RewardGaugesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.incentive.QueryProto.internal_static_babylon_incentive_RewardGaugesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.incentive.QueryProto.internal_static_babylon_incentive_RewardGaugesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.incentive.QueryProto.RewardGaugesResponse.class, com.babylon.incentive.QueryProto.RewardGaugesResponse.Builder.class);
+      }
+
+      // Construct using com.babylon.incentive.QueryProto.RewardGaugesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (coinsBuilder_ == null) {
+          coins_ = java.util.Collections.emptyList();
+        } else {
+          coins_ = null;
+          coinsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (withdrawnCoinsBuilder_ == null) {
+          withdrawnCoins_ = java.util.Collections.emptyList();
+        } else {
+          withdrawnCoins_ = null;
+          withdrawnCoinsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.incentive.QueryProto.internal_static_babylon_incentive_RewardGaugesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.incentive.QueryProto.RewardGaugesResponse getDefaultInstanceForType() {
+        return com.babylon.incentive.QueryProto.RewardGaugesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.incentive.QueryProto.RewardGaugesResponse build() {
+        com.babylon.incentive.QueryProto.RewardGaugesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.incentive.QueryProto.RewardGaugesResponse buildPartial() {
+        com.babylon.incentive.QueryProto.RewardGaugesResponse result = new com.babylon.incentive.QueryProto.RewardGaugesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.babylon.incentive.QueryProto.RewardGaugesResponse result) {
+        if (coinsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            coins_ = java.util.Collections.unmodifiableList(coins_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.coins_ = coins_;
+        } else {
+          result.coins_ = coinsBuilder_.build();
+        }
+        if (withdrawnCoinsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            withdrawnCoins_ = java.util.Collections.unmodifiableList(withdrawnCoins_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.withdrawnCoins_ = withdrawnCoins_;
+        } else {
+          result.withdrawnCoins_ = withdrawnCoinsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.babylon.incentive.QueryProto.RewardGaugesResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.incentive.QueryProto.RewardGaugesResponse) {
+          return mergeFrom((com.babylon.incentive.QueryProto.RewardGaugesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.incentive.QueryProto.RewardGaugesResponse other) {
+        if (other == com.babylon.incentive.QueryProto.RewardGaugesResponse.getDefaultInstance()) return this;
+        if (coinsBuilder_ == null) {
+          if (!other.coins_.isEmpty()) {
+            if (coins_.isEmpty()) {
+              coins_ = other.coins_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureCoinsIsMutable();
+              coins_.addAll(other.coins_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.coins_.isEmpty()) {
+            if (coinsBuilder_.isEmpty()) {
+              coinsBuilder_.dispose();
+              coinsBuilder_ = null;
+              coins_ = other.coins_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              coinsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCoinsFieldBuilder() : null;
+            } else {
+              coinsBuilder_.addAllMessages(other.coins_);
+            }
+          }
+        }
+        if (withdrawnCoinsBuilder_ == null) {
+          if (!other.withdrawnCoins_.isEmpty()) {
+            if (withdrawnCoins_.isEmpty()) {
+              withdrawnCoins_ = other.withdrawnCoins_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureWithdrawnCoinsIsMutable();
+              withdrawnCoins_.addAll(other.withdrawnCoins_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.withdrawnCoins_.isEmpty()) {
+            if (withdrawnCoinsBuilder_.isEmpty()) {
+              withdrawnCoinsBuilder_.dispose();
+              withdrawnCoinsBuilder_ = null;
+              withdrawnCoins_ = other.withdrawnCoins_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              withdrawnCoinsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getWithdrawnCoinsFieldBuilder() : null;
+            } else {
+              withdrawnCoinsBuilder_.addAllMessages(other.withdrawnCoins_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (coinsBuilder_ == null) {
+                  ensureCoinsIsMutable();
+                  coins_.add(m);
+                } else {
+                  coinsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (withdrawnCoinsBuilder_ == null) {
+                  ensureWithdrawnCoinsIsMutable();
+                  withdrawnCoins_.add(m);
+                } else {
+                  withdrawnCoinsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> coins_ =
+        java.util.Collections.emptyList();
+      private void ensureCoinsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          coins_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(coins_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> coinsBuilder_;
+
+      /**
+       * <pre>
+       * coins are coins that have been in the gauge
+       * Can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getCoinsList() {
+        if (coinsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(coins_);
+        } else {
+          return coinsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * coins are coins that have been in the gauge
+       * Can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getCoinsCount() {
+        if (coinsBuilder_ == null) {
+          return coins_.size();
+        } else {
+          return coinsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * coins are coins that have been in the gauge
+       * Can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index) {
+        if (coinsBuilder_ == null) {
+          return coins_.get(index);
+        } else {
+          return coinsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * coins are coins that have been in the gauge
+       * Can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsIsMutable();
+          coins_.set(index, value);
+          onChanged();
+        } else {
+          coinsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are coins that have been in the gauge
+       * Can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          coinsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are coins that have been in the gauge
+       * Can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsIsMutable();
+          coins_.add(value);
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are coins that have been in the gauge
+       * Can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsIsMutable();
+          coins_.add(index, value);
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are coins that have been in the gauge
+       * Can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.add(builderForValue.build());
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are coins that have been in the gauge
+       * Can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are coins that have been in the gauge
+       * Can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllCoins(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, coins_);
+          onChanged();
+        } else {
+          coinsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are coins that have been in the gauge
+       * Can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearCoins() {
+        if (coinsBuilder_ == null) {
+          coins_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          coinsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are coins that have been in the gauge
+       * Can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeCoins(int index) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.remove(index);
+          onChanged();
+        } else {
+          coinsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are coins that have been in the gauge
+       * Can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getCoinsBuilder(
+          int index) {
+        return getCoinsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * coins are coins that have been in the gauge
+       * Can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+          int index) {
+        if (coinsBuilder_ == null) {
+          return coins_.get(index);  } else {
+          return coinsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * coins are coins that have been in the gauge
+       * Can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getCoinsOrBuilderList() {
+        if (coinsBuilder_ != null) {
+          return coinsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(coins_);
+        }
+      }
+      /**
+       * <pre>
+       * coins are coins that have been in the gauge
+       * Can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addCoinsBuilder() {
+        return getCoinsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * coins are coins that have been in the gauge
+       * Can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addCoinsBuilder(
+          int index) {
+        return getCoinsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * coins are coins that have been in the gauge
+       * Can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getCoinsBuilderList() {
+        return getCoinsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getCoinsFieldBuilder() {
+        if (coinsBuilder_ == null) {
+          coinsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  coins_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          coins_ = null;
+        }
+        return coinsBuilder_;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> withdrawnCoins_ =
+        java.util.Collections.emptyList();
+      private void ensureWithdrawnCoinsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          withdrawnCoins_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(withdrawnCoins_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> withdrawnCoinsBuilder_;
+
+      /**
+       * <pre>
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getWithdrawnCoinsList() {
+        if (withdrawnCoinsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(withdrawnCoins_);
+        } else {
+          return withdrawnCoinsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getWithdrawnCoinsCount() {
+        if (withdrawnCoinsBuilder_ == null) {
+          return withdrawnCoins_.size();
+        } else {
+          return withdrawnCoinsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getWithdrawnCoins(int index) {
+        if (withdrawnCoinsBuilder_ == null) {
+          return withdrawnCoins_.get(index);
+        } else {
+          return withdrawnCoinsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setWithdrawnCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (withdrawnCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWithdrawnCoinsIsMutable();
+          withdrawnCoins_.set(index, value);
+          onChanged();
+        } else {
+          withdrawnCoinsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setWithdrawnCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (withdrawnCoinsBuilder_ == null) {
+          ensureWithdrawnCoinsIsMutable();
+          withdrawnCoins_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          withdrawnCoinsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addWithdrawnCoins(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (withdrawnCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWithdrawnCoinsIsMutable();
+          withdrawnCoins_.add(value);
+          onChanged();
+        } else {
+          withdrawnCoinsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addWithdrawnCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (withdrawnCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWithdrawnCoinsIsMutable();
+          withdrawnCoins_.add(index, value);
+          onChanged();
+        } else {
+          withdrawnCoinsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addWithdrawnCoins(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (withdrawnCoinsBuilder_ == null) {
+          ensureWithdrawnCoinsIsMutable();
+          withdrawnCoins_.add(builderForValue.build());
+          onChanged();
+        } else {
+          withdrawnCoinsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addWithdrawnCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (withdrawnCoinsBuilder_ == null) {
+          ensureWithdrawnCoinsIsMutable();
+          withdrawnCoins_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          withdrawnCoinsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllWithdrawnCoins(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (withdrawnCoinsBuilder_ == null) {
+          ensureWithdrawnCoinsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, withdrawnCoins_);
+          onChanged();
+        } else {
+          withdrawnCoinsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearWithdrawnCoins() {
+        if (withdrawnCoinsBuilder_ == null) {
+          withdrawnCoins_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          withdrawnCoinsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeWithdrawnCoins(int index) {
+        if (withdrawnCoinsBuilder_ == null) {
+          ensureWithdrawnCoinsIsMutable();
+          withdrawnCoins_.remove(index);
+          onChanged();
+        } else {
+          withdrawnCoinsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getWithdrawnCoinsBuilder(
+          int index) {
+        return getWithdrawnCoinsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getWithdrawnCoinsOrBuilder(
+          int index) {
+        if (withdrawnCoinsBuilder_ == null) {
+          return withdrawnCoins_.get(index);  } else {
+          return withdrawnCoinsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getWithdrawnCoinsOrBuilderList() {
+        if (withdrawnCoinsBuilder_ != null) {
+          return withdrawnCoinsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(withdrawnCoins_);
+        }
+      }
+      /**
+       * <pre>
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addWithdrawnCoinsBuilder() {
+        return getWithdrawnCoinsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addWithdrawnCoinsBuilder(
+          int index) {
+        return getWithdrawnCoinsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getWithdrawnCoinsBuilderList() {
+        return getWithdrawnCoinsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getWithdrawnCoinsFieldBuilder() {
+        if (withdrawnCoinsBuilder_ == null) {
+          withdrawnCoinsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  withdrawnCoins_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          withdrawnCoins_ = null;
+        }
+        return withdrawnCoinsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.incentive.RewardGaugesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.incentive.RewardGaugesResponse)
+    private static final com.babylon.incentive.QueryProto.RewardGaugesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.incentive.QueryProto.RewardGaugesResponse();
+    }
+
+    public static com.babylon.incentive.QueryProto.RewardGaugesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RewardGaugesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<RewardGaugesResponse>() {
+      @java.lang.Override
+      public RewardGaugesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RewardGaugesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RewardGaugesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.incentive.QueryProto.RewardGaugesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface QueryRewardGaugesResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:babylon.incentive.QueryRewardGaugesResponse)
       com.google.protobuf.MessageOrBuilder {
@@ -1693,7 +3109,7 @@ public final class QueryProto {
      * and value is the reward gauge holding all rewards for the stakeholder in that type
      * </pre>
      *
-     * <code>map&lt;string, .babylon.incentive.RewardGauge&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
+     * <code>map&lt;string, .babylon.incentive.RewardGaugesResponse&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
      */
     int getRewardGaugesCount();
     /**
@@ -1702,7 +3118,7 @@ public final class QueryProto {
      * and value is the reward gauge holding all rewards for the stakeholder in that type
      * </pre>
      *
-     * <code>map&lt;string, .babylon.incentive.RewardGauge&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
+     * <code>map&lt;string, .babylon.incentive.RewardGaugesResponse&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
      */
     boolean containsRewardGauges(
         java.lang.String key);
@@ -1710,7 +3126,7 @@ public final class QueryProto {
      * Use {@link #getRewardGaugesMap()} instead.
      */
     @java.lang.Deprecated
-    java.util.Map<java.lang.String, com.babylon.incentive.IncentiveProto.RewardGauge>
+    java.util.Map<java.lang.String, com.babylon.incentive.QueryProto.RewardGaugesResponse>
     getRewardGauges();
     /**
      * <pre>
@@ -1718,9 +3134,9 @@ public final class QueryProto {
      * and value is the reward gauge holding all rewards for the stakeholder in that type
      * </pre>
      *
-     * <code>map&lt;string, .babylon.incentive.RewardGauge&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
+     * <code>map&lt;string, .babylon.incentive.RewardGaugesResponse&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
      */
-    java.util.Map<java.lang.String, com.babylon.incentive.IncentiveProto.RewardGauge>
+    java.util.Map<java.lang.String, com.babylon.incentive.QueryProto.RewardGaugesResponse>
     getRewardGaugesMap();
     /**
      * <pre>
@@ -1728,22 +3144,22 @@ public final class QueryProto {
      * and value is the reward gauge holding all rewards for the stakeholder in that type
      * </pre>
      *
-     * <code>map&lt;string, .babylon.incentive.RewardGauge&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
+     * <code>map&lt;string, .babylon.incentive.RewardGaugesResponse&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
      */
     /* nullable */
-com.babylon.incentive.IncentiveProto.RewardGauge getRewardGaugesOrDefault(
+com.babylon.incentive.QueryProto.RewardGaugesResponse getRewardGaugesOrDefault(
         java.lang.String key,
         /* nullable */
-com.babylon.incentive.IncentiveProto.RewardGauge defaultValue);
+com.babylon.incentive.QueryProto.RewardGaugesResponse defaultValue);
     /**
      * <pre>
      * reward_gauges is the map of reward gauges, where key is the stakeholder type
      * and value is the reward gauge holding all rewards for the stakeholder in that type
      * </pre>
      *
-     * <code>map&lt;string, .babylon.incentive.RewardGauge&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
+     * <code>map&lt;string, .babylon.incentive.RewardGaugesResponse&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
      */
-    com.babylon.incentive.IncentiveProto.RewardGauge getRewardGaugesOrThrow(
+    com.babylon.incentive.QueryProto.RewardGaugesResponse getRewardGaugesOrThrow(
         java.lang.String key);
   }
   /**
@@ -1800,19 +3216,19 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue);
     public static final int REWARD_GAUGES_FIELD_NUMBER = 1;
     private static final class RewardGaugesDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
-          java.lang.String, com.babylon.incentive.IncentiveProto.RewardGauge> defaultEntry =
+          java.lang.String, com.babylon.incentive.QueryProto.RewardGaugesResponse> defaultEntry =
               com.google.protobuf.MapEntry
-              .<java.lang.String, com.babylon.incentive.IncentiveProto.RewardGauge>newDefaultInstance(
+              .<java.lang.String, com.babylon.incentive.QueryProto.RewardGaugesResponse>newDefaultInstance(
                   com.babylon.incentive.QueryProto.internal_static_babylon_incentive_QueryRewardGaugesResponse_RewardGaugesEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                  com.babylon.incentive.IncentiveProto.RewardGauge.getDefaultInstance());
+                  com.babylon.incentive.QueryProto.RewardGaugesResponse.getDefaultInstance());
     }
     @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
-        java.lang.String, com.babylon.incentive.IncentiveProto.RewardGauge> rewardGauges_;
-    private com.google.protobuf.MapField<java.lang.String, com.babylon.incentive.IncentiveProto.RewardGauge>
+        java.lang.String, com.babylon.incentive.QueryProto.RewardGaugesResponse> rewardGauges_;
+    private com.google.protobuf.MapField<java.lang.String, com.babylon.incentive.QueryProto.RewardGaugesResponse>
     internalGetRewardGauges() {
       if (rewardGauges_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
@@ -1829,7 +3245,7 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue);
      * and value is the reward gauge holding all rewards for the stakeholder in that type
      * </pre>
      *
-     * <code>map&lt;string, .babylon.incentive.RewardGauge&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
+     * <code>map&lt;string, .babylon.incentive.RewardGaugesResponse&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
      */
     @java.lang.Override
     public boolean containsRewardGauges(
@@ -1842,7 +3258,7 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue);
      */
     @java.lang.Override
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, com.babylon.incentive.IncentiveProto.RewardGauge> getRewardGauges() {
+    public java.util.Map<java.lang.String, com.babylon.incentive.QueryProto.RewardGaugesResponse> getRewardGauges() {
       return getRewardGaugesMap();
     }
     /**
@@ -1851,10 +3267,10 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue);
      * and value is the reward gauge holding all rewards for the stakeholder in that type
      * </pre>
      *
-     * <code>map&lt;string, .babylon.incentive.RewardGauge&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
+     * <code>map&lt;string, .babylon.incentive.RewardGaugesResponse&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
      */
     @java.lang.Override
-    public java.util.Map<java.lang.String, com.babylon.incentive.IncentiveProto.RewardGauge> getRewardGaugesMap() {
+    public java.util.Map<java.lang.String, com.babylon.incentive.QueryProto.RewardGaugesResponse> getRewardGaugesMap() {
       return internalGetRewardGauges().getMap();
     }
     /**
@@ -1863,16 +3279,16 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue);
      * and value is the reward gauge holding all rewards for the stakeholder in that type
      * </pre>
      *
-     * <code>map&lt;string, .babylon.incentive.RewardGauge&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
+     * <code>map&lt;string, .babylon.incentive.RewardGaugesResponse&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
      */
     @java.lang.Override
     public /* nullable */
-com.babylon.incentive.IncentiveProto.RewardGauge getRewardGaugesOrDefault(
+com.babylon.incentive.QueryProto.RewardGaugesResponse getRewardGaugesOrDefault(
         java.lang.String key,
         /* nullable */
-com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
+com.babylon.incentive.QueryProto.RewardGaugesResponse defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, com.babylon.incentive.IncentiveProto.RewardGauge> map =
+      java.util.Map<java.lang.String, com.babylon.incentive.QueryProto.RewardGaugesResponse> map =
           internalGetRewardGauges().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
@@ -1882,13 +3298,13 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
      * and value is the reward gauge holding all rewards for the stakeholder in that type
      * </pre>
      *
-     * <code>map&lt;string, .babylon.incentive.RewardGauge&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
+     * <code>map&lt;string, .babylon.incentive.RewardGaugesResponse&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
      */
     @java.lang.Override
-    public com.babylon.incentive.IncentiveProto.RewardGauge getRewardGaugesOrThrow(
+    public com.babylon.incentive.QueryProto.RewardGaugesResponse getRewardGaugesOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, com.babylon.incentive.IncentiveProto.RewardGauge> map =
+      java.util.Map<java.lang.String, com.babylon.incentive.QueryProto.RewardGaugesResponse> map =
           internalGetRewardGauges().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
@@ -1925,9 +3341,9 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
       if (size != -1) return size;
 
       size = 0;
-      for (java.util.Map.Entry<java.lang.String, com.babylon.incentive.IncentiveProto.RewardGauge> entry
+      for (java.util.Map.Entry<java.lang.String, com.babylon.incentive.QueryProto.RewardGaugesResponse> entry
            : internalGetRewardGauges().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, com.babylon.incentive.IncentiveProto.RewardGauge>
+        com.google.protobuf.MapEntry<java.lang.String, com.babylon.incentive.QueryProto.RewardGaugesResponse>
         rewardGauges__ = RewardGaugesDefaultEntryHolder.defaultEntry.newBuilderForType()
             .setKey(entry.getKey())
             .setValue(entry.getValue())
@@ -2238,7 +3654,7 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
                 done = true;
                 break;
               case 10: {
-                com.google.protobuf.MapEntry<java.lang.String, com.babylon.incentive.IncentiveProto.RewardGauge>
+                com.google.protobuf.MapEntry<java.lang.String, com.babylon.incentive.QueryProto.RewardGaugesResponse>
                 rewardGauges__ = input.readMessage(
                     RewardGaugesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableRewardGauges().getMutableMap().put(
@@ -2264,8 +3680,8 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
       private int bitField0_;
 
       private com.google.protobuf.MapField<
-          java.lang.String, com.babylon.incentive.IncentiveProto.RewardGauge> rewardGauges_;
-      private com.google.protobuf.MapField<java.lang.String, com.babylon.incentive.IncentiveProto.RewardGauge>
+          java.lang.String, com.babylon.incentive.QueryProto.RewardGaugesResponse> rewardGauges_;
+      private com.google.protobuf.MapField<java.lang.String, com.babylon.incentive.QueryProto.RewardGaugesResponse>
           internalGetRewardGauges() {
         if (rewardGauges_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
@@ -2273,7 +3689,7 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
         }
         return rewardGauges_;
       }
-      private com.google.protobuf.MapField<java.lang.String, com.babylon.incentive.IncentiveProto.RewardGauge>
+      private com.google.protobuf.MapField<java.lang.String, com.babylon.incentive.QueryProto.RewardGaugesResponse>
           internalGetMutableRewardGauges() {
         if (rewardGauges_ == null) {
           rewardGauges_ = com.google.protobuf.MapField.newMapField(
@@ -2295,7 +3711,7 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
        * and value is the reward gauge holding all rewards for the stakeholder in that type
        * </pre>
        *
-       * <code>map&lt;string, .babylon.incentive.RewardGauge&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
+       * <code>map&lt;string, .babylon.incentive.RewardGaugesResponse&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
        */
       @java.lang.Override
       public boolean containsRewardGauges(
@@ -2308,7 +3724,7 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
        */
       @java.lang.Override
       @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.babylon.incentive.IncentiveProto.RewardGauge> getRewardGauges() {
+      public java.util.Map<java.lang.String, com.babylon.incentive.QueryProto.RewardGaugesResponse> getRewardGauges() {
         return getRewardGaugesMap();
       }
       /**
@@ -2317,10 +3733,10 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
        * and value is the reward gauge holding all rewards for the stakeholder in that type
        * </pre>
        *
-       * <code>map&lt;string, .babylon.incentive.RewardGauge&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
+       * <code>map&lt;string, .babylon.incentive.RewardGaugesResponse&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
        */
       @java.lang.Override
-      public java.util.Map<java.lang.String, com.babylon.incentive.IncentiveProto.RewardGauge> getRewardGaugesMap() {
+      public java.util.Map<java.lang.String, com.babylon.incentive.QueryProto.RewardGaugesResponse> getRewardGaugesMap() {
         return internalGetRewardGauges().getMap();
       }
       /**
@@ -2329,16 +3745,16 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
        * and value is the reward gauge holding all rewards for the stakeholder in that type
        * </pre>
        *
-       * <code>map&lt;string, .babylon.incentive.RewardGauge&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
+       * <code>map&lt;string, .babylon.incentive.RewardGaugesResponse&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
        */
       @java.lang.Override
       public /* nullable */
-com.babylon.incentive.IncentiveProto.RewardGauge getRewardGaugesOrDefault(
+com.babylon.incentive.QueryProto.RewardGaugesResponse getRewardGaugesOrDefault(
           java.lang.String key,
           /* nullable */
-com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
+com.babylon.incentive.QueryProto.RewardGaugesResponse defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, com.babylon.incentive.IncentiveProto.RewardGauge> map =
+        java.util.Map<java.lang.String, com.babylon.incentive.QueryProto.RewardGaugesResponse> map =
             internalGetRewardGauges().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
@@ -2348,13 +3764,13 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
        * and value is the reward gauge holding all rewards for the stakeholder in that type
        * </pre>
        *
-       * <code>map&lt;string, .babylon.incentive.RewardGauge&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
+       * <code>map&lt;string, .babylon.incentive.RewardGaugesResponse&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
        */
       @java.lang.Override
-      public com.babylon.incentive.IncentiveProto.RewardGauge getRewardGaugesOrThrow(
+      public com.babylon.incentive.QueryProto.RewardGaugesResponse getRewardGaugesOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, com.babylon.incentive.IncentiveProto.RewardGauge> map =
+        java.util.Map<java.lang.String, com.babylon.incentive.QueryProto.RewardGaugesResponse> map =
             internalGetRewardGauges().getMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
@@ -2373,7 +3789,7 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
        * and value is the reward gauge holding all rewards for the stakeholder in that type
        * </pre>
        *
-       * <code>map&lt;string, .babylon.incentive.RewardGauge&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
+       * <code>map&lt;string, .babylon.incentive.RewardGaugesResponse&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
        */
       public Builder removeRewardGauges(
           java.lang.String key) {
@@ -2386,7 +3802,7 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
        * Use alternate mutation accessors instead.
        */
       @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.babylon.incentive.IncentiveProto.RewardGauge>
+      public java.util.Map<java.lang.String, com.babylon.incentive.QueryProto.RewardGaugesResponse>
           getMutableRewardGauges() {
         bitField0_ |= 0x00000001;
         return internalGetMutableRewardGauges().getMutableMap();
@@ -2397,11 +3813,11 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
        * and value is the reward gauge holding all rewards for the stakeholder in that type
        * </pre>
        *
-       * <code>map&lt;string, .babylon.incentive.RewardGauge&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
+       * <code>map&lt;string, .babylon.incentive.RewardGaugesResponse&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
        */
       public Builder putRewardGauges(
           java.lang.String key,
-          com.babylon.incentive.IncentiveProto.RewardGauge value) {
+          com.babylon.incentive.QueryProto.RewardGaugesResponse value) {
         if (key == null) { throw new NullPointerException("map key"); }
         if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableRewardGauges().getMutableMap()
@@ -2415,10 +3831,10 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
        * and value is the reward gauge holding all rewards for the stakeholder in that type
        * </pre>
        *
-       * <code>map&lt;string, .babylon.incentive.RewardGauge&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
+       * <code>map&lt;string, .babylon.incentive.RewardGaugesResponse&gt; reward_gauges = 1 [json_name = "rewardGauges"];</code>
        */
       public Builder putAllRewardGauges(
-          java.util.Map<java.lang.String, com.babylon.incentive.IncentiveProto.RewardGauge> values) {
+          java.util.Map<java.lang.String, com.babylon.incentive.QueryProto.RewardGaugesResponse> values) {
         internalGetMutableRewardGauges().getMutableMap()
             .putAll(values);
         bitField0_ |= 0x00000001;
@@ -2993,6 +4409,1850 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
 
   }
 
+  public interface BTCStakingGaugeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.incentive.BTCStakingGaugeResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * coins that have been in the gauge
+     * can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getCoinsList();
+    /**
+     * <pre>
+     * coins that have been in the gauge
+     * can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index);
+    /**
+     * <pre>
+     * coins that have been in the gauge
+     * can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getCoinsCount();
+    /**
+     * <pre>
+     * coins that have been in the gauge
+     * can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getCoinsOrBuilderList();
+    /**
+     * <pre>
+     * coins that have been in the gauge
+     * can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code babylon.incentive.BTCStakingGaugeResponse}
+   */
+  public static final class BTCStakingGaugeResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.incentive.BTCStakingGaugeResponse)
+      BTCStakingGaugeResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BTCStakingGaugeResponse.newBuilder() to construct.
+    private BTCStakingGaugeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BTCStakingGaugeResponse() {
+      coins_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BTCStakingGaugeResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.incentive.QueryProto.internal_static_babylon_incentive_BTCStakingGaugeResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.incentive.QueryProto.internal_static_babylon_incentive_BTCStakingGaugeResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.incentive.QueryProto.BTCStakingGaugeResponse.class, com.babylon.incentive.QueryProto.BTCStakingGaugeResponse.Builder.class);
+    }
+
+    public static final int COINS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> coins_;
+    /**
+     * <pre>
+     * coins that have been in the gauge
+     * can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getCoinsList() {
+      return coins_;
+    }
+    /**
+     * <pre>
+     * coins that have been in the gauge
+     * can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getCoinsOrBuilderList() {
+      return coins_;
+    }
+    /**
+     * <pre>
+     * coins that have been in the gauge
+     * can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getCoinsCount() {
+      return coins_.size();
+    }
+    /**
+     * <pre>
+     * coins that have been in the gauge
+     * can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index) {
+      return coins_.get(index);
+    }
+    /**
+     * <pre>
+     * coins that have been in the gauge
+     * can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+        int index) {
+      return coins_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < coins_.size(); i++) {
+        output.writeMessage(1, coins_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < coins_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, coins_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.incentive.QueryProto.BTCStakingGaugeResponse)) {
+        return super.equals(obj);
+      }
+      com.babylon.incentive.QueryProto.BTCStakingGaugeResponse other = (com.babylon.incentive.QueryProto.BTCStakingGaugeResponse) obj;
+
+      if (!getCoinsList()
+          .equals(other.getCoinsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getCoinsCount() > 0) {
+        hash = (37 * hash) + COINS_FIELD_NUMBER;
+        hash = (53 * hash) + getCoinsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.incentive.QueryProto.BTCStakingGaugeResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.incentive.QueryProto.BTCStakingGaugeResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.incentive.QueryProto.BTCStakingGaugeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.incentive.QueryProto.BTCStakingGaugeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.incentive.QueryProto.BTCStakingGaugeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.incentive.QueryProto.BTCStakingGaugeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.incentive.QueryProto.BTCStakingGaugeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.incentive.QueryProto.BTCStakingGaugeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.incentive.QueryProto.BTCStakingGaugeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.incentive.QueryProto.BTCStakingGaugeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.incentive.QueryProto.BTCStakingGaugeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.incentive.QueryProto.BTCStakingGaugeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.incentive.QueryProto.BTCStakingGaugeResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code babylon.incentive.BTCStakingGaugeResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.incentive.BTCStakingGaugeResponse)
+        com.babylon.incentive.QueryProto.BTCStakingGaugeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.incentive.QueryProto.internal_static_babylon_incentive_BTCStakingGaugeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.incentive.QueryProto.internal_static_babylon_incentive_BTCStakingGaugeResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.incentive.QueryProto.BTCStakingGaugeResponse.class, com.babylon.incentive.QueryProto.BTCStakingGaugeResponse.Builder.class);
+      }
+
+      // Construct using com.babylon.incentive.QueryProto.BTCStakingGaugeResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (coinsBuilder_ == null) {
+          coins_ = java.util.Collections.emptyList();
+        } else {
+          coins_ = null;
+          coinsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.incentive.QueryProto.internal_static_babylon_incentive_BTCStakingGaugeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.incentive.QueryProto.BTCStakingGaugeResponse getDefaultInstanceForType() {
+        return com.babylon.incentive.QueryProto.BTCStakingGaugeResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.incentive.QueryProto.BTCStakingGaugeResponse build() {
+        com.babylon.incentive.QueryProto.BTCStakingGaugeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.incentive.QueryProto.BTCStakingGaugeResponse buildPartial() {
+        com.babylon.incentive.QueryProto.BTCStakingGaugeResponse result = new com.babylon.incentive.QueryProto.BTCStakingGaugeResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.babylon.incentive.QueryProto.BTCStakingGaugeResponse result) {
+        if (coinsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            coins_ = java.util.Collections.unmodifiableList(coins_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.coins_ = coins_;
+        } else {
+          result.coins_ = coinsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.babylon.incentive.QueryProto.BTCStakingGaugeResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.incentive.QueryProto.BTCStakingGaugeResponse) {
+          return mergeFrom((com.babylon.incentive.QueryProto.BTCStakingGaugeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.incentive.QueryProto.BTCStakingGaugeResponse other) {
+        if (other == com.babylon.incentive.QueryProto.BTCStakingGaugeResponse.getDefaultInstance()) return this;
+        if (coinsBuilder_ == null) {
+          if (!other.coins_.isEmpty()) {
+            if (coins_.isEmpty()) {
+              coins_ = other.coins_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureCoinsIsMutable();
+              coins_.addAll(other.coins_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.coins_.isEmpty()) {
+            if (coinsBuilder_.isEmpty()) {
+              coinsBuilder_.dispose();
+              coinsBuilder_ = null;
+              coins_ = other.coins_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              coinsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCoinsFieldBuilder() : null;
+            } else {
+              coinsBuilder_.addAllMessages(other.coins_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (coinsBuilder_ == null) {
+                  ensureCoinsIsMutable();
+                  coins_.add(m);
+                } else {
+                  coinsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> coins_ =
+        java.util.Collections.emptyList();
+      private void ensureCoinsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          coins_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(coins_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> coinsBuilder_;
+
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getCoinsList() {
+        if (coinsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(coins_);
+        } else {
+          return coinsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getCoinsCount() {
+        if (coinsBuilder_ == null) {
+          return coins_.size();
+        } else {
+          return coinsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index) {
+        if (coinsBuilder_ == null) {
+          return coins_.get(index);
+        } else {
+          return coinsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsIsMutable();
+          coins_.set(index, value);
+          onChanged();
+        } else {
+          coinsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          coinsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsIsMutable();
+          coins_.add(value);
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsIsMutable();
+          coins_.add(index, value);
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.add(builderForValue.build());
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllCoins(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, coins_);
+          onChanged();
+        } else {
+          coinsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearCoins() {
+        if (coinsBuilder_ == null) {
+          coins_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          coinsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeCoins(int index) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.remove(index);
+          onChanged();
+        } else {
+          coinsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getCoinsBuilder(
+          int index) {
+        return getCoinsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+          int index) {
+        if (coinsBuilder_ == null) {
+          return coins_.get(index);  } else {
+          return coinsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getCoinsOrBuilderList() {
+        if (coinsBuilder_ != null) {
+          return coinsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(coins_);
+        }
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addCoinsBuilder() {
+        return getCoinsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addCoinsBuilder(
+          int index) {
+        return getCoinsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getCoinsBuilderList() {
+        return getCoinsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getCoinsFieldBuilder() {
+        if (coinsBuilder_ == null) {
+          coinsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  coins_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          coins_ = null;
+        }
+        return coinsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.incentive.BTCStakingGaugeResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.incentive.BTCStakingGaugeResponse)
+    private static final com.babylon.incentive.QueryProto.BTCStakingGaugeResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.incentive.QueryProto.BTCStakingGaugeResponse();
+    }
+
+    public static com.babylon.incentive.QueryProto.BTCStakingGaugeResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BTCStakingGaugeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<BTCStakingGaugeResponse>() {
+      @java.lang.Override
+      public BTCStakingGaugeResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<BTCStakingGaugeResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BTCStakingGaugeResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.incentive.QueryProto.BTCStakingGaugeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BTCTimestampingGaugeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.incentive.BTCTimestampingGaugeResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * coins that have been in the gauge
+     * can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getCoinsList();
+    /**
+     * <pre>
+     * coins that have been in the gauge
+     * can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index);
+    /**
+     * <pre>
+     * coins that have been in the gauge
+     * can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getCoinsCount();
+    /**
+     * <pre>
+     * coins that have been in the gauge
+     * can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getCoinsOrBuilderList();
+    /**
+     * <pre>
+     * coins that have been in the gauge
+     * can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code babylon.incentive.BTCTimestampingGaugeResponse}
+   */
+  public static final class BTCTimestampingGaugeResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.incentive.BTCTimestampingGaugeResponse)
+      BTCTimestampingGaugeResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BTCTimestampingGaugeResponse.newBuilder() to construct.
+    private BTCTimestampingGaugeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BTCTimestampingGaugeResponse() {
+      coins_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BTCTimestampingGaugeResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.incentive.QueryProto.internal_static_babylon_incentive_BTCTimestampingGaugeResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.incentive.QueryProto.internal_static_babylon_incentive_BTCTimestampingGaugeResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse.class, com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse.Builder.class);
+    }
+
+    public static final int COINS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> coins_;
+    /**
+     * <pre>
+     * coins that have been in the gauge
+     * can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getCoinsList() {
+      return coins_;
+    }
+    /**
+     * <pre>
+     * coins that have been in the gauge
+     * can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getCoinsOrBuilderList() {
+      return coins_;
+    }
+    /**
+     * <pre>
+     * coins that have been in the gauge
+     * can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getCoinsCount() {
+      return coins_.size();
+    }
+    /**
+     * <pre>
+     * coins that have been in the gauge
+     * can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index) {
+      return coins_.get(index);
+    }
+    /**
+     * <pre>
+     * coins that have been in the gauge
+     * can have multiple coin denoms
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+        int index) {
+      return coins_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < coins_.size(); i++) {
+        output.writeMessage(1, coins_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < coins_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, coins_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse)) {
+        return super.equals(obj);
+      }
+      com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse other = (com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse) obj;
+
+      if (!getCoinsList()
+          .equals(other.getCoinsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getCoinsCount() > 0) {
+        hash = (37 * hash) + COINS_FIELD_NUMBER;
+        hash = (53 * hash) + getCoinsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code babylon.incentive.BTCTimestampingGaugeResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.incentive.BTCTimestampingGaugeResponse)
+        com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.incentive.QueryProto.internal_static_babylon_incentive_BTCTimestampingGaugeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.incentive.QueryProto.internal_static_babylon_incentive_BTCTimestampingGaugeResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse.class, com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse.Builder.class);
+      }
+
+      // Construct using com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (coinsBuilder_ == null) {
+          coins_ = java.util.Collections.emptyList();
+        } else {
+          coins_ = null;
+          coinsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.incentive.QueryProto.internal_static_babylon_incentive_BTCTimestampingGaugeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse getDefaultInstanceForType() {
+        return com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse build() {
+        com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse buildPartial() {
+        com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse result = new com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse result) {
+        if (coinsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            coins_ = java.util.Collections.unmodifiableList(coins_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.coins_ = coins_;
+        } else {
+          result.coins_ = coinsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse) {
+          return mergeFrom((com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse other) {
+        if (other == com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse.getDefaultInstance()) return this;
+        if (coinsBuilder_ == null) {
+          if (!other.coins_.isEmpty()) {
+            if (coins_.isEmpty()) {
+              coins_ = other.coins_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureCoinsIsMutable();
+              coins_.addAll(other.coins_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.coins_.isEmpty()) {
+            if (coinsBuilder_.isEmpty()) {
+              coinsBuilder_.dispose();
+              coinsBuilder_ = null;
+              coins_ = other.coins_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              coinsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCoinsFieldBuilder() : null;
+            } else {
+              coinsBuilder_.addAllMessages(other.coins_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (coinsBuilder_ == null) {
+                  ensureCoinsIsMutable();
+                  coins_.add(m);
+                } else {
+                  coinsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> coins_ =
+        java.util.Collections.emptyList();
+      private void ensureCoinsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          coins_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(coins_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> coinsBuilder_;
+
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getCoinsList() {
+        if (coinsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(coins_);
+        } else {
+          return coinsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getCoinsCount() {
+        if (coinsBuilder_ == null) {
+          return coins_.size();
+        } else {
+          return coinsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index) {
+        if (coinsBuilder_ == null) {
+          return coins_.get(index);
+        } else {
+          return coinsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsIsMutable();
+          coins_.set(index, value);
+          onChanged();
+        } else {
+          coinsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          coinsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsIsMutable();
+          coins_.add(value);
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsIsMutable();
+          coins_.add(index, value);
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.add(builderForValue.build());
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllCoins(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, coins_);
+          onChanged();
+        } else {
+          coinsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearCoins() {
+        if (coinsBuilder_ == null) {
+          coins_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          coinsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeCoins(int index) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.remove(index);
+          onChanged();
+        } else {
+          coinsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getCoinsBuilder(
+          int index) {
+        return getCoinsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+          int index) {
+        if (coinsBuilder_ == null) {
+          return coins_.get(index);  } else {
+          return coinsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getCoinsOrBuilderList() {
+        if (coinsBuilder_ != null) {
+          return coinsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(coins_);
+        }
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addCoinsBuilder() {
+        return getCoinsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addCoinsBuilder(
+          int index) {
+        return getCoinsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * coins that have been in the gauge
+       * can have multiple coin denoms
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getCoinsBuilderList() {
+        return getCoinsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getCoinsFieldBuilder() {
+        if (coinsBuilder_ == null) {
+          coinsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  coins_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          coins_ = null;
+        }
+        return coinsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.incentive.BTCTimestampingGaugeResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.incentive.BTCTimestampingGaugeResponse)
+    private static final com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse();
+    }
+
+    public static com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BTCTimestampingGaugeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<BTCTimestampingGaugeResponse>() {
+      @java.lang.Override
+      public BTCTimestampingGaugeResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<BTCTimestampingGaugeResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BTCTimestampingGaugeResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface QueryBTCStakingGaugeResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:babylon.incentive.QueryBTCStakingGaugeResponse)
       com.google.protobuf.MessageOrBuilder {
@@ -3002,7 +6262,7 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
      * gauge is the BTC staking gauge at the queried height 
      * </pre>
      *
-     * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+     * <code>.babylon.incentive.BTCStakingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
      * @return Whether the gauge field is set.
      */
     boolean hasGauge();
@@ -3011,18 +6271,18 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
      * gauge is the BTC staking gauge at the queried height 
      * </pre>
      *
-     * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+     * <code>.babylon.incentive.BTCStakingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
      * @return The gauge.
      */
-    com.babylon.incentive.IncentiveProto.Gauge getGauge();
+    com.babylon.incentive.QueryProto.BTCStakingGaugeResponse getGauge();
     /**
      * <pre>
      * gauge is the BTC staking gauge at the queried height 
      * </pre>
      *
-     * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+     * <code>.babylon.incentive.BTCStakingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
      */
-    com.babylon.incentive.IncentiveProto.GaugeOrBuilder getGaugeOrBuilder();
+    com.babylon.incentive.QueryProto.BTCStakingGaugeResponseOrBuilder getGaugeOrBuilder();
   }
   /**
    * <pre>
@@ -3064,13 +6324,13 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
     }
 
     public static final int GAUGE_FIELD_NUMBER = 1;
-    private com.babylon.incentive.IncentiveProto.Gauge gauge_;
+    private com.babylon.incentive.QueryProto.BTCStakingGaugeResponse gauge_;
     /**
      * <pre>
      * gauge is the BTC staking gauge at the queried height 
      * </pre>
      *
-     * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+     * <code>.babylon.incentive.BTCStakingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
      * @return Whether the gauge field is set.
      */
     @java.lang.Override
@@ -3082,23 +6342,23 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
      * gauge is the BTC staking gauge at the queried height 
      * </pre>
      *
-     * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+     * <code>.babylon.incentive.BTCStakingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
      * @return The gauge.
      */
     @java.lang.Override
-    public com.babylon.incentive.IncentiveProto.Gauge getGauge() {
-      return gauge_ == null ? com.babylon.incentive.IncentiveProto.Gauge.getDefaultInstance() : gauge_;
+    public com.babylon.incentive.QueryProto.BTCStakingGaugeResponse getGauge() {
+      return gauge_ == null ? com.babylon.incentive.QueryProto.BTCStakingGaugeResponse.getDefaultInstance() : gauge_;
     }
     /**
      * <pre>
      * gauge is the BTC staking gauge at the queried height 
      * </pre>
      *
-     * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+     * <code>.babylon.incentive.BTCStakingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
      */
     @java.lang.Override
-    public com.babylon.incentive.IncentiveProto.GaugeOrBuilder getGaugeOrBuilder() {
-      return gauge_ == null ? com.babylon.incentive.IncentiveProto.Gauge.getDefaultInstance() : gauge_;
+    public com.babylon.incentive.QueryProto.BTCStakingGaugeResponseOrBuilder getGaugeOrBuilder() {
+      return gauge_ == null ? com.babylon.incentive.QueryProto.BTCStakingGaugeResponse.getDefaultInstance() : gauge_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3443,15 +6703,15 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
       }
       private int bitField0_;
 
-      private com.babylon.incentive.IncentiveProto.Gauge gauge_;
+      private com.babylon.incentive.QueryProto.BTCStakingGaugeResponse gauge_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.babylon.incentive.IncentiveProto.Gauge, com.babylon.incentive.IncentiveProto.Gauge.Builder, com.babylon.incentive.IncentiveProto.GaugeOrBuilder> gaugeBuilder_;
+          com.babylon.incentive.QueryProto.BTCStakingGaugeResponse, com.babylon.incentive.QueryProto.BTCStakingGaugeResponse.Builder, com.babylon.incentive.QueryProto.BTCStakingGaugeResponseOrBuilder> gaugeBuilder_;
       /**
        * <pre>
        * gauge is the BTC staking gauge at the queried height 
        * </pre>
        *
-       * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+       * <code>.babylon.incentive.BTCStakingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
        * @return Whether the gauge field is set.
        */
       public boolean hasGauge() {
@@ -3462,12 +6722,12 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
        * gauge is the BTC staking gauge at the queried height 
        * </pre>
        *
-       * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+       * <code>.babylon.incentive.BTCStakingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
        * @return The gauge.
        */
-      public com.babylon.incentive.IncentiveProto.Gauge getGauge() {
+      public com.babylon.incentive.QueryProto.BTCStakingGaugeResponse getGauge() {
         if (gaugeBuilder_ == null) {
-          return gauge_ == null ? com.babylon.incentive.IncentiveProto.Gauge.getDefaultInstance() : gauge_;
+          return gauge_ == null ? com.babylon.incentive.QueryProto.BTCStakingGaugeResponse.getDefaultInstance() : gauge_;
         } else {
           return gaugeBuilder_.getMessage();
         }
@@ -3477,9 +6737,9 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
        * gauge is the BTC staking gauge at the queried height 
        * </pre>
        *
-       * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+       * <code>.babylon.incentive.BTCStakingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
        */
-      public Builder setGauge(com.babylon.incentive.IncentiveProto.Gauge value) {
+      public Builder setGauge(com.babylon.incentive.QueryProto.BTCStakingGaugeResponse value) {
         if (gaugeBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3497,10 +6757,10 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
        * gauge is the BTC staking gauge at the queried height 
        * </pre>
        *
-       * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+       * <code>.babylon.incentive.BTCStakingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
        */
       public Builder setGauge(
-          com.babylon.incentive.IncentiveProto.Gauge.Builder builderForValue) {
+          com.babylon.incentive.QueryProto.BTCStakingGaugeResponse.Builder builderForValue) {
         if (gaugeBuilder_ == null) {
           gauge_ = builderForValue.build();
         } else {
@@ -3515,13 +6775,13 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
        * gauge is the BTC staking gauge at the queried height 
        * </pre>
        *
-       * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+       * <code>.babylon.incentive.BTCStakingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
        */
-      public Builder mergeGauge(com.babylon.incentive.IncentiveProto.Gauge value) {
+      public Builder mergeGauge(com.babylon.incentive.QueryProto.BTCStakingGaugeResponse value) {
         if (gaugeBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0) &&
             gauge_ != null &&
-            gauge_ != com.babylon.incentive.IncentiveProto.Gauge.getDefaultInstance()) {
+            gauge_ != com.babylon.incentive.QueryProto.BTCStakingGaugeResponse.getDefaultInstance()) {
             getGaugeBuilder().mergeFrom(value);
           } else {
             gauge_ = value;
@@ -3538,7 +6798,7 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
        * gauge is the BTC staking gauge at the queried height 
        * </pre>
        *
-       * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+       * <code>.babylon.incentive.BTCStakingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
        */
       public Builder clearGauge() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -3555,9 +6815,9 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
        * gauge is the BTC staking gauge at the queried height 
        * </pre>
        *
-       * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+       * <code>.babylon.incentive.BTCStakingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
        */
-      public com.babylon.incentive.IncentiveProto.Gauge.Builder getGaugeBuilder() {
+      public com.babylon.incentive.QueryProto.BTCStakingGaugeResponse.Builder getGaugeBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getGaugeFieldBuilder().getBuilder();
@@ -3567,14 +6827,14 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
        * gauge is the BTC staking gauge at the queried height 
        * </pre>
        *
-       * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+       * <code>.babylon.incentive.BTCStakingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
        */
-      public com.babylon.incentive.IncentiveProto.GaugeOrBuilder getGaugeOrBuilder() {
+      public com.babylon.incentive.QueryProto.BTCStakingGaugeResponseOrBuilder getGaugeOrBuilder() {
         if (gaugeBuilder_ != null) {
           return gaugeBuilder_.getMessageOrBuilder();
         } else {
           return gauge_ == null ?
-              com.babylon.incentive.IncentiveProto.Gauge.getDefaultInstance() : gauge_;
+              com.babylon.incentive.QueryProto.BTCStakingGaugeResponse.getDefaultInstance() : gauge_;
         }
       }
       /**
@@ -3582,14 +6842,14 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
        * gauge is the BTC staking gauge at the queried height 
        * </pre>
        *
-       * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+       * <code>.babylon.incentive.BTCStakingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.babylon.incentive.IncentiveProto.Gauge, com.babylon.incentive.IncentiveProto.Gauge.Builder, com.babylon.incentive.IncentiveProto.GaugeOrBuilder> 
+          com.babylon.incentive.QueryProto.BTCStakingGaugeResponse, com.babylon.incentive.QueryProto.BTCStakingGaugeResponse.Builder, com.babylon.incentive.QueryProto.BTCStakingGaugeResponseOrBuilder> 
           getGaugeFieldBuilder() {
         if (gaugeBuilder_ == null) {
           gaugeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.babylon.incentive.IncentiveProto.Gauge, com.babylon.incentive.IncentiveProto.Gauge.Builder, com.babylon.incentive.IncentiveProto.GaugeOrBuilder>(
+              com.babylon.incentive.QueryProto.BTCStakingGaugeResponse, com.babylon.incentive.QueryProto.BTCStakingGaugeResponse.Builder, com.babylon.incentive.QueryProto.BTCStakingGaugeResponseOrBuilder>(
                   getGauge(),
                   getParentForChildren(),
                   isClean());
@@ -4175,7 +7435,7 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
      * gauge is the BTC timestamping gauge at the queried epoch 
      * </pre>
      *
-     * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+     * <code>.babylon.incentive.BTCTimestampingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
      * @return Whether the gauge field is set.
      */
     boolean hasGauge();
@@ -4184,18 +7444,18 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
      * gauge is the BTC timestamping gauge at the queried epoch 
      * </pre>
      *
-     * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+     * <code>.babylon.incentive.BTCTimestampingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
      * @return The gauge.
      */
-    com.babylon.incentive.IncentiveProto.Gauge getGauge();
+    com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse getGauge();
     /**
      * <pre>
      * gauge is the BTC timestamping gauge at the queried epoch 
      * </pre>
      *
-     * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+     * <code>.babylon.incentive.BTCTimestampingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
      */
-    com.babylon.incentive.IncentiveProto.GaugeOrBuilder getGaugeOrBuilder();
+    com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponseOrBuilder getGaugeOrBuilder();
   }
   /**
    * <pre>
@@ -4237,13 +7497,13 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
     }
 
     public static final int GAUGE_FIELD_NUMBER = 1;
-    private com.babylon.incentive.IncentiveProto.Gauge gauge_;
+    private com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse gauge_;
     /**
      * <pre>
      * gauge is the BTC timestamping gauge at the queried epoch 
      * </pre>
      *
-     * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+     * <code>.babylon.incentive.BTCTimestampingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
      * @return Whether the gauge field is set.
      */
     @java.lang.Override
@@ -4255,23 +7515,23 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
      * gauge is the BTC timestamping gauge at the queried epoch 
      * </pre>
      *
-     * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+     * <code>.babylon.incentive.BTCTimestampingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
      * @return The gauge.
      */
     @java.lang.Override
-    public com.babylon.incentive.IncentiveProto.Gauge getGauge() {
-      return gauge_ == null ? com.babylon.incentive.IncentiveProto.Gauge.getDefaultInstance() : gauge_;
+    public com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse getGauge() {
+      return gauge_ == null ? com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse.getDefaultInstance() : gauge_;
     }
     /**
      * <pre>
      * gauge is the BTC timestamping gauge at the queried epoch 
      * </pre>
      *
-     * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+     * <code>.babylon.incentive.BTCTimestampingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
      */
     @java.lang.Override
-    public com.babylon.incentive.IncentiveProto.GaugeOrBuilder getGaugeOrBuilder() {
-      return gauge_ == null ? com.babylon.incentive.IncentiveProto.Gauge.getDefaultInstance() : gauge_;
+    public com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponseOrBuilder getGaugeOrBuilder() {
+      return gauge_ == null ? com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse.getDefaultInstance() : gauge_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4616,15 +7876,15 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
       }
       private int bitField0_;
 
-      private com.babylon.incentive.IncentiveProto.Gauge gauge_;
+      private com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse gauge_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.babylon.incentive.IncentiveProto.Gauge, com.babylon.incentive.IncentiveProto.Gauge.Builder, com.babylon.incentive.IncentiveProto.GaugeOrBuilder> gaugeBuilder_;
+          com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse, com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse.Builder, com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponseOrBuilder> gaugeBuilder_;
       /**
        * <pre>
        * gauge is the BTC timestamping gauge at the queried epoch 
        * </pre>
        *
-       * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+       * <code>.babylon.incentive.BTCTimestampingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
        * @return Whether the gauge field is set.
        */
       public boolean hasGauge() {
@@ -4635,12 +7895,12 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
        * gauge is the BTC timestamping gauge at the queried epoch 
        * </pre>
        *
-       * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+       * <code>.babylon.incentive.BTCTimestampingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
        * @return The gauge.
        */
-      public com.babylon.incentive.IncentiveProto.Gauge getGauge() {
+      public com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse getGauge() {
         if (gaugeBuilder_ == null) {
-          return gauge_ == null ? com.babylon.incentive.IncentiveProto.Gauge.getDefaultInstance() : gauge_;
+          return gauge_ == null ? com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse.getDefaultInstance() : gauge_;
         } else {
           return gaugeBuilder_.getMessage();
         }
@@ -4650,9 +7910,9 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
        * gauge is the BTC timestamping gauge at the queried epoch 
        * </pre>
        *
-       * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+       * <code>.babylon.incentive.BTCTimestampingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
        */
-      public Builder setGauge(com.babylon.incentive.IncentiveProto.Gauge value) {
+      public Builder setGauge(com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse value) {
         if (gaugeBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4670,10 +7930,10 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
        * gauge is the BTC timestamping gauge at the queried epoch 
        * </pre>
        *
-       * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+       * <code>.babylon.incentive.BTCTimestampingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
        */
       public Builder setGauge(
-          com.babylon.incentive.IncentiveProto.Gauge.Builder builderForValue) {
+          com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse.Builder builderForValue) {
         if (gaugeBuilder_ == null) {
           gauge_ = builderForValue.build();
         } else {
@@ -4688,13 +7948,13 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
        * gauge is the BTC timestamping gauge at the queried epoch 
        * </pre>
        *
-       * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+       * <code>.babylon.incentive.BTCTimestampingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
        */
-      public Builder mergeGauge(com.babylon.incentive.IncentiveProto.Gauge value) {
+      public Builder mergeGauge(com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse value) {
         if (gaugeBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0) &&
             gauge_ != null &&
-            gauge_ != com.babylon.incentive.IncentiveProto.Gauge.getDefaultInstance()) {
+            gauge_ != com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse.getDefaultInstance()) {
             getGaugeBuilder().mergeFrom(value);
           } else {
             gauge_ = value;
@@ -4711,7 +7971,7 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
        * gauge is the BTC timestamping gauge at the queried epoch 
        * </pre>
        *
-       * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+       * <code>.babylon.incentive.BTCTimestampingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
        */
       public Builder clearGauge() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -4728,9 +7988,9 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
        * gauge is the BTC timestamping gauge at the queried epoch 
        * </pre>
        *
-       * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+       * <code>.babylon.incentive.BTCTimestampingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
        */
-      public com.babylon.incentive.IncentiveProto.Gauge.Builder getGaugeBuilder() {
+      public com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse.Builder getGaugeBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getGaugeFieldBuilder().getBuilder();
@@ -4740,14 +8000,14 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
        * gauge is the BTC timestamping gauge at the queried epoch 
        * </pre>
        *
-       * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+       * <code>.babylon.incentive.BTCTimestampingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
        */
-      public com.babylon.incentive.IncentiveProto.GaugeOrBuilder getGaugeOrBuilder() {
+      public com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponseOrBuilder getGaugeOrBuilder() {
         if (gaugeBuilder_ != null) {
           return gaugeBuilder_.getMessageOrBuilder();
         } else {
           return gauge_ == null ?
-              com.babylon.incentive.IncentiveProto.Gauge.getDefaultInstance() : gauge_;
+              com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse.getDefaultInstance() : gauge_;
         }
       }
       /**
@@ -4755,14 +8015,14 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
        * gauge is the BTC timestamping gauge at the queried epoch 
        * </pre>
        *
-       * <code>.babylon.incentive.Gauge gauge = 1 [json_name = "gauge"];</code>
+       * <code>.babylon.incentive.BTCTimestampingGaugeResponse gauge = 1 [json_name = "gauge"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.babylon.incentive.IncentiveProto.Gauge, com.babylon.incentive.IncentiveProto.Gauge.Builder, com.babylon.incentive.IncentiveProto.GaugeOrBuilder> 
+          com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse, com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse.Builder, com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponseOrBuilder> 
           getGaugeFieldBuilder() {
         if (gaugeBuilder_ == null) {
           gaugeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.babylon.incentive.IncentiveProto.Gauge, com.babylon.incentive.IncentiveProto.Gauge.Builder, com.babylon.incentive.IncentiveProto.GaugeOrBuilder>(
+              com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse, com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponse.Builder, com.babylon.incentive.QueryProto.BTCTimestampingGaugeResponseOrBuilder>(
                   getGauge(),
                   getParentForChildren(),
                   isClean());
@@ -4850,6 +8110,11 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_babylon_incentive_QueryRewardGaugesRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_incentive_RewardGaugesResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_incentive_RewardGaugesResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_babylon_incentive_QueryRewardGaugesResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -4864,6 +8129,16 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_babylon_incentive_QueryBTCStakingGaugeRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_incentive_BTCStakingGaugeResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_incentive_BTCStakingGaugeResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_incentive_BTCTimestampingGaugeResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_incentive_BTCTimestampingGaugeResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_babylon_incentive_QueryBTCStakingGaugeResponse_descriptor;
   private static final 
@@ -4892,45 +8167,60 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
       ".incentive\032\024gogoproto/gogo.proto\032\034google" +
       "/api/annotations.proto\032\036babylon/incentiv" +
       "e/params.proto\032!babylon/incentive/incent" +
-      "ive.proto\"\024\n\022QueryParamsRequest\"N\n\023Query" +
-      "ParamsResponse\0227\n\006params\030\001 \001(\0132\031.babylon" +
-      ".incentive.ParamsB\004\310\336\037\000R\006params\"4\n\030Query" +
-      "RewardGaugesRequest\022\030\n\007address\030\001 \001(\tR\007ad" +
-      "dress\"\341\001\n\031QueryRewardGaugesResponse\022c\n\rr" +
-      "eward_gauges\030\001 \003(\0132>.babylon.incentive.Q" +
-      "ueryRewardGaugesResponse.RewardGaugesEnt" +
-      "ryR\014rewardGauges\032_\n\021RewardGaugesEntry\022\020\n" +
-      "\003key\030\001 \001(\tR\003key\0224\n\005value\030\002 \001(\0132\036.babylon" +
-      ".incentive.RewardGaugeR\005value:\0028\001\"5\n\033Que" +
-      "ryBTCStakingGaugeRequest\022\026\n\006height\030\001 \001(\004" +
-      "R\006height\"N\n\034QueryBTCStakingGaugeResponse" +
-      "\022.\n\005gauge\030\001 \001(\0132\030.babylon.incentive.Gaug" +
-      "eR\005gauge\"?\n QueryBTCTimestampingGaugeReq" +
-      "uest\022\033\n\tepoch_num\030\001 \001(\004R\010epochNum\"S\n!Que" +
-      "ryBTCTimestampingGaugeResponse\022.\n\005gauge\030" +
-      "\001 \001(\0132\030.babylon.incentive.GaugeR\005gauge2\231" +
-      "\005\n\005Query\022z\n\006Params\022%.babylon.incentive.Q" +
-      "ueryParamsRequest\032&.babylon.incentive.Qu" +
-      "eryParamsResponse\"!\202\323\344\223\002\033\022\031/babylon/ince" +
-      "ntive/params\022\244\001\n\014RewardGauges\022+.babylon." +
-      "incentive.QueryRewardGaugesRequest\032,.bab" +
-      "ylon.incentive.QueryRewardGaugesResponse" +
-      "\"9\202\323\344\223\0023\0221/babylon/incentive/address/{ad" +
-      "dress}/reward_gauge\022\251\001\n\017BTCStakingGauge\022" +
-      "..babylon.incentive.QueryBTCStakingGauge" +
-      "Request\032/.babylon.incentive.QueryBTCStak" +
-      "ingGaugeResponse\"5\202\323\344\223\002/\022-/babylon/incen" +
-      "tive/btc_staking_gauge/{height}\022\300\001\n\024BTCT" +
-      "imestampingGauge\0223.babylon.incentive.Que" +
-      "ryBTCTimestampingGaugeRequest\0324.babylon." +
-      "incentive.QueryBTCTimestampingGaugeRespo" +
-      "nse\"=\202\323\344\223\0027\0225/babylon/incentive/btc_time" +
-      "stamping_gauge/{epoch_num}B\271\001\n\025com.babyl" +
-      "on.incentiveB\nQueryProtoZ1github.com/bab" +
-      "ylonchain/babylon/x/incentive/types\242\002\003BI" +
-      "X\252\002\021Babylon.Incentive\312\002\021Babylon\\Incentiv" +
-      "e\342\002\035Babylon\\Incentive\\GPBMetadata\352\002\022Baby" +
-      "lon::Incentiveb\006proto3"
+      "ive.proto\032\036cosmos/base/v1beta1/coin.prot" +
+      "o\"\024\n\022QueryParamsRequest\"N\n\023QueryParamsRe" +
+      "sponse\0227\n\006params\030\001 \001(\0132\031.babylon.incenti" +
+      "ve.ParamsB\004\310\336\037\000R\006params\"4\n\030QueryRewardGa" +
+      "ugesRequest\022\030\n\007address\030\001 \001(\tR\007address\"\357\001" +
+      "\n\024RewardGaugesResponse\022a\n\005coins\030\001 \003(\0132\031." +
+      "cosmos.base.v1beta1.CoinB0\310\336\037\000\252\337\037(github" +
+      ".com/cosmos/cosmos-sdk/types.CoinsR\005coin" +
+      "s\022t\n\017withdrawn_coins\030\002 \003(\0132\031.cosmos.base" +
+      ".v1beta1.CoinB0\310\336\037\000\252\337\037(github.com/cosmos" +
+      "/cosmos-sdk/types.CoinsR\016withdrawnCoins\"" +
+      "\352\001\n\031QueryRewardGaugesResponse\022c\n\rreward_" +
+      "gauges\030\001 \003(\0132>.babylon.incentive.QueryRe" +
+      "wardGaugesResponse.RewardGaugesEntryR\014re" +
+      "wardGauges\032h\n\021RewardGaugesEntry\022\020\n\003key\030\001" +
+      " \001(\tR\003key\022=\n\005value\030\002 \001(\0132\'.babylon.incen" +
+      "tive.RewardGaugesResponseR\005value:\0028\001\"5\n\033" +
+      "QueryBTCStakingGaugeRequest\022\026\n\006height\030\001 " +
+      "\001(\004R\006height\"|\n\027BTCStakingGaugeResponse\022a" +
+      "\n\005coins\030\001 \003(\0132\031.cosmos.base.v1beta1.Coin" +
+      "B0\310\336\037\000\252\337\037(github.com/cosmos/cosmos-sdk/t" +
+      "ypes.CoinsR\005coins\"\201\001\n\034BTCTimestampingGau" +
+      "geResponse\022a\n\005coins\030\001 \003(\0132\031.cosmos.base." +
+      "v1beta1.CoinB0\310\336\037\000\252\337\037(github.com/cosmos/" +
+      "cosmos-sdk/types.CoinsR\005coins\"`\n\034QueryBT" +
+      "CStakingGaugeResponse\022@\n\005gauge\030\001 \001(\0132*.b" +
+      "abylon.incentive.BTCStakingGaugeResponse" +
+      "R\005gauge\"?\n QueryBTCTimestampingGaugeRequ" +
+      "est\022\033\n\tepoch_num\030\001 \001(\004R\010epochNum\"j\n!Quer" +
+      "yBTCTimestampingGaugeResponse\022E\n\005gauge\030\001" +
+      " \001(\0132/.babylon.incentive.BTCTimestamping" +
+      "GaugeResponseR\005gauge2\231\005\n\005Query\022z\n\006Params" +
+      "\022%.babylon.incentive.QueryParamsRequest\032" +
+      "&.babylon.incentive.QueryParamsResponse\"" +
+      "!\202\323\344\223\002\033\022\031/babylon/incentive/params\022\244\001\n\014R" +
+      "ewardGauges\022+.babylon.incentive.QueryRew" +
+      "ardGaugesRequest\032,.babylon.incentive.Que" +
+      "ryRewardGaugesResponse\"9\202\323\344\223\0023\0221/babylon" +
+      "/incentive/address/{address}/reward_gaug" +
+      "e\022\251\001\n\017BTCStakingGauge\022..babylon.incentiv" +
+      "e.QueryBTCStakingGaugeRequest\032/.babylon." +
+      "incentive.QueryBTCStakingGaugeResponse\"5" +
+      "\202\323\344\223\002/\022-/babylon/incentive/btc_staking_g" +
+      "auge/{height}\022\300\001\n\024BTCTimestampingGauge\0223" +
+      ".babylon.incentive.QueryBTCTimestampingG" +
+      "augeRequest\0324.babylon.incentive.QueryBTC" +
+      "TimestampingGaugeResponse\"=\202\323\344\223\0027\0225/baby" +
+      "lon/incentive/btc_timestamping_gauge/{ep" +
+      "och_num}B\273\001\n\025com.babylon.incentiveB\nQuer" +
+      "yProtoZ3github.com/babylonlabs-io/babylo" +
+      "n/x/incentive/types\242\002\003BIX\252\002\021Babylon.Ince" +
+      "ntive\312\002\021Babylon\\Incentive\342\002\035Babylon\\Ince" +
+      "ntive\\GPBMetadata\352\002\022Babylon::Incentiveb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4939,6 +8229,7 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.babylon.incentive.ParamsProto.getDescriptor(),
           com.babylon.incentive.IncentiveProto.getDescriptor(),
+          com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
         });
     internal_static_babylon_incentive_QueryParamsRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -4958,8 +8249,14 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_incentive_QueryRewardGaugesRequest_descriptor,
         new java.lang.String[] { "Address", });
-    internal_static_babylon_incentive_QueryRewardGaugesResponse_descriptor =
+    internal_static_babylon_incentive_RewardGaugesResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_babylon_incentive_RewardGaugesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_incentive_RewardGaugesResponse_descriptor,
+        new java.lang.String[] { "Coins", "WithdrawnCoins", });
+    internal_static_babylon_incentive_QueryRewardGaugesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_babylon_incentive_QueryRewardGaugesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_incentive_QueryRewardGaugesResponse_descriptor,
@@ -4971,31 +8268,44 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
         internal_static_babylon_incentive_QueryRewardGaugesResponse_RewardGaugesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_babylon_incentive_QueryBTCStakingGaugeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_babylon_incentive_QueryBTCStakingGaugeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_incentive_QueryBTCStakingGaugeRequest_descriptor,
         new java.lang.String[] { "Height", });
+    internal_static_babylon_incentive_BTCStakingGaugeResponse_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_babylon_incentive_BTCStakingGaugeResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_incentive_BTCStakingGaugeResponse_descriptor,
+        new java.lang.String[] { "Coins", });
+    internal_static_babylon_incentive_BTCTimestampingGaugeResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_babylon_incentive_BTCTimestampingGaugeResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_incentive_BTCTimestampingGaugeResponse_descriptor,
+        new java.lang.String[] { "Coins", });
     internal_static_babylon_incentive_QueryBTCStakingGaugeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_babylon_incentive_QueryBTCStakingGaugeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_incentive_QueryBTCStakingGaugeResponse_descriptor,
         new java.lang.String[] { "Gauge", });
     internal_static_babylon_incentive_QueryBTCTimestampingGaugeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_babylon_incentive_QueryBTCTimestampingGaugeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_incentive_QueryBTCTimestampingGaugeRequest_descriptor,
         new java.lang.String[] { "EpochNum", });
     internal_static_babylon_incentive_QueryBTCTimestampingGaugeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_babylon_incentive_QueryBTCTimestampingGaugeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_incentive_QueryBTCTimestampingGaugeResponse_descriptor,
         new java.lang.String[] { "Gauge", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.gogoproto.GogoProto.castrepeated);
     registry.add(com.gogoproto.GogoProto.nullable);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
@@ -5004,6 +8314,7 @@ com.babylon.incentive.IncentiveProto.RewardGauge defaultValue) {
     com.google.api.AnnotationsProto.getDescriptor();
     com.babylon.incentive.ParamsProto.getDescriptor();
     com.babylon.incentive.IncentiveProto.getDescriptor();
+    com.cosmos.base.v1beta1.CoinProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

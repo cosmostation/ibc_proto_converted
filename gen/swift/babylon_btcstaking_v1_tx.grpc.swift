@@ -49,6 +49,11 @@ internal protocol Babylon_Btcstaking_V1_MsgClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> UnaryCall<Babylon_Btcstaking_V1_MsgCreateBTCDelegation, Babylon_Btcstaking_V1_MsgCreateBTCDelegationResponse>
 
+  func addBTCDelegationInclusionProof(
+    _ request: Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProof,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProof, Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProofResponse>
+
   func addCovenantSigs(
     _ request: Babylon_Btcstaking_V1_MsgAddCovenantSigs,
     callOptions: CallOptions?
@@ -126,6 +131,24 @@ extension Babylon_Btcstaking_V1_MsgClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeCreateBTCDelegationInterceptors() ?? []
+    )
+  }
+
+  /// AddBTCDelegationInclusionProof adds inclusion proof of a given delegation on BTC chain
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to AddBTCDelegationInclusionProof.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func addBTCDelegationInclusionProof(
+    _ request: Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProof,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProof, Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProofResponse> {
+    return self.makeUnaryCall(
+      path: Babylon_Btcstaking_V1_MsgClientMetadata.Methods.addBTCDelegationInclusionProof.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAddBTCDelegationInclusionProofInterceptors() ?? []
     )
   }
 
@@ -282,6 +305,11 @@ internal protocol Babylon_Btcstaking_V1_MsgAsyncClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Babylon_Btcstaking_V1_MsgCreateBTCDelegation, Babylon_Btcstaking_V1_MsgCreateBTCDelegationResponse>
 
+  func makeAddBtcdelegationInclusionProofCall(
+    _ request: Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProof,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProof, Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProofResponse>
+
   func makeAddCovenantSigsCall(
     _ request: Babylon_Btcstaking_V1_MsgAddCovenantSigs,
     callOptions: CallOptions?
@@ -346,6 +374,18 @@ extension Babylon_Btcstaking_V1_MsgAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeCreateBTCDelegationInterceptors() ?? []
+    )
+  }
+
+  internal func makeAddBtcdelegationInclusionProofCall(
+    _ request: Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProof,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProof, Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProofResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Babylon_Btcstaking_V1_MsgClientMetadata.Methods.addBTCDelegationInclusionProof.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAddBTCDelegationInclusionProofInterceptors() ?? []
     )
   }
 
@@ -436,6 +476,18 @@ extension Babylon_Btcstaking_V1_MsgAsyncClientProtocol {
     )
   }
 
+  internal func addBTCDelegationInclusionProof(
+    _ request: Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProof,
+    callOptions: CallOptions? = nil
+  ) async throws -> Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProofResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Babylon_Btcstaking_V1_MsgClientMetadata.Methods.addBTCDelegationInclusionProof.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeAddBTCDelegationInclusionProofInterceptors() ?? []
+    )
+  }
+
   internal func addCovenantSigs(
     _ request: Babylon_Btcstaking_V1_MsgAddCovenantSigs,
     callOptions: CallOptions? = nil
@@ -513,6 +565,9 @@ internal protocol Babylon_Btcstaking_V1_MsgClientInterceptorFactoryProtocol: Sen
   /// - Returns: Interceptors to use when invoking 'createBTCDelegation'.
   func makeCreateBTCDelegationInterceptors() -> [ClientInterceptor<Babylon_Btcstaking_V1_MsgCreateBTCDelegation, Babylon_Btcstaking_V1_MsgCreateBTCDelegationResponse>]
 
+  /// - Returns: Interceptors to use when invoking 'addBTCDelegationInclusionProof'.
+  func makeAddBTCDelegationInclusionProofInterceptors() -> [ClientInterceptor<Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProof, Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProofResponse>]
+
   /// - Returns: Interceptors to use when invoking 'addCovenantSigs'.
   func makeAddCovenantSigsInterceptors() -> [ClientInterceptor<Babylon_Btcstaking_V1_MsgAddCovenantSigs, Babylon_Btcstaking_V1_MsgAddCovenantSigsResponse>]
 
@@ -534,6 +589,7 @@ internal enum Babylon_Btcstaking_V1_MsgClientMetadata {
       Babylon_Btcstaking_V1_MsgClientMetadata.Methods.createFinalityProvider,
       Babylon_Btcstaking_V1_MsgClientMetadata.Methods.editFinalityProvider,
       Babylon_Btcstaking_V1_MsgClientMetadata.Methods.createBTCDelegation,
+      Babylon_Btcstaking_V1_MsgClientMetadata.Methods.addBTCDelegationInclusionProof,
       Babylon_Btcstaking_V1_MsgClientMetadata.Methods.addCovenantSigs,
       Babylon_Btcstaking_V1_MsgClientMetadata.Methods.bTCUndelegate,
       Babylon_Btcstaking_V1_MsgClientMetadata.Methods.selectiveSlashingEvidence,
@@ -557,6 +613,12 @@ internal enum Babylon_Btcstaking_V1_MsgClientMetadata {
     internal static let createBTCDelegation = GRPCMethodDescriptor(
       name: "CreateBTCDelegation",
       path: "/babylon.btcstaking.v1.Msg/CreateBTCDelegation",
+      type: GRPCCallType.unary
+    )
+
+    internal static let addBTCDelegationInclusionProof = GRPCMethodDescriptor(
+      name: "AddBTCDelegationInclusionProof",
+      path: "/babylon.btcstaking.v1.Msg/AddBTCDelegationInclusionProof",
       type: GRPCCallType.unary
     )
 
@@ -601,6 +663,9 @@ internal protocol Babylon_Btcstaking_V1_MsgProvider: CallHandlerProvider {
 
   /// CreateBTCDelegation creates a new BTC delegation
   func createBTCDelegation(request: Babylon_Btcstaking_V1_MsgCreateBTCDelegation, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Btcstaking_V1_MsgCreateBTCDelegationResponse>
+
+  /// AddBTCDelegationInclusionProof adds inclusion proof of a given delegation on BTC chain
+  func addBTCDelegationInclusionProof(request: Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProof, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProofResponse>
 
   /// AddCovenantSigs handles signatures from a covenant member
   func addCovenantSigs(request: Babylon_Btcstaking_V1_MsgAddCovenantSigs, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Btcstaking_V1_MsgAddCovenantSigsResponse>
@@ -653,6 +718,15 @@ extension Babylon_Btcstaking_V1_MsgProvider {
         responseSerializer: ProtobufSerializer<Babylon_Btcstaking_V1_MsgCreateBTCDelegationResponse>(),
         interceptors: self.interceptors?.makeCreateBTCDelegationInterceptors() ?? [],
         userFunction: self.createBTCDelegation(request:context:)
+      )
+
+    case "AddBTCDelegationInclusionProof":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProof>(),
+        responseSerializer: ProtobufSerializer<Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProofResponse>(),
+        interceptors: self.interceptors?.makeAddBTCDelegationInclusionProofInterceptors() ?? [],
+        userFunction: self.addBTCDelegationInclusionProof(request:context:)
       )
 
     case "AddCovenantSigs":
@@ -723,6 +797,12 @@ internal protocol Babylon_Btcstaking_V1_MsgAsyncProvider: CallHandlerProvider {
     request: Babylon_Btcstaking_V1_MsgCreateBTCDelegation,
     context: GRPCAsyncServerCallContext
   ) async throws -> Babylon_Btcstaking_V1_MsgCreateBTCDelegationResponse
+
+  /// AddBTCDelegationInclusionProof adds inclusion proof of a given delegation on BTC chain
+  @Sendable func addBTCDelegationInclusionProof(
+    request: Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProof,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProofResponse
 
   /// AddCovenantSigs handles signatures from a covenant member
   @Sendable func addCovenantSigs(
@@ -796,6 +876,15 @@ extension Babylon_Btcstaking_V1_MsgAsyncProvider {
         wrapping: self.createBTCDelegation(request:context:)
       )
 
+    case "AddBTCDelegationInclusionProof":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProof>(),
+        responseSerializer: ProtobufSerializer<Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProofResponse>(),
+        interceptors: self.interceptors?.makeAddBTCDelegationInclusionProofInterceptors() ?? [],
+        wrapping: self.addBTCDelegationInclusionProof(request:context:)
+      )
+
     case "AddCovenantSigs":
       return GRPCAsyncServerHandler(
         context: context,
@@ -852,6 +941,10 @@ internal protocol Babylon_Btcstaking_V1_MsgServerInterceptorFactoryProtocol {
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeCreateBTCDelegationInterceptors() -> [ServerInterceptor<Babylon_Btcstaking_V1_MsgCreateBTCDelegation, Babylon_Btcstaking_V1_MsgCreateBTCDelegationResponse>]
 
+  /// - Returns: Interceptors to use when handling 'addBTCDelegationInclusionProof'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeAddBTCDelegationInclusionProofInterceptors() -> [ServerInterceptor<Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProof, Babylon_Btcstaking_V1_MsgAddBTCDelegationInclusionProofResponse>]
+
   /// - Returns: Interceptors to use when handling 'addCovenantSigs'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeAddCovenantSigsInterceptors() -> [ServerInterceptor<Babylon_Btcstaking_V1_MsgAddCovenantSigs, Babylon_Btcstaking_V1_MsgAddCovenantSigsResponse>]
@@ -877,6 +970,7 @@ internal enum Babylon_Btcstaking_V1_MsgServerMetadata {
       Babylon_Btcstaking_V1_MsgServerMetadata.Methods.createFinalityProvider,
       Babylon_Btcstaking_V1_MsgServerMetadata.Methods.editFinalityProvider,
       Babylon_Btcstaking_V1_MsgServerMetadata.Methods.createBTCDelegation,
+      Babylon_Btcstaking_V1_MsgServerMetadata.Methods.addBTCDelegationInclusionProof,
       Babylon_Btcstaking_V1_MsgServerMetadata.Methods.addCovenantSigs,
       Babylon_Btcstaking_V1_MsgServerMetadata.Methods.bTCUndelegate,
       Babylon_Btcstaking_V1_MsgServerMetadata.Methods.selectiveSlashingEvidence,
@@ -900,6 +994,12 @@ internal enum Babylon_Btcstaking_V1_MsgServerMetadata {
     internal static let createBTCDelegation = GRPCMethodDescriptor(
       name: "CreateBTCDelegation",
       path: "/babylon.btcstaking.v1.Msg/CreateBTCDelegation",
+      type: GRPCCallType.unary
+    )
+
+    internal static let addBTCDelegationInclusionProof = GRPCMethodDescriptor(
+      name: "AddBTCDelegationInclusionProof",
+      path: "/babylon.btcstaking.v1.Msg/AddBTCDelegationInclusionProof",
       type: GRPCCallType.unary
     )
 

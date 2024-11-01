@@ -44,24 +44,9 @@ struct Babylon_Finality_V1_EventSlashedFinalityProvider {
   fileprivate var _evidence: Babylon_Finality_V1_Evidence? = nil
 }
 
-/// EventSluggishFinalityProviderDetected is the event emitted when a finality provider is
-/// detected as sluggish
-struct Babylon_Finality_V1_EventSluggishFinalityProviderDetected {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  /// public_key is the BTC public key of the finality provider
-  var publicKey: String = String()
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-}
-
-/// EventSluggishFinalityProviderReverted is the event emitted when a sluggish finality
-/// provider is no longer considered sluggish
-struct Babylon_Finality_V1_EventSluggishFinalityProviderReverted {
+/// EventJailedFinalityProvider is the event emitted when a finality provider is
+/// jailed due to inactivity
+struct Babylon_Finality_V1_EventJailedFinalityProvider {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -76,8 +61,7 @@ struct Babylon_Finality_V1_EventSluggishFinalityProviderReverted {
 
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Babylon_Finality_V1_EventSlashedFinalityProvider: @unchecked Sendable {}
-extension Babylon_Finality_V1_EventSluggishFinalityProviderDetected: @unchecked Sendable {}
-extension Babylon_Finality_V1_EventSluggishFinalityProviderReverted: @unchecked Sendable {}
+extension Babylon_Finality_V1_EventJailedFinalityProvider: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -120,8 +104,8 @@ extension Babylon_Finality_V1_EventSlashedFinalityProvider: SwiftProtobuf.Messag
   }
 }
 
-extension Babylon_Finality_V1_EventSluggishFinalityProviderDetected: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".EventSluggishFinalityProviderDetected"
+extension Babylon_Finality_V1_EventJailedFinalityProvider: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".EventJailedFinalityProvider"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "public_key"),
   ]
@@ -145,39 +129,7 @@ extension Babylon_Finality_V1_EventSluggishFinalityProviderDetected: SwiftProtob
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Babylon_Finality_V1_EventSluggishFinalityProviderDetected, rhs: Babylon_Finality_V1_EventSluggishFinalityProviderDetected) -> Bool {
-    if lhs.publicKey != rhs.publicKey {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension Babylon_Finality_V1_EventSluggishFinalityProviderReverted: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".EventSluggishFinalityProviderReverted"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "public_key"),
-  ]
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.publicKey) }()
-      default: break
-      }
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.publicKey.isEmpty {
-      try visitor.visitSingularStringField(value: self.publicKey, fieldNumber: 1)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Babylon_Finality_V1_EventSluggishFinalityProviderReverted, rhs: Babylon_Finality_V1_EventSluggishFinalityProviderReverted) -> Bool {
+  static func ==(lhs: Babylon_Finality_V1_EventJailedFinalityProvider, rhs: Babylon_Finality_V1_EventJailedFinalityProvider) -> Bool {
     if lhs.publicKey != rhs.publicKey {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

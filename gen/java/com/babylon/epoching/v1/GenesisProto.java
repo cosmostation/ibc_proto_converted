@@ -640,12 +640,12 @@ public final class GenesisProto {
       "ylon.epoching.v1\032\024gogoproto/gogo.proto\032 " +
       "babylon/epoching/v1/params.proto\"I\n\014Gene" +
       "sisState\0229\n\006params\030\001 \001(\0132\033.babylon.epoch" +
-      "ing.v1.ParamsB\004\310\336\037\000R\006paramsB\305\001\n\027com.baby" +
-      "lon.epoching.v1B\014GenesisProtoZ0github.co" +
-      "m/babylonchain/babylon/x/epoching/types\242" +
-      "\002\003BEX\252\002\023Babylon.Epoching.V1\312\002\023Babylon\\Ep" +
-      "oching\\V1\342\002\037Babylon\\Epoching\\V1\\GPBMetad" +
-      "ata\352\002\025Babylon::Epoching::V1b\006proto3"
+      "ing.v1.ParamsB\004\310\336\037\000R\006paramsB\307\001\n\027com.baby" +
+      "lon.epoching.v1B\014GenesisProtoZ2github.co" +
+      "m/babylonlabs-io/babylon/x/epoching/type" +
+      "s\242\002\003BEX\252\002\023Babylon.Epoching.V1\312\002\023Babylon\\" +
+      "Epoching\\V1\342\002\037Babylon\\Epoching\\V1\\GPBMet" +
+      "adata\352\002\025Babylon::Epoching::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

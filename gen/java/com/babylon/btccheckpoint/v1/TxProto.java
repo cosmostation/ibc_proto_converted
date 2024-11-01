@@ -56,7 +56,7 @@ public final class TxProto {
   }
   /**
    * <pre>
-   * MsgInsertBTCSpvProof defines resquest to insert a new checkpoint into the
+   * MsgInsertBTCSpvProof defines request to insert a new checkpoint into the
    * store
    * </pre>
    *
@@ -347,7 +347,7 @@ public final class TxProto {
     }
     /**
      * <pre>
-     * MsgInsertBTCSpvProof defines resquest to insert a new checkpoint into the
+     * MsgInsertBTCSpvProof defines request to insert a new checkpoint into the
      * store
      * </pre>
      *
@@ -2724,13 +2724,13 @@ public final class TxProto {
       "ertBTCSpvProofResponse\022l\n\014UpdateParams\022)" +
       ".babylon.btccheckpoint.v1.MsgUpdateParam" +
       "s\0321.babylon.btccheckpoint.v1.MsgUpdatePa" +
-      "ramsResponse\032\005\200\347\260*\001B\336\001\n\034com.babylon.btcc" +
-      "heckpoint.v1B\007TxProtoZ5github.com/babylo" +
-      "nchain/babylon/x/btccheckpoint/types\242\002\003B" +
-      "BX\252\002\030Babylon.Btccheckpoint.V1\312\002\030Babylon\\" +
-      "Btccheckpoint\\V1\342\002$Babylon\\Btccheckpoint" +
-      "\\V1\\GPBMetadata\352\002\032Babylon::Btccheckpoint" +
-      "::V1b\006proto3"
+      "ramsResponse\032\005\200\347\260*\001B\340\001\n\034com.babylon.btcc" +
+      "heckpoint.v1B\007TxProtoZ7github.com/babylo" +
+      "nlabs-io/babylon/x/btccheckpoint/types\242\002" +
+      "\003BBX\252\002\030Babylon.Btccheckpoint.V1\312\002\030Babylo" +
+      "n\\Btccheckpoint\\V1\342\002$Babylon\\Btccheckpoi" +
+      "nt\\V1\\GPBMetadata\352\002\032Babylon::Btccheckpoi" +
+      "nt::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -93,7 +93,7 @@ public final class TxProto {
      * the PK follows encoding in BIP-340 spec
      * </pre>
      *
-     * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The btcPk.
      */
     com.google.protobuf.ByteString getBtcPk();
@@ -309,7 +309,7 @@ public final class TxProto {
      * the PK follows encoding in BIP-340 spec
      * </pre>
      *
-     * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The btcPk.
      */
     @java.lang.Override
@@ -1155,7 +1155,7 @@ public final class TxProto {
        * the PK follows encoding in BIP-340 spec
        * </pre>
        *
-       * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The btcPk.
        */
       @java.lang.Override
@@ -1168,7 +1168,7 @@ public final class TxProto {
        * the PK follows encoding in BIP-340 spec
        * </pre>
        *
-       * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param value The btcPk to set.
        * @return This builder for chaining.
        */
@@ -1185,7 +1185,7 @@ public final class TxProto {
        * the PK follows encoding in BIP-340 spec
        * </pre>
        *
-       * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBtcPk() {
@@ -3408,7 +3408,7 @@ public final class TxProto {
      * btc_pk is the Bitcoin secp256k1 PK of the BTC delegator
      * </pre>
      *
-     * <code>bytes btc_pk = 3 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes btc_pk = 3 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The btcPk.
      */
     com.google.protobuf.ByteString getBtcPk();
@@ -3419,7 +3419,7 @@ public final class TxProto {
      * finality provider pk it means that delegation is re-staked
      * </pre>
      *
-     * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return A list containing the fpBtcPkList.
      */
     java.util.List<com.google.protobuf.ByteString> getFpBtcPkListList();
@@ -3429,7 +3429,7 @@ public final class TxProto {
      * finality provider pk it means that delegation is re-staked
      * </pre>
      *
-     * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The count of fpBtcPkList.
      */
     int getFpBtcPkListCount();
@@ -3439,7 +3439,7 @@ public final class TxProto {
      * finality provider pk it means that delegation is re-staked
      * </pre>
      *
-     * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @param index The index of the element to return.
      * @return The fpBtcPkList at the given index.
      */
@@ -3467,30 +3467,40 @@ public final class TxProto {
 
     /**
      * <pre>
-     * staking_tx is the staking tx along with the merkle proof of inclusion in btc block
+     * staking_tx is a bitcoin staking transaction i.e transaction that locks funds
      * </pre>
      *
-     * <code>.babylon.btccheckpoint.v1.TransactionInfo staking_tx = 7 [json_name = "stakingTx"];</code>
-     * @return Whether the stakingTx field is set.
-     */
-    boolean hasStakingTx();
-    /**
-     * <pre>
-     * staking_tx is the staking tx along with the merkle proof of inclusion in btc block
-     * </pre>
-     *
-     * <code>.babylon.btccheckpoint.v1.TransactionInfo staking_tx = 7 [json_name = "stakingTx"];</code>
+     * <code>bytes staking_tx = 7 [json_name = "stakingTx"];</code>
      * @return The stakingTx.
      */
-    com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfo getStakingTx();
+    com.google.protobuf.ByteString getStakingTx();
+
     /**
      * <pre>
-     * staking_tx is the staking tx along with the merkle proof of inclusion in btc block
+     * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
      * </pre>
      *
-     * <code>.babylon.btccheckpoint.v1.TransactionInfo staking_tx = 7 [json_name = "stakingTx"];</code>
+     * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 8 [json_name = "stakingTxInclusionProof"];</code>
+     * @return Whether the stakingTxInclusionProof field is set.
      */
-    com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfoOrBuilder getStakingTxOrBuilder();
+    boolean hasStakingTxInclusionProof();
+    /**
+     * <pre>
+     * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 8 [json_name = "stakingTxInclusionProof"];</code>
+     * @return The stakingTxInclusionProof.
+     */
+    com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof getStakingTxInclusionProof();
+    /**
+     * <pre>
+     * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 8 [json_name = "stakingTxInclusionProof"];</code>
+     */
+    com.babylon.btcstaking.v1.BtcstakingProto.InclusionProofOrBuilder getStakingTxInclusionProofOrBuilder();
 
     /**
      * <pre>
@@ -3498,7 +3508,7 @@ public final class TxProto {
      * Note that the tx itself does not contain signatures, which are off-chain.
      * </pre>
      *
-     * <code>bytes slashing_tx = 8 [json_name = "slashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
+     * <code>bytes slashing_tx = 9 [json_name = "slashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
      * @return The slashingTx.
      */
     com.google.protobuf.ByteString getSlashingTx();
@@ -3511,7 +3521,7 @@ public final class TxProto {
      * order to be spendable.
      * </pre>
      *
-     * <code>bytes delegator_slashing_sig = 9 [json_name = "delegatorSlashingSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+     * <code>bytes delegator_slashing_sig = 10 [json_name = "delegatorSlashingSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
      * @return The delegatorSlashingSig.
      */
     com.google.protobuf.ByteString getDelegatorSlashingSig();
@@ -3525,7 +3535,7 @@ public final class TxProto {
      * It must be smaller than math.MaxUInt16 and larger that max(MinUnbondingTime, CheckpointFinalizationTimeout)
      * </pre>
      *
-     * <code>uint32 unbonding_time = 10 [json_name = "unbondingTime"];</code>
+     * <code>uint32 unbonding_time = 11 [json_name = "unbondingTime"];</code>
      * @return The unbondingTime.
      */
     int getUnbondingTime();
@@ -3537,7 +3547,7 @@ public final class TxProto {
      * staking output and sends it to the unbonding output
      * </pre>
      *
-     * <code>bytes unbonding_tx = 11 [json_name = "unbondingTx"];</code>
+     * <code>bytes unbonding_tx = 12 [json_name = "unbondingTx"];</code>
      * @return The unbondingTx.
      */
     com.google.protobuf.ByteString getUnbondingTx();
@@ -3548,7 +3558,7 @@ public final class TxProto {
      * NOTE: staking_value and unbonding_value could be different because of the difference between the fee for staking tx and that for unbonding
      * </pre>
      *
-     * <code>int64 unbonding_value = 12 [json_name = "unbondingValue"];</code>
+     * <code>int64 unbonding_value = 13 [json_name = "unbondingValue"];</code>
      * @return The unbondingValue.
      */
     long getUnbondingValue();
@@ -3559,7 +3569,7 @@ public final class TxProto {
      * Note that the tx itself does not contain signatures, which are off-chain.
      * </pre>
      *
-     * <code>bytes unbonding_slashing_tx = 13 [json_name = "unbondingSlashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
+     * <code>bytes unbonding_slashing_tx = 14 [json_name = "unbondingSlashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
      * @return The unbondingSlashingTx.
      */
     com.google.protobuf.ByteString getUnbondingSlashingTx();
@@ -3569,7 +3579,7 @@ public final class TxProto {
      * delegator_unbonding_slashing_sig is the signature on the slashing tx by the delegator (i.e., SK corresponding to btc_pk).
      * </pre>
      *
-     * <code>bytes delegator_unbonding_slashing_sig = 14 [json_name = "delegatorUnbondingSlashingSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+     * <code>bytes delegator_unbonding_slashing_sig = 15 [json_name = "delegatorUnbondingSlashingSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
      * @return The delegatorUnbondingSlashingSig.
      */
     com.google.protobuf.ByteString getDelegatorUnbondingSlashingSig();
@@ -3594,6 +3604,7 @@ public final class TxProto {
       stakerAddr_ = "";
       btcPk_ = com.google.protobuf.ByteString.EMPTY;
       fpBtcPkList_ = java.util.Collections.emptyList();
+      stakingTx_ = com.google.protobuf.ByteString.EMPTY;
       slashingTx_ = com.google.protobuf.ByteString.EMPTY;
       delegatorSlashingSig_ = com.google.protobuf.ByteString.EMPTY;
       unbondingTx_ = com.google.protobuf.ByteString.EMPTY;
@@ -3713,7 +3724,7 @@ public final class TxProto {
      * btc_pk is the Bitcoin secp256k1 PK of the BTC delegator
      * </pre>
      *
-     * <code>bytes btc_pk = 3 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes btc_pk = 3 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The btcPk.
      */
     @java.lang.Override
@@ -3730,7 +3741,7 @@ public final class TxProto {
      * finality provider pk it means that delegation is re-staked
      * </pre>
      *
-     * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return A list containing the fpBtcPkList.
      */
     @java.lang.Override
@@ -3744,7 +3755,7 @@ public final class TxProto {
      * finality provider pk it means that delegation is re-staked
      * </pre>
      *
-     * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The count of fpBtcPkList.
      */
     public int getFpBtcPkListCount() {
@@ -3756,7 +3767,7 @@ public final class TxProto {
      * finality provider pk it means that delegation is re-staked
      * </pre>
      *
-     * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @param index The index of the element to return.
      * @return The fpBtcPkList at the given index.
      */
@@ -3795,44 +3806,59 @@ public final class TxProto {
     }
 
     public static final int STAKING_TX_FIELD_NUMBER = 7;
-    private com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfo stakingTx_;
+    private com.google.protobuf.ByteString stakingTx_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <pre>
-     * staking_tx is the staking tx along with the merkle proof of inclusion in btc block
+     * staking_tx is a bitcoin staking transaction i.e transaction that locks funds
      * </pre>
      *
-     * <code>.babylon.btccheckpoint.v1.TransactionInfo staking_tx = 7 [json_name = "stakingTx"];</code>
-     * @return Whether the stakingTx field is set.
-     */
-    @java.lang.Override
-    public boolean hasStakingTx() {
-      return stakingTx_ != null;
-    }
-    /**
-     * <pre>
-     * staking_tx is the staking tx along with the merkle proof of inclusion in btc block
-     * </pre>
-     *
-     * <code>.babylon.btccheckpoint.v1.TransactionInfo staking_tx = 7 [json_name = "stakingTx"];</code>
+     * <code>bytes staking_tx = 7 [json_name = "stakingTx"];</code>
      * @return The stakingTx.
      */
     @java.lang.Override
-    public com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfo getStakingTx() {
-      return stakingTx_ == null ? com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfo.getDefaultInstance() : stakingTx_;
+    public com.google.protobuf.ByteString getStakingTx() {
+      return stakingTx_;
+    }
+
+    public static final int STAKING_TX_INCLUSION_PROOF_FIELD_NUMBER = 8;
+    private com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof stakingTxInclusionProof_;
+    /**
+     * <pre>
+     * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 8 [json_name = "stakingTxInclusionProof"];</code>
+     * @return Whether the stakingTxInclusionProof field is set.
+     */
+    @java.lang.Override
+    public boolean hasStakingTxInclusionProof() {
+      return stakingTxInclusionProof_ != null;
     }
     /**
      * <pre>
-     * staking_tx is the staking tx along with the merkle proof of inclusion in btc block
+     * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
      * </pre>
      *
-     * <code>.babylon.btccheckpoint.v1.TransactionInfo staking_tx = 7 [json_name = "stakingTx"];</code>
+     * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 8 [json_name = "stakingTxInclusionProof"];</code>
+     * @return The stakingTxInclusionProof.
      */
     @java.lang.Override
-    public com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfoOrBuilder getStakingTxOrBuilder() {
-      return stakingTx_ == null ? com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfo.getDefaultInstance() : stakingTx_;
+    public com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof getStakingTxInclusionProof() {
+      return stakingTxInclusionProof_ == null ? com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.getDefaultInstance() : stakingTxInclusionProof_;
+    }
+    /**
+     * <pre>
+     * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 8 [json_name = "stakingTxInclusionProof"];</code>
+     */
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.BtcstakingProto.InclusionProofOrBuilder getStakingTxInclusionProofOrBuilder() {
+      return stakingTxInclusionProof_ == null ? com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.getDefaultInstance() : stakingTxInclusionProof_;
     }
 
-    public static final int SLASHING_TX_FIELD_NUMBER = 8;
+    public static final int SLASHING_TX_FIELD_NUMBER = 9;
     private com.google.protobuf.ByteString slashingTx_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <pre>
@@ -3840,7 +3866,7 @@ public final class TxProto {
      * Note that the tx itself does not contain signatures, which are off-chain.
      * </pre>
      *
-     * <code>bytes slashing_tx = 8 [json_name = "slashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
+     * <code>bytes slashing_tx = 9 [json_name = "slashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
      * @return The slashingTx.
      */
     @java.lang.Override
@@ -3848,7 +3874,7 @@ public final class TxProto {
       return slashingTx_;
     }
 
-    public static final int DELEGATOR_SLASHING_SIG_FIELD_NUMBER = 9;
+    public static final int DELEGATOR_SLASHING_SIG_FIELD_NUMBER = 10;
     private com.google.protobuf.ByteString delegatorSlashingSig_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <pre>
@@ -3858,7 +3884,7 @@ public final class TxProto {
      * order to be spendable.
      * </pre>
      *
-     * <code>bytes delegator_slashing_sig = 9 [json_name = "delegatorSlashingSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+     * <code>bytes delegator_slashing_sig = 10 [json_name = "delegatorSlashingSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
      * @return The delegatorSlashingSig.
      */
     @java.lang.Override
@@ -3866,7 +3892,7 @@ public final class TxProto {
       return delegatorSlashingSig_;
     }
 
-    public static final int UNBONDING_TIME_FIELD_NUMBER = 10;
+    public static final int UNBONDING_TIME_FIELD_NUMBER = 11;
     private int unbondingTime_ = 0;
     /**
      * <pre>
@@ -3877,7 +3903,7 @@ public final class TxProto {
      * It must be smaller than math.MaxUInt16 and larger that max(MinUnbondingTime, CheckpointFinalizationTimeout)
      * </pre>
      *
-     * <code>uint32 unbonding_time = 10 [json_name = "unbondingTime"];</code>
+     * <code>uint32 unbonding_time = 11 [json_name = "unbondingTime"];</code>
      * @return The unbondingTime.
      */
     @java.lang.Override
@@ -3885,7 +3911,7 @@ public final class TxProto {
       return unbondingTime_;
     }
 
-    public static final int UNBONDING_TX_FIELD_NUMBER = 11;
+    public static final int UNBONDING_TX_FIELD_NUMBER = 12;
     private com.google.protobuf.ByteString unbondingTx_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <pre>
@@ -3894,7 +3920,7 @@ public final class TxProto {
      * staking output and sends it to the unbonding output
      * </pre>
      *
-     * <code>bytes unbonding_tx = 11 [json_name = "unbondingTx"];</code>
+     * <code>bytes unbonding_tx = 12 [json_name = "unbondingTx"];</code>
      * @return The unbondingTx.
      */
     @java.lang.Override
@@ -3902,7 +3928,7 @@ public final class TxProto {
       return unbondingTx_;
     }
 
-    public static final int UNBONDING_VALUE_FIELD_NUMBER = 12;
+    public static final int UNBONDING_VALUE_FIELD_NUMBER = 13;
     private long unbondingValue_ = 0L;
     /**
      * <pre>
@@ -3910,7 +3936,7 @@ public final class TxProto {
      * NOTE: staking_value and unbonding_value could be different because of the difference between the fee for staking tx and that for unbonding
      * </pre>
      *
-     * <code>int64 unbonding_value = 12 [json_name = "unbondingValue"];</code>
+     * <code>int64 unbonding_value = 13 [json_name = "unbondingValue"];</code>
      * @return The unbondingValue.
      */
     @java.lang.Override
@@ -3918,7 +3944,7 @@ public final class TxProto {
       return unbondingValue_;
     }
 
-    public static final int UNBONDING_SLASHING_TX_FIELD_NUMBER = 13;
+    public static final int UNBONDING_SLASHING_TX_FIELD_NUMBER = 14;
     private com.google.protobuf.ByteString unbondingSlashingTx_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <pre>
@@ -3926,7 +3952,7 @@ public final class TxProto {
      * Note that the tx itself does not contain signatures, which are off-chain.
      * </pre>
      *
-     * <code>bytes unbonding_slashing_tx = 13 [json_name = "unbondingSlashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
+     * <code>bytes unbonding_slashing_tx = 14 [json_name = "unbondingSlashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
      * @return The unbondingSlashingTx.
      */
     @java.lang.Override
@@ -3934,14 +3960,14 @@ public final class TxProto {
       return unbondingSlashingTx_;
     }
 
-    public static final int DELEGATOR_UNBONDING_SLASHING_SIG_FIELD_NUMBER = 14;
+    public static final int DELEGATOR_UNBONDING_SLASHING_SIG_FIELD_NUMBER = 15;
     private com.google.protobuf.ByteString delegatorUnbondingSlashingSig_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <pre>
      * delegator_unbonding_slashing_sig is the signature on the slashing tx by the delegator (i.e., SK corresponding to btc_pk).
      * </pre>
      *
-     * <code>bytes delegator_unbonding_slashing_sig = 14 [json_name = "delegatorUnbondingSlashingSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+     * <code>bytes delegator_unbonding_slashing_sig = 15 [json_name = "delegatorUnbondingSlashingSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
      * @return The delegatorUnbondingSlashingSig.
      */
     @java.lang.Override
@@ -3981,29 +4007,32 @@ public final class TxProto {
       if (stakingValue_ != 0L) {
         output.writeInt64(6, stakingValue_);
       }
-      if (stakingTx_ != null) {
-        output.writeMessage(7, getStakingTx());
+      if (!stakingTx_.isEmpty()) {
+        output.writeBytes(7, stakingTx_);
+      }
+      if (stakingTxInclusionProof_ != null) {
+        output.writeMessage(8, getStakingTxInclusionProof());
       }
       if (!slashingTx_.isEmpty()) {
-        output.writeBytes(8, slashingTx_);
+        output.writeBytes(9, slashingTx_);
       }
       if (!delegatorSlashingSig_.isEmpty()) {
-        output.writeBytes(9, delegatorSlashingSig_);
+        output.writeBytes(10, delegatorSlashingSig_);
       }
       if (unbondingTime_ != 0) {
-        output.writeUInt32(10, unbondingTime_);
+        output.writeUInt32(11, unbondingTime_);
       }
       if (!unbondingTx_.isEmpty()) {
-        output.writeBytes(11, unbondingTx_);
+        output.writeBytes(12, unbondingTx_);
       }
       if (unbondingValue_ != 0L) {
-        output.writeInt64(12, unbondingValue_);
+        output.writeInt64(13, unbondingValue_);
       }
       if (!unbondingSlashingTx_.isEmpty()) {
-        output.writeBytes(13, unbondingSlashingTx_);
+        output.writeBytes(14, unbondingSlashingTx_);
       }
       if (!delegatorUnbondingSlashingSig_.isEmpty()) {
-        output.writeBytes(14, delegatorUnbondingSlashingSig_);
+        output.writeBytes(15, delegatorUnbondingSlashingSig_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -4042,37 +4071,41 @@ public final class TxProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(6, stakingValue_);
       }
-      if (stakingTx_ != null) {
+      if (!stakingTx_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getStakingTx());
+          .computeBytesSize(7, stakingTx_);
+      }
+      if (stakingTxInclusionProof_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getStakingTxInclusionProof());
       }
       if (!slashingTx_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(8, slashingTx_);
+          .computeBytesSize(9, slashingTx_);
       }
       if (!delegatorSlashingSig_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(9, delegatorSlashingSig_);
+          .computeBytesSize(10, delegatorSlashingSig_);
       }
       if (unbondingTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, unbondingTime_);
+          .computeUInt32Size(11, unbondingTime_);
       }
       if (!unbondingTx_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(11, unbondingTx_);
+          .computeBytesSize(12, unbondingTx_);
       }
       if (unbondingValue_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(12, unbondingValue_);
+          .computeInt64Size(13, unbondingValue_);
       }
       if (!unbondingSlashingTx_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(13, unbondingSlashingTx_);
+          .computeBytesSize(14, unbondingSlashingTx_);
       }
       if (!delegatorUnbondingSlashingSig_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(14, delegatorUnbondingSlashingSig_);
+          .computeBytesSize(15, delegatorUnbondingSlashingSig_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -4104,10 +4137,12 @@ public final class TxProto {
           != other.getStakingTime()) return false;
       if (getStakingValue()
           != other.getStakingValue()) return false;
-      if (hasStakingTx() != other.hasStakingTx()) return false;
-      if (hasStakingTx()) {
-        if (!getStakingTx()
-            .equals(other.getStakingTx())) return false;
+      if (!getStakingTx()
+          .equals(other.getStakingTx())) return false;
+      if (hasStakingTxInclusionProof() != other.hasStakingTxInclusionProof()) return false;
+      if (hasStakingTxInclusionProof()) {
+        if (!getStakingTxInclusionProof()
+            .equals(other.getStakingTxInclusionProof())) return false;
       }
       if (!getSlashingTx()
           .equals(other.getSlashingTx())) return false;
@@ -4151,9 +4186,11 @@ public final class TxProto {
       hash = (37 * hash) + STAKING_VALUE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getStakingValue());
-      if (hasStakingTx()) {
-        hash = (37 * hash) + STAKING_TX_FIELD_NUMBER;
-        hash = (53 * hash) + getStakingTx().hashCode();
+      hash = (37 * hash) + STAKING_TX_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingTx().hashCode();
+      if (hasStakingTxInclusionProof()) {
+        hash = (37 * hash) + STAKING_TX_INCLUSION_PROOF_FIELD_NUMBER;
+        hash = (53 * hash) + getStakingTxInclusionProof().hashCode();
       }
       hash = (37 * hash) + SLASHING_TX_FIELD_NUMBER;
       hash = (53 * hash) + getSlashingTx().hashCode();
@@ -4315,10 +4352,11 @@ public final class TxProto {
         fpBtcPkList_ = java.util.Collections.emptyList();
         stakingTime_ = 0;
         stakingValue_ = 0L;
-        stakingTx_ = null;
-        if (stakingTxBuilder_ != null) {
-          stakingTxBuilder_.dispose();
-          stakingTxBuilder_ = null;
+        stakingTx_ = com.google.protobuf.ByteString.EMPTY;
+        stakingTxInclusionProof_ = null;
+        if (stakingTxInclusionProofBuilder_ != null) {
+          stakingTxInclusionProofBuilder_.dispose();
+          stakingTxInclusionProofBuilder_ = null;
         }
         slashingTx_ = com.google.protobuf.ByteString.EMPTY;
         delegatorSlashingSig_ = com.google.protobuf.ByteString.EMPTY;
@@ -4387,29 +4425,32 @@ public final class TxProto {
           result.stakingValue_ = stakingValue_;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.stakingTx_ = stakingTxBuilder_ == null
-              ? stakingTx_
-              : stakingTxBuilder_.build();
+          result.stakingTx_ = stakingTx_;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.slashingTx_ = slashingTx_;
+          result.stakingTxInclusionProof_ = stakingTxInclusionProofBuilder_ == null
+              ? stakingTxInclusionProof_
+              : stakingTxInclusionProofBuilder_.build();
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
-          result.delegatorSlashingSig_ = delegatorSlashingSig_;
+          result.slashingTx_ = slashingTx_;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
-          result.unbondingTime_ = unbondingTime_;
+          result.delegatorSlashingSig_ = delegatorSlashingSig_;
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
-          result.unbondingTx_ = unbondingTx_;
+          result.unbondingTime_ = unbondingTime_;
         }
         if (((from_bitField0_ & 0x00000800) != 0)) {
-          result.unbondingValue_ = unbondingValue_;
+          result.unbondingTx_ = unbondingTx_;
         }
         if (((from_bitField0_ & 0x00001000) != 0)) {
-          result.unbondingSlashingTx_ = unbondingSlashingTx_;
+          result.unbondingValue_ = unbondingValue_;
         }
         if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.unbondingSlashingTx_ = unbondingSlashingTx_;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
           result.delegatorUnbondingSlashingSig_ = delegatorUnbondingSlashingSig_;
         }
       }
@@ -4485,8 +4526,11 @@ public final class TxProto {
         if (other.getStakingValue() != 0L) {
           setStakingValue(other.getStakingValue());
         }
-        if (other.hasStakingTx()) {
-          mergeStakingTx(other.getStakingTx());
+        if (other.getStakingTx() != com.google.protobuf.ByteString.EMPTY) {
+          setStakingTx(other.getStakingTx());
+        }
+        if (other.hasStakingTxInclusionProof()) {
+          mergeStakingTxInclusionProof(other.getStakingTxInclusionProof());
         }
         if (other.getSlashingTx() != com.google.protobuf.ByteString.EMPTY) {
           setSlashingTx(other.getSlashingTx());
@@ -4569,47 +4613,52 @@ public final class TxProto {
                 break;
               } // case 48
               case 58: {
-                input.readMessage(
-                    getStakingTxFieldBuilder().getBuilder(),
-                    extensionRegistry);
+                stakingTx_ = input.readBytes();
                 bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 66: {
-                slashingTx_ = input.readBytes();
+                input.readMessage(
+                    getStakingTxInclusionProofFieldBuilder().getBuilder(),
+                    extensionRegistry);
                 bitField0_ |= 0x00000080;
                 break;
               } // case 66
               case 74: {
-                delegatorSlashingSig_ = input.readBytes();
+                slashingTx_ = input.readBytes();
                 bitField0_ |= 0x00000100;
                 break;
               } // case 74
-              case 80: {
-                unbondingTime_ = input.readUInt32();
+              case 82: {
+                delegatorSlashingSig_ = input.readBytes();
                 bitField0_ |= 0x00000200;
                 break;
-              } // case 80
-              case 90: {
-                unbondingTx_ = input.readBytes();
+              } // case 82
+              case 88: {
+                unbondingTime_ = input.readUInt32();
                 bitField0_ |= 0x00000400;
                 break;
-              } // case 90
-              case 96: {
-                unbondingValue_ = input.readInt64();
+              } // case 88
+              case 98: {
+                unbondingTx_ = input.readBytes();
                 bitField0_ |= 0x00000800;
                 break;
-              } // case 96
-              case 106: {
-                unbondingSlashingTx_ = input.readBytes();
+              } // case 98
+              case 104: {
+                unbondingValue_ = input.readInt64();
                 bitField0_ |= 0x00001000;
                 break;
-              } // case 106
+              } // case 104
               case 114: {
-                delegatorUnbondingSlashingSig_ = input.readBytes();
+                unbondingSlashingTx_ = input.readBytes();
                 bitField0_ |= 0x00002000;
                 break;
               } // case 114
+              case 122: {
+                delegatorUnbondingSlashingSig_ = input.readBytes();
+                bitField0_ |= 0x00004000;
+                break;
+              } // case 122
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4880,7 +4929,7 @@ public final class TxProto {
        * btc_pk is the Bitcoin secp256k1 PK of the BTC delegator
        * </pre>
        *
-       * <code>bytes btc_pk = 3 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes btc_pk = 3 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The btcPk.
        */
       @java.lang.Override
@@ -4892,7 +4941,7 @@ public final class TxProto {
        * btc_pk is the Bitcoin secp256k1 PK of the BTC delegator
        * </pre>
        *
-       * <code>bytes btc_pk = 3 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes btc_pk = 3 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param value The btcPk to set.
        * @return This builder for chaining.
        */
@@ -4908,7 +4957,7 @@ public final class TxProto {
        * btc_pk is the Bitcoin secp256k1 PK of the BTC delegator
        * </pre>
        *
-       * <code>bytes btc_pk = 3 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes btc_pk = 3 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBtcPk() {
@@ -4931,7 +4980,7 @@ public final class TxProto {
        * finality provider pk it means that delegation is re-staked
        * </pre>
        *
-       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return A list containing the fpBtcPkList.
        */
       public java.util.List<com.google.protobuf.ByteString>
@@ -4945,7 +4994,7 @@ public final class TxProto {
        * finality provider pk it means that delegation is re-staked
        * </pre>
        *
-       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The count of fpBtcPkList.
        */
       public int getFpBtcPkListCount() {
@@ -4957,7 +5006,7 @@ public final class TxProto {
        * finality provider pk it means that delegation is re-staked
        * </pre>
        *
-       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param index The index of the element to return.
        * @return The fpBtcPkList at the given index.
        */
@@ -4970,7 +5019,7 @@ public final class TxProto {
        * finality provider pk it means that delegation is re-staked
        * </pre>
        *
-       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param index The index to set the value at.
        * @param value The fpBtcPkList to set.
        * @return This builder for chaining.
@@ -4989,7 +5038,7 @@ public final class TxProto {
        * finality provider pk it means that delegation is re-staked
        * </pre>
        *
-       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param value The fpBtcPkList to add.
        * @return This builder for chaining.
        */
@@ -5006,7 +5055,7 @@ public final class TxProto {
        * finality provider pk it means that delegation is re-staked
        * </pre>
        *
-       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param values The fpBtcPkList to add.
        * @return This builder for chaining.
        */
@@ -5024,7 +5073,7 @@ public final class TxProto {
        * finality provider pk it means that delegation is re-staked
        * </pre>
        *
-       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes fp_btc_pk_list = 4 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFpBtcPkList() {
@@ -5122,159 +5171,203 @@ public final class TxProto {
         return this;
       }
 
-      private com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfo stakingTx_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfo, com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfo.Builder, com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfoOrBuilder> stakingTxBuilder_;
+      private com.google.protobuf.ByteString stakingTx_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <pre>
-       * staking_tx is the staking tx along with the merkle proof of inclusion in btc block
+       * staking_tx is a bitcoin staking transaction i.e transaction that locks funds
        * </pre>
        *
-       * <code>.babylon.btccheckpoint.v1.TransactionInfo staking_tx = 7 [json_name = "stakingTx"];</code>
-       * @return Whether the stakingTx field is set.
-       */
-      public boolean hasStakingTx() {
-        return ((bitField0_ & 0x00000040) != 0);
-      }
-      /**
-       * <pre>
-       * staking_tx is the staking tx along with the merkle proof of inclusion in btc block
-       * </pre>
-       *
-       * <code>.babylon.btccheckpoint.v1.TransactionInfo staking_tx = 7 [json_name = "stakingTx"];</code>
+       * <code>bytes staking_tx = 7 [json_name = "stakingTx"];</code>
        * @return The stakingTx.
        */
-      public com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfo getStakingTx() {
-        if (stakingTxBuilder_ == null) {
-          return stakingTx_ == null ? com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfo.getDefaultInstance() : stakingTx_;
-        } else {
-          return stakingTxBuilder_.getMessage();
-        }
+      @java.lang.Override
+      public com.google.protobuf.ByteString getStakingTx() {
+        return stakingTx_;
       }
       /**
        * <pre>
-       * staking_tx is the staking tx along with the merkle proof of inclusion in btc block
+       * staking_tx is a bitcoin staking transaction i.e transaction that locks funds
        * </pre>
        *
-       * <code>.babylon.btccheckpoint.v1.TransactionInfo staking_tx = 7 [json_name = "stakingTx"];</code>
+       * <code>bytes staking_tx = 7 [json_name = "stakingTx"];</code>
+       * @param value The stakingTx to set.
+       * @return This builder for chaining.
        */
-      public Builder setStakingTx(com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfo value) {
-        if (stakingTxBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          stakingTx_ = value;
-        } else {
-          stakingTxBuilder_.setMessage(value);
-        }
+      public Builder setStakingTx(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingTx_ = value;
         bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * staking_tx is the staking tx along with the merkle proof of inclusion in btc block
+       * staking_tx is a bitcoin staking transaction i.e transaction that locks funds
        * </pre>
        *
-       * <code>.babylon.btccheckpoint.v1.TransactionInfo staking_tx = 7 [json_name = "stakingTx"];</code>
-       */
-      public Builder setStakingTx(
-          com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfo.Builder builderForValue) {
-        if (stakingTxBuilder_ == null) {
-          stakingTx_ = builderForValue.build();
-        } else {
-          stakingTxBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000040;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * staking_tx is the staking tx along with the merkle proof of inclusion in btc block
-       * </pre>
-       *
-       * <code>.babylon.btccheckpoint.v1.TransactionInfo staking_tx = 7 [json_name = "stakingTx"];</code>
-       */
-      public Builder mergeStakingTx(com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfo value) {
-        if (stakingTxBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) != 0) &&
-            stakingTx_ != null &&
-            stakingTx_ != com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfo.getDefaultInstance()) {
-            getStakingTxBuilder().mergeFrom(value);
-          } else {
-            stakingTx_ = value;
-          }
-        } else {
-          stakingTxBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000040;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * staking_tx is the staking tx along with the merkle proof of inclusion in btc block
-       * </pre>
-       *
-       * <code>.babylon.btccheckpoint.v1.TransactionInfo staking_tx = 7 [json_name = "stakingTx"];</code>
+       * <code>bytes staking_tx = 7 [json_name = "stakingTx"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearStakingTx() {
         bitField0_ = (bitField0_ & ~0x00000040);
-        stakingTx_ = null;
-        if (stakingTxBuilder_ != null) {
-          stakingTxBuilder_.dispose();
-          stakingTxBuilder_ = null;
+        stakingTx_ = getDefaultInstance().getStakingTx();
+        onChanged();
+        return this;
+      }
+
+      private com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof stakingTxInclusionProof_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof, com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.Builder, com.babylon.btcstaking.v1.BtcstakingProto.InclusionProofOrBuilder> stakingTxInclusionProofBuilder_;
+      /**
+       * <pre>
+       * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 8 [json_name = "stakingTxInclusionProof"];</code>
+       * @return Whether the stakingTxInclusionProof field is set.
+       */
+      public boolean hasStakingTxInclusionProof() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <pre>
+       * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 8 [json_name = "stakingTxInclusionProof"];</code>
+       * @return The stakingTxInclusionProof.
+       */
+      public com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof getStakingTxInclusionProof() {
+        if (stakingTxInclusionProofBuilder_ == null) {
+          return stakingTxInclusionProof_ == null ? com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.getDefaultInstance() : stakingTxInclusionProof_;
+        } else {
+          return stakingTxInclusionProofBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 8 [json_name = "stakingTxInclusionProof"];</code>
+       */
+      public Builder setStakingTxInclusionProof(com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof value) {
+        if (stakingTxInclusionProofBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          stakingTxInclusionProof_ = value;
+        } else {
+          stakingTxInclusionProofBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 8 [json_name = "stakingTxInclusionProof"];</code>
+       */
+      public Builder setStakingTxInclusionProof(
+          com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.Builder builderForValue) {
+        if (stakingTxInclusionProofBuilder_ == null) {
+          stakingTxInclusionProof_ = builderForValue.build();
+        } else {
+          stakingTxInclusionProofBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 8 [json_name = "stakingTxInclusionProof"];</code>
+       */
+      public Builder mergeStakingTxInclusionProof(com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof value) {
+        if (stakingTxInclusionProofBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0) &&
+            stakingTxInclusionProof_ != null &&
+            stakingTxInclusionProof_ != com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.getDefaultInstance()) {
+            getStakingTxInclusionProofBuilder().mergeFrom(value);
+          } else {
+            stakingTxInclusionProof_ = value;
+          }
+        } else {
+          stakingTxInclusionProofBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 8 [json_name = "stakingTxInclusionProof"];</code>
+       */
+      public Builder clearStakingTxInclusionProof() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        stakingTxInclusionProof_ = null;
+        if (stakingTxInclusionProofBuilder_ != null) {
+          stakingTxInclusionProofBuilder_.dispose();
+          stakingTxInclusionProofBuilder_ = null;
         }
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * staking_tx is the staking tx along with the merkle proof of inclusion in btc block
+       * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
        * </pre>
        *
-       * <code>.babylon.btccheckpoint.v1.TransactionInfo staking_tx = 7 [json_name = "stakingTx"];</code>
+       * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 8 [json_name = "stakingTxInclusionProof"];</code>
        */
-      public com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfo.Builder getStakingTxBuilder() {
-        bitField0_ |= 0x00000040;
+      public com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.Builder getStakingTxInclusionProofBuilder() {
+        bitField0_ |= 0x00000080;
         onChanged();
-        return getStakingTxFieldBuilder().getBuilder();
+        return getStakingTxInclusionProofFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * staking_tx is the staking tx along with the merkle proof of inclusion in btc block
+       * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
        * </pre>
        *
-       * <code>.babylon.btccheckpoint.v1.TransactionInfo staking_tx = 7 [json_name = "stakingTx"];</code>
+       * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 8 [json_name = "stakingTxInclusionProof"];</code>
        */
-      public com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfoOrBuilder getStakingTxOrBuilder() {
-        if (stakingTxBuilder_ != null) {
-          return stakingTxBuilder_.getMessageOrBuilder();
+      public com.babylon.btcstaking.v1.BtcstakingProto.InclusionProofOrBuilder getStakingTxInclusionProofOrBuilder() {
+        if (stakingTxInclusionProofBuilder_ != null) {
+          return stakingTxInclusionProofBuilder_.getMessageOrBuilder();
         } else {
-          return stakingTx_ == null ?
-              com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfo.getDefaultInstance() : stakingTx_;
+          return stakingTxInclusionProof_ == null ?
+              com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.getDefaultInstance() : stakingTxInclusionProof_;
         }
       }
       /**
        * <pre>
-       * staking_tx is the staking tx along with the merkle proof of inclusion in btc block
+       * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
        * </pre>
        *
-       * <code>.babylon.btccheckpoint.v1.TransactionInfo staking_tx = 7 [json_name = "stakingTx"];</code>
+       * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 8 [json_name = "stakingTxInclusionProof"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfo, com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfo.Builder, com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfoOrBuilder> 
-          getStakingTxFieldBuilder() {
-        if (stakingTxBuilder_ == null) {
-          stakingTxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfo, com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfo.Builder, com.babylon.btccheckpoint.v1.BtccheckpointProto.TransactionInfoOrBuilder>(
-                  getStakingTx(),
+          com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof, com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.Builder, com.babylon.btcstaking.v1.BtcstakingProto.InclusionProofOrBuilder> 
+          getStakingTxInclusionProofFieldBuilder() {
+        if (stakingTxInclusionProofBuilder_ == null) {
+          stakingTxInclusionProofBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof, com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.Builder, com.babylon.btcstaking.v1.BtcstakingProto.InclusionProofOrBuilder>(
+                  getStakingTxInclusionProof(),
                   getParentForChildren(),
                   isClean());
-          stakingTx_ = null;
+          stakingTxInclusionProof_ = null;
         }
-        return stakingTxBuilder_;
+        return stakingTxInclusionProofBuilder_;
       }
 
       private com.google.protobuf.ByteString slashingTx_ = com.google.protobuf.ByteString.EMPTY;
@@ -5284,7 +5377,7 @@ public final class TxProto {
        * Note that the tx itself does not contain signatures, which are off-chain.
        * </pre>
        *
-       * <code>bytes slashing_tx = 8 [json_name = "slashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
+       * <code>bytes slashing_tx = 9 [json_name = "slashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
        * @return The slashingTx.
        */
       @java.lang.Override
@@ -5297,14 +5390,14 @@ public final class TxProto {
        * Note that the tx itself does not contain signatures, which are off-chain.
        * </pre>
        *
-       * <code>bytes slashing_tx = 8 [json_name = "slashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
+       * <code>bytes slashing_tx = 9 [json_name = "slashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
        * @param value The slashingTx to set.
        * @return This builder for chaining.
        */
       public Builder setSlashingTx(com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         slashingTx_ = value;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -5314,11 +5407,11 @@ public final class TxProto {
        * Note that the tx itself does not contain signatures, which are off-chain.
        * </pre>
        *
-       * <code>bytes slashing_tx = 8 [json_name = "slashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
+       * <code>bytes slashing_tx = 9 [json_name = "slashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSlashingTx() {
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000100);
         slashingTx_ = getDefaultInstance().getSlashingTx();
         onChanged();
         return this;
@@ -5333,7 +5426,7 @@ public final class TxProto {
        * order to be spendable.
        * </pre>
        *
-       * <code>bytes delegator_slashing_sig = 9 [json_name = "delegatorSlashingSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+       * <code>bytes delegator_slashing_sig = 10 [json_name = "delegatorSlashingSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
        * @return The delegatorSlashingSig.
        */
       @java.lang.Override
@@ -5348,14 +5441,14 @@ public final class TxProto {
        * order to be spendable.
        * </pre>
        *
-       * <code>bytes delegator_slashing_sig = 9 [json_name = "delegatorSlashingSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+       * <code>bytes delegator_slashing_sig = 10 [json_name = "delegatorSlashingSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
        * @param value The delegatorSlashingSig to set.
        * @return This builder for chaining.
        */
       public Builder setDelegatorSlashingSig(com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         delegatorSlashingSig_ = value;
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -5367,11 +5460,11 @@ public final class TxProto {
        * order to be spendable.
        * </pre>
        *
-       * <code>bytes delegator_slashing_sig = 9 [json_name = "delegatorSlashingSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+       * <code>bytes delegator_slashing_sig = 10 [json_name = "delegatorSlashingSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDelegatorSlashingSig() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000200);
         delegatorSlashingSig_ = getDefaultInstance().getDelegatorSlashingSig();
         onChanged();
         return this;
@@ -5387,7 +5480,7 @@ public final class TxProto {
        * It must be smaller than math.MaxUInt16 and larger that max(MinUnbondingTime, CheckpointFinalizationTimeout)
        * </pre>
        *
-       * <code>uint32 unbonding_time = 10 [json_name = "unbondingTime"];</code>
+       * <code>uint32 unbonding_time = 11 [json_name = "unbondingTime"];</code>
        * @return The unbondingTime.
        */
       @java.lang.Override
@@ -5403,14 +5496,14 @@ public final class TxProto {
        * It must be smaller than math.MaxUInt16 and larger that max(MinUnbondingTime, CheckpointFinalizationTimeout)
        * </pre>
        *
-       * <code>uint32 unbonding_time = 10 [json_name = "unbondingTime"];</code>
+       * <code>uint32 unbonding_time = 11 [json_name = "unbondingTime"];</code>
        * @param value The unbondingTime to set.
        * @return This builder for chaining.
        */
       public Builder setUnbondingTime(int value) {
 
         unbondingTime_ = value;
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -5423,11 +5516,11 @@ public final class TxProto {
        * It must be smaller than math.MaxUInt16 and larger that max(MinUnbondingTime, CheckpointFinalizationTimeout)
        * </pre>
        *
-       * <code>uint32 unbonding_time = 10 [json_name = "unbondingTime"];</code>
+       * <code>uint32 unbonding_time = 11 [json_name = "unbondingTime"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUnbondingTime() {
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000400);
         unbondingTime_ = 0;
         onChanged();
         return this;
@@ -5441,7 +5534,7 @@ public final class TxProto {
        * staking output and sends it to the unbonding output
        * </pre>
        *
-       * <code>bytes unbonding_tx = 11 [json_name = "unbondingTx"];</code>
+       * <code>bytes unbonding_tx = 12 [json_name = "unbondingTx"];</code>
        * @return The unbondingTx.
        */
       @java.lang.Override
@@ -5455,14 +5548,14 @@ public final class TxProto {
        * staking output and sends it to the unbonding output
        * </pre>
        *
-       * <code>bytes unbonding_tx = 11 [json_name = "unbondingTx"];</code>
+       * <code>bytes unbonding_tx = 12 [json_name = "unbondingTx"];</code>
        * @param value The unbondingTx to set.
        * @return This builder for chaining.
        */
       public Builder setUnbondingTx(com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         unbondingTx_ = value;
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -5473,11 +5566,11 @@ public final class TxProto {
        * staking output and sends it to the unbonding output
        * </pre>
        *
-       * <code>bytes unbonding_tx = 11 [json_name = "unbondingTx"];</code>
+       * <code>bytes unbonding_tx = 12 [json_name = "unbondingTx"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUnbondingTx() {
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000800);
         unbondingTx_ = getDefaultInstance().getUnbondingTx();
         onChanged();
         return this;
@@ -5490,7 +5583,7 @@ public final class TxProto {
        * NOTE: staking_value and unbonding_value could be different because of the difference between the fee for staking tx and that for unbonding
        * </pre>
        *
-       * <code>int64 unbonding_value = 12 [json_name = "unbondingValue"];</code>
+       * <code>int64 unbonding_value = 13 [json_name = "unbondingValue"];</code>
        * @return The unbondingValue.
        */
       @java.lang.Override
@@ -5503,14 +5596,14 @@ public final class TxProto {
        * NOTE: staking_value and unbonding_value could be different because of the difference between the fee for staking tx and that for unbonding
        * </pre>
        *
-       * <code>int64 unbonding_value = 12 [json_name = "unbondingValue"];</code>
+       * <code>int64 unbonding_value = 13 [json_name = "unbondingValue"];</code>
        * @param value The unbondingValue to set.
        * @return This builder for chaining.
        */
       public Builder setUnbondingValue(long value) {
 
         unbondingValue_ = value;
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
@@ -5520,11 +5613,11 @@ public final class TxProto {
        * NOTE: staking_value and unbonding_value could be different because of the difference between the fee for staking tx and that for unbonding
        * </pre>
        *
-       * <code>int64 unbonding_value = 12 [json_name = "unbondingValue"];</code>
+       * <code>int64 unbonding_value = 13 [json_name = "unbondingValue"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUnbondingValue() {
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00001000);
         unbondingValue_ = 0L;
         onChanged();
         return this;
@@ -5537,7 +5630,7 @@ public final class TxProto {
        * Note that the tx itself does not contain signatures, which are off-chain.
        * </pre>
        *
-       * <code>bytes unbonding_slashing_tx = 13 [json_name = "unbondingSlashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
+       * <code>bytes unbonding_slashing_tx = 14 [json_name = "unbondingSlashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
        * @return The unbondingSlashingTx.
        */
       @java.lang.Override
@@ -5550,14 +5643,14 @@ public final class TxProto {
        * Note that the tx itself does not contain signatures, which are off-chain.
        * </pre>
        *
-       * <code>bytes unbonding_slashing_tx = 13 [json_name = "unbondingSlashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
+       * <code>bytes unbonding_slashing_tx = 14 [json_name = "unbondingSlashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
        * @param value The unbondingSlashingTx to set.
        * @return This builder for chaining.
        */
       public Builder setUnbondingSlashingTx(com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         unbondingSlashingTx_ = value;
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
@@ -5567,11 +5660,11 @@ public final class TxProto {
        * Note that the tx itself does not contain signatures, which are off-chain.
        * </pre>
        *
-       * <code>bytes unbonding_slashing_tx = 13 [json_name = "unbondingSlashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
+       * <code>bytes unbonding_slashing_tx = 14 [json_name = "unbondingSlashingTx", (.gogoproto.customtype) = "BTCSlashingTx"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUnbondingSlashingTx() {
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00002000);
         unbondingSlashingTx_ = getDefaultInstance().getUnbondingSlashingTx();
         onChanged();
         return this;
@@ -5583,7 +5676,7 @@ public final class TxProto {
        * delegator_unbonding_slashing_sig is the signature on the slashing tx by the delegator (i.e., SK corresponding to btc_pk).
        * </pre>
        *
-       * <code>bytes delegator_unbonding_slashing_sig = 14 [json_name = "delegatorUnbondingSlashingSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+       * <code>bytes delegator_unbonding_slashing_sig = 15 [json_name = "delegatorUnbondingSlashingSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
        * @return The delegatorUnbondingSlashingSig.
        */
       @java.lang.Override
@@ -5595,14 +5688,14 @@ public final class TxProto {
        * delegator_unbonding_slashing_sig is the signature on the slashing tx by the delegator (i.e., SK corresponding to btc_pk).
        * </pre>
        *
-       * <code>bytes delegator_unbonding_slashing_sig = 14 [json_name = "delegatorUnbondingSlashingSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+       * <code>bytes delegator_unbonding_slashing_sig = 15 [json_name = "delegatorUnbondingSlashingSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
        * @param value The delegatorUnbondingSlashingSig to set.
        * @return This builder for chaining.
        */
       public Builder setDelegatorUnbondingSlashingSig(com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         delegatorUnbondingSlashingSig_ = value;
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -5611,11 +5704,11 @@ public final class TxProto {
        * delegator_unbonding_slashing_sig is the signature on the slashing tx by the delegator (i.e., SK corresponding to btc_pk).
        * </pre>
        *
-       * <code>bytes delegator_unbonding_slashing_sig = 14 [json_name = "delegatorUnbondingSlashingSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+       * <code>bytes delegator_unbonding_slashing_sig = 15 [json_name = "delegatorUnbondingSlashingSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDelegatorUnbondingSlashingSig() {
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00004000);
         delegatorUnbondingSlashingSig_ = getDefaultInstance().getDelegatorUnbondingSlashingSig();
         onChanged();
         return this;
@@ -6089,6 +6182,1420 @@ public final class TxProto {
 
   }
 
+  public interface MsgAddBTCDelegationInclusionProofOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.MsgAddBTCDelegationInclusionProof)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The signer.
+     */
+    java.lang.String getSigner();
+    /**
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The bytes for signer.
+     */
+    com.google.protobuf.ByteString
+        getSignerBytes();
+
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking tx.
+     * It uniquely identifies a BTC delegation
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 2 [json_name = "stakingTxHash"];</code>
+     * @return The stakingTxHash.
+     */
+    java.lang.String getStakingTxHash();
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking tx.
+     * It uniquely identifies a BTC delegation
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 2 [json_name = "stakingTxHash"];</code>
+     * @return The bytes for stakingTxHash.
+     */
+    com.google.protobuf.ByteString
+        getStakingTxHashBytes();
+
+    /**
+     * <pre>
+     * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 3 [json_name = "stakingTxInclusionProof"];</code>
+     * @return Whether the stakingTxInclusionProof field is set.
+     */
+    boolean hasStakingTxInclusionProof();
+    /**
+     * <pre>
+     * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 3 [json_name = "stakingTxInclusionProof"];</code>
+     * @return The stakingTxInclusionProof.
+     */
+    com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof getStakingTxInclusionProof();
+    /**
+     * <pre>
+     * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 3 [json_name = "stakingTxInclusionProof"];</code>
+     */
+    com.babylon.btcstaking.v1.BtcstakingProto.InclusionProofOrBuilder getStakingTxInclusionProofOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgAddBTCDelegationInclusionProof is the message for adding proof of inclusion of BTC delegation on BTC chain
+   * </pre>
+   *
+   * Protobuf type {@code babylon.btcstaking.v1.MsgAddBTCDelegationInclusionProof}
+   */
+  public static final class MsgAddBTCDelegationInclusionProof extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.MsgAddBTCDelegationInclusionProof)
+      MsgAddBTCDelegationInclusionProofOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAddBTCDelegationInclusionProof.newBuilder() to construct.
+    private MsgAddBTCDelegationInclusionProof(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAddBTCDelegationInclusionProof() {
+      signer_ = "";
+      stakingTxHash_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAddBTCDelegationInclusionProof();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.btcstaking.v1.TxProto.internal_static_babylon_btcstaking_v1_MsgAddBTCDelegationInclusionProof_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.btcstaking.v1.TxProto.internal_static_babylon_btcstaking_v1_MsgAddBTCDelegationInclusionProof_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof.class, com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof.Builder.class);
+    }
+
+    public static final int SIGNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object signer_ = "";
+    /**
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The signer.
+     */
+    @java.lang.Override
+    public java.lang.String getSigner() {
+      java.lang.Object ref = signer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        signer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The bytes for signer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSignerBytes() {
+      java.lang.Object ref = signer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        signer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAKING_TX_HASH_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingTxHash_ = "";
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking tx.
+     * It uniquely identifies a BTC delegation
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 2 [json_name = "stakingTxHash"];</code>
+     * @return The stakingTxHash.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingTxHash() {
+      java.lang.Object ref = stakingTxHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingTxHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking tx.
+     * It uniquely identifies a BTC delegation
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 2 [json_name = "stakingTxHash"];</code>
+     * @return The bytes for stakingTxHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingTxHashBytes() {
+      java.lang.Object ref = stakingTxHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingTxHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAKING_TX_INCLUSION_PROOF_FIELD_NUMBER = 3;
+    private com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof stakingTxInclusionProof_;
+    /**
+     * <pre>
+     * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 3 [json_name = "stakingTxInclusionProof"];</code>
+     * @return Whether the stakingTxInclusionProof field is set.
+     */
+    @java.lang.Override
+    public boolean hasStakingTxInclusionProof() {
+      return stakingTxInclusionProof_ != null;
+    }
+    /**
+     * <pre>
+     * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 3 [json_name = "stakingTxInclusionProof"];</code>
+     * @return The stakingTxInclusionProof.
+     */
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof getStakingTxInclusionProof() {
+      return stakingTxInclusionProof_ == null ? com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.getDefaultInstance() : stakingTxInclusionProof_;
+    }
+    /**
+     * <pre>
+     * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 3 [json_name = "stakingTxInclusionProof"];</code>
+     */
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.BtcstakingProto.InclusionProofOrBuilder getStakingTxInclusionProofOrBuilder() {
+      return stakingTxInclusionProof_ == null ? com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.getDefaultInstance() : stakingTxInclusionProof_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, signer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingTxHash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, stakingTxHash_);
+      }
+      if (stakingTxInclusionProof_ != null) {
+        output.writeMessage(3, getStakingTxInclusionProof());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, signer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingTxHash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, stakingTxHash_);
+      }
+      if (stakingTxInclusionProof_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getStakingTxInclusionProof());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof)) {
+        return super.equals(obj);
+      }
+      com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof other = (com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof) obj;
+
+      if (!getSigner()
+          .equals(other.getSigner())) return false;
+      if (!getStakingTxHash()
+          .equals(other.getStakingTxHash())) return false;
+      if (hasStakingTxInclusionProof() != other.hasStakingTxInclusionProof()) return false;
+      if (hasStakingTxInclusionProof()) {
+        if (!getStakingTxInclusionProof()
+            .equals(other.getStakingTxInclusionProof())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SIGNER_FIELD_NUMBER;
+      hash = (53 * hash) + getSigner().hashCode();
+      hash = (37 * hash) + STAKING_TX_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingTxHash().hashCode();
+      if (hasStakingTxInclusionProof()) {
+        hash = (37 * hash) + STAKING_TX_INCLUSION_PROOF_FIELD_NUMBER;
+        hash = (53 * hash) + getStakingTxInclusionProof().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgAddBTCDelegationInclusionProof is the message for adding proof of inclusion of BTC delegation on BTC chain
+     * </pre>
+     *
+     * Protobuf type {@code babylon.btcstaking.v1.MsgAddBTCDelegationInclusionProof}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.MsgAddBTCDelegationInclusionProof)
+        com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.btcstaking.v1.TxProto.internal_static_babylon_btcstaking_v1_MsgAddBTCDelegationInclusionProof_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.btcstaking.v1.TxProto.internal_static_babylon_btcstaking_v1_MsgAddBTCDelegationInclusionProof_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof.class, com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof.Builder.class);
+      }
+
+      // Construct using com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        signer_ = "";
+        stakingTxHash_ = "";
+        stakingTxInclusionProof_ = null;
+        if (stakingTxInclusionProofBuilder_ != null) {
+          stakingTxInclusionProofBuilder_.dispose();
+          stakingTxInclusionProofBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.btcstaking.v1.TxProto.internal_static_babylon_btcstaking_v1_MsgAddBTCDelegationInclusionProof_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof getDefaultInstanceForType() {
+        return com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof build() {
+        com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof buildPartial() {
+        com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof result = new com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.signer_ = signer_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.stakingTxHash_ = stakingTxHash_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.stakingTxInclusionProof_ = stakingTxInclusionProofBuilder_ == null
+              ? stakingTxInclusionProof_
+              : stakingTxInclusionProofBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof) {
+          return mergeFrom((com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof other) {
+        if (other == com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof.getDefaultInstance()) return this;
+        if (!other.getSigner().isEmpty()) {
+          signer_ = other.signer_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getStakingTxHash().isEmpty()) {
+          stakingTxHash_ = other.stakingTxHash_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasStakingTxInclusionProof()) {
+          mergeStakingTxInclusionProof(other.getStakingTxInclusionProof());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                signer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                stakingTxHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getStakingTxInclusionProofFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object signer_ = "";
+      /**
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @return The signer.
+       */
+      public java.lang.String getSigner() {
+        java.lang.Object ref = signer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          signer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @return The bytes for signer.
+       */
+      public com.google.protobuf.ByteString
+          getSignerBytes() {
+        java.lang.Object ref = signer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @param value The signer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        signer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSigner() {
+        signer_ = getDefaultInstance().getSigner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @param value The bytes for signer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        signer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object stakingTxHash_ = "";
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking tx.
+       * It uniquely identifies a BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 2 [json_name = "stakingTxHash"];</code>
+       * @return The stakingTxHash.
+       */
+      public java.lang.String getStakingTxHash() {
+        java.lang.Object ref = stakingTxHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingTxHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking tx.
+       * It uniquely identifies a BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 2 [json_name = "stakingTxHash"];</code>
+       * @return The bytes for stakingTxHash.
+       */
+      public com.google.protobuf.ByteString
+          getStakingTxHashBytes() {
+        java.lang.Object ref = stakingTxHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingTxHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking tx.
+       * It uniquely identifies a BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 2 [json_name = "stakingTxHash"];</code>
+       * @param value The stakingTxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingTxHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingTxHash_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking tx.
+       * It uniquely identifies a BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 2 [json_name = "stakingTxHash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingTxHash() {
+        stakingTxHash_ = getDefaultInstance().getStakingTxHash();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking tx.
+       * It uniquely identifies a BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 2 [json_name = "stakingTxHash"];</code>
+       * @param value The bytes for stakingTxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingTxHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingTxHash_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof stakingTxInclusionProof_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof, com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.Builder, com.babylon.btcstaking.v1.BtcstakingProto.InclusionProofOrBuilder> stakingTxInclusionProofBuilder_;
+      /**
+       * <pre>
+       * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 3 [json_name = "stakingTxInclusionProof"];</code>
+       * @return Whether the stakingTxInclusionProof field is set.
+       */
+      public boolean hasStakingTxInclusionProof() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 3 [json_name = "stakingTxInclusionProof"];</code>
+       * @return The stakingTxInclusionProof.
+       */
+      public com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof getStakingTxInclusionProof() {
+        if (stakingTxInclusionProofBuilder_ == null) {
+          return stakingTxInclusionProof_ == null ? com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.getDefaultInstance() : stakingTxInclusionProof_;
+        } else {
+          return stakingTxInclusionProofBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 3 [json_name = "stakingTxInclusionProof"];</code>
+       */
+      public Builder setStakingTxInclusionProof(com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof value) {
+        if (stakingTxInclusionProofBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          stakingTxInclusionProof_ = value;
+        } else {
+          stakingTxInclusionProofBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 3 [json_name = "stakingTxInclusionProof"];</code>
+       */
+      public Builder setStakingTxInclusionProof(
+          com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.Builder builderForValue) {
+        if (stakingTxInclusionProofBuilder_ == null) {
+          stakingTxInclusionProof_ = builderForValue.build();
+        } else {
+          stakingTxInclusionProofBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 3 [json_name = "stakingTxInclusionProof"];</code>
+       */
+      public Builder mergeStakingTxInclusionProof(com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof value) {
+        if (stakingTxInclusionProofBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            stakingTxInclusionProof_ != null &&
+            stakingTxInclusionProof_ != com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.getDefaultInstance()) {
+            getStakingTxInclusionProofBuilder().mergeFrom(value);
+          } else {
+            stakingTxInclusionProof_ = value;
+          }
+        } else {
+          stakingTxInclusionProofBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 3 [json_name = "stakingTxInclusionProof"];</code>
+       */
+      public Builder clearStakingTxInclusionProof() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        stakingTxInclusionProof_ = null;
+        if (stakingTxInclusionProofBuilder_ != null) {
+          stakingTxInclusionProofBuilder_.dispose();
+          stakingTxInclusionProofBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 3 [json_name = "stakingTxInclusionProof"];</code>
+       */
+      public com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.Builder getStakingTxInclusionProofBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getStakingTxInclusionProofFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 3 [json_name = "stakingTxInclusionProof"];</code>
+       */
+      public com.babylon.btcstaking.v1.BtcstakingProto.InclusionProofOrBuilder getStakingTxInclusionProofOrBuilder() {
+        if (stakingTxInclusionProofBuilder_ != null) {
+          return stakingTxInclusionProofBuilder_.getMessageOrBuilder();
+        } else {
+          return stakingTxInclusionProof_ == null ?
+              com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.getDefaultInstance() : stakingTxInclusionProof_;
+        }
+      }
+      /**
+       * <pre>
+       * staking_tx_inclusion_proof is the inclusion proof of the staking tx in BTC chain
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.InclusionProof staking_tx_inclusion_proof = 3 [json_name = "stakingTxInclusionProof"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof, com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.Builder, com.babylon.btcstaking.v1.BtcstakingProto.InclusionProofOrBuilder> 
+          getStakingTxInclusionProofFieldBuilder() {
+        if (stakingTxInclusionProofBuilder_ == null) {
+          stakingTxInclusionProofBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof, com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.Builder, com.babylon.btcstaking.v1.BtcstakingProto.InclusionProofOrBuilder>(
+                  getStakingTxInclusionProof(),
+                  getParentForChildren(),
+                  isClean());
+          stakingTxInclusionProof_ = null;
+        }
+        return stakingTxInclusionProofBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.MsgAddBTCDelegationInclusionProof)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.MsgAddBTCDelegationInclusionProof)
+    private static final com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof();
+    }
+
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAddBTCDelegationInclusionProof>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAddBTCDelegationInclusionProof>() {
+      @java.lang.Override
+      public MsgAddBTCDelegationInclusionProof parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAddBTCDelegationInclusionProof> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAddBTCDelegationInclusionProof> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProof getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgAddBTCDelegationInclusionProofResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.MsgAddBTCDelegationInclusionProofResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgAddBTCDelegationInclusionProofResponse is the response for MsgAddBTCDelegationInclusionProof
+   * </pre>
+   *
+   * Protobuf type {@code babylon.btcstaking.v1.MsgAddBTCDelegationInclusionProofResponse}
+   */
+  public static final class MsgAddBTCDelegationInclusionProofResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.MsgAddBTCDelegationInclusionProofResponse)
+      MsgAddBTCDelegationInclusionProofResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAddBTCDelegationInclusionProofResponse.newBuilder() to construct.
+    private MsgAddBTCDelegationInclusionProofResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAddBTCDelegationInclusionProofResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAddBTCDelegationInclusionProofResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.btcstaking.v1.TxProto.internal_static_babylon_btcstaking_v1_MsgAddBTCDelegationInclusionProofResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.btcstaking.v1.TxProto.internal_static_babylon_btcstaking_v1_MsgAddBTCDelegationInclusionProofResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse.class, com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse)) {
+        return super.equals(obj);
+      }
+      com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse other = (com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgAddBTCDelegationInclusionProofResponse is the response for MsgAddBTCDelegationInclusionProof
+     * </pre>
+     *
+     * Protobuf type {@code babylon.btcstaking.v1.MsgAddBTCDelegationInclusionProofResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.MsgAddBTCDelegationInclusionProofResponse)
+        com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.btcstaking.v1.TxProto.internal_static_babylon_btcstaking_v1_MsgAddBTCDelegationInclusionProofResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.btcstaking.v1.TxProto.internal_static_babylon_btcstaking_v1_MsgAddBTCDelegationInclusionProofResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse.class, com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse.Builder.class);
+      }
+
+      // Construct using com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.btcstaking.v1.TxProto.internal_static_babylon_btcstaking_v1_MsgAddBTCDelegationInclusionProofResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse getDefaultInstanceForType() {
+        return com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse build() {
+        com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse buildPartial() {
+        com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse result = new com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse) {
+          return mergeFrom((com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse other) {
+        if (other == com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.MsgAddBTCDelegationInclusionProofResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.MsgAddBTCDelegationInclusionProofResponse)
+    private static final com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse();
+    }
+
+    public static com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAddBTCDelegationInclusionProofResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAddBTCDelegationInclusionProofResponse>() {
+      @java.lang.Override
+      public MsgAddBTCDelegationInclusionProofResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAddBTCDelegationInclusionProofResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAddBTCDelegationInclusionProofResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.TxProto.MsgAddBTCDelegationInclusionProofResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface MsgAddCovenantSigsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.MsgAddCovenantSigs)
       com.google.protobuf.MessageOrBuilder {
@@ -6110,7 +7617,7 @@ public final class TxProto {
      * pk is the BTC public key of the covenant member
      * </pre>
      *
-     * <code>bytes pk = 2 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes pk = 2 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The pk.
      */
     com.google.protobuf.ByteString getPk();
@@ -6178,7 +7685,7 @@ public final class TxProto {
      * the signature follows encoding in BIP-340 spec
      * </pre>
      *
-     * <code>bytes unbonding_tx_sig = 5 [json_name = "unbondingTxSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+     * <code>bytes unbonding_tx_sig = 5 [json_name = "unbondingTxSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
      * @return The unbondingTxSig.
      */
     com.google.protobuf.ByteString getUnbondingTxSig();
@@ -6312,7 +7819,7 @@ public final class TxProto {
      * pk is the BTC public key of the covenant member
      * </pre>
      *
-     * <code>bytes pk = 2 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes pk = 2 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The pk.
      */
     @java.lang.Override
@@ -6423,7 +7930,7 @@ public final class TxProto {
      * the signature follows encoding in BIP-340 spec
      * </pre>
      *
-     * <code>bytes unbonding_tx_sig = 5 [json_name = "unbondingTxSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+     * <code>bytes unbonding_tx_sig = 5 [json_name = "unbondingTxSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
      * @return The unbondingTxSig.
      */
     @java.lang.Override
@@ -7042,7 +8549,7 @@ public final class TxProto {
        * pk is the BTC public key of the covenant member
        * </pre>
        *
-       * <code>bytes pk = 2 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes pk = 2 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The pk.
        */
       @java.lang.Override
@@ -7054,7 +8561,7 @@ public final class TxProto {
        * pk is the BTC public key of the covenant member
        * </pre>
        *
-       * <code>bytes pk = 2 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes pk = 2 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param value The pk to set.
        * @return This builder for chaining.
        */
@@ -7070,7 +8577,7 @@ public final class TxProto {
        * pk is the BTC public key of the covenant member
        * </pre>
        *
-       * <code>bytes pk = 2 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes pk = 2 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPk() {
@@ -7307,7 +8814,7 @@ public final class TxProto {
        * the signature follows encoding in BIP-340 spec
        * </pre>
        *
-       * <code>bytes unbonding_tx_sig = 5 [json_name = "unbondingTxSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+       * <code>bytes unbonding_tx_sig = 5 [json_name = "unbondingTxSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
        * @return The unbondingTxSig.
        */
       @java.lang.Override
@@ -7320,7 +8827,7 @@ public final class TxProto {
        * the signature follows encoding in BIP-340 spec
        * </pre>
        *
-       * <code>bytes unbonding_tx_sig = 5 [json_name = "unbondingTxSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+       * <code>bytes unbonding_tx_sig = 5 [json_name = "unbondingTxSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
        * @param value The unbondingTxSig to set.
        * @return This builder for chaining.
        */
@@ -7337,7 +8844,7 @@ public final class TxProto {
        * the signature follows encoding in BIP-340 spec
        * </pre>
        *
-       * <code>bytes unbonding_tx_sig = 5 [json_name = "unbondingTxSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+       * <code>bytes unbonding_tx_sig = 5 [json_name = "unbondingTxSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340Signature"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUnbondingTxSig() {
@@ -7985,14 +9492,44 @@ public final class TxProto {
 
     /**
      * <pre>
-     * unbonding_tx_sig is the signature of the staker on the unbonding tx submitted to babylon
-     * the signature follows encoding in BIP-340 spec
+     * stake_spending_tx is a bitcoin transaction that spends the staking transaction
+     * i.e it has staking output as an input
      * </pre>
      *
-     * <code>bytes unbonding_tx_sig = 3 [json_name = "unbondingTxSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
-     * @return The unbondingTxSig.
+     * <code>bytes stake_spending_tx = 3 [json_name = "stakeSpendingTx"];</code>
+     * @return The stakeSpendingTx.
      */
-    com.google.protobuf.ByteString getUnbondingTxSig();
+    com.google.protobuf.ByteString getStakeSpendingTx();
+
+    /**
+     * <pre>
+     * spend_spending_tx_inclusion_proof is the proof of inclusion of the
+     * stake_spending_tx in the BTC chain
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.InclusionProof stake_spending_tx_inclusion_proof = 4 [json_name = "stakeSpendingTxInclusionProof"];</code>
+     * @return Whether the stakeSpendingTxInclusionProof field is set.
+     */
+    boolean hasStakeSpendingTxInclusionProof();
+    /**
+     * <pre>
+     * spend_spending_tx_inclusion_proof is the proof of inclusion of the
+     * stake_spending_tx in the BTC chain
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.InclusionProof stake_spending_tx_inclusion_proof = 4 [json_name = "stakeSpendingTxInclusionProof"];</code>
+     * @return The stakeSpendingTxInclusionProof.
+     */
+    com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof getStakeSpendingTxInclusionProof();
+    /**
+     * <pre>
+     * spend_spending_tx_inclusion_proof is the proof of inclusion of the
+     * stake_spending_tx in the BTC chain
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.InclusionProof stake_spending_tx_inclusion_proof = 4 [json_name = "stakeSpendingTxInclusionProof"];</code>
+     */
+    com.babylon.btcstaking.v1.BtcstakingProto.InclusionProofOrBuilder getStakeSpendingTxInclusionProofOrBuilder();
   }
   /**
    * <pre>
@@ -8015,7 +9552,7 @@ public final class TxProto {
     private MsgBTCUndelegate() {
       signer_ = "";
       stakingTxHash_ = "";
-      unbondingTxSig_ = com.google.protobuf.ByteString.EMPTY;
+      stakeSpendingTx_ = com.google.protobuf.ByteString.EMPTY;
     }
 
     @java.lang.Override
@@ -8126,20 +9663,61 @@ public final class TxProto {
       }
     }
 
-    public static final int UNBONDING_TX_SIG_FIELD_NUMBER = 3;
-    private com.google.protobuf.ByteString unbondingTxSig_ = com.google.protobuf.ByteString.EMPTY;
+    public static final int STAKE_SPENDING_TX_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString stakeSpendingTx_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <pre>
-     * unbonding_tx_sig is the signature of the staker on the unbonding tx submitted to babylon
-     * the signature follows encoding in BIP-340 spec
+     * stake_spending_tx is a bitcoin transaction that spends the staking transaction
+     * i.e it has staking output as an input
      * </pre>
      *
-     * <code>bytes unbonding_tx_sig = 3 [json_name = "unbondingTxSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
-     * @return The unbondingTxSig.
+     * <code>bytes stake_spending_tx = 3 [json_name = "stakeSpendingTx"];</code>
+     * @return The stakeSpendingTx.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString getUnbondingTxSig() {
-      return unbondingTxSig_;
+    public com.google.protobuf.ByteString getStakeSpendingTx() {
+      return stakeSpendingTx_;
+    }
+
+    public static final int STAKE_SPENDING_TX_INCLUSION_PROOF_FIELD_NUMBER = 4;
+    private com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof stakeSpendingTxInclusionProof_;
+    /**
+     * <pre>
+     * spend_spending_tx_inclusion_proof is the proof of inclusion of the
+     * stake_spending_tx in the BTC chain
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.InclusionProof stake_spending_tx_inclusion_proof = 4 [json_name = "stakeSpendingTxInclusionProof"];</code>
+     * @return Whether the stakeSpendingTxInclusionProof field is set.
+     */
+    @java.lang.Override
+    public boolean hasStakeSpendingTxInclusionProof() {
+      return stakeSpendingTxInclusionProof_ != null;
+    }
+    /**
+     * <pre>
+     * spend_spending_tx_inclusion_proof is the proof of inclusion of the
+     * stake_spending_tx in the BTC chain
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.InclusionProof stake_spending_tx_inclusion_proof = 4 [json_name = "stakeSpendingTxInclusionProof"];</code>
+     * @return The stakeSpendingTxInclusionProof.
+     */
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof getStakeSpendingTxInclusionProof() {
+      return stakeSpendingTxInclusionProof_ == null ? com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.getDefaultInstance() : stakeSpendingTxInclusionProof_;
+    }
+    /**
+     * <pre>
+     * spend_spending_tx_inclusion_proof is the proof of inclusion of the
+     * stake_spending_tx in the BTC chain
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.InclusionProof stake_spending_tx_inclusion_proof = 4 [json_name = "stakeSpendingTxInclusionProof"];</code>
+     */
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.BtcstakingProto.InclusionProofOrBuilder getStakeSpendingTxInclusionProofOrBuilder() {
+      return stakeSpendingTxInclusionProof_ == null ? com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.getDefaultInstance() : stakeSpendingTxInclusionProof_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -8162,8 +9740,11 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingTxHash_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, stakingTxHash_);
       }
-      if (!unbondingTxSig_.isEmpty()) {
-        output.writeBytes(3, unbondingTxSig_);
+      if (!stakeSpendingTx_.isEmpty()) {
+        output.writeBytes(3, stakeSpendingTx_);
+      }
+      if (stakeSpendingTxInclusionProof_ != null) {
+        output.writeMessage(4, getStakeSpendingTxInclusionProof());
       }
       getUnknownFields().writeTo(output);
     }
@@ -8180,9 +9761,13 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingTxHash_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, stakingTxHash_);
       }
-      if (!unbondingTxSig_.isEmpty()) {
+      if (!stakeSpendingTx_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, unbondingTxSig_);
+          .computeBytesSize(3, stakeSpendingTx_);
+      }
+      if (stakeSpendingTxInclusionProof_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getStakeSpendingTxInclusionProof());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -8203,8 +9788,13 @@ public final class TxProto {
           .equals(other.getSigner())) return false;
       if (!getStakingTxHash()
           .equals(other.getStakingTxHash())) return false;
-      if (!getUnbondingTxSig()
-          .equals(other.getUnbondingTxSig())) return false;
+      if (!getStakeSpendingTx()
+          .equals(other.getStakeSpendingTx())) return false;
+      if (hasStakeSpendingTxInclusionProof() != other.hasStakeSpendingTxInclusionProof()) return false;
+      if (hasStakeSpendingTxInclusionProof()) {
+        if (!getStakeSpendingTxInclusionProof()
+            .equals(other.getStakeSpendingTxInclusionProof())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -8220,8 +9810,12 @@ public final class TxProto {
       hash = (53 * hash) + getSigner().hashCode();
       hash = (37 * hash) + STAKING_TX_HASH_FIELD_NUMBER;
       hash = (53 * hash) + getStakingTxHash().hashCode();
-      hash = (37 * hash) + UNBONDING_TX_SIG_FIELD_NUMBER;
-      hash = (53 * hash) + getUnbondingTxSig().hashCode();
+      hash = (37 * hash) + STAKE_SPENDING_TX_FIELD_NUMBER;
+      hash = (53 * hash) + getStakeSpendingTx().hashCode();
+      if (hasStakeSpendingTxInclusionProof()) {
+        hash = (37 * hash) + STAKE_SPENDING_TX_INCLUSION_PROOF_FIELD_NUMBER;
+        hash = (53 * hash) + getStakeSpendingTxInclusionProof().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8361,7 +9955,12 @@ public final class TxProto {
         bitField0_ = 0;
         signer_ = "";
         stakingTxHash_ = "";
-        unbondingTxSig_ = com.google.protobuf.ByteString.EMPTY;
+        stakeSpendingTx_ = com.google.protobuf.ByteString.EMPTY;
+        stakeSpendingTxInclusionProof_ = null;
+        if (stakeSpendingTxInclusionProofBuilder_ != null) {
+          stakeSpendingTxInclusionProofBuilder_.dispose();
+          stakeSpendingTxInclusionProofBuilder_ = null;
+        }
         return this;
       }
 
@@ -8402,7 +10001,12 @@ public final class TxProto {
           result.stakingTxHash_ = stakingTxHash_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.unbondingTxSig_ = unbondingTxSig_;
+          result.stakeSpendingTx_ = stakeSpendingTx_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.stakeSpendingTxInclusionProof_ = stakeSpendingTxInclusionProofBuilder_ == null
+              ? stakeSpendingTxInclusionProof_
+              : stakeSpendingTxInclusionProofBuilder_.build();
         }
       }
 
@@ -8460,8 +10064,11 @@ public final class TxProto {
           bitField0_ |= 0x00000002;
           onChanged();
         }
-        if (other.getUnbondingTxSig() != com.google.protobuf.ByteString.EMPTY) {
-          setUnbondingTxSig(other.getUnbondingTxSig());
+        if (other.getStakeSpendingTx() != com.google.protobuf.ByteString.EMPTY) {
+          setStakeSpendingTx(other.getStakeSpendingTx());
+        }
+        if (other.hasStakeSpendingTxInclusionProof()) {
+          mergeStakeSpendingTxInclusionProof(other.getStakeSpendingTxInclusionProof());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -8500,10 +10107,17 @@ public final class TxProto {
                 break;
               } // case 18
               case 26: {
-                unbondingTxSig_ = input.readBytes();
+                stakeSpendingTx_ = input.readBytes();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
+              case 34: {
+                input.readMessage(
+                    getStakeSpendingTxInclusionProofFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -8690,51 +10304,215 @@ public final class TxProto {
         return this;
       }
 
-      private com.google.protobuf.ByteString unbondingTxSig_ = com.google.protobuf.ByteString.EMPTY;
+      private com.google.protobuf.ByteString stakeSpendingTx_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <pre>
-       * unbonding_tx_sig is the signature of the staker on the unbonding tx submitted to babylon
-       * the signature follows encoding in BIP-340 spec
+       * stake_spending_tx is a bitcoin transaction that spends the staking transaction
+       * i.e it has staking output as an input
        * </pre>
        *
-       * <code>bytes unbonding_tx_sig = 3 [json_name = "unbondingTxSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
-       * @return The unbondingTxSig.
+       * <code>bytes stake_spending_tx = 3 [json_name = "stakeSpendingTx"];</code>
+       * @return The stakeSpendingTx.
        */
       @java.lang.Override
-      public com.google.protobuf.ByteString getUnbondingTxSig() {
-        return unbondingTxSig_;
+      public com.google.protobuf.ByteString getStakeSpendingTx() {
+        return stakeSpendingTx_;
       }
       /**
        * <pre>
-       * unbonding_tx_sig is the signature of the staker on the unbonding tx submitted to babylon
-       * the signature follows encoding in BIP-340 spec
+       * stake_spending_tx is a bitcoin transaction that spends the staking transaction
+       * i.e it has staking output as an input
        * </pre>
        *
-       * <code>bytes unbonding_tx_sig = 3 [json_name = "unbondingTxSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
-       * @param value The unbondingTxSig to set.
+       * <code>bytes stake_spending_tx = 3 [json_name = "stakeSpendingTx"];</code>
+       * @param value The stakeSpendingTx to set.
        * @return This builder for chaining.
        */
-      public Builder setUnbondingTxSig(com.google.protobuf.ByteString value) {
+      public Builder setStakeSpendingTx(com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
-        unbondingTxSig_ = value;
+        stakeSpendingTx_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * unbonding_tx_sig is the signature of the staker on the unbonding tx submitted to babylon
-       * the signature follows encoding in BIP-340 spec
+       * stake_spending_tx is a bitcoin transaction that spends the staking transaction
+       * i.e it has staking output as an input
        * </pre>
        *
-       * <code>bytes unbonding_tx_sig = 3 [json_name = "unbondingTxSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340Signature"];</code>
+       * <code>bytes stake_spending_tx = 3 [json_name = "stakeSpendingTx"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearUnbondingTxSig() {
+      public Builder clearStakeSpendingTx() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        unbondingTxSig_ = getDefaultInstance().getUnbondingTxSig();
+        stakeSpendingTx_ = getDefaultInstance().getStakeSpendingTx();
         onChanged();
         return this;
+      }
+
+      private com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof stakeSpendingTxInclusionProof_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof, com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.Builder, com.babylon.btcstaking.v1.BtcstakingProto.InclusionProofOrBuilder> stakeSpendingTxInclusionProofBuilder_;
+      /**
+       * <pre>
+       * spend_spending_tx_inclusion_proof is the proof of inclusion of the
+       * stake_spending_tx in the BTC chain
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.InclusionProof stake_spending_tx_inclusion_proof = 4 [json_name = "stakeSpendingTxInclusionProof"];</code>
+       * @return Whether the stakeSpendingTxInclusionProof field is set.
+       */
+      public boolean hasStakeSpendingTxInclusionProof() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * spend_spending_tx_inclusion_proof is the proof of inclusion of the
+       * stake_spending_tx in the BTC chain
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.InclusionProof stake_spending_tx_inclusion_proof = 4 [json_name = "stakeSpendingTxInclusionProof"];</code>
+       * @return The stakeSpendingTxInclusionProof.
+       */
+      public com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof getStakeSpendingTxInclusionProof() {
+        if (stakeSpendingTxInclusionProofBuilder_ == null) {
+          return stakeSpendingTxInclusionProof_ == null ? com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.getDefaultInstance() : stakeSpendingTxInclusionProof_;
+        } else {
+          return stakeSpendingTxInclusionProofBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * spend_spending_tx_inclusion_proof is the proof of inclusion of the
+       * stake_spending_tx in the BTC chain
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.InclusionProof stake_spending_tx_inclusion_proof = 4 [json_name = "stakeSpendingTxInclusionProof"];</code>
+       */
+      public Builder setStakeSpendingTxInclusionProof(com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof value) {
+        if (stakeSpendingTxInclusionProofBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          stakeSpendingTxInclusionProof_ = value;
+        } else {
+          stakeSpendingTxInclusionProofBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * spend_spending_tx_inclusion_proof is the proof of inclusion of the
+       * stake_spending_tx in the BTC chain
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.InclusionProof stake_spending_tx_inclusion_proof = 4 [json_name = "stakeSpendingTxInclusionProof"];</code>
+       */
+      public Builder setStakeSpendingTxInclusionProof(
+          com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.Builder builderForValue) {
+        if (stakeSpendingTxInclusionProofBuilder_ == null) {
+          stakeSpendingTxInclusionProof_ = builderForValue.build();
+        } else {
+          stakeSpendingTxInclusionProofBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * spend_spending_tx_inclusion_proof is the proof of inclusion of the
+       * stake_spending_tx in the BTC chain
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.InclusionProof stake_spending_tx_inclusion_proof = 4 [json_name = "stakeSpendingTxInclusionProof"];</code>
+       */
+      public Builder mergeStakeSpendingTxInclusionProof(com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof value) {
+        if (stakeSpendingTxInclusionProofBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            stakeSpendingTxInclusionProof_ != null &&
+            stakeSpendingTxInclusionProof_ != com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.getDefaultInstance()) {
+            getStakeSpendingTxInclusionProofBuilder().mergeFrom(value);
+          } else {
+            stakeSpendingTxInclusionProof_ = value;
+          }
+        } else {
+          stakeSpendingTxInclusionProofBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * spend_spending_tx_inclusion_proof is the proof of inclusion of the
+       * stake_spending_tx in the BTC chain
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.InclusionProof stake_spending_tx_inclusion_proof = 4 [json_name = "stakeSpendingTxInclusionProof"];</code>
+       */
+      public Builder clearStakeSpendingTxInclusionProof() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        stakeSpendingTxInclusionProof_ = null;
+        if (stakeSpendingTxInclusionProofBuilder_ != null) {
+          stakeSpendingTxInclusionProofBuilder_.dispose();
+          stakeSpendingTxInclusionProofBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * spend_spending_tx_inclusion_proof is the proof of inclusion of the
+       * stake_spending_tx in the BTC chain
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.InclusionProof stake_spending_tx_inclusion_proof = 4 [json_name = "stakeSpendingTxInclusionProof"];</code>
+       */
+      public com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.Builder getStakeSpendingTxInclusionProofBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getStakeSpendingTxInclusionProofFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * spend_spending_tx_inclusion_proof is the proof of inclusion of the
+       * stake_spending_tx in the BTC chain
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.InclusionProof stake_spending_tx_inclusion_proof = 4 [json_name = "stakeSpendingTxInclusionProof"];</code>
+       */
+      public com.babylon.btcstaking.v1.BtcstakingProto.InclusionProofOrBuilder getStakeSpendingTxInclusionProofOrBuilder() {
+        if (stakeSpendingTxInclusionProofBuilder_ != null) {
+          return stakeSpendingTxInclusionProofBuilder_.getMessageOrBuilder();
+        } else {
+          return stakeSpendingTxInclusionProof_ == null ?
+              com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.getDefaultInstance() : stakeSpendingTxInclusionProof_;
+        }
+      }
+      /**
+       * <pre>
+       * spend_spending_tx_inclusion_proof is the proof of inclusion of the
+       * stake_spending_tx in the BTC chain
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.InclusionProof stake_spending_tx_inclusion_proof = 4 [json_name = "stakeSpendingTxInclusionProof"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof, com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.Builder, com.babylon.btcstaking.v1.BtcstakingProto.InclusionProofOrBuilder> 
+          getStakeSpendingTxInclusionProofFieldBuilder() {
+        if (stakeSpendingTxInclusionProofBuilder_ == null) {
+          stakeSpendingTxInclusionProofBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof, com.babylon.btcstaking.v1.BtcstakingProto.InclusionProof.Builder, com.babylon.btcstaking.v1.BtcstakingProto.InclusionProofOrBuilder>(
+                  getStakeSpendingTxInclusionProof(),
+                  getParentForChildren(),
+                  isClean());
+          stakeSpendingTxInclusionProof_ = null;
+        }
+        return stakeSpendingTxInclusionProofBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11818,6 +13596,16 @@ public final class TxProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_babylon_btcstaking_v1_MsgCreateBTCDelegationResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_btcstaking_v1_MsgAddBTCDelegationInclusionProof_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_btcstaking_v1_MsgAddBTCDelegationInclusionProof_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_btcstaking_v1_MsgAddBTCDelegationInclusionProofResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_btcstaking_v1_MsgAddBTCDelegationInclusionProofResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_babylon_btcstaking_v1_MsgAddCovenantSigs_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -11870,105 +13658,118 @@ public final class TxProto {
       "n.btcstaking.v1\032\024gogoproto/gogo.proto\032\031c" +
       "osmos_proto/cosmos.proto\032\027cosmos/msg/v1/" +
       "msg.proto\032\"babylon/btcstaking/v1/params." +
-      "proto\032,babylon/btccheckpoint/v1/btccheck" +
-      "point.proto\032$cosmos/staking/v1beta1/stak" +
-      "ing.proto\032\037babylon/btcstaking/v1/pop.pro" +
-      "to\"\370\002\n\031MsgCreateFinalityProvider\022,\n\004addr" +
-      "\030\001 \001(\tB\030\322\264-\024cosmos.AddressStringR\004addr\022E" +
-      "\n\013description\030\002 \001(\0132#.cosmos.staking.v1b" +
-      "eta1.DescriptionR\013description\022M\n\ncommiss" +
-      "ion\030\003 \001(\tB-\332\336\037\033cosmossdk.io/math.LegacyD" +
-      "ec\322\264-\ncosmos.DecR\ncommission\022M\n\006btc_pk\030\004" +
-      " \001(\014B6\332\336\0372github.com/babylonchain/babylo" +
-      "n/types.BIP340PubKeyR\005btcPk\022=\n\003pop\030\005 \001(\013" +
-      "2+.babylon.btcstaking.v1.ProofOfPossessi" +
-      "onBTCR\003pop:\t\202\347\260*\004addr\"#\n!MsgCreateFinali" +
-      "tyProviderResponse\"\377\001\n\027MsgEditFinalityPr" +
-      "ovider\022,\n\004addr\030\001 \001(\tB\030\322\264-\024cosmos.Address" +
-      "StringR\004addr\022\025\n\006btc_pk\030\002 \001(\014R\005btcPk\022E\n\013d" +
-      "escription\030\003 \001(\0132#.cosmos.staking.v1beta" +
-      "1.DescriptionR\013description\022M\n\ncommission" +
-      "\030\004 \001(\tB-\332\336\037\033cosmossdk.io/math.LegacyDec\322" +
-      "\264-\ncosmos.DecR\ncommission:\t\202\347\260*\004addr\"!\n\037" +
-      "MsgEditFinalityProviderResponse\"\306\007\n\026MsgC" +
-      "reateBTCDelegation\0229\n\013staker_addr\030\001 \001(\tB" +
-      "\030\322\264-\024cosmos.AddressStringR\nstakerAddr\022=\n" +
-      "\003pop\030\002 \001(\0132+.babylon.btcstaking.v1.Proof" +
-      "OfPossessionBTCR\003pop\022M\n\006btc_pk\030\003 \001(\014B6\332\336" +
-      "\0372github.com/babylonchain/babylon/types." +
-      "BIP340PubKeyR\005btcPk\022[\n\016fp_btc_pk_list\030\004 " +
-      "\003(\014B6\332\336\0372github.com/babylonchain/babylon" +
+      "proto\032$cosmos/staking/v1beta1/staking.pr" +
+      "oto\032\037babylon/btcstaking/v1/pop.proto\032&ba" +
+      "bylon/btcstaking/v1/btcstaking.proto\"\372\002\n" +
+      "\031MsgCreateFinalityProvider\022,\n\004addr\030\001 \001(\t" +
+      "B\030\322\264-\024cosmos.AddressStringR\004addr\022E\n\013desc" +
+      "ription\030\002 \001(\0132#.cosmos.staking.v1beta1.D" +
+      "escriptionR\013description\022M\n\ncommission\030\003 " +
+      "\001(\tB-\332\336\037\033cosmossdk.io/math.LegacyDec\322\264-\n" +
+      "cosmos.DecR\ncommission\022O\n\006btc_pk\030\004 \001(\014B8" +
+      "\332\336\0374github.com/babylonlabs-io/babylon/ty" +
+      "pes.BIP340PubKeyR\005btcPk\022=\n\003pop\030\005 \001(\0132+.b" +
+      "abylon.btcstaking.v1.ProofOfPossessionBT" +
+      "CR\003pop:\t\202\347\260*\004addr\"#\n!MsgCreateFinalityPr" +
+      "oviderResponse\"\377\001\n\027MsgEditFinalityProvid" +
+      "er\022,\n\004addr\030\001 \001(\tB\030\322\264-\024cosmos.AddressStri" +
+      "ngR\004addr\022\025\n\006btc_pk\030\002 \001(\014R\005btcPk\022E\n\013descr" +
+      "iption\030\003 \001(\0132#.cosmos.staking.v1beta1.De" +
+      "scriptionR\013description\022M\n\ncommission\030\004 \001" +
+      "(\tB-\332\336\037\033cosmossdk.io/math.LegacyDec\322\264-\nc" +
+      "osmos.DecR\ncommission:\t\202\347\260*\004addr\"!\n\037MsgE" +
+      "ditFinalityProviderResponse\"\207\010\n\026MsgCreat" +
+      "eBTCDelegation\0229\n\013staker_addr\030\001 \001(\tB\030\322\264-" +
+      "\024cosmos.AddressStringR\nstakerAddr\022=\n\003pop" +
+      "\030\002 \001(\0132+.babylon.btcstaking.v1.ProofOfPo" +
+      "ssessionBTCR\003pop\022O\n\006btc_pk\030\003 \001(\014B8\332\336\0374gi" +
+      "thub.com/babylonlabs-io/babylon/types.BI" +
+      "P340PubKeyR\005btcPk\022]\n\016fp_btc_pk_list\030\004 \003(" +
+      "\014B8\332\336\0374github.com/babylonlabs-io/babylon" +
       "/types.BIP340PubKeyR\013fpBtcPkList\022!\n\014stak" +
       "ing_time\030\005 \001(\rR\013stakingTime\022#\n\rstaking_v" +
-      "alue\030\006 \001(\003R\014stakingValue\022H\n\nstaking_tx\030\007" +
-      " \001(\0132).babylon.btccheckpoint.v1.Transact" +
-      "ionInfoR\tstakingTx\0222\n\013slashing_tx\030\010 \001(\014B" +
-      "\021\332\336\037\rBTCSlashingTxR\nslashingTx\022o\n\026delega" +
-      "tor_slashing_sig\030\t \001(\014B9\332\336\0375github.com/b" +
-      "abylonchain/babylon/types.BIP340Signatur" +
-      "eR\024delegatorSlashingSig\022%\n\016unbonding_tim" +
-      "e\030\n \001(\rR\runbondingTime\022!\n\014unbonding_tx\030\013" +
-      " \001(\014R\013unbondingTx\022\'\n\017unbonding_value\030\014 \001" +
-      "(\003R\016unbondingValue\022E\n\025unbonding_slashing" +
-      "_tx\030\r \001(\014B\021\332\336\037\rBTCSlashingTxR\023unbondingS" +
-      "lashingTx\022\202\001\n delegator_unbonding_slashi" +
-      "ng_sig\030\016 \001(\014B9\332\336\0375github.com/babylonchai" +
-      "n/babylon/types.BIP340SignatureR\035delegat" +
-      "orUnbondingSlashingSig:\020\202\347\260*\013staker_addr" +
-      "\" \n\036MsgCreateBTCDelegationResponse\"\365\002\n\022M" +
-      "sgAddCovenantSigs\022\026\n\006signer\030\001 \001(\tR\006signe" +
-      "r\022F\n\002pk\030\002 \001(\014B6\332\336\0372github.com/babyloncha" +
-      "in/babylon/types.BIP340PubKeyR\002pk\022&\n\017sta" +
-      "king_tx_hash\030\003 \001(\tR\rstakingTxHash\022(\n\020sla" +
-      "shing_tx_sigs\030\004 \003(\014R\016slashingTxSigs\022c\n\020u" +
-      "nbonding_tx_sig\030\005 \001(\014B9\332\336\0375github.com/ba" +
-      "bylonchain/babylon/types.BIP340Signature" +
-      "R\016unbondingTxSig\022;\n\032slashing_unbonding_t" +
-      "x_sigs\030\006 \003(\014R\027slashingUnbondingTxSigs:\013\202" +
-      "\347\260*\006signer\"\034\n\032MsgAddCovenantSigsResponse" +
-      "\"\304\001\n\020MsgBTCUndelegate\022\026\n\006signer\030\001 \001(\tR\006s" +
-      "igner\022&\n\017staking_tx_hash\030\002 \001(\tR\rstakingT" +
-      "xHash\022c\n\020unbonding_tx_sig\030\003 \001(\014B9\332\336\0375git" +
-      "hub.com/babylonchain/babylon/types.BIP34" +
-      "0SignatureR\016unbondingTxSig:\013\202\347\260*\006signer\"" +
-      "\032\n\030MsgBTCUndelegateResponse\"\232\001\n\034MsgSelec" +
-      "tiveSlashingEvidence\022\026\n\006signer\030\001 \001(\tR\006si" +
-      "gner\022&\n\017staking_tx_hash\030\002 \001(\tR\rstakingTx" +
-      "Hash\022-\n\023recovered_fp_btc_sk\030\003 \001(\014R\020recov" +
-      "eredFpBtcSk:\013\202\347\260*\006signer\"&\n$MsgSelective" +
-      "SlashingEvidenceResponse\"\226\001\n\017MsgUpdatePa" +
-      "rams\0226\n\tauthority\030\001 \001(\tB\030\322\264-\024cosmos.Addr" +
-      "essStringR\tauthority\022;\n\006params\030\002 \001(\0132\035.b" +
-      "abylon.btcstaking.v1.ParamsB\004\310\336\037\000R\006param" +
-      "s:\016\202\347\260*\tauthority\"\031\n\027MsgUpdateParamsResp" +
-      "onse2\344\006\n\003Msg\022\204\001\n\026CreateFinalityProvider\022" +
-      "0.babylon.btcstaking.v1.MsgCreateFinalit" +
-      "yProvider\0328.babylon.btcstaking.v1.MsgCre" +
-      "ateFinalityProviderResponse\022~\n\024EditFinal" +
-      "ityProvider\022..babylon.btcstaking.v1.MsgE" +
-      "ditFinalityProvider\0326.babylon.btcstaking" +
-      ".v1.MsgEditFinalityProviderResponse\022{\n\023C" +
-      "reateBTCDelegation\022-.babylon.btcstaking." +
-      "v1.MsgCreateBTCDelegation\0325.babylon.btcs" +
-      "taking.v1.MsgCreateBTCDelegationResponse" +
-      "\022o\n\017AddCovenantSigs\022).babylon.btcstaking" +
-      ".v1.MsgAddCovenantSigs\0321.babylon.btcstak" +
-      "ing.v1.MsgAddCovenantSigsResponse\022i\n\rBTC" +
-      "Undelegate\022\'.babylon.btcstaking.v1.MsgBT" +
-      "CUndelegate\032/.babylon.btcstaking.v1.MsgB" +
-      "TCUndelegateResponse\022\215\001\n\031SelectiveSlashi" +
-      "ngEvidence\0223.babylon.btcstaking.v1.MsgSe" +
-      "lectiveSlashingEvidence\032;.babylon.btcsta" +
-      "king.v1.MsgSelectiveSlashingEvidenceResp" +
-      "onse\022f\n\014UpdateParams\022&.babylon.btcstakin" +
-      "g.v1.MsgUpdateParams\032..babylon.btcstakin" +
-      "g.v1.MsgUpdateParamsResponse\032\005\200\347\260*\001B\314\001\n\031" +
-      "com.babylon.btcstaking.v1B\007TxProtoZ2gith" +
-      "ub.com/babylonchain/babylon/x/btcstaking" +
-      "/types\242\002\003BBX\252\002\025Babylon.Btcstaking.V1\312\002\025B" +
-      "abylon\\Btcstaking\\V1\342\002!Babylon\\Btcstakin" +
-      "g\\V1\\GPBMetadata\352\002\027Babylon::Btcstaking::" +
-      "V1b\006proto3"
+      "alue\030\006 \001(\003R\014stakingValue\022\035\n\nstaking_tx\030\007" +
+      " \001(\014R\tstakingTx\022b\n\032staking_tx_inclusion_" +
+      "proof\030\010 \001(\0132%.babylon.btcstaking.v1.Incl" +
+      "usionProofR\027stakingTxInclusionProof\0222\n\013s" +
+      "lashing_tx\030\t \001(\014B\021\332\336\037\rBTCSlashingTxR\nsla" +
+      "shingTx\022q\n\026delegator_slashing_sig\030\n \001(\014B" +
+      ";\332\336\0377github.com/babylonlabs-io/babylon/t" +
+      "ypes.BIP340SignatureR\024delegatorSlashingS" +
+      "ig\022%\n\016unbonding_time\030\013 \001(\rR\runbondingTim" +
+      "e\022!\n\014unbonding_tx\030\014 \001(\014R\013unbondingTx\022\'\n\017" +
+      "unbonding_value\030\r \001(\003R\016unbondingValue\022E\n" +
+      "\025unbonding_slashing_tx\030\016 \001(\014B\021\332\336\037\rBTCSla" +
+      "shingTxR\023unbondingSlashingTx\022\204\001\n delegat" +
+      "or_unbonding_slashing_sig\030\017 \001(\014B;\332\336\0377git" +
+      "hub.com/babylonlabs-io/babylon/types.BIP" +
+      "340SignatureR\035delegatorUnbondingSlashing" +
+      "Sig:\020\202\347\260*\013staker_addr\" \n\036MsgCreateBTCDel" +
+      "egationResponse\"\324\001\n!MsgAddBTCDelegationI" +
+      "nclusionProof\022\026\n\006signer\030\001 \001(\tR\006signer\022&\n" +
+      "\017staking_tx_hash\030\002 \001(\tR\rstakingTxHash\022b\n" +
+      "\032staking_tx_inclusion_proof\030\003 \001(\0132%.baby" +
+      "lon.btcstaking.v1.InclusionProofR\027stakin" +
+      "gTxInclusionProof:\013\202\347\260*\006signer\"+\n)MsgAdd" +
+      "BTCDelegationInclusionProofResponse\"\371\002\n\022" +
+      "MsgAddCovenantSigs\022\026\n\006signer\030\001 \001(\tR\006sign" +
+      "er\022H\n\002pk\030\002 \001(\014B8\332\336\0374github.com/babylonla" +
+      "bs-io/babylon/types.BIP340PubKeyR\002pk\022&\n\017" +
+      "staking_tx_hash\030\003 \001(\tR\rstakingTxHash\022(\n\020" +
+      "slashing_tx_sigs\030\004 \003(\014R\016slashingTxSigs\022e" +
+      "\n\020unbonding_tx_sig\030\005 \001(\014B;\332\336\0377github.com" +
+      "/babylonlabs-io/babylon/types.BIP340Sign" +
+      "atureR\016unbondingTxSig\022;\n\032slashing_unbond" +
+      "ing_tx_sigs\030\006 \003(\014R\027slashingUnbondingTxSi" +
+      "gs:\013\202\347\260*\006signer\"\034\n\032MsgAddCovenantSigsRes" +
+      "ponse\"\374\001\n\020MsgBTCUndelegate\022\026\n\006signer\030\001 \001" +
+      "(\tR\006signer\022&\n\017staking_tx_hash\030\002 \001(\tR\rsta" +
+      "kingTxHash\022*\n\021stake_spending_tx\030\003 \001(\014R\017s" +
+      "takeSpendingTx\022o\n!stake_spending_tx_incl" +
+      "usion_proof\030\004 \001(\0132%.babylon.btcstaking.v" +
+      "1.InclusionProofR\035stakeSpendingTxInclusi" +
+      "onProof:\013\202\347\260*\006signer\"\032\n\030MsgBTCUndelegate" +
+      "Response\"\232\001\n\034MsgSelectiveSlashingEvidenc" +
+      "e\022\026\n\006signer\030\001 \001(\tR\006signer\022&\n\017staking_tx_" +
+      "hash\030\002 \001(\tR\rstakingTxHash\022-\n\023recovered_f" +
+      "p_btc_sk\030\003 \001(\014R\020recoveredFpBtcSk:\013\202\347\260*\006s" +
+      "igner\"&\n$MsgSelectiveSlashingEvidenceRes" +
+      "ponse\"\226\001\n\017MsgUpdateParams\0226\n\tauthority\030\001" +
+      " \001(\tB\030\322\264-\024cosmos.AddressStringR\tauthorit" +
+      "y\022;\n\006params\030\002 \001(\0132\035.babylon.btcstaking.v" +
+      "1.ParamsB\004\310\336\037\000R\006params:\016\202\347\260*\tauthority\"\031" +
+      "\n\027MsgUpdateParamsResponse2\203\010\n\003Msg\022\204\001\n\026Cr" +
+      "eateFinalityProvider\0220.babylon.btcstakin" +
+      "g.v1.MsgCreateFinalityProvider\0328.babylon" +
+      ".btcstaking.v1.MsgCreateFinalityProvider" +
+      "Response\022~\n\024EditFinalityProvider\022..babyl" +
+      "on.btcstaking.v1.MsgEditFinalityProvider" +
+      "\0326.babylon.btcstaking.v1.MsgEditFinality" +
+      "ProviderResponse\022{\n\023CreateBTCDelegation\022" +
+      "-.babylon.btcstaking.v1.MsgCreateBTCDele" +
+      "gation\0325.babylon.btcstaking.v1.MsgCreate" +
+      "BTCDelegationResponse\022\234\001\n\036AddBTCDelegati" +
+      "onInclusionProof\0228.babylon.btcstaking.v1" +
+      ".MsgAddBTCDelegationInclusionProof\032@.bab" +
+      "ylon.btcstaking.v1.MsgAddBTCDelegationIn" +
+      "clusionProofResponse\022o\n\017AddCovenantSigs\022" +
+      ").babylon.btcstaking.v1.MsgAddCovenantSi" +
+      "gs\0321.babylon.btcstaking.v1.MsgAddCovenan" +
+      "tSigsResponse\022i\n\rBTCUndelegate\022\'.babylon" +
+      ".btcstaking.v1.MsgBTCUndelegate\032/.babylo" +
+      "n.btcstaking.v1.MsgBTCUndelegateResponse" +
+      "\022\215\001\n\031SelectiveSlashingEvidence\0223.babylon" +
+      ".btcstaking.v1.MsgSelectiveSlashingEvide" +
+      "nce\032;.babylon.btcstaking.v1.MsgSelective" +
+      "SlashingEvidenceResponse\022f\n\014UpdateParams" +
+      "\022&.babylon.btcstaking.v1.MsgUpdateParams" +
+      "\032..babylon.btcstaking.v1.MsgUpdateParams" +
+      "Response\032\005\200\347\260*\001B\316\001\n\031com.babylon.btcstaki" +
+      "ng.v1B\007TxProtoZ4github.com/babylonlabs-i" +
+      "o/babylon/x/btcstaking/types\242\002\003BBX\252\002\025Bab" +
+      "ylon.Btcstaking.V1\312\002\025Babylon\\Btcstaking\\" +
+      "V1\342\002!Babylon\\Btcstaking\\V1\\GPBMetadata\352\002" +
+      "\027Babylon::Btcstaking::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11977,9 +13778,9 @@ public final class TxProto {
           com.cosmos_proto.CosmosProto.getDescriptor(),
           com.cosmos.msg.v1.MsgProto.getDescriptor(),
           com.babylon.btcstaking.v1.ParamsProto.getDescriptor(),
-          com.babylon.btccheckpoint.v1.BtccheckpointProto.getDescriptor(),
           com.cosmos.staking.v1beta1.StakingProto.getDescriptor(),
           com.babylon.btcstaking.v1.PopProto.getDescriptor(),
+          com.babylon.btcstaking.v1.BtcstakingProto.getDescriptor(),
         });
     internal_static_babylon_btcstaking_v1_MsgCreateFinalityProvider_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -12010,57 +13811,69 @@ public final class TxProto {
     internal_static_babylon_btcstaking_v1_MsgCreateBTCDelegation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_MsgCreateBTCDelegation_descriptor,
-        new java.lang.String[] { "StakerAddr", "Pop", "BtcPk", "FpBtcPkList", "StakingTime", "StakingValue", "StakingTx", "SlashingTx", "DelegatorSlashingSig", "UnbondingTime", "UnbondingTx", "UnbondingValue", "UnbondingSlashingTx", "DelegatorUnbondingSlashingSig", });
+        new java.lang.String[] { "StakerAddr", "Pop", "BtcPk", "FpBtcPkList", "StakingTime", "StakingValue", "StakingTx", "StakingTxInclusionProof", "SlashingTx", "DelegatorSlashingSig", "UnbondingTime", "UnbondingTx", "UnbondingValue", "UnbondingSlashingTx", "DelegatorUnbondingSlashingSig", });
     internal_static_babylon_btcstaking_v1_MsgCreateBTCDelegationResponse_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_babylon_btcstaking_v1_MsgCreateBTCDelegationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_MsgCreateBTCDelegationResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_babylon_btcstaking_v1_MsgAddCovenantSigs_descriptor =
+    internal_static_babylon_btcstaking_v1_MsgAddBTCDelegationInclusionProof_descriptor =
       getDescriptor().getMessageTypes().get(6);
+    internal_static_babylon_btcstaking_v1_MsgAddBTCDelegationInclusionProof_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_btcstaking_v1_MsgAddBTCDelegationInclusionProof_descriptor,
+        new java.lang.String[] { "Signer", "StakingTxHash", "StakingTxInclusionProof", });
+    internal_static_babylon_btcstaking_v1_MsgAddBTCDelegationInclusionProofResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_babylon_btcstaking_v1_MsgAddBTCDelegationInclusionProofResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_btcstaking_v1_MsgAddBTCDelegationInclusionProofResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_babylon_btcstaking_v1_MsgAddCovenantSigs_descriptor =
+      getDescriptor().getMessageTypes().get(8);
     internal_static_babylon_btcstaking_v1_MsgAddCovenantSigs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_MsgAddCovenantSigs_descriptor,
         new java.lang.String[] { "Signer", "Pk", "StakingTxHash", "SlashingTxSigs", "UnbondingTxSig", "SlashingUnbondingTxSigs", });
     internal_static_babylon_btcstaking_v1_MsgAddCovenantSigsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_babylon_btcstaking_v1_MsgAddCovenantSigsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_MsgAddCovenantSigsResponse_descriptor,
         new java.lang.String[] { });
     internal_static_babylon_btcstaking_v1_MsgBTCUndelegate_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_babylon_btcstaking_v1_MsgBTCUndelegate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_MsgBTCUndelegate_descriptor,
-        new java.lang.String[] { "Signer", "StakingTxHash", "UnbondingTxSig", });
+        new java.lang.String[] { "Signer", "StakingTxHash", "StakeSpendingTx", "StakeSpendingTxInclusionProof", });
     internal_static_babylon_btcstaking_v1_MsgBTCUndelegateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_babylon_btcstaking_v1_MsgBTCUndelegateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_MsgBTCUndelegateResponse_descriptor,
         new java.lang.String[] { });
     internal_static_babylon_btcstaking_v1_MsgSelectiveSlashingEvidence_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_babylon_btcstaking_v1_MsgSelectiveSlashingEvidence_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_MsgSelectiveSlashingEvidence_descriptor,
         new java.lang.String[] { "Signer", "StakingTxHash", "RecoveredFpBtcSk", });
     internal_static_babylon_btcstaking_v1_MsgSelectiveSlashingEvidenceResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_babylon_btcstaking_v1_MsgSelectiveSlashingEvidenceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_MsgSelectiveSlashingEvidenceResponse_descriptor,
         new java.lang.String[] { });
     internal_static_babylon_btcstaking_v1_MsgUpdateParams_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_babylon_btcstaking_v1_MsgUpdateParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_MsgUpdateParams_descriptor,
         new java.lang.String[] { "Authority", "Params", });
     internal_static_babylon_btcstaking_v1_MsgUpdateParamsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_babylon_btcstaking_v1_MsgUpdateParamsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_MsgUpdateParamsResponse_descriptor,
@@ -12078,9 +13891,9 @@ public final class TxProto {
     com.cosmos_proto.CosmosProto.getDescriptor();
     com.cosmos.msg.v1.MsgProto.getDescriptor();
     com.babylon.btcstaking.v1.ParamsProto.getDescriptor();
-    com.babylon.btccheckpoint.v1.BtccheckpointProto.getDescriptor();
     com.cosmos.staking.v1beta1.StakingProto.getDescriptor();
     com.babylon.btcstaking.v1.PopProto.getDescriptor();
+    com.babylon.btcstaking.v1.BtcstakingProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

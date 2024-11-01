@@ -25,10 +25,10 @@ public final class ParamsProto {
      * (k in research paper)
      * </pre>
      *
-     * <code>uint64 btc_confirmation_depth = 1 [json_name = "btcConfirmationDepth", (.gogoproto.moretags) = "yaml:&#92;"btc_confirmation_depth&#92;""];</code>
+     * <code>uint32 btc_confirmation_depth = 1 [json_name = "btcConfirmationDepth", (.gogoproto.moretags) = "yaml:&#92;"btc_confirmation_depth&#92;""];</code>
      * @return The btcConfirmationDepth.
      */
-    long getBtcConfirmationDepth();
+    int getBtcConfirmationDepth();
 
     /**
      * <pre>
@@ -40,10 +40,10 @@ public final class ParamsProto {
      * has dishonest majority and is stalling checkpoints (w in research paper)
      * </pre>
      *
-     * <code>uint64 checkpoint_finalization_timeout = 2 [json_name = "checkpointFinalizationTimeout", (.gogoproto.moretags) = "yaml:&#92;"checkpoint_finalization_timeout&#92;""];</code>
+     * <code>uint32 checkpoint_finalization_timeout = 2 [json_name = "checkpointFinalizationTimeout", (.gogoproto.moretags) = "yaml:&#92;"checkpoint_finalization_timeout&#92;""];</code>
      * @return The checkpointFinalizationTimeout.
      */
-    long getCheckpointFinalizationTimeout();
+    int getCheckpointFinalizationTimeout();
 
     /**
      * <pre>
@@ -108,7 +108,7 @@ public final class ParamsProto {
     }
 
     public static final int BTC_CONFIRMATION_DEPTH_FIELD_NUMBER = 1;
-    private long btcConfirmationDepth_ = 0L;
+    private int btcConfirmationDepth_ = 0;
     /**
      * <pre>
      * btc_confirmation_depth is the confirmation depth in BTC.
@@ -116,16 +116,16 @@ public final class ParamsProto {
      * (k in research paper)
      * </pre>
      *
-     * <code>uint64 btc_confirmation_depth = 1 [json_name = "btcConfirmationDepth", (.gogoproto.moretags) = "yaml:&#92;"btc_confirmation_depth&#92;""];</code>
+     * <code>uint32 btc_confirmation_depth = 1 [json_name = "btcConfirmationDepth", (.gogoproto.moretags) = "yaml:&#92;"btc_confirmation_depth&#92;""];</code>
      * @return The btcConfirmationDepth.
      */
     @java.lang.Override
-    public long getBtcConfirmationDepth() {
+    public int getBtcConfirmationDepth() {
       return btcConfirmationDepth_;
     }
 
     public static final int CHECKPOINT_FINALIZATION_TIMEOUT_FIELD_NUMBER = 2;
-    private long checkpointFinalizationTimeout_ = 0L;
+    private int checkpointFinalizationTimeout_ = 0;
     /**
      * <pre>
      * checkpoint_finalization_timeout is the maximum time window (measured in BTC
@@ -136,11 +136,11 @@ public final class ParamsProto {
      * has dishonest majority and is stalling checkpoints (w in research paper)
      * </pre>
      *
-     * <code>uint64 checkpoint_finalization_timeout = 2 [json_name = "checkpointFinalizationTimeout", (.gogoproto.moretags) = "yaml:&#92;"checkpoint_finalization_timeout&#92;""];</code>
+     * <code>uint32 checkpoint_finalization_timeout = 2 [json_name = "checkpointFinalizationTimeout", (.gogoproto.moretags) = "yaml:&#92;"checkpoint_finalization_timeout&#92;""];</code>
      * @return The checkpointFinalizationTimeout.
      */
     @java.lang.Override
-    public long getCheckpointFinalizationTimeout() {
+    public int getCheckpointFinalizationTimeout() {
       return checkpointFinalizationTimeout_;
     }
 
@@ -207,11 +207,11 @@ public final class ParamsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (btcConfirmationDepth_ != 0L) {
-        output.writeUInt64(1, btcConfirmationDepth_);
+      if (btcConfirmationDepth_ != 0) {
+        output.writeUInt32(1, btcConfirmationDepth_);
       }
-      if (checkpointFinalizationTimeout_ != 0L) {
-        output.writeUInt64(2, checkpointFinalizationTimeout_);
+      if (checkpointFinalizationTimeout_ != 0) {
+        output.writeUInt32(2, checkpointFinalizationTimeout_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(checkpointTag_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, checkpointTag_);
@@ -225,13 +225,13 @@ public final class ParamsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (btcConfirmationDepth_ != 0L) {
+      if (btcConfirmationDepth_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1, btcConfirmationDepth_);
+          .computeUInt32Size(1, btcConfirmationDepth_);
       }
-      if (checkpointFinalizationTimeout_ != 0L) {
+      if (checkpointFinalizationTimeout_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(2, checkpointFinalizationTimeout_);
+          .computeUInt32Size(2, checkpointFinalizationTimeout_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(checkpointTag_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, checkpointTag_);
@@ -269,11 +269,9 @@ public final class ParamsProto {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + BTC_CONFIRMATION_DEPTH_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getBtcConfirmationDepth());
+      hash = (53 * hash) + getBtcConfirmationDepth();
       hash = (37 * hash) + CHECKPOINT_FINALIZATION_TIMEOUT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getCheckpointFinalizationTimeout());
+      hash = (53 * hash) + getCheckpointFinalizationTimeout();
       hash = (37 * hash) + CHECKPOINT_TAG_FIELD_NUMBER;
       hash = (53 * hash) + getCheckpointTag().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -411,8 +409,8 @@ public final class ParamsProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        btcConfirmationDepth_ = 0L;
-        checkpointFinalizationTimeout_ = 0L;
+        btcConfirmationDepth_ = 0;
+        checkpointFinalizationTimeout_ = 0;
         checkpointTag_ = "";
         return this;
       }
@@ -502,10 +500,10 @@ public final class ParamsProto {
 
       public Builder mergeFrom(com.babylon.btccheckpoint.v1.ParamsProto.Params other) {
         if (other == com.babylon.btccheckpoint.v1.ParamsProto.Params.getDefaultInstance()) return this;
-        if (other.getBtcConfirmationDepth() != 0L) {
+        if (other.getBtcConfirmationDepth() != 0) {
           setBtcConfirmationDepth(other.getBtcConfirmationDepth());
         }
-        if (other.getCheckpointFinalizationTimeout() != 0L) {
+        if (other.getCheckpointFinalizationTimeout() != 0) {
           setCheckpointFinalizationTimeout(other.getCheckpointFinalizationTimeout());
         }
         if (!other.getCheckpointTag().isEmpty()) {
@@ -540,12 +538,12 @@ public final class ParamsProto {
                 done = true;
                 break;
               case 8: {
-                btcConfirmationDepth_ = input.readUInt64();
+                btcConfirmationDepth_ = input.readUInt32();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 16: {
-                checkpointFinalizationTimeout_ = input.readUInt64();
+                checkpointFinalizationTimeout_ = input.readUInt32();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 16
@@ -571,7 +569,7 @@ public final class ParamsProto {
       }
       private int bitField0_;
 
-      private long btcConfirmationDepth_ ;
+      private int btcConfirmationDepth_ ;
       /**
        * <pre>
        * btc_confirmation_depth is the confirmation depth in BTC.
@@ -579,11 +577,11 @@ public final class ParamsProto {
        * (k in research paper)
        * </pre>
        *
-       * <code>uint64 btc_confirmation_depth = 1 [json_name = "btcConfirmationDepth", (.gogoproto.moretags) = "yaml:&#92;"btc_confirmation_depth&#92;""];</code>
+       * <code>uint32 btc_confirmation_depth = 1 [json_name = "btcConfirmationDepth", (.gogoproto.moretags) = "yaml:&#92;"btc_confirmation_depth&#92;""];</code>
        * @return The btcConfirmationDepth.
        */
       @java.lang.Override
-      public long getBtcConfirmationDepth() {
+      public int getBtcConfirmationDepth() {
         return btcConfirmationDepth_;
       }
       /**
@@ -593,11 +591,11 @@ public final class ParamsProto {
        * (k in research paper)
        * </pre>
        *
-       * <code>uint64 btc_confirmation_depth = 1 [json_name = "btcConfirmationDepth", (.gogoproto.moretags) = "yaml:&#92;"btc_confirmation_depth&#92;""];</code>
+       * <code>uint32 btc_confirmation_depth = 1 [json_name = "btcConfirmationDepth", (.gogoproto.moretags) = "yaml:&#92;"btc_confirmation_depth&#92;""];</code>
        * @param value The btcConfirmationDepth to set.
        * @return This builder for chaining.
        */
-      public Builder setBtcConfirmationDepth(long value) {
+      public Builder setBtcConfirmationDepth(int value) {
 
         btcConfirmationDepth_ = value;
         bitField0_ |= 0x00000001;
@@ -611,17 +609,17 @@ public final class ParamsProto {
        * (k in research paper)
        * </pre>
        *
-       * <code>uint64 btc_confirmation_depth = 1 [json_name = "btcConfirmationDepth", (.gogoproto.moretags) = "yaml:&#92;"btc_confirmation_depth&#92;""];</code>
+       * <code>uint32 btc_confirmation_depth = 1 [json_name = "btcConfirmationDepth", (.gogoproto.moretags) = "yaml:&#92;"btc_confirmation_depth&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearBtcConfirmationDepth() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        btcConfirmationDepth_ = 0L;
+        btcConfirmationDepth_ = 0;
         onChanged();
         return this;
       }
 
-      private long checkpointFinalizationTimeout_ ;
+      private int checkpointFinalizationTimeout_ ;
       /**
        * <pre>
        * checkpoint_finalization_timeout is the maximum time window (measured in BTC
@@ -632,11 +630,11 @@ public final class ParamsProto {
        * has dishonest majority and is stalling checkpoints (w in research paper)
        * </pre>
        *
-       * <code>uint64 checkpoint_finalization_timeout = 2 [json_name = "checkpointFinalizationTimeout", (.gogoproto.moretags) = "yaml:&#92;"checkpoint_finalization_timeout&#92;""];</code>
+       * <code>uint32 checkpoint_finalization_timeout = 2 [json_name = "checkpointFinalizationTimeout", (.gogoproto.moretags) = "yaml:&#92;"checkpoint_finalization_timeout&#92;""];</code>
        * @return The checkpointFinalizationTimeout.
        */
       @java.lang.Override
-      public long getCheckpointFinalizationTimeout() {
+      public int getCheckpointFinalizationTimeout() {
         return checkpointFinalizationTimeout_;
       }
       /**
@@ -649,11 +647,11 @@ public final class ParamsProto {
        * has dishonest majority and is stalling checkpoints (w in research paper)
        * </pre>
        *
-       * <code>uint64 checkpoint_finalization_timeout = 2 [json_name = "checkpointFinalizationTimeout", (.gogoproto.moretags) = "yaml:&#92;"checkpoint_finalization_timeout&#92;""];</code>
+       * <code>uint32 checkpoint_finalization_timeout = 2 [json_name = "checkpointFinalizationTimeout", (.gogoproto.moretags) = "yaml:&#92;"checkpoint_finalization_timeout&#92;""];</code>
        * @param value The checkpointFinalizationTimeout to set.
        * @return This builder for chaining.
        */
-      public Builder setCheckpointFinalizationTimeout(long value) {
+      public Builder setCheckpointFinalizationTimeout(int value) {
 
         checkpointFinalizationTimeout_ = value;
         bitField0_ |= 0x00000002;
@@ -670,12 +668,12 @@ public final class ParamsProto {
        * has dishonest majority and is stalling checkpoints (w in research paper)
        * </pre>
        *
-       * <code>uint64 checkpoint_finalization_timeout = 2 [json_name = "checkpointFinalizationTimeout", (.gogoproto.moretags) = "yaml:&#92;"checkpoint_finalization_timeout&#92;""];</code>
+       * <code>uint32 checkpoint_finalization_timeout = 2 [json_name = "checkpointFinalizationTimeout", (.gogoproto.moretags) = "yaml:&#92;"checkpoint_finalization_timeout&#92;""];</code>
        * @return This builder for chaining.
        */
       public Builder clearCheckpointFinalizationTimeout() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        checkpointFinalizationTimeout_ = 0L;
+        checkpointFinalizationTimeout_ = 0;
         onChanged();
         return this;
       }
@@ -857,19 +855,19 @@ public final class ParamsProto {
       "\n%babylon/btccheckpoint/v1/params.proto\022" +
       "\030babylon.btccheckpoint.v1\032\024gogoproto/gog" +
       "o.proto\"\235\002\n\006Params\022W\n\026btc_confirmation_d" +
-      "epth\030\001 \001(\004B!\362\336\037\035yaml:\"btc_confirmation_d" +
+      "epth\030\001 \001(\rB!\362\336\037\035yaml:\"btc_confirmation_d" +
       "epth\"R\024btcConfirmationDepth\022r\n\037checkpoin" +
-      "t_finalization_timeout\030\002 \001(\004B*\362\336\037&yaml:\"" +
+      "t_finalization_timeout\030\002 \001(\rB*\362\336\037&yaml:\"" +
       "checkpoint_finalization_timeout\"R\035checkp" +
       "ointFinalizationTimeout\022@\n\016checkpoint_ta" +
       "g\030\003 \001(\tB\031\362\336\037\025yaml:\"checkpoint_tag\"R\rchec" +
-      "kpointTag:\004\350\240\037\001B\342\001\n\034com.babylon.btccheck" +
-      "point.v1B\013ParamsProtoZ5github.com/babylo" +
-      "nchain/babylon/x/btccheckpoint/types\242\002\003B" +
-      "BX\252\002\030Babylon.Btccheckpoint.V1\312\002\030Babylon\\" +
-      "Btccheckpoint\\V1\342\002$Babylon\\Btccheckpoint" +
-      "\\V1\\GPBMetadata\352\002\032Babylon::Btccheckpoint" +
-      "::V1b\006proto3"
+      "kpointTag:\004\350\240\037\001B\344\001\n\034com.babylon.btccheck" +
+      "point.v1B\013ParamsProtoZ7github.com/babylo" +
+      "nlabs-io/babylon/x/btccheckpoint/types\242\002" +
+      "\003BBX\252\002\030Babylon.Btccheckpoint.V1\312\002\030Babylo" +
+      "n\\Btccheckpoint\\V1\342\002$Babylon\\Btccheckpoi" +
+      "nt\\V1\\GPBMetadata\352\002\032Babylon::Btccheckpoi" +
+      "nt::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

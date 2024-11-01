@@ -7304,5251 +7304,6 @@ public final class QueryProto {
 
   }
 
-  public interface QueryFinalityProviderPowerAtHeightRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.QueryFinalityProviderPowerAtHeightRequest)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * fp_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the finality provider that
-     * this BTC delegation delegates to
-     * the PK follows encoding in BIP-340 spec
-     * </pre>
-     *
-     * <code>string fp_btc_pk_hex = 1 [json_name = "fpBtcPkHex"];</code>
-     * @return The fpBtcPkHex.
-     */
-    java.lang.String getFpBtcPkHex();
-    /**
-     * <pre>
-     * fp_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the finality provider that
-     * this BTC delegation delegates to
-     * the PK follows encoding in BIP-340 spec
-     * </pre>
-     *
-     * <code>string fp_btc_pk_hex = 1 [json_name = "fpBtcPkHex"];</code>
-     * @return The bytes for fpBtcPkHex.
-     */
-    com.google.protobuf.ByteString
-        getFpBtcPkHexBytes();
-
-    /**
-     * <pre>
-     * height is used for querying the given finality provider's voting power at this height
-     * </pre>
-     *
-     * <code>uint64 height = 2 [json_name = "height"];</code>
-     * @return The height.
-     */
-    long getHeight();
-  }
-  /**
-   * <pre>
-   * QueryFinalityProviderPowerAtHeightRequest is the request type for the
-   * Query/FinalityProviderPowerAtHeight RPC method.
-   * </pre>
-   *
-   * Protobuf type {@code babylon.btcstaking.v1.QueryFinalityProviderPowerAtHeightRequest}
-   */
-  public static final class QueryFinalityProviderPowerAtHeightRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.QueryFinalityProviderPowerAtHeightRequest)
-      QueryFinalityProviderPowerAtHeightRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use QueryFinalityProviderPowerAtHeightRequest.newBuilder() to construct.
-    private QueryFinalityProviderPowerAtHeightRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private QueryFinalityProviderPowerAtHeightRequest() {
-      fpBtcPkHex_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new QueryFinalityProviderPowerAtHeightRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryFinalityProviderPowerAtHeightRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryFinalityProviderPowerAtHeightRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest.class, com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest.Builder.class);
-    }
-
-    public static final int FP_BTC_PK_HEX_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object fpBtcPkHex_ = "";
-    /**
-     * <pre>
-     * fp_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the finality provider that
-     * this BTC delegation delegates to
-     * the PK follows encoding in BIP-340 spec
-     * </pre>
-     *
-     * <code>string fp_btc_pk_hex = 1 [json_name = "fpBtcPkHex"];</code>
-     * @return The fpBtcPkHex.
-     */
-    @java.lang.Override
-    public java.lang.String getFpBtcPkHex() {
-      java.lang.Object ref = fpBtcPkHex_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        fpBtcPkHex_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * fp_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the finality provider that
-     * this BTC delegation delegates to
-     * the PK follows encoding in BIP-340 spec
-     * </pre>
-     *
-     * <code>string fp_btc_pk_hex = 1 [json_name = "fpBtcPkHex"];</code>
-     * @return The bytes for fpBtcPkHex.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getFpBtcPkHexBytes() {
-      java.lang.Object ref = fpBtcPkHex_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        fpBtcPkHex_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int HEIGHT_FIELD_NUMBER = 2;
-    private long height_ = 0L;
-    /**
-     * <pre>
-     * height is used for querying the given finality provider's voting power at this height
-     * </pre>
-     *
-     * <code>uint64 height = 2 [json_name = "height"];</code>
-     * @return The height.
-     */
-    @java.lang.Override
-    public long getHeight() {
-      return height_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fpBtcPkHex_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fpBtcPkHex_);
-      }
-      if (height_ != 0L) {
-        output.writeUInt64(2, height_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fpBtcPkHex_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fpBtcPkHex_);
-      }
-      if (height_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(2, height_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest)) {
-        return super.equals(obj);
-      }
-      com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest other = (com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest) obj;
-
-      if (!getFpBtcPkHex()
-          .equals(other.getFpBtcPkHex())) return false;
-      if (getHeight()
-          != other.getHeight()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + FP_BTC_PK_HEX_FIELD_NUMBER;
-      hash = (53 * hash) + getFpBtcPkHex().hashCode();
-      hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getHeight());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * QueryFinalityProviderPowerAtHeightRequest is the request type for the
-     * Query/FinalityProviderPowerAtHeight RPC method.
-     * </pre>
-     *
-     * Protobuf type {@code babylon.btcstaking.v1.QueryFinalityProviderPowerAtHeightRequest}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.QueryFinalityProviderPowerAtHeightRequest)
-        com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryFinalityProviderPowerAtHeightRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryFinalityProviderPowerAtHeightRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest.class, com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest.Builder.class);
-      }
-
-      // Construct using com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        fpBtcPkHex_ = "";
-        height_ = 0L;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryFinalityProviderPowerAtHeightRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest getDefaultInstanceForType() {
-        return com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest build() {
-        com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest buildPartial() {
-        com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest result = new com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.fpBtcPkHex_ = fpBtcPkHex_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.height_ = height_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest) {
-          return mergeFrom((com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest other) {
-        if (other == com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest.getDefaultInstance()) return this;
-        if (!other.getFpBtcPkHex().isEmpty()) {
-          fpBtcPkHex_ = other.fpBtcPkHex_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.getHeight() != 0L) {
-          setHeight(other.getHeight());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                fpBtcPkHex_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 16: {
-                height_ = input.readUInt64();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object fpBtcPkHex_ = "";
-      /**
-       * <pre>
-       * fp_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the finality provider that
-       * this BTC delegation delegates to
-       * the PK follows encoding in BIP-340 spec
-       * </pre>
-       *
-       * <code>string fp_btc_pk_hex = 1 [json_name = "fpBtcPkHex"];</code>
-       * @return The fpBtcPkHex.
-       */
-      public java.lang.String getFpBtcPkHex() {
-        java.lang.Object ref = fpBtcPkHex_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          fpBtcPkHex_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * fp_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the finality provider that
-       * this BTC delegation delegates to
-       * the PK follows encoding in BIP-340 spec
-       * </pre>
-       *
-       * <code>string fp_btc_pk_hex = 1 [json_name = "fpBtcPkHex"];</code>
-       * @return The bytes for fpBtcPkHex.
-       */
-      public com.google.protobuf.ByteString
-          getFpBtcPkHexBytes() {
-        java.lang.Object ref = fpBtcPkHex_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          fpBtcPkHex_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * fp_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the finality provider that
-       * this BTC delegation delegates to
-       * the PK follows encoding in BIP-340 spec
-       * </pre>
-       *
-       * <code>string fp_btc_pk_hex = 1 [json_name = "fpBtcPkHex"];</code>
-       * @param value The fpBtcPkHex to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFpBtcPkHex(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        fpBtcPkHex_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * fp_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the finality provider that
-       * this BTC delegation delegates to
-       * the PK follows encoding in BIP-340 spec
-       * </pre>
-       *
-       * <code>string fp_btc_pk_hex = 1 [json_name = "fpBtcPkHex"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearFpBtcPkHex() {
-        fpBtcPkHex_ = getDefaultInstance().getFpBtcPkHex();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * fp_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the finality provider that
-       * this BTC delegation delegates to
-       * the PK follows encoding in BIP-340 spec
-       * </pre>
-       *
-       * <code>string fp_btc_pk_hex = 1 [json_name = "fpBtcPkHex"];</code>
-       * @param value The bytes for fpBtcPkHex to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFpBtcPkHexBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        fpBtcPkHex_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-
-      private long height_ ;
-      /**
-       * <pre>
-       * height is used for querying the given finality provider's voting power at this height
-       * </pre>
-       *
-       * <code>uint64 height = 2 [json_name = "height"];</code>
-       * @return The height.
-       */
-      @java.lang.Override
-      public long getHeight() {
-        return height_;
-      }
-      /**
-       * <pre>
-       * height is used for querying the given finality provider's voting power at this height
-       * </pre>
-       *
-       * <code>uint64 height = 2 [json_name = "height"];</code>
-       * @param value The height to set.
-       * @return This builder for chaining.
-       */
-      public Builder setHeight(long value) {
-
-        height_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * height is used for querying the given finality provider's voting power at this height
-       * </pre>
-       *
-       * <code>uint64 height = 2 [json_name = "height"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearHeight() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        height_ = 0L;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.QueryFinalityProviderPowerAtHeightRequest)
-    }
-
-    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.QueryFinalityProviderPowerAtHeightRequest)
-    private static final com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest();
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<QueryFinalityProviderPowerAtHeightRequest>
-        PARSER = new com.google.protobuf.AbstractParser<QueryFinalityProviderPowerAtHeightRequest>() {
-      @java.lang.Override
-      public QueryFinalityProviderPowerAtHeightRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<QueryFinalityProviderPowerAtHeightRequest> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<QueryFinalityProviderPowerAtHeightRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface QueryFinalityProviderPowerAtHeightResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.QueryFinalityProviderPowerAtHeightResponse)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * voting_power is the voting power of the finality provider
-     * </pre>
-     *
-     * <code>uint64 voting_power = 1 [json_name = "votingPower"];</code>
-     * @return The votingPower.
-     */
-    long getVotingPower();
-  }
-  /**
-   * <pre>
-   * QueryFinalityProviderPowerAtHeightResponse is the response type for the
-   * Query/FinalityProviderPowerAtHeight RPC method.
-   * </pre>
-   *
-   * Protobuf type {@code babylon.btcstaking.v1.QueryFinalityProviderPowerAtHeightResponse}
-   */
-  public static final class QueryFinalityProviderPowerAtHeightResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.QueryFinalityProviderPowerAtHeightResponse)
-      QueryFinalityProviderPowerAtHeightResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use QueryFinalityProviderPowerAtHeightResponse.newBuilder() to construct.
-    private QueryFinalityProviderPowerAtHeightResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private QueryFinalityProviderPowerAtHeightResponse() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new QueryFinalityProviderPowerAtHeightResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryFinalityProviderPowerAtHeightResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryFinalityProviderPowerAtHeightResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse.class, com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse.Builder.class);
-    }
-
-    public static final int VOTING_POWER_FIELD_NUMBER = 1;
-    private long votingPower_ = 0L;
-    /**
-     * <pre>
-     * voting_power is the voting power of the finality provider
-     * </pre>
-     *
-     * <code>uint64 voting_power = 1 [json_name = "votingPower"];</code>
-     * @return The votingPower.
-     */
-    @java.lang.Override
-    public long getVotingPower() {
-      return votingPower_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (votingPower_ != 0L) {
-        output.writeUInt64(1, votingPower_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (votingPower_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1, votingPower_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse)) {
-        return super.equals(obj);
-      }
-      com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse other = (com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse) obj;
-
-      if (getVotingPower()
-          != other.getVotingPower()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + VOTING_POWER_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getVotingPower());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * QueryFinalityProviderPowerAtHeightResponse is the response type for the
-     * Query/FinalityProviderPowerAtHeight RPC method.
-     * </pre>
-     *
-     * Protobuf type {@code babylon.btcstaking.v1.QueryFinalityProviderPowerAtHeightResponse}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.QueryFinalityProviderPowerAtHeightResponse)
-        com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryFinalityProviderPowerAtHeightResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryFinalityProviderPowerAtHeightResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse.class, com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse.Builder.class);
-      }
-
-      // Construct using com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        votingPower_ = 0L;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryFinalityProviderPowerAtHeightResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse getDefaultInstanceForType() {
-        return com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse build() {
-        com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse buildPartial() {
-        com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse result = new com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.votingPower_ = votingPower_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse) {
-          return mergeFrom((com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse other) {
-        if (other == com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse.getDefaultInstance()) return this;
-        if (other.getVotingPower() != 0L) {
-          setVotingPower(other.getVotingPower());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                votingPower_ = input.readUInt64();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private long votingPower_ ;
-      /**
-       * <pre>
-       * voting_power is the voting power of the finality provider
-       * </pre>
-       *
-       * <code>uint64 voting_power = 1 [json_name = "votingPower"];</code>
-       * @return The votingPower.
-       */
-      @java.lang.Override
-      public long getVotingPower() {
-        return votingPower_;
-      }
-      /**
-       * <pre>
-       * voting_power is the voting power of the finality provider
-       * </pre>
-       *
-       * <code>uint64 voting_power = 1 [json_name = "votingPower"];</code>
-       * @param value The votingPower to set.
-       * @return This builder for chaining.
-       */
-      public Builder setVotingPower(long value) {
-
-        votingPower_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * voting_power is the voting power of the finality provider
-       * </pre>
-       *
-       * <code>uint64 voting_power = 1 [json_name = "votingPower"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearVotingPower() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        votingPower_ = 0L;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.QueryFinalityProviderPowerAtHeightResponse)
-    }
-
-    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.QueryFinalityProviderPowerAtHeightResponse)
-    private static final com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse();
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<QueryFinalityProviderPowerAtHeightResponse>
-        PARSER = new com.google.protobuf.AbstractParser<QueryFinalityProviderPowerAtHeightResponse>() {
-      @java.lang.Override
-      public QueryFinalityProviderPowerAtHeightResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<QueryFinalityProviderPowerAtHeightResponse> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<QueryFinalityProviderPowerAtHeightResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderPowerAtHeightResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface QueryFinalityProviderCurrentPowerRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.QueryFinalityProviderCurrentPowerRequest)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * fp_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the finality provider that
-     * this BTC delegation delegates to
-     * the PK follows encoding in BIP-340 spec
-     * </pre>
-     *
-     * <code>string fp_btc_pk_hex = 1 [json_name = "fpBtcPkHex"];</code>
-     * @return The fpBtcPkHex.
-     */
-    java.lang.String getFpBtcPkHex();
-    /**
-     * <pre>
-     * fp_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the finality provider that
-     * this BTC delegation delegates to
-     * the PK follows encoding in BIP-340 spec
-     * </pre>
-     *
-     * <code>string fp_btc_pk_hex = 1 [json_name = "fpBtcPkHex"];</code>
-     * @return The bytes for fpBtcPkHex.
-     */
-    com.google.protobuf.ByteString
-        getFpBtcPkHexBytes();
-  }
-  /**
-   * <pre>
-   * QueryFinalityProviderCurrentPowerRequest is the request type for the
-   * Query/FinalityProviderCurrentPower RPC method.
-   * </pre>
-   *
-   * Protobuf type {@code babylon.btcstaking.v1.QueryFinalityProviderCurrentPowerRequest}
-   */
-  public static final class QueryFinalityProviderCurrentPowerRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.QueryFinalityProviderCurrentPowerRequest)
-      QueryFinalityProviderCurrentPowerRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use QueryFinalityProviderCurrentPowerRequest.newBuilder() to construct.
-    private QueryFinalityProviderCurrentPowerRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private QueryFinalityProviderCurrentPowerRequest() {
-      fpBtcPkHex_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new QueryFinalityProviderCurrentPowerRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryFinalityProviderCurrentPowerRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryFinalityProviderCurrentPowerRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest.class, com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest.Builder.class);
-    }
-
-    public static final int FP_BTC_PK_HEX_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object fpBtcPkHex_ = "";
-    /**
-     * <pre>
-     * fp_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the finality provider that
-     * this BTC delegation delegates to
-     * the PK follows encoding in BIP-340 spec
-     * </pre>
-     *
-     * <code>string fp_btc_pk_hex = 1 [json_name = "fpBtcPkHex"];</code>
-     * @return The fpBtcPkHex.
-     */
-    @java.lang.Override
-    public java.lang.String getFpBtcPkHex() {
-      java.lang.Object ref = fpBtcPkHex_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        fpBtcPkHex_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * fp_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the finality provider that
-     * this BTC delegation delegates to
-     * the PK follows encoding in BIP-340 spec
-     * </pre>
-     *
-     * <code>string fp_btc_pk_hex = 1 [json_name = "fpBtcPkHex"];</code>
-     * @return The bytes for fpBtcPkHex.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getFpBtcPkHexBytes() {
-      java.lang.Object ref = fpBtcPkHex_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        fpBtcPkHex_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fpBtcPkHex_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fpBtcPkHex_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fpBtcPkHex_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fpBtcPkHex_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest)) {
-        return super.equals(obj);
-      }
-      com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest other = (com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest) obj;
-
-      if (!getFpBtcPkHex()
-          .equals(other.getFpBtcPkHex())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + FP_BTC_PK_HEX_FIELD_NUMBER;
-      hash = (53 * hash) + getFpBtcPkHex().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * QueryFinalityProviderCurrentPowerRequest is the request type for the
-     * Query/FinalityProviderCurrentPower RPC method.
-     * </pre>
-     *
-     * Protobuf type {@code babylon.btcstaking.v1.QueryFinalityProviderCurrentPowerRequest}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.QueryFinalityProviderCurrentPowerRequest)
-        com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryFinalityProviderCurrentPowerRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryFinalityProviderCurrentPowerRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest.class, com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest.Builder.class);
-      }
-
-      // Construct using com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        fpBtcPkHex_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryFinalityProviderCurrentPowerRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest getDefaultInstanceForType() {
-        return com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest build() {
-        com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest buildPartial() {
-        com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest result = new com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.fpBtcPkHex_ = fpBtcPkHex_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest) {
-          return mergeFrom((com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest other) {
-        if (other == com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest.getDefaultInstance()) return this;
-        if (!other.getFpBtcPkHex().isEmpty()) {
-          fpBtcPkHex_ = other.fpBtcPkHex_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                fpBtcPkHex_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object fpBtcPkHex_ = "";
-      /**
-       * <pre>
-       * fp_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the finality provider that
-       * this BTC delegation delegates to
-       * the PK follows encoding in BIP-340 spec
-       * </pre>
-       *
-       * <code>string fp_btc_pk_hex = 1 [json_name = "fpBtcPkHex"];</code>
-       * @return The fpBtcPkHex.
-       */
-      public java.lang.String getFpBtcPkHex() {
-        java.lang.Object ref = fpBtcPkHex_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          fpBtcPkHex_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * fp_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the finality provider that
-       * this BTC delegation delegates to
-       * the PK follows encoding in BIP-340 spec
-       * </pre>
-       *
-       * <code>string fp_btc_pk_hex = 1 [json_name = "fpBtcPkHex"];</code>
-       * @return The bytes for fpBtcPkHex.
-       */
-      public com.google.protobuf.ByteString
-          getFpBtcPkHexBytes() {
-        java.lang.Object ref = fpBtcPkHex_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          fpBtcPkHex_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * fp_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the finality provider that
-       * this BTC delegation delegates to
-       * the PK follows encoding in BIP-340 spec
-       * </pre>
-       *
-       * <code>string fp_btc_pk_hex = 1 [json_name = "fpBtcPkHex"];</code>
-       * @param value The fpBtcPkHex to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFpBtcPkHex(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        fpBtcPkHex_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * fp_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the finality provider that
-       * this BTC delegation delegates to
-       * the PK follows encoding in BIP-340 spec
-       * </pre>
-       *
-       * <code>string fp_btc_pk_hex = 1 [json_name = "fpBtcPkHex"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearFpBtcPkHex() {
-        fpBtcPkHex_ = getDefaultInstance().getFpBtcPkHex();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * fp_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the finality provider that
-       * this BTC delegation delegates to
-       * the PK follows encoding in BIP-340 spec
-       * </pre>
-       *
-       * <code>string fp_btc_pk_hex = 1 [json_name = "fpBtcPkHex"];</code>
-       * @param value The bytes for fpBtcPkHex to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFpBtcPkHexBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        fpBtcPkHex_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.QueryFinalityProviderCurrentPowerRequest)
-    }
-
-    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.QueryFinalityProviderCurrentPowerRequest)
-    private static final com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest();
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<QueryFinalityProviderCurrentPowerRequest>
-        PARSER = new com.google.protobuf.AbstractParser<QueryFinalityProviderCurrentPowerRequest>() {
-      @java.lang.Override
-      public QueryFinalityProviderCurrentPowerRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<QueryFinalityProviderCurrentPowerRequest> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<QueryFinalityProviderCurrentPowerRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface QueryFinalityProviderCurrentPowerResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.QueryFinalityProviderCurrentPowerResponse)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * height is the current height
-     * </pre>
-     *
-     * <code>uint64 height = 1 [json_name = "height"];</code>
-     * @return The height.
-     */
-    long getHeight();
-
-    /**
-     * <pre>
-     * voting_power is the voting power of the finality provider
-     * </pre>
-     *
-     * <code>uint64 voting_power = 2 [json_name = "votingPower"];</code>
-     * @return The votingPower.
-     */
-    long getVotingPower();
-  }
-  /**
-   * <pre>
-   * QueryFinalityProviderCurrentPowerResponse is the response type for the
-   * Query/FinalityProviderCurrentPower RPC method.
-   * </pre>
-   *
-   * Protobuf type {@code babylon.btcstaking.v1.QueryFinalityProviderCurrentPowerResponse}
-   */
-  public static final class QueryFinalityProviderCurrentPowerResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.QueryFinalityProviderCurrentPowerResponse)
-      QueryFinalityProviderCurrentPowerResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use QueryFinalityProviderCurrentPowerResponse.newBuilder() to construct.
-    private QueryFinalityProviderCurrentPowerResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private QueryFinalityProviderCurrentPowerResponse() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new QueryFinalityProviderCurrentPowerResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryFinalityProviderCurrentPowerResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryFinalityProviderCurrentPowerResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse.class, com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse.Builder.class);
-    }
-
-    public static final int HEIGHT_FIELD_NUMBER = 1;
-    private long height_ = 0L;
-    /**
-     * <pre>
-     * height is the current height
-     * </pre>
-     *
-     * <code>uint64 height = 1 [json_name = "height"];</code>
-     * @return The height.
-     */
-    @java.lang.Override
-    public long getHeight() {
-      return height_;
-    }
-
-    public static final int VOTING_POWER_FIELD_NUMBER = 2;
-    private long votingPower_ = 0L;
-    /**
-     * <pre>
-     * voting_power is the voting power of the finality provider
-     * </pre>
-     *
-     * <code>uint64 voting_power = 2 [json_name = "votingPower"];</code>
-     * @return The votingPower.
-     */
-    @java.lang.Override
-    public long getVotingPower() {
-      return votingPower_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (height_ != 0L) {
-        output.writeUInt64(1, height_);
-      }
-      if (votingPower_ != 0L) {
-        output.writeUInt64(2, votingPower_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (height_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1, height_);
-      }
-      if (votingPower_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(2, votingPower_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse)) {
-        return super.equals(obj);
-      }
-      com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse other = (com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse) obj;
-
-      if (getHeight()
-          != other.getHeight()) return false;
-      if (getVotingPower()
-          != other.getVotingPower()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getHeight());
-      hash = (37 * hash) + VOTING_POWER_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getVotingPower());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * QueryFinalityProviderCurrentPowerResponse is the response type for the
-     * Query/FinalityProviderCurrentPower RPC method.
-     * </pre>
-     *
-     * Protobuf type {@code babylon.btcstaking.v1.QueryFinalityProviderCurrentPowerResponse}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.QueryFinalityProviderCurrentPowerResponse)
-        com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryFinalityProviderCurrentPowerResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryFinalityProviderCurrentPowerResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse.class, com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse.Builder.class);
-      }
-
-      // Construct using com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        height_ = 0L;
-        votingPower_ = 0L;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryFinalityProviderCurrentPowerResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse getDefaultInstanceForType() {
-        return com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse build() {
-        com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse buildPartial() {
-        com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse result = new com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.height_ = height_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.votingPower_ = votingPower_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse) {
-          return mergeFrom((com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse other) {
-        if (other == com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse.getDefaultInstance()) return this;
-        if (other.getHeight() != 0L) {
-          setHeight(other.getHeight());
-        }
-        if (other.getVotingPower() != 0L) {
-          setVotingPower(other.getVotingPower());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                height_ = input.readUInt64();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              case 16: {
-                votingPower_ = input.readUInt64();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private long height_ ;
-      /**
-       * <pre>
-       * height is the current height
-       * </pre>
-       *
-       * <code>uint64 height = 1 [json_name = "height"];</code>
-       * @return The height.
-       */
-      @java.lang.Override
-      public long getHeight() {
-        return height_;
-      }
-      /**
-       * <pre>
-       * height is the current height
-       * </pre>
-       *
-       * <code>uint64 height = 1 [json_name = "height"];</code>
-       * @param value The height to set.
-       * @return This builder for chaining.
-       */
-      public Builder setHeight(long value) {
-
-        height_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * height is the current height
-       * </pre>
-       *
-       * <code>uint64 height = 1 [json_name = "height"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearHeight() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        height_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long votingPower_ ;
-      /**
-       * <pre>
-       * voting_power is the voting power of the finality provider
-       * </pre>
-       *
-       * <code>uint64 voting_power = 2 [json_name = "votingPower"];</code>
-       * @return The votingPower.
-       */
-      @java.lang.Override
-      public long getVotingPower() {
-        return votingPower_;
-      }
-      /**
-       * <pre>
-       * voting_power is the voting power of the finality provider
-       * </pre>
-       *
-       * <code>uint64 voting_power = 2 [json_name = "votingPower"];</code>
-       * @param value The votingPower to set.
-       * @return This builder for chaining.
-       */
-      public Builder setVotingPower(long value) {
-
-        votingPower_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * voting_power is the voting power of the finality provider
-       * </pre>
-       *
-       * <code>uint64 voting_power = 2 [json_name = "votingPower"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearVotingPower() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        votingPower_ = 0L;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.QueryFinalityProviderCurrentPowerResponse)
-    }
-
-    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.QueryFinalityProviderCurrentPowerResponse)
-    private static final com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse();
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<QueryFinalityProviderCurrentPowerResponse>
-        PARSER = new com.google.protobuf.AbstractParser<QueryFinalityProviderCurrentPowerResponse>() {
-      @java.lang.Override
-      public QueryFinalityProviderCurrentPowerResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<QueryFinalityProviderCurrentPowerResponse> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<QueryFinalityProviderCurrentPowerResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.babylon.btcstaking.v1.QueryProto.QueryFinalityProviderCurrentPowerResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface QueryActiveFinalityProvidersAtHeightRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.QueryActiveFinalityProvidersAtHeightRequest)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * height defines at which Babylon height to query the finality providers info.
-     * </pre>
-     *
-     * <code>uint64 height = 1 [json_name = "height"];</code>
-     * @return The height.
-     */
-    long getHeight();
-
-    /**
-     * <pre>
-     * pagination defines an optional pagination for the request.
-     * </pre>
-     *
-     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
-     * @return Whether the pagination field is set.
-     */
-    boolean hasPagination();
-    /**
-     * <pre>
-     * pagination defines an optional pagination for the request.
-     * </pre>
-     *
-     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
-     * @return The pagination.
-     */
-    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
-    /**
-     * <pre>
-     * pagination defines an optional pagination for the request.
-     * </pre>
-     *
-     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
-     */
-    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
-  }
-  /**
-   * <pre>
-   * QueryActiveFinalityProvidersAtHeightRequest is the request type for the
-   * Query/ActiveFinalityProvidersAtHeight RPC method.
-   * </pre>
-   *
-   * Protobuf type {@code babylon.btcstaking.v1.QueryActiveFinalityProvidersAtHeightRequest}
-   */
-  public static final class QueryActiveFinalityProvidersAtHeightRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.QueryActiveFinalityProvidersAtHeightRequest)
-      QueryActiveFinalityProvidersAtHeightRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use QueryActiveFinalityProvidersAtHeightRequest.newBuilder() to construct.
-    private QueryActiveFinalityProvidersAtHeightRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private QueryActiveFinalityProvidersAtHeightRequest() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new QueryActiveFinalityProvidersAtHeightRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryActiveFinalityProvidersAtHeightRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryActiveFinalityProvidersAtHeightRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest.class, com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest.Builder.class);
-    }
-
-    public static final int HEIGHT_FIELD_NUMBER = 1;
-    private long height_ = 0L;
-    /**
-     * <pre>
-     * height defines at which Babylon height to query the finality providers info.
-     * </pre>
-     *
-     * <code>uint64 height = 1 [json_name = "height"];</code>
-     * @return The height.
-     */
-    @java.lang.Override
-    public long getHeight() {
-      return height_;
-    }
-
-    public static final int PAGINATION_FIELD_NUMBER = 2;
-    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
-    /**
-     * <pre>
-     * pagination defines an optional pagination for the request.
-     * </pre>
-     *
-     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
-     * @return Whether the pagination field is set.
-     */
-    @java.lang.Override
-    public boolean hasPagination() {
-      return pagination_ != null;
-    }
-    /**
-     * <pre>
-     * pagination defines an optional pagination for the request.
-     * </pre>
-     *
-     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
-     * @return The pagination.
-     */
-    @java.lang.Override
-    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
-      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
-    }
-    /**
-     * <pre>
-     * pagination defines an optional pagination for the request.
-     * </pre>
-     *
-     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
-     */
-    @java.lang.Override
-    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
-      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (height_ != 0L) {
-        output.writeUInt64(1, height_);
-      }
-      if (pagination_ != null) {
-        output.writeMessage(2, getPagination());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (height_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1, height_);
-      }
-      if (pagination_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getPagination());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest)) {
-        return super.equals(obj);
-      }
-      com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest other = (com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest) obj;
-
-      if (getHeight()
-          != other.getHeight()) return false;
-      if (hasPagination() != other.hasPagination()) return false;
-      if (hasPagination()) {
-        if (!getPagination()
-            .equals(other.getPagination())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getHeight());
-      if (hasPagination()) {
-        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
-        hash = (53 * hash) + getPagination().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * QueryActiveFinalityProvidersAtHeightRequest is the request type for the
-     * Query/ActiveFinalityProvidersAtHeight RPC method.
-     * </pre>
-     *
-     * Protobuf type {@code babylon.btcstaking.v1.QueryActiveFinalityProvidersAtHeightRequest}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.QueryActiveFinalityProvidersAtHeightRequest)
-        com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryActiveFinalityProvidersAtHeightRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryActiveFinalityProvidersAtHeightRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest.class, com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest.Builder.class);
-      }
-
-      // Construct using com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        height_ = 0L;
-        pagination_ = null;
-        if (paginationBuilder_ != null) {
-          paginationBuilder_.dispose();
-          paginationBuilder_ = null;
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryActiveFinalityProvidersAtHeightRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest getDefaultInstanceForType() {
-        return com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest build() {
-        com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest buildPartial() {
-        com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest result = new com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.height_ = height_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.pagination_ = paginationBuilder_ == null
-              ? pagination_
-              : paginationBuilder_.build();
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest) {
-          return mergeFrom((com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest other) {
-        if (other == com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest.getDefaultInstance()) return this;
-        if (other.getHeight() != 0L) {
-          setHeight(other.getHeight());
-        }
-        if (other.hasPagination()) {
-          mergePagination(other.getPagination());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                height_ = input.readUInt64();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              case 18: {
-                input.readMessage(
-                    getPaginationFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private long height_ ;
-      /**
-       * <pre>
-       * height defines at which Babylon height to query the finality providers info.
-       * </pre>
-       *
-       * <code>uint64 height = 1 [json_name = "height"];</code>
-       * @return The height.
-       */
-      @java.lang.Override
-      public long getHeight() {
-        return height_;
-      }
-      /**
-       * <pre>
-       * height defines at which Babylon height to query the finality providers info.
-       * </pre>
-       *
-       * <code>uint64 height = 1 [json_name = "height"];</code>
-       * @param value The height to set.
-       * @return This builder for chaining.
-       */
-      public Builder setHeight(long value) {
-
-        height_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * height defines at which Babylon height to query the finality providers info.
-       * </pre>
-       *
-       * <code>uint64 height = 1 [json_name = "height"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearHeight() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        height_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
-      /**
-       * <pre>
-       * pagination defines an optional pagination for the request.
-       * </pre>
-       *
-       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
-       * @return Whether the pagination field is set.
-       */
-      public boolean hasPagination() {
-        return ((bitField0_ & 0x00000002) != 0);
-      }
-      /**
-       * <pre>
-       * pagination defines an optional pagination for the request.
-       * </pre>
-       *
-       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
-       * @return The pagination.
-       */
-      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
-        if (paginationBuilder_ == null) {
-          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
-        } else {
-          return paginationBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * pagination defines an optional pagination for the request.
-       * </pre>
-       *
-       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
-       */
-      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
-        if (paginationBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          pagination_ = value;
-        } else {
-          paginationBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * pagination defines an optional pagination for the request.
-       * </pre>
-       *
-       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
-       */
-      public Builder setPagination(
-          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
-        if (paginationBuilder_ == null) {
-          pagination_ = builderForValue.build();
-        } else {
-          paginationBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * pagination defines an optional pagination for the request.
-       * </pre>
-       *
-       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
-       */
-      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
-        if (paginationBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            pagination_ != null &&
-            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
-            getPaginationBuilder().mergeFrom(value);
-          } else {
-            pagination_ = value;
-          }
-        } else {
-          paginationBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * pagination defines an optional pagination for the request.
-       * </pre>
-       *
-       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
-       */
-      public Builder clearPagination() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        pagination_ = null;
-        if (paginationBuilder_ != null) {
-          paginationBuilder_.dispose();
-          paginationBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * pagination defines an optional pagination for the request.
-       * </pre>
-       *
-       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
-       */
-      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getPaginationFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * pagination defines an optional pagination for the request.
-       * </pre>
-       *
-       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
-       */
-      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
-        if (paginationBuilder_ != null) {
-          return paginationBuilder_.getMessageOrBuilder();
-        } else {
-          return pagination_ == null ?
-              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
-        }
-      }
-      /**
-       * <pre>
-       * pagination defines an optional pagination for the request.
-       * </pre>
-       *
-       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
-          getPaginationFieldBuilder() {
-        if (paginationBuilder_ == null) {
-          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
-                  getPagination(),
-                  getParentForChildren(),
-                  isClean());
-          pagination_ = null;
-        }
-        return paginationBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.QueryActiveFinalityProvidersAtHeightRequest)
-    }
-
-    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.QueryActiveFinalityProvidersAtHeightRequest)
-    private static final com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest();
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<QueryActiveFinalityProvidersAtHeightRequest>
-        PARSER = new com.google.protobuf.AbstractParser<QueryActiveFinalityProvidersAtHeightRequest>() {
-      @java.lang.Override
-      public QueryActiveFinalityProvidersAtHeightRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<QueryActiveFinalityProvidersAtHeightRequest> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<QueryActiveFinalityProvidersAtHeightRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface QueryActiveFinalityProvidersAtHeightResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.QueryActiveFinalityProvidersAtHeightResponse)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * finality_providers contains all the queried finality providersn.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-     */
-    java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta> 
-        getFinalityProvidersList();
-    /**
-     * <pre>
-     * finality_providers contains all the queried finality providersn.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-     */
-    com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta getFinalityProviders(int index);
-    /**
-     * <pre>
-     * finality_providers contains all the queried finality providersn.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-     */
-    int getFinalityProvidersCount();
-    /**
-     * <pre>
-     * finality_providers contains all the queried finality providersn.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-     */
-    java.util.List<? extends com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMetaOrBuilder> 
-        getFinalityProvidersOrBuilderList();
-    /**
-     * <pre>
-     * finality_providers contains all the queried finality providersn.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-     */
-    com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMetaOrBuilder getFinalityProvidersOrBuilder(
-        int index);
-
-    /**
-     * <pre>
-     * pagination defines the pagination in the response.
-     * </pre>
-     *
-     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
-     * @return Whether the pagination field is set.
-     */
-    boolean hasPagination();
-    /**
-     * <pre>
-     * pagination defines the pagination in the response.
-     * </pre>
-     *
-     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
-     * @return The pagination.
-     */
-    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
-    /**
-     * <pre>
-     * pagination defines the pagination in the response.
-     * </pre>
-     *
-     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
-     */
-    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
-  }
-  /**
-   * <pre>
-   * QueryActiveFinalityProvidersAtHeightResponse is the response type for the
-   * Query/ActiveFinalityProvidersAtHeight RPC method.
-   * </pre>
-   *
-   * Protobuf type {@code babylon.btcstaking.v1.QueryActiveFinalityProvidersAtHeightResponse}
-   */
-  public static final class QueryActiveFinalityProvidersAtHeightResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.QueryActiveFinalityProvidersAtHeightResponse)
-      QueryActiveFinalityProvidersAtHeightResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use QueryActiveFinalityProvidersAtHeightResponse.newBuilder() to construct.
-    private QueryActiveFinalityProvidersAtHeightResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private QueryActiveFinalityProvidersAtHeightResponse() {
-      finalityProviders_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new QueryActiveFinalityProvidersAtHeightResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryActiveFinalityProvidersAtHeightResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryActiveFinalityProvidersAtHeightResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse.class, com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse.Builder.class);
-    }
-
-    public static final int FINALITY_PROVIDERS_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta> finalityProviders_;
-    /**
-     * <pre>
-     * finality_providers contains all the queried finality providersn.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-     */
-    @java.lang.Override
-    public java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta> getFinalityProvidersList() {
-      return finalityProviders_;
-    }
-    /**
-     * <pre>
-     * finality_providers contains all the queried finality providersn.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMetaOrBuilder> 
-        getFinalityProvidersOrBuilderList() {
-      return finalityProviders_;
-    }
-    /**
-     * <pre>
-     * finality_providers contains all the queried finality providersn.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-     */
-    @java.lang.Override
-    public int getFinalityProvidersCount() {
-      return finalityProviders_.size();
-    }
-    /**
-     * <pre>
-     * finality_providers contains all the queried finality providersn.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-     */
-    @java.lang.Override
-    public com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta getFinalityProviders(int index) {
-      return finalityProviders_.get(index);
-    }
-    /**
-     * <pre>
-     * finality_providers contains all the queried finality providersn.
-     * </pre>
-     *
-     * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-     */
-    @java.lang.Override
-    public com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMetaOrBuilder getFinalityProvidersOrBuilder(
-        int index) {
-      return finalityProviders_.get(index);
-    }
-
-    public static final int PAGINATION_FIELD_NUMBER = 2;
-    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
-    /**
-     * <pre>
-     * pagination defines the pagination in the response.
-     * </pre>
-     *
-     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
-     * @return Whether the pagination field is set.
-     */
-    @java.lang.Override
-    public boolean hasPagination() {
-      return pagination_ != null;
-    }
-    /**
-     * <pre>
-     * pagination defines the pagination in the response.
-     * </pre>
-     *
-     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
-     * @return The pagination.
-     */
-    @java.lang.Override
-    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
-      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
-    }
-    /**
-     * <pre>
-     * pagination defines the pagination in the response.
-     * </pre>
-     *
-     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
-     */
-    @java.lang.Override
-    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
-      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < finalityProviders_.size(); i++) {
-        output.writeMessage(1, finalityProviders_.get(i));
-      }
-      if (pagination_ != null) {
-        output.writeMessage(2, getPagination());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < finalityProviders_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, finalityProviders_.get(i));
-      }
-      if (pagination_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getPagination());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse)) {
-        return super.equals(obj);
-      }
-      com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse other = (com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse) obj;
-
-      if (!getFinalityProvidersList()
-          .equals(other.getFinalityProvidersList())) return false;
-      if (hasPagination() != other.hasPagination()) return false;
-      if (hasPagination()) {
-        if (!getPagination()
-            .equals(other.getPagination())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getFinalityProvidersCount() > 0) {
-        hash = (37 * hash) + FINALITY_PROVIDERS_FIELD_NUMBER;
-        hash = (53 * hash) + getFinalityProvidersList().hashCode();
-      }
-      if (hasPagination()) {
-        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
-        hash = (53 * hash) + getPagination().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * QueryActiveFinalityProvidersAtHeightResponse is the response type for the
-     * Query/ActiveFinalityProvidersAtHeight RPC method.
-     * </pre>
-     *
-     * Protobuf type {@code babylon.btcstaking.v1.QueryActiveFinalityProvidersAtHeightResponse}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.QueryActiveFinalityProvidersAtHeightResponse)
-        com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryActiveFinalityProvidersAtHeightResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryActiveFinalityProvidersAtHeightResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse.class, com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse.Builder.class);
-      }
-
-      // Construct using com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (finalityProvidersBuilder_ == null) {
-          finalityProviders_ = java.util.Collections.emptyList();
-        } else {
-          finalityProviders_ = null;
-          finalityProvidersBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        pagination_ = null;
-        if (paginationBuilder_ != null) {
-          paginationBuilder_.dispose();
-          paginationBuilder_ = null;
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryActiveFinalityProvidersAtHeightResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse getDefaultInstanceForType() {
-        return com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse build() {
-        com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse buildPartial() {
-        com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse result = new com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse result) {
-        if (finalityProvidersBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            finalityProviders_ = java.util.Collections.unmodifiableList(finalityProviders_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.finalityProviders_ = finalityProviders_;
-        } else {
-          result.finalityProviders_ = finalityProvidersBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.pagination_ = paginationBuilder_ == null
-              ? pagination_
-              : paginationBuilder_.build();
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse) {
-          return mergeFrom((com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse other) {
-        if (other == com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse.getDefaultInstance()) return this;
-        if (finalityProvidersBuilder_ == null) {
-          if (!other.finalityProviders_.isEmpty()) {
-            if (finalityProviders_.isEmpty()) {
-              finalityProviders_ = other.finalityProviders_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureFinalityProvidersIsMutable();
-              finalityProviders_.addAll(other.finalityProviders_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.finalityProviders_.isEmpty()) {
-            if (finalityProvidersBuilder_.isEmpty()) {
-              finalityProvidersBuilder_.dispose();
-              finalityProvidersBuilder_ = null;
-              finalityProviders_ = other.finalityProviders_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              finalityProvidersBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getFinalityProvidersFieldBuilder() : null;
-            } else {
-              finalityProvidersBuilder_.addAllMessages(other.finalityProviders_);
-            }
-          }
-        }
-        if (other.hasPagination()) {
-          mergePagination(other.getPagination());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta m =
-                    input.readMessage(
-                        com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta.parser(),
-                        extensionRegistry);
-                if (finalityProvidersBuilder_ == null) {
-                  ensureFinalityProvidersIsMutable();
-                  finalityProviders_.add(m);
-                } else {
-                  finalityProvidersBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getPaginationFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta> finalityProviders_ =
-        java.util.Collections.emptyList();
-      private void ensureFinalityProvidersIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          finalityProviders_ = new java.util.ArrayList<com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta>(finalityProviders_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta, com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta.Builder, com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMetaOrBuilder> finalityProvidersBuilder_;
-
-      /**
-       * <pre>
-       * finality_providers contains all the queried finality providersn.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-       */
-      public java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta> getFinalityProvidersList() {
-        if (finalityProvidersBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(finalityProviders_);
-        } else {
-          return finalityProvidersBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <pre>
-       * finality_providers contains all the queried finality providersn.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-       */
-      public int getFinalityProvidersCount() {
-        if (finalityProvidersBuilder_ == null) {
-          return finalityProviders_.size();
-        } else {
-          return finalityProvidersBuilder_.getCount();
-        }
-      }
-      /**
-       * <pre>
-       * finality_providers contains all the queried finality providersn.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-       */
-      public com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta getFinalityProviders(int index) {
-        if (finalityProvidersBuilder_ == null) {
-          return finalityProviders_.get(index);
-        } else {
-          return finalityProvidersBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <pre>
-       * finality_providers contains all the queried finality providersn.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-       */
-      public Builder setFinalityProviders(
-          int index, com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta value) {
-        if (finalityProvidersBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureFinalityProvidersIsMutable();
-          finalityProviders_.set(index, value);
-          onChanged();
-        } else {
-          finalityProvidersBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * finality_providers contains all the queried finality providersn.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-       */
-      public Builder setFinalityProviders(
-          int index, com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta.Builder builderForValue) {
-        if (finalityProvidersBuilder_ == null) {
-          ensureFinalityProvidersIsMutable();
-          finalityProviders_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          finalityProvidersBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * finality_providers contains all the queried finality providersn.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-       */
-      public Builder addFinalityProviders(com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta value) {
-        if (finalityProvidersBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureFinalityProvidersIsMutable();
-          finalityProviders_.add(value);
-          onChanged();
-        } else {
-          finalityProvidersBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * finality_providers contains all the queried finality providersn.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-       */
-      public Builder addFinalityProviders(
-          int index, com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta value) {
-        if (finalityProvidersBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureFinalityProvidersIsMutable();
-          finalityProviders_.add(index, value);
-          onChanged();
-        } else {
-          finalityProvidersBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * finality_providers contains all the queried finality providersn.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-       */
-      public Builder addFinalityProviders(
-          com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta.Builder builderForValue) {
-        if (finalityProvidersBuilder_ == null) {
-          ensureFinalityProvidersIsMutable();
-          finalityProviders_.add(builderForValue.build());
-          onChanged();
-        } else {
-          finalityProvidersBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * finality_providers contains all the queried finality providersn.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-       */
-      public Builder addFinalityProviders(
-          int index, com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta.Builder builderForValue) {
-        if (finalityProvidersBuilder_ == null) {
-          ensureFinalityProvidersIsMutable();
-          finalityProviders_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          finalityProvidersBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * finality_providers contains all the queried finality providersn.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-       */
-      public Builder addAllFinalityProviders(
-          java.lang.Iterable<? extends com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta> values) {
-        if (finalityProvidersBuilder_ == null) {
-          ensureFinalityProvidersIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, finalityProviders_);
-          onChanged();
-        } else {
-          finalityProvidersBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * finality_providers contains all the queried finality providersn.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-       */
-      public Builder clearFinalityProviders() {
-        if (finalityProvidersBuilder_ == null) {
-          finalityProviders_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          finalityProvidersBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * finality_providers contains all the queried finality providersn.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-       */
-      public Builder removeFinalityProviders(int index) {
-        if (finalityProvidersBuilder_ == null) {
-          ensureFinalityProvidersIsMutable();
-          finalityProviders_.remove(index);
-          onChanged();
-        } else {
-          finalityProvidersBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * finality_providers contains all the queried finality providersn.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-       */
-      public com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta.Builder getFinalityProvidersBuilder(
-          int index) {
-        return getFinalityProvidersFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * finality_providers contains all the queried finality providersn.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-       */
-      public com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMetaOrBuilder getFinalityProvidersOrBuilder(
-          int index) {
-        if (finalityProvidersBuilder_ == null) {
-          return finalityProviders_.get(index);  } else {
-          return finalityProvidersBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * finality_providers contains all the queried finality providersn.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-       */
-      public java.util.List<? extends com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMetaOrBuilder> 
-           getFinalityProvidersOrBuilderList() {
-        if (finalityProvidersBuilder_ != null) {
-          return finalityProvidersBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(finalityProviders_);
-        }
-      }
-      /**
-       * <pre>
-       * finality_providers contains all the queried finality providersn.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-       */
-      public com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta.Builder addFinalityProvidersBuilder() {
-        return getFinalityProvidersFieldBuilder().addBuilder(
-            com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * finality_providers contains all the queried finality providersn.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-       */
-      public com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta.Builder addFinalityProvidersBuilder(
-          int index) {
-        return getFinalityProvidersFieldBuilder().addBuilder(
-            index, com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * finality_providers contains all the queried finality providersn.
-       * </pre>
-       *
-       * <code>repeated .babylon.btcstaking.v1.FinalityProviderWithMeta finality_providers = 1 [json_name = "finalityProviders"];</code>
-       */
-      public java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta.Builder> 
-           getFinalityProvidersBuilderList() {
-        return getFinalityProvidersFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta, com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta.Builder, com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMetaOrBuilder> 
-          getFinalityProvidersFieldBuilder() {
-        if (finalityProvidersBuilder_ == null) {
-          finalityProvidersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta, com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMeta.Builder, com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderWithMetaOrBuilder>(
-                  finalityProviders_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          finalityProviders_ = null;
-        }
-        return finalityProvidersBuilder_;
-      }
-
-      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
-      /**
-       * <pre>
-       * pagination defines the pagination in the response.
-       * </pre>
-       *
-       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
-       * @return Whether the pagination field is set.
-       */
-      public boolean hasPagination() {
-        return ((bitField0_ & 0x00000002) != 0);
-      }
-      /**
-       * <pre>
-       * pagination defines the pagination in the response.
-       * </pre>
-       *
-       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
-       * @return The pagination.
-       */
-      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
-        if (paginationBuilder_ == null) {
-          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
-        } else {
-          return paginationBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * pagination defines the pagination in the response.
-       * </pre>
-       *
-       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
-       */
-      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
-        if (paginationBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          pagination_ = value;
-        } else {
-          paginationBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * pagination defines the pagination in the response.
-       * </pre>
-       *
-       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
-       */
-      public Builder setPagination(
-          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
-        if (paginationBuilder_ == null) {
-          pagination_ = builderForValue.build();
-        } else {
-          paginationBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * pagination defines the pagination in the response.
-       * </pre>
-       *
-       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
-       */
-      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
-        if (paginationBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            pagination_ != null &&
-            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
-            getPaginationBuilder().mergeFrom(value);
-          } else {
-            pagination_ = value;
-          }
-        } else {
-          paginationBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * pagination defines the pagination in the response.
-       * </pre>
-       *
-       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
-       */
-      public Builder clearPagination() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        pagination_ = null;
-        if (paginationBuilder_ != null) {
-          paginationBuilder_.dispose();
-          paginationBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * pagination defines the pagination in the response.
-       * </pre>
-       *
-       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
-       */
-      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getPaginationFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * pagination defines the pagination in the response.
-       * </pre>
-       *
-       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
-       */
-      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
-        if (paginationBuilder_ != null) {
-          return paginationBuilder_.getMessageOrBuilder();
-        } else {
-          return pagination_ == null ?
-              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
-        }
-      }
-      /**
-       * <pre>
-       * pagination defines the pagination in the response.
-       * </pre>
-       *
-       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
-          getPaginationFieldBuilder() {
-        if (paginationBuilder_ == null) {
-          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
-                  getPagination(),
-                  getParentForChildren(),
-                  isClean());
-          pagination_ = null;
-        }
-        return paginationBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.QueryActiveFinalityProvidersAtHeightResponse)
-    }
-
-    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.QueryActiveFinalityProvidersAtHeightResponse)
-    private static final com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse();
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<QueryActiveFinalityProvidersAtHeightResponse>
-        PARSER = new com.google.protobuf.AbstractParser<QueryActiveFinalityProvidersAtHeightResponse>() {
-      @java.lang.Override
-      public QueryActiveFinalityProvidersAtHeightResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<QueryActiveFinalityProvidersAtHeightResponse> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<QueryActiveFinalityProvidersAtHeightResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.babylon.btcstaking.v1.QueryProto.QueryActiveFinalityProvidersAtHeightResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface QueryActivatedHeightRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.QueryActivatedHeightRequest)
-      com.google.protobuf.MessageOrBuilder {
-  }
-  /**
-   * <pre>
-   * QueryActivatedHeightRequest is the request type for the Query/ActivatedHeight RPC method.
-   * </pre>
-   *
-   * Protobuf type {@code babylon.btcstaking.v1.QueryActivatedHeightRequest}
-   */
-  public static final class QueryActivatedHeightRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.QueryActivatedHeightRequest)
-      QueryActivatedHeightRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use QueryActivatedHeightRequest.newBuilder() to construct.
-    private QueryActivatedHeightRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private QueryActivatedHeightRequest() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new QueryActivatedHeightRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryActivatedHeightRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryActivatedHeightRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest.class, com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest)) {
-        return super.equals(obj);
-      }
-      com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest other = (com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * QueryActivatedHeightRequest is the request type for the Query/ActivatedHeight RPC method.
-     * </pre>
-     *
-     * Protobuf type {@code babylon.btcstaking.v1.QueryActivatedHeightRequest}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.QueryActivatedHeightRequest)
-        com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryActivatedHeightRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryActivatedHeightRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest.class, com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest.Builder.class);
-      }
-
-      // Construct using com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryActivatedHeightRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest getDefaultInstanceForType() {
-        return com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest build() {
-        com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest buildPartial() {
-        com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest result = new com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest) {
-          return mergeFrom((com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest other) {
-        if (other == com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.QueryActivatedHeightRequest)
-    }
-
-    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.QueryActivatedHeightRequest)
-    private static final com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest();
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<QueryActivatedHeightRequest>
-        PARSER = new com.google.protobuf.AbstractParser<QueryActivatedHeightRequest>() {
-      @java.lang.Override
-      public QueryActivatedHeightRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<QueryActivatedHeightRequest> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<QueryActivatedHeightRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface QueryActivatedHeightResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.QueryActivatedHeightResponse)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
-     * @return The height.
-     */
-    long getHeight();
-  }
-  /**
-   * <pre>
-   * QueryActivatedHeightResponse is the response type for the Query/ActivatedHeight RPC method.
-   * </pre>
-   *
-   * Protobuf type {@code babylon.btcstaking.v1.QueryActivatedHeightResponse}
-   */
-  public static final class QueryActivatedHeightResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.QueryActivatedHeightResponse)
-      QueryActivatedHeightResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use QueryActivatedHeightResponse.newBuilder() to construct.
-    private QueryActivatedHeightResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private QueryActivatedHeightResponse() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new QueryActivatedHeightResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryActivatedHeightResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryActivatedHeightResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse.class, com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse.Builder.class);
-    }
-
-    public static final int HEIGHT_FIELD_NUMBER = 1;
-    private long height_ = 0L;
-    /**
-     * <code>uint64 height = 1 [json_name = "height"];</code>
-     * @return The height.
-     */
-    @java.lang.Override
-    public long getHeight() {
-      return height_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (height_ != 0L) {
-        output.writeUInt64(1, height_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (height_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1, height_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse)) {
-        return super.equals(obj);
-      }
-      com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse other = (com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse) obj;
-
-      if (getHeight()
-          != other.getHeight()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getHeight());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * QueryActivatedHeightResponse is the response type for the Query/ActivatedHeight RPC method.
-     * </pre>
-     *
-     * Protobuf type {@code babylon.btcstaking.v1.QueryActivatedHeightResponse}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.QueryActivatedHeightResponse)
-        com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryActivatedHeightResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryActivatedHeightResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse.class, com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse.Builder.class);
-      }
-
-      // Construct using com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        height_ = 0L;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryActivatedHeightResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse getDefaultInstanceForType() {
-        return com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse build() {
-        com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse buildPartial() {
-        com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse result = new com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.height_ = height_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse) {
-          return mergeFrom((com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse other) {
-        if (other == com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse.getDefaultInstance()) return this;
-        if (other.getHeight() != 0L) {
-          setHeight(other.getHeight());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                height_ = input.readUInt64();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private long height_ ;
-      /**
-       * <code>uint64 height = 1 [json_name = "height"];</code>
-       * @return The height.
-       */
-      @java.lang.Override
-      public long getHeight() {
-        return height_;
-      }
-      /**
-       * <code>uint64 height = 1 [json_name = "height"];</code>
-       * @param value The height to set.
-       * @return This builder for chaining.
-       */
-      public Builder setHeight(long value) {
-
-        height_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint64 height = 1 [json_name = "height"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearHeight() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        height_ = 0L;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.QueryActivatedHeightResponse)
-    }
-
-    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.QueryActivatedHeightResponse)
-    private static final com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse();
-    }
-
-    public static com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<QueryActivatedHeightResponse>
-        PARSER = new com.google.protobuf.AbstractParser<QueryActivatedHeightResponse>() {
-      @java.lang.Override
-      public QueryActivatedHeightResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<QueryActivatedHeightResponse> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<QueryActivatedHeightResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.babylon.btcstaking.v1.QueryProto.QueryActivatedHeightResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface QueryFinalityProviderDelegationsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.QueryFinalityProviderDelegationsRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -15879,7 +10634,7 @@ public final class QueryProto {
      * the PK follows encoding in BIP-340 spec
      * </pre>
      *
-     * <code>bytes btc_pk = 2 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes btc_pk = 2 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The btcPk.
      */
     com.google.protobuf.ByteString getBtcPk();
@@ -15890,7 +10645,7 @@ public final class QueryProto {
      * this BTC delegation delegates to
      * </pre>
      *
-     * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return A list containing the fpBtcPkList.
      */
     java.util.List<com.google.protobuf.ByteString> getFpBtcPkListList();
@@ -15900,7 +10655,7 @@ public final class QueryProto {
      * this BTC delegation delegates to
      * </pre>
      *
-     * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The count of fpBtcPkList.
      */
     int getFpBtcPkListCount();
@@ -15910,7 +10665,7 @@ public final class QueryProto {
      * this BTC delegation delegates to
      * </pre>
      *
-     * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @param index The index of the element to return.
      * @return The fpBtcPkList at the given index.
      */
@@ -15918,14 +10673,24 @@ public final class QueryProto {
 
     /**
      * <pre>
+     * staking_time is the number of blocks for which the delegation is locked on BTC chain
+     * </pre>
+     *
+     * <code>uint32 staking_time = 4 [json_name = "stakingTime"];</code>
+     * @return The stakingTime.
+     */
+    int getStakingTime();
+
+    /**
+     * <pre>
      * start_height is the start BTC height of the BTC delegation
      * it is the start BTC height of the timelock
      * </pre>
      *
-     * <code>uint64 start_height = 4 [json_name = "startHeight"];</code>
+     * <code>uint32 start_height = 5 [json_name = "startHeight"];</code>
      * @return The startHeight.
      */
-    long getStartHeight();
+    int getStartHeight();
 
     /**
      * <pre>
@@ -15933,10 +10698,10 @@ public final class QueryProto {
      * it is the end BTC height of the timelock - w
      * </pre>
      *
-     * <code>uint64 end_height = 5 [json_name = "endHeight"];</code>
+     * <code>uint32 end_height = 6 [json_name = "endHeight"];</code>
      * @return The endHeight.
      */
-    long getEndHeight();
+    int getEndHeight();
 
     /**
      * <pre>
@@ -15944,7 +10709,7 @@ public final class QueryProto {
      * quantified in satoshi
      * </pre>
      *
-     * <code>uint64 total_sat = 6 [json_name = "totalSat"];</code>
+     * <code>uint64 total_sat = 7 [json_name = "totalSat"];</code>
      * @return The totalSat.
      */
     long getTotalSat();
@@ -15954,7 +10719,7 @@ public final class QueryProto {
      * staking_tx_hex is the hex string of staking tx
      * </pre>
      *
-     * <code>string staking_tx_hex = 7 [json_name = "stakingTxHex"];</code>
+     * <code>string staking_tx_hex = 8 [json_name = "stakingTxHex"];</code>
      * @return The stakingTxHex.
      */
     java.lang.String getStakingTxHex();
@@ -15963,7 +10728,7 @@ public final class QueryProto {
      * staking_tx_hex is the hex string of staking tx
      * </pre>
      *
-     * <code>string staking_tx_hex = 7 [json_name = "stakingTxHex"];</code>
+     * <code>string staking_tx_hex = 8 [json_name = "stakingTxHex"];</code>
      * @return The bytes for stakingTxHex.
      */
     com.google.protobuf.ByteString
@@ -15974,7 +10739,7 @@ public final class QueryProto {
      * slashing_tx_hex is the hex string of slashing tx
      * </pre>
      *
-     * <code>string slashing_tx_hex = 8 [json_name = "slashingTxHex"];</code>
+     * <code>string slashing_tx_hex = 9 [json_name = "slashingTxHex"];</code>
      * @return The slashingTxHex.
      */
     java.lang.String getSlashingTxHex();
@@ -15983,7 +10748,7 @@ public final class QueryProto {
      * slashing_tx_hex is the hex string of slashing tx
      * </pre>
      *
-     * <code>string slashing_tx_hex = 8 [json_name = "slashingTxHex"];</code>
+     * <code>string slashing_tx_hex = 9 [json_name = "slashingTxHex"];</code>
      * @return The bytes for slashingTxHex.
      */
     com.google.protobuf.ByteString
@@ -15996,7 +10761,7 @@ public final class QueryProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>string delegator_slash_sig_hex = 9 [json_name = "delegatorSlashSigHex"];</code>
+     * <code>string delegator_slash_sig_hex = 10 [json_name = "delegatorSlashSigHex"];</code>
      * @return The delegatorSlashSigHex.
      */
     java.lang.String getDelegatorSlashSigHex();
@@ -16007,7 +10772,7 @@ public final class QueryProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>string delegator_slash_sig_hex = 9 [json_name = "delegatorSlashSigHex"];</code>
+     * <code>string delegator_slash_sig_hex = 10 [json_name = "delegatorSlashSigHex"];</code>
      * @return The bytes for delegatorSlashSigHex.
      */
     com.google.protobuf.ByteString
@@ -16020,7 +10785,7 @@ public final class QueryProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
      */
     java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures> 
         getCovenantSigsList();
@@ -16031,7 +10796,7 @@ public final class QueryProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
      */
     com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures getCovenantSigs(int index);
     /**
@@ -16041,7 +10806,7 @@ public final class QueryProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
      */
     int getCovenantSigsCount();
     /**
@@ -16051,7 +10816,7 @@ public final class QueryProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
      */
     java.util.List<? extends com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder> 
         getCovenantSigsOrBuilderList();
@@ -16062,7 +10827,7 @@ public final class QueryProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
      */
     com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder getCovenantSigsOrBuilder(
         int index);
@@ -16072,7 +10837,7 @@ public final class QueryProto {
      * staking_output_idx is the index of the staking output in the staking tx
      * </pre>
      *
-     * <code>uint32 staking_output_idx = 11 [json_name = "stakingOutputIdx"];</code>
+     * <code>uint32 staking_output_idx = 12 [json_name = "stakingOutputIdx"];</code>
      * @return The stakingOutputIdx.
      */
     int getStakingOutputIdx();
@@ -16082,7 +10847,7 @@ public final class QueryProto {
      * whether this delegation is active
      * </pre>
      *
-     * <code>bool active = 12 [json_name = "active"];</code>
+     * <code>bool active = 13 [json_name = "active"];</code>
      * @return The active.
      */
     boolean getActive();
@@ -16092,7 +10857,7 @@ public final class QueryProto {
      * descriptive status of current delegation.
      * </pre>
      *
-     * <code>string status_desc = 13 [json_name = "statusDesc"];</code>
+     * <code>string status_desc = 14 [json_name = "statusDesc"];</code>
      * @return The statusDesc.
      */
     java.lang.String getStatusDesc();
@@ -16101,7 +10866,7 @@ public final class QueryProto {
      * descriptive status of current delegation.
      * </pre>
      *
-     * <code>string status_desc = 13 [json_name = "statusDesc"];</code>
+     * <code>string status_desc = 14 [json_name = "statusDesc"];</code>
      * @return The bytes for statusDesc.
      */
     com.google.protobuf.ByteString
@@ -16113,7 +10878,7 @@ public final class QueryProto {
      * change outputs
      * </pre>
      *
-     * <code>uint32 unbonding_time = 14 [json_name = "unbondingTime"];</code>
+     * <code>uint32 unbonding_time = 15 [json_name = "unbondingTime"];</code>
      * @return The unbondingTime.
      */
     int getUnbondingTime();
@@ -16123,7 +10888,7 @@ public final class QueryProto {
      * undelegation_response is the undelegation info of this delegation.
      * </pre>
      *
-     * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 15 [json_name = "undelegationResponse"];</code>
+     * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 16 [json_name = "undelegationResponse"];</code>
      * @return Whether the undelegationResponse field is set.
      */
     boolean hasUndelegationResponse();
@@ -16132,7 +10897,7 @@ public final class QueryProto {
      * undelegation_response is the undelegation info of this delegation.
      * </pre>
      *
-     * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 15 [json_name = "undelegationResponse"];</code>
+     * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 16 [json_name = "undelegationResponse"];</code>
      * @return The undelegationResponse.
      */
     com.babylon.btcstaking.v1.QueryProto.BTCUndelegationResponse getUndelegationResponse();
@@ -16141,7 +10906,7 @@ public final class QueryProto {
      * undelegation_response is the undelegation info of this delegation.
      * </pre>
      *
-     * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 15 [json_name = "undelegationResponse"];</code>
+     * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 16 [json_name = "undelegationResponse"];</code>
      */
     com.babylon.btcstaking.v1.QueryProto.BTCUndelegationResponseOrBuilder getUndelegationResponseOrBuilder();
 
@@ -16150,7 +10915,7 @@ public final class QueryProto {
      * params version used to validate delegation
      * </pre>
      *
-     * <code>uint32 params_version = 16 [json_name = "paramsVersion"];</code>
+     * <code>uint32 params_version = 17 [json_name = "paramsVersion"];</code>
      * @return The paramsVersion.
      */
     int getParamsVersion();
@@ -16257,7 +11022,7 @@ public final class QueryProto {
      * the PK follows encoding in BIP-340 spec
      * </pre>
      *
-     * <code>bytes btc_pk = 2 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes btc_pk = 2 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The btcPk.
      */
     @java.lang.Override
@@ -16274,7 +11039,7 @@ public final class QueryProto {
      * this BTC delegation delegates to
      * </pre>
      *
-     * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return A list containing the fpBtcPkList.
      */
     @java.lang.Override
@@ -16288,7 +11053,7 @@ public final class QueryProto {
      * this BTC delegation delegates to
      * </pre>
      *
-     * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The count of fpBtcPkList.
      */
     public int getFpBtcPkListCount() {
@@ -16300,7 +11065,7 @@ public final class QueryProto {
      * this BTC delegation delegates to
      * </pre>
      *
-     * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @param index The index of the element to return.
      * @return The fpBtcPkList at the given index.
      */
@@ -16308,39 +11073,54 @@ public final class QueryProto {
       return fpBtcPkList_.get(index);
     }
 
-    public static final int START_HEIGHT_FIELD_NUMBER = 4;
-    private long startHeight_ = 0L;
+    public static final int STAKING_TIME_FIELD_NUMBER = 4;
+    private int stakingTime_ = 0;
+    /**
+     * <pre>
+     * staking_time is the number of blocks for which the delegation is locked on BTC chain
+     * </pre>
+     *
+     * <code>uint32 staking_time = 4 [json_name = "stakingTime"];</code>
+     * @return The stakingTime.
+     */
+    @java.lang.Override
+    public int getStakingTime() {
+      return stakingTime_;
+    }
+
+    public static final int START_HEIGHT_FIELD_NUMBER = 5;
+    private int startHeight_ = 0;
     /**
      * <pre>
      * start_height is the start BTC height of the BTC delegation
      * it is the start BTC height of the timelock
      * </pre>
      *
-     * <code>uint64 start_height = 4 [json_name = "startHeight"];</code>
+     * <code>uint32 start_height = 5 [json_name = "startHeight"];</code>
      * @return The startHeight.
      */
     @java.lang.Override
-    public long getStartHeight() {
+    public int getStartHeight() {
       return startHeight_;
     }
 
-    public static final int END_HEIGHT_FIELD_NUMBER = 5;
-    private long endHeight_ = 0L;
+    public static final int END_HEIGHT_FIELD_NUMBER = 6;
+    private int endHeight_ = 0;
     /**
      * <pre>
      * end_height is the end height of the BTC delegation
      * it is the end BTC height of the timelock - w
      * </pre>
      *
-     * <code>uint64 end_height = 5 [json_name = "endHeight"];</code>
+     * <code>uint32 end_height = 6 [json_name = "endHeight"];</code>
      * @return The endHeight.
      */
     @java.lang.Override
-    public long getEndHeight() {
+    public int getEndHeight() {
       return endHeight_;
     }
 
-    public static final int TOTAL_SAT_FIELD_NUMBER = 6;
+    public static final int TOTAL_SAT_FIELD_NUMBER = 7;
     private long totalSat_ = 0L;
     /**
      * <pre>
@@ -16348,7 +11128,7 @@ public final class QueryProto {
      * quantified in satoshi
      * </pre>
      *
-     * <code>uint64 total_sat = 6 [json_name = "totalSat"];</code>
+     * <code>uint64 total_sat = 7 [json_name = "totalSat"];</code>
      * @return The totalSat.
      */
     @java.lang.Override
@@ -16356,7 +11136,7 @@ public final class QueryProto {
       return totalSat_;
     }
 
-    public static final int STAKING_TX_HEX_FIELD_NUMBER = 7;
+    public static final int STAKING_TX_HEX_FIELD_NUMBER = 8;
     @SuppressWarnings("serial")
     private volatile java.lang.Object stakingTxHex_ = "";
     /**
@@ -16364,7 +11144,7 @@ public final class QueryProto {
      * staking_tx_hex is the hex string of staking tx
      * </pre>
      *
-     * <code>string staking_tx_hex = 7 [json_name = "stakingTxHex"];</code>
+     * <code>string staking_tx_hex = 8 [json_name = "stakingTxHex"];</code>
      * @return The stakingTxHex.
      */
     @java.lang.Override
@@ -16385,7 +11165,7 @@ public final class QueryProto {
      * staking_tx_hex is the hex string of staking tx
      * </pre>
      *
-     * <code>string staking_tx_hex = 7 [json_name = "stakingTxHex"];</code>
+     * <code>string staking_tx_hex = 8 [json_name = "stakingTxHex"];</code>
      * @return The bytes for stakingTxHex.
      */
     @java.lang.Override
@@ -16403,7 +11183,7 @@ public final class QueryProto {
       }
     }
 
-    public static final int SLASHING_TX_HEX_FIELD_NUMBER = 8;
+    public static final int SLASHING_TX_HEX_FIELD_NUMBER = 9;
     @SuppressWarnings("serial")
     private volatile java.lang.Object slashingTxHex_ = "";
     /**
@@ -16411,7 +11191,7 @@ public final class QueryProto {
      * slashing_tx_hex is the hex string of slashing tx
      * </pre>
      *
-     * <code>string slashing_tx_hex = 8 [json_name = "slashingTxHex"];</code>
+     * <code>string slashing_tx_hex = 9 [json_name = "slashingTxHex"];</code>
      * @return The slashingTxHex.
      */
     @java.lang.Override
@@ -16432,7 +11212,7 @@ public final class QueryProto {
      * slashing_tx_hex is the hex string of slashing tx
      * </pre>
      *
-     * <code>string slashing_tx_hex = 8 [json_name = "slashingTxHex"];</code>
+     * <code>string slashing_tx_hex = 9 [json_name = "slashingTxHex"];</code>
      * @return The bytes for slashingTxHex.
      */
     @java.lang.Override
@@ -16450,7 +11230,7 @@ public final class QueryProto {
       }
     }
 
-    public static final int DELEGATOR_SLASH_SIG_HEX_FIELD_NUMBER = 9;
+    public static final int DELEGATOR_SLASH_SIG_HEX_FIELD_NUMBER = 10;
     @SuppressWarnings("serial")
     private volatile java.lang.Object delegatorSlashSigHex_ = "";
     /**
@@ -16460,7 +11240,7 @@ public final class QueryProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>string delegator_slash_sig_hex = 9 [json_name = "delegatorSlashSigHex"];</code>
+     * <code>string delegator_slash_sig_hex = 10 [json_name = "delegatorSlashSigHex"];</code>
      * @return The delegatorSlashSigHex.
      */
     @java.lang.Override
@@ -16483,7 +11263,7 @@ public final class QueryProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>string delegator_slash_sig_hex = 9 [json_name = "delegatorSlashSigHex"];</code>
+     * <code>string delegator_slash_sig_hex = 10 [json_name = "delegatorSlashSigHex"];</code>
      * @return The bytes for delegatorSlashSigHex.
      */
     @java.lang.Override
@@ -16501,7 +11281,7 @@ public final class QueryProto {
       }
     }
 
-    public static final int COVENANT_SIGS_FIELD_NUMBER = 10;
+    public static final int COVENANT_SIGS_FIELD_NUMBER = 11;
     @SuppressWarnings("serial")
     private java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures> covenantSigs_;
     /**
@@ -16511,7 +11291,7 @@ public final class QueryProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
      */
     @java.lang.Override
     public java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures> getCovenantSigsList() {
@@ -16524,7 +11304,7 @@ public final class QueryProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder> 
@@ -16538,7 +11318,7 @@ public final class QueryProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
      */
     @java.lang.Override
     public int getCovenantSigsCount() {
@@ -16551,7 +11331,7 @@ public final class QueryProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
      */
     @java.lang.Override
     public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures getCovenantSigs(int index) {
@@ -16564,7 +11344,7 @@ public final class QueryProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
      */
     @java.lang.Override
     public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder getCovenantSigsOrBuilder(
@@ -16572,14 +11352,14 @@ public final class QueryProto {
       return covenantSigs_.get(index);
     }
 
-    public static final int STAKING_OUTPUT_IDX_FIELD_NUMBER = 11;
+    public static final int STAKING_OUTPUT_IDX_FIELD_NUMBER = 12;
     private int stakingOutputIdx_ = 0;
     /**
      * <pre>
      * staking_output_idx is the index of the staking output in the staking tx
      * </pre>
      *
-     * <code>uint32 staking_output_idx = 11 [json_name = "stakingOutputIdx"];</code>
+     * <code>uint32 staking_output_idx = 12 [json_name = "stakingOutputIdx"];</code>
      * @return The stakingOutputIdx.
      */
     @java.lang.Override
@@ -16587,14 +11367,14 @@ public final class QueryProto {
       return stakingOutputIdx_;
     }
 
-    public static final int ACTIVE_FIELD_NUMBER = 12;
+    public static final int ACTIVE_FIELD_NUMBER = 13;
     private boolean active_ = false;
     /**
      * <pre>
      * whether this delegation is active
      * </pre>
      *
-     * <code>bool active = 12 [json_name = "active"];</code>
+     * <code>bool active = 13 [json_name = "active"];</code>
      * @return The active.
      */
     @java.lang.Override
@@ -16602,7 +11382,7 @@ public final class QueryProto {
       return active_;
     }
 
-    public static final int STATUS_DESC_FIELD_NUMBER = 13;
+    public static final int STATUS_DESC_FIELD_NUMBER = 14;
     @SuppressWarnings("serial")
     private volatile java.lang.Object statusDesc_ = "";
     /**
@@ -16610,7 +11390,7 @@ public final class QueryProto {
      * descriptive status of current delegation.
      * </pre>
      *
-     * <code>string status_desc = 13 [json_name = "statusDesc"];</code>
+     * <code>string status_desc = 14 [json_name = "statusDesc"];</code>
      * @return The statusDesc.
      */
     @java.lang.Override
@@ -16631,7 +11411,7 @@ public final class QueryProto {
      * descriptive status of current delegation.
      * </pre>
      *
-     * <code>string status_desc = 13 [json_name = "statusDesc"];</code>
+     * <code>string status_desc = 14 [json_name = "statusDesc"];</code>
      * @return The bytes for statusDesc.
      */
     @java.lang.Override
@@ -16649,7 +11429,7 @@ public final class QueryProto {
       }
     }
 
-    public static final int UNBONDING_TIME_FIELD_NUMBER = 14;
+    public static final int UNBONDING_TIME_FIELD_NUMBER = 15;
     private int unbondingTime_ = 0;
     /**
      * <pre>
@@ -16657,7 +11437,7 @@ public final class QueryProto {
      * change outputs
      * </pre>
      *
-     * <code>uint32 unbonding_time = 14 [json_name = "unbondingTime"];</code>
+     * <code>uint32 unbonding_time = 15 [json_name = "unbondingTime"];</code>
      * @return The unbondingTime.
      */
     @java.lang.Override
@@ -16665,14 +11445,14 @@ public final class QueryProto {
       return unbondingTime_;
     }
 
-    public static final int UNDELEGATION_RESPONSE_FIELD_NUMBER = 15;
+    public static final int UNDELEGATION_RESPONSE_FIELD_NUMBER = 16;
     private com.babylon.btcstaking.v1.QueryProto.BTCUndelegationResponse undelegationResponse_;
     /**
      * <pre>
      * undelegation_response is the undelegation info of this delegation.
      * </pre>
      *
-     * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 15 [json_name = "undelegationResponse"];</code>
+     * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 16 [json_name = "undelegationResponse"];</code>
      * @return Whether the undelegationResponse field is set.
      */
     @java.lang.Override
@@ -16684,7 +11464,7 @@ public final class QueryProto {
      * undelegation_response is the undelegation info of this delegation.
      * </pre>
      *
-     * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 15 [json_name = "undelegationResponse"];</code>
+     * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 16 [json_name = "undelegationResponse"];</code>
      * @return The undelegationResponse.
      */
     @java.lang.Override
@@ -16696,21 +11476,21 @@ public final class QueryProto {
      * undelegation_response is the undelegation info of this delegation.
      * </pre>
      *
-     * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 15 [json_name = "undelegationResponse"];</code>
+     * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 16 [json_name = "undelegationResponse"];</code>
      */
     @java.lang.Override
     public com.babylon.btcstaking.v1.QueryProto.BTCUndelegationResponseOrBuilder getUndelegationResponseOrBuilder() {
       return undelegationResponse_ == null ? com.babylon.btcstaking.v1.QueryProto.BTCUndelegationResponse.getDefaultInstance() : undelegationResponse_;
     }
 
-    public static final int PARAMS_VERSION_FIELD_NUMBER = 16;
+    public static final int PARAMS_VERSION_FIELD_NUMBER = 17;
     private int paramsVersion_ = 0;
     /**
      * <pre>
      * params version used to validate delegation
      * </pre>
      *
-     * <code>uint32 params_version = 16 [json_name = "paramsVersion"];</code>
+     * <code>uint32 params_version = 17 [json_name = "paramsVersion"];</code>
      * @return The paramsVersion.
      */
     @java.lang.Override
@@ -16741,44 +11521,47 @@ public final class QueryProto {
       for (int i = 0; i < fpBtcPkList_.size(); i++) {
         output.writeBytes(3, fpBtcPkList_.get(i));
       }
-      if (startHeight_ != 0L) {
-        output.writeUInt64(4, startHeight_);
+      if (stakingTime_ != 0) {
+        output.writeUInt32(4, stakingTime_);
       }
-      if (endHeight_ != 0L) {
-        output.writeUInt64(5, endHeight_);
+      if (startHeight_ != 0) {
+        output.writeUInt32(5, startHeight_);
+      }
+      if (endHeight_ != 0) {
+        output.writeUInt32(6, endHeight_);
       }
       if (totalSat_ != 0L) {
-        output.writeUInt64(6, totalSat_);
+        output.writeUInt64(7, totalSat_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingTxHex_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, stakingTxHex_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, stakingTxHex_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(slashingTxHex_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, slashingTxHex_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, slashingTxHex_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegatorSlashSigHex_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, delegatorSlashSigHex_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, delegatorSlashSigHex_);
       }
       for (int i = 0; i < covenantSigs_.size(); i++) {
-        output.writeMessage(10, covenantSigs_.get(i));
+        output.writeMessage(11, covenantSigs_.get(i));
       }
       if (stakingOutputIdx_ != 0) {
-        output.writeUInt32(11, stakingOutputIdx_);
+        output.writeUInt32(12, stakingOutputIdx_);
       }
       if (active_ != false) {
-        output.writeBool(12, active_);
+        output.writeBool(13, active_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(statusDesc_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, statusDesc_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, statusDesc_);
       }
       if (unbondingTime_ != 0) {
-        output.writeUInt32(14, unbondingTime_);
+        output.writeUInt32(15, unbondingTime_);
       }
       if (undelegationResponse_ != null) {
-        output.writeMessage(15, getUndelegationResponse());
+        output.writeMessage(16, getUndelegationResponse());
       }
       if (paramsVersion_ != 0) {
-        output.writeUInt32(16, paramsVersion_);
+        output.writeUInt32(17, paramsVersion_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -16805,53 +11588,57 @@ public final class QueryProto {
         size += dataSize;
         size += 1 * getFpBtcPkListList().size();
       }
-      if (startHeight_ != 0L) {
+      if (stakingTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(4, startHeight_);
+          .computeUInt32Size(4, stakingTime_);
       }
-      if (endHeight_ != 0L) {
+      if (startHeight_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(5, endHeight_);
+          .computeUInt32Size(5, startHeight_);
+      }
+      if (endHeight_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(6, endHeight_);
       }
       if (totalSat_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(6, totalSat_);
+          .computeUInt64Size(7, totalSat_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingTxHex_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, stakingTxHex_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, stakingTxHex_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(slashingTxHex_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, slashingTxHex_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, slashingTxHex_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegatorSlashSigHex_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, delegatorSlashSigHex_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, delegatorSlashSigHex_);
       }
       for (int i = 0; i < covenantSigs_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, covenantSigs_.get(i));
+          .computeMessageSize(11, covenantSigs_.get(i));
       }
       if (stakingOutputIdx_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, stakingOutputIdx_);
+          .computeUInt32Size(12, stakingOutputIdx_);
       }
       if (active_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(12, active_);
+          .computeBoolSize(13, active_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(statusDesc_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, statusDesc_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, statusDesc_);
       }
       if (unbondingTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, unbondingTime_);
+          .computeUInt32Size(15, unbondingTime_);
       }
       if (undelegationResponse_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, getUndelegationResponse());
+          .computeMessageSize(16, getUndelegationResponse());
       }
       if (paramsVersion_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(16, paramsVersion_);
+          .computeUInt32Size(17, paramsVersion_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -16874,6 +11661,8 @@ public final class QueryProto {
           .equals(other.getBtcPk())) return false;
       if (!getFpBtcPkListList()
           .equals(other.getFpBtcPkListList())) return false;
+      if (getStakingTime()
+          != other.getStakingTime()) return false;
       if (getStartHeight()
           != other.getStartHeight()) return false;
       if (getEndHeight()
@@ -16922,12 +11711,12 @@ public final class QueryProto {
         hash = (37 * hash) + FP_BTC_PK_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getFpBtcPkListList().hashCode();
       }
+      hash = (37 * hash) + STAKING_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingTime();
       hash = (37 * hash) + START_HEIGHT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getStartHeight());
+      hash = (53 * hash) + getStartHeight();
       hash = (37 * hash) + END_HEIGHT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getEndHeight());
+      hash = (53 * hash) + getEndHeight();
       hash = (37 * hash) + TOTAL_SAT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getTotalSat());
@@ -17094,8 +11883,9 @@ public final class QueryProto {
         stakerAddr_ = "";
         btcPk_ = com.google.protobuf.ByteString.EMPTY;
         fpBtcPkList_ = java.util.Collections.emptyList();
-        startHeight_ = 0L;
-        endHeight_ = 0L;
+        stakingTime_ = 0;
+        startHeight_ = 0;
+        endHeight_ = 0;
         totalSat_ = 0L;
         stakingTxHex_ = "";
         slashingTxHex_ = "";
@@ -17106,7 +11896,7 @@ public final class QueryProto {
           covenantSigs_ = null;
           covenantSigsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000400);
         stakingOutputIdx_ = 0;
         active_ = false;
         statusDesc_ = "";
@@ -17156,9 +11946,9 @@ public final class QueryProto {
         }
         result.fpBtcPkList_ = fpBtcPkList_;
         if (covenantSigsBuilder_ == null) {
-          if (((bitField0_ & 0x00000200) != 0)) {
+          if (((bitField0_ & 0x00000400) != 0)) {
             covenantSigs_ = java.util.Collections.unmodifiableList(covenantSigs_);
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000400);
           }
           result.covenantSigs_ = covenantSigs_;
         } else {
@@ -17175,41 +11965,44 @@ public final class QueryProto {
           result.btcPk_ = btcPk_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.startHeight_ = startHeight_;
+          result.stakingTime_ = stakingTime_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.endHeight_ = endHeight_;
+          result.startHeight_ = startHeight_;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.totalSat_ = totalSat_;
+          result.endHeight_ = endHeight_;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.stakingTxHex_ = stakingTxHex_;
+          result.totalSat_ = totalSat_;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.slashingTxHex_ = slashingTxHex_;
+          result.stakingTxHex_ = stakingTxHex_;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.slashingTxHex_ = slashingTxHex_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
           result.delegatorSlashSigHex_ = delegatorSlashSigHex_;
         }
-        if (((from_bitField0_ & 0x00000400) != 0)) {
+        if (((from_bitField0_ & 0x00000800) != 0)) {
           result.stakingOutputIdx_ = stakingOutputIdx_;
         }
-        if (((from_bitField0_ & 0x00000800) != 0)) {
+        if (((from_bitField0_ & 0x00001000) != 0)) {
           result.active_ = active_;
         }
-        if (((from_bitField0_ & 0x00001000) != 0)) {
+        if (((from_bitField0_ & 0x00002000) != 0)) {
           result.statusDesc_ = statusDesc_;
         }
-        if (((from_bitField0_ & 0x00002000) != 0)) {
+        if (((from_bitField0_ & 0x00004000) != 0)) {
           result.unbondingTime_ = unbondingTime_;
         }
-        if (((from_bitField0_ & 0x00004000) != 0)) {
+        if (((from_bitField0_ & 0x00008000) != 0)) {
           result.undelegationResponse_ = undelegationResponseBuilder_ == null
               ? undelegationResponse_
               : undelegationResponseBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00008000) != 0)) {
+        if (((from_bitField0_ & 0x00010000) != 0)) {
           result.paramsVersion_ = paramsVersion_;
         }
       }
@@ -17276,10 +12069,13 @@ public final class QueryProto {
           }
           onChanged();
         }
-        if (other.getStartHeight() != 0L) {
+        if (other.getStakingTime() != 0) {
+          setStakingTime(other.getStakingTime());
+        }
+        if (other.getStartHeight() != 0) {
           setStartHeight(other.getStartHeight());
         }
-        if (other.getEndHeight() != 0L) {
+        if (other.getEndHeight() != 0) {
           setEndHeight(other.getEndHeight());
         }
         if (other.getTotalSat() != 0L) {
@@ -17287,24 +12083,24 @@ public final class QueryProto {
         }
         if (!other.getStakingTxHex().isEmpty()) {
           stakingTxHex_ = other.stakingTxHex_;
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000080;
           onChanged();
         }
         if (!other.getSlashingTxHex().isEmpty()) {
           slashingTxHex_ = other.slashingTxHex_;
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000100;
           onChanged();
         }
         if (!other.getDelegatorSlashSigHex().isEmpty()) {
           delegatorSlashSigHex_ = other.delegatorSlashSigHex_;
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000200;
           onChanged();
         }
         if (covenantSigsBuilder_ == null) {
           if (!other.covenantSigs_.isEmpty()) {
             if (covenantSigs_.isEmpty()) {
               covenantSigs_ = other.covenantSigs_;
-              bitField0_ = (bitField0_ & ~0x00000200);
+              bitField0_ = (bitField0_ & ~0x00000400);
             } else {
               ensureCovenantSigsIsMutable();
               covenantSigs_.addAll(other.covenantSigs_);
@@ -17317,7 +12113,7 @@ public final class QueryProto {
               covenantSigsBuilder_.dispose();
               covenantSigsBuilder_ = null;
               covenantSigs_ = other.covenantSigs_;
-              bitField0_ = (bitField0_ & ~0x00000200);
+              bitField0_ = (bitField0_ & ~0x00000400);
               covenantSigsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getCovenantSigsFieldBuilder() : null;
@@ -17334,7 +12130,7 @@ public final class QueryProto {
         }
         if (!other.getStatusDesc().isEmpty()) {
           statusDesc_ = other.statusDesc_;
-          bitField0_ |= 0x00001000;
+          bitField0_ |= 0x00002000;
           onChanged();
         }
         if (other.getUnbondingTime() != 0) {
@@ -17389,36 +12185,41 @@ public final class QueryProto {
                 break;
               } // case 26
               case 32: {
-                startHeight_ = input.readUInt64();
+                stakingTime_ = input.readUInt32();
                 bitField0_ |= 0x00000008;
                 break;
               } // case 32
               case 40: {
-                endHeight_ = input.readUInt64();
+                startHeight_ = input.readUInt32();
                 bitField0_ |= 0x00000010;
                 break;
               } // case 40
               case 48: {
-                totalSat_ = input.readUInt64();
+                endHeight_ = input.readUInt32();
                 bitField0_ |= 0x00000020;
                 break;
               } // case 48
-              case 58: {
-                stakingTxHex_ = input.readStringRequireUtf8();
+              case 56: {
+                totalSat_ = input.readUInt64();
                 bitField0_ |= 0x00000040;
                 break;
-              } // case 58
+              } // case 56
               case 66: {
-                slashingTxHex_ = input.readStringRequireUtf8();
+                stakingTxHex_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000080;
                 break;
               } // case 66
               case 74: {
-                delegatorSlashSigHex_ = input.readStringRequireUtf8();
+                slashingTxHex_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000100;
                 break;
               } // case 74
               case 82: {
+                delegatorSlashSigHex_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              case 90: {
                 com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures m =
                     input.readMessage(
                         com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.parser(),
@@ -17430,39 +12231,39 @@ public final class QueryProto {
                   covenantSigsBuilder_.addMessage(m);
                 }
                 break;
-              } // case 82
-              case 88: {
-                stakingOutputIdx_ = input.readUInt32();
-                bitField0_ |= 0x00000400;
-                break;
-              } // case 88
+              } // case 90
               case 96: {
-                active_ = input.readBool();
+                stakingOutputIdx_ = input.readUInt32();
                 bitField0_ |= 0x00000800;
                 break;
               } // case 96
-              case 106: {
-                statusDesc_ = input.readStringRequireUtf8();
+              case 104: {
+                active_ = input.readBool();
                 bitField0_ |= 0x00001000;
                 break;
-              } // case 106
-              case 112: {
-                unbondingTime_ = input.readUInt32();
+              } // case 104
+              case 114: {
+                statusDesc_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00002000;
                 break;
-              } // case 112
-              case 122: {
+              } // case 114
+              case 120: {
+                unbondingTime_ = input.readUInt32();
+                bitField0_ |= 0x00004000;
+                break;
+              } // case 120
+              case 130: {
                 input.readMessage(
                     getUndelegationResponseFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00004000;
-                break;
-              } // case 122
-              case 128: {
-                paramsVersion_ = input.readUInt32();
                 bitField0_ |= 0x00008000;
                 break;
-              } // case 128
+              } // case 130
+              case 136: {
+                paramsVersion_ = input.readUInt32();
+                bitField0_ |= 0x00010000;
+                break;
+              } // case 136
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -17579,7 +12380,7 @@ public final class QueryProto {
        * the PK follows encoding in BIP-340 spec
        * </pre>
        *
-       * <code>bytes btc_pk = 2 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes btc_pk = 2 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The btcPk.
        */
       @java.lang.Override
@@ -17592,7 +12393,7 @@ public final class QueryProto {
        * the PK follows encoding in BIP-340 spec
        * </pre>
        *
-       * <code>bytes btc_pk = 2 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes btc_pk = 2 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param value The btcPk to set.
        * @return This builder for chaining.
        */
@@ -17609,7 +12410,7 @@ public final class QueryProto {
        * the PK follows encoding in BIP-340 spec
        * </pre>
        *
-       * <code>bytes btc_pk = 2 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes btc_pk = 2 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBtcPk() {
@@ -17632,7 +12433,7 @@ public final class QueryProto {
        * this BTC delegation delegates to
        * </pre>
        *
-       * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return A list containing the fpBtcPkList.
        */
       public java.util.List<com.google.protobuf.ByteString>
@@ -17646,7 +12447,7 @@ public final class QueryProto {
        * this BTC delegation delegates to
        * </pre>
        *
-       * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The count of fpBtcPkList.
        */
       public int getFpBtcPkListCount() {
@@ -17658,7 +12459,7 @@ public final class QueryProto {
        * this BTC delegation delegates to
        * </pre>
        *
-       * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param index The index of the element to return.
        * @return The fpBtcPkList at the given index.
        */
@@ -17671,7 +12472,7 @@ public final class QueryProto {
        * this BTC delegation delegates to
        * </pre>
        *
-       * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param index The index to set the value at.
        * @param value The fpBtcPkList to set.
        * @return This builder for chaining.
@@ -17690,7 +12491,7 @@ public final class QueryProto {
        * this BTC delegation delegates to
        * </pre>
        *
-       * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param value The fpBtcPkList to add.
        * @return This builder for chaining.
        */
@@ -17707,7 +12508,7 @@ public final class QueryProto {
        * this BTC delegation delegates to
        * </pre>
        *
-       * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param values The fpBtcPkList to add.
        * @return This builder for chaining.
        */
@@ -17725,7 +12526,7 @@ public final class QueryProto {
        * this BTC delegation delegates to
        * </pre>
        *
-       * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>repeated bytes fp_btc_pk_list = 3 [json_name = "fpBtcPkList", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFpBtcPkList() {
@@ -17735,18 +12536,62 @@ public final class QueryProto {
         return this;
       }
 
-      private long startHeight_ ;
+      private int stakingTime_ ;
+      /**
+       * <pre>
+       * staking_time is the number of blocks for which the delegation is locked on BTC chain
+       * </pre>
+       *
+       * <code>uint32 staking_time = 4 [json_name = "stakingTime"];</code>
+       * @return The stakingTime.
+       */
+      @java.lang.Override
+      public int getStakingTime() {
+        return stakingTime_;
+      }
+      /**
+       * <pre>
+       * staking_time is the number of blocks for which the delegation is locked on BTC chain
+       * </pre>
+       *
+       * <code>uint32 staking_time = 4 [json_name = "stakingTime"];</code>
+       * @param value The stakingTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingTime(int value) {
+
+        stakingTime_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_time is the number of blocks for which the delegation is locked on BTC chain
+       * </pre>
+       *
+       * <code>uint32 staking_time = 4 [json_name = "stakingTime"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingTime() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        stakingTime_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int startHeight_ ;
       /**
        * <pre>
        * start_height is the start BTC height of the BTC delegation
        * it is the start BTC height of the timelock
        * </pre>
        *
-       * <code>uint64 start_height = 4 [json_name = "startHeight"];</code>
+       * <code>uint32 start_height = 5 [json_name = "startHeight"];</code>
        * @return The startHeight.
        */
       @java.lang.Override
-      public long getStartHeight() {
+      public int getStartHeight() {
         return startHeight_;
       }
       /**
@@ -17755,14 +12600,14 @@ public final class QueryProto {
        * it is the start BTC height of the timelock
        * </pre>
        *
-       * <code>uint64 start_height = 4 [json_name = "startHeight"];</code>
+       * <code>uint32 start_height = 5 [json_name = "startHeight"];</code>
        * @param value The startHeight to set.
        * @return This builder for chaining.
        */
-      public Builder setStartHeight(long value) {
+      public Builder setStartHeight(int value) {
 
         startHeight_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -17772,28 +12617,28 @@ public final class QueryProto {
        * it is the start BTC height of the timelock
        * </pre>
        *
-       * <code>uint64 start_height = 4 [json_name = "startHeight"];</code>
+       * <code>uint32 start_height = 5 [json_name = "startHeight"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStartHeight() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        startHeight_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        startHeight_ = 0;
         onChanged();
         return this;
       }
 
-      private long endHeight_ ;
+      private int endHeight_ ;
       /**
        * <pre>
        * end_height is the end height of the BTC delegation
        * it is the end BTC height of the timelock - w
        * </pre>
        *
-       * <code>uint64 end_height = 5 [json_name = "endHeight"];</code>
+       * <code>uint32 end_height = 6 [json_name = "endHeight"];</code>
        * @return The endHeight.
        */
       @java.lang.Override
-      public long getEndHeight() {
+      public int getEndHeight() {
         return endHeight_;
       }
       /**
@@ -17802,14 +12647,14 @@ public final class QueryProto {
        * it is the end BTC height of the timelock - w
        * </pre>
        *
-       * <code>uint64 end_height = 5 [json_name = "endHeight"];</code>
+       * <code>uint32 end_height = 6 [json_name = "endHeight"];</code>
        * @param value The endHeight to set.
        * @return This builder for chaining.
        */
-      public Builder setEndHeight(long value) {
+      public Builder setEndHeight(int value) {
 
         endHeight_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -17819,12 +12664,12 @@ public final class QueryProto {
        * it is the end BTC height of the timelock - w
        * </pre>
        *
-       * <code>uint64 end_height = 5 [json_name = "endHeight"];</code>
+       * <code>uint32 end_height = 6 [json_name = "endHeight"];</code>
        * @return This builder for chaining.
        */
       public Builder clearEndHeight() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        endHeight_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        endHeight_ = 0;
         onChanged();
         return this;
       }
@@ -17836,7 +12681,7 @@ public final class QueryProto {
        * quantified in satoshi
        * </pre>
        *
-       * <code>uint64 total_sat = 6 [json_name = "totalSat"];</code>
+       * <code>uint64 total_sat = 7 [json_name = "totalSat"];</code>
        * @return The totalSat.
        */
       @java.lang.Override
@@ -17849,14 +12694,14 @@ public final class QueryProto {
        * quantified in satoshi
        * </pre>
        *
-       * <code>uint64 total_sat = 6 [json_name = "totalSat"];</code>
+       * <code>uint64 total_sat = 7 [json_name = "totalSat"];</code>
        * @param value The totalSat to set.
        * @return This builder for chaining.
        */
       public Builder setTotalSat(long value) {
 
         totalSat_ = value;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -17866,11 +12711,11 @@ public final class QueryProto {
        * quantified in satoshi
        * </pre>
        *
-       * <code>uint64 total_sat = 6 [json_name = "totalSat"];</code>
+       * <code>uint64 total_sat = 7 [json_name = "totalSat"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTotalSat() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000040);
         totalSat_ = 0L;
         onChanged();
         return this;
@@ -17882,7 +12727,7 @@ public final class QueryProto {
        * staking_tx_hex is the hex string of staking tx
        * </pre>
        *
-       * <code>string staking_tx_hex = 7 [json_name = "stakingTxHex"];</code>
+       * <code>string staking_tx_hex = 8 [json_name = "stakingTxHex"];</code>
        * @return The stakingTxHex.
        */
       public java.lang.String getStakingTxHex() {
@@ -17902,7 +12747,7 @@ public final class QueryProto {
        * staking_tx_hex is the hex string of staking tx
        * </pre>
        *
-       * <code>string staking_tx_hex = 7 [json_name = "stakingTxHex"];</code>
+       * <code>string staking_tx_hex = 8 [json_name = "stakingTxHex"];</code>
        * @return The bytes for stakingTxHex.
        */
       public com.google.protobuf.ByteString
@@ -17923,7 +12768,7 @@ public final class QueryProto {
        * staking_tx_hex is the hex string of staking tx
        * </pre>
        *
-       * <code>string staking_tx_hex = 7 [json_name = "stakingTxHex"];</code>
+       * <code>string staking_tx_hex = 8 [json_name = "stakingTxHex"];</code>
        * @param value The stakingTxHex to set.
        * @return This builder for chaining.
        */
@@ -17931,7 +12776,7 @@ public final class QueryProto {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         stakingTxHex_ = value;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -17940,12 +12785,12 @@ public final class QueryProto {
        * staking_tx_hex is the hex string of staking tx
        * </pre>
        *
-       * <code>string staking_tx_hex = 7 [json_name = "stakingTxHex"];</code>
+       * <code>string staking_tx_hex = 8 [json_name = "stakingTxHex"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStakingTxHex() {
         stakingTxHex_ = getDefaultInstance().getStakingTxHex();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
@@ -17954,7 +12799,7 @@ public final class QueryProto {
        * staking_tx_hex is the hex string of staking tx
        * </pre>
        *
-       * <code>string staking_tx_hex = 7 [json_name = "stakingTxHex"];</code>
+       * <code>string staking_tx_hex = 8 [json_name = "stakingTxHex"];</code>
        * @param value The bytes for stakingTxHex to set.
        * @return This builder for chaining.
        */
@@ -17963,7 +12808,7 @@ public final class QueryProto {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         stakingTxHex_ = value;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -17974,7 +12819,7 @@ public final class QueryProto {
        * slashing_tx_hex is the hex string of slashing tx
        * </pre>
        *
-       * <code>string slashing_tx_hex = 8 [json_name = "slashingTxHex"];</code>
+       * <code>string slashing_tx_hex = 9 [json_name = "slashingTxHex"];</code>
        * @return The slashingTxHex.
        */
       public java.lang.String getSlashingTxHex() {
@@ -17994,7 +12839,7 @@ public final class QueryProto {
        * slashing_tx_hex is the hex string of slashing tx
        * </pre>
        *
-       * <code>string slashing_tx_hex = 8 [json_name = "slashingTxHex"];</code>
+       * <code>string slashing_tx_hex = 9 [json_name = "slashingTxHex"];</code>
        * @return The bytes for slashingTxHex.
        */
       public com.google.protobuf.ByteString
@@ -18015,7 +12860,7 @@ public final class QueryProto {
        * slashing_tx_hex is the hex string of slashing tx
        * </pre>
        *
-       * <code>string slashing_tx_hex = 8 [json_name = "slashingTxHex"];</code>
+       * <code>string slashing_tx_hex = 9 [json_name = "slashingTxHex"];</code>
        * @param value The slashingTxHex to set.
        * @return This builder for chaining.
        */
@@ -18023,7 +12868,7 @@ public final class QueryProto {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         slashingTxHex_ = value;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -18032,12 +12877,12 @@ public final class QueryProto {
        * slashing_tx_hex is the hex string of slashing tx
        * </pre>
        *
-       * <code>string slashing_tx_hex = 8 [json_name = "slashingTxHex"];</code>
+       * <code>string slashing_tx_hex = 9 [json_name = "slashingTxHex"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSlashingTxHex() {
         slashingTxHex_ = getDefaultInstance().getSlashingTxHex();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
@@ -18046,7 +12891,7 @@ public final class QueryProto {
        * slashing_tx_hex is the hex string of slashing tx
        * </pre>
        *
-       * <code>string slashing_tx_hex = 8 [json_name = "slashingTxHex"];</code>
+       * <code>string slashing_tx_hex = 9 [json_name = "slashingTxHex"];</code>
        * @param value The bytes for slashingTxHex to set.
        * @return This builder for chaining.
        */
@@ -18055,7 +12900,7 @@ public final class QueryProto {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         slashingTxHex_ = value;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -18068,7 +12913,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>string delegator_slash_sig_hex = 9 [json_name = "delegatorSlashSigHex"];</code>
+       * <code>string delegator_slash_sig_hex = 10 [json_name = "delegatorSlashSigHex"];</code>
        * @return The delegatorSlashSigHex.
        */
       public java.lang.String getDelegatorSlashSigHex() {
@@ -18090,7 +12935,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>string delegator_slash_sig_hex = 9 [json_name = "delegatorSlashSigHex"];</code>
+       * <code>string delegator_slash_sig_hex = 10 [json_name = "delegatorSlashSigHex"];</code>
        * @return The bytes for delegatorSlashSigHex.
        */
       public com.google.protobuf.ByteString
@@ -18113,7 +12958,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>string delegator_slash_sig_hex = 9 [json_name = "delegatorSlashSigHex"];</code>
+       * <code>string delegator_slash_sig_hex = 10 [json_name = "delegatorSlashSigHex"];</code>
        * @param value The delegatorSlashSigHex to set.
        * @return This builder for chaining.
        */
@@ -18121,7 +12966,7 @@ public final class QueryProto {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         delegatorSlashSigHex_ = value;
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -18132,12 +12977,12 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>string delegator_slash_sig_hex = 9 [json_name = "delegatorSlashSigHex"];</code>
+       * <code>string delegator_slash_sig_hex = 10 [json_name = "delegatorSlashSigHex"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDelegatorSlashSigHex() {
         delegatorSlashSigHex_ = getDefaultInstance().getDelegatorSlashSigHex();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000200);
         onChanged();
         return this;
       }
@@ -18148,7 +12993,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>string delegator_slash_sig_hex = 9 [json_name = "delegatorSlashSigHex"];</code>
+       * <code>string delegator_slash_sig_hex = 10 [json_name = "delegatorSlashSigHex"];</code>
        * @param value The bytes for delegatorSlashSigHex to set.
        * @return This builder for chaining.
        */
@@ -18157,7 +13002,7 @@ public final class QueryProto {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         delegatorSlashSigHex_ = value;
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -18165,9 +13010,9 @@ public final class QueryProto {
       private java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures> covenantSigs_ =
         java.util.Collections.emptyList();
       private void ensureCovenantSigsIsMutable() {
-        if (!((bitField0_ & 0x00000200) != 0)) {
+        if (!((bitField0_ & 0x00000400) != 0)) {
           covenantSigs_ = new java.util.ArrayList<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures>(covenantSigs_);
-          bitField0_ |= 0x00000200;
+          bitField0_ |= 0x00000400;
          }
       }
 
@@ -18181,7 +13026,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
        */
       public java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures> getCovenantSigsList() {
         if (covenantSigsBuilder_ == null) {
@@ -18197,7 +13042,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
        */
       public int getCovenantSigsCount() {
         if (covenantSigsBuilder_ == null) {
@@ -18213,7 +13058,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures getCovenantSigs(int index) {
         if (covenantSigsBuilder_ == null) {
@@ -18229,7 +13074,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
        */
       public Builder setCovenantSigs(
           int index, com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures value) {
@@ -18252,7 +13097,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
        */
       public Builder setCovenantSigs(
           int index, com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder builderForValue) {
@@ -18272,7 +13117,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
        */
       public Builder addCovenantSigs(com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures value) {
         if (covenantSigsBuilder_ == null) {
@@ -18294,7 +13139,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
        */
       public Builder addCovenantSigs(
           int index, com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures value) {
@@ -18317,7 +13162,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
        */
       public Builder addCovenantSigs(
           com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder builderForValue) {
@@ -18337,7 +13182,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
        */
       public Builder addCovenantSigs(
           int index, com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder builderForValue) {
@@ -18357,7 +13202,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
        */
       public Builder addAllCovenantSigs(
           java.lang.Iterable<? extends com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures> values) {
@@ -18378,12 +13223,12 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
        */
       public Builder clearCovenantSigs() {
         if (covenantSigsBuilder_ == null) {
           covenantSigs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000400);
           onChanged();
         } else {
           covenantSigsBuilder_.clear();
@@ -18397,7 +13242,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
        */
       public Builder removeCovenantSigs(int index) {
         if (covenantSigsBuilder_ == null) {
@@ -18416,7 +13261,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder getCovenantSigsBuilder(
           int index) {
@@ -18429,7 +13274,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder getCovenantSigsOrBuilder(
           int index) {
@@ -18445,7 +13290,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
        */
       public java.util.List<? extends com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder> 
            getCovenantSigsOrBuilderList() {
@@ -18462,7 +13307,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder addCovenantSigsBuilder() {
         return getCovenantSigsFieldBuilder().addBuilder(
@@ -18475,7 +13320,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder addCovenantSigsBuilder(
           int index) {
@@ -18489,7 +13334,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 10 [json_name = "covenantSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_sigs = 11 [json_name = "covenantSigs"];</code>
        */
       public java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder> 
            getCovenantSigsBuilderList() {
@@ -18502,7 +13347,7 @@ public final class QueryProto {
           covenantSigsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures, com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder, com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder>(
                   covenantSigs_,
-                  ((bitField0_ & 0x00000200) != 0),
+                  ((bitField0_ & 0x00000400) != 0),
                   getParentForChildren(),
                   isClean());
           covenantSigs_ = null;
@@ -18516,7 +13361,7 @@ public final class QueryProto {
        * staking_output_idx is the index of the staking output in the staking tx
        * </pre>
        *
-       * <code>uint32 staking_output_idx = 11 [json_name = "stakingOutputIdx"];</code>
+       * <code>uint32 staking_output_idx = 12 [json_name = "stakingOutputIdx"];</code>
        * @return The stakingOutputIdx.
        */
       @java.lang.Override
@@ -18528,14 +13373,14 @@ public final class QueryProto {
        * staking_output_idx is the index of the staking output in the staking tx
        * </pre>
        *
-       * <code>uint32 staking_output_idx = 11 [json_name = "stakingOutputIdx"];</code>
+       * <code>uint32 staking_output_idx = 12 [json_name = "stakingOutputIdx"];</code>
        * @param value The stakingOutputIdx to set.
        * @return This builder for chaining.
        */
       public Builder setStakingOutputIdx(int value) {
 
         stakingOutputIdx_ = value;
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -18544,11 +13389,11 @@ public final class QueryProto {
        * staking_output_idx is the index of the staking output in the staking tx
        * </pre>
        *
-       * <code>uint32 staking_output_idx = 11 [json_name = "stakingOutputIdx"];</code>
+       * <code>uint32 staking_output_idx = 12 [json_name = "stakingOutputIdx"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStakingOutputIdx() {
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000800);
         stakingOutputIdx_ = 0;
         onChanged();
         return this;
@@ -18560,7 +13405,7 @@ public final class QueryProto {
        * whether this delegation is active
        * </pre>
        *
-       * <code>bool active = 12 [json_name = "active"];</code>
+       * <code>bool active = 13 [json_name = "active"];</code>
        * @return The active.
        */
       @java.lang.Override
@@ -18572,14 +13417,14 @@ public final class QueryProto {
        * whether this delegation is active
        * </pre>
        *
-       * <code>bool active = 12 [json_name = "active"];</code>
+       * <code>bool active = 13 [json_name = "active"];</code>
        * @param value The active to set.
        * @return This builder for chaining.
        */
       public Builder setActive(boolean value) {
 
         active_ = value;
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
@@ -18588,11 +13433,11 @@ public final class QueryProto {
        * whether this delegation is active
        * </pre>
        *
-       * <code>bool active = 12 [json_name = "active"];</code>
+       * <code>bool active = 13 [json_name = "active"];</code>
        * @return This builder for chaining.
        */
       public Builder clearActive() {
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00001000);
         active_ = false;
         onChanged();
         return this;
@@ -18604,7 +13449,7 @@ public final class QueryProto {
        * descriptive status of current delegation.
        * </pre>
        *
-       * <code>string status_desc = 13 [json_name = "statusDesc"];</code>
+       * <code>string status_desc = 14 [json_name = "statusDesc"];</code>
        * @return The statusDesc.
        */
       public java.lang.String getStatusDesc() {
@@ -18624,7 +13469,7 @@ public final class QueryProto {
        * descriptive status of current delegation.
        * </pre>
        *
-       * <code>string status_desc = 13 [json_name = "statusDesc"];</code>
+       * <code>string status_desc = 14 [json_name = "statusDesc"];</code>
        * @return The bytes for statusDesc.
        */
       public com.google.protobuf.ByteString
@@ -18645,7 +13490,7 @@ public final class QueryProto {
        * descriptive status of current delegation.
        * </pre>
        *
-       * <code>string status_desc = 13 [json_name = "statusDesc"];</code>
+       * <code>string status_desc = 14 [json_name = "statusDesc"];</code>
        * @param value The statusDesc to set.
        * @return This builder for chaining.
        */
@@ -18653,7 +13498,7 @@ public final class QueryProto {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         statusDesc_ = value;
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
@@ -18662,12 +13507,12 @@ public final class QueryProto {
        * descriptive status of current delegation.
        * </pre>
        *
-       * <code>string status_desc = 13 [json_name = "statusDesc"];</code>
+       * <code>string status_desc = 14 [json_name = "statusDesc"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStatusDesc() {
         statusDesc_ = getDefaultInstance().getStatusDesc();
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00002000);
         onChanged();
         return this;
       }
@@ -18676,7 +13521,7 @@ public final class QueryProto {
        * descriptive status of current delegation.
        * </pre>
        *
-       * <code>string status_desc = 13 [json_name = "statusDesc"];</code>
+       * <code>string status_desc = 14 [json_name = "statusDesc"];</code>
        * @param value The bytes for statusDesc to set.
        * @return This builder for chaining.
        */
@@ -18685,7 +13530,7 @@ public final class QueryProto {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         statusDesc_ = value;
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
@@ -18697,7 +13542,7 @@ public final class QueryProto {
        * change outputs
        * </pre>
        *
-       * <code>uint32 unbonding_time = 14 [json_name = "unbondingTime"];</code>
+       * <code>uint32 unbonding_time = 15 [json_name = "unbondingTime"];</code>
        * @return The unbondingTime.
        */
       @java.lang.Override
@@ -18710,14 +13555,14 @@ public final class QueryProto {
        * change outputs
        * </pre>
        *
-       * <code>uint32 unbonding_time = 14 [json_name = "unbondingTime"];</code>
+       * <code>uint32 unbonding_time = 15 [json_name = "unbondingTime"];</code>
        * @param value The unbondingTime to set.
        * @return This builder for chaining.
        */
       public Builder setUnbondingTime(int value) {
 
         unbondingTime_ = value;
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -18727,11 +13572,11 @@ public final class QueryProto {
        * change outputs
        * </pre>
        *
-       * <code>uint32 unbonding_time = 14 [json_name = "unbondingTime"];</code>
+       * <code>uint32 unbonding_time = 15 [json_name = "unbondingTime"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUnbondingTime() {
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00004000);
         unbondingTime_ = 0;
         onChanged();
         return this;
@@ -18745,18 +13590,18 @@ public final class QueryProto {
        * undelegation_response is the undelegation info of this delegation.
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 15 [json_name = "undelegationResponse"];</code>
+       * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 16 [json_name = "undelegationResponse"];</code>
        * @return Whether the undelegationResponse field is set.
        */
       public boolean hasUndelegationResponse() {
-        return ((bitField0_ & 0x00004000) != 0);
+        return ((bitField0_ & 0x00008000) != 0);
       }
       /**
        * <pre>
        * undelegation_response is the undelegation info of this delegation.
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 15 [json_name = "undelegationResponse"];</code>
+       * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 16 [json_name = "undelegationResponse"];</code>
        * @return The undelegationResponse.
        */
       public com.babylon.btcstaking.v1.QueryProto.BTCUndelegationResponse getUndelegationResponse() {
@@ -18771,7 +13616,7 @@ public final class QueryProto {
        * undelegation_response is the undelegation info of this delegation.
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 15 [json_name = "undelegationResponse"];</code>
+       * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 16 [json_name = "undelegationResponse"];</code>
        */
       public Builder setUndelegationResponse(com.babylon.btcstaking.v1.QueryProto.BTCUndelegationResponse value) {
         if (undelegationResponseBuilder_ == null) {
@@ -18782,7 +13627,7 @@ public final class QueryProto {
         } else {
           undelegationResponseBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00004000;
+        bitField0_ |= 0x00008000;
         onChanged();
         return this;
       }
@@ -18791,7 +13636,7 @@ public final class QueryProto {
        * undelegation_response is the undelegation info of this delegation.
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 15 [json_name = "undelegationResponse"];</code>
+       * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 16 [json_name = "undelegationResponse"];</code>
        */
       public Builder setUndelegationResponse(
           com.babylon.btcstaking.v1.QueryProto.BTCUndelegationResponse.Builder builderForValue) {
@@ -18800,7 +13645,7 @@ public final class QueryProto {
         } else {
           undelegationResponseBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00004000;
+        bitField0_ |= 0x00008000;
         onChanged();
         return this;
       }
@@ -18809,11 +13654,11 @@ public final class QueryProto {
        * undelegation_response is the undelegation info of this delegation.
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 15 [json_name = "undelegationResponse"];</code>
+       * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 16 [json_name = "undelegationResponse"];</code>
        */
       public Builder mergeUndelegationResponse(com.babylon.btcstaking.v1.QueryProto.BTCUndelegationResponse value) {
         if (undelegationResponseBuilder_ == null) {
-          if (((bitField0_ & 0x00004000) != 0) &&
+          if (((bitField0_ & 0x00008000) != 0) &&
             undelegationResponse_ != null &&
             undelegationResponse_ != com.babylon.btcstaking.v1.QueryProto.BTCUndelegationResponse.getDefaultInstance()) {
             getUndelegationResponseBuilder().mergeFrom(value);
@@ -18823,7 +13668,7 @@ public final class QueryProto {
         } else {
           undelegationResponseBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00004000;
+        bitField0_ |= 0x00008000;
         onChanged();
         return this;
       }
@@ -18832,10 +13677,10 @@ public final class QueryProto {
        * undelegation_response is the undelegation info of this delegation.
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 15 [json_name = "undelegationResponse"];</code>
+       * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 16 [json_name = "undelegationResponse"];</code>
        */
       public Builder clearUndelegationResponse() {
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00008000);
         undelegationResponse_ = null;
         if (undelegationResponseBuilder_ != null) {
           undelegationResponseBuilder_.dispose();
@@ -18849,10 +13694,10 @@ public final class QueryProto {
        * undelegation_response is the undelegation info of this delegation.
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 15 [json_name = "undelegationResponse"];</code>
+       * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 16 [json_name = "undelegationResponse"];</code>
        */
       public com.babylon.btcstaking.v1.QueryProto.BTCUndelegationResponse.Builder getUndelegationResponseBuilder() {
-        bitField0_ |= 0x00004000;
+        bitField0_ |= 0x00008000;
         onChanged();
         return getUndelegationResponseFieldBuilder().getBuilder();
       }
@@ -18861,7 +13706,7 @@ public final class QueryProto {
        * undelegation_response is the undelegation info of this delegation.
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 15 [json_name = "undelegationResponse"];</code>
+       * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 16 [json_name = "undelegationResponse"];</code>
        */
       public com.babylon.btcstaking.v1.QueryProto.BTCUndelegationResponseOrBuilder getUndelegationResponseOrBuilder() {
         if (undelegationResponseBuilder_ != null) {
@@ -18876,7 +13721,7 @@ public final class QueryProto {
        * undelegation_response is the undelegation info of this delegation.
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 15 [json_name = "undelegationResponse"];</code>
+       * <code>.babylon.btcstaking.v1.BTCUndelegationResponse undelegation_response = 16 [json_name = "undelegationResponse"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.babylon.btcstaking.v1.QueryProto.BTCUndelegationResponse, com.babylon.btcstaking.v1.QueryProto.BTCUndelegationResponse.Builder, com.babylon.btcstaking.v1.QueryProto.BTCUndelegationResponseOrBuilder> 
@@ -18898,7 +13743,7 @@ public final class QueryProto {
        * params version used to validate delegation
        * </pre>
        *
-       * <code>uint32 params_version = 16 [json_name = "paramsVersion"];</code>
+       * <code>uint32 params_version = 17 [json_name = "paramsVersion"];</code>
        * @return The paramsVersion.
        */
       @java.lang.Override
@@ -18910,14 +13755,14 @@ public final class QueryProto {
        * params version used to validate delegation
        * </pre>
        *
-       * <code>uint32 params_version = 16 [json_name = "paramsVersion"];</code>
+       * <code>uint32 params_version = 17 [json_name = "paramsVersion"];</code>
        * @param value The paramsVersion to set.
        * @return This builder for chaining.
        */
       public Builder setParamsVersion(int value) {
 
         paramsVersion_ = value;
-        bitField0_ |= 0x00008000;
+        bitField0_ |= 0x00010000;
         onChanged();
         return this;
       }
@@ -18926,11 +13771,11 @@ public final class QueryProto {
        * params version used to validate delegation
        * </pre>
        *
-       * <code>uint32 params_version = 16 [json_name = "paramsVersion"];</code>
+       * <code>uint32 params_version = 17 [json_name = "paramsVersion"];</code>
        * @return This builder for chaining.
        */
       public Builder clearParamsVersion() {
-        bitField0_ = (bitField0_ & ~0x00008000);
+        bitField0_ = (bitField0_ & ~0x00010000);
         paramsVersion_ = 0;
         onChanged();
         return this;
@@ -18999,6 +13844,613 @@ public final class QueryProto {
 
   }
 
+  public interface DelegatorUnbondingInfoResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.DelegatorUnbondingInfoResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * spend_stake_tx_hex is the transaction which spent the staking output. It is
+     * filled only if the spend_stake_tx_hex is different than the unbonding_tx_hex
+     * </pre>
+     *
+     * <code>string spend_stake_tx_hex = 1 [json_name = "spendStakeTxHex"];</code>
+     * @return The spendStakeTxHex.
+     */
+    java.lang.String getSpendStakeTxHex();
+    /**
+     * <pre>
+     * spend_stake_tx_hex is the transaction which spent the staking output. It is
+     * filled only if the spend_stake_tx_hex is different than the unbonding_tx_hex
+     * </pre>
+     *
+     * <code>string spend_stake_tx_hex = 1 [json_name = "spendStakeTxHex"];</code>
+     * @return The bytes for spendStakeTxHex.
+     */
+    com.google.protobuf.ByteString
+        getSpendStakeTxHexBytes();
+  }
+  /**
+   * <pre>
+   * DelegatorUnbondingInfoResponse provides all necessary info about transaction
+   * which spent the staking output
+   * </pre>
+   *
+   * Protobuf type {@code babylon.btcstaking.v1.DelegatorUnbondingInfoResponse}
+   */
+  public static final class DelegatorUnbondingInfoResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.DelegatorUnbondingInfoResponse)
+      DelegatorUnbondingInfoResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DelegatorUnbondingInfoResponse.newBuilder() to construct.
+    private DelegatorUnbondingInfoResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DelegatorUnbondingInfoResponse() {
+      spendStakeTxHex_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DelegatorUnbondingInfoResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_DelegatorUnbondingInfoResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_DelegatorUnbondingInfoResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse.class, com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse.Builder.class);
+    }
+
+    public static final int SPEND_STAKE_TX_HEX_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object spendStakeTxHex_ = "";
+    /**
+     * <pre>
+     * spend_stake_tx_hex is the transaction which spent the staking output. It is
+     * filled only if the spend_stake_tx_hex is different than the unbonding_tx_hex
+     * </pre>
+     *
+     * <code>string spend_stake_tx_hex = 1 [json_name = "spendStakeTxHex"];</code>
+     * @return The spendStakeTxHex.
+     */
+    @java.lang.Override
+    public java.lang.String getSpendStakeTxHex() {
+      java.lang.Object ref = spendStakeTxHex_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        spendStakeTxHex_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * spend_stake_tx_hex is the transaction which spent the staking output. It is
+     * filled only if the spend_stake_tx_hex is different than the unbonding_tx_hex
+     * </pre>
+     *
+     * <code>string spend_stake_tx_hex = 1 [json_name = "spendStakeTxHex"];</code>
+     * @return The bytes for spendStakeTxHex.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSpendStakeTxHexBytes() {
+      java.lang.Object ref = spendStakeTxHex_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        spendStakeTxHex_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(spendStakeTxHex_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, spendStakeTxHex_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(spendStakeTxHex_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, spendStakeTxHex_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse)) {
+        return super.equals(obj);
+      }
+      com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse other = (com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse) obj;
+
+      if (!getSpendStakeTxHex()
+          .equals(other.getSpendStakeTxHex())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SPEND_STAKE_TX_HEX_FIELD_NUMBER;
+      hash = (53 * hash) + getSpendStakeTxHex().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * DelegatorUnbondingInfoResponse provides all necessary info about transaction
+     * which spent the staking output
+     * </pre>
+     *
+     * Protobuf type {@code babylon.btcstaking.v1.DelegatorUnbondingInfoResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.DelegatorUnbondingInfoResponse)
+        com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_DelegatorUnbondingInfoResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_DelegatorUnbondingInfoResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse.class, com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse.Builder.class);
+      }
+
+      // Construct using com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        spendStakeTxHex_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_DelegatorUnbondingInfoResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse getDefaultInstanceForType() {
+        return com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse build() {
+        com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse buildPartial() {
+        com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse result = new com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.spendStakeTxHex_ = spendStakeTxHex_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse) {
+          return mergeFrom((com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse other) {
+        if (other == com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse.getDefaultInstance()) return this;
+        if (!other.getSpendStakeTxHex().isEmpty()) {
+          spendStakeTxHex_ = other.spendStakeTxHex_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                spendStakeTxHex_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object spendStakeTxHex_ = "";
+      /**
+       * <pre>
+       * spend_stake_tx_hex is the transaction which spent the staking output. It is
+       * filled only if the spend_stake_tx_hex is different than the unbonding_tx_hex
+       * </pre>
+       *
+       * <code>string spend_stake_tx_hex = 1 [json_name = "spendStakeTxHex"];</code>
+       * @return The spendStakeTxHex.
+       */
+      public java.lang.String getSpendStakeTxHex() {
+        java.lang.Object ref = spendStakeTxHex_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          spendStakeTxHex_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * spend_stake_tx_hex is the transaction which spent the staking output. It is
+       * filled only if the spend_stake_tx_hex is different than the unbonding_tx_hex
+       * </pre>
+       *
+       * <code>string spend_stake_tx_hex = 1 [json_name = "spendStakeTxHex"];</code>
+       * @return The bytes for spendStakeTxHex.
+       */
+      public com.google.protobuf.ByteString
+          getSpendStakeTxHexBytes() {
+        java.lang.Object ref = spendStakeTxHex_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          spendStakeTxHex_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * spend_stake_tx_hex is the transaction which spent the staking output. It is
+       * filled only if the spend_stake_tx_hex is different than the unbonding_tx_hex
+       * </pre>
+       *
+       * <code>string spend_stake_tx_hex = 1 [json_name = "spendStakeTxHex"];</code>
+       * @param value The spendStakeTxHex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpendStakeTxHex(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        spendStakeTxHex_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * spend_stake_tx_hex is the transaction which spent the staking output. It is
+       * filled only if the spend_stake_tx_hex is different than the unbonding_tx_hex
+       * </pre>
+       *
+       * <code>string spend_stake_tx_hex = 1 [json_name = "spendStakeTxHex"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSpendStakeTxHex() {
+        spendStakeTxHex_ = getDefaultInstance().getSpendStakeTxHex();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * spend_stake_tx_hex is the transaction which spent the staking output. It is
+       * filled only if the spend_stake_tx_hex is different than the unbonding_tx_hex
+       * </pre>
+       *
+       * <code>string spend_stake_tx_hex = 1 [json_name = "spendStakeTxHex"];</code>
+       * @param value The bytes for spendStakeTxHex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpendStakeTxHexBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        spendStakeTxHex_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.DelegatorUnbondingInfoResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.DelegatorUnbondingInfoResponse)
+    private static final com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse();
+    }
+
+    public static com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DelegatorUnbondingInfoResponse>
+        PARSER = new com.google.protobuf.AbstractParser<DelegatorUnbondingInfoResponse>() {
+      @java.lang.Override
+      public DelegatorUnbondingInfoResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DelegatorUnbondingInfoResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DelegatorUnbondingInfoResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface BTCUndelegationResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.BTCUndelegationResponse)
       com.google.protobuf.MessageOrBuilder {
@@ -19029,39 +14481,11 @@ public final class QueryProto {
 
     /**
      * <pre>
-     * delegator_unbonding_sig is the signature on the unbonding tx
-     * by the delegator (i.e., SK corresponding to btc_pk).
-     * It effectively proves that the delegator wants to unbond and thus
-     * Babylon will consider this BTC delegation unbonded. Delegator's BTC
-     * on Bitcoin will be unbonded after timelock. The unbonding delegator sig as string hex.
-     * </pre>
-     *
-     * <code>string delegator_unbonding_sig_hex = 2 [json_name = "delegatorUnbondingSigHex"];</code>
-     * @return The delegatorUnbondingSigHex.
-     */
-    java.lang.String getDelegatorUnbondingSigHex();
-    /**
-     * <pre>
-     * delegator_unbonding_sig is the signature on the unbonding tx
-     * by the delegator (i.e., SK corresponding to btc_pk).
-     * It effectively proves that the delegator wants to unbond and thus
-     * Babylon will consider this BTC delegation unbonded. Delegator's BTC
-     * on Bitcoin will be unbonded after timelock. The unbonding delegator sig as string hex.
-     * </pre>
-     *
-     * <code>string delegator_unbonding_sig_hex = 2 [json_name = "delegatorUnbondingSigHex"];</code>
-     * @return The bytes for delegatorUnbondingSigHex.
-     */
-    com.google.protobuf.ByteString
-        getDelegatorUnbondingSigHexBytes();
-
-    /**
-     * <pre>
      * covenant_unbonding_sig_list is the list of signatures on the unbonding tx
      * by covenant members
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
      */
     java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo> 
         getCovenantUnbondingSigListList();
@@ -19071,7 +14495,7 @@ public final class QueryProto {
      * by covenant members
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
      */
     com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo getCovenantUnbondingSigList(int index);
     /**
@@ -19080,7 +14504,7 @@ public final class QueryProto {
      * by covenant members
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
      */
     int getCovenantUnbondingSigListCount();
     /**
@@ -19089,7 +14513,7 @@ public final class QueryProto {
      * by covenant members
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
      */
     java.util.List<? extends com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfoOrBuilder> 
         getCovenantUnbondingSigListOrBuilderList();
@@ -19099,7 +14523,7 @@ public final class QueryProto {
      * by covenant members
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
      */
     com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfoOrBuilder getCovenantUnbondingSigListOrBuilder(
         int index);
@@ -19109,7 +14533,7 @@ public final class QueryProto {
      * slashingTxHex is the hex string of slashing tx
      * </pre>
      *
-     * <code>string slashing_tx_hex = 4 [json_name = "slashingTxHex"];</code>
+     * <code>string slashing_tx_hex = 3 [json_name = "slashingTxHex"];</code>
      * @return The slashingTxHex.
      */
     java.lang.String getSlashingTxHex();
@@ -19118,7 +14542,7 @@ public final class QueryProto {
      * slashingTxHex is the hex string of slashing tx
      * </pre>
      *
-     * <code>string slashing_tx_hex = 4 [json_name = "slashingTxHex"];</code>
+     * <code>string slashing_tx_hex = 3 [json_name = "slashingTxHex"];</code>
      * @return The bytes for slashingTxHex.
      */
     com.google.protobuf.ByteString
@@ -19132,7 +14556,7 @@ public final class QueryProto {
      * The delegator slashing sig as string hex.
      * </pre>
      *
-     * <code>string delegator_slashing_sig_hex = 5 [json_name = "delegatorSlashingSigHex"];</code>
+     * <code>string delegator_slashing_sig_hex = 4 [json_name = "delegatorSlashingSigHex"];</code>
      * @return The delegatorSlashingSigHex.
      */
     java.lang.String getDelegatorSlashingSigHex();
@@ -19144,7 +14568,7 @@ public final class QueryProto {
      * The delegator slashing sig as string hex.
      * </pre>
      *
-     * <code>string delegator_slashing_sig_hex = 5 [json_name = "delegatorSlashingSigHex"];</code>
+     * <code>string delegator_slashing_sig_hex = 4 [json_name = "delegatorSlashingSigHex"];</code>
      * @return The bytes for delegatorSlashingSigHex.
      */
     com.google.protobuf.ByteString
@@ -19157,7 +14581,7 @@ public final class QueryProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
      */
     java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures> 
         getCovenantSlashingSigsList();
@@ -19168,7 +14592,7 @@ public final class QueryProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
      */
     com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures getCovenantSlashingSigs(int index);
     /**
@@ -19178,7 +14602,7 @@ public final class QueryProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
      */
     int getCovenantSlashingSigsCount();
     /**
@@ -19188,7 +14612,7 @@ public final class QueryProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
      */
     java.util.List<? extends com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder> 
         getCovenantSlashingSigsOrBuilderList();
@@ -19199,10 +14623,40 @@ public final class QueryProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
      */
     com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder getCovenantSlashingSigsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * btc_undelegation_info contains all necessary info about the transaction
+     * which spent the staking output
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfoResponse delegator_unbonding_info_response = 6 [json_name = "delegatorUnbondingInfoResponse"];</code>
+     * @return Whether the delegatorUnbondingInfoResponse field is set.
+     */
+    boolean hasDelegatorUnbondingInfoResponse();
+    /**
+     * <pre>
+     * btc_undelegation_info contains all necessary info about the transaction
+     * which spent the staking output
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfoResponse delegator_unbonding_info_response = 6 [json_name = "delegatorUnbondingInfoResponse"];</code>
+     * @return The delegatorUnbondingInfoResponse.
+     */
+    com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse getDelegatorUnbondingInfoResponse();
+    /**
+     * <pre>
+     * btc_undelegation_info contains all necessary info about the transaction
+     * which spent the staking output
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfoResponse delegator_unbonding_info_response = 6 [json_name = "delegatorUnbondingInfoResponse"];</code>
+     */
+    com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponseOrBuilder getDelegatorUnbondingInfoResponseOrBuilder();
   }
   /**
    * <pre>
@@ -19222,7 +14676,6 @@ public final class QueryProto {
     }
     private BTCUndelegationResponse() {
       unbondingTxHex_ = "";
-      delegatorUnbondingSigHex_ = "";
       covenantUnbondingSigList_ = java.util.Collections.emptyList();
       slashingTxHex_ = "";
       delegatorSlashingSigHex_ = "";
@@ -19300,62 +14753,7 @@ public final class QueryProto {
       }
     }
 
-    public static final int DELEGATOR_UNBONDING_SIG_HEX_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object delegatorUnbondingSigHex_ = "";
-    /**
-     * <pre>
-     * delegator_unbonding_sig is the signature on the unbonding tx
-     * by the delegator (i.e., SK corresponding to btc_pk).
-     * It effectively proves that the delegator wants to unbond and thus
-     * Babylon will consider this BTC delegation unbonded. Delegator's BTC
-     * on Bitcoin will be unbonded after timelock. The unbonding delegator sig as string hex.
-     * </pre>
-     *
-     * <code>string delegator_unbonding_sig_hex = 2 [json_name = "delegatorUnbondingSigHex"];</code>
-     * @return The delegatorUnbondingSigHex.
-     */
-    @java.lang.Override
-    public java.lang.String getDelegatorUnbondingSigHex() {
-      java.lang.Object ref = delegatorUnbondingSigHex_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        delegatorUnbondingSigHex_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * delegator_unbonding_sig is the signature on the unbonding tx
-     * by the delegator (i.e., SK corresponding to btc_pk).
-     * It effectively proves that the delegator wants to unbond and thus
-     * Babylon will consider this BTC delegation unbonded. Delegator's BTC
-     * on Bitcoin will be unbonded after timelock. The unbonding delegator sig as string hex.
-     * </pre>
-     *
-     * <code>string delegator_unbonding_sig_hex = 2 [json_name = "delegatorUnbondingSigHex"];</code>
-     * @return The bytes for delegatorUnbondingSigHex.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getDelegatorUnbondingSigHexBytes() {
-      java.lang.Object ref = delegatorUnbondingSigHex_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        delegatorUnbondingSigHex_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int COVENANT_UNBONDING_SIG_LIST_FIELD_NUMBER = 3;
+    public static final int COVENANT_UNBONDING_SIG_LIST_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo> covenantUnbondingSigList_;
     /**
@@ -19364,7 +14762,7 @@ public final class QueryProto {
      * by covenant members
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
      */
     @java.lang.Override
     public java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo> getCovenantUnbondingSigListList() {
@@ -19376,7 +14774,7 @@ public final class QueryProto {
      * by covenant members
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfoOrBuilder> 
@@ -19389,7 +14787,7 @@ public final class QueryProto {
      * by covenant members
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
      */
     @java.lang.Override
     public int getCovenantUnbondingSigListCount() {
@@ -19401,7 +14799,7 @@ public final class QueryProto {
      * by covenant members
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
      */
     @java.lang.Override
     public com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo getCovenantUnbondingSigList(int index) {
@@ -19413,7 +14811,7 @@ public final class QueryProto {
      * by covenant members
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+     * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
      */
     @java.lang.Override
     public com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfoOrBuilder getCovenantUnbondingSigListOrBuilder(
@@ -19421,7 +14819,7 @@ public final class QueryProto {
       return covenantUnbondingSigList_.get(index);
     }
 
-    public static final int SLASHING_TX_HEX_FIELD_NUMBER = 4;
+    public static final int SLASHING_TX_HEX_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
     private volatile java.lang.Object slashingTxHex_ = "";
     /**
@@ -19429,7 +14827,7 @@ public final class QueryProto {
      * slashingTxHex is the hex string of slashing tx
      * </pre>
      *
-     * <code>string slashing_tx_hex = 4 [json_name = "slashingTxHex"];</code>
+     * <code>string slashing_tx_hex = 3 [json_name = "slashingTxHex"];</code>
      * @return The slashingTxHex.
      */
     @java.lang.Override
@@ -19450,7 +14848,7 @@ public final class QueryProto {
      * slashingTxHex is the hex string of slashing tx
      * </pre>
      *
-     * <code>string slashing_tx_hex = 4 [json_name = "slashingTxHex"];</code>
+     * <code>string slashing_tx_hex = 3 [json_name = "slashingTxHex"];</code>
      * @return The bytes for slashingTxHex.
      */
     @java.lang.Override
@@ -19468,7 +14866,7 @@ public final class QueryProto {
       }
     }
 
-    public static final int DELEGATOR_SLASHING_SIG_HEX_FIELD_NUMBER = 5;
+    public static final int DELEGATOR_SLASHING_SIG_HEX_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
     private volatile java.lang.Object delegatorSlashingSigHex_ = "";
     /**
@@ -19479,7 +14877,7 @@ public final class QueryProto {
      * The delegator slashing sig as string hex.
      * </pre>
      *
-     * <code>string delegator_slashing_sig_hex = 5 [json_name = "delegatorSlashingSigHex"];</code>
+     * <code>string delegator_slashing_sig_hex = 4 [json_name = "delegatorSlashingSigHex"];</code>
      * @return The delegatorSlashingSigHex.
      */
     @java.lang.Override
@@ -19503,7 +14901,7 @@ public final class QueryProto {
      * The delegator slashing sig as string hex.
      * </pre>
      *
-     * <code>string delegator_slashing_sig_hex = 5 [json_name = "delegatorSlashingSigHex"];</code>
+     * <code>string delegator_slashing_sig_hex = 4 [json_name = "delegatorSlashingSigHex"];</code>
      * @return The bytes for delegatorSlashingSigHex.
      */
     @java.lang.Override
@@ -19521,7 +14919,7 @@ public final class QueryProto {
       }
     }
 
-    public static final int COVENANT_SLASHING_SIGS_FIELD_NUMBER = 6;
+    public static final int COVENANT_SLASHING_SIGS_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
     private java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures> covenantSlashingSigs_;
     /**
@@ -19531,7 +14929,7 @@ public final class QueryProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
      */
     @java.lang.Override
     public java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures> getCovenantSlashingSigsList() {
@@ -19544,7 +14942,7 @@ public final class QueryProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder> 
@@ -19558,7 +14956,7 @@ public final class QueryProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
      */
     @java.lang.Override
     public int getCovenantSlashingSigsCount() {
@@ -19571,7 +14969,7 @@ public final class QueryProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
      */
     @java.lang.Override
     public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures getCovenantSlashingSigs(int index) {
@@ -19584,12 +14982,53 @@ public final class QueryProto {
      * It will be a part of the witness for the staking tx output.
      * </pre>
      *
-     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+     * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
      */
     @java.lang.Override
     public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder getCovenantSlashingSigsOrBuilder(
         int index) {
       return covenantSlashingSigs_.get(index);
+    }
+
+    public static final int DELEGATOR_UNBONDING_INFO_RESPONSE_FIELD_NUMBER = 6;
+    private com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse delegatorUnbondingInfoResponse_;
+    /**
+     * <pre>
+     * btc_undelegation_info contains all necessary info about the transaction
+     * which spent the staking output
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfoResponse delegator_unbonding_info_response = 6 [json_name = "delegatorUnbondingInfoResponse"];</code>
+     * @return Whether the delegatorUnbondingInfoResponse field is set.
+     */
+    @java.lang.Override
+    public boolean hasDelegatorUnbondingInfoResponse() {
+      return delegatorUnbondingInfoResponse_ != null;
+    }
+    /**
+     * <pre>
+     * btc_undelegation_info contains all necessary info about the transaction
+     * which spent the staking output
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfoResponse delegator_unbonding_info_response = 6 [json_name = "delegatorUnbondingInfoResponse"];</code>
+     * @return The delegatorUnbondingInfoResponse.
+     */
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse getDelegatorUnbondingInfoResponse() {
+      return delegatorUnbondingInfoResponse_ == null ? com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse.getDefaultInstance() : delegatorUnbondingInfoResponse_;
+    }
+    /**
+     * <pre>
+     * btc_undelegation_info contains all necessary info about the transaction
+     * which spent the staking output
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfoResponse delegator_unbonding_info_response = 6 [json_name = "delegatorUnbondingInfoResponse"];</code>
+     */
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponseOrBuilder getDelegatorUnbondingInfoResponseOrBuilder() {
+      return delegatorUnbondingInfoResponse_ == null ? com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse.getDefaultInstance() : delegatorUnbondingInfoResponse_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -19609,20 +15048,20 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unbondingTxHex_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, unbondingTxHex_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegatorUnbondingSigHex_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, delegatorUnbondingSigHex_);
-      }
       for (int i = 0; i < covenantUnbondingSigList_.size(); i++) {
-        output.writeMessage(3, covenantUnbondingSigList_.get(i));
+        output.writeMessage(2, covenantUnbondingSigList_.get(i));
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(slashingTxHex_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, slashingTxHex_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, slashingTxHex_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegatorSlashingSigHex_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, delegatorSlashingSigHex_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, delegatorSlashingSigHex_);
       }
       for (int i = 0; i < covenantSlashingSigs_.size(); i++) {
-        output.writeMessage(6, covenantSlashingSigs_.get(i));
+        output.writeMessage(5, covenantSlashingSigs_.get(i));
+      }
+      if (delegatorUnbondingInfoResponse_ != null) {
+        output.writeMessage(6, getDelegatorUnbondingInfoResponse());
       }
       getUnknownFields().writeTo(output);
     }
@@ -19636,22 +15075,23 @@ public final class QueryProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unbondingTxHex_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, unbondingTxHex_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegatorUnbondingSigHex_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, delegatorUnbondingSigHex_);
-      }
       for (int i = 0; i < covenantUnbondingSigList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, covenantUnbondingSigList_.get(i));
+          .computeMessageSize(2, covenantUnbondingSigList_.get(i));
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(slashingTxHex_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, slashingTxHex_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, slashingTxHex_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegatorSlashingSigHex_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, delegatorSlashingSigHex_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, delegatorSlashingSigHex_);
       }
       for (int i = 0; i < covenantSlashingSigs_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, covenantSlashingSigs_.get(i));
+          .computeMessageSize(5, covenantSlashingSigs_.get(i));
+      }
+      if (delegatorUnbondingInfoResponse_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getDelegatorUnbondingInfoResponse());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -19670,8 +15110,6 @@ public final class QueryProto {
 
       if (!getUnbondingTxHex()
           .equals(other.getUnbondingTxHex())) return false;
-      if (!getDelegatorUnbondingSigHex()
-          .equals(other.getDelegatorUnbondingSigHex())) return false;
       if (!getCovenantUnbondingSigListList()
           .equals(other.getCovenantUnbondingSigListList())) return false;
       if (!getSlashingTxHex()
@@ -19680,6 +15118,11 @@ public final class QueryProto {
           .equals(other.getDelegatorSlashingSigHex())) return false;
       if (!getCovenantSlashingSigsList()
           .equals(other.getCovenantSlashingSigsList())) return false;
+      if (hasDelegatorUnbondingInfoResponse() != other.hasDelegatorUnbondingInfoResponse()) return false;
+      if (hasDelegatorUnbondingInfoResponse()) {
+        if (!getDelegatorUnbondingInfoResponse()
+            .equals(other.getDelegatorUnbondingInfoResponse())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -19693,8 +15136,6 @@ public final class QueryProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + UNBONDING_TX_HEX_FIELD_NUMBER;
       hash = (53 * hash) + getUnbondingTxHex().hashCode();
-      hash = (37 * hash) + DELEGATOR_UNBONDING_SIG_HEX_FIELD_NUMBER;
-      hash = (53 * hash) + getDelegatorUnbondingSigHex().hashCode();
       if (getCovenantUnbondingSigListCount() > 0) {
         hash = (37 * hash) + COVENANT_UNBONDING_SIG_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getCovenantUnbondingSigListList().hashCode();
@@ -19706,6 +15147,10 @@ public final class QueryProto {
       if (getCovenantSlashingSigsCount() > 0) {
         hash = (37 * hash) + COVENANT_SLASHING_SIGS_FIELD_NUMBER;
         hash = (53 * hash) + getCovenantSlashingSigsList().hashCode();
+      }
+      if (hasDelegatorUnbondingInfoResponse()) {
+        hash = (37 * hash) + DELEGATOR_UNBONDING_INFO_RESPONSE_FIELD_NUMBER;
+        hash = (53 * hash) + getDelegatorUnbondingInfoResponse().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -19843,14 +15288,13 @@ public final class QueryProto {
         super.clear();
         bitField0_ = 0;
         unbondingTxHex_ = "";
-        delegatorUnbondingSigHex_ = "";
         if (covenantUnbondingSigListBuilder_ == null) {
           covenantUnbondingSigList_ = java.util.Collections.emptyList();
         } else {
           covenantUnbondingSigList_ = null;
           covenantUnbondingSigListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         slashingTxHex_ = "";
         delegatorSlashingSigHex_ = "";
         if (covenantSlashingSigsBuilder_ == null) {
@@ -19859,7 +15303,12 @@ public final class QueryProto {
           covenantSlashingSigs_ = null;
           covenantSlashingSigsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
+        delegatorUnbondingInfoResponse_ = null;
+        if (delegatorUnbondingInfoResponseBuilder_ != null) {
+          delegatorUnbondingInfoResponseBuilder_.dispose();
+          delegatorUnbondingInfoResponseBuilder_ = null;
+        }
         return this;
       }
 
@@ -19894,18 +15343,18 @@ public final class QueryProto {
 
       private void buildPartialRepeatedFields(com.babylon.btcstaking.v1.QueryProto.BTCUndelegationResponse result) {
         if (covenantUnbondingSigListBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             covenantUnbondingSigList_ = java.util.Collections.unmodifiableList(covenantUnbondingSigList_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.covenantUnbondingSigList_ = covenantUnbondingSigList_;
         } else {
           result.covenantUnbondingSigList_ = covenantUnbondingSigListBuilder_.build();
         }
         if (covenantSlashingSigsBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             covenantSlashingSigs_ = java.util.Collections.unmodifiableList(covenantSlashingSigs_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.covenantSlashingSigs_ = covenantSlashingSigs_;
         } else {
@@ -19918,14 +15367,16 @@ public final class QueryProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.unbondingTxHex_ = unbondingTxHex_;
         }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.delegatorUnbondingSigHex_ = delegatorUnbondingSigHex_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
+        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.slashingTxHex_ = slashingTxHex_;
         }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
+        if (((from_bitField0_ & 0x00000008) != 0)) {
           result.delegatorSlashingSigHex_ = delegatorSlashingSigHex_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.delegatorUnbondingInfoResponse_ = delegatorUnbondingInfoResponseBuilder_ == null
+              ? delegatorUnbondingInfoResponse_
+              : delegatorUnbondingInfoResponseBuilder_.build();
         }
       }
 
@@ -19978,16 +15429,11 @@ public final class QueryProto {
           bitField0_ |= 0x00000001;
           onChanged();
         }
-        if (!other.getDelegatorUnbondingSigHex().isEmpty()) {
-          delegatorUnbondingSigHex_ = other.delegatorUnbondingSigHex_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
         if (covenantUnbondingSigListBuilder_ == null) {
           if (!other.covenantUnbondingSigList_.isEmpty()) {
             if (covenantUnbondingSigList_.isEmpty()) {
               covenantUnbondingSigList_ = other.covenantUnbondingSigList_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureCovenantUnbondingSigListIsMutable();
               covenantUnbondingSigList_.addAll(other.covenantUnbondingSigList_);
@@ -20000,7 +15446,7 @@ public final class QueryProto {
               covenantUnbondingSigListBuilder_.dispose();
               covenantUnbondingSigListBuilder_ = null;
               covenantUnbondingSigList_ = other.covenantUnbondingSigList_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000002);
               covenantUnbondingSigListBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getCovenantUnbondingSigListFieldBuilder() : null;
@@ -20011,19 +15457,19 @@ public final class QueryProto {
         }
         if (!other.getSlashingTxHex().isEmpty()) {
           slashingTxHex_ = other.slashingTxHex_;
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getDelegatorSlashingSigHex().isEmpty()) {
           delegatorSlashingSigHex_ = other.delegatorSlashingSigHex_;
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (covenantSlashingSigsBuilder_ == null) {
           if (!other.covenantSlashingSigs_.isEmpty()) {
             if (covenantSlashingSigs_.isEmpty()) {
               covenantSlashingSigs_ = other.covenantSlashingSigs_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureCovenantSlashingSigsIsMutable();
               covenantSlashingSigs_.addAll(other.covenantSlashingSigs_);
@@ -20036,7 +15482,7 @@ public final class QueryProto {
               covenantSlashingSigsBuilder_.dispose();
               covenantSlashingSigsBuilder_ = null;
               covenantSlashingSigs_ = other.covenantSlashingSigs_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000010);
               covenantSlashingSigsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getCovenantSlashingSigsFieldBuilder() : null;
@@ -20044,6 +15490,9 @@ public final class QueryProto {
               covenantSlashingSigsBuilder_.addAllMessages(other.covenantSlashingSigs_);
             }
           }
+        }
+        if (other.hasDelegatorUnbondingInfoResponse()) {
+          mergeDelegatorUnbondingInfoResponse(other.getDelegatorUnbondingInfoResponse());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -20077,11 +15526,6 @@ public final class QueryProto {
                 break;
               } // case 10
               case 18: {
-                delegatorUnbondingSigHex_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
                 com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo m =
                     input.readMessage(
                         com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo.parser(),
@@ -20093,18 +15537,18 @@ public final class QueryProto {
                   covenantUnbondingSigListBuilder_.addMessage(m);
                 }
                 break;
+              } // case 18
+              case 26: {
+                slashingTxHex_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
               } // case 26
               case 34: {
-                slashingTxHex_ = input.readStringRequireUtf8();
+                delegatorSlashingSigHex_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
-                delegatorSlashingSigHex_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 42
-              case 50: {
                 com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures m =
                     input.readMessage(
                         com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.parser(),
@@ -20115,6 +15559,13 @@ public final class QueryProto {
                 } else {
                   covenantSlashingSigsBuilder_.addMessage(m);
                 }
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getDelegatorUnbondingInfoResponseFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               default: {
@@ -20236,124 +15687,12 @@ public final class QueryProto {
         return this;
       }
 
-      private java.lang.Object delegatorUnbondingSigHex_ = "";
-      /**
-       * <pre>
-       * delegator_unbonding_sig is the signature on the unbonding tx
-       * by the delegator (i.e., SK corresponding to btc_pk).
-       * It effectively proves that the delegator wants to unbond and thus
-       * Babylon will consider this BTC delegation unbonded. Delegator's BTC
-       * on Bitcoin will be unbonded after timelock. The unbonding delegator sig as string hex.
-       * </pre>
-       *
-       * <code>string delegator_unbonding_sig_hex = 2 [json_name = "delegatorUnbondingSigHex"];</code>
-       * @return The delegatorUnbondingSigHex.
-       */
-      public java.lang.String getDelegatorUnbondingSigHex() {
-        java.lang.Object ref = delegatorUnbondingSigHex_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          delegatorUnbondingSigHex_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * delegator_unbonding_sig is the signature on the unbonding tx
-       * by the delegator (i.e., SK corresponding to btc_pk).
-       * It effectively proves that the delegator wants to unbond and thus
-       * Babylon will consider this BTC delegation unbonded. Delegator's BTC
-       * on Bitcoin will be unbonded after timelock. The unbonding delegator sig as string hex.
-       * </pre>
-       *
-       * <code>string delegator_unbonding_sig_hex = 2 [json_name = "delegatorUnbondingSigHex"];</code>
-       * @return The bytes for delegatorUnbondingSigHex.
-       */
-      public com.google.protobuf.ByteString
-          getDelegatorUnbondingSigHexBytes() {
-        java.lang.Object ref = delegatorUnbondingSigHex_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          delegatorUnbondingSigHex_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * delegator_unbonding_sig is the signature on the unbonding tx
-       * by the delegator (i.e., SK corresponding to btc_pk).
-       * It effectively proves that the delegator wants to unbond and thus
-       * Babylon will consider this BTC delegation unbonded. Delegator's BTC
-       * on Bitcoin will be unbonded after timelock. The unbonding delegator sig as string hex.
-       * </pre>
-       *
-       * <code>string delegator_unbonding_sig_hex = 2 [json_name = "delegatorUnbondingSigHex"];</code>
-       * @param value The delegatorUnbondingSigHex to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDelegatorUnbondingSigHex(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        delegatorUnbondingSigHex_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * delegator_unbonding_sig is the signature on the unbonding tx
-       * by the delegator (i.e., SK corresponding to btc_pk).
-       * It effectively proves that the delegator wants to unbond and thus
-       * Babylon will consider this BTC delegation unbonded. Delegator's BTC
-       * on Bitcoin will be unbonded after timelock. The unbonding delegator sig as string hex.
-       * </pre>
-       *
-       * <code>string delegator_unbonding_sig_hex = 2 [json_name = "delegatorUnbondingSigHex"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDelegatorUnbondingSigHex() {
-        delegatorUnbondingSigHex_ = getDefaultInstance().getDelegatorUnbondingSigHex();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * delegator_unbonding_sig is the signature on the unbonding tx
-       * by the delegator (i.e., SK corresponding to btc_pk).
-       * It effectively proves that the delegator wants to unbond and thus
-       * Babylon will consider this BTC delegation unbonded. Delegator's BTC
-       * on Bitcoin will be unbonded after timelock. The unbonding delegator sig as string hex.
-       * </pre>
-       *
-       * <code>string delegator_unbonding_sig_hex = 2 [json_name = "delegatorUnbondingSigHex"];</code>
-       * @param value The bytes for delegatorUnbondingSigHex to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDelegatorUnbondingSigHexBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        delegatorUnbondingSigHex_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-
       private java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo> covenantUnbondingSigList_ =
         java.util.Collections.emptyList();
       private void ensureCovenantUnbondingSigListIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           covenantUnbondingSigList_ = new java.util.ArrayList<com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo>(covenantUnbondingSigList_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -20366,7 +15705,7 @@ public final class QueryProto {
        * by covenant members
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
        */
       public java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo> getCovenantUnbondingSigListList() {
         if (covenantUnbondingSigListBuilder_ == null) {
@@ -20381,7 +15720,7 @@ public final class QueryProto {
        * by covenant members
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
        */
       public int getCovenantUnbondingSigListCount() {
         if (covenantUnbondingSigListBuilder_ == null) {
@@ -20396,7 +15735,7 @@ public final class QueryProto {
        * by covenant members
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo getCovenantUnbondingSigList(int index) {
         if (covenantUnbondingSigListBuilder_ == null) {
@@ -20411,7 +15750,7 @@ public final class QueryProto {
        * by covenant members
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
        */
       public Builder setCovenantUnbondingSigList(
           int index, com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo value) {
@@ -20433,7 +15772,7 @@ public final class QueryProto {
        * by covenant members
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
        */
       public Builder setCovenantUnbondingSigList(
           int index, com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo.Builder builderForValue) {
@@ -20452,7 +15791,7 @@ public final class QueryProto {
        * by covenant members
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
        */
       public Builder addCovenantUnbondingSigList(com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo value) {
         if (covenantUnbondingSigListBuilder_ == null) {
@@ -20473,7 +15812,7 @@ public final class QueryProto {
        * by covenant members
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
        */
       public Builder addCovenantUnbondingSigList(
           int index, com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo value) {
@@ -20495,7 +15834,7 @@ public final class QueryProto {
        * by covenant members
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
        */
       public Builder addCovenantUnbondingSigList(
           com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo.Builder builderForValue) {
@@ -20514,7 +15853,7 @@ public final class QueryProto {
        * by covenant members
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
        */
       public Builder addCovenantUnbondingSigList(
           int index, com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo.Builder builderForValue) {
@@ -20533,7 +15872,7 @@ public final class QueryProto {
        * by covenant members
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
        */
       public Builder addAllCovenantUnbondingSigList(
           java.lang.Iterable<? extends com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo> values) {
@@ -20553,12 +15892,12 @@ public final class QueryProto {
        * by covenant members
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
        */
       public Builder clearCovenantUnbondingSigList() {
         if (covenantUnbondingSigListBuilder_ == null) {
           covenantUnbondingSigList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           covenantUnbondingSigListBuilder_.clear();
@@ -20571,7 +15910,7 @@ public final class QueryProto {
        * by covenant members
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
        */
       public Builder removeCovenantUnbondingSigList(int index) {
         if (covenantUnbondingSigListBuilder_ == null) {
@@ -20589,7 +15928,7 @@ public final class QueryProto {
        * by covenant members
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo.Builder getCovenantUnbondingSigListBuilder(
           int index) {
@@ -20601,7 +15940,7 @@ public final class QueryProto {
        * by covenant members
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfoOrBuilder getCovenantUnbondingSigListOrBuilder(
           int index) {
@@ -20616,7 +15955,7 @@ public final class QueryProto {
        * by covenant members
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
        */
       public java.util.List<? extends com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfoOrBuilder> 
            getCovenantUnbondingSigListOrBuilderList() {
@@ -20632,7 +15971,7 @@ public final class QueryProto {
        * by covenant members
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo.Builder addCovenantUnbondingSigListBuilder() {
         return getCovenantUnbondingSigListFieldBuilder().addBuilder(
@@ -20644,7 +15983,7 @@ public final class QueryProto {
        * by covenant members
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo.Builder addCovenantUnbondingSigListBuilder(
           int index) {
@@ -20657,7 +15996,7 @@ public final class QueryProto {
        * by covenant members
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 3 [json_name = "covenantUnbondingSigList"];</code>
+       * <code>repeated .babylon.btcstaking.v1.SignatureInfo covenant_unbonding_sig_list = 2 [json_name = "covenantUnbondingSigList"];</code>
        */
       public java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo.Builder> 
            getCovenantUnbondingSigListBuilderList() {
@@ -20670,7 +16009,7 @@ public final class QueryProto {
           covenantUnbondingSigListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo, com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfo.Builder, com.babylon.btcstaking.v1.BtcstakingProto.SignatureInfoOrBuilder>(
                   covenantUnbondingSigList_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           covenantUnbondingSigList_ = null;
@@ -20684,7 +16023,7 @@ public final class QueryProto {
        * slashingTxHex is the hex string of slashing tx
        * </pre>
        *
-       * <code>string slashing_tx_hex = 4 [json_name = "slashingTxHex"];</code>
+       * <code>string slashing_tx_hex = 3 [json_name = "slashingTxHex"];</code>
        * @return The slashingTxHex.
        */
       public java.lang.String getSlashingTxHex() {
@@ -20704,7 +16043,7 @@ public final class QueryProto {
        * slashingTxHex is the hex string of slashing tx
        * </pre>
        *
-       * <code>string slashing_tx_hex = 4 [json_name = "slashingTxHex"];</code>
+       * <code>string slashing_tx_hex = 3 [json_name = "slashingTxHex"];</code>
        * @return The bytes for slashingTxHex.
        */
       public com.google.protobuf.ByteString
@@ -20725,7 +16064,7 @@ public final class QueryProto {
        * slashingTxHex is the hex string of slashing tx
        * </pre>
        *
-       * <code>string slashing_tx_hex = 4 [json_name = "slashingTxHex"];</code>
+       * <code>string slashing_tx_hex = 3 [json_name = "slashingTxHex"];</code>
        * @param value The slashingTxHex to set.
        * @return This builder for chaining.
        */
@@ -20733,7 +16072,7 @@ public final class QueryProto {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         slashingTxHex_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -20742,12 +16081,12 @@ public final class QueryProto {
        * slashingTxHex is the hex string of slashing tx
        * </pre>
        *
-       * <code>string slashing_tx_hex = 4 [json_name = "slashingTxHex"];</code>
+       * <code>string slashing_tx_hex = 3 [json_name = "slashingTxHex"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSlashingTxHex() {
         slashingTxHex_ = getDefaultInstance().getSlashingTxHex();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -20756,7 +16095,7 @@ public final class QueryProto {
        * slashingTxHex is the hex string of slashing tx
        * </pre>
        *
-       * <code>string slashing_tx_hex = 4 [json_name = "slashingTxHex"];</code>
+       * <code>string slashing_tx_hex = 3 [json_name = "slashingTxHex"];</code>
        * @param value The bytes for slashingTxHex to set.
        * @return This builder for chaining.
        */
@@ -20765,7 +16104,7 @@ public final class QueryProto {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         slashingTxHex_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -20779,7 +16118,7 @@ public final class QueryProto {
        * The delegator slashing sig as string hex.
        * </pre>
        *
-       * <code>string delegator_slashing_sig_hex = 5 [json_name = "delegatorSlashingSigHex"];</code>
+       * <code>string delegator_slashing_sig_hex = 4 [json_name = "delegatorSlashingSigHex"];</code>
        * @return The delegatorSlashingSigHex.
        */
       public java.lang.String getDelegatorSlashingSigHex() {
@@ -20802,7 +16141,7 @@ public final class QueryProto {
        * The delegator slashing sig as string hex.
        * </pre>
        *
-       * <code>string delegator_slashing_sig_hex = 5 [json_name = "delegatorSlashingSigHex"];</code>
+       * <code>string delegator_slashing_sig_hex = 4 [json_name = "delegatorSlashingSigHex"];</code>
        * @return The bytes for delegatorSlashingSigHex.
        */
       public com.google.protobuf.ByteString
@@ -20826,7 +16165,7 @@ public final class QueryProto {
        * The delegator slashing sig as string hex.
        * </pre>
        *
-       * <code>string delegator_slashing_sig_hex = 5 [json_name = "delegatorSlashingSigHex"];</code>
+       * <code>string delegator_slashing_sig_hex = 4 [json_name = "delegatorSlashingSigHex"];</code>
        * @param value The delegatorSlashingSigHex to set.
        * @return This builder for chaining.
        */
@@ -20834,7 +16173,7 @@ public final class QueryProto {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         delegatorSlashingSigHex_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -20846,12 +16185,12 @@ public final class QueryProto {
        * The delegator slashing sig as string hex.
        * </pre>
        *
-       * <code>string delegator_slashing_sig_hex = 5 [json_name = "delegatorSlashingSigHex"];</code>
+       * <code>string delegator_slashing_sig_hex = 4 [json_name = "delegatorSlashingSigHex"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDelegatorSlashingSigHex() {
         delegatorSlashingSigHex_ = getDefaultInstance().getDelegatorSlashingSigHex();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -20863,7 +16202,7 @@ public final class QueryProto {
        * The delegator slashing sig as string hex.
        * </pre>
        *
-       * <code>string delegator_slashing_sig_hex = 5 [json_name = "delegatorSlashingSigHex"];</code>
+       * <code>string delegator_slashing_sig_hex = 4 [json_name = "delegatorSlashingSigHex"];</code>
        * @param value The bytes for delegatorSlashingSigHex to set.
        * @return This builder for chaining.
        */
@@ -20872,7 +16211,7 @@ public final class QueryProto {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         delegatorSlashingSigHex_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -20880,9 +16219,9 @@ public final class QueryProto {
       private java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures> covenantSlashingSigs_ =
         java.util.Collections.emptyList();
       private void ensureCovenantSlashingSigsIsMutable() {
-        if (!((bitField0_ & 0x00000020) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           covenantSlashingSigs_ = new java.util.ArrayList<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures>(covenantSlashingSigs_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -20896,7 +16235,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
        */
       public java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures> getCovenantSlashingSigsList() {
         if (covenantSlashingSigsBuilder_ == null) {
@@ -20912,7 +16251,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
        */
       public int getCovenantSlashingSigsCount() {
         if (covenantSlashingSigsBuilder_ == null) {
@@ -20928,7 +16267,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures getCovenantSlashingSigs(int index) {
         if (covenantSlashingSigsBuilder_ == null) {
@@ -20944,7 +16283,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
        */
       public Builder setCovenantSlashingSigs(
           int index, com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures value) {
@@ -20967,7 +16306,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
        */
       public Builder setCovenantSlashingSigs(
           int index, com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder builderForValue) {
@@ -20987,7 +16326,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
        */
       public Builder addCovenantSlashingSigs(com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures value) {
         if (covenantSlashingSigsBuilder_ == null) {
@@ -21009,7 +16348,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
        */
       public Builder addCovenantSlashingSigs(
           int index, com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures value) {
@@ -21032,7 +16371,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
        */
       public Builder addCovenantSlashingSigs(
           com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder builderForValue) {
@@ -21052,7 +16391,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
        */
       public Builder addCovenantSlashingSigs(
           int index, com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder builderForValue) {
@@ -21072,7 +16411,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
        */
       public Builder addAllCovenantSlashingSigs(
           java.lang.Iterable<? extends com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures> values) {
@@ -21093,12 +16432,12 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
        */
       public Builder clearCovenantSlashingSigs() {
         if (covenantSlashingSigsBuilder_ == null) {
           covenantSlashingSigs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           covenantSlashingSigsBuilder_.clear();
@@ -21112,7 +16451,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
        */
       public Builder removeCovenantSlashingSigs(int index) {
         if (covenantSlashingSigsBuilder_ == null) {
@@ -21131,7 +16470,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder getCovenantSlashingSigsBuilder(
           int index) {
@@ -21144,7 +16483,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder getCovenantSlashingSigsOrBuilder(
           int index) {
@@ -21160,7 +16499,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
        */
       public java.util.List<? extends com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder> 
            getCovenantSlashingSigsOrBuilderList() {
@@ -21177,7 +16516,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder addCovenantSlashingSigsBuilder() {
         return getCovenantSlashingSigsFieldBuilder().addBuilder(
@@ -21190,7 +16529,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
        */
       public com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder addCovenantSlashingSigsBuilder(
           int index) {
@@ -21204,7 +16543,7 @@ public final class QueryProto {
        * It will be a part of the witness for the staking tx output.
        * </pre>
        *
-       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 6 [json_name = "covenantSlashingSigs"];</code>
+       * <code>repeated .babylon.btcstaking.v1.CovenantAdaptorSignatures covenant_slashing_sigs = 5 [json_name = "covenantSlashingSigs"];</code>
        */
       public java.util.List<com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder> 
            getCovenantSlashingSigsBuilderList() {
@@ -21217,12 +16556,176 @@ public final class QueryProto {
           covenantSlashingSigsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures, com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignatures.Builder, com.babylon.btcstaking.v1.BtcstakingProto.CovenantAdaptorSignaturesOrBuilder>(
                   covenantSlashingSigs_,
-                  ((bitField0_ & 0x00000020) != 0),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           covenantSlashingSigs_ = null;
         }
         return covenantSlashingSigsBuilder_;
+      }
+
+      private com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse delegatorUnbondingInfoResponse_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse, com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse.Builder, com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponseOrBuilder> delegatorUnbondingInfoResponseBuilder_;
+      /**
+       * <pre>
+       * btc_undelegation_info contains all necessary info about the transaction
+       * which spent the staking output
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfoResponse delegator_unbonding_info_response = 6 [json_name = "delegatorUnbondingInfoResponse"];</code>
+       * @return Whether the delegatorUnbondingInfoResponse field is set.
+       */
+      public boolean hasDelegatorUnbondingInfoResponse() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * btc_undelegation_info contains all necessary info about the transaction
+       * which spent the staking output
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfoResponse delegator_unbonding_info_response = 6 [json_name = "delegatorUnbondingInfoResponse"];</code>
+       * @return The delegatorUnbondingInfoResponse.
+       */
+      public com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse getDelegatorUnbondingInfoResponse() {
+        if (delegatorUnbondingInfoResponseBuilder_ == null) {
+          return delegatorUnbondingInfoResponse_ == null ? com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse.getDefaultInstance() : delegatorUnbondingInfoResponse_;
+        } else {
+          return delegatorUnbondingInfoResponseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * btc_undelegation_info contains all necessary info about the transaction
+       * which spent the staking output
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfoResponse delegator_unbonding_info_response = 6 [json_name = "delegatorUnbondingInfoResponse"];</code>
+       */
+      public Builder setDelegatorUnbondingInfoResponse(com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse value) {
+        if (delegatorUnbondingInfoResponseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          delegatorUnbondingInfoResponse_ = value;
+        } else {
+          delegatorUnbondingInfoResponseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * btc_undelegation_info contains all necessary info about the transaction
+       * which spent the staking output
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfoResponse delegator_unbonding_info_response = 6 [json_name = "delegatorUnbondingInfoResponse"];</code>
+       */
+      public Builder setDelegatorUnbondingInfoResponse(
+          com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse.Builder builderForValue) {
+        if (delegatorUnbondingInfoResponseBuilder_ == null) {
+          delegatorUnbondingInfoResponse_ = builderForValue.build();
+        } else {
+          delegatorUnbondingInfoResponseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * btc_undelegation_info contains all necessary info about the transaction
+       * which spent the staking output
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfoResponse delegator_unbonding_info_response = 6 [json_name = "delegatorUnbondingInfoResponse"];</code>
+       */
+      public Builder mergeDelegatorUnbondingInfoResponse(com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse value) {
+        if (delegatorUnbondingInfoResponseBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            delegatorUnbondingInfoResponse_ != null &&
+            delegatorUnbondingInfoResponse_ != com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse.getDefaultInstance()) {
+            getDelegatorUnbondingInfoResponseBuilder().mergeFrom(value);
+          } else {
+            delegatorUnbondingInfoResponse_ = value;
+          }
+        } else {
+          delegatorUnbondingInfoResponseBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * btc_undelegation_info contains all necessary info about the transaction
+       * which spent the staking output
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfoResponse delegator_unbonding_info_response = 6 [json_name = "delegatorUnbondingInfoResponse"];</code>
+       */
+      public Builder clearDelegatorUnbondingInfoResponse() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        delegatorUnbondingInfoResponse_ = null;
+        if (delegatorUnbondingInfoResponseBuilder_ != null) {
+          delegatorUnbondingInfoResponseBuilder_.dispose();
+          delegatorUnbondingInfoResponseBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * btc_undelegation_info contains all necessary info about the transaction
+       * which spent the staking output
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfoResponse delegator_unbonding_info_response = 6 [json_name = "delegatorUnbondingInfoResponse"];</code>
+       */
+      public com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse.Builder getDelegatorUnbondingInfoResponseBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getDelegatorUnbondingInfoResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * btc_undelegation_info contains all necessary info about the transaction
+       * which spent the staking output
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfoResponse delegator_unbonding_info_response = 6 [json_name = "delegatorUnbondingInfoResponse"];</code>
+       */
+      public com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponseOrBuilder getDelegatorUnbondingInfoResponseOrBuilder() {
+        if (delegatorUnbondingInfoResponseBuilder_ != null) {
+          return delegatorUnbondingInfoResponseBuilder_.getMessageOrBuilder();
+        } else {
+          return delegatorUnbondingInfoResponse_ == null ?
+              com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse.getDefaultInstance() : delegatorUnbondingInfoResponse_;
+        }
+      }
+      /**
+       * <pre>
+       * btc_undelegation_info contains all necessary info about the transaction
+       * which spent the staking output
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.DelegatorUnbondingInfoResponse delegator_unbonding_info_response = 6 [json_name = "delegatorUnbondingInfoResponse"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse, com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse.Builder, com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponseOrBuilder> 
+          getDelegatorUnbondingInfoResponseFieldBuilder() {
+        if (delegatorUnbondingInfoResponseBuilder_ == null) {
+          delegatorUnbondingInfoResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse, com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponse.Builder, com.babylon.btcstaking.v1.QueryProto.DelegatorUnbondingInfoResponseOrBuilder>(
+                  getDelegatorUnbondingInfoResponse(),
+                  getParentForChildren(),
+                  isClean());
+          delegatorUnbondingInfoResponse_ = null;
+        }
+        return delegatorUnbondingInfoResponseBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -22155,7 +17658,7 @@ public final class QueryProto {
      * the PK follows encoding in BIP-340 spec
      * </pre>
      *
-     * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The btcPk.
      */
     com.google.protobuf.ByteString getBtcPk();
@@ -22209,10 +17712,10 @@ public final class QueryProto {
      * if it's 0 then the finality provider is not slashed
      * </pre>
      *
-     * <code>uint64 slashed_btc_height = 7 [json_name = "slashedBtcHeight"];</code>
+     * <code>uint32 slashed_btc_height = 7 [json_name = "slashedBtcHeight"];</code>
      * @return The slashedBtcHeight.
      */
-    long getSlashedBtcHeight();
+    int getSlashedBtcHeight();
 
     /**
      * <pre>
@@ -22226,23 +17729,13 @@ public final class QueryProto {
 
     /**
      * <pre>
-     * voting_power is the voting power of this finality provider at the given height
+     * jailed defines whether the finality provider is jailed
      * </pre>
      *
-     * <code>uint64 voting_power = 9 [json_name = "votingPower"];</code>
-     * @return The votingPower.
+     * <code>bool jailed = 9 [json_name = "jailed"];</code>
+     * @return The jailed.
      */
-    long getVotingPower();
-
-    /**
-     * <pre>
-     * sluggish defines whether the finality provider is detected sluggish
-     * </pre>
-     *
-     * <code>bool sluggish = 10 [json_name = "sluggish"];</code>
-     * @return The sluggish.
-     */
-    boolean getSluggish();
+    boolean getJailed();
   }
   /**
    * <pre>
@@ -22426,7 +17919,7 @@ public final class QueryProto {
      * the PK follows encoding in BIP-340 spec
      * </pre>
      *
-     * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+     * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
      * @return The btcPk.
      */
     @java.lang.Override
@@ -22493,7 +17986,7 @@ public final class QueryProto {
     }
 
     public static final int SLASHED_BTC_HEIGHT_FIELD_NUMBER = 7;
-    private long slashedBtcHeight_ = 0L;
+    private int slashedBtcHeight_ = 0;
     /**
      * <pre>
      * slashed_btc_height indicates the BTC height when
@@ -22501,11 +17994,11 @@ public final class QueryProto {
      * if it's 0 then the finality provider is not slashed
      * </pre>
      *
-     * <code>uint64 slashed_btc_height = 7 [json_name = "slashedBtcHeight"];</code>
+     * <code>uint32 slashed_btc_height = 7 [json_name = "slashedBtcHeight"];</code>
      * @return The slashedBtcHeight.
      */
     @java.lang.Override
-    public long getSlashedBtcHeight() {
+    public int getSlashedBtcHeight() {
       return slashedBtcHeight_;
     }
 
@@ -22524,34 +18017,19 @@ public final class QueryProto {
       return height_;
     }
 
-    public static final int VOTING_POWER_FIELD_NUMBER = 9;
-    private long votingPower_ = 0L;
+    public static final int JAILED_FIELD_NUMBER = 9;
+    private boolean jailed_ = false;
     /**
      * <pre>
-     * voting_power is the voting power of this finality provider at the given height
+     * jailed defines whether the finality provider is jailed
      * </pre>
      *
-     * <code>uint64 voting_power = 9 [json_name = "votingPower"];</code>
-     * @return The votingPower.
+     * <code>bool jailed = 9 [json_name = "jailed"];</code>
+     * @return The jailed.
      */
     @java.lang.Override
-    public long getVotingPower() {
-      return votingPower_;
-    }
-
-    public static final int SLUGGISH_FIELD_NUMBER = 10;
-    private boolean sluggish_ = false;
-    /**
-     * <pre>
-     * sluggish defines whether the finality provider is detected sluggish
-     * </pre>
-     *
-     * <code>bool sluggish = 10 [json_name = "sluggish"];</code>
-     * @return The sluggish.
-     */
-    @java.lang.Override
-    public boolean getSluggish() {
-      return sluggish_;
+    public boolean getJailed() {
+      return jailed_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -22586,17 +18064,14 @@ public final class QueryProto {
       if (slashedBabylonHeight_ != 0L) {
         output.writeUInt64(6, slashedBabylonHeight_);
       }
-      if (slashedBtcHeight_ != 0L) {
-        output.writeUInt64(7, slashedBtcHeight_);
+      if (slashedBtcHeight_ != 0) {
+        output.writeUInt32(7, slashedBtcHeight_);
       }
       if (height_ != 0L) {
         output.writeUInt64(8, height_);
       }
-      if (votingPower_ != 0L) {
-        output.writeUInt64(9, votingPower_);
-      }
-      if (sluggish_ != false) {
-        output.writeBool(10, sluggish_);
+      if (jailed_ != false) {
+        output.writeBool(9, jailed_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -22629,21 +18104,17 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(6, slashedBabylonHeight_);
       }
-      if (slashedBtcHeight_ != 0L) {
+      if (slashedBtcHeight_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(7, slashedBtcHeight_);
+          .computeUInt32Size(7, slashedBtcHeight_);
       }
       if (height_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(8, height_);
       }
-      if (votingPower_ != 0L) {
+      if (jailed_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(9, votingPower_);
-      }
-      if (sluggish_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(10, sluggish_);
+          .computeBoolSize(9, jailed_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -22682,10 +18153,8 @@ public final class QueryProto {
           != other.getSlashedBtcHeight()) return false;
       if (getHeight()
           != other.getHeight()) return false;
-      if (getVotingPower()
-          != other.getVotingPower()) return false;
-      if (getSluggish()
-          != other.getSluggish()) return false;
+      if (getJailed()
+          != other.getJailed()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -22715,17 +18184,13 @@ public final class QueryProto {
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getSlashedBabylonHeight());
       hash = (37 * hash) + SLASHED_BTC_HEIGHT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getSlashedBtcHeight());
+      hash = (53 * hash) + getSlashedBtcHeight();
       hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getHeight());
-      hash = (37 * hash) + VOTING_POWER_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getVotingPower());
-      hash = (37 * hash) + SLUGGISH_FIELD_NUMBER;
+      hash = (37 * hash) + JAILED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getSluggish());
+          getJailed());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -22875,10 +18340,9 @@ public final class QueryProto {
           popBuilder_ = null;
         }
         slashedBabylonHeight_ = 0L;
-        slashedBtcHeight_ = 0L;
+        slashedBtcHeight_ = 0;
         height_ = 0L;
-        votingPower_ = 0L;
-        sluggish_ = false;
+        jailed_ = false;
         return this;
       }
 
@@ -22941,10 +18405,7 @@ public final class QueryProto {
           result.height_ = height_;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
-          result.votingPower_ = votingPower_;
-        }
-        if (((from_bitField0_ & 0x00000200) != 0)) {
-          result.sluggish_ = sluggish_;
+          result.jailed_ = jailed_;
         }
       }
 
@@ -23014,17 +18475,14 @@ public final class QueryProto {
         if (other.getSlashedBabylonHeight() != 0L) {
           setSlashedBabylonHeight(other.getSlashedBabylonHeight());
         }
-        if (other.getSlashedBtcHeight() != 0L) {
+        if (other.getSlashedBtcHeight() != 0) {
           setSlashedBtcHeight(other.getSlashedBtcHeight());
         }
         if (other.getHeight() != 0L) {
           setHeight(other.getHeight());
         }
-        if (other.getVotingPower() != 0L) {
-          setVotingPower(other.getVotingPower());
-        }
-        if (other.getSluggish() != false) {
-          setSluggish(other.getSluggish());
+        if (other.getJailed() != false) {
+          setJailed(other.getJailed());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -23087,7 +18545,7 @@ public final class QueryProto {
                 break;
               } // case 48
               case 56: {
-                slashedBtcHeight_ = input.readUInt64();
+                slashedBtcHeight_ = input.readUInt32();
                 bitField0_ |= 0x00000040;
                 break;
               } // case 56
@@ -23097,15 +18555,10 @@ public final class QueryProto {
                 break;
               } // case 64
               case 72: {
-                votingPower_ = input.readUInt64();
+                jailed_ = input.readBool();
                 bitField0_ |= 0x00000100;
                 break;
               } // case 72
-              case 80: {
-                sluggish_ = input.readBool();
-                bitField0_ |= 0x00000200;
-                break;
-              } // case 80
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -23469,7 +18922,7 @@ public final class QueryProto {
        * the PK follows encoding in BIP-340 spec
        * </pre>
        *
-       * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The btcPk.
        */
       @java.lang.Override
@@ -23482,7 +18935,7 @@ public final class QueryProto {
        * the PK follows encoding in BIP-340 spec
        * </pre>
        *
-       * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @param value The btcPk to set.
        * @return This builder for chaining.
        */
@@ -23499,7 +18952,7 @@ public final class QueryProto {
        * the PK follows encoding in BIP-340 spec
        * </pre>
        *
-       * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes btc_pk = 4 [json_name = "btcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBtcPk() {
@@ -23723,7 +19176,7 @@ public final class QueryProto {
         return this;
       }
 
-      private long slashedBtcHeight_ ;
+      private int slashedBtcHeight_ ;
       /**
        * <pre>
        * slashed_btc_height indicates the BTC height when
@@ -23731,11 +19184,11 @@ public final class QueryProto {
        * if it's 0 then the finality provider is not slashed
        * </pre>
        *
-       * <code>uint64 slashed_btc_height = 7 [json_name = "slashedBtcHeight"];</code>
+       * <code>uint32 slashed_btc_height = 7 [json_name = "slashedBtcHeight"];</code>
        * @return The slashedBtcHeight.
        */
       @java.lang.Override
-      public long getSlashedBtcHeight() {
+      public int getSlashedBtcHeight() {
         return slashedBtcHeight_;
       }
       /**
@@ -23745,11 +19198,11 @@ public final class QueryProto {
        * if it's 0 then the finality provider is not slashed
        * </pre>
        *
-       * <code>uint64 slashed_btc_height = 7 [json_name = "slashedBtcHeight"];</code>
+       * <code>uint32 slashed_btc_height = 7 [json_name = "slashedBtcHeight"];</code>
        * @param value The slashedBtcHeight to set.
        * @return This builder for chaining.
        */
-      public Builder setSlashedBtcHeight(long value) {
+      public Builder setSlashedBtcHeight(int value) {
 
         slashedBtcHeight_ = value;
         bitField0_ |= 0x00000040;
@@ -23763,12 +19216,12 @@ public final class QueryProto {
        * if it's 0 then the finality provider is not slashed
        * </pre>
        *
-       * <code>uint64 slashed_btc_height = 7 [json_name = "slashedBtcHeight"];</code>
+       * <code>uint32 slashed_btc_height = 7 [json_name = "slashedBtcHeight"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSlashedBtcHeight() {
         bitField0_ = (bitField0_ & ~0x00000040);
-        slashedBtcHeight_ = 0L;
+        slashedBtcHeight_ = 0;
         onChanged();
         return this;
       }
@@ -23817,90 +19270,46 @@ public final class QueryProto {
         return this;
       }
 
-      private long votingPower_ ;
+      private boolean jailed_ ;
       /**
        * <pre>
-       * voting_power is the voting power of this finality provider at the given height
+       * jailed defines whether the finality provider is jailed
        * </pre>
        *
-       * <code>uint64 voting_power = 9 [json_name = "votingPower"];</code>
-       * @return The votingPower.
+       * <code>bool jailed = 9 [json_name = "jailed"];</code>
+       * @return The jailed.
        */
       @java.lang.Override
-      public long getVotingPower() {
-        return votingPower_;
+      public boolean getJailed() {
+        return jailed_;
       }
       /**
        * <pre>
-       * voting_power is the voting power of this finality provider at the given height
+       * jailed defines whether the finality provider is jailed
        * </pre>
        *
-       * <code>uint64 voting_power = 9 [json_name = "votingPower"];</code>
-       * @param value The votingPower to set.
+       * <code>bool jailed = 9 [json_name = "jailed"];</code>
+       * @param value The jailed to set.
        * @return This builder for chaining.
        */
-      public Builder setVotingPower(long value) {
+      public Builder setJailed(boolean value) {
 
-        votingPower_ = value;
+        jailed_ = value;
         bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * voting_power is the voting power of this finality provider at the given height
+       * jailed defines whether the finality provider is jailed
        * </pre>
        *
-       * <code>uint64 voting_power = 9 [json_name = "votingPower"];</code>
+       * <code>bool jailed = 9 [json_name = "jailed"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearVotingPower() {
+      public Builder clearJailed() {
         bitField0_ = (bitField0_ & ~0x00000100);
-        votingPower_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private boolean sluggish_ ;
-      /**
-       * <pre>
-       * sluggish defines whether the finality provider is detected sluggish
-       * </pre>
-       *
-       * <code>bool sluggish = 10 [json_name = "sluggish"];</code>
-       * @return The sluggish.
-       */
-      @java.lang.Override
-      public boolean getSluggish() {
-        return sluggish_;
-      }
-      /**
-       * <pre>
-       * sluggish defines whether the finality provider is detected sluggish
-       * </pre>
-       *
-       * <code>bool sluggish = 10 [json_name = "sluggish"];</code>
-       * @param value The sluggish to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSluggish(boolean value) {
-
-        sluggish_ = value;
-        bitField0_ |= 0x00000200;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * sluggish defines whether the finality provider is detected sluggish
-       * </pre>
-       *
-       * <code>bool sluggish = 10 [json_name = "sluggish"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSluggish() {
-        bitField0_ = (bitField0_ & ~0x00000200);
-        sluggish_ = false;
+        jailed_ = false;
         onChanged();
         return this;
       }
@@ -24019,46 +19428,6 @@ public final class QueryProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_babylon_btcstaking_v1_QueryBTCDelegationsResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_babylon_btcstaking_v1_QueryFinalityProviderPowerAtHeightRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_babylon_btcstaking_v1_QueryFinalityProviderPowerAtHeightRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_babylon_btcstaking_v1_QueryFinalityProviderPowerAtHeightResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_babylon_btcstaking_v1_QueryFinalityProviderPowerAtHeightResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_babylon_btcstaking_v1_QueryFinalityProviderCurrentPowerRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_babylon_btcstaking_v1_QueryFinalityProviderCurrentPowerRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_babylon_btcstaking_v1_QueryFinalityProviderCurrentPowerResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_babylon_btcstaking_v1_QueryFinalityProviderCurrentPowerResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_babylon_btcstaking_v1_QueryActiveFinalityProvidersAtHeightRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_babylon_btcstaking_v1_QueryActiveFinalityProvidersAtHeightRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_babylon_btcstaking_v1_QueryActiveFinalityProvidersAtHeightResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_babylon_btcstaking_v1_QueryActiveFinalityProvidersAtHeightResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_babylon_btcstaking_v1_QueryActivatedHeightRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_babylon_btcstaking_v1_QueryActivatedHeightRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_babylon_btcstaking_v1_QueryActivatedHeightResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_babylon_btcstaking_v1_QueryActivatedHeightResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_babylon_btcstaking_v1_QueryFinalityProviderDelegationsRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -24083,6 +19452,11 @@ public final class QueryProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_babylon_btcstaking_v1_BTCDelegationResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_btcstaking_v1_DelegatorUnbondingInfoResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_btcstaking_v1_DelegatorUnbondingInfoResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_babylon_btcstaking_v1_BTCUndelegationResponse_descriptor;
   private static final 
@@ -24143,151 +19517,112 @@ public final class QueryProto {
       "bylon.btcstaking.v1.BTCDelegationRespons" +
       "eR\016btcDelegations\022G\n\npagination\030\002 \001(\0132\'." +
       "cosmos.base.query.v1beta1.PageResponseR\n" +
-      "pagination\"f\n)QueryFinalityProviderPower" +
-      "AtHeightRequest\022!\n\rfp_btc_pk_hex\030\001 \001(\tR\n" +
-      "fpBtcPkHex\022\026\n\006height\030\002 \001(\004R\006height\"O\n*Qu" +
-      "eryFinalityProviderPowerAtHeightResponse" +
-      "\022!\n\014voting_power\030\001 \001(\004R\013votingPower\"M\n(Q" +
-      "ueryFinalityProviderCurrentPowerRequest\022" +
-      "!\n\rfp_btc_pk_hex\030\001 \001(\tR\nfpBtcPkHex\"f\n)Qu" +
-      "eryFinalityProviderCurrentPowerResponse\022" +
-      "\026\n\006height\030\001 \001(\004R\006height\022!\n\014voting_power\030" +
-      "\002 \001(\004R\013votingPower\"\215\001\n+QueryActiveFinali" +
-      "tyProvidersAtHeightRequest\022\026\n\006height\030\001 \001" +
-      "(\004R\006height\022F\n\npagination\030\002 \001(\0132&.cosmos." +
-      "base.query.v1beta1.PageRequestR\npaginati" +
-      "on\"\327\001\n,QueryActiveFinalityProvidersAtHei" +
-      "ghtResponse\022^\n\022finality_providers\030\001 \003(\0132" +
-      "/.babylon.btcstaking.v1.FinalityProvider" +
-      "WithMetaR\021finalityProviders\022G\n\npaginatio" +
-      "n\030\002 \001(\0132\'.cosmos.base.query.v1beta1.Page" +
-      "ResponseR\npagination\"\035\n\033QueryActivatedHe" +
-      "ightRequest\"6\n\034QueryActivatedHeightRespo" +
-      "nse\022\026\n\006height\030\001 \001(\004R\006height\"\224\001\n\'QueryFin" +
-      "alityProviderDelegationsRequest\022!\n\rfp_bt" +
-      "c_pk_hex\030\001 \001(\tR\nfpBtcPkHex\022F\n\npagination" +
-      "\030\002 \001(\0132&.cosmos.base.query.v1beta1.PageR" +
-      "equestR\npagination\"\347\001\n(QueryFinalityProv" +
-      "iderDelegationsResponse\022r\n\031btc_delegator" +
-      "_delegations\030\001 \003(\01326.babylon.btcstaking." +
-      "v1.BTCDelegatorDelegationsResponseR\027btcD" +
-      "elegatorDelegations\022G\n\npagination\030\002 \001(\0132" +
-      "\'.cosmos.base.query.v1beta1.PageResponse" +
-      "R\npagination\"J\n\031QueryBTCDelegationReques" +
-      "t\022-\n\023staking_tx_hash_hex\030\001 \001(\tR\020stakingT" +
-      "xHashHex\"q\n\032QueryBTCDelegationResponse\022S" +
-      "\n\016btc_delegation\030\001 \001(\0132,.babylon.btcstak" +
-      "ing.v1.BTCDelegationResponseR\rbtcDelegat" +
-      "ion\"\323\006\n\025BTCDelegationResponse\0229\n\013staker_" +
-      "addr\030\001 \001(\tB\030\322\264-\024cosmos.AddressStringR\nst" +
-      "akerAddr\022M\n\006btc_pk\030\002 \001(\014B6\332\336\0372github.com" +
-      "/babylonchain/babylon/types.BIP340PubKey" +
-      "R\005btcPk\022[\n\016fp_btc_pk_list\030\003 \003(\014B6\332\336\0372git" +
-      "hub.com/babylonchain/babylon/types.BIP34" +
-      "0PubKeyR\013fpBtcPkList\022!\n\014start_height\030\004 \001" +
-      "(\004R\013startHeight\022\035\n\nend_height\030\005 \001(\004R\tend" +
-      "Height\022\033\n\ttotal_sat\030\006 \001(\004R\010totalSat\022$\n\016s" +
-      "taking_tx_hex\030\007 \001(\tR\014stakingTxHex\022&\n\017sla" +
-      "shing_tx_hex\030\010 \001(\tR\rslashingTxHex\0225\n\027del" +
-      "egator_slash_sig_hex\030\t \001(\tR\024delegatorSla" +
-      "shSigHex\022U\n\rcovenant_sigs\030\n \003(\01320.babylo" +
-      "n.btcstaking.v1.CovenantAdaptorSignature" +
-      "sR\014covenantSigs\022,\n\022staking_output_idx\030\013 " +
-      "\001(\rR\020stakingOutputIdx\022\026\n\006active\030\014 \001(\010R\006a" +
-      "ctive\022\037\n\013status_desc\030\r \001(\tR\nstatusDesc\022%" +
-      "\n\016unbonding_time\030\016 \001(\rR\runbondingTime\022c\n" +
-      "\025undelegation_response\030\017 \001(\0132..babylon.b" +
-      "tcstaking.v1.BTCUndelegationResponseR\024un" +
-      "delegationResponse\022%\n\016params_version\030\020 \001" +
-      "(\rR\rparamsVersion\"\264\003\n\027BTCUndelegationRes" +
-      "ponse\022(\n\020unbonding_tx_hex\030\001 \001(\tR\016unbondi" +
-      "ngTxHex\022=\n\033delegator_unbonding_sig_hex\030\002" +
-      " \001(\tR\030delegatorUnbondingSigHex\022c\n\033covena" +
-      "nt_unbonding_sig_list\030\003 \003(\0132$.babylon.bt" +
-      "cstaking.v1.SignatureInfoR\030covenantUnbon" +
-      "dingSigList\022&\n\017slashing_tx_hex\030\004 \001(\tR\rsl" +
-      "ashingTxHex\022;\n\032delegator_slashing_sig_he" +
-      "x\030\005 \001(\tR\027delegatorSlashingSigHex\022f\n\026cove" +
-      "nant_slashing_sigs\030\006 \003(\01320.babylon.btcst" +
-      "aking.v1.CovenantAdaptorSignaturesR\024cove" +
-      "nantSlashingSigs\"c\n\037BTCDelegatorDelegati" +
-      "onsResponse\022@\n\004dels\030\001 \003(\0132,.babylon.btcs" +
-      "taking.v1.BTCDelegationResponseR\004dels\"\247\004" +
-      "\n\030FinalityProviderResponse\022E\n\013descriptio" +
-      "n\030\001 \001(\0132#.cosmos.staking.v1beta1.Descrip" +
-      "tionR\013description\022M\n\ncommission\030\002 \001(\tB-\332" +
-      "\336\037\033cosmossdk.io/math.LegacyDec\322\264-\ncosmos" +
-      ".DecR\ncommission\022,\n\004addr\030\003 \001(\tB\030\322\264-\024cosm" +
-      "os.AddressStringR\004addr\022M\n\006btc_pk\030\004 \001(\014B6" +
-      "\332\336\0372github.com/babylonchain/babylon/type" +
-      "s.BIP340PubKeyR\005btcPk\022=\n\003pop\030\005 \001(\0132+.bab" +
-      "ylon.btcstaking.v1.ProofOfPossessionBTCR" +
-      "\003pop\0224\n\026slashed_babylon_height\030\006 \001(\004R\024sl" +
-      "ashedBabylonHeight\022,\n\022slashed_btc_height" +
-      "\030\007 \001(\004R\020slashedBtcHeight\022\026\n\006height\030\010 \001(\004" +
-      "R\006height\022!\n\014voting_power\030\t \001(\004R\013votingPo" +
-      "wer\022\032\n\010sluggish\030\n \001(\010R\010sluggish2\235\021\n\005Quer" +
-      "y\022\206\001\n\006Params\022).babylon.btcstaking.v1.Que" +
-      "ryParamsRequest\032*.babylon.btcstaking.v1." +
-      "QueryParamsResponse\"%\202\323\344\223\002\037\022\035/babylon/bt" +
-      "cstaking/v1/params\022\253\001\n\017ParamsByVersion\0222" +
-      ".babylon.btcstaking.v1.QueryParamsByVers" +
-      "ionRequest\0323.babylon.btcstaking.v1.Query" +
-      "ParamsByVersionResponse\"/\202\323\344\223\002)\022\'/babylo" +
-      "n/btcstaking/v1/params/{version}\022\263\001\n\021Fin" +
-      "alityProviders\0224.babylon.btcstaking.v1.Q" +
-      "ueryFinalityProvidersRequest\0325.babylon.b" +
-      "tcstaking.v1.QueryFinalityProvidersRespo" +
-      "nse\"1\202\323\344\223\002+\022)/babylon/btcstaking/v1/fina" +
-      "lity_providers\022\322\001\n\020FinalityProvider\0223.ba" +
-      "bylon.btcstaking.v1.QueryFinalityProvide" +
-      "rRequest\0324.babylon.btcstaking.v1.QueryFi" +
-      "nalityProviderResponse\"S\202\323\344\223\002M\022K/babylon" +
-      "/btcstaking/v1/finality_providers/{fp_bt" +
-      "c_pk_hex}/finality_provider\022\247\001\n\016BTCDeleg" +
-      "ations\0221.babylon.btcstaking.v1.QueryBTCD" +
-      "elegationsRequest\0322.babylon.btcstaking.v" +
-      "1.QueryBTCDelegationsResponse\".\202\323\344\223\002(\022&/" +
-      "babylon/btcstaking/v1/btc_delegations\022\346\001" +
-      "\n\037ActiveFinalityProvidersAtHeight\022B.baby" +
-      "lon.btcstaking.v1.QueryActiveFinalityPro" +
-      "vidersAtHeightRequest\032C.babylon.btcstaki" +
-      "ng.v1.QueryActiveFinalityProvidersAtHeig" +
-      "htResponse\":\202\323\344\223\0024\0222/babylon/btcstaking/" +
-      "v1/finality_providers/{height}\022\366\001\n\035Final" +
-      "ityProviderPowerAtHeight\022@.babylon.btcst" +
-      "aking.v1.QueryFinalityProviderPowerAtHei" +
-      "ghtRequest\032A.babylon.btcstaking.v1.Query" +
-      "FinalityProviderPowerAtHeightResponse\"P\202" +
-      "\323\344\223\002J\022H/babylon/btcstaking/v1/finality_p" +
-      "roviders/{fp_btc_pk_hex}/power/{height}\022" +
-      "\352\001\n\034FinalityProviderCurrentPower\022?.babyl" +
-      "on.btcstaking.v1.QueryFinalityProviderCu" +
-      "rrentPowerRequest\032@.babylon.btcstaking.v" +
-      "1.QueryFinalityProviderCurrentPowerRespo" +
-      "nse\"G\202\323\344\223\002A\022?/babylon/btcstaking/v1/fina" +
-      "lity_providers/{fp_btc_pk_hex}/power\022\253\001\n" +
-      "\017ActivatedHeight\0222.babylon.btcstaking.v1" +
-      ".QueryActivatedHeightRequest\0323.babylon.b" +
-      "tcstaking.v1.QueryActivatedHeightRespons" +
-      "e\"/\202\323\344\223\002)\022\'/babylon/btcstaking/v1/activa" +
-      "ted_height\022\355\001\n\033FinalityProviderDelegatio" +
-      "ns\022>.babylon.btcstaking.v1.QueryFinality" +
-      "ProviderDelegationsRequest\032?.babylon.btc" +
-      "staking.v1.QueryFinalityProviderDelegati" +
-      "onsResponse\"M\202\323\344\223\002G\022E/babylon/btcstaking" +
-      "/v1/finality_providers/{fp_btc_pk_hex}/d" +
-      "elegations\022\272\001\n\rBTCDelegation\0220.babylon.b" +
-      "tcstaking.v1.QueryBTCDelegationRequest\0321" +
-      ".babylon.btcstaking.v1.QueryBTCDelegatio" +
-      "nResponse\"D\202\323\344\223\002>\022</babylon/btcstaking/v" +
-      "1/btc_delegations/{staking_tx_hash_hex}B" +
-      "\317\001\n\031com.babylon.btcstaking.v1B\nQueryProt" +
-      "oZ2github.com/babylonchain/babylon/x/btc" +
-      "staking/types\242\002\003BBX\252\002\025Babylon.Btcstaking" +
-      ".V1\312\002\025Babylon\\Btcstaking\\V1\342\002!Babylon\\Bt" +
-      "cstaking\\V1\\GPBMetadata\352\002\027Babylon::Btcst" +
-      "aking::V1b\006proto3"
+      "pagination\"\224\001\n\'QueryFinalityProviderDele" +
+      "gationsRequest\022!\n\rfp_btc_pk_hex\030\001 \001(\tR\nf" +
+      "pBtcPkHex\022F\n\npagination\030\002 \001(\0132&.cosmos.b" +
+      "ase.query.v1beta1.PageRequestR\npaginatio" +
+      "n\"\347\001\n(QueryFinalityProviderDelegationsRe" +
+      "sponse\022r\n\031btc_delegator_delegations\030\001 \003(" +
+      "\01326.babylon.btcstaking.v1.BTCDelegatorDe" +
+      "legationsResponseR\027btcDelegatorDelegatio" +
+      "ns\022G\n\npagination\030\002 \001(\0132\'.cosmos.base.que" +
+      "ry.v1beta1.PageResponseR\npagination\"J\n\031Q" +
+      "ueryBTCDelegationRequest\022-\n\023staking_tx_h" +
+      "ash_hex\030\001 \001(\tR\020stakingTxHashHex\"q\n\032Query" +
+      "BTCDelegationResponse\022S\n\016btc_delegation\030" +
+      "\001 \001(\0132,.babylon.btcstaking.v1.BTCDelegat" +
+      "ionResponseR\rbtcDelegation\"\372\006\n\025BTCDelega" +
+      "tionResponse\0229\n\013staker_addr\030\001 \001(\tB\030\322\264-\024c" +
+      "osmos.AddressStringR\nstakerAddr\022O\n\006btc_p" +
+      "k\030\002 \001(\014B8\332\336\0374github.com/babylonlabs-io/b" +
+      "abylon/types.BIP340PubKeyR\005btcPk\022]\n\016fp_b" +
+      "tc_pk_list\030\003 \003(\014B8\332\336\0374github.com/babylon" +
+      "labs-io/babylon/types.BIP340PubKeyR\013fpBt" +
+      "cPkList\022!\n\014staking_time\030\004 \001(\rR\013stakingTi" +
+      "me\022!\n\014start_height\030\005 \001(\rR\013startHeight\022\035\n" +
+      "\nend_height\030\006 \001(\rR\tendHeight\022\033\n\ttotal_sa" +
+      "t\030\007 \001(\004R\010totalSat\022$\n\016staking_tx_hex\030\010 \001(" +
+      "\tR\014stakingTxHex\022&\n\017slashing_tx_hex\030\t \001(\t" +
+      "R\rslashingTxHex\0225\n\027delegator_slash_sig_h" +
+      "ex\030\n \001(\tR\024delegatorSlashSigHex\022U\n\rcovena" +
+      "nt_sigs\030\013 \003(\01320.babylon.btcstaking.v1.Co" +
+      "venantAdaptorSignaturesR\014covenantSigs\022,\n" +
+      "\022staking_output_idx\030\014 \001(\rR\020stakingOutput" +
+      "Idx\022\026\n\006active\030\r \001(\010R\006active\022\037\n\013status_de" +
+      "sc\030\016 \001(\tR\nstatusDesc\022%\n\016unbonding_time\030\017" +
+      " \001(\rR\runbondingTime\022c\n\025undelegation_resp" +
+      "onse\030\020 \001(\0132..babylon.btcstaking.v1.BTCUn" +
+      "delegationResponseR\024undelegationResponse" +
+      "\022%\n\016params_version\030\021 \001(\rR\rparamsVersion\"" +
+      "M\n\036DelegatorUnbondingInfoResponse\022+\n\022spe" +
+      "nd_stake_tx_hex\030\001 \001(\tR\017spendStakeTxHex\"\370" +
+      "\003\n\027BTCUndelegationResponse\022(\n\020unbonding_" +
+      "tx_hex\030\001 \001(\tR\016unbondingTxHex\022c\n\033covenant" +
+      "_unbonding_sig_list\030\002 \003(\0132$.babylon.btcs" +
+      "taking.v1.SignatureInfoR\030covenantUnbondi" +
+      "ngSigList\022&\n\017slashing_tx_hex\030\003 \001(\tR\rslas" +
+      "hingTxHex\022;\n\032delegator_slashing_sig_hex\030" +
+      "\004 \001(\tR\027delegatorSlashingSigHex\022f\n\026covena" +
+      "nt_slashing_sigs\030\005 \003(\01320.babylon.btcstak" +
+      "ing.v1.CovenantAdaptorSignaturesR\024covena" +
+      "ntSlashingSigs\022\200\001\n!delegator_unbonding_i" +
+      "nfo_response\030\006 \001(\01325.babylon.btcstaking." +
+      "v1.DelegatorUnbondingInfoResponseR\036deleg" +
+      "atorUnbondingInfoResponse\"c\n\037BTCDelegato" +
+      "rDelegationsResponse\022@\n\004dels\030\001 \003(\0132,.bab" +
+      "ylon.btcstaking.v1.BTCDelegationResponse" +
+      "R\004dels\"\202\004\n\030FinalityProviderResponse\022E\n\013d" +
+      "escription\030\001 \001(\0132#.cosmos.staking.v1beta" +
+      "1.DescriptionR\013description\022M\n\ncommission" +
+      "\030\002 \001(\tB-\332\336\037\033cosmossdk.io/math.LegacyDec\322" +
+      "\264-\ncosmos.DecR\ncommission\022,\n\004addr\030\003 \001(\tB" +
+      "\030\322\264-\024cosmos.AddressStringR\004addr\022O\n\006btc_p" +
+      "k\030\004 \001(\014B8\332\336\0374github.com/babylonlabs-io/b" +
+      "abylon/types.BIP340PubKeyR\005btcPk\022=\n\003pop\030" +
+      "\005 \001(\0132+.babylon.btcstaking.v1.ProofOfPos" +
+      "sessionBTCR\003pop\0224\n\026slashed_babylon_heigh" +
+      "t\030\006 \001(\004R\024slashedBabylonHeight\022,\n\022slashed" +
+      "_btc_height\030\007 \001(\rR\020slashedBtcHeight\022\026\n\006h" +
+      "eight\030\010 \001(\004R\006height\022\026\n\006jailed\030\t \001(\010R\006jai" +
+      "led2\250\n\n\005Query\022\206\001\n\006Params\022).babylon.btcst" +
+      "aking.v1.QueryParamsRequest\032*.babylon.bt" +
+      "cstaking.v1.QueryParamsResponse\"%\202\323\344\223\002\037\022" +
+      "\035/babylon/btcstaking/v1/params\022\253\001\n\017Param" +
+      "sByVersion\0222.babylon.btcstaking.v1.Query" +
+      "ParamsByVersionRequest\0323.babylon.btcstak" +
+      "ing.v1.QueryParamsByVersionResponse\"/\202\323\344" +
+      "\223\002)\022\'/babylon/btcstaking/v1/params/{vers" +
+      "ion}\022\263\001\n\021FinalityProviders\0224.babylon.btc" +
+      "staking.v1.QueryFinalityProvidersRequest" +
+      "\0325.babylon.btcstaking.v1.QueryFinalityPr" +
+      "ovidersResponse\"1\202\323\344\223\002+\022)/babylon/btcsta" +
+      "king/v1/finality_providers\022\322\001\n\020FinalityP" +
+      "rovider\0223.babylon.btcstaking.v1.QueryFin" +
+      "alityProviderRequest\0324.babylon.btcstakin" +
+      "g.v1.QueryFinalityProviderResponse\"S\202\323\344\223" +
+      "\002M\022K/babylon/btcstaking/v1/finality_prov" +
+      "iders/{fp_btc_pk_hex}/finality_provider\022" +
+      "\260\001\n\016BTCDelegations\0221.babylon.btcstaking." +
+      "v1.QueryBTCDelegationsRequest\0322.babylon." +
+      "btcstaking.v1.QueryBTCDelegationsRespons" +
+      "e\"7\202\323\344\223\0021\022//babylon/btcstaking/v1/btc_de" +
+      "legations/{status}\022\355\001\n\033FinalityProviderD" +
+      "elegations\022>.babylon.btcstaking.v1.Query" +
+      "FinalityProviderDelegationsRequest\032?.bab" +
+      "ylon.btcstaking.v1.QueryFinalityProvider" +
+      "DelegationsResponse\"M\202\323\344\223\002G\022E/babylon/bt" +
+      "cstaking/v1/finality_providers/{fp_btc_p" +
+      "k_hex}/delegations\022\271\001\n\rBTCDelegation\0220.b" +
+      "abylon.btcstaking.v1.QueryBTCDelegationR" +
+      "equest\0321.babylon.btcstaking.v1.QueryBTCD" +
+      "elegationResponse\"C\202\323\344\223\002=\022;/babylon/btcs" +
+      "taking/v1/btc_delegation/{staking_tx_has" +
+      "h_hex}B\321\001\n\031com.babylon.btcstaking.v1B\nQu" +
+      "eryProtoZ4github.com/babylonlabs-io/baby" +
+      "lon/x/btcstaking/types\242\002\003BBX\252\002\025Babylon.B" +
+      "tcstaking.V1\312\002\025Babylon\\Btcstaking\\V1\342\002!B" +
+      "abylon\\Btcstaking\\V1\\GPBMetadata\352\002\027Babyl" +
+      "on::Btcstaking::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -24361,102 +19696,60 @@ public final class QueryProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_QueryBTCDelegationsResponse_descriptor,
         new java.lang.String[] { "BtcDelegations", "Pagination", });
-    internal_static_babylon_btcstaking_v1_QueryFinalityProviderPowerAtHeightRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_babylon_btcstaking_v1_QueryFinalityProviderPowerAtHeightRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_babylon_btcstaking_v1_QueryFinalityProviderPowerAtHeightRequest_descriptor,
-        new java.lang.String[] { "FpBtcPkHex", "Height", });
-    internal_static_babylon_btcstaking_v1_QueryFinalityProviderPowerAtHeightResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
-    internal_static_babylon_btcstaking_v1_QueryFinalityProviderPowerAtHeightResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_babylon_btcstaking_v1_QueryFinalityProviderPowerAtHeightResponse_descriptor,
-        new java.lang.String[] { "VotingPower", });
-    internal_static_babylon_btcstaking_v1_QueryFinalityProviderCurrentPowerRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
-    internal_static_babylon_btcstaking_v1_QueryFinalityProviderCurrentPowerRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_babylon_btcstaking_v1_QueryFinalityProviderCurrentPowerRequest_descriptor,
-        new java.lang.String[] { "FpBtcPkHex", });
-    internal_static_babylon_btcstaking_v1_QueryFinalityProviderCurrentPowerResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
-    internal_static_babylon_btcstaking_v1_QueryFinalityProviderCurrentPowerResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_babylon_btcstaking_v1_QueryFinalityProviderCurrentPowerResponse_descriptor,
-        new java.lang.String[] { "Height", "VotingPower", });
-    internal_static_babylon_btcstaking_v1_QueryActiveFinalityProvidersAtHeightRequest_descriptor =
-      getDescriptor().getMessageTypes().get(14);
-    internal_static_babylon_btcstaking_v1_QueryActiveFinalityProvidersAtHeightRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_babylon_btcstaking_v1_QueryActiveFinalityProvidersAtHeightRequest_descriptor,
-        new java.lang.String[] { "Height", "Pagination", });
-    internal_static_babylon_btcstaking_v1_QueryActiveFinalityProvidersAtHeightResponse_descriptor =
-      getDescriptor().getMessageTypes().get(15);
-    internal_static_babylon_btcstaking_v1_QueryActiveFinalityProvidersAtHeightResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_babylon_btcstaking_v1_QueryActiveFinalityProvidersAtHeightResponse_descriptor,
-        new java.lang.String[] { "FinalityProviders", "Pagination", });
-    internal_static_babylon_btcstaking_v1_QueryActivatedHeightRequest_descriptor =
-      getDescriptor().getMessageTypes().get(16);
-    internal_static_babylon_btcstaking_v1_QueryActivatedHeightRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_babylon_btcstaking_v1_QueryActivatedHeightRequest_descriptor,
-        new java.lang.String[] { });
-    internal_static_babylon_btcstaking_v1_QueryActivatedHeightResponse_descriptor =
-      getDescriptor().getMessageTypes().get(17);
-    internal_static_babylon_btcstaking_v1_QueryActivatedHeightResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_babylon_btcstaking_v1_QueryActivatedHeightResponse_descriptor,
-        new java.lang.String[] { "Height", });
     internal_static_babylon_btcstaking_v1_QueryFinalityProviderDelegationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_babylon_btcstaking_v1_QueryFinalityProviderDelegationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_QueryFinalityProviderDelegationsRequest_descriptor,
         new java.lang.String[] { "FpBtcPkHex", "Pagination", });
     internal_static_babylon_btcstaking_v1_QueryFinalityProviderDelegationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_babylon_btcstaking_v1_QueryFinalityProviderDelegationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_QueryFinalityProviderDelegationsResponse_descriptor,
         new java.lang.String[] { "BtcDelegatorDelegations", "Pagination", });
     internal_static_babylon_btcstaking_v1_QueryBTCDelegationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_babylon_btcstaking_v1_QueryBTCDelegationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_QueryBTCDelegationRequest_descriptor,
         new java.lang.String[] { "StakingTxHashHex", });
     internal_static_babylon_btcstaking_v1_QueryBTCDelegationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_babylon_btcstaking_v1_QueryBTCDelegationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_QueryBTCDelegationResponse_descriptor,
         new java.lang.String[] { "BtcDelegation", });
     internal_static_babylon_btcstaking_v1_BTCDelegationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_babylon_btcstaking_v1_BTCDelegationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_BTCDelegationResponse_descriptor,
-        new java.lang.String[] { "StakerAddr", "BtcPk", "FpBtcPkList", "StartHeight", "EndHeight", "TotalSat", "StakingTxHex", "SlashingTxHex", "DelegatorSlashSigHex", "CovenantSigs", "StakingOutputIdx", "Active", "StatusDesc", "UnbondingTime", "UndelegationResponse", "ParamsVersion", });
+        new java.lang.String[] { "StakerAddr", "BtcPk", "FpBtcPkList", "StakingTime", "StartHeight", "EndHeight", "TotalSat", "StakingTxHex", "SlashingTxHex", "DelegatorSlashSigHex", "CovenantSigs", "StakingOutputIdx", "Active", "StatusDesc", "UnbondingTime", "UndelegationResponse", "ParamsVersion", });
+    internal_static_babylon_btcstaking_v1_DelegatorUnbondingInfoResponse_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_babylon_btcstaking_v1_DelegatorUnbondingInfoResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_btcstaking_v1_DelegatorUnbondingInfoResponse_descriptor,
+        new java.lang.String[] { "SpendStakeTxHex", });
     internal_static_babylon_btcstaking_v1_BTCUndelegationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_babylon_btcstaking_v1_BTCUndelegationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_BTCUndelegationResponse_descriptor,
-        new java.lang.String[] { "UnbondingTxHex", "DelegatorUnbondingSigHex", "CovenantUnbondingSigList", "SlashingTxHex", "DelegatorSlashingSigHex", "CovenantSlashingSigs", });
+        new java.lang.String[] { "UnbondingTxHex", "CovenantUnbondingSigList", "SlashingTxHex", "DelegatorSlashingSigHex", "CovenantSlashingSigs", "DelegatorUnbondingInfoResponse", });
     internal_static_babylon_btcstaking_v1_BTCDelegatorDelegationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_babylon_btcstaking_v1_BTCDelegatorDelegationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_BTCDelegatorDelegationsResponse_descriptor,
         new java.lang.String[] { "Dels", });
     internal_static_babylon_btcstaking_v1_FinalityProviderResponse_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_babylon_btcstaking_v1_FinalityProviderResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_FinalityProviderResponse_descriptor,
-        new java.lang.String[] { "Description", "Commission", "Addr", "BtcPk", "Pop", "SlashedBabylonHeight", "SlashedBtcHeight", "Height", "VotingPower", "Sluggish", });
+        new java.lang.String[] { "Description", "Commission", "Addr", "BtcPk", "Pop", "SlashedBabylonHeight", "SlashedBtcHeight", "Height", "Jailed", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.cosmos_proto.CosmosProto.scalar);

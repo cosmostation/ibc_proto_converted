@@ -5357,10 +5357,10 @@ public final class QueryProto {
      * btc height of the best submission of the epoch
      * </pre>
      *
-     * <code>uint64 best_submission_btc_block_height = 2 [json_name = "bestSubmissionBtcBlockHeight"];</code>
+     * <code>uint32 best_submission_btc_block_height = 2 [json_name = "bestSubmissionBtcBlockHeight"];</code>
      * @return The bestSubmissionBtcBlockHeight.
      */
-    long getBestSubmissionBtcBlockHeight();
+    int getBestSubmissionBtcBlockHeight();
 
     /**
      * <pre>
@@ -5531,17 +5531,17 @@ public final class QueryProto {
     }
 
     public static final int BEST_SUBMISSION_BTC_BLOCK_HEIGHT_FIELD_NUMBER = 2;
-    private long bestSubmissionBtcBlockHeight_ = 0L;
+    private int bestSubmissionBtcBlockHeight_ = 0;
     /**
      * <pre>
      * btc height of the best submission of the epoch
      * </pre>
      *
-     * <code>uint64 best_submission_btc_block_height = 2 [json_name = "bestSubmissionBtcBlockHeight"];</code>
+     * <code>uint32 best_submission_btc_block_height = 2 [json_name = "bestSubmissionBtcBlockHeight"];</code>
      * @return The bestSubmissionBtcBlockHeight.
      */
     @java.lang.Override
-    public long getBestSubmissionBtcBlockHeight() {
+    public int getBestSubmissionBtcBlockHeight() {
       return bestSubmissionBtcBlockHeight_;
     }
 
@@ -5733,8 +5733,8 @@ public final class QueryProto {
       if (epochNumber_ != 0L) {
         output.writeUInt64(1, epochNumber_);
       }
-      if (bestSubmissionBtcBlockHeight_ != 0L) {
-        output.writeUInt64(2, bestSubmissionBtcBlockHeight_);
+      if (bestSubmissionBtcBlockHeight_ != 0) {
+        output.writeUInt32(2, bestSubmissionBtcBlockHeight_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bestSubmissionBtcBlockHash_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, bestSubmissionBtcBlockHash_);
@@ -5758,9 +5758,9 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, epochNumber_);
       }
-      if (bestSubmissionBtcBlockHeight_ != 0L) {
+      if (bestSubmissionBtcBlockHeight_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(2, bestSubmissionBtcBlockHeight_);
+          .computeUInt32Size(2, bestSubmissionBtcBlockHeight_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bestSubmissionBtcBlockHash_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, bestSubmissionBtcBlockHash_);
@@ -5813,8 +5813,7 @@ public final class QueryProto {
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getEpochNumber());
       hash = (37 * hash) + BEST_SUBMISSION_BTC_BLOCK_HEIGHT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getBestSubmissionBtcBlockHeight());
+      hash = (53 * hash) + getBestSubmissionBtcBlockHeight();
       hash = (37 * hash) + BEST_SUBMISSION_BTC_BLOCK_HASH_FIELD_NUMBER;
       hash = (53 * hash) + getBestSubmissionBtcBlockHash().hashCode();
       if (getBestSubmissionTransactionsCount() > 0) {
@@ -5962,7 +5961,7 @@ public final class QueryProto {
         super.clear();
         bitField0_ = 0;
         epochNumber_ = 0L;
-        bestSubmissionBtcBlockHeight_ = 0L;
+        bestSubmissionBtcBlockHeight_ = 0;
         bestSubmissionBtcBlockHash_ = "";
         if (bestSubmissionTransactionsBuilder_ == null) {
           bestSubmissionTransactions_ = java.util.Collections.emptyList();
@@ -6091,7 +6090,7 @@ public final class QueryProto {
         if (other.getEpochNumber() != 0L) {
           setEpochNumber(other.getEpochNumber());
         }
-        if (other.getBestSubmissionBtcBlockHeight() != 0L) {
+        if (other.getBestSubmissionBtcBlockHeight() != 0) {
           setBestSubmissionBtcBlockHeight(other.getBestSubmissionBtcBlockHeight());
         }
         if (!other.getBestSubmissionBtcBlockHash().isEmpty()) {
@@ -6183,7 +6182,7 @@ public final class QueryProto {
                 break;
               } // case 8
               case 16: {
-                bestSubmissionBtcBlockHeight_ = input.readUInt64();
+                bestSubmissionBtcBlockHeight_ = input.readUInt32();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 16
@@ -6279,17 +6278,17 @@ public final class QueryProto {
         return this;
       }
 
-      private long bestSubmissionBtcBlockHeight_ ;
+      private int bestSubmissionBtcBlockHeight_ ;
       /**
        * <pre>
        * btc height of the best submission of the epoch
        * </pre>
        *
-       * <code>uint64 best_submission_btc_block_height = 2 [json_name = "bestSubmissionBtcBlockHeight"];</code>
+       * <code>uint32 best_submission_btc_block_height = 2 [json_name = "bestSubmissionBtcBlockHeight"];</code>
        * @return The bestSubmissionBtcBlockHeight.
        */
       @java.lang.Override
-      public long getBestSubmissionBtcBlockHeight() {
+      public int getBestSubmissionBtcBlockHeight() {
         return bestSubmissionBtcBlockHeight_;
       }
       /**
@@ -6297,11 +6296,11 @@ public final class QueryProto {
        * btc height of the best submission of the epoch
        * </pre>
        *
-       * <code>uint64 best_submission_btc_block_height = 2 [json_name = "bestSubmissionBtcBlockHeight"];</code>
+       * <code>uint32 best_submission_btc_block_height = 2 [json_name = "bestSubmissionBtcBlockHeight"];</code>
        * @param value The bestSubmissionBtcBlockHeight to set.
        * @return This builder for chaining.
        */
-      public Builder setBestSubmissionBtcBlockHeight(long value) {
+      public Builder setBestSubmissionBtcBlockHeight(int value) {
 
         bestSubmissionBtcBlockHeight_ = value;
         bitField0_ |= 0x00000002;
@@ -6313,12 +6312,12 @@ public final class QueryProto {
        * btc height of the best submission of the epoch
        * </pre>
        *
-       * <code>uint64 best_submission_btc_block_height = 2 [json_name = "bestSubmissionBtcBlockHeight"];</code>
+       * <code>uint32 best_submission_btc_block_height = 2 [json_name = "bestSubmissionBtcBlockHeight"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBestSubmissionBtcBlockHeight() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        bestSubmissionBtcBlockHeight_ = 0L;
+        bestSubmissionBtcBlockHeight_ = 0;
         onChanged();
         return this;
       }
@@ -10002,7 +10001,7 @@ public final class QueryProto {
       "btccheckpoint.v1.SubmissionKeyResponseR\004" +
       "keys\"\313\003\n\031BTCCheckpointInfoResponse\022!\n\014ep" +
       "och_number\030\001 \001(\004R\013epochNumber\022F\n best_su" +
-      "bmission_btc_block_height\030\002 \001(\004R\034bestSub" +
+      "bmission_btc_block_height\030\002 \001(\rR\034bestSub" +
       "missionBtcBlockHeight\022B\n\036best_submission" +
       "_btc_block_hash\030\003 \001(\tR\032bestSubmissionBtc" +
       "BlockHash\022s\n\034best_submission_transaction" +
@@ -10041,12 +10040,12 @@ public final class QueryProto {
       "quest\0327.babylon.btccheckpoint.v1.QueryEp" +
       "ochSubmissionsResponse\"9\202\323\344\223\0023\0221/babylon" +
       "/btccheckpoint/v1/{epoch_num}/submission" +
-      "sB\341\001\n\034com.babylon.btccheckpoint.v1B\nQuer" +
-      "yProtoZ5github.com/babylonchain/babylon/" +
-      "x/btccheckpoint/types\242\002\003BBX\252\002\030Babylon.Bt" +
-      "ccheckpoint.V1\312\002\030Babylon\\Btccheckpoint\\V" +
-      "1\342\002$Babylon\\Btccheckpoint\\V1\\GPBMetadata" +
-      "\352\002\032Babylon::Btccheckpoint::V1b\006proto3"
+      "sB\343\001\n\034com.babylon.btccheckpoint.v1B\nQuer" +
+      "yProtoZ7github.com/babylonlabs-io/babylo" +
+      "n/x/btccheckpoint/types\242\002\003BBX\252\002\030Babylon." +
+      "Btccheckpoint.V1\312\002\030Babylon\\Btccheckpoint" +
+      "\\V1\342\002$Babylon\\Btccheckpoint\\V1\\GPBMetada" +
+      "ta\352\002\032Babylon::Btccheckpoint::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

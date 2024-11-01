@@ -58,26 +58,6 @@ internal protocol Babylon_Btcstaking_V1_QueryClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> UnaryCall<Babylon_Btcstaking_V1_QueryBTCDelegationsRequest, Babylon_Btcstaking_V1_QueryBTCDelegationsResponse>
 
-  func activeFinalityProvidersAtHeight(
-    _ request: Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightRequest, Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightResponse>
-
-  func finalityProviderPowerAtHeight(
-    _ request: Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightRequest, Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightResponse>
-
-  func finalityProviderCurrentPower(
-    _ request: Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerRequest, Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerResponse>
-
-  func activatedHeight(
-    _ request: Babylon_Btcstaking_V1_QueryActivatedHeightRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Babylon_Btcstaking_V1_QueryActivatedHeightRequest, Babylon_Btcstaking_V1_QueryActivatedHeightResponse>
-
   func finalityProviderDelegations(
     _ request: Babylon_Btcstaking_V1_QueryFinalityProviderDelegationsRequest,
     callOptions: CallOptions?
@@ -181,79 +161,6 @@ extension Babylon_Btcstaking_V1_QueryClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeBTCDelegationsInterceptors() ?? []
-    )
-  }
-
-  /// ActiveFinalityProvidersAtHeight queries finality providers with non zero voting power at given height.
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to ActiveFinalityProvidersAtHeight.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func activeFinalityProvidersAtHeight(
-    _ request: Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightRequest, Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightResponse> {
-    return self.makeUnaryCall(
-      path: Babylon_Btcstaking_V1_QueryClientMetadata.Methods.activeFinalityProvidersAtHeight.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeActiveFinalityProvidersAtHeightInterceptors() ?? []
-    )
-  }
-
-  /// FinalityProviderPowerAtHeight queries the voting power of a finality provider at a given height
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to FinalityProviderPowerAtHeight.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func finalityProviderPowerAtHeight(
-    _ request: Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightRequest, Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightResponse> {
-    return self.makeUnaryCall(
-      path: Babylon_Btcstaking_V1_QueryClientMetadata.Methods.finalityProviderPowerAtHeight.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeFinalityProviderPowerAtHeightInterceptors() ?? []
-    )
-  }
-
-  /// FinalityProviderCurrentPower queries the voting power of a finality provider at the current height
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to FinalityProviderCurrentPower.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func finalityProviderCurrentPower(
-    _ request: Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerRequest, Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerResponse> {
-    return self.makeUnaryCall(
-      path: Babylon_Btcstaking_V1_QueryClientMetadata.Methods.finalityProviderCurrentPower.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeFinalityProviderCurrentPowerInterceptors() ?? []
-    )
-  }
-
-  /// ActivatedHeight queries the height when BTC staking protocol is activated, i.e., the first height when
-  /// there exists 1 finality provider with voting power
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to ActivatedHeight.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func activatedHeight(
-    _ request: Babylon_Btcstaking_V1_QueryActivatedHeightRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Babylon_Btcstaking_V1_QueryActivatedHeightRequest, Babylon_Btcstaking_V1_QueryActivatedHeightResponse> {
-    return self.makeUnaryCall(
-      path: Babylon_Btcstaking_V1_QueryClientMetadata.Methods.activatedHeight.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeActivatedHeightInterceptors() ?? []
     )
   }
 
@@ -382,26 +289,6 @@ internal protocol Babylon_Btcstaking_V1_QueryAsyncClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Babylon_Btcstaking_V1_QueryBTCDelegationsRequest, Babylon_Btcstaking_V1_QueryBTCDelegationsResponse>
 
-  func makeActiveFinalityProvidersAtHeightCall(
-    _ request: Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightRequest, Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightResponse>
-
-  func makeFinalityProviderPowerAtHeightCall(
-    _ request: Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightRequest, Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightResponse>
-
-  func makeFinalityProviderCurrentPowerCall(
-    _ request: Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerRequest, Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerResponse>
-
-  func makeActivatedHeightCall(
-    _ request: Babylon_Btcstaking_V1_QueryActivatedHeightRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Babylon_Btcstaking_V1_QueryActivatedHeightRequest, Babylon_Btcstaking_V1_QueryActivatedHeightResponse>
-
   func makeFinalityProviderDelegationsCall(
     _ request: Babylon_Btcstaking_V1_QueryFinalityProviderDelegationsRequest,
     callOptions: CallOptions?
@@ -480,54 +367,6 @@ extension Babylon_Btcstaking_V1_QueryAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeBTCDelegationsInterceptors() ?? []
-    )
-  }
-
-  internal func makeActiveFinalityProvidersAtHeightCall(
-    _ request: Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightRequest, Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Babylon_Btcstaking_V1_QueryClientMetadata.Methods.activeFinalityProvidersAtHeight.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeActiveFinalityProvidersAtHeightInterceptors() ?? []
-    )
-  }
-
-  internal func makeFinalityProviderPowerAtHeightCall(
-    _ request: Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightRequest, Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Babylon_Btcstaking_V1_QueryClientMetadata.Methods.finalityProviderPowerAtHeight.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeFinalityProviderPowerAtHeightInterceptors() ?? []
-    )
-  }
-
-  internal func makeFinalityProviderCurrentPowerCall(
-    _ request: Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerRequest, Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Babylon_Btcstaking_V1_QueryClientMetadata.Methods.finalityProviderCurrentPower.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeFinalityProviderCurrentPowerInterceptors() ?? []
-    )
-  }
-
-  internal func makeActivatedHeightCall(
-    _ request: Babylon_Btcstaking_V1_QueryActivatedHeightRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Babylon_Btcstaking_V1_QueryActivatedHeightRequest, Babylon_Btcstaking_V1_QueryActivatedHeightResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Babylon_Btcstaking_V1_QueryClientMetadata.Methods.activatedHeight.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeActivatedHeightInterceptors() ?? []
     )
   }
 
@@ -618,54 +457,6 @@ extension Babylon_Btcstaking_V1_QueryAsyncClientProtocol {
     )
   }
 
-  internal func activeFinalityProvidersAtHeight(
-    _ request: Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Babylon_Btcstaking_V1_QueryClientMetadata.Methods.activeFinalityProvidersAtHeight.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeActiveFinalityProvidersAtHeightInterceptors() ?? []
-    )
-  }
-
-  internal func finalityProviderPowerAtHeight(
-    _ request: Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Babylon_Btcstaking_V1_QueryClientMetadata.Methods.finalityProviderPowerAtHeight.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeFinalityProviderPowerAtHeightInterceptors() ?? []
-    )
-  }
-
-  internal func finalityProviderCurrentPower(
-    _ request: Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Babylon_Btcstaking_V1_QueryClientMetadata.Methods.finalityProviderCurrentPower.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeFinalityProviderCurrentPowerInterceptors() ?? []
-    )
-  }
-
-  internal func activatedHeight(
-    _ request: Babylon_Btcstaking_V1_QueryActivatedHeightRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Babylon_Btcstaking_V1_QueryActivatedHeightResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Babylon_Btcstaking_V1_QueryClientMetadata.Methods.activatedHeight.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeActivatedHeightInterceptors() ?? []
-    )
-  }
-
   internal func finalityProviderDelegations(
     _ request: Babylon_Btcstaking_V1_QueryFinalityProviderDelegationsRequest,
     callOptions: CallOptions? = nil
@@ -725,18 +516,6 @@ internal protocol Babylon_Btcstaking_V1_QueryClientInterceptorFactoryProtocol: S
   /// - Returns: Interceptors to use when invoking 'bTCDelegations'.
   func makeBTCDelegationsInterceptors() -> [ClientInterceptor<Babylon_Btcstaking_V1_QueryBTCDelegationsRequest, Babylon_Btcstaking_V1_QueryBTCDelegationsResponse>]
 
-  /// - Returns: Interceptors to use when invoking 'activeFinalityProvidersAtHeight'.
-  func makeActiveFinalityProvidersAtHeightInterceptors() -> [ClientInterceptor<Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightRequest, Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'finalityProviderPowerAtHeight'.
-  func makeFinalityProviderPowerAtHeightInterceptors() -> [ClientInterceptor<Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightRequest, Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'finalityProviderCurrentPower'.
-  func makeFinalityProviderCurrentPowerInterceptors() -> [ClientInterceptor<Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerRequest, Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'activatedHeight'.
-  func makeActivatedHeightInterceptors() -> [ClientInterceptor<Babylon_Btcstaking_V1_QueryActivatedHeightRequest, Babylon_Btcstaking_V1_QueryActivatedHeightResponse>]
-
   /// - Returns: Interceptors to use when invoking 'finalityProviderDelegations'.
   func makeFinalityProviderDelegationsInterceptors() -> [ClientInterceptor<Babylon_Btcstaking_V1_QueryFinalityProviderDelegationsRequest, Babylon_Btcstaking_V1_QueryFinalityProviderDelegationsResponse>]
 
@@ -754,10 +533,6 @@ internal enum Babylon_Btcstaking_V1_QueryClientMetadata {
       Babylon_Btcstaking_V1_QueryClientMetadata.Methods.finalityProviders,
       Babylon_Btcstaking_V1_QueryClientMetadata.Methods.finalityProvider,
       Babylon_Btcstaking_V1_QueryClientMetadata.Methods.bTCDelegations,
-      Babylon_Btcstaking_V1_QueryClientMetadata.Methods.activeFinalityProvidersAtHeight,
-      Babylon_Btcstaking_V1_QueryClientMetadata.Methods.finalityProviderPowerAtHeight,
-      Babylon_Btcstaking_V1_QueryClientMetadata.Methods.finalityProviderCurrentPower,
-      Babylon_Btcstaking_V1_QueryClientMetadata.Methods.activatedHeight,
       Babylon_Btcstaking_V1_QueryClientMetadata.Methods.finalityProviderDelegations,
       Babylon_Btcstaking_V1_QueryClientMetadata.Methods.bTCDelegation,
     ]
@@ -791,30 +566,6 @@ internal enum Babylon_Btcstaking_V1_QueryClientMetadata {
     internal static let bTCDelegations = GRPCMethodDescriptor(
       name: "BTCDelegations",
       path: "/babylon.btcstaking.v1.Query/BTCDelegations",
-      type: GRPCCallType.unary
-    )
-
-    internal static let activeFinalityProvidersAtHeight = GRPCMethodDescriptor(
-      name: "ActiveFinalityProvidersAtHeight",
-      path: "/babylon.btcstaking.v1.Query/ActiveFinalityProvidersAtHeight",
-      type: GRPCCallType.unary
-    )
-
-    internal static let finalityProviderPowerAtHeight = GRPCMethodDescriptor(
-      name: "FinalityProviderPowerAtHeight",
-      path: "/babylon.btcstaking.v1.Query/FinalityProviderPowerAtHeight",
-      type: GRPCCallType.unary
-    )
-
-    internal static let finalityProviderCurrentPower = GRPCMethodDescriptor(
-      name: "FinalityProviderCurrentPower",
-      path: "/babylon.btcstaking.v1.Query/FinalityProviderCurrentPower",
-      type: GRPCCallType.unary
-    )
-
-    internal static let activatedHeight = GRPCMethodDescriptor(
-      name: "ActivatedHeight",
-      path: "/babylon.btcstaking.v1.Query/ActivatedHeight",
       type: GRPCCallType.unary
     )
 
@@ -852,19 +603,6 @@ internal protocol Babylon_Btcstaking_V1_QueryProvider: CallHandlerProvider {
 
   /// BTCDelegations queries all BTC delegations under a given status
   func bTCDelegations(request: Babylon_Btcstaking_V1_QueryBTCDelegationsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Btcstaking_V1_QueryBTCDelegationsResponse>
-
-  /// ActiveFinalityProvidersAtHeight queries finality providers with non zero voting power at given height.
-  func activeFinalityProvidersAtHeight(request: Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightResponse>
-
-  /// FinalityProviderPowerAtHeight queries the voting power of a finality provider at a given height
-  func finalityProviderPowerAtHeight(request: Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightResponse>
-
-  /// FinalityProviderCurrentPower queries the voting power of a finality provider at the current height
-  func finalityProviderCurrentPower(request: Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerResponse>
-
-  /// ActivatedHeight queries the height when BTC staking protocol is activated, i.e., the first height when
-  /// there exists 1 finality provider with voting power
-  func activatedHeight(request: Babylon_Btcstaking_V1_QueryActivatedHeightRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Btcstaking_V1_QueryActivatedHeightResponse>
 
   /// FinalityProviderDelegations queries all BTC delegations of the given finality provider
   func finalityProviderDelegations(request: Babylon_Btcstaking_V1_QueryFinalityProviderDelegationsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Btcstaking_V1_QueryFinalityProviderDelegationsResponse>
@@ -930,42 +668,6 @@ extension Babylon_Btcstaking_V1_QueryProvider {
         userFunction: self.bTCDelegations(request:context:)
       )
 
-    case "ActiveFinalityProvidersAtHeight":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightRequest>(),
-        responseSerializer: ProtobufSerializer<Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightResponse>(),
-        interceptors: self.interceptors?.makeActiveFinalityProvidersAtHeightInterceptors() ?? [],
-        userFunction: self.activeFinalityProvidersAtHeight(request:context:)
-      )
-
-    case "FinalityProviderPowerAtHeight":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightRequest>(),
-        responseSerializer: ProtobufSerializer<Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightResponse>(),
-        interceptors: self.interceptors?.makeFinalityProviderPowerAtHeightInterceptors() ?? [],
-        userFunction: self.finalityProviderPowerAtHeight(request:context:)
-      )
-
-    case "FinalityProviderCurrentPower":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerRequest>(),
-        responseSerializer: ProtobufSerializer<Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerResponse>(),
-        interceptors: self.interceptors?.makeFinalityProviderCurrentPowerInterceptors() ?? [],
-        userFunction: self.finalityProviderCurrentPower(request:context:)
-      )
-
-    case "ActivatedHeight":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Babylon_Btcstaking_V1_QueryActivatedHeightRequest>(),
-        responseSerializer: ProtobufSerializer<Babylon_Btcstaking_V1_QueryActivatedHeightResponse>(),
-        interceptors: self.interceptors?.makeActivatedHeightInterceptors() ?? [],
-        userFunction: self.activatedHeight(request:context:)
-      )
-
     case "FinalityProviderDelegations":
       return UnaryServerHandler(
         context: context,
@@ -1027,31 +729,6 @@ internal protocol Babylon_Btcstaking_V1_QueryAsyncProvider: CallHandlerProvider 
     request: Babylon_Btcstaking_V1_QueryBTCDelegationsRequest,
     context: GRPCAsyncServerCallContext
   ) async throws -> Babylon_Btcstaking_V1_QueryBTCDelegationsResponse
-
-  /// ActiveFinalityProvidersAtHeight queries finality providers with non zero voting power at given height.
-  @Sendable func activeFinalityProvidersAtHeight(
-    request: Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightRequest,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightResponse
-
-  /// FinalityProviderPowerAtHeight queries the voting power of a finality provider at a given height
-  @Sendable func finalityProviderPowerAtHeight(
-    request: Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightRequest,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightResponse
-
-  /// FinalityProviderCurrentPower queries the voting power of a finality provider at the current height
-  @Sendable func finalityProviderCurrentPower(
-    request: Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerRequest,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerResponse
-
-  /// ActivatedHeight queries the height when BTC staking protocol is activated, i.e., the first height when
-  /// there exists 1 finality provider with voting power
-  @Sendable func activatedHeight(
-    request: Babylon_Btcstaking_V1_QueryActivatedHeightRequest,
-    context: GRPCAsyncServerCallContext
-  ) async throws -> Babylon_Btcstaking_V1_QueryActivatedHeightResponse
 
   /// FinalityProviderDelegations queries all BTC delegations of the given finality provider
   @Sendable func finalityProviderDelegations(
@@ -1130,42 +807,6 @@ extension Babylon_Btcstaking_V1_QueryAsyncProvider {
         wrapping: self.bTCDelegations(request:context:)
       )
 
-    case "ActiveFinalityProvidersAtHeight":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightRequest>(),
-        responseSerializer: ProtobufSerializer<Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightResponse>(),
-        interceptors: self.interceptors?.makeActiveFinalityProvidersAtHeightInterceptors() ?? [],
-        wrapping: self.activeFinalityProvidersAtHeight(request:context:)
-      )
-
-    case "FinalityProviderPowerAtHeight":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightRequest>(),
-        responseSerializer: ProtobufSerializer<Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightResponse>(),
-        interceptors: self.interceptors?.makeFinalityProviderPowerAtHeightInterceptors() ?? [],
-        wrapping: self.finalityProviderPowerAtHeight(request:context:)
-      )
-
-    case "FinalityProviderCurrentPower":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerRequest>(),
-        responseSerializer: ProtobufSerializer<Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerResponse>(),
-        interceptors: self.interceptors?.makeFinalityProviderCurrentPowerInterceptors() ?? [],
-        wrapping: self.finalityProviderCurrentPower(request:context:)
-      )
-
-    case "ActivatedHeight":
-      return GRPCAsyncServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Babylon_Btcstaking_V1_QueryActivatedHeightRequest>(),
-        responseSerializer: ProtobufSerializer<Babylon_Btcstaking_V1_QueryActivatedHeightResponse>(),
-        interceptors: self.interceptors?.makeActivatedHeightInterceptors() ?? [],
-        wrapping: self.activatedHeight(request:context:)
-      )
-
     case "FinalityProviderDelegations":
       return GRPCAsyncServerHandler(
         context: context,
@@ -1212,22 +853,6 @@ internal protocol Babylon_Btcstaking_V1_QueryServerInterceptorFactoryProtocol {
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeBTCDelegationsInterceptors() -> [ServerInterceptor<Babylon_Btcstaking_V1_QueryBTCDelegationsRequest, Babylon_Btcstaking_V1_QueryBTCDelegationsResponse>]
 
-  /// - Returns: Interceptors to use when handling 'activeFinalityProvidersAtHeight'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeActiveFinalityProvidersAtHeightInterceptors() -> [ServerInterceptor<Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightRequest, Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightResponse>]
-
-  /// - Returns: Interceptors to use when handling 'finalityProviderPowerAtHeight'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeFinalityProviderPowerAtHeightInterceptors() -> [ServerInterceptor<Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightRequest, Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightResponse>]
-
-  /// - Returns: Interceptors to use when handling 'finalityProviderCurrentPower'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeFinalityProviderCurrentPowerInterceptors() -> [ServerInterceptor<Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerRequest, Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerResponse>]
-
-  /// - Returns: Interceptors to use when handling 'activatedHeight'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeActivatedHeightInterceptors() -> [ServerInterceptor<Babylon_Btcstaking_V1_QueryActivatedHeightRequest, Babylon_Btcstaking_V1_QueryActivatedHeightResponse>]
-
   /// - Returns: Interceptors to use when handling 'finalityProviderDelegations'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeFinalityProviderDelegationsInterceptors() -> [ServerInterceptor<Babylon_Btcstaking_V1_QueryFinalityProviderDelegationsRequest, Babylon_Btcstaking_V1_QueryFinalityProviderDelegationsResponse>]
@@ -1247,10 +872,6 @@ internal enum Babylon_Btcstaking_V1_QueryServerMetadata {
       Babylon_Btcstaking_V1_QueryServerMetadata.Methods.finalityProviders,
       Babylon_Btcstaking_V1_QueryServerMetadata.Methods.finalityProvider,
       Babylon_Btcstaking_V1_QueryServerMetadata.Methods.bTCDelegations,
-      Babylon_Btcstaking_V1_QueryServerMetadata.Methods.activeFinalityProvidersAtHeight,
-      Babylon_Btcstaking_V1_QueryServerMetadata.Methods.finalityProviderPowerAtHeight,
-      Babylon_Btcstaking_V1_QueryServerMetadata.Methods.finalityProviderCurrentPower,
-      Babylon_Btcstaking_V1_QueryServerMetadata.Methods.activatedHeight,
       Babylon_Btcstaking_V1_QueryServerMetadata.Methods.finalityProviderDelegations,
       Babylon_Btcstaking_V1_QueryServerMetadata.Methods.bTCDelegation,
     ]
@@ -1284,30 +905,6 @@ internal enum Babylon_Btcstaking_V1_QueryServerMetadata {
     internal static let bTCDelegations = GRPCMethodDescriptor(
       name: "BTCDelegations",
       path: "/babylon.btcstaking.v1.Query/BTCDelegations",
-      type: GRPCCallType.unary
-    )
-
-    internal static let activeFinalityProvidersAtHeight = GRPCMethodDescriptor(
-      name: "ActiveFinalityProvidersAtHeight",
-      path: "/babylon.btcstaking.v1.Query/ActiveFinalityProvidersAtHeight",
-      type: GRPCCallType.unary
-    )
-
-    internal static let finalityProviderPowerAtHeight = GRPCMethodDescriptor(
-      name: "FinalityProviderPowerAtHeight",
-      path: "/babylon.btcstaking.v1.Query/FinalityProviderPowerAtHeight",
-      type: GRPCCallType.unary
-    )
-
-    internal static let finalityProviderCurrentPower = GRPCMethodDescriptor(
-      name: "FinalityProviderCurrentPower",
-      path: "/babylon.btcstaking.v1.Query/FinalityProviderCurrentPower",
-      type: GRPCCallType.unary
-    )
-
-    internal static let activatedHeight = GRPCMethodDescriptor(
-      name: "ActivatedHeight",
-      path: "/babylon.btcstaking.v1.Query/ActivatedHeight",
       type: GRPCCallType.unary
     )
 

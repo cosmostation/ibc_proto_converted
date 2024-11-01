@@ -641,13 +641,13 @@ public final class GenesisProto {
       "go.proto\032%babylon/btccheckpoint/v1/param" +
       "s.proto\"N\n\014GenesisState\022>\n\006params\030\001 \001(\0132" +
       " .babylon.btccheckpoint.v1.ParamsB\004\310\336\037\000R" +
-      "\006paramsB\343\001\n\034com.babylon.btccheckpoint.v1" +
-      "B\014GenesisProtoZ5github.com/babylonchain/" +
-      "babylon/x/btccheckpoint/types\242\002\003BBX\252\002\030Ba" +
-      "bylon.Btccheckpoint.V1\312\002\030Babylon\\Btcchec" +
-      "kpoint\\V1\342\002$Babylon\\Btccheckpoint\\V1\\GPB" +
-      "Metadata\352\002\032Babylon::Btccheckpoint::V1b\006p" +
-      "roto3"
+      "\006paramsB\345\001\n\034com.babylon.btccheckpoint.v1" +
+      "B\014GenesisProtoZ7github.com/babylonlabs-i" +
+      "o/babylon/x/btccheckpoint/types\242\002\003BBX\252\002\030" +
+      "Babylon.Btccheckpoint.V1\312\002\030Babylon\\Btcch" +
+      "eckpoint\\V1\342\002$Babylon\\Btccheckpoint\\V1\\G" +
+      "PBMetadata\352\002\032Babylon::Btccheckpoint::V1b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

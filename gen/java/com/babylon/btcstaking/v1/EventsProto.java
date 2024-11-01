@@ -14,88 +14,757 @@ public final class EventsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface EventNewFinalityProviderOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.EventNewFinalityProvider)
+  /**
+   * <pre>
+   * FinalityProviderStatus is the status of a finality provider.
+   * </pre>
+   *
+   * Protobuf enum {@code babylon.btcstaking.v1.FinalityProviderStatus}
+   */
+  public enum FinalityProviderStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * FINALITY_PROVIDER_STATUS_INACTIVE defines a finality provider that does not have sufficient
+     * delegations or does not have timestamped public randomness.
+     * </pre>
+     *
+     * <code>FINALITY_PROVIDER_STATUS_INACTIVE = 0;</code>
+     */
+    FINALITY_PROVIDER_STATUS_INACTIVE(0),
+    /**
+     * <pre>
+     * FINALITY_PROVIDER_STATUS_ACTIVE defines a finality provider that have sufficient delegations
+     * and have timestamped public randomness.
+     * </pre>
+     *
+     * <code>FINALITY_PROVIDER_STATUS_ACTIVE = 1;</code>
+     */
+    FINALITY_PROVIDER_STATUS_ACTIVE(1),
+    /**
+     * <pre>
+     * FINALITY_PROVIDER_STATUS_JAILED defines a finality provider that is jailed due to downtime
+     * </pre>
+     *
+     * <code>FINALITY_PROVIDER_STATUS_JAILED = 2;</code>
+     */
+    FINALITY_PROVIDER_STATUS_JAILED(2),
+    /**
+     * <pre>
+     * FINALITY_PROVIDER_STATUS_SLASHED defines a finality provider that is slashed due to double-sign
+     * </pre>
+     *
+     * <code>FINALITY_PROVIDER_STATUS_SLASHED = 3;</code>
+     */
+    FINALITY_PROVIDER_STATUS_SLASHED(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * FINALITY_PROVIDER_STATUS_INACTIVE defines a finality provider that does not have sufficient
+     * delegations or does not have timestamped public randomness.
+     * </pre>
+     *
+     * <code>FINALITY_PROVIDER_STATUS_INACTIVE = 0;</code>
+     */
+    public static final int FINALITY_PROVIDER_STATUS_INACTIVE_VALUE = 0;
+    /**
+     * <pre>
+     * FINALITY_PROVIDER_STATUS_ACTIVE defines a finality provider that have sufficient delegations
+     * and have timestamped public randomness.
+     * </pre>
+     *
+     * <code>FINALITY_PROVIDER_STATUS_ACTIVE = 1;</code>
+     */
+    public static final int FINALITY_PROVIDER_STATUS_ACTIVE_VALUE = 1;
+    /**
+     * <pre>
+     * FINALITY_PROVIDER_STATUS_JAILED defines a finality provider that is jailed due to downtime
+     * </pre>
+     *
+     * <code>FINALITY_PROVIDER_STATUS_JAILED = 2;</code>
+     */
+    public static final int FINALITY_PROVIDER_STATUS_JAILED_VALUE = 2;
+    /**
+     * <pre>
+     * FINALITY_PROVIDER_STATUS_SLASHED defines a finality provider that is slashed due to double-sign
+     * </pre>
+     *
+     * <code>FINALITY_PROVIDER_STATUS_SLASHED = 3;</code>
+     */
+    public static final int FINALITY_PROVIDER_STATUS_SLASHED_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static FinalityProviderStatus valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static FinalityProviderStatus forNumber(int value) {
+      switch (value) {
+        case 0: return FINALITY_PROVIDER_STATUS_INACTIVE;
+        case 1: return FINALITY_PROVIDER_STATUS_ACTIVE;
+        case 2: return FINALITY_PROVIDER_STATUS_JAILED;
+        case 3: return FINALITY_PROVIDER_STATUS_SLASHED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<FinalityProviderStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        FinalityProviderStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<FinalityProviderStatus>() {
+            public FinalityProviderStatus findValueByNumber(int number) {
+              return FinalityProviderStatus.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.babylon.btcstaking.v1.EventsProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final FinalityProviderStatus[] VALUES = values();
+
+    public static FinalityProviderStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private FinalityProviderStatus(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:babylon.btcstaking.v1.FinalityProviderStatus)
+  }
+
+  public interface EventFinalityProviderCreatedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.EventFinalityProviderCreated)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.babylon.btcstaking.v1.FinalityProvider fp = 1 [json_name = "fp"];</code>
-     * @return Whether the fp field is set.
+     * <pre>
+     * btc_pk_hex is the hex string of Bitcoin secp256k1 PK of this finality provider
+     * </pre>
+     *
+     * <code>string btc_pk_hex = 1 [json_name = "btcPkHex", (.amino.dont_omitempty) = true];</code>
+     * @return The btcPkHex.
      */
-    boolean hasFp();
+    java.lang.String getBtcPkHex();
     /**
-     * <code>.babylon.btcstaking.v1.FinalityProvider fp = 1 [json_name = "fp"];</code>
-     * @return The fp.
+     * <pre>
+     * btc_pk_hex is the hex string of Bitcoin secp256k1 PK of this finality provider
+     * </pre>
+     *
+     * <code>string btc_pk_hex = 1 [json_name = "btcPkHex", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for btcPkHex.
      */
-    com.babylon.btcstaking.v1.BtcstakingProto.FinalityProvider getFp();
+    com.google.protobuf.ByteString
+        getBtcPkHexBytes();
+
     /**
-     * <code>.babylon.btcstaking.v1.FinalityProvider fp = 1 [json_name = "fp"];</code>
+     * <pre>
+     * addr is the babylon address to receive commission from delegations.
+     * </pre>
+     *
+     * <code>string addr = 2 [json_name = "addr", (.amino.dont_omitempty) = true];</code>
+     * @return The addr.
      */
-    com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderOrBuilder getFpOrBuilder();
+    java.lang.String getAddr();
+    /**
+     * <pre>
+     * addr is the babylon address to receive commission from delegations.
+     * </pre>
+     *
+     * <code>string addr = 2 [json_name = "addr", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for addr.
+     */
+    com.google.protobuf.ByteString
+        getAddrBytes();
+
+    /**
+     * <pre>
+     * commission defines the commission rate of the finality provider in decimals.
+     * </pre>
+     *
+     * <code>string commission = 3 [json_name = "commission", (.amino.dont_omitempty) = true];</code>
+     * @return The commission.
+     */
+    java.lang.String getCommission();
+    /**
+     * <pre>
+     * commission defines the commission rate of the finality provider in decimals.
+     * </pre>
+     *
+     * <code>string commission = 3 [json_name = "commission", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for commission.
+     */
+    com.google.protobuf.ByteString
+        getCommissionBytes();
+
+    /**
+     * <pre>
+     * moniker defines a human-readable name for the finality provider.
+     * </pre>
+     *
+     * <code>string moniker = 4 [json_name = "moniker"];</code>
+     * @return The moniker.
+     */
+    java.lang.String getMoniker();
+    /**
+     * <pre>
+     * moniker defines a human-readable name for the finality provider.
+     * </pre>
+     *
+     * <code>string moniker = 4 [json_name = "moniker"];</code>
+     * @return The bytes for moniker.
+     */
+    com.google.protobuf.ByteString
+        getMonikerBytes();
+
+    /**
+     * <pre>
+     * identity defines an optional identity signature (ex. UPort or Keybase).
+     * </pre>
+     *
+     * <code>string identity = 5 [json_name = "identity"];</code>
+     * @return The identity.
+     */
+    java.lang.String getIdentity();
+    /**
+     * <pre>
+     * identity defines an optional identity signature (ex. UPort or Keybase).
+     * </pre>
+     *
+     * <code>string identity = 5 [json_name = "identity"];</code>
+     * @return The bytes for identity.
+     */
+    com.google.protobuf.ByteString
+        getIdentityBytes();
+
+    /**
+     * <pre>
+     * website defines an optional website link.
+     * </pre>
+     *
+     * <code>string website = 6 [json_name = "website"];</code>
+     * @return The website.
+     */
+    java.lang.String getWebsite();
+    /**
+     * <pre>
+     * website defines an optional website link.
+     * </pre>
+     *
+     * <code>string website = 6 [json_name = "website"];</code>
+     * @return The bytes for website.
+     */
+    com.google.protobuf.ByteString
+        getWebsiteBytes();
+
+    /**
+     * <pre>
+     * security_contact defines an optional email for security contact.
+     * </pre>
+     *
+     * <code>string security_contact = 7 [json_name = "securityContact"];</code>
+     * @return The securityContact.
+     */
+    java.lang.String getSecurityContact();
+    /**
+     * <pre>
+     * security_contact defines an optional email for security contact.
+     * </pre>
+     *
+     * <code>string security_contact = 7 [json_name = "securityContact"];</code>
+     * @return The bytes for securityContact.
+     */
+    com.google.protobuf.ByteString
+        getSecurityContactBytes();
+
+    /**
+     * <pre>
+     * details define other optional details.
+     * </pre>
+     *
+     * <code>string details = 8 [json_name = "details"];</code>
+     * @return The details.
+     */
+    java.lang.String getDetails();
+    /**
+     * <pre>
+     * details define other optional details.
+     * </pre>
+     *
+     * <code>string details = 8 [json_name = "details"];</code>
+     * @return The bytes for details.
+     */
+    com.google.protobuf.ByteString
+        getDetailsBytes();
   }
   /**
    * <pre>
-   * EventNewFinalityProvider is the event emitted when a finality provider is created
+   * EventFinalityProviderCreated is the event emitted when a finality provider is created
    * </pre>
    *
-   * Protobuf type {@code babylon.btcstaking.v1.EventNewFinalityProvider}
+   * Protobuf type {@code babylon.btcstaking.v1.EventFinalityProviderCreated}
    */
-  public static final class EventNewFinalityProvider extends
+  public static final class EventFinalityProviderCreated extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.EventNewFinalityProvider)
-      EventNewFinalityProviderOrBuilder {
+      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.EventFinalityProviderCreated)
+      EventFinalityProviderCreatedOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use EventNewFinalityProvider.newBuilder() to construct.
-    private EventNewFinalityProvider(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use EventFinalityProviderCreated.newBuilder() to construct.
+    private EventFinalityProviderCreated(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private EventNewFinalityProvider() {
+    private EventFinalityProviderCreated() {
+      btcPkHex_ = "";
+      addr_ = "";
+      commission_ = "";
+      moniker_ = "";
+      identity_ = "";
+      website_ = "";
+      securityContact_ = "";
+      details_ = "";
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new EventNewFinalityProvider();
+      return new EventFinalityProviderCreated();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventNewFinalityProvider_descriptor;
+      return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventFinalityProviderCreated_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventNewFinalityProvider_fieldAccessorTable
+      return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventFinalityProviderCreated_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider.class, com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider.Builder.class);
+              com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated.class, com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated.Builder.class);
     }
 
-    public static final int FP_FIELD_NUMBER = 1;
-    private com.babylon.btcstaking.v1.BtcstakingProto.FinalityProvider fp_;
+    public static final int BTC_PK_HEX_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object btcPkHex_ = "";
     /**
-     * <code>.babylon.btcstaking.v1.FinalityProvider fp = 1 [json_name = "fp"];</code>
-     * @return Whether the fp field is set.
+     * <pre>
+     * btc_pk_hex is the hex string of Bitcoin secp256k1 PK of this finality provider
+     * </pre>
+     *
+     * <code>string btc_pk_hex = 1 [json_name = "btcPkHex", (.amino.dont_omitempty) = true];</code>
+     * @return The btcPkHex.
      */
     @java.lang.Override
-    public boolean hasFp() {
-      return fp_ != null;
+    public java.lang.String getBtcPkHex() {
+      java.lang.Object ref = btcPkHex_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        btcPkHex_ = s;
+        return s;
+      }
     }
     /**
-     * <code>.babylon.btcstaking.v1.FinalityProvider fp = 1 [json_name = "fp"];</code>
-     * @return The fp.
+     * <pre>
+     * btc_pk_hex is the hex string of Bitcoin secp256k1 PK of this finality provider
+     * </pre>
+     *
+     * <code>string btc_pk_hex = 1 [json_name = "btcPkHex", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for btcPkHex.
      */
     @java.lang.Override
-    public com.babylon.btcstaking.v1.BtcstakingProto.FinalityProvider getFp() {
-      return fp_ == null ? com.babylon.btcstaking.v1.BtcstakingProto.FinalityProvider.getDefaultInstance() : fp_;
+    public com.google.protobuf.ByteString
+        getBtcPkHexBytes() {
+      java.lang.Object ref = btcPkHex_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        btcPkHex_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDR_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object addr_ = "";
+    /**
+     * <pre>
+     * addr is the babylon address to receive commission from delegations.
+     * </pre>
+     *
+     * <code>string addr = 2 [json_name = "addr", (.amino.dont_omitempty) = true];</code>
+     * @return The addr.
+     */
+    @java.lang.Override
+    public java.lang.String getAddr() {
+      java.lang.Object ref = addr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        addr_ = s;
+        return s;
+      }
     }
     /**
-     * <code>.babylon.btcstaking.v1.FinalityProvider fp = 1 [json_name = "fp"];</code>
+     * <pre>
+     * addr is the babylon address to receive commission from delegations.
+     * </pre>
+     *
+     * <code>string addr = 2 [json_name = "addr", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for addr.
      */
     @java.lang.Override
-    public com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderOrBuilder getFpOrBuilder() {
-      return fp_ == null ? com.babylon.btcstaking.v1.BtcstakingProto.FinalityProvider.getDefaultInstance() : fp_;
+    public com.google.protobuf.ByteString
+        getAddrBytes() {
+      java.lang.Object ref = addr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        addr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COMMISSION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object commission_ = "";
+    /**
+     * <pre>
+     * commission defines the commission rate of the finality provider in decimals.
+     * </pre>
+     *
+     * <code>string commission = 3 [json_name = "commission", (.amino.dont_omitempty) = true];</code>
+     * @return The commission.
+     */
+    @java.lang.Override
+    public java.lang.String getCommission() {
+      java.lang.Object ref = commission_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        commission_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * commission defines the commission rate of the finality provider in decimals.
+     * </pre>
+     *
+     * <code>string commission = 3 [json_name = "commission", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for commission.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCommissionBytes() {
+      java.lang.Object ref = commission_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        commission_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MONIKER_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object moniker_ = "";
+    /**
+     * <pre>
+     * moniker defines a human-readable name for the finality provider.
+     * </pre>
+     *
+     * <code>string moniker = 4 [json_name = "moniker"];</code>
+     * @return The moniker.
+     */
+    @java.lang.Override
+    public java.lang.String getMoniker() {
+      java.lang.Object ref = moniker_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        moniker_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * moniker defines a human-readable name for the finality provider.
+     * </pre>
+     *
+     * <code>string moniker = 4 [json_name = "moniker"];</code>
+     * @return The bytes for moniker.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMonikerBytes() {
+      java.lang.Object ref = moniker_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        moniker_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IDENTITY_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object identity_ = "";
+    /**
+     * <pre>
+     * identity defines an optional identity signature (ex. UPort or Keybase).
+     * </pre>
+     *
+     * <code>string identity = 5 [json_name = "identity"];</code>
+     * @return The identity.
+     */
+    @java.lang.Override
+    public java.lang.String getIdentity() {
+      java.lang.Object ref = identity_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        identity_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * identity defines an optional identity signature (ex. UPort or Keybase).
+     * </pre>
+     *
+     * <code>string identity = 5 [json_name = "identity"];</code>
+     * @return The bytes for identity.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdentityBytes() {
+      java.lang.Object ref = identity_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        identity_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WEBSITE_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object website_ = "";
+    /**
+     * <pre>
+     * website defines an optional website link.
+     * </pre>
+     *
+     * <code>string website = 6 [json_name = "website"];</code>
+     * @return The website.
+     */
+    @java.lang.Override
+    public java.lang.String getWebsite() {
+      java.lang.Object ref = website_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        website_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * website defines an optional website link.
+     * </pre>
+     *
+     * <code>string website = 6 [json_name = "website"];</code>
+     * @return The bytes for website.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWebsiteBytes() {
+      java.lang.Object ref = website_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        website_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SECURITY_CONTACT_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object securityContact_ = "";
+    /**
+     * <pre>
+     * security_contact defines an optional email for security contact.
+     * </pre>
+     *
+     * <code>string security_contact = 7 [json_name = "securityContact"];</code>
+     * @return The securityContact.
+     */
+    @java.lang.Override
+    public java.lang.String getSecurityContact() {
+      java.lang.Object ref = securityContact_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        securityContact_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * security_contact defines an optional email for security contact.
+     * </pre>
+     *
+     * <code>string security_contact = 7 [json_name = "securityContact"];</code>
+     * @return The bytes for securityContact.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecurityContactBytes() {
+      java.lang.Object ref = securityContact_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        securityContact_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DETAILS_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object details_ = "";
+    /**
+     * <pre>
+     * details define other optional details.
+     * </pre>
+     *
+     * <code>string details = 8 [json_name = "details"];</code>
+     * @return The details.
+     */
+    @java.lang.Override
+    public java.lang.String getDetails() {
+      java.lang.Object ref = details_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        details_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * details define other optional details.
+     * </pre>
+     *
+     * <code>string details = 8 [json_name = "details"];</code>
+     * @return The bytes for details.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDetailsBytes() {
+      java.lang.Object ref = details_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        details_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -112,8 +781,29 @@ public final class EventsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (fp_ != null) {
-        output.writeMessage(1, getFp());
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(btcPkHex_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, btcPkHex_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(addr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, addr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(commission_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, commission_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moniker_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, moniker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(identity_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, identity_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(website_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, website_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityContact_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, securityContact_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(details_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, details_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -124,9 +814,29 @@ public final class EventsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (fp_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getFp());
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(btcPkHex_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, btcPkHex_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(addr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, addr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(commission_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, commission_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moniker_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, moniker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(identity_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, identity_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(website_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, website_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityContact_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, securityContact_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(details_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, details_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -138,16 +848,27 @@ public final class EventsProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider)) {
+      if (!(obj instanceof com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated)) {
         return super.equals(obj);
       }
-      com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider other = (com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider) obj;
+      com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated other = (com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated) obj;
 
-      if (hasFp() != other.hasFp()) return false;
-      if (hasFp()) {
-        if (!getFp()
-            .equals(other.getFp())) return false;
-      }
+      if (!getBtcPkHex()
+          .equals(other.getBtcPkHex())) return false;
+      if (!getAddr()
+          .equals(other.getAddr())) return false;
+      if (!getCommission()
+          .equals(other.getCommission())) return false;
+      if (!getMoniker()
+          .equals(other.getMoniker())) return false;
+      if (!getIdentity()
+          .equals(other.getIdentity())) return false;
+      if (!getWebsite()
+          .equals(other.getWebsite())) return false;
+      if (!getSecurityContact()
+          .equals(other.getSecurityContact())) return false;
+      if (!getDetails()
+          .equals(other.getDetails())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -159,53 +880,65 @@ public final class EventsProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasFp()) {
-        hash = (37 * hash) + FP_FIELD_NUMBER;
-        hash = (53 * hash) + getFp().hashCode();
-      }
+      hash = (37 * hash) + BTC_PK_HEX_FIELD_NUMBER;
+      hash = (53 * hash) + getBtcPkHex().hashCode();
+      hash = (37 * hash) + ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getAddr().hashCode();
+      hash = (37 * hash) + COMMISSION_FIELD_NUMBER;
+      hash = (53 * hash) + getCommission().hashCode();
+      hash = (37 * hash) + MONIKER_FIELD_NUMBER;
+      hash = (53 * hash) + getMoniker().hashCode();
+      hash = (37 * hash) + IDENTITY_FIELD_NUMBER;
+      hash = (53 * hash) + getIdentity().hashCode();
+      hash = (37 * hash) + WEBSITE_FIELD_NUMBER;
+      hash = (53 * hash) + getWebsite().hashCode();
+      hash = (37 * hash) + SECURITY_CONTACT_FIELD_NUMBER;
+      hash = (53 * hash) + getSecurityContact().hashCode();
+      hash = (37 * hash) + DETAILS_FIELD_NUMBER;
+      hash = (53 * hash) + getDetails().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider parseFrom(
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider parseFrom(
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider parseFrom(
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider parseFrom(
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider parseFrom(byte[] data)
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider parseFrom(
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider parseFrom(java.io.InputStream input)
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider parseFrom(
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -213,26 +946,26 @@ public final class EventsProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider parseDelimitedFrom(java.io.InputStream input)
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider parseDelimitedFrom(
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider parseFrom(
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider parseFrom(
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -245,7 +978,7 @@ public final class EventsProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider prototype) {
+    public static Builder newBuilder(com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -262,29 +995,29 @@ public final class EventsProto {
     }
     /**
      * <pre>
-     * EventNewFinalityProvider is the event emitted when a finality provider is created
+     * EventFinalityProviderCreated is the event emitted when a finality provider is created
      * </pre>
      *
-     * Protobuf type {@code babylon.btcstaking.v1.EventNewFinalityProvider}
+     * Protobuf type {@code babylon.btcstaking.v1.EventFinalityProviderCreated}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.EventNewFinalityProvider)
-        com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProviderOrBuilder {
+        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.EventFinalityProviderCreated)
+        com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreatedOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventNewFinalityProvider_descriptor;
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventFinalityProviderCreated_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventNewFinalityProvider_fieldAccessorTable
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventFinalityProviderCreated_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider.class, com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider.Builder.class);
+                com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated.class, com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated.Builder.class);
       }
 
-      // Construct using com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider.newBuilder()
+      // Construct using com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated.newBuilder()
       private Builder() {
 
       }
@@ -298,28 +1031,31 @@ public final class EventsProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        fp_ = null;
-        if (fpBuilder_ != null) {
-          fpBuilder_.dispose();
-          fpBuilder_ = null;
-        }
+        btcPkHex_ = "";
+        addr_ = "";
+        commission_ = "";
+        moniker_ = "";
+        identity_ = "";
+        website_ = "";
+        securityContact_ = "";
+        details_ = "";
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventNewFinalityProvider_descriptor;
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventFinalityProviderCreated_descriptor;
       }
 
       @java.lang.Override
-      public com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider getDefaultInstanceForType() {
-        return com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider.getDefaultInstance();
+      public com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated getDefaultInstanceForType() {
+        return com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider build() {
-        com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider result = buildPartial();
+      public com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated build() {
+        com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -327,19 +1063,38 @@ public final class EventsProto {
       }
 
       @java.lang.Override
-      public com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider buildPartial() {
-        com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider result = new com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider(this);
+      public com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated buildPartial() {
+        com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated result = new com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider result) {
+      private void buildPartial0(com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.fp_ = fpBuilder_ == null
-              ? fp_
-              : fpBuilder_.build();
+          result.btcPkHex_ = btcPkHex_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.addr_ = addr_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.commission_ = commission_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.moniker_ = moniker_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.identity_ = identity_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.website_ = website_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.securityContact_ = securityContact_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.details_ = details_;
         }
       }
 
@@ -377,18 +1132,55 @@ public final class EventsProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider) {
-          return mergeFrom((com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider)other);
+        if (other instanceof com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated) {
+          return mergeFrom((com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider other) {
-        if (other == com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider.getDefaultInstance()) return this;
-        if (other.hasFp()) {
-          mergeFp(other.getFp());
+      public Builder mergeFrom(com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated other) {
+        if (other == com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated.getDefaultInstance()) return this;
+        if (!other.getBtcPkHex().isEmpty()) {
+          btcPkHex_ = other.btcPkHex_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getAddr().isEmpty()) {
+          addr_ = other.addr_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getCommission().isEmpty()) {
+          commission_ = other.commission_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getMoniker().isEmpty()) {
+          moniker_ = other.moniker_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getIdentity().isEmpty()) {
+          identity_ = other.identity_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getWebsite().isEmpty()) {
+          website_ = other.website_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getSecurityContact().isEmpty()) {
+          securityContact_ = other.securityContact_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.getDetails().isEmpty()) {
+          details_ = other.details_;
+          bitField0_ |= 0x00000080;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -417,12 +1209,45 @@ public final class EventsProto {
                 done = true;
                 break;
               case 10: {
-                input.readMessage(
-                    getFpFieldBuilder().getBuilder(),
-                    extensionRegistry);
+                btcPkHex_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
+              case 18: {
+                addr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                commission_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                moniker_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                identity_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                website_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                securityContact_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                details_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -440,123 +1265,740 @@ public final class EventsProto {
       }
       private int bitField0_;
 
-      private com.babylon.btcstaking.v1.BtcstakingProto.FinalityProvider fp_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.babylon.btcstaking.v1.BtcstakingProto.FinalityProvider, com.babylon.btcstaking.v1.BtcstakingProto.FinalityProvider.Builder, com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderOrBuilder> fpBuilder_;
+      private java.lang.Object btcPkHex_ = "";
       /**
-       * <code>.babylon.btcstaking.v1.FinalityProvider fp = 1 [json_name = "fp"];</code>
-       * @return Whether the fp field is set.
+       * <pre>
+       * btc_pk_hex is the hex string of Bitcoin secp256k1 PK of this finality provider
+       * </pre>
+       *
+       * <code>string btc_pk_hex = 1 [json_name = "btcPkHex", (.amino.dont_omitempty) = true];</code>
+       * @return The btcPkHex.
        */
-      public boolean hasFp() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>.babylon.btcstaking.v1.FinalityProvider fp = 1 [json_name = "fp"];</code>
-       * @return The fp.
-       */
-      public com.babylon.btcstaking.v1.BtcstakingProto.FinalityProvider getFp() {
-        if (fpBuilder_ == null) {
-          return fp_ == null ? com.babylon.btcstaking.v1.BtcstakingProto.FinalityProvider.getDefaultInstance() : fp_;
+      public java.lang.String getBtcPkHex() {
+        java.lang.Object ref = btcPkHex_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          btcPkHex_ = s;
+          return s;
         } else {
-          return fpBuilder_.getMessage();
+          return (java.lang.String) ref;
         }
       }
       /**
-       * <code>.babylon.btcstaking.v1.FinalityProvider fp = 1 [json_name = "fp"];</code>
+       * <pre>
+       * btc_pk_hex is the hex string of Bitcoin secp256k1 PK of this finality provider
+       * </pre>
+       *
+       * <code>string btc_pk_hex = 1 [json_name = "btcPkHex", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for btcPkHex.
        */
-      public Builder setFp(com.babylon.btcstaking.v1.BtcstakingProto.FinalityProvider value) {
-        if (fpBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          fp_ = value;
+      public com.google.protobuf.ByteString
+          getBtcPkHexBytes() {
+        java.lang.Object ref = btcPkHex_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          btcPkHex_ = b;
+          return b;
         } else {
-          fpBuilder_.setMessage(value);
+          return (com.google.protobuf.ByteString) ref;
         }
+      }
+      /**
+       * <pre>
+       * btc_pk_hex is the hex string of Bitcoin secp256k1 PK of this finality provider
+       * </pre>
+       *
+       * <code>string btc_pk_hex = 1 [json_name = "btcPkHex", (.amino.dont_omitempty) = true];</code>
+       * @param value The btcPkHex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBtcPkHex(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        btcPkHex_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>.babylon.btcstaking.v1.FinalityProvider fp = 1 [json_name = "fp"];</code>
+       * <pre>
+       * btc_pk_hex is the hex string of Bitcoin secp256k1 PK of this finality provider
+       * </pre>
+       *
+       * <code>string btc_pk_hex = 1 [json_name = "btcPkHex", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
        */
-      public Builder setFp(
-          com.babylon.btcstaking.v1.BtcstakingProto.FinalityProvider.Builder builderForValue) {
-        if (fpBuilder_ == null) {
-          fp_ = builderForValue.build();
-        } else {
-          fpBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.babylon.btcstaking.v1.FinalityProvider fp = 1 [json_name = "fp"];</code>
-       */
-      public Builder mergeFp(com.babylon.btcstaking.v1.BtcstakingProto.FinalityProvider value) {
-        if (fpBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            fp_ != null &&
-            fp_ != com.babylon.btcstaking.v1.BtcstakingProto.FinalityProvider.getDefaultInstance()) {
-            getFpBuilder().mergeFrom(value);
-          } else {
-            fp_ = value;
-          }
-        } else {
-          fpBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.babylon.btcstaking.v1.FinalityProvider fp = 1 [json_name = "fp"];</code>
-       */
-      public Builder clearFp() {
+      public Builder clearBtcPkHex() {
+        btcPkHex_ = getDefaultInstance().getBtcPkHex();
         bitField0_ = (bitField0_ & ~0x00000001);
-        fp_ = null;
-        if (fpBuilder_ != null) {
-          fpBuilder_.dispose();
-          fpBuilder_ = null;
-        }
         onChanged();
         return this;
       }
       /**
-       * <code>.babylon.btcstaking.v1.FinalityProvider fp = 1 [json_name = "fp"];</code>
+       * <pre>
+       * btc_pk_hex is the hex string of Bitcoin secp256k1 PK of this finality provider
+       * </pre>
+       *
+       * <code>string btc_pk_hex = 1 [json_name = "btcPkHex", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for btcPkHex to set.
+       * @return This builder for chaining.
        */
-      public com.babylon.btcstaking.v1.BtcstakingProto.FinalityProvider.Builder getFpBuilder() {
+      public Builder setBtcPkHexBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        btcPkHex_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
-        return getFpFieldBuilder().getBuilder();
+        return this;
       }
+
+      private java.lang.Object addr_ = "";
       /**
-       * <code>.babylon.btcstaking.v1.FinalityProvider fp = 1 [json_name = "fp"];</code>
+       * <pre>
+       * addr is the babylon address to receive commission from delegations.
+       * </pre>
+       *
+       * <code>string addr = 2 [json_name = "addr", (.amino.dont_omitempty) = true];</code>
+       * @return The addr.
        */
-      public com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderOrBuilder getFpOrBuilder() {
-        if (fpBuilder_ != null) {
-          return fpBuilder_.getMessageOrBuilder();
+      public java.lang.String getAddr() {
+        java.lang.Object ref = addr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          addr_ = s;
+          return s;
         } else {
-          return fp_ == null ?
-              com.babylon.btcstaking.v1.BtcstakingProto.FinalityProvider.getDefaultInstance() : fp_;
+          return (java.lang.String) ref;
         }
       }
       /**
-       * <code>.babylon.btcstaking.v1.FinalityProvider fp = 1 [json_name = "fp"];</code>
+       * <pre>
+       * addr is the babylon address to receive commission from delegations.
+       * </pre>
+       *
+       * <code>string addr = 2 [json_name = "addr", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for addr.
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.babylon.btcstaking.v1.BtcstakingProto.FinalityProvider, com.babylon.btcstaking.v1.BtcstakingProto.FinalityProvider.Builder, com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderOrBuilder> 
-          getFpFieldBuilder() {
-        if (fpBuilder_ == null) {
-          fpBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.babylon.btcstaking.v1.BtcstakingProto.FinalityProvider, com.babylon.btcstaking.v1.BtcstakingProto.FinalityProvider.Builder, com.babylon.btcstaking.v1.BtcstakingProto.FinalityProviderOrBuilder>(
-                  getFp(),
-                  getParentForChildren(),
-                  isClean());
-          fp_ = null;
+      public com.google.protobuf.ByteString
+          getAddrBytes() {
+        java.lang.Object ref = addr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          addr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
         }
-        return fpBuilder_;
+      }
+      /**
+       * <pre>
+       * addr is the babylon address to receive commission from delegations.
+       * </pre>
+       *
+       * <code>string addr = 2 [json_name = "addr", (.amino.dont_omitempty) = true];</code>
+       * @param value The addr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        addr_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * addr is the babylon address to receive commission from delegations.
+       * </pre>
+       *
+       * <code>string addr = 2 [json_name = "addr", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddr() {
+        addr_ = getDefaultInstance().getAddr();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * addr is the babylon address to receive commission from delegations.
+       * </pre>
+       *
+       * <code>string addr = 2 [json_name = "addr", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for addr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        addr_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object commission_ = "";
+      /**
+       * <pre>
+       * commission defines the commission rate of the finality provider in decimals.
+       * </pre>
+       *
+       * <code>string commission = 3 [json_name = "commission", (.amino.dont_omitempty) = true];</code>
+       * @return The commission.
+       */
+      public java.lang.String getCommission() {
+        java.lang.Object ref = commission_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          commission_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * commission defines the commission rate of the finality provider in decimals.
+       * </pre>
+       *
+       * <code>string commission = 3 [json_name = "commission", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for commission.
+       */
+      public com.google.protobuf.ByteString
+          getCommissionBytes() {
+        java.lang.Object ref = commission_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          commission_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * commission defines the commission rate of the finality provider in decimals.
+       * </pre>
+       *
+       * <code>string commission = 3 [json_name = "commission", (.amino.dont_omitempty) = true];</code>
+       * @param value The commission to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommission(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        commission_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * commission defines the commission rate of the finality provider in decimals.
+       * </pre>
+       *
+       * <code>string commission = 3 [json_name = "commission", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCommission() {
+        commission_ = getDefaultInstance().getCommission();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * commission defines the commission rate of the finality provider in decimals.
+       * </pre>
+       *
+       * <code>string commission = 3 [json_name = "commission", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for commission to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommissionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        commission_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object moniker_ = "";
+      /**
+       * <pre>
+       * moniker defines a human-readable name for the finality provider.
+       * </pre>
+       *
+       * <code>string moniker = 4 [json_name = "moniker"];</code>
+       * @return The moniker.
+       */
+      public java.lang.String getMoniker() {
+        java.lang.Object ref = moniker_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          moniker_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * moniker defines a human-readable name for the finality provider.
+       * </pre>
+       *
+       * <code>string moniker = 4 [json_name = "moniker"];</code>
+       * @return The bytes for moniker.
+       */
+      public com.google.protobuf.ByteString
+          getMonikerBytes() {
+        java.lang.Object ref = moniker_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          moniker_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * moniker defines a human-readable name for the finality provider.
+       * </pre>
+       *
+       * <code>string moniker = 4 [json_name = "moniker"];</code>
+       * @param value The moniker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMoniker(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        moniker_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * moniker defines a human-readable name for the finality provider.
+       * </pre>
+       *
+       * <code>string moniker = 4 [json_name = "moniker"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMoniker() {
+        moniker_ = getDefaultInstance().getMoniker();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * moniker defines a human-readable name for the finality provider.
+       * </pre>
+       *
+       * <code>string moniker = 4 [json_name = "moniker"];</code>
+       * @param value The bytes for moniker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMonikerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        moniker_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object identity_ = "";
+      /**
+       * <pre>
+       * identity defines an optional identity signature (ex. UPort or Keybase).
+       * </pre>
+       *
+       * <code>string identity = 5 [json_name = "identity"];</code>
+       * @return The identity.
+       */
+      public java.lang.String getIdentity() {
+        java.lang.Object ref = identity_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          identity_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * identity defines an optional identity signature (ex. UPort or Keybase).
+       * </pre>
+       *
+       * <code>string identity = 5 [json_name = "identity"];</code>
+       * @return The bytes for identity.
+       */
+      public com.google.protobuf.ByteString
+          getIdentityBytes() {
+        java.lang.Object ref = identity_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          identity_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * identity defines an optional identity signature (ex. UPort or Keybase).
+       * </pre>
+       *
+       * <code>string identity = 5 [json_name = "identity"];</code>
+       * @param value The identity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdentity(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        identity_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * identity defines an optional identity signature (ex. UPort or Keybase).
+       * </pre>
+       *
+       * <code>string identity = 5 [json_name = "identity"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIdentity() {
+        identity_ = getDefaultInstance().getIdentity();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * identity defines an optional identity signature (ex. UPort or Keybase).
+       * </pre>
+       *
+       * <code>string identity = 5 [json_name = "identity"];</code>
+       * @param value The bytes for identity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdentityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        identity_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object website_ = "";
+      /**
+       * <pre>
+       * website defines an optional website link.
+       * </pre>
+       *
+       * <code>string website = 6 [json_name = "website"];</code>
+       * @return The website.
+       */
+      public java.lang.String getWebsite() {
+        java.lang.Object ref = website_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          website_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * website defines an optional website link.
+       * </pre>
+       *
+       * <code>string website = 6 [json_name = "website"];</code>
+       * @return The bytes for website.
+       */
+      public com.google.protobuf.ByteString
+          getWebsiteBytes() {
+        java.lang.Object ref = website_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          website_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * website defines an optional website link.
+       * </pre>
+       *
+       * <code>string website = 6 [json_name = "website"];</code>
+       * @param value The website to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWebsite(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        website_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * website defines an optional website link.
+       * </pre>
+       *
+       * <code>string website = 6 [json_name = "website"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWebsite() {
+        website_ = getDefaultInstance().getWebsite();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * website defines an optional website link.
+       * </pre>
+       *
+       * <code>string website = 6 [json_name = "website"];</code>
+       * @param value The bytes for website to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWebsiteBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        website_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object securityContact_ = "";
+      /**
+       * <pre>
+       * security_contact defines an optional email for security contact.
+       * </pre>
+       *
+       * <code>string security_contact = 7 [json_name = "securityContact"];</code>
+       * @return The securityContact.
+       */
+      public java.lang.String getSecurityContact() {
+        java.lang.Object ref = securityContact_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          securityContact_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * security_contact defines an optional email for security contact.
+       * </pre>
+       *
+       * <code>string security_contact = 7 [json_name = "securityContact"];</code>
+       * @return The bytes for securityContact.
+       */
+      public com.google.protobuf.ByteString
+          getSecurityContactBytes() {
+        java.lang.Object ref = securityContact_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          securityContact_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * security_contact defines an optional email for security contact.
+       * </pre>
+       *
+       * <code>string security_contact = 7 [json_name = "securityContact"];</code>
+       * @param value The securityContact to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecurityContact(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        securityContact_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * security_contact defines an optional email for security contact.
+       * </pre>
+       *
+       * <code>string security_contact = 7 [json_name = "securityContact"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecurityContact() {
+        securityContact_ = getDefaultInstance().getSecurityContact();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * security_contact defines an optional email for security contact.
+       * </pre>
+       *
+       * <code>string security_contact = 7 [json_name = "securityContact"];</code>
+       * @param value The bytes for securityContact to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecurityContactBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        securityContact_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object details_ = "";
+      /**
+       * <pre>
+       * details define other optional details.
+       * </pre>
+       *
+       * <code>string details = 8 [json_name = "details"];</code>
+       * @return The details.
+       */
+      public java.lang.String getDetails() {
+        java.lang.Object ref = details_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          details_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * details define other optional details.
+       * </pre>
+       *
+       * <code>string details = 8 [json_name = "details"];</code>
+       * @return The bytes for details.
+       */
+      public com.google.protobuf.ByteString
+          getDetailsBytes() {
+        java.lang.Object ref = details_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          details_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * details define other optional details.
+       * </pre>
+       *
+       * <code>string details = 8 [json_name = "details"];</code>
+       * @param value The details to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDetails(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        details_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * details define other optional details.
+       * </pre>
+       *
+       * <code>string details = 8 [json_name = "details"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDetails() {
+        details_ = getDefaultInstance().getDetails();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * details define other optional details.
+       * </pre>
+       *
+       * <code>string details = 8 [json_name = "details"];</code>
+       * @param value The bytes for details to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDetailsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        details_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -571,23 +2013,23 @@ public final class EventsProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.EventNewFinalityProvider)
+      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.EventFinalityProviderCreated)
     }
 
-    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.EventNewFinalityProvider)
-    private static final com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.EventFinalityProviderCreated)
+    private static final com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider();
+      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated();
     }
 
-    public static com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider getDefaultInstance() {
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<EventNewFinalityProvider>
-        PARSER = new com.google.protobuf.AbstractParser<EventNewFinalityProvider>() {
+    private static final com.google.protobuf.Parser<EventFinalityProviderCreated>
+        PARSER = new com.google.protobuf.AbstractParser<EventFinalityProviderCreated>() {
       @java.lang.Override
-      public EventNewFinalityProvider parsePartialFrom(
+      public EventFinalityProviderCreated parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -606,17 +2048,1717 @@ public final class EventsProto {
       }
     };
 
-    public static com.google.protobuf.Parser<EventNewFinalityProvider> parser() {
+    public static com.google.protobuf.Parser<EventFinalityProviderCreated> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<EventNewFinalityProvider> getParserForType() {
+    public com.google.protobuf.Parser<EventFinalityProviderCreated> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.babylon.btcstaking.v1.EventsProto.EventNewFinalityProvider getDefaultInstanceForType() {
+    public com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderCreated getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventFinalityProviderEditedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.EventFinalityProviderEdited)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * btc_pk_hex is the hex string of Bitcoin secp256k1 PK of this finality provider
+     * </pre>
+     *
+     * <code>string btc_pk_hex = 1 [json_name = "btcPkHex", (.amino.dont_omitempty) = true];</code>
+     * @return The btcPkHex.
+     */
+    java.lang.String getBtcPkHex();
+    /**
+     * <pre>
+     * btc_pk_hex is the hex string of Bitcoin secp256k1 PK of this finality provider
+     * </pre>
+     *
+     * <code>string btc_pk_hex = 1 [json_name = "btcPkHex", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for btcPkHex.
+     */
+    com.google.protobuf.ByteString
+        getBtcPkHexBytes();
+
+    /**
+     * <pre>
+     * commission defines the commission rate of the finality provider in decimals.
+     * </pre>
+     *
+     * <code>string commission = 2 [json_name = "commission", (.amino.dont_omitempty) = true];</code>
+     * @return The commission.
+     */
+    java.lang.String getCommission();
+    /**
+     * <pre>
+     * commission defines the commission rate of the finality provider in decimals.
+     * </pre>
+     *
+     * <code>string commission = 2 [json_name = "commission", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for commission.
+     */
+    com.google.protobuf.ByteString
+        getCommissionBytes();
+
+    /**
+     * <pre>
+     * moniker defines a human-readable name for the finality provider.
+     * </pre>
+     *
+     * <code>string moniker = 3 [json_name = "moniker"];</code>
+     * @return The moniker.
+     */
+    java.lang.String getMoniker();
+    /**
+     * <pre>
+     * moniker defines a human-readable name for the finality provider.
+     * </pre>
+     *
+     * <code>string moniker = 3 [json_name = "moniker"];</code>
+     * @return The bytes for moniker.
+     */
+    com.google.protobuf.ByteString
+        getMonikerBytes();
+
+    /**
+     * <pre>
+     * identity defines an optional identity signature (ex. UPort or Keybase).
+     * </pre>
+     *
+     * <code>string identity = 4 [json_name = "identity"];</code>
+     * @return The identity.
+     */
+    java.lang.String getIdentity();
+    /**
+     * <pre>
+     * identity defines an optional identity signature (ex. UPort or Keybase).
+     * </pre>
+     *
+     * <code>string identity = 4 [json_name = "identity"];</code>
+     * @return The bytes for identity.
+     */
+    com.google.protobuf.ByteString
+        getIdentityBytes();
+
+    /**
+     * <pre>
+     * website defines an optional website link.
+     * </pre>
+     *
+     * <code>string website = 5 [json_name = "website"];</code>
+     * @return The website.
+     */
+    java.lang.String getWebsite();
+    /**
+     * <pre>
+     * website defines an optional website link.
+     * </pre>
+     *
+     * <code>string website = 5 [json_name = "website"];</code>
+     * @return The bytes for website.
+     */
+    com.google.protobuf.ByteString
+        getWebsiteBytes();
+
+    /**
+     * <pre>
+     * security_contact defines an optional email for security contact.
+     * </pre>
+     *
+     * <code>string security_contact = 6 [json_name = "securityContact"];</code>
+     * @return The securityContact.
+     */
+    java.lang.String getSecurityContact();
+    /**
+     * <pre>
+     * security_contact defines an optional email for security contact.
+     * </pre>
+     *
+     * <code>string security_contact = 6 [json_name = "securityContact"];</code>
+     * @return The bytes for securityContact.
+     */
+    com.google.protobuf.ByteString
+        getSecurityContactBytes();
+
+    /**
+     * <pre>
+     * details define other optional details.
+     * </pre>
+     *
+     * <code>string details = 7 [json_name = "details"];</code>
+     * @return The details.
+     */
+    java.lang.String getDetails();
+    /**
+     * <pre>
+     * details define other optional details.
+     * </pre>
+     *
+     * <code>string details = 7 [json_name = "details"];</code>
+     * @return The bytes for details.
+     */
+    com.google.protobuf.ByteString
+        getDetailsBytes();
+  }
+  /**
+   * <pre>
+   * EventFinalityProviderEdited is the event emitted when a finality provider is edited
+   * </pre>
+   *
+   * Protobuf type {@code babylon.btcstaking.v1.EventFinalityProviderEdited}
+   */
+  public static final class EventFinalityProviderEdited extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.EventFinalityProviderEdited)
+      EventFinalityProviderEditedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventFinalityProviderEdited.newBuilder() to construct.
+    private EventFinalityProviderEdited(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventFinalityProviderEdited() {
+      btcPkHex_ = "";
+      commission_ = "";
+      moniker_ = "";
+      identity_ = "";
+      website_ = "";
+      securityContact_ = "";
+      details_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventFinalityProviderEdited();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventFinalityProviderEdited_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventFinalityProviderEdited_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited.class, com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited.Builder.class);
+    }
+
+    public static final int BTC_PK_HEX_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object btcPkHex_ = "";
+    /**
+     * <pre>
+     * btc_pk_hex is the hex string of Bitcoin secp256k1 PK of this finality provider
+     * </pre>
+     *
+     * <code>string btc_pk_hex = 1 [json_name = "btcPkHex", (.amino.dont_omitempty) = true];</code>
+     * @return The btcPkHex.
+     */
+    @java.lang.Override
+    public java.lang.String getBtcPkHex() {
+      java.lang.Object ref = btcPkHex_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        btcPkHex_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * btc_pk_hex is the hex string of Bitcoin secp256k1 PK of this finality provider
+     * </pre>
+     *
+     * <code>string btc_pk_hex = 1 [json_name = "btcPkHex", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for btcPkHex.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBtcPkHexBytes() {
+      java.lang.Object ref = btcPkHex_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        btcPkHex_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COMMISSION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object commission_ = "";
+    /**
+     * <pre>
+     * commission defines the commission rate of the finality provider in decimals.
+     * </pre>
+     *
+     * <code>string commission = 2 [json_name = "commission", (.amino.dont_omitempty) = true];</code>
+     * @return The commission.
+     */
+    @java.lang.Override
+    public java.lang.String getCommission() {
+      java.lang.Object ref = commission_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        commission_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * commission defines the commission rate of the finality provider in decimals.
+     * </pre>
+     *
+     * <code>string commission = 2 [json_name = "commission", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for commission.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCommissionBytes() {
+      java.lang.Object ref = commission_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        commission_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MONIKER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object moniker_ = "";
+    /**
+     * <pre>
+     * moniker defines a human-readable name for the finality provider.
+     * </pre>
+     *
+     * <code>string moniker = 3 [json_name = "moniker"];</code>
+     * @return The moniker.
+     */
+    @java.lang.Override
+    public java.lang.String getMoniker() {
+      java.lang.Object ref = moniker_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        moniker_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * moniker defines a human-readable name for the finality provider.
+     * </pre>
+     *
+     * <code>string moniker = 3 [json_name = "moniker"];</code>
+     * @return The bytes for moniker.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMonikerBytes() {
+      java.lang.Object ref = moniker_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        moniker_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IDENTITY_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object identity_ = "";
+    /**
+     * <pre>
+     * identity defines an optional identity signature (ex. UPort or Keybase).
+     * </pre>
+     *
+     * <code>string identity = 4 [json_name = "identity"];</code>
+     * @return The identity.
+     */
+    @java.lang.Override
+    public java.lang.String getIdentity() {
+      java.lang.Object ref = identity_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        identity_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * identity defines an optional identity signature (ex. UPort or Keybase).
+     * </pre>
+     *
+     * <code>string identity = 4 [json_name = "identity"];</code>
+     * @return The bytes for identity.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdentityBytes() {
+      java.lang.Object ref = identity_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        identity_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WEBSITE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object website_ = "";
+    /**
+     * <pre>
+     * website defines an optional website link.
+     * </pre>
+     *
+     * <code>string website = 5 [json_name = "website"];</code>
+     * @return The website.
+     */
+    @java.lang.Override
+    public java.lang.String getWebsite() {
+      java.lang.Object ref = website_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        website_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * website defines an optional website link.
+     * </pre>
+     *
+     * <code>string website = 5 [json_name = "website"];</code>
+     * @return The bytes for website.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWebsiteBytes() {
+      java.lang.Object ref = website_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        website_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SECURITY_CONTACT_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object securityContact_ = "";
+    /**
+     * <pre>
+     * security_contact defines an optional email for security contact.
+     * </pre>
+     *
+     * <code>string security_contact = 6 [json_name = "securityContact"];</code>
+     * @return The securityContact.
+     */
+    @java.lang.Override
+    public java.lang.String getSecurityContact() {
+      java.lang.Object ref = securityContact_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        securityContact_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * security_contact defines an optional email for security contact.
+     * </pre>
+     *
+     * <code>string security_contact = 6 [json_name = "securityContact"];</code>
+     * @return The bytes for securityContact.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecurityContactBytes() {
+      java.lang.Object ref = securityContact_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        securityContact_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DETAILS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object details_ = "";
+    /**
+     * <pre>
+     * details define other optional details.
+     * </pre>
+     *
+     * <code>string details = 7 [json_name = "details"];</code>
+     * @return The details.
+     */
+    @java.lang.Override
+    public java.lang.String getDetails() {
+      java.lang.Object ref = details_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        details_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * details define other optional details.
+     * </pre>
+     *
+     * <code>string details = 7 [json_name = "details"];</code>
+     * @return The bytes for details.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDetailsBytes() {
+      java.lang.Object ref = details_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        details_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(btcPkHex_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, btcPkHex_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(commission_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, commission_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moniker_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, moniker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(identity_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, identity_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(website_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, website_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityContact_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, securityContact_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(details_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, details_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(btcPkHex_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, btcPkHex_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(commission_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, commission_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moniker_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, moniker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(identity_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, identity_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(website_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, website_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityContact_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, securityContact_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(details_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, details_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited)) {
+        return super.equals(obj);
+      }
+      com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited other = (com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited) obj;
+
+      if (!getBtcPkHex()
+          .equals(other.getBtcPkHex())) return false;
+      if (!getCommission()
+          .equals(other.getCommission())) return false;
+      if (!getMoniker()
+          .equals(other.getMoniker())) return false;
+      if (!getIdentity()
+          .equals(other.getIdentity())) return false;
+      if (!getWebsite()
+          .equals(other.getWebsite())) return false;
+      if (!getSecurityContact()
+          .equals(other.getSecurityContact())) return false;
+      if (!getDetails()
+          .equals(other.getDetails())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BTC_PK_HEX_FIELD_NUMBER;
+      hash = (53 * hash) + getBtcPkHex().hashCode();
+      hash = (37 * hash) + COMMISSION_FIELD_NUMBER;
+      hash = (53 * hash) + getCommission().hashCode();
+      hash = (37 * hash) + MONIKER_FIELD_NUMBER;
+      hash = (53 * hash) + getMoniker().hashCode();
+      hash = (37 * hash) + IDENTITY_FIELD_NUMBER;
+      hash = (53 * hash) + getIdentity().hashCode();
+      hash = (37 * hash) + WEBSITE_FIELD_NUMBER;
+      hash = (53 * hash) + getWebsite().hashCode();
+      hash = (37 * hash) + SECURITY_CONTACT_FIELD_NUMBER;
+      hash = (53 * hash) + getSecurityContact().hashCode();
+      hash = (37 * hash) + DETAILS_FIELD_NUMBER;
+      hash = (53 * hash) + getDetails().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventFinalityProviderEdited is the event emitted when a finality provider is edited
+     * </pre>
+     *
+     * Protobuf type {@code babylon.btcstaking.v1.EventFinalityProviderEdited}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.EventFinalityProviderEdited)
+        com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEditedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventFinalityProviderEdited_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventFinalityProviderEdited_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited.class, com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited.Builder.class);
+      }
+
+      // Construct using com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        btcPkHex_ = "";
+        commission_ = "";
+        moniker_ = "";
+        identity_ = "";
+        website_ = "";
+        securityContact_ = "";
+        details_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventFinalityProviderEdited_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited getDefaultInstanceForType() {
+        return com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited build() {
+        com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited buildPartial() {
+        com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited result = new com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.btcPkHex_ = btcPkHex_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.commission_ = commission_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.moniker_ = moniker_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.identity_ = identity_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.website_ = website_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.securityContact_ = securityContact_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.details_ = details_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited) {
+          return mergeFrom((com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited other) {
+        if (other == com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited.getDefaultInstance()) return this;
+        if (!other.getBtcPkHex().isEmpty()) {
+          btcPkHex_ = other.btcPkHex_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getCommission().isEmpty()) {
+          commission_ = other.commission_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getMoniker().isEmpty()) {
+          moniker_ = other.moniker_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getIdentity().isEmpty()) {
+          identity_ = other.identity_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getWebsite().isEmpty()) {
+          website_ = other.website_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getSecurityContact().isEmpty()) {
+          securityContact_ = other.securityContact_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getDetails().isEmpty()) {
+          details_ = other.details_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                btcPkHex_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                commission_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                moniker_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                identity_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                website_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                securityContact_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                details_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object btcPkHex_ = "";
+      /**
+       * <pre>
+       * btc_pk_hex is the hex string of Bitcoin secp256k1 PK of this finality provider
+       * </pre>
+       *
+       * <code>string btc_pk_hex = 1 [json_name = "btcPkHex", (.amino.dont_omitempty) = true];</code>
+       * @return The btcPkHex.
+       */
+      public java.lang.String getBtcPkHex() {
+        java.lang.Object ref = btcPkHex_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          btcPkHex_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * btc_pk_hex is the hex string of Bitcoin secp256k1 PK of this finality provider
+       * </pre>
+       *
+       * <code>string btc_pk_hex = 1 [json_name = "btcPkHex", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for btcPkHex.
+       */
+      public com.google.protobuf.ByteString
+          getBtcPkHexBytes() {
+        java.lang.Object ref = btcPkHex_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          btcPkHex_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * btc_pk_hex is the hex string of Bitcoin secp256k1 PK of this finality provider
+       * </pre>
+       *
+       * <code>string btc_pk_hex = 1 [json_name = "btcPkHex", (.amino.dont_omitempty) = true];</code>
+       * @param value The btcPkHex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBtcPkHex(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        btcPkHex_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * btc_pk_hex is the hex string of Bitcoin secp256k1 PK of this finality provider
+       * </pre>
+       *
+       * <code>string btc_pk_hex = 1 [json_name = "btcPkHex", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBtcPkHex() {
+        btcPkHex_ = getDefaultInstance().getBtcPkHex();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * btc_pk_hex is the hex string of Bitcoin secp256k1 PK of this finality provider
+       * </pre>
+       *
+       * <code>string btc_pk_hex = 1 [json_name = "btcPkHex", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for btcPkHex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBtcPkHexBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        btcPkHex_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object commission_ = "";
+      /**
+       * <pre>
+       * commission defines the commission rate of the finality provider in decimals.
+       * </pre>
+       *
+       * <code>string commission = 2 [json_name = "commission", (.amino.dont_omitempty) = true];</code>
+       * @return The commission.
+       */
+      public java.lang.String getCommission() {
+        java.lang.Object ref = commission_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          commission_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * commission defines the commission rate of the finality provider in decimals.
+       * </pre>
+       *
+       * <code>string commission = 2 [json_name = "commission", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for commission.
+       */
+      public com.google.protobuf.ByteString
+          getCommissionBytes() {
+        java.lang.Object ref = commission_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          commission_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * commission defines the commission rate of the finality provider in decimals.
+       * </pre>
+       *
+       * <code>string commission = 2 [json_name = "commission", (.amino.dont_omitempty) = true];</code>
+       * @param value The commission to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommission(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        commission_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * commission defines the commission rate of the finality provider in decimals.
+       * </pre>
+       *
+       * <code>string commission = 2 [json_name = "commission", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCommission() {
+        commission_ = getDefaultInstance().getCommission();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * commission defines the commission rate of the finality provider in decimals.
+       * </pre>
+       *
+       * <code>string commission = 2 [json_name = "commission", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for commission to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommissionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        commission_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object moniker_ = "";
+      /**
+       * <pre>
+       * moniker defines a human-readable name for the finality provider.
+       * </pre>
+       *
+       * <code>string moniker = 3 [json_name = "moniker"];</code>
+       * @return The moniker.
+       */
+      public java.lang.String getMoniker() {
+        java.lang.Object ref = moniker_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          moniker_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * moniker defines a human-readable name for the finality provider.
+       * </pre>
+       *
+       * <code>string moniker = 3 [json_name = "moniker"];</code>
+       * @return The bytes for moniker.
+       */
+      public com.google.protobuf.ByteString
+          getMonikerBytes() {
+        java.lang.Object ref = moniker_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          moniker_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * moniker defines a human-readable name for the finality provider.
+       * </pre>
+       *
+       * <code>string moniker = 3 [json_name = "moniker"];</code>
+       * @param value The moniker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMoniker(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        moniker_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * moniker defines a human-readable name for the finality provider.
+       * </pre>
+       *
+       * <code>string moniker = 3 [json_name = "moniker"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMoniker() {
+        moniker_ = getDefaultInstance().getMoniker();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * moniker defines a human-readable name for the finality provider.
+       * </pre>
+       *
+       * <code>string moniker = 3 [json_name = "moniker"];</code>
+       * @param value The bytes for moniker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMonikerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        moniker_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object identity_ = "";
+      /**
+       * <pre>
+       * identity defines an optional identity signature (ex. UPort or Keybase).
+       * </pre>
+       *
+       * <code>string identity = 4 [json_name = "identity"];</code>
+       * @return The identity.
+       */
+      public java.lang.String getIdentity() {
+        java.lang.Object ref = identity_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          identity_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * identity defines an optional identity signature (ex. UPort or Keybase).
+       * </pre>
+       *
+       * <code>string identity = 4 [json_name = "identity"];</code>
+       * @return The bytes for identity.
+       */
+      public com.google.protobuf.ByteString
+          getIdentityBytes() {
+        java.lang.Object ref = identity_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          identity_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * identity defines an optional identity signature (ex. UPort or Keybase).
+       * </pre>
+       *
+       * <code>string identity = 4 [json_name = "identity"];</code>
+       * @param value The identity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdentity(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        identity_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * identity defines an optional identity signature (ex. UPort or Keybase).
+       * </pre>
+       *
+       * <code>string identity = 4 [json_name = "identity"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIdentity() {
+        identity_ = getDefaultInstance().getIdentity();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * identity defines an optional identity signature (ex. UPort or Keybase).
+       * </pre>
+       *
+       * <code>string identity = 4 [json_name = "identity"];</code>
+       * @param value The bytes for identity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdentityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        identity_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object website_ = "";
+      /**
+       * <pre>
+       * website defines an optional website link.
+       * </pre>
+       *
+       * <code>string website = 5 [json_name = "website"];</code>
+       * @return The website.
+       */
+      public java.lang.String getWebsite() {
+        java.lang.Object ref = website_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          website_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * website defines an optional website link.
+       * </pre>
+       *
+       * <code>string website = 5 [json_name = "website"];</code>
+       * @return The bytes for website.
+       */
+      public com.google.protobuf.ByteString
+          getWebsiteBytes() {
+        java.lang.Object ref = website_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          website_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * website defines an optional website link.
+       * </pre>
+       *
+       * <code>string website = 5 [json_name = "website"];</code>
+       * @param value The website to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWebsite(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        website_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * website defines an optional website link.
+       * </pre>
+       *
+       * <code>string website = 5 [json_name = "website"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWebsite() {
+        website_ = getDefaultInstance().getWebsite();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * website defines an optional website link.
+       * </pre>
+       *
+       * <code>string website = 5 [json_name = "website"];</code>
+       * @param value The bytes for website to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWebsiteBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        website_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object securityContact_ = "";
+      /**
+       * <pre>
+       * security_contact defines an optional email for security contact.
+       * </pre>
+       *
+       * <code>string security_contact = 6 [json_name = "securityContact"];</code>
+       * @return The securityContact.
+       */
+      public java.lang.String getSecurityContact() {
+        java.lang.Object ref = securityContact_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          securityContact_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * security_contact defines an optional email for security contact.
+       * </pre>
+       *
+       * <code>string security_contact = 6 [json_name = "securityContact"];</code>
+       * @return The bytes for securityContact.
+       */
+      public com.google.protobuf.ByteString
+          getSecurityContactBytes() {
+        java.lang.Object ref = securityContact_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          securityContact_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * security_contact defines an optional email for security contact.
+       * </pre>
+       *
+       * <code>string security_contact = 6 [json_name = "securityContact"];</code>
+       * @param value The securityContact to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecurityContact(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        securityContact_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * security_contact defines an optional email for security contact.
+       * </pre>
+       *
+       * <code>string security_contact = 6 [json_name = "securityContact"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecurityContact() {
+        securityContact_ = getDefaultInstance().getSecurityContact();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * security_contact defines an optional email for security contact.
+       * </pre>
+       *
+       * <code>string security_contact = 6 [json_name = "securityContact"];</code>
+       * @param value The bytes for securityContact to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecurityContactBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        securityContact_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object details_ = "";
+      /**
+       * <pre>
+       * details define other optional details.
+       * </pre>
+       *
+       * <code>string details = 7 [json_name = "details"];</code>
+       * @return The details.
+       */
+      public java.lang.String getDetails() {
+        java.lang.Object ref = details_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          details_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * details define other optional details.
+       * </pre>
+       *
+       * <code>string details = 7 [json_name = "details"];</code>
+       * @return The bytes for details.
+       */
+      public com.google.protobuf.ByteString
+          getDetailsBytes() {
+        java.lang.Object ref = details_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          details_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * details define other optional details.
+       * </pre>
+       *
+       * <code>string details = 7 [json_name = "details"];</code>
+       * @param value The details to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDetails(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        details_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * details define other optional details.
+       * </pre>
+       *
+       * <code>string details = 7 [json_name = "details"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDetails() {
+        details_ = getDefaultInstance().getDetails();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * details define other optional details.
+       * </pre>
+       *
+       * <code>string details = 7 [json_name = "details"];</code>
+       * @param value The bytes for details to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDetailsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        details_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.EventFinalityProviderEdited)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.EventFinalityProviderEdited)
+    private static final com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited();
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventFinalityProviderEdited>
+        PARSER = new com.google.protobuf.AbstractParser<EventFinalityProviderEdited>() {
+      @java.lang.Override
+      public EventFinalityProviderEdited parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventFinalityProviderEdited> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventFinalityProviderEdited> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderEdited getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2081,10 +5223,64 @@ public final class EventsProto {
 
     /**
      * <pre>
+     * jailed_fp means a finality provider is jailed
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventJailedFinalityProvider jailed_fp = 2 [json_name = "jailedFp"];</code>
+     * @return Whether the jailedFp field is set.
+     */
+    boolean hasJailedFp();
+    /**
+     * <pre>
+     * jailed_fp means a finality provider is jailed
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventJailedFinalityProvider jailed_fp = 2 [json_name = "jailedFp"];</code>
+     * @return The jailedFp.
+     */
+    com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider getJailedFp();
+    /**
+     * <pre>
+     * jailed_fp means a finality provider is jailed
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventJailedFinalityProvider jailed_fp = 2 [json_name = "jailedFp"];</code>
+     */
+    com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProviderOrBuilder getJailedFpOrBuilder();
+
+    /**
+     * <pre>
+     * unjailed_fp means a jailed finality provider is unjailed
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventUnjailedFinalityProvider unjailed_fp = 3 [json_name = "unjailedFp"];</code>
+     * @return Whether the unjailedFp field is set.
+     */
+    boolean hasUnjailedFp();
+    /**
+     * <pre>
+     * unjailed_fp means a jailed finality provider is unjailed
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventUnjailedFinalityProvider unjailed_fp = 3 [json_name = "unjailedFp"];</code>
+     * @return The unjailedFp.
+     */
+    com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider getUnjailedFp();
+    /**
+     * <pre>
+     * unjailed_fp means a jailed finality provider is unjailed
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventUnjailedFinalityProvider unjailed_fp = 3 [json_name = "unjailedFp"];</code>
+     */
+    com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProviderOrBuilder getUnjailedFpOrBuilder();
+
+    /**
+     * <pre>
      * btc_del_state_update means a BTC delegation's state is updated
      * </pre>
      *
-     * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 2 [json_name = "btcDelStateUpdate"];</code>
+     * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 4 [json_name = "btcDelStateUpdate"];</code>
      * @return Whether the btcDelStateUpdate field is set.
      */
     boolean hasBtcDelStateUpdate();
@@ -2093,7 +5289,7 @@ public final class EventsProto {
      * btc_del_state_update means a BTC delegation's state is updated
      * </pre>
      *
-     * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 2 [json_name = "btcDelStateUpdate"];</code>
+     * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 4 [json_name = "btcDelStateUpdate"];</code>
      * @return The btcDelStateUpdate.
      */
     com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate getBtcDelStateUpdate();
@@ -2102,7 +5298,7 @@ public final class EventsProto {
      * btc_del_state_update means a BTC delegation's state is updated
      * </pre>
      *
-     * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 2 [json_name = "btcDelStateUpdate"];</code>
+     * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 4 [json_name = "btcDelStateUpdate"];</code>
      */
     com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdateOrBuilder getBtcDelStateUpdateOrBuilder();
 
@@ -2110,7 +5306,7 @@ public final class EventsProto {
   }
   /**
    * <pre>
-   * EventPowerDistUpdate is an event that affects voting power distirbution
+   * EventPowerDistUpdate is an event that affects voting power distribution
    * of BTC staking protocol
    * </pre>
    *
@@ -2153,7 +5349,7 @@ public final class EventsProto {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The pk.
        */
       com.google.protobuf.ByteString getPk();
@@ -2203,7 +5399,7 @@ public final class EventsProto {
       public static final int PK_FIELD_NUMBER = 1;
       private com.google.protobuf.ByteString pk_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+       * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
        * @return The pk.
        */
       @java.lang.Override
@@ -2544,7 +5740,7 @@ public final class EventsProto {
 
         private com.google.protobuf.ByteString pk_ = com.google.protobuf.ByteString.EMPTY;
         /**
-         * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+         * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
          * @return The pk.
          */
         @java.lang.Override
@@ -2552,7 +5748,7 @@ public final class EventsProto {
           return pk_;
         }
         /**
-         * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+         * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
          * @param value The pk to set.
          * @return This builder for chaining.
          */
@@ -2564,7 +5760,7 @@ public final class EventsProto {
           return this;
         }
         /**
-         * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/types.BIP340PubKey"];</code>
+         * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
          * @return This builder for chaining.
          */
         public Builder clearPk() {
@@ -2637,6 +5833,980 @@ public final class EventsProto {
 
     }
 
+    public interface EventJailedFinalityProviderOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.EventPowerDistUpdate.EventJailedFinalityProvider)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+       * @return The pk.
+       */
+      com.google.protobuf.ByteString getPk();
+    }
+    /**
+     * <pre>
+     * EventJailedFinalityProvider defines an event that a finality provider
+     * is jailed after being detected sluggish
+     * </pre>
+     *
+     * Protobuf type {@code babylon.btcstaking.v1.EventPowerDistUpdate.EventJailedFinalityProvider}
+     */
+    public static final class EventJailedFinalityProvider extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.EventPowerDistUpdate.EventJailedFinalityProvider)
+        EventJailedFinalityProviderOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use EventJailedFinalityProvider.newBuilder() to construct.
+      private EventJailedFinalityProvider(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private EventJailedFinalityProvider() {
+        pk_ = com.google.protobuf.ByteString.EMPTY;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new EventJailedFinalityProvider();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_EventJailedFinalityProvider_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_EventJailedFinalityProvider_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider.class, com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider.Builder.class);
+      }
+
+      public static final int PK_FIELD_NUMBER = 1;
+      private com.google.protobuf.ByteString pk_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+       * @return The pk.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPk() {
+        return pk_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!pk_.isEmpty()) {
+          output.writeBytes(1, pk_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!pk_.isEmpty()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(1, pk_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider)) {
+          return super.equals(obj);
+        }
+        com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider other = (com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider) obj;
+
+        if (!getPk()
+            .equals(other.getPk())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + PK_FIELD_NUMBER;
+        hash = (53 * hash) + getPk().hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * EventJailedFinalityProvider defines an event that a finality provider
+       * is jailed after being detected sluggish
+       * </pre>
+       *
+       * Protobuf type {@code babylon.btcstaking.v1.EventPowerDistUpdate.EventJailedFinalityProvider}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.EventPowerDistUpdate.EventJailedFinalityProvider)
+          com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProviderOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_EventJailedFinalityProvider_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_EventJailedFinalityProvider_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider.class, com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider.Builder.class);
+        }
+
+        // Construct using com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          pk_ = com.google.protobuf.ByteString.EMPTY;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_EventJailedFinalityProvider_descriptor;
+        }
+
+        @java.lang.Override
+        public com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider getDefaultInstanceForType() {
+          return com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider build() {
+          com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider buildPartial() {
+          com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider result = new com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.pk_ = pk_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider) {
+            return mergeFrom((com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider other) {
+          if (other == com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider.getDefaultInstance()) return this;
+          if (other.getPk() != com.google.protobuf.ByteString.EMPTY) {
+            setPk(other.getPk());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  pk_ = input.readBytes();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.ByteString pk_ = com.google.protobuf.ByteString.EMPTY;
+        /**
+         * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+         * @return The pk.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString getPk() {
+          return pk_;
+        }
+        /**
+         * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+         * @param value The pk to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPk(com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          pk_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPk() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          pk_ = getDefaultInstance().getPk();
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.EventPowerDistUpdate.EventJailedFinalityProvider)
+      }
+
+      // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.EventPowerDistUpdate.EventJailedFinalityProvider)
+      private static final com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider();
+      }
+
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<EventJailedFinalityProvider>
+          PARSER = new com.google.protobuf.AbstractParser<EventJailedFinalityProvider>() {
+        @java.lang.Override
+        public EventJailedFinalityProvider parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<EventJailedFinalityProvider> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<EventJailedFinalityProvider> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface EventUnjailedFinalityProviderOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.EventPowerDistUpdate.EventUnjailedFinalityProvider)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+       * @return The pk.
+       */
+      com.google.protobuf.ByteString getPk();
+    }
+    /**
+     * <pre>
+     * EventUnjailedFinalityProvider defines an event that a jailed finality provider
+     * is unjailed after the jailing period is passed
+     * </pre>
+     *
+     * Protobuf type {@code babylon.btcstaking.v1.EventPowerDistUpdate.EventUnjailedFinalityProvider}
+     */
+    public static final class EventUnjailedFinalityProvider extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.EventPowerDistUpdate.EventUnjailedFinalityProvider)
+        EventUnjailedFinalityProviderOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use EventUnjailedFinalityProvider.newBuilder() to construct.
+      private EventUnjailedFinalityProvider(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private EventUnjailedFinalityProvider() {
+        pk_ = com.google.protobuf.ByteString.EMPTY;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new EventUnjailedFinalityProvider();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_EventUnjailedFinalityProvider_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_EventUnjailedFinalityProvider_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider.class, com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider.Builder.class);
+      }
+
+      public static final int PK_FIELD_NUMBER = 1;
+      private com.google.protobuf.ByteString pk_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+       * @return The pk.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPk() {
+        return pk_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!pk_.isEmpty()) {
+          output.writeBytes(1, pk_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!pk_.isEmpty()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(1, pk_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider)) {
+          return super.equals(obj);
+        }
+        com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider other = (com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider) obj;
+
+        if (!getPk()
+            .equals(other.getPk())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + PK_FIELD_NUMBER;
+        hash = (53 * hash) + getPk().hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * EventUnjailedFinalityProvider defines an event that a jailed finality provider
+       * is unjailed after the jailing period is passed
+       * </pre>
+       *
+       * Protobuf type {@code babylon.btcstaking.v1.EventPowerDistUpdate.EventUnjailedFinalityProvider}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.EventPowerDistUpdate.EventUnjailedFinalityProvider)
+          com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProviderOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_EventUnjailedFinalityProvider_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_EventUnjailedFinalityProvider_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider.class, com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider.Builder.class);
+        }
+
+        // Construct using com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          pk_ = com.google.protobuf.ByteString.EMPTY;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_EventUnjailedFinalityProvider_descriptor;
+        }
+
+        @java.lang.Override
+        public com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider getDefaultInstanceForType() {
+          return com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider build() {
+          com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider buildPartial() {
+          com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider result = new com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.pk_ = pk_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider) {
+            return mergeFrom((com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider other) {
+          if (other == com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider.getDefaultInstance()) return this;
+          if (other.getPk() != com.google.protobuf.ByteString.EMPTY) {
+            setPk(other.getPk());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  pk_ = input.readBytes();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.ByteString pk_ = com.google.protobuf.ByteString.EMPTY;
+        /**
+         * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+         * @return The pk.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString getPk() {
+          return pk_;
+        }
+        /**
+         * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+         * @param value The pk to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPk(com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          pk_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bytes pk = 1 [json_name = "pk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPk() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          pk_ = getDefaultInstance().getPk();
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.EventPowerDistUpdate.EventUnjailedFinalityProvider)
+      }
+
+      // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.EventPowerDistUpdate.EventUnjailedFinalityProvider)
+      private static final com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider();
+      }
+
+      public static com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<EventUnjailedFinalityProvider>
+          PARSER = new com.google.protobuf.AbstractParser<EventUnjailedFinalityProvider>() {
+        @java.lang.Override
+        public EventUnjailedFinalityProvider parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<EventUnjailedFinalityProvider> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<EventUnjailedFinalityProvider> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     private int evCase_ = 0;
     @SuppressWarnings("serial")
     private java.lang.Object ev_;
@@ -2644,7 +6814,9 @@ public final class EventsProto {
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       SLASHED_FP(1),
-      BTC_DEL_STATE_UPDATE(2),
+      JAILED_FP(2),
+      UNJAILED_FP(3),
+      BTC_DEL_STATE_UPDATE(4),
       EV_NOT_SET(0);
       private final int value;
       private EvCase(int value) {
@@ -2663,7 +6835,9 @@ public final class EventsProto {
       public static EvCase forNumber(int value) {
         switch (value) {
           case 1: return SLASHED_FP;
-          case 2: return BTC_DEL_STATE_UPDATE;
+          case 2: return JAILED_FP;
+          case 3: return UNJAILED_FP;
+          case 4: return BTC_DEL_STATE_UPDATE;
           case 0: return EV_NOT_SET;
           default: return null;
         }
@@ -2722,30 +6896,116 @@ public final class EventsProto {
       return com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventSlashedFinalityProvider.getDefaultInstance();
     }
 
-    public static final int BTC_DEL_STATE_UPDATE_FIELD_NUMBER = 2;
+    public static final int JAILED_FP_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * jailed_fp means a finality provider is jailed
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventJailedFinalityProvider jailed_fp = 2 [json_name = "jailedFp"];</code>
+     * @return Whether the jailedFp field is set.
+     */
+    @java.lang.Override
+    public boolean hasJailedFp() {
+      return evCase_ == 2;
+    }
+    /**
+     * <pre>
+     * jailed_fp means a finality provider is jailed
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventJailedFinalityProvider jailed_fp = 2 [json_name = "jailedFp"];</code>
+     * @return The jailedFp.
+     */
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider getJailedFp() {
+      if (evCase_ == 2) {
+         return (com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider) ev_;
+      }
+      return com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * jailed_fp means a finality provider is jailed
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventJailedFinalityProvider jailed_fp = 2 [json_name = "jailedFp"];</code>
+     */
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProviderOrBuilder getJailedFpOrBuilder() {
+      if (evCase_ == 2) {
+         return (com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider) ev_;
+      }
+      return com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider.getDefaultInstance();
+    }
+
+    public static final int UNJAILED_FP_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * unjailed_fp means a jailed finality provider is unjailed
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventUnjailedFinalityProvider unjailed_fp = 3 [json_name = "unjailedFp"];</code>
+     * @return Whether the unjailedFp field is set.
+     */
+    @java.lang.Override
+    public boolean hasUnjailedFp() {
+      return evCase_ == 3;
+    }
+    /**
+     * <pre>
+     * unjailed_fp means a jailed finality provider is unjailed
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventUnjailedFinalityProvider unjailed_fp = 3 [json_name = "unjailedFp"];</code>
+     * @return The unjailedFp.
+     */
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider getUnjailedFp() {
+      if (evCase_ == 3) {
+         return (com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider) ev_;
+      }
+      return com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * unjailed_fp means a jailed finality provider is unjailed
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventUnjailedFinalityProvider unjailed_fp = 3 [json_name = "unjailedFp"];</code>
+     */
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProviderOrBuilder getUnjailedFpOrBuilder() {
+      if (evCase_ == 3) {
+         return (com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider) ev_;
+      }
+      return com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider.getDefaultInstance();
+    }
+
+    public static final int BTC_DEL_STATE_UPDATE_FIELD_NUMBER = 4;
     /**
      * <pre>
      * btc_del_state_update means a BTC delegation's state is updated
      * </pre>
      *
-     * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 2 [json_name = "btcDelStateUpdate"];</code>
+     * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 4 [json_name = "btcDelStateUpdate"];</code>
      * @return Whether the btcDelStateUpdate field is set.
      */
     @java.lang.Override
     public boolean hasBtcDelStateUpdate() {
-      return evCase_ == 2;
+      return evCase_ == 4;
     }
     /**
      * <pre>
      * btc_del_state_update means a BTC delegation's state is updated
      * </pre>
      *
-     * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 2 [json_name = "btcDelStateUpdate"];</code>
+     * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 4 [json_name = "btcDelStateUpdate"];</code>
      * @return The btcDelStateUpdate.
      */
     @java.lang.Override
     public com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate getBtcDelStateUpdate() {
-      if (evCase_ == 2) {
+      if (evCase_ == 4) {
          return (com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate) ev_;
       }
       return com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate.getDefaultInstance();
@@ -2755,11 +7015,11 @@ public final class EventsProto {
      * btc_del_state_update means a BTC delegation's state is updated
      * </pre>
      *
-     * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 2 [json_name = "btcDelStateUpdate"];</code>
+     * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 4 [json_name = "btcDelStateUpdate"];</code>
      */
     @java.lang.Override
     public com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdateOrBuilder getBtcDelStateUpdateOrBuilder() {
-      if (evCase_ == 2) {
+      if (evCase_ == 4) {
          return (com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate) ev_;
       }
       return com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate.getDefaultInstance();
@@ -2783,7 +7043,13 @@ public final class EventsProto {
         output.writeMessage(1, (com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventSlashedFinalityProvider) ev_);
       }
       if (evCase_ == 2) {
-        output.writeMessage(2, (com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate) ev_);
+        output.writeMessage(2, (com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider) ev_);
+      }
+      if (evCase_ == 3) {
+        output.writeMessage(3, (com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider) ev_);
+      }
+      if (evCase_ == 4) {
+        output.writeMessage(4, (com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate) ev_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -2800,7 +7066,15 @@ public final class EventsProto {
       }
       if (evCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate) ev_);
+          .computeMessageSize(2, (com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider) ev_);
+      }
+      if (evCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider) ev_);
+      }
+      if (evCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate) ev_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2824,6 +7098,14 @@ public final class EventsProto {
               .equals(other.getSlashedFp())) return false;
           break;
         case 2:
+          if (!getJailedFp()
+              .equals(other.getJailedFp())) return false;
+          break;
+        case 3:
+          if (!getUnjailedFp()
+              .equals(other.getUnjailedFp())) return false;
+          break;
+        case 4:
           if (!getBtcDelStateUpdate()
               .equals(other.getBtcDelStateUpdate())) return false;
           break;
@@ -2847,6 +7129,14 @@ public final class EventsProto {
           hash = (53 * hash) + getSlashedFp().hashCode();
           break;
         case 2:
+          hash = (37 * hash) + JAILED_FP_FIELD_NUMBER;
+          hash = (53 * hash) + getJailedFp().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + UNJAILED_FP_FIELD_NUMBER;
+          hash = (53 * hash) + getUnjailedFp().hashCode();
+          break;
+        case 4:
           hash = (37 * hash) + BTC_DEL_STATE_UPDATE_FIELD_NUMBER;
           hash = (53 * hash) + getBtcDelStateUpdate().hashCode();
           break;
@@ -2952,7 +7242,7 @@ public final class EventsProto {
     }
     /**
      * <pre>
-     * EventPowerDistUpdate is an event that affects voting power distirbution
+     * EventPowerDistUpdate is an event that affects voting power distribution
      * of BTC staking protocol
      * </pre>
      *
@@ -2991,6 +7281,12 @@ public final class EventsProto {
         bitField0_ = 0;
         if (slashedFpBuilder_ != null) {
           slashedFpBuilder_.clear();
+        }
+        if (jailedFpBuilder_ != null) {
+          jailedFpBuilder_.clear();
+        }
+        if (unjailedFpBuilder_ != null) {
+          unjailedFpBuilder_.clear();
         }
         if (btcDelStateUpdateBuilder_ != null) {
           btcDelStateUpdateBuilder_.clear();
@@ -3041,6 +7337,14 @@ public final class EventsProto {
           result.ev_ = slashedFpBuilder_.build();
         }
         if (evCase_ == 2 &&
+            jailedFpBuilder_ != null) {
+          result.ev_ = jailedFpBuilder_.build();
+        }
+        if (evCase_ == 3 &&
+            unjailedFpBuilder_ != null) {
+          result.ev_ = unjailedFpBuilder_.build();
+        }
+        if (evCase_ == 4 &&
             btcDelStateUpdateBuilder_ != null) {
           result.ev_ = btcDelStateUpdateBuilder_.build();
         }
@@ -3095,6 +7399,14 @@ public final class EventsProto {
             mergeSlashedFp(other.getSlashedFp());
             break;
           }
+          case JAILED_FP: {
+            mergeJailedFp(other.getJailedFp());
+            break;
+          }
+          case UNJAILED_FP: {
+            mergeUnjailedFp(other.getUnjailedFp());
+            break;
+          }
           case BTC_DEL_STATE_UPDATE: {
             mergeBtcDelStateUpdate(other.getBtcDelStateUpdate());
             break;
@@ -3138,11 +7450,25 @@ public final class EventsProto {
               } // case 10
               case 18: {
                 input.readMessage(
-                    getBtcDelStateUpdateFieldBuilder().getBuilder(),
+                    getJailedFpFieldBuilder().getBuilder(),
                     extensionRegistry);
                 evCase_ = 2;
                 break;
               } // case 18
+              case 26: {
+                input.readMessage(
+                    getUnjailedFpFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                evCase_ = 3;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getBtcDelStateUpdateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                evCase_ = 4;
+                break;
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3354,36 +7680,392 @@ public final class EventsProto {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider, com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider.Builder, com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProviderOrBuilder> jailedFpBuilder_;
+      /**
+       * <pre>
+       * jailed_fp means a finality provider is jailed
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventJailedFinalityProvider jailed_fp = 2 [json_name = "jailedFp"];</code>
+       * @return Whether the jailedFp field is set.
+       */
+      @java.lang.Override
+      public boolean hasJailedFp() {
+        return evCase_ == 2;
+      }
+      /**
+       * <pre>
+       * jailed_fp means a finality provider is jailed
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventJailedFinalityProvider jailed_fp = 2 [json_name = "jailedFp"];</code>
+       * @return The jailedFp.
+       */
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider getJailedFp() {
+        if (jailedFpBuilder_ == null) {
+          if (evCase_ == 2) {
+            return (com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider) ev_;
+          }
+          return com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider.getDefaultInstance();
+        } else {
+          if (evCase_ == 2) {
+            return jailedFpBuilder_.getMessage();
+          }
+          return com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * jailed_fp means a finality provider is jailed
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventJailedFinalityProvider jailed_fp = 2 [json_name = "jailedFp"];</code>
+       */
+      public Builder setJailedFp(com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider value) {
+        if (jailedFpBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ev_ = value;
+          onChanged();
+        } else {
+          jailedFpBuilder_.setMessage(value);
+        }
+        evCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * jailed_fp means a finality provider is jailed
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventJailedFinalityProvider jailed_fp = 2 [json_name = "jailedFp"];</code>
+       */
+      public Builder setJailedFp(
+          com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider.Builder builderForValue) {
+        if (jailedFpBuilder_ == null) {
+          ev_ = builderForValue.build();
+          onChanged();
+        } else {
+          jailedFpBuilder_.setMessage(builderForValue.build());
+        }
+        evCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * jailed_fp means a finality provider is jailed
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventJailedFinalityProvider jailed_fp = 2 [json_name = "jailedFp"];</code>
+       */
+      public Builder mergeJailedFp(com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider value) {
+        if (jailedFpBuilder_ == null) {
+          if (evCase_ == 2 &&
+              ev_ != com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider.getDefaultInstance()) {
+            ev_ = com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider.newBuilder((com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider) ev_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            ev_ = value;
+          }
+          onChanged();
+        } else {
+          if (evCase_ == 2) {
+            jailedFpBuilder_.mergeFrom(value);
+          } else {
+            jailedFpBuilder_.setMessage(value);
+          }
+        }
+        evCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * jailed_fp means a finality provider is jailed
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventJailedFinalityProvider jailed_fp = 2 [json_name = "jailedFp"];</code>
+       */
+      public Builder clearJailedFp() {
+        if (jailedFpBuilder_ == null) {
+          if (evCase_ == 2) {
+            evCase_ = 0;
+            ev_ = null;
+            onChanged();
+          }
+        } else {
+          if (evCase_ == 2) {
+            evCase_ = 0;
+            ev_ = null;
+          }
+          jailedFpBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * jailed_fp means a finality provider is jailed
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventJailedFinalityProvider jailed_fp = 2 [json_name = "jailedFp"];</code>
+       */
+      public com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider.Builder getJailedFpBuilder() {
+        return getJailedFpFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * jailed_fp means a finality provider is jailed
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventJailedFinalityProvider jailed_fp = 2 [json_name = "jailedFp"];</code>
+       */
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProviderOrBuilder getJailedFpOrBuilder() {
+        if ((evCase_ == 2) && (jailedFpBuilder_ != null)) {
+          return jailedFpBuilder_.getMessageOrBuilder();
+        } else {
+          if (evCase_ == 2) {
+            return (com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider) ev_;
+          }
+          return com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * jailed_fp means a finality provider is jailed
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventJailedFinalityProvider jailed_fp = 2 [json_name = "jailedFp"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider, com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider.Builder, com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProviderOrBuilder> 
+          getJailedFpFieldBuilder() {
+        if (jailedFpBuilder_ == null) {
+          if (!(evCase_ == 2)) {
+            ev_ = com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider.getDefaultInstance();
+          }
+          jailedFpBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider, com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider.Builder, com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProviderOrBuilder>(
+                  (com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventJailedFinalityProvider) ev_,
+                  getParentForChildren(),
+                  isClean());
+          ev_ = null;
+        }
+        evCase_ = 2;
+        onChanged();
+        return jailedFpBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider, com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider.Builder, com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProviderOrBuilder> unjailedFpBuilder_;
+      /**
+       * <pre>
+       * unjailed_fp means a jailed finality provider is unjailed
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventUnjailedFinalityProvider unjailed_fp = 3 [json_name = "unjailedFp"];</code>
+       * @return Whether the unjailedFp field is set.
+       */
+      @java.lang.Override
+      public boolean hasUnjailedFp() {
+        return evCase_ == 3;
+      }
+      /**
+       * <pre>
+       * unjailed_fp means a jailed finality provider is unjailed
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventUnjailedFinalityProvider unjailed_fp = 3 [json_name = "unjailedFp"];</code>
+       * @return The unjailedFp.
+       */
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider getUnjailedFp() {
+        if (unjailedFpBuilder_ == null) {
+          if (evCase_ == 3) {
+            return (com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider) ev_;
+          }
+          return com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider.getDefaultInstance();
+        } else {
+          if (evCase_ == 3) {
+            return unjailedFpBuilder_.getMessage();
+          }
+          return com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * unjailed_fp means a jailed finality provider is unjailed
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventUnjailedFinalityProvider unjailed_fp = 3 [json_name = "unjailedFp"];</code>
+       */
+      public Builder setUnjailedFp(com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider value) {
+        if (unjailedFpBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ev_ = value;
+          onChanged();
+        } else {
+          unjailedFpBuilder_.setMessage(value);
+        }
+        evCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * unjailed_fp means a jailed finality provider is unjailed
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventUnjailedFinalityProvider unjailed_fp = 3 [json_name = "unjailedFp"];</code>
+       */
+      public Builder setUnjailedFp(
+          com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider.Builder builderForValue) {
+        if (unjailedFpBuilder_ == null) {
+          ev_ = builderForValue.build();
+          onChanged();
+        } else {
+          unjailedFpBuilder_.setMessage(builderForValue.build());
+        }
+        evCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * unjailed_fp means a jailed finality provider is unjailed
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventUnjailedFinalityProvider unjailed_fp = 3 [json_name = "unjailedFp"];</code>
+       */
+      public Builder mergeUnjailedFp(com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider value) {
+        if (unjailedFpBuilder_ == null) {
+          if (evCase_ == 3 &&
+              ev_ != com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider.getDefaultInstance()) {
+            ev_ = com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider.newBuilder((com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider) ev_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            ev_ = value;
+          }
+          onChanged();
+        } else {
+          if (evCase_ == 3) {
+            unjailedFpBuilder_.mergeFrom(value);
+          } else {
+            unjailedFpBuilder_.setMessage(value);
+          }
+        }
+        evCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * unjailed_fp means a jailed finality provider is unjailed
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventUnjailedFinalityProvider unjailed_fp = 3 [json_name = "unjailedFp"];</code>
+       */
+      public Builder clearUnjailedFp() {
+        if (unjailedFpBuilder_ == null) {
+          if (evCase_ == 3) {
+            evCase_ = 0;
+            ev_ = null;
+            onChanged();
+          }
+        } else {
+          if (evCase_ == 3) {
+            evCase_ = 0;
+            ev_ = null;
+          }
+          unjailedFpBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unjailed_fp means a jailed finality provider is unjailed
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventUnjailedFinalityProvider unjailed_fp = 3 [json_name = "unjailedFp"];</code>
+       */
+      public com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider.Builder getUnjailedFpBuilder() {
+        return getUnjailedFpFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * unjailed_fp means a jailed finality provider is unjailed
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventUnjailedFinalityProvider unjailed_fp = 3 [json_name = "unjailedFp"];</code>
+       */
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProviderOrBuilder getUnjailedFpOrBuilder() {
+        if ((evCase_ == 3) && (unjailedFpBuilder_ != null)) {
+          return unjailedFpBuilder_.getMessageOrBuilder();
+        } else {
+          if (evCase_ == 3) {
+            return (com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider) ev_;
+          }
+          return com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * unjailed_fp means a jailed finality provider is unjailed
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.EventPowerDistUpdate.EventUnjailedFinalityProvider unjailed_fp = 3 [json_name = "unjailedFp"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider, com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider.Builder, com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProviderOrBuilder> 
+          getUnjailedFpFieldBuilder() {
+        if (unjailedFpBuilder_ == null) {
+          if (!(evCase_ == 3)) {
+            ev_ = com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider.getDefaultInstance();
+          }
+          unjailedFpBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider, com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider.Builder, com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProviderOrBuilder>(
+                  (com.babylon.btcstaking.v1.EventsProto.EventPowerDistUpdate.EventUnjailedFinalityProvider) ev_,
+                  getParentForChildren(),
+                  isClean());
+          ev_ = null;
+        }
+        evCase_ = 3;
+        onChanged();
+        return unjailedFpBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
           com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate, com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate.Builder, com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdateOrBuilder> btcDelStateUpdateBuilder_;
       /**
        * <pre>
        * btc_del_state_update means a BTC delegation's state is updated
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 2 [json_name = "btcDelStateUpdate"];</code>
+       * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 4 [json_name = "btcDelStateUpdate"];</code>
        * @return Whether the btcDelStateUpdate field is set.
        */
       @java.lang.Override
       public boolean hasBtcDelStateUpdate() {
-        return evCase_ == 2;
+        return evCase_ == 4;
       }
       /**
        * <pre>
        * btc_del_state_update means a BTC delegation's state is updated
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 2 [json_name = "btcDelStateUpdate"];</code>
+       * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 4 [json_name = "btcDelStateUpdate"];</code>
        * @return The btcDelStateUpdate.
        */
       @java.lang.Override
       public com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate getBtcDelStateUpdate() {
         if (btcDelStateUpdateBuilder_ == null) {
-          if (evCase_ == 2) {
+          if (evCase_ == 4) {
             return (com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate) ev_;
           }
           return com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate.getDefaultInstance();
         } else {
-          if (evCase_ == 2) {
+          if (evCase_ == 4) {
             return btcDelStateUpdateBuilder_.getMessage();
           }
           return com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate.getDefaultInstance();
@@ -3394,7 +8076,7 @@ public final class EventsProto {
        * btc_del_state_update means a BTC delegation's state is updated
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 2 [json_name = "btcDelStateUpdate"];</code>
+       * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 4 [json_name = "btcDelStateUpdate"];</code>
        */
       public Builder setBtcDelStateUpdate(com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate value) {
         if (btcDelStateUpdateBuilder_ == null) {
@@ -3406,7 +8088,7 @@ public final class EventsProto {
         } else {
           btcDelStateUpdateBuilder_.setMessage(value);
         }
-        evCase_ = 2;
+        evCase_ = 4;
         return this;
       }
       /**
@@ -3414,7 +8096,7 @@ public final class EventsProto {
        * btc_del_state_update means a BTC delegation's state is updated
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 2 [json_name = "btcDelStateUpdate"];</code>
+       * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 4 [json_name = "btcDelStateUpdate"];</code>
        */
       public Builder setBtcDelStateUpdate(
           com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate.Builder builderForValue) {
@@ -3424,7 +8106,7 @@ public final class EventsProto {
         } else {
           btcDelStateUpdateBuilder_.setMessage(builderForValue.build());
         }
-        evCase_ = 2;
+        evCase_ = 4;
         return this;
       }
       /**
@@ -3432,11 +8114,11 @@ public final class EventsProto {
        * btc_del_state_update means a BTC delegation's state is updated
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 2 [json_name = "btcDelStateUpdate"];</code>
+       * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 4 [json_name = "btcDelStateUpdate"];</code>
        */
       public Builder mergeBtcDelStateUpdate(com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate value) {
         if (btcDelStateUpdateBuilder_ == null) {
-          if (evCase_ == 2 &&
+          if (evCase_ == 4 &&
               ev_ != com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate.getDefaultInstance()) {
             ev_ = com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate.newBuilder((com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate) ev_)
                 .mergeFrom(value).buildPartial();
@@ -3445,13 +8127,13 @@ public final class EventsProto {
           }
           onChanged();
         } else {
-          if (evCase_ == 2) {
+          if (evCase_ == 4) {
             btcDelStateUpdateBuilder_.mergeFrom(value);
           } else {
             btcDelStateUpdateBuilder_.setMessage(value);
           }
         }
-        evCase_ = 2;
+        evCase_ = 4;
         return this;
       }
       /**
@@ -3459,17 +8141,17 @@ public final class EventsProto {
        * btc_del_state_update means a BTC delegation's state is updated
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 2 [json_name = "btcDelStateUpdate"];</code>
+       * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 4 [json_name = "btcDelStateUpdate"];</code>
        */
       public Builder clearBtcDelStateUpdate() {
         if (btcDelStateUpdateBuilder_ == null) {
-          if (evCase_ == 2) {
+          if (evCase_ == 4) {
             evCase_ = 0;
             ev_ = null;
             onChanged();
           }
         } else {
-          if (evCase_ == 2) {
+          if (evCase_ == 4) {
             evCase_ = 0;
             ev_ = null;
           }
@@ -3482,7 +8164,7 @@ public final class EventsProto {
        * btc_del_state_update means a BTC delegation's state is updated
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 2 [json_name = "btcDelStateUpdate"];</code>
+       * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 4 [json_name = "btcDelStateUpdate"];</code>
        */
       public com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate.Builder getBtcDelStateUpdateBuilder() {
         return getBtcDelStateUpdateFieldBuilder().getBuilder();
@@ -3492,14 +8174,14 @@ public final class EventsProto {
        * btc_del_state_update means a BTC delegation's state is updated
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 2 [json_name = "btcDelStateUpdate"];</code>
+       * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 4 [json_name = "btcDelStateUpdate"];</code>
        */
       @java.lang.Override
       public com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdateOrBuilder getBtcDelStateUpdateOrBuilder() {
-        if ((evCase_ == 2) && (btcDelStateUpdateBuilder_ != null)) {
+        if ((evCase_ == 4) && (btcDelStateUpdateBuilder_ != null)) {
           return btcDelStateUpdateBuilder_.getMessageOrBuilder();
         } else {
-          if (evCase_ == 2) {
+          if (evCase_ == 4) {
             return (com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate) ev_;
           }
           return com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate.getDefaultInstance();
@@ -3510,13 +8192,13 @@ public final class EventsProto {
        * btc_del_state_update means a BTC delegation's state is updated
        * </pre>
        *
-       * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 2 [json_name = "btcDelStateUpdate"];</code>
+       * <code>.babylon.btcstaking.v1.EventBTCDelegationStateUpdate btc_del_state_update = 4 [json_name = "btcDelStateUpdate"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate, com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate.Builder, com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdateOrBuilder> 
           getBtcDelStateUpdateFieldBuilder() {
         if (btcDelStateUpdateBuilder_ == null) {
-          if (!(evCase_ == 2)) {
+          if (!(evCase_ == 4)) {
             ev_ = com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationStateUpdate.getDefaultInstance();
           }
           btcDelStateUpdateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -3526,7 +8208,7 @@ public final class EventsProto {
                   isClean());
           ev_ = null;
         }
-        evCase_ = 2;
+        evCase_ = 4;
         onChanged();
         return btcDelStateUpdateBuilder_;
       }
@@ -3594,11 +8276,9226 @@ public final class EventsProto {
 
   }
 
+  public interface EventFinalityProviderStatusChangeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.EventFinalityProviderStatusChange)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * btc_pk is the BTC public key of the finality provider
+     * </pre>
+     *
+     * <code>string btc_pk = 1 [json_name = "btcPk", (.amino.dont_omitempty) = true];</code>
+     * @return The btcPk.
+     */
+    java.lang.String getBtcPk();
+    /**
+     * <pre>
+     * btc_pk is the BTC public key of the finality provider
+     * </pre>
+     *
+     * <code>string btc_pk = 1 [json_name = "btcPk", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for btcPk.
+     */
+    com.google.protobuf.ByteString
+        getBtcPkBytes();
+
+    /**
+     * <pre>
+     * new_state is the status that the finality provider
+     * is transitioned to, following FinalityProviderStatus
+     * </pre>
+     *
+     * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+     * @return The newState.
+     */
+    java.lang.String getNewState();
+    /**
+     * <pre>
+     * new_state is the status that the finality provider
+     * is transitioned to, following FinalityProviderStatus
+     * </pre>
+     *
+     * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for newState.
+     */
+    com.google.protobuf.ByteString
+        getNewStateBytes();
+  }
+  /**
+   * <pre>
+   * A finality provider starts with status INACTIVE once registered.
+   * Possible status transitions are when:
+   * 1. it has accumulated sufficient delegations and has
+   * timestamped public randomness:
+   * INACTIVE -&gt; ACTIVE
+   * 2. it is jailed due to downtime:
+   * ACTIVE -&gt; JAILED
+   * 3. it is slashed due to double-sign:
+   * ACTIVE -&gt; SLASHED
+   * 4. it is unjailed after a jailing period:
+   * JAILED -&gt; INACTIVE/ACTIVE (depending on (1))
+   * 5. it does not have sufficient delegations or does not
+   * have timestamped public randomness:
+   * ACTIVE -&gt; INACTIVE.
+   * Note that it is impossible for a SLASHED finality provider to
+   * transition to other status
+   * </pre>
+   *
+   * Protobuf type {@code babylon.btcstaking.v1.EventFinalityProviderStatusChange}
+   */
+  public static final class EventFinalityProviderStatusChange extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.EventFinalityProviderStatusChange)
+      EventFinalityProviderStatusChangeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventFinalityProviderStatusChange.newBuilder() to construct.
+    private EventFinalityProviderStatusChange(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventFinalityProviderStatusChange() {
+      btcPk_ = "";
+      newState_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventFinalityProviderStatusChange();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventFinalityProviderStatusChange_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventFinalityProviderStatusChange_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange.class, com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange.Builder.class);
+    }
+
+    public static final int BTC_PK_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object btcPk_ = "";
+    /**
+     * <pre>
+     * btc_pk is the BTC public key of the finality provider
+     * </pre>
+     *
+     * <code>string btc_pk = 1 [json_name = "btcPk", (.amino.dont_omitempty) = true];</code>
+     * @return The btcPk.
+     */
+    @java.lang.Override
+    public java.lang.String getBtcPk() {
+      java.lang.Object ref = btcPk_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        btcPk_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * btc_pk is the BTC public key of the finality provider
+     * </pre>
+     *
+     * <code>string btc_pk = 1 [json_name = "btcPk", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for btcPk.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBtcPkBytes() {
+      java.lang.Object ref = btcPk_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        btcPk_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEW_STATE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object newState_ = "";
+    /**
+     * <pre>
+     * new_state is the status that the finality provider
+     * is transitioned to, following FinalityProviderStatus
+     * </pre>
+     *
+     * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+     * @return The newState.
+     */
+    @java.lang.Override
+    public java.lang.String getNewState() {
+      java.lang.Object ref = newState_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        newState_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * new_state is the status that the finality provider
+     * is transitioned to, following FinalityProviderStatus
+     * </pre>
+     *
+     * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for newState.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewStateBytes() {
+      java.lang.Object ref = newState_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newState_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(btcPk_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, btcPk_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newState_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, newState_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(btcPk_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, btcPk_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newState_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, newState_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange)) {
+        return super.equals(obj);
+      }
+      com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange other = (com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange) obj;
+
+      if (!getBtcPk()
+          .equals(other.getBtcPk())) return false;
+      if (!getNewState()
+          .equals(other.getNewState())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BTC_PK_FIELD_NUMBER;
+      hash = (53 * hash) + getBtcPk().hashCode();
+      hash = (37 * hash) + NEW_STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getNewState().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * A finality provider starts with status INACTIVE once registered.
+     * Possible status transitions are when:
+     * 1. it has accumulated sufficient delegations and has
+     * timestamped public randomness:
+     * INACTIVE -&gt; ACTIVE
+     * 2. it is jailed due to downtime:
+     * ACTIVE -&gt; JAILED
+     * 3. it is slashed due to double-sign:
+     * ACTIVE -&gt; SLASHED
+     * 4. it is unjailed after a jailing period:
+     * JAILED -&gt; INACTIVE/ACTIVE (depending on (1))
+     * 5. it does not have sufficient delegations or does not
+     * have timestamped public randomness:
+     * ACTIVE -&gt; INACTIVE.
+     * Note that it is impossible for a SLASHED finality provider to
+     * transition to other status
+     * </pre>
+     *
+     * Protobuf type {@code babylon.btcstaking.v1.EventFinalityProviderStatusChange}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.EventFinalityProviderStatusChange)
+        com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChangeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventFinalityProviderStatusChange_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventFinalityProviderStatusChange_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange.class, com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange.Builder.class);
+      }
+
+      // Construct using com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        btcPk_ = "";
+        newState_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventFinalityProviderStatusChange_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange getDefaultInstanceForType() {
+        return com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange build() {
+        com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange buildPartial() {
+        com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange result = new com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.btcPk_ = btcPk_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.newState_ = newState_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange) {
+          return mergeFrom((com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange other) {
+        if (other == com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange.getDefaultInstance()) return this;
+        if (!other.getBtcPk().isEmpty()) {
+          btcPk_ = other.btcPk_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getNewState().isEmpty()) {
+          newState_ = other.newState_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                btcPk_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                newState_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object btcPk_ = "";
+      /**
+       * <pre>
+       * btc_pk is the BTC public key of the finality provider
+       * </pre>
+       *
+       * <code>string btc_pk = 1 [json_name = "btcPk", (.amino.dont_omitempty) = true];</code>
+       * @return The btcPk.
+       */
+      public java.lang.String getBtcPk() {
+        java.lang.Object ref = btcPk_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          btcPk_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * btc_pk is the BTC public key of the finality provider
+       * </pre>
+       *
+       * <code>string btc_pk = 1 [json_name = "btcPk", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for btcPk.
+       */
+      public com.google.protobuf.ByteString
+          getBtcPkBytes() {
+        java.lang.Object ref = btcPk_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          btcPk_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * btc_pk is the BTC public key of the finality provider
+       * </pre>
+       *
+       * <code>string btc_pk = 1 [json_name = "btcPk", (.amino.dont_omitempty) = true];</code>
+       * @param value The btcPk to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBtcPk(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        btcPk_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * btc_pk is the BTC public key of the finality provider
+       * </pre>
+       *
+       * <code>string btc_pk = 1 [json_name = "btcPk", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBtcPk() {
+        btcPk_ = getDefaultInstance().getBtcPk();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * btc_pk is the BTC public key of the finality provider
+       * </pre>
+       *
+       * <code>string btc_pk = 1 [json_name = "btcPk", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for btcPk to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBtcPkBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        btcPk_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object newState_ = "";
+      /**
+       * <pre>
+       * new_state is the status that the finality provider
+       * is transitioned to, following FinalityProviderStatus
+       * </pre>
+       *
+       * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @return The newState.
+       */
+      public java.lang.String getNewState() {
+        java.lang.Object ref = newState_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          newState_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * new_state is the status that the finality provider
+       * is transitioned to, following FinalityProviderStatus
+       * </pre>
+       *
+       * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for newState.
+       */
+      public com.google.protobuf.ByteString
+          getNewStateBytes() {
+        java.lang.Object ref = newState_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          newState_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * new_state is the status that the finality provider
+       * is transitioned to, following FinalityProviderStatus
+       * </pre>
+       *
+       * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @param value The newState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewState(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        newState_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_state is the status that the finality provider
+       * is transitioned to, following FinalityProviderStatus
+       * </pre>
+       *
+       * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewState() {
+        newState_ = getDefaultInstance().getNewState();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_state is the status that the finality provider
+       * is transitioned to, following FinalityProviderStatus
+       * </pre>
+       *
+       * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for newState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewStateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        newState_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.EventFinalityProviderStatusChange)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.EventFinalityProviderStatusChange)
+    private static final com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange();
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventFinalityProviderStatusChange>
+        PARSER = new com.google.protobuf.AbstractParser<EventFinalityProviderStatusChange>() {
+      @java.lang.Override
+      public EventFinalityProviderStatusChange parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventFinalityProviderStatusChange> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventFinalityProviderStatusChange> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.EventsProto.EventFinalityProviderStatusChange getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventBTCDelegationCreatedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.EventBTCDelegationCreated)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking tx.
+     * It uniquely identifies a BTC delegation
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The stakingTxHash.
+     */
+    java.lang.String getStakingTxHash();
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking tx.
+     * It uniquely identifies a BTC delegation
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for stakingTxHash.
+     */
+    com.google.protobuf.ByteString
+        getStakingTxHashBytes();
+
+    /**
+     * <pre>
+     * staking_output_pk_script is the hex encoded PK script of the staking output
+     * </pre>
+     *
+     * <code>string staking_output_pk_script = 2 [json_name = "stakingOutputPkScript", (.amino.dont_omitempty) = true];</code>
+     * @return The stakingOutputPkScript.
+     */
+    java.lang.String getStakingOutputPkScript();
+    /**
+     * <pre>
+     * staking_output_pk_script is the hex encoded PK script of the staking output
+     * </pre>
+     *
+     * <code>string staking_output_pk_script = 2 [json_name = "stakingOutputPkScript", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for stakingOutputPkScript.
+     */
+    com.google.protobuf.ByteString
+        getStakingOutputPkScriptBytes();
+
+    /**
+     * <pre>
+     * staking_output_index is the index of the staking output in the staking tx
+     * </pre>
+     *
+     * <code>string staking_output_index = 3 [json_name = "stakingOutputIndex", (.amino.dont_omitempty) = true];</code>
+     * @return The stakingOutputIndex.
+     */
+    java.lang.String getStakingOutputIndex();
+    /**
+     * <pre>
+     * staking_output_index is the index of the staking output in the staking tx
+     * </pre>
+     *
+     * <code>string staking_output_index = 3 [json_name = "stakingOutputIndex", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for stakingOutputIndex.
+     */
+    com.google.protobuf.ByteString
+        getStakingOutputIndexBytes();
+
+    /**
+     * <pre>
+     * version of the params used to validate the delegation
+     * </pre>
+     *
+     * <code>string params_version = 4 [json_name = "paramsVersion", (.amino.dont_omitempty) = true];</code>
+     * @return The paramsVersion.
+     */
+    java.lang.String getParamsVersion();
+    /**
+     * <pre>
+     * version of the params used to validate the delegation
+     * </pre>
+     *
+     * <code>string params_version = 4 [json_name = "paramsVersion", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for paramsVersion.
+     */
+    com.google.protobuf.ByteString
+        getParamsVersionBytes();
+
+    /**
+     * <pre>
+     * finality_provider_btc_pks_hex is the list of hex str of Bitcoin secp256k1 PK of
+     * the finality providers that this BTC delegation delegates to
+     * the PK follows encoding in BIP-340 spec
+     * </pre>
+     *
+     * <code>repeated string finality_provider_btc_pks_hex = 5 [json_name = "finalityProviderBtcPksHex", (.amino.dont_omitempty) = true];</code>
+     * @return A list containing the finalityProviderBtcPksHex.
+     */
+    java.util.List<java.lang.String>
+        getFinalityProviderBtcPksHexList();
+    /**
+     * <pre>
+     * finality_provider_btc_pks_hex is the list of hex str of Bitcoin secp256k1 PK of
+     * the finality providers that this BTC delegation delegates to
+     * the PK follows encoding in BIP-340 spec
+     * </pre>
+     *
+     * <code>repeated string finality_provider_btc_pks_hex = 5 [json_name = "finalityProviderBtcPksHex", (.amino.dont_omitempty) = true];</code>
+     * @return The count of finalityProviderBtcPksHex.
+     */
+    int getFinalityProviderBtcPksHexCount();
+    /**
+     * <pre>
+     * finality_provider_btc_pks_hex is the list of hex str of Bitcoin secp256k1 PK of
+     * the finality providers that this BTC delegation delegates to
+     * the PK follows encoding in BIP-340 spec
+     * </pre>
+     *
+     * <code>repeated string finality_provider_btc_pks_hex = 5 [json_name = "finalityProviderBtcPksHex", (.amino.dont_omitempty) = true];</code>
+     * @param index The index of the element to return.
+     * @return The finalityProviderBtcPksHex at the given index.
+     */
+    java.lang.String getFinalityProviderBtcPksHex(int index);
+    /**
+     * <pre>
+     * finality_provider_btc_pks_hex is the list of hex str of Bitcoin secp256k1 PK of
+     * the finality providers that this BTC delegation delegates to
+     * the PK follows encoding in BIP-340 spec
+     * </pre>
+     *
+     * <code>repeated string finality_provider_btc_pks_hex = 5 [json_name = "finalityProviderBtcPksHex", (.amino.dont_omitempty) = true];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the finalityProviderBtcPksHex at the given index.
+     */
+    com.google.protobuf.ByteString
+        getFinalityProviderBtcPksHexBytes(int index);
+
+    /**
+     * <pre>
+     * staker_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the staker that
+     * creates this BTC delegation the PK follows encoding in BIP-340 spec
+     * </pre>
+     *
+     * <code>string staker_btc_pk_hex = 6 [json_name = "stakerBtcPkHex", (.amino.dont_omitempty) = true];</code>
+     * @return The stakerBtcPkHex.
+     */
+    java.lang.String getStakerBtcPkHex();
+    /**
+     * <pre>
+     * staker_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the staker that
+     * creates this BTC delegation the PK follows encoding in BIP-340 spec
+     * </pre>
+     *
+     * <code>string staker_btc_pk_hex = 6 [json_name = "stakerBtcPkHex", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for stakerBtcPkHex.
+     */
+    com.google.protobuf.ByteString
+        getStakerBtcPkHexBytes();
+
+    /**
+     * <pre>
+     * staking_time is the timelock of the staking tx specified in the BTC script
+     * </pre>
+     *
+     * <code>string staking_time = 7 [json_name = "stakingTime", (.amino.dont_omitempty) = true];</code>
+     * @return The stakingTime.
+     */
+    java.lang.String getStakingTime();
+    /**
+     * <pre>
+     * staking_time is the timelock of the staking tx specified in the BTC script
+     * </pre>
+     *
+     * <code>string staking_time = 7 [json_name = "stakingTime", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for stakingTime.
+     */
+    com.google.protobuf.ByteString
+        getStakingTimeBytes();
+
+    /**
+     * <pre>
+     * staking_amount is the total amount of BTC stake in this delegation
+     * quantified in satoshi
+     * </pre>
+     *
+     * <code>string staking_amount = 8 [json_name = "stakingAmount", (.amino.dont_omitempty) = true];</code>
+     * @return The stakingAmount.
+     */
+    java.lang.String getStakingAmount();
+    /**
+     * <pre>
+     * staking_amount is the total amount of BTC stake in this delegation
+     * quantified in satoshi
+     * </pre>
+     *
+     * <code>string staking_amount = 8 [json_name = "stakingAmount", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for stakingAmount.
+     */
+    com.google.protobuf.ByteString
+        getStakingAmountBytes();
+
+    /**
+     * <pre>
+     * unbonding_time is the time is timelock on unbonding tx chosen by the staker
+     * </pre>
+     *
+     * <code>string unbonding_time = 9 [json_name = "unbondingTime", (.amino.dont_omitempty) = true];</code>
+     * @return The unbondingTime.
+     */
+    java.lang.String getUnbondingTime();
+    /**
+     * <pre>
+     * unbonding_time is the time is timelock on unbonding tx chosen by the staker
+     * </pre>
+     *
+     * <code>string unbonding_time = 9 [json_name = "unbondingTime", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for unbondingTime.
+     */
+    com.google.protobuf.ByteString
+        getUnbondingTimeBytes();
+
+    /**
+     * <pre>
+     * unbonding_tx is hex encoded bytes of the unsigned unbonding tx
+     * </pre>
+     *
+     * <code>string unbonding_tx = 10 [json_name = "unbondingTx", (.amino.dont_omitempty) = true];</code>
+     * @return The unbondingTx.
+     */
+    java.lang.String getUnbondingTx();
+    /**
+     * <pre>
+     * unbonding_tx is hex encoded bytes of the unsigned unbonding tx
+     * </pre>
+     *
+     * <code>string unbonding_tx = 10 [json_name = "unbondingTx", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for unbondingTx.
+     */
+    com.google.protobuf.ByteString
+        getUnbondingTxBytes();
+
+    /**
+     * <pre>
+     * new_state of the BTC delegation
+     * </pre>
+     *
+     * <code>string new_state = 11 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+     * @return The newState.
+     */
+    java.lang.String getNewState();
+    /**
+     * <pre>
+     * new_state of the BTC delegation
+     * </pre>
+     *
+     * <code>string new_state = 11 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for newState.
+     */
+    com.google.protobuf.ByteString
+        getNewStateBytes();
+  }
+  /**
+   * <pre>
+   * EventBTCDelegationCreated is the event emitted when a BTC delegation is created
+   * on the Babylon chain
+   * </pre>
+   *
+   * Protobuf type {@code babylon.btcstaking.v1.EventBTCDelegationCreated}
+   */
+  public static final class EventBTCDelegationCreated extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.EventBTCDelegationCreated)
+      EventBTCDelegationCreatedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventBTCDelegationCreated.newBuilder() to construct.
+    private EventBTCDelegationCreated(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventBTCDelegationCreated() {
+      stakingTxHash_ = "";
+      stakingOutputPkScript_ = "";
+      stakingOutputIndex_ = "";
+      paramsVersion_ = "";
+      finalityProviderBtcPksHex_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      stakerBtcPkHex_ = "";
+      stakingTime_ = "";
+      stakingAmount_ = "";
+      unbondingTime_ = "";
+      unbondingTx_ = "";
+      newState_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventBTCDelegationCreated();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventBTCDelegationCreated_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventBTCDelegationCreated_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated.class, com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated.Builder.class);
+    }
+
+    public static final int STAKING_TX_HASH_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingTxHash_ = "";
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking tx.
+     * It uniquely identifies a BTC delegation
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The stakingTxHash.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingTxHash() {
+      java.lang.Object ref = stakingTxHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingTxHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking tx.
+     * It uniquely identifies a BTC delegation
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for stakingTxHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingTxHashBytes() {
+      java.lang.Object ref = stakingTxHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingTxHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAKING_OUTPUT_PK_SCRIPT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingOutputPkScript_ = "";
+    /**
+     * <pre>
+     * staking_output_pk_script is the hex encoded PK script of the staking output
+     * </pre>
+     *
+     * <code>string staking_output_pk_script = 2 [json_name = "stakingOutputPkScript", (.amino.dont_omitempty) = true];</code>
+     * @return The stakingOutputPkScript.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingOutputPkScript() {
+      java.lang.Object ref = stakingOutputPkScript_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingOutputPkScript_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staking_output_pk_script is the hex encoded PK script of the staking output
+     * </pre>
+     *
+     * <code>string staking_output_pk_script = 2 [json_name = "stakingOutputPkScript", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for stakingOutputPkScript.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingOutputPkScriptBytes() {
+      java.lang.Object ref = stakingOutputPkScript_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingOutputPkScript_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAKING_OUTPUT_INDEX_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingOutputIndex_ = "";
+    /**
+     * <pre>
+     * staking_output_index is the index of the staking output in the staking tx
+     * </pre>
+     *
+     * <code>string staking_output_index = 3 [json_name = "stakingOutputIndex", (.amino.dont_omitempty) = true];</code>
+     * @return The stakingOutputIndex.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingOutputIndex() {
+      java.lang.Object ref = stakingOutputIndex_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingOutputIndex_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staking_output_index is the index of the staking output in the staking tx
+     * </pre>
+     *
+     * <code>string staking_output_index = 3 [json_name = "stakingOutputIndex", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for stakingOutputIndex.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingOutputIndexBytes() {
+      java.lang.Object ref = stakingOutputIndex_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingOutputIndex_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PARAMS_VERSION_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object paramsVersion_ = "";
+    /**
+     * <pre>
+     * version of the params used to validate the delegation
+     * </pre>
+     *
+     * <code>string params_version = 4 [json_name = "paramsVersion", (.amino.dont_omitempty) = true];</code>
+     * @return The paramsVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getParamsVersion() {
+      java.lang.Object ref = paramsVersion_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        paramsVersion_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * version of the params used to validate the delegation
+     * </pre>
+     *
+     * <code>string params_version = 4 [json_name = "paramsVersion", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for paramsVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getParamsVersionBytes() {
+      java.lang.Object ref = paramsVersion_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        paramsVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FINALITY_PROVIDER_BTC_PKS_HEX_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList finalityProviderBtcPksHex_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * finality_provider_btc_pks_hex is the list of hex str of Bitcoin secp256k1 PK of
+     * the finality providers that this BTC delegation delegates to
+     * the PK follows encoding in BIP-340 spec
+     * </pre>
+     *
+     * <code>repeated string finality_provider_btc_pks_hex = 5 [json_name = "finalityProviderBtcPksHex", (.amino.dont_omitempty) = true];</code>
+     * @return A list containing the finalityProviderBtcPksHex.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getFinalityProviderBtcPksHexList() {
+      return finalityProviderBtcPksHex_;
+    }
+    /**
+     * <pre>
+     * finality_provider_btc_pks_hex is the list of hex str of Bitcoin secp256k1 PK of
+     * the finality providers that this BTC delegation delegates to
+     * the PK follows encoding in BIP-340 spec
+     * </pre>
+     *
+     * <code>repeated string finality_provider_btc_pks_hex = 5 [json_name = "finalityProviderBtcPksHex", (.amino.dont_omitempty) = true];</code>
+     * @return The count of finalityProviderBtcPksHex.
+     */
+    public int getFinalityProviderBtcPksHexCount() {
+      return finalityProviderBtcPksHex_.size();
+    }
+    /**
+     * <pre>
+     * finality_provider_btc_pks_hex is the list of hex str of Bitcoin secp256k1 PK of
+     * the finality providers that this BTC delegation delegates to
+     * the PK follows encoding in BIP-340 spec
+     * </pre>
+     *
+     * <code>repeated string finality_provider_btc_pks_hex = 5 [json_name = "finalityProviderBtcPksHex", (.amino.dont_omitempty) = true];</code>
+     * @param index The index of the element to return.
+     * @return The finalityProviderBtcPksHex at the given index.
+     */
+    public java.lang.String getFinalityProviderBtcPksHex(int index) {
+      return finalityProviderBtcPksHex_.get(index);
+    }
+    /**
+     * <pre>
+     * finality_provider_btc_pks_hex is the list of hex str of Bitcoin secp256k1 PK of
+     * the finality providers that this BTC delegation delegates to
+     * the PK follows encoding in BIP-340 spec
+     * </pre>
+     *
+     * <code>repeated string finality_provider_btc_pks_hex = 5 [json_name = "finalityProviderBtcPksHex", (.amino.dont_omitempty) = true];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the finalityProviderBtcPksHex at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getFinalityProviderBtcPksHexBytes(int index) {
+      return finalityProviderBtcPksHex_.getByteString(index);
+    }
+
+    public static final int STAKER_BTC_PK_HEX_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakerBtcPkHex_ = "";
+    /**
+     * <pre>
+     * staker_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the staker that
+     * creates this BTC delegation the PK follows encoding in BIP-340 spec
+     * </pre>
+     *
+     * <code>string staker_btc_pk_hex = 6 [json_name = "stakerBtcPkHex", (.amino.dont_omitempty) = true];</code>
+     * @return The stakerBtcPkHex.
+     */
+    @java.lang.Override
+    public java.lang.String getStakerBtcPkHex() {
+      java.lang.Object ref = stakerBtcPkHex_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakerBtcPkHex_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staker_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the staker that
+     * creates this BTC delegation the PK follows encoding in BIP-340 spec
+     * </pre>
+     *
+     * <code>string staker_btc_pk_hex = 6 [json_name = "stakerBtcPkHex", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for stakerBtcPkHex.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakerBtcPkHexBytes() {
+      java.lang.Object ref = stakerBtcPkHex_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakerBtcPkHex_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAKING_TIME_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingTime_ = "";
+    /**
+     * <pre>
+     * staking_time is the timelock of the staking tx specified in the BTC script
+     * </pre>
+     *
+     * <code>string staking_time = 7 [json_name = "stakingTime", (.amino.dont_omitempty) = true];</code>
+     * @return The stakingTime.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingTime() {
+      java.lang.Object ref = stakingTime_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingTime_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staking_time is the timelock of the staking tx specified in the BTC script
+     * </pre>
+     *
+     * <code>string staking_time = 7 [json_name = "stakingTime", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for stakingTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingTimeBytes() {
+      java.lang.Object ref = stakingTime_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingTime_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAKING_AMOUNT_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingAmount_ = "";
+    /**
+     * <pre>
+     * staking_amount is the total amount of BTC stake in this delegation
+     * quantified in satoshi
+     * </pre>
+     *
+     * <code>string staking_amount = 8 [json_name = "stakingAmount", (.amino.dont_omitempty) = true];</code>
+     * @return The stakingAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingAmount() {
+      java.lang.Object ref = stakingAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staking_amount is the total amount of BTC stake in this delegation
+     * quantified in satoshi
+     * </pre>
+     *
+     * <code>string staking_amount = 8 [json_name = "stakingAmount", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for stakingAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingAmountBytes() {
+      java.lang.Object ref = stakingAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UNBONDING_TIME_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object unbondingTime_ = "";
+    /**
+     * <pre>
+     * unbonding_time is the time is timelock on unbonding tx chosen by the staker
+     * </pre>
+     *
+     * <code>string unbonding_time = 9 [json_name = "unbondingTime", (.amino.dont_omitempty) = true];</code>
+     * @return The unbondingTime.
+     */
+    @java.lang.Override
+    public java.lang.String getUnbondingTime() {
+      java.lang.Object ref = unbondingTime_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        unbondingTime_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * unbonding_time is the time is timelock on unbonding tx chosen by the staker
+     * </pre>
+     *
+     * <code>string unbonding_time = 9 [json_name = "unbondingTime", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for unbondingTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUnbondingTimeBytes() {
+      java.lang.Object ref = unbondingTime_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        unbondingTime_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UNBONDING_TX_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object unbondingTx_ = "";
+    /**
+     * <pre>
+     * unbonding_tx is hex encoded bytes of the unsigned unbonding tx
+     * </pre>
+     *
+     * <code>string unbonding_tx = 10 [json_name = "unbondingTx", (.amino.dont_omitempty) = true];</code>
+     * @return The unbondingTx.
+     */
+    @java.lang.Override
+    public java.lang.String getUnbondingTx() {
+      java.lang.Object ref = unbondingTx_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        unbondingTx_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * unbonding_tx is hex encoded bytes of the unsigned unbonding tx
+     * </pre>
+     *
+     * <code>string unbonding_tx = 10 [json_name = "unbondingTx", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for unbondingTx.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUnbondingTxBytes() {
+      java.lang.Object ref = unbondingTx_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        unbondingTx_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEW_STATE_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object newState_ = "";
+    /**
+     * <pre>
+     * new_state of the BTC delegation
+     * </pre>
+     *
+     * <code>string new_state = 11 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+     * @return The newState.
+     */
+    @java.lang.Override
+    public java.lang.String getNewState() {
+      java.lang.Object ref = newState_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        newState_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * new_state of the BTC delegation
+     * </pre>
+     *
+     * <code>string new_state = 11 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for newState.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewStateBytes() {
+      java.lang.Object ref = newState_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newState_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingTxHash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, stakingTxHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingOutputPkScript_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, stakingOutputPkScript_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingOutputIndex_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, stakingOutputIndex_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(paramsVersion_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, paramsVersion_);
+      }
+      for (int i = 0; i < finalityProviderBtcPksHex_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, finalityProviderBtcPksHex_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakerBtcPkHex_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, stakerBtcPkHex_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingTime_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, stakingTime_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, stakingAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unbondingTime_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, unbondingTime_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unbondingTx_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, unbondingTx_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newState_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, newState_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingTxHash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, stakingTxHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingOutputPkScript_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, stakingOutputPkScript_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingOutputIndex_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, stakingOutputIndex_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(paramsVersion_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, paramsVersion_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < finalityProviderBtcPksHex_.size(); i++) {
+          dataSize += computeStringSizeNoTag(finalityProviderBtcPksHex_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getFinalityProviderBtcPksHexList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakerBtcPkHex_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, stakerBtcPkHex_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingTime_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, stakingTime_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, stakingAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unbondingTime_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, unbondingTime_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unbondingTx_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, unbondingTx_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newState_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, newState_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated)) {
+        return super.equals(obj);
+      }
+      com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated other = (com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated) obj;
+
+      if (!getStakingTxHash()
+          .equals(other.getStakingTxHash())) return false;
+      if (!getStakingOutputPkScript()
+          .equals(other.getStakingOutputPkScript())) return false;
+      if (!getStakingOutputIndex()
+          .equals(other.getStakingOutputIndex())) return false;
+      if (!getParamsVersion()
+          .equals(other.getParamsVersion())) return false;
+      if (!getFinalityProviderBtcPksHexList()
+          .equals(other.getFinalityProviderBtcPksHexList())) return false;
+      if (!getStakerBtcPkHex()
+          .equals(other.getStakerBtcPkHex())) return false;
+      if (!getStakingTime()
+          .equals(other.getStakingTime())) return false;
+      if (!getStakingAmount()
+          .equals(other.getStakingAmount())) return false;
+      if (!getUnbondingTime()
+          .equals(other.getUnbondingTime())) return false;
+      if (!getUnbondingTx()
+          .equals(other.getUnbondingTx())) return false;
+      if (!getNewState()
+          .equals(other.getNewState())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKING_TX_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingTxHash().hashCode();
+      hash = (37 * hash) + STAKING_OUTPUT_PK_SCRIPT_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingOutputPkScript().hashCode();
+      hash = (37 * hash) + STAKING_OUTPUT_INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingOutputIndex().hashCode();
+      hash = (37 * hash) + PARAMS_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getParamsVersion().hashCode();
+      if (getFinalityProviderBtcPksHexCount() > 0) {
+        hash = (37 * hash) + FINALITY_PROVIDER_BTC_PKS_HEX_FIELD_NUMBER;
+        hash = (53 * hash) + getFinalityProviderBtcPksHexList().hashCode();
+      }
+      hash = (37 * hash) + STAKER_BTC_PK_HEX_FIELD_NUMBER;
+      hash = (53 * hash) + getStakerBtcPkHex().hashCode();
+      hash = (37 * hash) + STAKING_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingTime().hashCode();
+      hash = (37 * hash) + STAKING_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingAmount().hashCode();
+      hash = (37 * hash) + UNBONDING_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getUnbondingTime().hashCode();
+      hash = (37 * hash) + UNBONDING_TX_FIELD_NUMBER;
+      hash = (53 * hash) + getUnbondingTx().hashCode();
+      hash = (37 * hash) + NEW_STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getNewState().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventBTCDelegationCreated is the event emitted when a BTC delegation is created
+     * on the Babylon chain
+     * </pre>
+     *
+     * Protobuf type {@code babylon.btcstaking.v1.EventBTCDelegationCreated}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.EventBTCDelegationCreated)
+        com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreatedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventBTCDelegationCreated_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventBTCDelegationCreated_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated.class, com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated.Builder.class);
+      }
+
+      // Construct using com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        stakingTxHash_ = "";
+        stakingOutputPkScript_ = "";
+        stakingOutputIndex_ = "";
+        paramsVersion_ = "";
+        finalityProviderBtcPksHex_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        stakerBtcPkHex_ = "";
+        stakingTime_ = "";
+        stakingAmount_ = "";
+        unbondingTime_ = "";
+        unbondingTx_ = "";
+        newState_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventBTCDelegationCreated_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated getDefaultInstanceForType() {
+        return com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated build() {
+        com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated buildPartial() {
+        com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated result = new com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.stakingTxHash_ = stakingTxHash_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.stakingOutputPkScript_ = stakingOutputPkScript_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.stakingOutputIndex_ = stakingOutputIndex_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.paramsVersion_ = paramsVersion_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          finalityProviderBtcPksHex_.makeImmutable();
+          result.finalityProviderBtcPksHex_ = finalityProviderBtcPksHex_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.stakerBtcPkHex_ = stakerBtcPkHex_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.stakingTime_ = stakingTime_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.stakingAmount_ = stakingAmount_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.unbondingTime_ = unbondingTime_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.unbondingTx_ = unbondingTx_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.newState_ = newState_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated) {
+          return mergeFrom((com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated other) {
+        if (other == com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated.getDefaultInstance()) return this;
+        if (!other.getStakingTxHash().isEmpty()) {
+          stakingTxHash_ = other.stakingTxHash_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getStakingOutputPkScript().isEmpty()) {
+          stakingOutputPkScript_ = other.stakingOutputPkScript_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getStakingOutputIndex().isEmpty()) {
+          stakingOutputIndex_ = other.stakingOutputIndex_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getParamsVersion().isEmpty()) {
+          paramsVersion_ = other.paramsVersion_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.finalityProviderBtcPksHex_.isEmpty()) {
+          if (finalityProviderBtcPksHex_.isEmpty()) {
+            finalityProviderBtcPksHex_ = other.finalityProviderBtcPksHex_;
+            bitField0_ |= 0x00000010;
+          } else {
+            ensureFinalityProviderBtcPksHexIsMutable();
+            finalityProviderBtcPksHex_.addAll(other.finalityProviderBtcPksHex_);
+          }
+          onChanged();
+        }
+        if (!other.getStakerBtcPkHex().isEmpty()) {
+          stakerBtcPkHex_ = other.stakerBtcPkHex_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getStakingTime().isEmpty()) {
+          stakingTime_ = other.stakingTime_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.getStakingAmount().isEmpty()) {
+          stakingAmount_ = other.stakingAmount_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        if (!other.getUnbondingTime().isEmpty()) {
+          unbondingTime_ = other.unbondingTime_;
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        if (!other.getUnbondingTx().isEmpty()) {
+          unbondingTx_ = other.unbondingTx_;
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
+        if (!other.getNewState().isEmpty()) {
+          newState_ = other.newState_;
+          bitField0_ |= 0x00000400;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                stakingTxHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                stakingOutputPkScript_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                stakingOutputIndex_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                paramsVersion_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureFinalityProviderBtcPksHexIsMutable();
+                finalityProviderBtcPksHex_.add(s);
+                break;
+              } // case 42
+              case 50: {
+                stakerBtcPkHex_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                stakingTime_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                stakingAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                unbondingTime_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 82: {
+                unbondingTx_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              case 90: {
+                newState_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object stakingTxHash_ = "";
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking tx.
+       * It uniquely identifies a BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @return The stakingTxHash.
+       */
+      public java.lang.String getStakingTxHash() {
+        java.lang.Object ref = stakingTxHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingTxHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking tx.
+       * It uniquely identifies a BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for stakingTxHash.
+       */
+      public com.google.protobuf.ByteString
+          getStakingTxHashBytes() {
+        java.lang.Object ref = stakingTxHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingTxHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking tx.
+       * It uniquely identifies a BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @param value The stakingTxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingTxHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingTxHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking tx.
+       * It uniquely identifies a BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingTxHash() {
+        stakingTxHash_ = getDefaultInstance().getStakingTxHash();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking tx.
+       * It uniquely identifies a BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for stakingTxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingTxHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingTxHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object stakingOutputPkScript_ = "";
+      /**
+       * <pre>
+       * staking_output_pk_script is the hex encoded PK script of the staking output
+       * </pre>
+       *
+       * <code>string staking_output_pk_script = 2 [json_name = "stakingOutputPkScript", (.amino.dont_omitempty) = true];</code>
+       * @return The stakingOutputPkScript.
+       */
+      public java.lang.String getStakingOutputPkScript() {
+        java.lang.Object ref = stakingOutputPkScript_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingOutputPkScript_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_output_pk_script is the hex encoded PK script of the staking output
+       * </pre>
+       *
+       * <code>string staking_output_pk_script = 2 [json_name = "stakingOutputPkScript", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for stakingOutputPkScript.
+       */
+      public com.google.protobuf.ByteString
+          getStakingOutputPkScriptBytes() {
+        java.lang.Object ref = stakingOutputPkScript_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingOutputPkScript_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_output_pk_script is the hex encoded PK script of the staking output
+       * </pre>
+       *
+       * <code>string staking_output_pk_script = 2 [json_name = "stakingOutputPkScript", (.amino.dont_omitempty) = true];</code>
+       * @param value The stakingOutputPkScript to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingOutputPkScript(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingOutputPkScript_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_output_pk_script is the hex encoded PK script of the staking output
+       * </pre>
+       *
+       * <code>string staking_output_pk_script = 2 [json_name = "stakingOutputPkScript", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingOutputPkScript() {
+        stakingOutputPkScript_ = getDefaultInstance().getStakingOutputPkScript();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_output_pk_script is the hex encoded PK script of the staking output
+       * </pre>
+       *
+       * <code>string staking_output_pk_script = 2 [json_name = "stakingOutputPkScript", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for stakingOutputPkScript to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingOutputPkScriptBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingOutputPkScript_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object stakingOutputIndex_ = "";
+      /**
+       * <pre>
+       * staking_output_index is the index of the staking output in the staking tx
+       * </pre>
+       *
+       * <code>string staking_output_index = 3 [json_name = "stakingOutputIndex", (.amino.dont_omitempty) = true];</code>
+       * @return The stakingOutputIndex.
+       */
+      public java.lang.String getStakingOutputIndex() {
+        java.lang.Object ref = stakingOutputIndex_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingOutputIndex_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_output_index is the index of the staking output in the staking tx
+       * </pre>
+       *
+       * <code>string staking_output_index = 3 [json_name = "stakingOutputIndex", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for stakingOutputIndex.
+       */
+      public com.google.protobuf.ByteString
+          getStakingOutputIndexBytes() {
+        java.lang.Object ref = stakingOutputIndex_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingOutputIndex_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_output_index is the index of the staking output in the staking tx
+       * </pre>
+       *
+       * <code>string staking_output_index = 3 [json_name = "stakingOutputIndex", (.amino.dont_omitempty) = true];</code>
+       * @param value The stakingOutputIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingOutputIndex(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingOutputIndex_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_output_index is the index of the staking output in the staking tx
+       * </pre>
+       *
+       * <code>string staking_output_index = 3 [json_name = "stakingOutputIndex", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingOutputIndex() {
+        stakingOutputIndex_ = getDefaultInstance().getStakingOutputIndex();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_output_index is the index of the staking output in the staking tx
+       * </pre>
+       *
+       * <code>string staking_output_index = 3 [json_name = "stakingOutputIndex", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for stakingOutputIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingOutputIndexBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingOutputIndex_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object paramsVersion_ = "";
+      /**
+       * <pre>
+       * version of the params used to validate the delegation
+       * </pre>
+       *
+       * <code>string params_version = 4 [json_name = "paramsVersion", (.amino.dont_omitempty) = true];</code>
+       * @return The paramsVersion.
+       */
+      public java.lang.String getParamsVersion() {
+        java.lang.Object ref = paramsVersion_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          paramsVersion_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * version of the params used to validate the delegation
+       * </pre>
+       *
+       * <code>string params_version = 4 [json_name = "paramsVersion", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for paramsVersion.
+       */
+      public com.google.protobuf.ByteString
+          getParamsVersionBytes() {
+        java.lang.Object ref = paramsVersion_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          paramsVersion_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * version of the params used to validate the delegation
+       * </pre>
+       *
+       * <code>string params_version = 4 [json_name = "paramsVersion", (.amino.dont_omitempty) = true];</code>
+       * @param value The paramsVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParamsVersion(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        paramsVersion_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * version of the params used to validate the delegation
+       * </pre>
+       *
+       * <code>string params_version = 4 [json_name = "paramsVersion", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearParamsVersion() {
+        paramsVersion_ = getDefaultInstance().getParamsVersion();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * version of the params used to validate the delegation
+       * </pre>
+       *
+       * <code>string params_version = 4 [json_name = "paramsVersion", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for paramsVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParamsVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        paramsVersion_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList finalityProviderBtcPksHex_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureFinalityProviderBtcPksHexIsMutable() {
+        if (!finalityProviderBtcPksHex_.isModifiable()) {
+          finalityProviderBtcPksHex_ = new com.google.protobuf.LazyStringArrayList(finalityProviderBtcPksHex_);
+        }
+        bitField0_ |= 0x00000010;
+      }
+      /**
+       * <pre>
+       * finality_provider_btc_pks_hex is the list of hex str of Bitcoin secp256k1 PK of
+       * the finality providers that this BTC delegation delegates to
+       * the PK follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>repeated string finality_provider_btc_pks_hex = 5 [json_name = "finalityProviderBtcPksHex", (.amino.dont_omitempty) = true];</code>
+       * @return A list containing the finalityProviderBtcPksHex.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getFinalityProviderBtcPksHexList() {
+        finalityProviderBtcPksHex_.makeImmutable();
+        return finalityProviderBtcPksHex_;
+      }
+      /**
+       * <pre>
+       * finality_provider_btc_pks_hex is the list of hex str of Bitcoin secp256k1 PK of
+       * the finality providers that this BTC delegation delegates to
+       * the PK follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>repeated string finality_provider_btc_pks_hex = 5 [json_name = "finalityProviderBtcPksHex", (.amino.dont_omitempty) = true];</code>
+       * @return The count of finalityProviderBtcPksHex.
+       */
+      public int getFinalityProviderBtcPksHexCount() {
+        return finalityProviderBtcPksHex_.size();
+      }
+      /**
+       * <pre>
+       * finality_provider_btc_pks_hex is the list of hex str of Bitcoin secp256k1 PK of
+       * the finality providers that this BTC delegation delegates to
+       * the PK follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>repeated string finality_provider_btc_pks_hex = 5 [json_name = "finalityProviderBtcPksHex", (.amino.dont_omitempty) = true];</code>
+       * @param index The index of the element to return.
+       * @return The finalityProviderBtcPksHex at the given index.
+       */
+      public java.lang.String getFinalityProviderBtcPksHex(int index) {
+        return finalityProviderBtcPksHex_.get(index);
+      }
+      /**
+       * <pre>
+       * finality_provider_btc_pks_hex is the list of hex str of Bitcoin secp256k1 PK of
+       * the finality providers that this BTC delegation delegates to
+       * the PK follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>repeated string finality_provider_btc_pks_hex = 5 [json_name = "finalityProviderBtcPksHex", (.amino.dont_omitempty) = true];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the finalityProviderBtcPksHex at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getFinalityProviderBtcPksHexBytes(int index) {
+        return finalityProviderBtcPksHex_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * finality_provider_btc_pks_hex is the list of hex str of Bitcoin secp256k1 PK of
+       * the finality providers that this BTC delegation delegates to
+       * the PK follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>repeated string finality_provider_btc_pks_hex = 5 [json_name = "finalityProviderBtcPksHex", (.amino.dont_omitempty) = true];</code>
+       * @param index The index to set the value at.
+       * @param value The finalityProviderBtcPksHex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFinalityProviderBtcPksHex(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureFinalityProviderBtcPksHexIsMutable();
+        finalityProviderBtcPksHex_.set(index, value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * finality_provider_btc_pks_hex is the list of hex str of Bitcoin secp256k1 PK of
+       * the finality providers that this BTC delegation delegates to
+       * the PK follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>repeated string finality_provider_btc_pks_hex = 5 [json_name = "finalityProviderBtcPksHex", (.amino.dont_omitempty) = true];</code>
+       * @param value The finalityProviderBtcPksHex to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFinalityProviderBtcPksHex(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureFinalityProviderBtcPksHexIsMutable();
+        finalityProviderBtcPksHex_.add(value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * finality_provider_btc_pks_hex is the list of hex str of Bitcoin secp256k1 PK of
+       * the finality providers that this BTC delegation delegates to
+       * the PK follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>repeated string finality_provider_btc_pks_hex = 5 [json_name = "finalityProviderBtcPksHex", (.amino.dont_omitempty) = true];</code>
+       * @param values The finalityProviderBtcPksHex to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllFinalityProviderBtcPksHex(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureFinalityProviderBtcPksHexIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, finalityProviderBtcPksHex_);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * finality_provider_btc_pks_hex is the list of hex str of Bitcoin secp256k1 PK of
+       * the finality providers that this BTC delegation delegates to
+       * the PK follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>repeated string finality_provider_btc_pks_hex = 5 [json_name = "finalityProviderBtcPksHex", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFinalityProviderBtcPksHex() {
+        finalityProviderBtcPksHex_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * finality_provider_btc_pks_hex is the list of hex str of Bitcoin secp256k1 PK of
+       * the finality providers that this BTC delegation delegates to
+       * the PK follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>repeated string finality_provider_btc_pks_hex = 5 [json_name = "finalityProviderBtcPksHex", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes of the finalityProviderBtcPksHex to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFinalityProviderBtcPksHexBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureFinalityProviderBtcPksHexIsMutable();
+        finalityProviderBtcPksHex_.add(value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object stakerBtcPkHex_ = "";
+      /**
+       * <pre>
+       * staker_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the staker that
+       * creates this BTC delegation the PK follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>string staker_btc_pk_hex = 6 [json_name = "stakerBtcPkHex", (.amino.dont_omitempty) = true];</code>
+       * @return The stakerBtcPkHex.
+       */
+      public java.lang.String getStakerBtcPkHex() {
+        java.lang.Object ref = stakerBtcPkHex_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakerBtcPkHex_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the staker that
+       * creates this BTC delegation the PK follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>string staker_btc_pk_hex = 6 [json_name = "stakerBtcPkHex", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for stakerBtcPkHex.
+       */
+      public com.google.protobuf.ByteString
+          getStakerBtcPkHexBytes() {
+        java.lang.Object ref = stakerBtcPkHex_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakerBtcPkHex_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the staker that
+       * creates this BTC delegation the PK follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>string staker_btc_pk_hex = 6 [json_name = "stakerBtcPkHex", (.amino.dont_omitempty) = true];</code>
+       * @param value The stakerBtcPkHex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakerBtcPkHex(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakerBtcPkHex_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the staker that
+       * creates this BTC delegation the PK follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>string staker_btc_pk_hex = 6 [json_name = "stakerBtcPkHex", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakerBtcPkHex() {
+        stakerBtcPkHex_ = getDefaultInstance().getStakerBtcPkHex();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the staker that
+       * creates this BTC delegation the PK follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>string staker_btc_pk_hex = 6 [json_name = "stakerBtcPkHex", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for stakerBtcPkHex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakerBtcPkHexBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakerBtcPkHex_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object stakingTime_ = "";
+      /**
+       * <pre>
+       * staking_time is the timelock of the staking tx specified in the BTC script
+       * </pre>
+       *
+       * <code>string staking_time = 7 [json_name = "stakingTime", (.amino.dont_omitempty) = true];</code>
+       * @return The stakingTime.
+       */
+      public java.lang.String getStakingTime() {
+        java.lang.Object ref = stakingTime_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingTime_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_time is the timelock of the staking tx specified in the BTC script
+       * </pre>
+       *
+       * <code>string staking_time = 7 [json_name = "stakingTime", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for stakingTime.
+       */
+      public com.google.protobuf.ByteString
+          getStakingTimeBytes() {
+        java.lang.Object ref = stakingTime_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingTime_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_time is the timelock of the staking tx specified in the BTC script
+       * </pre>
+       *
+       * <code>string staking_time = 7 [json_name = "stakingTime", (.amino.dont_omitempty) = true];</code>
+       * @param value The stakingTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingTime(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingTime_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_time is the timelock of the staking tx specified in the BTC script
+       * </pre>
+       *
+       * <code>string staking_time = 7 [json_name = "stakingTime", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingTime() {
+        stakingTime_ = getDefaultInstance().getStakingTime();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_time is the timelock of the staking tx specified in the BTC script
+       * </pre>
+       *
+       * <code>string staking_time = 7 [json_name = "stakingTime", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for stakingTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingTimeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingTime_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object stakingAmount_ = "";
+      /**
+       * <pre>
+       * staking_amount is the total amount of BTC stake in this delegation
+       * quantified in satoshi
+       * </pre>
+       *
+       * <code>string staking_amount = 8 [json_name = "stakingAmount", (.amino.dont_omitempty) = true];</code>
+       * @return The stakingAmount.
+       */
+      public java.lang.String getStakingAmount() {
+        java.lang.Object ref = stakingAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_amount is the total amount of BTC stake in this delegation
+       * quantified in satoshi
+       * </pre>
+       *
+       * <code>string staking_amount = 8 [json_name = "stakingAmount", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for stakingAmount.
+       */
+      public com.google.protobuf.ByteString
+          getStakingAmountBytes() {
+        java.lang.Object ref = stakingAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_amount is the total amount of BTC stake in this delegation
+       * quantified in satoshi
+       * </pre>
+       *
+       * <code>string staking_amount = 8 [json_name = "stakingAmount", (.amino.dont_omitempty) = true];</code>
+       * @param value The stakingAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingAmount_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_amount is the total amount of BTC stake in this delegation
+       * quantified in satoshi
+       * </pre>
+       *
+       * <code>string staking_amount = 8 [json_name = "stakingAmount", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingAmount() {
+        stakingAmount_ = getDefaultInstance().getStakingAmount();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_amount is the total amount of BTC stake in this delegation
+       * quantified in satoshi
+       * </pre>
+       *
+       * <code>string staking_amount = 8 [json_name = "stakingAmount", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for stakingAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingAmount_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object unbondingTime_ = "";
+      /**
+       * <pre>
+       * unbonding_time is the time is timelock on unbonding tx chosen by the staker
+       * </pre>
+       *
+       * <code>string unbonding_time = 9 [json_name = "unbondingTime", (.amino.dont_omitempty) = true];</code>
+       * @return The unbondingTime.
+       */
+      public java.lang.String getUnbondingTime() {
+        java.lang.Object ref = unbondingTime_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          unbondingTime_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * unbonding_time is the time is timelock on unbonding tx chosen by the staker
+       * </pre>
+       *
+       * <code>string unbonding_time = 9 [json_name = "unbondingTime", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for unbondingTime.
+       */
+      public com.google.protobuf.ByteString
+          getUnbondingTimeBytes() {
+        java.lang.Object ref = unbondingTime_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          unbondingTime_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * unbonding_time is the time is timelock on unbonding tx chosen by the staker
+       * </pre>
+       *
+       * <code>string unbonding_time = 9 [json_name = "unbondingTime", (.amino.dont_omitempty) = true];</code>
+       * @param value The unbondingTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnbondingTime(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        unbondingTime_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unbonding_time is the time is timelock on unbonding tx chosen by the staker
+       * </pre>
+       *
+       * <code>string unbonding_time = 9 [json_name = "unbondingTime", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnbondingTime() {
+        unbondingTime_ = getDefaultInstance().getUnbondingTime();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unbonding_time is the time is timelock on unbonding tx chosen by the staker
+       * </pre>
+       *
+       * <code>string unbonding_time = 9 [json_name = "unbondingTime", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for unbondingTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnbondingTimeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        unbondingTime_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object unbondingTx_ = "";
+      /**
+       * <pre>
+       * unbonding_tx is hex encoded bytes of the unsigned unbonding tx
+       * </pre>
+       *
+       * <code>string unbonding_tx = 10 [json_name = "unbondingTx", (.amino.dont_omitempty) = true];</code>
+       * @return The unbondingTx.
+       */
+      public java.lang.String getUnbondingTx() {
+        java.lang.Object ref = unbondingTx_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          unbondingTx_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * unbonding_tx is hex encoded bytes of the unsigned unbonding tx
+       * </pre>
+       *
+       * <code>string unbonding_tx = 10 [json_name = "unbondingTx", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for unbondingTx.
+       */
+      public com.google.protobuf.ByteString
+          getUnbondingTxBytes() {
+        java.lang.Object ref = unbondingTx_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          unbondingTx_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * unbonding_tx is hex encoded bytes of the unsigned unbonding tx
+       * </pre>
+       *
+       * <code>string unbonding_tx = 10 [json_name = "unbondingTx", (.amino.dont_omitempty) = true];</code>
+       * @param value The unbondingTx to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnbondingTx(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        unbondingTx_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unbonding_tx is hex encoded bytes of the unsigned unbonding tx
+       * </pre>
+       *
+       * <code>string unbonding_tx = 10 [json_name = "unbondingTx", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnbondingTx() {
+        unbondingTx_ = getDefaultInstance().getUnbondingTx();
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unbonding_tx is hex encoded bytes of the unsigned unbonding tx
+       * </pre>
+       *
+       * <code>string unbonding_tx = 10 [json_name = "unbondingTx", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for unbondingTx to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnbondingTxBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        unbondingTx_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object newState_ = "";
+      /**
+       * <pre>
+       * new_state of the BTC delegation
+       * </pre>
+       *
+       * <code>string new_state = 11 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @return The newState.
+       */
+      public java.lang.String getNewState() {
+        java.lang.Object ref = newState_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          newState_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * new_state of the BTC delegation
+       * </pre>
+       *
+       * <code>string new_state = 11 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for newState.
+       */
+      public com.google.protobuf.ByteString
+          getNewStateBytes() {
+        java.lang.Object ref = newState_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          newState_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * new_state of the BTC delegation
+       * </pre>
+       *
+       * <code>string new_state = 11 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @param value The newState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewState(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        newState_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_state of the BTC delegation
+       * </pre>
+       *
+       * <code>string new_state = 11 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewState() {
+        newState_ = getDefaultInstance().getNewState();
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_state of the BTC delegation
+       * </pre>
+       *
+       * <code>string new_state = 11 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for newState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewStateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        newState_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.EventBTCDelegationCreated)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.EventBTCDelegationCreated)
+    private static final com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated();
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventBTCDelegationCreated>
+        PARSER = new com.google.protobuf.AbstractParser<EventBTCDelegationCreated>() {
+      @java.lang.Override
+      public EventBTCDelegationCreated parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventBTCDelegationCreated> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventBTCDelegationCreated> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationCreated getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventCovenantSignatureReceivedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.EventCovenantSignatureReceived)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking identifing the BTC delegation
+     * that this covenant signature is for
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The stakingTxHash.
+     */
+    java.lang.String getStakingTxHash();
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking identifing the BTC delegation
+     * that this covenant signature is for
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for stakingTxHash.
+     */
+    com.google.protobuf.ByteString
+        getStakingTxHashBytes();
+
+    /**
+     * <pre>
+     * covenant_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the
+     * covnenat committee that send the signature
+     * </pre>
+     *
+     * <code>string covenant_btc_pk_hex = 2 [json_name = "covenantBtcPkHex", (.amino.dont_omitempty) = true];</code>
+     * @return The covenantBtcPkHex.
+     */
+    java.lang.String getCovenantBtcPkHex();
+    /**
+     * <pre>
+     * covenant_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the
+     * covnenat committee that send the signature
+     * </pre>
+     *
+     * <code>string covenant_btc_pk_hex = 2 [json_name = "covenantBtcPkHex", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for covenantBtcPkHex.
+     */
+    com.google.protobuf.ByteString
+        getCovenantBtcPkHexBytes();
+
+    /**
+     * <pre>
+     * covenant_unbonding_signature_hex is the hex str of the BIP340 Schnorr
+     * signature of the covenant committee on the unbonding tx
+     * </pre>
+     *
+     * <code>string covenant_unbonding_signature_hex = 3 [json_name = "covenantUnbondingSignatureHex", (.amino.dont_omitempty) = true];</code>
+     * @return The covenantUnbondingSignatureHex.
+     */
+    java.lang.String getCovenantUnbondingSignatureHex();
+    /**
+     * <pre>
+     * covenant_unbonding_signature_hex is the hex str of the BIP340 Schnorr
+     * signature of the covenant committee on the unbonding tx
+     * </pre>
+     *
+     * <code>string covenant_unbonding_signature_hex = 3 [json_name = "covenantUnbondingSignatureHex", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for covenantUnbondingSignatureHex.
+     */
+    com.google.protobuf.ByteString
+        getCovenantUnbondingSignatureHexBytes();
+  }
+  /**
+   * <pre>
+   * EventCovenantSignatureReceived is the event emitted when a covenant committee
+   * sends valid covenant signatures for a BTC delegation
+   * </pre>
+   *
+   * Protobuf type {@code babylon.btcstaking.v1.EventCovenantSignatureReceived}
+   */
+  public static final class EventCovenantSignatureReceived extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.EventCovenantSignatureReceived)
+      EventCovenantSignatureReceivedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventCovenantSignatureReceived.newBuilder() to construct.
+    private EventCovenantSignatureReceived(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventCovenantSignatureReceived() {
+      stakingTxHash_ = "";
+      covenantBtcPkHex_ = "";
+      covenantUnbondingSignatureHex_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventCovenantSignatureReceived();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventCovenantSignatureReceived_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventCovenantSignatureReceived_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived.class, com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived.Builder.class);
+    }
+
+    public static final int STAKING_TX_HASH_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingTxHash_ = "";
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking identifing the BTC delegation
+     * that this covenant signature is for
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The stakingTxHash.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingTxHash() {
+      java.lang.Object ref = stakingTxHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingTxHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking identifing the BTC delegation
+     * that this covenant signature is for
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for stakingTxHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingTxHashBytes() {
+      java.lang.Object ref = stakingTxHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingTxHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COVENANT_BTC_PK_HEX_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object covenantBtcPkHex_ = "";
+    /**
+     * <pre>
+     * covenant_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the
+     * covnenat committee that send the signature
+     * </pre>
+     *
+     * <code>string covenant_btc_pk_hex = 2 [json_name = "covenantBtcPkHex", (.amino.dont_omitempty) = true];</code>
+     * @return The covenantBtcPkHex.
+     */
+    @java.lang.Override
+    public java.lang.String getCovenantBtcPkHex() {
+      java.lang.Object ref = covenantBtcPkHex_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        covenantBtcPkHex_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * covenant_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the
+     * covnenat committee that send the signature
+     * </pre>
+     *
+     * <code>string covenant_btc_pk_hex = 2 [json_name = "covenantBtcPkHex", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for covenantBtcPkHex.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCovenantBtcPkHexBytes() {
+      java.lang.Object ref = covenantBtcPkHex_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        covenantBtcPkHex_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COVENANT_UNBONDING_SIGNATURE_HEX_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object covenantUnbondingSignatureHex_ = "";
+    /**
+     * <pre>
+     * covenant_unbonding_signature_hex is the hex str of the BIP340 Schnorr
+     * signature of the covenant committee on the unbonding tx
+     * </pre>
+     *
+     * <code>string covenant_unbonding_signature_hex = 3 [json_name = "covenantUnbondingSignatureHex", (.amino.dont_omitempty) = true];</code>
+     * @return The covenantUnbondingSignatureHex.
+     */
+    @java.lang.Override
+    public java.lang.String getCovenantUnbondingSignatureHex() {
+      java.lang.Object ref = covenantUnbondingSignatureHex_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        covenantUnbondingSignatureHex_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * covenant_unbonding_signature_hex is the hex str of the BIP340 Schnorr
+     * signature of the covenant committee on the unbonding tx
+     * </pre>
+     *
+     * <code>string covenant_unbonding_signature_hex = 3 [json_name = "covenantUnbondingSignatureHex", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for covenantUnbondingSignatureHex.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCovenantUnbondingSignatureHexBytes() {
+      java.lang.Object ref = covenantUnbondingSignatureHex_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        covenantUnbondingSignatureHex_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingTxHash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, stakingTxHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(covenantBtcPkHex_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, covenantBtcPkHex_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(covenantUnbondingSignatureHex_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, covenantUnbondingSignatureHex_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingTxHash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, stakingTxHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(covenantBtcPkHex_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, covenantBtcPkHex_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(covenantUnbondingSignatureHex_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, covenantUnbondingSignatureHex_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived)) {
+        return super.equals(obj);
+      }
+      com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived other = (com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived) obj;
+
+      if (!getStakingTxHash()
+          .equals(other.getStakingTxHash())) return false;
+      if (!getCovenantBtcPkHex()
+          .equals(other.getCovenantBtcPkHex())) return false;
+      if (!getCovenantUnbondingSignatureHex()
+          .equals(other.getCovenantUnbondingSignatureHex())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKING_TX_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingTxHash().hashCode();
+      hash = (37 * hash) + COVENANT_BTC_PK_HEX_FIELD_NUMBER;
+      hash = (53 * hash) + getCovenantBtcPkHex().hashCode();
+      hash = (37 * hash) + COVENANT_UNBONDING_SIGNATURE_HEX_FIELD_NUMBER;
+      hash = (53 * hash) + getCovenantUnbondingSignatureHex().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventCovenantSignatureReceived is the event emitted when a covenant committee
+     * sends valid covenant signatures for a BTC delegation
+     * </pre>
+     *
+     * Protobuf type {@code babylon.btcstaking.v1.EventCovenantSignatureReceived}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.EventCovenantSignatureReceived)
+        com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceivedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventCovenantSignatureReceived_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventCovenantSignatureReceived_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived.class, com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived.Builder.class);
+      }
+
+      // Construct using com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        stakingTxHash_ = "";
+        covenantBtcPkHex_ = "";
+        covenantUnbondingSignatureHex_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventCovenantSignatureReceived_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived getDefaultInstanceForType() {
+        return com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived build() {
+        com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived buildPartial() {
+        com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived result = new com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.stakingTxHash_ = stakingTxHash_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.covenantBtcPkHex_ = covenantBtcPkHex_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.covenantUnbondingSignatureHex_ = covenantUnbondingSignatureHex_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived) {
+          return mergeFrom((com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived other) {
+        if (other == com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived.getDefaultInstance()) return this;
+        if (!other.getStakingTxHash().isEmpty()) {
+          stakingTxHash_ = other.stakingTxHash_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getCovenantBtcPkHex().isEmpty()) {
+          covenantBtcPkHex_ = other.covenantBtcPkHex_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getCovenantUnbondingSignatureHex().isEmpty()) {
+          covenantUnbondingSignatureHex_ = other.covenantUnbondingSignatureHex_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                stakingTxHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                covenantBtcPkHex_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                covenantUnbondingSignatureHex_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object stakingTxHash_ = "";
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking identifing the BTC delegation
+       * that this covenant signature is for
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @return The stakingTxHash.
+       */
+      public java.lang.String getStakingTxHash() {
+        java.lang.Object ref = stakingTxHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingTxHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking identifing the BTC delegation
+       * that this covenant signature is for
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for stakingTxHash.
+       */
+      public com.google.protobuf.ByteString
+          getStakingTxHashBytes() {
+        java.lang.Object ref = stakingTxHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingTxHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking identifing the BTC delegation
+       * that this covenant signature is for
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @param value The stakingTxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingTxHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingTxHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking identifing the BTC delegation
+       * that this covenant signature is for
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingTxHash() {
+        stakingTxHash_ = getDefaultInstance().getStakingTxHash();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking identifing the BTC delegation
+       * that this covenant signature is for
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for stakingTxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingTxHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingTxHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object covenantBtcPkHex_ = "";
+      /**
+       * <pre>
+       * covenant_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the
+       * covnenat committee that send the signature
+       * </pre>
+       *
+       * <code>string covenant_btc_pk_hex = 2 [json_name = "covenantBtcPkHex", (.amino.dont_omitempty) = true];</code>
+       * @return The covenantBtcPkHex.
+       */
+      public java.lang.String getCovenantBtcPkHex() {
+        java.lang.Object ref = covenantBtcPkHex_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          covenantBtcPkHex_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * covenant_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the
+       * covnenat committee that send the signature
+       * </pre>
+       *
+       * <code>string covenant_btc_pk_hex = 2 [json_name = "covenantBtcPkHex", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for covenantBtcPkHex.
+       */
+      public com.google.protobuf.ByteString
+          getCovenantBtcPkHexBytes() {
+        java.lang.Object ref = covenantBtcPkHex_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          covenantBtcPkHex_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * covenant_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the
+       * covnenat committee that send the signature
+       * </pre>
+       *
+       * <code>string covenant_btc_pk_hex = 2 [json_name = "covenantBtcPkHex", (.amino.dont_omitempty) = true];</code>
+       * @param value The covenantBtcPkHex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCovenantBtcPkHex(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        covenantBtcPkHex_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * covenant_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the
+       * covnenat committee that send the signature
+       * </pre>
+       *
+       * <code>string covenant_btc_pk_hex = 2 [json_name = "covenantBtcPkHex", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCovenantBtcPkHex() {
+        covenantBtcPkHex_ = getDefaultInstance().getCovenantBtcPkHex();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * covenant_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the
+       * covnenat committee that send the signature
+       * </pre>
+       *
+       * <code>string covenant_btc_pk_hex = 2 [json_name = "covenantBtcPkHex", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for covenantBtcPkHex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCovenantBtcPkHexBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        covenantBtcPkHex_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object covenantUnbondingSignatureHex_ = "";
+      /**
+       * <pre>
+       * covenant_unbonding_signature_hex is the hex str of the BIP340 Schnorr
+       * signature of the covenant committee on the unbonding tx
+       * </pre>
+       *
+       * <code>string covenant_unbonding_signature_hex = 3 [json_name = "covenantUnbondingSignatureHex", (.amino.dont_omitempty) = true];</code>
+       * @return The covenantUnbondingSignatureHex.
+       */
+      public java.lang.String getCovenantUnbondingSignatureHex() {
+        java.lang.Object ref = covenantUnbondingSignatureHex_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          covenantUnbondingSignatureHex_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * covenant_unbonding_signature_hex is the hex str of the BIP340 Schnorr
+       * signature of the covenant committee on the unbonding tx
+       * </pre>
+       *
+       * <code>string covenant_unbonding_signature_hex = 3 [json_name = "covenantUnbondingSignatureHex", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for covenantUnbondingSignatureHex.
+       */
+      public com.google.protobuf.ByteString
+          getCovenantUnbondingSignatureHexBytes() {
+        java.lang.Object ref = covenantUnbondingSignatureHex_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          covenantUnbondingSignatureHex_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * covenant_unbonding_signature_hex is the hex str of the BIP340 Schnorr
+       * signature of the covenant committee on the unbonding tx
+       * </pre>
+       *
+       * <code>string covenant_unbonding_signature_hex = 3 [json_name = "covenantUnbondingSignatureHex", (.amino.dont_omitempty) = true];</code>
+       * @param value The covenantUnbondingSignatureHex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCovenantUnbondingSignatureHex(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        covenantUnbondingSignatureHex_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * covenant_unbonding_signature_hex is the hex str of the BIP340 Schnorr
+       * signature of the covenant committee on the unbonding tx
+       * </pre>
+       *
+       * <code>string covenant_unbonding_signature_hex = 3 [json_name = "covenantUnbondingSignatureHex", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCovenantUnbondingSignatureHex() {
+        covenantUnbondingSignatureHex_ = getDefaultInstance().getCovenantUnbondingSignatureHex();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * covenant_unbonding_signature_hex is the hex str of the BIP340 Schnorr
+       * signature of the covenant committee on the unbonding tx
+       * </pre>
+       *
+       * <code>string covenant_unbonding_signature_hex = 3 [json_name = "covenantUnbondingSignatureHex", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for covenantUnbondingSignatureHex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCovenantUnbondingSignatureHexBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        covenantUnbondingSignatureHex_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.EventCovenantSignatureReceived)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.EventCovenantSignatureReceived)
+    private static final com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived();
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventCovenantSignatureReceived>
+        PARSER = new com.google.protobuf.AbstractParser<EventCovenantSignatureReceived>() {
+      @java.lang.Override
+      public EventCovenantSignatureReceived parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventCovenantSignatureReceived> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventCovenantSignatureReceived> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.EventsProto.EventCovenantSignatureReceived getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventCovenantQuorumReachedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.EventCovenantQuorumReached)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking identifing the BTC delegation
+     * that this covenant signature is for
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The stakingTxHash.
+     */
+    java.lang.String getStakingTxHash();
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking identifing the BTC delegation
+     * that this covenant signature is for
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for stakingTxHash.
+     */
+    com.google.protobuf.ByteString
+        getStakingTxHashBytes();
+
+    /**
+     * <pre>
+     * new_state of the BTC delegation
+     * </pre>
+     *
+     * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+     * @return The newState.
+     */
+    java.lang.String getNewState();
+    /**
+     * <pre>
+     * new_state of the BTC delegation
+     * </pre>
+     *
+     * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for newState.
+     */
+    com.google.protobuf.ByteString
+        getNewStateBytes();
+  }
+  /**
+   * <pre>
+   * EventCovenantQuorumReached is the event emitted quorum of covenant committee
+   * is reached for a BTC delegation
+   * </pre>
+   *
+   * Protobuf type {@code babylon.btcstaking.v1.EventCovenantQuorumReached}
+   */
+  public static final class EventCovenantQuorumReached extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.EventCovenantQuorumReached)
+      EventCovenantQuorumReachedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventCovenantQuorumReached.newBuilder() to construct.
+    private EventCovenantQuorumReached(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventCovenantQuorumReached() {
+      stakingTxHash_ = "";
+      newState_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventCovenantQuorumReached();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventCovenantQuorumReached_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventCovenantQuorumReached_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached.class, com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached.Builder.class);
+    }
+
+    public static final int STAKING_TX_HASH_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingTxHash_ = "";
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking identifing the BTC delegation
+     * that this covenant signature is for
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The stakingTxHash.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingTxHash() {
+      java.lang.Object ref = stakingTxHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingTxHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking identifing the BTC delegation
+     * that this covenant signature is for
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for stakingTxHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingTxHashBytes() {
+      java.lang.Object ref = stakingTxHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingTxHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEW_STATE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object newState_ = "";
+    /**
+     * <pre>
+     * new_state of the BTC delegation
+     * </pre>
+     *
+     * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+     * @return The newState.
+     */
+    @java.lang.Override
+    public java.lang.String getNewState() {
+      java.lang.Object ref = newState_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        newState_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * new_state of the BTC delegation
+     * </pre>
+     *
+     * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for newState.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewStateBytes() {
+      java.lang.Object ref = newState_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newState_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingTxHash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, stakingTxHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newState_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, newState_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingTxHash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, stakingTxHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newState_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, newState_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached)) {
+        return super.equals(obj);
+      }
+      com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached other = (com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached) obj;
+
+      if (!getStakingTxHash()
+          .equals(other.getStakingTxHash())) return false;
+      if (!getNewState()
+          .equals(other.getNewState())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKING_TX_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingTxHash().hashCode();
+      hash = (37 * hash) + NEW_STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getNewState().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventCovenantQuorumReached is the event emitted quorum of covenant committee
+     * is reached for a BTC delegation
+     * </pre>
+     *
+     * Protobuf type {@code babylon.btcstaking.v1.EventCovenantQuorumReached}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.EventCovenantQuorumReached)
+        com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReachedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventCovenantQuorumReached_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventCovenantQuorumReached_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached.class, com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached.Builder.class);
+      }
+
+      // Construct using com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        stakingTxHash_ = "";
+        newState_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventCovenantQuorumReached_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached getDefaultInstanceForType() {
+        return com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached build() {
+        com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached buildPartial() {
+        com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached result = new com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.stakingTxHash_ = stakingTxHash_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.newState_ = newState_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached) {
+          return mergeFrom((com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached other) {
+        if (other == com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached.getDefaultInstance()) return this;
+        if (!other.getStakingTxHash().isEmpty()) {
+          stakingTxHash_ = other.stakingTxHash_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getNewState().isEmpty()) {
+          newState_ = other.newState_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                stakingTxHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                newState_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object stakingTxHash_ = "";
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking identifing the BTC delegation
+       * that this covenant signature is for
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @return The stakingTxHash.
+       */
+      public java.lang.String getStakingTxHash() {
+        java.lang.Object ref = stakingTxHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingTxHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking identifing the BTC delegation
+       * that this covenant signature is for
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for stakingTxHash.
+       */
+      public com.google.protobuf.ByteString
+          getStakingTxHashBytes() {
+        java.lang.Object ref = stakingTxHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingTxHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking identifing the BTC delegation
+       * that this covenant signature is for
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @param value The stakingTxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingTxHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingTxHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking identifing the BTC delegation
+       * that this covenant signature is for
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingTxHash() {
+        stakingTxHash_ = getDefaultInstance().getStakingTxHash();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking identifing the BTC delegation
+       * that this covenant signature is for
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for stakingTxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingTxHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingTxHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object newState_ = "";
+      /**
+       * <pre>
+       * new_state of the BTC delegation
+       * </pre>
+       *
+       * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @return The newState.
+       */
+      public java.lang.String getNewState() {
+        java.lang.Object ref = newState_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          newState_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * new_state of the BTC delegation
+       * </pre>
+       *
+       * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for newState.
+       */
+      public com.google.protobuf.ByteString
+          getNewStateBytes() {
+        java.lang.Object ref = newState_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          newState_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * new_state of the BTC delegation
+       * </pre>
+       *
+       * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @param value The newState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewState(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        newState_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_state of the BTC delegation
+       * </pre>
+       *
+       * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewState() {
+        newState_ = getDefaultInstance().getNewState();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_state of the BTC delegation
+       * </pre>
+       *
+       * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for newState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewStateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        newState_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.EventCovenantQuorumReached)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.EventCovenantQuorumReached)
+    private static final com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached();
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventCovenantQuorumReached>
+        PARSER = new com.google.protobuf.AbstractParser<EventCovenantQuorumReached>() {
+      @java.lang.Override
+      public EventCovenantQuorumReached parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventCovenantQuorumReached> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventCovenantQuorumReached> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.EventsProto.EventCovenantQuorumReached getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventBTCDelegationInclusionProofReceivedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.EventBTCDelegationInclusionProofReceived)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking tx.
+     * It uniquely identifies a BTC delegation
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The stakingTxHash.
+     */
+    java.lang.String getStakingTxHash();
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking tx.
+     * It uniquely identifies a BTC delegation
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for stakingTxHash.
+     */
+    com.google.protobuf.ByteString
+        getStakingTxHashBytes();
+
+    /**
+     * <pre>
+     * start_height is the start BTC height of the BTC delegation
+     * it is the start BTC height of the timelock
+     * </pre>
+     *
+     * <code>string start_height = 2 [json_name = "startHeight", (.amino.dont_omitempty) = true];</code>
+     * @return The startHeight.
+     */
+    java.lang.String getStartHeight();
+    /**
+     * <pre>
+     * start_height is the start BTC height of the BTC delegation
+     * it is the start BTC height of the timelock
+     * </pre>
+     *
+     * <code>string start_height = 2 [json_name = "startHeight", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for startHeight.
+     */
+    com.google.protobuf.ByteString
+        getStartHeightBytes();
+
+    /**
+     * <pre>
+     * end_height is the end height of the BTC delegation
+     * it is calculated by end_height = start_height + staking_time
+     * </pre>
+     *
+     * <code>string end_height = 3 [json_name = "endHeight", (.amino.dont_omitempty) = true];</code>
+     * @return The endHeight.
+     */
+    java.lang.String getEndHeight();
+    /**
+     * <pre>
+     * end_height is the end height of the BTC delegation
+     * it is calculated by end_height = start_height + staking_time
+     * </pre>
+     *
+     * <code>string end_height = 3 [json_name = "endHeight", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for endHeight.
+     */
+    com.google.protobuf.ByteString
+        getEndHeightBytes();
+
+    /**
+     * <pre>
+     * new_state of the BTC delegation
+     * </pre>
+     *
+     * <code>string new_state = 4 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+     * @return The newState.
+     */
+    java.lang.String getNewState();
+    /**
+     * <pre>
+     * new_state of the BTC delegation
+     * </pre>
+     *
+     * <code>string new_state = 4 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for newState.
+     */
+    com.google.protobuf.ByteString
+        getNewStateBytes();
+  }
+  /**
+   * <pre>
+   * EventBTCDelegationInclusionProofReceived is the event emitted when a BTC delegation
+   * inclusion proof is received
+   * </pre>
+   *
+   * Protobuf type {@code babylon.btcstaking.v1.EventBTCDelegationInclusionProofReceived}
+   */
+  public static final class EventBTCDelegationInclusionProofReceived extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.EventBTCDelegationInclusionProofReceived)
+      EventBTCDelegationInclusionProofReceivedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventBTCDelegationInclusionProofReceived.newBuilder() to construct.
+    private EventBTCDelegationInclusionProofReceived(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventBTCDelegationInclusionProofReceived() {
+      stakingTxHash_ = "";
+      startHeight_ = "";
+      endHeight_ = "";
+      newState_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventBTCDelegationInclusionProofReceived();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventBTCDelegationInclusionProofReceived_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventBTCDelegationInclusionProofReceived_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived.class, com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived.Builder.class);
+    }
+
+    public static final int STAKING_TX_HASH_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingTxHash_ = "";
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking tx.
+     * It uniquely identifies a BTC delegation
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The stakingTxHash.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingTxHash() {
+      java.lang.Object ref = stakingTxHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingTxHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking tx.
+     * It uniquely identifies a BTC delegation
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for stakingTxHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingTxHashBytes() {
+      java.lang.Object ref = stakingTxHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingTxHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int START_HEIGHT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object startHeight_ = "";
+    /**
+     * <pre>
+     * start_height is the start BTC height of the BTC delegation
+     * it is the start BTC height of the timelock
+     * </pre>
+     *
+     * <code>string start_height = 2 [json_name = "startHeight", (.amino.dont_omitempty) = true];</code>
+     * @return The startHeight.
+     */
+    @java.lang.Override
+    public java.lang.String getStartHeight() {
+      java.lang.Object ref = startHeight_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        startHeight_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * start_height is the start BTC height of the BTC delegation
+     * it is the start BTC height of the timelock
+     * </pre>
+     *
+     * <code>string start_height = 2 [json_name = "startHeight", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for startHeight.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStartHeightBytes() {
+      java.lang.Object ref = startHeight_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        startHeight_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int END_HEIGHT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object endHeight_ = "";
+    /**
+     * <pre>
+     * end_height is the end height of the BTC delegation
+     * it is calculated by end_height = start_height + staking_time
+     * </pre>
+     *
+     * <code>string end_height = 3 [json_name = "endHeight", (.amino.dont_omitempty) = true];</code>
+     * @return The endHeight.
+     */
+    @java.lang.Override
+    public java.lang.String getEndHeight() {
+      java.lang.Object ref = endHeight_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        endHeight_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * end_height is the end height of the BTC delegation
+     * it is calculated by end_height = start_height + staking_time
+     * </pre>
+     *
+     * <code>string end_height = 3 [json_name = "endHeight", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for endHeight.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEndHeightBytes() {
+      java.lang.Object ref = endHeight_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        endHeight_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEW_STATE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object newState_ = "";
+    /**
+     * <pre>
+     * new_state of the BTC delegation
+     * </pre>
+     *
+     * <code>string new_state = 4 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+     * @return The newState.
+     */
+    @java.lang.Override
+    public java.lang.String getNewState() {
+      java.lang.Object ref = newState_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        newState_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * new_state of the BTC delegation
+     * </pre>
+     *
+     * <code>string new_state = 4 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for newState.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewStateBytes() {
+      java.lang.Object ref = newState_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newState_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingTxHash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, stakingTxHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startHeight_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, startHeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endHeight_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, endHeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newState_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, newState_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingTxHash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, stakingTxHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startHeight_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, startHeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endHeight_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, endHeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newState_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, newState_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived)) {
+        return super.equals(obj);
+      }
+      com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived other = (com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived) obj;
+
+      if (!getStakingTxHash()
+          .equals(other.getStakingTxHash())) return false;
+      if (!getStartHeight()
+          .equals(other.getStartHeight())) return false;
+      if (!getEndHeight()
+          .equals(other.getEndHeight())) return false;
+      if (!getNewState()
+          .equals(other.getNewState())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKING_TX_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingTxHash().hashCode();
+      hash = (37 * hash) + START_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getStartHeight().hashCode();
+      hash = (37 * hash) + END_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getEndHeight().hashCode();
+      hash = (37 * hash) + NEW_STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getNewState().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventBTCDelegationInclusionProofReceived is the event emitted when a BTC delegation
+     * inclusion proof is received
+     * </pre>
+     *
+     * Protobuf type {@code babylon.btcstaking.v1.EventBTCDelegationInclusionProofReceived}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.EventBTCDelegationInclusionProofReceived)
+        com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceivedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventBTCDelegationInclusionProofReceived_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventBTCDelegationInclusionProofReceived_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived.class, com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived.Builder.class);
+      }
+
+      // Construct using com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        stakingTxHash_ = "";
+        startHeight_ = "";
+        endHeight_ = "";
+        newState_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventBTCDelegationInclusionProofReceived_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived getDefaultInstanceForType() {
+        return com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived build() {
+        com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived buildPartial() {
+        com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived result = new com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.stakingTxHash_ = stakingTxHash_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.startHeight_ = startHeight_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.endHeight_ = endHeight_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.newState_ = newState_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived) {
+          return mergeFrom((com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived other) {
+        if (other == com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived.getDefaultInstance()) return this;
+        if (!other.getStakingTxHash().isEmpty()) {
+          stakingTxHash_ = other.stakingTxHash_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getStartHeight().isEmpty()) {
+          startHeight_ = other.startHeight_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getEndHeight().isEmpty()) {
+          endHeight_ = other.endHeight_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getNewState().isEmpty()) {
+          newState_ = other.newState_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                stakingTxHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                startHeight_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                endHeight_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                newState_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object stakingTxHash_ = "";
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking tx.
+       * It uniquely identifies a BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @return The stakingTxHash.
+       */
+      public java.lang.String getStakingTxHash() {
+        java.lang.Object ref = stakingTxHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingTxHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking tx.
+       * It uniquely identifies a BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for stakingTxHash.
+       */
+      public com.google.protobuf.ByteString
+          getStakingTxHashBytes() {
+        java.lang.Object ref = stakingTxHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingTxHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking tx.
+       * It uniquely identifies a BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @param value The stakingTxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingTxHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingTxHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking tx.
+       * It uniquely identifies a BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingTxHash() {
+        stakingTxHash_ = getDefaultInstance().getStakingTxHash();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking tx.
+       * It uniquely identifies a BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for stakingTxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingTxHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingTxHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object startHeight_ = "";
+      /**
+       * <pre>
+       * start_height is the start BTC height of the BTC delegation
+       * it is the start BTC height of the timelock
+       * </pre>
+       *
+       * <code>string start_height = 2 [json_name = "startHeight", (.amino.dont_omitempty) = true];</code>
+       * @return The startHeight.
+       */
+      public java.lang.String getStartHeight() {
+        java.lang.Object ref = startHeight_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          startHeight_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * start_height is the start BTC height of the BTC delegation
+       * it is the start BTC height of the timelock
+       * </pre>
+       *
+       * <code>string start_height = 2 [json_name = "startHeight", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for startHeight.
+       */
+      public com.google.protobuf.ByteString
+          getStartHeightBytes() {
+        java.lang.Object ref = startHeight_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          startHeight_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * start_height is the start BTC height of the BTC delegation
+       * it is the start BTC height of the timelock
+       * </pre>
+       *
+       * <code>string start_height = 2 [json_name = "startHeight", (.amino.dont_omitempty) = true];</code>
+       * @param value The startHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartHeight(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        startHeight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_height is the start BTC height of the BTC delegation
+       * it is the start BTC height of the timelock
+       * </pre>
+       *
+       * <code>string start_height = 2 [json_name = "startHeight", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartHeight() {
+        startHeight_ = getDefaultInstance().getStartHeight();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_height is the start BTC height of the BTC delegation
+       * it is the start BTC height of the timelock
+       * </pre>
+       *
+       * <code>string start_height = 2 [json_name = "startHeight", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for startHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartHeightBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        startHeight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object endHeight_ = "";
+      /**
+       * <pre>
+       * end_height is the end height of the BTC delegation
+       * it is calculated by end_height = start_height + staking_time
+       * </pre>
+       *
+       * <code>string end_height = 3 [json_name = "endHeight", (.amino.dont_omitempty) = true];</code>
+       * @return The endHeight.
+       */
+      public java.lang.String getEndHeight() {
+        java.lang.Object ref = endHeight_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          endHeight_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * end_height is the end height of the BTC delegation
+       * it is calculated by end_height = start_height + staking_time
+       * </pre>
+       *
+       * <code>string end_height = 3 [json_name = "endHeight", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for endHeight.
+       */
+      public com.google.protobuf.ByteString
+          getEndHeightBytes() {
+        java.lang.Object ref = endHeight_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          endHeight_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * end_height is the end height of the BTC delegation
+       * it is calculated by end_height = start_height + staking_time
+       * </pre>
+       *
+       * <code>string end_height = 3 [json_name = "endHeight", (.amino.dont_omitempty) = true];</code>
+       * @param value The endHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndHeight(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        endHeight_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * end_height is the end height of the BTC delegation
+       * it is calculated by end_height = start_height + staking_time
+       * </pre>
+       *
+       * <code>string end_height = 3 [json_name = "endHeight", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEndHeight() {
+        endHeight_ = getDefaultInstance().getEndHeight();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * end_height is the end height of the BTC delegation
+       * it is calculated by end_height = start_height + staking_time
+       * </pre>
+       *
+       * <code>string end_height = 3 [json_name = "endHeight", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for endHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndHeightBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        endHeight_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object newState_ = "";
+      /**
+       * <pre>
+       * new_state of the BTC delegation
+       * </pre>
+       *
+       * <code>string new_state = 4 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @return The newState.
+       */
+      public java.lang.String getNewState() {
+        java.lang.Object ref = newState_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          newState_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * new_state of the BTC delegation
+       * </pre>
+       *
+       * <code>string new_state = 4 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for newState.
+       */
+      public com.google.protobuf.ByteString
+          getNewStateBytes() {
+        java.lang.Object ref = newState_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          newState_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * new_state of the BTC delegation
+       * </pre>
+       *
+       * <code>string new_state = 4 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @param value The newState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewState(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        newState_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_state of the BTC delegation
+       * </pre>
+       *
+       * <code>string new_state = 4 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewState() {
+        newState_ = getDefaultInstance().getNewState();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_state of the BTC delegation
+       * </pre>
+       *
+       * <code>string new_state = 4 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for newState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewStateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        newState_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.EventBTCDelegationInclusionProofReceived)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.EventBTCDelegationInclusionProofReceived)
+    private static final com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived();
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventBTCDelegationInclusionProofReceived>
+        PARSER = new com.google.protobuf.AbstractParser<EventBTCDelegationInclusionProofReceived>() {
+      @java.lang.Override
+      public EventBTCDelegationInclusionProofReceived parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventBTCDelegationInclusionProofReceived> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventBTCDelegationInclusionProofReceived> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationInclusionProofReceived getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventBTCDelgationUnbondedEarlyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.EventBTCDelgationUnbondedEarly)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking tx.
+     * It uniquely identifies a BTC delegation
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The stakingTxHash.
+     */
+    java.lang.String getStakingTxHash();
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking tx.
+     * It uniquely identifies a BTC delegation
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for stakingTxHash.
+     */
+    com.google.protobuf.ByteString
+        getStakingTxHashBytes();
+
+    /**
+     * <pre>
+     * start_height is the start BTC height of the early unbonding
+     * </pre>
+     *
+     * <code>string start_height = 2 [json_name = "startHeight", (.amino.dont_omitempty) = true];</code>
+     * @return The startHeight.
+     */
+    java.lang.String getStartHeight();
+    /**
+     * <pre>
+     * start_height is the start BTC height of the early unbonding
+     * </pre>
+     *
+     * <code>string start_height = 2 [json_name = "startHeight", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for startHeight.
+     */
+    com.google.protobuf.ByteString
+        getStartHeightBytes();
+
+    /**
+     * <pre>
+     * new_state of the BTC delegation
+     * </pre>
+     *
+     * <code>string new_state = 3 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+     * @return The newState.
+     */
+    java.lang.String getNewState();
+    /**
+     * <pre>
+     * new_state of the BTC delegation
+     * </pre>
+     *
+     * <code>string new_state = 3 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for newState.
+     */
+    com.google.protobuf.ByteString
+        getNewStateBytes();
+  }
+  /**
+   * <pre>
+   * EventBTCDelgationUnbondedEarly is the event emitted when a BTC delegation
+   * is unbonded by staker sending unbonding tx to BTC
+   * </pre>
+   *
+   * Protobuf type {@code babylon.btcstaking.v1.EventBTCDelgationUnbondedEarly}
+   */
+  public static final class EventBTCDelgationUnbondedEarly extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.EventBTCDelgationUnbondedEarly)
+      EventBTCDelgationUnbondedEarlyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventBTCDelgationUnbondedEarly.newBuilder() to construct.
+    private EventBTCDelgationUnbondedEarly(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventBTCDelgationUnbondedEarly() {
+      stakingTxHash_ = "";
+      startHeight_ = "";
+      newState_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventBTCDelgationUnbondedEarly();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventBTCDelgationUnbondedEarly_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventBTCDelgationUnbondedEarly_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly.class, com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly.Builder.class);
+    }
+
+    public static final int STAKING_TX_HASH_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingTxHash_ = "";
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking tx.
+     * It uniquely identifies a BTC delegation
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The stakingTxHash.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingTxHash() {
+      java.lang.Object ref = stakingTxHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingTxHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking tx.
+     * It uniquely identifies a BTC delegation
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for stakingTxHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingTxHashBytes() {
+      java.lang.Object ref = stakingTxHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingTxHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int START_HEIGHT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object startHeight_ = "";
+    /**
+     * <pre>
+     * start_height is the start BTC height of the early unbonding
+     * </pre>
+     *
+     * <code>string start_height = 2 [json_name = "startHeight", (.amino.dont_omitempty) = true];</code>
+     * @return The startHeight.
+     */
+    @java.lang.Override
+    public java.lang.String getStartHeight() {
+      java.lang.Object ref = startHeight_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        startHeight_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * start_height is the start BTC height of the early unbonding
+     * </pre>
+     *
+     * <code>string start_height = 2 [json_name = "startHeight", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for startHeight.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStartHeightBytes() {
+      java.lang.Object ref = startHeight_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        startHeight_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEW_STATE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object newState_ = "";
+    /**
+     * <pre>
+     * new_state of the BTC delegation
+     * </pre>
+     *
+     * <code>string new_state = 3 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+     * @return The newState.
+     */
+    @java.lang.Override
+    public java.lang.String getNewState() {
+      java.lang.Object ref = newState_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        newState_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * new_state of the BTC delegation
+     * </pre>
+     *
+     * <code>string new_state = 3 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for newState.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewStateBytes() {
+      java.lang.Object ref = newState_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newState_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingTxHash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, stakingTxHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startHeight_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, startHeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newState_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, newState_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingTxHash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, stakingTxHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startHeight_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, startHeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newState_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, newState_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly)) {
+        return super.equals(obj);
+      }
+      com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly other = (com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly) obj;
+
+      if (!getStakingTxHash()
+          .equals(other.getStakingTxHash())) return false;
+      if (!getStartHeight()
+          .equals(other.getStartHeight())) return false;
+      if (!getNewState()
+          .equals(other.getNewState())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKING_TX_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingTxHash().hashCode();
+      hash = (37 * hash) + START_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getStartHeight().hashCode();
+      hash = (37 * hash) + NEW_STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getNewState().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventBTCDelgationUnbondedEarly is the event emitted when a BTC delegation
+     * is unbonded by staker sending unbonding tx to BTC
+     * </pre>
+     *
+     * Protobuf type {@code babylon.btcstaking.v1.EventBTCDelgationUnbondedEarly}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.EventBTCDelgationUnbondedEarly)
+        com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarlyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventBTCDelgationUnbondedEarly_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventBTCDelgationUnbondedEarly_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly.class, com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly.Builder.class);
+      }
+
+      // Construct using com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        stakingTxHash_ = "";
+        startHeight_ = "";
+        newState_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventBTCDelgationUnbondedEarly_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly getDefaultInstanceForType() {
+        return com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly build() {
+        com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly buildPartial() {
+        com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly result = new com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.stakingTxHash_ = stakingTxHash_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.startHeight_ = startHeight_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.newState_ = newState_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly) {
+          return mergeFrom((com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly other) {
+        if (other == com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly.getDefaultInstance()) return this;
+        if (!other.getStakingTxHash().isEmpty()) {
+          stakingTxHash_ = other.stakingTxHash_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getStartHeight().isEmpty()) {
+          startHeight_ = other.startHeight_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getNewState().isEmpty()) {
+          newState_ = other.newState_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                stakingTxHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                startHeight_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                newState_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object stakingTxHash_ = "";
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking tx.
+       * It uniquely identifies a BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @return The stakingTxHash.
+       */
+      public java.lang.String getStakingTxHash() {
+        java.lang.Object ref = stakingTxHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingTxHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking tx.
+       * It uniquely identifies a BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for stakingTxHash.
+       */
+      public com.google.protobuf.ByteString
+          getStakingTxHashBytes() {
+        java.lang.Object ref = stakingTxHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingTxHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking tx.
+       * It uniquely identifies a BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @param value The stakingTxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingTxHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingTxHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking tx.
+       * It uniquely identifies a BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingTxHash() {
+        stakingTxHash_ = getDefaultInstance().getStakingTxHash();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking tx.
+       * It uniquely identifies a BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for stakingTxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingTxHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingTxHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object startHeight_ = "";
+      /**
+       * <pre>
+       * start_height is the start BTC height of the early unbonding
+       * </pre>
+       *
+       * <code>string start_height = 2 [json_name = "startHeight", (.amino.dont_omitempty) = true];</code>
+       * @return The startHeight.
+       */
+      public java.lang.String getStartHeight() {
+        java.lang.Object ref = startHeight_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          startHeight_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * start_height is the start BTC height of the early unbonding
+       * </pre>
+       *
+       * <code>string start_height = 2 [json_name = "startHeight", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for startHeight.
+       */
+      public com.google.protobuf.ByteString
+          getStartHeightBytes() {
+        java.lang.Object ref = startHeight_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          startHeight_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * start_height is the start BTC height of the early unbonding
+       * </pre>
+       *
+       * <code>string start_height = 2 [json_name = "startHeight", (.amino.dont_omitempty) = true];</code>
+       * @param value The startHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartHeight(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        startHeight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_height is the start BTC height of the early unbonding
+       * </pre>
+       *
+       * <code>string start_height = 2 [json_name = "startHeight", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartHeight() {
+        startHeight_ = getDefaultInstance().getStartHeight();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_height is the start BTC height of the early unbonding
+       * </pre>
+       *
+       * <code>string start_height = 2 [json_name = "startHeight", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for startHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartHeightBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        startHeight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object newState_ = "";
+      /**
+       * <pre>
+       * new_state of the BTC delegation
+       * </pre>
+       *
+       * <code>string new_state = 3 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @return The newState.
+       */
+      public java.lang.String getNewState() {
+        java.lang.Object ref = newState_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          newState_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * new_state of the BTC delegation
+       * </pre>
+       *
+       * <code>string new_state = 3 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for newState.
+       */
+      public com.google.protobuf.ByteString
+          getNewStateBytes() {
+        java.lang.Object ref = newState_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          newState_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * new_state of the BTC delegation
+       * </pre>
+       *
+       * <code>string new_state = 3 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @param value The newState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewState(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        newState_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_state of the BTC delegation
+       * </pre>
+       *
+       * <code>string new_state = 3 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewState() {
+        newState_ = getDefaultInstance().getNewState();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_state of the BTC delegation
+       * </pre>
+       *
+       * <code>string new_state = 3 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for newState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewStateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        newState_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.EventBTCDelgationUnbondedEarly)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.EventBTCDelgationUnbondedEarly)
+    private static final com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly();
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventBTCDelgationUnbondedEarly>
+        PARSER = new com.google.protobuf.AbstractParser<EventBTCDelgationUnbondedEarly>() {
+      @java.lang.Override
+      public EventBTCDelgationUnbondedEarly parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventBTCDelgationUnbondedEarly> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventBTCDelgationUnbondedEarly> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.EventsProto.EventBTCDelgationUnbondedEarly getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventBTCDelegationExpiredOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.EventBTCDelegationExpired)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking tx.
+     * It uniquely identifies a BTC delegation
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The stakingTxHash.
+     */
+    java.lang.String getStakingTxHash();
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking tx.
+     * It uniquely identifies a BTC delegation
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for stakingTxHash.
+     */
+    com.google.protobuf.ByteString
+        getStakingTxHashBytes();
+
+    /**
+     * <pre>
+     * new_state of the BTC delegation
+     * </pre>
+     *
+     * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+     * @return The newState.
+     */
+    java.lang.String getNewState();
+    /**
+     * <pre>
+     * new_state of the BTC delegation
+     * </pre>
+     *
+     * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for newState.
+     */
+    com.google.protobuf.ByteString
+        getNewStateBytes();
+  }
+  /**
+   * <pre>
+   * EventBTCDelegationExpired is the event emitted when a BTC delegation
+   * is unbonded by expiration of the staking tx timelock
+   * </pre>
+   *
+   * Protobuf type {@code babylon.btcstaking.v1.EventBTCDelegationExpired}
+   */
+  public static final class EventBTCDelegationExpired extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.EventBTCDelegationExpired)
+      EventBTCDelegationExpiredOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventBTCDelegationExpired.newBuilder() to construct.
+    private EventBTCDelegationExpired(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventBTCDelegationExpired() {
+      stakingTxHash_ = "";
+      newState_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventBTCDelegationExpired();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventBTCDelegationExpired_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventBTCDelegationExpired_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired.class, com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired.Builder.class);
+    }
+
+    public static final int STAKING_TX_HASH_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingTxHash_ = "";
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking tx.
+     * It uniquely identifies a BTC delegation
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The stakingTxHash.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingTxHash() {
+      java.lang.Object ref = stakingTxHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingTxHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staking_tx_hash is the hash of the staking tx.
+     * It uniquely identifies a BTC delegation
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for stakingTxHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingTxHashBytes() {
+      java.lang.Object ref = stakingTxHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingTxHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEW_STATE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object newState_ = "";
+    /**
+     * <pre>
+     * new_state of the BTC delegation
+     * </pre>
+     *
+     * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+     * @return The newState.
+     */
+    @java.lang.Override
+    public java.lang.String getNewState() {
+      java.lang.Object ref = newState_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        newState_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * new_state of the BTC delegation
+     * </pre>
+     *
+     * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for newState.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewStateBytes() {
+      java.lang.Object ref = newState_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newState_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingTxHash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, stakingTxHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newState_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, newState_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingTxHash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, stakingTxHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newState_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, newState_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired)) {
+        return super.equals(obj);
+      }
+      com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired other = (com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired) obj;
+
+      if (!getStakingTxHash()
+          .equals(other.getStakingTxHash())) return false;
+      if (!getNewState()
+          .equals(other.getNewState())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKING_TX_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingTxHash().hashCode();
+      hash = (37 * hash) + NEW_STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getNewState().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventBTCDelegationExpired is the event emitted when a BTC delegation
+     * is unbonded by expiration of the staking tx timelock
+     * </pre>
+     *
+     * Protobuf type {@code babylon.btcstaking.v1.EventBTCDelegationExpired}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.EventBTCDelegationExpired)
+        com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpiredOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventBTCDelegationExpired_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventBTCDelegationExpired_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired.class, com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired.Builder.class);
+      }
+
+      // Construct using com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        stakingTxHash_ = "";
+        newState_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventBTCDelegationExpired_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired getDefaultInstanceForType() {
+        return com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired build() {
+        com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired buildPartial() {
+        com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired result = new com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.stakingTxHash_ = stakingTxHash_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.newState_ = newState_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired) {
+          return mergeFrom((com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired other) {
+        if (other == com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired.getDefaultInstance()) return this;
+        if (!other.getStakingTxHash().isEmpty()) {
+          stakingTxHash_ = other.stakingTxHash_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getNewState().isEmpty()) {
+          newState_ = other.newState_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                stakingTxHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                newState_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object stakingTxHash_ = "";
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking tx.
+       * It uniquely identifies a BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @return The stakingTxHash.
+       */
+      public java.lang.String getStakingTxHash() {
+        java.lang.Object ref = stakingTxHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingTxHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking tx.
+       * It uniquely identifies a BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for stakingTxHash.
+       */
+      public com.google.protobuf.ByteString
+          getStakingTxHashBytes() {
+        java.lang.Object ref = stakingTxHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingTxHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking tx.
+       * It uniquely identifies a BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @param value The stakingTxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingTxHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingTxHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking tx.
+       * It uniquely identifies a BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingTxHash() {
+        stakingTxHash_ = getDefaultInstance().getStakingTxHash();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_tx_hash is the hash of the staking tx.
+       * It uniquely identifies a BTC delegation
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for stakingTxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingTxHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingTxHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object newState_ = "";
+      /**
+       * <pre>
+       * new_state of the BTC delegation
+       * </pre>
+       *
+       * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @return The newState.
+       */
+      public java.lang.String getNewState() {
+        java.lang.Object ref = newState_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          newState_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * new_state of the BTC delegation
+       * </pre>
+       *
+       * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for newState.
+       */
+      public com.google.protobuf.ByteString
+          getNewStateBytes() {
+        java.lang.Object ref = newState_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          newState_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * new_state of the BTC delegation
+       * </pre>
+       *
+       * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @param value The newState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewState(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        newState_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_state of the BTC delegation
+       * </pre>
+       *
+       * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewState() {
+        newState_ = getDefaultInstance().getNewState();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_state of the BTC delegation
+       * </pre>
+       *
+       * <code>string new_state = 2 [json_name = "newState", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for newState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewStateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        newState_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.EventBTCDelegationExpired)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.EventBTCDelegationExpired)
+    private static final com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired();
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventBTCDelegationExpired>
+        PARSER = new com.google.protobuf.AbstractParser<EventBTCDelegationExpired>() {
+      @java.lang.Override
+      public EventBTCDelegationExpired parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventBTCDelegationExpired> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventBTCDelegationExpired> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.EventsProto.EventBTCDelegationExpired getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventUnexpectedUnbondingTxOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.EventUnexpectedUnbondingTx)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * staking_tx_hash uniquely identifies a BTC delegation being unbonded
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The stakingTxHash.
+     */
+    java.lang.String getStakingTxHash();
+    /**
+     * <pre>
+     * staking_tx_hash uniquely identifies a BTC delegation being unbonded
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for stakingTxHash.
+     */
+    com.google.protobuf.ByteString
+        getStakingTxHashBytes();
+
+    /**
+     * <pre>
+     * spend_stake_tx_hash has of the transactin spending staking output
+     * </pre>
+     *
+     * <code>string spend_stake_tx_hash = 2 [json_name = "spendStakeTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The spendStakeTxHash.
+     */
+    java.lang.String getSpendStakeTxHash();
+    /**
+     * <pre>
+     * spend_stake_tx_hash has of the transactin spending staking output
+     * </pre>
+     *
+     * <code>string spend_stake_tx_hash = 2 [json_name = "spendStakeTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for spendStakeTxHash.
+     */
+    com.google.protobuf.ByteString
+        getSpendStakeTxHashBytes();
+
+    /**
+     * <pre>
+     * spend_stake_tx_header_hash is the hash of the header of the block that
+     * includes the spend_stake_tx
+     * </pre>
+     *
+     * <code>string spend_stake_tx_header_hash = 3 [json_name = "spendStakeTxHeaderHash", (.amino.dont_omitempty) = true];</code>
+     * @return The spendStakeTxHeaderHash.
+     */
+    java.lang.String getSpendStakeTxHeaderHash();
+    /**
+     * <pre>
+     * spend_stake_tx_header_hash is the hash of the header of the block that
+     * includes the spend_stake_tx
+     * </pre>
+     *
+     * <code>string spend_stake_tx_header_hash = 3 [json_name = "spendStakeTxHeaderHash", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for spendStakeTxHeaderHash.
+     */
+    com.google.protobuf.ByteString
+        getSpendStakeTxHeaderHashBytes();
+
+    /**
+     * <pre>
+     * spend_stake_tx_block_index is the spend_stake_tx index in the block
+     * </pre>
+     *
+     * <code>uint32 spend_stake_tx_block_index = 4 [json_name = "spendStakeTxBlockIndex", (.amino.dont_omitempty) = true];</code>
+     * @return The spendStakeTxBlockIndex.
+     */
+    int getSpendStakeTxBlockIndex();
+  }
+  /**
+   * <pre>
+   * EventUnexpectedUnbondingTx is the event emitted when an unbonding tx is
+   * is different that the one registered in the BTC delegation.
+   * </pre>
+   *
+   * Protobuf type {@code babylon.btcstaking.v1.EventUnexpectedUnbondingTx}
+   */
+  public static final class EventUnexpectedUnbondingTx extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.EventUnexpectedUnbondingTx)
+      EventUnexpectedUnbondingTxOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventUnexpectedUnbondingTx.newBuilder() to construct.
+    private EventUnexpectedUnbondingTx(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventUnexpectedUnbondingTx() {
+      stakingTxHash_ = "";
+      spendStakeTxHash_ = "";
+      spendStakeTxHeaderHash_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventUnexpectedUnbondingTx();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventUnexpectedUnbondingTx_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventUnexpectedUnbondingTx_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx.class, com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx.Builder.class);
+    }
+
+    public static final int STAKING_TX_HASH_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingTxHash_ = "";
+    /**
+     * <pre>
+     * staking_tx_hash uniquely identifies a BTC delegation being unbonded
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The stakingTxHash.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingTxHash() {
+      java.lang.Object ref = stakingTxHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingTxHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staking_tx_hash uniquely identifies a BTC delegation being unbonded
+     * </pre>
+     *
+     * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for stakingTxHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingTxHashBytes() {
+      java.lang.Object ref = stakingTxHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingTxHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SPEND_STAKE_TX_HASH_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object spendStakeTxHash_ = "";
+    /**
+     * <pre>
+     * spend_stake_tx_hash has of the transactin spending staking output
+     * </pre>
+     *
+     * <code>string spend_stake_tx_hash = 2 [json_name = "spendStakeTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The spendStakeTxHash.
+     */
+    @java.lang.Override
+    public java.lang.String getSpendStakeTxHash() {
+      java.lang.Object ref = spendStakeTxHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        spendStakeTxHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * spend_stake_tx_hash has of the transactin spending staking output
+     * </pre>
+     *
+     * <code>string spend_stake_tx_hash = 2 [json_name = "spendStakeTxHash", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for spendStakeTxHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSpendStakeTxHashBytes() {
+      java.lang.Object ref = spendStakeTxHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        spendStakeTxHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SPEND_STAKE_TX_HEADER_HASH_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object spendStakeTxHeaderHash_ = "";
+    /**
+     * <pre>
+     * spend_stake_tx_header_hash is the hash of the header of the block that
+     * includes the spend_stake_tx
+     * </pre>
+     *
+     * <code>string spend_stake_tx_header_hash = 3 [json_name = "spendStakeTxHeaderHash", (.amino.dont_omitempty) = true];</code>
+     * @return The spendStakeTxHeaderHash.
+     */
+    @java.lang.Override
+    public java.lang.String getSpendStakeTxHeaderHash() {
+      java.lang.Object ref = spendStakeTxHeaderHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        spendStakeTxHeaderHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * spend_stake_tx_header_hash is the hash of the header of the block that
+     * includes the spend_stake_tx
+     * </pre>
+     *
+     * <code>string spend_stake_tx_header_hash = 3 [json_name = "spendStakeTxHeaderHash", (.amino.dont_omitempty) = true];</code>
+     * @return The bytes for spendStakeTxHeaderHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSpendStakeTxHeaderHashBytes() {
+      java.lang.Object ref = spendStakeTxHeaderHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        spendStakeTxHeaderHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SPEND_STAKE_TX_BLOCK_INDEX_FIELD_NUMBER = 4;
+    private int spendStakeTxBlockIndex_ = 0;
+    /**
+     * <pre>
+     * spend_stake_tx_block_index is the spend_stake_tx index in the block
+     * </pre>
+     *
+     * <code>uint32 spend_stake_tx_block_index = 4 [json_name = "spendStakeTxBlockIndex", (.amino.dont_omitempty) = true];</code>
+     * @return The spendStakeTxBlockIndex.
+     */
+    @java.lang.Override
+    public int getSpendStakeTxBlockIndex() {
+      return spendStakeTxBlockIndex_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingTxHash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, stakingTxHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(spendStakeTxHash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, spendStakeTxHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(spendStakeTxHeaderHash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, spendStakeTxHeaderHash_);
+      }
+      if (spendStakeTxBlockIndex_ != 0) {
+        output.writeUInt32(4, spendStakeTxBlockIndex_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingTxHash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, stakingTxHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(spendStakeTxHash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, spendStakeTxHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(spendStakeTxHeaderHash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, spendStakeTxHeaderHash_);
+      }
+      if (spendStakeTxBlockIndex_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, spendStakeTxBlockIndex_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx)) {
+        return super.equals(obj);
+      }
+      com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx other = (com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx) obj;
+
+      if (!getStakingTxHash()
+          .equals(other.getStakingTxHash())) return false;
+      if (!getSpendStakeTxHash()
+          .equals(other.getSpendStakeTxHash())) return false;
+      if (!getSpendStakeTxHeaderHash()
+          .equals(other.getSpendStakeTxHeaderHash())) return false;
+      if (getSpendStakeTxBlockIndex()
+          != other.getSpendStakeTxBlockIndex()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKING_TX_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingTxHash().hashCode();
+      hash = (37 * hash) + SPEND_STAKE_TX_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getSpendStakeTxHash().hashCode();
+      hash = (37 * hash) + SPEND_STAKE_TX_HEADER_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getSpendStakeTxHeaderHash().hashCode();
+      hash = (37 * hash) + SPEND_STAKE_TX_BLOCK_INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getSpendStakeTxBlockIndex();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventUnexpectedUnbondingTx is the event emitted when an unbonding tx is
+     * is different that the one registered in the BTC delegation.
+     * </pre>
+     *
+     * Protobuf type {@code babylon.btcstaking.v1.EventUnexpectedUnbondingTx}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.EventUnexpectedUnbondingTx)
+        com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTxOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventUnexpectedUnbondingTx_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventUnexpectedUnbondingTx_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx.class, com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx.Builder.class);
+      }
+
+      // Construct using com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        stakingTxHash_ = "";
+        spendStakeTxHash_ = "";
+        spendStakeTxHeaderHash_ = "";
+        spendStakeTxBlockIndex_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.btcstaking.v1.EventsProto.internal_static_babylon_btcstaking_v1_EventUnexpectedUnbondingTx_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx getDefaultInstanceForType() {
+        return com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx build() {
+        com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx buildPartial() {
+        com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx result = new com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.stakingTxHash_ = stakingTxHash_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.spendStakeTxHash_ = spendStakeTxHash_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.spendStakeTxHeaderHash_ = spendStakeTxHeaderHash_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.spendStakeTxBlockIndex_ = spendStakeTxBlockIndex_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx) {
+          return mergeFrom((com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx other) {
+        if (other == com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx.getDefaultInstance()) return this;
+        if (!other.getStakingTxHash().isEmpty()) {
+          stakingTxHash_ = other.stakingTxHash_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getSpendStakeTxHash().isEmpty()) {
+          spendStakeTxHash_ = other.spendStakeTxHash_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getSpendStakeTxHeaderHash().isEmpty()) {
+          spendStakeTxHeaderHash_ = other.spendStakeTxHeaderHash_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getSpendStakeTxBlockIndex() != 0) {
+          setSpendStakeTxBlockIndex(other.getSpendStakeTxBlockIndex());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                stakingTxHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                spendStakeTxHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                spendStakeTxHeaderHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                spendStakeTxBlockIndex_ = input.readUInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object stakingTxHash_ = "";
+      /**
+       * <pre>
+       * staking_tx_hash uniquely identifies a BTC delegation being unbonded
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @return The stakingTxHash.
+       */
+      public java.lang.String getStakingTxHash() {
+        java.lang.Object ref = stakingTxHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingTxHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_tx_hash uniquely identifies a BTC delegation being unbonded
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for stakingTxHash.
+       */
+      public com.google.protobuf.ByteString
+          getStakingTxHashBytes() {
+        java.lang.Object ref = stakingTxHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingTxHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_tx_hash uniquely identifies a BTC delegation being unbonded
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @param value The stakingTxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingTxHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingTxHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_tx_hash uniquely identifies a BTC delegation being unbonded
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingTxHash() {
+        stakingTxHash_ = getDefaultInstance().getStakingTxHash();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_tx_hash uniquely identifies a BTC delegation being unbonded
+       * </pre>
+       *
+       * <code>string staking_tx_hash = 1 [json_name = "stakingTxHash", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for stakingTxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingTxHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingTxHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object spendStakeTxHash_ = "";
+      /**
+       * <pre>
+       * spend_stake_tx_hash has of the transactin spending staking output
+       * </pre>
+       *
+       * <code>string spend_stake_tx_hash = 2 [json_name = "spendStakeTxHash", (.amino.dont_omitempty) = true];</code>
+       * @return The spendStakeTxHash.
+       */
+      public java.lang.String getSpendStakeTxHash() {
+        java.lang.Object ref = spendStakeTxHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          spendStakeTxHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * spend_stake_tx_hash has of the transactin spending staking output
+       * </pre>
+       *
+       * <code>string spend_stake_tx_hash = 2 [json_name = "spendStakeTxHash", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for spendStakeTxHash.
+       */
+      public com.google.protobuf.ByteString
+          getSpendStakeTxHashBytes() {
+        java.lang.Object ref = spendStakeTxHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          spendStakeTxHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * spend_stake_tx_hash has of the transactin spending staking output
+       * </pre>
+       *
+       * <code>string spend_stake_tx_hash = 2 [json_name = "spendStakeTxHash", (.amino.dont_omitempty) = true];</code>
+       * @param value The spendStakeTxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpendStakeTxHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        spendStakeTxHash_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * spend_stake_tx_hash has of the transactin spending staking output
+       * </pre>
+       *
+       * <code>string spend_stake_tx_hash = 2 [json_name = "spendStakeTxHash", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSpendStakeTxHash() {
+        spendStakeTxHash_ = getDefaultInstance().getSpendStakeTxHash();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * spend_stake_tx_hash has of the transactin spending staking output
+       * </pre>
+       *
+       * <code>string spend_stake_tx_hash = 2 [json_name = "spendStakeTxHash", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for spendStakeTxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpendStakeTxHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        spendStakeTxHash_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object spendStakeTxHeaderHash_ = "";
+      /**
+       * <pre>
+       * spend_stake_tx_header_hash is the hash of the header of the block that
+       * includes the spend_stake_tx
+       * </pre>
+       *
+       * <code>string spend_stake_tx_header_hash = 3 [json_name = "spendStakeTxHeaderHash", (.amino.dont_omitempty) = true];</code>
+       * @return The spendStakeTxHeaderHash.
+       */
+      public java.lang.String getSpendStakeTxHeaderHash() {
+        java.lang.Object ref = spendStakeTxHeaderHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          spendStakeTxHeaderHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * spend_stake_tx_header_hash is the hash of the header of the block that
+       * includes the spend_stake_tx
+       * </pre>
+       *
+       * <code>string spend_stake_tx_header_hash = 3 [json_name = "spendStakeTxHeaderHash", (.amino.dont_omitempty) = true];</code>
+       * @return The bytes for spendStakeTxHeaderHash.
+       */
+      public com.google.protobuf.ByteString
+          getSpendStakeTxHeaderHashBytes() {
+        java.lang.Object ref = spendStakeTxHeaderHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          spendStakeTxHeaderHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * spend_stake_tx_header_hash is the hash of the header of the block that
+       * includes the spend_stake_tx
+       * </pre>
+       *
+       * <code>string spend_stake_tx_header_hash = 3 [json_name = "spendStakeTxHeaderHash", (.amino.dont_omitempty) = true];</code>
+       * @param value The spendStakeTxHeaderHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpendStakeTxHeaderHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        spendStakeTxHeaderHash_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * spend_stake_tx_header_hash is the hash of the header of the block that
+       * includes the spend_stake_tx
+       * </pre>
+       *
+       * <code>string spend_stake_tx_header_hash = 3 [json_name = "spendStakeTxHeaderHash", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSpendStakeTxHeaderHash() {
+        spendStakeTxHeaderHash_ = getDefaultInstance().getSpendStakeTxHeaderHash();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * spend_stake_tx_header_hash is the hash of the header of the block that
+       * includes the spend_stake_tx
+       * </pre>
+       *
+       * <code>string spend_stake_tx_header_hash = 3 [json_name = "spendStakeTxHeaderHash", (.amino.dont_omitempty) = true];</code>
+       * @param value The bytes for spendStakeTxHeaderHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpendStakeTxHeaderHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        spendStakeTxHeaderHash_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private int spendStakeTxBlockIndex_ ;
+      /**
+       * <pre>
+       * spend_stake_tx_block_index is the spend_stake_tx index in the block
+       * </pre>
+       *
+       * <code>uint32 spend_stake_tx_block_index = 4 [json_name = "spendStakeTxBlockIndex", (.amino.dont_omitempty) = true];</code>
+       * @return The spendStakeTxBlockIndex.
+       */
+      @java.lang.Override
+      public int getSpendStakeTxBlockIndex() {
+        return spendStakeTxBlockIndex_;
+      }
+      /**
+       * <pre>
+       * spend_stake_tx_block_index is the spend_stake_tx index in the block
+       * </pre>
+       *
+       * <code>uint32 spend_stake_tx_block_index = 4 [json_name = "spendStakeTxBlockIndex", (.amino.dont_omitempty) = true];</code>
+       * @param value The spendStakeTxBlockIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpendStakeTxBlockIndex(int value) {
+
+        spendStakeTxBlockIndex_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * spend_stake_tx_block_index is the spend_stake_tx index in the block
+       * </pre>
+       *
+       * <code>uint32 spend_stake_tx_block_index = 4 [json_name = "spendStakeTxBlockIndex", (.amino.dont_omitempty) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSpendStakeTxBlockIndex() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        spendStakeTxBlockIndex_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.EventUnexpectedUnbondingTx)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.EventUnexpectedUnbondingTx)
+    private static final com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx();
+    }
+
+    public static com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventUnexpectedUnbondingTx>
+        PARSER = new com.google.protobuf.AbstractParser<EventUnexpectedUnbondingTx>() {
+      @java.lang.Override
+      public EventUnexpectedUnbondingTx parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventUnexpectedUnbondingTx> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventUnexpectedUnbondingTx> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.EventsProto.EventUnexpectedUnbondingTx getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_babylon_btcstaking_v1_EventNewFinalityProvider_descriptor;
+    internal_static_babylon_btcstaking_v1_EventFinalityProviderCreated_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_babylon_btcstaking_v1_EventNewFinalityProvider_fieldAccessorTable;
+      internal_static_babylon_btcstaking_v1_EventFinalityProviderCreated_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_btcstaking_v1_EventFinalityProviderEdited_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_btcstaking_v1_EventFinalityProviderEdited_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_babylon_btcstaking_v1_EventBTCDelegationStateUpdate_descriptor;
   private static final 
@@ -3619,6 +17516,56 @@ public final class EventsProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_EventSlashedFinalityProvider_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_EventJailedFinalityProvider_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_EventJailedFinalityProvider_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_EventUnjailedFinalityProvider_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_EventUnjailedFinalityProvider_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_btcstaking_v1_EventFinalityProviderStatusChange_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_btcstaking_v1_EventFinalityProviderStatusChange_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_btcstaking_v1_EventBTCDelegationCreated_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_btcstaking_v1_EventBTCDelegationCreated_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_btcstaking_v1_EventCovenantSignatureReceived_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_btcstaking_v1_EventCovenantSignatureReceived_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_btcstaking_v1_EventCovenantQuorumReached_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_btcstaking_v1_EventCovenantQuorumReached_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_btcstaking_v1_EventBTCDelegationInclusionProofReceived_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_btcstaking_v1_EventBTCDelegationInclusionProofReceived_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_btcstaking_v1_EventBTCDelgationUnbondedEarly_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_btcstaking_v1_EventBTCDelgationUnbondedEarly_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_btcstaking_v1_EventBTCDelegationExpired_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_btcstaking_v1_EventBTCDelegationExpired_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_btcstaking_v1_EventUnexpectedUnbondingTx_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_btcstaking_v1_EventUnexpectedUnbondingTx_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3630,74 +17577,220 @@ public final class EventsProto {
     java.lang.String[] descriptorData = {
       "\n\"babylon/btcstaking/v1/events.proto\022\025ba" +
       "bylon.btcstaking.v1\032\024gogoproto/gogo.prot" +
-      "o\032&babylon/btcstaking/v1/btcstaking.prot" +
-      "o\"S\n\030EventNewFinalityProvider\0227\n\002fp\030\001 \001(" +
-      "\0132\'.babylon.btcstaking.v1.FinalityProvid" +
-      "erR\002fp\"\220\001\n\035EventBTCDelegationStateUpdate" +
-      "\022&\n\017staking_tx_hash\030\001 \001(\tR\rstakingTxHash" +
-      "\022G\n\tnew_state\030\002 \001(\0162*.babylon.btcstaking" +
-      ".v1.BTCDelegationStatusR\010newState\"f\n\026Eve" +
-      "ntSelectiveSlashing\022L\n\010evidence\030\001 \001(\01320." +
-      "babylon.btcstaking.v1.SelectiveSlashingE" +
-      "videnceR\010evidence\"\330\002\n\024EventPowerDistUpda" +
-      "te\022i\n\nslashed_fp\030\001 \001(\0132H.babylon.btcstak" +
-      "ing.v1.EventPowerDistUpdate.EventSlashed" +
-      "FinalityProviderH\000R\tslashedFp\022g\n\024btc_del" +
-      "_state_update\030\002 \001(\01324.babylon.btcstaking" +
-      ".v1.EventBTCDelegationStateUpdateH\000R\021btc" +
-      "DelStateUpdate\032f\n\034EventSlashedFinalityPr" +
-      "ovider\022F\n\002pk\030\001 \001(\014B6\332\336\0372github.com/babyl" +
-      "onchain/babylon/types.BIP340PubKeyR\002pkB\004" +
-      "\n\002evB\320\001\n\031com.babylon.btcstaking.v1B\013Even" +
-      "tsProtoZ2github.com/babylonchain/babylon" +
-      "/x/btcstaking/types\242\002\003BBX\252\002\025Babylon.Btcs" +
-      "taking.V1\312\002\025Babylon\\Btcstaking\\V1\342\002!Baby" +
-      "lon\\Btcstaking\\V1\\GPBMetadata\352\002\027Babylon:" +
-      ":Btcstaking::V1b\006proto3"
+      "o\032$cosmos/staking/v1beta1/staking.proto\032" +
+      "&babylon/btcstaking/v1/btcstaking.proto\032" +
+      "\031cosmos_proto/cosmos.proto\032\021amino/amino." +
+      "proto\"\232\002\n\034EventFinalityProviderCreated\022#" +
+      "\n\nbtc_pk_hex\030\001 \001(\tB\005\250\347\260*\001R\010btcPkHex\022\031\n\004a" +
+      "ddr\030\002 \001(\tB\005\250\347\260*\001R\004addr\022%\n\ncommission\030\003 \001" +
+      "(\tB\005\250\347\260*\001R\ncommission\022\030\n\007moniker\030\004 \001(\tR\007" +
+      "moniker\022\032\n\010identity\030\005 \001(\tR\010identity\022\030\n\007w" +
+      "ebsite\030\006 \001(\tR\007website\022)\n\020security_contac" +
+      "t\030\007 \001(\tR\017securityContact\022\030\n\007details\030\010 \001(" +
+      "\tR\007details\"\376\001\n\033EventFinalityProviderEdit" +
+      "ed\022#\n\nbtc_pk_hex\030\001 \001(\tB\005\250\347\260*\001R\010btcPkHex\022" +
+      "%\n\ncommission\030\002 \001(\tB\005\250\347\260*\001R\ncommission\022\030" +
+      "\n\007moniker\030\003 \001(\tR\007moniker\022\032\n\010identity\030\004 \001" +
+      "(\tR\010identity\022\030\n\007website\030\005 \001(\tR\007website\022)" +
+      "\n\020security_contact\030\006 \001(\tR\017securityContac" +
+      "t\022\030\n\007details\030\007 \001(\tR\007details\"\220\001\n\035EventBTC" +
+      "DelegationStateUpdate\022&\n\017staking_tx_hash" +
+      "\030\001 \001(\tR\rstakingTxHash\022G\n\tnew_state\030\002 \001(\016" +
+      "2*.babylon.btcstaking.v1.BTCDelegationSt" +
+      "atusR\010newState\"f\n\026EventSelectiveSlashing" +
+      "\022L\n\010evidence\030\001 \001(\01320.babylon.btcstaking." +
+      "v1.SelectiveSlashingEvidenceR\010evidence\"\204" +
+      "\006\n\024EventPowerDistUpdate\022i\n\nslashed_fp\030\001 " +
+      "\001(\0132H.babylon.btcstaking.v1.EventPowerDi" +
+      "stUpdate.EventSlashedFinalityProviderH\000R" +
+      "\tslashedFp\022f\n\tjailed_fp\030\002 \001(\0132G.babylon." +
+      "btcstaking.v1.EventPowerDistUpdate.Event" +
+      "JailedFinalityProviderH\000R\010jailedFp\022l\n\013un" +
+      "jailed_fp\030\003 \001(\0132I.babylon.btcstaking.v1." +
+      "EventPowerDistUpdate.EventUnjailedFinali" +
+      "tyProviderH\000R\nunjailedFp\022g\n\024btc_del_stat" +
+      "e_update\030\004 \001(\01324.babylon.btcstaking.v1.E" +
+      "ventBTCDelegationStateUpdateH\000R\021btcDelSt" +
+      "ateUpdate\032h\n\034EventSlashedFinalityProvide" +
+      "r\022H\n\002pk\030\001 \001(\014B8\332\336\0374github.com/babylonlab" +
+      "s-io/babylon/types.BIP340PubKeyR\002pk\032g\n\033E" +
+      "ventJailedFinalityProvider\022H\n\002pk\030\001 \001(\014B8" +
+      "\332\336\0374github.com/babylonlabs-io/babylon/ty" +
+      "pes.BIP340PubKeyR\002pk\032i\n\035EventUnjailedFin" +
+      "alityProvider\022H\n\002pk\030\001 \001(\014B8\332\336\0374github.co" +
+      "m/babylonlabs-io/babylon/types.BIP340Pub" +
+      "KeyR\002pkB\004\n\002ev\"e\n!EventFinalityProviderSt" +
+      "atusChange\022\034\n\006btc_pk\030\001 \001(\tB\005\250\347\260*\001R\005btcPk" +
+      "\022\"\n\tnew_state\030\002 \001(\tB\005\250\347\260*\001R\010newState\"\300\004\n" +
+      "\031EventBTCDelegationCreated\022-\n\017staking_tx" +
+      "_hash\030\001 \001(\tB\005\250\347\260*\001R\rstakingTxHash\022>\n\030sta" +
+      "king_output_pk_script\030\002 \001(\tB\005\250\347\260*\001R\025stak" +
+      "ingOutputPkScript\0227\n\024staking_output_inde" +
+      "x\030\003 \001(\tB\005\250\347\260*\001R\022stakingOutputIndex\022,\n\016pa" +
+      "rams_version\030\004 \001(\tB\005\250\347\260*\001R\rparamsVersion" +
+      "\022G\n\035finality_provider_btc_pks_hex\030\005 \003(\tB" +
+      "\005\250\347\260*\001R\031finalityProviderBtcPksHex\0220\n\021sta" +
+      "ker_btc_pk_hex\030\006 \001(\tB\005\250\347\260*\001R\016stakerBtcPk" +
+      "Hex\022(\n\014staking_time\030\007 \001(\tB\005\250\347\260*\001R\013stakin" +
+      "gTime\022,\n\016staking_amount\030\010 \001(\tB\005\250\347\260*\001R\rst" +
+      "akingAmount\022,\n\016unbonding_time\030\t \001(\tB\005\250\347\260" +
+      "*\001R\runbondingTime\022(\n\014unbonding_tx\030\n \001(\tB" +
+      "\005\250\347\260*\001R\013unbondingTx\022\"\n\tnew_state\030\013 \001(\tB\005" +
+      "\250\347\260*\001R\010newState\"\325\001\n\036EventCovenantSignatu" +
+      "reReceived\022-\n\017staking_tx_hash\030\001 \001(\tB\005\250\347\260" +
+      "*\001R\rstakingTxHash\0224\n\023covenant_btc_pk_hex" +
+      "\030\002 \001(\tB\005\250\347\260*\001R\020covenantBtcPkHex\022N\n coven" +
+      "ant_unbonding_signature_hex\030\003 \001(\tB\005\250\347\260*\001" +
+      "R\035covenantUnbondingSignatureHex\"o\n\032Event" +
+      "CovenantQuorumReached\022-\n\017staking_tx_hash" +
+      "\030\001 \001(\tB\005\250\347\260*\001R\rstakingTxHash\022\"\n\tnew_stat" +
+      "e\030\002 \001(\tB\005\250\347\260*\001R\010newState\"\315\001\n(EventBTCDel" +
+      "egationInclusionProofReceived\022-\n\017staking" +
+      "_tx_hash\030\001 \001(\tB\005\250\347\260*\001R\rstakingTxHash\022(\n\014" +
+      "start_height\030\002 \001(\tB\005\250\347\260*\001R\013startHeight\022$" +
+      "\n\nend_height\030\003 \001(\tB\005\250\347\260*\001R\tendHeight\022\"\n\t" +
+      "new_state\030\004 \001(\tB\005\250\347\260*\001R\010newState\"\235\001\n\036Eve" +
+      "ntBTCDelgationUnbondedEarly\022-\n\017staking_t" +
+      "x_hash\030\001 \001(\tB\005\250\347\260*\001R\rstakingTxHash\022(\n\014st" +
+      "art_height\030\002 \001(\tB\005\250\347\260*\001R\013startHeight\022\"\n\t" +
+      "new_state\030\003 \001(\tB\005\250\347\260*\001R\010newState\"n\n\031Even" +
+      "tBTCDelegationExpired\022-\n\017staking_tx_hash" +
+      "\030\001 \001(\tB\005\250\347\260*\001R\rstakingTxHash\022\"\n\tnew_stat" +
+      "e\030\002 \001(\tB\005\250\347\260*\001R\010newState\"\207\002\n\032EventUnexpe" +
+      "ctedUnbondingTx\022-\n\017staking_tx_hash\030\001 \001(\t" +
+      "B\005\250\347\260*\001R\rstakingTxHash\0224\n\023spend_stake_tx" +
+      "_hash\030\002 \001(\tB\005\250\347\260*\001R\020spendStakeTxHash\022A\n\032" +
+      "spend_stake_tx_header_hash\030\003 \001(\tB\005\250\347\260*\001R" +
+      "\026spendStakeTxHeaderHash\022A\n\032spend_stake_t" +
+      "x_block_index\030\004 \001(\rB\005\250\347\260*\001R\026spendStakeTx" +
+      "BlockIndex*\257\001\n\026FinalityProviderStatus\022%\n" +
+      "!FINALITY_PROVIDER_STATUS_INACTIVE\020\000\022#\n\037" +
+      "FINALITY_PROVIDER_STATUS_ACTIVE\020\001\022#\n\037FIN" +
+      "ALITY_PROVIDER_STATUS_JAILED\020\002\022$\n FINALI" +
+      "TY_PROVIDER_STATUS_SLASHED\020\003B\322\001\n\031com.bab" +
+      "ylon.btcstaking.v1B\013EventsProtoZ4github." +
+      "com/babylonlabs-io/babylon/x/btcstaking/" +
+      "types\242\002\003BBX\252\002\025Babylon.Btcstaking.V1\312\002\025Ba" +
+      "bylon\\Btcstaking\\V1\342\002!Babylon\\Btcstaking" +
+      "\\V1\\GPBMetadata\352\002\027Babylon::Btcstaking::V" +
+      "1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.gogoproto.GogoProto.getDescriptor(),
+          com.cosmos.staking.v1beta1.StakingProto.getDescriptor(),
           com.babylon.btcstaking.v1.BtcstakingProto.getDescriptor(),
+          com.cosmos_proto.CosmosProto.getDescriptor(),
+          com.amino.AminoProto.getDescriptor(),
         });
-    internal_static_babylon_btcstaking_v1_EventNewFinalityProvider_descriptor =
+    internal_static_babylon_btcstaking_v1_EventFinalityProviderCreated_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_babylon_btcstaking_v1_EventNewFinalityProvider_fieldAccessorTable = new
+    internal_static_babylon_btcstaking_v1_EventFinalityProviderCreated_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_babylon_btcstaking_v1_EventNewFinalityProvider_descriptor,
-        new java.lang.String[] { "Fp", });
-    internal_static_babylon_btcstaking_v1_EventBTCDelegationStateUpdate_descriptor =
+        internal_static_babylon_btcstaking_v1_EventFinalityProviderCreated_descriptor,
+        new java.lang.String[] { "BtcPkHex", "Addr", "Commission", "Moniker", "Identity", "Website", "SecurityContact", "Details", });
+    internal_static_babylon_btcstaking_v1_EventFinalityProviderEdited_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_babylon_btcstaking_v1_EventFinalityProviderEdited_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_btcstaking_v1_EventFinalityProviderEdited_descriptor,
+        new java.lang.String[] { "BtcPkHex", "Commission", "Moniker", "Identity", "Website", "SecurityContact", "Details", });
+    internal_static_babylon_btcstaking_v1_EventBTCDelegationStateUpdate_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_babylon_btcstaking_v1_EventBTCDelegationStateUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_EventBTCDelegationStateUpdate_descriptor,
         new java.lang.String[] { "StakingTxHash", "NewState", });
     internal_static_babylon_btcstaking_v1_EventSelectiveSlashing_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_babylon_btcstaking_v1_EventSelectiveSlashing_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_EventSelectiveSlashing_descriptor,
         new java.lang.String[] { "Evidence", });
     internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_descriptor,
-        new java.lang.String[] { "SlashedFp", "BtcDelStateUpdate", "Ev", });
+        new java.lang.String[] { "SlashedFp", "JailedFp", "UnjailedFp", "BtcDelStateUpdate", "Ev", });
     internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_EventSlashedFinalityProvider_descriptor =
       internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_descriptor.getNestedTypes().get(0);
     internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_EventSlashedFinalityProvider_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_EventSlashedFinalityProvider_descriptor,
         new java.lang.String[] { "Pk", });
+    internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_EventJailedFinalityProvider_descriptor =
+      internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_descriptor.getNestedTypes().get(1);
+    internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_EventJailedFinalityProvider_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_EventJailedFinalityProvider_descriptor,
+        new java.lang.String[] { "Pk", });
+    internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_EventUnjailedFinalityProvider_descriptor =
+      internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_descriptor.getNestedTypes().get(2);
+    internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_EventUnjailedFinalityProvider_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_btcstaking_v1_EventPowerDistUpdate_EventUnjailedFinalityProvider_descriptor,
+        new java.lang.String[] { "Pk", });
+    internal_static_babylon_btcstaking_v1_EventFinalityProviderStatusChange_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_babylon_btcstaking_v1_EventFinalityProviderStatusChange_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_btcstaking_v1_EventFinalityProviderStatusChange_descriptor,
+        new java.lang.String[] { "BtcPk", "NewState", });
+    internal_static_babylon_btcstaking_v1_EventBTCDelegationCreated_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_babylon_btcstaking_v1_EventBTCDelegationCreated_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_btcstaking_v1_EventBTCDelegationCreated_descriptor,
+        new java.lang.String[] { "StakingTxHash", "StakingOutputPkScript", "StakingOutputIndex", "ParamsVersion", "FinalityProviderBtcPksHex", "StakerBtcPkHex", "StakingTime", "StakingAmount", "UnbondingTime", "UnbondingTx", "NewState", });
+    internal_static_babylon_btcstaking_v1_EventCovenantSignatureReceived_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_babylon_btcstaking_v1_EventCovenantSignatureReceived_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_btcstaking_v1_EventCovenantSignatureReceived_descriptor,
+        new java.lang.String[] { "StakingTxHash", "CovenantBtcPkHex", "CovenantUnbondingSignatureHex", });
+    internal_static_babylon_btcstaking_v1_EventCovenantQuorumReached_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_babylon_btcstaking_v1_EventCovenantQuorumReached_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_btcstaking_v1_EventCovenantQuorumReached_descriptor,
+        new java.lang.String[] { "StakingTxHash", "NewState", });
+    internal_static_babylon_btcstaking_v1_EventBTCDelegationInclusionProofReceived_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_babylon_btcstaking_v1_EventBTCDelegationInclusionProofReceived_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_btcstaking_v1_EventBTCDelegationInclusionProofReceived_descriptor,
+        new java.lang.String[] { "StakingTxHash", "StartHeight", "EndHeight", "NewState", });
+    internal_static_babylon_btcstaking_v1_EventBTCDelgationUnbondedEarly_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_babylon_btcstaking_v1_EventBTCDelgationUnbondedEarly_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_btcstaking_v1_EventBTCDelgationUnbondedEarly_descriptor,
+        new java.lang.String[] { "StakingTxHash", "StartHeight", "NewState", });
+    internal_static_babylon_btcstaking_v1_EventBTCDelegationExpired_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_babylon_btcstaking_v1_EventBTCDelegationExpired_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_btcstaking_v1_EventBTCDelegationExpired_descriptor,
+        new java.lang.String[] { "StakingTxHash", "NewState", });
+    internal_static_babylon_btcstaking_v1_EventUnexpectedUnbondingTx_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_babylon_btcstaking_v1_EventUnexpectedUnbondingTx_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_btcstaking_v1_EventUnexpectedUnbondingTx_descriptor,
+        new java.lang.String[] { "StakingTxHash", "SpendStakeTxHash", "SpendStakeTxHeaderHash", "SpendStakeTxBlockIndex", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.amino.AminoProto.dontOmitempty);
     registry.add(com.gogoproto.GogoProto.customtype);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.gogoproto.GogoProto.getDescriptor();
+    com.cosmos.staking.v1beta1.StakingProto.getDescriptor();
     com.babylon.btcstaking.v1.BtcstakingProto.getDescriptor();
+    com.cosmos_proto.CosmosProto.getDescriptor();
+    com.amino.AminoProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

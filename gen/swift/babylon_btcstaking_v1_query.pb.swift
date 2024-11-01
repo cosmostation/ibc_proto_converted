@@ -232,154 +232,6 @@ struct Babylon_Btcstaking_V1_QueryBTCDelegationsResponse {
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageResponse? = nil
 }
 
-/// QueryFinalityProviderPowerAtHeightRequest is the request type for the
-/// Query/FinalityProviderPowerAtHeight RPC method.
-struct Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightRequest {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  /// fp_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the finality provider that
-  /// this BTC delegation delegates to
-  /// the PK follows encoding in BIP-340 spec
-  var fpBtcPkHex: String = String()
-
-  /// height is used for querying the given finality provider's voting power at this height
-  var height: UInt64 = 0
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-}
-
-/// QueryFinalityProviderPowerAtHeightResponse is the response type for the
-/// Query/FinalityProviderPowerAtHeight RPC method.
-struct Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  /// voting_power is the voting power of the finality provider
-  var votingPower: UInt64 = 0
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-}
-
-/// QueryFinalityProviderCurrentPowerRequest is the request type for the
-/// Query/FinalityProviderCurrentPower RPC method.
-struct Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerRequest {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  /// fp_btc_pk_hex is the hex str of Bitcoin secp256k1 PK of the finality provider that
-  /// this BTC delegation delegates to
-  /// the PK follows encoding in BIP-340 spec
-  var fpBtcPkHex: String = String()
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-}
-
-/// QueryFinalityProviderCurrentPowerResponse is the response type for the
-/// Query/FinalityProviderCurrentPower RPC method.
-struct Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  /// height is the current height
-  var height: UInt64 = 0
-
-  /// voting_power is the voting power of the finality provider
-  var votingPower: UInt64 = 0
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-}
-
-/// QueryActiveFinalityProvidersAtHeightRequest is the request type for the
-/// Query/ActiveFinalityProvidersAtHeight RPC method.
-struct Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightRequest {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  /// height defines at which Babylon height to query the finality providers info.
-  var height: UInt64 = 0
-
-  /// pagination defines an optional pagination for the request.
-  var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
-    get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageRequest()}
-    set {_pagination = newValue}
-  }
-  /// Returns true if `pagination` has been explicitly set.
-  var hasPagination: Bool {return self._pagination != nil}
-  /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
-  mutating func clearPagination() {self._pagination = nil}
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-
-  fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageRequest? = nil
-}
-
-/// QueryActiveFinalityProvidersAtHeightResponse is the response type for the
-/// Query/ActiveFinalityProvidersAtHeight RPC method.
-struct Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  /// finality_providers contains all the queried finality providersn.
-  var finalityProviders: [Babylon_Btcstaking_V1_FinalityProviderWithMeta] = []
-
-  /// pagination defines the pagination in the response.
-  var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
-    get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageResponse()}
-    set {_pagination = newValue}
-  }
-  /// Returns true if `pagination` has been explicitly set.
-  var hasPagination: Bool {return self._pagination != nil}
-  /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
-  mutating func clearPagination() {self._pagination = nil}
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-
-  fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageResponse? = nil
-}
-
-/// QueryActivatedHeightRequest is the request type for the Query/ActivatedHeight RPC method.
-struct Babylon_Btcstaking_V1_QueryActivatedHeightRequest {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-}
-
-/// QueryActivatedHeightResponse is the response type for the Query/ActivatedHeight RPC method.
-struct Babylon_Btcstaking_V1_QueryActivatedHeightResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  var height: UInt64 = 0
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-}
-
 /// QueryFinalityProviderDelegationsRequest is the request type for the
 /// Query/FinalityProviderDelegations RPC method.
 struct Babylon_Btcstaking_V1_QueryFinalityProviderDelegationsRequest {
@@ -501,16 +353,22 @@ struct Babylon_Btcstaking_V1_BTCDelegationResponse {
     set {_uniqueStorage()._fpBtcPkList = newValue}
   }
 
+  /// staking_time is the number of blocks for which the delegation is locked on BTC chain
+  var stakingTime: UInt32 {
+    get {return _storage._stakingTime}
+    set {_uniqueStorage()._stakingTime = newValue}
+  }
+
   /// start_height is the start BTC height of the BTC delegation
   /// it is the start BTC height of the timelock
-  var startHeight: UInt64 {
+  var startHeight: UInt32 {
     get {return _storage._startHeight}
     set {_uniqueStorage()._startHeight = newValue}
   }
 
   /// end_height is the end height of the BTC delegation
   /// it is the end BTC height of the timelock - w
-  var endHeight: UInt64 {
+  var endHeight: UInt32 {
     get {return _storage._endHeight}
     set {_uniqueStorage()._endHeight = newValue}
   }
@@ -598,6 +456,22 @@ struct Babylon_Btcstaking_V1_BTCDelegationResponse {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
+/// DelegatorUnbondingInfoResponse provides all necessary info about transaction
+/// which spent the staking output
+struct Babylon_Btcstaking_V1_DelegatorUnbondingInfoResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// spend_stake_tx_hex is the transaction which spent the staking output. It is
+  /// filled only if the spend_stake_tx_hex is different than the unbonding_tx_hex
+  var spendStakeTxHex: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 /// BTCUndelegationResponse provides all necessary info about the undeleagation
 struct Babylon_Btcstaking_V1_BTCUndelegationResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
@@ -608,13 +482,6 @@ struct Babylon_Btcstaking_V1_BTCUndelegationResponse {
   /// output to unbonding output. Unbonding output will usually have lower timelock
   /// than staking output. The unbonding tx as string hex.
   var unbondingTxHex: String = String()
-
-  /// delegator_unbonding_sig is the signature on the unbonding tx
-  /// by the delegator (i.e., SK corresponding to btc_pk).
-  /// It effectively proves that the delegator wants to unbond and thus
-  /// Babylon will consider this BTC delegation unbonded. Delegator's BTC
-  /// on Bitcoin will be unbonded after timelock. The unbonding delegator sig as string hex.
-  var delegatorUnbondingSigHex: String = String()
 
   /// covenant_unbonding_sig_list is the list of signatures on the unbonding tx
   /// by covenant members
@@ -634,9 +501,22 @@ struct Babylon_Btcstaking_V1_BTCUndelegationResponse {
   /// It will be a part of the witness for the staking tx output.
   var covenantSlashingSigs: [Babylon_Btcstaking_V1_CovenantAdaptorSignatures] = []
 
+  /// btc_undelegation_info contains all necessary info about the transaction
+  /// which spent the staking output
+  var delegatorUnbondingInfoResponse: Babylon_Btcstaking_V1_DelegatorUnbondingInfoResponse {
+    get {return _delegatorUnbondingInfoResponse ?? Babylon_Btcstaking_V1_DelegatorUnbondingInfoResponse()}
+    set {_delegatorUnbondingInfoResponse = newValue}
+  }
+  /// Returns true if `delegatorUnbondingInfoResponse` has been explicitly set.
+  var hasDelegatorUnbondingInfoResponse: Bool {return self._delegatorUnbondingInfoResponse != nil}
+  /// Clears the value of `delegatorUnbondingInfoResponse`. Subsequent reads from it will return its default value.
+  mutating func clearDelegatorUnbondingInfoResponse() {self._delegatorUnbondingInfoResponse = nil}
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
+
+  fileprivate var _delegatorUnbondingInfoResponse: Babylon_Btcstaking_V1_DelegatorUnbondingInfoResponse? = nil
 }
 
 /// BTCDelegatorDelegationsResponse is a collection of BTC delegations responses from the same delegator.
@@ -697,16 +577,13 @@ struct Babylon_Btcstaking_V1_FinalityProviderResponse {
   /// slashed_btc_height indicates the BTC height when
   /// the finality provider is slashed.
   /// if it's 0 then the finality provider is not slashed
-  var slashedBtcHeight: UInt64 = 0
+  var slashedBtcHeight: UInt32 = 0
 
   /// height is the queried Babylon height
   var height: UInt64 = 0
 
-  /// voting_power is the voting power of this finality provider at the given height
-  var votingPower: UInt64 = 0
-
-  /// sluggish defines whether the finality provider is detected sluggish
-  var sluggish: Bool = false
+  /// jailed defines whether the finality provider is jailed
+  var jailed: Bool = false
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -727,19 +604,12 @@ extension Babylon_Btcstaking_V1_QueryFinalityProviderRequest: @unchecked Sendabl
 extension Babylon_Btcstaking_V1_QueryFinalityProviderResponse: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_QueryBTCDelegationsRequest: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_QueryBTCDelegationsResponse: @unchecked Sendable {}
-extension Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightRequest: @unchecked Sendable {}
-extension Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightResponse: @unchecked Sendable {}
-extension Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerRequest: @unchecked Sendable {}
-extension Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerResponse: @unchecked Sendable {}
-extension Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightRequest: @unchecked Sendable {}
-extension Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightResponse: @unchecked Sendable {}
-extension Babylon_Btcstaking_V1_QueryActivatedHeightRequest: @unchecked Sendable {}
-extension Babylon_Btcstaking_V1_QueryActivatedHeightResponse: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_QueryFinalityProviderDelegationsRequest: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_QueryFinalityProviderDelegationsResponse: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_QueryBTCDelegationRequest: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_QueryBTCDelegationResponse: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_BTCDelegationResponse: @unchecked Sendable {}
+extension Babylon_Btcstaking_V1_DelegatorUnbondingInfoResponse: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_BTCUndelegationResponse: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_BTCDelegatorDelegationsResponse: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_FinalityProviderResponse: @unchecked Sendable {}
@@ -1102,281 +972,6 @@ extension Babylon_Btcstaking_V1_QueryBTCDelegationsResponse: SwiftProtobuf.Messa
   }
 }
 
-extension Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryFinalityProviderPowerAtHeightRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "fp_btc_pk_hex"),
-    2: .same(proto: "height"),
-  ]
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.fpBtcPkHex) }()
-      case 2: try { try decoder.decodeSingularUInt64Field(value: &self.height) }()
-      default: break
-      }
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.fpBtcPkHex.isEmpty {
-      try visitor.visitSingularStringField(value: self.fpBtcPkHex, fieldNumber: 1)
-    }
-    if self.height != 0 {
-      try visitor.visitSingularUInt64Field(value: self.height, fieldNumber: 2)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightRequest, rhs: Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightRequest) -> Bool {
-    if lhs.fpBtcPkHex != rhs.fpBtcPkHex {return false}
-    if lhs.height != rhs.height {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryFinalityProviderPowerAtHeightResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "voting_power"),
-  ]
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.votingPower) }()
-      default: break
-      }
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if self.votingPower != 0 {
-      try visitor.visitSingularUInt64Field(value: self.votingPower, fieldNumber: 1)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightResponse, rhs: Babylon_Btcstaking_V1_QueryFinalityProviderPowerAtHeightResponse) -> Bool {
-    if lhs.votingPower != rhs.votingPower {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryFinalityProviderCurrentPowerRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "fp_btc_pk_hex"),
-  ]
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.fpBtcPkHex) }()
-      default: break
-      }
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.fpBtcPkHex.isEmpty {
-      try visitor.visitSingularStringField(value: self.fpBtcPkHex, fieldNumber: 1)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerRequest, rhs: Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerRequest) -> Bool {
-    if lhs.fpBtcPkHex != rhs.fpBtcPkHex {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryFinalityProviderCurrentPowerResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "height"),
-    2: .standard(proto: "voting_power"),
-  ]
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.height) }()
-      case 2: try { try decoder.decodeSingularUInt64Field(value: &self.votingPower) }()
-      default: break
-      }
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if self.height != 0 {
-      try visitor.visitSingularUInt64Field(value: self.height, fieldNumber: 1)
-    }
-    if self.votingPower != 0 {
-      try visitor.visitSingularUInt64Field(value: self.votingPower, fieldNumber: 2)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerResponse, rhs: Babylon_Btcstaking_V1_QueryFinalityProviderCurrentPowerResponse) -> Bool {
-    if lhs.height != rhs.height {return false}
-    if lhs.votingPower != rhs.votingPower {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryActiveFinalityProvidersAtHeightRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "height"),
-    2: .same(proto: "pagination"),
-  ]
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.height) }()
-      case 2: try { try decoder.decodeSingularMessageField(value: &self._pagination) }()
-      default: break
-      }
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    if self.height != 0 {
-      try visitor.visitSingularUInt64Field(value: self.height, fieldNumber: 1)
-    }
-    try { if let v = self._pagination {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
-    } }()
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightRequest, rhs: Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightRequest) -> Bool {
-    if lhs.height != rhs.height {return false}
-    if lhs._pagination != rhs._pagination {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryActiveFinalityProvidersAtHeightResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "finality_providers"),
-    2: .same(proto: "pagination"),
-  ]
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.finalityProviders) }()
-      case 2: try { try decoder.decodeSingularMessageField(value: &self._pagination) }()
-      default: break
-      }
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    if !self.finalityProviders.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.finalityProviders, fieldNumber: 1)
-    }
-    try { if let v = self._pagination {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
-    } }()
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightResponse, rhs: Babylon_Btcstaking_V1_QueryActiveFinalityProvidersAtHeightResponse) -> Bool {
-    if lhs.finalityProviders != rhs.finalityProviders {return false}
-    if lhs._pagination != rhs._pagination {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension Babylon_Btcstaking_V1_QueryActivatedHeightRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryActivatedHeightRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let _ = try decoder.nextFieldNumber() {
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Babylon_Btcstaking_V1_QueryActivatedHeightRequest, rhs: Babylon_Btcstaking_V1_QueryActivatedHeightRequest) -> Bool {
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension Babylon_Btcstaking_V1_QueryActivatedHeightResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryActivatedHeightResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "height"),
-  ]
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.height) }()
-      default: break
-      }
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if self.height != 0 {
-      try visitor.visitSingularUInt64Field(value: self.height, fieldNumber: 1)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Babylon_Btcstaking_V1_QueryActivatedHeightResponse, rhs: Babylon_Btcstaking_V1_QueryActivatedHeightResponse) -> Bool {
-    if lhs.height != rhs.height {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
 extension Babylon_Btcstaking_V1_QueryFinalityProviderDelegationsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".QueryFinalityProviderDelegationsRequest"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
@@ -1535,27 +1130,29 @@ extension Babylon_Btcstaking_V1_BTCDelegationResponse: SwiftProtobuf.Message, Sw
     1: .standard(proto: "staker_addr"),
     2: .standard(proto: "btc_pk"),
     3: .standard(proto: "fp_btc_pk_list"),
-    4: .standard(proto: "start_height"),
-    5: .standard(proto: "end_height"),
-    6: .standard(proto: "total_sat"),
-    7: .standard(proto: "staking_tx_hex"),
-    8: .standard(proto: "slashing_tx_hex"),
-    9: .standard(proto: "delegator_slash_sig_hex"),
-    10: .standard(proto: "covenant_sigs"),
-    11: .standard(proto: "staking_output_idx"),
-    12: .same(proto: "active"),
-    13: .standard(proto: "status_desc"),
-    14: .standard(proto: "unbonding_time"),
-    15: .standard(proto: "undelegation_response"),
-    16: .standard(proto: "params_version"),
+    4: .standard(proto: "staking_time"),
+    5: .standard(proto: "start_height"),
+    6: .standard(proto: "end_height"),
+    7: .standard(proto: "total_sat"),
+    8: .standard(proto: "staking_tx_hex"),
+    9: .standard(proto: "slashing_tx_hex"),
+    10: .standard(proto: "delegator_slash_sig_hex"),
+    11: .standard(proto: "covenant_sigs"),
+    12: .standard(proto: "staking_output_idx"),
+    13: .same(proto: "active"),
+    14: .standard(proto: "status_desc"),
+    15: .standard(proto: "unbonding_time"),
+    16: .standard(proto: "undelegation_response"),
+    17: .standard(proto: "params_version"),
   ]
 
   fileprivate class _StorageClass {
     var _stakerAddr: String = String()
     var _btcPk: Data = Data()
     var _fpBtcPkList: [Data] = []
-    var _startHeight: UInt64 = 0
-    var _endHeight: UInt64 = 0
+    var _stakingTime: UInt32 = 0
+    var _startHeight: UInt32 = 0
+    var _endHeight: UInt32 = 0
     var _totalSat: UInt64 = 0
     var _stakingTxHex: String = String()
     var _slashingTxHex: String = String()
@@ -1576,6 +1173,7 @@ extension Babylon_Btcstaking_V1_BTCDelegationResponse: SwiftProtobuf.Message, Sw
       _stakerAddr = source._stakerAddr
       _btcPk = source._btcPk
       _fpBtcPkList = source._fpBtcPkList
+      _stakingTime = source._stakingTime
       _startHeight = source._startHeight
       _endHeight = source._endHeight
       _totalSat = source._totalSat
@@ -1610,19 +1208,20 @@ extension Babylon_Btcstaking_V1_BTCDelegationResponse: SwiftProtobuf.Message, Sw
         case 1: try { try decoder.decodeSingularStringField(value: &_storage._stakerAddr) }()
         case 2: try { try decoder.decodeSingularBytesField(value: &_storage._btcPk) }()
         case 3: try { try decoder.decodeRepeatedBytesField(value: &_storage._fpBtcPkList) }()
-        case 4: try { try decoder.decodeSingularUInt64Field(value: &_storage._startHeight) }()
-        case 5: try { try decoder.decodeSingularUInt64Field(value: &_storage._endHeight) }()
-        case 6: try { try decoder.decodeSingularUInt64Field(value: &_storage._totalSat) }()
-        case 7: try { try decoder.decodeSingularStringField(value: &_storage._stakingTxHex) }()
-        case 8: try { try decoder.decodeSingularStringField(value: &_storage._slashingTxHex) }()
-        case 9: try { try decoder.decodeSingularStringField(value: &_storage._delegatorSlashSigHex) }()
-        case 10: try { try decoder.decodeRepeatedMessageField(value: &_storage._covenantSigs) }()
-        case 11: try { try decoder.decodeSingularUInt32Field(value: &_storage._stakingOutputIdx) }()
-        case 12: try { try decoder.decodeSingularBoolField(value: &_storage._active) }()
-        case 13: try { try decoder.decodeSingularStringField(value: &_storage._statusDesc) }()
-        case 14: try { try decoder.decodeSingularUInt32Field(value: &_storage._unbondingTime) }()
-        case 15: try { try decoder.decodeSingularMessageField(value: &_storage._undelegationResponse) }()
-        case 16: try { try decoder.decodeSingularUInt32Field(value: &_storage._paramsVersion) }()
+        case 4: try { try decoder.decodeSingularUInt32Field(value: &_storage._stakingTime) }()
+        case 5: try { try decoder.decodeSingularUInt32Field(value: &_storage._startHeight) }()
+        case 6: try { try decoder.decodeSingularUInt32Field(value: &_storage._endHeight) }()
+        case 7: try { try decoder.decodeSingularUInt64Field(value: &_storage._totalSat) }()
+        case 8: try { try decoder.decodeSingularStringField(value: &_storage._stakingTxHex) }()
+        case 9: try { try decoder.decodeSingularStringField(value: &_storage._slashingTxHex) }()
+        case 10: try { try decoder.decodeSingularStringField(value: &_storage._delegatorSlashSigHex) }()
+        case 11: try { try decoder.decodeRepeatedMessageField(value: &_storage._covenantSigs) }()
+        case 12: try { try decoder.decodeSingularUInt32Field(value: &_storage._stakingOutputIdx) }()
+        case 13: try { try decoder.decodeSingularBoolField(value: &_storage._active) }()
+        case 14: try { try decoder.decodeSingularStringField(value: &_storage._statusDesc) }()
+        case 15: try { try decoder.decodeSingularUInt32Field(value: &_storage._unbondingTime) }()
+        case 16: try { try decoder.decodeSingularMessageField(value: &_storage._undelegationResponse) }()
+        case 17: try { try decoder.decodeSingularUInt32Field(value: &_storage._paramsVersion) }()
         default: break
         }
       }
@@ -1644,44 +1243,47 @@ extension Babylon_Btcstaking_V1_BTCDelegationResponse: SwiftProtobuf.Message, Sw
       if !_storage._fpBtcPkList.isEmpty {
         try visitor.visitRepeatedBytesField(value: _storage._fpBtcPkList, fieldNumber: 3)
       }
+      if _storage._stakingTime != 0 {
+        try visitor.visitSingularUInt32Field(value: _storage._stakingTime, fieldNumber: 4)
+      }
       if _storage._startHeight != 0 {
-        try visitor.visitSingularUInt64Field(value: _storage._startHeight, fieldNumber: 4)
+        try visitor.visitSingularUInt32Field(value: _storage._startHeight, fieldNumber: 5)
       }
       if _storage._endHeight != 0 {
-        try visitor.visitSingularUInt64Field(value: _storage._endHeight, fieldNumber: 5)
+        try visitor.visitSingularUInt32Field(value: _storage._endHeight, fieldNumber: 6)
       }
       if _storage._totalSat != 0 {
-        try visitor.visitSingularUInt64Field(value: _storage._totalSat, fieldNumber: 6)
+        try visitor.visitSingularUInt64Field(value: _storage._totalSat, fieldNumber: 7)
       }
       if !_storage._stakingTxHex.isEmpty {
-        try visitor.visitSingularStringField(value: _storage._stakingTxHex, fieldNumber: 7)
+        try visitor.visitSingularStringField(value: _storage._stakingTxHex, fieldNumber: 8)
       }
       if !_storage._slashingTxHex.isEmpty {
-        try visitor.visitSingularStringField(value: _storage._slashingTxHex, fieldNumber: 8)
+        try visitor.visitSingularStringField(value: _storage._slashingTxHex, fieldNumber: 9)
       }
       if !_storage._delegatorSlashSigHex.isEmpty {
-        try visitor.visitSingularStringField(value: _storage._delegatorSlashSigHex, fieldNumber: 9)
+        try visitor.visitSingularStringField(value: _storage._delegatorSlashSigHex, fieldNumber: 10)
       }
       if !_storage._covenantSigs.isEmpty {
-        try visitor.visitRepeatedMessageField(value: _storage._covenantSigs, fieldNumber: 10)
+        try visitor.visitRepeatedMessageField(value: _storage._covenantSigs, fieldNumber: 11)
       }
       if _storage._stakingOutputIdx != 0 {
-        try visitor.visitSingularUInt32Field(value: _storage._stakingOutputIdx, fieldNumber: 11)
+        try visitor.visitSingularUInt32Field(value: _storage._stakingOutputIdx, fieldNumber: 12)
       }
       if _storage._active != false {
-        try visitor.visitSingularBoolField(value: _storage._active, fieldNumber: 12)
+        try visitor.visitSingularBoolField(value: _storage._active, fieldNumber: 13)
       }
       if !_storage._statusDesc.isEmpty {
-        try visitor.visitSingularStringField(value: _storage._statusDesc, fieldNumber: 13)
+        try visitor.visitSingularStringField(value: _storage._statusDesc, fieldNumber: 14)
       }
       if _storage._unbondingTime != 0 {
-        try visitor.visitSingularUInt32Field(value: _storage._unbondingTime, fieldNumber: 14)
+        try visitor.visitSingularUInt32Field(value: _storage._unbondingTime, fieldNumber: 15)
       }
       try { if let v = _storage._undelegationResponse {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 15)
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 16)
       } }()
       if _storage._paramsVersion != 0 {
-        try visitor.visitSingularUInt32Field(value: _storage._paramsVersion, fieldNumber: 16)
+        try visitor.visitSingularUInt32Field(value: _storage._paramsVersion, fieldNumber: 17)
       }
     }
     try unknownFields.traverse(visitor: &visitor)
@@ -1695,6 +1297,7 @@ extension Babylon_Btcstaking_V1_BTCDelegationResponse: SwiftProtobuf.Message, Sw
         if _storage._stakerAddr != rhs_storage._stakerAddr {return false}
         if _storage._btcPk != rhs_storage._btcPk {return false}
         if _storage._fpBtcPkList != rhs_storage._fpBtcPkList {return false}
+        if _storage._stakingTime != rhs_storage._stakingTime {return false}
         if _storage._startHeight != rhs_storage._startHeight {return false}
         if _storage._endHeight != rhs_storage._endHeight {return false}
         if _storage._totalSat != rhs_storage._totalSat {return false}
@@ -1717,15 +1320,47 @@ extension Babylon_Btcstaking_V1_BTCDelegationResponse: SwiftProtobuf.Message, Sw
   }
 }
 
+extension Babylon_Btcstaking_V1_DelegatorUnbondingInfoResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".DelegatorUnbondingInfoResponse"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "spend_stake_tx_hex"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.spendStakeTxHex) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.spendStakeTxHex.isEmpty {
+      try visitor.visitSingularStringField(value: self.spendStakeTxHex, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Btcstaking_V1_DelegatorUnbondingInfoResponse, rhs: Babylon_Btcstaking_V1_DelegatorUnbondingInfoResponse) -> Bool {
+    if lhs.spendStakeTxHex != rhs.spendStakeTxHex {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
 extension Babylon_Btcstaking_V1_BTCUndelegationResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".BTCUndelegationResponse"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "unbonding_tx_hex"),
-    2: .standard(proto: "delegator_unbonding_sig_hex"),
-    3: .standard(proto: "covenant_unbonding_sig_list"),
-    4: .standard(proto: "slashing_tx_hex"),
-    5: .standard(proto: "delegator_slashing_sig_hex"),
-    6: .standard(proto: "covenant_slashing_sigs"),
+    2: .standard(proto: "covenant_unbonding_sig_list"),
+    3: .standard(proto: "slashing_tx_hex"),
+    4: .standard(proto: "delegator_slashing_sig_hex"),
+    5: .standard(proto: "covenant_slashing_sigs"),
+    6: .standard(proto: "delegator_unbonding_info_response"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -1735,45 +1370,49 @@ extension Babylon_Btcstaking_V1_BTCUndelegationResponse: SwiftProtobuf.Message, 
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.unbondingTxHex) }()
-      case 2: try { try decoder.decodeSingularStringField(value: &self.delegatorUnbondingSigHex) }()
-      case 3: try { try decoder.decodeRepeatedMessageField(value: &self.covenantUnbondingSigList) }()
-      case 4: try { try decoder.decodeSingularStringField(value: &self.slashingTxHex) }()
-      case 5: try { try decoder.decodeSingularStringField(value: &self.delegatorSlashingSigHex) }()
-      case 6: try { try decoder.decodeRepeatedMessageField(value: &self.covenantSlashingSigs) }()
+      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.covenantUnbondingSigList) }()
+      case 3: try { try decoder.decodeSingularStringField(value: &self.slashingTxHex) }()
+      case 4: try { try decoder.decodeSingularStringField(value: &self.delegatorSlashingSigHex) }()
+      case 5: try { try decoder.decodeRepeatedMessageField(value: &self.covenantSlashingSigs) }()
+      case 6: try { try decoder.decodeSingularMessageField(value: &self._delegatorUnbondingInfoResponse) }()
       default: break
       }
     }
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
     if !self.unbondingTxHex.isEmpty {
       try visitor.visitSingularStringField(value: self.unbondingTxHex, fieldNumber: 1)
     }
-    if !self.delegatorUnbondingSigHex.isEmpty {
-      try visitor.visitSingularStringField(value: self.delegatorUnbondingSigHex, fieldNumber: 2)
-    }
     if !self.covenantUnbondingSigList.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.covenantUnbondingSigList, fieldNumber: 3)
+      try visitor.visitRepeatedMessageField(value: self.covenantUnbondingSigList, fieldNumber: 2)
     }
     if !self.slashingTxHex.isEmpty {
-      try visitor.visitSingularStringField(value: self.slashingTxHex, fieldNumber: 4)
+      try visitor.visitSingularStringField(value: self.slashingTxHex, fieldNumber: 3)
     }
     if !self.delegatorSlashingSigHex.isEmpty {
-      try visitor.visitSingularStringField(value: self.delegatorSlashingSigHex, fieldNumber: 5)
+      try visitor.visitSingularStringField(value: self.delegatorSlashingSigHex, fieldNumber: 4)
     }
     if !self.covenantSlashingSigs.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.covenantSlashingSigs, fieldNumber: 6)
+      try visitor.visitRepeatedMessageField(value: self.covenantSlashingSigs, fieldNumber: 5)
     }
+    try { if let v = self._delegatorUnbondingInfoResponse {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Babylon_Btcstaking_V1_BTCUndelegationResponse, rhs: Babylon_Btcstaking_V1_BTCUndelegationResponse) -> Bool {
     if lhs.unbondingTxHex != rhs.unbondingTxHex {return false}
-    if lhs.delegatorUnbondingSigHex != rhs.delegatorUnbondingSigHex {return false}
     if lhs.covenantUnbondingSigList != rhs.covenantUnbondingSigList {return false}
     if lhs.slashingTxHex != rhs.slashingTxHex {return false}
     if lhs.delegatorSlashingSigHex != rhs.delegatorSlashingSigHex {return false}
     if lhs.covenantSlashingSigs != rhs.covenantSlashingSigs {return false}
+    if lhs._delegatorUnbondingInfoResponse != rhs._delegatorUnbondingInfoResponse {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -1822,8 +1461,7 @@ extension Babylon_Btcstaking_V1_FinalityProviderResponse: SwiftProtobuf.Message,
     6: .standard(proto: "slashed_babylon_height"),
     7: .standard(proto: "slashed_btc_height"),
     8: .same(proto: "height"),
-    9: .standard(proto: "voting_power"),
-    10: .same(proto: "sluggish"),
+    9: .same(proto: "jailed"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -1838,10 +1476,9 @@ extension Babylon_Btcstaking_V1_FinalityProviderResponse: SwiftProtobuf.Message,
       case 4: try { try decoder.decodeSingularBytesField(value: &self.btcPk) }()
       case 5: try { try decoder.decodeSingularMessageField(value: &self._pop) }()
       case 6: try { try decoder.decodeSingularUInt64Field(value: &self.slashedBabylonHeight) }()
-      case 7: try { try decoder.decodeSingularUInt64Field(value: &self.slashedBtcHeight) }()
+      case 7: try { try decoder.decodeSingularUInt32Field(value: &self.slashedBtcHeight) }()
       case 8: try { try decoder.decodeSingularUInt64Field(value: &self.height) }()
-      case 9: try { try decoder.decodeSingularUInt64Field(value: &self.votingPower) }()
-      case 10: try { try decoder.decodeSingularBoolField(value: &self.sluggish) }()
+      case 9: try { try decoder.decodeSingularBoolField(value: &self.jailed) }()
       default: break
       }
     }
@@ -1871,16 +1508,13 @@ extension Babylon_Btcstaking_V1_FinalityProviderResponse: SwiftProtobuf.Message,
       try visitor.visitSingularUInt64Field(value: self.slashedBabylonHeight, fieldNumber: 6)
     }
     if self.slashedBtcHeight != 0 {
-      try visitor.visitSingularUInt64Field(value: self.slashedBtcHeight, fieldNumber: 7)
+      try visitor.visitSingularUInt32Field(value: self.slashedBtcHeight, fieldNumber: 7)
     }
     if self.height != 0 {
       try visitor.visitSingularUInt64Field(value: self.height, fieldNumber: 8)
     }
-    if self.votingPower != 0 {
-      try visitor.visitSingularUInt64Field(value: self.votingPower, fieldNumber: 9)
-    }
-    if self.sluggish != false {
-      try visitor.visitSingularBoolField(value: self.sluggish, fieldNumber: 10)
+    if self.jailed != false {
+      try visitor.visitSingularBoolField(value: self.jailed, fieldNumber: 9)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -1894,8 +1528,7 @@ extension Babylon_Btcstaking_V1_FinalityProviderResponse: SwiftProtobuf.Message,
     if lhs.slashedBabylonHeight != rhs.slashedBabylonHeight {return false}
     if lhs.slashedBtcHeight != rhs.slashedBtcHeight {return false}
     if lhs.height != rhs.height {return false}
-    if lhs.votingPower != rhs.votingPower {return false}
-    if lhs.sluggish != rhs.sluggish {return false}
+    if lhs.jailed != rhs.jailed {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

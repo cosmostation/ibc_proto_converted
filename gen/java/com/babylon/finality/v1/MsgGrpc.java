@@ -111,6 +111,37 @@ public final class MsgGrpc {
     return getUpdateParamsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.babylon.finality.v1.TxProto.MsgUnjailFinalityProvider,
+      com.babylon.finality.v1.TxProto.MsgUnjailFinalityProviderResponse> getUnjailFinalityProviderMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UnjailFinalityProvider",
+      requestType = com.babylon.finality.v1.TxProto.MsgUnjailFinalityProvider.class,
+      responseType = com.babylon.finality.v1.TxProto.MsgUnjailFinalityProviderResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.babylon.finality.v1.TxProto.MsgUnjailFinalityProvider,
+      com.babylon.finality.v1.TxProto.MsgUnjailFinalityProviderResponse> getUnjailFinalityProviderMethod() {
+    io.grpc.MethodDescriptor<com.babylon.finality.v1.TxProto.MsgUnjailFinalityProvider, com.babylon.finality.v1.TxProto.MsgUnjailFinalityProviderResponse> getUnjailFinalityProviderMethod;
+    if ((getUnjailFinalityProviderMethod = MsgGrpc.getUnjailFinalityProviderMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getUnjailFinalityProviderMethod = MsgGrpc.getUnjailFinalityProviderMethod) == null) {
+          MsgGrpc.getUnjailFinalityProviderMethod = getUnjailFinalityProviderMethod =
+              io.grpc.MethodDescriptor.<com.babylon.finality.v1.TxProto.MsgUnjailFinalityProvider, com.babylon.finality.v1.TxProto.MsgUnjailFinalityProviderResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UnjailFinalityProvider"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.babylon.finality.v1.TxProto.MsgUnjailFinalityProvider.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.babylon.finality.v1.TxProto.MsgUnjailFinalityProviderResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("UnjailFinalityProvider"))
+              .build();
+        }
+      }
+    }
+    return getUnjailFinalityProviderMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -192,6 +223,17 @@ public final class MsgGrpc {
         io.grpc.stub.StreamObserver<com.babylon.finality.v1.TxProto.MsgUpdateParamsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateParamsMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * UnjailFinalityProvider defines a method for unjailing a jailed
+     * finality provider, thus it can receive voting power
+     * </pre>
+     */
+    default void unjailFinalityProvider(com.babylon.finality.v1.TxProto.MsgUnjailFinalityProvider request,
+        io.grpc.stub.StreamObserver<com.babylon.finality.v1.TxProto.MsgUnjailFinalityProviderResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUnjailFinalityProviderMethod(), responseObserver);
+    }
   }
 
   /**
@@ -260,6 +302,18 @@ public final class MsgGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateParamsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * UnjailFinalityProvider defines a method for unjailing a jailed
+     * finality provider, thus it can receive voting power
+     * </pre>
+     */
+    public void unjailFinalityProvider(com.babylon.finality.v1.TxProto.MsgUnjailFinalityProvider request,
+        io.grpc.stub.StreamObserver<com.babylon.finality.v1.TxProto.MsgUnjailFinalityProviderResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUnjailFinalityProviderMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -310,6 +364,17 @@ public final class MsgGrpc {
     public com.babylon.finality.v1.TxProto.MsgUpdateParamsResponse updateParams(com.babylon.finality.v1.TxProto.MsgUpdateParams request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateParamsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UnjailFinalityProvider defines a method for unjailing a jailed
+     * finality provider, thus it can receive voting power
+     * </pre>
+     */
+    public com.babylon.finality.v1.TxProto.MsgUnjailFinalityProviderResponse unjailFinalityProvider(com.babylon.finality.v1.TxProto.MsgUnjailFinalityProvider request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUnjailFinalityProviderMethod(), getCallOptions(), request);
     }
   }
 
@@ -365,11 +430,24 @@ public final class MsgGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateParamsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * UnjailFinalityProvider defines a method for unjailing a jailed
+     * finality provider, thus it can receive voting power
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.babylon.finality.v1.TxProto.MsgUnjailFinalityProviderResponse> unjailFinalityProvider(
+        com.babylon.finality.v1.TxProto.MsgUnjailFinalityProvider request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUnjailFinalityProviderMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_COMMIT_PUB_RAND_LIST = 0;
   private static final int METHODID_ADD_FINALITY_SIG = 1;
   private static final int METHODID_UPDATE_PARAMS = 2;
+  private static final int METHODID_UNJAIL_FINALITY_PROVIDER = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -399,6 +477,10 @@ public final class MsgGrpc {
         case METHODID_UPDATE_PARAMS:
           serviceImpl.updateParams((com.babylon.finality.v1.TxProto.MsgUpdateParams) request,
               (io.grpc.stub.StreamObserver<com.babylon.finality.v1.TxProto.MsgUpdateParamsResponse>) responseObserver);
+          break;
+        case METHODID_UNJAIL_FINALITY_PROVIDER:
+          serviceImpl.unjailFinalityProvider((com.babylon.finality.v1.TxProto.MsgUnjailFinalityProvider) request,
+              (io.grpc.stub.StreamObserver<com.babylon.finality.v1.TxProto.MsgUnjailFinalityProviderResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -439,6 +521,13 @@ public final class MsgGrpc {
               com.babylon.finality.v1.TxProto.MsgUpdateParams,
               com.babylon.finality.v1.TxProto.MsgUpdateParamsResponse>(
                 service, METHODID_UPDATE_PARAMS)))
+        .addMethod(
+          getUnjailFinalityProviderMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.babylon.finality.v1.TxProto.MsgUnjailFinalityProvider,
+              com.babylon.finality.v1.TxProto.MsgUnjailFinalityProviderResponse>(
+                service, METHODID_UNJAIL_FINALITY_PROVIDER)))
         .build();
   }
 
@@ -490,6 +579,7 @@ public final class MsgGrpc {
               .addMethod(getCommitPubRandListMethod())
               .addMethod(getAddFinalitySigMethod())
               .addMethod(getUpdateParamsMethod())
+              .addMethod(getUnjailFinalityProviderMethod())
               .build();
         }
       }

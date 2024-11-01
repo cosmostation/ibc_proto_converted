@@ -351,7 +351,7 @@ public final class QueryGrpc {
      * <pre>
      * ContainsBytes is a temporary method that
      * checks whether a hash is maintained by the module.
-     * See discussion at https://github.com/babylonchain/babylon/pull/132
+     * See discussion at https://github.com/babylonlabs-io/babylon/pull/132
      * for more details.
      * </pre>
      */
@@ -473,7 +473,7 @@ public final class QueryGrpc {
      * <pre>
      * ContainsBytes is a temporary method that
      * checks whether a hash is maintained by the module.
-     * See discussion at https://github.com/babylonchain/babylon/pull/132
+     * See discussion at https://github.com/babylonlabs-io/babylon/pull/132
      * for more details.
      * </pre>
      */
@@ -583,7 +583,7 @@ public final class QueryGrpc {
      * <pre>
      * ContainsBytes is a temporary method that
      * checks whether a hash is maintained by the module.
-     * See discussion at https://github.com/babylonchain/babylon/pull/132
+     * See discussion at https://github.com/babylonlabs-io/babylon/pull/132
      * for more details.
      * </pre>
      */
@@ -691,7 +691,7 @@ public final class QueryGrpc {
      * <pre>
      * ContainsBytes is a temporary method that
      * checks whether a hash is maintained by the module.
-     * See discussion at https://github.com/babylonchain/babylon/pull/132
+     * See discussion at https://github.com/babylonlabs-io/babylon/pull/132
      * for more details.
      * </pre>
      */

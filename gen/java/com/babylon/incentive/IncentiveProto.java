@@ -2394,12 +2394,12 @@ public final class IncentiveProto {
       "oinsR\005coins\022t\n\017withdrawn_coins\030\002 \003(\0132\031.c" +
       "osmos.base.v1beta1.CoinB0\310\336\037\000\252\337\037(github." +
       "com/cosmos/cosmos-sdk/types.CoinsR\016withd" +
-      "rawnCoinsB\275\001\n\025com.babylon.incentiveB\016Inc" +
-      "entiveProtoZ1github.com/babylonchain/bab" +
-      "ylon/x/incentive/types\242\002\003BIX\252\002\021Babylon.I" +
-      "ncentive\312\002\021Babylon\\Incentive\342\002\035Babylon\\I" +
-      "ncentive\\GPBMetadata\352\002\022Babylon::Incentiv" +
-      "eb\006proto3"
+      "rawnCoinsB\277\001\n\025com.babylon.incentiveB\016Inc" +
+      "entiveProtoZ3github.com/babylonlabs-io/b" +
+      "abylon/x/incentive/types\242\002\003BIX\252\002\021Babylon" +
+      ".Incentive\312\002\021Babylon\\Incentive\342\002\035Babylon" +
+      "\\Incentive\\GPBMetadata\352\002\022Babylon::Incent" +
+      "iveb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

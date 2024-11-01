@@ -234,7 +234,7 @@ public final class CheckpointProto {
      * sigs
      * </pre>
      *
-     * <code>bytes bls_multi_sig = 4 [json_name = "blsMultiSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.Signature"];</code>
+     * <code>bytes bls_multi_sig = 4 [json_name = "blsMultiSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.Signature"];</code>
      * @return The blsMultiSig.
      */
     com.google.protobuf.ByteString getBlsMultiSig();
@@ -335,7 +335,7 @@ public final class CheckpointProto {
      * sigs
      * </pre>
      *
-     * <code>bytes bls_multi_sig = 4 [json_name = "blsMultiSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.Signature"];</code>
+     * <code>bytes bls_multi_sig = 4 [json_name = "blsMultiSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.Signature"];</code>
      * @return The blsMultiSig.
      */
     @java.lang.Override
@@ -884,7 +884,7 @@ public final class CheckpointProto {
        * sigs
        * </pre>
        *
-       * <code>bytes bls_multi_sig = 4 [json_name = "blsMultiSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.Signature"];</code>
+       * <code>bytes bls_multi_sig = 4 [json_name = "blsMultiSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.Signature"];</code>
        * @return The blsMultiSig.
        */
       @java.lang.Override
@@ -897,7 +897,7 @@ public final class CheckpointProto {
        * sigs
        * </pre>
        *
-       * <code>bytes bls_multi_sig = 4 [json_name = "blsMultiSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.Signature"];</code>
+       * <code>bytes bls_multi_sig = 4 [json_name = "blsMultiSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.Signature"];</code>
        * @param value The blsMultiSig to set.
        * @return This builder for chaining.
        */
@@ -914,7 +914,7 @@ public final class CheckpointProto {
        * sigs
        * </pre>
        *
-       * <code>bytes bls_multi_sig = 4 [json_name = "blsMultiSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.Signature"];</code>
+       * <code>bytes bls_multi_sig = 4 [json_name = "blsMultiSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.Signature"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBlsMultiSig() {
@@ -1030,7 +1030,7 @@ public final class CheckpointProto {
      * bls_aggr_pk defines the aggregated BLS public key
      * </pre>
      *
-     * <code>bytes bls_aggr_pk = 3 [json_name = "blsAggrPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.PublicKey"];</code>
+     * <code>bytes bls_aggr_pk = 3 [json_name = "blsAggrPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.PublicKey"];</code>
      * @return The blsAggrPk.
      */
     com.google.protobuf.ByteString getBlsAggrPk();
@@ -1200,7 +1200,7 @@ public final class CheckpointProto {
      * bls_aggr_pk defines the aggregated BLS public key
      * </pre>
      *
-     * <code>bytes bls_aggr_pk = 3 [json_name = "blsAggrPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.PublicKey"];</code>
+     * <code>bytes bls_aggr_pk = 3 [json_name = "blsAggrPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.PublicKey"];</code>
      * @return The blsAggrPk.
      */
     @java.lang.Override
@@ -1975,7 +1975,7 @@ public final class CheckpointProto {
        * bls_aggr_pk defines the aggregated BLS public key
        * </pre>
        *
-       * <code>bytes bls_aggr_pk = 3 [json_name = "blsAggrPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.PublicKey"];</code>
+       * <code>bytes bls_aggr_pk = 3 [json_name = "blsAggrPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.PublicKey"];</code>
        * @return The blsAggrPk.
        */
       @java.lang.Override
@@ -1987,7 +1987,7 @@ public final class CheckpointProto {
        * bls_aggr_pk defines the aggregated BLS public key
        * </pre>
        *
-       * <code>bytes bls_aggr_pk = 3 [json_name = "blsAggrPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.PublicKey"];</code>
+       * <code>bytes bls_aggr_pk = 3 [json_name = "blsAggrPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.PublicKey"];</code>
        * @param value The blsAggrPk to set.
        * @return This builder for chaining.
        */
@@ -2003,7 +2003,7 @@ public final class CheckpointProto {
        * bls_aggr_pk defines the aggregated BLS public key
        * </pre>
        *
-       * <code>bytes bls_aggr_pk = 3 [json_name = "blsAggrPk", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.PublicKey"];</code>
+       * <code>bytes bls_aggr_pk = 3 [json_name = "blsAggrPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.PublicKey"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBlsAggrPk() {
@@ -2468,8 +2468,8 @@ public final class CheckpointProto {
 
   }
 
-  public interface InjectedCheckpointOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:babylon.checkpointing.v1.InjectedCheckpoint)
+  public interface MsgInjectedCheckpointOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.checkpointing.v1.MsgInjectedCheckpoint)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2519,41 +2519,43 @@ public final class CheckpointProto {
   }
   /**
    * <pre>
-   * InjectedCheckpoint wraps the checkpoint and the extended votes
+   * MsgInjectedCheckpoint wraps the checkpoint and the extended votes
+   * Note: this is a special message type that is only for internal ABCI++ usage
+   * for inserting checkpoint into the block
    * </pre>
    *
-   * Protobuf type {@code babylon.checkpointing.v1.InjectedCheckpoint}
+   * Protobuf type {@code babylon.checkpointing.v1.MsgInjectedCheckpoint}
    */
-  public static final class InjectedCheckpoint extends
+  public static final class MsgInjectedCheckpoint extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:babylon.checkpointing.v1.InjectedCheckpoint)
-      InjectedCheckpointOrBuilder {
+      // @@protoc_insertion_point(message_implements:babylon.checkpointing.v1.MsgInjectedCheckpoint)
+      MsgInjectedCheckpointOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use InjectedCheckpoint.newBuilder() to construct.
-    private InjectedCheckpoint(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use MsgInjectedCheckpoint.newBuilder() to construct.
+    private MsgInjectedCheckpoint(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private InjectedCheckpoint() {
+    private MsgInjectedCheckpoint() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new InjectedCheckpoint();
+      return new MsgInjectedCheckpoint();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.babylon.checkpointing.v1.CheckpointProto.internal_static_babylon_checkpointing_v1_InjectedCheckpoint_descriptor;
+      return com.babylon.checkpointing.v1.CheckpointProto.internal_static_babylon_checkpointing_v1_MsgInjectedCheckpoint_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.babylon.checkpointing.v1.CheckpointProto.internal_static_babylon_checkpointing_v1_InjectedCheckpoint_fieldAccessorTable
+      return com.babylon.checkpointing.v1.CheckpointProto.internal_static_babylon_checkpointing_v1_MsgInjectedCheckpoint_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint.class, com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint.Builder.class);
+              com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint.class, com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint.Builder.class);
     }
 
     public static final int CKPT_FIELD_NUMBER = 1;
@@ -2670,10 +2672,10 @@ public final class CheckpointProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint)) {
+      if (!(obj instanceof com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint)) {
         return super.equals(obj);
       }
-      com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint other = (com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint) obj;
+      com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint other = (com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint) obj;
 
       if (hasCkpt() != other.hasCkpt()) return false;
       if (hasCkpt()) {
@@ -2709,44 +2711,44 @@ public final class CheckpointProto {
       return hash;
     }
 
-    public static com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint parseFrom(
+    public static com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint parseFrom(
+    public static com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint parseFrom(
+    public static com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint parseFrom(
+    public static com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint parseFrom(byte[] data)
+    public static com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint parseFrom(
+    public static com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint parseFrom(java.io.InputStream input)
+    public static com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint parseFrom(
+    public static com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2754,26 +2756,26 @@ public final class CheckpointProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint parseDelimitedFrom(java.io.InputStream input)
+    public static com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint parseDelimitedFrom(
+    public static com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint parseFrom(
+    public static com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint parseFrom(
+    public static com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2786,7 +2788,7 @@ public final class CheckpointProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint prototype) {
+    public static Builder newBuilder(com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2803,29 +2805,31 @@ public final class CheckpointProto {
     }
     /**
      * <pre>
-     * InjectedCheckpoint wraps the checkpoint and the extended votes
+     * MsgInjectedCheckpoint wraps the checkpoint and the extended votes
+     * Note: this is a special message type that is only for internal ABCI++ usage
+     * for inserting checkpoint into the block
      * </pre>
      *
-     * Protobuf type {@code babylon.checkpointing.v1.InjectedCheckpoint}
+     * Protobuf type {@code babylon.checkpointing.v1.MsgInjectedCheckpoint}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:babylon.checkpointing.v1.InjectedCheckpoint)
-        com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpointOrBuilder {
+        // @@protoc_insertion_point(builder_implements:babylon.checkpointing.v1.MsgInjectedCheckpoint)
+        com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpointOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.babylon.checkpointing.v1.CheckpointProto.internal_static_babylon_checkpointing_v1_InjectedCheckpoint_descriptor;
+        return com.babylon.checkpointing.v1.CheckpointProto.internal_static_babylon_checkpointing_v1_MsgInjectedCheckpoint_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.babylon.checkpointing.v1.CheckpointProto.internal_static_babylon_checkpointing_v1_InjectedCheckpoint_fieldAccessorTable
+        return com.babylon.checkpointing.v1.CheckpointProto.internal_static_babylon_checkpointing_v1_MsgInjectedCheckpoint_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint.class, com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint.Builder.class);
+                com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint.class, com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint.Builder.class);
       }
 
-      // Construct using com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint.newBuilder()
+      // Construct using com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint.newBuilder()
       private Builder() {
 
       }
@@ -2855,17 +2859,17 @@ public final class CheckpointProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.babylon.checkpointing.v1.CheckpointProto.internal_static_babylon_checkpointing_v1_InjectedCheckpoint_descriptor;
+        return com.babylon.checkpointing.v1.CheckpointProto.internal_static_babylon_checkpointing_v1_MsgInjectedCheckpoint_descriptor;
       }
 
       @java.lang.Override
-      public com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint getDefaultInstanceForType() {
-        return com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint.getDefaultInstance();
+      public com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint getDefaultInstanceForType() {
+        return com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint build() {
-        com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint result = buildPartial();
+      public com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint build() {
+        com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2873,14 +2877,14 @@ public final class CheckpointProto {
       }
 
       @java.lang.Override
-      public com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint buildPartial() {
-        com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint result = new com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint(this);
+      public com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint buildPartial() {
+        com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint result = new com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint result) {
+      private void buildPartial0(com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.ckpt_ = ckptBuilder_ == null
@@ -2928,16 +2932,16 @@ public final class CheckpointProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint) {
-          return mergeFrom((com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint)other);
+        if (other instanceof com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint) {
+          return mergeFrom((com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint other) {
-        if (other == com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint other) {
+        if (other == com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint.getDefaultInstance()) return this;
         if (other.hasCkpt()) {
           mergeCkpt(other.getCkpt());
         }
@@ -3296,23 +3300,23 @@ public final class CheckpointProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:babylon.checkpointing.v1.InjectedCheckpoint)
+      // @@protoc_insertion_point(builder_scope:babylon.checkpointing.v1.MsgInjectedCheckpoint)
     }
 
-    // @@protoc_insertion_point(class_scope:babylon.checkpointing.v1.InjectedCheckpoint)
-    private static final com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:babylon.checkpointing.v1.MsgInjectedCheckpoint)
+    private static final com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint();
+      DEFAULT_INSTANCE = new com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint();
     }
 
-    public static com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint getDefaultInstance() {
+    public static com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<InjectedCheckpoint>
-        PARSER = new com.google.protobuf.AbstractParser<InjectedCheckpoint>() {
+    private static final com.google.protobuf.Parser<MsgInjectedCheckpoint>
+        PARSER = new com.google.protobuf.AbstractParser<MsgInjectedCheckpoint>() {
       @java.lang.Override
-      public InjectedCheckpoint parsePartialFrom(
+      public MsgInjectedCheckpoint parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -3331,17 +3335,17 @@ public final class CheckpointProto {
       }
     };
 
-    public static com.google.protobuf.Parser<InjectedCheckpoint> parser() {
+    public static com.google.protobuf.Parser<MsgInjectedCheckpoint> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<InjectedCheckpoint> getParserForType() {
+    public com.google.protobuf.Parser<MsgInjectedCheckpoint> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.babylon.checkpointing.v1.CheckpointProto.InjectedCheckpoint getDefaultInstanceForType() {
+    public com.babylon.checkpointing.v1.CheckpointProto.MsgInjectedCheckpoint getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4295,7 +4299,7 @@ public final class CheckpointProto {
     com.google.protobuf.ByteString getBlockHash();
 
     /**
-     * <code>bytes bls_sig = 3 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.Signature"];</code>
+     * <code>bytes bls_sig = 3 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.Signature"];</code>
      * @return The blsSig.
      */
     com.google.protobuf.ByteString getBlsSig();
@@ -4425,7 +4429,7 @@ public final class CheckpointProto {
     public static final int BLS_SIG_FIELD_NUMBER = 3;
     private com.google.protobuf.ByteString blsSig_ = com.google.protobuf.ByteString.EMPTY;
     /**
-     * <code>bytes bls_sig = 3 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.Signature"];</code>
+     * <code>bytes bls_sig = 3 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.Signature"];</code>
      * @return The blsSig.
      */
     @java.lang.Override
@@ -5052,7 +5056,7 @@ public final class CheckpointProto {
 
       private com.google.protobuf.ByteString blsSig_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>bytes bls_sig = 3 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.Signature"];</code>
+       * <code>bytes bls_sig = 3 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.Signature"];</code>
        * @return The blsSig.
        */
       @java.lang.Override
@@ -5060,7 +5064,7 @@ public final class CheckpointProto {
         return blsSig_;
       }
       /**
-       * <code>bytes bls_sig = 3 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.Signature"];</code>
+       * <code>bytes bls_sig = 3 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.Signature"];</code>
        * @param value The blsSig to set.
        * @return This builder for chaining.
        */
@@ -5072,7 +5076,7 @@ public final class CheckpointProto {
         return this;
       }
       /**
-       * <code>bytes bls_sig = 3 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonchain/babylon/crypto/bls12381.Signature"];</code>
+       * <code>bytes bls_sig = 3 [json_name = "blsSig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/crypto/bls12381.Signature"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBlsSig() {
@@ -5360,10 +5364,10 @@ public final class CheckpointProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_babylon_checkpointing_v1_RawCheckpointWithMeta_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_babylon_checkpointing_v1_InjectedCheckpoint_descriptor;
+    internal_static_babylon_checkpointing_v1_MsgInjectedCheckpoint_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_babylon_checkpointing_v1_InjectedCheckpoint_fieldAccessorTable;
+      internal_static_babylon_checkpointing_v1_MsgInjectedCheckpoint_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_babylon_checkpointing_v1_CheckpointStateUpdate_descriptor;
   private static final 
@@ -5386,50 +5390,50 @@ public final class CheckpointProto {
       "\n)babylon/checkpointing/v1/checkpoint.pr" +
       "oto\022\030babylon.checkpointing.v1\032\037google/pr" +
       "otobuf/timestamp.proto\032\024gogoproto/gogo.p" +
-      "roto\032\033tendermint/abci/types.proto\"\333\001\n\rRa" +
+      "roto\032\033tendermint/abci/types.proto\"\335\001\n\rRa" +
       "wCheckpoint\022\033\n\tepoch_num\030\001 \001(\004R\010epochNum" +
       "\022,\n\nblock_hash\030\002 \001(\014B\r\332\336\037\tBlockHashR\tblo" +
-      "ckHash\022\026\n\006bitmap\030\003 \001(\014R\006bitmap\022a\n\rbls_mu" +
-      "lti_sig\030\004 \001(\014B=\332\336\0379github.com/babyloncha" +
-      "in/babylon/crypto/bls12381.SignatureR\013bl" +
-      "sMultiSig:\004\350\240\037\001\"\351\002\n\025RawCheckpointWithMet" +
-      "a\022;\n\004ckpt\030\001 \001(\0132\'.babylon.checkpointing." +
-      "v1.RawCheckpointR\004ckpt\022B\n\006status\030\002 \001(\0162*" +
-      ".babylon.checkpointing.v1.CheckpointStat" +
-      "usR\006status\022]\n\013bls_aggr_pk\030\003 \001(\014B=\332\336\0379git" +
-      "hub.com/babylonchain/babylon/crypto/bls1" +
-      "2381.PublicKeyR\tblsAggrPk\022\033\n\tpower_sum\030\004" +
-      " \001(\004R\010powerSum\022M\n\tlifecycle\030\005 \003(\0132/.baby" +
-      "lon.checkpointing.v1.CheckpointStateUpda" +
-      "teR\tlifecycle:\004\350\240\037\001\"\260\001\n\022InjectedCheckpoi" +
-      "nt\022C\n\004ckpt\030\001 \001(\0132/.babylon.checkpointing" +
-      ".v1.RawCheckpointWithMetaR\004ckpt\022U\n\024exten" +
-      "ded_commit_info\030\002 \001(\0132#.tendermint.abci." +
-      "ExtendedCommitInfoR\022extendedCommitInfo\"\303" +
-      "\001\n\025CheckpointStateUpdate\022@\n\005state\030\001 \001(\0162" +
-      "*.babylon.checkpointing.v1.CheckpointSta" +
-      "tusR\005state\022!\n\014block_height\030\002 \001(\004R\013blockH" +
-      "eight\022?\n\nblock_time\030\003 \001(\0132\032.google.proto" +
-      "buf.TimestampB\004\220\337\037\001R\tblockTime:\004\350\240\037\001\"\205\002\n" +
-      "\006BlsSig\022\033\n\tepoch_num\030\001 \001(\004R\010epochNum\022,\n\n" +
-      "block_hash\030\002 \001(\014B\r\332\336\037\tBlockHashR\tblockHa" +
-      "sh\022V\n\007bls_sig\030\003 \001(\014B=\332\336\0379github.com/baby" +
-      "lonchain/babylon/crypto/bls12381.Signatu" +
-      "reR\006blsSig\022%\n\016signer_address\030\004 \001(\tR\rsign" +
-      "erAddress\022+\n\021validator_address\030\005 \001(\tR\020va" +
-      "lidatorAddress:\004\350\240\037\000*\352\001\n\020CheckpointStatu" +
-      "s\022.\n\030CKPT_STATUS_ACCUMULATING\020\000\032\020\212\235 \014Acc" +
-      "umulating\022\"\n\022CKPT_STATUS_SEALED\020\001\032\n\212\235 \006S" +
-      "ealed\022(\n\025CKPT_STATUS_SUBMITTED\020\002\032\r\212\235 \tSu" +
-      "bmitted\022(\n\025CKPT_STATUS_CONFIRMED\020\003\032\r\212\235 \t" +
-      "Confirmed\022(\n\025CKPT_STATUS_FINALIZED\020\004\032\r\212\235" +
-      " \tFinalized\032\004\210\243\036\000B\346\001\n\034com.babylon.checkp" +
-      "ointing.v1B\017CheckpointProtoZ5github.com/" +
-      "babylonchain/babylon/x/checkpointing/typ" +
-      "es\242\002\003BCX\252\002\030Babylon.Checkpointing.V1\312\002\030Ba" +
-      "bylon\\Checkpointing\\V1\342\002$Babylon\\Checkpo" +
-      "inting\\V1\\GPBMetadata\352\002\032Babylon::Checkpo" +
-      "inting::V1b\006proto3"
+      "ckHash\022\026\n\006bitmap\030\003 \001(\014R\006bitmap\022c\n\rbls_mu" +
+      "lti_sig\030\004 \001(\014B?\332\336\037;github.com/babylonlab" +
+      "s-io/babylon/crypto/bls12381.SignatureR\013" +
+      "blsMultiSig:\004\350\240\037\001\"\353\002\n\025RawCheckpointWithM" +
+      "eta\022;\n\004ckpt\030\001 \001(\0132\'.babylon.checkpointin" +
+      "g.v1.RawCheckpointR\004ckpt\022B\n\006status\030\002 \001(\016" +
+      "2*.babylon.checkpointing.v1.CheckpointSt" +
+      "atusR\006status\022_\n\013bls_aggr_pk\030\003 \001(\014B?\332\336\037;g" +
+      "ithub.com/babylonlabs-io/babylon/crypto/" +
+      "bls12381.PublicKeyR\tblsAggrPk\022\033\n\tpower_s" +
+      "um\030\004 \001(\004R\010powerSum\022M\n\tlifecycle\030\005 \003(\0132/." +
+      "babylon.checkpointing.v1.CheckpointState" +
+      "UpdateR\tlifecycle:\004\350\240\037\001\"\263\001\n\025MsgInjectedC" +
+      "heckpoint\022C\n\004ckpt\030\001 \001(\0132/.babylon.checkp" +
+      "ointing.v1.RawCheckpointWithMetaR\004ckpt\022U" +
+      "\n\024extended_commit_info\030\002 \001(\0132#.tendermin" +
+      "t.abci.ExtendedCommitInfoR\022extendedCommi" +
+      "tInfo\"\303\001\n\025CheckpointStateUpdate\022@\n\005state" +
+      "\030\001 \001(\0162*.babylon.checkpointing.v1.Checkp" +
+      "ointStatusR\005state\022!\n\014block_height\030\002 \001(\004R" +
+      "\013blockHeight\022?\n\nblock_time\030\003 \001(\0132\032.googl" +
+      "e.protobuf.TimestampB\004\220\337\037\001R\tblockTime:\004\350" +
+      "\240\037\001\"\207\002\n\006BlsSig\022\033\n\tepoch_num\030\001 \001(\004R\010epoch" +
+      "Num\022,\n\nblock_hash\030\002 \001(\014B\r\332\336\037\tBlockHashR\t" +
+      "blockHash\022X\n\007bls_sig\030\003 \001(\014B?\332\336\037;github.c" +
+      "om/babylonlabs-io/babylon/crypto/bls1238" +
+      "1.SignatureR\006blsSig\022%\n\016signer_address\030\004 " +
+      "\001(\tR\rsignerAddress\022+\n\021validator_address\030" +
+      "\005 \001(\tR\020validatorAddress:\004\350\240\037\000*\352\001\n\020Checkp" +
+      "ointStatus\022.\n\030CKPT_STATUS_ACCUMULATING\020\000" +
+      "\032\020\212\235 \014Accumulating\022\"\n\022CKPT_STATUS_SEALED" +
+      "\020\001\032\n\212\235 \006Sealed\022(\n\025CKPT_STATUS_SUBMITTED\020" +
+      "\002\032\r\212\235 \tSubmitted\022(\n\025CKPT_STATUS_CONFIRME" +
+      "D\020\003\032\r\212\235 \tConfirmed\022(\n\025CKPT_STATUS_FINALI" +
+      "ZED\020\004\032\r\212\235 \tFinalized\032\004\210\243\036\000B\350\001\n\034com.babyl" +
+      "on.checkpointing.v1B\017CheckpointProtoZ7gi" +
+      "thub.com/babylonlabs-io/babylon/x/checkp" +
+      "ointing/types\242\002\003BCX\252\002\030Babylon.Checkpoint" +
+      "ing.V1\312\002\030Babylon\\Checkpointing\\V1\342\002$Baby" +
+      "lon\\Checkpointing\\V1\\GPBMetadata\352\002\032Babyl" +
+      "on::Checkpointing::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5450,11 +5454,11 @@ public final class CheckpointProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_checkpointing_v1_RawCheckpointWithMeta_descriptor,
         new java.lang.String[] { "Ckpt", "Status", "BlsAggrPk", "PowerSum", "Lifecycle", });
-    internal_static_babylon_checkpointing_v1_InjectedCheckpoint_descriptor =
+    internal_static_babylon_checkpointing_v1_MsgInjectedCheckpoint_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_babylon_checkpointing_v1_InjectedCheckpoint_fieldAccessorTable = new
+    internal_static_babylon_checkpointing_v1_MsgInjectedCheckpoint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_babylon_checkpointing_v1_InjectedCheckpoint_descriptor,
+        internal_static_babylon_checkpointing_v1_MsgInjectedCheckpoint_descriptor,
         new java.lang.String[] { "Ckpt", "ExtendedCommitInfo", });
     internal_static_babylon_checkpointing_v1_CheckpointStateUpdate_descriptor =
       getDescriptor().getMessageTypes().get(3);
