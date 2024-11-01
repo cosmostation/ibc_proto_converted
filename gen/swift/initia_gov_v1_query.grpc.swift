@@ -52,6 +52,11 @@ internal protocol Initia_Gov_V1_QueryClientProtocol: GRPCClient {
     _ request: Initia_Gov_V1_QueryProposalsRequest,
     callOptions: CallOptions?
   ) -> UnaryCall<Initia_Gov_V1_QueryProposalsRequest, Initia_Gov_V1_QueryProposalsResponse>
+
+  func tallyResult(
+    _ request: Initia_Gov_V1_QueryTallyResultRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Initia_Gov_V1_QueryTallyResultRequest, Initia_Gov_V1_QueryTallyResultResponse>
 }
 
 extension Initia_Gov_V1_QueryClientProtocol {
@@ -128,6 +133,24 @@ extension Initia_Gov_V1_QueryClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeProposalsInterceptors() ?? []
+    )
+  }
+
+  /// TallyResult queries the tally of a proposal vote.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to TallyResult.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func tallyResult(
+    _ request: Initia_Gov_V1_QueryTallyResultRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Initia_Gov_V1_QueryTallyResultRequest, Initia_Gov_V1_QueryTallyResultResponse> {
+    return self.makeUnaryCall(
+      path: Initia_Gov_V1_QueryClientMetadata.Methods.tallyResult.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeTallyResultInterceptors() ?? []
     )
   }
 }
@@ -214,6 +237,11 @@ internal protocol Initia_Gov_V1_QueryAsyncClientProtocol: GRPCClient {
     _ request: Initia_Gov_V1_QueryProposalsRequest,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Initia_Gov_V1_QueryProposalsRequest, Initia_Gov_V1_QueryProposalsResponse>
+
+  func makeTallyResultCall(
+    _ request: Initia_Gov_V1_QueryTallyResultRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Initia_Gov_V1_QueryTallyResultRequest, Initia_Gov_V1_QueryTallyResultResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -273,6 +301,18 @@ extension Initia_Gov_V1_QueryAsyncClientProtocol {
       interceptors: self.interceptors?.makeProposalsInterceptors() ?? []
     )
   }
+
+  internal func makeTallyResultCall(
+    _ request: Initia_Gov_V1_QueryTallyResultRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Initia_Gov_V1_QueryTallyResultRequest, Initia_Gov_V1_QueryTallyResultResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Initia_Gov_V1_QueryClientMetadata.Methods.tallyResult.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeTallyResultInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -324,6 +364,18 @@ extension Initia_Gov_V1_QueryAsyncClientProtocol {
       interceptors: self.interceptors?.makeProposalsInterceptors() ?? []
     )
   }
+
+  internal func tallyResult(
+    _ request: Initia_Gov_V1_QueryTallyResultRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Initia_Gov_V1_QueryTallyResultResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Initia_Gov_V1_QueryClientMetadata.Methods.tallyResult.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeTallyResultInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -356,6 +408,9 @@ internal protocol Initia_Gov_V1_QueryClientInterceptorFactoryProtocol: Sendable 
 
   /// - Returns: Interceptors to use when invoking 'proposals'.
   func makeProposalsInterceptors() -> [ClientInterceptor<Initia_Gov_V1_QueryProposalsRequest, Initia_Gov_V1_QueryProposalsResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'tallyResult'.
+  func makeTallyResultInterceptors() -> [ClientInterceptor<Initia_Gov_V1_QueryTallyResultRequest, Initia_Gov_V1_QueryTallyResultResponse>]
 }
 
 internal enum Initia_Gov_V1_QueryClientMetadata {
@@ -367,6 +422,7 @@ internal enum Initia_Gov_V1_QueryClientMetadata {
       Initia_Gov_V1_QueryClientMetadata.Methods.emergencyProposals,
       Initia_Gov_V1_QueryClientMetadata.Methods.proposal,
       Initia_Gov_V1_QueryClientMetadata.Methods.proposals,
+      Initia_Gov_V1_QueryClientMetadata.Methods.tallyResult,
     ]
   )
 
@@ -394,6 +450,12 @@ internal enum Initia_Gov_V1_QueryClientMetadata {
       path: "/initia.gov.v1.Query/Proposals",
       type: GRPCCallType.unary
     )
+
+    internal static let tallyResult = GRPCMethodDescriptor(
+      name: "TallyResult",
+      path: "/initia.gov.v1.Query/TallyResult",
+      type: GRPCCallType.unary
+    )
   }
 }
 
@@ -414,6 +476,9 @@ internal protocol Initia_Gov_V1_QueryProvider: CallHandlerProvider {
 
   /// Proposals queries all proposals based on given status.
   func proposals(request: Initia_Gov_V1_QueryProposalsRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Initia_Gov_V1_QueryProposalsResponse>
+
+  /// TallyResult queries the tally of a proposal vote.
+  func tallyResult(request: Initia_Gov_V1_QueryTallyResultRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Initia_Gov_V1_QueryTallyResultResponse>
 }
 
 extension Initia_Gov_V1_QueryProvider {
@@ -464,6 +529,15 @@ extension Initia_Gov_V1_QueryProvider {
         userFunction: self.proposals(request:context:)
       )
 
+    case "TallyResult":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Initia_Gov_V1_QueryTallyResultRequest>(),
+        responseSerializer: ProtobufSerializer<Initia_Gov_V1_QueryTallyResultResponse>(),
+        interceptors: self.interceptors?.makeTallyResultInterceptors() ?? [],
+        userFunction: self.tallyResult(request:context:)
+      )
+
     default:
       return nil
     }
@@ -501,6 +575,12 @@ internal protocol Initia_Gov_V1_QueryAsyncProvider: CallHandlerProvider {
     request: Initia_Gov_V1_QueryProposalsRequest,
     context: GRPCAsyncServerCallContext
   ) async throws -> Initia_Gov_V1_QueryProposalsResponse
+
+  /// TallyResult queries the tally of a proposal vote.
+  @Sendable func tallyResult(
+    request: Initia_Gov_V1_QueryTallyResultRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Initia_Gov_V1_QueryTallyResultResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -558,6 +638,15 @@ extension Initia_Gov_V1_QueryAsyncProvider {
         wrapping: self.proposals(request:context:)
       )
 
+    case "TallyResult":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Initia_Gov_V1_QueryTallyResultRequest>(),
+        responseSerializer: ProtobufSerializer<Initia_Gov_V1_QueryTallyResultResponse>(),
+        interceptors: self.interceptors?.makeTallyResultInterceptors() ?? [],
+        wrapping: self.tallyResult(request:context:)
+      )
+
     default:
       return nil
     }
@@ -581,6 +670,10 @@ internal protocol Initia_Gov_V1_QueryServerInterceptorFactoryProtocol {
   /// - Returns: Interceptors to use when handling 'proposals'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeProposalsInterceptors() -> [ServerInterceptor<Initia_Gov_V1_QueryProposalsRequest, Initia_Gov_V1_QueryProposalsResponse>]
+
+  /// - Returns: Interceptors to use when handling 'tallyResult'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeTallyResultInterceptors() -> [ServerInterceptor<Initia_Gov_V1_QueryTallyResultRequest, Initia_Gov_V1_QueryTallyResultResponse>]
 }
 
 internal enum Initia_Gov_V1_QueryServerMetadata {
@@ -592,6 +685,7 @@ internal enum Initia_Gov_V1_QueryServerMetadata {
       Initia_Gov_V1_QueryServerMetadata.Methods.emergencyProposals,
       Initia_Gov_V1_QueryServerMetadata.Methods.proposal,
       Initia_Gov_V1_QueryServerMetadata.Methods.proposals,
+      Initia_Gov_V1_QueryServerMetadata.Methods.tallyResult,
     ]
   )
 
@@ -617,6 +711,12 @@ internal enum Initia_Gov_V1_QueryServerMetadata {
     internal static let proposals = GRPCMethodDescriptor(
       name: "Proposals",
       path: "/initia.gov.v1.Query/Proposals",
+      type: GRPCCallType.unary
+    )
+
+    internal static let tallyResult = GRPCMethodDescriptor(
+      name: "TallyResult",
+      path: "/initia.gov.v1.Query/TallyResult",
       type: GRPCCallType.unary
     )
   }

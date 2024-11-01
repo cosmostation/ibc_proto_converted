@@ -1250,8 +1250,8 @@ public final class AuthProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\031initia/move/v1/auth.proto\022\016initia.move" +
-      ".v1\032\021amino/amino.proto\032\024gogoproto/gogo.p" +
-      "roto\032\036cosmos/auth/v1beta1/auth.proto\"w\n\r" +
+      ".v1\032\021amino/amino.proto\032\036cosmos/auth/v1be" +
+      "ta1/auth.proto\032\024gogoproto/gogo.proto\"w\n\r" +
       "ObjectAccount\022I\n\014base_account\030\001 \001(\0132 .co" +
       "smos.auth.v1beta1.BaseAccountB\004\320\336\037\001R\013bas" +
       "eAccount:\033\210\240\037\000\212\347\260*\022move/ObjectAccount\"u\n" +
@@ -1268,8 +1268,8 @@ public final class AuthProto {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.amino.AminoProto.getDescriptor(),
-          com.gogoproto.GogoProto.getDescriptor(),
           com.cosmos.auth.v1beta1.AuthProto.getDescriptor(),
+          com.gogoproto.GogoProto.getDescriptor(),
         });
     internal_static_initia_move_v1_ObjectAccount_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1291,8 +1291,8 @@ public final class AuthProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.amino.AminoProto.getDescriptor();
-    com.gogoproto.GogoProto.getDescriptor();
     com.cosmos.auth.v1beta1.AuthProto.getDescriptor();
+    com.gogoproto.GogoProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

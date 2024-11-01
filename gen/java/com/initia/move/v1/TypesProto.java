@@ -2490,7 +2490,6 @@ public final class TypesProto {
   /**
    * <pre>
    * Module is data for the uploaded contract move code
-   * ex) 0000000000000000000000000000000000000001/0/BasicCoin
    * </pre>
    *
    * Protobuf type {@code initia.move.v1.Module}
@@ -2878,7 +2877,6 @@ public final class TypesProto {
     /**
      * <pre>
      * Module is data for the uploaded contract move code
-     * ex) 0000000000000000000000000000000000000001/0/BasicCoin
      * </pre>
      *
      * Protobuf type {@code initia.move.v1.Module}
@@ -3466,6 +3464,787 @@ public final class TypesProto {
 
   }
 
+  public interface ChecksumOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:initia.move.v1.Checksum)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>string module_name = 2 [json_name = "moduleName"];</code>
+     * @return The moduleName.
+     */
+    java.lang.String getModuleName();
+    /**
+     * <code>string module_name = 2 [json_name = "moduleName"];</code>
+     * @return The bytes for moduleName.
+     */
+    com.google.protobuf.ByteString
+        getModuleNameBytes();
+
+    /**
+     * <code>bytes checksum = 3 [json_name = "checksum"];</code>
+     * @return The checksum.
+     */
+    com.google.protobuf.ByteString getChecksum();
+  }
+  /**
+   * <pre>
+   * Checksum is checksum of the uploaded contract move code
+   * </pre>
+   *
+   * Protobuf type {@code initia.move.v1.Checksum}
+   */
+  public static final class Checksum extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:initia.move.v1.Checksum)
+      ChecksumOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Checksum.newBuilder() to construct.
+    private Checksum(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Checksum() {
+      address_ = "";
+      moduleName_ = "";
+      checksum_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Checksum();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.initia.move.v1.TypesProto.internal_static_initia_move_v1_Checksum_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.initia.move.v1.TypesProto.internal_static_initia_move_v1_Checksum_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.initia.move.v1.TypesProto.Checksum.class, com.initia.move.v1.TypesProto.Checksum.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MODULE_NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object moduleName_ = "";
+    /**
+     * <code>string module_name = 2 [json_name = "moduleName"];</code>
+     * @return The moduleName.
+     */
+    @java.lang.Override
+    public java.lang.String getModuleName() {
+      java.lang.Object ref = moduleName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        moduleName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string module_name = 2 [json_name = "moduleName"];</code>
+     * @return The bytes for moduleName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModuleNameBytes() {
+      java.lang.Object ref = moduleName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        moduleName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CHECKSUM_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString checksum_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes checksum = 3 [json_name = "checksum"];</code>
+     * @return The checksum.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getChecksum() {
+      return checksum_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moduleName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, moduleName_);
+      }
+      if (!checksum_.isEmpty()) {
+        output.writeBytes(3, checksum_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moduleName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, moduleName_);
+      }
+      if (!checksum_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, checksum_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.initia.move.v1.TypesProto.Checksum)) {
+        return super.equals(obj);
+      }
+      com.initia.move.v1.TypesProto.Checksum other = (com.initia.move.v1.TypesProto.Checksum) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getModuleName()
+          .equals(other.getModuleName())) return false;
+      if (!getChecksum()
+          .equals(other.getChecksum())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + MODULE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getModuleName().hashCode();
+      hash = (37 * hash) + CHECKSUM_FIELD_NUMBER;
+      hash = (53 * hash) + getChecksum().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.initia.move.v1.TypesProto.Checksum parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.initia.move.v1.TypesProto.Checksum parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.initia.move.v1.TypesProto.Checksum parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.initia.move.v1.TypesProto.Checksum parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.initia.move.v1.TypesProto.Checksum parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.initia.move.v1.TypesProto.Checksum parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.initia.move.v1.TypesProto.Checksum parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.initia.move.v1.TypesProto.Checksum parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.initia.move.v1.TypesProto.Checksum parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.initia.move.v1.TypesProto.Checksum parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.initia.move.v1.TypesProto.Checksum parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.initia.move.v1.TypesProto.Checksum parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.initia.move.v1.TypesProto.Checksum prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Checksum is checksum of the uploaded contract move code
+     * </pre>
+     *
+     * Protobuf type {@code initia.move.v1.Checksum}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:initia.move.v1.Checksum)
+        com.initia.move.v1.TypesProto.ChecksumOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.initia.move.v1.TypesProto.internal_static_initia_move_v1_Checksum_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.initia.move.v1.TypesProto.internal_static_initia_move_v1_Checksum_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.initia.move.v1.TypesProto.Checksum.class, com.initia.move.v1.TypesProto.Checksum.Builder.class);
+      }
+
+      // Construct using com.initia.move.v1.TypesProto.Checksum.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        moduleName_ = "";
+        checksum_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.initia.move.v1.TypesProto.internal_static_initia_move_v1_Checksum_descriptor;
+      }
+
+      @java.lang.Override
+      public com.initia.move.v1.TypesProto.Checksum getDefaultInstanceForType() {
+        return com.initia.move.v1.TypesProto.Checksum.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.initia.move.v1.TypesProto.Checksum build() {
+        com.initia.move.v1.TypesProto.Checksum result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.initia.move.v1.TypesProto.Checksum buildPartial() {
+        com.initia.move.v1.TypesProto.Checksum result = new com.initia.move.v1.TypesProto.Checksum(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.initia.move.v1.TypesProto.Checksum result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.moduleName_ = moduleName_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.checksum_ = checksum_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.initia.move.v1.TypesProto.Checksum) {
+          return mergeFrom((com.initia.move.v1.TypesProto.Checksum)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.initia.move.v1.TypesProto.Checksum other) {
+        if (other == com.initia.move.v1.TypesProto.Checksum.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getModuleName().isEmpty()) {
+          moduleName_ = other.moduleName_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getChecksum() != com.google.protobuf.ByteString.EMPTY) {
+          setChecksum(other.getChecksum());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                moduleName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                checksum_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object moduleName_ = "";
+      /**
+       * <code>string module_name = 2 [json_name = "moduleName"];</code>
+       * @return The moduleName.
+       */
+      public java.lang.String getModuleName() {
+        java.lang.Object ref = moduleName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          moduleName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string module_name = 2 [json_name = "moduleName"];</code>
+       * @return The bytes for moduleName.
+       */
+      public com.google.protobuf.ByteString
+          getModuleNameBytes() {
+        java.lang.Object ref = moduleName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          moduleName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string module_name = 2 [json_name = "moduleName"];</code>
+       * @param value The moduleName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        moduleName_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string module_name = 2 [json_name = "moduleName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModuleName() {
+        moduleName_ = getDefaultInstance().getModuleName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string module_name = 2 [json_name = "moduleName"];</code>
+       * @param value The bytes for moduleName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        moduleName_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString checksum_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes checksum = 3 [json_name = "checksum"];</code>
+       * @return The checksum.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getChecksum() {
+        return checksum_;
+      }
+      /**
+       * <code>bytes checksum = 3 [json_name = "checksum"];</code>
+       * @param value The checksum to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChecksum(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checksum_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes checksum = 3 [json_name = "checksum"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChecksum() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        checksum_ = getDefaultInstance().getChecksum();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:initia.move.v1.Checksum)
+    }
+
+    // @@protoc_insertion_point(class_scope:initia.move.v1.Checksum)
+    private static final com.initia.move.v1.TypesProto.Checksum DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.initia.move.v1.TypesProto.Checksum();
+    }
+
+    public static com.initia.move.v1.TypesProto.Checksum getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Checksum>
+        PARSER = new com.google.protobuf.AbstractParser<Checksum>() {
+      @java.lang.Override
+      public Checksum parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Checksum> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Checksum> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.initia.move.v1.TypesProto.Checksum getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ResourceOrBuilder extends
       // @@protoc_insertion_point(interface_extends:initia.move.v1.Resource)
       com.google.protobuf.MessageOrBuilder {
@@ -3515,7 +4294,6 @@ public final class TypesProto {
   /**
    * <pre>
    * Resource is data for the stored move resource
-   * ex) 0000000000000000000000000000000000000002/2/0x1::BasicCoin::Coin&lt;0x1::BasicCoin::Initia&gt;
    * </pre>
    *
    * Protobuf type {@code initia.move.v1.Resource}
@@ -3874,7 +4652,6 @@ public final class TypesProto {
     /**
      * <pre>
      * Resource is data for the stored move resource
-     * ex) 0000000000000000000000000000000000000002/2/0x1::BasicCoin::Coin&lt;0x1::BasicCoin::Initia&gt;
      * </pre>
      *
      * Protobuf type {@code initia.move.v1.Resource}
@@ -8560,6 +9337,11 @@ public final class TypesProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_initia_move_v1_Module_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_initia_move_v1_Checksum_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_initia_move_v1_Checksum_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_initia_move_v1_Resource_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -8624,31 +9406,34 @@ public final class TypesProto {
       "\007address\022\037\n\013module_name\030\002 \001(\tR\nmoduleNam" +
       "e\022\020\n\003abi\030\003 \001(\tR\003abi\022\033\n\traw_bytes\030\004 \001(\014R\010" +
       "rawBytes\022D\n\016upgrade_policy\030\005 \001(\0162\035.initi" +
-      "a.move.v1.UpgradePolicyR\rupgradePolicy\"\205" +
-      "\001\n\010Resource\022\030\n\007address\030\001 \001(\tR\007address\022\035\n" +
-      "\nstruct_tag\030\002 \001(\tR\tstructTag\022#\n\rmove_res" +
-      "ource\030\003 \001(\tR\014moveResource\022\033\n\traw_bytes\030\004" +
-      " \001(\014R\010rawBytes\"_\n\tTableInfo\022\030\n\007address\030\001" +
-      " \001(\tR\007address\022\031\n\010key_type\030\002 \001(\tR\007keyType" +
-      "\022\035\n\nvalue_type\030\003 \001(\tR\tvalueType\"\214\001\n\nTabl" +
-      "eEntry\022\030\n\007address\030\001 \001(\tR\007address\022\020\n\003key\030" +
-      "\002 \001(\tR\003key\022\024\n\005value\030\003 \001(\tR\005value\022\033\n\tkey_" +
-      "bytes\030\004 \001(\014R\010keyBytes\022\037\n\013value_bytes\030\005 \001" +
-      "(\014R\nvalueBytes\"K\n\022UpgradePolicyProto\0225\n\006" +
-      "policy\030\001 \001(\0162\035.initia.move.v1.UpgradePol" +
-      "icyR\006policy\"a\n\007DexPair\022%\n\016metadata_quote" +
-      "\030\001 \001(\tR\rmetadataQuote\022/\n\013metadata_lp\030\002 \001" +
-      "(\tB\016\342\336\037\nMetadataLPR\nmetadataLp\"\217\001\n\030Execu" +
-      "teAuthorizationItem\022%\n\016module_address\030\001 " +
-      "\001(\tR\rmoduleAddress\022\037\n\013module_name\030\002 \001(\tR" +
-      "\nmoduleName\022+\n\016function_names\030\003 \003(\tB\004\310\336\037" +
-      "\001R\rfunctionNames*?\n\rUpgradePolicy\022\017\n\013UNS" +
-      "PECIFIED\020\000\022\016\n\nCOMPATIBLE\020\001\022\r\n\tIMMUTABLE\020" +
-      "\002B\254\001\n\022com.initia.move.v1B\nTypesProtoZ*gi" +
-      "thub.com/initia-labs/initia/x/move/types" +
-      "\242\002\003IMX\252\002\016Initia.Move.V1\312\002\016Initia\\Move\\V1" +
-      "\342\002\032Initia\\Move\\V1\\GPBMetadata\352\002\020Initia::" +
-      "Move::V1\310\341\036\000\250\342\036\001b\006proto3"
+      "a.move.v1.UpgradePolicyR\rupgradePolicy\"a" +
+      "\n\010Checksum\022\030\n\007address\030\001 \001(\tR\007address\022\037\n\013" +
+      "module_name\030\002 \001(\tR\nmoduleName\022\032\n\010checksu" +
+      "m\030\003 \001(\014R\010checksum\"\205\001\n\010Resource\022\030\n\007addres" +
+      "s\030\001 \001(\tR\007address\022\035\n\nstruct_tag\030\002 \001(\tR\tst" +
+      "ructTag\022#\n\rmove_resource\030\003 \001(\tR\014moveReso" +
+      "urce\022\033\n\traw_bytes\030\004 \001(\014R\010rawBytes\"_\n\tTab" +
+      "leInfo\022\030\n\007address\030\001 \001(\tR\007address\022\031\n\010key_" +
+      "type\030\002 \001(\tR\007keyType\022\035\n\nvalue_type\030\003 \001(\tR" +
+      "\tvalueType\"\214\001\n\nTableEntry\022\030\n\007address\030\001 \001" +
+      "(\tR\007address\022\020\n\003key\030\002 \001(\tR\003key\022\024\n\005value\030\003" +
+      " \001(\tR\005value\022\033\n\tkey_bytes\030\004 \001(\014R\010keyBytes" +
+      "\022\037\n\013value_bytes\030\005 \001(\014R\nvalueBytes\"K\n\022Upg" +
+      "radePolicyProto\0225\n\006policy\030\001 \001(\0162\035.initia" +
+      ".move.v1.UpgradePolicyR\006policy\"a\n\007DexPai" +
+      "r\022%\n\016metadata_quote\030\001 \001(\tR\rmetadataQuote" +
+      "\022/\n\013metadata_lp\030\002 \001(\tB\016\342\336\037\nMetadataLPR\nm" +
+      "etadataLp\"\217\001\n\030ExecuteAuthorizationItem\022%" +
+      "\n\016module_address\030\001 \001(\tR\rmoduleAddress\022\037\n" +
+      "\013module_name\030\002 \001(\tR\nmoduleName\022+\n\016functi" +
+      "on_names\030\003 \003(\tB\004\310\336\037\001R\rfunctionNames*?\n\rU" +
+      "pgradePolicy\022\017\n\013UNSPECIFIED\020\000\022\016\n\nCOMPATI" +
+      "BLE\020\001\022\r\n\tIMMUTABLE\020\002B\254\001\n\022com.initia.move" +
+      ".v1B\nTypesProtoZ*github.com/initia-labs/" +
+      "initia/x/move/types\242\002\003IMX\252\002\016Initia.Move." +
+      "V1\312\002\016Initia\\Move\\V1\342\002\032Initia\\Move\\V1\\GPB" +
+      "Metadata\352\002\020Initia::Move::V1\310\341\036\000\250\342\036\001b\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8674,38 +9459,44 @@ public final class TypesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_initia_move_v1_Module_descriptor,
         new java.lang.String[] { "Address", "ModuleName", "Abi", "RawBytes", "UpgradePolicy", });
-    internal_static_initia_move_v1_Resource_descriptor =
+    internal_static_initia_move_v1_Checksum_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_initia_move_v1_Checksum_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_initia_move_v1_Checksum_descriptor,
+        new java.lang.String[] { "Address", "ModuleName", "Checksum", });
+    internal_static_initia_move_v1_Resource_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_initia_move_v1_Resource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_initia_move_v1_Resource_descriptor,
         new java.lang.String[] { "Address", "StructTag", "MoveResource", "RawBytes", });
     internal_static_initia_move_v1_TableInfo_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_initia_move_v1_TableInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_initia_move_v1_TableInfo_descriptor,
         new java.lang.String[] { "Address", "KeyType", "ValueType", });
     internal_static_initia_move_v1_TableEntry_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_initia_move_v1_TableEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_initia_move_v1_TableEntry_descriptor,
         new java.lang.String[] { "Address", "Key", "Value", "KeyBytes", "ValueBytes", });
     internal_static_initia_move_v1_UpgradePolicyProto_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_initia_move_v1_UpgradePolicyProto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_initia_move_v1_UpgradePolicyProto_descriptor,
         new java.lang.String[] { "Policy", });
     internal_static_initia_move_v1_DexPair_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_initia_move_v1_DexPair_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_initia_move_v1_DexPair_descriptor,
         new java.lang.String[] { "MetadataQuote", "MetadataLp", });
     internal_static_initia_move_v1_ExecuteAuthorizationItem_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_initia_move_v1_ExecuteAuthorizationItem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_initia_move_v1_ExecuteAuthorizationItem_descriptor,

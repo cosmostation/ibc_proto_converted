@@ -32,6 +32,8 @@ struct Initia_Intertx_V1_MsgRegisterAccount {
 
   var version: String = String()
 
+  var ordering: Ibc_Core_Channel_V1_Order = .noneUnspecified
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -102,6 +104,7 @@ extension Initia_Intertx_V1_MsgRegisterAccount: SwiftProtobuf.Message, SwiftProt
     1: .same(proto: "owner"),
     2: .standard(proto: "connection_id"),
     3: .same(proto: "version"),
+    4: .same(proto: "ordering"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -113,6 +116,7 @@ extension Initia_Intertx_V1_MsgRegisterAccount: SwiftProtobuf.Message, SwiftProt
       case 1: try { try decoder.decodeSingularStringField(value: &self.owner) }()
       case 2: try { try decoder.decodeSingularStringField(value: &self.connectionID) }()
       case 3: try { try decoder.decodeSingularStringField(value: &self.version) }()
+      case 4: try { try decoder.decodeSingularEnumField(value: &self.ordering) }()
       default: break
       }
     }
@@ -128,6 +132,9 @@ extension Initia_Intertx_V1_MsgRegisterAccount: SwiftProtobuf.Message, SwiftProt
     if !self.version.isEmpty {
       try visitor.visitSingularStringField(value: self.version, fieldNumber: 3)
     }
+    if self.ordering != .noneUnspecified {
+      try visitor.visitSingularEnumField(value: self.ordering, fieldNumber: 4)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -135,6 +142,7 @@ extension Initia_Intertx_V1_MsgRegisterAccount: SwiftProtobuf.Message, SwiftProt
     if lhs.owner != rhs.owner {return false}
     if lhs.connectionID != rhs.connectionID {return false}
     if lhs.version != rhs.version {return false}
+    if lhs.ordering != rhs.ordering {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

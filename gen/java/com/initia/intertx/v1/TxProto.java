@@ -53,6 +53,17 @@ public final class TxProto {
      */
     com.google.protobuf.ByteString
         getVersionBytes();
+
+    /**
+     * <code>.ibc.core.channel.v1.Order ordering = 4 [json_name = "ordering"];</code>
+     * @return The enum numeric value on the wire for ordering.
+     */
+    int getOrderingValue();
+    /**
+     * <code>.ibc.core.channel.v1.Order ordering = 4 [json_name = "ordering"];</code>
+     * @return The ordering.
+     */
+    com.ibc.core.channel.v1.ChannelProto.Order getOrdering();
   }
   /**
    * <pre>
@@ -74,6 +85,7 @@ public final class TxProto {
       owner_ = "";
       connectionId_ = "";
       version_ = "";
+      ordering_ = 0;
     }
 
     @java.lang.Override
@@ -213,6 +225,24 @@ public final class TxProto {
       }
     }
 
+    public static final int ORDERING_FIELD_NUMBER = 4;
+    private int ordering_ = 0;
+    /**
+     * <code>.ibc.core.channel.v1.Order ordering = 4 [json_name = "ordering"];</code>
+     * @return The enum numeric value on the wire for ordering.
+     */
+    @java.lang.Override public int getOrderingValue() {
+      return ordering_;
+    }
+    /**
+     * <code>.ibc.core.channel.v1.Order ordering = 4 [json_name = "ordering"];</code>
+     * @return The ordering.
+     */
+    @java.lang.Override public com.ibc.core.channel.v1.ChannelProto.Order getOrdering() {
+      com.ibc.core.channel.v1.ChannelProto.Order result = com.ibc.core.channel.v1.ChannelProto.Order.forNumber(ordering_);
+      return result == null ? com.ibc.core.channel.v1.ChannelProto.Order.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -236,6 +266,9 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, version_);
       }
+      if (ordering_ != com.ibc.core.channel.v1.ChannelProto.Order.ORDER_NONE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(4, ordering_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -253,6 +286,10 @@ public final class TxProto {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, version_);
+      }
+      if (ordering_ != com.ibc.core.channel.v1.ChannelProto.Order.ORDER_NONE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, ordering_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -275,6 +312,7 @@ public final class TxProto {
           .equals(other.getConnectionId())) return false;
       if (!getVersion()
           .equals(other.getVersion())) return false;
+      if (ordering_ != other.ordering_) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -292,6 +330,8 @@ public final class TxProto {
       hash = (53 * hash) + getConnectionId().hashCode();
       hash = (37 * hash) + VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getVersion().hashCode();
+      hash = (37 * hash) + ORDERING_FIELD_NUMBER;
+      hash = (53 * hash) + ordering_;
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -430,6 +470,7 @@ public final class TxProto {
         owner_ = "";
         connectionId_ = "";
         version_ = "";
+        ordering_ = 0;
         return this;
       }
 
@@ -471,6 +512,9 @@ public final class TxProto {
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.version_ = version_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.ordering_ = ordering_;
         }
       }
 
@@ -533,6 +577,9 @@ public final class TxProto {
           bitField0_ |= 0x00000004;
           onChanged();
         }
+        if (other.ordering_ != 0) {
+          setOrderingValue(other.getOrderingValue());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -574,6 +621,11 @@ public final class TxProto {
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
+              case 32: {
+                ordering_ = input.readEnum();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -803,6 +855,59 @@ public final class TxProto {
         checkByteStringIsUtf8(value);
         version_ = value;
         bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private int ordering_ = 0;
+      /**
+       * <code>.ibc.core.channel.v1.Order ordering = 4 [json_name = "ordering"];</code>
+       * @return The enum numeric value on the wire for ordering.
+       */
+      @java.lang.Override public int getOrderingValue() {
+        return ordering_;
+      }
+      /**
+       * <code>.ibc.core.channel.v1.Order ordering = 4 [json_name = "ordering"];</code>
+       * @param value The enum numeric value on the wire for ordering to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderingValue(int value) {
+        ordering_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ibc.core.channel.v1.Order ordering = 4 [json_name = "ordering"];</code>
+       * @return The ordering.
+       */
+      @java.lang.Override
+      public com.ibc.core.channel.v1.ChannelProto.Order getOrdering() {
+        com.ibc.core.channel.v1.ChannelProto.Order result = com.ibc.core.channel.v1.ChannelProto.Order.forNumber(ordering_);
+        return result == null ? com.ibc.core.channel.v1.ChannelProto.Order.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.ibc.core.channel.v1.Order ordering = 4 [json_name = "ordering"];</code>
+       * @param value The ordering to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrdering(com.ibc.core.channel.v1.ChannelProto.Order value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        ordering_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ibc.core.channel.v1.Order ordering = 4 [json_name = "ordering"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrdering() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        ordering_ = 0;
         onChanged();
         return this;
       }
@@ -2614,44 +2719,48 @@ public final class TxProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\032initia/intertx/v1/tx.proto\022\021initia.int" +
-      "ertx.v1\032\024gogoproto/gogo.proto\032\031google/pr" +
-      "otobuf/any.proto\032\027cosmos/msg/v1/msg.prot" +
-      "o\032\021amino/amino.proto\"\266\001\n\022MsgRegisterAcco" +
-      "unt\022\024\n\005owner\030\001 \001(\tR\005owner\022=\n\rconnection_" +
-      "id\030\002 \001(\tB\030\362\336\037\024yaml:\"connection_id\"R\014conn" +
-      "ectionId\022\030\n\007version\030\003 \001(\tR\007version:1\210\240\037\000" +
-      "\350\240\037\000\202\347\260*\005owner\212\347\260*\032intertx/MsgRegisterAc" +
-      "count\"\034\n\032MsgRegisterAccountResponse\"\266\001\n\013" +
-      "MsgSubmitTx\022\024\n\005owner\030\001 \001(\tR\005owner\022=\n\rcon" +
-      "nection_id\030\002 \001(\tB\030\362\336\037\024yaml:\"connection_i" +
-      "d\"R\014connectionId\022&\n\003msg\030\003 \001(\0132\024.google.p" +
-      "rotobuf.AnyR\003msg:*\210\240\037\000\350\240\037\000\202\347\260*\005owner\212\347\260*" +
-      "\023intertx/MsgSubmitTx\"\025\n\023MsgSubmitTxRespo" +
-      "nse2\311\001\n\003Msg\022g\n\017RegisterAccount\022%.initia." +
-      "intertx.v1.MsgRegisterAccount\032-.initia.i" +
-      "ntertx.v1.MsgRegisterAccountResponse\022R\n\010" +
-      "SubmitTx\022\036.initia.intertx.v1.MsgSubmitTx" +
-      "\032&.initia.intertx.v1.MsgSubmitTxResponse" +
-      "\032\005\200\347\260*\001B\263\001\n\025com.initia.intertx.v1B\007TxPro" +
-      "toZ-github.com/initia-labs/initia/x/inte" +
-      "rtx/types\242\002\003IIX\252\002\021Initia.Intertx.V1\312\002\021In" +
-      "itia\\Intertx\\V1\342\002\035Initia\\Intertx\\V1\\GPBM" +
-      "etadata\352\002\023Initia::Intertx::V1b\006proto3"
+      "ertx.v1\032\021amino/amino.proto\032\027cosmos/msg/v" +
+      "1/msg.proto\032\024gogoproto/gogo.proto\032\031googl" +
+      "e/protobuf/any.proto\032!ibc/core/channel/v" +
+      "1/channel.proto\"\356\001\n\022MsgRegisterAccount\022\024" +
+      "\n\005owner\030\001 \001(\tR\005owner\022=\n\rconnection_id\030\002 " +
+      "\001(\tB\030\362\336\037\024yaml:\"connection_id\"R\014connectio" +
+      "nId\022\030\n\007version\030\003 \001(\tR\007version\0226\n\010orderin" +
+      "g\030\004 \001(\0162\032.ibc.core.channel.v1.OrderR\010ord" +
+      "ering:1\210\240\037\000\350\240\037\000\202\347\260*\005owner\212\347\260*\032intertx/Ms" +
+      "gRegisterAccount\"\034\n\032MsgRegisterAccountRe" +
+      "sponse\"\266\001\n\013MsgSubmitTx\022\024\n\005owner\030\001 \001(\tR\005o" +
+      "wner\022=\n\rconnection_id\030\002 \001(\tB\030\362\336\037\024yaml:\"c" +
+      "onnection_id\"R\014connectionId\022&\n\003msg\030\003 \001(\013" +
+      "2\024.google.protobuf.AnyR\003msg:*\210\240\037\000\350\240\037\000\202\347\260" +
+      "*\005owner\212\347\260*\023intertx/MsgSubmitTx\"\025\n\023MsgSu" +
+      "bmitTxResponse2\311\001\n\003Msg\022g\n\017RegisterAccoun" +
+      "t\022%.initia.intertx.v1.MsgRegisterAccount" +
+      "\032-.initia.intertx.v1.MsgRegisterAccountR" +
+      "esponse\022R\n\010SubmitTx\022\036.initia.intertx.v1." +
+      "MsgSubmitTx\032&.initia.intertx.v1.MsgSubmi" +
+      "tTxResponse\032\005\200\347\260*\001B\263\001\n\025com.initia.intert" +
+      "x.v1B\007TxProtoZ-github.com/initia-labs/in" +
+      "itia/x/intertx/types\242\002\003IIX\252\002\021Initia.Inte" +
+      "rtx.V1\312\002\021Initia\\Intertx\\V1\342\002\035Initia\\Inte" +
+      "rtx\\V1\\GPBMetadata\352\002\023Initia::Intertx::V1" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.amino.AminoProto.getDescriptor(),
+          com.cosmos.msg.v1.MsgProto.getDescriptor(),
           com.gogoproto.GogoProto.getDescriptor(),
           com.google.protobuf.AnyProto.getDescriptor(),
-          com.cosmos.msg.v1.MsgProto.getDescriptor(),
-          com.amino.AminoProto.getDescriptor(),
+          com.ibc.core.channel.v1.ChannelProto.getDescriptor(),
         });
     internal_static_initia_intertx_v1_MsgRegisterAccount_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_initia_intertx_v1_MsgRegisterAccount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_initia_intertx_v1_MsgRegisterAccount_descriptor,
-        new java.lang.String[] { "Owner", "ConnectionId", "Version", });
+        new java.lang.String[] { "Owner", "ConnectionId", "Version", "Ordering", });
     internal_static_initia_intertx_v1_MsgRegisterAccountResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_initia_intertx_v1_MsgRegisterAccountResponse_fieldAccessorTable = new
@@ -2680,10 +2789,11 @@ public final class TxProto {
     registry.add(com.gogoproto.GogoProto.moretags);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.amino.AminoProto.getDescriptor();
+    com.cosmos.msg.v1.MsgProto.getDescriptor();
     com.gogoproto.GogoProto.getDescriptor();
     com.google.protobuf.AnyProto.getDescriptor();
-    com.cosmos.msg.v1.MsgProto.getDescriptor();
-    com.amino.AminoProto.getDescriptor();
+    com.ibc.core.channel.v1.ChannelProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

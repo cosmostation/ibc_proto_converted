@@ -142,6 +142,37 @@ public final class QueryGrpc {
     return getProposalsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.initia.gov.v1.QueryProto.QueryTallyResultRequest,
+      com.initia.gov.v1.QueryProto.QueryTallyResultResponse> getTallyResultMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TallyResult",
+      requestType = com.initia.gov.v1.QueryProto.QueryTallyResultRequest.class,
+      responseType = com.initia.gov.v1.QueryProto.QueryTallyResultResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.initia.gov.v1.QueryProto.QueryTallyResultRequest,
+      com.initia.gov.v1.QueryProto.QueryTallyResultResponse> getTallyResultMethod() {
+    io.grpc.MethodDescriptor<com.initia.gov.v1.QueryProto.QueryTallyResultRequest, com.initia.gov.v1.QueryProto.QueryTallyResultResponse> getTallyResultMethod;
+    if ((getTallyResultMethod = QueryGrpc.getTallyResultMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getTallyResultMethod = QueryGrpc.getTallyResultMethod) == null) {
+          QueryGrpc.getTallyResultMethod = getTallyResultMethod =
+              io.grpc.MethodDescriptor.<com.initia.gov.v1.QueryProto.QueryTallyResultRequest, com.initia.gov.v1.QueryProto.QueryTallyResultResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TallyResult"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.initia.gov.v1.QueryProto.QueryTallyResultRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.initia.gov.v1.QueryProto.QueryTallyResultResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("TallyResult"))
+              .build();
+        }
+      }
+    }
+    return getTallyResultMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -232,6 +263,16 @@ public final class QueryGrpc {
         io.grpc.stub.StreamObserver<com.initia.gov.v1.QueryProto.QueryProposalsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProposalsMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * TallyResult queries the tally of a proposal vote.
+     * </pre>
+     */
+    default void tallyResult(com.initia.gov.v1.QueryProto.QueryTallyResultRequest request,
+        io.grpc.stub.StreamObserver<com.initia.gov.v1.QueryProto.QueryTallyResultResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTallyResultMethod(), responseObserver);
+    }
   }
 
   /**
@@ -310,6 +351,17 @@ public final class QueryGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getProposalsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * TallyResult queries the tally of a proposal vote.
+     * </pre>
+     */
+    public void tallyResult(com.initia.gov.v1.QueryProto.QueryTallyResultRequest request,
+        io.grpc.stub.StreamObserver<com.initia.gov.v1.QueryProto.QueryTallyResultResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTallyResultMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -369,6 +421,16 @@ public final class QueryGrpc {
     public com.initia.gov.v1.QueryProto.QueryProposalsResponse proposals(com.initia.gov.v1.QueryProto.QueryProposalsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getProposalsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * TallyResult queries the tally of a proposal vote.
+     * </pre>
+     */
+    public com.initia.gov.v1.QueryProto.QueryTallyResultResponse tallyResult(com.initia.gov.v1.QueryProto.QueryTallyResultRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTallyResultMethod(), getCallOptions(), request);
     }
   }
 
@@ -434,12 +496,24 @@ public final class QueryGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getProposalsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * TallyResult queries the tally of a proposal vote.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.initia.gov.v1.QueryProto.QueryTallyResultResponse> tallyResult(
+        com.initia.gov.v1.QueryProto.QueryTallyResultRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTallyResultMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PARAMS = 0;
   private static final int METHODID_EMERGENCY_PROPOSALS = 1;
   private static final int METHODID_PROPOSAL = 2;
   private static final int METHODID_PROPOSALS = 3;
+  private static final int METHODID_TALLY_RESULT = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -473,6 +547,10 @@ public final class QueryGrpc {
         case METHODID_PROPOSALS:
           serviceImpl.proposals((com.initia.gov.v1.QueryProto.QueryProposalsRequest) request,
               (io.grpc.stub.StreamObserver<com.initia.gov.v1.QueryProto.QueryProposalsResponse>) responseObserver);
+          break;
+        case METHODID_TALLY_RESULT:
+          serviceImpl.tallyResult((com.initia.gov.v1.QueryProto.QueryTallyResultRequest) request,
+              (io.grpc.stub.StreamObserver<com.initia.gov.v1.QueryProto.QueryTallyResultResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -520,6 +598,13 @@ public final class QueryGrpc {
               com.initia.gov.v1.QueryProto.QueryProposalsRequest,
               com.initia.gov.v1.QueryProto.QueryProposalsResponse>(
                 service, METHODID_PROPOSALS)))
+        .addMethod(
+          getTallyResultMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.initia.gov.v1.QueryProto.QueryTallyResultRequest,
+              com.initia.gov.v1.QueryProto.QueryTallyResultResponse>(
+                service, METHODID_TALLY_RESULT)))
         .build();
   }
 
@@ -572,6 +657,7 @@ public final class QueryGrpc {
               .addMethod(getEmergencyProposalsMethod())
               .addMethod(getProposalMethod())
               .addMethod(getProposalsMethod())
+              .addMethod(getTallyResultMethod())
               .build();
         }
       }

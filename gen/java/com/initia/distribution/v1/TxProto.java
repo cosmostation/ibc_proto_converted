@@ -2984,10 +2984,10 @@ public final class TxProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\037initia/distribution/v1/tx.proto\022\026initi" +
-      "a.distribution.v1\032\024gogoproto/gogo.proto\032" +
-      "\031cosmos_proto/cosmos.proto\032\027cosmos/msg/v" +
-      "1/msg.proto\032\021amino/amino.proto\032\036cosmos/b" +
-      "ase/v1beta1/coin.proto\032)initia/distribut" +
+      "a.distribution.v1\032\021amino/amino.proto\032\036co" +
+      "smos/base/v1beta1/coin.proto\032\027cosmos/msg" +
+      "/v1/msg.proto\032\031cosmos_proto/cosmos.proto" +
+      "\032\024gogoproto/gogo.proto\032)initia/distribut" +
       "ion/v1/distribution.proto\"\275\001\n\017MsgUpdateP" +
       "arams\0226\n\tauthority\030\001 \001(\tB\030\322\264-\024cosmos.Add" +
       "ressStringR\tauthority\022A\n\006params\030\002 \001(\0132\036." +
@@ -3022,11 +3022,11 @@ public final class TxProto {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.gogoproto.GogoProto.getDescriptor(),
-          com.cosmos_proto.CosmosProto.getDescriptor(),
-          com.cosmos.msg.v1.MsgProto.getDescriptor(),
           com.amino.AminoProto.getDescriptor(),
           com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
+          com.cosmos.msg.v1.MsgProto.getDescriptor(),
+          com.cosmos_proto.CosmosProto.getDescriptor(),
+          com.gogoproto.GogoProto.getDescriptor(),
           com.initia.distribution.v1.DistributionProto.getDescriptor(),
         });
     internal_static_initia_distribution_v1_MsgUpdateParams_descriptor =
@@ -3068,11 +3068,11 @@ public final class TxProto {
     registry.add(com.gogoproto.GogoProto.nullable);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.gogoproto.GogoProto.getDescriptor();
-    com.cosmos_proto.CosmosProto.getDescriptor();
-    com.cosmos.msg.v1.MsgProto.getDescriptor();
     com.amino.AminoProto.getDescriptor();
     com.cosmos.base.v1beta1.CoinProto.getDescriptor();
+    com.cosmos.msg.v1.MsgProto.getDescriptor();
+    com.cosmos_proto.CosmosProto.getDescriptor();
+    com.gogoproto.GogoProto.getDescriptor();
     com.initia.distribution.v1.DistributionProto.getDescriptor();
   }
 

@@ -9507,9 +9507,9 @@ public final class QueryProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\"initia/distribution/v1/query.proto\022\026in" +
-      "itia.distribution.v1\032\024gogoproto/gogo.pro" +
-      "to\032\034google/api/annotations.proto\032*cosmos" +
-      "/base/query/v1beta1/pagination.proto\032)in" +
+      "itia.distribution.v1\032*cosmos/base/query/" +
+      "v1beta1/pagination.proto\032\024gogoproto/gogo" +
+      ".proto\032\034google/api/annotations.proto\032)in" +
       "itia/distribution/v1/distribution.proto\"" +
       "\024\n\022QueryParamsRequest\"S\n\023QueryParamsResp" +
       "onse\022<\n\006params\030\001 \001(\0132\036.initia.distributi" +
@@ -9590,9 +9590,9 @@ public final class QueryProto {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor(),
           com.gogoproto.GogoProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor(),
           com.initia.distribution.v1.DistributionProto.getDescriptor(),
         });
     internal_static_initia_distribution_v1_QueryParamsRequest_descriptor =
@@ -9677,9 +9677,9 @@ public final class QueryProto {
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor();
     com.gogoproto.GogoProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor();
     com.initia.distribution.v1.DistributionProto.getDescriptor();
   }
 

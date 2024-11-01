@@ -41,6 +41,8 @@ struct Initia_Move_V1_GenesisState {
 
   var modules: [Initia_Move_V1_Module] = []
 
+  var checksums: [Initia_Move_V1_Checksum] = []
+
   var resources: [Initia_Move_V1_Resource] = []
 
   var tableInfos: [Initia_Move_V1_TableInfo] = []
@@ -71,10 +73,11 @@ extension Initia_Move_V1_GenesisState: SwiftProtobuf.Message, SwiftProtobuf._Mes
     2: .standard(proto: "execution_counter"),
     3: .same(proto: "stdlibs"),
     4: .same(proto: "modules"),
-    5: .same(proto: "resources"),
-    6: .standard(proto: "table_infos"),
-    7: .standard(proto: "table_entries"),
-    8: .standard(proto: "dex_pairs"),
+    5: .same(proto: "checksums"),
+    6: .same(proto: "resources"),
+    7: .standard(proto: "table_infos"),
+    8: .standard(proto: "table_entries"),
+    9: .standard(proto: "dex_pairs"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -87,10 +90,11 @@ extension Initia_Move_V1_GenesisState: SwiftProtobuf.Message, SwiftProtobuf._Mes
       case 2: try { try decoder.decodeSingularUInt64Field(value: &self.executionCounter) }()
       case 3: try { try decoder.decodeRepeatedBytesField(value: &self.stdlibs) }()
       case 4: try { try decoder.decodeRepeatedMessageField(value: &self.modules) }()
-      case 5: try { try decoder.decodeRepeatedMessageField(value: &self.resources) }()
-      case 6: try { try decoder.decodeRepeatedMessageField(value: &self.tableInfos) }()
-      case 7: try { try decoder.decodeRepeatedMessageField(value: &self.tableEntries) }()
-      case 8: try { try decoder.decodeRepeatedMessageField(value: &self.dexPairs) }()
+      case 5: try { try decoder.decodeRepeatedMessageField(value: &self.checksums) }()
+      case 6: try { try decoder.decodeRepeatedMessageField(value: &self.resources) }()
+      case 7: try { try decoder.decodeRepeatedMessageField(value: &self.tableInfos) }()
+      case 8: try { try decoder.decodeRepeatedMessageField(value: &self.tableEntries) }()
+      case 9: try { try decoder.decodeRepeatedMessageField(value: &self.dexPairs) }()
       default: break
       }
     }
@@ -113,17 +117,20 @@ extension Initia_Move_V1_GenesisState: SwiftProtobuf.Message, SwiftProtobuf._Mes
     if !self.modules.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.modules, fieldNumber: 4)
     }
+    if !self.checksums.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.checksums, fieldNumber: 5)
+    }
     if !self.resources.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.resources, fieldNumber: 5)
+      try visitor.visitRepeatedMessageField(value: self.resources, fieldNumber: 6)
     }
     if !self.tableInfos.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.tableInfos, fieldNumber: 6)
+      try visitor.visitRepeatedMessageField(value: self.tableInfos, fieldNumber: 7)
     }
     if !self.tableEntries.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.tableEntries, fieldNumber: 7)
+      try visitor.visitRepeatedMessageField(value: self.tableEntries, fieldNumber: 8)
     }
     if !self.dexPairs.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.dexPairs, fieldNumber: 8)
+      try visitor.visitRepeatedMessageField(value: self.dexPairs, fieldNumber: 9)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -133,6 +140,7 @@ extension Initia_Move_V1_GenesisState: SwiftProtobuf.Message, SwiftProtobuf._Mes
     if lhs.executionCounter != rhs.executionCounter {return false}
     if lhs.stdlibs != rhs.stdlibs {return false}
     if lhs.modules != rhs.modules {return false}
+    if lhs.checksums != rhs.checksums {return false}
     if lhs.resources != rhs.resources {return false}
     if lhs.tableInfos != rhs.tableInfos {return false}
     if lhs.tableEntries != rhs.tableEntries {return false}

@@ -10562,8 +10562,8 @@ public final class DistributionProto {
     java.lang.String[] descriptorData = {
       "\n)initia/distribution/v1/distribution.pr" +
       "oto\022\026initia.distribution.v1\032\021amino/amino" +
-      ".proto\032\024gogoproto/gogo.proto\032\036cosmos/bas" +
-      "e/v1beta1/coin.proto\"\316\002\n\006Params\022`\n\rcommu" +
+      ".proto\032\036cosmos/base/v1beta1/coin.proto\032\024" +
+      "gogoproto/gogo.proto\"\316\002\n\006Params\022`\n\rcommu" +
       "nity_tax\030\001 \001(\tB;\310\336\037\000\332\336\037\033cosmossdk.io/mat" +
       "h.LegacyDec\362\336\037\024yaml:\"community_tax\"R\014com" +
       "munityTax\022T\n\025withdraw_addr_enabled\030\002 \001(\010" +
@@ -10634,8 +10634,8 @@ public final class DistributionProto {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.amino.AminoProto.getDescriptor(),
-          com.gogoproto.GogoProto.getDescriptor(),
           com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
+          com.gogoproto.GogoProto.getDescriptor(),
         });
     internal_static_initia_distribution_v1_Params_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -10724,8 +10724,8 @@ public final class DistributionProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.amino.AminoProto.getDescriptor();
-    com.gogoproto.GogoProto.getDescriptor();
     com.cosmos.base.v1beta1.CoinProto.getDescriptor();
+    com.gogoproto.GogoProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

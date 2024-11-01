@@ -212,6 +212,35 @@ struct Initia_Gov_V1_Vesting {
   init() {}
 }
 
+struct Initia_Gov_V1_TallyResult {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var tallyHeight: UInt64 = 0
+
+  var totalStakingPower: String = String()
+
+  var totalVestingPower: String = String()
+
+  /// v1_tally_result is the original TallyResult from cosmos-sdk,
+  /// which contains both staking and vesting power.
+  var v1TallyResult: Cosmos_Gov_V1_TallyResult {
+    get {return _v1TallyResult ?? Cosmos_Gov_V1_TallyResult()}
+    set {_v1TallyResult = newValue}
+  }
+  /// Returns true if `v1TallyResult` has been explicitly set.
+  var hasV1TallyResult: Bool {return self._v1TallyResult != nil}
+  /// Clears the value of `v1TallyResult`. Subsequent reads from it will return its default value.
+  mutating func clearV1TallyResult() {self._v1TallyResult = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _v1TallyResult: Cosmos_Gov_V1_TallyResult? = nil
+}
+
 /// Proposal defines the core field members of a governance proposal.
 struct Initia_Gov_V1_Proposal {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
@@ -239,8 +268,8 @@ struct Initia_Gov_V1_Proposal {
   /// final_tally_result is the final tally result of the proposal. When
   /// querying a proposal via gRPC, this field is not populated until the
   /// proposal's voting period has ended.
-  var finalTallyResult: Cosmos_Gov_V1_TallyResult {
-    get {return _storage._finalTallyResult ?? Cosmos_Gov_V1_TallyResult()}
+  var finalTallyResult: Initia_Gov_V1_TallyResult {
+    get {return _storage._finalTallyResult ?? Initia_Gov_V1_TallyResult()}
     set {_uniqueStorage()._finalTallyResult = newValue}
   }
   /// Returns true if `finalTallyResult` has been explicitly set.
@@ -375,6 +404,7 @@ struct Initia_Gov_V1_Proposal {
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Initia_Gov_V1_Params: @unchecked Sendable {}
 extension Initia_Gov_V1_Vesting: @unchecked Sendable {}
+extension Initia_Gov_V1_TallyResult: @unchecked Sendable {}
 extension Initia_Gov_V1_Proposal: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
@@ -646,6 +676,60 @@ extension Initia_Gov_V1_Vesting: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
   }
 }
 
+extension Initia_Gov_V1_TallyResult: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".TallyResult"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "tally_height"),
+    2: .standard(proto: "total_staking_power"),
+    3: .standard(proto: "total_vesting_power"),
+    4: .standard(proto: "v1_tally_result"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.tallyHeight) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.totalStakingPower) }()
+      case 3: try { try decoder.decodeSingularStringField(value: &self.totalVestingPower) }()
+      case 4: try { try decoder.decodeSingularMessageField(value: &self._v1TallyResult) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if self.tallyHeight != 0 {
+      try visitor.visitSingularUInt64Field(value: self.tallyHeight, fieldNumber: 1)
+    }
+    if !self.totalStakingPower.isEmpty {
+      try visitor.visitSingularStringField(value: self.totalStakingPower, fieldNumber: 2)
+    }
+    if !self.totalVestingPower.isEmpty {
+      try visitor.visitSingularStringField(value: self.totalVestingPower, fieldNumber: 3)
+    }
+    try { if let v = self._v1TallyResult {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Initia_Gov_V1_TallyResult, rhs: Initia_Gov_V1_TallyResult) -> Bool {
+    if lhs.tallyHeight != rhs.tallyHeight {return false}
+    if lhs.totalStakingPower != rhs.totalStakingPower {return false}
+    if lhs.totalVestingPower != rhs.totalVestingPower {return false}
+    if lhs._v1TallyResult != rhs._v1TallyResult {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
 extension Initia_Gov_V1_Proposal: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".Proposal"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
@@ -673,7 +757,7 @@ extension Initia_Gov_V1_Proposal: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     var _id: UInt64 = 0
     var _messages: [SwiftProtobuf.Google_Protobuf_Any] = []
     var _status: Cosmos_Gov_V1_ProposalStatus = .unspecified
-    var _finalTallyResult: Cosmos_Gov_V1_TallyResult? = nil
+    var _finalTallyResult: Initia_Gov_V1_TallyResult? = nil
     var _submitTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
     var _depositEndTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
     var _totalDeposit: [Cosmos_Base_V1beta1_Coin] = []

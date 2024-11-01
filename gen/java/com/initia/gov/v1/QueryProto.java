@@ -6315,6 +6315,1179 @@ public final class QueryProto {
 
   }
 
+  public interface QueryTallyResultRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:initia.gov.v1.QueryTallyResultRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * proposal_id defines the unique id of the proposal.
+     * </pre>
+     *
+     * <code>uint64 proposal_id = 1 [json_name = "proposalId"];</code>
+     * @return The proposalId.
+     */
+    long getProposalId();
+  }
+  /**
+   * <pre>
+   * QueryTallyResultRequest is the request type for the Query/Tally RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code initia.gov.v1.QueryTallyResultRequest}
+   */
+  public static final class QueryTallyResultRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:initia.gov.v1.QueryTallyResultRequest)
+      QueryTallyResultRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTallyResultRequest.newBuilder() to construct.
+    private QueryTallyResultRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTallyResultRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTallyResultRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.initia.gov.v1.QueryProto.internal_static_initia_gov_v1_QueryTallyResultRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.initia.gov.v1.QueryProto.internal_static_initia_gov_v1_QueryTallyResultRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.initia.gov.v1.QueryProto.QueryTallyResultRequest.class, com.initia.gov.v1.QueryProto.QueryTallyResultRequest.Builder.class);
+    }
+
+    public static final int PROPOSAL_ID_FIELD_NUMBER = 1;
+    private long proposalId_ = 0L;
+    /**
+     * <pre>
+     * proposal_id defines the unique id of the proposal.
+     * </pre>
+     *
+     * <code>uint64 proposal_id = 1 [json_name = "proposalId"];</code>
+     * @return The proposalId.
+     */
+    @java.lang.Override
+    public long getProposalId() {
+      return proposalId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (proposalId_ != 0L) {
+        output.writeUInt64(1, proposalId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (proposalId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, proposalId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.initia.gov.v1.QueryProto.QueryTallyResultRequest)) {
+        return super.equals(obj);
+      }
+      com.initia.gov.v1.QueryProto.QueryTallyResultRequest other = (com.initia.gov.v1.QueryProto.QueryTallyResultRequest) obj;
+
+      if (getProposalId()
+          != other.getProposalId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROPOSAL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getProposalId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.initia.gov.v1.QueryProto.QueryTallyResultRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryTallyResultRequest is the request type for the Query/Tally RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code initia.gov.v1.QueryTallyResultRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:initia.gov.v1.QueryTallyResultRequest)
+        com.initia.gov.v1.QueryProto.QueryTallyResultRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.initia.gov.v1.QueryProto.internal_static_initia_gov_v1_QueryTallyResultRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.initia.gov.v1.QueryProto.internal_static_initia_gov_v1_QueryTallyResultRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.initia.gov.v1.QueryProto.QueryTallyResultRequest.class, com.initia.gov.v1.QueryProto.QueryTallyResultRequest.Builder.class);
+      }
+
+      // Construct using com.initia.gov.v1.QueryProto.QueryTallyResultRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        proposalId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.initia.gov.v1.QueryProto.internal_static_initia_gov_v1_QueryTallyResultRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.initia.gov.v1.QueryProto.QueryTallyResultRequest getDefaultInstanceForType() {
+        return com.initia.gov.v1.QueryProto.QueryTallyResultRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.initia.gov.v1.QueryProto.QueryTallyResultRequest build() {
+        com.initia.gov.v1.QueryProto.QueryTallyResultRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.initia.gov.v1.QueryProto.QueryTallyResultRequest buildPartial() {
+        com.initia.gov.v1.QueryProto.QueryTallyResultRequest result = new com.initia.gov.v1.QueryProto.QueryTallyResultRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.initia.gov.v1.QueryProto.QueryTallyResultRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.proposalId_ = proposalId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.initia.gov.v1.QueryProto.QueryTallyResultRequest) {
+          return mergeFrom((com.initia.gov.v1.QueryProto.QueryTallyResultRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.initia.gov.v1.QueryProto.QueryTallyResultRequest other) {
+        if (other == com.initia.gov.v1.QueryProto.QueryTallyResultRequest.getDefaultInstance()) return this;
+        if (other.getProposalId() != 0L) {
+          setProposalId(other.getProposalId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                proposalId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long proposalId_ ;
+      /**
+       * <pre>
+       * proposal_id defines the unique id of the proposal.
+       * </pre>
+       *
+       * <code>uint64 proposal_id = 1 [json_name = "proposalId"];</code>
+       * @return The proposalId.
+       */
+      @java.lang.Override
+      public long getProposalId() {
+        return proposalId_;
+      }
+      /**
+       * <pre>
+       * proposal_id defines the unique id of the proposal.
+       * </pre>
+       *
+       * <code>uint64 proposal_id = 1 [json_name = "proposalId"];</code>
+       * @param value The proposalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProposalId(long value) {
+
+        proposalId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proposal_id defines the unique id of the proposal.
+       * </pre>
+       *
+       * <code>uint64 proposal_id = 1 [json_name = "proposalId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProposalId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        proposalId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:initia.gov.v1.QueryTallyResultRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:initia.gov.v1.QueryTallyResultRequest)
+    private static final com.initia.gov.v1.QueryProto.QueryTallyResultRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.initia.gov.v1.QueryProto.QueryTallyResultRequest();
+    }
+
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTallyResultRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTallyResultRequest>() {
+      @java.lang.Override
+      public QueryTallyResultRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTallyResultRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTallyResultRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.initia.gov.v1.QueryProto.QueryTallyResultRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTallyResultResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:initia.gov.v1.QueryTallyResultResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * tally defines the requested tally.
+     * </pre>
+     *
+     * <code>.initia.gov.v1.TallyResult tally_result = 1 [json_name = "tallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     * @return Whether the tallyResult field is set.
+     */
+    boolean hasTallyResult();
+    /**
+     * <pre>
+     * tally defines the requested tally.
+     * </pre>
+     *
+     * <code>.initia.gov.v1.TallyResult tally_result = 1 [json_name = "tallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     * @return The tallyResult.
+     */
+    com.initia.gov.v1.GovProto.TallyResult getTallyResult();
+    /**
+     * <pre>
+     * tally defines the requested tally.
+     * </pre>
+     *
+     * <code>.initia.gov.v1.TallyResult tally_result = 1 [json_name = "tallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    com.initia.gov.v1.GovProto.TallyResultOrBuilder getTallyResultOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryTallyResultResponse is the response type for the Query/Tally RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code initia.gov.v1.QueryTallyResultResponse}
+   */
+  public static final class QueryTallyResultResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:initia.gov.v1.QueryTallyResultResponse)
+      QueryTallyResultResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTallyResultResponse.newBuilder() to construct.
+    private QueryTallyResultResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTallyResultResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTallyResultResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.initia.gov.v1.QueryProto.internal_static_initia_gov_v1_QueryTallyResultResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.initia.gov.v1.QueryProto.internal_static_initia_gov_v1_QueryTallyResultResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.initia.gov.v1.QueryProto.QueryTallyResultResponse.class, com.initia.gov.v1.QueryProto.QueryTallyResultResponse.Builder.class);
+    }
+
+    public static final int TALLY_RESULT_FIELD_NUMBER = 1;
+    private com.initia.gov.v1.GovProto.TallyResult tallyResult_;
+    /**
+     * <pre>
+     * tally defines the requested tally.
+     * </pre>
+     *
+     * <code>.initia.gov.v1.TallyResult tally_result = 1 [json_name = "tallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     * @return Whether the tallyResult field is set.
+     */
+    @java.lang.Override
+    public boolean hasTallyResult() {
+      return tallyResult_ != null;
+    }
+    /**
+     * <pre>
+     * tally defines the requested tally.
+     * </pre>
+     *
+     * <code>.initia.gov.v1.TallyResult tally_result = 1 [json_name = "tallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     * @return The tallyResult.
+     */
+    @java.lang.Override
+    public com.initia.gov.v1.GovProto.TallyResult getTallyResult() {
+      return tallyResult_ == null ? com.initia.gov.v1.GovProto.TallyResult.getDefaultInstance() : tallyResult_;
+    }
+    /**
+     * <pre>
+     * tally defines the requested tally.
+     * </pre>
+     *
+     * <code>.initia.gov.v1.TallyResult tally_result = 1 [json_name = "tallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    @java.lang.Override
+    public com.initia.gov.v1.GovProto.TallyResultOrBuilder getTallyResultOrBuilder() {
+      return tallyResult_ == null ? com.initia.gov.v1.GovProto.TallyResult.getDefaultInstance() : tallyResult_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (tallyResult_ != null) {
+        output.writeMessage(1, getTallyResult());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (tallyResult_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTallyResult());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.initia.gov.v1.QueryProto.QueryTallyResultResponse)) {
+        return super.equals(obj);
+      }
+      com.initia.gov.v1.QueryProto.QueryTallyResultResponse other = (com.initia.gov.v1.QueryProto.QueryTallyResultResponse) obj;
+
+      if (hasTallyResult() != other.hasTallyResult()) return false;
+      if (hasTallyResult()) {
+        if (!getTallyResult()
+            .equals(other.getTallyResult())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTallyResult()) {
+        hash = (37 * hash) + TALLY_RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getTallyResult().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.initia.gov.v1.QueryProto.QueryTallyResultResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryTallyResultResponse is the response type for the Query/Tally RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code initia.gov.v1.QueryTallyResultResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:initia.gov.v1.QueryTallyResultResponse)
+        com.initia.gov.v1.QueryProto.QueryTallyResultResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.initia.gov.v1.QueryProto.internal_static_initia_gov_v1_QueryTallyResultResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.initia.gov.v1.QueryProto.internal_static_initia_gov_v1_QueryTallyResultResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.initia.gov.v1.QueryProto.QueryTallyResultResponse.class, com.initia.gov.v1.QueryProto.QueryTallyResultResponse.Builder.class);
+      }
+
+      // Construct using com.initia.gov.v1.QueryProto.QueryTallyResultResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        tallyResult_ = null;
+        if (tallyResultBuilder_ != null) {
+          tallyResultBuilder_.dispose();
+          tallyResultBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.initia.gov.v1.QueryProto.internal_static_initia_gov_v1_QueryTallyResultResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.initia.gov.v1.QueryProto.QueryTallyResultResponse getDefaultInstanceForType() {
+        return com.initia.gov.v1.QueryProto.QueryTallyResultResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.initia.gov.v1.QueryProto.QueryTallyResultResponse build() {
+        com.initia.gov.v1.QueryProto.QueryTallyResultResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.initia.gov.v1.QueryProto.QueryTallyResultResponse buildPartial() {
+        com.initia.gov.v1.QueryProto.QueryTallyResultResponse result = new com.initia.gov.v1.QueryProto.QueryTallyResultResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.initia.gov.v1.QueryProto.QueryTallyResultResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.tallyResult_ = tallyResultBuilder_ == null
+              ? tallyResult_
+              : tallyResultBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.initia.gov.v1.QueryProto.QueryTallyResultResponse) {
+          return mergeFrom((com.initia.gov.v1.QueryProto.QueryTallyResultResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.initia.gov.v1.QueryProto.QueryTallyResultResponse other) {
+        if (other == com.initia.gov.v1.QueryProto.QueryTallyResultResponse.getDefaultInstance()) return this;
+        if (other.hasTallyResult()) {
+          mergeTallyResult(other.getTallyResult());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getTallyResultFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.initia.gov.v1.GovProto.TallyResult tallyResult_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.initia.gov.v1.GovProto.TallyResult, com.initia.gov.v1.GovProto.TallyResult.Builder, com.initia.gov.v1.GovProto.TallyResultOrBuilder> tallyResultBuilder_;
+      /**
+       * <pre>
+       * tally defines the requested tally.
+       * </pre>
+       *
+       * <code>.initia.gov.v1.TallyResult tally_result = 1 [json_name = "tallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       * @return Whether the tallyResult field is set.
+       */
+      public boolean hasTallyResult() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * tally defines the requested tally.
+       * </pre>
+       *
+       * <code>.initia.gov.v1.TallyResult tally_result = 1 [json_name = "tallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       * @return The tallyResult.
+       */
+      public com.initia.gov.v1.GovProto.TallyResult getTallyResult() {
+        if (tallyResultBuilder_ == null) {
+          return tallyResult_ == null ? com.initia.gov.v1.GovProto.TallyResult.getDefaultInstance() : tallyResult_;
+        } else {
+          return tallyResultBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * tally defines the requested tally.
+       * </pre>
+       *
+       * <code>.initia.gov.v1.TallyResult tally_result = 1 [json_name = "tallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder setTallyResult(com.initia.gov.v1.GovProto.TallyResult value) {
+        if (tallyResultBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tallyResult_ = value;
+        } else {
+          tallyResultBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tally defines the requested tally.
+       * </pre>
+       *
+       * <code>.initia.gov.v1.TallyResult tally_result = 1 [json_name = "tallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder setTallyResult(
+          com.initia.gov.v1.GovProto.TallyResult.Builder builderForValue) {
+        if (tallyResultBuilder_ == null) {
+          tallyResult_ = builderForValue.build();
+        } else {
+          tallyResultBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tally defines the requested tally.
+       * </pre>
+       *
+       * <code>.initia.gov.v1.TallyResult tally_result = 1 [json_name = "tallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder mergeTallyResult(com.initia.gov.v1.GovProto.TallyResult value) {
+        if (tallyResultBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            tallyResult_ != null &&
+            tallyResult_ != com.initia.gov.v1.GovProto.TallyResult.getDefaultInstance()) {
+            getTallyResultBuilder().mergeFrom(value);
+          } else {
+            tallyResult_ = value;
+          }
+        } else {
+          tallyResultBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tally defines the requested tally.
+       * </pre>
+       *
+       * <code>.initia.gov.v1.TallyResult tally_result = 1 [json_name = "tallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder clearTallyResult() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        tallyResult_ = null;
+        if (tallyResultBuilder_ != null) {
+          tallyResultBuilder_.dispose();
+          tallyResultBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tally defines the requested tally.
+       * </pre>
+       *
+       * <code>.initia.gov.v1.TallyResult tally_result = 1 [json_name = "tallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public com.initia.gov.v1.GovProto.TallyResult.Builder getTallyResultBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getTallyResultFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * tally defines the requested tally.
+       * </pre>
+       *
+       * <code>.initia.gov.v1.TallyResult tally_result = 1 [json_name = "tallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public com.initia.gov.v1.GovProto.TallyResultOrBuilder getTallyResultOrBuilder() {
+        if (tallyResultBuilder_ != null) {
+          return tallyResultBuilder_.getMessageOrBuilder();
+        } else {
+          return tallyResult_ == null ?
+              com.initia.gov.v1.GovProto.TallyResult.getDefaultInstance() : tallyResult_;
+        }
+      }
+      /**
+       * <pre>
+       * tally defines the requested tally.
+       * </pre>
+       *
+       * <code>.initia.gov.v1.TallyResult tally_result = 1 [json_name = "tallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.initia.gov.v1.GovProto.TallyResult, com.initia.gov.v1.GovProto.TallyResult.Builder, com.initia.gov.v1.GovProto.TallyResultOrBuilder> 
+          getTallyResultFieldBuilder() {
+        if (tallyResultBuilder_ == null) {
+          tallyResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.initia.gov.v1.GovProto.TallyResult, com.initia.gov.v1.GovProto.TallyResult.Builder, com.initia.gov.v1.GovProto.TallyResultOrBuilder>(
+                  getTallyResult(),
+                  getParentForChildren(),
+                  isClean());
+          tallyResult_ = null;
+        }
+        return tallyResultBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:initia.gov.v1.QueryTallyResultResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:initia.gov.v1.QueryTallyResultResponse)
+    private static final com.initia.gov.v1.QueryProto.QueryTallyResultResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.initia.gov.v1.QueryProto.QueryTallyResultResponse();
+    }
+
+    public static com.initia.gov.v1.QueryProto.QueryTallyResultResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTallyResultResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTallyResultResponse>() {
+      @java.lang.Override
+      public QueryTallyResultResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTallyResultResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTallyResultResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.initia.gov.v1.QueryProto.QueryTallyResultResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_initia_gov_v1_QueryParamsRequest_descriptor;
   private static final 
@@ -6355,6 +7528,16 @@ public final class QueryProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_initia_gov_v1_QueryProposalsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_initia_gov_v1_QueryTallyResultRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_initia_gov_v1_QueryTallyResultRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_initia_gov_v1_QueryTallyResultResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_initia_gov_v1_QueryTallyResultResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -6365,61 +7548,71 @@ public final class QueryProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\031initia/gov/v1/query.proto\022\rinitia.gov." +
-      "v1\032\024gogoproto/gogo.proto\032\034google/api/ann" +
-      "otations.proto\032\031cosmos_proto/cosmos.prot" +
-      "o\032*cosmos/base/query/v1beta1/pagination." +
-      "proto\032\027cosmos/gov/v1/gov.proto\032\027initia/g" +
-      "ov/v1/gov.proto\"\024\n\022QueryParamsRequest\"J\n" +
-      "\023QueryParamsResponse\0223\n\006params\030\001 \001(\0132\025.i" +
-      "nitia.gov.v1.ParamsB\004\310\336\037\000R\006params\"r\n\036Que" +
-      "ryEmergencyProposalsRequest\022F\n\npaginatio" +
-      "n\030\001 \001(\0132&.cosmos.base.query.v1beta1.Page" +
-      "RequestR\npagination:\010\210\240\037\000\230\240\037\001\"\247\001\n\037QueryE" +
-      "mergencyProposalsResponse\022;\n\tproposals\030\001" +
-      " \003(\0132\027.initia.gov.v1.ProposalB\004\310\336\037\000R\tpro" +
-      "posals\022G\n\npagination\030\002 \001(\0132\'.cosmos.base" +
-      ".query.v1beta1.PageResponseR\npagination\"" +
-      "7\n\024QueryProposalRequest\022\037\n\013proposal_id\030\001" +
-      " \001(\004R\nproposalId\"L\n\025QueryProposalRespons" +
-      "e\0223\n\010proposal\030\001 \001(\0132\027.initia.gov.v1.Prop" +
-      "osalR\010proposal\"\217\002\n\025QueryProposalsRequest" +
-      "\022F\n\017proposal_status\030\001 \001(\0162\035.cosmos.gov.v" +
-      "1.ProposalStatusR\016proposalStatus\022.\n\005vote" +
-      "r\030\002 \001(\tB\030\322\264-\024cosmos.AddressStringR\005voter" +
-      "\0226\n\tdepositor\030\003 \001(\tB\030\322\264-\024cosmos.AddressS" +
-      "tringR\tdepositor\022F\n\npagination\030\004 \001(\0132&.c" +
-      "osmos.base.query.v1beta1.PageRequestR\npa" +
-      "gination\"\230\001\n\026QueryProposalsResponse\0225\n\tp" +
-      "roposals\030\001 \003(\0132\027.initia.gov.v1.ProposalR" +
-      "\tproposals\022G\n\npagination\030\002 \001(\0132\'.cosmos." +
-      "base.query.v1beta1.PageResponseR\npaginat" +
-      "ion2\235\004\n\005Query\022n\n\006Params\022!.initia.gov.v1." +
-      "QueryParamsRequest\032\".initia.gov.v1.Query" +
-      "ParamsResponse\"\035\202\323\344\223\002\027\022\025/initia/gov/v1/p" +
-      "arams\022\237\001\n\022EmergencyProposals\022-.initia.go" +
-      "v.v1.QueryEmergencyProposalsRequest\032..in" +
-      "itia.gov.v1.QueryEmergencyProposalsRespo" +
-      "nse\"*\202\323\344\223\002$\022\"/initia/gov/v1/emergency_pr" +
-      "oposals\022\205\001\n\010Proposal\022#.initia.gov.v1.Que" +
-      "ryProposalRequest\032$.initia.gov.v1.QueryP" +
-      "roposalResponse\".\202\323\344\223\002(\022&/initia/gov/v1/" +
-      "proposals/{proposal_id}\022z\n\tProposals\022$.i" +
-      "nitia.gov.v1.QueryProposalsRequest\032%.ini" +
-      "tia.gov.v1.QueryProposalsResponse\" \202\323\344\223\002" +
-      "\032\022\030/initia/gov/v1/proposalsB\236\001\n\021com.init" +
-      "ia.gov.v1B\nQueryProtoZ)github.com/initia" +
-      "-labs/initia/x/gov/types\242\002\003IGX\252\002\rInitia." +
-      "Gov.V1\312\002\rInitia\\Gov\\V1\342\002\031Initia\\Gov\\V1\\G" +
-      "PBMetadata\352\002\017Initia::Gov::V1b\006proto3"
+      "v1\032\021amino/amino.proto\032*cosmos/base/query" +
+      "/v1beta1/pagination.proto\032\027cosmos/gov/v1" +
+      "/gov.proto\032\031cosmos_proto/cosmos.proto\032\024g" +
+      "ogoproto/gogo.proto\032\034google/api/annotati" +
+      "ons.proto\032\027initia/gov/v1/gov.proto\"\024\n\022Qu" +
+      "eryParamsRequest\"J\n\023QueryParamsResponse\022" +
+      "3\n\006params\030\001 \001(\0132\025.initia.gov.v1.ParamsB\004" +
+      "\310\336\037\000R\006params\"r\n\036QueryEmergencyProposalsR" +
+      "equest\022F\n\npagination\030\001 \001(\0132&.cosmos.base" +
+      ".query.v1beta1.PageRequestR\npagination:\010" +
+      "\210\240\037\000\230\240\037\001\"\247\001\n\037QueryEmergencyProposalsResp" +
+      "onse\022;\n\tproposals\030\001 \003(\0132\027.initia.gov.v1." +
+      "ProposalB\004\310\336\037\000R\tproposals\022G\n\npagination\030" +
+      "\002 \001(\0132\'.cosmos.base.query.v1beta1.PageRe" +
+      "sponseR\npagination\"7\n\024QueryProposalReque" +
+      "st\022\037\n\013proposal_id\030\001 \001(\004R\nproposalId\"L\n\025Q" +
+      "ueryProposalResponse\0223\n\010proposal\030\001 \001(\0132\027" +
+      ".initia.gov.v1.ProposalR\010proposal\"\217\002\n\025Qu" +
+      "eryProposalsRequest\022F\n\017proposal_status\030\001" +
+      " \001(\0162\035.cosmos.gov.v1.ProposalStatusR\016pro" +
+      "posalStatus\022.\n\005voter\030\002 \001(\tB\030\322\264-\024cosmos.A" +
+      "ddressStringR\005voter\0226\n\tdepositor\030\003 \001(\tB\030" +
+      "\322\264-\024cosmos.AddressStringR\tdepositor\022F\n\np" +
+      "agination\030\004 \001(\0132&.cosmos.base.query.v1be" +
+      "ta1.PageRequestR\npagination\"\230\001\n\026QueryPro" +
+      "posalsResponse\0225\n\tproposals\030\001 \003(\0132\027.init" +
+      "ia.gov.v1.ProposalR\tproposals\022G\n\npaginat" +
+      "ion\030\002 \001(\0132\'.cosmos.base.query.v1beta1.Pa" +
+      "geResponseR\npagination\":\n\027QueryTallyResu" +
+      "ltRequest\022\037\n\013proposal_id\030\001 \001(\004R\nproposal" +
+      "Id\"d\n\030QueryTallyResultResponse\022H\n\014tally_" +
+      "result\030\001 \001(\0132\032.initia.gov.v1.TallyResult" +
+      "B\t\310\336\037\000\250\347\260*\001R\013tallyResult2\264\005\n\005Query\022n\n\006Pa" +
+      "rams\022!.initia.gov.v1.QueryParamsRequest\032" +
+      "\".initia.gov.v1.QueryParamsResponse\"\035\202\323\344" +
+      "\223\002\027\022\025/initia/gov/v1/params\022\237\001\n\022Emergency" +
+      "Proposals\022-.initia.gov.v1.QueryEmergency" +
+      "ProposalsRequest\032..initia.gov.v1.QueryEm" +
+      "ergencyProposalsResponse\"*\202\323\344\223\002$\022\"/initi" +
+      "a/gov/v1/emergency_proposals\022\205\001\n\010Proposa" +
+      "l\022#.initia.gov.v1.QueryProposalRequest\032$" +
+      ".initia.gov.v1.QueryProposalResponse\".\202\323" +
+      "\344\223\002(\022&/initia/gov/v1/proposals/{proposal" +
+      "_id}\022z\n\tProposals\022$.initia.gov.v1.QueryP" +
+      "roposalsRequest\032%.initia.gov.v1.QueryPro" +
+      "posalsResponse\" \202\323\344\223\002\032\022\030/initia/gov/v1/p" +
+      "roposals\022\224\001\n\013TallyResult\022&.initia.gov.v1" +
+      ".QueryTallyResultRequest\032\'.initia.gov.v1" +
+      ".QueryTallyResultResponse\"4\202\323\344\223\002.\022,/init" +
+      "ia/gov/v1/proposals/{proposal_id}/tallyB" +
+      "\236\001\n\021com.initia.gov.v1B\nQueryProtoZ)githu" +
+      "b.com/initia-labs/initia/x/gov/types\242\002\003I" +
+      "GX\252\002\rInitia.Gov.V1\312\002\rInitia\\Gov\\V1\342\002\031Ini" +
+      "tia\\Gov\\V1\\GPBMetadata\352\002\017Initia::Gov::V1" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.gogoproto.GogoProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
-          com.cosmos_proto.CosmosProto.getDescriptor(),
+          com.amino.AminoProto.getDescriptor(),
           com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor(),
           com.cosmos.gov.v1.GovProto.getDescriptor(),
+          com.cosmos_proto.CosmosProto.getDescriptor(),
+          com.gogoproto.GogoProto.getDescriptor(),
+          com.google.api.AnnotationsProto.getDescriptor(),
           com.initia.gov.v1.GovProto.getDescriptor(),
         });
     internal_static_initia_gov_v1_QueryParamsRequest_descriptor =
@@ -6470,8 +7663,21 @@ public final class QueryProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_initia_gov_v1_QueryProposalsResponse_descriptor,
         new java.lang.String[] { "Proposals", "Pagination", });
+    internal_static_initia_gov_v1_QueryTallyResultRequest_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_initia_gov_v1_QueryTallyResultRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_initia_gov_v1_QueryTallyResultRequest_descriptor,
+        new java.lang.String[] { "ProposalId", });
+    internal_static_initia_gov_v1_QueryTallyResultResponse_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_initia_gov_v1_QueryTallyResultResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_initia_gov_v1_QueryTallyResultResponse_descriptor,
+        new java.lang.String[] { "TallyResult", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.amino.AminoProto.dontOmitempty);
     registry.add(com.cosmos_proto.CosmosProto.scalar);
     registry.add(com.gogoproto.GogoProto.goprotoGetters);
     registry.add(com.gogoproto.GogoProto.goprotoStringer);
@@ -6479,11 +7685,12 @@ public final class QueryProto {
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.gogoproto.GogoProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
-    com.cosmos_proto.CosmosProto.getDescriptor();
+    com.amino.AminoProto.getDescriptor();
     com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor();
     com.cosmos.gov.v1.GovProto.getDescriptor();
+    com.cosmos_proto.CosmosProto.getDescriptor();
+    com.gogoproto.GogoProto.getDescriptor();
+    com.google.api.AnnotationsProto.getDescriptor();
     com.initia.gov.v1.GovProto.getDescriptor();
   }
 

@@ -6363,6 +6363,1050 @@ public final class GovProto {
 
   }
 
+  public interface TallyResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:initia.gov.v1.TallyResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 tally_height = 1 [json_name = "tallyHeight"];</code>
+     * @return The tallyHeight.
+     */
+    long getTallyHeight();
+
+    /**
+     * <code>string total_staking_power = 2 [json_name = "totalStakingPower", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * @return The totalStakingPower.
+     */
+    java.lang.String getTotalStakingPower();
+    /**
+     * <code>string total_staking_power = 2 [json_name = "totalStakingPower", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * @return The bytes for totalStakingPower.
+     */
+    com.google.protobuf.ByteString
+        getTotalStakingPowerBytes();
+
+    /**
+     * <code>string total_vesting_power = 3 [json_name = "totalVestingPower", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * @return The totalVestingPower.
+     */
+    java.lang.String getTotalVestingPower();
+    /**
+     * <code>string total_vesting_power = 3 [json_name = "totalVestingPower", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * @return The bytes for totalVestingPower.
+     */
+    com.google.protobuf.ByteString
+        getTotalVestingPowerBytes();
+
+    /**
+     * <pre>
+     * v1_tally_result is the original TallyResult from cosmos-sdk,
+     * which contains both staking and vesting power.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1.TallyResult v1_tally_result = 4 [json_name = "v1TallyResult"];</code>
+     * @return Whether the v1TallyResult field is set.
+     */
+    boolean hasV1TallyResult();
+    /**
+     * <pre>
+     * v1_tally_result is the original TallyResult from cosmos-sdk,
+     * which contains both staking and vesting power.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1.TallyResult v1_tally_result = 4 [json_name = "v1TallyResult"];</code>
+     * @return The v1TallyResult.
+     */
+    com.cosmos.gov.v1.GovProto.TallyResult getV1TallyResult();
+    /**
+     * <pre>
+     * v1_tally_result is the original TallyResult from cosmos-sdk,
+     * which contains both staking and vesting power.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1.TallyResult v1_tally_result = 4 [json_name = "v1TallyResult"];</code>
+     */
+    com.cosmos.gov.v1.GovProto.TallyResultOrBuilder getV1TallyResultOrBuilder();
+  }
+  /**
+   * Protobuf type {@code initia.gov.v1.TallyResult}
+   */
+  public static final class TallyResult extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:initia.gov.v1.TallyResult)
+      TallyResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TallyResult.newBuilder() to construct.
+    private TallyResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TallyResult() {
+      totalStakingPower_ = "";
+      totalVestingPower_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TallyResult();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.initia.gov.v1.GovProto.internal_static_initia_gov_v1_TallyResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.initia.gov.v1.GovProto.internal_static_initia_gov_v1_TallyResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.initia.gov.v1.GovProto.TallyResult.class, com.initia.gov.v1.GovProto.TallyResult.Builder.class);
+    }
+
+    public static final int TALLY_HEIGHT_FIELD_NUMBER = 1;
+    private long tallyHeight_ = 0L;
+    /**
+     * <code>uint64 tally_height = 1 [json_name = "tallyHeight"];</code>
+     * @return The tallyHeight.
+     */
+    @java.lang.Override
+    public long getTallyHeight() {
+      return tallyHeight_;
+    }
+
+    public static final int TOTAL_STAKING_POWER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object totalStakingPower_ = "";
+    /**
+     * <code>string total_staking_power = 2 [json_name = "totalStakingPower", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * @return The totalStakingPower.
+     */
+    @java.lang.Override
+    public java.lang.String getTotalStakingPower() {
+      java.lang.Object ref = totalStakingPower_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        totalStakingPower_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string total_staking_power = 2 [json_name = "totalStakingPower", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * @return The bytes for totalStakingPower.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTotalStakingPowerBytes() {
+      java.lang.Object ref = totalStakingPower_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalStakingPower_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOTAL_VESTING_POWER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object totalVestingPower_ = "";
+    /**
+     * <code>string total_vesting_power = 3 [json_name = "totalVestingPower", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * @return The totalVestingPower.
+     */
+    @java.lang.Override
+    public java.lang.String getTotalVestingPower() {
+      java.lang.Object ref = totalVestingPower_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        totalVestingPower_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string total_vesting_power = 3 [json_name = "totalVestingPower", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * @return The bytes for totalVestingPower.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTotalVestingPowerBytes() {
+      java.lang.Object ref = totalVestingPower_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalVestingPower_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int V1_TALLY_RESULT_FIELD_NUMBER = 4;
+    private com.cosmos.gov.v1.GovProto.TallyResult v1TallyResult_;
+    /**
+     * <pre>
+     * v1_tally_result is the original TallyResult from cosmos-sdk,
+     * which contains both staking and vesting power.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1.TallyResult v1_tally_result = 4 [json_name = "v1TallyResult"];</code>
+     * @return Whether the v1TallyResult field is set.
+     */
+    @java.lang.Override
+    public boolean hasV1TallyResult() {
+      return v1TallyResult_ != null;
+    }
+    /**
+     * <pre>
+     * v1_tally_result is the original TallyResult from cosmos-sdk,
+     * which contains both staking and vesting power.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1.TallyResult v1_tally_result = 4 [json_name = "v1TallyResult"];</code>
+     * @return The v1TallyResult.
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1.GovProto.TallyResult getV1TallyResult() {
+      return v1TallyResult_ == null ? com.cosmos.gov.v1.GovProto.TallyResult.getDefaultInstance() : v1TallyResult_;
+    }
+    /**
+     * <pre>
+     * v1_tally_result is the original TallyResult from cosmos-sdk,
+     * which contains both staking and vesting power.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1.TallyResult v1_tally_result = 4 [json_name = "v1TallyResult"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1.GovProto.TallyResultOrBuilder getV1TallyResultOrBuilder() {
+      return v1TallyResult_ == null ? com.cosmos.gov.v1.GovProto.TallyResult.getDefaultInstance() : v1TallyResult_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (tallyHeight_ != 0L) {
+        output.writeUInt64(1, tallyHeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalStakingPower_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, totalStakingPower_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalVestingPower_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, totalVestingPower_);
+      }
+      if (v1TallyResult_ != null) {
+        output.writeMessage(4, getV1TallyResult());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (tallyHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, tallyHeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalStakingPower_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, totalStakingPower_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalVestingPower_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, totalVestingPower_);
+      }
+      if (v1TallyResult_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getV1TallyResult());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.initia.gov.v1.GovProto.TallyResult)) {
+        return super.equals(obj);
+      }
+      com.initia.gov.v1.GovProto.TallyResult other = (com.initia.gov.v1.GovProto.TallyResult) obj;
+
+      if (getTallyHeight()
+          != other.getTallyHeight()) return false;
+      if (!getTotalStakingPower()
+          .equals(other.getTotalStakingPower())) return false;
+      if (!getTotalVestingPower()
+          .equals(other.getTotalVestingPower())) return false;
+      if (hasV1TallyResult() != other.hasV1TallyResult()) return false;
+      if (hasV1TallyResult()) {
+        if (!getV1TallyResult()
+            .equals(other.getV1TallyResult())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TALLY_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTallyHeight());
+      hash = (37 * hash) + TOTAL_STAKING_POWER_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalStakingPower().hashCode();
+      hash = (37 * hash) + TOTAL_VESTING_POWER_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalVestingPower().hashCode();
+      if (hasV1TallyResult()) {
+        hash = (37 * hash) + V1_TALLY_RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getV1TallyResult().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.initia.gov.v1.GovProto.TallyResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.initia.gov.v1.GovProto.TallyResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.initia.gov.v1.GovProto.TallyResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.initia.gov.v1.GovProto.TallyResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.initia.gov.v1.GovProto.TallyResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.initia.gov.v1.GovProto.TallyResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.initia.gov.v1.GovProto.TallyResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.initia.gov.v1.GovProto.TallyResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.initia.gov.v1.GovProto.TallyResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.initia.gov.v1.GovProto.TallyResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.initia.gov.v1.GovProto.TallyResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.initia.gov.v1.GovProto.TallyResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.initia.gov.v1.GovProto.TallyResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code initia.gov.v1.TallyResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:initia.gov.v1.TallyResult)
+        com.initia.gov.v1.GovProto.TallyResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.initia.gov.v1.GovProto.internal_static_initia_gov_v1_TallyResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.initia.gov.v1.GovProto.internal_static_initia_gov_v1_TallyResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.initia.gov.v1.GovProto.TallyResult.class, com.initia.gov.v1.GovProto.TallyResult.Builder.class);
+      }
+
+      // Construct using com.initia.gov.v1.GovProto.TallyResult.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        tallyHeight_ = 0L;
+        totalStakingPower_ = "";
+        totalVestingPower_ = "";
+        v1TallyResult_ = null;
+        if (v1TallyResultBuilder_ != null) {
+          v1TallyResultBuilder_.dispose();
+          v1TallyResultBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.initia.gov.v1.GovProto.internal_static_initia_gov_v1_TallyResult_descriptor;
+      }
+
+      @java.lang.Override
+      public com.initia.gov.v1.GovProto.TallyResult getDefaultInstanceForType() {
+        return com.initia.gov.v1.GovProto.TallyResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.initia.gov.v1.GovProto.TallyResult build() {
+        com.initia.gov.v1.GovProto.TallyResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.initia.gov.v1.GovProto.TallyResult buildPartial() {
+        com.initia.gov.v1.GovProto.TallyResult result = new com.initia.gov.v1.GovProto.TallyResult(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.initia.gov.v1.GovProto.TallyResult result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.tallyHeight_ = tallyHeight_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.totalStakingPower_ = totalStakingPower_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.totalVestingPower_ = totalVestingPower_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.v1TallyResult_ = v1TallyResultBuilder_ == null
+              ? v1TallyResult_
+              : v1TallyResultBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.initia.gov.v1.GovProto.TallyResult) {
+          return mergeFrom((com.initia.gov.v1.GovProto.TallyResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.initia.gov.v1.GovProto.TallyResult other) {
+        if (other == com.initia.gov.v1.GovProto.TallyResult.getDefaultInstance()) return this;
+        if (other.getTallyHeight() != 0L) {
+          setTallyHeight(other.getTallyHeight());
+        }
+        if (!other.getTotalStakingPower().isEmpty()) {
+          totalStakingPower_ = other.totalStakingPower_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getTotalVestingPower().isEmpty()) {
+          totalVestingPower_ = other.totalVestingPower_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasV1TallyResult()) {
+          mergeV1TallyResult(other.getV1TallyResult());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                tallyHeight_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                totalStakingPower_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                totalVestingPower_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getV1TallyResultFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long tallyHeight_ ;
+      /**
+       * <code>uint64 tally_height = 1 [json_name = "tallyHeight"];</code>
+       * @return The tallyHeight.
+       */
+      @java.lang.Override
+      public long getTallyHeight() {
+        return tallyHeight_;
+      }
+      /**
+       * <code>uint64 tally_height = 1 [json_name = "tallyHeight"];</code>
+       * @param value The tallyHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTallyHeight(long value) {
+
+        tallyHeight_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 tally_height = 1 [json_name = "tallyHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTallyHeight() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        tallyHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object totalStakingPower_ = "";
+      /**
+       * <code>string total_staking_power = 2 [json_name = "totalStakingPower", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * @return The totalStakingPower.
+       */
+      public java.lang.String getTotalStakingPower() {
+        java.lang.Object ref = totalStakingPower_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          totalStakingPower_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string total_staking_power = 2 [json_name = "totalStakingPower", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * @return The bytes for totalStakingPower.
+       */
+      public com.google.protobuf.ByteString
+          getTotalStakingPowerBytes() {
+        java.lang.Object ref = totalStakingPower_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalStakingPower_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string total_staking_power = 2 [json_name = "totalStakingPower", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * @param value The totalStakingPower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalStakingPower(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        totalStakingPower_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string total_staking_power = 2 [json_name = "totalStakingPower", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalStakingPower() {
+        totalStakingPower_ = getDefaultInstance().getTotalStakingPower();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string total_staking_power = 2 [json_name = "totalStakingPower", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * @param value The bytes for totalStakingPower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalStakingPowerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        totalStakingPower_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object totalVestingPower_ = "";
+      /**
+       * <code>string total_vesting_power = 3 [json_name = "totalVestingPower", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * @return The totalVestingPower.
+       */
+      public java.lang.String getTotalVestingPower() {
+        java.lang.Object ref = totalVestingPower_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          totalVestingPower_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string total_vesting_power = 3 [json_name = "totalVestingPower", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * @return The bytes for totalVestingPower.
+       */
+      public com.google.protobuf.ByteString
+          getTotalVestingPowerBytes() {
+        java.lang.Object ref = totalVestingPower_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalVestingPower_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string total_vesting_power = 3 [json_name = "totalVestingPower", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * @param value The totalVestingPower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalVestingPower(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        totalVestingPower_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string total_vesting_power = 3 [json_name = "totalVestingPower", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalVestingPower() {
+        totalVestingPower_ = getDefaultInstance().getTotalVestingPower();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string total_vesting_power = 3 [json_name = "totalVestingPower", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * @param value The bytes for totalVestingPower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalVestingPowerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        totalVestingPower_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.gov.v1.GovProto.TallyResult v1TallyResult_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.gov.v1.GovProto.TallyResult, com.cosmos.gov.v1.GovProto.TallyResult.Builder, com.cosmos.gov.v1.GovProto.TallyResultOrBuilder> v1TallyResultBuilder_;
+      /**
+       * <pre>
+       * v1_tally_result is the original TallyResult from cosmos-sdk,
+       * which contains both staking and vesting power.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1.TallyResult v1_tally_result = 4 [json_name = "v1TallyResult"];</code>
+       * @return Whether the v1TallyResult field is set.
+       */
+      public boolean hasV1TallyResult() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * v1_tally_result is the original TallyResult from cosmos-sdk,
+       * which contains both staking and vesting power.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1.TallyResult v1_tally_result = 4 [json_name = "v1TallyResult"];</code>
+       * @return The v1TallyResult.
+       */
+      public com.cosmos.gov.v1.GovProto.TallyResult getV1TallyResult() {
+        if (v1TallyResultBuilder_ == null) {
+          return v1TallyResult_ == null ? com.cosmos.gov.v1.GovProto.TallyResult.getDefaultInstance() : v1TallyResult_;
+        } else {
+          return v1TallyResultBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * v1_tally_result is the original TallyResult from cosmos-sdk,
+       * which contains both staking and vesting power.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1.TallyResult v1_tally_result = 4 [json_name = "v1TallyResult"];</code>
+       */
+      public Builder setV1TallyResult(com.cosmos.gov.v1.GovProto.TallyResult value) {
+        if (v1TallyResultBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          v1TallyResult_ = value;
+        } else {
+          v1TallyResultBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * v1_tally_result is the original TallyResult from cosmos-sdk,
+       * which contains both staking and vesting power.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1.TallyResult v1_tally_result = 4 [json_name = "v1TallyResult"];</code>
+       */
+      public Builder setV1TallyResult(
+          com.cosmos.gov.v1.GovProto.TallyResult.Builder builderForValue) {
+        if (v1TallyResultBuilder_ == null) {
+          v1TallyResult_ = builderForValue.build();
+        } else {
+          v1TallyResultBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * v1_tally_result is the original TallyResult from cosmos-sdk,
+       * which contains both staking and vesting power.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1.TallyResult v1_tally_result = 4 [json_name = "v1TallyResult"];</code>
+       */
+      public Builder mergeV1TallyResult(com.cosmos.gov.v1.GovProto.TallyResult value) {
+        if (v1TallyResultBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            v1TallyResult_ != null &&
+            v1TallyResult_ != com.cosmos.gov.v1.GovProto.TallyResult.getDefaultInstance()) {
+            getV1TallyResultBuilder().mergeFrom(value);
+          } else {
+            v1TallyResult_ = value;
+          }
+        } else {
+          v1TallyResultBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * v1_tally_result is the original TallyResult from cosmos-sdk,
+       * which contains both staking and vesting power.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1.TallyResult v1_tally_result = 4 [json_name = "v1TallyResult"];</code>
+       */
+      public Builder clearV1TallyResult() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        v1TallyResult_ = null;
+        if (v1TallyResultBuilder_ != null) {
+          v1TallyResultBuilder_.dispose();
+          v1TallyResultBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * v1_tally_result is the original TallyResult from cosmos-sdk,
+       * which contains both staking and vesting power.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1.TallyResult v1_tally_result = 4 [json_name = "v1TallyResult"];</code>
+       */
+      public com.cosmos.gov.v1.GovProto.TallyResult.Builder getV1TallyResultBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getV1TallyResultFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * v1_tally_result is the original TallyResult from cosmos-sdk,
+       * which contains both staking and vesting power.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1.TallyResult v1_tally_result = 4 [json_name = "v1TallyResult"];</code>
+       */
+      public com.cosmos.gov.v1.GovProto.TallyResultOrBuilder getV1TallyResultOrBuilder() {
+        if (v1TallyResultBuilder_ != null) {
+          return v1TallyResultBuilder_.getMessageOrBuilder();
+        } else {
+          return v1TallyResult_ == null ?
+              com.cosmos.gov.v1.GovProto.TallyResult.getDefaultInstance() : v1TallyResult_;
+        }
+      }
+      /**
+       * <pre>
+       * v1_tally_result is the original TallyResult from cosmos-sdk,
+       * which contains both staking and vesting power.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1.TallyResult v1_tally_result = 4 [json_name = "v1TallyResult"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.gov.v1.GovProto.TallyResult, com.cosmos.gov.v1.GovProto.TallyResult.Builder, com.cosmos.gov.v1.GovProto.TallyResultOrBuilder> 
+          getV1TallyResultFieldBuilder() {
+        if (v1TallyResultBuilder_ == null) {
+          v1TallyResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.gov.v1.GovProto.TallyResult, com.cosmos.gov.v1.GovProto.TallyResult.Builder, com.cosmos.gov.v1.GovProto.TallyResultOrBuilder>(
+                  getV1TallyResult(),
+                  getParentForChildren(),
+                  isClean());
+          v1TallyResult_ = null;
+        }
+        return v1TallyResultBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:initia.gov.v1.TallyResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:initia.gov.v1.TallyResult)
+    private static final com.initia.gov.v1.GovProto.TallyResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.initia.gov.v1.GovProto.TallyResult();
+    }
+
+    public static com.initia.gov.v1.GovProto.TallyResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TallyResult>
+        PARSER = new com.google.protobuf.AbstractParser<TallyResult>() {
+      @java.lang.Override
+      public TallyResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TallyResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TallyResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.initia.gov.v1.GovProto.TallyResult getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ProposalOrBuilder extends
       // @@protoc_insertion_point(interface_extends:initia.gov.v1.Proposal)
       com.google.protobuf.MessageOrBuilder {
@@ -6447,7 +7491,7 @@ public final class GovProto {
      * proposal's voting period has ended.
      * </pre>
      *
-     * <code>.cosmos.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult"];</code>
+     * <code>.initia.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      * @return Whether the finalTallyResult field is set.
      */
     boolean hasFinalTallyResult();
@@ -6458,10 +7502,10 @@ public final class GovProto {
      * proposal's voting period has ended.
      * </pre>
      *
-     * <code>.cosmos.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult"];</code>
+     * <code>.initia.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      * @return The finalTallyResult.
      */
-    com.cosmos.gov.v1.GovProto.TallyResult getFinalTallyResult();
+    com.initia.gov.v1.GovProto.TallyResult getFinalTallyResult();
     /**
      * <pre>
      * final_tally_result is the final tally result of the proposal. When
@@ -6469,9 +7513,9 @@ public final class GovProto {
      * proposal's voting period has ended.
      * </pre>
      *
-     * <code>.cosmos.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult"];</code>
+     * <code>.initia.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      */
-    com.cosmos.gov.v1.GovProto.TallyResultOrBuilder getFinalTallyResultOrBuilder();
+    com.initia.gov.v1.GovProto.TallyResultOrBuilder getFinalTallyResultOrBuilder();
 
     /**
      * <pre>
@@ -6943,7 +7987,7 @@ public final class GovProto {
     }
 
     public static final int FINAL_TALLY_RESULT_FIELD_NUMBER = 4;
-    private com.cosmos.gov.v1.GovProto.TallyResult finalTallyResult_;
+    private com.initia.gov.v1.GovProto.TallyResult finalTallyResult_;
     /**
      * <pre>
      * final_tally_result is the final tally result of the proposal. When
@@ -6951,7 +7995,7 @@ public final class GovProto {
      * proposal's voting period has ended.
      * </pre>
      *
-     * <code>.cosmos.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult"];</code>
+     * <code>.initia.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      * @return Whether the finalTallyResult field is set.
      */
     @java.lang.Override
@@ -6965,12 +8009,12 @@ public final class GovProto {
      * proposal's voting period has ended.
      * </pre>
      *
-     * <code>.cosmos.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult"];</code>
+     * <code>.initia.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      * @return The finalTallyResult.
      */
     @java.lang.Override
-    public com.cosmos.gov.v1.GovProto.TallyResult getFinalTallyResult() {
-      return finalTallyResult_ == null ? com.cosmos.gov.v1.GovProto.TallyResult.getDefaultInstance() : finalTallyResult_;
+    public com.initia.gov.v1.GovProto.TallyResult getFinalTallyResult() {
+      return finalTallyResult_ == null ? com.initia.gov.v1.GovProto.TallyResult.getDefaultInstance() : finalTallyResult_;
     }
     /**
      * <pre>
@@ -6979,11 +8023,11 @@ public final class GovProto {
      * proposal's voting period has ended.
      * </pre>
      *
-     * <code>.cosmos.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult"];</code>
+     * <code>.initia.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
-    public com.cosmos.gov.v1.GovProto.TallyResultOrBuilder getFinalTallyResultOrBuilder() {
-      return finalTallyResult_ == null ? com.cosmos.gov.v1.GovProto.TallyResult.getDefaultInstance() : finalTallyResult_;
+    public com.initia.gov.v1.GovProto.TallyResultOrBuilder getFinalTallyResultOrBuilder() {
+      return finalTallyResult_ == null ? com.initia.gov.v1.GovProto.TallyResult.getDefaultInstance() : finalTallyResult_;
     }
 
     public static final int SUBMIT_TIME_FIELD_NUMBER = 5;
@@ -8875,9 +9919,9 @@ public final class GovProto {
         return this;
       }
 
-      private com.cosmos.gov.v1.GovProto.TallyResult finalTallyResult_;
+      private com.initia.gov.v1.GovProto.TallyResult finalTallyResult_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.cosmos.gov.v1.GovProto.TallyResult, com.cosmos.gov.v1.GovProto.TallyResult.Builder, com.cosmos.gov.v1.GovProto.TallyResultOrBuilder> finalTallyResultBuilder_;
+          com.initia.gov.v1.GovProto.TallyResult, com.initia.gov.v1.GovProto.TallyResult.Builder, com.initia.gov.v1.GovProto.TallyResultOrBuilder> finalTallyResultBuilder_;
       /**
        * <pre>
        * final_tally_result is the final tally result of the proposal. When
@@ -8885,7 +9929,7 @@ public final class GovProto {
        * proposal's voting period has ended.
        * </pre>
        *
-       * <code>.cosmos.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult"];</code>
+       * <code>.initia.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        * @return Whether the finalTallyResult field is set.
        */
       public boolean hasFinalTallyResult() {
@@ -8898,12 +9942,12 @@ public final class GovProto {
        * proposal's voting period has ended.
        * </pre>
        *
-       * <code>.cosmos.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult"];</code>
+       * <code>.initia.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        * @return The finalTallyResult.
        */
-      public com.cosmos.gov.v1.GovProto.TallyResult getFinalTallyResult() {
+      public com.initia.gov.v1.GovProto.TallyResult getFinalTallyResult() {
         if (finalTallyResultBuilder_ == null) {
-          return finalTallyResult_ == null ? com.cosmos.gov.v1.GovProto.TallyResult.getDefaultInstance() : finalTallyResult_;
+          return finalTallyResult_ == null ? com.initia.gov.v1.GovProto.TallyResult.getDefaultInstance() : finalTallyResult_;
         } else {
           return finalTallyResultBuilder_.getMessage();
         }
@@ -8915,9 +9959,9 @@ public final class GovProto {
        * proposal's voting period has ended.
        * </pre>
        *
-       * <code>.cosmos.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult"];</code>
+       * <code>.initia.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
-      public Builder setFinalTallyResult(com.cosmos.gov.v1.GovProto.TallyResult value) {
+      public Builder setFinalTallyResult(com.initia.gov.v1.GovProto.TallyResult value) {
         if (finalTallyResultBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8937,10 +9981,10 @@ public final class GovProto {
        * proposal's voting period has ended.
        * </pre>
        *
-       * <code>.cosmos.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult"];</code>
+       * <code>.initia.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
       public Builder setFinalTallyResult(
-          com.cosmos.gov.v1.GovProto.TallyResult.Builder builderForValue) {
+          com.initia.gov.v1.GovProto.TallyResult.Builder builderForValue) {
         if (finalTallyResultBuilder_ == null) {
           finalTallyResult_ = builderForValue.build();
         } else {
@@ -8957,13 +10001,13 @@ public final class GovProto {
        * proposal's voting period has ended.
        * </pre>
        *
-       * <code>.cosmos.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult"];</code>
+       * <code>.initia.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
-      public Builder mergeFinalTallyResult(com.cosmos.gov.v1.GovProto.TallyResult value) {
+      public Builder mergeFinalTallyResult(com.initia.gov.v1.GovProto.TallyResult value) {
         if (finalTallyResultBuilder_ == null) {
           if (((bitField0_ & 0x00000008) != 0) &&
             finalTallyResult_ != null &&
-            finalTallyResult_ != com.cosmos.gov.v1.GovProto.TallyResult.getDefaultInstance()) {
+            finalTallyResult_ != com.initia.gov.v1.GovProto.TallyResult.getDefaultInstance()) {
             getFinalTallyResultBuilder().mergeFrom(value);
           } else {
             finalTallyResult_ = value;
@@ -8982,7 +10026,7 @@ public final class GovProto {
        * proposal's voting period has ended.
        * </pre>
        *
-       * <code>.cosmos.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult"];</code>
+       * <code>.initia.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
       public Builder clearFinalTallyResult() {
         bitField0_ = (bitField0_ & ~0x00000008);
@@ -9001,9 +10045,9 @@ public final class GovProto {
        * proposal's voting period has ended.
        * </pre>
        *
-       * <code>.cosmos.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult"];</code>
+       * <code>.initia.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
-      public com.cosmos.gov.v1.GovProto.TallyResult.Builder getFinalTallyResultBuilder() {
+      public com.initia.gov.v1.GovProto.TallyResult.Builder getFinalTallyResultBuilder() {
         bitField0_ |= 0x00000008;
         onChanged();
         return getFinalTallyResultFieldBuilder().getBuilder();
@@ -9015,14 +10059,14 @@ public final class GovProto {
        * proposal's voting period has ended.
        * </pre>
        *
-       * <code>.cosmos.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult"];</code>
+       * <code>.initia.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
-      public com.cosmos.gov.v1.GovProto.TallyResultOrBuilder getFinalTallyResultOrBuilder() {
+      public com.initia.gov.v1.GovProto.TallyResultOrBuilder getFinalTallyResultOrBuilder() {
         if (finalTallyResultBuilder_ != null) {
           return finalTallyResultBuilder_.getMessageOrBuilder();
         } else {
           return finalTallyResult_ == null ?
-              com.cosmos.gov.v1.GovProto.TallyResult.getDefaultInstance() : finalTallyResult_;
+              com.initia.gov.v1.GovProto.TallyResult.getDefaultInstance() : finalTallyResult_;
         }
       }
       /**
@@ -9032,14 +10076,14 @@ public final class GovProto {
        * proposal's voting period has ended.
        * </pre>
        *
-       * <code>.cosmos.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult"];</code>
+       * <code>.initia.gov.v1.TallyResult final_tally_result = 4 [json_name = "finalTallyResult", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.cosmos.gov.v1.GovProto.TallyResult, com.cosmos.gov.v1.GovProto.TallyResult.Builder, com.cosmos.gov.v1.GovProto.TallyResultOrBuilder> 
+          com.initia.gov.v1.GovProto.TallyResult, com.initia.gov.v1.GovProto.TallyResult.Builder, com.initia.gov.v1.GovProto.TallyResultOrBuilder> 
           getFinalTallyResultFieldBuilder() {
         if (finalTallyResultBuilder_ == null) {
           finalTallyResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.cosmos.gov.v1.GovProto.TallyResult, com.cosmos.gov.v1.GovProto.TallyResult.Builder, com.cosmos.gov.v1.GovProto.TallyResultOrBuilder>(
+              com.initia.gov.v1.GovProto.TallyResult, com.initia.gov.v1.GovProto.TallyResult.Builder, com.initia.gov.v1.GovProto.TallyResultOrBuilder>(
                   getFinalTallyResult(),
                   getParentForChildren(),
                   isClean());
@@ -10884,6 +11928,11 @@ public final class GovProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_initia_gov_v1_Vesting_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_initia_gov_v1_TallyResult_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_initia_gov_v1_TallyResult_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_initia_gov_v1_Proposal_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -10898,12 +11947,12 @@ public final class GovProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\027initia/gov/v1/gov.proto\022\rinitia.gov.v1" +
-      "\032\036cosmos/base/v1beta1/coin.proto\032\024gogopr" +
-      "oto/gogo.proto\032\031google/protobuf/any.prot" +
-      "o\032\037google/protobuf/timestamp.proto\032\036goog" +
-      "le/protobuf/duration.proto\032\031cosmos_proto" +
-      "/cosmos.proto\032\027cosmos/gov/v1/gov.proto\032\021" +
-      "amino/amino.proto\"\366\n\n\006Params\022E\n\013min_depo" +
+      "\032\021amino/amino.proto\032\036cosmos/base/v1beta1" +
+      "/coin.proto\032\027cosmos/gov/v1/gov.proto\032\031co" +
+      "smos_proto/cosmos.proto\032\024gogoproto/gogo." +
+      "proto\032\031google/protobuf/any.proto\032\036google" +
+      "/protobuf/duration.proto\032\037google/protobu" +
+      "f/timestamp.proto\"\366\n\n\006Params\022E\n\013min_depo" +
       "sit\030\001 \003(\0132\031.cosmos.base.v1beta1.CoinB\t\310\336" +
       "\037\000\250\347\260*\001R\nminDeposit\022V\n\022max_deposit_perio" +
       "d\030\002 \001(\0132\031.google.protobuf.DurationB\r\310\336\037\000" +
@@ -10941,48 +11990,54 @@ public final class GovProto {
       "\240\037\001\212\347\260*\ngov/Params\"x\n\007Vesting\022\037\n\013module_" +
       "addr\030\001 \001(\tR\nmoduleAddr\022\037\n\013module_name\030\002 " +
       "\001(\tR\nmoduleName\022!\n\014creator_addr\030\003 \001(\tR\013c" +
-      "reatorAddr:\010\230\240\037\000\350\240\037\001\"\323\007\n\010Proposal\022\016\n\002id\030" +
-      "\001 \001(\004R\002id\0220\n\010messages\030\002 \003(\0132\024.google.pro" +
-      "tobuf.AnyR\010messages\0225\n\006status\030\003 \001(\0162\035.co" +
-      "smos.gov.v1.ProposalStatusR\006status\022H\n\022fi" +
-      "nal_tally_result\030\004 \001(\0132\032.cosmos.gov.v1.T" +
-      "allyResultR\020finalTallyResult\022A\n\013submit_t" +
-      "ime\030\005 \001(\0132\032.google.protobuf.TimestampB\004\220" +
-      "\337\037\001R\nsubmitTime\022J\n\020deposit_end_time\030\006 \001(" +
-      "\0132\032.google.protobuf.TimestampB\004\220\337\037\001R\016dep" +
-      "ositEndTime\022I\n\rtotal_deposit\030\007 \003(\0132\031.cos" +
-      "mos.base.v1beta1.CoinB\t\310\336\037\000\250\347\260*\001R\014totalD" +
-      "eposit\022L\n\021voting_start_time\030\010 \001(\0132\032.goog" +
-      "le.protobuf.TimestampB\004\220\337\037\001R\017votingStart" +
-      "Time\022H\n\017voting_end_time\030\t \001(\0132\032.google.p" +
-      "rotobuf.TimestampB\004\220\337\037\001R\rvotingEndTime\022R" +
-      "\n\024emergency_start_time\030\n \001(\0132\032.google.pr" +
-      "otobuf.TimestampB\004\220\337\037\001R\022emergencyStartTi" +
-      "me\022[\n\031emergency_next_tally_time\030\013 \001(\0132\032." +
-      "google.protobuf.TimestampB\004\220\337\037\001R\026emergen" +
-      "cyNextTallyTime\022\032\n\010metadata\030\014 \001(\tR\010metad" +
-      "ata\022\024\n\005title\030\r \001(\tR\005title\022\030\n\007summary\030\016 \001" +
-      "(\tR\007summary\0224\n\010proposer\030\017 \001(\tB\030\322\264-\024cosmo" +
-      "s.AddressStringR\010proposer\022\034\n\texpedited\030\020" +
-      " \001(\010R\texpedited\022\034\n\temergency\030\021 \001(\010R\temer" +
-      "gency\022#\n\rfailed_reason\030\022 \001(\tR\014failedReas" +
-      "onB\234\001\n\021com.initia.gov.v1B\010GovProtoZ)gith" +
-      "ub.com/initia-labs/initia/x/gov/types\242\002\003" +
-      "IGX\252\002\rInitia.Gov.V1\312\002\rInitia\\Gov\\V1\342\002\031In" +
-      "itia\\Gov\\V1\\GPBMetadata\352\002\017Initia::Gov::V" +
-      "1b\006proto3"
+      "reatorAddr:\010\230\240\037\000\350\240\037\001\"\364\001\n\013TallyResult\022!\n\014" +
+      "tally_height\030\001 \001(\004R\013tallyHeight\022>\n\023total" +
+      "_staking_power\030\002 \001(\tB\016\322\264-\ncosmos.IntR\021to" +
+      "talStakingPower\022>\n\023total_vesting_power\030\003" +
+      " \001(\tB\016\322\264-\ncosmos.IntR\021totalVestingPower\022" +
+      "B\n\017v1_tally_result\030\004 \001(\0132\032.cosmos.gov.v1" +
+      ".TallyResultR\rv1TallyResult\"\336\007\n\010Proposal" +
+      "\022\016\n\002id\030\001 \001(\004R\002id\0220\n\010messages\030\002 \003(\0132\024.goo" +
+      "gle.protobuf.AnyR\010messages\0225\n\006status\030\003 \001" +
+      "(\0162\035.cosmos.gov.v1.ProposalStatusR\006statu" +
+      "s\022S\n\022final_tally_result\030\004 \001(\0132\032.initia.g" +
+      "ov.v1.TallyResultB\t\310\336\037\000\250\347\260*\001R\020finalTally" +
+      "Result\022A\n\013submit_time\030\005 \001(\0132\032.google.pro" +
+      "tobuf.TimestampB\004\220\337\037\001R\nsubmitTime\022J\n\020dep" +
+      "osit_end_time\030\006 \001(\0132\032.google.protobuf.Ti" +
+      "mestampB\004\220\337\037\001R\016depositEndTime\022I\n\rtotal_d" +
+      "eposit\030\007 \003(\0132\031.cosmos.base.v1beta1.CoinB" +
+      "\t\310\336\037\000\250\347\260*\001R\014totalDeposit\022L\n\021voting_start" +
+      "_time\030\010 \001(\0132\032.google.protobuf.TimestampB" +
+      "\004\220\337\037\001R\017votingStartTime\022H\n\017voting_end_tim" +
+      "e\030\t \001(\0132\032.google.protobuf.TimestampB\004\220\337\037" +
+      "\001R\rvotingEndTime\022R\n\024emergency_start_time" +
+      "\030\n \001(\0132\032.google.protobuf.TimestampB\004\220\337\037\001" +
+      "R\022emergencyStartTime\022[\n\031emergency_next_t" +
+      "ally_time\030\013 \001(\0132\032.google.protobuf.Timest" +
+      "ampB\004\220\337\037\001R\026emergencyNextTallyTime\022\032\n\010met" +
+      "adata\030\014 \001(\tR\010metadata\022\024\n\005title\030\r \001(\tR\005ti" +
+      "tle\022\030\n\007summary\030\016 \001(\tR\007summary\0224\n\010propose" +
+      "r\030\017 \001(\tB\030\322\264-\024cosmos.AddressStringR\010propo" +
+      "ser\022\034\n\texpedited\030\020 \001(\010R\texpedited\022\034\n\teme" +
+      "rgency\030\021 \001(\010R\temergency\022#\n\rfailed_reason" +
+      "\030\022 \001(\tR\014failedReasonB\234\001\n\021com.initia.gov." +
+      "v1B\010GovProtoZ)github.com/initia-labs/ini" +
+      "tia/x/gov/types\242\002\003IGX\252\002\rInitia.Gov.V1\312\002\r" +
+      "Initia\\Gov\\V1\342\002\031Initia\\Gov\\V1\\GPBMetadat" +
+      "a\352\002\017Initia::Gov::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.amino.AminoProto.getDescriptor(),
           com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
+          com.cosmos.gov.v1.GovProto.getDescriptor(),
+          com.cosmos_proto.CosmosProto.getDescriptor(),
           com.gogoproto.GogoProto.getDescriptor(),
           com.google.protobuf.AnyProto.getDescriptor(),
-          com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.protobuf.DurationProto.getDescriptor(),
-          com.cosmos_proto.CosmosProto.getDescriptor(),
-          com.cosmos.gov.v1.GovProto.getDescriptor(),
-          com.amino.AminoProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_initia_gov_v1_Params_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -10996,8 +12051,14 @@ public final class GovProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_initia_gov_v1_Vesting_descriptor,
         new java.lang.String[] { "ModuleAddr", "ModuleName", "CreatorAddr", });
-    internal_static_initia_gov_v1_Proposal_descriptor =
+    internal_static_initia_gov_v1_TallyResult_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_initia_gov_v1_TallyResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_initia_gov_v1_TallyResult_descriptor,
+        new java.lang.String[] { "TallyHeight", "TotalStakingPower", "TotalVestingPower", "V1TallyResult", });
+    internal_static_initia_gov_v1_Proposal_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_initia_gov_v1_Proposal_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_initia_gov_v1_Proposal_descriptor,
@@ -11014,14 +12075,14 @@ public final class GovProto {
     registry.add(com.gogoproto.GogoProto.stdtime);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.amino.AminoProto.getDescriptor();
     com.cosmos.base.v1beta1.CoinProto.getDescriptor();
+    com.cosmos.gov.v1.GovProto.getDescriptor();
+    com.cosmos_proto.CosmosProto.getDescriptor();
     com.gogoproto.GogoProto.getDescriptor();
     com.google.protobuf.AnyProto.getDescriptor();
-    com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.DurationProto.getDescriptor();
-    com.cosmos_proto.CosmosProto.getDescriptor();
-    com.cosmos.gov.v1.GovProto.getDescriptor();
-    com.amino.AminoProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

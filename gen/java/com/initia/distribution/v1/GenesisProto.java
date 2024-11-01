@@ -10386,10 +10386,10 @@ public final class GenesisProto {
   static {
     java.lang.String[] descriptorData = {
       "\n$initia/distribution/v1/genesis.proto\022\026" +
-      "initia.distribution.v1\032\024gogoproto/gogo.p" +
-      "roto\032.cosmos/distribution/v1beta1/distri" +
-      "bution.proto\032)cosmos/distribution/v1beta" +
-      "1/genesis.proto\032)initia/distribution/v1/" +
+      "initia.distribution.v1\032.cosmos/distribut" +
+      "ion/v1beta1/distribution.proto\032)cosmos/d" +
+      "istribution/v1beta1/genesis.proto\032\024gogop" +
+      "roto/gogo.proto\032)initia/distribution/v1/" +
       "distribution.proto\"\373\001\n!ValidatorOutstand" +
       "ingRewardsRecord\022I\n\021validator_address\030\001 " +
       "\001(\tB\034\362\336\037\030yaml:\"validator_address\"R\020valid" +
@@ -10474,9 +10474,9 @@ public final class GenesisProto {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.gogoproto.GogoProto.getDescriptor(),
           com.cosmos.distribution.v1beta1.DistributionProto.getDescriptor(),
           com.cosmos.distribution.v1beta1.GenesisProto.getDescriptor(),
+          com.gogoproto.GogoProto.getDescriptor(),
           com.initia.distribution.v1.DistributionProto.getDescriptor(),
         });
     internal_static_initia_distribution_v1_ValidatorOutstandingRewardsRecord_descriptor =
@@ -10531,9 +10531,9 @@ public final class GenesisProto {
     registry.add(com.gogoproto.GogoProto.nullable);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.gogoproto.GogoProto.getDescriptor();
     com.cosmos.distribution.v1beta1.DistributionProto.getDescriptor();
     com.cosmos.distribution.v1beta1.GenesisProto.getDescriptor();
+    com.gogoproto.GogoProto.getDescriptor();
     com.initia.distribution.v1.DistributionProto.getDescriptor();
   }
 

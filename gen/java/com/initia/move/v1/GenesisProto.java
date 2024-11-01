@@ -81,97 +81,121 @@ public final class GenesisProto {
         int index);
 
     /**
-     * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+     */
+    java.util.List<com.initia.move.v1.TypesProto.Checksum> 
+        getChecksumsList();
+    /**
+     * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+     */
+    com.initia.move.v1.TypesProto.Checksum getChecksums(int index);
+    /**
+     * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+     */
+    int getChecksumsCount();
+    /**
+     * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+     */
+    java.util.List<? extends com.initia.move.v1.TypesProto.ChecksumOrBuilder> 
+        getChecksumsOrBuilderList();
+    /**
+     * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+     */
+    com.initia.move.v1.TypesProto.ChecksumOrBuilder getChecksumsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     java.util.List<com.initia.move.v1.TypesProto.Resource> 
         getResourcesList();
     /**
-     * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     com.initia.move.v1.TypesProto.Resource getResources(int index);
     /**
-     * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     int getResourcesCount();
     /**
-     * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     java.util.List<? extends com.initia.move.v1.TypesProto.ResourceOrBuilder> 
         getResourcesOrBuilderList();
     /**
-     * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     com.initia.move.v1.TypesProto.ResourceOrBuilder getResourcesOrBuilder(
         int index);
 
     /**
-     * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     java.util.List<com.initia.move.v1.TypesProto.TableInfo> 
         getTableInfosList();
     /**
-     * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     com.initia.move.v1.TypesProto.TableInfo getTableInfos(int index);
     /**
-     * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     int getTableInfosCount();
     /**
-     * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     java.util.List<? extends com.initia.move.v1.TypesProto.TableInfoOrBuilder> 
         getTableInfosOrBuilderList();
     /**
-     * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     com.initia.move.v1.TypesProto.TableInfoOrBuilder getTableInfosOrBuilder(
         int index);
 
     /**
-     * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     java.util.List<com.initia.move.v1.TypesProto.TableEntry> 
         getTableEntriesList();
     /**
-     * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     com.initia.move.v1.TypesProto.TableEntry getTableEntries(int index);
     /**
-     * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     int getTableEntriesCount();
     /**
-     * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     java.util.List<? extends com.initia.move.v1.TypesProto.TableEntryOrBuilder> 
         getTableEntriesOrBuilderList();
     /**
-     * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     com.initia.move.v1.TypesProto.TableEntryOrBuilder getTableEntriesOrBuilder(
         int index);
 
     /**
-     * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     java.util.List<com.initia.move.v1.TypesProto.DexPair> 
         getDexPairsList();
     /**
-     * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     com.initia.move.v1.TypesProto.DexPair getDexPairs(int index);
     /**
-     * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     int getDexPairsCount();
     /**
-     * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     java.util.List<? extends com.initia.move.v1.TypesProto.DexPairOrBuilder> 
         getDexPairsOrBuilderList();
     /**
-     * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     com.initia.move.v1.TypesProto.DexPairOrBuilder getDexPairsOrBuilder(
         int index);
@@ -195,6 +219,7 @@ public final class GenesisProto {
     private GenesisState() {
       stdlibs_ = java.util.Collections.emptyList();
       modules_ = java.util.Collections.emptyList();
+      checksums_ = java.util.Collections.emptyList();
       resources_ = java.util.Collections.emptyList();
       tableInfos_ = java.util.Collections.emptyList();
       tableEntries_ = java.util.Collections.emptyList();
@@ -327,18 +352,59 @@ public final class GenesisProto {
       return modules_.get(index);
     }
 
-    public static final int RESOURCES_FIELD_NUMBER = 5;
+    public static final int CHECKSUMS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.initia.move.v1.TypesProto.Checksum> checksums_;
+    /**
+     * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.initia.move.v1.TypesProto.Checksum> getChecksumsList() {
+      return checksums_;
+    }
+    /**
+     * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.initia.move.v1.TypesProto.ChecksumOrBuilder> 
+        getChecksumsOrBuilderList() {
+      return checksums_;
+    }
+    /**
+     * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+     */
+    @java.lang.Override
+    public int getChecksumsCount() {
+      return checksums_.size();
+    }
+    /**
+     * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+     */
+    @java.lang.Override
+    public com.initia.move.v1.TypesProto.Checksum getChecksums(int index) {
+      return checksums_.get(index);
+    }
+    /**
+     * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+     */
+    @java.lang.Override
+    public com.initia.move.v1.TypesProto.ChecksumOrBuilder getChecksumsOrBuilder(
+        int index) {
+      return checksums_.get(index);
+    }
+
+    public static final int RESOURCES_FIELD_NUMBER = 6;
     @SuppressWarnings("serial")
     private java.util.List<com.initia.move.v1.TypesProto.Resource> resources_;
     /**
-     * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public java.util.List<com.initia.move.v1.TypesProto.Resource> getResourcesList() {
       return resources_;
     }
     /**
-     * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.initia.move.v1.TypesProto.ResourceOrBuilder> 
@@ -346,21 +412,21 @@ public final class GenesisProto {
       return resources_;
     }
     /**
-     * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public int getResourcesCount() {
       return resources_.size();
     }
     /**
-     * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public com.initia.move.v1.TypesProto.Resource getResources(int index) {
       return resources_.get(index);
     }
     /**
-     * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public com.initia.move.v1.TypesProto.ResourceOrBuilder getResourcesOrBuilder(
@@ -368,18 +434,18 @@ public final class GenesisProto {
       return resources_.get(index);
     }
 
-    public static final int TABLE_INFOS_FIELD_NUMBER = 6;
+    public static final int TABLE_INFOS_FIELD_NUMBER = 7;
     @SuppressWarnings("serial")
     private java.util.List<com.initia.move.v1.TypesProto.TableInfo> tableInfos_;
     /**
-     * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public java.util.List<com.initia.move.v1.TypesProto.TableInfo> getTableInfosList() {
       return tableInfos_;
     }
     /**
-     * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.initia.move.v1.TypesProto.TableInfoOrBuilder> 
@@ -387,21 +453,21 @@ public final class GenesisProto {
       return tableInfos_;
     }
     /**
-     * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public int getTableInfosCount() {
       return tableInfos_.size();
     }
     /**
-     * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public com.initia.move.v1.TypesProto.TableInfo getTableInfos(int index) {
       return tableInfos_.get(index);
     }
     /**
-     * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public com.initia.move.v1.TypesProto.TableInfoOrBuilder getTableInfosOrBuilder(
@@ -409,18 +475,18 @@ public final class GenesisProto {
       return tableInfos_.get(index);
     }
 
-    public static final int TABLE_ENTRIES_FIELD_NUMBER = 7;
+    public static final int TABLE_ENTRIES_FIELD_NUMBER = 8;
     @SuppressWarnings("serial")
     private java.util.List<com.initia.move.v1.TypesProto.TableEntry> tableEntries_;
     /**
-     * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public java.util.List<com.initia.move.v1.TypesProto.TableEntry> getTableEntriesList() {
       return tableEntries_;
     }
     /**
-     * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.initia.move.v1.TypesProto.TableEntryOrBuilder> 
@@ -428,21 +494,21 @@ public final class GenesisProto {
       return tableEntries_;
     }
     /**
-     * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public int getTableEntriesCount() {
       return tableEntries_.size();
     }
     /**
-     * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public com.initia.move.v1.TypesProto.TableEntry getTableEntries(int index) {
       return tableEntries_.get(index);
     }
     /**
-     * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public com.initia.move.v1.TypesProto.TableEntryOrBuilder getTableEntriesOrBuilder(
@@ -450,18 +516,18 @@ public final class GenesisProto {
       return tableEntries_.get(index);
     }
 
-    public static final int DEX_PAIRS_FIELD_NUMBER = 8;
+    public static final int DEX_PAIRS_FIELD_NUMBER = 9;
     @SuppressWarnings("serial")
     private java.util.List<com.initia.move.v1.TypesProto.DexPair> dexPairs_;
     /**
-     * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public java.util.List<com.initia.move.v1.TypesProto.DexPair> getDexPairsList() {
       return dexPairs_;
     }
     /**
-     * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.initia.move.v1.TypesProto.DexPairOrBuilder> 
@@ -469,21 +535,21 @@ public final class GenesisProto {
       return dexPairs_;
     }
     /**
-     * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public int getDexPairsCount() {
       return dexPairs_.size();
     }
     /**
-     * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public com.initia.move.v1.TypesProto.DexPair getDexPairs(int index) {
       return dexPairs_.get(index);
     }
     /**
-     * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
     public com.initia.move.v1.TypesProto.DexPairOrBuilder getDexPairsOrBuilder(
@@ -517,17 +583,20 @@ public final class GenesisProto {
       for (int i = 0; i < modules_.size(); i++) {
         output.writeMessage(4, modules_.get(i));
       }
+      for (int i = 0; i < checksums_.size(); i++) {
+        output.writeMessage(5, checksums_.get(i));
+      }
       for (int i = 0; i < resources_.size(); i++) {
-        output.writeMessage(5, resources_.get(i));
+        output.writeMessage(6, resources_.get(i));
       }
       for (int i = 0; i < tableInfos_.size(); i++) {
-        output.writeMessage(6, tableInfos_.get(i));
+        output.writeMessage(7, tableInfos_.get(i));
       }
       for (int i = 0; i < tableEntries_.size(); i++) {
-        output.writeMessage(7, tableEntries_.get(i));
+        output.writeMessage(8, tableEntries_.get(i));
       }
       for (int i = 0; i < dexPairs_.size(); i++) {
-        output.writeMessage(8, dexPairs_.get(i));
+        output.writeMessage(9, dexPairs_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -559,21 +628,25 @@ public final class GenesisProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, modules_.get(i));
       }
+      for (int i = 0; i < checksums_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, checksums_.get(i));
+      }
       for (int i = 0; i < resources_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, resources_.get(i));
+          .computeMessageSize(6, resources_.get(i));
       }
       for (int i = 0; i < tableInfos_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, tableInfos_.get(i));
+          .computeMessageSize(7, tableInfos_.get(i));
       }
       for (int i = 0; i < tableEntries_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, tableEntries_.get(i));
+          .computeMessageSize(8, tableEntries_.get(i));
       }
       for (int i = 0; i < dexPairs_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, dexPairs_.get(i));
+          .computeMessageSize(9, dexPairs_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -601,6 +674,8 @@ public final class GenesisProto {
           .equals(other.getStdlibsList())) return false;
       if (!getModulesList()
           .equals(other.getModulesList())) return false;
+      if (!getChecksumsList()
+          .equals(other.getChecksumsList())) return false;
       if (!getResourcesList()
           .equals(other.getResourcesList())) return false;
       if (!getTableInfosList()
@@ -634,6 +709,10 @@ public final class GenesisProto {
       if (getModulesCount() > 0) {
         hash = (37 * hash) + MODULES_FIELD_NUMBER;
         hash = (53 * hash) + getModulesList().hashCode();
+      }
+      if (getChecksumsCount() > 0) {
+        hash = (37 * hash) + CHECKSUMS_FIELD_NUMBER;
+        hash = (53 * hash) + getChecksumsList().hashCode();
       }
       if (getResourcesCount() > 0) {
         hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
@@ -800,34 +879,41 @@ public final class GenesisProto {
           modulesBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000008);
+        if (checksumsBuilder_ == null) {
+          checksums_ = java.util.Collections.emptyList();
+        } else {
+          checksums_ = null;
+          checksumsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
         if (resourcesBuilder_ == null) {
           resources_ = java.util.Collections.emptyList();
         } else {
           resources_ = null;
           resourcesBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         if (tableInfosBuilder_ == null) {
           tableInfos_ = java.util.Collections.emptyList();
         } else {
           tableInfos_ = null;
           tableInfosBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000040);
         if (tableEntriesBuilder_ == null) {
           tableEntries_ = java.util.Collections.emptyList();
         } else {
           tableEntries_ = null;
           tableEntriesBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000080);
         if (dexPairsBuilder_ == null) {
           dexPairs_ = java.util.Collections.emptyList();
         } else {
           dexPairs_ = null;
           dexPairsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
 
@@ -875,37 +961,46 @@ public final class GenesisProto {
         } else {
           result.modules_ = modulesBuilder_.build();
         }
-        if (resourcesBuilder_ == null) {
+        if (checksumsBuilder_ == null) {
           if (((bitField0_ & 0x00000010) != 0)) {
-            resources_ = java.util.Collections.unmodifiableList(resources_);
+            checksums_ = java.util.Collections.unmodifiableList(checksums_);
             bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.checksums_ = checksums_;
+        } else {
+          result.checksums_ = checksumsBuilder_.build();
+        }
+        if (resourcesBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            resources_ = java.util.Collections.unmodifiableList(resources_);
+            bitField0_ = (bitField0_ & ~0x00000020);
           }
           result.resources_ = resources_;
         } else {
           result.resources_ = resourcesBuilder_.build();
         }
         if (tableInfosBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0)) {
+          if (((bitField0_ & 0x00000040) != 0)) {
             tableInfos_ = java.util.Collections.unmodifiableList(tableInfos_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000040);
           }
           result.tableInfos_ = tableInfos_;
         } else {
           result.tableInfos_ = tableInfosBuilder_.build();
         }
         if (tableEntriesBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) != 0)) {
+          if (((bitField0_ & 0x00000080) != 0)) {
             tableEntries_ = java.util.Collections.unmodifiableList(tableEntries_);
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000080);
           }
           result.tableEntries_ = tableEntries_;
         } else {
           result.tableEntries_ = tableEntriesBuilder_.build();
         }
         if (dexPairsBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) != 0)) {
+          if (((bitField0_ & 0x00000100) != 0)) {
             dexPairs_ = java.util.Collections.unmodifiableList(dexPairs_);
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000100);
           }
           result.dexPairs_ = dexPairs_;
         } else {
@@ -1011,11 +1106,37 @@ public final class GenesisProto {
             }
           }
         }
+        if (checksumsBuilder_ == null) {
+          if (!other.checksums_.isEmpty()) {
+            if (checksums_.isEmpty()) {
+              checksums_ = other.checksums_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureChecksumsIsMutable();
+              checksums_.addAll(other.checksums_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.checksums_.isEmpty()) {
+            if (checksumsBuilder_.isEmpty()) {
+              checksumsBuilder_.dispose();
+              checksumsBuilder_ = null;
+              checksums_ = other.checksums_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              checksumsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getChecksumsFieldBuilder() : null;
+            } else {
+              checksumsBuilder_.addAllMessages(other.checksums_);
+            }
+          }
+        }
         if (resourcesBuilder_ == null) {
           if (!other.resources_.isEmpty()) {
             if (resources_.isEmpty()) {
               resources_ = other.resources_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000020);
             } else {
               ensureResourcesIsMutable();
               resources_.addAll(other.resources_);
@@ -1028,7 +1149,7 @@ public final class GenesisProto {
               resourcesBuilder_.dispose();
               resourcesBuilder_ = null;
               resources_ = other.resources_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000020);
               resourcesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getResourcesFieldBuilder() : null;
@@ -1041,7 +1162,7 @@ public final class GenesisProto {
           if (!other.tableInfos_.isEmpty()) {
             if (tableInfos_.isEmpty()) {
               tableInfos_ = other.tableInfos_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000040);
             } else {
               ensureTableInfosIsMutable();
               tableInfos_.addAll(other.tableInfos_);
@@ -1054,7 +1175,7 @@ public final class GenesisProto {
               tableInfosBuilder_.dispose();
               tableInfosBuilder_ = null;
               tableInfos_ = other.tableInfos_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000040);
               tableInfosBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getTableInfosFieldBuilder() : null;
@@ -1067,7 +1188,7 @@ public final class GenesisProto {
           if (!other.tableEntries_.isEmpty()) {
             if (tableEntries_.isEmpty()) {
               tableEntries_ = other.tableEntries_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000080);
             } else {
               ensureTableEntriesIsMutable();
               tableEntries_.addAll(other.tableEntries_);
@@ -1080,7 +1201,7 @@ public final class GenesisProto {
               tableEntriesBuilder_.dispose();
               tableEntriesBuilder_ = null;
               tableEntries_ = other.tableEntries_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000080);
               tableEntriesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getTableEntriesFieldBuilder() : null;
@@ -1093,7 +1214,7 @@ public final class GenesisProto {
           if (!other.dexPairs_.isEmpty()) {
             if (dexPairs_.isEmpty()) {
               dexPairs_ = other.dexPairs_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000100);
             } else {
               ensureDexPairsIsMutable();
               dexPairs_.addAll(other.dexPairs_);
@@ -1106,7 +1227,7 @@ public final class GenesisProto {
               dexPairsBuilder_.dispose();
               dexPairsBuilder_ = null;
               dexPairs_ = other.dexPairs_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000100);
               dexPairsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getDexPairsFieldBuilder() : null;
@@ -1173,6 +1294,19 @@ public final class GenesisProto {
                 break;
               } // case 34
               case 42: {
+                com.initia.move.v1.TypesProto.Checksum m =
+                    input.readMessage(
+                        com.initia.move.v1.TypesProto.Checksum.parser(),
+                        extensionRegistry);
+                if (checksumsBuilder_ == null) {
+                  ensureChecksumsIsMutable();
+                  checksums_.add(m);
+                } else {
+                  checksumsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
                 com.initia.move.v1.TypesProto.Resource m =
                     input.readMessage(
                         com.initia.move.v1.TypesProto.Resource.parser(),
@@ -1184,8 +1318,8 @@ public final class GenesisProto {
                   resourcesBuilder_.addMessage(m);
                 }
                 break;
-              } // case 42
-              case 50: {
+              } // case 50
+              case 58: {
                 com.initia.move.v1.TypesProto.TableInfo m =
                     input.readMessage(
                         com.initia.move.v1.TypesProto.TableInfo.parser(),
@@ -1197,8 +1331,8 @@ public final class GenesisProto {
                   tableInfosBuilder_.addMessage(m);
                 }
                 break;
-              } // case 50
-              case 58: {
+              } // case 58
+              case 66: {
                 com.initia.move.v1.TypesProto.TableEntry m =
                     input.readMessage(
                         com.initia.move.v1.TypesProto.TableEntry.parser(),
@@ -1210,8 +1344,8 @@ public final class GenesisProto {
                   tableEntriesBuilder_.addMessage(m);
                 }
                 break;
-              } // case 58
-              case 66: {
+              } // case 66
+              case 74: {
                 com.initia.move.v1.TypesProto.DexPair m =
                     input.readMessage(
                         com.initia.move.v1.TypesProto.DexPair.parser(),
@@ -1223,7 +1357,7 @@ public final class GenesisProto {
                   dexPairsBuilder_.addMessage(m);
                 }
                 break;
-              } // case 66
+              } // case 74
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1713,12 +1847,252 @@ public final class GenesisProto {
         return modulesBuilder_;
       }
 
+      private java.util.List<com.initia.move.v1.TypesProto.Checksum> checksums_ =
+        java.util.Collections.emptyList();
+      private void ensureChecksumsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          checksums_ = new java.util.ArrayList<com.initia.move.v1.TypesProto.Checksum>(checksums_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.initia.move.v1.TypesProto.Checksum, com.initia.move.v1.TypesProto.Checksum.Builder, com.initia.move.v1.TypesProto.ChecksumOrBuilder> checksumsBuilder_;
+
+      /**
+       * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+       */
+      public java.util.List<com.initia.move.v1.TypesProto.Checksum> getChecksumsList() {
+        if (checksumsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(checksums_);
+        } else {
+          return checksumsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+       */
+      public int getChecksumsCount() {
+        if (checksumsBuilder_ == null) {
+          return checksums_.size();
+        } else {
+          return checksumsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+       */
+      public com.initia.move.v1.TypesProto.Checksum getChecksums(int index) {
+        if (checksumsBuilder_ == null) {
+          return checksums_.get(index);
+        } else {
+          return checksumsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder setChecksums(
+          int index, com.initia.move.v1.TypesProto.Checksum value) {
+        if (checksumsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChecksumsIsMutable();
+          checksums_.set(index, value);
+          onChanged();
+        } else {
+          checksumsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder setChecksums(
+          int index, com.initia.move.v1.TypesProto.Checksum.Builder builderForValue) {
+        if (checksumsBuilder_ == null) {
+          ensureChecksumsIsMutable();
+          checksums_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          checksumsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder addChecksums(com.initia.move.v1.TypesProto.Checksum value) {
+        if (checksumsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChecksumsIsMutable();
+          checksums_.add(value);
+          onChanged();
+        } else {
+          checksumsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder addChecksums(
+          int index, com.initia.move.v1.TypesProto.Checksum value) {
+        if (checksumsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChecksumsIsMutable();
+          checksums_.add(index, value);
+          onChanged();
+        } else {
+          checksumsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder addChecksums(
+          com.initia.move.v1.TypesProto.Checksum.Builder builderForValue) {
+        if (checksumsBuilder_ == null) {
+          ensureChecksumsIsMutable();
+          checksums_.add(builderForValue.build());
+          onChanged();
+        } else {
+          checksumsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder addChecksums(
+          int index, com.initia.move.v1.TypesProto.Checksum.Builder builderForValue) {
+        if (checksumsBuilder_ == null) {
+          ensureChecksumsIsMutable();
+          checksums_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          checksumsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder addAllChecksums(
+          java.lang.Iterable<? extends com.initia.move.v1.TypesProto.Checksum> values) {
+        if (checksumsBuilder_ == null) {
+          ensureChecksumsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, checksums_);
+          onChanged();
+        } else {
+          checksumsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder clearChecksums() {
+        if (checksumsBuilder_ == null) {
+          checksums_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          checksumsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder removeChecksums(int index) {
+        if (checksumsBuilder_ == null) {
+          ensureChecksumsIsMutable();
+          checksums_.remove(index);
+          onChanged();
+        } else {
+          checksumsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+       */
+      public com.initia.move.v1.TypesProto.Checksum.Builder getChecksumsBuilder(
+          int index) {
+        return getChecksumsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+       */
+      public com.initia.move.v1.TypesProto.ChecksumOrBuilder getChecksumsOrBuilder(
+          int index) {
+        if (checksumsBuilder_ == null) {
+          return checksums_.get(index);  } else {
+          return checksumsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+       */
+      public java.util.List<? extends com.initia.move.v1.TypesProto.ChecksumOrBuilder> 
+           getChecksumsOrBuilderList() {
+        if (checksumsBuilder_ != null) {
+          return checksumsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(checksums_);
+        }
+      }
+      /**
+       * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+       */
+      public com.initia.move.v1.TypesProto.Checksum.Builder addChecksumsBuilder() {
+        return getChecksumsFieldBuilder().addBuilder(
+            com.initia.move.v1.TypesProto.Checksum.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+       */
+      public com.initia.move.v1.TypesProto.Checksum.Builder addChecksumsBuilder(
+          int index) {
+        return getChecksumsFieldBuilder().addBuilder(
+            index, com.initia.move.v1.TypesProto.Checksum.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .initia.move.v1.Checksum checksums = 5 [json_name = "checksums", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "checksums,omitempty", (.amino.dont_omitempty) = true];</code>
+       */
+      public java.util.List<com.initia.move.v1.TypesProto.Checksum.Builder> 
+           getChecksumsBuilderList() {
+        return getChecksumsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.initia.move.v1.TypesProto.Checksum, com.initia.move.v1.TypesProto.Checksum.Builder, com.initia.move.v1.TypesProto.ChecksumOrBuilder> 
+          getChecksumsFieldBuilder() {
+        if (checksumsBuilder_ == null) {
+          checksumsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.initia.move.v1.TypesProto.Checksum, com.initia.move.v1.TypesProto.Checksum.Builder, com.initia.move.v1.TypesProto.ChecksumOrBuilder>(
+                  checksums_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          checksums_ = null;
+        }
+        return checksumsBuilder_;
+      }
+
       private java.util.List<com.initia.move.v1.TypesProto.Resource> resources_ =
         java.util.Collections.emptyList();
       private void ensureResourcesIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           resources_ = new java.util.ArrayList<com.initia.move.v1.TypesProto.Resource>(resources_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000020;
          }
       }
 
@@ -1726,7 +2100,7 @@ public final class GenesisProto {
           com.initia.move.v1.TypesProto.Resource, com.initia.move.v1.TypesProto.Resource.Builder, com.initia.move.v1.TypesProto.ResourceOrBuilder> resourcesBuilder_;
 
       /**
-       * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public java.util.List<com.initia.move.v1.TypesProto.Resource> getResourcesList() {
         if (resourcesBuilder_ == null) {
@@ -1736,7 +2110,7 @@ public final class GenesisProto {
         }
       }
       /**
-       * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public int getResourcesCount() {
         if (resourcesBuilder_ == null) {
@@ -1746,7 +2120,7 @@ public final class GenesisProto {
         }
       }
       /**
-       * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public com.initia.move.v1.TypesProto.Resource getResources(int index) {
         if (resourcesBuilder_ == null) {
@@ -1756,7 +2130,7 @@ public final class GenesisProto {
         }
       }
       /**
-       * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder setResources(
           int index, com.initia.move.v1.TypesProto.Resource value) {
@@ -1773,7 +2147,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder setResources(
           int index, com.initia.move.v1.TypesProto.Resource.Builder builderForValue) {
@@ -1787,7 +2161,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addResources(com.initia.move.v1.TypesProto.Resource value) {
         if (resourcesBuilder_ == null) {
@@ -1803,7 +2177,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addResources(
           int index, com.initia.move.v1.TypesProto.Resource value) {
@@ -1820,7 +2194,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addResources(
           com.initia.move.v1.TypesProto.Resource.Builder builderForValue) {
@@ -1834,7 +2208,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addResources(
           int index, com.initia.move.v1.TypesProto.Resource.Builder builderForValue) {
@@ -1848,7 +2222,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addAllResources(
           java.lang.Iterable<? extends com.initia.move.v1.TypesProto.Resource> values) {
@@ -1863,12 +2237,12 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder clearResources() {
         if (resourcesBuilder_ == null) {
           resources_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000020);
           onChanged();
         } else {
           resourcesBuilder_.clear();
@@ -1876,7 +2250,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder removeResources(int index) {
         if (resourcesBuilder_ == null) {
@@ -1889,14 +2263,14 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public com.initia.move.v1.TypesProto.Resource.Builder getResourcesBuilder(
           int index) {
         return getResourcesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public com.initia.move.v1.TypesProto.ResourceOrBuilder getResourcesOrBuilder(
           int index) {
@@ -1906,7 +2280,7 @@ public final class GenesisProto {
         }
       }
       /**
-       * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public java.util.List<? extends com.initia.move.v1.TypesProto.ResourceOrBuilder> 
            getResourcesOrBuilderList() {
@@ -1917,14 +2291,14 @@ public final class GenesisProto {
         }
       }
       /**
-       * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public com.initia.move.v1.TypesProto.Resource.Builder addResourcesBuilder() {
         return getResourcesFieldBuilder().addBuilder(
             com.initia.move.v1.TypesProto.Resource.getDefaultInstance());
       }
       /**
-       * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public com.initia.move.v1.TypesProto.Resource.Builder addResourcesBuilder(
           int index) {
@@ -1932,7 +2306,7 @@ public final class GenesisProto {
             index, com.initia.move.v1.TypesProto.Resource.getDefaultInstance());
       }
       /**
-       * <code>repeated .initia.move.v1.Resource resources = 5 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.Resource resources = 6 [json_name = "resources", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "resources,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public java.util.List<com.initia.move.v1.TypesProto.Resource.Builder> 
            getResourcesBuilderList() {
@@ -1945,7 +2319,7 @@ public final class GenesisProto {
           resourcesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.initia.move.v1.TypesProto.Resource, com.initia.move.v1.TypesProto.Resource.Builder, com.initia.move.v1.TypesProto.ResourceOrBuilder>(
                   resources_,
-                  ((bitField0_ & 0x00000010) != 0),
+                  ((bitField0_ & 0x00000020) != 0),
                   getParentForChildren(),
                   isClean());
           resources_ = null;
@@ -1956,9 +2330,9 @@ public final class GenesisProto {
       private java.util.List<com.initia.move.v1.TypesProto.TableInfo> tableInfos_ =
         java.util.Collections.emptyList();
       private void ensureTableInfosIsMutable() {
-        if (!((bitField0_ & 0x00000020) != 0)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           tableInfos_ = new java.util.ArrayList<com.initia.move.v1.TypesProto.TableInfo>(tableInfos_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000040;
          }
       }
 
@@ -1966,7 +2340,7 @@ public final class GenesisProto {
           com.initia.move.v1.TypesProto.TableInfo, com.initia.move.v1.TypesProto.TableInfo.Builder, com.initia.move.v1.TypesProto.TableInfoOrBuilder> tableInfosBuilder_;
 
       /**
-       * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public java.util.List<com.initia.move.v1.TypesProto.TableInfo> getTableInfosList() {
         if (tableInfosBuilder_ == null) {
@@ -1976,7 +2350,7 @@ public final class GenesisProto {
         }
       }
       /**
-       * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public int getTableInfosCount() {
         if (tableInfosBuilder_ == null) {
@@ -1986,7 +2360,7 @@ public final class GenesisProto {
         }
       }
       /**
-       * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public com.initia.move.v1.TypesProto.TableInfo getTableInfos(int index) {
         if (tableInfosBuilder_ == null) {
@@ -1996,7 +2370,7 @@ public final class GenesisProto {
         }
       }
       /**
-       * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder setTableInfos(
           int index, com.initia.move.v1.TypesProto.TableInfo value) {
@@ -2013,7 +2387,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder setTableInfos(
           int index, com.initia.move.v1.TypesProto.TableInfo.Builder builderForValue) {
@@ -2027,7 +2401,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addTableInfos(com.initia.move.v1.TypesProto.TableInfo value) {
         if (tableInfosBuilder_ == null) {
@@ -2043,7 +2417,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addTableInfos(
           int index, com.initia.move.v1.TypesProto.TableInfo value) {
@@ -2060,7 +2434,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addTableInfos(
           com.initia.move.v1.TypesProto.TableInfo.Builder builderForValue) {
@@ -2074,7 +2448,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addTableInfos(
           int index, com.initia.move.v1.TypesProto.TableInfo.Builder builderForValue) {
@@ -2088,7 +2462,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addAllTableInfos(
           java.lang.Iterable<? extends com.initia.move.v1.TypesProto.TableInfo> values) {
@@ -2103,12 +2477,12 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder clearTableInfos() {
         if (tableInfosBuilder_ == null) {
           tableInfos_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000040);
           onChanged();
         } else {
           tableInfosBuilder_.clear();
@@ -2116,7 +2490,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder removeTableInfos(int index) {
         if (tableInfosBuilder_ == null) {
@@ -2129,14 +2503,14 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public com.initia.move.v1.TypesProto.TableInfo.Builder getTableInfosBuilder(
           int index) {
         return getTableInfosFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public com.initia.move.v1.TypesProto.TableInfoOrBuilder getTableInfosOrBuilder(
           int index) {
@@ -2146,7 +2520,7 @@ public final class GenesisProto {
         }
       }
       /**
-       * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public java.util.List<? extends com.initia.move.v1.TypesProto.TableInfoOrBuilder> 
            getTableInfosOrBuilderList() {
@@ -2157,14 +2531,14 @@ public final class GenesisProto {
         }
       }
       /**
-       * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public com.initia.move.v1.TypesProto.TableInfo.Builder addTableInfosBuilder() {
         return getTableInfosFieldBuilder().addBuilder(
             com.initia.move.v1.TypesProto.TableInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public com.initia.move.v1.TypesProto.TableInfo.Builder addTableInfosBuilder(
           int index) {
@@ -2172,7 +2546,7 @@ public final class GenesisProto {
             index, com.initia.move.v1.TypesProto.TableInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .initia.move.v1.TableInfo table_infos = 6 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableInfo table_infos = 7 [json_name = "tableInfos", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_infos,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public java.util.List<com.initia.move.v1.TypesProto.TableInfo.Builder> 
            getTableInfosBuilderList() {
@@ -2185,7 +2559,7 @@ public final class GenesisProto {
           tableInfosBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.initia.move.v1.TypesProto.TableInfo, com.initia.move.v1.TypesProto.TableInfo.Builder, com.initia.move.v1.TypesProto.TableInfoOrBuilder>(
                   tableInfos_,
-                  ((bitField0_ & 0x00000020) != 0),
+                  ((bitField0_ & 0x00000040) != 0),
                   getParentForChildren(),
                   isClean());
           tableInfos_ = null;
@@ -2196,9 +2570,9 @@ public final class GenesisProto {
       private java.util.List<com.initia.move.v1.TypesProto.TableEntry> tableEntries_ =
         java.util.Collections.emptyList();
       private void ensureTableEntriesIsMutable() {
-        if (!((bitField0_ & 0x00000040) != 0)) {
+        if (!((bitField0_ & 0x00000080) != 0)) {
           tableEntries_ = new java.util.ArrayList<com.initia.move.v1.TypesProto.TableEntry>(tableEntries_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000080;
          }
       }
 
@@ -2206,7 +2580,7 @@ public final class GenesisProto {
           com.initia.move.v1.TypesProto.TableEntry, com.initia.move.v1.TypesProto.TableEntry.Builder, com.initia.move.v1.TypesProto.TableEntryOrBuilder> tableEntriesBuilder_;
 
       /**
-       * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public java.util.List<com.initia.move.v1.TypesProto.TableEntry> getTableEntriesList() {
         if (tableEntriesBuilder_ == null) {
@@ -2216,7 +2590,7 @@ public final class GenesisProto {
         }
       }
       /**
-       * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public int getTableEntriesCount() {
         if (tableEntriesBuilder_ == null) {
@@ -2226,7 +2600,7 @@ public final class GenesisProto {
         }
       }
       /**
-       * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public com.initia.move.v1.TypesProto.TableEntry getTableEntries(int index) {
         if (tableEntriesBuilder_ == null) {
@@ -2236,7 +2610,7 @@ public final class GenesisProto {
         }
       }
       /**
-       * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder setTableEntries(
           int index, com.initia.move.v1.TypesProto.TableEntry value) {
@@ -2253,7 +2627,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder setTableEntries(
           int index, com.initia.move.v1.TypesProto.TableEntry.Builder builderForValue) {
@@ -2267,7 +2641,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addTableEntries(com.initia.move.v1.TypesProto.TableEntry value) {
         if (tableEntriesBuilder_ == null) {
@@ -2283,7 +2657,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addTableEntries(
           int index, com.initia.move.v1.TypesProto.TableEntry value) {
@@ -2300,7 +2674,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addTableEntries(
           com.initia.move.v1.TypesProto.TableEntry.Builder builderForValue) {
@@ -2314,7 +2688,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addTableEntries(
           int index, com.initia.move.v1.TypesProto.TableEntry.Builder builderForValue) {
@@ -2328,7 +2702,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addAllTableEntries(
           java.lang.Iterable<? extends com.initia.move.v1.TypesProto.TableEntry> values) {
@@ -2343,12 +2717,12 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder clearTableEntries() {
         if (tableEntriesBuilder_ == null) {
           tableEntries_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000080);
           onChanged();
         } else {
           tableEntriesBuilder_.clear();
@@ -2356,7 +2730,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder removeTableEntries(int index) {
         if (tableEntriesBuilder_ == null) {
@@ -2369,14 +2743,14 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public com.initia.move.v1.TypesProto.TableEntry.Builder getTableEntriesBuilder(
           int index) {
         return getTableEntriesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public com.initia.move.v1.TypesProto.TableEntryOrBuilder getTableEntriesOrBuilder(
           int index) {
@@ -2386,7 +2760,7 @@ public final class GenesisProto {
         }
       }
       /**
-       * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public java.util.List<? extends com.initia.move.v1.TypesProto.TableEntryOrBuilder> 
            getTableEntriesOrBuilderList() {
@@ -2397,14 +2771,14 @@ public final class GenesisProto {
         }
       }
       /**
-       * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public com.initia.move.v1.TypesProto.TableEntry.Builder addTableEntriesBuilder() {
         return getTableEntriesFieldBuilder().addBuilder(
             com.initia.move.v1.TypesProto.TableEntry.getDefaultInstance());
       }
       /**
-       * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public com.initia.move.v1.TypesProto.TableEntry.Builder addTableEntriesBuilder(
           int index) {
@@ -2412,7 +2786,7 @@ public final class GenesisProto {
             index, com.initia.move.v1.TypesProto.TableEntry.getDefaultInstance());
       }
       /**
-       * <code>repeated .initia.move.v1.TableEntry table_entries = 7 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.TableEntry table_entries = 8 [json_name = "tableEntries", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "table_entries,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public java.util.List<com.initia.move.v1.TypesProto.TableEntry.Builder> 
            getTableEntriesBuilderList() {
@@ -2425,7 +2799,7 @@ public final class GenesisProto {
           tableEntriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.initia.move.v1.TypesProto.TableEntry, com.initia.move.v1.TypesProto.TableEntry.Builder, com.initia.move.v1.TypesProto.TableEntryOrBuilder>(
                   tableEntries_,
-                  ((bitField0_ & 0x00000040) != 0),
+                  ((bitField0_ & 0x00000080) != 0),
                   getParentForChildren(),
                   isClean());
           tableEntries_ = null;
@@ -2436,9 +2810,9 @@ public final class GenesisProto {
       private java.util.List<com.initia.move.v1.TypesProto.DexPair> dexPairs_ =
         java.util.Collections.emptyList();
       private void ensureDexPairsIsMutable() {
-        if (!((bitField0_ & 0x00000080) != 0)) {
+        if (!((bitField0_ & 0x00000100) != 0)) {
           dexPairs_ = new java.util.ArrayList<com.initia.move.v1.TypesProto.DexPair>(dexPairs_);
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000100;
          }
       }
 
@@ -2446,7 +2820,7 @@ public final class GenesisProto {
           com.initia.move.v1.TypesProto.DexPair, com.initia.move.v1.TypesProto.DexPair.Builder, com.initia.move.v1.TypesProto.DexPairOrBuilder> dexPairsBuilder_;
 
       /**
-       * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public java.util.List<com.initia.move.v1.TypesProto.DexPair> getDexPairsList() {
         if (dexPairsBuilder_ == null) {
@@ -2456,7 +2830,7 @@ public final class GenesisProto {
         }
       }
       /**
-       * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public int getDexPairsCount() {
         if (dexPairsBuilder_ == null) {
@@ -2466,7 +2840,7 @@ public final class GenesisProto {
         }
       }
       /**
-       * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public com.initia.move.v1.TypesProto.DexPair getDexPairs(int index) {
         if (dexPairsBuilder_ == null) {
@@ -2476,7 +2850,7 @@ public final class GenesisProto {
         }
       }
       /**
-       * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder setDexPairs(
           int index, com.initia.move.v1.TypesProto.DexPair value) {
@@ -2493,7 +2867,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder setDexPairs(
           int index, com.initia.move.v1.TypesProto.DexPair.Builder builderForValue) {
@@ -2507,7 +2881,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addDexPairs(com.initia.move.v1.TypesProto.DexPair value) {
         if (dexPairsBuilder_ == null) {
@@ -2523,7 +2897,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addDexPairs(
           int index, com.initia.move.v1.TypesProto.DexPair value) {
@@ -2540,7 +2914,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addDexPairs(
           com.initia.move.v1.TypesProto.DexPair.Builder builderForValue) {
@@ -2554,7 +2928,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addDexPairs(
           int index, com.initia.move.v1.TypesProto.DexPair.Builder builderForValue) {
@@ -2568,7 +2942,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder addAllDexPairs(
           java.lang.Iterable<? extends com.initia.move.v1.TypesProto.DexPair> values) {
@@ -2583,12 +2957,12 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder clearDexPairs() {
         if (dexPairsBuilder_ == null) {
           dexPairs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000100);
           onChanged();
         } else {
           dexPairsBuilder_.clear();
@@ -2596,7 +2970,7 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public Builder removeDexPairs(int index) {
         if (dexPairsBuilder_ == null) {
@@ -2609,14 +2983,14 @@ public final class GenesisProto {
         return this;
       }
       /**
-       * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public com.initia.move.v1.TypesProto.DexPair.Builder getDexPairsBuilder(
           int index) {
         return getDexPairsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public com.initia.move.v1.TypesProto.DexPairOrBuilder getDexPairsOrBuilder(
           int index) {
@@ -2626,7 +3000,7 @@ public final class GenesisProto {
         }
       }
       /**
-       * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public java.util.List<? extends com.initia.move.v1.TypesProto.DexPairOrBuilder> 
            getDexPairsOrBuilderList() {
@@ -2637,14 +3011,14 @@ public final class GenesisProto {
         }
       }
       /**
-       * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public com.initia.move.v1.TypesProto.DexPair.Builder addDexPairsBuilder() {
         return getDexPairsFieldBuilder().addBuilder(
             com.initia.move.v1.TypesProto.DexPair.getDefaultInstance());
       }
       /**
-       * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public com.initia.move.v1.TypesProto.DexPair.Builder addDexPairsBuilder(
           int index) {
@@ -2652,7 +3026,7 @@ public final class GenesisProto {
             index, com.initia.move.v1.TypesProto.DexPair.getDefaultInstance());
       }
       /**
-       * <code>repeated .initia.move.v1.DexPair dex_pairs = 8 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .initia.move.v1.DexPair dex_pairs = 9 [json_name = "dexPairs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "dex_pairs,omitempty", (.amino.dont_omitempty) = true];</code>
        */
       public java.util.List<com.initia.move.v1.TypesProto.DexPair.Builder> 
            getDexPairsBuilderList() {
@@ -2665,7 +3039,7 @@ public final class GenesisProto {
           dexPairsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.initia.move.v1.TypesProto.DexPair, com.initia.move.v1.TypesProto.DexPair.Builder, com.initia.move.v1.TypesProto.DexPairOrBuilder>(
                   dexPairs_,
-                  ((bitField0_ & 0x00000080) != 0),
+                  ((bitField0_ & 0x00000100) != 0),
                   getParentForChildren(),
                   isClean());
           dexPairs_ = null;
@@ -2752,7 +3126,7 @@ public final class GenesisProto {
     java.lang.String[] descriptorData = {
       "\n\034initia/move/v1/genesis.proto\022\016initia.m" +
       "ove.v1\032\021amino/amino.proto\032\024gogoproto/gog" +
-      "o.proto\032\032initia/move/v1/types.proto\"\220\005\n\014" +
+      "o.proto\032\032initia/move/v1/types.proto\"\352\005\n\014" +
       "GenesisState\0229\n\006params\030\001 \001(\0132\026.initia.mo" +
       "ve.v1.ParamsB\t\310\336\037\000\250\347\260*\001R\006params\022I\n\021execu" +
       "tion_counter\030\002 \001(\004B\034\362\336\037\030yaml:\"execution_" +
@@ -2760,20 +3134,23 @@ public final class GenesisProto {
       "\003(\014B\025\352\336\037\021stdlibs,omitemptyR\007stdlibs\022P\n\007m" +
       "odules\030\004 \003(\0132\026.initia.move.v1.ModuleB\036\310\336" +
       "\037\000\352\336\037\021modules,omitempty\250\347\260*\001R\007modules\022X\n" +
-      "\tresources\030\005 \003(\0132\030.initia.move.v1.Resour" +
-      "ceB \310\336\037\000\352\336\037\023resources,omitempty\250\347\260*\001R\tre" +
-      "sources\022^\n\013table_infos\030\006 \003(\0132\031.initia.mo" +
-      "ve.v1.TableInfoB\"\310\336\037\000\352\336\037\025table_infos,omi" +
-      "tempty\250\347\260*\001R\ntableInfos\022e\n\rtable_entries" +
-      "\030\007 \003(\0132\032.initia.move.v1.TableEntryB$\310\336\037\000" +
-      "\352\336\037\027table_entries,omitempty\250\347\260*\001R\014tableE" +
-      "ntries\022V\n\tdex_pairs\030\010 \003(\0132\027.initia.move." +
-      "v1.DexPairB \310\336\037\000\352\336\037\023dex_pairs,omitempty\250" +
-      "\347\260*\001R\010dexPairsB\246\001\n\022com.initia.move.v1B\014G" +
-      "enesisProtoZ*github.com/initia-labs/init" +
-      "ia/x/move/types\242\002\003IMX\252\002\016Initia.Move.V1\312\002" +
-      "\016Initia\\Move\\V1\342\002\032Initia\\Move\\V1\\GPBMeta" +
-      "data\352\002\020Initia::Move::V1b\006proto3"
+      "\tchecksums\030\005 \003(\0132\030.initia.move.v1.Checks" +
+      "umB \310\336\037\000\352\336\037\023checksums,omitempty\250\347\260*\001R\tch" +
+      "ecksums\022X\n\tresources\030\006 \003(\0132\030.initia.move" +
+      ".v1.ResourceB \310\336\037\000\352\336\037\023resources,omitempt" +
+      "y\250\347\260*\001R\tresources\022^\n\013table_infos\030\007 \003(\0132\031" +
+      ".initia.move.v1.TableInfoB\"\310\336\037\000\352\336\037\025table" +
+      "_infos,omitempty\250\347\260*\001R\ntableInfos\022e\n\rtab" +
+      "le_entries\030\010 \003(\0132\032.initia.move.v1.TableE" +
+      "ntryB$\310\336\037\000\352\336\037\027table_entries,omitempty\250\347\260" +
+      "*\001R\014tableEntries\022V\n\tdex_pairs\030\t \003(\0132\027.in" +
+      "itia.move.v1.DexPairB \310\336\037\000\352\336\037\023dex_pairs," +
+      "omitempty\250\347\260*\001R\010dexPairsB\246\001\n\022com.initia." +
+      "move.v1B\014GenesisProtoZ*github.com/initia" +
+      "-labs/initia/x/move/types\242\002\003IMX\252\002\016Initia" +
+      ".Move.V1\312\002\016Initia\\Move\\V1\342\002\032Initia\\Move\\" +
+      "V1\\GPBMetadata\352\002\020Initia::Move::V1b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2787,7 +3164,7 @@ public final class GenesisProto {
     internal_static_initia_move_v1_GenesisState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_initia_move_v1_GenesisState_descriptor,
-        new java.lang.String[] { "Params", "ExecutionCounter", "Stdlibs", "Modules", "Resources", "TableInfos", "TableEntries", "DexPairs", });
+        new java.lang.String[] { "Params", "ExecutionCounter", "Stdlibs", "Modules", "Checksums", "Resources", "TableInfos", "TableEntries", "DexPairs", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.amino.AminoProto.dontOmitempty);

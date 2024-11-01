@@ -119,7 +119,6 @@ struct Initia_Move_V1_RawParams {
 }
 
 /// Module is data for the uploaded contract move code
-/// ex) 0000000000000000000000000000000000000001/0/BasicCoin
 struct Initia_Move_V1_Module {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -140,8 +139,24 @@ struct Initia_Move_V1_Module {
   init() {}
 }
 
+/// Checksum is checksum of the uploaded contract move code
+struct Initia_Move_V1_Checksum {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var address: String = String()
+
+  var moduleName: String = String()
+
+  var checksum: Data = Data()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 /// Resource is data for the stored move resource
-/// ex) 0000000000000000000000000000000000000002/2/0x1::BasicCoin::Coin<0x1::BasicCoin::Initia>
 struct Initia_Move_V1_Resource {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -252,6 +267,7 @@ extension Initia_Move_V1_UpgradePolicy: @unchecked Sendable {}
 extension Initia_Move_V1_Params: @unchecked Sendable {}
 extension Initia_Move_V1_RawParams: @unchecked Sendable {}
 extension Initia_Move_V1_Module: @unchecked Sendable {}
+extension Initia_Move_V1_Checksum: @unchecked Sendable {}
 extension Initia_Move_V1_Resource: @unchecked Sendable {}
 extension Initia_Move_V1_TableInfo: @unchecked Sendable {}
 extension Initia_Move_V1_TableEntry: @unchecked Sendable {}
@@ -429,6 +445,50 @@ extension Initia_Move_V1_Module: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     if lhs.abi != rhs.abi {return false}
     if lhs.rawBytes != rhs.rawBytes {return false}
     if lhs.upgradePolicy != rhs.upgradePolicy {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Initia_Move_V1_Checksum: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".Checksum"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "address"),
+    2: .standard(proto: "module_name"),
+    3: .same(proto: "checksum"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.address) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.moduleName) }()
+      case 3: try { try decoder.decodeSingularBytesField(value: &self.checksum) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.address.isEmpty {
+      try visitor.visitSingularStringField(value: self.address, fieldNumber: 1)
+    }
+    if !self.moduleName.isEmpty {
+      try visitor.visitSingularStringField(value: self.moduleName, fieldNumber: 2)
+    }
+    if !self.checksum.isEmpty {
+      try visitor.visitSingularBytesField(value: self.checksum, fieldNumber: 3)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Initia_Move_V1_Checksum, rhs: Initia_Move_V1_Checksum) -> Bool {
+    if lhs.address != rhs.address {return false}
+    if lhs.moduleName != rhs.moduleName {return false}
+    if lhs.checksum != rhs.checksum {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

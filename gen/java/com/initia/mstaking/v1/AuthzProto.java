@@ -2570,9 +2570,9 @@ public final class AuthzProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\036initia/mstaking/v1/authz.proto\022\022initia" +
-      ".mstaking.v1\032\024gogoproto/gogo.proto\032\031cosm" +
-      "os_proto/cosmos.proto\032\036cosmos/base/v1bet" +
-      "a1/coin.proto\032\021amino/amino.proto\"\247\004\n\022Sta" +
+      ".mstaking.v1\032\021amino/amino.proto\032\036cosmos/" +
+      "base/v1beta1/coin.proto\032\031cosmos_proto/co" +
+      "smos.proto\032\024gogoproto/gogo.proto\"\247\004\n\022Sta" +
       "keAuthorization\022\177\n\nmax_tokens\030\001 \003(\0132\031.co" +
       "smos.base.v1beta1.CoinBE\310\336\037\000\362\336\037\021yaml:\"ma" +
       "x_tokens\"\252\337\037(github.com/cosmos/cosmos-sd" +
@@ -2601,10 +2601,10 @@ public final class AuthzProto {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.gogoproto.GogoProto.getDescriptor(),
-          com.cosmos_proto.CosmosProto.getDescriptor(),
-          com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
           com.amino.AminoProto.getDescriptor(),
+          com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
+          com.cosmos_proto.CosmosProto.getDescriptor(),
+          com.gogoproto.GogoProto.getDescriptor(),
         });
     internal_static_initia_mstaking_v1_StakeAuthorization_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -2628,10 +2628,10 @@ public final class AuthzProto {
     registry.add(com.gogoproto.GogoProto.nullable);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.gogoproto.GogoProto.getDescriptor();
-    com.cosmos_proto.CosmosProto.getDescriptor();
-    com.cosmos.base.v1beta1.CoinProto.getDescriptor();
     com.amino.AminoProto.getDescriptor();
+    com.cosmos.base.v1beta1.CoinProto.getDescriptor();
+    com.cosmos_proto.CosmosProto.getDescriptor();
+    com.gogoproto.GogoProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -1323,9 +1323,9 @@ public final class TxProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\026initia/gov/v1/tx.proto\022\rinitia.gov.v1\032" +
-      "\024gogoproto/gogo.proto\032\031cosmos_proto/cosm" +
-      "os.proto\032\027cosmos/msg/v1/msg.proto\032\021amino" +
-      "/amino.proto\032\027initia/gov/v1/gov.proto\"\253\001" +
+      "\021amino/amino.proto\032\027cosmos/msg/v1/msg.pr" +
+      "oto\032\031cosmos_proto/cosmos.proto\032\024gogoprot" +
+      "o/gogo.proto\032\027initia/gov/v1/gov.proto\"\253\001" +
       "\n\017MsgUpdateParams\0226\n\tauthority\030\001 \001(\tB\030\322\264" +
       "-\024cosmos.AddressStringR\tauthority\0228\n\006par" +
       "ams\030\002 \001(\0132\025.initia.gov.v1.ParamsB\t\310\336\037\000\250\347" +
@@ -1342,10 +1342,10 @@ public final class TxProto {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.gogoproto.GogoProto.getDescriptor(),
-          com.cosmos_proto.CosmosProto.getDescriptor(),
-          com.cosmos.msg.v1.MsgProto.getDescriptor(),
           com.amino.AminoProto.getDescriptor(),
+          com.cosmos.msg.v1.MsgProto.getDescriptor(),
+          com.cosmos_proto.CosmosProto.getDescriptor(),
+          com.gogoproto.GogoProto.getDescriptor(),
           com.initia.gov.v1.GovProto.getDescriptor(),
         });
     internal_static_initia_gov_v1_MsgUpdateParams_descriptor =
@@ -1371,10 +1371,10 @@ public final class TxProto {
     registry.add(com.gogoproto.GogoProto.nullable);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.gogoproto.GogoProto.getDescriptor();
-    com.cosmos_proto.CosmosProto.getDescriptor();
-    com.cosmos.msg.v1.MsgProto.getDescriptor();
     com.amino.AminoProto.getDescriptor();
+    com.cosmos.msg.v1.MsgProto.getDescriptor();
+    com.cosmos_proto.CosmosProto.getDescriptor();
+    com.gogoproto.GogoProto.getDescriptor();
     com.initia.gov.v1.GovProto.getDescriptor();
   }
 
