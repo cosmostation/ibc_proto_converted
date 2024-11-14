@@ -1,0 +1,29 @@
+syntax = "proto3";
+package types;
+
+option go_package = "gitlab.com/thorchain/thornode/x/thorchain/types";
+option (gogoproto.goproto_getters_all) = false;
+
+import "gogoproto/gogo.proto";
+
+message Upgrade {
+  int64 height = 1;
+  string info = 2;
+}
+
+message MsgProposeUpgrade {
+  string name = 1;
+  Upgrade upgrade = 2 [(gogoproto.nullable) = false];
+  bytes signer = 3  [(gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];
+}
+
+message MsgApproveUpgrade {
+  string name = 1;
+  bytes signer = 2  [(gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];
+}
+
+message MsgRejectUpgrade {
+  string name = 1;
+  bytes signer = 2  [(gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];
+}
+
