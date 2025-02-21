@@ -22,8 +22,8 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 
 /// BTCDelegationStatus is the status of a delegation.
 /// There are two possible valid state transition paths for a BTC delegation:
-/// - PENDING -> ACTIVE -> UNBONDED
-/// - PENDING -> VERIFIED -> ACTIVE -> UNBONDED
+/// - PENDING -> VERIFIED -> ACTIVE -> UNBONDED -> EXPIRED
+/// - PENDING -> VERIFIED -> ACTIVE -> UNBONDED/EXPIRED
 /// and one invalid state transition path:
 /// - PENDING -> VERIFIED -> UNBONDED i.e the staker unbonded before
 /// activating delegation on Babylon chain.
@@ -43,13 +43,16 @@ enum Babylon_Btcstaking_V1_BTCDelegationStatus: SwiftProtobuf.Enum {
   /// ACTIVE defines a delegation that has voting power
   case active // = 2
 
-  /// UNBONDED defines a delegation no longer has voting power:
-  /// - either reaching the end of staking transaction timelock
-  /// - or receiving unbonding tx with signatures from staker and covenant committee
+  /// UNBONDED defines a delegation no longer has voting power
+  /// by receiving unbonding tx with signatures from staker and covenant committee
   case unbonded // = 3
 
+  /// EXPIRED defines a delegation no longer has voting power
+  /// for reaching the end of staking transaction timelock
+  case expired // = 4
+
   /// ANY is any of the above status
-  case any // = 4
+  case any // = 5
   case UNRECOGNIZED(Int)
 
   init() {
@@ -62,7 +65,8 @@ enum Babylon_Btcstaking_V1_BTCDelegationStatus: SwiftProtobuf.Enum {
     case 1: self = .verified
     case 2: self = .active
     case 3: self = .unbonded
-    case 4: self = .any
+    case 4: self = .expired
+    case 5: self = .any
     default: self = .UNRECOGNIZED(rawValue)
     }
   }
@@ -73,7 +77,8 @@ enum Babylon_Btcstaking_V1_BTCDelegationStatus: SwiftProtobuf.Enum {
     case .verified: return 1
     case .active: return 2
     case .unbonded: return 3
-    case .any: return 4
+    case .expired: return 4
+    case .any: return 5
     case .UNRECOGNIZED(let i): return i
     }
   }
@@ -89,6 +94,7 @@ extension Babylon_Btcstaking_V1_BTCDelegationStatus: CaseIterable {
     .verified,
     .active,
     .unbonded,
+    .expired,
     .any,
   ]
 }
@@ -145,6 +151,14 @@ struct Babylon_Btcstaking_V1_FinalityProvider {
   /// jailed defines whether the finality provider is jailed
   var jailed: Bool = false
 
+  /// highest_voted_height is the highest height for which the
+  /// finality provider has voted
+  var highestVotedHeight: UInt32 = 0
+
+  /// consumer_id is the ID of the consumer the finality provider is operating on.
+  /// If it's missing / empty, it's assumed the finality provider is operating in the Babylon chain.
+  var consumerID: String = String()
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -181,6 +195,10 @@ struct Babylon_Btcstaking_V1_FinalityProviderWithMeta {
 
   /// jailed defines whether the finality provider is detected jailed
   var jailed: Bool = false
+
+  /// highest_voted_height is the highest height for which the
+  /// finality provider has voted
+  var highestVotedHeight: UInt32 = 0
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -309,6 +327,13 @@ struct Babylon_Btcstaking_V1_BTCDelegation {
   var paramsVersion: UInt32 {
     get {return _storage._paramsVersion}
     set {_uniqueStorage()._paramsVersion = newValue}
+  }
+
+  /// btc_tip_height is the height of the BTC light client tip at the time of
+  /// the delegation creation
+  var btcTipHeight: UInt32 {
+    get {return _storage._btcTipHeight}
+    set {_uniqueStorage()._btcTipHeight = newValue}
   }
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
@@ -527,7 +552,8 @@ extension Babylon_Btcstaking_V1_BTCDelegationStatus: SwiftProtobuf._ProtoNamePro
     1: .same(proto: "VERIFIED"),
     2: .same(proto: "ACTIVE"),
     3: .same(proto: "UNBONDED"),
-    4: .same(proto: "ANY"),
+    4: .same(proto: "EXPIRED"),
+    5: .same(proto: "ANY"),
   ]
 }
 
@@ -542,6 +568,8 @@ extension Babylon_Btcstaking_V1_FinalityProvider: SwiftProtobuf.Message, SwiftPr
     6: .standard(proto: "slashed_babylon_height"),
     7: .standard(proto: "slashed_btc_height"),
     8: .same(proto: "jailed"),
+    9: .standard(proto: "highest_voted_height"),
+    10: .standard(proto: "consumer_id"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -558,6 +586,8 @@ extension Babylon_Btcstaking_V1_FinalityProvider: SwiftProtobuf.Message, SwiftPr
       case 6: try { try decoder.decodeSingularUInt64Field(value: &self.slashedBabylonHeight) }()
       case 7: try { try decoder.decodeSingularUInt32Field(value: &self.slashedBtcHeight) }()
       case 8: try { try decoder.decodeSingularBoolField(value: &self.jailed) }()
+      case 9: try { try decoder.decodeSingularUInt32Field(value: &self.highestVotedHeight) }()
+      case 10: try { try decoder.decodeSingularStringField(value: &self.consumerID) }()
       default: break
       }
     }
@@ -592,6 +622,12 @@ extension Babylon_Btcstaking_V1_FinalityProvider: SwiftProtobuf.Message, SwiftPr
     if self.jailed != false {
       try visitor.visitSingularBoolField(value: self.jailed, fieldNumber: 8)
     }
+    if self.highestVotedHeight != 0 {
+      try visitor.visitSingularUInt32Field(value: self.highestVotedHeight, fieldNumber: 9)
+    }
+    if !self.consumerID.isEmpty {
+      try visitor.visitSingularStringField(value: self.consumerID, fieldNumber: 10)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -604,6 +640,8 @@ extension Babylon_Btcstaking_V1_FinalityProvider: SwiftProtobuf.Message, SwiftPr
     if lhs.slashedBabylonHeight != rhs.slashedBabylonHeight {return false}
     if lhs.slashedBtcHeight != rhs.slashedBtcHeight {return false}
     if lhs.jailed != rhs.jailed {return false}
+    if lhs.highestVotedHeight != rhs.highestVotedHeight {return false}
+    if lhs.consumerID != rhs.consumerID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -618,6 +656,7 @@ extension Babylon_Btcstaking_V1_FinalityProviderWithMeta: SwiftProtobuf.Message,
     4: .standard(proto: "slashed_babylon_height"),
     5: .standard(proto: "slashed_btc_height"),
     6: .same(proto: "jailed"),
+    7: .standard(proto: "highest_voted_height"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -632,6 +671,7 @@ extension Babylon_Btcstaking_V1_FinalityProviderWithMeta: SwiftProtobuf.Message,
       case 4: try { try decoder.decodeSingularUInt64Field(value: &self.slashedBabylonHeight) }()
       case 5: try { try decoder.decodeSingularUInt32Field(value: &self.slashedBtcHeight) }()
       case 6: try { try decoder.decodeSingularBoolField(value: &self.jailed) }()
+      case 7: try { try decoder.decodeSingularUInt32Field(value: &self.highestVotedHeight) }()
       default: break
       }
     }
@@ -656,6 +696,9 @@ extension Babylon_Btcstaking_V1_FinalityProviderWithMeta: SwiftProtobuf.Message,
     if self.jailed != false {
       try visitor.visitSingularBoolField(value: self.jailed, fieldNumber: 6)
     }
+    if self.highestVotedHeight != 0 {
+      try visitor.visitSingularUInt32Field(value: self.highestVotedHeight, fieldNumber: 7)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -666,6 +709,7 @@ extension Babylon_Btcstaking_V1_FinalityProviderWithMeta: SwiftProtobuf.Message,
     if lhs.slashedBabylonHeight != rhs.slashedBabylonHeight {return false}
     if lhs.slashedBtcHeight != rhs.slashedBtcHeight {return false}
     if lhs.jailed != rhs.jailed {return false}
+    if lhs.highestVotedHeight != rhs.highestVotedHeight {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -690,6 +734,7 @@ extension Babylon_Btcstaking_V1_BTCDelegation: SwiftProtobuf.Message, SwiftProto
     14: .standard(proto: "unbonding_time"),
     15: .standard(proto: "btc_undelegation"),
     16: .standard(proto: "params_version"),
+    17: .standard(proto: "btc_tip_height"),
   ]
 
   fileprivate class _StorageClass {
@@ -709,6 +754,7 @@ extension Babylon_Btcstaking_V1_BTCDelegation: SwiftProtobuf.Message, SwiftProto
     var _unbondingTime: UInt32 = 0
     var _btcUndelegation: Babylon_Btcstaking_V1_BTCUndelegation? = nil
     var _paramsVersion: UInt32 = 0
+    var _btcTipHeight: UInt32 = 0
 
     static let defaultInstance = _StorageClass()
 
@@ -731,6 +777,7 @@ extension Babylon_Btcstaking_V1_BTCDelegation: SwiftProtobuf.Message, SwiftProto
       _unbondingTime = source._unbondingTime
       _btcUndelegation = source._btcUndelegation
       _paramsVersion = source._paramsVersion
+      _btcTipHeight = source._btcTipHeight
     }
   }
 
@@ -765,6 +812,7 @@ extension Babylon_Btcstaking_V1_BTCDelegation: SwiftProtobuf.Message, SwiftProto
         case 14: try { try decoder.decodeSingularUInt32Field(value: &_storage._unbondingTime) }()
         case 15: try { try decoder.decodeSingularMessageField(value: &_storage._btcUndelegation) }()
         case 16: try { try decoder.decodeSingularUInt32Field(value: &_storage._paramsVersion) }()
+        case 17: try { try decoder.decodeSingularUInt32Field(value: &_storage._btcTipHeight) }()
         default: break
         }
       }
@@ -825,6 +873,9 @@ extension Babylon_Btcstaking_V1_BTCDelegation: SwiftProtobuf.Message, SwiftProto
       if _storage._paramsVersion != 0 {
         try visitor.visitSingularUInt32Field(value: _storage._paramsVersion, fieldNumber: 16)
       }
+      if _storage._btcTipHeight != 0 {
+        try visitor.visitSingularUInt32Field(value: _storage._btcTipHeight, fieldNumber: 17)
+      }
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -850,6 +901,7 @@ extension Babylon_Btcstaking_V1_BTCDelegation: SwiftProtobuf.Message, SwiftProto
         if _storage._unbondingTime != rhs_storage._unbondingTime {return false}
         if _storage._btcUndelegation != rhs_storage._btcUndelegation {return false}
         if _storage._paramsVersion != rhs_storage._paramsVersion {return false}
+        if _storage._btcTipHeight != rhs_storage._btcTipHeight {return false}
         return true
       }
       if !storagesAreEqual {return false}

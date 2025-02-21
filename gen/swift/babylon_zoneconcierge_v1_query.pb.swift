@@ -60,7 +60,7 @@ struct Babylon_Zoneconcierge_V1_QueryHeaderRequest {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var chainID: String = String()
+  var consumerID: String = String()
 
   var height: UInt64 = 0
 
@@ -130,8 +130,8 @@ struct Babylon_Zoneconcierge_V1_QueryChainListResponse {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// chain_ids are IDs of the chains in ascending alphabetical order
-  var chainIds: [String] = []
+  /// consumer_ids are IDs of the chains in ascending alphabetical order
+  var consumerIds: [String] = []
 
   /// pagination defines the pagination in the response
   var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
@@ -156,7 +156,7 @@ struct Babylon_Zoneconcierge_V1_QueryChainsInfoRequest {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var chainIds: [String] = []
+  var consumerIds: [String] = []
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -185,7 +185,7 @@ struct Babylon_Zoneconcierge_V1_QueryEpochChainsInfoRequest {
 
   var epochNum: UInt64 = 0
 
-  var chainIds: [String] = []
+  var consumerIds: [String] = []
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -213,7 +213,7 @@ struct Babylon_Zoneconcierge_V1_QueryListHeadersRequest {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var chainID: String = String()
+  var consumerID: String = String()
 
   /// pagination defines whether to have the pagination in the request
   var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
@@ -268,7 +268,7 @@ struct Babylon_Zoneconcierge_V1_QueryListEpochHeadersRequest {
 
   var epochNum: UInt64 = 0
 
-  var chainID: String = String()
+  var consumerID: String = String()
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -297,8 +297,8 @@ struct Babylon_Zoneconcierge_V1_QueryFinalizedChainsInfoRequest {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// chain_ids is the list of ids of CZs
-  var chainIds: [String] = []
+  /// consumer_ids is the list of ids of CZs
+  var consumerIds: [String] = []
 
   /// prove indicates whether the querier wants to get proofs of this timestamp
   var prove: Bool = false
@@ -329,8 +329,8 @@ struct Babylon_Zoneconcierge_V1_QueryFinalizedChainInfoUntilHeightRequest {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// chain_id is the ID of the CZ
-  var chainID: String = String()
+  /// consumer_id is the ID of the CZ
+  var consumerID: String = String()
 
   /// height is the height of the CZ chain
   /// such that the returned finalised chain info will be no later than this
@@ -493,7 +493,7 @@ extension Babylon_Zoneconcierge_V1_QueryParamsResponse: SwiftProtobuf.Message, S
 extension Babylon_Zoneconcierge_V1_QueryHeaderRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".QueryHeaderRequest"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "chain_id"),
+    1: .standard(proto: "consumer_id"),
     2: .same(proto: "height"),
   ]
 
@@ -503,7 +503,7 @@ extension Babylon_Zoneconcierge_V1_QueryHeaderRequest: SwiftProtobuf.Message, Sw
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.chainID) }()
+      case 1: try { try decoder.decodeSingularStringField(value: &self.consumerID) }()
       case 2: try { try decoder.decodeSingularUInt64Field(value: &self.height) }()
       default: break
       }
@@ -511,8 +511,8 @@ extension Babylon_Zoneconcierge_V1_QueryHeaderRequest: SwiftProtobuf.Message, Sw
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.chainID.isEmpty {
-      try visitor.visitSingularStringField(value: self.chainID, fieldNumber: 1)
+    if !self.consumerID.isEmpty {
+      try visitor.visitSingularStringField(value: self.consumerID, fieldNumber: 1)
     }
     if self.height != 0 {
       try visitor.visitSingularUInt64Field(value: self.height, fieldNumber: 2)
@@ -521,7 +521,7 @@ extension Babylon_Zoneconcierge_V1_QueryHeaderRequest: SwiftProtobuf.Message, Sw
   }
 
   static func ==(lhs: Babylon_Zoneconcierge_V1_QueryHeaderRequest, rhs: Babylon_Zoneconcierge_V1_QueryHeaderRequest) -> Bool {
-    if lhs.chainID != rhs.chainID {return false}
+    if lhs.consumerID != rhs.consumerID {return false}
     if lhs.height != rhs.height {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -609,7 +609,7 @@ extension Babylon_Zoneconcierge_V1_QueryChainListRequest: SwiftProtobuf.Message,
 extension Babylon_Zoneconcierge_V1_QueryChainListResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".QueryChainListResponse"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "chain_ids"),
+    1: .standard(proto: "consumer_ids"),
     2: .same(proto: "pagination"),
   ]
 
@@ -619,7 +619,7 @@ extension Babylon_Zoneconcierge_V1_QueryChainListResponse: SwiftProtobuf.Message
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeRepeatedStringField(value: &self.chainIds) }()
+      case 1: try { try decoder.decodeRepeatedStringField(value: &self.consumerIds) }()
       case 2: try { try decoder.decodeSingularMessageField(value: &self._pagination) }()
       default: break
       }
@@ -631,8 +631,8 @@ extension Babylon_Zoneconcierge_V1_QueryChainListResponse: SwiftProtobuf.Message
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
     // https://github.com/apple/swift-protobuf/issues/1182
-    if !self.chainIds.isEmpty {
-      try visitor.visitRepeatedStringField(value: self.chainIds, fieldNumber: 1)
+    if !self.consumerIds.isEmpty {
+      try visitor.visitRepeatedStringField(value: self.consumerIds, fieldNumber: 1)
     }
     try { if let v = self._pagination {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
@@ -641,7 +641,7 @@ extension Babylon_Zoneconcierge_V1_QueryChainListResponse: SwiftProtobuf.Message
   }
 
   static func ==(lhs: Babylon_Zoneconcierge_V1_QueryChainListResponse, rhs: Babylon_Zoneconcierge_V1_QueryChainListResponse) -> Bool {
-    if lhs.chainIds != rhs.chainIds {return false}
+    if lhs.consumerIds != rhs.consumerIds {return false}
     if lhs._pagination != rhs._pagination {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -651,7 +651,7 @@ extension Babylon_Zoneconcierge_V1_QueryChainListResponse: SwiftProtobuf.Message
 extension Babylon_Zoneconcierge_V1_QueryChainsInfoRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".QueryChainsInfoRequest"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "chain_ids"),
+    1: .standard(proto: "consumer_ids"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -660,21 +660,21 @@ extension Babylon_Zoneconcierge_V1_QueryChainsInfoRequest: SwiftProtobuf.Message
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeRepeatedStringField(value: &self.chainIds) }()
+      case 1: try { try decoder.decodeRepeatedStringField(value: &self.consumerIds) }()
       default: break
       }
     }
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.chainIds.isEmpty {
-      try visitor.visitRepeatedStringField(value: self.chainIds, fieldNumber: 1)
+    if !self.consumerIds.isEmpty {
+      try visitor.visitRepeatedStringField(value: self.consumerIds, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Babylon_Zoneconcierge_V1_QueryChainsInfoRequest, rhs: Babylon_Zoneconcierge_V1_QueryChainsInfoRequest) -> Bool {
-    if lhs.chainIds != rhs.chainIds {return false}
+    if lhs.consumerIds != rhs.consumerIds {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -716,7 +716,7 @@ extension Babylon_Zoneconcierge_V1_QueryEpochChainsInfoRequest: SwiftProtobuf.Me
   static let protoMessageName: String = _protobuf_package + ".QueryEpochChainsInfoRequest"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "epoch_num"),
-    2: .standard(proto: "chain_ids"),
+    2: .standard(proto: "consumer_ids"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -726,7 +726,7 @@ extension Babylon_Zoneconcierge_V1_QueryEpochChainsInfoRequest: SwiftProtobuf.Me
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularUInt64Field(value: &self.epochNum) }()
-      case 2: try { try decoder.decodeRepeatedStringField(value: &self.chainIds) }()
+      case 2: try { try decoder.decodeRepeatedStringField(value: &self.consumerIds) }()
       default: break
       }
     }
@@ -736,15 +736,15 @@ extension Babylon_Zoneconcierge_V1_QueryEpochChainsInfoRequest: SwiftProtobuf.Me
     if self.epochNum != 0 {
       try visitor.visitSingularUInt64Field(value: self.epochNum, fieldNumber: 1)
     }
-    if !self.chainIds.isEmpty {
-      try visitor.visitRepeatedStringField(value: self.chainIds, fieldNumber: 2)
+    if !self.consumerIds.isEmpty {
+      try visitor.visitRepeatedStringField(value: self.consumerIds, fieldNumber: 2)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Babylon_Zoneconcierge_V1_QueryEpochChainsInfoRequest, rhs: Babylon_Zoneconcierge_V1_QueryEpochChainsInfoRequest) -> Bool {
     if lhs.epochNum != rhs.epochNum {return false}
-    if lhs.chainIds != rhs.chainIds {return false}
+    if lhs.consumerIds != rhs.consumerIds {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -785,7 +785,7 @@ extension Babylon_Zoneconcierge_V1_QueryEpochChainsInfoResponse: SwiftProtobuf.M
 extension Babylon_Zoneconcierge_V1_QueryListHeadersRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".QueryListHeadersRequest"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "chain_id"),
+    1: .standard(proto: "consumer_id"),
     2: .same(proto: "pagination"),
   ]
 
@@ -795,7 +795,7 @@ extension Babylon_Zoneconcierge_V1_QueryListHeadersRequest: SwiftProtobuf.Messag
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.chainID) }()
+      case 1: try { try decoder.decodeSingularStringField(value: &self.consumerID) }()
       case 2: try { try decoder.decodeSingularMessageField(value: &self._pagination) }()
       default: break
       }
@@ -807,8 +807,8 @@ extension Babylon_Zoneconcierge_V1_QueryListHeadersRequest: SwiftProtobuf.Messag
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
     // https://github.com/apple/swift-protobuf/issues/1182
-    if !self.chainID.isEmpty {
-      try visitor.visitSingularStringField(value: self.chainID, fieldNumber: 1)
+    if !self.consumerID.isEmpty {
+      try visitor.visitSingularStringField(value: self.consumerID, fieldNumber: 1)
     }
     try { if let v = self._pagination {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
@@ -817,7 +817,7 @@ extension Babylon_Zoneconcierge_V1_QueryListHeadersRequest: SwiftProtobuf.Messag
   }
 
   static func ==(lhs: Babylon_Zoneconcierge_V1_QueryListHeadersRequest, rhs: Babylon_Zoneconcierge_V1_QueryListHeadersRequest) -> Bool {
-    if lhs.chainID != rhs.chainID {return false}
+    if lhs.consumerID != rhs.consumerID {return false}
     if lhs._pagination != rhs._pagination {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -870,7 +870,7 @@ extension Babylon_Zoneconcierge_V1_QueryListEpochHeadersRequest: SwiftProtobuf.M
   static let protoMessageName: String = _protobuf_package + ".QueryListEpochHeadersRequest"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "epoch_num"),
-    2: .standard(proto: "chain_id"),
+    2: .standard(proto: "consumer_id"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -880,7 +880,7 @@ extension Babylon_Zoneconcierge_V1_QueryListEpochHeadersRequest: SwiftProtobuf.M
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularUInt64Field(value: &self.epochNum) }()
-      case 2: try { try decoder.decodeSingularStringField(value: &self.chainID) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.consumerID) }()
       default: break
       }
     }
@@ -890,15 +890,15 @@ extension Babylon_Zoneconcierge_V1_QueryListEpochHeadersRequest: SwiftProtobuf.M
     if self.epochNum != 0 {
       try visitor.visitSingularUInt64Field(value: self.epochNum, fieldNumber: 1)
     }
-    if !self.chainID.isEmpty {
-      try visitor.visitSingularStringField(value: self.chainID, fieldNumber: 2)
+    if !self.consumerID.isEmpty {
+      try visitor.visitSingularStringField(value: self.consumerID, fieldNumber: 2)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Babylon_Zoneconcierge_V1_QueryListEpochHeadersRequest, rhs: Babylon_Zoneconcierge_V1_QueryListEpochHeadersRequest) -> Bool {
     if lhs.epochNum != rhs.epochNum {return false}
-    if lhs.chainID != rhs.chainID {return false}
+    if lhs.consumerID != rhs.consumerID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -939,7 +939,7 @@ extension Babylon_Zoneconcierge_V1_QueryListEpochHeadersResponse: SwiftProtobuf.
 extension Babylon_Zoneconcierge_V1_QueryFinalizedChainsInfoRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".QueryFinalizedChainsInfoRequest"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "chain_ids"),
+    1: .standard(proto: "consumer_ids"),
     2: .same(proto: "prove"),
   ]
 
@@ -949,7 +949,7 @@ extension Babylon_Zoneconcierge_V1_QueryFinalizedChainsInfoRequest: SwiftProtobu
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeRepeatedStringField(value: &self.chainIds) }()
+      case 1: try { try decoder.decodeRepeatedStringField(value: &self.consumerIds) }()
       case 2: try { try decoder.decodeSingularBoolField(value: &self.prove) }()
       default: break
       }
@@ -957,8 +957,8 @@ extension Babylon_Zoneconcierge_V1_QueryFinalizedChainsInfoRequest: SwiftProtobu
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.chainIds.isEmpty {
-      try visitor.visitRepeatedStringField(value: self.chainIds, fieldNumber: 1)
+    if !self.consumerIds.isEmpty {
+      try visitor.visitRepeatedStringField(value: self.consumerIds, fieldNumber: 1)
     }
     if self.prove != false {
       try visitor.visitSingularBoolField(value: self.prove, fieldNumber: 2)
@@ -967,7 +967,7 @@ extension Babylon_Zoneconcierge_V1_QueryFinalizedChainsInfoRequest: SwiftProtobu
   }
 
   static func ==(lhs: Babylon_Zoneconcierge_V1_QueryFinalizedChainsInfoRequest, rhs: Babylon_Zoneconcierge_V1_QueryFinalizedChainsInfoRequest) -> Bool {
-    if lhs.chainIds != rhs.chainIds {return false}
+    if lhs.consumerIds != rhs.consumerIds {return false}
     if lhs.prove != rhs.prove {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -1009,7 +1009,7 @@ extension Babylon_Zoneconcierge_V1_QueryFinalizedChainsInfoResponse: SwiftProtob
 extension Babylon_Zoneconcierge_V1_QueryFinalizedChainInfoUntilHeightRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".QueryFinalizedChainInfoUntilHeightRequest"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "chain_id"),
+    1: .standard(proto: "consumer_id"),
     2: .same(proto: "height"),
     3: .same(proto: "prove"),
   ]
@@ -1020,7 +1020,7 @@ extension Babylon_Zoneconcierge_V1_QueryFinalizedChainInfoUntilHeightRequest: Sw
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.chainID) }()
+      case 1: try { try decoder.decodeSingularStringField(value: &self.consumerID) }()
       case 2: try { try decoder.decodeSingularUInt64Field(value: &self.height) }()
       case 3: try { try decoder.decodeSingularBoolField(value: &self.prove) }()
       default: break
@@ -1029,8 +1029,8 @@ extension Babylon_Zoneconcierge_V1_QueryFinalizedChainInfoUntilHeightRequest: Sw
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.chainID.isEmpty {
-      try visitor.visitSingularStringField(value: self.chainID, fieldNumber: 1)
+    if !self.consumerID.isEmpty {
+      try visitor.visitSingularStringField(value: self.consumerID, fieldNumber: 1)
     }
     if self.height != 0 {
       try visitor.visitSingularUInt64Field(value: self.height, fieldNumber: 2)
@@ -1042,7 +1042,7 @@ extension Babylon_Zoneconcierge_V1_QueryFinalizedChainInfoUntilHeightRequest: Sw
   }
 
   static func ==(lhs: Babylon_Zoneconcierge_V1_QueryFinalizedChainInfoUntilHeightRequest, rhs: Babylon_Zoneconcierge_V1_QueryFinalizedChainInfoUntilHeightRequest) -> Bool {
-    if lhs.chainID != rhs.chainID {return false}
+    if lhs.consumerID != rhs.consumerID {return false}
     if lhs.height != rhs.height {return false}
     if lhs.prove != rhs.prove {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}

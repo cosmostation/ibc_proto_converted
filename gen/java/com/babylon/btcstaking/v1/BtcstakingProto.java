@@ -18,8 +18,8 @@ public final class BtcstakingProto {
    * <pre>
    * BTCDelegationStatus is the status of a delegation.
    * There are two possible valid state transition paths for a BTC delegation:
-   * - PENDING -&gt; ACTIVE -&gt; UNBONDED
-   * - PENDING -&gt; VERIFIED -&gt; ACTIVE -&gt; UNBONDED
+   * - PENDING -&gt; VERIFIED -&gt; ACTIVE -&gt; UNBONDED -&gt; EXPIRED
+   * - PENDING -&gt; VERIFIED -&gt; ACTIVE -&gt; UNBONDED/EXPIRED
    * and one invalid state transition path:
    * - PENDING -&gt; VERIFIED -&gt; UNBONDED i.e the staker unbonded before
    * activating delegation on Babylon chain.
@@ -59,9 +59,8 @@ public final class BtcstakingProto {
     ACTIVE(2),
     /**
      * <pre>
-     * UNBONDED defines a delegation no longer has voting power:
-     * - either reaching the end of staking transaction timelock
-     * - or receiving unbonding tx with signatures from staker and covenant committee
+     * UNBONDED defines a delegation no longer has voting power
+     * by receiving unbonding tx with signatures from staker and covenant committee
      * </pre>
      *
      * <code>UNBONDED = 3;</code>
@@ -69,12 +68,21 @@ public final class BtcstakingProto {
     UNBONDED(3),
     /**
      * <pre>
+     * EXPIRED defines a delegation no longer has voting power
+     * for reaching the end of staking transaction timelock
+     * </pre>
+     *
+     * <code>EXPIRED = 4;</code>
+     */
+    EXPIRED(4),
+    /**
+     * <pre>
      * ANY is any of the above status
      * </pre>
      *
-     * <code>ANY = 4;</code>
+     * <code>ANY = 5;</code>
      */
-    ANY(4),
+    ANY(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -105,9 +113,8 @@ public final class BtcstakingProto {
     public static final int ACTIVE_VALUE = 2;
     /**
      * <pre>
-     * UNBONDED defines a delegation no longer has voting power:
-     * - either reaching the end of staking transaction timelock
-     * - or receiving unbonding tx with signatures from staker and covenant committee
+     * UNBONDED defines a delegation no longer has voting power
+     * by receiving unbonding tx with signatures from staker and covenant committee
      * </pre>
      *
      * <code>UNBONDED = 3;</code>
@@ -115,12 +122,21 @@ public final class BtcstakingProto {
     public static final int UNBONDED_VALUE = 3;
     /**
      * <pre>
+     * EXPIRED defines a delegation no longer has voting power
+     * for reaching the end of staking transaction timelock
+     * </pre>
+     *
+     * <code>EXPIRED = 4;</code>
+     */
+    public static final int EXPIRED_VALUE = 4;
+    /**
+     * <pre>
      * ANY is any of the above status
      * </pre>
      *
-     * <code>ANY = 4;</code>
+     * <code>ANY = 5;</code>
      */
-    public static final int ANY_VALUE = 4;
+    public static final int ANY_VALUE = 5;
 
 
     public final int getNumber() {
@@ -151,7 +167,8 @@ public final class BtcstakingProto {
         case 1: return VERIFIED;
         case 2: return ACTIVE;
         case 3: return UNBONDED;
-        case 4: return ANY;
+        case 4: return EXPIRED;
+        case 5: return ANY;
         default: return null;
       }
     }
@@ -353,6 +370,39 @@ public final class BtcstakingProto {
      * @return The jailed.
      */
     boolean getJailed();
+
+    /**
+     * <pre>
+     * highest_voted_height is the highest height for which the
+     * finality provider has voted
+     * </pre>
+     *
+     * <code>uint32 highest_voted_height = 9 [json_name = "highestVotedHeight"];</code>
+     * @return The highestVotedHeight.
+     */
+    int getHighestVotedHeight();
+
+    /**
+     * <pre>
+     * consumer_id is the ID of the consumer the finality provider is operating on.
+     * If it's missing / empty, it's assumed the finality provider is operating in the Babylon chain.
+     * </pre>
+     *
+     * <code>string consumer_id = 10 [json_name = "consumerId"];</code>
+     * @return The consumerId.
+     */
+    java.lang.String getConsumerId();
+    /**
+     * <pre>
+     * consumer_id is the ID of the consumer the finality provider is operating on.
+     * If it's missing / empty, it's assumed the finality provider is operating in the Babylon chain.
+     * </pre>
+     *
+     * <code>string consumer_id = 10 [json_name = "consumerId"];</code>
+     * @return The bytes for consumerId.
+     */
+    com.google.protobuf.ByteString
+        getConsumerIdBytes();
   }
   /**
    * <pre>
@@ -374,6 +424,7 @@ public final class BtcstakingProto {
       addr_ = "";
       commission_ = "";
       btcPk_ = com.google.protobuf.ByteString.EMPTY;
+      consumerId_ = "";
     }
 
     @java.lang.Override
@@ -634,6 +685,71 @@ public final class BtcstakingProto {
       return jailed_;
     }
 
+    public static final int HIGHEST_VOTED_HEIGHT_FIELD_NUMBER = 9;
+    private int highestVotedHeight_ = 0;
+    /**
+     * <pre>
+     * highest_voted_height is the highest height for which the
+     * finality provider has voted
+     * </pre>
+     *
+     * <code>uint32 highest_voted_height = 9 [json_name = "highestVotedHeight"];</code>
+     * @return The highestVotedHeight.
+     */
+    @java.lang.Override
+    public int getHighestVotedHeight() {
+      return highestVotedHeight_;
+    }
+
+    public static final int CONSUMER_ID_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object consumerId_ = "";
+    /**
+     * <pre>
+     * consumer_id is the ID of the consumer the finality provider is operating on.
+     * If it's missing / empty, it's assumed the finality provider is operating in the Babylon chain.
+     * </pre>
+     *
+     * <code>string consumer_id = 10 [json_name = "consumerId"];</code>
+     * @return The consumerId.
+     */
+    @java.lang.Override
+    public java.lang.String getConsumerId() {
+      java.lang.Object ref = consumerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        consumerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * consumer_id is the ID of the consumer the finality provider is operating on.
+     * If it's missing / empty, it's assumed the finality provider is operating in the Babylon chain.
+     * </pre>
+     *
+     * <code>string consumer_id = 10 [json_name = "consumerId"];</code>
+     * @return The bytes for consumerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConsumerIdBytes() {
+      java.lang.Object ref = consumerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        consumerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -671,6 +787,12 @@ public final class BtcstakingProto {
       }
       if (jailed_ != false) {
         output.writeBool(8, jailed_);
+      }
+      if (highestVotedHeight_ != 0) {
+        output.writeUInt32(9, highestVotedHeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consumerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, consumerId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -711,6 +833,13 @@ public final class BtcstakingProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(8, jailed_);
       }
+      if (highestVotedHeight_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(9, highestVotedHeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consumerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, consumerId_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -748,6 +877,10 @@ public final class BtcstakingProto {
           != other.getSlashedBtcHeight()) return false;
       if (getJailed()
           != other.getJailed()) return false;
+      if (getHighestVotedHeight()
+          != other.getHighestVotedHeight()) return false;
+      if (!getConsumerId()
+          .equals(other.getConsumerId())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -781,6 +914,10 @@ public final class BtcstakingProto {
       hash = (37 * hash) + JAILED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getJailed());
+      hash = (37 * hash) + HIGHEST_VOTED_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getHighestVotedHeight();
+      hash = (37 * hash) + CONSUMER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConsumerId().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -932,6 +1069,8 @@ public final class BtcstakingProto {
         slashedBabylonHeight_ = 0L;
         slashedBtcHeight_ = 0;
         jailed_ = false;
+        highestVotedHeight_ = 0;
+        consumerId_ = "";
         return this;
       }
 
@@ -992,6 +1131,12 @@ public final class BtcstakingProto {
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.jailed_ = jailed_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.highestVotedHeight_ = highestVotedHeight_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.consumerId_ = consumerId_;
         }
       }
 
@@ -1067,6 +1212,14 @@ public final class BtcstakingProto {
         if (other.getJailed() != false) {
           setJailed(other.getJailed());
         }
+        if (other.getHighestVotedHeight() != 0) {
+          setHighestVotedHeight(other.getHighestVotedHeight());
+        }
+        if (!other.getConsumerId().isEmpty()) {
+          consumerId_ = other.consumerId_;
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1137,6 +1290,16 @@ public final class BtcstakingProto {
                 bitField0_ |= 0x00000080;
                 break;
               } // case 64
+              case 72: {
+                highestVotedHeight_ = input.readUInt32();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 72
+              case 82: {
+                consumerId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1847,6 +2010,150 @@ public final class BtcstakingProto {
         onChanged();
         return this;
       }
+
+      private int highestVotedHeight_ ;
+      /**
+       * <pre>
+       * highest_voted_height is the highest height for which the
+       * finality provider has voted
+       * </pre>
+       *
+       * <code>uint32 highest_voted_height = 9 [json_name = "highestVotedHeight"];</code>
+       * @return The highestVotedHeight.
+       */
+      @java.lang.Override
+      public int getHighestVotedHeight() {
+        return highestVotedHeight_;
+      }
+      /**
+       * <pre>
+       * highest_voted_height is the highest height for which the
+       * finality provider has voted
+       * </pre>
+       *
+       * <code>uint32 highest_voted_height = 9 [json_name = "highestVotedHeight"];</code>
+       * @param value The highestVotedHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHighestVotedHeight(int value) {
+
+        highestVotedHeight_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * highest_voted_height is the highest height for which the
+       * finality provider has voted
+       * </pre>
+       *
+       * <code>uint32 highest_voted_height = 9 [json_name = "highestVotedHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHighestVotedHeight() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        highestVotedHeight_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object consumerId_ = "";
+      /**
+       * <pre>
+       * consumer_id is the ID of the consumer the finality provider is operating on.
+       * If it's missing / empty, it's assumed the finality provider is operating in the Babylon chain.
+       * </pre>
+       *
+       * <code>string consumer_id = 10 [json_name = "consumerId"];</code>
+       * @return The consumerId.
+       */
+      public java.lang.String getConsumerId() {
+        java.lang.Object ref = consumerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          consumerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * consumer_id is the ID of the consumer the finality provider is operating on.
+       * If it's missing / empty, it's assumed the finality provider is operating in the Babylon chain.
+       * </pre>
+       *
+       * <code>string consumer_id = 10 [json_name = "consumerId"];</code>
+       * @return The bytes for consumerId.
+       */
+      public com.google.protobuf.ByteString
+          getConsumerIdBytes() {
+        java.lang.Object ref = consumerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          consumerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * consumer_id is the ID of the consumer the finality provider is operating on.
+       * If it's missing / empty, it's assumed the finality provider is operating in the Babylon chain.
+       * </pre>
+       *
+       * <code>string consumer_id = 10 [json_name = "consumerId"];</code>
+       * @param value The consumerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConsumerId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        consumerId_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * consumer_id is the ID of the consumer the finality provider is operating on.
+       * If it's missing / empty, it's assumed the finality provider is operating in the Babylon chain.
+       * </pre>
+       *
+       * <code>string consumer_id = 10 [json_name = "consumerId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConsumerId() {
+        consumerId_ = getDefaultInstance().getConsumerId();
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * consumer_id is the ID of the consumer the finality provider is operating on.
+       * If it's missing / empty, it's assumed the finality provider is operating in the Babylon chain.
+       * </pre>
+       *
+       * <code>string consumer_id = 10 [json_name = "consumerId"];</code>
+       * @param value The bytes for consumerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConsumerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        consumerId_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1979,6 +2286,17 @@ public final class BtcstakingProto {
      * @return The jailed.
      */
     boolean getJailed();
+
+    /**
+     * <pre>
+     * highest_voted_height is the highest height for which the
+     * finality provider has voted
+     * </pre>
+     *
+     * <code>uint32 highest_voted_height = 7 [json_name = "highestVotedHeight"];</code>
+     * @return The highestVotedHeight.
+     */
+    int getHighestVotedHeight();
   }
   /**
    * <pre>
@@ -2115,6 +2433,22 @@ public final class BtcstakingProto {
       return jailed_;
     }
 
+    public static final int HIGHEST_VOTED_HEIGHT_FIELD_NUMBER = 7;
+    private int highestVotedHeight_ = 0;
+    /**
+     * <pre>
+     * highest_voted_height is the highest height for which the
+     * finality provider has voted
+     * </pre>
+     *
+     * <code>uint32 highest_voted_height = 7 [json_name = "highestVotedHeight"];</code>
+     * @return The highestVotedHeight.
+     */
+    @java.lang.Override
+    public int getHighestVotedHeight() {
+      return highestVotedHeight_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2146,6 +2480,9 @@ public final class BtcstakingProto {
       }
       if (jailed_ != false) {
         output.writeBool(6, jailed_);
+      }
+      if (highestVotedHeight_ != 0) {
+        output.writeUInt32(7, highestVotedHeight_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -2180,6 +2517,10 @@ public final class BtcstakingProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, jailed_);
       }
+      if (highestVotedHeight_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(7, highestVotedHeight_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2207,6 +2548,8 @@ public final class BtcstakingProto {
           != other.getSlashedBtcHeight()) return false;
       if (getJailed()
           != other.getJailed()) return false;
+      if (getHighestVotedHeight()
+          != other.getHighestVotedHeight()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2234,6 +2577,8 @@ public final class BtcstakingProto {
       hash = (37 * hash) + JAILED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getJailed());
+      hash = (37 * hash) + HIGHEST_VOTED_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getHighestVotedHeight();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2375,6 +2720,7 @@ public final class BtcstakingProto {
         slashedBabylonHeight_ = 0L;
         slashedBtcHeight_ = 0;
         jailed_ = false;
+        highestVotedHeight_ = 0;
         return this;
       }
 
@@ -2425,6 +2771,9 @@ public final class BtcstakingProto {
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.jailed_ = jailed_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.highestVotedHeight_ = highestVotedHeight_;
         }
       }
 
@@ -2490,6 +2839,9 @@ public final class BtcstakingProto {
         if (other.getJailed() != false) {
           setJailed(other.getJailed());
         }
+        if (other.getHighestVotedHeight() != 0) {
+          setHighestVotedHeight(other.getHighestVotedHeight());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -2546,6 +2898,11 @@ public final class BtcstakingProto {
                 bitField0_ |= 0x00000020;
                 break;
               } // case 48
+              case 56: {
+                highestVotedHeight_ = input.readUInt32();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2838,6 +3195,53 @@ public final class BtcstakingProto {
       public Builder clearJailed() {
         bitField0_ = (bitField0_ & ~0x00000020);
         jailed_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int highestVotedHeight_ ;
+      /**
+       * <pre>
+       * highest_voted_height is the highest height for which the
+       * finality provider has voted
+       * </pre>
+       *
+       * <code>uint32 highest_voted_height = 7 [json_name = "highestVotedHeight"];</code>
+       * @return The highestVotedHeight.
+       */
+      @java.lang.Override
+      public int getHighestVotedHeight() {
+        return highestVotedHeight_;
+      }
+      /**
+       * <pre>
+       * highest_voted_height is the highest height for which the
+       * finality provider has voted
+       * </pre>
+       *
+       * <code>uint32 highest_voted_height = 7 [json_name = "highestVotedHeight"];</code>
+       * @param value The highestVotedHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHighestVotedHeight(int value) {
+
+        highestVotedHeight_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * highest_voted_height is the highest height for which the
+       * finality provider has voted
+       * </pre>
+       *
+       * <code>uint32 highest_voted_height = 7 [json_name = "highestVotedHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHighestVotedHeight() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        highestVotedHeight_ = 0;
         onChanged();
         return this;
       }
@@ -3193,6 +3597,17 @@ public final class BtcstakingProto {
      * @return The paramsVersion.
      */
     int getParamsVersion();
+
+    /**
+     * <pre>
+     * btc_tip_height is the height of the BTC light client tip at the time of
+     * the delegation creation
+     * </pre>
+     *
+     * <code>uint32 btc_tip_height = 17 [json_name = "btcTipHeight"];</code>
+     * @return The btcTipHeight.
+     */
+    int getBtcTipHeight();
   }
   /**
    * <pre>
@@ -3657,6 +4072,22 @@ public final class BtcstakingProto {
       return paramsVersion_;
     }
 
+    public static final int BTC_TIP_HEIGHT_FIELD_NUMBER = 17;
+    private int btcTipHeight_ = 0;
+    /**
+     * <pre>
+     * btc_tip_height is the height of the BTC light client tip at the time of
+     * the delegation creation
+     * </pre>
+     *
+     * <code>uint32 btc_tip_height = 17 [json_name = "btcTipHeight"];</code>
+     * @return The btcTipHeight.
+     */
+    @java.lang.Override
+    public int getBtcTipHeight() {
+      return btcTipHeight_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3718,6 +4149,9 @@ public final class BtcstakingProto {
       }
       if (paramsVersion_ != 0) {
         output.writeUInt32(16, paramsVersion_);
+      }
+      if (btcTipHeight_ != 0) {
+        output.writeUInt32(17, btcTipHeight_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3796,6 +4230,10 @@ public final class BtcstakingProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(16, paramsVersion_);
       }
+      if (btcTipHeight_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(17, btcTipHeight_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3849,6 +4287,8 @@ public final class BtcstakingProto {
       }
       if (getParamsVersion()
           != other.getParamsVersion()) return false;
+      if (getBtcTipHeight()
+          != other.getBtcTipHeight()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3901,6 +4341,8 @@ public final class BtcstakingProto {
       }
       hash = (37 * hash) + PARAMS_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getParamsVersion();
+      hash = (37 * hash) + BTC_TIP_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getBtcTipHeight();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4066,6 +4508,7 @@ public final class BtcstakingProto {
           btcUndelegationBuilder_ = null;
         }
         paramsVersion_ = 0;
+        btcTipHeight_ = 0;
         return this;
       }
 
@@ -4162,6 +4605,9 @@ public final class BtcstakingProto {
         }
         if (((from_bitField0_ & 0x00008000) != 0)) {
           result.paramsVersion_ = paramsVersion_;
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.btcTipHeight_ = btcTipHeight_;
         }
       }
 
@@ -4289,6 +4735,9 @@ public final class BtcstakingProto {
         if (other.getParamsVersion() != 0) {
           setParamsVersion(other.getParamsVersion());
         }
+        if (other.getBtcTipHeight() != 0) {
+          setBtcTipHeight(other.getBtcTipHeight());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -4408,6 +4857,11 @@ public final class BtcstakingProto {
                 bitField0_ |= 0x00008000;
                 break;
               } // case 128
+              case 136: {
+                btcTipHeight_ = input.readUInt32();
+                bitField0_ |= 0x00010000;
+                break;
+              } // case 136
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5812,6 +6266,53 @@ public final class BtcstakingProto {
       public Builder clearParamsVersion() {
         bitField0_ = (bitField0_ & ~0x00008000);
         paramsVersion_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int btcTipHeight_ ;
+      /**
+       * <pre>
+       * btc_tip_height is the height of the BTC light client tip at the time of
+       * the delegation creation
+       * </pre>
+       *
+       * <code>uint32 btc_tip_height = 17 [json_name = "btcTipHeight"];</code>
+       * @return The btcTipHeight.
+       */
+      @java.lang.Override
+      public int getBtcTipHeight() {
+        return btcTipHeight_;
+      }
+      /**
+       * <pre>
+       * btc_tip_height is the height of the BTC light client tip at the time of
+       * the delegation creation
+       * </pre>
+       *
+       * <code>uint32 btc_tip_height = 17 [json_name = "btcTipHeight"];</code>
+       * @param value The btcTipHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBtcTipHeight(int value) {
+
+        btcTipHeight_ = value;
+        bitField0_ |= 0x00010000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * btc_tip_height is the height of the BTC light client tip at the time of
+       * the delegation creation
+       * </pre>
+       *
+       * <code>uint32 btc_tip_height = 17 [json_name = "btcTipHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBtcTipHeight() {
+        bitField0_ = (bitField0_ & ~0x00010000);
+        btcTipHeight_ = 0;
         onChanged();
         return this;
       }
@@ -12791,7 +13292,7 @@ public final class BtcstakingProto {
       "proto\032\031cosmos_proto/cosmos.proto\032$cosmos" +
       "/staking/v1beta1/staking.proto\032\037babylon/" +
       "btcstaking/v1/pop.proto\032,babylon/btcchec" +
-      "kpoint/v1/btccheckpoint.proto\"\342\003\n\020Finali" +
+      "kpoint/v1/btccheckpoint.proto\"\265\004\n\020Finali" +
       "tyProvider\022,\n\004addr\030\001 \001(\tB\030\322\264-\024cosmos.Add" +
       "ressStringR\004addr\022E\n\013description\030\002 \001(\0132#." +
       "cosmos.staking.v1beta1.DescriptionR\013desc" +
@@ -12803,80 +13304,85 @@ public final class BtcstakingProto {
       "g.v1.ProofOfPossessionBTCR\003pop\0224\n\026slashe" +
       "d_babylon_height\030\006 \001(\004R\024slashedBabylonHe" +
       "ight\022,\n\022slashed_btc_height\030\007 \001(\rR\020slashe" +
-      "dBtcHeight\022\026\n\006jailed\030\010 \001(\010R\006jailed\"\242\002\n\030F" +
-      "inalityProviderWithMeta\022O\n\006btc_pk\030\001 \001(\014B" +
-      "8\332\336\0374github.com/babylonlabs-io/babylon/t" +
-      "ypes.BIP340PubKeyR\005btcPk\022\026\n\006height\030\002 \001(\004" +
-      "R\006height\022!\n\014voting_power\030\003 \001(\004R\013votingPo" +
-      "wer\0224\n\026slashed_babylon_height\030\004 \001(\004R\024sla" +
-      "shedBabylonHeight\022,\n\022slashed_btc_height\030" +
-      "\005 \001(\rR\020slashedBtcHeight\022\026\n\006jailed\030\006 \001(\010R" +
-      "\006jailed\"\226\007\n\rBTCDelegation\0229\n\013staker_addr" +
-      "\030\001 \001(\tB\030\322\264-\024cosmos.AddressStringR\nstaker" +
-      "Addr\022O\n\006btc_pk\030\002 \001(\014B8\332\336\0374github.com/bab" +
-      "ylonlabs-io/babylon/types.BIP340PubKeyR\005" +
-      "btcPk\022=\n\003pop\030\003 \001(\0132+.babylon.btcstaking." +
-      "v1.ProofOfPossessionBTCR\003pop\022]\n\016fp_btc_p" +
-      "k_list\030\004 \003(\014B8\332\336\0374github.com/babylonlabs" +
-      "-io/babylon/types.BIP340PubKeyR\013fpBtcPkL" +
-      "ist\022!\n\014staking_time\030\005 \001(\rR\013stakingTime\022!" +
-      "\n\014start_height\030\006 \001(\rR\013startHeight\022\035\n\nend" +
-      "_height\030\007 \001(\rR\tendHeight\022\033\n\ttotal_sat\030\010 " +
-      "\001(\004R\010totalSat\022\035\n\nstaking_tx\030\t \001(\014R\tstaki" +
-      "ngTx\022,\n\022staking_output_idx\030\n \001(\rR\020stakin" +
-      "gOutputIdx\0222\n\013slashing_tx\030\013 \001(\014B\021\332\336\037\rBTC" +
-      "SlashingTxR\nslashingTx\022`\n\rdelegator_sig\030" +
-      "\014 \001(\014B;\332\336\0377github.com/babylonlabs-io/bab" +
-      "ylon/types.BIP340SignatureR\014delegatorSig" +
-      "\022U\n\rcovenant_sigs\030\r \003(\01320.babylon.btcsta" +
-      "king.v1.CovenantAdaptorSignaturesR\014coven" +
-      "antSigs\022%\n\016unbonding_time\030\016 \001(\rR\runbondi" +
-      "ngTime\022Q\n\020btc_undelegation\030\017 \001(\0132&.babyl" +
-      "on.btcstaking.v1.BTCUndelegationR\017btcUnd" +
-      "elegation\022%\n\016params_version\030\020 \001(\rR\rparam" +
-      "sVersion\">\n\026DelegatorUnbondingInfo\022$\n\016sp" +
-      "end_stake_tx\030\001 \001(\014R\014spendStakeTx\"\221\004\n\017BTC" +
-      "Undelegation\022!\n\014unbonding_tx\030\001 \001(\014R\013unbo" +
-      "ndingTx\0222\n\013slashing_tx\030\002 \001(\014B\021\332\336\037\rBTCSla" +
-      "shingTxR\nslashingTx\022q\n\026delegator_slashin" +
-      "g_sig\030\003 \001(\014B;\332\336\0377github.com/babylonlabs-" +
-      "io/babylon/types.BIP340SignatureR\024delega" +
-      "torSlashingSig\022f\n\026covenant_slashing_sigs" +
-      "\030\004 \003(\01320.babylon.btcstaking.v1.CovenantA" +
-      "daptorSignaturesR\024covenantSlashingSigs\022c" +
-      "\n\033covenant_unbonding_sig_list\030\005 \003(\0132$.ba" +
-      "bylon.btcstaking.v1.SignatureInfoR\030coven" +
-      "antUnbondingSigList\022g\n\030delegator_unbondi" +
-      "ng_info\030\006 \001(\0132-.babylon.btcstaking.v1.De" +
-      "legatorUnbondingInfoR\026delegatorUnbonding" +
-      "Info\"S\n\027BTCDelegatorDelegations\0228\n\004dels\030" +
-      "\001 \003(\0132$.babylon.btcstaking.v1.BTCDelegat" +
-      "ionR\004dels\"N\n\033BTCDelegatorDelegationIndex" +
-      "\022/\n\024staking_tx_hash_list\030\001 \003(\014R\021stakingT" +
-      "xHashList\"\250\001\n\rSignatureInfo\022H\n\002pk\030\001 \001(\014B" +
-      "8\332\336\0374github.com/babylonlabs-io/babylon/t" +
-      "ypes.BIP340PubKeyR\002pk\022M\n\003sig\030\002 \001(\014B;\332\336\0377" +
-      "github.com/babylonlabs-io/babylon/types." +
-      "BIP340SignatureR\003sig\"\217\001\n\031CovenantAdaptor" +
-      "Signatures\022O\n\006cov_pk\030\001 \001(\014B8\332\336\0374github.c" +
+      "dBtcHeight\022\026\n\006jailed\030\010 \001(\010R\006jailed\0220\n\024hi" +
+      "ghest_voted_height\030\t \001(\rR\022highestVotedHe" +
+      "ight\022\037\n\013consumer_id\030\n \001(\tR\nconsumerId\"\324\002" +
+      "\n\030FinalityProviderWithMeta\022O\n\006btc_pk\030\001 \001" +
+      "(\014B8\332\336\0374github.com/babylonlabs-io/babylo" +
+      "n/types.BIP340PubKeyR\005btcPk\022\026\n\006height\030\002 " +
+      "\001(\004R\006height\022!\n\014voting_power\030\003 \001(\004R\013votin" +
+      "gPower\0224\n\026slashed_babylon_height\030\004 \001(\004R\024" +
+      "slashedBabylonHeight\022,\n\022slashed_btc_heig" +
+      "ht\030\005 \001(\rR\020slashedBtcHeight\022\026\n\006jailed\030\006 \001" +
+      "(\010R\006jailed\0220\n\024highest_voted_height\030\007 \001(\r" +
+      "R\022highestVotedHeight\"\274\007\n\rBTCDelegation\0229" +
+      "\n\013staker_addr\030\001 \001(\tB\030\322\264-\024cosmos.AddressS" +
+      "tringR\nstakerAddr\022O\n\006btc_pk\030\002 \001(\014B8\332\336\0374g" +
+      "ithub.com/babylonlabs-io/babylon/types.B" +
+      "IP340PubKeyR\005btcPk\022=\n\003pop\030\003 \001(\0132+.babylo" +
+      "n.btcstaking.v1.ProofOfPossessionBTCR\003po" +
+      "p\022]\n\016fp_btc_pk_list\030\004 \003(\014B8\332\336\0374github.co" +
+      "m/babylonlabs-io/babylon/types.BIP340Pub" +
+      "KeyR\013fpBtcPkList\022!\n\014staking_time\030\005 \001(\rR\013" +
+      "stakingTime\022!\n\014start_height\030\006 \001(\rR\013start" +
+      "Height\022\035\n\nend_height\030\007 \001(\rR\tendHeight\022\033\n" +
+      "\ttotal_sat\030\010 \001(\004R\010totalSat\022\035\n\nstaking_tx" +
+      "\030\t \001(\014R\tstakingTx\022,\n\022staking_output_idx\030" +
+      "\n \001(\rR\020stakingOutputIdx\0222\n\013slashing_tx\030\013" +
+      " \001(\014B\021\332\336\037\rBTCSlashingTxR\nslashingTx\022`\n\rd" +
+      "elegator_sig\030\014 \001(\014B;\332\336\0377github.com/babyl" +
+      "onlabs-io/babylon/types.BIP340SignatureR" +
+      "\014delegatorSig\022U\n\rcovenant_sigs\030\r \003(\01320.b" +
+      "abylon.btcstaking.v1.CovenantAdaptorSign" +
+      "aturesR\014covenantSigs\022%\n\016unbonding_time\030\016" +
+      " \001(\rR\runbondingTime\022Q\n\020btc_undelegation\030" +
+      "\017 \001(\0132&.babylon.btcstaking.v1.BTCUndeleg" +
+      "ationR\017btcUndelegation\022%\n\016params_version" +
+      "\030\020 \001(\rR\rparamsVersion\022$\n\016btc_tip_height\030" +
+      "\021 \001(\rR\014btcTipHeight\">\n\026DelegatorUnbondin" +
+      "gInfo\022$\n\016spend_stake_tx\030\001 \001(\014R\014spendStak" +
+      "eTx\"\221\004\n\017BTCUndelegation\022!\n\014unbonding_tx\030" +
+      "\001 \001(\014R\013unbondingTx\0222\n\013slashing_tx\030\002 \001(\014B" +
+      "\021\332\336\037\rBTCSlashingTxR\nslashingTx\022q\n\026delega" +
+      "tor_slashing_sig\030\003 \001(\014B;\332\336\0377github.com/b" +
+      "abylonlabs-io/babylon/types.BIP340Signat" +
+      "ureR\024delegatorSlashingSig\022f\n\026covenant_sl" +
+      "ashing_sigs\030\004 \003(\01320.babylon.btcstaking.v" +
+      "1.CovenantAdaptorSignaturesR\024covenantSla" +
+      "shingSigs\022c\n\033covenant_unbonding_sig_list" +
+      "\030\005 \003(\0132$.babylon.btcstaking.v1.Signature" +
+      "InfoR\030covenantUnbondingSigList\022g\n\030delega" +
+      "tor_unbonding_info\030\006 \001(\0132-.babylon.btcst" +
+      "aking.v1.DelegatorUnbondingInfoR\026delegat" +
+      "orUnbondingInfo\"S\n\027BTCDelegatorDelegatio" +
+      "ns\0228\n\004dels\030\001 \003(\0132$.babylon.btcstaking.v1" +
+      ".BTCDelegationR\004dels\"N\n\033BTCDelegatorDele" +
+      "gationIndex\022/\n\024staking_tx_hash_list\030\001 \003(" +
+      "\014R\021stakingTxHashList\"\250\001\n\rSignatureInfo\022H" +
+      "\n\002pk\030\001 \001(\014B8\332\336\0374github.com/babylonlabs-i" +
+      "o/babylon/types.BIP340PubKeyR\002pk\022M\n\003sig\030" +
+      "\002 \001(\014B;\332\336\0377github.com/babylonlabs-io/bab" +
+      "ylon/types.BIP340SignatureR\003sig\"\217\001\n\031Cove" +
+      "nantAdaptorSignatures\022O\n\006cov_pk\030\001 \001(\014B8\332" +
+      "\336\0374github.com/babylonlabs-io/babylon/typ" +
+      "es.BIP340PubKeyR\005covPk\022!\n\014adaptor_sigs\030\002" +
+      " \003(\014R\013adaptorSigs\"\310\001\n\031SelectiveSlashingE" +
+      "vidence\022&\n\017staking_tx_hash\030\001 \001(\tR\rstakin" +
+      "gTxHash\022T\n\tfp_btc_pk\030\002 \001(\014B8\332\336\0374github.c" +
       "om/babylonlabs-io/babylon/types.BIP340Pu" +
-      "bKeyR\005covPk\022!\n\014adaptor_sigs\030\002 \003(\014R\013adapt" +
-      "orSigs\"\310\001\n\031SelectiveSlashingEvidence\022&\n\017" +
-      "staking_tx_hash\030\001 \001(\tR\rstakingTxHash\022T\n\t" +
-      "fp_btc_pk\030\002 \001(\014B8\332\336\0374github.com/babylonl" +
-      "abs-io/babylon/types.BIP340PubKeyR\007fpBtc" +
-      "Pk\022-\n\023recovered_fp_btc_sk\030\003 \001(\014R\020recover" +
-      "edFpBtcSk\"b\n\016InclusionProof\022:\n\003key\030\001 \001(\013" +
-      "2(.babylon.btccheckpoint.v1.TransactionK" +
-      "eyR\003key\022\024\n\005proof\030\002 \001(\014R\005proof*S\n\023BTCDele" +
-      "gationStatus\022\013\n\007PENDING\020\000\022\014\n\010VERIFIED\020\001\022" +
-      "\n\n\006ACTIVE\020\002\022\014\n\010UNBONDED\020\003\022\007\n\003ANY\020\004B\326\001\n\031c" +
-      "om.babylon.btcstaking.v1B\017BtcstakingProt" +
-      "oZ4github.com/babylonlabs-io/babylon/x/b" +
-      "tcstaking/types\242\002\003BBX\252\002\025Babylon.Btcstaki" +
-      "ng.V1\312\002\025Babylon\\Btcstaking\\V1\342\002!Babylon\\" +
-      "Btcstaking\\V1\\GPBMetadata\352\002\027Babylon::Btc" +
-      "staking::V1b\006proto3"
+      "bKeyR\007fpBtcPk\022-\n\023recovered_fp_btc_sk\030\003 \001" +
+      "(\014R\020recoveredFpBtcSk\"b\n\016InclusionProof\022:" +
+      "\n\003key\030\001 \001(\0132(.babylon.btccheckpoint.v1.T" +
+      "ransactionKeyR\003key\022\024\n\005proof\030\002 \001(\014R\005proof" +
+      "*`\n\023BTCDelegationStatus\022\013\n\007PENDING\020\000\022\014\n\010" +
+      "VERIFIED\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010UNBONDED\020\003\022\013\n\007" +
+      "EXPIRED\020\004\022\007\n\003ANY\020\005B\326\001\n\031com.babylon.btcst" +
+      "aking.v1B\017BtcstakingProtoZ4github.com/ba" +
+      "bylonlabs-io/babylon/x/btcstaking/types\242" +
+      "\002\003BBX\252\002\025Babylon.Btcstaking.V1\312\002\025Babylon\\" +
+      "Btcstaking\\V1\342\002!Babylon\\Btcstaking\\V1\\GP" +
+      "BMetadata\352\002\027Babylon::Btcstaking::V1b\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12892,19 +13398,19 @@ public final class BtcstakingProto {
     internal_static_babylon_btcstaking_v1_FinalityProvider_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_FinalityProvider_descriptor,
-        new java.lang.String[] { "Addr", "Description", "Commission", "BtcPk", "Pop", "SlashedBabylonHeight", "SlashedBtcHeight", "Jailed", });
+        new java.lang.String[] { "Addr", "Description", "Commission", "BtcPk", "Pop", "SlashedBabylonHeight", "SlashedBtcHeight", "Jailed", "HighestVotedHeight", "ConsumerId", });
     internal_static_babylon_btcstaking_v1_FinalityProviderWithMeta_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_babylon_btcstaking_v1_FinalityProviderWithMeta_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_FinalityProviderWithMeta_descriptor,
-        new java.lang.String[] { "BtcPk", "Height", "VotingPower", "SlashedBabylonHeight", "SlashedBtcHeight", "Jailed", });
+        new java.lang.String[] { "BtcPk", "Height", "VotingPower", "SlashedBabylonHeight", "SlashedBtcHeight", "Jailed", "HighestVotedHeight", });
     internal_static_babylon_btcstaking_v1_BTCDelegation_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_babylon_btcstaking_v1_BTCDelegation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_BTCDelegation_descriptor,
-        new java.lang.String[] { "StakerAddr", "BtcPk", "Pop", "FpBtcPkList", "StakingTime", "StartHeight", "EndHeight", "TotalSat", "StakingTx", "StakingOutputIdx", "SlashingTx", "DelegatorSig", "CovenantSigs", "UnbondingTime", "BtcUndelegation", "ParamsVersion", });
+        new java.lang.String[] { "StakerAddr", "BtcPk", "Pop", "FpBtcPkList", "StakingTime", "StartHeight", "EndHeight", "TotalSat", "StakingTx", "StakingOutputIdx", "SlashingTx", "DelegatorSig", "CovenantSigs", "UnbondingTime", "BtcUndelegation", "ParamsVersion", "BtcTipHeight", });
     internal_static_babylon_btcstaking_v1_DelegatorUnbondingInfo_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_babylon_btcstaking_v1_DelegatorUnbondingInfo_fieldAccessorTable = new

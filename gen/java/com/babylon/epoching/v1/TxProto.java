@@ -4076,6 +4076,2034 @@ public final class TxProto {
 
   }
 
+  public interface MsgWrappedEditValidatorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.epoching.v1.MsgWrappedEditValidator)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.staking.v1beta1.MsgEditValidator msg = 1 [json_name = "msg"];</code>
+     * @return Whether the msg field is set.
+     */
+    boolean hasMsg();
+    /**
+     * <code>.cosmos.staking.v1beta1.MsgEditValidator msg = 1 [json_name = "msg"];</code>
+     * @return The msg.
+     */
+    com.cosmos.staking.v1beta1.TxProto.MsgEditValidator getMsg();
+    /**
+     * <code>.cosmos.staking.v1beta1.MsgEditValidator msg = 1 [json_name = "msg"];</code>
+     */
+    com.cosmos.staking.v1beta1.TxProto.MsgEditValidatorOrBuilder getMsgOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgWrappedEditValidator defines a message for updating validator description
+   * and commission rate.
+   * </pre>
+   *
+   * Protobuf type {@code babylon.epoching.v1.MsgWrappedEditValidator}
+   */
+  public static final class MsgWrappedEditValidator extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.epoching.v1.MsgWrappedEditValidator)
+      MsgWrappedEditValidatorOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgWrappedEditValidator.newBuilder() to construct.
+    private MsgWrappedEditValidator(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgWrappedEditValidator() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgWrappedEditValidator();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.epoching.v1.TxProto.internal_static_babylon_epoching_v1_MsgWrappedEditValidator_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.epoching.v1.TxProto.internal_static_babylon_epoching_v1_MsgWrappedEditValidator_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator.class, com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator.Builder.class);
+    }
+
+    public static final int MSG_FIELD_NUMBER = 1;
+    private com.cosmos.staking.v1beta1.TxProto.MsgEditValidator msg_;
+    /**
+     * <code>.cosmos.staking.v1beta1.MsgEditValidator msg = 1 [json_name = "msg"];</code>
+     * @return Whether the msg field is set.
+     */
+    @java.lang.Override
+    public boolean hasMsg() {
+      return msg_ != null;
+    }
+    /**
+     * <code>.cosmos.staking.v1beta1.MsgEditValidator msg = 1 [json_name = "msg"];</code>
+     * @return The msg.
+     */
+    @java.lang.Override
+    public com.cosmos.staking.v1beta1.TxProto.MsgEditValidator getMsg() {
+      return msg_ == null ? com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.getDefaultInstance() : msg_;
+    }
+    /**
+     * <code>.cosmos.staking.v1beta1.MsgEditValidator msg = 1 [json_name = "msg"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.staking.v1beta1.TxProto.MsgEditValidatorOrBuilder getMsgOrBuilder() {
+      return msg_ == null ? com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.getDefaultInstance() : msg_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (msg_ != null) {
+        output.writeMessage(1, getMsg());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (msg_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMsg());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator)) {
+        return super.equals(obj);
+      }
+      com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator other = (com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator) obj;
+
+      if (hasMsg() != other.hasMsg()) return false;
+      if (hasMsg()) {
+        if (!getMsg()
+            .equals(other.getMsg())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMsg()) {
+        hash = (37 * hash) + MSG_FIELD_NUMBER;
+        hash = (53 * hash) + getMsg().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgWrappedEditValidator defines a message for updating validator description
+     * and commission rate.
+     * </pre>
+     *
+     * Protobuf type {@code babylon.epoching.v1.MsgWrappedEditValidator}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.epoching.v1.MsgWrappedEditValidator)
+        com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.epoching.v1.TxProto.internal_static_babylon_epoching_v1_MsgWrappedEditValidator_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.epoching.v1.TxProto.internal_static_babylon_epoching_v1_MsgWrappedEditValidator_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator.class, com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator.Builder.class);
+      }
+
+      // Construct using com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        msg_ = null;
+        if (msgBuilder_ != null) {
+          msgBuilder_.dispose();
+          msgBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.epoching.v1.TxProto.internal_static_babylon_epoching_v1_MsgWrappedEditValidator_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator getDefaultInstanceForType() {
+        return com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator build() {
+        com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator buildPartial() {
+        com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator result = new com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.msg_ = msgBuilder_ == null
+              ? msg_
+              : msgBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator) {
+          return mergeFrom((com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator other) {
+        if (other == com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator.getDefaultInstance()) return this;
+        if (other.hasMsg()) {
+          mergeMsg(other.getMsg());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getMsgFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.staking.v1beta1.TxProto.MsgEditValidator msg_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.staking.v1beta1.TxProto.MsgEditValidator, com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.Builder, com.cosmos.staking.v1beta1.TxProto.MsgEditValidatorOrBuilder> msgBuilder_;
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgEditValidator msg = 1 [json_name = "msg"];</code>
+       * @return Whether the msg field is set.
+       */
+      public boolean hasMsg() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgEditValidator msg = 1 [json_name = "msg"];</code>
+       * @return The msg.
+       */
+      public com.cosmos.staking.v1beta1.TxProto.MsgEditValidator getMsg() {
+        if (msgBuilder_ == null) {
+          return msg_ == null ? com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.getDefaultInstance() : msg_;
+        } else {
+          return msgBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgEditValidator msg = 1 [json_name = "msg"];</code>
+       */
+      public Builder setMsg(com.cosmos.staking.v1beta1.TxProto.MsgEditValidator value) {
+        if (msgBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          msg_ = value;
+        } else {
+          msgBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgEditValidator msg = 1 [json_name = "msg"];</code>
+       */
+      public Builder setMsg(
+          com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.Builder builderForValue) {
+        if (msgBuilder_ == null) {
+          msg_ = builderForValue.build();
+        } else {
+          msgBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgEditValidator msg = 1 [json_name = "msg"];</code>
+       */
+      public Builder mergeMsg(com.cosmos.staking.v1beta1.TxProto.MsgEditValidator value) {
+        if (msgBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            msg_ != null &&
+            msg_ != com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.getDefaultInstance()) {
+            getMsgBuilder().mergeFrom(value);
+          } else {
+            msg_ = value;
+          }
+        } else {
+          msgBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgEditValidator msg = 1 [json_name = "msg"];</code>
+       */
+      public Builder clearMsg() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        msg_ = null;
+        if (msgBuilder_ != null) {
+          msgBuilder_.dispose();
+          msgBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgEditValidator msg = 1 [json_name = "msg"];</code>
+       */
+      public com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.Builder getMsgBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getMsgFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgEditValidator msg = 1 [json_name = "msg"];</code>
+       */
+      public com.cosmos.staking.v1beta1.TxProto.MsgEditValidatorOrBuilder getMsgOrBuilder() {
+        if (msgBuilder_ != null) {
+          return msgBuilder_.getMessageOrBuilder();
+        } else {
+          return msg_ == null ?
+              com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.getDefaultInstance() : msg_;
+        }
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgEditValidator msg = 1 [json_name = "msg"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.staking.v1beta1.TxProto.MsgEditValidator, com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.Builder, com.cosmos.staking.v1beta1.TxProto.MsgEditValidatorOrBuilder> 
+          getMsgFieldBuilder() {
+        if (msgBuilder_ == null) {
+          msgBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.staking.v1beta1.TxProto.MsgEditValidator, com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.Builder, com.cosmos.staking.v1beta1.TxProto.MsgEditValidatorOrBuilder>(
+                  getMsg(),
+                  getParentForChildren(),
+                  isClean());
+          msg_ = null;
+        }
+        return msgBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.epoching.v1.MsgWrappedEditValidator)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.epoching.v1.MsgWrappedEditValidator)
+    private static final com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator();
+    }
+
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgWrappedEditValidator>
+        PARSER = new com.google.protobuf.AbstractParser<MsgWrappedEditValidator>() {
+      @java.lang.Override
+      public MsgWrappedEditValidator parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgWrappedEditValidator> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgWrappedEditValidator> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgWrappedEditValidatorResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.epoching.v1.MsgWrappedEditValidatorResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgWrappedEditValidatorResponse is the response to the MsgWrappedEditValidator message.
+   * </pre>
+   *
+   * Protobuf type {@code babylon.epoching.v1.MsgWrappedEditValidatorResponse}
+   */
+  public static final class MsgWrappedEditValidatorResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.epoching.v1.MsgWrappedEditValidatorResponse)
+      MsgWrappedEditValidatorResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgWrappedEditValidatorResponse.newBuilder() to construct.
+    private MsgWrappedEditValidatorResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgWrappedEditValidatorResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgWrappedEditValidatorResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.epoching.v1.TxProto.internal_static_babylon_epoching_v1_MsgWrappedEditValidatorResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.epoching.v1.TxProto.internal_static_babylon_epoching_v1_MsgWrappedEditValidatorResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse.class, com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse)) {
+        return super.equals(obj);
+      }
+      com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse other = (com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgWrappedEditValidatorResponse is the response to the MsgWrappedEditValidator message.
+     * </pre>
+     *
+     * Protobuf type {@code babylon.epoching.v1.MsgWrappedEditValidatorResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.epoching.v1.MsgWrappedEditValidatorResponse)
+        com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.epoching.v1.TxProto.internal_static_babylon_epoching_v1_MsgWrappedEditValidatorResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.epoching.v1.TxProto.internal_static_babylon_epoching_v1_MsgWrappedEditValidatorResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse.class, com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse.Builder.class);
+      }
+
+      // Construct using com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.epoching.v1.TxProto.internal_static_babylon_epoching_v1_MsgWrappedEditValidatorResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse getDefaultInstanceForType() {
+        return com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse build() {
+        com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse buildPartial() {
+        com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse result = new com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse) {
+          return mergeFrom((com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse other) {
+        if (other == com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.epoching.v1.MsgWrappedEditValidatorResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.epoching.v1.MsgWrappedEditValidatorResponse)
+    private static final com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse();
+    }
+
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgWrappedEditValidatorResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgWrappedEditValidatorResponse>() {
+      @java.lang.Override
+      public MsgWrappedEditValidatorResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgWrappedEditValidatorResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgWrappedEditValidatorResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgWrappedStakingUpdateParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.epoching.v1.MsgWrappedStakingUpdateParams)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg = 1 [json_name = "msg"];</code>
+     * @return Whether the msg field is set.
+     */
+    boolean hasMsg();
+    /**
+     * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg = 1 [json_name = "msg"];</code>
+     * @return The msg.
+     */
+    com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams getMsg();
+    /**
+     * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg = 1 [json_name = "msg"];</code>
+     */
+    com.cosmos.staking.v1beta1.TxProto.MsgUpdateParamsOrBuilder getMsgOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgWrappedStakingUpdateParams defines a message for updating x/staking module parameters.
+   * </pre>
+   *
+   * Protobuf type {@code babylon.epoching.v1.MsgWrappedStakingUpdateParams}
+   */
+  public static final class MsgWrappedStakingUpdateParams extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.epoching.v1.MsgWrappedStakingUpdateParams)
+      MsgWrappedStakingUpdateParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgWrappedStakingUpdateParams.newBuilder() to construct.
+    private MsgWrappedStakingUpdateParams(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgWrappedStakingUpdateParams() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgWrappedStakingUpdateParams();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.epoching.v1.TxProto.internal_static_babylon_epoching_v1_MsgWrappedStakingUpdateParams_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.epoching.v1.TxProto.internal_static_babylon_epoching_v1_MsgWrappedStakingUpdateParams_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams.class, com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams.Builder.class);
+    }
+
+    public static final int MSG_FIELD_NUMBER = 1;
+    private com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams msg_;
+    /**
+     * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg = 1 [json_name = "msg"];</code>
+     * @return Whether the msg field is set.
+     */
+    @java.lang.Override
+    public boolean hasMsg() {
+      return msg_ != null;
+    }
+    /**
+     * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg = 1 [json_name = "msg"];</code>
+     * @return The msg.
+     */
+    @java.lang.Override
+    public com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams getMsg() {
+      return msg_ == null ? com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.getDefaultInstance() : msg_;
+    }
+    /**
+     * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg = 1 [json_name = "msg"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.staking.v1beta1.TxProto.MsgUpdateParamsOrBuilder getMsgOrBuilder() {
+      return msg_ == null ? com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.getDefaultInstance() : msg_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (msg_ != null) {
+        output.writeMessage(1, getMsg());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (msg_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMsg());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams)) {
+        return super.equals(obj);
+      }
+      com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams other = (com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams) obj;
+
+      if (hasMsg() != other.hasMsg()) return false;
+      if (hasMsg()) {
+        if (!getMsg()
+            .equals(other.getMsg())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMsg()) {
+        hash = (37 * hash) + MSG_FIELD_NUMBER;
+        hash = (53 * hash) + getMsg().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgWrappedStakingUpdateParams defines a message for updating x/staking module parameters.
+     * </pre>
+     *
+     * Protobuf type {@code babylon.epoching.v1.MsgWrappedStakingUpdateParams}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.epoching.v1.MsgWrappedStakingUpdateParams)
+        com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.epoching.v1.TxProto.internal_static_babylon_epoching_v1_MsgWrappedStakingUpdateParams_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.epoching.v1.TxProto.internal_static_babylon_epoching_v1_MsgWrappedStakingUpdateParams_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams.class, com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams.Builder.class);
+      }
+
+      // Construct using com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        msg_ = null;
+        if (msgBuilder_ != null) {
+          msgBuilder_.dispose();
+          msgBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.epoching.v1.TxProto.internal_static_babylon_epoching_v1_MsgWrappedStakingUpdateParams_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams getDefaultInstanceForType() {
+        return com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams build() {
+        com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams buildPartial() {
+        com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams result = new com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.msg_ = msgBuilder_ == null
+              ? msg_
+              : msgBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams) {
+          return mergeFrom((com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams other) {
+        if (other == com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams.getDefaultInstance()) return this;
+        if (other.hasMsg()) {
+          mergeMsg(other.getMsg());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getMsgFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams msg_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams, com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.Builder, com.cosmos.staking.v1beta1.TxProto.MsgUpdateParamsOrBuilder> msgBuilder_;
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg = 1 [json_name = "msg"];</code>
+       * @return Whether the msg field is set.
+       */
+      public boolean hasMsg() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg = 1 [json_name = "msg"];</code>
+       * @return The msg.
+       */
+      public com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams getMsg() {
+        if (msgBuilder_ == null) {
+          return msg_ == null ? com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.getDefaultInstance() : msg_;
+        } else {
+          return msgBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg = 1 [json_name = "msg"];</code>
+       */
+      public Builder setMsg(com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams value) {
+        if (msgBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          msg_ = value;
+        } else {
+          msgBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg = 1 [json_name = "msg"];</code>
+       */
+      public Builder setMsg(
+          com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.Builder builderForValue) {
+        if (msgBuilder_ == null) {
+          msg_ = builderForValue.build();
+        } else {
+          msgBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg = 1 [json_name = "msg"];</code>
+       */
+      public Builder mergeMsg(com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams value) {
+        if (msgBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            msg_ != null &&
+            msg_ != com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.getDefaultInstance()) {
+            getMsgBuilder().mergeFrom(value);
+          } else {
+            msg_ = value;
+          }
+        } else {
+          msgBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg = 1 [json_name = "msg"];</code>
+       */
+      public Builder clearMsg() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        msg_ = null;
+        if (msgBuilder_ != null) {
+          msgBuilder_.dispose();
+          msgBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg = 1 [json_name = "msg"];</code>
+       */
+      public com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.Builder getMsgBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getMsgFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg = 1 [json_name = "msg"];</code>
+       */
+      public com.cosmos.staking.v1beta1.TxProto.MsgUpdateParamsOrBuilder getMsgOrBuilder() {
+        if (msgBuilder_ != null) {
+          return msgBuilder_.getMessageOrBuilder();
+        } else {
+          return msg_ == null ?
+              com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.getDefaultInstance() : msg_;
+        }
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg = 1 [json_name = "msg"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams, com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.Builder, com.cosmos.staking.v1beta1.TxProto.MsgUpdateParamsOrBuilder> 
+          getMsgFieldBuilder() {
+        if (msgBuilder_ == null) {
+          msgBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams, com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.Builder, com.cosmos.staking.v1beta1.TxProto.MsgUpdateParamsOrBuilder>(
+                  getMsg(),
+                  getParentForChildren(),
+                  isClean());
+          msg_ = null;
+        }
+        return msgBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.epoching.v1.MsgWrappedStakingUpdateParams)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.epoching.v1.MsgWrappedStakingUpdateParams)
+    private static final com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams();
+    }
+
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgWrappedStakingUpdateParams>
+        PARSER = new com.google.protobuf.AbstractParser<MsgWrappedStakingUpdateParams>() {
+      @java.lang.Override
+      public MsgWrappedStakingUpdateParams parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgWrappedStakingUpdateParams> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgWrappedStakingUpdateParams> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgWrappedStakingUpdateParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.epoching.v1.MsgWrappedStakingUpdateParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgWrappedStakingUpdateParamsResponse is the response to the MsgWrappedStakingUpdateParams message.
+   * </pre>
+   *
+   * Protobuf type {@code babylon.epoching.v1.MsgWrappedStakingUpdateParamsResponse}
+   */
+  public static final class MsgWrappedStakingUpdateParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.epoching.v1.MsgWrappedStakingUpdateParamsResponse)
+      MsgWrappedStakingUpdateParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgWrappedStakingUpdateParamsResponse.newBuilder() to construct.
+    private MsgWrappedStakingUpdateParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgWrappedStakingUpdateParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgWrappedStakingUpdateParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.epoching.v1.TxProto.internal_static_babylon_epoching_v1_MsgWrappedStakingUpdateParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.epoching.v1.TxProto.internal_static_babylon_epoching_v1_MsgWrappedStakingUpdateParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse.class, com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse other = (com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgWrappedStakingUpdateParamsResponse is the response to the MsgWrappedStakingUpdateParams message.
+     * </pre>
+     *
+     * Protobuf type {@code babylon.epoching.v1.MsgWrappedStakingUpdateParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.epoching.v1.MsgWrappedStakingUpdateParamsResponse)
+        com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.epoching.v1.TxProto.internal_static_babylon_epoching_v1_MsgWrappedStakingUpdateParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.epoching.v1.TxProto.internal_static_babylon_epoching_v1_MsgWrappedStakingUpdateParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse.class, com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse.Builder.class);
+      }
+
+      // Construct using com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.epoching.v1.TxProto.internal_static_babylon_epoching_v1_MsgWrappedStakingUpdateParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse getDefaultInstanceForType() {
+        return com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse build() {
+        com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse buildPartial() {
+        com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse result = new com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse) {
+          return mergeFrom((com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse other) {
+        if (other == com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.epoching.v1.MsgWrappedStakingUpdateParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.epoching.v1.MsgWrappedStakingUpdateParamsResponse)
+    private static final com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse();
+    }
+
+    public static com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgWrappedStakingUpdateParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgWrappedStakingUpdateParamsResponse>() {
+      @java.lang.Override
+      public MsgWrappedStakingUpdateParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgWrappedStakingUpdateParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgWrappedStakingUpdateParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface MsgUpdateParamsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:babylon.epoching.v1.MsgUpdateParams)
       com.google.protobuf.MessageOrBuilder {
@@ -5431,6 +7459,26 @@ public final class TxProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_babylon_epoching_v1_MsgWrappedCancelUnbondingDelegationResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_epoching_v1_MsgWrappedEditValidator_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_epoching_v1_MsgWrappedEditValidator_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_epoching_v1_MsgWrappedEditValidatorResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_epoching_v1_MsgWrappedEditValidatorResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_epoching_v1_MsgWrappedStakingUpdateParams_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_epoching_v1_MsgWrappedStakingUpdateParams_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_epoching_v1_MsgWrappedStakingUpdateParamsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_epoching_v1_MsgWrappedStakingUpdateParamsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_babylon_epoching_v1_MsgUpdateParams_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -5468,32 +7516,46 @@ public final class TxProto {
       "\030\001 \001(\01324.cosmos.staking.v1beta1.MsgCance" +
       "lUnbondingDelegationR\003msg:\020\210\240\037\000\350\240\037\000\202\347\260*\003" +
       "msg\"-\n+MsgWrappedCancelUnbondingDelegati" +
-      "onResponse\"\224\001\n\017MsgUpdateParams\0226\n\tauthor" +
-      "ity\030\001 \001(\tB\030\322\264-\024cosmos.AddressStringR\taut" +
-      "hority\0229\n\006params\030\002 \001(\0132\033.babylon.epochin" +
-      "g.v1.ParamsB\004\310\336\037\000R\006params:\016\202\347\260*\tauthorit" +
-      "y\"\031\n\027MsgUpdateParamsResponse2\364\004\n\003Msg\022k\n\017" +
-      "WrappedDelegate\022\'.babylon.epoching.v1.Ms" +
-      "gWrappedDelegate\032/.babylon.epoching.v1.M" +
-      "sgWrappedDelegateResponse\022q\n\021WrappedUnde" +
-      "legate\022).babylon.epoching.v1.MsgWrappedU" +
-      "ndelegate\0321.babylon.epoching.v1.MsgWrapp" +
-      "edUndelegateResponse\022\200\001\n\026WrappedBeginRed" +
-      "elegate\022..babylon.epoching.v1.MsgWrapped" +
-      "BeginRedelegate\0326.babylon.epoching.v1.Ms" +
-      "gWrappedBeginRedelegateResponse\022\236\001\n Wrap" +
-      "pedCancelUnbondingDelegation\0228.babylon.e" +
-      "poching.v1.MsgWrappedCancelUnbondingDele" +
-      "gation\032@.babylon.epoching.v1.MsgWrappedC" +
-      "ancelUnbondingDelegationResponse\022b\n\014Upda" +
-      "teParams\022$.babylon.epoching.v1.MsgUpdate" +
-      "Params\032,.babylon.epoching.v1.MsgUpdatePa" +
-      "ramsResponse\032\005\200\347\260*\001B\302\001\n\027com.babylon.epoc" +
-      "hing.v1B\007TxProtoZ2github.com/babylonlabs" +
-      "-io/babylon/x/epoching/types\242\002\003BEX\252\002\023Bab" +
-      "ylon.Epoching.V1\312\002\023Babylon\\Epoching\\V1\342\002" +
-      "\037Babylon\\Epoching\\V1\\GPBMetadata\352\002\025Babyl" +
-      "on::Epoching::V1b\006proto3"
+      "onResponse\"g\n\027MsgWrappedEditValidator\022:\n" +
+      "\003msg\030\001 \001(\0132(.cosmos.staking.v1beta1.MsgE" +
+      "ditValidatorR\003msg:\020\210\240\037\000\350\240\037\000\202\347\260*\003msg\"!\n\037M" +
+      "sgWrappedEditValidatorResponse\"l\n\035MsgWra" +
+      "ppedStakingUpdateParams\0229\n\003msg\030\001 \001(\0132\'.c" +
+      "osmos.staking.v1beta1.MsgUpdateParamsR\003m" +
+      "sg:\020\210\240\037\000\350\240\037\000\202\347\260*\003msg\"\'\n%MsgWrappedStakin" +
+      "gUpdateParamsResponse\"\224\001\n\017MsgUpdateParam" +
+      "s\0226\n\tauthority\030\001 \001(\tB\030\322\264-\024cosmos.Address" +
+      "StringR\tauthority\0229\n\006params\030\002 \001(\0132\033.baby" +
+      "lon.epoching.v1.ParamsB\004\310\336\037\000R\006params:\016\202\347" +
+      "\260*\tauthority\"\031\n\027MsgUpdateParamsResponse2" +
+      "\377\006\n\003Msg\022k\n\017WrappedDelegate\022\'.babylon.epo" +
+      "ching.v1.MsgWrappedDelegate\032/.babylon.ep" +
+      "oching.v1.MsgWrappedDelegateResponse\022q\n\021" +
+      "WrappedUndelegate\022).babylon.epoching.v1." +
+      "MsgWrappedUndelegate\0321.babylon.epoching." +
+      "v1.MsgWrappedUndelegateResponse\022\200\001\n\026Wrap" +
+      "pedBeginRedelegate\022..babylon.epoching.v1" +
+      ".MsgWrappedBeginRedelegate\0326.babylon.epo" +
+      "ching.v1.MsgWrappedBeginRedelegateRespon" +
+      "se\022\236\001\n WrappedCancelUnbondingDelegation\022" +
+      "8.babylon.epoching.v1.MsgWrappedCancelUn" +
+      "bondingDelegation\032@.babylon.epoching.v1." +
+      "MsgWrappedCancelUnbondingDelegationRespo" +
+      "nse\022z\n\024WrappedEditValidator\022,.babylon.ep" +
+      "oching.v1.MsgWrappedEditValidator\0324.baby" +
+      "lon.epoching.v1.MsgWrappedEditValidatorR" +
+      "esponse\022\214\001\n\032WrappedStakingUpdateParams\0222" +
+      ".babylon.epoching.v1.MsgWrappedStakingUp" +
+      "dateParams\032:.babylon.epoching.v1.MsgWrap" +
+      "pedStakingUpdateParamsResponse\022b\n\014Update" +
+      "Params\022$.babylon.epoching.v1.MsgUpdatePa" +
+      "rams\032,.babylon.epoching.v1.MsgUpdatePara" +
+      "msResponse\032\005\200\347\260*\001B\302\001\n\027com.babylon.epochi" +
+      "ng.v1B\007TxProtoZ2github.com/babylonlabs-i" +
+      "o/babylon/x/epoching/types\242\002\003BEX\252\002\023Babyl" +
+      "on.Epoching.V1\312\002\023Babylon\\Epoching\\V1\342\002\037B" +
+      "abylon\\Epoching\\V1\\GPBMetadata\352\002\025Babylon" +
+      "::Epoching::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5552,14 +7614,38 @@ public final class TxProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_epoching_v1_MsgWrappedCancelUnbondingDelegationResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_babylon_epoching_v1_MsgUpdateParams_descriptor =
+    internal_static_babylon_epoching_v1_MsgWrappedEditValidator_descriptor =
       getDescriptor().getMessageTypes().get(8);
+    internal_static_babylon_epoching_v1_MsgWrappedEditValidator_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_epoching_v1_MsgWrappedEditValidator_descriptor,
+        new java.lang.String[] { "Msg", });
+    internal_static_babylon_epoching_v1_MsgWrappedEditValidatorResponse_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_babylon_epoching_v1_MsgWrappedEditValidatorResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_epoching_v1_MsgWrappedEditValidatorResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_babylon_epoching_v1_MsgWrappedStakingUpdateParams_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_babylon_epoching_v1_MsgWrappedStakingUpdateParams_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_epoching_v1_MsgWrappedStakingUpdateParams_descriptor,
+        new java.lang.String[] { "Msg", });
+    internal_static_babylon_epoching_v1_MsgWrappedStakingUpdateParamsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_babylon_epoching_v1_MsgWrappedStakingUpdateParamsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_epoching_v1_MsgWrappedStakingUpdateParamsResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_babylon_epoching_v1_MsgUpdateParams_descriptor =
+      getDescriptor().getMessageTypes().get(12);
     internal_static_babylon_epoching_v1_MsgUpdateParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_epoching_v1_MsgUpdateParams_descriptor,
         new java.lang.String[] { "Authority", "Params", });
     internal_static_babylon_epoching_v1_MsgUpdateParamsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_babylon_epoching_v1_MsgUpdateParamsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_epoching_v1_MsgUpdateParamsResponse_descriptor,

@@ -5542,6 +5542,3061 @@ public final class TxProto {
 
   }
 
+  public interface MsgEquivocationEvidenceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.finality.v1.MsgEquivocationEvidence)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The signer.
+     */
+    java.lang.String getSigner();
+    /**
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The bytes for signer.
+     */
+    com.google.protobuf.ByteString
+        getSignerBytes();
+
+    /**
+     * <pre>
+     * fp_btc_pk is the BTC PK of the finality provider that casts this vote
+     * </pre>
+     *
+     * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+     * @return The fpBtcPk.
+     */
+    com.google.protobuf.ByteString getFpBtcPk();
+
+    /**
+     * <pre>
+     * block_height is the height of the conflicting blocks
+     * </pre>
+     *
+     * <code>uint64 block_height = 3 [json_name = "blockHeight"];</code>
+     * @return The blockHeight.
+     */
+    long getBlockHeight();
+
+    /**
+     * <pre>
+     * pub_rand is the public randomness the finality provider has committed to
+     * </pre>
+     *
+     * <code>bytes pub_rand = 4 [json_name = "pubRand", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrPubRand"];</code>
+     * @return The pubRand.
+     */
+    com.google.protobuf.ByteString getPubRand();
+
+    /**
+     * <pre>
+     * canonical_app_hash is the AppHash of the canonical block
+     * </pre>
+     *
+     * <code>bytes canonical_app_hash = 5 [json_name = "canonicalAppHash"];</code>
+     * @return The canonicalAppHash.
+     */
+    com.google.protobuf.ByteString getCanonicalAppHash();
+
+    /**
+     * <pre>
+     * fork_app_hash is the AppHash of the fork block
+     * </pre>
+     *
+     * <code>bytes fork_app_hash = 6 [json_name = "forkAppHash"];</code>
+     * @return The forkAppHash.
+     */
+    com.google.protobuf.ByteString getForkAppHash();
+
+    /**
+     * <pre>
+     * canonical_finality_sig is the finality signature to the canonical block
+     * where finality signature is an EOTS signature, i.e.,
+     * the `s` in a Schnorr signature `(r, s)`
+     * `r` is the public randomness that is already committed by the finality provider
+     * </pre>
+     *
+     * <code>bytes canonical_finality_sig = 7 [json_name = "canonicalFinalitySig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrEOTSSig"];</code>
+     * @return The canonicalFinalitySig.
+     */
+    com.google.protobuf.ByteString getCanonicalFinalitySig();
+
+    /**
+     * <pre>
+     * fork_finality_sig is the finality signature to the fork block
+     * where finality signature is an EOTS signature
+     * </pre>
+     *
+     * <code>bytes fork_finality_sig = 8 [json_name = "forkFinalitySig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrEOTSSig"];</code>
+     * @return The forkFinalitySig.
+     */
+    com.google.protobuf.ByteString getForkFinalitySig();
+  }
+  /**
+   * <pre>
+   * MsgEquivocationEvidence is the message for handling evidence of equivocation
+   * </pre>
+   *
+   * Protobuf type {@code babylon.finality.v1.MsgEquivocationEvidence}
+   */
+  public static final class MsgEquivocationEvidence extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.finality.v1.MsgEquivocationEvidence)
+      MsgEquivocationEvidenceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgEquivocationEvidence.newBuilder() to construct.
+    private MsgEquivocationEvidence(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgEquivocationEvidence() {
+      signer_ = "";
+      fpBtcPk_ = com.google.protobuf.ByteString.EMPTY;
+      pubRand_ = com.google.protobuf.ByteString.EMPTY;
+      canonicalAppHash_ = com.google.protobuf.ByteString.EMPTY;
+      forkAppHash_ = com.google.protobuf.ByteString.EMPTY;
+      canonicalFinalitySig_ = com.google.protobuf.ByteString.EMPTY;
+      forkFinalitySig_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgEquivocationEvidence();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.finality.v1.TxProto.internal_static_babylon_finality_v1_MsgEquivocationEvidence_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.finality.v1.TxProto.internal_static_babylon_finality_v1_MsgEquivocationEvidence_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.finality.v1.TxProto.MsgEquivocationEvidence.class, com.babylon.finality.v1.TxProto.MsgEquivocationEvidence.Builder.class);
+    }
+
+    public static final int SIGNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object signer_ = "";
+    /**
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The signer.
+     */
+    @java.lang.Override
+    public java.lang.String getSigner() {
+      java.lang.Object ref = signer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        signer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The bytes for signer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSignerBytes() {
+      java.lang.Object ref = signer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        signer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FP_BTC_PK_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString fpBtcPk_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * fp_btc_pk is the BTC PK of the finality provider that casts this vote
+     * </pre>
+     *
+     * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+     * @return The fpBtcPk.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getFpBtcPk() {
+      return fpBtcPk_;
+    }
+
+    public static final int BLOCK_HEIGHT_FIELD_NUMBER = 3;
+    private long blockHeight_ = 0L;
+    /**
+     * <pre>
+     * block_height is the height of the conflicting blocks
+     * </pre>
+     *
+     * <code>uint64 block_height = 3 [json_name = "blockHeight"];</code>
+     * @return The blockHeight.
+     */
+    @java.lang.Override
+    public long getBlockHeight() {
+      return blockHeight_;
+    }
+
+    public static final int PUB_RAND_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString pubRand_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * pub_rand is the public randomness the finality provider has committed to
+     * </pre>
+     *
+     * <code>bytes pub_rand = 4 [json_name = "pubRand", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrPubRand"];</code>
+     * @return The pubRand.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPubRand() {
+      return pubRand_;
+    }
+
+    public static final int CANONICAL_APP_HASH_FIELD_NUMBER = 5;
+    private com.google.protobuf.ByteString canonicalAppHash_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * canonical_app_hash is the AppHash of the canonical block
+     * </pre>
+     *
+     * <code>bytes canonical_app_hash = 5 [json_name = "canonicalAppHash"];</code>
+     * @return The canonicalAppHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getCanonicalAppHash() {
+      return canonicalAppHash_;
+    }
+
+    public static final int FORK_APP_HASH_FIELD_NUMBER = 6;
+    private com.google.protobuf.ByteString forkAppHash_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * fork_app_hash is the AppHash of the fork block
+     * </pre>
+     *
+     * <code>bytes fork_app_hash = 6 [json_name = "forkAppHash"];</code>
+     * @return The forkAppHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getForkAppHash() {
+      return forkAppHash_;
+    }
+
+    public static final int CANONICAL_FINALITY_SIG_FIELD_NUMBER = 7;
+    private com.google.protobuf.ByteString canonicalFinalitySig_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * canonical_finality_sig is the finality signature to the canonical block
+     * where finality signature is an EOTS signature, i.e.,
+     * the `s` in a Schnorr signature `(r, s)`
+     * `r` is the public randomness that is already committed by the finality provider
+     * </pre>
+     *
+     * <code>bytes canonical_finality_sig = 7 [json_name = "canonicalFinalitySig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrEOTSSig"];</code>
+     * @return The canonicalFinalitySig.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getCanonicalFinalitySig() {
+      return canonicalFinalitySig_;
+    }
+
+    public static final int FORK_FINALITY_SIG_FIELD_NUMBER = 8;
+    private com.google.protobuf.ByteString forkFinalitySig_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * fork_finality_sig is the finality signature to the fork block
+     * where finality signature is an EOTS signature
+     * </pre>
+     *
+     * <code>bytes fork_finality_sig = 8 [json_name = "forkFinalitySig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrEOTSSig"];</code>
+     * @return The forkFinalitySig.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getForkFinalitySig() {
+      return forkFinalitySig_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, signer_);
+      }
+      if (!fpBtcPk_.isEmpty()) {
+        output.writeBytes(2, fpBtcPk_);
+      }
+      if (blockHeight_ != 0L) {
+        output.writeUInt64(3, blockHeight_);
+      }
+      if (!pubRand_.isEmpty()) {
+        output.writeBytes(4, pubRand_);
+      }
+      if (!canonicalAppHash_.isEmpty()) {
+        output.writeBytes(5, canonicalAppHash_);
+      }
+      if (!forkAppHash_.isEmpty()) {
+        output.writeBytes(6, forkAppHash_);
+      }
+      if (!canonicalFinalitySig_.isEmpty()) {
+        output.writeBytes(7, canonicalFinalitySig_);
+      }
+      if (!forkFinalitySig_.isEmpty()) {
+        output.writeBytes(8, forkFinalitySig_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, signer_);
+      }
+      if (!fpBtcPk_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, fpBtcPk_);
+      }
+      if (blockHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, blockHeight_);
+      }
+      if (!pubRand_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, pubRand_);
+      }
+      if (!canonicalAppHash_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, canonicalAppHash_);
+      }
+      if (!forkAppHash_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, forkAppHash_);
+      }
+      if (!canonicalFinalitySig_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(7, canonicalFinalitySig_);
+      }
+      if (!forkFinalitySig_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(8, forkFinalitySig_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.finality.v1.TxProto.MsgEquivocationEvidence)) {
+        return super.equals(obj);
+      }
+      com.babylon.finality.v1.TxProto.MsgEquivocationEvidence other = (com.babylon.finality.v1.TxProto.MsgEquivocationEvidence) obj;
+
+      if (!getSigner()
+          .equals(other.getSigner())) return false;
+      if (!getFpBtcPk()
+          .equals(other.getFpBtcPk())) return false;
+      if (getBlockHeight()
+          != other.getBlockHeight()) return false;
+      if (!getPubRand()
+          .equals(other.getPubRand())) return false;
+      if (!getCanonicalAppHash()
+          .equals(other.getCanonicalAppHash())) return false;
+      if (!getForkAppHash()
+          .equals(other.getForkAppHash())) return false;
+      if (!getCanonicalFinalitySig()
+          .equals(other.getCanonicalFinalitySig())) return false;
+      if (!getForkFinalitySig()
+          .equals(other.getForkFinalitySig())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SIGNER_FIELD_NUMBER;
+      hash = (53 * hash) + getSigner().hashCode();
+      hash = (37 * hash) + FP_BTC_PK_FIELD_NUMBER;
+      hash = (53 * hash) + getFpBtcPk().hashCode();
+      hash = (37 * hash) + BLOCK_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBlockHeight());
+      hash = (37 * hash) + PUB_RAND_FIELD_NUMBER;
+      hash = (53 * hash) + getPubRand().hashCode();
+      hash = (37 * hash) + CANONICAL_APP_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getCanonicalAppHash().hashCode();
+      hash = (37 * hash) + FORK_APP_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getForkAppHash().hashCode();
+      hash = (37 * hash) + CANONICAL_FINALITY_SIG_FIELD_NUMBER;
+      hash = (53 * hash) + getCanonicalFinalitySig().hashCode();
+      hash = (37 * hash) + FORK_FINALITY_SIG_FIELD_NUMBER;
+      hash = (53 * hash) + getForkFinalitySig().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidence parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidence parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidence parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidence parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidence parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidence parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidence parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidence parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidence parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidence parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidence parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidence parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.finality.v1.TxProto.MsgEquivocationEvidence prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgEquivocationEvidence is the message for handling evidence of equivocation
+     * </pre>
+     *
+     * Protobuf type {@code babylon.finality.v1.MsgEquivocationEvidence}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.finality.v1.MsgEquivocationEvidence)
+        com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.finality.v1.TxProto.internal_static_babylon_finality_v1_MsgEquivocationEvidence_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.finality.v1.TxProto.internal_static_babylon_finality_v1_MsgEquivocationEvidence_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.finality.v1.TxProto.MsgEquivocationEvidence.class, com.babylon.finality.v1.TxProto.MsgEquivocationEvidence.Builder.class);
+      }
+
+      // Construct using com.babylon.finality.v1.TxProto.MsgEquivocationEvidence.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        signer_ = "";
+        fpBtcPk_ = com.google.protobuf.ByteString.EMPTY;
+        blockHeight_ = 0L;
+        pubRand_ = com.google.protobuf.ByteString.EMPTY;
+        canonicalAppHash_ = com.google.protobuf.ByteString.EMPTY;
+        forkAppHash_ = com.google.protobuf.ByteString.EMPTY;
+        canonicalFinalitySig_ = com.google.protobuf.ByteString.EMPTY;
+        forkFinalitySig_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.finality.v1.TxProto.internal_static_babylon_finality_v1_MsgEquivocationEvidence_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.TxProto.MsgEquivocationEvidence getDefaultInstanceForType() {
+        return com.babylon.finality.v1.TxProto.MsgEquivocationEvidence.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.TxProto.MsgEquivocationEvidence build() {
+        com.babylon.finality.v1.TxProto.MsgEquivocationEvidence result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.TxProto.MsgEquivocationEvidence buildPartial() {
+        com.babylon.finality.v1.TxProto.MsgEquivocationEvidence result = new com.babylon.finality.v1.TxProto.MsgEquivocationEvidence(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.finality.v1.TxProto.MsgEquivocationEvidence result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.signer_ = signer_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.fpBtcPk_ = fpBtcPk_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.blockHeight_ = blockHeight_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.pubRand_ = pubRand_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.canonicalAppHash_ = canonicalAppHash_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.forkAppHash_ = forkAppHash_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.canonicalFinalitySig_ = canonicalFinalitySig_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.forkFinalitySig_ = forkFinalitySig_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.finality.v1.TxProto.MsgEquivocationEvidence) {
+          return mergeFrom((com.babylon.finality.v1.TxProto.MsgEquivocationEvidence)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.finality.v1.TxProto.MsgEquivocationEvidence other) {
+        if (other == com.babylon.finality.v1.TxProto.MsgEquivocationEvidence.getDefaultInstance()) return this;
+        if (!other.getSigner().isEmpty()) {
+          signer_ = other.signer_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getFpBtcPk() != com.google.protobuf.ByteString.EMPTY) {
+          setFpBtcPk(other.getFpBtcPk());
+        }
+        if (other.getBlockHeight() != 0L) {
+          setBlockHeight(other.getBlockHeight());
+        }
+        if (other.getPubRand() != com.google.protobuf.ByteString.EMPTY) {
+          setPubRand(other.getPubRand());
+        }
+        if (other.getCanonicalAppHash() != com.google.protobuf.ByteString.EMPTY) {
+          setCanonicalAppHash(other.getCanonicalAppHash());
+        }
+        if (other.getForkAppHash() != com.google.protobuf.ByteString.EMPTY) {
+          setForkAppHash(other.getForkAppHash());
+        }
+        if (other.getCanonicalFinalitySig() != com.google.protobuf.ByteString.EMPTY) {
+          setCanonicalFinalitySig(other.getCanonicalFinalitySig());
+        }
+        if (other.getForkFinalitySig() != com.google.protobuf.ByteString.EMPTY) {
+          setForkFinalitySig(other.getForkFinalitySig());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                signer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                fpBtcPk_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                blockHeight_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                pubRand_ = input.readBytes();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                canonicalAppHash_ = input.readBytes();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                forkAppHash_ = input.readBytes();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                canonicalFinalitySig_ = input.readBytes();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                forkFinalitySig_ = input.readBytes();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object signer_ = "";
+      /**
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @return The signer.
+       */
+      public java.lang.String getSigner() {
+        java.lang.Object ref = signer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          signer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @return The bytes for signer.
+       */
+      public com.google.protobuf.ByteString
+          getSignerBytes() {
+        java.lang.Object ref = signer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @param value The signer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        signer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSigner() {
+        signer_ = getDefaultInstance().getSigner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @param value The bytes for signer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        signer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString fpBtcPk_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * fp_btc_pk is the BTC PK of the finality provider that casts this vote
+       * </pre>
+       *
+       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+       * @return The fpBtcPk.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getFpBtcPk() {
+        return fpBtcPk_;
+      }
+      /**
+       * <pre>
+       * fp_btc_pk is the BTC PK of the finality provider that casts this vote
+       * </pre>
+       *
+       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+       * @param value The fpBtcPk to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFpBtcPk(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        fpBtcPk_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * fp_btc_pk is the BTC PK of the finality provider that casts this vote
+       * </pre>
+       *
+       * <code>bytes fp_btc_pk = 2 [json_name = "fpBtcPk", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.BIP340PubKey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFpBtcPk() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        fpBtcPk_ = getDefaultInstance().getFpBtcPk();
+        onChanged();
+        return this;
+      }
+
+      private long blockHeight_ ;
+      /**
+       * <pre>
+       * block_height is the height of the conflicting blocks
+       * </pre>
+       *
+       * <code>uint64 block_height = 3 [json_name = "blockHeight"];</code>
+       * @return The blockHeight.
+       */
+      @java.lang.Override
+      public long getBlockHeight() {
+        return blockHeight_;
+      }
+      /**
+       * <pre>
+       * block_height is the height of the conflicting blocks
+       * </pre>
+       *
+       * <code>uint64 block_height = 3 [json_name = "blockHeight"];</code>
+       * @param value The blockHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBlockHeight(long value) {
+
+        blockHeight_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * block_height is the height of the conflicting blocks
+       * </pre>
+       *
+       * <code>uint64 block_height = 3 [json_name = "blockHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBlockHeight() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        blockHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString pubRand_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * pub_rand is the public randomness the finality provider has committed to
+       * </pre>
+       *
+       * <code>bytes pub_rand = 4 [json_name = "pubRand", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrPubRand"];</code>
+       * @return The pubRand.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPubRand() {
+        return pubRand_;
+      }
+      /**
+       * <pre>
+       * pub_rand is the public randomness the finality provider has committed to
+       * </pre>
+       *
+       * <code>bytes pub_rand = 4 [json_name = "pubRand", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrPubRand"];</code>
+       * @param value The pubRand to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPubRand(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        pubRand_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pub_rand is the public randomness the finality provider has committed to
+       * </pre>
+       *
+       * <code>bytes pub_rand = 4 [json_name = "pubRand", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrPubRand"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPubRand() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        pubRand_ = getDefaultInstance().getPubRand();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString canonicalAppHash_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * canonical_app_hash is the AppHash of the canonical block
+       * </pre>
+       *
+       * <code>bytes canonical_app_hash = 5 [json_name = "canonicalAppHash"];</code>
+       * @return The canonicalAppHash.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getCanonicalAppHash() {
+        return canonicalAppHash_;
+      }
+      /**
+       * <pre>
+       * canonical_app_hash is the AppHash of the canonical block
+       * </pre>
+       *
+       * <code>bytes canonical_app_hash = 5 [json_name = "canonicalAppHash"];</code>
+       * @param value The canonicalAppHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCanonicalAppHash(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        canonicalAppHash_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * canonical_app_hash is the AppHash of the canonical block
+       * </pre>
+       *
+       * <code>bytes canonical_app_hash = 5 [json_name = "canonicalAppHash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCanonicalAppHash() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        canonicalAppHash_ = getDefaultInstance().getCanonicalAppHash();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString forkAppHash_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * fork_app_hash is the AppHash of the fork block
+       * </pre>
+       *
+       * <code>bytes fork_app_hash = 6 [json_name = "forkAppHash"];</code>
+       * @return The forkAppHash.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getForkAppHash() {
+        return forkAppHash_;
+      }
+      /**
+       * <pre>
+       * fork_app_hash is the AppHash of the fork block
+       * </pre>
+       *
+       * <code>bytes fork_app_hash = 6 [json_name = "forkAppHash"];</code>
+       * @param value The forkAppHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setForkAppHash(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        forkAppHash_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * fork_app_hash is the AppHash of the fork block
+       * </pre>
+       *
+       * <code>bytes fork_app_hash = 6 [json_name = "forkAppHash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearForkAppHash() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        forkAppHash_ = getDefaultInstance().getForkAppHash();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString canonicalFinalitySig_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * canonical_finality_sig is the finality signature to the canonical block
+       * where finality signature is an EOTS signature, i.e.,
+       * the `s` in a Schnorr signature `(r, s)`
+       * `r` is the public randomness that is already committed by the finality provider
+       * </pre>
+       *
+       * <code>bytes canonical_finality_sig = 7 [json_name = "canonicalFinalitySig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrEOTSSig"];</code>
+       * @return The canonicalFinalitySig.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getCanonicalFinalitySig() {
+        return canonicalFinalitySig_;
+      }
+      /**
+       * <pre>
+       * canonical_finality_sig is the finality signature to the canonical block
+       * where finality signature is an EOTS signature, i.e.,
+       * the `s` in a Schnorr signature `(r, s)`
+       * `r` is the public randomness that is already committed by the finality provider
+       * </pre>
+       *
+       * <code>bytes canonical_finality_sig = 7 [json_name = "canonicalFinalitySig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrEOTSSig"];</code>
+       * @param value The canonicalFinalitySig to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCanonicalFinalitySig(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        canonicalFinalitySig_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * canonical_finality_sig is the finality signature to the canonical block
+       * where finality signature is an EOTS signature, i.e.,
+       * the `s` in a Schnorr signature `(r, s)`
+       * `r` is the public randomness that is already committed by the finality provider
+       * </pre>
+       *
+       * <code>bytes canonical_finality_sig = 7 [json_name = "canonicalFinalitySig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrEOTSSig"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCanonicalFinalitySig() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        canonicalFinalitySig_ = getDefaultInstance().getCanonicalFinalitySig();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString forkFinalitySig_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * fork_finality_sig is the finality signature to the fork block
+       * where finality signature is an EOTS signature
+       * </pre>
+       *
+       * <code>bytes fork_finality_sig = 8 [json_name = "forkFinalitySig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrEOTSSig"];</code>
+       * @return The forkFinalitySig.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getForkFinalitySig() {
+        return forkFinalitySig_;
+      }
+      /**
+       * <pre>
+       * fork_finality_sig is the finality signature to the fork block
+       * where finality signature is an EOTS signature
+       * </pre>
+       *
+       * <code>bytes fork_finality_sig = 8 [json_name = "forkFinalitySig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrEOTSSig"];</code>
+       * @param value The forkFinalitySig to set.
+       * @return This builder for chaining.
+       */
+      public Builder setForkFinalitySig(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        forkFinalitySig_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * fork_finality_sig is the finality signature to the fork block
+       * where finality signature is an EOTS signature
+       * </pre>
+       *
+       * <code>bytes fork_finality_sig = 8 [json_name = "forkFinalitySig", (.gogoproto.customtype) = "github.com/babylonlabs-io/babylon/types.SchnorrEOTSSig"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearForkFinalitySig() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        forkFinalitySig_ = getDefaultInstance().getForkFinalitySig();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.finality.v1.MsgEquivocationEvidence)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.finality.v1.MsgEquivocationEvidence)
+    private static final com.babylon.finality.v1.TxProto.MsgEquivocationEvidence DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.finality.v1.TxProto.MsgEquivocationEvidence();
+    }
+
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidence getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgEquivocationEvidence>
+        PARSER = new com.google.protobuf.AbstractParser<MsgEquivocationEvidence>() {
+      @java.lang.Override
+      public MsgEquivocationEvidence parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgEquivocationEvidence> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgEquivocationEvidence> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.finality.v1.TxProto.MsgEquivocationEvidence getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgEquivocationEvidenceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.finality.v1.MsgEquivocationEvidenceResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgEquivocationEvidenceResponse is the response for MsgEquivocationEvidence
+   * </pre>
+   *
+   * Protobuf type {@code babylon.finality.v1.MsgEquivocationEvidenceResponse}
+   */
+  public static final class MsgEquivocationEvidenceResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.finality.v1.MsgEquivocationEvidenceResponse)
+      MsgEquivocationEvidenceResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgEquivocationEvidenceResponse.newBuilder() to construct.
+    private MsgEquivocationEvidenceResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgEquivocationEvidenceResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgEquivocationEvidenceResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.finality.v1.TxProto.internal_static_babylon_finality_v1_MsgEquivocationEvidenceResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.finality.v1.TxProto.internal_static_babylon_finality_v1_MsgEquivocationEvidenceResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse.class, com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse)) {
+        return super.equals(obj);
+      }
+      com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse other = (com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgEquivocationEvidenceResponse is the response for MsgEquivocationEvidence
+     * </pre>
+     *
+     * Protobuf type {@code babylon.finality.v1.MsgEquivocationEvidenceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.finality.v1.MsgEquivocationEvidenceResponse)
+        com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.finality.v1.TxProto.internal_static_babylon_finality_v1_MsgEquivocationEvidenceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.finality.v1.TxProto.internal_static_babylon_finality_v1_MsgEquivocationEvidenceResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse.class, com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse.Builder.class);
+      }
+
+      // Construct using com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.finality.v1.TxProto.internal_static_babylon_finality_v1_MsgEquivocationEvidenceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse getDefaultInstanceForType() {
+        return com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse build() {
+        com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse buildPartial() {
+        com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse result = new com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse) {
+          return mergeFrom((com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse other) {
+        if (other == com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.finality.v1.MsgEquivocationEvidenceResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.finality.v1.MsgEquivocationEvidenceResponse)
+    private static final com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse();
+    }
+
+    public static com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgEquivocationEvidenceResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgEquivocationEvidenceResponse>() {
+      @java.lang.Override
+      public MsgEquivocationEvidenceResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgEquivocationEvidenceResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgEquivocationEvidenceResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgResumeFinalityProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.finality.v1.MsgResumeFinalityProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * authority is the address of the governance account.
+     * just FYI: cosmos.AddressString marks that this field should use type alias
+     * for AddressString instead of string, but the functionality is not yet implemented
+     * in cosmos-proto
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    java.lang.String getAuthority();
+    /**
+     * <pre>
+     * authority is the address of the governance account.
+     * just FYI: cosmos.AddressString marks that this field should use type alias
+     * for AddressString instead of string, but the functionality is not yet implemented
+     * in cosmos-proto
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    com.google.protobuf.ByteString
+        getAuthorityBytes();
+
+    /**
+     * <pre>
+     * fp_pks_hex is a list of finality provider public keys to jail
+     * the public key follows encoding in BIP-340 spec
+     * </pre>
+     *
+     * <code>repeated string fp_pks_hex = 2 [json_name = "fpPksHex"];</code>
+     * @return A list containing the fpPksHex.
+     */
+    java.util.List<java.lang.String>
+        getFpPksHexList();
+    /**
+     * <pre>
+     * fp_pks_hex is a list of finality provider public keys to jail
+     * the public key follows encoding in BIP-340 spec
+     * </pre>
+     *
+     * <code>repeated string fp_pks_hex = 2 [json_name = "fpPksHex"];</code>
+     * @return The count of fpPksHex.
+     */
+    int getFpPksHexCount();
+    /**
+     * <pre>
+     * fp_pks_hex is a list of finality provider public keys to jail
+     * the public key follows encoding in BIP-340 spec
+     * </pre>
+     *
+     * <code>repeated string fp_pks_hex = 2 [json_name = "fpPksHex"];</code>
+     * @param index The index of the element to return.
+     * @return The fpPksHex at the given index.
+     */
+    java.lang.String getFpPksHex(int index);
+    /**
+     * <pre>
+     * fp_pks_hex is a list of finality provider public keys to jail
+     * the public key follows encoding in BIP-340 spec
+     * </pre>
+     *
+     * <code>repeated string fp_pks_hex = 2 [json_name = "fpPksHex"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the fpPksHex at the given index.
+     */
+    com.google.protobuf.ByteString
+        getFpPksHexBytes(int index);
+
+    /**
+     * <pre>
+     * halting_height is the height where the finality halting begins
+     * </pre>
+     *
+     * <code>uint32 halting_height = 3 [json_name = "haltingHeight"];</code>
+     * @return The haltingHeight.
+     */
+    int getHaltingHeight();
+  }
+  /**
+   * <pre>
+   * MsgResumeFinalityProposal is a governance proposal to resume finality from halting
+   * </pre>
+   *
+   * Protobuf type {@code babylon.finality.v1.MsgResumeFinalityProposal}
+   */
+  public static final class MsgResumeFinalityProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.finality.v1.MsgResumeFinalityProposal)
+      MsgResumeFinalityProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgResumeFinalityProposal.newBuilder() to construct.
+    private MsgResumeFinalityProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgResumeFinalityProposal() {
+      authority_ = "";
+      fpPksHex_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgResumeFinalityProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.finality.v1.TxProto.internal_static_babylon_finality_v1_MsgResumeFinalityProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.finality.v1.TxProto.internal_static_babylon_finality_v1_MsgResumeFinalityProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal.class, com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal.Builder.class);
+    }
+
+    public static final int AUTHORITY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object authority_ = "";
+    /**
+     * <pre>
+     * authority is the address of the governance account.
+     * just FYI: cosmos.AddressString marks that this field should use type alias
+     * for AddressString instead of string, but the functionality is not yet implemented
+     * in cosmos-proto
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthority() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authority_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * authority is the address of the governance account.
+     * just FYI: cosmos.AddressString marks that this field should use type alias
+     * for AddressString instead of string, but the functionality is not yet implemented
+     * in cosmos-proto
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthorityBytes() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authority_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FP_PKS_HEX_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList fpPksHex_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * fp_pks_hex is a list of finality provider public keys to jail
+     * the public key follows encoding in BIP-340 spec
+     * </pre>
+     *
+     * <code>repeated string fp_pks_hex = 2 [json_name = "fpPksHex"];</code>
+     * @return A list containing the fpPksHex.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getFpPksHexList() {
+      return fpPksHex_;
+    }
+    /**
+     * <pre>
+     * fp_pks_hex is a list of finality provider public keys to jail
+     * the public key follows encoding in BIP-340 spec
+     * </pre>
+     *
+     * <code>repeated string fp_pks_hex = 2 [json_name = "fpPksHex"];</code>
+     * @return The count of fpPksHex.
+     */
+    public int getFpPksHexCount() {
+      return fpPksHex_.size();
+    }
+    /**
+     * <pre>
+     * fp_pks_hex is a list of finality provider public keys to jail
+     * the public key follows encoding in BIP-340 spec
+     * </pre>
+     *
+     * <code>repeated string fp_pks_hex = 2 [json_name = "fpPksHex"];</code>
+     * @param index The index of the element to return.
+     * @return The fpPksHex at the given index.
+     */
+    public java.lang.String getFpPksHex(int index) {
+      return fpPksHex_.get(index);
+    }
+    /**
+     * <pre>
+     * fp_pks_hex is a list of finality provider public keys to jail
+     * the public key follows encoding in BIP-340 spec
+     * </pre>
+     *
+     * <code>repeated string fp_pks_hex = 2 [json_name = "fpPksHex"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the fpPksHex at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getFpPksHexBytes(int index) {
+      return fpPksHex_.getByteString(index);
+    }
+
+    public static final int HALTING_HEIGHT_FIELD_NUMBER = 3;
+    private int haltingHeight_ = 0;
+    /**
+     * <pre>
+     * halting_height is the height where the finality halting begins
+     * </pre>
+     *
+     * <code>uint32 halting_height = 3 [json_name = "haltingHeight"];</code>
+     * @return The haltingHeight.
+     */
+    @java.lang.Override
+    public int getHaltingHeight() {
+      return haltingHeight_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
+      }
+      for (int i = 0; i < fpPksHex_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fpPksHex_.getRaw(i));
+      }
+      if (haltingHeight_ != 0) {
+        output.writeUInt32(3, haltingHeight_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < fpPksHex_.size(); i++) {
+          dataSize += computeStringSizeNoTag(fpPksHex_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getFpPksHexList().size();
+      }
+      if (haltingHeight_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, haltingHeight_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal)) {
+        return super.equals(obj);
+      }
+      com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal other = (com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal) obj;
+
+      if (!getAuthority()
+          .equals(other.getAuthority())) return false;
+      if (!getFpPksHexList()
+          .equals(other.getFpPksHexList())) return false;
+      if (getHaltingHeight()
+          != other.getHaltingHeight()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUTHORITY_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthority().hashCode();
+      if (getFpPksHexCount() > 0) {
+        hash = (37 * hash) + FP_PKS_HEX_FIELD_NUMBER;
+        hash = (53 * hash) + getFpPksHexList().hashCode();
+      }
+      hash = (37 * hash) + HALTING_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getHaltingHeight();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgResumeFinalityProposal is a governance proposal to resume finality from halting
+     * </pre>
+     *
+     * Protobuf type {@code babylon.finality.v1.MsgResumeFinalityProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.finality.v1.MsgResumeFinalityProposal)
+        com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.finality.v1.TxProto.internal_static_babylon_finality_v1_MsgResumeFinalityProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.finality.v1.TxProto.internal_static_babylon_finality_v1_MsgResumeFinalityProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal.class, com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal.Builder.class);
+      }
+
+      // Construct using com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        authority_ = "";
+        fpPksHex_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        haltingHeight_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.finality.v1.TxProto.internal_static_babylon_finality_v1_MsgResumeFinalityProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal getDefaultInstanceForType() {
+        return com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal build() {
+        com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal buildPartial() {
+        com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal result = new com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.authority_ = authority_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          fpPksHex_.makeImmutable();
+          result.fpPksHex_ = fpPksHex_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.haltingHeight_ = haltingHeight_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal) {
+          return mergeFrom((com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal other) {
+        if (other == com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal.getDefaultInstance()) return this;
+        if (!other.getAuthority().isEmpty()) {
+          authority_ = other.authority_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.fpPksHex_.isEmpty()) {
+          if (fpPksHex_.isEmpty()) {
+            fpPksHex_ = other.fpPksHex_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureFpPksHexIsMutable();
+            fpPksHex_.addAll(other.fpPksHex_);
+          }
+          onChanged();
+        }
+        if (other.getHaltingHeight() != 0) {
+          setHaltingHeight(other.getHaltingHeight());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                authority_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureFpPksHexIsMutable();
+                fpPksHex_.add(s);
+                break;
+              } // case 18
+              case 24: {
+                haltingHeight_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object authority_ = "";
+      /**
+       * <pre>
+       * authority is the address of the governance account.
+       * just FYI: cosmos.AddressString marks that this field should use type alias
+       * for AddressString instead of string, but the functionality is not yet implemented
+       * in cosmos-proto
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The authority.
+       */
+      public java.lang.String getAuthority() {
+        java.lang.Object ref = authority_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authority_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * authority is the address of the governance account.
+       * just FYI: cosmos.AddressString marks that this field should use type alias
+       * for AddressString instead of string, but the functionality is not yet implemented
+       * in cosmos-proto
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for authority.
+       */
+      public com.google.protobuf.ByteString
+          getAuthorityBytes() {
+        java.lang.Object ref = authority_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authority_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * authority is the address of the governance account.
+       * just FYI: cosmos.AddressString marks that this field should use type alias
+       * for AddressString instead of string, but the functionality is not yet implemented
+       * in cosmos-proto
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthority(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authority is the address of the governance account.
+       * just FYI: cosmos.AddressString marks that this field should use type alias
+       * for AddressString instead of string, but the functionality is not yet implemented
+       * in cosmos-proto
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthority() {
+        authority_ = getDefaultInstance().getAuthority();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authority is the address of the governance account.
+       * just FYI: cosmos.AddressString marks that this field should use type alias
+       * for AddressString instead of string, but the functionality is not yet implemented
+       * in cosmos-proto
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthorityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList fpPksHex_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureFpPksHexIsMutable() {
+        if (!fpPksHex_.isModifiable()) {
+          fpPksHex_ = new com.google.protobuf.LazyStringArrayList(fpPksHex_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <pre>
+       * fp_pks_hex is a list of finality provider public keys to jail
+       * the public key follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>repeated string fp_pks_hex = 2 [json_name = "fpPksHex"];</code>
+       * @return A list containing the fpPksHex.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getFpPksHexList() {
+        fpPksHex_.makeImmutable();
+        return fpPksHex_;
+      }
+      /**
+       * <pre>
+       * fp_pks_hex is a list of finality provider public keys to jail
+       * the public key follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>repeated string fp_pks_hex = 2 [json_name = "fpPksHex"];</code>
+       * @return The count of fpPksHex.
+       */
+      public int getFpPksHexCount() {
+        return fpPksHex_.size();
+      }
+      /**
+       * <pre>
+       * fp_pks_hex is a list of finality provider public keys to jail
+       * the public key follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>repeated string fp_pks_hex = 2 [json_name = "fpPksHex"];</code>
+       * @param index The index of the element to return.
+       * @return The fpPksHex at the given index.
+       */
+      public java.lang.String getFpPksHex(int index) {
+        return fpPksHex_.get(index);
+      }
+      /**
+       * <pre>
+       * fp_pks_hex is a list of finality provider public keys to jail
+       * the public key follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>repeated string fp_pks_hex = 2 [json_name = "fpPksHex"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the fpPksHex at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getFpPksHexBytes(int index) {
+        return fpPksHex_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * fp_pks_hex is a list of finality provider public keys to jail
+       * the public key follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>repeated string fp_pks_hex = 2 [json_name = "fpPksHex"];</code>
+       * @param index The index to set the value at.
+       * @param value The fpPksHex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFpPksHex(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureFpPksHexIsMutable();
+        fpPksHex_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * fp_pks_hex is a list of finality provider public keys to jail
+       * the public key follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>repeated string fp_pks_hex = 2 [json_name = "fpPksHex"];</code>
+       * @param value The fpPksHex to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFpPksHex(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureFpPksHexIsMutable();
+        fpPksHex_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * fp_pks_hex is a list of finality provider public keys to jail
+       * the public key follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>repeated string fp_pks_hex = 2 [json_name = "fpPksHex"];</code>
+       * @param values The fpPksHex to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllFpPksHex(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureFpPksHexIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, fpPksHex_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * fp_pks_hex is a list of finality provider public keys to jail
+       * the public key follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>repeated string fp_pks_hex = 2 [json_name = "fpPksHex"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFpPksHex() {
+        fpPksHex_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * fp_pks_hex is a list of finality provider public keys to jail
+       * the public key follows encoding in BIP-340 spec
+       * </pre>
+       *
+       * <code>repeated string fp_pks_hex = 2 [json_name = "fpPksHex"];</code>
+       * @param value The bytes of the fpPksHex to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFpPksHexBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureFpPksHexIsMutable();
+        fpPksHex_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private int haltingHeight_ ;
+      /**
+       * <pre>
+       * halting_height is the height where the finality halting begins
+       * </pre>
+       *
+       * <code>uint32 halting_height = 3 [json_name = "haltingHeight"];</code>
+       * @return The haltingHeight.
+       */
+      @java.lang.Override
+      public int getHaltingHeight() {
+        return haltingHeight_;
+      }
+      /**
+       * <pre>
+       * halting_height is the height where the finality halting begins
+       * </pre>
+       *
+       * <code>uint32 halting_height = 3 [json_name = "haltingHeight"];</code>
+       * @param value The haltingHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHaltingHeight(int value) {
+
+        haltingHeight_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * halting_height is the height where the finality halting begins
+       * </pre>
+       *
+       * <code>uint32 halting_height = 3 [json_name = "haltingHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHaltingHeight() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        haltingHeight_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.finality.v1.MsgResumeFinalityProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.finality.v1.MsgResumeFinalityProposal)
+    private static final com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal();
+    }
+
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgResumeFinalityProposal>
+        PARSER = new com.google.protobuf.AbstractParser<MsgResumeFinalityProposal>() {
+      @java.lang.Override
+      public MsgResumeFinalityProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgResumeFinalityProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgResumeFinalityProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgResumeFinalityProposalResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.finality.v1.MsgResumeFinalityProposalResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgResumeFinalityProposalResponse is the response to the MsgResumeFinalityProposal message.
+   * </pre>
+   *
+   * Protobuf type {@code babylon.finality.v1.MsgResumeFinalityProposalResponse}
+   */
+  public static final class MsgResumeFinalityProposalResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.finality.v1.MsgResumeFinalityProposalResponse)
+      MsgResumeFinalityProposalResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgResumeFinalityProposalResponse.newBuilder() to construct.
+    private MsgResumeFinalityProposalResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgResumeFinalityProposalResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgResumeFinalityProposalResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.finality.v1.TxProto.internal_static_babylon_finality_v1_MsgResumeFinalityProposalResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.finality.v1.TxProto.internal_static_babylon_finality_v1_MsgResumeFinalityProposalResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse.class, com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse)) {
+        return super.equals(obj);
+      }
+      com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse other = (com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgResumeFinalityProposalResponse is the response to the MsgResumeFinalityProposal message.
+     * </pre>
+     *
+     * Protobuf type {@code babylon.finality.v1.MsgResumeFinalityProposalResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.finality.v1.MsgResumeFinalityProposalResponse)
+        com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.finality.v1.TxProto.internal_static_babylon_finality_v1_MsgResumeFinalityProposalResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.finality.v1.TxProto.internal_static_babylon_finality_v1_MsgResumeFinalityProposalResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse.class, com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse.Builder.class);
+      }
+
+      // Construct using com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.finality.v1.TxProto.internal_static_babylon_finality_v1_MsgResumeFinalityProposalResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse getDefaultInstanceForType() {
+        return com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse build() {
+        com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse buildPartial() {
+        com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse result = new com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse) {
+          return mergeFrom((com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse other) {
+        if (other == com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.finality.v1.MsgResumeFinalityProposalResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.finality.v1.MsgResumeFinalityProposalResponse)
+    private static final com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse();
+    }
+
+    public static com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgResumeFinalityProposalResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgResumeFinalityProposalResponse>() {
+      @java.lang.Override
+      public MsgResumeFinalityProposalResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgResumeFinalityProposalResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgResumeFinalityProposalResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_babylon_finality_v1_MsgCommitPubRandList_descriptor;
   private static final 
@@ -5582,6 +8637,26 @@ public final class TxProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_babylon_finality_v1_MsgUnjailFinalityProviderResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_finality_v1_MsgEquivocationEvidence_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_finality_v1_MsgEquivocationEvidence_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_finality_v1_MsgEquivocationEvidenceResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_finality_v1_MsgEquivocationEvidenceResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_finality_v1_MsgResumeFinalityProposal_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_finality_v1_MsgResumeFinalityProposal_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_finality_v1_MsgResumeFinalityProposalResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_finality_v1_MsgResumeFinalityProposalResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5625,24 +8700,51 @@ public final class TxProto {
       "igner\030\001 \001(\tR\006signer\022T\n\tfp_btc_pk\030\002 \001(\014B8" +
       "\332\336\0374github.com/babylonlabs-io/babylon/ty" +
       "pes.BIP340PubKeyR\007fpBtcPk:\017\210\240\037\000\202\347\260*\006sign" +
-      "er\"#\n!MsgUnjailFinalityProviderResponse2" +
-      "\320\003\n\003Msg\022q\n\021CommitPubRandList\022).babylon.f" +
-      "inality.v1.MsgCommitPubRandList\0321.babylo" +
-      "n.finality.v1.MsgCommitPubRandListRespon" +
-      "se\022h\n\016AddFinalitySig\022&.babylon.finality." +
-      "v1.MsgAddFinalitySig\032..babylon.finality." +
-      "v1.MsgAddFinalitySigResponse\022b\n\014UpdatePa" +
-      "rams\022$.babylon.finality.v1.MsgUpdatePara" +
-      "ms\032,.babylon.finality.v1.MsgUpdateParams" +
-      "Response\022\200\001\n\026UnjailFinalityProvider\022..ba" +
-      "bylon.finality.v1.MsgUnjailFinalityProvi" +
-      "der\0326.babylon.finality.v1.MsgUnjailFinal" +
-      "ityProviderResponse\032\005\200\347\260*\001B\302\001\n\027com.babyl" +
-      "on.finality.v1B\007TxProtoZ2github.com/baby" +
-      "lonlabs-io/babylon/x/finality/types\242\002\003BF" +
-      "X\252\002\023Babylon.Finality.V1\312\002\023Babylon\\Finali" +
-      "ty\\V1\342\002\037Babylon\\Finality\\V1\\GPBMetadata\352" +
-      "\002\025Babylon::Finality::V1b\006proto3"
+      "er\"#\n!MsgUnjailFinalityProviderResponse\"" +
+      "\272\004\n\027MsgEquivocationEvidence\022\026\n\006signer\030\001 " +
+      "\001(\tR\006signer\022T\n\tfp_btc_pk\030\002 \001(\014B8\332\336\0374gith" +
+      "ub.com/babylonlabs-io/babylon/types.BIP3" +
+      "40PubKeyR\007fpBtcPk\022!\n\014block_height\030\003 \001(\004R" +
+      "\013blockHeight\022U\n\010pub_rand\030\004 \001(\014B:\332\336\0376gith" +
+      "ub.com/babylonlabs-io/babylon/types.Schn" +
+      "orrPubRandR\007pubRand\022,\n\022canonical_app_has" +
+      "h\030\005 \001(\014R\020canonicalAppHash\022\"\n\rfork_app_ha" +
+      "sh\030\006 \001(\014R\013forkAppHash\022p\n\026canonical_final" +
+      "ity_sig\030\007 \001(\014B:\332\336\0376github.com/babylonlab" +
+      "s-io/babylon/types.SchnorrEOTSSigR\024canon" +
+      "icalFinalitySig\022f\n\021fork_finality_sig\030\010 \001" +
+      "(\014B:\332\336\0376github.com/babylonlabs-io/babylo" +
+      "n/types.SchnorrEOTSSigR\017forkFinalitySig:" +
+      "\013\202\347\260*\006signer\"!\n\037MsgEquivocationEvidenceR" +
+      "esponse\"\250\001\n\031MsgResumeFinalityProposal\0226\n" +
+      "\tauthority\030\001 \001(\tB\030\322\264-\024cosmos.AddressStri" +
+      "ngR\tauthority\022\034\n\nfp_pks_hex\030\002 \003(\tR\010fpPks" +
+      "Hex\022%\n\016halting_height\030\003 \001(\rR\rhaltingHeig" +
+      "ht:\016\202\347\260*\tauthority\"#\n!MsgResumeFinalityP" +
+      "roposalResponse2\317\005\n\003Msg\022q\n\021CommitPubRand" +
+      "List\022).babylon.finality.v1.MsgCommitPubR" +
+      "andList\0321.babylon.finality.v1.MsgCommitP" +
+      "ubRandListResponse\022h\n\016AddFinalitySig\022&.b" +
+      "abylon.finality.v1.MsgAddFinalitySig\032..b" +
+      "abylon.finality.v1.MsgAddFinalitySigResp" +
+      "onse\022b\n\014UpdateParams\022$.babylon.finality." +
+      "v1.MsgUpdateParams\032,.babylon.finality.v1" +
+      ".MsgUpdateParamsResponse\022\200\001\n\026UnjailFinal" +
+      "ityProvider\022..babylon.finality.v1.MsgUnj" +
+      "ailFinalityProvider\0326.babylon.finality.v" +
+      "1.MsgUnjailFinalityProviderResponse\022\200\001\n\026" +
+      "ResumeFinalityProposal\022..babylon.finalit" +
+      "y.v1.MsgResumeFinalityProposal\0326.babylon" +
+      ".finality.v1.MsgResumeFinalityProposalRe" +
+      "sponse\022z\n\024EquivocationEvidence\022,.babylon" +
+      ".finality.v1.MsgEquivocationEvidence\0324.b" +
+      "abylon.finality.v1.MsgEquivocationEviden" +
+      "ceResponse\032\005\200\347\260*\001B\302\001\n\027com.babylon.finali" +
+      "ty.v1B\007TxProtoZ2github.com/babylonlabs-i" +
+      "o/babylon/x/finality/types\242\002\003BFX\252\002\023Babyl" +
+      "on.Finality.V1\312\002\023Babylon\\Finality\\V1\342\002\037B" +
+      "abylon\\Finality\\V1\\GPBMetadata\352\002\025Babylon" +
+      "::Finality::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5700,6 +8802,30 @@ public final class TxProto {
     internal_static_babylon_finality_v1_MsgUnjailFinalityProviderResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_finality_v1_MsgUnjailFinalityProviderResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_babylon_finality_v1_MsgEquivocationEvidence_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_babylon_finality_v1_MsgEquivocationEvidence_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_finality_v1_MsgEquivocationEvidence_descriptor,
+        new java.lang.String[] { "Signer", "FpBtcPk", "BlockHeight", "PubRand", "CanonicalAppHash", "ForkAppHash", "CanonicalFinalitySig", "ForkFinalitySig", });
+    internal_static_babylon_finality_v1_MsgEquivocationEvidenceResponse_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_babylon_finality_v1_MsgEquivocationEvidenceResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_finality_v1_MsgEquivocationEvidenceResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_babylon_finality_v1_MsgResumeFinalityProposal_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_babylon_finality_v1_MsgResumeFinalityProposal_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_finality_v1_MsgResumeFinalityProposal_descriptor,
+        new java.lang.String[] { "Authority", "FpPksHex", "HaltingHeight", });
+    internal_static_babylon_finality_v1_MsgResumeFinalityProposalResponse_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_babylon_finality_v1_MsgResumeFinalityProposalResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_finality_v1_MsgResumeFinalityProposalResponse_descriptor,
         new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

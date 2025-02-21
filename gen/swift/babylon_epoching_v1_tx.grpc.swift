@@ -53,6 +53,16 @@ internal protocol Babylon_Epoching_V1_MsgClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> UnaryCall<Babylon_Epoching_V1_MsgWrappedCancelUnbondingDelegation, Babylon_Epoching_V1_MsgWrappedCancelUnbondingDelegationResponse>
 
+  func wrappedEditValidator(
+    _ request: Babylon_Epoching_V1_MsgWrappedEditValidator,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Babylon_Epoching_V1_MsgWrappedEditValidator, Babylon_Epoching_V1_MsgWrappedEditValidatorResponse>
+
+  func wrappedStakingUpdateParams(
+    _ request: Babylon_Epoching_V1_MsgWrappedStakingUpdateParams,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Babylon_Epoching_V1_MsgWrappedStakingUpdateParams, Babylon_Epoching_V1_MsgWrappedStakingUpdateParamsResponse>
+
   func updateParams(
     _ request: Babylon_Epoching_V1_MsgUpdateParams,
     callOptions: CallOptions?
@@ -137,6 +147,44 @@ extension Babylon_Epoching_V1_MsgClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeWrappedCancelUnbondingDelegationInterceptors() ?? []
+    )
+  }
+
+  /// WrappedEditValidator defines a method for editing the validator
+  /// information.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to WrappedEditValidator.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func wrappedEditValidator(
+    _ request: Babylon_Epoching_V1_MsgWrappedEditValidator,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Babylon_Epoching_V1_MsgWrappedEditValidator, Babylon_Epoching_V1_MsgWrappedEditValidatorResponse> {
+    return self.makeUnaryCall(
+      path: Babylon_Epoching_V1_MsgClientMetadata.Methods.wrappedEditValidator.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeWrappedEditValidatorInterceptors() ?? []
+    )
+  }
+
+  /// WrappedStakingUpdateParams defines a method for update the parameters
+  /// of the x/staking module.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to WrappedStakingUpdateParams.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func wrappedStakingUpdateParams(
+    _ request: Babylon_Epoching_V1_MsgWrappedStakingUpdateParams,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Babylon_Epoching_V1_MsgWrappedStakingUpdateParams, Babylon_Epoching_V1_MsgWrappedStakingUpdateParamsResponse> {
+    return self.makeUnaryCall(
+      path: Babylon_Epoching_V1_MsgClientMetadata.Methods.wrappedStakingUpdateParams.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeWrappedStakingUpdateParamsInterceptors() ?? []
     )
   }
 
@@ -242,6 +290,16 @@ internal protocol Babylon_Epoching_V1_MsgAsyncClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Babylon_Epoching_V1_MsgWrappedCancelUnbondingDelegation, Babylon_Epoching_V1_MsgWrappedCancelUnbondingDelegationResponse>
 
+  func makeWrappedEditValidatorCall(
+    _ request: Babylon_Epoching_V1_MsgWrappedEditValidator,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Babylon_Epoching_V1_MsgWrappedEditValidator, Babylon_Epoching_V1_MsgWrappedEditValidatorResponse>
+
+  func makeWrappedStakingUpdateParamsCall(
+    _ request: Babylon_Epoching_V1_MsgWrappedStakingUpdateParams,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Babylon_Epoching_V1_MsgWrappedStakingUpdateParams, Babylon_Epoching_V1_MsgWrappedStakingUpdateParamsResponse>
+
   func makeUpdateParamsCall(
     _ request: Babylon_Epoching_V1_MsgUpdateParams,
     callOptions: CallOptions?
@@ -303,6 +361,30 @@ extension Babylon_Epoching_V1_MsgAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeWrappedCancelUnbondingDelegationInterceptors() ?? []
+    )
+  }
+
+  internal func makeWrappedEditValidatorCall(
+    _ request: Babylon_Epoching_V1_MsgWrappedEditValidator,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Babylon_Epoching_V1_MsgWrappedEditValidator, Babylon_Epoching_V1_MsgWrappedEditValidatorResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Babylon_Epoching_V1_MsgClientMetadata.Methods.wrappedEditValidator.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeWrappedEditValidatorInterceptors() ?? []
+    )
+  }
+
+  internal func makeWrappedStakingUpdateParamsCall(
+    _ request: Babylon_Epoching_V1_MsgWrappedStakingUpdateParams,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Babylon_Epoching_V1_MsgWrappedStakingUpdateParams, Babylon_Epoching_V1_MsgWrappedStakingUpdateParamsResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Babylon_Epoching_V1_MsgClientMetadata.Methods.wrappedStakingUpdateParams.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeWrappedStakingUpdateParamsInterceptors() ?? []
     )
   }
 
@@ -369,6 +451,30 @@ extension Babylon_Epoching_V1_MsgAsyncClientProtocol {
     )
   }
 
+  internal func wrappedEditValidator(
+    _ request: Babylon_Epoching_V1_MsgWrappedEditValidator,
+    callOptions: CallOptions? = nil
+  ) async throws -> Babylon_Epoching_V1_MsgWrappedEditValidatorResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Babylon_Epoching_V1_MsgClientMetadata.Methods.wrappedEditValidator.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeWrappedEditValidatorInterceptors() ?? []
+    )
+  }
+
+  internal func wrappedStakingUpdateParams(
+    _ request: Babylon_Epoching_V1_MsgWrappedStakingUpdateParams,
+    callOptions: CallOptions? = nil
+  ) async throws -> Babylon_Epoching_V1_MsgWrappedStakingUpdateParamsResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Babylon_Epoching_V1_MsgClientMetadata.Methods.wrappedStakingUpdateParams.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeWrappedStakingUpdateParamsInterceptors() ?? []
+    )
+  }
+
   internal func updateParams(
     _ request: Babylon_Epoching_V1_MsgUpdateParams,
     callOptions: CallOptions? = nil
@@ -413,6 +519,12 @@ internal protocol Babylon_Epoching_V1_MsgClientInterceptorFactoryProtocol: Senda
   /// - Returns: Interceptors to use when invoking 'wrappedCancelUnbondingDelegation'.
   func makeWrappedCancelUnbondingDelegationInterceptors() -> [ClientInterceptor<Babylon_Epoching_V1_MsgWrappedCancelUnbondingDelegation, Babylon_Epoching_V1_MsgWrappedCancelUnbondingDelegationResponse>]
 
+  /// - Returns: Interceptors to use when invoking 'wrappedEditValidator'.
+  func makeWrappedEditValidatorInterceptors() -> [ClientInterceptor<Babylon_Epoching_V1_MsgWrappedEditValidator, Babylon_Epoching_V1_MsgWrappedEditValidatorResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'wrappedStakingUpdateParams'.
+  func makeWrappedStakingUpdateParamsInterceptors() -> [ClientInterceptor<Babylon_Epoching_V1_MsgWrappedStakingUpdateParams, Babylon_Epoching_V1_MsgWrappedStakingUpdateParamsResponse>]
+
   /// - Returns: Interceptors to use when invoking 'updateParams'.
   func makeUpdateParamsInterceptors() -> [ClientInterceptor<Babylon_Epoching_V1_MsgUpdateParams, Babylon_Epoching_V1_MsgUpdateParamsResponse>]
 }
@@ -426,6 +538,8 @@ internal enum Babylon_Epoching_V1_MsgClientMetadata {
       Babylon_Epoching_V1_MsgClientMetadata.Methods.wrappedUndelegate,
       Babylon_Epoching_V1_MsgClientMetadata.Methods.wrappedBeginRedelegate,
       Babylon_Epoching_V1_MsgClientMetadata.Methods.wrappedCancelUnbondingDelegation,
+      Babylon_Epoching_V1_MsgClientMetadata.Methods.wrappedEditValidator,
+      Babylon_Epoching_V1_MsgClientMetadata.Methods.wrappedStakingUpdateParams,
       Babylon_Epoching_V1_MsgClientMetadata.Methods.updateParams,
     ]
   )
@@ -452,6 +566,18 @@ internal enum Babylon_Epoching_V1_MsgClientMetadata {
     internal static let wrappedCancelUnbondingDelegation = GRPCMethodDescriptor(
       name: "WrappedCancelUnbondingDelegation",
       path: "/babylon.epoching.v1.Msg/WrappedCancelUnbondingDelegation",
+      type: GRPCCallType.unary
+    )
+
+    internal static let wrappedEditValidator = GRPCMethodDescriptor(
+      name: "WrappedEditValidator",
+      path: "/babylon.epoching.v1.Msg/WrappedEditValidator",
+      type: GRPCCallType.unary
+    )
+
+    internal static let wrappedStakingUpdateParams = GRPCMethodDescriptor(
+      name: "WrappedStakingUpdateParams",
+      path: "/babylon.epoching.v1.Msg/WrappedStakingUpdateParams",
       type: GRPCCallType.unary
     )
 
@@ -484,6 +610,14 @@ internal protocol Babylon_Epoching_V1_MsgProvider: CallHandlerProvider {
   /// WrappedCancelUnbondingDelegation defines a method for cancelling unbonding of
   /// coins from a delegator and source validator to a destination validator.
   func wrappedCancelUnbondingDelegation(request: Babylon_Epoching_V1_MsgWrappedCancelUnbondingDelegation, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Epoching_V1_MsgWrappedCancelUnbondingDelegationResponse>
+
+  /// WrappedEditValidator defines a method for editing the validator
+  /// information.
+  func wrappedEditValidator(request: Babylon_Epoching_V1_MsgWrappedEditValidator, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Epoching_V1_MsgWrappedEditValidatorResponse>
+
+  /// WrappedStakingUpdateParams defines a method for update the parameters
+  /// of the x/staking module.
+  func wrappedStakingUpdateParams(request: Babylon_Epoching_V1_MsgWrappedStakingUpdateParams, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Epoching_V1_MsgWrappedStakingUpdateParamsResponse>
 
   /// UpdateParams defines a method for updating epoching module parameters.
   func updateParams(request: Babylon_Epoching_V1_MsgUpdateParams, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Epoching_V1_MsgUpdateParamsResponse>
@@ -537,6 +671,24 @@ extension Babylon_Epoching_V1_MsgProvider {
         userFunction: self.wrappedCancelUnbondingDelegation(request:context:)
       )
 
+    case "WrappedEditValidator":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Babylon_Epoching_V1_MsgWrappedEditValidator>(),
+        responseSerializer: ProtobufSerializer<Babylon_Epoching_V1_MsgWrappedEditValidatorResponse>(),
+        interceptors: self.interceptors?.makeWrappedEditValidatorInterceptors() ?? [],
+        userFunction: self.wrappedEditValidator(request:context:)
+      )
+
+    case "WrappedStakingUpdateParams":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Babylon_Epoching_V1_MsgWrappedStakingUpdateParams>(),
+        responseSerializer: ProtobufSerializer<Babylon_Epoching_V1_MsgWrappedStakingUpdateParamsResponse>(),
+        interceptors: self.interceptors?.makeWrappedStakingUpdateParamsInterceptors() ?? [],
+        userFunction: self.wrappedStakingUpdateParams(request:context:)
+      )
+
     case "UpdateParams":
       return UnaryServerHandler(
         context: context,
@@ -587,6 +739,20 @@ internal protocol Babylon_Epoching_V1_MsgAsyncProvider: CallHandlerProvider {
     request: Babylon_Epoching_V1_MsgWrappedCancelUnbondingDelegation,
     context: GRPCAsyncServerCallContext
   ) async throws -> Babylon_Epoching_V1_MsgWrappedCancelUnbondingDelegationResponse
+
+  /// WrappedEditValidator defines a method for editing the validator
+  /// information.
+  @Sendable func wrappedEditValidator(
+    request: Babylon_Epoching_V1_MsgWrappedEditValidator,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Babylon_Epoching_V1_MsgWrappedEditValidatorResponse
+
+  /// WrappedStakingUpdateParams defines a method for update the parameters
+  /// of the x/staking module.
+  @Sendable func wrappedStakingUpdateParams(
+    request: Babylon_Epoching_V1_MsgWrappedStakingUpdateParams,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Babylon_Epoching_V1_MsgWrappedStakingUpdateParamsResponse
 
   /// UpdateParams defines a method for updating epoching module parameters.
   @Sendable func updateParams(
@@ -650,6 +816,24 @@ extension Babylon_Epoching_V1_MsgAsyncProvider {
         wrapping: self.wrappedCancelUnbondingDelegation(request:context:)
       )
 
+    case "WrappedEditValidator":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Babylon_Epoching_V1_MsgWrappedEditValidator>(),
+        responseSerializer: ProtobufSerializer<Babylon_Epoching_V1_MsgWrappedEditValidatorResponse>(),
+        interceptors: self.interceptors?.makeWrappedEditValidatorInterceptors() ?? [],
+        wrapping: self.wrappedEditValidator(request:context:)
+      )
+
+    case "WrappedStakingUpdateParams":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Babylon_Epoching_V1_MsgWrappedStakingUpdateParams>(),
+        responseSerializer: ProtobufSerializer<Babylon_Epoching_V1_MsgWrappedStakingUpdateParamsResponse>(),
+        interceptors: self.interceptors?.makeWrappedStakingUpdateParamsInterceptors() ?? [],
+        wrapping: self.wrappedStakingUpdateParams(request:context:)
+      )
+
     case "UpdateParams":
       return GRPCAsyncServerHandler(
         context: context,
@@ -683,6 +867,14 @@ internal protocol Babylon_Epoching_V1_MsgServerInterceptorFactoryProtocol {
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeWrappedCancelUnbondingDelegationInterceptors() -> [ServerInterceptor<Babylon_Epoching_V1_MsgWrappedCancelUnbondingDelegation, Babylon_Epoching_V1_MsgWrappedCancelUnbondingDelegationResponse>]
 
+  /// - Returns: Interceptors to use when handling 'wrappedEditValidator'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeWrappedEditValidatorInterceptors() -> [ServerInterceptor<Babylon_Epoching_V1_MsgWrappedEditValidator, Babylon_Epoching_V1_MsgWrappedEditValidatorResponse>]
+
+  /// - Returns: Interceptors to use when handling 'wrappedStakingUpdateParams'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeWrappedStakingUpdateParamsInterceptors() -> [ServerInterceptor<Babylon_Epoching_V1_MsgWrappedStakingUpdateParams, Babylon_Epoching_V1_MsgWrappedStakingUpdateParamsResponse>]
+
   /// - Returns: Interceptors to use when handling 'updateParams'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeUpdateParamsInterceptors() -> [ServerInterceptor<Babylon_Epoching_V1_MsgUpdateParams, Babylon_Epoching_V1_MsgUpdateParamsResponse>]
@@ -697,6 +889,8 @@ internal enum Babylon_Epoching_V1_MsgServerMetadata {
       Babylon_Epoching_V1_MsgServerMetadata.Methods.wrappedUndelegate,
       Babylon_Epoching_V1_MsgServerMetadata.Methods.wrappedBeginRedelegate,
       Babylon_Epoching_V1_MsgServerMetadata.Methods.wrappedCancelUnbondingDelegation,
+      Babylon_Epoching_V1_MsgServerMetadata.Methods.wrappedEditValidator,
+      Babylon_Epoching_V1_MsgServerMetadata.Methods.wrappedStakingUpdateParams,
       Babylon_Epoching_V1_MsgServerMetadata.Methods.updateParams,
     ]
   )
@@ -723,6 +917,18 @@ internal enum Babylon_Epoching_V1_MsgServerMetadata {
     internal static let wrappedCancelUnbondingDelegation = GRPCMethodDescriptor(
       name: "WrappedCancelUnbondingDelegation",
       path: "/babylon.epoching.v1.Msg/WrappedCancelUnbondingDelegation",
+      type: GRPCCallType.unary
+    )
+
+    internal static let wrappedEditValidator = GRPCMethodDescriptor(
+      name: "WrappedEditValidator",
+      path: "/babylon.epoching.v1.Msg/WrappedEditValidator",
+      type: GRPCCallType.unary
+    )
+
+    internal static let wrappedStakingUpdateParams = GRPCMethodDescriptor(
+      name: "WrappedStakingUpdateParams",
+      path: "/babylon.epoching.v1.Msg/WrappedStakingUpdateParams",
       type: GRPCCallType.unary
     )
 

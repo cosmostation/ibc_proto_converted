@@ -52,6 +52,16 @@ internal protocol Babylon_Finality_V1_MsgClientProtocol: GRPCClient {
     _ request: Babylon_Finality_V1_MsgUnjailFinalityProvider,
     callOptions: CallOptions?
   ) -> UnaryCall<Babylon_Finality_V1_MsgUnjailFinalityProvider, Babylon_Finality_V1_MsgUnjailFinalityProviderResponse>
+
+  func resumeFinalityProposal(
+    _ request: Babylon_Finality_V1_MsgResumeFinalityProposal,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Babylon_Finality_V1_MsgResumeFinalityProposal, Babylon_Finality_V1_MsgResumeFinalityProposalResponse>
+
+  func equivocationEvidence(
+    _ request: Babylon_Finality_V1_MsgEquivocationEvidence,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Babylon_Finality_V1_MsgEquivocationEvidence, Babylon_Finality_V1_MsgEquivocationEvidenceResponse>
 }
 
 extension Babylon_Finality_V1_MsgClientProtocol {
@@ -95,7 +105,6 @@ extension Babylon_Finality_V1_MsgClientProtocol {
     )
   }
 
-  /// TODO: msg for evidence of equivocation. this is not specified yet
   /// UpdateParams updates the finality module parameters.
   ///
   /// - Parameters:
@@ -130,6 +139,43 @@ extension Babylon_Finality_V1_MsgClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeUnjailFinalityProviderInterceptors() ?? []
+    )
+  }
+
+  /// ResumeFinalityProposal handles the proposal of resuming finality.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to ResumeFinalityProposal.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func resumeFinalityProposal(
+    _ request: Babylon_Finality_V1_MsgResumeFinalityProposal,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Babylon_Finality_V1_MsgResumeFinalityProposal, Babylon_Finality_V1_MsgResumeFinalityProposalResponse> {
+    return self.makeUnaryCall(
+      path: Babylon_Finality_V1_MsgClientMetadata.Methods.resumeFinalityProposal.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeResumeFinalityProposalInterceptors() ?? []
+    )
+  }
+
+  /// EquivocationEvidence handles the evidence of equivocation message sent from
+  /// the finality gadget cw contract
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to EquivocationEvidence.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func equivocationEvidence(
+    _ request: Babylon_Finality_V1_MsgEquivocationEvidence,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Babylon_Finality_V1_MsgEquivocationEvidence, Babylon_Finality_V1_MsgEquivocationEvidenceResponse> {
+    return self.makeUnaryCall(
+      path: Babylon_Finality_V1_MsgClientMetadata.Methods.equivocationEvidence.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeEquivocationEvidenceInterceptors() ?? []
     )
   }
 }
@@ -216,6 +262,16 @@ internal protocol Babylon_Finality_V1_MsgAsyncClientProtocol: GRPCClient {
     _ request: Babylon_Finality_V1_MsgUnjailFinalityProvider,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Babylon_Finality_V1_MsgUnjailFinalityProvider, Babylon_Finality_V1_MsgUnjailFinalityProviderResponse>
+
+  func makeResumeFinalityProposalCall(
+    _ request: Babylon_Finality_V1_MsgResumeFinalityProposal,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Babylon_Finality_V1_MsgResumeFinalityProposal, Babylon_Finality_V1_MsgResumeFinalityProposalResponse>
+
+  func makeEquivocationEvidenceCall(
+    _ request: Babylon_Finality_V1_MsgEquivocationEvidence,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Babylon_Finality_V1_MsgEquivocationEvidence, Babylon_Finality_V1_MsgEquivocationEvidenceResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -275,6 +331,30 @@ extension Babylon_Finality_V1_MsgAsyncClientProtocol {
       interceptors: self.interceptors?.makeUnjailFinalityProviderInterceptors() ?? []
     )
   }
+
+  internal func makeResumeFinalityProposalCall(
+    _ request: Babylon_Finality_V1_MsgResumeFinalityProposal,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Babylon_Finality_V1_MsgResumeFinalityProposal, Babylon_Finality_V1_MsgResumeFinalityProposalResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Babylon_Finality_V1_MsgClientMetadata.Methods.resumeFinalityProposal.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeResumeFinalityProposalInterceptors() ?? []
+    )
+  }
+
+  internal func makeEquivocationEvidenceCall(
+    _ request: Babylon_Finality_V1_MsgEquivocationEvidence,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Babylon_Finality_V1_MsgEquivocationEvidence, Babylon_Finality_V1_MsgEquivocationEvidenceResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Babylon_Finality_V1_MsgClientMetadata.Methods.equivocationEvidence.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeEquivocationEvidenceInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -326,6 +406,30 @@ extension Babylon_Finality_V1_MsgAsyncClientProtocol {
       interceptors: self.interceptors?.makeUnjailFinalityProviderInterceptors() ?? []
     )
   }
+
+  internal func resumeFinalityProposal(
+    _ request: Babylon_Finality_V1_MsgResumeFinalityProposal,
+    callOptions: CallOptions? = nil
+  ) async throws -> Babylon_Finality_V1_MsgResumeFinalityProposalResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Babylon_Finality_V1_MsgClientMetadata.Methods.resumeFinalityProposal.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeResumeFinalityProposalInterceptors() ?? []
+    )
+  }
+
+  internal func equivocationEvidence(
+    _ request: Babylon_Finality_V1_MsgEquivocationEvidence,
+    callOptions: CallOptions? = nil
+  ) async throws -> Babylon_Finality_V1_MsgEquivocationEvidenceResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Babylon_Finality_V1_MsgClientMetadata.Methods.equivocationEvidence.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeEquivocationEvidenceInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -358,6 +462,12 @@ internal protocol Babylon_Finality_V1_MsgClientInterceptorFactoryProtocol: Senda
 
   /// - Returns: Interceptors to use when invoking 'unjailFinalityProvider'.
   func makeUnjailFinalityProviderInterceptors() -> [ClientInterceptor<Babylon_Finality_V1_MsgUnjailFinalityProvider, Babylon_Finality_V1_MsgUnjailFinalityProviderResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'resumeFinalityProposal'.
+  func makeResumeFinalityProposalInterceptors() -> [ClientInterceptor<Babylon_Finality_V1_MsgResumeFinalityProposal, Babylon_Finality_V1_MsgResumeFinalityProposalResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'equivocationEvidence'.
+  func makeEquivocationEvidenceInterceptors() -> [ClientInterceptor<Babylon_Finality_V1_MsgEquivocationEvidence, Babylon_Finality_V1_MsgEquivocationEvidenceResponse>]
 }
 
 internal enum Babylon_Finality_V1_MsgClientMetadata {
@@ -369,6 +479,8 @@ internal enum Babylon_Finality_V1_MsgClientMetadata {
       Babylon_Finality_V1_MsgClientMetadata.Methods.addFinalitySig,
       Babylon_Finality_V1_MsgClientMetadata.Methods.updateParams,
       Babylon_Finality_V1_MsgClientMetadata.Methods.unjailFinalityProvider,
+      Babylon_Finality_V1_MsgClientMetadata.Methods.resumeFinalityProposal,
+      Babylon_Finality_V1_MsgClientMetadata.Methods.equivocationEvidence,
     ]
   )
 
@@ -396,6 +508,18 @@ internal enum Babylon_Finality_V1_MsgClientMetadata {
       path: "/babylon.finality.v1.Msg/UnjailFinalityProvider",
       type: GRPCCallType.unary
     )
+
+    internal static let resumeFinalityProposal = GRPCMethodDescriptor(
+      name: "ResumeFinalityProposal",
+      path: "/babylon.finality.v1.Msg/ResumeFinalityProposal",
+      type: GRPCCallType.unary
+    )
+
+    internal static let equivocationEvidence = GRPCMethodDescriptor(
+      name: "EquivocationEvidence",
+      path: "/babylon.finality.v1.Msg/EquivocationEvidence",
+      type: GRPCCallType.unary
+    )
   }
 }
 
@@ -411,13 +535,19 @@ internal protocol Babylon_Finality_V1_MsgProvider: CallHandlerProvider {
   /// AddFinalitySig adds a finality signature to a given block
   func addFinalitySig(request: Babylon_Finality_V1_MsgAddFinalitySig, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Finality_V1_MsgAddFinalitySigResponse>
 
-  /// TODO: msg for evidence of equivocation. this is not specified yet
   /// UpdateParams updates the finality module parameters.
   func updateParams(request: Babylon_Finality_V1_MsgUpdateParams, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Finality_V1_MsgUpdateParamsResponse>
 
   /// UnjailFinalityProvider defines a method for unjailing a jailed
   /// finality provider, thus it can receive voting power
   func unjailFinalityProvider(request: Babylon_Finality_V1_MsgUnjailFinalityProvider, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Finality_V1_MsgUnjailFinalityProviderResponse>
+
+  /// ResumeFinalityProposal handles the proposal of resuming finality.
+  func resumeFinalityProposal(request: Babylon_Finality_V1_MsgResumeFinalityProposal, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Finality_V1_MsgResumeFinalityProposalResponse>
+
+  /// EquivocationEvidence handles the evidence of equivocation message sent from
+  /// the finality gadget cw contract
+  func equivocationEvidence(request: Babylon_Finality_V1_MsgEquivocationEvidence, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Finality_V1_MsgEquivocationEvidenceResponse>
 }
 
 extension Babylon_Finality_V1_MsgProvider {
@@ -468,6 +598,24 @@ extension Babylon_Finality_V1_MsgProvider {
         userFunction: self.unjailFinalityProvider(request:context:)
       )
 
+    case "ResumeFinalityProposal":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Babylon_Finality_V1_MsgResumeFinalityProposal>(),
+        responseSerializer: ProtobufSerializer<Babylon_Finality_V1_MsgResumeFinalityProposalResponse>(),
+        interceptors: self.interceptors?.makeResumeFinalityProposalInterceptors() ?? [],
+        userFunction: self.resumeFinalityProposal(request:context:)
+      )
+
+    case "EquivocationEvidence":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Babylon_Finality_V1_MsgEquivocationEvidence>(),
+        responseSerializer: ProtobufSerializer<Babylon_Finality_V1_MsgEquivocationEvidenceResponse>(),
+        interceptors: self.interceptors?.makeEquivocationEvidenceInterceptors() ?? [],
+        userFunction: self.equivocationEvidence(request:context:)
+      )
+
     default:
       return nil
     }
@@ -494,7 +642,6 @@ internal protocol Babylon_Finality_V1_MsgAsyncProvider: CallHandlerProvider {
     context: GRPCAsyncServerCallContext
   ) async throws -> Babylon_Finality_V1_MsgAddFinalitySigResponse
 
-  /// TODO: msg for evidence of equivocation. this is not specified yet
   /// UpdateParams updates the finality module parameters.
   @Sendable func updateParams(
     request: Babylon_Finality_V1_MsgUpdateParams,
@@ -507,6 +654,19 @@ internal protocol Babylon_Finality_V1_MsgAsyncProvider: CallHandlerProvider {
     request: Babylon_Finality_V1_MsgUnjailFinalityProvider,
     context: GRPCAsyncServerCallContext
   ) async throws -> Babylon_Finality_V1_MsgUnjailFinalityProviderResponse
+
+  /// ResumeFinalityProposal handles the proposal of resuming finality.
+  @Sendable func resumeFinalityProposal(
+    request: Babylon_Finality_V1_MsgResumeFinalityProposal,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Babylon_Finality_V1_MsgResumeFinalityProposalResponse
+
+  /// EquivocationEvidence handles the evidence of equivocation message sent from
+  /// the finality gadget cw contract
+  @Sendable func equivocationEvidence(
+    request: Babylon_Finality_V1_MsgEquivocationEvidence,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Babylon_Finality_V1_MsgEquivocationEvidenceResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -564,6 +724,24 @@ extension Babylon_Finality_V1_MsgAsyncProvider {
         wrapping: self.unjailFinalityProvider(request:context:)
       )
 
+    case "ResumeFinalityProposal":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Babylon_Finality_V1_MsgResumeFinalityProposal>(),
+        responseSerializer: ProtobufSerializer<Babylon_Finality_V1_MsgResumeFinalityProposalResponse>(),
+        interceptors: self.interceptors?.makeResumeFinalityProposalInterceptors() ?? [],
+        wrapping: self.resumeFinalityProposal(request:context:)
+      )
+
+    case "EquivocationEvidence":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Babylon_Finality_V1_MsgEquivocationEvidence>(),
+        responseSerializer: ProtobufSerializer<Babylon_Finality_V1_MsgEquivocationEvidenceResponse>(),
+        interceptors: self.interceptors?.makeEquivocationEvidenceInterceptors() ?? [],
+        wrapping: self.equivocationEvidence(request:context:)
+      )
+
     default:
       return nil
     }
@@ -587,6 +765,14 @@ internal protocol Babylon_Finality_V1_MsgServerInterceptorFactoryProtocol {
   /// - Returns: Interceptors to use when handling 'unjailFinalityProvider'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeUnjailFinalityProviderInterceptors() -> [ServerInterceptor<Babylon_Finality_V1_MsgUnjailFinalityProvider, Babylon_Finality_V1_MsgUnjailFinalityProviderResponse>]
+
+  /// - Returns: Interceptors to use when handling 'resumeFinalityProposal'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeResumeFinalityProposalInterceptors() -> [ServerInterceptor<Babylon_Finality_V1_MsgResumeFinalityProposal, Babylon_Finality_V1_MsgResumeFinalityProposalResponse>]
+
+  /// - Returns: Interceptors to use when handling 'equivocationEvidence'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeEquivocationEvidenceInterceptors() -> [ServerInterceptor<Babylon_Finality_V1_MsgEquivocationEvidence, Babylon_Finality_V1_MsgEquivocationEvidenceResponse>]
 }
 
 internal enum Babylon_Finality_V1_MsgServerMetadata {
@@ -598,6 +784,8 @@ internal enum Babylon_Finality_V1_MsgServerMetadata {
       Babylon_Finality_V1_MsgServerMetadata.Methods.addFinalitySig,
       Babylon_Finality_V1_MsgServerMetadata.Methods.updateParams,
       Babylon_Finality_V1_MsgServerMetadata.Methods.unjailFinalityProvider,
+      Babylon_Finality_V1_MsgServerMetadata.Methods.resumeFinalityProposal,
+      Babylon_Finality_V1_MsgServerMetadata.Methods.equivocationEvidence,
     ]
   )
 
@@ -623,6 +811,18 @@ internal enum Babylon_Finality_V1_MsgServerMetadata {
     internal static let unjailFinalityProvider = GRPCMethodDescriptor(
       name: "UnjailFinalityProvider",
       path: "/babylon.finality.v1.Msg/UnjailFinalityProvider",
+      type: GRPCCallType.unary
+    )
+
+    internal static let resumeFinalityProposal = GRPCMethodDescriptor(
+      name: "ResumeFinalityProposal",
+      path: "/babylon.finality.v1.Msg/ResumeFinalityProposal",
+      type: GRPCCallType.unary
+    )
+
+    internal static let equivocationEvidence = GRPCMethodDescriptor(
+      name: "EquivocationEvidence",
+      path: "/babylon.finality.v1.Msg/EquivocationEvidence",
       type: GRPCCallType.unary
     )
   }

@@ -180,6 +180,54 @@ struct Babylon_Epoching_V1_EventWrappedCancelUnbondingDelegation {
   init() {}
 }
 
+/// EventWrappedEditValidator is the event emitted when a
+/// MsgWrappedEditValidator has been queued
+struct Babylon_Epoching_V1_EventWrappedEditValidator {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var validatorAddress: String = String()
+
+  var epochBoundary: UInt64 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// EventWrappedStakingUpdateParams is the event emitted when a
+/// MsgWrappedStakingUpdateParams has been queued
+struct Babylon_Epoching_V1_EventWrappedStakingUpdateParams {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// unbonding_time is the time duration of unbonding.
+  var unbondingTime: String = String()
+
+  /// max_validators is the maximum number of validators.
+  var maxValidators: UInt32 = 0
+
+  /// max_entries is the max entries for either unbonding delegation or redelegation (per pair/trio).
+  var maxEntries: UInt32 = 0
+
+  /// historical_entries is the number of historical entries to persist.
+  var historicalEntries: UInt32 = 0
+
+  /// bond_denom defines the bondable coin denomination.
+  var bondDenom: String = String()
+
+  /// min_commission_rate is the chain-wide minimum commission rate that a validator can charge their delegators
+  var minCommissionRate: String = String()
+
+  var epochBoundary: UInt64 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Babylon_Epoching_V1_EventBeginEpoch: @unchecked Sendable {}
 extension Babylon_Epoching_V1_EventEndEpoch: @unchecked Sendable {}
@@ -189,6 +237,8 @@ extension Babylon_Epoching_V1_EventWrappedDelegate: @unchecked Sendable {}
 extension Babylon_Epoching_V1_EventWrappedUndelegate: @unchecked Sendable {}
 extension Babylon_Epoching_V1_EventWrappedBeginRedelegate: @unchecked Sendable {}
 extension Babylon_Epoching_V1_EventWrappedCancelUnbondingDelegation: @unchecked Sendable {}
+extension Babylon_Epoching_V1_EventWrappedEditValidator: @unchecked Sendable {}
+extension Babylon_Epoching_V1_EventWrappedStakingUpdateParams: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -595,6 +645,112 @@ extension Babylon_Epoching_V1_EventWrappedCancelUnbondingDelegation: SwiftProtob
     if lhs.validatorAddress != rhs.validatorAddress {return false}
     if lhs.amount != rhs.amount {return false}
     if lhs.creationHeight != rhs.creationHeight {return false}
+    if lhs.epochBoundary != rhs.epochBoundary {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Epoching_V1_EventWrappedEditValidator: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".EventWrappedEditValidator"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "validator_address"),
+    2: .standard(proto: "epoch_boundary"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.validatorAddress) }()
+      case 2: try { try decoder.decodeSingularUInt64Field(value: &self.epochBoundary) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.validatorAddress.isEmpty {
+      try visitor.visitSingularStringField(value: self.validatorAddress, fieldNumber: 1)
+    }
+    if self.epochBoundary != 0 {
+      try visitor.visitSingularUInt64Field(value: self.epochBoundary, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Epoching_V1_EventWrappedEditValidator, rhs: Babylon_Epoching_V1_EventWrappedEditValidator) -> Bool {
+    if lhs.validatorAddress != rhs.validatorAddress {return false}
+    if lhs.epochBoundary != rhs.epochBoundary {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Epoching_V1_EventWrappedStakingUpdateParams: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".EventWrappedStakingUpdateParams"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "unbonding_time"),
+    2: .standard(proto: "max_validators"),
+    3: .standard(proto: "max_entries"),
+    4: .standard(proto: "historical_entries"),
+    5: .standard(proto: "bond_denom"),
+    6: .standard(proto: "min_commission_rate"),
+    7: .standard(proto: "epoch_boundary"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.unbondingTime) }()
+      case 2: try { try decoder.decodeSingularUInt32Field(value: &self.maxValidators) }()
+      case 3: try { try decoder.decodeSingularUInt32Field(value: &self.maxEntries) }()
+      case 4: try { try decoder.decodeSingularUInt32Field(value: &self.historicalEntries) }()
+      case 5: try { try decoder.decodeSingularStringField(value: &self.bondDenom) }()
+      case 6: try { try decoder.decodeSingularStringField(value: &self.minCommissionRate) }()
+      case 7: try { try decoder.decodeSingularUInt64Field(value: &self.epochBoundary) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.unbondingTime.isEmpty {
+      try visitor.visitSingularStringField(value: self.unbondingTime, fieldNumber: 1)
+    }
+    if self.maxValidators != 0 {
+      try visitor.visitSingularUInt32Field(value: self.maxValidators, fieldNumber: 2)
+    }
+    if self.maxEntries != 0 {
+      try visitor.visitSingularUInt32Field(value: self.maxEntries, fieldNumber: 3)
+    }
+    if self.historicalEntries != 0 {
+      try visitor.visitSingularUInt32Field(value: self.historicalEntries, fieldNumber: 4)
+    }
+    if !self.bondDenom.isEmpty {
+      try visitor.visitSingularStringField(value: self.bondDenom, fieldNumber: 5)
+    }
+    if !self.minCommissionRate.isEmpty {
+      try visitor.visitSingularStringField(value: self.minCommissionRate, fieldNumber: 6)
+    }
+    if self.epochBoundary != 0 {
+      try visitor.visitSingularUInt64Field(value: self.epochBoundary, fieldNumber: 7)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Epoching_V1_EventWrappedStakingUpdateParams, rhs: Babylon_Epoching_V1_EventWrappedStakingUpdateParams) -> Bool {
+    if lhs.unbondingTime != rhs.unbondingTime {return false}
+    if lhs.maxValidators != rhs.maxValidators {return false}
+    if lhs.maxEntries != rhs.maxEntries {return false}
+    if lhs.historicalEntries != rhs.historicalEntries {return false}
+    if lhs.bondDenom != rhs.bondDenom {return false}
+    if lhs.minCommissionRate != rhs.minCommissionRate {return false}
     if lhs.epochBoundary != rhs.epochBoundary {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

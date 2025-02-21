@@ -21,7 +21,8 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// Gauge is an object that stores rewards to be distributed
-/// code adapted from https://github.com/osmosis-labs/osmosis/blob/v18.0.0/proto/osmosis/incentives/gauge.proto
+/// code adapted from
+/// https://github.com/osmosis-labs/osmosis/blob/v18.0.0/proto/osmosis/incentives/gauge.proto
 struct Babylon_Incentive_Gauge {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -36,8 +37,9 @@ struct Babylon_Incentive_Gauge {
   init() {}
 }
 
-/// RewardGauge is an object that stores rewards distributed to a BTC staking/timestamping stakeholder
-/// code adapted from https://github.com/osmosis-labs/osmosis/blob/v18.0.0/proto/osmosis/incentives/gauge.proto
+/// RewardGauge is an object that stores rewards distributed to a BTC staking
+/// stakeholder code adapted from
+/// https://github.com/osmosis-labs/osmosis/blob/v18.0.0/proto/osmosis/incentives/gauge.proto
 struct Babylon_Incentive_RewardGauge {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -47,7 +49,8 @@ struct Babylon_Incentive_RewardGauge {
   /// Can have multiple coin denoms
   var coins: [Cosmos_Base_V1beta1_Coin] = []
 
-  /// withdrawn_coins are coins that have been withdrawn by the stakeholder already
+  /// withdrawn_coins are coins that have been withdrawn by the stakeholder
+  /// already
   var withdrawnCoins: [Cosmos_Base_V1beta1_Coin] = []
 
   var unknownFields = SwiftProtobuf.UnknownStorage()

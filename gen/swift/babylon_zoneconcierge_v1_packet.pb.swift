@@ -20,15 +20,14 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-/// ZoneconciergePacketData is the message that defines the IBC packets of
-/// ZoneConcierge
-struct Babylon_Zoneconcierge_V1_ZoneconciergePacketData {
+/// OutboundPacket represents packets sent from Babylon to other chains
+struct Babylon_Zoneconcierge_V1_OutboundPacket {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// packet is the actual message carried in the IBC packet
-  var packet: Babylon_Zoneconcierge_V1_ZoneconciergePacketData.OneOf_Packet? = nil
+  var packet: Babylon_Zoneconcierge_V1_OutboundPacket.OneOf_Packet? = nil
 
   var btcTimestamp: Babylon_Zoneconcierge_V1_BTCTimestamp {
     get {
@@ -38,20 +37,88 @@ struct Babylon_Zoneconcierge_V1_ZoneconciergePacketData {
     set {packet = .btcTimestamp(newValue)}
   }
 
+  var btcStaking: Babylon_Btcstaking_V1_BTCStakingIBCPacket {
+    get {
+      if case .btcStaking(let v)? = packet {return v}
+      return Babylon_Btcstaking_V1_BTCStakingIBCPacket()
+    }
+    set {packet = .btcStaking(newValue)}
+  }
+
+  var btcHeaders: Babylon_Zoneconcierge_V1_BTCHeaders {
+    get {
+      if case .btcHeaders(let v)? = packet {return v}
+      return Babylon_Zoneconcierge_V1_BTCHeaders()
+    }
+    set {packet = .btcHeaders(newValue)}
+  }
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   /// packet is the actual message carried in the IBC packet
   enum OneOf_Packet: Equatable {
     case btcTimestamp(Babylon_Zoneconcierge_V1_BTCTimestamp)
+    case btcStaking(Babylon_Btcstaking_V1_BTCStakingIBCPacket)
+    case btcHeaders(Babylon_Zoneconcierge_V1_BTCHeaders)
 
   #if !swift(>=4.1)
-    static func ==(lhs: Babylon_Zoneconcierge_V1_ZoneconciergePacketData.OneOf_Packet, rhs: Babylon_Zoneconcierge_V1_ZoneconciergePacketData.OneOf_Packet) -> Bool {
+    static func ==(lhs: Babylon_Zoneconcierge_V1_OutboundPacket.OneOf_Packet, rhs: Babylon_Zoneconcierge_V1_OutboundPacket.OneOf_Packet) -> Bool {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch (lhs, rhs) {
       case (.btcTimestamp, .btcTimestamp): return {
         guard case .btcTimestamp(let l) = lhs, case .btcTimestamp(let r) = rhs else { preconditionFailure() }
+        return l == r
+      }()
+      case (.btcStaking, .btcStaking): return {
+        guard case .btcStaking(let l) = lhs, case .btcStaking(let r) = rhs else { preconditionFailure() }
+        return l == r
+      }()
+      case (.btcHeaders, .btcHeaders): return {
+        guard case .btcHeaders(let l) = lhs, case .btcHeaders(let r) = rhs else { preconditionFailure() }
+        return l == r
+      }()
+      default: return false
+      }
+    }
+  #endif
+  }
+
+  init() {}
+}
+
+/// InboundPacket represents packets received by Babylon from other chains
+struct Babylon_Zoneconcierge_V1_InboundPacket {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// packet is the actual message carried in the IBC packet
+  var packet: Babylon_Zoneconcierge_V1_InboundPacket.OneOf_Packet? = nil
+
+  var consumerSlashing: Babylon_Zoneconcierge_V1_ConsumerSlashingIBCPacket {
+    get {
+      if case .consumerSlashing(let v)? = packet {return v}
+      return Babylon_Zoneconcierge_V1_ConsumerSlashingIBCPacket()
+    }
+    set {packet = .consumerSlashing(newValue)}
+  }
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  /// packet is the actual message carried in the IBC packet
+  enum OneOf_Packet: Equatable {
+    case consumerSlashing(Babylon_Zoneconcierge_V1_ConsumerSlashingIBCPacket)
+
+  #if !swift(>=4.1)
+    static func ==(lhs: Babylon_Zoneconcierge_V1_InboundPacket.OneOf_Packet, rhs: Babylon_Zoneconcierge_V1_InboundPacket.OneOf_Packet) -> Bool {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch (lhs, rhs) {
+      case (.consumerSlashing, .consumerSlashing): return {
+        guard case .consumerSlashing(let l) = lhs, case .consumerSlashing(let r) = rhs else { preconditionFailure() }
         return l == r
       }()
       }
@@ -62,8 +129,22 @@ struct Babylon_Zoneconcierge_V1_ZoneconciergePacketData {
   init() {}
 }
 
+/// BTCHeaders contains BTC headers that have been verified and inserted into Babylon's BTC light client
+/// These headers are forwarded to consumer chains to keep their light clients in sync with Babylon
+struct Babylon_Zoneconcierge_V1_BTCHeaders {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var headers: [Babylon_Btclightclient_V1_BTCHeaderInfo] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 /// BTCTimestamp is a BTC timestamp that carries information of a BTC-finalised epoch
-/// It includes a number of BTC headers, a raw checkpoint, an epoch metadata, and 
+/// It includes a number of BTC headers, a raw checkpoint, an epoch metadata, and
 /// a CZ header if there exists CZ headers checkpointed to this epoch.
 /// Upon a newly finalised epoch in Babylon, Babylon will send a BTC timestamp to each
 /// Cosmos zone that has phase-2 integration with Babylon via IBC.
@@ -86,10 +167,14 @@ struct Babylon_Zoneconcierge_V1_BTCTimestamp {
   /// - the block AFTER the common ancestor of BTC tip at epoch `lastFinalizedEpoch-1` and BTC tip at epoch `lastFinalizedEpoch`
   /// - BTC tip at epoch `lastFinalizedEpoch`
   /// where `lastFinalizedEpoch` is the last finalised epoch in Babylon
-  var btcHeaders: [Babylon_Btclightclient_V1_BTCHeaderInfo] {
-    get {return _storage._btcHeaders}
+  var btcHeaders: Babylon_Zoneconcierge_V1_BTCHeaders {
+    get {return _storage._btcHeaders ?? Babylon_Zoneconcierge_V1_BTCHeaders()}
     set {_uniqueStorage()._btcHeaders = newValue}
   }
+  /// Returns true if `btcHeaders` has been explicitly set.
+  var hasBtcHeaders: Bool {return _storage._btcHeaders != nil}
+  /// Clears the value of `btcHeaders`. Subsequent reads from it will return its default value.
+  mutating func clearBtcHeaders() {_uniqueStorage()._btcHeaders = nil}
 
   /// epoch_info is the metadata of the sealed epoch
   var epochInfo: Babylon_Epoching_V1_Epoch {
@@ -121,7 +206,7 @@ struct Babylon_Zoneconcierge_V1_BTCTimestamp {
   /// Clears the value of `btcSubmissionKey`. Subsequent reads from it will return its default value.
   mutating func clearBtcSubmissionKey() {_uniqueStorage()._btcSubmissionKey = nil}
 
-  /// 
+  ///
   ///Proofs that the header is finalized
   var proof: Babylon_Zoneconcierge_V1_ProofFinalizedChainInfo {
     get {return _storage._proof ?? Babylon_Zoneconcierge_V1_ProofFinalizedChainInfo()}
@@ -139,20 +224,51 @@ struct Babylon_Zoneconcierge_V1_BTCTimestamp {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
+/// ConsumerSlashingIBCPacket defines the slashing information that a Consumer sends to Babylon's ZoneConcierge upon a
+/// Consumer slashing event.
+/// It includes the FP public key, the Consumer block height at the slashing event, and the double sign evidence.
+struct Babylon_Zoneconcierge_V1_ConsumerSlashingIBCPacket {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  //// evidence is the FP slashing evidence that the Consumer sends to Babylon
+  var evidence: Babylon_Finality_V1_Evidence {
+    get {return _evidence ?? Babylon_Finality_V1_Evidence()}
+    set {_evidence = newValue}
+  }
+  /// Returns true if `evidence` has been explicitly set.
+  var hasEvidence: Bool {return self._evidence != nil}
+  /// Clears the value of `evidence`. Subsequent reads from it will return its default value.
+  mutating func clearEvidence() {self._evidence = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _evidence: Babylon_Finality_V1_Evidence? = nil
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
-extension Babylon_Zoneconcierge_V1_ZoneconciergePacketData: @unchecked Sendable {}
-extension Babylon_Zoneconcierge_V1_ZoneconciergePacketData.OneOf_Packet: @unchecked Sendable {}
+extension Babylon_Zoneconcierge_V1_OutboundPacket: @unchecked Sendable {}
+extension Babylon_Zoneconcierge_V1_OutboundPacket.OneOf_Packet: @unchecked Sendable {}
+extension Babylon_Zoneconcierge_V1_InboundPacket: @unchecked Sendable {}
+extension Babylon_Zoneconcierge_V1_InboundPacket.OneOf_Packet: @unchecked Sendable {}
+extension Babylon_Zoneconcierge_V1_BTCHeaders: @unchecked Sendable {}
 extension Babylon_Zoneconcierge_V1_BTCTimestamp: @unchecked Sendable {}
+extension Babylon_Zoneconcierge_V1_ConsumerSlashingIBCPacket: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 fileprivate let _protobuf_package = "babylon.zoneconcierge.v1"
 
-extension Babylon_Zoneconcierge_V1_ZoneconciergePacketData: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ZoneconciergePacketData"
+extension Babylon_Zoneconcierge_V1_OutboundPacket: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".OutboundPacket"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "btc_timestamp"),
+    2: .standard(proto: "btc_staking"),
+    3: .standard(proto: "btc_headers"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -174,6 +290,32 @@ extension Babylon_Zoneconcierge_V1_ZoneconciergePacketData: SwiftProtobuf.Messag
           self.packet = .btcTimestamp(v)
         }
       }()
+      case 2: try {
+        var v: Babylon_Btcstaking_V1_BTCStakingIBCPacket?
+        var hadOneofValue = false
+        if let current = self.packet {
+          hadOneofValue = true
+          if case .btcStaking(let m) = current {v = m}
+        }
+        try decoder.decodeSingularMessageField(value: &v)
+        if let v = v {
+          if hadOneofValue {try decoder.handleConflictingOneOf()}
+          self.packet = .btcStaking(v)
+        }
+      }()
+      case 3: try {
+        var v: Babylon_Zoneconcierge_V1_BTCHeaders?
+        var hadOneofValue = false
+        if let current = self.packet {
+          hadOneofValue = true
+          if case .btcHeaders(let m) = current {v = m}
+        }
+        try decoder.decodeSingularMessageField(value: &v)
+        if let v = v {
+          if hadOneofValue {try decoder.handleConflictingOneOf()}
+          self.packet = .btcHeaders(v)
+        }
+      }()
       default: break
       }
     }
@@ -184,14 +326,106 @@ extension Babylon_Zoneconcierge_V1_ZoneconciergePacketData: SwiftProtobuf.Messag
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
     // https://github.com/apple/swift-protobuf/issues/1182
-    try { if case .btcTimestamp(let v)? = self.packet {
+    switch self.packet {
+    case .btcTimestamp?: try {
+      guard case .btcTimestamp(let v)? = self.packet else { preconditionFailure() }
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    }()
+    case .btcStaking?: try {
+      guard case .btcStaking(let v)? = self.packet else { preconditionFailure() }
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    }()
+    case .btcHeaders?: try {
+      guard case .btcHeaders(let v)? = self.packet else { preconditionFailure() }
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+    }()
+    case nil: break
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Zoneconcierge_V1_OutboundPacket, rhs: Babylon_Zoneconcierge_V1_OutboundPacket) -> Bool {
+    if lhs.packet != rhs.packet {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Zoneconcierge_V1_InboundPacket: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".InboundPacket"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "consumer_slashing"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try {
+        var v: Babylon_Zoneconcierge_V1_ConsumerSlashingIBCPacket?
+        var hadOneofValue = false
+        if let current = self.packet {
+          hadOneofValue = true
+          if case .consumerSlashing(let m) = current {v = m}
+        }
+        try decoder.decodeSingularMessageField(value: &v)
+        if let v = v {
+          if hadOneofValue {try decoder.handleConflictingOneOf()}
+          self.packet = .consumerSlashing(v)
+        }
+      }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if case .consumerSlashing(let v)? = self.packet {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
     } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Babylon_Zoneconcierge_V1_ZoneconciergePacketData, rhs: Babylon_Zoneconcierge_V1_ZoneconciergePacketData) -> Bool {
+  static func ==(lhs: Babylon_Zoneconcierge_V1_InboundPacket, rhs: Babylon_Zoneconcierge_V1_InboundPacket) -> Bool {
     if lhs.packet != rhs.packet {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Zoneconcierge_V1_BTCHeaders: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".BTCHeaders"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "headers"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.headers) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.headers.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.headers, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Zoneconcierge_V1_BTCHeaders, rhs: Babylon_Zoneconcierge_V1_BTCHeaders) -> Bool {
+    if lhs.headers != rhs.headers {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -210,7 +444,7 @@ extension Babylon_Zoneconcierge_V1_BTCTimestamp: SwiftProtobuf.Message, SwiftPro
 
   fileprivate class _StorageClass {
     var _header: Babylon_Zoneconcierge_V1_IndexedHeader? = nil
-    var _btcHeaders: [Babylon_Btclightclient_V1_BTCHeaderInfo] = []
+    var _btcHeaders: Babylon_Zoneconcierge_V1_BTCHeaders? = nil
     var _epochInfo: Babylon_Epoching_V1_Epoch? = nil
     var _rawCheckpoint: Babylon_Checkpointing_V1_RawCheckpoint? = nil
     var _btcSubmissionKey: Babylon_Btccheckpoint_V1_SubmissionKey? = nil
@@ -246,7 +480,7 @@ extension Babylon_Zoneconcierge_V1_BTCTimestamp: SwiftProtobuf.Message, SwiftPro
         // enabled. https://github.com/apple/swift-protobuf/issues/1034
         switch fieldNumber {
         case 1: try { try decoder.decodeSingularMessageField(value: &_storage._header) }()
-        case 2: try { try decoder.decodeRepeatedMessageField(value: &_storage._btcHeaders) }()
+        case 2: try { try decoder.decodeSingularMessageField(value: &_storage._btcHeaders) }()
         case 3: try { try decoder.decodeSingularMessageField(value: &_storage._epochInfo) }()
         case 4: try { try decoder.decodeSingularMessageField(value: &_storage._rawCheckpoint) }()
         case 5: try { try decoder.decodeSingularMessageField(value: &_storage._btcSubmissionKey) }()
@@ -266,9 +500,9 @@ extension Babylon_Zoneconcierge_V1_BTCTimestamp: SwiftProtobuf.Message, SwiftPro
       try { if let v = _storage._header {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
       } }()
-      if !_storage._btcHeaders.isEmpty {
-        try visitor.visitRepeatedMessageField(value: _storage._btcHeaders, fieldNumber: 2)
-      }
+      try { if let v = _storage._btcHeaders {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+      } }()
       try { if let v = _storage._epochInfo {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
       } }()
@@ -300,6 +534,42 @@ extension Babylon_Zoneconcierge_V1_BTCTimestamp: SwiftProtobuf.Message, SwiftPro
       }
       if !storagesAreEqual {return false}
     }
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Zoneconcierge_V1_ConsumerSlashingIBCPacket: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ConsumerSlashingIBCPacket"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "evidence"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._evidence) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._evidence {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Zoneconcierge_V1_ConsumerSlashingIBCPacket, rhs: Babylon_Zoneconcierge_V1_ConsumerSlashingIBCPacket) -> Bool {
+    if lhs._evidence != rhs._evidence {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

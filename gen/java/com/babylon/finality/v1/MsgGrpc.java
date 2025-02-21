@@ -142,6 +142,68 @@ public final class MsgGrpc {
     return getUnjailFinalityProviderMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal,
+      com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse> getResumeFinalityProposalMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ResumeFinalityProposal",
+      requestType = com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal.class,
+      responseType = com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal,
+      com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse> getResumeFinalityProposalMethod() {
+    io.grpc.MethodDescriptor<com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal, com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse> getResumeFinalityProposalMethod;
+    if ((getResumeFinalityProposalMethod = MsgGrpc.getResumeFinalityProposalMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getResumeFinalityProposalMethod = MsgGrpc.getResumeFinalityProposalMethod) == null) {
+          MsgGrpc.getResumeFinalityProposalMethod = getResumeFinalityProposalMethod =
+              io.grpc.MethodDescriptor.<com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal, com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ResumeFinalityProposal"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("ResumeFinalityProposal"))
+              .build();
+        }
+      }
+    }
+    return getResumeFinalityProposalMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.babylon.finality.v1.TxProto.MsgEquivocationEvidence,
+      com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse> getEquivocationEvidenceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "EquivocationEvidence",
+      requestType = com.babylon.finality.v1.TxProto.MsgEquivocationEvidence.class,
+      responseType = com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.babylon.finality.v1.TxProto.MsgEquivocationEvidence,
+      com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse> getEquivocationEvidenceMethod() {
+    io.grpc.MethodDescriptor<com.babylon.finality.v1.TxProto.MsgEquivocationEvidence, com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse> getEquivocationEvidenceMethod;
+    if ((getEquivocationEvidenceMethod = MsgGrpc.getEquivocationEvidenceMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getEquivocationEvidenceMethod = MsgGrpc.getEquivocationEvidenceMethod) == null) {
+          MsgGrpc.getEquivocationEvidenceMethod = getEquivocationEvidenceMethod =
+              io.grpc.MethodDescriptor.<com.babylon.finality.v1.TxProto.MsgEquivocationEvidence, com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EquivocationEvidence"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.babylon.finality.v1.TxProto.MsgEquivocationEvidence.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("EquivocationEvidence"))
+              .build();
+        }
+      }
+    }
+    return getEquivocationEvidenceMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -215,7 +277,6 @@ public final class MsgGrpc {
 
     /**
      * <pre>
-     * TODO: msg for evidence of equivocation. this is not specified yet
      * UpdateParams updates the finality module parameters.
      * </pre>
      */
@@ -233,6 +294,27 @@ public final class MsgGrpc {
     default void unjailFinalityProvider(com.babylon.finality.v1.TxProto.MsgUnjailFinalityProvider request,
         io.grpc.stub.StreamObserver<com.babylon.finality.v1.TxProto.MsgUnjailFinalityProviderResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUnjailFinalityProviderMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ResumeFinalityProposal handles the proposal of resuming finality.
+     * </pre>
+     */
+    default void resumeFinalityProposal(com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal request,
+        io.grpc.stub.StreamObserver<com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getResumeFinalityProposalMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * EquivocationEvidence handles the evidence of equivocation message sent from
+     * the finality gadget cw contract
+     * </pre>
+     */
+    default void equivocationEvidence(com.babylon.finality.v1.TxProto.MsgEquivocationEvidence request,
+        io.grpc.stub.StreamObserver<com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEquivocationEvidenceMethod(), responseObserver);
     }
   }
 
@@ -293,7 +375,6 @@ public final class MsgGrpc {
 
     /**
      * <pre>
-     * TODO: msg for evidence of equivocation. this is not specified yet
      * UpdateParams updates the finality module parameters.
      * </pre>
      */
@@ -313,6 +394,29 @@ public final class MsgGrpc {
         io.grpc.stub.StreamObserver<com.babylon.finality.v1.TxProto.MsgUnjailFinalityProviderResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUnjailFinalityProviderMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ResumeFinalityProposal handles the proposal of resuming finality.
+     * </pre>
+     */
+    public void resumeFinalityProposal(com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal request,
+        io.grpc.stub.StreamObserver<com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getResumeFinalityProposalMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * EquivocationEvidence handles the evidence of equivocation message sent from
+     * the finality gadget cw contract
+     * </pre>
+     */
+    public void equivocationEvidence(com.babylon.finality.v1.TxProto.MsgEquivocationEvidence request,
+        io.grpc.stub.StreamObserver<com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getEquivocationEvidenceMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -357,7 +461,6 @@ public final class MsgGrpc {
 
     /**
      * <pre>
-     * TODO: msg for evidence of equivocation. this is not specified yet
      * UpdateParams updates the finality module parameters.
      * </pre>
      */
@@ -375,6 +478,27 @@ public final class MsgGrpc {
     public com.babylon.finality.v1.TxProto.MsgUnjailFinalityProviderResponse unjailFinalityProvider(com.babylon.finality.v1.TxProto.MsgUnjailFinalityProvider request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUnjailFinalityProviderMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ResumeFinalityProposal handles the proposal of resuming finality.
+     * </pre>
+     */
+    public com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse resumeFinalityProposal(com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getResumeFinalityProposalMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * EquivocationEvidence handles the evidence of equivocation message sent from
+     * the finality gadget cw contract
+     * </pre>
+     */
+    public com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse equivocationEvidence(com.babylon.finality.v1.TxProto.MsgEquivocationEvidence request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getEquivocationEvidenceMethod(), getCallOptions(), request);
     }
   }
 
@@ -421,7 +545,6 @@ public final class MsgGrpc {
 
     /**
      * <pre>
-     * TODO: msg for evidence of equivocation. this is not specified yet
      * UpdateParams updates the finality module parameters.
      * </pre>
      */
@@ -442,12 +565,37 @@ public final class MsgGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUnjailFinalityProviderMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * ResumeFinalityProposal handles the proposal of resuming finality.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse> resumeFinalityProposal(
+        com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getResumeFinalityProposalMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * EquivocationEvidence handles the evidence of equivocation message sent from
+     * the finality gadget cw contract
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse> equivocationEvidence(
+        com.babylon.finality.v1.TxProto.MsgEquivocationEvidence request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getEquivocationEvidenceMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_COMMIT_PUB_RAND_LIST = 0;
   private static final int METHODID_ADD_FINALITY_SIG = 1;
   private static final int METHODID_UPDATE_PARAMS = 2;
   private static final int METHODID_UNJAIL_FINALITY_PROVIDER = 3;
+  private static final int METHODID_RESUME_FINALITY_PROPOSAL = 4;
+  private static final int METHODID_EQUIVOCATION_EVIDENCE = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -481,6 +629,14 @@ public final class MsgGrpc {
         case METHODID_UNJAIL_FINALITY_PROVIDER:
           serviceImpl.unjailFinalityProvider((com.babylon.finality.v1.TxProto.MsgUnjailFinalityProvider) request,
               (io.grpc.stub.StreamObserver<com.babylon.finality.v1.TxProto.MsgUnjailFinalityProviderResponse>) responseObserver);
+          break;
+        case METHODID_RESUME_FINALITY_PROPOSAL:
+          serviceImpl.resumeFinalityProposal((com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal) request,
+              (io.grpc.stub.StreamObserver<com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse>) responseObserver);
+          break;
+        case METHODID_EQUIVOCATION_EVIDENCE:
+          serviceImpl.equivocationEvidence((com.babylon.finality.v1.TxProto.MsgEquivocationEvidence) request,
+              (io.grpc.stub.StreamObserver<com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -528,6 +684,20 @@ public final class MsgGrpc {
               com.babylon.finality.v1.TxProto.MsgUnjailFinalityProvider,
               com.babylon.finality.v1.TxProto.MsgUnjailFinalityProviderResponse>(
                 service, METHODID_UNJAIL_FINALITY_PROVIDER)))
+        .addMethod(
+          getResumeFinalityProposalMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.babylon.finality.v1.TxProto.MsgResumeFinalityProposal,
+              com.babylon.finality.v1.TxProto.MsgResumeFinalityProposalResponse>(
+                service, METHODID_RESUME_FINALITY_PROPOSAL)))
+        .addMethod(
+          getEquivocationEvidenceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.babylon.finality.v1.TxProto.MsgEquivocationEvidence,
+              com.babylon.finality.v1.TxProto.MsgEquivocationEvidenceResponse>(
+                service, METHODID_EQUIVOCATION_EVIDENCE)))
         .build();
   }
 
@@ -580,6 +750,8 @@ public final class MsgGrpc {
               .addMethod(getAddFinalitySigMethod())
               .addMethod(getUpdateParamsMethod())
               .addMethod(getUnjailFinalityProviderMethod())
+              .addMethod(getResumeFinalityProposalMethod())
+              .addMethod(getEquivocationEvidenceMethod())
               .build();
         }
       }

@@ -63,8 +63,9 @@ struct Babylon_Btcstaking_V1_Params {
   var slashingRate: String = String()
 
   /// PARAMETERS COVERING UNBONDING
-  /// min_unbonding_time is the minimum time for unbonding transaction timelock in BTC blocks
-  var minUnbondingTimeBlocks: UInt32 = 0
+  /// unbonding_time is the exact unbonding time required from unbonding transaction
+  /// it must be larger than `checkpoint_finalization_timeout` from `btccheckpoint` module
+  var unbondingTimeBlocks: UInt32 = 0
 
   /// unbonding_fee exact fee required for unbonding transaction
   var unbondingFeeSat: Int64 = 0
@@ -77,6 +78,45 @@ struct Babylon_Btcstaking_V1_Params {
 
   /// base gas fee for delegation creation
   var delegationCreationBaseGasFee: UInt64 = 0
+
+  /// allow_list_expiration_height is the height at which the allow list expires
+  /// i.e all staking transactions are allowed to enter Babylon chain afterwards
+  /// setting it to 0 means allow list is disabled
+  var allowListExpirationHeight: UInt64 = 0
+
+  /// btc_activation_height is the btc height from which parameters are activated (inclusive)
+  var btcActivationHeight: UInt32 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// HeightVersionPair pairs a btc height with a version of the parameters
+struct Babylon_Btcstaking_V1_HeightVersionPair {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// start_height is the height from which the parameters are activated (inclusive)
+  var startHeight: UInt64 = 0
+
+  /// version is the version of the parameters
+  var version: UInt32 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// HeightToVersionMap maps a btc height to a version of the parameters
+struct Babylon_Btcstaking_V1_HeightToVersionMap {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// Pairs must be sorted by `start_height` in ascending order, without duplicates
+  var pairs: [Babylon_Btcstaking_V1_HeightVersionPair] = []
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -112,6 +152,8 @@ struct Babylon_Btcstaking_V1_StoredParams {
 
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Babylon_Btcstaking_V1_Params: @unchecked Sendable {}
+extension Babylon_Btcstaking_V1_HeightVersionPair: @unchecked Sendable {}
+extension Babylon_Btcstaking_V1_HeightToVersionMap: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_StoredParams: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
@@ -131,10 +173,12 @@ extension Babylon_Btcstaking_V1_Params: SwiftProtobuf.Message, SwiftProtobuf._Me
     7: .standard(proto: "slashing_pk_script"),
     8: .standard(proto: "min_slashing_tx_fee_sat"),
     9: .standard(proto: "slashing_rate"),
-    10: .standard(proto: "min_unbonding_time_blocks"),
+    10: .standard(proto: "unbonding_time_blocks"),
     11: .standard(proto: "unbonding_fee_sat"),
     12: .standard(proto: "min_commission_rate"),
     13: .standard(proto: "delegation_creation_base_gas_fee"),
+    14: .standard(proto: "allow_list_expiration_height"),
+    15: .standard(proto: "btc_activation_height"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -152,10 +196,12 @@ extension Babylon_Btcstaking_V1_Params: SwiftProtobuf.Message, SwiftProtobuf._Me
       case 7: try { try decoder.decodeSingularBytesField(value: &self.slashingPkScript) }()
       case 8: try { try decoder.decodeSingularInt64Field(value: &self.minSlashingTxFeeSat) }()
       case 9: try { try decoder.decodeSingularStringField(value: &self.slashingRate) }()
-      case 10: try { try decoder.decodeSingularUInt32Field(value: &self.minUnbondingTimeBlocks) }()
+      case 10: try { try decoder.decodeSingularUInt32Field(value: &self.unbondingTimeBlocks) }()
       case 11: try { try decoder.decodeSingularInt64Field(value: &self.unbondingFeeSat) }()
       case 12: try { try decoder.decodeSingularStringField(value: &self.minCommissionRate) }()
       case 13: try { try decoder.decodeSingularUInt64Field(value: &self.delegationCreationBaseGasFee) }()
+      case 14: try { try decoder.decodeSingularUInt64Field(value: &self.allowListExpirationHeight) }()
+      case 15: try { try decoder.decodeSingularUInt32Field(value: &self.btcActivationHeight) }()
       default: break
       }
     }
@@ -189,8 +235,8 @@ extension Babylon_Btcstaking_V1_Params: SwiftProtobuf.Message, SwiftProtobuf._Me
     if !self.slashingRate.isEmpty {
       try visitor.visitSingularStringField(value: self.slashingRate, fieldNumber: 9)
     }
-    if self.minUnbondingTimeBlocks != 0 {
-      try visitor.visitSingularUInt32Field(value: self.minUnbondingTimeBlocks, fieldNumber: 10)
+    if self.unbondingTimeBlocks != 0 {
+      try visitor.visitSingularUInt32Field(value: self.unbondingTimeBlocks, fieldNumber: 10)
     }
     if self.unbondingFeeSat != 0 {
       try visitor.visitSingularInt64Field(value: self.unbondingFeeSat, fieldNumber: 11)
@@ -200,6 +246,12 @@ extension Babylon_Btcstaking_V1_Params: SwiftProtobuf.Message, SwiftProtobuf._Me
     }
     if self.delegationCreationBaseGasFee != 0 {
       try visitor.visitSingularUInt64Field(value: self.delegationCreationBaseGasFee, fieldNumber: 13)
+    }
+    if self.allowListExpirationHeight != 0 {
+      try visitor.visitSingularUInt64Field(value: self.allowListExpirationHeight, fieldNumber: 14)
+    }
+    if self.btcActivationHeight != 0 {
+      try visitor.visitSingularUInt32Field(value: self.btcActivationHeight, fieldNumber: 15)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -214,10 +266,82 @@ extension Babylon_Btcstaking_V1_Params: SwiftProtobuf.Message, SwiftProtobuf._Me
     if lhs.slashingPkScript != rhs.slashingPkScript {return false}
     if lhs.minSlashingTxFeeSat != rhs.minSlashingTxFeeSat {return false}
     if lhs.slashingRate != rhs.slashingRate {return false}
-    if lhs.minUnbondingTimeBlocks != rhs.minUnbondingTimeBlocks {return false}
+    if lhs.unbondingTimeBlocks != rhs.unbondingTimeBlocks {return false}
     if lhs.unbondingFeeSat != rhs.unbondingFeeSat {return false}
     if lhs.minCommissionRate != rhs.minCommissionRate {return false}
     if lhs.delegationCreationBaseGasFee != rhs.delegationCreationBaseGasFee {return false}
+    if lhs.allowListExpirationHeight != rhs.allowListExpirationHeight {return false}
+    if lhs.btcActivationHeight != rhs.btcActivationHeight {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Btcstaking_V1_HeightVersionPair: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".HeightVersionPair"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "start_height"),
+    2: .same(proto: "version"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.startHeight) }()
+      case 2: try { try decoder.decodeSingularUInt32Field(value: &self.version) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.startHeight != 0 {
+      try visitor.visitSingularUInt64Field(value: self.startHeight, fieldNumber: 1)
+    }
+    if self.version != 0 {
+      try visitor.visitSingularUInt32Field(value: self.version, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Btcstaking_V1_HeightVersionPair, rhs: Babylon_Btcstaking_V1_HeightVersionPair) -> Bool {
+    if lhs.startHeight != rhs.startHeight {return false}
+    if lhs.version != rhs.version {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Btcstaking_V1_HeightToVersionMap: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".HeightToVersionMap"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "pairs"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.pairs) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.pairs.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.pairs, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Btcstaking_V1_HeightToVersionMap, rhs: Babylon_Btcstaking_V1_HeightToVersionMap) -> Bool {
+    if lhs.pairs != rhs.pairs {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

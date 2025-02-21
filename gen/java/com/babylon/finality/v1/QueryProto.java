@@ -4506,6 +4506,17 @@ public final class QueryProto {
      * @return The jailed.
      */
     boolean getJailed();
+
+    /**
+     * <pre>
+     * highest_voted_height is the highest height for which the
+     * finality provider has voted
+     * </pre>
+     *
+     * <code>uint32 highest_voted_height = 7 [json_name = "highestVotedHeight"];</code>
+     * @return The highestVotedHeight.
+     */
+    int getHighestVotedHeight();
   }
   /**
    * <pre>
@@ -4675,6 +4686,22 @@ public final class QueryProto {
       return jailed_;
     }
 
+    public static final int HIGHEST_VOTED_HEIGHT_FIELD_NUMBER = 7;
+    private int highestVotedHeight_ = 0;
+    /**
+     * <pre>
+     * highest_voted_height is the highest height for which the
+     * finality provider has voted
+     * </pre>
+     *
+     * <code>uint32 highest_voted_height = 7 [json_name = "highestVotedHeight"];</code>
+     * @return The highestVotedHeight.
+     */
+    @java.lang.Override
+    public int getHighestVotedHeight() {
+      return highestVotedHeight_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4706,6 +4733,9 @@ public final class QueryProto {
       }
       if (jailed_ != false) {
         output.writeBool(6, jailed_);
+      }
+      if (highestVotedHeight_ != 0) {
+        output.writeUInt32(7, highestVotedHeight_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -4739,6 +4769,10 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, jailed_);
       }
+      if (highestVotedHeight_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(7, highestVotedHeight_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4766,6 +4800,8 @@ public final class QueryProto {
           != other.getSlashedBtcHeight()) return false;
       if (getJailed()
           != other.getJailed()) return false;
+      if (getHighestVotedHeight()
+          != other.getHighestVotedHeight()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -4793,6 +4829,8 @@ public final class QueryProto {
       hash = (37 * hash) + JAILED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getJailed());
+      hash = (37 * hash) + HIGHEST_VOTED_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getHighestVotedHeight();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4934,6 +4972,7 @@ public final class QueryProto {
         slashedBabylonHeight_ = 0L;
         slashedBtcHeight_ = 0;
         jailed_ = false;
+        highestVotedHeight_ = 0;
         return this;
       }
 
@@ -4984,6 +5023,9 @@ public final class QueryProto {
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.jailed_ = jailed_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.highestVotedHeight_ = highestVotedHeight_;
         }
       }
 
@@ -5051,6 +5093,9 @@ public final class QueryProto {
         if (other.getJailed() != false) {
           setJailed(other.getJailed());
         }
+        if (other.getHighestVotedHeight() != 0) {
+          setHighestVotedHeight(other.getHighestVotedHeight());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -5107,6 +5152,11 @@ public final class QueryProto {
                 bitField0_ |= 0x00000020;
                 break;
               } // case 48
+              case 56: {
+                highestVotedHeight_ = input.readUInt32();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5449,6 +5499,53 @@ public final class QueryProto {
       public Builder clearJailed() {
         bitField0_ = (bitField0_ & ~0x00000020);
         jailed_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int highestVotedHeight_ ;
+      /**
+       * <pre>
+       * highest_voted_height is the highest height for which the
+       * finality provider has voted
+       * </pre>
+       *
+       * <code>uint32 highest_voted_height = 7 [json_name = "highestVotedHeight"];</code>
+       * @return The highestVotedHeight.
+       */
+      @java.lang.Override
+      public int getHighestVotedHeight() {
+        return highestVotedHeight_;
+      }
+      /**
+       * <pre>
+       * highest_voted_height is the highest height for which the
+       * finality provider has voted
+       * </pre>
+       *
+       * <code>uint32 highest_voted_height = 7 [json_name = "highestVotedHeight"];</code>
+       * @param value The highestVotedHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHighestVotedHeight(int value) {
+
+        highestVotedHeight_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * highest_voted_height is the highest height for which the
+       * finality provider has voted
+       * </pre>
+       *
+       * <code>uint32 highest_voted_height = 7 [json_name = "highestVotedHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHighestVotedHeight() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        highestVotedHeight_ = 0;
         onChanged();
         return this;
       }
@@ -24890,7 +24987,7 @@ com.babylon.finality.v1.QueryProto.PubRandCommitResponse defaultValue) {
       "FinalityProvidersAtHeightRequest\022\026\n\006heig" +
       "ht\030\001 \001(\004R\006height\022F\n\npagination\030\002 \001(\0132&.c" +
       "osmos.base.query.v1beta1.PageRequestR\npa" +
-      "gination\"\270\002\n\'ActiveFinalityProvidersAtHe" +
+      "gination\"\352\002\n\'ActiveFinalityProvidersAtHe" +
       "ightResponse\022V\n\nbtc_pk_hex\030\001 \001(\tB8\332\336\0374gi" +
       "thub.com/babylonlabs-io/babylon/types.BI" +
       "P340PubKeyR\010btcPkHex\022\026\n\006height\030\002 \001(\004R\006he" +
@@ -24898,168 +24995,169 @@ com.babylon.finality.v1.QueryProto.PubRandCommitResponse defaultValue) {
       "4\n\026slashed_babylon_height\030\004 \001(\004R\024slashed" +
       "BabylonHeight\022,\n\022slashed_btc_height\030\005 \001(" +
       "\rR\020slashedBtcHeight\022\026\n\006jailed\030\006 \001(\010R\006jai" +
-      "led\"\344\001\n,QueryActiveFinalityProvidersAtHe" +
-      "ightResponse\022k\n\022finality_providers\030\001 \003(\013" +
-      "2<.babylon.finality.v1.ActiveFinalityPro" +
-      "vidersAtHeightResponseR\021finalityProvider" +
-      "s\022G\n\npagination\030\002 \001(\0132\'.cosmos.base.quer" +
-      "y.v1beta1.PageResponseR\npagination\"\035\n\033Qu" +
-      "eryActivatedHeightRequest\"6\n\034QueryActiva" +
-      "tedHeightResponse\022\026\n\006height\030\001 \001(\004R\006heigh" +
-      "t\"\215\001\n QueryListPublicRandomnessRequest\022!" +
-      "\n\rfp_btc_pk_hex\030\001 \001(\tR\nfpBtcPkHex\022F\n\npag" +
-      "ination\030\002 \001(\0132&.cosmos.base.query.v1beta" +
-      "1.PageRequestR\npagination\"\322\002\n!QueryListP" +
-      "ublicRandomnessResponse\022\244\001\n\014pub_rand_map" +
-      "\030\001 \003(\0132F.babylon.finality.v1.QueryListPu" +
-      "blicRandomnessResponse.PubRandMapEntryB:" +
-      "\332\336\0376github.com/babylonlabs-io/babylon/ty" +
-      "pes.SchnorrPubRandR\npubRandMap\022G\n\npagina" +
-      "tion\030\002 \001(\0132\'.cosmos.base.query.v1beta1.P" +
-      "ageResponseR\npagination\032=\n\017PubRandMapEnt" +
-      "ry\022\020\n\003key\030\001 \001(\004R\003key\022\024\n\005value\030\002 \001(\014R\005val" +
-      "ue:\0028\001\"v\n\025PubRandCommitResponse\022 \n\014num_p" +
-      "ub_rand\030\001 \001(\004R\nnumPubRand\022\036\n\ncommitment\030" +
-      "\002 \001(\014R\ncommitment\022\033\n\tepoch_num\030\003 \001(\004R\010ep" +
-      "ochNum\"\212\001\n\035QueryListPubRandCommitRequest" +
-      "\022!\n\rfp_btc_pk_hex\030\001 \001(\tR\nfpBtcPkHex\022F\n\np" +
-      "agination\030\002 \001(\0132&.cosmos.base.query.v1be" +
-      "ta1.PageRequestR\npagination\"\324\002\n\036QueryLis" +
-      "tPubRandCommitResponse\022x\n\023pub_rand_commi" +
-      "t_map\030\001 \003(\0132I.babylon.finality.v1.QueryL" +
-      "istPubRandCommitResponse.PubRandCommitMa" +
-      "pEntryR\020pubRandCommitMap\022G\n\npagination\030\002" +
-      " \001(\0132\'.cosmos.base.query.v1beta1.PageRes" +
-      "ponseR\npagination\032o\n\025PubRandCommitMapEnt" +
-      "ry\022\020\n\003key\030\001 \001(\004R\003key\022@\n\005value\030\002 \001(\0132*.ba" +
-      "bylon.finality.v1.PubRandCommitResponseR" +
-      "\005value:\0028\001\"+\n\021QueryBlockRequest\022\026\n\006heigh" +
-      "t\030\001 \001(\004R\006height\"M\n\022QueryBlockResponse\0227\n" +
-      "\005block\030\001 \001(\0132!.babylon.finality.v1.Index" +
-      "edBlockR\005block\"\241\001\n\026QueryListBlocksReques" +
-      "t\022?\n\006status\030\001 \001(\0162\'.babylon.finality.v1." +
-      "QueriedBlockStatusR\006status\022F\n\npagination" +
-      "\030\002 \001(\0132&.cosmos.base.query.v1beta1.PageR" +
-      "equestR\npagination\"\235\001\n\027QueryListBlocksRe" +
-      "sponse\0229\n\006blocks\030\001 \003(\0132!.babylon.finalit" +
-      "y.v1.IndexedBlockR\006blocks\022G\n\npagination\030" +
+      "led\0220\n\024highest_voted_height\030\007 \001(\rR\022highe" +
+      "stVotedHeight\"\344\001\n,QueryActiveFinalityPro" +
+      "vidersAtHeightResponse\022k\n\022finality_provi" +
+      "ders\030\001 \003(\0132<.babylon.finality.v1.ActiveF" +
+      "inalityProvidersAtHeightResponseR\021finali" +
+      "tyProviders\022G\n\npagination\030\002 \001(\0132\'.cosmos" +
+      ".base.query.v1beta1.PageResponseR\npagina" +
+      "tion\"\035\n\033QueryActivatedHeightRequest\"6\n\034Q" +
+      "ueryActivatedHeightResponse\022\026\n\006height\030\001 " +
+      "\001(\004R\006height\"\215\001\n QueryListPublicRandomnes" +
+      "sRequest\022!\n\rfp_btc_pk_hex\030\001 \001(\tR\nfpBtcPk" +
+      "Hex\022F\n\npagination\030\002 \001(\0132&.cosmos.base.qu" +
+      "ery.v1beta1.PageRequestR\npagination\"\322\002\n!" +
+      "QueryListPublicRandomnessResponse\022\244\001\n\014pu" +
+      "b_rand_map\030\001 \003(\0132F.babylon.finality.v1.Q" +
+      "ueryListPublicRandomnessResponse.PubRand" +
+      "MapEntryB:\332\336\0376github.com/babylonlabs-io/" +
+      "babylon/types.SchnorrPubRandR\npubRandMap" +
+      "\022G\n\npagination\030\002 \001(\0132\'.cosmos.base.query" +
+      ".v1beta1.PageResponseR\npagination\032=\n\017Pub" +
+      "RandMapEntry\022\020\n\003key\030\001 \001(\004R\003key\022\024\n\005value\030" +
+      "\002 \001(\014R\005value:\0028\001\"v\n\025PubRandCommitRespons" +
+      "e\022 \n\014num_pub_rand\030\001 \001(\004R\nnumPubRand\022\036\n\nc" +
+      "ommitment\030\002 \001(\014R\ncommitment\022\033\n\tepoch_num" +
+      "\030\003 \001(\004R\010epochNum\"\212\001\n\035QueryListPubRandCom" +
+      "mitRequest\022!\n\rfp_btc_pk_hex\030\001 \001(\tR\nfpBtc" +
+      "PkHex\022F\n\npagination\030\002 \001(\0132&.cosmos.base." +
+      "query.v1beta1.PageRequestR\npagination\"\324\002" +
+      "\n\036QueryListPubRandCommitResponse\022x\n\023pub_" +
+      "rand_commit_map\030\001 \003(\0132I.babylon.finality" +
+      ".v1.QueryListPubRandCommitResponse.PubRa" +
+      "ndCommitMapEntryR\020pubRandCommitMap\022G\n\npa" +
+      "gination\030\002 \001(\0132\'.cosmos.base.query.v1bet" +
+      "a1.PageResponseR\npagination\032o\n\025PubRandCo" +
+      "mmitMapEntry\022\020\n\003key\030\001 \001(\004R\003key\022@\n\005value\030" +
+      "\002 \001(\0132*.babylon.finality.v1.PubRandCommi" +
+      "tResponseR\005value:\0028\001\"+\n\021QueryBlockReques" +
+      "t\022\026\n\006height\030\001 \001(\004R\006height\"M\n\022QueryBlockR" +
+      "esponse\0227\n\005block\030\001 \001(\0132!.babylon.finalit" +
+      "y.v1.IndexedBlockR\005block\"\241\001\n\026QueryListBl" +
+      "ocksRequest\022?\n\006status\030\001 \001(\0162\'.babylon.fi" +
+      "nality.v1.QueriedBlockStatusR\006status\022F\n\n" +
+      "pagination\030\002 \001(\0132&.cosmos.base.query.v1b" +
+      "eta1.PageRequestR\npagination\"\235\001\n\027QueryLi" +
+      "stBlocksResponse\0229\n\006blocks\030\001 \003(\0132!.babyl" +
+      "on.finality.v1.IndexedBlockR\006blocks\022G\n\np" +
+      "agination\030\002 \001(\0132\'.cosmos.base.query.v1be" +
+      "ta1.PageResponseR\npagination\"3\n\031QueryVot" +
+      "esAtHeightRequest\022\026\n\006height\030\001 \001(\004R\006heigh" +
+      "t\"o\n\032QueryVotesAtHeightResponse\022Q\n\007btc_p" +
+      "ks\030\001 \003(\014B8\332\336\0374github.com/babylonlabs-io/" +
+      "babylon/types.BIP340PubKeyR\006btcPks\"9\n\024Qu" +
+      "eryEvidenceRequest\022!\n\rfp_btc_pk_hex\030\001 \001(" +
+      "\tR\nfpBtcPkHex\"\333\003\n\020EvidenceResponse\022!\n\rfp" +
+      "_btc_pk_hex\030\001 \001(\tR\nfpBtcPkHex\022!\n\014block_h" +
+      "eight\030\002 \001(\004R\013blockHeight\022U\n\010pub_rand\030\003 \001" +
+      "(\014B:\332\336\0376github.com/babylonlabs-io/babylo" +
+      "n/types.SchnorrPubRandR\007pubRand\022,\n\022canon" +
+      "ical_app_hash\030\004 \001(\014R\020canonicalAppHash\022\"\n" +
+      "\rfork_app_hash\030\005 \001(\014R\013forkAppHash\022p\n\026can" +
+      "onical_finality_sig\030\006 \001(\014B:\332\336\0376github.co" +
+      "m/babylonlabs-io/babylon/types.SchnorrEO" +
+      "TSSigR\024canonicalFinalitySig\022f\n\021fork_fina" +
+      "lity_sig\030\007 \001(\014B:\332\336\0376github.com/babylonla" +
+      "bs-io/babylon/types.SchnorrEOTSSigR\017fork" +
+      "FinalitySig\"Z\n\025QueryEvidenceResponse\022A\n\010" +
+      "evidence\030\001 \001(\0132%.babylon.finality.v1.Evi" +
+      "denceResponseR\010evidence\"\206\001\n\031QueryListEvi" +
+      "dencesRequest\022!\n\014start_height\030\001 \001(\004R\013sta" +
+      "rtHeight\022F\n\npagination\030\002 \001(\0132&.cosmos.ba" +
+      "se.query.v1beta1.PageRequestR\npagination" +
+      "\"\252\001\n\032QueryListEvidencesResponse\022C\n\tevide" +
+      "nces\030\001 \003(\0132%.babylon.finality.v1.Evidenc" +
+      "eResponseR\tevidences\022G\n\npagination\030\002 \001(\013" +
+      "2\'.cosmos.base.query.v1beta1.PageRespons" +
+      "eR\npagination\"<\n\027QuerySigningInfoRequest" +
+      "\022!\n\rfp_btc_pk_hex\030\001 \001(\tR\nfpBtcPkHex\"\335\001\n\023" +
+      "SigningInfoResponse\022!\n\rfp_btc_pk_hex\030\001 \001" +
+      "(\tR\nfpBtcPkHex\022!\n\014start_height\030\002 \001(\003R\013st" +
+      "artHeight\0222\n\025missed_blocks_counter\030\003 \001(\003" +
+      "R\023missedBlocksCounter\022L\n\014jailed_until\030\004 " +
+      "\001(\0132\032.google.protobuf.TimestampB\r\310\336\037\000\220\337\037" +
+      "\001\250\347\260*\001R\013jailedUntil\"m\n\030QuerySigningInfoR" +
+      "esponse\022Q\n\014signing_info\030\001 \001(\0132(.babylon." +
+      "finality.v1.SigningInfoResponseB\004\310\336\037\000R\013s" +
+      "igningInfo\"b\n\030QuerySigningInfosRequest\022F" +
+      "\n\npagination\030\001 \001(\0132&.cosmos.base.query.v" +
+      "1beta1.PageRequestR\npagination\"\271\001\n\031Query" +
+      "SigningInfosResponse\022S\n\rsigning_infos\030\001 " +
+      "\003(\0132(.babylon.finality.v1.SigningInfoRes" +
+      "ponseB\004\310\336\037\000R\014signingInfos\022G\n\npagination\030" +
       "\002 \001(\0132\'.cosmos.base.query.v1beta1.PageRe" +
-      "sponseR\npagination\"3\n\031QueryVotesAtHeight" +
-      "Request\022\026\n\006height\030\001 \001(\004R\006height\"o\n\032Query" +
-      "VotesAtHeightResponse\022Q\n\007btc_pks\030\001 \003(\014B8" +
-      "\332\336\0374github.com/babylonlabs-io/babylon/ty" +
-      "pes.BIP340PubKeyR\006btcPks\"9\n\024QueryEvidenc" +
-      "eRequest\022!\n\rfp_btc_pk_hex\030\001 \001(\tR\nfpBtcPk" +
-      "Hex\"\333\003\n\020EvidenceResponse\022!\n\rfp_btc_pk_he" +
-      "x\030\001 \001(\tR\nfpBtcPkHex\022!\n\014block_height\030\002 \001(" +
-      "\004R\013blockHeight\022U\n\010pub_rand\030\003 \001(\014B:\332\336\0376gi" +
-      "thub.com/babylonlabs-io/babylon/types.Sc" +
-      "hnorrPubRandR\007pubRand\022,\n\022canonical_app_h" +
-      "ash\030\004 \001(\014R\020canonicalAppHash\022\"\n\rfork_app_" +
-      "hash\030\005 \001(\014R\013forkAppHash\022p\n\026canonical_fin" +
-      "ality_sig\030\006 \001(\014B:\332\336\0376github.com/babylonl" +
-      "abs-io/babylon/types.SchnorrEOTSSigR\024can" +
-      "onicalFinalitySig\022f\n\021fork_finality_sig\030\007" +
-      " \001(\014B:\332\336\0376github.com/babylonlabs-io/baby" +
-      "lon/types.SchnorrEOTSSigR\017forkFinalitySi" +
-      "g\"Z\n\025QueryEvidenceResponse\022A\n\010evidence\030\001" +
-      " \001(\0132%.babylon.finality.v1.EvidenceRespo" +
-      "nseR\010evidence\"\206\001\n\031QueryListEvidencesRequ" +
-      "est\022!\n\014start_height\030\001 \001(\004R\013startHeight\022F" +
-      "\n\npagination\030\002 \001(\0132&.cosmos.base.query.v" +
-      "1beta1.PageRequestR\npagination\"\252\001\n\032Query" +
-      "ListEvidencesResponse\022C\n\tevidences\030\001 \003(\013" +
-      "2%.babylon.finality.v1.EvidenceResponseR" +
-      "\tevidences\022G\n\npagination\030\002 \001(\0132\'.cosmos." +
-      "base.query.v1beta1.PageResponseR\npaginat" +
-      "ion\"<\n\027QuerySigningInfoRequest\022!\n\rfp_btc" +
-      "_pk_hex\030\001 \001(\tR\nfpBtcPkHex\"\335\001\n\023SigningInf" +
-      "oResponse\022!\n\rfp_btc_pk_hex\030\001 \001(\tR\nfpBtcP" +
-      "kHex\022!\n\014start_height\030\002 \001(\003R\013startHeight\022" +
-      "2\n\025missed_blocks_counter\030\003 \001(\003R\023missedBl" +
-      "ocksCounter\022L\n\014jailed_until\030\004 \001(\0132\032.goog" +
-      "le.protobuf.TimestampB\r\310\336\037\000\220\337\037\001\250\347\260*\001R\013ja" +
-      "iledUntil\"m\n\030QuerySigningInfoResponse\022Q\n" +
-      "\014signing_info\030\001 \001(\0132(.babylon.finality.v" +
-      "1.SigningInfoResponseB\004\310\336\037\000R\013signingInfo" +
-      "\"b\n\030QuerySigningInfosRequest\022F\n\npaginati" +
-      "on\030\001 \001(\0132&.cosmos.base.query.v1beta1.Pag" +
-      "eRequestR\npagination\"\271\001\n\031QuerySigningInf" +
-      "osResponse\022S\n\rsigning_infos\030\001 \003(\0132(.baby" +
-      "lon.finality.v1.SigningInfoResponseB\004\310\336\037" +
-      "\000R\014signingInfos\022G\n\npagination\030\002 \001(\0132\'.co" +
-      "smos.base.query.v1beta1.PageResponseR\npa" +
-      "gination*?\n\022QueriedBlockStatus\022\021\n\rNON_FI" +
-      "NALIZED\020\000\022\r\n\tFINALIZED\020\001\022\007\n\003ANY\020\0022\352\023\n\005Qu" +
-      "ery\022\200\001\n\006Params\022\'.babylon.finality.v1.Que" +
-      "ryParamsRequest\032(.babylon.finality.v1.Qu" +
-      "eryParamsResponse\"#\202\323\344\223\002\035\022\033/babylon/fina" +
-      "lity/v1/params\022\340\001\n\037ActiveFinalityProvide" +
-      "rsAtHeight\022@.babylon.finality.v1.QueryAc" +
-      "tiveFinalityProvidersAtHeightRequest\032A.b" +
-      "abylon.finality.v1.QueryActiveFinalityPr" +
-      "ovidersAtHeightResponse\"8\202\323\344\223\0022\0220/babylo" +
-      "n/finality/v1/finality_providers/{height" +
-      "}\022\360\001\n\035FinalityProviderPowerAtHeight\022>.ba" +
-      "bylon.finality.v1.QueryFinalityProviderP" +
-      "owerAtHeightRequest\032?.babylon.finality.v" +
-      "1.QueryFinalityProviderPowerAtHeightResp" +
-      "onse\"N\202\323\344\223\002H\022F/babylon/finality/v1/final" +
-      "ity_providers/{fp_btc_pk_hex}/power/{hei" +
-      "ght}\022\344\001\n\034FinalityProviderCurrentPower\022=." +
-      "babylon.finality.v1.QueryFinalityProvide" +
-      "rCurrentPowerRequest\032>.babylon.finality." +
-      "v1.QueryFinalityProviderCurrentPowerResp" +
-      "onse\"E\202\323\344\223\002?\022=/babylon/finality/v1/final" +
-      "ity_providers/{fp_btc_pk_hex}/power\022\245\001\n\017" +
-      "ActivatedHeight\0220.babylon.finality.v1.Qu" +
-      "eryActivatedHeightRequest\0321.babylon.fina" +
-      "lity.v1.QueryActivatedHeightResponse\"-\202\323" +
-      "\344\223\002\'\022%/babylon/finality/v1/activated_hei" +
-      "ght\022\335\001\n\024ListPublicRandomness\0225.babylon.f" +
-      "inality.v1.QueryListPublicRandomnessRequ" +
-      "est\0326.babylon.finality.v1.QueryListPubli" +
-      "cRandomnessResponse\"V\202\323\344\223\002P\022N/babylon/fi" +
-      "nality/v1/finality_providers/{fp_btc_pk_" +
-      "hex}/public_randomness_list\022\322\001\n\021ListPubR" +
-      "andCommit\0222.babylon.finality.v1.QueryLis" +
-      "tPubRandCommitRequest\0323.babylon.finality" +
-      ".v1.QueryListPubRandCommitResponse\"T\202\323\344\223" +
-      "\002N\022L/babylon/finality/v1/finality_provid" +
-      "ers/{fp_btc_pk_hex}/pub_rand_commit_list" +
-      "\022\206\001\n\005Block\022&.babylon.finality.v1.QueryBl" +
-      "ockRequest\032\'.babylon.finality.v1.QueryBl" +
-      "ockResponse\",\202\323\344\223\002&\022$/babylon/finality/v" +
-      "1/blocks/{height}\022\214\001\n\nListBlocks\022+.babyl" +
-      "on.finality.v1.QueryListBlocksRequest\032,." +
-      "babylon.finality.v1.QueryListBlocksRespo" +
-      "nse\"#\202\323\344\223\002\035\022\033/babylon/finality/v1/blocks" +
-      "\022\235\001\n\rVotesAtHeight\022..babylon.finality.v1" +
-      ".QueryVotesAtHeightRequest\032/.babylon.fin" +
-      "ality.v1.QueryVotesAtHeightResponse\"+\202\323\344" +
-      "\223\002%\022#/babylon/finality/v1/votes/{height}" +
-      "\022\253\001\n\010Evidence\022).babylon.finality.v1.Quer" +
-      "yEvidenceRequest\032*.babylon.finality.v1.Q" +
-      "ueryEvidenceResponse\"H\202\323\344\223\002B\022@/babylon/f" +
-      "inality/v1/finality_providers/{fp_btc_pk" +
-      "_hex}/evidence\022\230\001\n\rListEvidences\022..babyl" +
-      "on.finality.v1.QueryListEvidencesRequest" +
-      "\032/.babylon.finality.v1.QueryListEvidence" +
-      "sResponse\"&\202\323\344\223\002 \022\036/babylon/finality/v1/" +
-      "evidences\022\246\001\n\013SigningInfo\022,.babylon.fina" +
-      "lity.v1.QuerySigningInfoRequest\032-.babylo" +
-      "n.finality.v1.QuerySigningInfoResponse\":" +
-      "\202\323\344\223\0024\0222/babylon/finality/v1/signing_inf" +
-      "os/{fp_btc_pk_hex}\022\231\001\n\014SigningInfos\022-.ba" +
-      "bylon.finality.v1.QuerySigningInfosReque" +
-      "st\032..babylon.finality.v1.QuerySigningInf" +
-      "osResponse\"*\202\323\344\223\002$\022\"/babylon/finality/v1" +
-      "/signing_infosB\305\001\n\027com.babylon.finality." +
-      "v1B\nQueryProtoZ2github.com/babylonlabs-i" +
-      "o/babylon/x/finality/types\242\002\003BFX\252\002\023Babyl" +
-      "on.Finality.V1\312\002\023Babylon\\Finality\\V1\342\002\037B" +
-      "abylon\\Finality\\V1\\GPBMetadata\352\002\025Babylon" +
-      "::Finality::V1b\006proto3"
+      "sponseR\npagination*?\n\022QueriedBlockStatus" +
+      "\022\021\n\rNON_FINALIZED\020\000\022\r\n\tFINALIZED\020\001\022\007\n\003AN" +
+      "Y\020\0022\352\023\n\005Query\022\200\001\n\006Params\022\'.babylon.final" +
+      "ity.v1.QueryParamsRequest\032(.babylon.fina" +
+      "lity.v1.QueryParamsResponse\"#\202\323\344\223\002\035\022\033/ba" +
+      "bylon/finality/v1/params\022\340\001\n\037ActiveFinal" +
+      "ityProvidersAtHeight\022@.babylon.finality." +
+      "v1.QueryActiveFinalityProvidersAtHeightR" +
+      "equest\032A.babylon.finality.v1.QueryActive" +
+      "FinalityProvidersAtHeightResponse\"8\202\323\344\223\002" +
+      "2\0220/babylon/finality/v1/finality_provide" +
+      "rs/{height}\022\360\001\n\035FinalityProviderPowerAtH" +
+      "eight\022>.babylon.finality.v1.QueryFinalit" +
+      "yProviderPowerAtHeightRequest\032?.babylon." +
+      "finality.v1.QueryFinalityProviderPowerAt" +
+      "HeightResponse\"N\202\323\344\223\002H\022F/babylon/finalit" +
+      "y/v1/finality_providers/{fp_btc_pk_hex}/" +
+      "power/{height}\022\344\001\n\034FinalityProviderCurre" +
+      "ntPower\022=.babylon.finality.v1.QueryFinal" +
+      "ityProviderCurrentPowerRequest\032>.babylon" +
+      ".finality.v1.QueryFinalityProviderCurren" +
+      "tPowerResponse\"E\202\323\344\223\002?\022=/babylon/finalit" +
+      "y/v1/finality_providers/{fp_btc_pk_hex}/" +
+      "power\022\245\001\n\017ActivatedHeight\0220.babylon.fina" +
+      "lity.v1.QueryActivatedHeightRequest\0321.ba" +
+      "bylon.finality.v1.QueryActivatedHeightRe" +
+      "sponse\"-\202\323\344\223\002\'\022%/babylon/finality/v1/act" +
+      "ivated_height\022\335\001\n\024ListPublicRandomness\0225" +
+      ".babylon.finality.v1.QueryListPublicRand" +
+      "omnessRequest\0326.babylon.finality.v1.Quer" +
+      "yListPublicRandomnessResponse\"V\202\323\344\223\002P\022N/" +
+      "babylon/finality/v1/finality_providers/{" +
+      "fp_btc_pk_hex}/public_randomness_list\022\322\001" +
+      "\n\021ListPubRandCommit\0222.babylon.finality.v" +
+      "1.QueryListPubRandCommitRequest\0323.babylo" +
+      "n.finality.v1.QueryListPubRandCommitResp" +
+      "onse\"T\202\323\344\223\002N\022L/babylon/finality/v1/final" +
+      "ity_providers/{fp_btc_pk_hex}/pub_rand_c" +
+      "ommit_list\022\206\001\n\005Block\022&.babylon.finality." +
+      "v1.QueryBlockRequest\032\'.babylon.finality." +
+      "v1.QueryBlockResponse\",\202\323\344\223\002&\022$/babylon/" +
+      "finality/v1/blocks/{height}\022\214\001\n\nListBloc" +
+      "ks\022+.babylon.finality.v1.QueryListBlocks" +
+      "Request\032,.babylon.finality.v1.QueryListB" +
+      "locksResponse\"#\202\323\344\223\002\035\022\033/babylon/finality" +
+      "/v1/blocks\022\235\001\n\rVotesAtHeight\022..babylon.f" +
+      "inality.v1.QueryVotesAtHeightRequest\032/.b" +
+      "abylon.finality.v1.QueryVotesAtHeightRes" +
+      "ponse\"+\202\323\344\223\002%\022#/babylon/finality/v1/vote" +
+      "s/{height}\022\253\001\n\010Evidence\022).babylon.finali" +
+      "ty.v1.QueryEvidenceRequest\032*.babylon.fin" +
+      "ality.v1.QueryEvidenceResponse\"H\202\323\344\223\002B\022@" +
+      "/babylon/finality/v1/finality_providers/" +
+      "{fp_btc_pk_hex}/evidence\022\230\001\n\rListEvidenc" +
+      "es\022..babylon.finality.v1.QueryListEviden" +
+      "cesRequest\032/.babylon.finality.v1.QueryLi" +
+      "stEvidencesResponse\"&\202\323\344\223\002 \022\036/babylon/fi" +
+      "nality/v1/evidences\022\246\001\n\013SigningInfo\022,.ba" +
+      "bylon.finality.v1.QuerySigningInfoReques" +
+      "t\032-.babylon.finality.v1.QuerySigningInfo" +
+      "Response\":\202\323\344\223\0024\0222/babylon/finality/v1/s" +
+      "igning_infos/{fp_btc_pk_hex}\022\231\001\n\014Signing" +
+      "Infos\022-.babylon.finality.v1.QuerySigning" +
+      "InfosRequest\032..babylon.finality.v1.Query" +
+      "SigningInfosResponse\"*\202\323\344\223\002$\022\"/babylon/f" +
+      "inality/v1/signing_infosB\305\001\n\027com.babylon" +
+      ".finality.v1B\nQueryProtoZ2github.com/bab" +
+      "ylonlabs-io/babylon/x/finality/types\242\002\003B" +
+      "FX\252\002\023Babylon.Finality.V1\312\002\023Babylon\\Final" +
+      "ity\\V1\342\002\037Babylon\\Finality\\V1\\GPBMetadata" +
+      "\352\002\025Babylon::Finality::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -25119,7 +25217,7 @@ com.babylon.finality.v1.QueryProto.PubRandCommitResponse defaultValue) {
     internal_static_babylon_finality_v1_ActiveFinalityProvidersAtHeightResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_finality_v1_ActiveFinalityProvidersAtHeightResponse_descriptor,
-        new java.lang.String[] { "BtcPkHex", "Height", "VotingPower", "SlashedBabylonHeight", "SlashedBtcHeight", "Jailed", });
+        new java.lang.String[] { "BtcPkHex", "Height", "VotingPower", "SlashedBabylonHeight", "SlashedBtcHeight", "Jailed", "HighestVotedHeight", });
     internal_static_babylon_finality_v1_QueryActiveFinalityProvidersAtHeightResponse_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_babylon_finality_v1_QueryActiveFinalityProvidersAtHeightResponse_fieldAccessorTable = new

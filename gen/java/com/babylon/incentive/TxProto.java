@@ -20,7 +20,7 @@ public final class TxProto {
 
     /**
      * <pre>
-     * {submitter, reporter, finality_provider, btc_delegation}
+     * {finality_provider, btc_delegation}
      * </pre>
      *
      * <code>string type = 1 [json_name = "type"];</code>
@@ -29,7 +29,7 @@ public final class TxProto {
     java.lang.String getType();
     /**
      * <pre>
-     * {submitter, reporter, finality_provider, btc_delegation}
+     * {finality_provider, btc_delegation}
      * </pre>
      *
      * <code>string type = 1 [json_name = "type"];</code>
@@ -106,7 +106,7 @@ public final class TxProto {
     private volatile java.lang.Object type_ = "";
     /**
      * <pre>
-     * {submitter, reporter, finality_provider, btc_delegation}
+     * {finality_provider, btc_delegation}
      * </pre>
      *
      * <code>string type = 1 [json_name = "type"];</code>
@@ -127,7 +127,7 @@ public final class TxProto {
     }
     /**
      * <pre>
-     * {submitter, reporter, finality_provider, btc_delegation}
+     * {finality_provider, btc_delegation}
      * </pre>
      *
      * <code>string type = 1 [json_name = "type"];</code>
@@ -554,7 +554,7 @@ public final class TxProto {
       private java.lang.Object type_ = "";
       /**
        * <pre>
-       * {submitter, reporter, finality_provider, btc_delegation}
+       * {finality_provider, btc_delegation}
        * </pre>
        *
        * <code>string type = 1 [json_name = "type"];</code>
@@ -574,7 +574,7 @@ public final class TxProto {
       }
       /**
        * <pre>
-       * {submitter, reporter, finality_provider, btc_delegation}
+       * {finality_provider, btc_delegation}
        * </pre>
        *
        * <code>string type = 1 [json_name = "type"];</code>
@@ -595,7 +595,7 @@ public final class TxProto {
       }
       /**
        * <pre>
-       * {submitter, reporter, finality_provider, btc_delegation}
+       * {finality_provider, btc_delegation}
        * </pre>
        *
        * <code>string type = 1 [json_name = "type"];</code>
@@ -612,7 +612,7 @@ public final class TxProto {
       }
       /**
        * <pre>
-       * {submitter, reporter, finality_provider, btc_delegation}
+       * {finality_provider, btc_delegation}
        * </pre>
        *
        * <code>string type = 1 [json_name = "type"];</code>
@@ -626,7 +626,7 @@ public final class TxProto {
       }
       /**
        * <pre>
-       * {submitter, reporter, finality_provider, btc_delegation}
+       * {finality_provider, btc_delegation}
        * </pre>
        *
        * <code>string type = 1 [json_name = "type"];</code>
@@ -1713,8 +1713,8 @@ public final class TxProto {
      * <pre>
      * authority is the address of the governance account.
      * just FYI: cosmos.AddressString marks that this field should use type alias
-     * for AddressString instead of string, but the functionality is not yet implemented
-     * in cosmos-proto
+     * for AddressString instead of string, but the functionality is not yet
+     * implemented in cosmos-proto
      * </pre>
      *
      * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
@@ -1725,8 +1725,8 @@ public final class TxProto {
      * <pre>
      * authority is the address of the governance account.
      * just FYI: cosmos.AddressString marks that this field should use type alias
-     * for AddressString instead of string, but the functionality is not yet implemented
-     * in cosmos-proto
+     * for AddressString instead of string, but the functionality is not yet
+     * implemented in cosmos-proto
      * </pre>
      *
      * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
@@ -1815,8 +1815,8 @@ public final class TxProto {
      * <pre>
      * authority is the address of the governance account.
      * just FYI: cosmos.AddressString marks that this field should use type alias
-     * for AddressString instead of string, but the functionality is not yet implemented
-     * in cosmos-proto
+     * for AddressString instead of string, but the functionality is not yet
+     * implemented in cosmos-proto
      * </pre>
      *
      * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
@@ -1839,8 +1839,8 @@ public final class TxProto {
      * <pre>
      * authority is the address of the governance account.
      * just FYI: cosmos.AddressString marks that this field should use type alias
-     * for AddressString instead of string, but the functionality is not yet implemented
-     * in cosmos-proto
+     * for AddressString instead of string, but the functionality is not yet
+     * implemented in cosmos-proto
      * </pre>
      *
      * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
@@ -2276,8 +2276,8 @@ public final class TxProto {
        * <pre>
        * authority is the address of the governance account.
        * just FYI: cosmos.AddressString marks that this field should use type alias
-       * for AddressString instead of string, but the functionality is not yet implemented
-       * in cosmos-proto
+       * for AddressString instead of string, but the functionality is not yet
+       * implemented in cosmos-proto
        * </pre>
        *
        * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
@@ -2299,8 +2299,8 @@ public final class TxProto {
        * <pre>
        * authority is the address of the governance account.
        * just FYI: cosmos.AddressString marks that this field should use type alias
-       * for AddressString instead of string, but the functionality is not yet implemented
-       * in cosmos-proto
+       * for AddressString instead of string, but the functionality is not yet
+       * implemented in cosmos-proto
        * </pre>
        *
        * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
@@ -2323,8 +2323,8 @@ public final class TxProto {
        * <pre>
        * authority is the address of the governance account.
        * just FYI: cosmos.AddressString marks that this field should use type alias
-       * for AddressString instead of string, but the functionality is not yet implemented
-       * in cosmos-proto
+       * for AddressString instead of string, but the functionality is not yet
+       * implemented in cosmos-proto
        * </pre>
        *
        * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
@@ -2343,8 +2343,8 @@ public final class TxProto {
        * <pre>
        * authority is the address of the governance account.
        * just FYI: cosmos.AddressString marks that this field should use type alias
-       * for AddressString instead of string, but the functionality is not yet implemented
-       * in cosmos-proto
+       * for AddressString instead of string, but the functionality is not yet
+       * implemented in cosmos-proto
        * </pre>
        *
        * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
@@ -2360,8 +2360,8 @@ public final class TxProto {
        * <pre>
        * authority is the address of the governance account.
        * just FYI: cosmos.AddressString marks that this field should use type alias
-       * for AddressString instead of string, but the functionality is not yet implemented
-       * in cosmos-proto
+       * for AddressString instead of string, but the functionality is not yet
+       * implemented in cosmos-proto
        * </pre>
        *
        * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
@@ -3019,6 +3019,1121 @@ public final class TxProto {
 
   }
 
+  public interface MsgSetWithdrawAddressOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.incentive.MsgSetWithdrawAddress)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The delegatorAddress.
+     */
+    java.lang.String getDelegatorAddress();
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for delegatorAddress.
+     */
+    com.google.protobuf.ByteString
+        getDelegatorAddressBytes();
+
+    /**
+     * <code>string withdraw_address = 2 [json_name = "withdrawAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The withdrawAddress.
+     */
+    java.lang.String getWithdrawAddress();
+    /**
+     * <code>string withdraw_address = 2 [json_name = "withdrawAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for withdrawAddress.
+     */
+    com.google.protobuf.ByteString
+        getWithdrawAddressBytes();
+  }
+  /**
+   * <pre>
+   * MsgSetWithdrawAddress sets the withdraw address
+   * </pre>
+   *
+   * Protobuf type {@code babylon.incentive.MsgSetWithdrawAddress}
+   */
+  public static final class MsgSetWithdrawAddress extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.incentive.MsgSetWithdrawAddress)
+      MsgSetWithdrawAddressOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetWithdrawAddress.newBuilder() to construct.
+    private MsgSetWithdrawAddress(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetWithdrawAddress() {
+      delegatorAddress_ = "";
+      withdrawAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetWithdrawAddress();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.incentive.TxProto.internal_static_babylon_incentive_MsgSetWithdrawAddress_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.incentive.TxProto.internal_static_babylon_incentive_MsgSetWithdrawAddress_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.incentive.TxProto.MsgSetWithdrawAddress.class, com.babylon.incentive.TxProto.MsgSetWithdrawAddress.Builder.class);
+    }
+
+    public static final int DELEGATOR_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object delegatorAddress_ = "";
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The delegatorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getDelegatorAddress() {
+      java.lang.Object ref = delegatorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        delegatorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string delegator_address = 1 [json_name = "delegatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for delegatorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDelegatorAddressBytes() {
+      java.lang.Object ref = delegatorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        delegatorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WITHDRAW_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object withdrawAddress_ = "";
+    /**
+     * <code>string withdraw_address = 2 [json_name = "withdrawAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The withdrawAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getWithdrawAddress() {
+      java.lang.Object ref = withdrawAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        withdrawAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string withdraw_address = 2 [json_name = "withdrawAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for withdrawAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWithdrawAddressBytes() {
+      java.lang.Object ref = withdrawAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        withdrawAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegatorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, delegatorAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(withdrawAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, withdrawAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegatorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, delegatorAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(withdrawAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, withdrawAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.incentive.TxProto.MsgSetWithdrawAddress)) {
+        return super.equals(obj);
+      }
+      com.babylon.incentive.TxProto.MsgSetWithdrawAddress other = (com.babylon.incentive.TxProto.MsgSetWithdrawAddress) obj;
+
+      if (!getDelegatorAddress()
+          .equals(other.getDelegatorAddress())) return false;
+      if (!getWithdrawAddress()
+          .equals(other.getWithdrawAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DELEGATOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getDelegatorAddress().hashCode();
+      hash = (37 * hash) + WITHDRAW_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getWithdrawAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddress parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddress parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddress parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddress parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddress parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddress parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddress parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddress parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddress parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddress parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddress parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddress parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.incentive.TxProto.MsgSetWithdrawAddress prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgSetWithdrawAddress sets the withdraw address
+     * </pre>
+     *
+     * Protobuf type {@code babylon.incentive.MsgSetWithdrawAddress}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.incentive.MsgSetWithdrawAddress)
+        com.babylon.incentive.TxProto.MsgSetWithdrawAddressOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.incentive.TxProto.internal_static_babylon_incentive_MsgSetWithdrawAddress_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.incentive.TxProto.internal_static_babylon_incentive_MsgSetWithdrawAddress_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.incentive.TxProto.MsgSetWithdrawAddress.class, com.babylon.incentive.TxProto.MsgSetWithdrawAddress.Builder.class);
+      }
+
+      // Construct using com.babylon.incentive.TxProto.MsgSetWithdrawAddress.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        delegatorAddress_ = "";
+        withdrawAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.incentive.TxProto.internal_static_babylon_incentive_MsgSetWithdrawAddress_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.incentive.TxProto.MsgSetWithdrawAddress getDefaultInstanceForType() {
+        return com.babylon.incentive.TxProto.MsgSetWithdrawAddress.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.incentive.TxProto.MsgSetWithdrawAddress build() {
+        com.babylon.incentive.TxProto.MsgSetWithdrawAddress result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.incentive.TxProto.MsgSetWithdrawAddress buildPartial() {
+        com.babylon.incentive.TxProto.MsgSetWithdrawAddress result = new com.babylon.incentive.TxProto.MsgSetWithdrawAddress(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.incentive.TxProto.MsgSetWithdrawAddress result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.delegatorAddress_ = delegatorAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.withdrawAddress_ = withdrawAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.incentive.TxProto.MsgSetWithdrawAddress) {
+          return mergeFrom((com.babylon.incentive.TxProto.MsgSetWithdrawAddress)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.incentive.TxProto.MsgSetWithdrawAddress other) {
+        if (other == com.babylon.incentive.TxProto.MsgSetWithdrawAddress.getDefaultInstance()) return this;
+        if (!other.getDelegatorAddress().isEmpty()) {
+          delegatorAddress_ = other.delegatorAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getWithdrawAddress().isEmpty()) {
+          withdrawAddress_ = other.withdrawAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                delegatorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                withdrawAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object delegatorAddress_ = "";
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The delegatorAddress.
+       */
+      public java.lang.String getDelegatorAddress() {
+        java.lang.Object ref = delegatorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          delegatorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for delegatorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getDelegatorAddressBytes() {
+        java.lang.Object ref = delegatorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          delegatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The delegatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegatorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        delegatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelegatorAddress() {
+        delegatorAddress_ = getDefaultInstance().getDelegatorAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string delegator_address = 1 [json_name = "delegatorAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for delegatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegatorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        delegatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object withdrawAddress_ = "";
+      /**
+       * <code>string withdraw_address = 2 [json_name = "withdrawAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The withdrawAddress.
+       */
+      public java.lang.String getWithdrawAddress() {
+        java.lang.Object ref = withdrawAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          withdrawAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string withdraw_address = 2 [json_name = "withdrawAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for withdrawAddress.
+       */
+      public com.google.protobuf.ByteString
+          getWithdrawAddressBytes() {
+        java.lang.Object ref = withdrawAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          withdrawAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string withdraw_address = 2 [json_name = "withdrawAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The withdrawAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWithdrawAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        withdrawAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string withdraw_address = 2 [json_name = "withdrawAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWithdrawAddress() {
+        withdrawAddress_ = getDefaultInstance().getWithdrawAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string withdraw_address = 2 [json_name = "withdrawAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for withdrawAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWithdrawAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        withdrawAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.incentive.MsgSetWithdrawAddress)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.incentive.MsgSetWithdrawAddress)
+    private static final com.babylon.incentive.TxProto.MsgSetWithdrawAddress DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.incentive.TxProto.MsgSetWithdrawAddress();
+    }
+
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddress getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetWithdrawAddress>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetWithdrawAddress>() {
+      @java.lang.Override
+      public MsgSetWithdrawAddress parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetWithdrawAddress> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetWithdrawAddress> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.incentive.TxProto.MsgSetWithdrawAddress getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSetWithdrawAddressResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.incentive.MsgSetWithdrawAddressResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgSetWithdrawAddressResponse defines the Msg/SetWithdrawAddress response
+   * type.
+   * </pre>
+   *
+   * Protobuf type {@code babylon.incentive.MsgSetWithdrawAddressResponse}
+   */
+  public static final class MsgSetWithdrawAddressResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.incentive.MsgSetWithdrawAddressResponse)
+      MsgSetWithdrawAddressResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetWithdrawAddressResponse.newBuilder() to construct.
+    private MsgSetWithdrawAddressResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetWithdrawAddressResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetWithdrawAddressResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.incentive.TxProto.internal_static_babylon_incentive_MsgSetWithdrawAddressResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.incentive.TxProto.internal_static_babylon_incentive_MsgSetWithdrawAddressResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse.class, com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse)) {
+        return super.equals(obj);
+      }
+      com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse other = (com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgSetWithdrawAddressResponse defines the Msg/SetWithdrawAddress response
+     * type.
+     * </pre>
+     *
+     * Protobuf type {@code babylon.incentive.MsgSetWithdrawAddressResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.incentive.MsgSetWithdrawAddressResponse)
+        com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.incentive.TxProto.internal_static_babylon_incentive_MsgSetWithdrawAddressResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.incentive.TxProto.internal_static_babylon_incentive_MsgSetWithdrawAddressResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse.class, com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse.Builder.class);
+      }
+
+      // Construct using com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.incentive.TxProto.internal_static_babylon_incentive_MsgSetWithdrawAddressResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse getDefaultInstanceForType() {
+        return com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse build() {
+        com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse buildPartial() {
+        com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse result = new com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse) {
+          return mergeFrom((com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse other) {
+        if (other == com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.incentive.MsgSetWithdrawAddressResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.incentive.MsgSetWithdrawAddressResponse)
+    private static final com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse();
+    }
+
+    public static com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetWithdrawAddressResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetWithdrawAddressResponse>() {
+      @java.lang.Override
+      public MsgSetWithdrawAddressResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetWithdrawAddressResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetWithdrawAddressResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_babylon_incentive_MsgWithdrawReward_descriptor;
   private static final 
@@ -3039,6 +4154,16 @@ public final class TxProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_babylon_incentive_MsgUpdateParamsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_incentive_MsgSetWithdrawAddress_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_incentive_MsgSetWithdrawAddress_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_incentive_MsgSetWithdrawAddressResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_incentive_MsgSetWithdrawAddressResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3062,17 +4187,25 @@ public final class TxProto {
       "osmos.AddressStringR\tauthority\0227\n\006params" +
       "\030\002 \001(\0132\031.babylon.incentive.ParamsB\004\310\336\037\000R" +
       "\006params:\016\202\347\260*\tauthority\"\031\n\027MsgUpdatePara" +
-      "msResponse2\322\001\n\003Msg\022d\n\016WithdrawReward\022$.b" +
-      "abylon.incentive.MsgWithdrawReward\032,.bab" +
-      "ylon.incentive.MsgWithdrawRewardResponse" +
-      "\022^\n\014UpdateParams\022\".babylon.incentive.Msg" +
-      "UpdateParams\032*.babylon.incentive.MsgUpda" +
-      "teParamsResponse\032\005\200\347\260*\001B\270\001\n\025com.babylon." +
-      "incentiveB\007TxProtoZ3github.com/babylonla" +
-      "bs-io/babylon/x/incentive/types\242\002\003BIX\252\002\021" +
-      "Babylon.Incentive\312\002\021Babylon\\Incentive\342\002\035" +
-      "Babylon\\Incentive\\GPBMetadata\352\002\022Babylon:" +
-      ":Incentiveb\006proto3"
+      "msResponse\"\273\001\n\025MsgSetWithdrawAddress\022E\n\021" +
+      "delegator_address\030\001 \001(\tB\030\322\264-\024cosmos.Addr" +
+      "essStringR\020delegatorAddress\022C\n\020withdraw_" +
+      "address\030\002 \001(\tB\030\322\264-\024cosmos.AddressStringR" +
+      "\017withdrawAddress:\026\202\347\260*\021delegator_address" +
+      "\"\037\n\035MsgSetWithdrawAddressResponse2\304\002\n\003Ms" +
+      "g\022d\n\016WithdrawReward\022$.babylon.incentive." +
+      "MsgWithdrawReward\032,.babylon.incentive.Ms" +
+      "gWithdrawRewardResponse\022^\n\014UpdateParams\022" +
+      "\".babylon.incentive.MsgUpdateParams\032*.ba" +
+      "bylon.incentive.MsgUpdateParamsResponse\022" +
+      "p\n\022SetWithdrawAddress\022(.babylon.incentiv" +
+      "e.MsgSetWithdrawAddress\0320.babylon.incent" +
+      "ive.MsgSetWithdrawAddressResponse\032\005\200\347\260*\001" +
+      "B\270\001\n\025com.babylon.incentiveB\007TxProtoZ3git" +
+      "hub.com/babylonlabs-io/babylon/x/incenti" +
+      "ve/types\242\002\003BIX\252\002\021Babylon.Incentive\312\002\021Bab" +
+      "ylon\\Incentive\342\002\035Babylon\\Incentive\\GPBMe" +
+      "tadata\352\002\022Babylon::Incentiveb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3106,6 +4239,18 @@ public final class TxProto {
     internal_static_babylon_incentive_MsgUpdateParamsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_incentive_MsgUpdateParamsResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_babylon_incentive_MsgSetWithdrawAddress_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_babylon_incentive_MsgSetWithdrawAddress_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_incentive_MsgSetWithdrawAddress_descriptor,
+        new java.lang.String[] { "DelegatorAddress", "WithdrawAddress", });
+    internal_static_babylon_incentive_MsgSetWithdrawAddressResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_babylon_incentive_MsgSetWithdrawAddressResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_incentive_MsgSetWithdrawAddressResponse_descriptor,
         new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

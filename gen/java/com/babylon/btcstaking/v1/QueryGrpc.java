@@ -80,6 +80,37 @@ public final class QueryGrpc {
     return getParamsByVersionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest,
+      com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse> getParamsByBTCHeightMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ParamsByBTCHeight",
+      requestType = com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest.class,
+      responseType = com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest,
+      com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse> getParamsByBTCHeightMethod() {
+    io.grpc.MethodDescriptor<com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest, com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse> getParamsByBTCHeightMethod;
+    if ((getParamsByBTCHeightMethod = QueryGrpc.getParamsByBTCHeightMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getParamsByBTCHeightMethod = QueryGrpc.getParamsByBTCHeightMethod) == null) {
+          QueryGrpc.getParamsByBTCHeightMethod = getParamsByBTCHeightMethod =
+              io.grpc.MethodDescriptor.<com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest, com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ParamsByBTCHeight"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("ParamsByBTCHeight"))
+              .build();
+        }
+      }
+    }
+    return getParamsByBTCHeightMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.babylon.btcstaking.v1.QueryProto.QueryFinalityProvidersRequest,
       com.babylon.btcstaking.v1.QueryProto.QueryFinalityProvidersResponse> getFinalityProvidersMethod;
 
@@ -308,6 +339,16 @@ public final class QueryGrpc {
 
     /**
      * <pre>
+     * ParamsByBTCHeight queries the parameters of the module for a specific BTC height
+     * </pre>
+     */
+    default void paramsByBTCHeight(com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest request,
+        io.grpc.stub.StreamObserver<com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getParamsByBTCHeightMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * FinalityProviders queries all finality providers
      * </pre>
      */
@@ -414,6 +455,17 @@ public final class QueryGrpc {
 
     /**
      * <pre>
+     * ParamsByBTCHeight queries the parameters of the module for a specific BTC height
+     * </pre>
+     */
+    public void paramsByBTCHeight(com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest request,
+        io.grpc.stub.StreamObserver<com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getParamsByBTCHeightMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * FinalityProviders queries all finality providers
      * </pre>
      */
@@ -505,6 +557,16 @@ public final class QueryGrpc {
     public com.babylon.btcstaking.v1.QueryProto.QueryParamsByVersionResponse paramsByVersion(com.babylon.btcstaking.v1.QueryProto.QueryParamsByVersionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getParamsByVersionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ParamsByBTCHeight queries the parameters of the module for a specific BTC height
+     * </pre>
+     */
+    public com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse paramsByBTCHeight(com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getParamsByBTCHeightMethod(), getCallOptions(), request);
     }
 
     /**
@@ -601,6 +663,17 @@ public final class QueryGrpc {
 
     /**
      * <pre>
+     * ParamsByBTCHeight queries the parameters of the module for a specific BTC height
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse> paramsByBTCHeight(
+        com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getParamsByBTCHeightMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * FinalityProviders queries all finality providers
      * </pre>
      */
@@ -657,11 +730,12 @@ public final class QueryGrpc {
 
   private static final int METHODID_PARAMS = 0;
   private static final int METHODID_PARAMS_BY_VERSION = 1;
-  private static final int METHODID_FINALITY_PROVIDERS = 2;
-  private static final int METHODID_FINALITY_PROVIDER = 3;
-  private static final int METHODID_BTCDELEGATIONS = 4;
-  private static final int METHODID_FINALITY_PROVIDER_DELEGATIONS = 5;
-  private static final int METHODID_BTCDELEGATION = 6;
+  private static final int METHODID_PARAMS_BY_BTCHEIGHT = 2;
+  private static final int METHODID_FINALITY_PROVIDERS = 3;
+  private static final int METHODID_FINALITY_PROVIDER = 4;
+  private static final int METHODID_BTCDELEGATIONS = 5;
+  private static final int METHODID_FINALITY_PROVIDER_DELEGATIONS = 6;
+  private static final int METHODID_BTCDELEGATION = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -687,6 +761,10 @@ public final class QueryGrpc {
         case METHODID_PARAMS_BY_VERSION:
           serviceImpl.paramsByVersion((com.babylon.btcstaking.v1.QueryProto.QueryParamsByVersionRequest) request,
               (io.grpc.stub.StreamObserver<com.babylon.btcstaking.v1.QueryProto.QueryParamsByVersionResponse>) responseObserver);
+          break;
+        case METHODID_PARAMS_BY_BTCHEIGHT:
+          serviceImpl.paramsByBTCHeight((com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest) request,
+              (io.grpc.stub.StreamObserver<com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse>) responseObserver);
           break;
         case METHODID_FINALITY_PROVIDERS:
           serviceImpl.finalityProviders((com.babylon.btcstaking.v1.QueryProto.QueryFinalityProvidersRequest) request,
@@ -740,6 +818,13 @@ public final class QueryGrpc {
               com.babylon.btcstaking.v1.QueryProto.QueryParamsByVersionRequest,
               com.babylon.btcstaking.v1.QueryProto.QueryParamsByVersionResponse>(
                 service, METHODID_PARAMS_BY_VERSION)))
+        .addMethod(
+          getParamsByBTCHeightMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest,
+              com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse>(
+                service, METHODID_PARAMS_BY_BTCHEIGHT)))
         .addMethod(
           getFinalityProvidersMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -825,6 +910,7 @@ public final class QueryGrpc {
               .setSchemaDescriptor(new QueryFileDescriptorSupplier())
               .addMethod(getParamsMethod())
               .addMethod(getParamsByVersionMethod())
+              .addMethod(getParamsByBTCHeightMethod())
               .addMethod(getFinalityProvidersMethod())
               .addMethod(getFinalityProviderMethod())
               .addMethod(getBTCDelegationsMethod())

@@ -26,8 +26,8 @@ struct Babylon_Zoneconcierge_V1_IndexedHeader {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// chain_id is the unique ID of the chain
-  var chainID: String = String()
+  /// consumer_id is the unique ID of the consumer
+  var consumerID: String = String()
 
   /// hash is the hash of this header
   var hash: Data = Data()
@@ -104,8 +104,8 @@ struct Babylon_Zoneconcierge_V1_ChainInfo {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// chain_id is the ID of the chain
-  var chainID: String = String()
+  /// consumer_id is the ID of the consumer
+  var consumerID: String = String()
 
   /// latest_header is the latest header in CZ's canonical chain
   var latestHeader: Babylon_Zoneconcierge_V1_IndexedHeader {
@@ -182,10 +182,10 @@ struct Babylon_Zoneconcierge_V1_FinalizedChainInfo {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// chain_id is the ID of the chain
-  var chainID: String {
-    get {return _storage._chainID}
-    set {_uniqueStorage()._chainID = newValue}
+  /// consumer_id is the ID of the consumer
+  var consumerID: String {
+    get {return _storage._consumerID}
+    set {_uniqueStorage()._consumerID = newValue}
   }
 
   /// finalized_chain_info is the info of the CZ
@@ -368,7 +368,7 @@ fileprivate let _protobuf_package = "babylon.zoneconcierge.v1"
 extension Babylon_Zoneconcierge_V1_IndexedHeader: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".IndexedHeader"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "chain_id"),
+    1: .standard(proto: "consumer_id"),
     2: .same(proto: "hash"),
     3: .same(proto: "height"),
     4: .same(proto: "time"),
@@ -384,7 +384,7 @@ extension Babylon_Zoneconcierge_V1_IndexedHeader: SwiftProtobuf.Message, SwiftPr
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.chainID) }()
+      case 1: try { try decoder.decodeSingularStringField(value: &self.consumerID) }()
       case 2: try { try decoder.decodeSingularBytesField(value: &self.hash) }()
       case 3: try { try decoder.decodeSingularUInt64Field(value: &self.height) }()
       case 4: try { try decoder.decodeSingularMessageField(value: &self._time) }()
@@ -402,8 +402,8 @@ extension Babylon_Zoneconcierge_V1_IndexedHeader: SwiftProtobuf.Message, SwiftPr
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
     // https://github.com/apple/swift-protobuf/issues/1182
-    if !self.chainID.isEmpty {
-      try visitor.visitSingularStringField(value: self.chainID, fieldNumber: 1)
+    if !self.consumerID.isEmpty {
+      try visitor.visitSingularStringField(value: self.consumerID, fieldNumber: 1)
     }
     if !self.hash.isEmpty {
       try visitor.visitSingularBytesField(value: self.hash, fieldNumber: 2)
@@ -430,7 +430,7 @@ extension Babylon_Zoneconcierge_V1_IndexedHeader: SwiftProtobuf.Message, SwiftPr
   }
 
   static func ==(lhs: Babylon_Zoneconcierge_V1_IndexedHeader, rhs: Babylon_Zoneconcierge_V1_IndexedHeader) -> Bool {
-    if lhs.chainID != rhs.chainID {return false}
+    if lhs.consumerID != rhs.consumerID {return false}
     if lhs.hash != rhs.hash {return false}
     if lhs.height != rhs.height {return false}
     if lhs._time != rhs._time {return false}
@@ -478,7 +478,7 @@ extension Babylon_Zoneconcierge_V1_Forks: SwiftProtobuf.Message, SwiftProtobuf._
 extension Babylon_Zoneconcierge_V1_ChainInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".ChainInfo"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "chain_id"),
+    1: .standard(proto: "consumer_id"),
     2: .standard(proto: "latest_header"),
     3: .standard(proto: "latest_forks"),
     4: .standard(proto: "timestamped_headers_count"),
@@ -490,7 +490,7 @@ extension Babylon_Zoneconcierge_V1_ChainInfo: SwiftProtobuf.Message, SwiftProtob
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.chainID) }()
+      case 1: try { try decoder.decodeSingularStringField(value: &self.consumerID) }()
       case 2: try { try decoder.decodeSingularMessageField(value: &self._latestHeader) }()
       case 3: try { try decoder.decodeSingularMessageField(value: &self._latestForks) }()
       case 4: try { try decoder.decodeSingularUInt64Field(value: &self.timestampedHeadersCount) }()
@@ -504,8 +504,8 @@ extension Babylon_Zoneconcierge_V1_ChainInfo: SwiftProtobuf.Message, SwiftProtob
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
     // https://github.com/apple/swift-protobuf/issues/1182
-    if !self.chainID.isEmpty {
-      try visitor.visitSingularStringField(value: self.chainID, fieldNumber: 1)
+    if !self.consumerID.isEmpty {
+      try visitor.visitSingularStringField(value: self.consumerID, fieldNumber: 1)
     }
     try { if let v = self._latestHeader {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
@@ -520,7 +520,7 @@ extension Babylon_Zoneconcierge_V1_ChainInfo: SwiftProtobuf.Message, SwiftProtob
   }
 
   static func ==(lhs: Babylon_Zoneconcierge_V1_ChainInfo, rhs: Babylon_Zoneconcierge_V1_ChainInfo) -> Bool {
-    if lhs.chainID != rhs.chainID {return false}
+    if lhs.consumerID != rhs.consumerID {return false}
     if lhs._latestHeader != rhs._latestHeader {return false}
     if lhs._latestForks != rhs._latestForks {return false}
     if lhs.timestampedHeadersCount != rhs.timestampedHeadersCount {return false}
@@ -574,7 +574,7 @@ extension Babylon_Zoneconcierge_V1_ChainInfoWithProof: SwiftProtobuf.Message, Sw
 extension Babylon_Zoneconcierge_V1_FinalizedChainInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".FinalizedChainInfo"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "chain_id"),
+    1: .standard(proto: "consumer_id"),
     2: .standard(proto: "finalized_chain_info"),
     3: .standard(proto: "epoch_info"),
     4: .standard(proto: "raw_checkpoint"),
@@ -583,7 +583,7 @@ extension Babylon_Zoneconcierge_V1_FinalizedChainInfo: SwiftProtobuf.Message, Sw
   ]
 
   fileprivate class _StorageClass {
-    var _chainID: String = String()
+    var _consumerID: String = String()
     var _finalizedChainInfo: Babylon_Zoneconcierge_V1_ChainInfo? = nil
     var _epochInfo: Babylon_Epoching_V1_Epoch? = nil
     var _rawCheckpoint: Babylon_Checkpointing_V1_RawCheckpoint? = nil
@@ -595,7 +595,7 @@ extension Babylon_Zoneconcierge_V1_FinalizedChainInfo: SwiftProtobuf.Message, Sw
     private init() {}
 
     init(copying source: _StorageClass) {
-      _chainID = source._chainID
+      _consumerID = source._consumerID
       _finalizedChainInfo = source._finalizedChainInfo
       _epochInfo = source._epochInfo
       _rawCheckpoint = source._rawCheckpoint
@@ -619,7 +619,7 @@ extension Babylon_Zoneconcierge_V1_FinalizedChainInfo: SwiftProtobuf.Message, Sw
         // allocates stack space for every case branch when no optimizations are
         // enabled. https://github.com/apple/swift-protobuf/issues/1034
         switch fieldNumber {
-        case 1: try { try decoder.decodeSingularStringField(value: &_storage._chainID) }()
+        case 1: try { try decoder.decodeSingularStringField(value: &_storage._consumerID) }()
         case 2: try { try decoder.decodeSingularMessageField(value: &_storage._finalizedChainInfo) }()
         case 3: try { try decoder.decodeSingularMessageField(value: &_storage._epochInfo) }()
         case 4: try { try decoder.decodeSingularMessageField(value: &_storage._rawCheckpoint) }()
@@ -637,8 +637,8 @@ extension Babylon_Zoneconcierge_V1_FinalizedChainInfo: SwiftProtobuf.Message, Sw
       // allocates stack space for every if/case branch local when no optimizations
       // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
       // https://github.com/apple/swift-protobuf/issues/1182
-      if !_storage._chainID.isEmpty {
-        try visitor.visitSingularStringField(value: _storage._chainID, fieldNumber: 1)
+      if !_storage._consumerID.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._consumerID, fieldNumber: 1)
       }
       try { if let v = _storage._finalizedChainInfo {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
@@ -664,7 +664,7 @@ extension Babylon_Zoneconcierge_V1_FinalizedChainInfo: SwiftProtobuf.Message, Sw
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
         let rhs_storage = _args.1
-        if _storage._chainID != rhs_storage._chainID {return false}
+        if _storage._consumerID != rhs_storage._consumerID {return false}
         if _storage._finalizedChainInfo != rhs_storage._finalizedChainInfo {return false}
         if _storage._epochInfo != rhs_storage._epochInfo {return false}
         if _storage._rawCheckpoint != rhs_storage._rawCheckpoint {return false}

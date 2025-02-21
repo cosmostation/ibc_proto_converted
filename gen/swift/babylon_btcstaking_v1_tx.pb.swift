@@ -57,6 +57,10 @@ struct Babylon_Btcstaking_V1_MsgCreateFinalityProvider {
   /// Clears the value of `pop`. Subsequent reads from it will return its default value.
   mutating func clearPop() {self._pop = nil}
 
+  /// consumer_id is the ID of the consumer
+  /// If it's empty, it's assumed to be Babylon's chain id
+  var consumerID: String = String()
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -495,6 +499,7 @@ extension Babylon_Btcstaking_V1_MsgCreateFinalityProvider: SwiftProtobuf.Message
     3: .same(proto: "commission"),
     4: .standard(proto: "btc_pk"),
     5: .same(proto: "pop"),
+    6: .standard(proto: "consumer_id"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -508,6 +513,7 @@ extension Babylon_Btcstaking_V1_MsgCreateFinalityProvider: SwiftProtobuf.Message
       case 3: try { try decoder.decodeSingularStringField(value: &self.commission) }()
       case 4: try { try decoder.decodeSingularBytesField(value: &self.btcPk) }()
       case 5: try { try decoder.decodeSingularMessageField(value: &self._pop) }()
+      case 6: try { try decoder.decodeSingularStringField(value: &self.consumerID) }()
       default: break
       }
     }
@@ -533,6 +539,9 @@ extension Babylon_Btcstaking_V1_MsgCreateFinalityProvider: SwiftProtobuf.Message
     try { if let v = self._pop {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
     } }()
+    if !self.consumerID.isEmpty {
+      try visitor.visitSingularStringField(value: self.consumerID, fieldNumber: 6)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -542,6 +551,7 @@ extension Babylon_Btcstaking_V1_MsgCreateFinalityProvider: SwiftProtobuf.Message
     if lhs.commission != rhs.commission {return false}
     if lhs.btcPk != rhs.btcPk {return false}
     if lhs._pop != rhs._pop {return false}
+    if lhs.consumerID != rhs.consumerID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

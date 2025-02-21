@@ -231,6 +231,10 @@ struct Babylon_Finality_V1_ActiveFinalityProvidersAtHeightResponse {
   /// jailed defines whether the finality provider is detected jailed
   var jailed: Bool = false
 
+  /// highest_voted_height is the highest height for which the
+  /// finality provider has voted
+  var highestVotedHeight: UInt32 = 0
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -1088,6 +1092,7 @@ extension Babylon_Finality_V1_ActiveFinalityProvidersAtHeightResponse: SwiftProt
     4: .standard(proto: "slashed_babylon_height"),
     5: .standard(proto: "slashed_btc_height"),
     6: .same(proto: "jailed"),
+    7: .standard(proto: "highest_voted_height"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -1102,6 +1107,7 @@ extension Babylon_Finality_V1_ActiveFinalityProvidersAtHeightResponse: SwiftProt
       case 4: try { try decoder.decodeSingularUInt64Field(value: &self.slashedBabylonHeight) }()
       case 5: try { try decoder.decodeSingularUInt32Field(value: &self.slashedBtcHeight) }()
       case 6: try { try decoder.decodeSingularBoolField(value: &self.jailed) }()
+      case 7: try { try decoder.decodeSingularUInt32Field(value: &self.highestVotedHeight) }()
       default: break
       }
     }
@@ -1126,6 +1132,9 @@ extension Babylon_Finality_V1_ActiveFinalityProvidersAtHeightResponse: SwiftProt
     if self.jailed != false {
       try visitor.visitSingularBoolField(value: self.jailed, fieldNumber: 6)
     }
+    if self.highestVotedHeight != 0 {
+      try visitor.visitSingularUInt32Field(value: self.highestVotedHeight, fieldNumber: 7)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -1136,6 +1145,7 @@ extension Babylon_Finality_V1_ActiveFinalityProvidersAtHeightResponse: SwiftProt
     if lhs.slashedBabylonHeight != rhs.slashedBabylonHeight {return false}
     if lhs.slashedBtcHeight != rhs.slashedBtcHeight {return false}
     if lhs.jailed != rhs.jailed {return false}
+    if lhs.highestVotedHeight != rhs.highestVotedHeight {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

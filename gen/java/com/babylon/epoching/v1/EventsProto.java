@@ -6977,6 +6977,1956 @@ public final class EventsProto {
 
   }
 
+  public interface EventWrappedEditValidatorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.epoching.v1.EventWrappedEditValidator)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The validatorAddress.
+     */
+    java.lang.String getValidatorAddress();
+    /**
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The bytes for validatorAddress.
+     */
+    com.google.protobuf.ByteString
+        getValidatorAddressBytes();
+
+    /**
+     * <code>uint64 epoch_boundary = 2 [json_name = "epochBoundary"];</code>
+     * @return The epochBoundary.
+     */
+    long getEpochBoundary();
+  }
+  /**
+   * <pre>
+   * EventWrappedEditValidator is the event emitted when a
+   * MsgWrappedEditValidator has been queued
+   * </pre>
+   *
+   * Protobuf type {@code babylon.epoching.v1.EventWrappedEditValidator}
+   */
+  public static final class EventWrappedEditValidator extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.epoching.v1.EventWrappedEditValidator)
+      EventWrappedEditValidatorOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventWrappedEditValidator.newBuilder() to construct.
+    private EventWrappedEditValidator(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventWrappedEditValidator() {
+      validatorAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventWrappedEditValidator();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.epoching.v1.EventsProto.internal_static_babylon_epoching_v1_EventWrappedEditValidator_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.epoching.v1.EventsProto.internal_static_babylon_epoching_v1_EventWrappedEditValidator_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator.class, com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator.Builder.class);
+    }
+
+    public static final int VALIDATOR_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validatorAddress_ = "";
+    /**
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The validatorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getValidatorAddress() {
+      java.lang.Object ref = validatorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validatorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The bytes for validatorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidatorAddressBytes() {
+      java.lang.Object ref = validatorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validatorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EPOCH_BOUNDARY_FIELD_NUMBER = 2;
+    private long epochBoundary_ = 0L;
+    /**
+     * <code>uint64 epoch_boundary = 2 [json_name = "epochBoundary"];</code>
+     * @return The epochBoundary.
+     */
+    @java.lang.Override
+    public long getEpochBoundary() {
+      return epochBoundary_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, validatorAddress_);
+      }
+      if (epochBoundary_ != 0L) {
+        output.writeUInt64(2, epochBoundary_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, validatorAddress_);
+      }
+      if (epochBoundary_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, epochBoundary_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator)) {
+        return super.equals(obj);
+      }
+      com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator other = (com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator) obj;
+
+      if (!getValidatorAddress()
+          .equals(other.getValidatorAddress())) return false;
+      if (getEpochBoundary()
+          != other.getEpochBoundary()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VALIDATOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getValidatorAddress().hashCode();
+      hash = (37 * hash) + EPOCH_BOUNDARY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEpochBoundary());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventWrappedEditValidator is the event emitted when a
+     * MsgWrappedEditValidator has been queued
+     * </pre>
+     *
+     * Protobuf type {@code babylon.epoching.v1.EventWrappedEditValidator}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.epoching.v1.EventWrappedEditValidator)
+        com.babylon.epoching.v1.EventsProto.EventWrappedEditValidatorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.epoching.v1.EventsProto.internal_static_babylon_epoching_v1_EventWrappedEditValidator_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.epoching.v1.EventsProto.internal_static_babylon_epoching_v1_EventWrappedEditValidator_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator.class, com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator.Builder.class);
+      }
+
+      // Construct using com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        validatorAddress_ = "";
+        epochBoundary_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.epoching.v1.EventsProto.internal_static_babylon_epoching_v1_EventWrappedEditValidator_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator getDefaultInstanceForType() {
+        return com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator build() {
+        com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator buildPartial() {
+        com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator result = new com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.validatorAddress_ = validatorAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.epochBoundary_ = epochBoundary_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator) {
+          return mergeFrom((com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator other) {
+        if (other == com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator.getDefaultInstance()) return this;
+        if (!other.getValidatorAddress().isEmpty()) {
+          validatorAddress_ = other.validatorAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getEpochBoundary() != 0L) {
+          setEpochBoundary(other.getEpochBoundary());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                validatorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                epochBoundary_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object validatorAddress_ = "";
+      /**
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @return The validatorAddress.
+       */
+      public java.lang.String getValidatorAddress() {
+        java.lang.Object ref = validatorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validatorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @return The bytes for validatorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getValidatorAddressBytes() {
+        java.lang.Object ref = validatorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @param value The validatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidatorAddress() {
+        validatorAddress_ = getDefaultInstance().getValidatorAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @param value The bytes for validatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long epochBoundary_ ;
+      /**
+       * <code>uint64 epoch_boundary = 2 [json_name = "epochBoundary"];</code>
+       * @return The epochBoundary.
+       */
+      @java.lang.Override
+      public long getEpochBoundary() {
+        return epochBoundary_;
+      }
+      /**
+       * <code>uint64 epoch_boundary = 2 [json_name = "epochBoundary"];</code>
+       * @param value The epochBoundary to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpochBoundary(long value) {
+
+        epochBoundary_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 epoch_boundary = 2 [json_name = "epochBoundary"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEpochBoundary() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        epochBoundary_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.epoching.v1.EventWrappedEditValidator)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.epoching.v1.EventWrappedEditValidator)
+    private static final com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator();
+    }
+
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventWrappedEditValidator>
+        PARSER = new com.google.protobuf.AbstractParser<EventWrappedEditValidator>() {
+      @java.lang.Override
+      public EventWrappedEditValidator parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventWrappedEditValidator> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventWrappedEditValidator> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.epoching.v1.EventsProto.EventWrappedEditValidator getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventWrappedStakingUpdateParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.epoching.v1.EventWrappedStakingUpdateParams)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * unbonding_time is the time duration of unbonding.
+     * </pre>
+     *
+     * <code>string unbonding_time = 1 [json_name = "unbondingTime"];</code>
+     * @return The unbondingTime.
+     */
+    java.lang.String getUnbondingTime();
+    /**
+     * <pre>
+     * unbonding_time is the time duration of unbonding.
+     * </pre>
+     *
+     * <code>string unbonding_time = 1 [json_name = "unbondingTime"];</code>
+     * @return The bytes for unbondingTime.
+     */
+    com.google.protobuf.ByteString
+        getUnbondingTimeBytes();
+
+    /**
+     * <pre>
+     * max_validators is the maximum number of validators.
+     * </pre>
+     *
+     * <code>uint32 max_validators = 2 [json_name = "maxValidators"];</code>
+     * @return The maxValidators.
+     */
+    int getMaxValidators();
+
+    /**
+     * <pre>
+     * max_entries is the max entries for either unbonding delegation or redelegation (per pair/trio).
+     * </pre>
+     *
+     * <code>uint32 max_entries = 3 [json_name = "maxEntries"];</code>
+     * @return The maxEntries.
+     */
+    int getMaxEntries();
+
+    /**
+     * <pre>
+     * historical_entries is the number of historical entries to persist.
+     * </pre>
+     *
+     * <code>uint32 historical_entries = 4 [json_name = "historicalEntries"];</code>
+     * @return The historicalEntries.
+     */
+    int getHistoricalEntries();
+
+    /**
+     * <pre>
+     * bond_denom defines the bondable coin denomination.
+     * </pre>
+     *
+     * <code>string bond_denom = 5 [json_name = "bondDenom"];</code>
+     * @return The bondDenom.
+     */
+    java.lang.String getBondDenom();
+    /**
+     * <pre>
+     * bond_denom defines the bondable coin denomination.
+     * </pre>
+     *
+     * <code>string bond_denom = 5 [json_name = "bondDenom"];</code>
+     * @return The bytes for bondDenom.
+     */
+    com.google.protobuf.ByteString
+        getBondDenomBytes();
+
+    /**
+     * <pre>
+     * min_commission_rate is the chain-wide minimum commission rate that a validator can charge their delegators
+     * </pre>
+     *
+     * <code>string min_commission_rate = 6 [json_name = "minCommissionRate"];</code>
+     * @return The minCommissionRate.
+     */
+    java.lang.String getMinCommissionRate();
+    /**
+     * <pre>
+     * min_commission_rate is the chain-wide minimum commission rate that a validator can charge their delegators
+     * </pre>
+     *
+     * <code>string min_commission_rate = 6 [json_name = "minCommissionRate"];</code>
+     * @return The bytes for minCommissionRate.
+     */
+    com.google.protobuf.ByteString
+        getMinCommissionRateBytes();
+
+    /**
+     * <code>uint64 epoch_boundary = 7 [json_name = "epochBoundary"];</code>
+     * @return The epochBoundary.
+     */
+    long getEpochBoundary();
+  }
+  /**
+   * <pre>
+   * EventWrappedStakingUpdateParams is the event emitted when a
+   * MsgWrappedStakingUpdateParams has been queued
+   * </pre>
+   *
+   * Protobuf type {@code babylon.epoching.v1.EventWrappedStakingUpdateParams}
+   */
+  public static final class EventWrappedStakingUpdateParams extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.epoching.v1.EventWrappedStakingUpdateParams)
+      EventWrappedStakingUpdateParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventWrappedStakingUpdateParams.newBuilder() to construct.
+    private EventWrappedStakingUpdateParams(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventWrappedStakingUpdateParams() {
+      unbondingTime_ = "";
+      bondDenom_ = "";
+      minCommissionRate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventWrappedStakingUpdateParams();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.epoching.v1.EventsProto.internal_static_babylon_epoching_v1_EventWrappedStakingUpdateParams_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.epoching.v1.EventsProto.internal_static_babylon_epoching_v1_EventWrappedStakingUpdateParams_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams.class, com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams.Builder.class);
+    }
+
+    public static final int UNBONDING_TIME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object unbondingTime_ = "";
+    /**
+     * <pre>
+     * unbonding_time is the time duration of unbonding.
+     * </pre>
+     *
+     * <code>string unbonding_time = 1 [json_name = "unbondingTime"];</code>
+     * @return The unbondingTime.
+     */
+    @java.lang.Override
+    public java.lang.String getUnbondingTime() {
+      java.lang.Object ref = unbondingTime_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        unbondingTime_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * unbonding_time is the time duration of unbonding.
+     * </pre>
+     *
+     * <code>string unbonding_time = 1 [json_name = "unbondingTime"];</code>
+     * @return The bytes for unbondingTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUnbondingTimeBytes() {
+      java.lang.Object ref = unbondingTime_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        unbondingTime_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAX_VALIDATORS_FIELD_NUMBER = 2;
+    private int maxValidators_ = 0;
+    /**
+     * <pre>
+     * max_validators is the maximum number of validators.
+     * </pre>
+     *
+     * <code>uint32 max_validators = 2 [json_name = "maxValidators"];</code>
+     * @return The maxValidators.
+     */
+    @java.lang.Override
+    public int getMaxValidators() {
+      return maxValidators_;
+    }
+
+    public static final int MAX_ENTRIES_FIELD_NUMBER = 3;
+    private int maxEntries_ = 0;
+    /**
+     * <pre>
+     * max_entries is the max entries for either unbonding delegation or redelegation (per pair/trio).
+     * </pre>
+     *
+     * <code>uint32 max_entries = 3 [json_name = "maxEntries"];</code>
+     * @return The maxEntries.
+     */
+    @java.lang.Override
+    public int getMaxEntries() {
+      return maxEntries_;
+    }
+
+    public static final int HISTORICAL_ENTRIES_FIELD_NUMBER = 4;
+    private int historicalEntries_ = 0;
+    /**
+     * <pre>
+     * historical_entries is the number of historical entries to persist.
+     * </pre>
+     *
+     * <code>uint32 historical_entries = 4 [json_name = "historicalEntries"];</code>
+     * @return The historicalEntries.
+     */
+    @java.lang.Override
+    public int getHistoricalEntries() {
+      return historicalEntries_;
+    }
+
+    public static final int BOND_DENOM_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bondDenom_ = "";
+    /**
+     * <pre>
+     * bond_denom defines the bondable coin denomination.
+     * </pre>
+     *
+     * <code>string bond_denom = 5 [json_name = "bondDenom"];</code>
+     * @return The bondDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getBondDenom() {
+      java.lang.Object ref = bondDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bondDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * bond_denom defines the bondable coin denomination.
+     * </pre>
+     *
+     * <code>string bond_denom = 5 [json_name = "bondDenom"];</code>
+     * @return The bytes for bondDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBondDenomBytes() {
+      java.lang.Object ref = bondDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bondDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MIN_COMMISSION_RATE_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minCommissionRate_ = "";
+    /**
+     * <pre>
+     * min_commission_rate is the chain-wide minimum commission rate that a validator can charge their delegators
+     * </pre>
+     *
+     * <code>string min_commission_rate = 6 [json_name = "minCommissionRate"];</code>
+     * @return The minCommissionRate.
+     */
+    @java.lang.Override
+    public java.lang.String getMinCommissionRate() {
+      java.lang.Object ref = minCommissionRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minCommissionRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * min_commission_rate is the chain-wide minimum commission rate that a validator can charge their delegators
+     * </pre>
+     *
+     * <code>string min_commission_rate = 6 [json_name = "minCommissionRate"];</code>
+     * @return The bytes for minCommissionRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinCommissionRateBytes() {
+      java.lang.Object ref = minCommissionRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minCommissionRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EPOCH_BOUNDARY_FIELD_NUMBER = 7;
+    private long epochBoundary_ = 0L;
+    /**
+     * <code>uint64 epoch_boundary = 7 [json_name = "epochBoundary"];</code>
+     * @return The epochBoundary.
+     */
+    @java.lang.Override
+    public long getEpochBoundary() {
+      return epochBoundary_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unbondingTime_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, unbondingTime_);
+      }
+      if (maxValidators_ != 0) {
+        output.writeUInt32(2, maxValidators_);
+      }
+      if (maxEntries_ != 0) {
+        output.writeUInt32(3, maxEntries_);
+      }
+      if (historicalEntries_ != 0) {
+        output.writeUInt32(4, historicalEntries_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bondDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, bondDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minCommissionRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, minCommissionRate_);
+      }
+      if (epochBoundary_ != 0L) {
+        output.writeUInt64(7, epochBoundary_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unbondingTime_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, unbondingTime_);
+      }
+      if (maxValidators_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, maxValidators_);
+      }
+      if (maxEntries_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, maxEntries_);
+      }
+      if (historicalEntries_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, historicalEntries_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bondDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, bondDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minCommissionRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, minCommissionRate_);
+      }
+      if (epochBoundary_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(7, epochBoundary_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams)) {
+        return super.equals(obj);
+      }
+      com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams other = (com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams) obj;
+
+      if (!getUnbondingTime()
+          .equals(other.getUnbondingTime())) return false;
+      if (getMaxValidators()
+          != other.getMaxValidators()) return false;
+      if (getMaxEntries()
+          != other.getMaxEntries()) return false;
+      if (getHistoricalEntries()
+          != other.getHistoricalEntries()) return false;
+      if (!getBondDenom()
+          .equals(other.getBondDenom())) return false;
+      if (!getMinCommissionRate()
+          .equals(other.getMinCommissionRate())) return false;
+      if (getEpochBoundary()
+          != other.getEpochBoundary()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + UNBONDING_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getUnbondingTime().hashCode();
+      hash = (37 * hash) + MAX_VALIDATORS_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxValidators();
+      hash = (37 * hash) + MAX_ENTRIES_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxEntries();
+      hash = (37 * hash) + HISTORICAL_ENTRIES_FIELD_NUMBER;
+      hash = (53 * hash) + getHistoricalEntries();
+      hash = (37 * hash) + BOND_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getBondDenom().hashCode();
+      hash = (37 * hash) + MIN_COMMISSION_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getMinCommissionRate().hashCode();
+      hash = (37 * hash) + EPOCH_BOUNDARY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEpochBoundary());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventWrappedStakingUpdateParams is the event emitted when a
+     * MsgWrappedStakingUpdateParams has been queued
+     * </pre>
+     *
+     * Protobuf type {@code babylon.epoching.v1.EventWrappedStakingUpdateParams}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.epoching.v1.EventWrappedStakingUpdateParams)
+        com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.epoching.v1.EventsProto.internal_static_babylon_epoching_v1_EventWrappedStakingUpdateParams_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.epoching.v1.EventsProto.internal_static_babylon_epoching_v1_EventWrappedStakingUpdateParams_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams.class, com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams.Builder.class);
+      }
+
+      // Construct using com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        unbondingTime_ = "";
+        maxValidators_ = 0;
+        maxEntries_ = 0;
+        historicalEntries_ = 0;
+        bondDenom_ = "";
+        minCommissionRate_ = "";
+        epochBoundary_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.epoching.v1.EventsProto.internal_static_babylon_epoching_v1_EventWrappedStakingUpdateParams_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams getDefaultInstanceForType() {
+        return com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams build() {
+        com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams buildPartial() {
+        com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams result = new com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.unbondingTime_ = unbondingTime_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.maxValidators_ = maxValidators_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.maxEntries_ = maxEntries_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.historicalEntries_ = historicalEntries_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.bondDenom_ = bondDenom_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.minCommissionRate_ = minCommissionRate_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.epochBoundary_ = epochBoundary_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams) {
+          return mergeFrom((com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams other) {
+        if (other == com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams.getDefaultInstance()) return this;
+        if (!other.getUnbondingTime().isEmpty()) {
+          unbondingTime_ = other.unbondingTime_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getMaxValidators() != 0) {
+          setMaxValidators(other.getMaxValidators());
+        }
+        if (other.getMaxEntries() != 0) {
+          setMaxEntries(other.getMaxEntries());
+        }
+        if (other.getHistoricalEntries() != 0) {
+          setHistoricalEntries(other.getHistoricalEntries());
+        }
+        if (!other.getBondDenom().isEmpty()) {
+          bondDenom_ = other.bondDenom_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getMinCommissionRate().isEmpty()) {
+          minCommissionRate_ = other.minCommissionRate_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (other.getEpochBoundary() != 0L) {
+          setEpochBoundary(other.getEpochBoundary());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                unbondingTime_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                maxValidators_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                maxEntries_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                historicalEntries_ = input.readUInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                bondDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                minCommissionRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 56: {
+                epochBoundary_ = input.readUInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object unbondingTime_ = "";
+      /**
+       * <pre>
+       * unbonding_time is the time duration of unbonding.
+       * </pre>
+       *
+       * <code>string unbonding_time = 1 [json_name = "unbondingTime"];</code>
+       * @return The unbondingTime.
+       */
+      public java.lang.String getUnbondingTime() {
+        java.lang.Object ref = unbondingTime_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          unbondingTime_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * unbonding_time is the time duration of unbonding.
+       * </pre>
+       *
+       * <code>string unbonding_time = 1 [json_name = "unbondingTime"];</code>
+       * @return The bytes for unbondingTime.
+       */
+      public com.google.protobuf.ByteString
+          getUnbondingTimeBytes() {
+        java.lang.Object ref = unbondingTime_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          unbondingTime_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * unbonding_time is the time duration of unbonding.
+       * </pre>
+       *
+       * <code>string unbonding_time = 1 [json_name = "unbondingTime"];</code>
+       * @param value The unbondingTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnbondingTime(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        unbondingTime_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unbonding_time is the time duration of unbonding.
+       * </pre>
+       *
+       * <code>string unbonding_time = 1 [json_name = "unbondingTime"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnbondingTime() {
+        unbondingTime_ = getDefaultInstance().getUnbondingTime();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unbonding_time is the time duration of unbonding.
+       * </pre>
+       *
+       * <code>string unbonding_time = 1 [json_name = "unbondingTime"];</code>
+       * @param value The bytes for unbondingTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnbondingTimeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        unbondingTime_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int maxValidators_ ;
+      /**
+       * <pre>
+       * max_validators is the maximum number of validators.
+       * </pre>
+       *
+       * <code>uint32 max_validators = 2 [json_name = "maxValidators"];</code>
+       * @return The maxValidators.
+       */
+      @java.lang.Override
+      public int getMaxValidators() {
+        return maxValidators_;
+      }
+      /**
+       * <pre>
+       * max_validators is the maximum number of validators.
+       * </pre>
+       *
+       * <code>uint32 max_validators = 2 [json_name = "maxValidators"];</code>
+       * @param value The maxValidators to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxValidators(int value) {
+
+        maxValidators_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * max_validators is the maximum number of validators.
+       * </pre>
+       *
+       * <code>uint32 max_validators = 2 [json_name = "maxValidators"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxValidators() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        maxValidators_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int maxEntries_ ;
+      /**
+       * <pre>
+       * max_entries is the max entries for either unbonding delegation or redelegation (per pair/trio).
+       * </pre>
+       *
+       * <code>uint32 max_entries = 3 [json_name = "maxEntries"];</code>
+       * @return The maxEntries.
+       */
+      @java.lang.Override
+      public int getMaxEntries() {
+        return maxEntries_;
+      }
+      /**
+       * <pre>
+       * max_entries is the max entries for either unbonding delegation or redelegation (per pair/trio).
+       * </pre>
+       *
+       * <code>uint32 max_entries = 3 [json_name = "maxEntries"];</code>
+       * @param value The maxEntries to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxEntries(int value) {
+
+        maxEntries_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * max_entries is the max entries for either unbonding delegation or redelegation (per pair/trio).
+       * </pre>
+       *
+       * <code>uint32 max_entries = 3 [json_name = "maxEntries"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxEntries() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        maxEntries_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int historicalEntries_ ;
+      /**
+       * <pre>
+       * historical_entries is the number of historical entries to persist.
+       * </pre>
+       *
+       * <code>uint32 historical_entries = 4 [json_name = "historicalEntries"];</code>
+       * @return The historicalEntries.
+       */
+      @java.lang.Override
+      public int getHistoricalEntries() {
+        return historicalEntries_;
+      }
+      /**
+       * <pre>
+       * historical_entries is the number of historical entries to persist.
+       * </pre>
+       *
+       * <code>uint32 historical_entries = 4 [json_name = "historicalEntries"];</code>
+       * @param value The historicalEntries to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHistoricalEntries(int value) {
+
+        historicalEntries_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * historical_entries is the number of historical entries to persist.
+       * </pre>
+       *
+       * <code>uint32 historical_entries = 4 [json_name = "historicalEntries"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHistoricalEntries() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        historicalEntries_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bondDenom_ = "";
+      /**
+       * <pre>
+       * bond_denom defines the bondable coin denomination.
+       * </pre>
+       *
+       * <code>string bond_denom = 5 [json_name = "bondDenom"];</code>
+       * @return The bondDenom.
+       */
+      public java.lang.String getBondDenom() {
+        java.lang.Object ref = bondDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bondDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * bond_denom defines the bondable coin denomination.
+       * </pre>
+       *
+       * <code>string bond_denom = 5 [json_name = "bondDenom"];</code>
+       * @return The bytes for bondDenom.
+       */
+      public com.google.protobuf.ByteString
+          getBondDenomBytes() {
+        java.lang.Object ref = bondDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bondDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * bond_denom defines the bondable coin denomination.
+       * </pre>
+       *
+       * <code>string bond_denom = 5 [json_name = "bondDenom"];</code>
+       * @param value The bondDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBondDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bondDenom_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bond_denom defines the bondable coin denomination.
+       * </pre>
+       *
+       * <code>string bond_denom = 5 [json_name = "bondDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBondDenom() {
+        bondDenom_ = getDefaultInstance().getBondDenom();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bond_denom defines the bondable coin denomination.
+       * </pre>
+       *
+       * <code>string bond_denom = 5 [json_name = "bondDenom"];</code>
+       * @param value The bytes for bondDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBondDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bondDenom_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object minCommissionRate_ = "";
+      /**
+       * <pre>
+       * min_commission_rate is the chain-wide minimum commission rate that a validator can charge their delegators
+       * </pre>
+       *
+       * <code>string min_commission_rate = 6 [json_name = "minCommissionRate"];</code>
+       * @return The minCommissionRate.
+       */
+      public java.lang.String getMinCommissionRate() {
+        java.lang.Object ref = minCommissionRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minCommissionRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * min_commission_rate is the chain-wide minimum commission rate that a validator can charge their delegators
+       * </pre>
+       *
+       * <code>string min_commission_rate = 6 [json_name = "minCommissionRate"];</code>
+       * @return The bytes for minCommissionRate.
+       */
+      public com.google.protobuf.ByteString
+          getMinCommissionRateBytes() {
+        java.lang.Object ref = minCommissionRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minCommissionRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * min_commission_rate is the chain-wide minimum commission rate that a validator can charge their delegators
+       * </pre>
+       *
+       * <code>string min_commission_rate = 6 [json_name = "minCommissionRate"];</code>
+       * @param value The minCommissionRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinCommissionRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minCommissionRate_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * min_commission_rate is the chain-wide minimum commission rate that a validator can charge their delegators
+       * </pre>
+       *
+       * <code>string min_commission_rate = 6 [json_name = "minCommissionRate"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinCommissionRate() {
+        minCommissionRate_ = getDefaultInstance().getMinCommissionRate();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * min_commission_rate is the chain-wide minimum commission rate that a validator can charge their delegators
+       * </pre>
+       *
+       * <code>string min_commission_rate = 6 [json_name = "minCommissionRate"];</code>
+       * @param value The bytes for minCommissionRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinCommissionRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minCommissionRate_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private long epochBoundary_ ;
+      /**
+       * <code>uint64 epoch_boundary = 7 [json_name = "epochBoundary"];</code>
+       * @return The epochBoundary.
+       */
+      @java.lang.Override
+      public long getEpochBoundary() {
+        return epochBoundary_;
+      }
+      /**
+       * <code>uint64 epoch_boundary = 7 [json_name = "epochBoundary"];</code>
+       * @param value The epochBoundary to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpochBoundary(long value) {
+
+        epochBoundary_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 epoch_boundary = 7 [json_name = "epochBoundary"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEpochBoundary() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        epochBoundary_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.epoching.v1.EventWrappedStakingUpdateParams)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.epoching.v1.EventWrappedStakingUpdateParams)
+    private static final com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams();
+    }
+
+    public static com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventWrappedStakingUpdateParams>
+        PARSER = new com.google.protobuf.AbstractParser<EventWrappedStakingUpdateParams>() {
+      @java.lang.Override
+      public EventWrappedStakingUpdateParams parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventWrappedStakingUpdateParams> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventWrappedStakingUpdateParams> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.epoching.v1.EventsProto.EventWrappedStakingUpdateParams getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_babylon_epoching_v1_EventBeginEpoch_descriptor;
   private static final 
@@ -7017,6 +8967,16 @@ public final class EventsProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_babylon_epoching_v1_EventWrappedCancelUnbondingDelegation_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_epoching_v1_EventWrappedEditValidator_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_epoching_v1_EventWrappedEditValidator_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_epoching_v1_EventWrappedStakingUpdateParams_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_epoching_v1_EventWrappedStakingUpdateParams_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -7065,12 +9025,23 @@ public final class EventsProto {
       "lidator_address\030\002 \001(\tR\020validatorAddress\022" +
       "\026\n\006amount\030\003 \001(\004R\006amount\022\'\n\017creation_heig" +
       "ht\030\004 \001(\003R\016creationHeight\022%\n\016epoch_bounda" +
-      "ry\030\005 \001(\004R\repochBoundaryB\306\001\n\027com.babylon." +
-      "epoching.v1B\013EventsProtoZ2github.com/bab" +
-      "ylonlabs-io/babylon/x/epoching/types\242\002\003B" +
-      "EX\252\002\023Babylon.Epoching.V1\312\002\023Babylon\\Epoch" +
-      "ing\\V1\342\002\037Babylon\\Epoching\\V1\\GPBMetadata" +
-      "\352\002\025Babylon::Epoching::V1b\006proto3"
+      "ry\030\005 \001(\004R\repochBoundary\"o\n\031EventWrappedE" +
+      "ditValidator\022+\n\021validator_address\030\001 \001(\tR" +
+      "\020validatorAddress\022%\n\016epoch_boundary\030\002 \001(" +
+      "\004R\repochBoundary\"\265\002\n\037EventWrappedStaking" +
+      "UpdateParams\022%\n\016unbonding_time\030\001 \001(\tR\run" +
+      "bondingTime\022%\n\016max_validators\030\002 \001(\rR\rmax" +
+      "Validators\022\037\n\013max_entries\030\003 \001(\rR\nmaxEntr" +
+      "ies\022-\n\022historical_entries\030\004 \001(\rR\021histori" +
+      "calEntries\022\035\n\nbond_denom\030\005 \001(\tR\tbondDeno" +
+      "m\022.\n\023min_commission_rate\030\006 \001(\tR\021minCommi" +
+      "ssionRate\022%\n\016epoch_boundary\030\007 \001(\004R\repoch" +
+      "BoundaryB\306\001\n\027com.babylon.epoching.v1B\013Ev" +
+      "entsProtoZ2github.com/babylonlabs-io/bab" +
+      "ylon/x/epoching/types\242\002\003BEX\252\002\023Babylon.Ep" +
+      "oching.V1\312\002\023Babylon\\Epoching\\V1\342\002\037Babylo" +
+      "n\\Epoching\\V1\\GPBMetadata\352\002\025Babylon::Epo" +
+      "ching::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7125,6 +9096,18 @@ public final class EventsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_epoching_v1_EventWrappedCancelUnbondingDelegation_descriptor,
         new java.lang.String[] { "DelegatorAddress", "ValidatorAddress", "Amount", "CreationHeight", "EpochBoundary", });
+    internal_static_babylon_epoching_v1_EventWrappedEditValidator_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_babylon_epoching_v1_EventWrappedEditValidator_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_epoching_v1_EventWrappedEditValidator_descriptor,
+        new java.lang.String[] { "ValidatorAddress", "EpochBoundary", });
+    internal_static_babylon_epoching_v1_EventWrappedStakingUpdateParams_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_babylon_epoching_v1_EventWrappedStakingUpdateParams_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_epoching_v1_EventWrappedStakingUpdateParams_descriptor,
+        new java.lang.String[] { "UnbondingTime", "MaxValidators", "MaxEntries", "HistoricalEntries", "BondDenom", "MinCommissionRate", "EpochBoundary", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.gogoproto.GogoProto.customtype);

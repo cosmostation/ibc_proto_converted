@@ -187,6 +187,90 @@ struct Babylon_Finality_V1_MsgUnjailFinalityProviderResponse {
   init() {}
 }
 
+/// MsgEquivocationEvidence is the message for handling evidence of equivocation
+struct Babylon_Finality_V1_MsgEquivocationEvidence {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var signer: String = String()
+
+  /// fp_btc_pk is the BTC PK of the finality provider that casts this vote
+  var fpBtcPk: Data = Data()
+
+  /// block_height is the height of the conflicting blocks
+  var blockHeight: UInt64 = 0
+
+  /// pub_rand is the public randomness the finality provider has committed to
+  var pubRand: Data = Data()
+
+  /// canonical_app_hash is the AppHash of the canonical block
+  var canonicalAppHash: Data = Data()
+
+  /// fork_app_hash is the AppHash of the fork block
+  var forkAppHash: Data = Data()
+
+  /// canonical_finality_sig is the finality signature to the canonical block
+  /// where finality signature is an EOTS signature, i.e.,
+  /// the `s` in a Schnorr signature `(r, s)`
+  /// `r` is the public randomness that is already committed by the finality provider
+  var canonicalFinalitySig: Data = Data()
+
+  /// fork_finality_sig is the finality signature to the fork block
+  /// where finality signature is an EOTS signature
+  var forkFinalitySig: Data = Data()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// MsgEquivocationEvidenceResponse is the response for MsgEquivocationEvidence
+struct Babylon_Finality_V1_MsgEquivocationEvidenceResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// MsgResumeFinalityProposal is a governance proposal to resume finality from halting
+struct Babylon_Finality_V1_MsgResumeFinalityProposal {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// authority is the address of the governance account.
+  /// just FYI: cosmos.AddressString marks that this field should use type alias
+  /// for AddressString instead of string, but the functionality is not yet implemented
+  /// in cosmos-proto
+  var authority: String = String()
+
+  /// fp_pks_hex is a list of finality provider public keys to jail
+  /// the public key follows encoding in BIP-340 spec
+  var fpPksHex: [String] = []
+
+  /// halting_height is the height where the finality halting begins
+  var haltingHeight: UInt32 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// MsgResumeFinalityProposalResponse is the response to the MsgResumeFinalityProposal message.
+struct Babylon_Finality_V1_MsgResumeFinalityProposalResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Babylon_Finality_V1_MsgCommitPubRandList: @unchecked Sendable {}
 extension Babylon_Finality_V1_MsgCommitPubRandListResponse: @unchecked Sendable {}
@@ -196,6 +280,10 @@ extension Babylon_Finality_V1_MsgUpdateParams: @unchecked Sendable {}
 extension Babylon_Finality_V1_MsgUpdateParamsResponse: @unchecked Sendable {}
 extension Babylon_Finality_V1_MsgUnjailFinalityProvider: @unchecked Sendable {}
 extension Babylon_Finality_V1_MsgUnjailFinalityProviderResponse: @unchecked Sendable {}
+extension Babylon_Finality_V1_MsgEquivocationEvidence: @unchecked Sendable {}
+extension Babylon_Finality_V1_MsgEquivocationEvidenceResponse: @unchecked Sendable {}
+extension Babylon_Finality_V1_MsgResumeFinalityProposal: @unchecked Sendable {}
+extension Babylon_Finality_V1_MsgResumeFinalityProposalResponse: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -487,6 +575,162 @@ extension Babylon_Finality_V1_MsgUnjailFinalityProviderResponse: SwiftProtobuf.M
   }
 
   static func ==(lhs: Babylon_Finality_V1_MsgUnjailFinalityProviderResponse, rhs: Babylon_Finality_V1_MsgUnjailFinalityProviderResponse) -> Bool {
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Finality_V1_MsgEquivocationEvidence: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgEquivocationEvidence"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "signer"),
+    2: .standard(proto: "fp_btc_pk"),
+    3: .standard(proto: "block_height"),
+    4: .standard(proto: "pub_rand"),
+    5: .standard(proto: "canonical_app_hash"),
+    6: .standard(proto: "fork_app_hash"),
+    7: .standard(proto: "canonical_finality_sig"),
+    8: .standard(proto: "fork_finality_sig"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.signer) }()
+      case 2: try { try decoder.decodeSingularBytesField(value: &self.fpBtcPk) }()
+      case 3: try { try decoder.decodeSingularUInt64Field(value: &self.blockHeight) }()
+      case 4: try { try decoder.decodeSingularBytesField(value: &self.pubRand) }()
+      case 5: try { try decoder.decodeSingularBytesField(value: &self.canonicalAppHash) }()
+      case 6: try { try decoder.decodeSingularBytesField(value: &self.forkAppHash) }()
+      case 7: try { try decoder.decodeSingularBytesField(value: &self.canonicalFinalitySig) }()
+      case 8: try { try decoder.decodeSingularBytesField(value: &self.forkFinalitySig) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.signer.isEmpty {
+      try visitor.visitSingularStringField(value: self.signer, fieldNumber: 1)
+    }
+    if !self.fpBtcPk.isEmpty {
+      try visitor.visitSingularBytesField(value: self.fpBtcPk, fieldNumber: 2)
+    }
+    if self.blockHeight != 0 {
+      try visitor.visitSingularUInt64Field(value: self.blockHeight, fieldNumber: 3)
+    }
+    if !self.pubRand.isEmpty {
+      try visitor.visitSingularBytesField(value: self.pubRand, fieldNumber: 4)
+    }
+    if !self.canonicalAppHash.isEmpty {
+      try visitor.visitSingularBytesField(value: self.canonicalAppHash, fieldNumber: 5)
+    }
+    if !self.forkAppHash.isEmpty {
+      try visitor.visitSingularBytesField(value: self.forkAppHash, fieldNumber: 6)
+    }
+    if !self.canonicalFinalitySig.isEmpty {
+      try visitor.visitSingularBytesField(value: self.canonicalFinalitySig, fieldNumber: 7)
+    }
+    if !self.forkFinalitySig.isEmpty {
+      try visitor.visitSingularBytesField(value: self.forkFinalitySig, fieldNumber: 8)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Finality_V1_MsgEquivocationEvidence, rhs: Babylon_Finality_V1_MsgEquivocationEvidence) -> Bool {
+    if lhs.signer != rhs.signer {return false}
+    if lhs.fpBtcPk != rhs.fpBtcPk {return false}
+    if lhs.blockHeight != rhs.blockHeight {return false}
+    if lhs.pubRand != rhs.pubRand {return false}
+    if lhs.canonicalAppHash != rhs.canonicalAppHash {return false}
+    if lhs.forkAppHash != rhs.forkAppHash {return false}
+    if lhs.canonicalFinalitySig != rhs.canonicalFinalitySig {return false}
+    if lhs.forkFinalitySig != rhs.forkFinalitySig {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Finality_V1_MsgEquivocationEvidenceResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgEquivocationEvidenceResponse"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let _ = try decoder.nextFieldNumber() {
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Finality_V1_MsgEquivocationEvidenceResponse, rhs: Babylon_Finality_V1_MsgEquivocationEvidenceResponse) -> Bool {
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Finality_V1_MsgResumeFinalityProposal: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgResumeFinalityProposal"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "authority"),
+    2: .standard(proto: "fp_pks_hex"),
+    3: .standard(proto: "halting_height"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.authority) }()
+      case 2: try { try decoder.decodeRepeatedStringField(value: &self.fpPksHex) }()
+      case 3: try { try decoder.decodeSingularUInt32Field(value: &self.haltingHeight) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.authority.isEmpty {
+      try visitor.visitSingularStringField(value: self.authority, fieldNumber: 1)
+    }
+    if !self.fpPksHex.isEmpty {
+      try visitor.visitRepeatedStringField(value: self.fpPksHex, fieldNumber: 2)
+    }
+    if self.haltingHeight != 0 {
+      try visitor.visitSingularUInt32Field(value: self.haltingHeight, fieldNumber: 3)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Finality_V1_MsgResumeFinalityProposal, rhs: Babylon_Finality_V1_MsgResumeFinalityProposal) -> Bool {
+    if lhs.authority != rhs.authority {return false}
+    if lhs.fpPksHex != rhs.fpPksHex {return false}
+    if lhs.haltingHeight != rhs.haltingHeight {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Finality_V1_MsgResumeFinalityProposalResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgResumeFinalityProposalResponse"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let _ = try decoder.nextFieldNumber() {
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Finality_V1_MsgResumeFinalityProposalResponse, rhs: Babylon_Finality_V1_MsgResumeFinalityProposalResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

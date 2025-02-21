@@ -1092,16 +1092,16 @@ public final class QueryProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string chain_id = 1 [json_name = "chainId"];</code>
-     * @return The chainId.
+     * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+     * @return The consumerId.
      */
-    java.lang.String getChainId();
+    java.lang.String getConsumerId();
     /**
-     * <code>string chain_id = 1 [json_name = "chainId"];</code>
-     * @return The bytes for chainId.
+     * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+     * @return The bytes for consumerId.
      */
     com.google.protobuf.ByteString
-        getChainIdBytes();
+        getConsumerIdBytes();
 
     /**
      * <code>uint64 height = 2 [json_name = "height"];</code>
@@ -1126,7 +1126,7 @@ public final class QueryProto {
       super(builder);
     }
     private QueryHeaderRequest() {
-      chainId_ = "";
+      consumerId_ = "";
     }
 
     @java.lang.Override
@@ -1149,39 +1149,39 @@ public final class QueryProto {
               com.babylon.zoneconcierge.v1.QueryProto.QueryHeaderRequest.class, com.babylon.zoneconcierge.v1.QueryProto.QueryHeaderRequest.Builder.class);
     }
 
-    public static final int CHAIN_ID_FIELD_NUMBER = 1;
+    public static final int CONSUMER_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object chainId_ = "";
+    private volatile java.lang.Object consumerId_ = "";
     /**
-     * <code>string chain_id = 1 [json_name = "chainId"];</code>
-     * @return The chainId.
+     * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+     * @return The consumerId.
      */
     @java.lang.Override
-    public java.lang.String getChainId() {
-      java.lang.Object ref = chainId_;
+    public java.lang.String getConsumerId() {
+      java.lang.Object ref = consumerId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        chainId_ = s;
+        consumerId_ = s;
         return s;
       }
     }
     /**
-     * <code>string chain_id = 1 [json_name = "chainId"];</code>
-     * @return The bytes for chainId.
+     * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+     * @return The bytes for consumerId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getChainIdBytes() {
-      java.lang.Object ref = chainId_;
+        getConsumerIdBytes() {
+      java.lang.Object ref = consumerId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        chainId_ = b;
+        consumerId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1213,8 +1213,8 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chainId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consumerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, consumerId_);
       }
       if (height_ != 0L) {
         output.writeUInt64(2, height_);
@@ -1228,8 +1228,8 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, chainId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consumerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, consumerId_);
       }
       if (height_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -1250,8 +1250,8 @@ public final class QueryProto {
       }
       com.babylon.zoneconcierge.v1.QueryProto.QueryHeaderRequest other = (com.babylon.zoneconcierge.v1.QueryProto.QueryHeaderRequest) obj;
 
-      if (!getChainId()
-          .equals(other.getChainId())) return false;
+      if (!getConsumerId()
+          .equals(other.getConsumerId())) return false;
       if (getHeight()
           != other.getHeight()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -1265,8 +1265,8 @@ public final class QueryProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getChainId().hashCode();
+      hash = (37 * hash) + CONSUMER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConsumerId().hashCode();
       hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getHeight());
@@ -1405,7 +1405,7 @@ public final class QueryProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        chainId_ = "";
+        consumerId_ = "";
         height_ = 0L;
         return this;
       }
@@ -1441,7 +1441,7 @@ public final class QueryProto {
       private void buildPartial0(com.babylon.zoneconcierge.v1.QueryProto.QueryHeaderRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.chainId_ = chainId_;
+          result.consumerId_ = consumerId_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.height_ = height_;
@@ -1492,8 +1492,8 @@ public final class QueryProto {
 
       public Builder mergeFrom(com.babylon.zoneconcierge.v1.QueryProto.QueryHeaderRequest other) {
         if (other == com.babylon.zoneconcierge.v1.QueryProto.QueryHeaderRequest.getDefaultInstance()) return this;
-        if (!other.getChainId().isEmpty()) {
-          chainId_ = other.chainId_;
+        if (!other.getConsumerId().isEmpty()) {
+          consumerId_ = other.consumerId_;
           bitField0_ |= 0x00000001;
           onChanged();
         }
@@ -1527,7 +1527,7 @@ public final class QueryProto {
                 done = true;
                 break;
               case 10: {
-                chainId_ = input.readStringRequireUtf8();
+                consumerId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
@@ -1553,73 +1553,73 @@ public final class QueryProto {
       }
       private int bitField0_;
 
-      private java.lang.Object chainId_ = "";
+      private java.lang.Object consumerId_ = "";
       /**
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
-       * @return The chainId.
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+       * @return The consumerId.
        */
-      public java.lang.String getChainId() {
-        java.lang.Object ref = chainId_;
+      public java.lang.String getConsumerId() {
+        java.lang.Object ref = consumerId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          chainId_ = s;
+          consumerId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
-       * @return The bytes for chainId.
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+       * @return The bytes for consumerId.
        */
       public com.google.protobuf.ByteString
-          getChainIdBytes() {
-        java.lang.Object ref = chainId_;
+          getConsumerIdBytes() {
+        java.lang.Object ref = consumerId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          chainId_ = b;
+          consumerId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
-       * @param value The chainId to set.
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+       * @param value The consumerId to set.
        * @return This builder for chaining.
        */
-      public Builder setChainId(
+      public Builder setConsumerId(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        chainId_ = value;
+        consumerId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearChainId() {
-        chainId_ = getDefaultInstance().getChainId();
+      public Builder clearConsumerId() {
+        consumerId_ = getDefaultInstance().getConsumerId();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
-       * @param value The bytes for chainId to set.
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+       * @param value The bytes for consumerId to set.
        * @return This builder for chaining.
        */
-      public Builder setChainIdBytes(
+      public Builder setConsumerIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        chainId_ = value;
+        consumerId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
@@ -3198,44 +3198,44 @@ public final class QueryProto {
 
     /**
      * <pre>
-     * chain_ids are IDs of the chains in ascending alphabetical order
+     * consumer_ids are IDs of the chains in ascending alphabetical order
      * </pre>
      *
-     * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-     * @return A list containing the chainIds.
+     * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+     * @return A list containing the consumerIds.
      */
     java.util.List<java.lang.String>
-        getChainIdsList();
+        getConsumerIdsList();
     /**
      * <pre>
-     * chain_ids are IDs of the chains in ascending alphabetical order
+     * consumer_ids are IDs of the chains in ascending alphabetical order
      * </pre>
      *
-     * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-     * @return The count of chainIds.
+     * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+     * @return The count of consumerIds.
      */
-    int getChainIdsCount();
+    int getConsumerIdsCount();
     /**
      * <pre>
-     * chain_ids are IDs of the chains in ascending alphabetical order
+     * consumer_ids are IDs of the chains in ascending alphabetical order
      * </pre>
      *
-     * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
+     * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
      * @param index The index of the element to return.
-     * @return The chainIds at the given index.
+     * @return The consumerIds at the given index.
      */
-    java.lang.String getChainIds(int index);
+    java.lang.String getConsumerIds(int index);
     /**
      * <pre>
-     * chain_ids are IDs of the chains in ascending alphabetical order
+     * consumer_ids are IDs of the chains in ascending alphabetical order
      * </pre>
      *
-     * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
+     * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
      * @param index The index of the value to return.
-     * @return The bytes of the chainIds at the given index.
+     * @return The bytes of the consumerIds at the given index.
      */
     com.google.protobuf.ByteString
-        getChainIdsBytes(int index);
+        getConsumerIdsBytes(int index);
 
     /**
      * <pre>
@@ -3281,7 +3281,7 @@ public final class QueryProto {
       super(builder);
     }
     private QueryChainListResponse() {
-      chainIds_ =
+      consumerIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
@@ -3305,57 +3305,57 @@ public final class QueryProto {
               com.babylon.zoneconcierge.v1.QueryProto.QueryChainListResponse.class, com.babylon.zoneconcierge.v1.QueryProto.QueryChainListResponse.Builder.class);
     }
 
-    public static final int CHAIN_IDS_FIELD_NUMBER = 1;
+    public static final int CONSUMER_IDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList chainIds_ =
+    private com.google.protobuf.LazyStringArrayList consumerIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
-     * chain_ids are IDs of the chains in ascending alphabetical order
+     * consumer_ids are IDs of the chains in ascending alphabetical order
      * </pre>
      *
-     * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-     * @return A list containing the chainIds.
+     * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+     * @return A list containing the consumerIds.
      */
     public com.google.protobuf.ProtocolStringList
-        getChainIdsList() {
-      return chainIds_;
+        getConsumerIdsList() {
+      return consumerIds_;
     }
     /**
      * <pre>
-     * chain_ids are IDs of the chains in ascending alphabetical order
+     * consumer_ids are IDs of the chains in ascending alphabetical order
      * </pre>
      *
-     * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-     * @return The count of chainIds.
+     * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+     * @return The count of consumerIds.
      */
-    public int getChainIdsCount() {
-      return chainIds_.size();
+    public int getConsumerIdsCount() {
+      return consumerIds_.size();
     }
     /**
      * <pre>
-     * chain_ids are IDs of the chains in ascending alphabetical order
+     * consumer_ids are IDs of the chains in ascending alphabetical order
      * </pre>
      *
-     * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
+     * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
      * @param index The index of the element to return.
-     * @return The chainIds at the given index.
+     * @return The consumerIds at the given index.
      */
-    public java.lang.String getChainIds(int index) {
-      return chainIds_.get(index);
+    public java.lang.String getConsumerIds(int index) {
+      return consumerIds_.get(index);
     }
     /**
      * <pre>
-     * chain_ids are IDs of the chains in ascending alphabetical order
+     * consumer_ids are IDs of the chains in ascending alphabetical order
      * </pre>
      *
-     * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
+     * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
      * @param index The index of the value to return.
-     * @return The bytes of the chainIds at the given index.
+     * @return The bytes of the consumerIds at the given index.
      */
     public com.google.protobuf.ByteString
-        getChainIdsBytes(int index) {
-      return chainIds_.getByteString(index);
+        getConsumerIdsBytes(int index) {
+      return consumerIds_.getByteString(index);
     }
 
     public static final int PAGINATION_FIELD_NUMBER = 2;
@@ -3410,8 +3410,8 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < chainIds_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chainIds_.getRaw(i));
+      for (int i = 0; i < consumerIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, consumerIds_.getRaw(i));
       }
       if (pagination_ != null) {
         output.writeMessage(2, getPagination());
@@ -3427,11 +3427,11 @@ public final class QueryProto {
       size = 0;
       {
         int dataSize = 0;
-        for (int i = 0; i < chainIds_.size(); i++) {
-          dataSize += computeStringSizeNoTag(chainIds_.getRaw(i));
+        for (int i = 0; i < consumerIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(consumerIds_.getRaw(i));
         }
         size += dataSize;
-        size += 1 * getChainIdsList().size();
+        size += 1 * getConsumerIdsList().size();
       }
       if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -3452,8 +3452,8 @@ public final class QueryProto {
       }
       com.babylon.zoneconcierge.v1.QueryProto.QueryChainListResponse other = (com.babylon.zoneconcierge.v1.QueryProto.QueryChainListResponse) obj;
 
-      if (!getChainIdsList()
-          .equals(other.getChainIdsList())) return false;
+      if (!getConsumerIdsList()
+          .equals(other.getConsumerIdsList())) return false;
       if (hasPagination() != other.hasPagination()) return false;
       if (hasPagination()) {
         if (!getPagination()
@@ -3470,9 +3470,9 @@ public final class QueryProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getChainIdsCount() > 0) {
-        hash = (37 * hash) + CHAIN_IDS_FIELD_NUMBER;
-        hash = (53 * hash) + getChainIdsList().hashCode();
+      if (getConsumerIdsCount() > 0) {
+        hash = (37 * hash) + CONSUMER_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getConsumerIdsList().hashCode();
       }
       if (hasPagination()) {
         hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
@@ -3613,7 +3613,7 @@ public final class QueryProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        chainIds_ =
+        consumerIds_ =
             com.google.protobuf.LazyStringArrayList.emptyList();
         pagination_ = null;
         if (paginationBuilder_ != null) {
@@ -3654,8 +3654,8 @@ public final class QueryProto {
       private void buildPartial0(com.babylon.zoneconcierge.v1.QueryProto.QueryChainListResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          chainIds_.makeImmutable();
-          result.chainIds_ = chainIds_;
+          consumerIds_.makeImmutable();
+          result.consumerIds_ = consumerIds_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
@@ -3708,13 +3708,13 @@ public final class QueryProto {
 
       public Builder mergeFrom(com.babylon.zoneconcierge.v1.QueryProto.QueryChainListResponse other) {
         if (other == com.babylon.zoneconcierge.v1.QueryProto.QueryChainListResponse.getDefaultInstance()) return this;
-        if (!other.chainIds_.isEmpty()) {
-          if (chainIds_.isEmpty()) {
-            chainIds_ = other.chainIds_;
+        if (!other.consumerIds_.isEmpty()) {
+          if (consumerIds_.isEmpty()) {
+            consumerIds_ = other.consumerIds_;
             bitField0_ |= 0x00000001;
           } else {
-            ensureChainIdsIsMutable();
-            chainIds_.addAll(other.chainIds_);
+            ensureConsumerIdsIsMutable();
+            consumerIds_.addAll(other.consumerIds_);
           }
           onChanged();
         }
@@ -3749,8 +3749,8 @@ public final class QueryProto {
                 break;
               case 10: {
                 java.lang.String s = input.readStringRequireUtf8();
-                ensureChainIdsIsMutable();
-                chainIds_.add(s);
+                ensureConsumerIdsIsMutable();
+                consumerIds_.add(s);
                 break;
               } // case 10
               case 18: {
@@ -3777,128 +3777,128 @@ public final class QueryProto {
       }
       private int bitField0_;
 
-      private com.google.protobuf.LazyStringArrayList chainIds_ =
+      private com.google.protobuf.LazyStringArrayList consumerIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureChainIdsIsMutable() {
-        if (!chainIds_.isModifiable()) {
-          chainIds_ = new com.google.protobuf.LazyStringArrayList(chainIds_);
+      private void ensureConsumerIdsIsMutable() {
+        if (!consumerIds_.isModifiable()) {
+          consumerIds_ = new com.google.protobuf.LazyStringArrayList(consumerIds_);
         }
         bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
-       * chain_ids are IDs of the chains in ascending alphabetical order
+       * consumer_ids are IDs of the chains in ascending alphabetical order
        * </pre>
        *
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-       * @return A list containing the chainIds.
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+       * @return A list containing the consumerIds.
        */
       public com.google.protobuf.ProtocolStringList
-          getChainIdsList() {
-        chainIds_.makeImmutable();
-        return chainIds_;
+          getConsumerIdsList() {
+        consumerIds_.makeImmutable();
+        return consumerIds_;
       }
       /**
        * <pre>
-       * chain_ids are IDs of the chains in ascending alphabetical order
+       * consumer_ids are IDs of the chains in ascending alphabetical order
        * </pre>
        *
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-       * @return The count of chainIds.
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+       * @return The count of consumerIds.
        */
-      public int getChainIdsCount() {
-        return chainIds_.size();
+      public int getConsumerIdsCount() {
+        return consumerIds_.size();
       }
       /**
        * <pre>
-       * chain_ids are IDs of the chains in ascending alphabetical order
+       * consumer_ids are IDs of the chains in ascending alphabetical order
        * </pre>
        *
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
        * @param index The index of the element to return.
-       * @return The chainIds at the given index.
+       * @return The consumerIds at the given index.
        */
-      public java.lang.String getChainIds(int index) {
-        return chainIds_.get(index);
+      public java.lang.String getConsumerIds(int index) {
+        return consumerIds_.get(index);
       }
       /**
        * <pre>
-       * chain_ids are IDs of the chains in ascending alphabetical order
+       * consumer_ids are IDs of the chains in ascending alphabetical order
        * </pre>
        *
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
        * @param index The index of the value to return.
-       * @return The bytes of the chainIds at the given index.
+       * @return The bytes of the consumerIds at the given index.
        */
       public com.google.protobuf.ByteString
-          getChainIdsBytes(int index) {
-        return chainIds_.getByteString(index);
+          getConsumerIdsBytes(int index) {
+        return consumerIds_.getByteString(index);
       }
       /**
        * <pre>
-       * chain_ids are IDs of the chains in ascending alphabetical order
+       * consumer_ids are IDs of the chains in ascending alphabetical order
        * </pre>
        *
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
        * @param index The index to set the value at.
-       * @param value The chainIds to set.
+       * @param value The consumerIds to set.
        * @return This builder for chaining.
        */
-      public Builder setChainIds(
+      public Builder setConsumerIds(
           int index, java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        ensureChainIdsIsMutable();
-        chainIds_.set(index, value);
+        ensureConsumerIdsIsMutable();
+        consumerIds_.set(index, value);
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * chain_ids are IDs of the chains in ascending alphabetical order
+       * consumer_ids are IDs of the chains in ascending alphabetical order
        * </pre>
        *
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-       * @param value The chainIds to add.
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+       * @param value The consumerIds to add.
        * @return This builder for chaining.
        */
-      public Builder addChainIds(
+      public Builder addConsumerIds(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        ensureChainIdsIsMutable();
-        chainIds_.add(value);
+        ensureConsumerIdsIsMutable();
+        consumerIds_.add(value);
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * chain_ids are IDs of the chains in ascending alphabetical order
+       * consumer_ids are IDs of the chains in ascending alphabetical order
        * </pre>
        *
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-       * @param values The chainIds to add.
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+       * @param values The consumerIds to add.
        * @return This builder for chaining.
        */
-      public Builder addAllChainIds(
+      public Builder addAllConsumerIds(
           java.lang.Iterable<java.lang.String> values) {
-        ensureChainIdsIsMutable();
+        ensureConsumerIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, chainIds_);
+            values, consumerIds_);
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * chain_ids are IDs of the chains in ascending alphabetical order
+       * consumer_ids are IDs of the chains in ascending alphabetical order
        * </pre>
        *
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearChainIds() {
-        chainIds_ =
+      public Builder clearConsumerIds() {
+        consumerIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);;
         onChanged();
@@ -3906,19 +3906,19 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * chain_ids are IDs of the chains in ascending alphabetical order
+       * consumer_ids are IDs of the chains in ascending alphabetical order
        * </pre>
        *
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-       * @param value The bytes of the chainIds to add.
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+       * @param value The bytes of the consumerIds to add.
        * @return This builder for chaining.
        */
-      public Builder addChainIdsBytes(
+      public Builder addConsumerIdsBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        ensureChainIdsIsMutable();
-        chainIds_.add(value);
+        ensureConsumerIdsIsMutable();
+        consumerIds_.add(value);
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
@@ -4147,29 +4147,29 @@ public final class QueryProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-     * @return A list containing the chainIds.
+     * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+     * @return A list containing the consumerIds.
      */
     java.util.List<java.lang.String>
-        getChainIdsList();
+        getConsumerIdsList();
     /**
-     * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-     * @return The count of chainIds.
+     * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+     * @return The count of consumerIds.
      */
-    int getChainIdsCount();
+    int getConsumerIdsCount();
     /**
-     * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
+     * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
      * @param index The index of the element to return.
-     * @return The chainIds at the given index.
+     * @return The consumerIds at the given index.
      */
-    java.lang.String getChainIds(int index);
+    java.lang.String getConsumerIds(int index);
     /**
-     * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
+     * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
      * @param index The index of the value to return.
-     * @return The bytes of the chainIds at the given index.
+     * @return The bytes of the consumerIds at the given index.
      */
     com.google.protobuf.ByteString
-        getChainIdsBytes(int index);
+        getConsumerIdsBytes(int index);
   }
   /**
    * <pre>
@@ -4188,7 +4188,7 @@ public final class QueryProto {
       super(builder);
     }
     private QueryChainsInfoRequest() {
-      chainIds_ =
+      consumerIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
@@ -4212,41 +4212,41 @@ public final class QueryProto {
               com.babylon.zoneconcierge.v1.QueryProto.QueryChainsInfoRequest.class, com.babylon.zoneconcierge.v1.QueryProto.QueryChainsInfoRequest.Builder.class);
     }
 
-    public static final int CHAIN_IDS_FIELD_NUMBER = 1;
+    public static final int CONSUMER_IDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList chainIds_ =
+    private com.google.protobuf.LazyStringArrayList consumerIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     /**
-     * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-     * @return A list containing the chainIds.
+     * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+     * @return A list containing the consumerIds.
      */
     public com.google.protobuf.ProtocolStringList
-        getChainIdsList() {
-      return chainIds_;
+        getConsumerIdsList() {
+      return consumerIds_;
     }
     /**
-     * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-     * @return The count of chainIds.
+     * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+     * @return The count of consumerIds.
      */
-    public int getChainIdsCount() {
-      return chainIds_.size();
+    public int getConsumerIdsCount() {
+      return consumerIds_.size();
     }
     /**
-     * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
+     * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
      * @param index The index of the element to return.
-     * @return The chainIds at the given index.
+     * @return The consumerIds at the given index.
      */
-    public java.lang.String getChainIds(int index) {
-      return chainIds_.get(index);
+    public java.lang.String getConsumerIds(int index) {
+      return consumerIds_.get(index);
     }
     /**
-     * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
+     * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
      * @param index The index of the value to return.
-     * @return The bytes of the chainIds at the given index.
+     * @return The bytes of the consumerIds at the given index.
      */
     public com.google.protobuf.ByteString
-        getChainIdsBytes(int index) {
-      return chainIds_.getByteString(index);
+        getConsumerIdsBytes(int index) {
+      return consumerIds_.getByteString(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4263,8 +4263,8 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < chainIds_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chainIds_.getRaw(i));
+      for (int i = 0; i < consumerIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, consumerIds_.getRaw(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -4277,11 +4277,11 @@ public final class QueryProto {
       size = 0;
       {
         int dataSize = 0;
-        for (int i = 0; i < chainIds_.size(); i++) {
-          dataSize += computeStringSizeNoTag(chainIds_.getRaw(i));
+        for (int i = 0; i < consumerIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(consumerIds_.getRaw(i));
         }
         size += dataSize;
-        size += 1 * getChainIdsList().size();
+        size += 1 * getConsumerIdsList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -4298,8 +4298,8 @@ public final class QueryProto {
       }
       com.babylon.zoneconcierge.v1.QueryProto.QueryChainsInfoRequest other = (com.babylon.zoneconcierge.v1.QueryProto.QueryChainsInfoRequest) obj;
 
-      if (!getChainIdsList()
-          .equals(other.getChainIdsList())) return false;
+      if (!getConsumerIdsList()
+          .equals(other.getConsumerIdsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -4311,9 +4311,9 @@ public final class QueryProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getChainIdsCount() > 0) {
-        hash = (37 * hash) + CHAIN_IDS_FIELD_NUMBER;
-        hash = (53 * hash) + getChainIdsList().hashCode();
+      if (getConsumerIdsCount() > 0) {
+        hash = (37 * hash) + CONSUMER_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getConsumerIdsList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -4450,7 +4450,7 @@ public final class QueryProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        chainIds_ =
+        consumerIds_ =
             com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
@@ -4486,8 +4486,8 @@ public final class QueryProto {
       private void buildPartial0(com.babylon.zoneconcierge.v1.QueryProto.QueryChainsInfoRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          chainIds_.makeImmutable();
-          result.chainIds_ = chainIds_;
+          consumerIds_.makeImmutable();
+          result.consumerIds_ = consumerIds_;
         }
       }
 
@@ -4535,13 +4535,13 @@ public final class QueryProto {
 
       public Builder mergeFrom(com.babylon.zoneconcierge.v1.QueryProto.QueryChainsInfoRequest other) {
         if (other == com.babylon.zoneconcierge.v1.QueryProto.QueryChainsInfoRequest.getDefaultInstance()) return this;
-        if (!other.chainIds_.isEmpty()) {
-          if (chainIds_.isEmpty()) {
-            chainIds_ = other.chainIds_;
+        if (!other.consumerIds_.isEmpty()) {
+          if (consumerIds_.isEmpty()) {
+            consumerIds_ = other.consumerIds_;
             bitField0_ |= 0x00000001;
           } else {
-            ensureChainIdsIsMutable();
-            chainIds_.addAll(other.chainIds_);
+            ensureConsumerIdsIsMutable();
+            consumerIds_.addAll(other.consumerIds_);
           }
           onChanged();
         }
@@ -4573,8 +4573,8 @@ public final class QueryProto {
                 break;
               case 10: {
                 java.lang.String s = input.readStringRequireUtf8();
-                ensureChainIdsIsMutable();
-                chainIds_.add(s);
+                ensureConsumerIdsIsMutable();
+                consumerIds_.add(s);
                 break;
               } // case 10
               default: {
@@ -4594,112 +4594,112 @@ public final class QueryProto {
       }
       private int bitField0_;
 
-      private com.google.protobuf.LazyStringArrayList chainIds_ =
+      private com.google.protobuf.LazyStringArrayList consumerIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureChainIdsIsMutable() {
-        if (!chainIds_.isModifiable()) {
-          chainIds_ = new com.google.protobuf.LazyStringArrayList(chainIds_);
+      private void ensureConsumerIdsIsMutable() {
+        if (!consumerIds_.isModifiable()) {
+          consumerIds_ = new com.google.protobuf.LazyStringArrayList(consumerIds_);
         }
         bitField0_ |= 0x00000001;
       }
       /**
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-       * @return A list containing the chainIds.
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+       * @return A list containing the consumerIds.
        */
       public com.google.protobuf.ProtocolStringList
-          getChainIdsList() {
-        chainIds_.makeImmutable();
-        return chainIds_;
+          getConsumerIdsList() {
+        consumerIds_.makeImmutable();
+        return consumerIds_;
       }
       /**
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-       * @return The count of chainIds.
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+       * @return The count of consumerIds.
        */
-      public int getChainIdsCount() {
-        return chainIds_.size();
+      public int getConsumerIdsCount() {
+        return consumerIds_.size();
       }
       /**
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
        * @param index The index of the element to return.
-       * @return The chainIds at the given index.
+       * @return The consumerIds at the given index.
        */
-      public java.lang.String getChainIds(int index) {
-        return chainIds_.get(index);
+      public java.lang.String getConsumerIds(int index) {
+        return consumerIds_.get(index);
       }
       /**
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
        * @param index The index of the value to return.
-       * @return The bytes of the chainIds at the given index.
+       * @return The bytes of the consumerIds at the given index.
        */
       public com.google.protobuf.ByteString
-          getChainIdsBytes(int index) {
-        return chainIds_.getByteString(index);
+          getConsumerIdsBytes(int index) {
+        return consumerIds_.getByteString(index);
       }
       /**
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
        * @param index The index to set the value at.
-       * @param value The chainIds to set.
+       * @param value The consumerIds to set.
        * @return This builder for chaining.
        */
-      public Builder setChainIds(
+      public Builder setConsumerIds(
           int index, java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        ensureChainIdsIsMutable();
-        chainIds_.set(index, value);
+        ensureConsumerIdsIsMutable();
+        consumerIds_.set(index, value);
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-       * @param value The chainIds to add.
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+       * @param value The consumerIds to add.
        * @return This builder for chaining.
        */
-      public Builder addChainIds(
+      public Builder addConsumerIds(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        ensureChainIdsIsMutable();
-        chainIds_.add(value);
+        ensureConsumerIdsIsMutable();
+        consumerIds_.add(value);
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-       * @param values The chainIds to add.
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+       * @param values The consumerIds to add.
        * @return This builder for chaining.
        */
-      public Builder addAllChainIds(
+      public Builder addAllConsumerIds(
           java.lang.Iterable<java.lang.String> values) {
-        ensureChainIdsIsMutable();
+        ensureConsumerIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, chainIds_);
+            values, consumerIds_);
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearChainIds() {
-        chainIds_ =
+      public Builder clearConsumerIds() {
+        consumerIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-       * @param value The bytes of the chainIds to add.
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+       * @param value The bytes of the consumerIds to add.
        * @return This builder for chaining.
        */
-      public Builder addChainIdsBytes(
+      public Builder addConsumerIdsBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        ensureChainIdsIsMutable();
-        chainIds_.add(value);
+        ensureConsumerIdsIsMutable();
+        consumerIds_.add(value);
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
@@ -5569,29 +5569,29 @@ public final class QueryProto {
     long getEpochNum();
 
     /**
-     * <code>repeated string chain_ids = 2 [json_name = "chainIds"];</code>
-     * @return A list containing the chainIds.
+     * <code>repeated string consumer_ids = 2 [json_name = "consumerIds"];</code>
+     * @return A list containing the consumerIds.
      */
     java.util.List<java.lang.String>
-        getChainIdsList();
+        getConsumerIdsList();
     /**
-     * <code>repeated string chain_ids = 2 [json_name = "chainIds"];</code>
-     * @return The count of chainIds.
+     * <code>repeated string consumer_ids = 2 [json_name = "consumerIds"];</code>
+     * @return The count of consumerIds.
      */
-    int getChainIdsCount();
+    int getConsumerIdsCount();
     /**
-     * <code>repeated string chain_ids = 2 [json_name = "chainIds"];</code>
+     * <code>repeated string consumer_ids = 2 [json_name = "consumerIds"];</code>
      * @param index The index of the element to return.
-     * @return The chainIds at the given index.
+     * @return The consumerIds at the given index.
      */
-    java.lang.String getChainIds(int index);
+    java.lang.String getConsumerIds(int index);
     /**
-     * <code>repeated string chain_ids = 2 [json_name = "chainIds"];</code>
+     * <code>repeated string consumer_ids = 2 [json_name = "consumerIds"];</code>
      * @param index The index of the value to return.
-     * @return The bytes of the chainIds at the given index.
+     * @return The bytes of the consumerIds at the given index.
      */
     com.google.protobuf.ByteString
-        getChainIdsBytes(int index);
+        getConsumerIdsBytes(int index);
   }
   /**
    * <pre>
@@ -5611,7 +5611,7 @@ public final class QueryProto {
       super(builder);
     }
     private QueryEpochChainsInfoRequest() {
-      chainIds_ =
+      consumerIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
@@ -5646,41 +5646,41 @@ public final class QueryProto {
       return epochNum_;
     }
 
-    public static final int CHAIN_IDS_FIELD_NUMBER = 2;
+    public static final int CONSUMER_IDS_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList chainIds_ =
+    private com.google.protobuf.LazyStringArrayList consumerIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     /**
-     * <code>repeated string chain_ids = 2 [json_name = "chainIds"];</code>
-     * @return A list containing the chainIds.
+     * <code>repeated string consumer_ids = 2 [json_name = "consumerIds"];</code>
+     * @return A list containing the consumerIds.
      */
     public com.google.protobuf.ProtocolStringList
-        getChainIdsList() {
-      return chainIds_;
+        getConsumerIdsList() {
+      return consumerIds_;
     }
     /**
-     * <code>repeated string chain_ids = 2 [json_name = "chainIds"];</code>
-     * @return The count of chainIds.
+     * <code>repeated string consumer_ids = 2 [json_name = "consumerIds"];</code>
+     * @return The count of consumerIds.
      */
-    public int getChainIdsCount() {
-      return chainIds_.size();
+    public int getConsumerIdsCount() {
+      return consumerIds_.size();
     }
     /**
-     * <code>repeated string chain_ids = 2 [json_name = "chainIds"];</code>
+     * <code>repeated string consumer_ids = 2 [json_name = "consumerIds"];</code>
      * @param index The index of the element to return.
-     * @return The chainIds at the given index.
+     * @return The consumerIds at the given index.
      */
-    public java.lang.String getChainIds(int index) {
-      return chainIds_.get(index);
+    public java.lang.String getConsumerIds(int index) {
+      return consumerIds_.get(index);
     }
     /**
-     * <code>repeated string chain_ids = 2 [json_name = "chainIds"];</code>
+     * <code>repeated string consumer_ids = 2 [json_name = "consumerIds"];</code>
      * @param index The index of the value to return.
-     * @return The bytes of the chainIds at the given index.
+     * @return The bytes of the consumerIds at the given index.
      */
     public com.google.protobuf.ByteString
-        getChainIdsBytes(int index) {
-      return chainIds_.getByteString(index);
+        getConsumerIdsBytes(int index) {
+      return consumerIds_.getByteString(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -5700,8 +5700,8 @@ public final class QueryProto {
       if (epochNum_ != 0L) {
         output.writeUInt64(1, epochNum_);
       }
-      for (int i = 0; i < chainIds_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, chainIds_.getRaw(i));
+      for (int i = 0; i < consumerIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, consumerIds_.getRaw(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -5718,11 +5718,11 @@ public final class QueryProto {
       }
       {
         int dataSize = 0;
-        for (int i = 0; i < chainIds_.size(); i++) {
-          dataSize += computeStringSizeNoTag(chainIds_.getRaw(i));
+        for (int i = 0; i < consumerIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(consumerIds_.getRaw(i));
         }
         size += dataSize;
-        size += 1 * getChainIdsList().size();
+        size += 1 * getConsumerIdsList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -5741,8 +5741,8 @@ public final class QueryProto {
 
       if (getEpochNum()
           != other.getEpochNum()) return false;
-      if (!getChainIdsList()
-          .equals(other.getChainIdsList())) return false;
+      if (!getConsumerIdsList()
+          .equals(other.getConsumerIdsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -5757,9 +5757,9 @@ public final class QueryProto {
       hash = (37 * hash) + EPOCH_NUM_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getEpochNum());
-      if (getChainIdsCount() > 0) {
-        hash = (37 * hash) + CHAIN_IDS_FIELD_NUMBER;
-        hash = (53 * hash) + getChainIdsList().hashCode();
+      if (getConsumerIdsCount() > 0) {
+        hash = (37 * hash) + CONSUMER_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getConsumerIdsList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -5898,7 +5898,7 @@ public final class QueryProto {
         super.clear();
         bitField0_ = 0;
         epochNum_ = 0L;
-        chainIds_ =
+        consumerIds_ =
             com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
@@ -5937,8 +5937,8 @@ public final class QueryProto {
           result.epochNum_ = epochNum_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          chainIds_.makeImmutable();
-          result.chainIds_ = chainIds_;
+          consumerIds_.makeImmutable();
+          result.consumerIds_ = consumerIds_;
         }
       }
 
@@ -5989,13 +5989,13 @@ public final class QueryProto {
         if (other.getEpochNum() != 0L) {
           setEpochNum(other.getEpochNum());
         }
-        if (!other.chainIds_.isEmpty()) {
-          if (chainIds_.isEmpty()) {
-            chainIds_ = other.chainIds_;
+        if (!other.consumerIds_.isEmpty()) {
+          if (consumerIds_.isEmpty()) {
+            consumerIds_ = other.consumerIds_;
             bitField0_ |= 0x00000002;
           } else {
-            ensureChainIdsIsMutable();
-            chainIds_.addAll(other.chainIds_);
+            ensureConsumerIdsIsMutable();
+            consumerIds_.addAll(other.consumerIds_);
           }
           onChanged();
         }
@@ -6032,8 +6032,8 @@ public final class QueryProto {
               } // case 8
               case 18: {
                 java.lang.String s = input.readStringRequireUtf8();
-                ensureChainIdsIsMutable();
-                chainIds_.add(s);
+                ensureConsumerIdsIsMutable();
+                consumerIds_.add(s);
                 break;
               } // case 18
               default: {
@@ -6085,112 +6085,112 @@ public final class QueryProto {
         return this;
       }
 
-      private com.google.protobuf.LazyStringArrayList chainIds_ =
+      private com.google.protobuf.LazyStringArrayList consumerIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureChainIdsIsMutable() {
-        if (!chainIds_.isModifiable()) {
-          chainIds_ = new com.google.protobuf.LazyStringArrayList(chainIds_);
+      private void ensureConsumerIdsIsMutable() {
+        if (!consumerIds_.isModifiable()) {
+          consumerIds_ = new com.google.protobuf.LazyStringArrayList(consumerIds_);
         }
         bitField0_ |= 0x00000002;
       }
       /**
-       * <code>repeated string chain_ids = 2 [json_name = "chainIds"];</code>
-       * @return A list containing the chainIds.
+       * <code>repeated string consumer_ids = 2 [json_name = "consumerIds"];</code>
+       * @return A list containing the consumerIds.
        */
       public com.google.protobuf.ProtocolStringList
-          getChainIdsList() {
-        chainIds_.makeImmutable();
-        return chainIds_;
+          getConsumerIdsList() {
+        consumerIds_.makeImmutable();
+        return consumerIds_;
       }
       /**
-       * <code>repeated string chain_ids = 2 [json_name = "chainIds"];</code>
-       * @return The count of chainIds.
+       * <code>repeated string consumer_ids = 2 [json_name = "consumerIds"];</code>
+       * @return The count of consumerIds.
        */
-      public int getChainIdsCount() {
-        return chainIds_.size();
+      public int getConsumerIdsCount() {
+        return consumerIds_.size();
       }
       /**
-       * <code>repeated string chain_ids = 2 [json_name = "chainIds"];</code>
+       * <code>repeated string consumer_ids = 2 [json_name = "consumerIds"];</code>
        * @param index The index of the element to return.
-       * @return The chainIds at the given index.
+       * @return The consumerIds at the given index.
        */
-      public java.lang.String getChainIds(int index) {
-        return chainIds_.get(index);
+      public java.lang.String getConsumerIds(int index) {
+        return consumerIds_.get(index);
       }
       /**
-       * <code>repeated string chain_ids = 2 [json_name = "chainIds"];</code>
+       * <code>repeated string consumer_ids = 2 [json_name = "consumerIds"];</code>
        * @param index The index of the value to return.
-       * @return The bytes of the chainIds at the given index.
+       * @return The bytes of the consumerIds at the given index.
        */
       public com.google.protobuf.ByteString
-          getChainIdsBytes(int index) {
-        return chainIds_.getByteString(index);
+          getConsumerIdsBytes(int index) {
+        return consumerIds_.getByteString(index);
       }
       /**
-       * <code>repeated string chain_ids = 2 [json_name = "chainIds"];</code>
+       * <code>repeated string consumer_ids = 2 [json_name = "consumerIds"];</code>
        * @param index The index to set the value at.
-       * @param value The chainIds to set.
+       * @param value The consumerIds to set.
        * @return This builder for chaining.
        */
-      public Builder setChainIds(
+      public Builder setConsumerIds(
           int index, java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        ensureChainIdsIsMutable();
-        chainIds_.set(index, value);
+        ensureConsumerIdsIsMutable();
+        consumerIds_.set(index, value);
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string chain_ids = 2 [json_name = "chainIds"];</code>
-       * @param value The chainIds to add.
+       * <code>repeated string consumer_ids = 2 [json_name = "consumerIds"];</code>
+       * @param value The consumerIds to add.
        * @return This builder for chaining.
        */
-      public Builder addChainIds(
+      public Builder addConsumerIds(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        ensureChainIdsIsMutable();
-        chainIds_.add(value);
+        ensureConsumerIdsIsMutable();
+        consumerIds_.add(value);
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string chain_ids = 2 [json_name = "chainIds"];</code>
-       * @param values The chainIds to add.
+       * <code>repeated string consumer_ids = 2 [json_name = "consumerIds"];</code>
+       * @param values The consumerIds to add.
        * @return This builder for chaining.
        */
-      public Builder addAllChainIds(
+      public Builder addAllConsumerIds(
           java.lang.Iterable<java.lang.String> values) {
-        ensureChainIdsIsMutable();
+        ensureConsumerIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, chainIds_);
+            values, consumerIds_);
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string chain_ids = 2 [json_name = "chainIds"];</code>
+       * <code>repeated string consumer_ids = 2 [json_name = "consumerIds"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearChainIds() {
-        chainIds_ =
+      public Builder clearConsumerIds() {
+        consumerIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string chain_ids = 2 [json_name = "chainIds"];</code>
-       * @param value The bytes of the chainIds to add.
+       * <code>repeated string consumer_ids = 2 [json_name = "consumerIds"];</code>
+       * @param value The bytes of the consumerIds to add.
        * @return This builder for chaining.
        */
-      public Builder addChainIdsBytes(
+      public Builder addConsumerIdsBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        ensureChainIdsIsMutable();
-        chainIds_.add(value);
+        ensureConsumerIdsIsMutable();
+        consumerIds_.add(value);
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
@@ -7168,16 +7168,16 @@ public final class QueryProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string chain_id = 1 [json_name = "chainId"];</code>
-     * @return The chainId.
+     * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+     * @return The consumerId.
      */
-    java.lang.String getChainId();
+    java.lang.String getConsumerId();
     /**
-     * <code>string chain_id = 1 [json_name = "chainId"];</code>
-     * @return The bytes for chainId.
+     * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+     * @return The bytes for consumerId.
      */
     com.google.protobuf.ByteString
-        getChainIdBytes();
+        getConsumerIdBytes();
 
     /**
      * <pre>
@@ -7223,7 +7223,7 @@ public final class QueryProto {
       super(builder);
     }
     private QueryListHeadersRequest() {
-      chainId_ = "";
+      consumerId_ = "";
     }
 
     @java.lang.Override
@@ -7246,39 +7246,39 @@ public final class QueryProto {
               com.babylon.zoneconcierge.v1.QueryProto.QueryListHeadersRequest.class, com.babylon.zoneconcierge.v1.QueryProto.QueryListHeadersRequest.Builder.class);
     }
 
-    public static final int CHAIN_ID_FIELD_NUMBER = 1;
+    public static final int CONSUMER_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object chainId_ = "";
+    private volatile java.lang.Object consumerId_ = "";
     /**
-     * <code>string chain_id = 1 [json_name = "chainId"];</code>
-     * @return The chainId.
+     * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+     * @return The consumerId.
      */
     @java.lang.Override
-    public java.lang.String getChainId() {
-      java.lang.Object ref = chainId_;
+    public java.lang.String getConsumerId() {
+      java.lang.Object ref = consumerId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        chainId_ = s;
+        consumerId_ = s;
         return s;
       }
     }
     /**
-     * <code>string chain_id = 1 [json_name = "chainId"];</code>
-     * @return The bytes for chainId.
+     * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+     * @return The bytes for consumerId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getChainIdBytes() {
-      java.lang.Object ref = chainId_;
+        getConsumerIdBytes() {
+      java.lang.Object ref = consumerId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        chainId_ = b;
+        consumerId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -7337,8 +7337,8 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chainId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consumerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, consumerId_);
       }
       if (pagination_ != null) {
         output.writeMessage(2, getPagination());
@@ -7352,8 +7352,8 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, chainId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consumerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, consumerId_);
       }
       if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -7374,8 +7374,8 @@ public final class QueryProto {
       }
       com.babylon.zoneconcierge.v1.QueryProto.QueryListHeadersRequest other = (com.babylon.zoneconcierge.v1.QueryProto.QueryListHeadersRequest) obj;
 
-      if (!getChainId()
-          .equals(other.getChainId())) return false;
+      if (!getConsumerId()
+          .equals(other.getConsumerId())) return false;
       if (hasPagination() != other.hasPagination()) return false;
       if (hasPagination()) {
         if (!getPagination()
@@ -7392,8 +7392,8 @@ public final class QueryProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getChainId().hashCode();
+      hash = (37 * hash) + CONSUMER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConsumerId().hashCode();
       if (hasPagination()) {
         hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
         hash = (53 * hash) + getPagination().hashCode();
@@ -7533,7 +7533,7 @@ public final class QueryProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        chainId_ = "";
+        consumerId_ = "";
         pagination_ = null;
         if (paginationBuilder_ != null) {
           paginationBuilder_.dispose();
@@ -7573,7 +7573,7 @@ public final class QueryProto {
       private void buildPartial0(com.babylon.zoneconcierge.v1.QueryProto.QueryListHeadersRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.chainId_ = chainId_;
+          result.consumerId_ = consumerId_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.pagination_ = paginationBuilder_ == null
@@ -7626,8 +7626,8 @@ public final class QueryProto {
 
       public Builder mergeFrom(com.babylon.zoneconcierge.v1.QueryProto.QueryListHeadersRequest other) {
         if (other == com.babylon.zoneconcierge.v1.QueryProto.QueryListHeadersRequest.getDefaultInstance()) return this;
-        if (!other.getChainId().isEmpty()) {
-          chainId_ = other.chainId_;
+        if (!other.getConsumerId().isEmpty()) {
+          consumerId_ = other.consumerId_;
           bitField0_ |= 0x00000001;
           onChanged();
         }
@@ -7661,7 +7661,7 @@ public final class QueryProto {
                 done = true;
                 break;
               case 10: {
-                chainId_ = input.readStringRequireUtf8();
+                consumerId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
@@ -7689,73 +7689,73 @@ public final class QueryProto {
       }
       private int bitField0_;
 
-      private java.lang.Object chainId_ = "";
+      private java.lang.Object consumerId_ = "";
       /**
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
-       * @return The chainId.
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+       * @return The consumerId.
        */
-      public java.lang.String getChainId() {
-        java.lang.Object ref = chainId_;
+      public java.lang.String getConsumerId() {
+        java.lang.Object ref = consumerId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          chainId_ = s;
+          consumerId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
-       * @return The bytes for chainId.
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+       * @return The bytes for consumerId.
        */
       public com.google.protobuf.ByteString
-          getChainIdBytes() {
-        java.lang.Object ref = chainId_;
+          getConsumerIdBytes() {
+        java.lang.Object ref = consumerId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          chainId_ = b;
+          consumerId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
-       * @param value The chainId to set.
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+       * @param value The consumerId to set.
        * @return This builder for chaining.
        */
-      public Builder setChainId(
+      public Builder setConsumerId(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        chainId_ = value;
+        consumerId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearChainId() {
-        chainId_ = getDefaultInstance().getChainId();
+      public Builder clearConsumerId() {
+        consumerId_ = getDefaultInstance().getConsumerId();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
-       * @param value The bytes for chainId to set.
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+       * @param value The bytes for consumerId to set.
        * @return This builder for chaining.
        */
-      public Builder setChainIdBytes(
+      public Builder setConsumerIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        chainId_ = value;
+        consumerId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
@@ -9150,16 +9150,16 @@ public final class QueryProto {
     long getEpochNum();
 
     /**
-     * <code>string chain_id = 2 [json_name = "chainId"];</code>
-     * @return The chainId.
+     * <code>string consumer_id = 2 [json_name = "consumerId"];</code>
+     * @return The consumerId.
      */
-    java.lang.String getChainId();
+    java.lang.String getConsumerId();
     /**
-     * <code>string chain_id = 2 [json_name = "chainId"];</code>
-     * @return The bytes for chainId.
+     * <code>string consumer_id = 2 [json_name = "consumerId"];</code>
+     * @return The bytes for consumerId.
      */
     com.google.protobuf.ByteString
-        getChainIdBytes();
+        getConsumerIdBytes();
   }
   /**
    * <pre>
@@ -9179,7 +9179,7 @@ public final class QueryProto {
       super(builder);
     }
     private QueryListEpochHeadersRequest() {
-      chainId_ = "";
+      consumerId_ = "";
     }
 
     @java.lang.Override
@@ -9213,39 +9213,39 @@ public final class QueryProto {
       return epochNum_;
     }
 
-    public static final int CHAIN_ID_FIELD_NUMBER = 2;
+    public static final int CONSUMER_ID_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object chainId_ = "";
+    private volatile java.lang.Object consumerId_ = "";
     /**
-     * <code>string chain_id = 2 [json_name = "chainId"];</code>
-     * @return The chainId.
+     * <code>string consumer_id = 2 [json_name = "consumerId"];</code>
+     * @return The consumerId.
      */
     @java.lang.Override
-    public java.lang.String getChainId() {
-      java.lang.Object ref = chainId_;
+    public java.lang.String getConsumerId() {
+      java.lang.Object ref = consumerId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        chainId_ = s;
+        consumerId_ = s;
         return s;
       }
     }
     /**
-     * <code>string chain_id = 2 [json_name = "chainId"];</code>
-     * @return The bytes for chainId.
+     * <code>string consumer_id = 2 [json_name = "consumerId"];</code>
+     * @return The bytes for consumerId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getChainIdBytes() {
-      java.lang.Object ref = chainId_;
+        getConsumerIdBytes() {
+      java.lang.Object ref = consumerId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        chainId_ = b;
+        consumerId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -9269,8 +9269,8 @@ public final class QueryProto {
       if (epochNum_ != 0L) {
         output.writeUInt64(1, epochNum_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, chainId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consumerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, consumerId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -9285,8 +9285,8 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, epochNum_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, chainId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consumerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, consumerId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -9305,8 +9305,8 @@ public final class QueryProto {
 
       if (getEpochNum()
           != other.getEpochNum()) return false;
-      if (!getChainId()
-          .equals(other.getChainId())) return false;
+      if (!getConsumerId()
+          .equals(other.getConsumerId())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -9321,8 +9321,8 @@ public final class QueryProto {
       hash = (37 * hash) + EPOCH_NUM_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getEpochNum());
-      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getChainId().hashCode();
+      hash = (37 * hash) + CONSUMER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConsumerId().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9460,7 +9460,7 @@ public final class QueryProto {
         super.clear();
         bitField0_ = 0;
         epochNum_ = 0L;
-        chainId_ = "";
+        consumerId_ = "";
         return this;
       }
 
@@ -9498,7 +9498,7 @@ public final class QueryProto {
           result.epochNum_ = epochNum_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.chainId_ = chainId_;
+          result.consumerId_ = consumerId_;
         }
       }
 
@@ -9549,8 +9549,8 @@ public final class QueryProto {
         if (other.getEpochNum() != 0L) {
           setEpochNum(other.getEpochNum());
         }
-        if (!other.getChainId().isEmpty()) {
-          chainId_ = other.chainId_;
+        if (!other.getConsumerId().isEmpty()) {
+          consumerId_ = other.consumerId_;
           bitField0_ |= 0x00000002;
           onChanged();
         }
@@ -9586,7 +9586,7 @@ public final class QueryProto {
                 break;
               } // case 8
               case 18: {
-                chainId_ = input.readStringRequireUtf8();
+                consumerId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
@@ -9639,73 +9639,73 @@ public final class QueryProto {
         return this;
       }
 
-      private java.lang.Object chainId_ = "";
+      private java.lang.Object consumerId_ = "";
       /**
-       * <code>string chain_id = 2 [json_name = "chainId"];</code>
-       * @return The chainId.
+       * <code>string consumer_id = 2 [json_name = "consumerId"];</code>
+       * @return The consumerId.
        */
-      public java.lang.String getChainId() {
-        java.lang.Object ref = chainId_;
+      public java.lang.String getConsumerId() {
+        java.lang.Object ref = consumerId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          chainId_ = s;
+          consumerId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string chain_id = 2 [json_name = "chainId"];</code>
-       * @return The bytes for chainId.
+       * <code>string consumer_id = 2 [json_name = "consumerId"];</code>
+       * @return The bytes for consumerId.
        */
       public com.google.protobuf.ByteString
-          getChainIdBytes() {
-        java.lang.Object ref = chainId_;
+          getConsumerIdBytes() {
+        java.lang.Object ref = consumerId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          chainId_ = b;
+          consumerId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string chain_id = 2 [json_name = "chainId"];</code>
-       * @param value The chainId to set.
+       * <code>string consumer_id = 2 [json_name = "consumerId"];</code>
+       * @param value The consumerId to set.
        * @return This builder for chaining.
        */
-      public Builder setChainId(
+      public Builder setConsumerId(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        chainId_ = value;
+        consumerId_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>string chain_id = 2 [json_name = "chainId"];</code>
+       * <code>string consumer_id = 2 [json_name = "consumerId"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearChainId() {
-        chainId_ = getDefaultInstance().getChainId();
+      public Builder clearConsumerId() {
+        consumerId_ = getDefaultInstance().getConsumerId();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
-       * <code>string chain_id = 2 [json_name = "chainId"];</code>
-       * @param value The bytes for chainId to set.
+       * <code>string consumer_id = 2 [json_name = "consumerId"];</code>
+       * @param value The bytes for consumerId to set.
        * @return This builder for chaining.
        */
-      public Builder setChainIdBytes(
+      public Builder setConsumerIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        chainId_ = value;
+        consumerId_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
@@ -10684,44 +10684,44 @@ public final class QueryProto {
 
     /**
      * <pre>
-     * chain_ids is the list of ids of CZs
+     * consumer_ids is the list of ids of CZs
      * </pre>
      *
-     * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-     * @return A list containing the chainIds.
+     * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+     * @return A list containing the consumerIds.
      */
     java.util.List<java.lang.String>
-        getChainIdsList();
+        getConsumerIdsList();
     /**
      * <pre>
-     * chain_ids is the list of ids of CZs
+     * consumer_ids is the list of ids of CZs
      * </pre>
      *
-     * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-     * @return The count of chainIds.
+     * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+     * @return The count of consumerIds.
      */
-    int getChainIdsCount();
+    int getConsumerIdsCount();
     /**
      * <pre>
-     * chain_ids is the list of ids of CZs
+     * consumer_ids is the list of ids of CZs
      * </pre>
      *
-     * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
+     * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
      * @param index The index of the element to return.
-     * @return The chainIds at the given index.
+     * @return The consumerIds at the given index.
      */
-    java.lang.String getChainIds(int index);
+    java.lang.String getConsumerIds(int index);
     /**
      * <pre>
-     * chain_ids is the list of ids of CZs
+     * consumer_ids is the list of ids of CZs
      * </pre>
      *
-     * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
+     * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
      * @param index The index of the value to return.
-     * @return The bytes of the chainIds at the given index.
+     * @return The bytes of the consumerIds at the given index.
      */
     com.google.protobuf.ByteString
-        getChainIdsBytes(int index);
+        getConsumerIdsBytes(int index);
 
     /**
      * <pre>
@@ -10751,7 +10751,7 @@ public final class QueryProto {
       super(builder);
     }
     private QueryFinalizedChainsInfoRequest() {
-      chainIds_ =
+      consumerIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
@@ -10775,57 +10775,57 @@ public final class QueryProto {
               com.babylon.zoneconcierge.v1.QueryProto.QueryFinalizedChainsInfoRequest.class, com.babylon.zoneconcierge.v1.QueryProto.QueryFinalizedChainsInfoRequest.Builder.class);
     }
 
-    public static final int CHAIN_IDS_FIELD_NUMBER = 1;
+    public static final int CONSUMER_IDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList chainIds_ =
+    private com.google.protobuf.LazyStringArrayList consumerIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
-     * chain_ids is the list of ids of CZs
+     * consumer_ids is the list of ids of CZs
      * </pre>
      *
-     * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-     * @return A list containing the chainIds.
+     * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+     * @return A list containing the consumerIds.
      */
     public com.google.protobuf.ProtocolStringList
-        getChainIdsList() {
-      return chainIds_;
+        getConsumerIdsList() {
+      return consumerIds_;
     }
     /**
      * <pre>
-     * chain_ids is the list of ids of CZs
+     * consumer_ids is the list of ids of CZs
      * </pre>
      *
-     * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-     * @return The count of chainIds.
+     * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+     * @return The count of consumerIds.
      */
-    public int getChainIdsCount() {
-      return chainIds_.size();
+    public int getConsumerIdsCount() {
+      return consumerIds_.size();
     }
     /**
      * <pre>
-     * chain_ids is the list of ids of CZs
+     * consumer_ids is the list of ids of CZs
      * </pre>
      *
-     * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
+     * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
      * @param index The index of the element to return.
-     * @return The chainIds at the given index.
+     * @return The consumerIds at the given index.
      */
-    public java.lang.String getChainIds(int index) {
-      return chainIds_.get(index);
+    public java.lang.String getConsumerIds(int index) {
+      return consumerIds_.get(index);
     }
     /**
      * <pre>
-     * chain_ids is the list of ids of CZs
+     * consumer_ids is the list of ids of CZs
      * </pre>
      *
-     * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
+     * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
      * @param index The index of the value to return.
-     * @return The bytes of the chainIds at the given index.
+     * @return The bytes of the consumerIds at the given index.
      */
     public com.google.protobuf.ByteString
-        getChainIdsBytes(int index) {
-      return chainIds_.getByteString(index);
+        getConsumerIdsBytes(int index) {
+      return consumerIds_.getByteString(index);
     }
 
     public static final int PROVE_FIELD_NUMBER = 2;
@@ -10857,8 +10857,8 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < chainIds_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chainIds_.getRaw(i));
+      for (int i = 0; i < consumerIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, consumerIds_.getRaw(i));
       }
       if (prove_ != false) {
         output.writeBool(2, prove_);
@@ -10874,11 +10874,11 @@ public final class QueryProto {
       size = 0;
       {
         int dataSize = 0;
-        for (int i = 0; i < chainIds_.size(); i++) {
-          dataSize += computeStringSizeNoTag(chainIds_.getRaw(i));
+        for (int i = 0; i < consumerIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(consumerIds_.getRaw(i));
         }
         size += dataSize;
-        size += 1 * getChainIdsList().size();
+        size += 1 * getConsumerIdsList().size();
       }
       if (prove_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -10899,8 +10899,8 @@ public final class QueryProto {
       }
       com.babylon.zoneconcierge.v1.QueryProto.QueryFinalizedChainsInfoRequest other = (com.babylon.zoneconcierge.v1.QueryProto.QueryFinalizedChainsInfoRequest) obj;
 
-      if (!getChainIdsList()
-          .equals(other.getChainIdsList())) return false;
+      if (!getConsumerIdsList()
+          .equals(other.getConsumerIdsList())) return false;
       if (getProve()
           != other.getProve()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -10914,9 +10914,9 @@ public final class QueryProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getChainIdsCount() > 0) {
-        hash = (37 * hash) + CHAIN_IDS_FIELD_NUMBER;
-        hash = (53 * hash) + getChainIdsList().hashCode();
+      if (getConsumerIdsCount() > 0) {
+        hash = (37 * hash) + CONSUMER_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getConsumerIdsList().hashCode();
       }
       hash = (37 * hash) + PROVE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
@@ -11057,7 +11057,7 @@ public final class QueryProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        chainIds_ =
+        consumerIds_ =
             com.google.protobuf.LazyStringArrayList.emptyList();
         prove_ = false;
         return this;
@@ -11094,8 +11094,8 @@ public final class QueryProto {
       private void buildPartial0(com.babylon.zoneconcierge.v1.QueryProto.QueryFinalizedChainsInfoRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          chainIds_.makeImmutable();
-          result.chainIds_ = chainIds_;
+          consumerIds_.makeImmutable();
+          result.consumerIds_ = consumerIds_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.prove_ = prove_;
@@ -11146,13 +11146,13 @@ public final class QueryProto {
 
       public Builder mergeFrom(com.babylon.zoneconcierge.v1.QueryProto.QueryFinalizedChainsInfoRequest other) {
         if (other == com.babylon.zoneconcierge.v1.QueryProto.QueryFinalizedChainsInfoRequest.getDefaultInstance()) return this;
-        if (!other.chainIds_.isEmpty()) {
-          if (chainIds_.isEmpty()) {
-            chainIds_ = other.chainIds_;
+        if (!other.consumerIds_.isEmpty()) {
+          if (consumerIds_.isEmpty()) {
+            consumerIds_ = other.consumerIds_;
             bitField0_ |= 0x00000001;
           } else {
-            ensureChainIdsIsMutable();
-            chainIds_.addAll(other.chainIds_);
+            ensureConsumerIdsIsMutable();
+            consumerIds_.addAll(other.consumerIds_);
           }
           onChanged();
         }
@@ -11187,8 +11187,8 @@ public final class QueryProto {
                 break;
               case 10: {
                 java.lang.String s = input.readStringRequireUtf8();
-                ensureChainIdsIsMutable();
-                chainIds_.add(s);
+                ensureConsumerIdsIsMutable();
+                consumerIds_.add(s);
                 break;
               } // case 10
               case 16: {
@@ -11213,128 +11213,128 @@ public final class QueryProto {
       }
       private int bitField0_;
 
-      private com.google.protobuf.LazyStringArrayList chainIds_ =
+      private com.google.protobuf.LazyStringArrayList consumerIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureChainIdsIsMutable() {
-        if (!chainIds_.isModifiable()) {
-          chainIds_ = new com.google.protobuf.LazyStringArrayList(chainIds_);
+      private void ensureConsumerIdsIsMutable() {
+        if (!consumerIds_.isModifiable()) {
+          consumerIds_ = new com.google.protobuf.LazyStringArrayList(consumerIds_);
         }
         bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
-       * chain_ids is the list of ids of CZs
+       * consumer_ids is the list of ids of CZs
        * </pre>
        *
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-       * @return A list containing the chainIds.
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+       * @return A list containing the consumerIds.
        */
       public com.google.protobuf.ProtocolStringList
-          getChainIdsList() {
-        chainIds_.makeImmutable();
-        return chainIds_;
+          getConsumerIdsList() {
+        consumerIds_.makeImmutable();
+        return consumerIds_;
       }
       /**
        * <pre>
-       * chain_ids is the list of ids of CZs
+       * consumer_ids is the list of ids of CZs
        * </pre>
        *
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-       * @return The count of chainIds.
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+       * @return The count of consumerIds.
        */
-      public int getChainIdsCount() {
-        return chainIds_.size();
+      public int getConsumerIdsCount() {
+        return consumerIds_.size();
       }
       /**
        * <pre>
-       * chain_ids is the list of ids of CZs
+       * consumer_ids is the list of ids of CZs
        * </pre>
        *
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
        * @param index The index of the element to return.
-       * @return The chainIds at the given index.
+       * @return The consumerIds at the given index.
        */
-      public java.lang.String getChainIds(int index) {
-        return chainIds_.get(index);
+      public java.lang.String getConsumerIds(int index) {
+        return consumerIds_.get(index);
       }
       /**
        * <pre>
-       * chain_ids is the list of ids of CZs
+       * consumer_ids is the list of ids of CZs
        * </pre>
        *
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
        * @param index The index of the value to return.
-       * @return The bytes of the chainIds at the given index.
+       * @return The bytes of the consumerIds at the given index.
        */
       public com.google.protobuf.ByteString
-          getChainIdsBytes(int index) {
-        return chainIds_.getByteString(index);
+          getConsumerIdsBytes(int index) {
+        return consumerIds_.getByteString(index);
       }
       /**
        * <pre>
-       * chain_ids is the list of ids of CZs
+       * consumer_ids is the list of ids of CZs
        * </pre>
        *
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
        * @param index The index to set the value at.
-       * @param value The chainIds to set.
+       * @param value The consumerIds to set.
        * @return This builder for chaining.
        */
-      public Builder setChainIds(
+      public Builder setConsumerIds(
           int index, java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        ensureChainIdsIsMutable();
-        chainIds_.set(index, value);
+        ensureConsumerIdsIsMutable();
+        consumerIds_.set(index, value);
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * chain_ids is the list of ids of CZs
+       * consumer_ids is the list of ids of CZs
        * </pre>
        *
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-       * @param value The chainIds to add.
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+       * @param value The consumerIds to add.
        * @return This builder for chaining.
        */
-      public Builder addChainIds(
+      public Builder addConsumerIds(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        ensureChainIdsIsMutable();
-        chainIds_.add(value);
+        ensureConsumerIdsIsMutable();
+        consumerIds_.add(value);
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * chain_ids is the list of ids of CZs
+       * consumer_ids is the list of ids of CZs
        * </pre>
        *
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-       * @param values The chainIds to add.
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+       * @param values The consumerIds to add.
        * @return This builder for chaining.
        */
-      public Builder addAllChainIds(
+      public Builder addAllConsumerIds(
           java.lang.Iterable<java.lang.String> values) {
-        ensureChainIdsIsMutable();
+        ensureConsumerIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, chainIds_);
+            values, consumerIds_);
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * chain_ids is the list of ids of CZs
+       * consumer_ids is the list of ids of CZs
        * </pre>
        *
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearChainIds() {
-        chainIds_ =
+      public Builder clearConsumerIds() {
+        consumerIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);;
         onChanged();
@@ -11342,19 +11342,19 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * chain_ids is the list of ids of CZs
+       * consumer_ids is the list of ids of CZs
        * </pre>
        *
-       * <code>repeated string chain_ids = 1 [json_name = "chainIds"];</code>
-       * @param value The bytes of the chainIds to add.
+       * <code>repeated string consumer_ids = 1 [json_name = "consumerIds"];</code>
+       * @param value The bytes of the consumerIds to add.
        * @return This builder for chaining.
        */
-      public Builder addChainIdsBytes(
+      public Builder addConsumerIdsBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        ensureChainIdsIsMutable();
-        chainIds_.add(value);
+        ensureConsumerIdsIsMutable();
+        consumerIds_.add(value);
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
@@ -12265,23 +12265,23 @@ public final class QueryProto {
 
     /**
      * <pre>
-     * chain_id is the ID of the CZ
+     * consumer_id is the ID of the CZ
      * </pre>
      *
-     * <code>string chain_id = 1 [json_name = "chainId"];</code>
-     * @return The chainId.
+     * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+     * @return The consumerId.
      */
-    java.lang.String getChainId();
+    java.lang.String getConsumerId();
     /**
      * <pre>
-     * chain_id is the ID of the CZ
+     * consumer_id is the ID of the CZ
      * </pre>
      *
-     * <code>string chain_id = 1 [json_name = "chainId"];</code>
-     * @return The bytes for chainId.
+     * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+     * @return The bytes for consumerId.
      */
     com.google.protobuf.ByteString
-        getChainIdBytes();
+        getConsumerIdBytes();
 
     /**
      * <pre>
@@ -12323,7 +12323,7 @@ public final class QueryProto {
       super(builder);
     }
     private QueryFinalizedChainInfoUntilHeightRequest() {
-      chainId_ = "";
+      consumerId_ = "";
     }
 
     @java.lang.Override
@@ -12346,47 +12346,47 @@ public final class QueryProto {
               com.babylon.zoneconcierge.v1.QueryProto.QueryFinalizedChainInfoUntilHeightRequest.class, com.babylon.zoneconcierge.v1.QueryProto.QueryFinalizedChainInfoUntilHeightRequest.Builder.class);
     }
 
-    public static final int CHAIN_ID_FIELD_NUMBER = 1;
+    public static final int CONSUMER_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object chainId_ = "";
+    private volatile java.lang.Object consumerId_ = "";
     /**
      * <pre>
-     * chain_id is the ID of the CZ
+     * consumer_id is the ID of the CZ
      * </pre>
      *
-     * <code>string chain_id = 1 [json_name = "chainId"];</code>
-     * @return The chainId.
+     * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+     * @return The consumerId.
      */
     @java.lang.Override
-    public java.lang.String getChainId() {
-      java.lang.Object ref = chainId_;
+    public java.lang.String getConsumerId() {
+      java.lang.Object ref = consumerId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        chainId_ = s;
+        consumerId_ = s;
         return s;
       }
     }
     /**
      * <pre>
-     * chain_id is the ID of the CZ
+     * consumer_id is the ID of the CZ
      * </pre>
      *
-     * <code>string chain_id = 1 [json_name = "chainId"];</code>
-     * @return The bytes for chainId.
+     * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+     * @return The bytes for consumerId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getChainIdBytes() {
-      java.lang.Object ref = chainId_;
+        getConsumerIdBytes() {
+      java.lang.Object ref = consumerId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        chainId_ = b;
+        consumerId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -12439,8 +12439,8 @@ public final class QueryProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chainId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consumerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, consumerId_);
       }
       if (height_ != 0L) {
         output.writeUInt64(2, height_);
@@ -12457,8 +12457,8 @@ public final class QueryProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, chainId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consumerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, consumerId_);
       }
       if (height_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -12483,8 +12483,8 @@ public final class QueryProto {
       }
       com.babylon.zoneconcierge.v1.QueryProto.QueryFinalizedChainInfoUntilHeightRequest other = (com.babylon.zoneconcierge.v1.QueryProto.QueryFinalizedChainInfoUntilHeightRequest) obj;
 
-      if (!getChainId()
-          .equals(other.getChainId())) return false;
+      if (!getConsumerId()
+          .equals(other.getConsumerId())) return false;
       if (getHeight()
           != other.getHeight()) return false;
       if (getProve()
@@ -12500,8 +12500,8 @@ public final class QueryProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getChainId().hashCode();
+      hash = (37 * hash) + CONSUMER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConsumerId().hashCode();
       hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getHeight());
@@ -12644,7 +12644,7 @@ public final class QueryProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        chainId_ = "";
+        consumerId_ = "";
         height_ = 0L;
         prove_ = false;
         return this;
@@ -12681,7 +12681,7 @@ public final class QueryProto {
       private void buildPartial0(com.babylon.zoneconcierge.v1.QueryProto.QueryFinalizedChainInfoUntilHeightRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.chainId_ = chainId_;
+          result.consumerId_ = consumerId_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.height_ = height_;
@@ -12735,8 +12735,8 @@ public final class QueryProto {
 
       public Builder mergeFrom(com.babylon.zoneconcierge.v1.QueryProto.QueryFinalizedChainInfoUntilHeightRequest other) {
         if (other == com.babylon.zoneconcierge.v1.QueryProto.QueryFinalizedChainInfoUntilHeightRequest.getDefaultInstance()) return this;
-        if (!other.getChainId().isEmpty()) {
-          chainId_ = other.chainId_;
+        if (!other.getConsumerId().isEmpty()) {
+          consumerId_ = other.consumerId_;
           bitField0_ |= 0x00000001;
           onChanged();
         }
@@ -12773,7 +12773,7 @@ public final class QueryProto {
                 done = true;
                 break;
               case 10: {
-                chainId_ = input.readStringRequireUtf8();
+                consumerId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
@@ -12804,22 +12804,22 @@ public final class QueryProto {
       }
       private int bitField0_;
 
-      private java.lang.Object chainId_ = "";
+      private java.lang.Object consumerId_ = "";
       /**
        * <pre>
-       * chain_id is the ID of the CZ
+       * consumer_id is the ID of the CZ
        * </pre>
        *
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
-       * @return The chainId.
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+       * @return The consumerId.
        */
-      public java.lang.String getChainId() {
-        java.lang.Object ref = chainId_;
+      public java.lang.String getConsumerId() {
+        java.lang.Object ref = consumerId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          chainId_ = s;
+          consumerId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -12827,20 +12827,20 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * chain_id is the ID of the CZ
+       * consumer_id is the ID of the CZ
        * </pre>
        *
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
-       * @return The bytes for chainId.
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+       * @return The bytes for consumerId.
        */
       public com.google.protobuf.ByteString
-          getChainIdBytes() {
-        java.lang.Object ref = chainId_;
+          getConsumerIdBytes() {
+        java.lang.Object ref = consumerId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          chainId_ = b;
+          consumerId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -12848,49 +12848,49 @@ public final class QueryProto {
       }
       /**
        * <pre>
-       * chain_id is the ID of the CZ
+       * consumer_id is the ID of the CZ
        * </pre>
        *
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
-       * @param value The chainId to set.
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+       * @param value The consumerId to set.
        * @return This builder for chaining.
        */
-      public Builder setChainId(
+      public Builder setConsumerId(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        chainId_ = value;
+        consumerId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * chain_id is the ID of the CZ
+       * consumer_id is the ID of the CZ
        * </pre>
        *
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearChainId() {
-        chainId_ = getDefaultInstance().getChainId();
+      public Builder clearConsumerId() {
+        consumerId_ = getDefaultInstance().getConsumerId();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * chain_id is the ID of the CZ
+       * consumer_id is the ID of the CZ
        * </pre>
        *
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
-       * @param value The bytes for chainId to set.
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+       * @param value The bytes for consumerId to set.
        * @return This builder for chaining.
        */
-      public Builder setChainIdBytes(
+      public Builder setConsumerIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        chainId_ = value;
+        consumerId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
@@ -14873,105 +14873,107 @@ public final class QueryProto {
       "rams.proto\"\024\n\022QueryParamsRequest\"U\n\023Quer" +
       "yParamsResponse\022>\n\006params\030\001 \001(\0132 .babylo" +
       "n.zoneconcierge.v1.ParamsB\004\310\336\037\000R\006params\"" +
-      "G\n\022QueryHeaderRequest\022\031\n\010chain_id\030\001 \001(\tR" +
-      "\007chainId\022\026\n\006height\030\002 \001(\004R\006height\"\232\001\n\023Que" +
-      "ryHeaderResponse\022?\n\006header\030\001 \001(\0132\'.babyl" +
-      "on.zoneconcierge.v1.IndexedHeaderR\006heade" +
-      "r\022B\n\014fork_headers\030\002 \001(\0132\037.babylon.zoneco" +
-      "ncierge.v1.ForksR\013forkHeaders\"_\n\025QueryCh" +
-      "ainListRequest\022F\n\npagination\030\001 \001(\0132&.cos" +
-      "mos.base.query.v1beta1.PageRequestR\npagi" +
-      "nation\"~\n\026QueryChainListResponse\022\033\n\tchai" +
-      "n_ids\030\001 \003(\tR\010chainIds\022G\n\npagination\030\002 \001(" +
-      "\0132\'.cosmos.base.query.v1beta1.PageRespon" +
-      "seR\npagination\"5\n\026QueryChainsInfoRequest" +
-      "\022\033\n\tchain_ids\030\001 \003(\tR\010chainIds\"_\n\027QueryCh" +
-      "ainsInfoResponse\022D\n\013chains_info\030\001 \003(\0132#." +
-      "babylon.zoneconcierge.v1.ChainInfoR\nchai" +
-      "nsInfo\"W\n\033QueryEpochChainsInfoRequest\022\033\n" +
-      "\tepoch_num\030\001 \001(\004R\010epochNum\022\033\n\tchain_ids\030" +
-      "\002 \003(\tR\010chainIds\"d\n\034QueryEpochChainsInfoR" +
-      "esponse\022D\n\013chains_info\030\001 \003(\0132#.babylon.z" +
-      "oneconcierge.v1.ChainInfoR\nchainsInfo\"|\n" +
-      "\027QueryListHeadersRequest\022\031\n\010chain_id\030\001 \001" +
-      "(\tR\007chainId\022F\n\npagination\030\002 \001(\0132&.cosmos" +
-      ".base.query.v1beta1.PageRequestR\npaginat" +
-      "ion\"\246\001\n\030QueryListHeadersResponse\022A\n\007head" +
-      "ers\030\001 \003(\0132\'.babylon.zoneconcierge.v1.Ind" +
-      "exedHeaderR\007headers\022G\n\npagination\030\002 \001(\0132" +
-      "\'.cosmos.base.query.v1beta1.PageResponse" +
-      "R\npagination\"V\n\034QueryListEpochHeadersReq" +
-      "uest\022\033\n\tepoch_num\030\001 \001(\004R\010epochNum\022\031\n\010cha" +
-      "in_id\030\002 \001(\tR\007chainId\"b\n\035QueryListEpochHe" +
-      "adersResponse\022A\n\007headers\030\001 \003(\0132\'.babylon" +
-      ".zoneconcierge.v1.IndexedHeaderR\007headers" +
-      "\"T\n\037QueryFinalizedChainsInfoRequest\022\033\n\tc" +
-      "hain_ids\030\001 \003(\tR\010chainIds\022\024\n\005prove\030\002 \001(\010R" +
-      "\005prove\"\204\001\n QueryFinalizedChainsInfoRespo" +
-      "nse\022`\n\025finalized_chains_info\030\001 \003(\0132,.bab" +
-      "ylon.zoneconcierge.v1.FinalizedChainInfo" +
-      "R\023finalizedChainsInfo\"t\n)QueryFinalizedC" +
-      "hainInfoUntilHeightRequest\022\031\n\010chain_id\030\001" +
-      " \001(\tR\007chainId\022\026\n\006height\030\002 \001(\004R\006height\022\024\n" +
-      "\005prove\030\003 \001(\010R\005prove\"\256\003\n*QueryFinalizedCh" +
-      "ainInfoUntilHeightResponse\022U\n\024finalized_" +
-      "chain_info\030\001 \001(\0132#.babylon.zoneconcierge" +
-      ".v1.ChainInfoR\022finalizedChainInfo\0229\n\nepo" +
-      "ch_info\030\002 \001(\0132\032.babylon.epoching.v1.Epoc" +
-      "hR\tepochInfo\022N\n\016raw_checkpoint\030\003 \001(\0132\'.b" +
-      "abylon.checkpointing.v1.RawCheckpointR\rr" +
-      "awCheckpoint\022U\n\022btc_submission_key\030\004 \001(\013" +
-      "2\'.babylon.btccheckpoint.v1.SubmissionKe" +
-      "yR\020btcSubmissionKey\022G\n\005proof\030\005 \001(\01321.bab" +
-      "ylon.zoneconcierge.v1.ProofFinalizedChai" +
-      "nInfoR\005proof2\204\r\n\005Query\022\217\001\n\006Params\022,.baby" +
-      "lon.zoneconcierge.v1.QueryParamsRequest\032" +
-      "-.babylon.zoneconcierge.v1.QueryParamsRe" +
-      "sponse\"(\202\323\344\223\002\"\022 /babylon/zoneconcierge/v" +
-      "1/params\022\256\001\n\006Header\022,.babylon.zoneconcie" +
-      "rge.v1.QueryHeaderRequest\032-.babylon.zone" +
-      "concierge.v1.QueryHeaderResponse\"G\202\323\344\223\002A" +
-      "\022?/babylon/zoneconcierge/v1/chain_info/{" +
-      "chain_id}/header/{height}\022\230\001\n\tChainList\022" +
-      "/.babylon.zoneconcierge.v1.QueryChainLis" +
-      "tRequest\0320.babylon.zoneconcierge.v1.Quer" +
-      "yChainListResponse\"(\202\323\344\223\002\"\022 /babylon/zon" +
-      "econcierge/v1/chains\022\240\001\n\nChainsInfo\0220.ba" +
-      "bylon.zoneconcierge.v1.QueryChainsInfoRe" +
-      "quest\0321.babylon.zoneconcierge.v1.QueryCh" +
-      "ainsInfoResponse\"-\202\323\344\223\002\'\022%/babylon/zonec" +
-      "oncierge/v1/chains_info\022\265\001\n\017EpochChainsI" +
-      "nfo\0225.babylon.zoneconcierge.v1.QueryEpoc" +
-      "hChainsInfoRequest\0326.babylon.zoneconcier" +
-      "ge.v1.QueryEpochChainsInfoResponse\"3\202\323\344\223" +
-      "\002-\022+/babylon/zoneconcierge/v1/epoch_chai" +
-      "ns_info\022\252\001\n\013ListHeaders\0221.babylon.zoneco" +
-      "ncierge.v1.QueryListHeadersRequest\0322.bab" +
-      "ylon.zoneconcierge.v1.QueryListHeadersRe" +
-      "sponse\"4\202\323\344\223\002.\022,/babylon/zoneconcierge/v" +
-      "1/headers/{chain_id}\022\314\001\n\020ListEpochHeader" +
-      "s\0226.babylon.zoneconcierge.v1.QueryListEp" +
-      "ochHeadersRequest\0327.babylon.zoneconcierg" +
-      "e.v1.QueryListEpochHeadersResponse\"G\202\323\344\223" +
-      "\002A\022?/babylon/zoneconcierge/v1/headers/{c" +
-      "hain_id}/epochs/{epoch_num}\022\305\001\n\023Finalize" +
-      "dChainsInfo\0229.babylon.zoneconcierge.v1.Q" +
-      "ueryFinalizedChainsInfoRequest\032:.babylon" +
+      "M\n\022QueryHeaderRequest\022\037\n\013consumer_id\030\001 \001" +
+      "(\tR\nconsumerId\022\026\n\006height\030\002 \001(\004R\006height\"\232" +
+      "\001\n\023QueryHeaderResponse\022?\n\006header\030\001 \001(\0132\'" +
+      ".babylon.zoneconcierge.v1.IndexedHeaderR" +
+      "\006header\022B\n\014fork_headers\030\002 \001(\0132\037.babylon." +
+      "zoneconcierge.v1.ForksR\013forkHeaders\"_\n\025Q" +
+      "ueryChainListRequest\022F\n\npagination\030\001 \001(\013" +
+      "2&.cosmos.base.query.v1beta1.PageRequest" +
+      "R\npagination\"\204\001\n\026QueryChainListResponse\022" +
+      "!\n\014consumer_ids\030\001 \003(\tR\013consumerIds\022G\n\npa" +
+      "gination\030\002 \001(\0132\'.cosmos.base.query.v1bet" +
+      "a1.PageResponseR\npagination\";\n\026QueryChai" +
+      "nsInfoRequest\022!\n\014consumer_ids\030\001 \003(\tR\013con" +
+      "sumerIds\"_\n\027QueryChainsInfoResponse\022D\n\013c" +
+      "hains_info\030\001 \003(\0132#.babylon.zoneconcierge" +
+      ".v1.ChainInfoR\nchainsInfo\"]\n\033QueryEpochC" +
+      "hainsInfoRequest\022\033\n\tepoch_num\030\001 \001(\004R\010epo" +
+      "chNum\022!\n\014consumer_ids\030\002 \003(\tR\013consumerIds" +
+      "\"d\n\034QueryEpochChainsInfoResponse\022D\n\013chai" +
+      "ns_info\030\001 \003(\0132#.babylon.zoneconcierge.v1" +
+      ".ChainInfoR\nchainsInfo\"\202\001\n\027QueryListHead" +
+      "ersRequest\022\037\n\013consumer_id\030\001 \001(\tR\nconsume" +
+      "rId\022F\n\npagination\030\002 \001(\0132&.cosmos.base.qu" +
+      "ery.v1beta1.PageRequestR\npagination\"\246\001\n\030" +
+      "QueryListHeadersResponse\022A\n\007headers\030\001 \003(" +
+      "\0132\'.babylon.zoneconcierge.v1.IndexedHead" +
+      "erR\007headers\022G\n\npagination\030\002 \001(\0132\'.cosmos" +
+      ".base.query.v1beta1.PageResponseR\npagina" +
+      "tion\"\\\n\034QueryListEpochHeadersRequest\022\033\n\t" +
+      "epoch_num\030\001 \001(\004R\010epochNum\022\037\n\013consumer_id" +
+      "\030\002 \001(\tR\nconsumerId\"b\n\035QueryListEpochHead" +
+      "ersResponse\022A\n\007headers\030\001 \003(\0132\'.babylon.z" +
+      "oneconcierge.v1.IndexedHeaderR\007headers\"Z" +
+      "\n\037QueryFinalizedChainsInfoRequest\022!\n\014con" +
+      "sumer_ids\030\001 \003(\tR\013consumerIds\022\024\n\005prove\030\002 " +
+      "\001(\010R\005prove\"\204\001\n QueryFinalizedChainsInfoR" +
+      "esponse\022`\n\025finalized_chains_info\030\001 \003(\0132," +
+      ".babylon.zoneconcierge.v1.FinalizedChain" +
+      "InfoR\023finalizedChainsInfo\"z\n)QueryFinali" +
+      "zedChainInfoUntilHeightRequest\022\037\n\013consum" +
+      "er_id\030\001 \001(\tR\nconsumerId\022\026\n\006height\030\002 \001(\004R" +
+      "\006height\022\024\n\005prove\030\003 \001(\010R\005prove\"\256\003\n*QueryF" +
+      "inalizedChainInfoUntilHeightResponse\022U\n\024" +
+      "finalized_chain_info\030\001 \001(\0132#.babylon.zon" +
+      "econcierge.v1.ChainInfoR\022finalizedChainI" +
+      "nfo\0229\n\nepoch_info\030\002 \001(\0132\032.babylon.epochi" +
+      "ng.v1.EpochR\tepochInfo\022N\n\016raw_checkpoint" +
+      "\030\003 \001(\0132\'.babylon.checkpointing.v1.RawChe" +
+      "ckpointR\rrawCheckpoint\022U\n\022btc_submission" +
+      "_key\030\004 \001(\0132\'.babylon.btccheckpoint.v1.Su" +
+      "bmissionKeyR\020btcSubmissionKey\022G\n\005proof\030\005" +
+      " \001(\01321.babylon.zoneconcierge.v1.ProofFin" +
+      "alizedChainInfoR\005proof2\220\r\n\005Query\022\217\001\n\006Par" +
+      "ams\022,.babylon.zoneconcierge.v1.QueryPara" +
+      "msRequest\032-.babylon.zoneconcierge.v1.Que" +
+      "ryParamsResponse\"(\202\323\344\223\002\"\022 /babylon/zonec" +
+      "oncierge/v1/params\022\261\001\n\006Header\022,.babylon." +
+      "zoneconcierge.v1.QueryHeaderRequest\032-.ba" +
+      "bylon.zoneconcierge.v1.QueryHeaderRespon" +
+      "se\"J\202\323\344\223\002D\022B/babylon/zoneconcierge/v1/ch" +
+      "ain_info/{consumer_id}/header/{height}\022\230" +
+      "\001\n\tChainList\022/.babylon.zoneconcierge.v1." +
+      "QueryChainListRequest\0320.babylon.zoneconc" +
+      "ierge.v1.QueryChainListResponse\"(\202\323\344\223\002\"\022" +
+      " /babylon/zoneconcierge/v1/chains\022\240\001\n\nCh" +
+      "ainsInfo\0220.babylon.zoneconcierge.v1.Quer" +
+      "yChainsInfoRequest\0321.babylon.zoneconcier" +
+      "ge.v1.QueryChainsInfoResponse\"-\202\323\344\223\002\'\022%/" +
+      "babylon/zoneconcierge/v1/chains_info\022\265\001\n" +
+      "\017EpochChainsInfo\0225.babylon.zoneconcierge" +
+      ".v1.QueryEpochChainsInfoRequest\0326.babylo" +
+      "n.zoneconcierge.v1.QueryEpochChainsInfoR" +
+      "esponse\"3\202\323\344\223\002-\022+/babylon/zoneconcierge/" +
+      "v1/epoch_chains_info\022\255\001\n\013ListHeaders\0221.b" +
+      "abylon.zoneconcierge.v1.QueryListHeaders" +
+      "Request\0322.babylon.zoneconcierge.v1.Query" +
+      "ListHeadersResponse\"7\202\323\344\223\0021\022//babylon/zo" +
+      "neconcierge/v1/headers/{consumer_id}\022\317\001\n" +
+      "\020ListEpochHeaders\0226.babylon.zoneconcierg" +
+      "e.v1.QueryListEpochHeadersRequest\0327.baby" +
+      "lon.zoneconcierge.v1.QueryListEpochHeade" +
+      "rsResponse\"J\202\323\344\223\002D\022B/babylon/zoneconcier" +
+      "ge/v1/headers/{consumer_id}/epochs/{epoc" +
+      "h_num}\022\305\001\n\023FinalizedChainsInfo\0229.babylon" +
       ".zoneconcierge.v1.QueryFinalizedChainsIn" +
-      "foResponse\"7\202\323\344\223\0021\022//babylon/zoneconcier" +
-      "ge/v1/finalized_chains_info\022\375\001\n\035Finalize" +
-      "dChainInfoUntilHeight\022C.babylon.zoneconc" +
-      "ierge.v1.QueryFinalizedChainInfoUntilHei" +
-      "ghtRequest\032D.babylon.zoneconcierge.v1.Qu" +
-      "eryFinalizedChainInfoUntilHeightResponse" +
-      "\"Q\202\323\344\223\002K\022I/babylon/zoneconcierge/v1/fina" +
-      "lized_chain_info/{chain_id}/height/{heig" +
-      "ht}B\341\001\n\034com.babylon.zoneconcierge.v1B\nQu" +
-      "eryProtoZ5github.com/babylonchain/babylo" +
-      "n/x/zoneconcierge/types\242\002\003BZX\252\002\030Babylon." +
-      "Zoneconcierge.V1\312\002\030Babylon\\Zoneconcierge" +
-      "\\V1\342\002$Babylon\\Zoneconcierge\\V1\\GPBMetada" +
-      "ta\352\002\032Babylon::Zoneconcierge::V1b\006proto3"
+      "foRequest\032:.babylon.zoneconcierge.v1.Que" +
+      "ryFinalizedChainsInfoResponse\"7\202\323\344\223\0021\022//" +
+      "babylon/zoneconcierge/v1/finalized_chain" +
+      "s_info\022\200\002\n\035FinalizedChainInfoUntilHeight" +
+      "\022C.babylon.zoneconcierge.v1.QueryFinaliz" +
+      "edChainInfoUntilHeightRequest\032D.babylon." +
+      "zoneconcierge.v1.QueryFinalizedChainInfo" +
+      "UntilHeightResponse\"T\202\323\344\223\002N\022L/babylon/zo" +
+      "neconcierge/v1/finalized_chain_info/{con" +
+      "sumer_id}/height/{height}B\343\001\n\034com.babylo" +
+      "n.zoneconcierge.v1B\nQueryProtoZ7github.c" +
+      "om/babylonlabs-io/babylon/x/zoneconcierg" +
+      "e/types\242\002\003BZX\252\002\030Babylon.Zoneconcierge.V1" +
+      "\312\002\030Babylon\\Zoneconcierge\\V1\342\002$Babylon\\Zo" +
+      "neconcierge\\V1\\GPBMetadata\352\002\032Babylon::Zo" +
+      "neconcierge::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -15002,7 +15004,7 @@ public final class QueryProto {
     internal_static_babylon_zoneconcierge_v1_QueryHeaderRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_zoneconcierge_v1_QueryHeaderRequest_descriptor,
-        new java.lang.String[] { "ChainId", "Height", });
+        new java.lang.String[] { "ConsumerId", "Height", });
     internal_static_babylon_zoneconcierge_v1_QueryHeaderResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_babylon_zoneconcierge_v1_QueryHeaderResponse_fieldAccessorTable = new
@@ -15020,13 +15022,13 @@ public final class QueryProto {
     internal_static_babylon_zoneconcierge_v1_QueryChainListResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_zoneconcierge_v1_QueryChainListResponse_descriptor,
-        new java.lang.String[] { "ChainIds", "Pagination", });
+        new java.lang.String[] { "ConsumerIds", "Pagination", });
     internal_static_babylon_zoneconcierge_v1_QueryChainsInfoRequest_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_babylon_zoneconcierge_v1_QueryChainsInfoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_zoneconcierge_v1_QueryChainsInfoRequest_descriptor,
-        new java.lang.String[] { "ChainIds", });
+        new java.lang.String[] { "ConsumerIds", });
     internal_static_babylon_zoneconcierge_v1_QueryChainsInfoResponse_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_babylon_zoneconcierge_v1_QueryChainsInfoResponse_fieldAccessorTable = new
@@ -15038,7 +15040,7 @@ public final class QueryProto {
     internal_static_babylon_zoneconcierge_v1_QueryEpochChainsInfoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_zoneconcierge_v1_QueryEpochChainsInfoRequest_descriptor,
-        new java.lang.String[] { "EpochNum", "ChainIds", });
+        new java.lang.String[] { "EpochNum", "ConsumerIds", });
     internal_static_babylon_zoneconcierge_v1_QueryEpochChainsInfoResponse_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_babylon_zoneconcierge_v1_QueryEpochChainsInfoResponse_fieldAccessorTable = new
@@ -15050,7 +15052,7 @@ public final class QueryProto {
     internal_static_babylon_zoneconcierge_v1_QueryListHeadersRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_zoneconcierge_v1_QueryListHeadersRequest_descriptor,
-        new java.lang.String[] { "ChainId", "Pagination", });
+        new java.lang.String[] { "ConsumerId", "Pagination", });
     internal_static_babylon_zoneconcierge_v1_QueryListHeadersResponse_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_babylon_zoneconcierge_v1_QueryListHeadersResponse_fieldAccessorTable = new
@@ -15062,7 +15064,7 @@ public final class QueryProto {
     internal_static_babylon_zoneconcierge_v1_QueryListEpochHeadersRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_zoneconcierge_v1_QueryListEpochHeadersRequest_descriptor,
-        new java.lang.String[] { "EpochNum", "ChainId", });
+        new java.lang.String[] { "EpochNum", "ConsumerId", });
     internal_static_babylon_zoneconcierge_v1_QueryListEpochHeadersResponse_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_babylon_zoneconcierge_v1_QueryListEpochHeadersResponse_fieldAccessorTable = new
@@ -15074,7 +15076,7 @@ public final class QueryProto {
     internal_static_babylon_zoneconcierge_v1_QueryFinalizedChainsInfoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_zoneconcierge_v1_QueryFinalizedChainsInfoRequest_descriptor,
-        new java.lang.String[] { "ChainIds", "Prove", });
+        new java.lang.String[] { "ConsumerIds", "Prove", });
     internal_static_babylon_zoneconcierge_v1_QueryFinalizedChainsInfoResponse_descriptor =
       getDescriptor().getMessageTypes().get(15);
     internal_static_babylon_zoneconcierge_v1_QueryFinalizedChainsInfoResponse_fieldAccessorTable = new
@@ -15086,7 +15088,7 @@ public final class QueryProto {
     internal_static_babylon_zoneconcierge_v1_QueryFinalizedChainInfoUntilHeightRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_zoneconcierge_v1_QueryFinalizedChainInfoUntilHeightRequest_descriptor,
-        new java.lang.String[] { "ChainId", "Height", "Prove", });
+        new java.lang.String[] { "ConsumerId", "Height", "Prove", });
     internal_static_babylon_zoneconcierge_v1_QueryFinalizedChainInfoUntilHeightResponse_descriptor =
       getDescriptor().getMessageTypes().get(17);
     internal_static_babylon_zoneconcierge_v1_QueryFinalizedChainInfoUntilHeightResponse_fieldAccessorTable = new

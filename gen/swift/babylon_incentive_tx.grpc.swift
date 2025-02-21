@@ -42,6 +42,11 @@ internal protocol Babylon_Incentive_MsgClientProtocol: GRPCClient {
     _ request: Babylon_Incentive_MsgUpdateParams,
     callOptions: CallOptions?
   ) -> UnaryCall<Babylon_Incentive_MsgUpdateParams, Babylon_Incentive_MsgUpdateParamsResponse>
+
+  func setWithdrawAddress(
+    _ request: Babylon_Incentive_MsgSetWithdrawAddress,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Babylon_Incentive_MsgSetWithdrawAddress, Babylon_Incentive_MsgSetWithdrawAddressResponse>
 }
 
 extension Babylon_Incentive_MsgClientProtocol {
@@ -82,6 +87,25 @@ extension Babylon_Incentive_MsgClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? []
+    )
+  }
+
+  /// SetWithdrawAddress defines a method to change the withdraw address of a
+  /// stakeholder
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to SetWithdrawAddress.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func setWithdrawAddress(
+    _ request: Babylon_Incentive_MsgSetWithdrawAddress,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Babylon_Incentive_MsgSetWithdrawAddress, Babylon_Incentive_MsgSetWithdrawAddressResponse> {
+    return self.makeUnaryCall(
+      path: Babylon_Incentive_MsgClientMetadata.Methods.setWithdrawAddress.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeSetWithdrawAddressInterceptors() ?? []
     )
   }
 }
@@ -158,6 +182,11 @@ internal protocol Babylon_Incentive_MsgAsyncClientProtocol: GRPCClient {
     _ request: Babylon_Incentive_MsgUpdateParams,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Babylon_Incentive_MsgUpdateParams, Babylon_Incentive_MsgUpdateParamsResponse>
+
+  func makeSetWithdrawAddressCall(
+    _ request: Babylon_Incentive_MsgSetWithdrawAddress,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Babylon_Incentive_MsgSetWithdrawAddress, Babylon_Incentive_MsgSetWithdrawAddressResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -193,6 +222,18 @@ extension Babylon_Incentive_MsgAsyncClientProtocol {
       interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? []
     )
   }
+
+  internal func makeSetWithdrawAddressCall(
+    _ request: Babylon_Incentive_MsgSetWithdrawAddress,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Babylon_Incentive_MsgSetWithdrawAddress, Babylon_Incentive_MsgSetWithdrawAddressResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Babylon_Incentive_MsgClientMetadata.Methods.setWithdrawAddress.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeSetWithdrawAddressInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -218,6 +259,18 @@ extension Babylon_Incentive_MsgAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeUpdateParamsInterceptors() ?? []
+    )
+  }
+
+  internal func setWithdrawAddress(
+    _ request: Babylon_Incentive_MsgSetWithdrawAddress,
+    callOptions: CallOptions? = nil
+  ) async throws -> Babylon_Incentive_MsgSetWithdrawAddressResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Babylon_Incentive_MsgClientMetadata.Methods.setWithdrawAddress.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeSetWithdrawAddressInterceptors() ?? []
     )
   }
 }
@@ -246,6 +299,9 @@ internal protocol Babylon_Incentive_MsgClientInterceptorFactoryProtocol: Sendabl
 
   /// - Returns: Interceptors to use when invoking 'updateParams'.
   func makeUpdateParamsInterceptors() -> [ClientInterceptor<Babylon_Incentive_MsgUpdateParams, Babylon_Incentive_MsgUpdateParamsResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'setWithdrawAddress'.
+  func makeSetWithdrawAddressInterceptors() -> [ClientInterceptor<Babylon_Incentive_MsgSetWithdrawAddress, Babylon_Incentive_MsgSetWithdrawAddressResponse>]
 }
 
 internal enum Babylon_Incentive_MsgClientMetadata {
@@ -255,6 +311,7 @@ internal enum Babylon_Incentive_MsgClientMetadata {
     methods: [
       Babylon_Incentive_MsgClientMetadata.Methods.withdrawReward,
       Babylon_Incentive_MsgClientMetadata.Methods.updateParams,
+      Babylon_Incentive_MsgClientMetadata.Methods.setWithdrawAddress,
     ]
   )
 
@@ -268,6 +325,12 @@ internal enum Babylon_Incentive_MsgClientMetadata {
     internal static let updateParams = GRPCMethodDescriptor(
       name: "UpdateParams",
       path: "/babylon.incentive.Msg/UpdateParams",
+      type: GRPCCallType.unary
+    )
+
+    internal static let setWithdrawAddress = GRPCMethodDescriptor(
+      name: "SetWithdrawAddress",
+      path: "/babylon.incentive.Msg/SetWithdrawAddress",
       type: GRPCCallType.unary
     )
   }
@@ -284,6 +347,10 @@ internal protocol Babylon_Incentive_MsgProvider: CallHandlerProvider {
 
   /// UpdateParams updates the incentive module parameters.
   func updateParams(request: Babylon_Incentive_MsgUpdateParams, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Incentive_MsgUpdateParamsResponse>
+
+  /// SetWithdrawAddress defines a method to change the withdraw address of a
+  /// stakeholder
+  func setWithdrawAddress(request: Babylon_Incentive_MsgSetWithdrawAddress, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Incentive_MsgSetWithdrawAddressResponse>
 }
 
 extension Babylon_Incentive_MsgProvider {
@@ -316,6 +383,15 @@ extension Babylon_Incentive_MsgProvider {
         userFunction: self.updateParams(request:context:)
       )
 
+    case "SetWithdrawAddress":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Babylon_Incentive_MsgSetWithdrawAddress>(),
+        responseSerializer: ProtobufSerializer<Babylon_Incentive_MsgSetWithdrawAddressResponse>(),
+        interceptors: self.interceptors?.makeSetWithdrawAddressInterceptors() ?? [],
+        userFunction: self.setWithdrawAddress(request:context:)
+      )
+
     default:
       return nil
     }
@@ -341,6 +417,13 @@ internal protocol Babylon_Incentive_MsgAsyncProvider: CallHandlerProvider {
     request: Babylon_Incentive_MsgUpdateParams,
     context: GRPCAsyncServerCallContext
   ) async throws -> Babylon_Incentive_MsgUpdateParamsResponse
+
+  /// SetWithdrawAddress defines a method to change the withdraw address of a
+  /// stakeholder
+  @Sendable func setWithdrawAddress(
+    request: Babylon_Incentive_MsgSetWithdrawAddress,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Babylon_Incentive_MsgSetWithdrawAddressResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -380,6 +463,15 @@ extension Babylon_Incentive_MsgAsyncProvider {
         wrapping: self.updateParams(request:context:)
       )
 
+    case "SetWithdrawAddress":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Babylon_Incentive_MsgSetWithdrawAddress>(),
+        responseSerializer: ProtobufSerializer<Babylon_Incentive_MsgSetWithdrawAddressResponse>(),
+        interceptors: self.interceptors?.makeSetWithdrawAddressInterceptors() ?? [],
+        wrapping: self.setWithdrawAddress(request:context:)
+      )
+
     default:
       return nil
     }
@@ -395,6 +487,10 @@ internal protocol Babylon_Incentive_MsgServerInterceptorFactoryProtocol {
   /// - Returns: Interceptors to use when handling 'updateParams'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeUpdateParamsInterceptors() -> [ServerInterceptor<Babylon_Incentive_MsgUpdateParams, Babylon_Incentive_MsgUpdateParamsResponse>]
+
+  /// - Returns: Interceptors to use when handling 'setWithdrawAddress'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeSetWithdrawAddressInterceptors() -> [ServerInterceptor<Babylon_Incentive_MsgSetWithdrawAddress, Babylon_Incentive_MsgSetWithdrawAddressResponse>]
 }
 
 internal enum Babylon_Incentive_MsgServerMetadata {
@@ -404,6 +500,7 @@ internal enum Babylon_Incentive_MsgServerMetadata {
     methods: [
       Babylon_Incentive_MsgServerMetadata.Methods.withdrawReward,
       Babylon_Incentive_MsgServerMetadata.Methods.updateParams,
+      Babylon_Incentive_MsgServerMetadata.Methods.setWithdrawAddress,
     ]
   )
 
@@ -417,6 +514,12 @@ internal enum Babylon_Incentive_MsgServerMetadata {
     internal static let updateParams = GRPCMethodDescriptor(
       name: "UpdateParams",
       path: "/babylon.incentive.Msg/UpdateParams",
+      type: GRPCCallType.unary
+    )
+
+    internal static let setWithdrawAddress = GRPCMethodDescriptor(
+      name: "SetWithdrawAddress",
+      path: "/babylon.incentive.Msg/SetWithdrawAddress",
       type: GRPCCallType.unary
     )
   }

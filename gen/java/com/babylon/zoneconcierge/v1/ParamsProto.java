@@ -542,12 +542,13 @@ public final class ParamsProto {
       "o.proto\"r\n\006Params\022b\n\032ibc_packet_timeout_" +
       "seconds\030\001 \001(\rB%\362\336\037!yaml:\"ibc_packet_time" +
       "out_seconds\"R\027ibcPacketTimeoutSeconds:\004\350" +
-      "\240\037\001B\342\001\n\034com.babylon.zoneconcierge.v1B\013Pa" +
-      "ramsProtoZ5github.com/babylonchain/babyl" +
-      "on/x/zoneconcierge/types\242\002\003BZX\252\002\030Babylon" +
-      ".Zoneconcierge.V1\312\002\030Babylon\\Zoneconcierg" +
-      "e\\V1\342\002$Babylon\\Zoneconcierge\\V1\\GPBMetad" +
-      "ata\352\002\032Babylon::Zoneconcierge::V1b\006proto3"
+      "\240\037\001B\344\001\n\034com.babylon.zoneconcierge.v1B\013Pa" +
+      "ramsProtoZ7github.com/babylonlabs-io/bab" +
+      "ylon/x/zoneconcierge/types\242\002\003BZX\252\002\030Babyl" +
+      "on.Zoneconcierge.V1\312\002\030Babylon\\Zoneconcie" +
+      "rge\\V1\342\002$Babylon\\Zoneconcierge\\V1\\GPBMet" +
+      "adata\352\002\032Babylon::Zoneconcierge::V1b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

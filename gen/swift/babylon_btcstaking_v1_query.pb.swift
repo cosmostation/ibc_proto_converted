@@ -90,6 +90,45 @@ struct Babylon_Btcstaking_V1_QueryParamsByVersionResponse {
   fileprivate var _params: Babylon_Btcstaking_V1_Params? = nil
 }
 
+/// QueryParamsByBTCHeightRequest is request type for the Query/ParamsByBTCHeight RPC method.
+struct Babylon_Btcstaking_V1_QueryParamsByBTCHeightRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var btcHeight: UInt32 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// QueryParamsByBTCHeightResponse is response type for the Query/QueryParamsByBTCHeightResponse RPC method.
+struct Babylon_Btcstaking_V1_QueryParamsByBTCHeightResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// params holds all the parameters of this module.
+  var params: Babylon_Btcstaking_V1_Params {
+    get {return _params ?? Babylon_Btcstaking_V1_Params()}
+    set {_params = newValue}
+  }
+  /// Returns true if `params` has been explicitly set.
+  var hasParams: Bool {return self._params != nil}
+  /// Clears the value of `params`. Subsequent reads from it will return its default value.
+  mutating func clearParams() {self._params = nil}
+
+  /// version is the version of the params for the given BTC height
+  var version: UInt32 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _params: Babylon_Btcstaking_V1_Params? = nil
+}
+
 /// QueryFinalityProvidersRequest is the request type for the
 /// Query/FinalityProviders RPC method.
 struct Babylon_Btcstaking_V1_QueryFinalityProvidersRequest {
@@ -585,6 +624,10 @@ struct Babylon_Btcstaking_V1_FinalityProviderResponse {
   /// jailed defines whether the finality provider is jailed
   var jailed: Bool = false
 
+  /// highest_voted_height is the highest height for which the
+  /// finality provider has voted
+  var highestVotedHeight: UInt32 = 0
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -598,6 +641,8 @@ extension Babylon_Btcstaking_V1_QueryParamsRequest: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_QueryParamsResponse: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_QueryParamsByVersionRequest: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_QueryParamsByVersionResponse: @unchecked Sendable {}
+extension Babylon_Btcstaking_V1_QueryParamsByBTCHeightRequest: @unchecked Sendable {}
+extension Babylon_Btcstaking_V1_QueryParamsByBTCHeightResponse: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_QueryFinalityProvidersRequest: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_QueryFinalityProvidersResponse: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_QueryFinalityProviderRequest: @unchecked Sendable {}
@@ -737,6 +782,80 @@ extension Babylon_Btcstaking_V1_QueryParamsByVersionResponse: SwiftProtobuf.Mess
 
   static func ==(lhs: Babylon_Btcstaking_V1_QueryParamsByVersionResponse, rhs: Babylon_Btcstaking_V1_QueryParamsByVersionResponse) -> Bool {
     if lhs._params != rhs._params {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Btcstaking_V1_QueryParamsByBTCHeightRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".QueryParamsByBTCHeightRequest"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "btc_height"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularUInt32Field(value: &self.btcHeight) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.btcHeight != 0 {
+      try visitor.visitSingularUInt32Field(value: self.btcHeight, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Btcstaking_V1_QueryParamsByBTCHeightRequest, rhs: Babylon_Btcstaking_V1_QueryParamsByBTCHeightRequest) -> Bool {
+    if lhs.btcHeight != rhs.btcHeight {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Btcstaking_V1_QueryParamsByBTCHeightResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".QueryParamsByBTCHeightResponse"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "params"),
+    2: .same(proto: "version"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._params) }()
+      case 2: try { try decoder.decodeSingularUInt32Field(value: &self.version) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._params {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
+    if self.version != 0 {
+      try visitor.visitSingularUInt32Field(value: self.version, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Btcstaking_V1_QueryParamsByBTCHeightResponse, rhs: Babylon_Btcstaking_V1_QueryParamsByBTCHeightResponse) -> Bool {
+    if lhs._params != rhs._params {return false}
+    if lhs.version != rhs.version {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -1462,6 +1581,7 @@ extension Babylon_Btcstaking_V1_FinalityProviderResponse: SwiftProtobuf.Message,
     7: .standard(proto: "slashed_btc_height"),
     8: .same(proto: "height"),
     9: .same(proto: "jailed"),
+    10: .standard(proto: "highest_voted_height"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -1479,6 +1599,7 @@ extension Babylon_Btcstaking_V1_FinalityProviderResponse: SwiftProtobuf.Message,
       case 7: try { try decoder.decodeSingularUInt32Field(value: &self.slashedBtcHeight) }()
       case 8: try { try decoder.decodeSingularUInt64Field(value: &self.height) }()
       case 9: try { try decoder.decodeSingularBoolField(value: &self.jailed) }()
+      case 10: try { try decoder.decodeSingularUInt32Field(value: &self.highestVotedHeight) }()
       default: break
       }
     }
@@ -1516,6 +1637,9 @@ extension Babylon_Btcstaking_V1_FinalityProviderResponse: SwiftProtobuf.Message,
     if self.jailed != false {
       try visitor.visitSingularBoolField(value: self.jailed, fieldNumber: 9)
     }
+    if self.highestVotedHeight != 0 {
+      try visitor.visitSingularUInt32Field(value: self.highestVotedHeight, fieldNumber: 10)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -1529,6 +1653,7 @@ extension Babylon_Btcstaking_V1_FinalityProviderResponse: SwiftProtobuf.Message,
     if lhs.slashedBtcHeight != rhs.slashedBtcHeight {return false}
     if lhs.height != rhs.height {return false}
     if lhs.jailed != rhs.jailed {return false}
+    if lhs.highestVotedHeight != rhs.highestVotedHeight {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

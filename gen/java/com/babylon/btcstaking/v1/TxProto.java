@@ -124,6 +124,28 @@ public final class TxProto {
      * <code>.babylon.btcstaking.v1.ProofOfPossessionBTC pop = 5 [json_name = "pop"];</code>
      */
     com.babylon.btcstaking.v1.PopProto.ProofOfPossessionBTCOrBuilder getPopOrBuilder();
+
+    /**
+     * <pre>
+     * consumer_id is the ID of the consumer
+     * If it's empty, it's assumed to be Babylon's chain id
+     * </pre>
+     *
+     * <code>string consumer_id = 6 [json_name = "consumerId"];</code>
+     * @return The consumerId.
+     */
+    java.lang.String getConsumerId();
+    /**
+     * <pre>
+     * consumer_id is the ID of the consumer
+     * If it's empty, it's assumed to be Babylon's chain id
+     * </pre>
+     *
+     * <code>string consumer_id = 6 [json_name = "consumerId"];</code>
+     * @return The bytes for consumerId.
+     */
+    com.google.protobuf.ByteString
+        getConsumerIdBytes();
   }
   /**
    * <pre>
@@ -145,6 +167,7 @@ public final class TxProto {
       addr_ = "";
       commission_ = "";
       btcPk_ = com.google.protobuf.ByteString.EMPTY;
+      consumerId_ = "";
     }
 
     @java.lang.Override
@@ -355,6 +378,55 @@ public final class TxProto {
       return pop_ == null ? com.babylon.btcstaking.v1.PopProto.ProofOfPossessionBTC.getDefaultInstance() : pop_;
     }
 
+    public static final int CONSUMER_ID_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object consumerId_ = "";
+    /**
+     * <pre>
+     * consumer_id is the ID of the consumer
+     * If it's empty, it's assumed to be Babylon's chain id
+     * </pre>
+     *
+     * <code>string consumer_id = 6 [json_name = "consumerId"];</code>
+     * @return The consumerId.
+     */
+    @java.lang.Override
+    public java.lang.String getConsumerId() {
+      java.lang.Object ref = consumerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        consumerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * consumer_id is the ID of the consumer
+     * If it's empty, it's assumed to be Babylon's chain id
+     * </pre>
+     *
+     * <code>string consumer_id = 6 [json_name = "consumerId"];</code>
+     * @return The bytes for consumerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConsumerIdBytes() {
+      java.lang.Object ref = consumerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        consumerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -384,6 +456,9 @@ public final class TxProto {
       if (pop_ != null) {
         output.writeMessage(5, getPop());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consumerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, consumerId_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -410,6 +485,9 @@ public final class TxProto {
       if (pop_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getPop());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consumerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, consumerId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -442,6 +520,8 @@ public final class TxProto {
         if (!getPop()
             .equals(other.getPop())) return false;
       }
+      if (!getConsumerId()
+          .equals(other.getConsumerId())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -467,6 +547,8 @@ public final class TxProto {
         hash = (37 * hash) + POP_FIELD_NUMBER;
         hash = (53 * hash) + getPop().hashCode();
       }
+      hash = (37 * hash) + CONSUMER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConsumerId().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -615,6 +697,7 @@ public final class TxProto {
           popBuilder_.dispose();
           popBuilder_ = null;
         }
+        consumerId_ = "";
         return this;
       }
 
@@ -666,6 +749,9 @@ public final class TxProto {
           result.pop_ = popBuilder_ == null
               ? pop_
               : popBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.consumerId_ = consumerId_;
         }
       }
 
@@ -732,6 +818,11 @@ public final class TxProto {
         if (other.hasPop()) {
           mergePop(other.getPop());
         }
+        if (!other.getConsumerId().isEmpty()) {
+          consumerId_ = other.consumerId_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -787,6 +878,11 @@ public final class TxProto {
                 bitField0_ |= 0x00000010;
                 break;
               } // case 42
+              case 50: {
+                consumerId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1348,6 +1444,103 @@ public final class TxProto {
           pop_ = null;
         }
         return popBuilder_;
+      }
+
+      private java.lang.Object consumerId_ = "";
+      /**
+       * <pre>
+       * consumer_id is the ID of the consumer
+       * If it's empty, it's assumed to be Babylon's chain id
+       * </pre>
+       *
+       * <code>string consumer_id = 6 [json_name = "consumerId"];</code>
+       * @return The consumerId.
+       */
+      public java.lang.String getConsumerId() {
+        java.lang.Object ref = consumerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          consumerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * consumer_id is the ID of the consumer
+       * If it's empty, it's assumed to be Babylon's chain id
+       * </pre>
+       *
+       * <code>string consumer_id = 6 [json_name = "consumerId"];</code>
+       * @return The bytes for consumerId.
+       */
+      public com.google.protobuf.ByteString
+          getConsumerIdBytes() {
+        java.lang.Object ref = consumerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          consumerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * consumer_id is the ID of the consumer
+       * If it's empty, it's assumed to be Babylon's chain id
+       * </pre>
+       *
+       * <code>string consumer_id = 6 [json_name = "consumerId"];</code>
+       * @param value The consumerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConsumerId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        consumerId_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * consumer_id is the ID of the consumer
+       * If it's empty, it's assumed to be Babylon's chain id
+       * </pre>
+       *
+       * <code>string consumer_id = 6 [json_name = "consumerId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConsumerId() {
+        consumerId_ = getDefaultInstance().getConsumerId();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * consumer_id is the ID of the consumer
+       * If it's empty, it's assumed to be Babylon's chain id
+       * </pre>
+       *
+       * <code>string consumer_id = 6 [json_name = "consumerId"];</code>
+       * @param value The bytes for consumerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConsumerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        consumerId_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -13660,7 +13853,7 @@ public final class TxProto {
       "msg.proto\032\"babylon/btcstaking/v1/params." +
       "proto\032$cosmos/staking/v1beta1/staking.pr" +
       "oto\032\037babylon/btcstaking/v1/pop.proto\032&ba" +
-      "bylon/btcstaking/v1/btcstaking.proto\"\372\002\n" +
+      "bylon/btcstaking/v1/btcstaking.proto\"\233\003\n" +
       "\031MsgCreateFinalityProvider\022,\n\004addr\030\001 \001(\t" +
       "B\030\322\264-\024cosmos.AddressStringR\004addr\022E\n\013desc" +
       "ription\030\002 \001(\0132#.cosmos.staking.v1beta1.D" +
@@ -13670,106 +13863,107 @@ public final class TxProto {
       "\332\336\0374github.com/babylonlabs-io/babylon/ty" +
       "pes.BIP340PubKeyR\005btcPk\022=\n\003pop\030\005 \001(\0132+.b" +
       "abylon.btcstaking.v1.ProofOfPossessionBT" +
-      "CR\003pop:\t\202\347\260*\004addr\"#\n!MsgCreateFinalityPr" +
-      "oviderResponse\"\377\001\n\027MsgEditFinalityProvid" +
-      "er\022,\n\004addr\030\001 \001(\tB\030\322\264-\024cosmos.AddressStri" +
-      "ngR\004addr\022\025\n\006btc_pk\030\002 \001(\014R\005btcPk\022E\n\013descr" +
-      "iption\030\003 \001(\0132#.cosmos.staking.v1beta1.De" +
-      "scriptionR\013description\022M\n\ncommission\030\004 \001" +
-      "(\tB-\332\336\037\033cosmossdk.io/math.LegacyDec\322\264-\nc" +
-      "osmos.DecR\ncommission:\t\202\347\260*\004addr\"!\n\037MsgE" +
-      "ditFinalityProviderResponse\"\207\010\n\026MsgCreat" +
-      "eBTCDelegation\0229\n\013staker_addr\030\001 \001(\tB\030\322\264-" +
-      "\024cosmos.AddressStringR\nstakerAddr\022=\n\003pop" +
-      "\030\002 \001(\0132+.babylon.btcstaking.v1.ProofOfPo" +
-      "ssessionBTCR\003pop\022O\n\006btc_pk\030\003 \001(\014B8\332\336\0374gi" +
+      "CR\003pop\022\037\n\013consumer_id\030\006 \001(\tR\nconsumerId:" +
+      "\t\202\347\260*\004addr\"#\n!MsgCreateFinalityProviderR" +
+      "esponse\"\377\001\n\027MsgEditFinalityProvider\022,\n\004a" +
+      "ddr\030\001 \001(\tB\030\322\264-\024cosmos.AddressStringR\004add" +
+      "r\022\025\n\006btc_pk\030\002 \001(\014R\005btcPk\022E\n\013description\030" +
+      "\003 \001(\0132#.cosmos.staking.v1beta1.Descripti" +
+      "onR\013description\022M\n\ncommission\030\004 \001(\tB-\332\336\037" +
+      "\033cosmossdk.io/math.LegacyDec\322\264-\ncosmos.D" +
+      "ecR\ncommission:\t\202\347\260*\004addr\"!\n\037MsgEditFina" +
+      "lityProviderResponse\"\207\010\n\026MsgCreateBTCDel" +
+      "egation\0229\n\013staker_addr\030\001 \001(\tB\030\322\264-\024cosmos" +
+      ".AddressStringR\nstakerAddr\022=\n\003pop\030\002 \001(\0132" +
+      "+.babylon.btcstaking.v1.ProofOfPossessio" +
+      "nBTCR\003pop\022O\n\006btc_pk\030\003 \001(\014B8\332\336\0374github.co" +
+      "m/babylonlabs-io/babylon/types.BIP340Pub" +
+      "KeyR\005btcPk\022]\n\016fp_btc_pk_list\030\004 \003(\014B8\332\336\0374" +
+      "github.com/babylonlabs-io/babylon/types." +
+      "BIP340PubKeyR\013fpBtcPkList\022!\n\014staking_tim" +
+      "e\030\005 \001(\rR\013stakingTime\022#\n\rstaking_value\030\006 " +
+      "\001(\003R\014stakingValue\022\035\n\nstaking_tx\030\007 \001(\014R\ts" +
+      "takingTx\022b\n\032staking_tx_inclusion_proof\030\010" +
+      " \001(\0132%.babylon.btcstaking.v1.InclusionPr" +
+      "oofR\027stakingTxInclusionProof\0222\n\013slashing" +
+      "_tx\030\t \001(\014B\021\332\336\037\rBTCSlashingTxR\nslashingTx" +
+      "\022q\n\026delegator_slashing_sig\030\n \001(\014B;\332\336\0377gi" +
       "thub.com/babylonlabs-io/babylon/types.BI" +
-      "P340PubKeyR\005btcPk\022]\n\016fp_btc_pk_list\030\004 \003(" +
-      "\014B8\332\336\0374github.com/babylonlabs-io/babylon" +
-      "/types.BIP340PubKeyR\013fpBtcPkList\022!\n\014stak" +
-      "ing_time\030\005 \001(\rR\013stakingTime\022#\n\rstaking_v" +
-      "alue\030\006 \001(\003R\014stakingValue\022\035\n\nstaking_tx\030\007" +
-      " \001(\014R\tstakingTx\022b\n\032staking_tx_inclusion_" +
-      "proof\030\010 \001(\0132%.babylon.btcstaking.v1.Incl" +
-      "usionProofR\027stakingTxInclusionProof\0222\n\013s" +
-      "lashing_tx\030\t \001(\014B\021\332\336\037\rBTCSlashingTxR\nsla" +
-      "shingTx\022q\n\026delegator_slashing_sig\030\n \001(\014B" +
-      ";\332\336\0377github.com/babylonlabs-io/babylon/t" +
-      "ypes.BIP340SignatureR\024delegatorSlashingS" +
-      "ig\022%\n\016unbonding_time\030\013 \001(\rR\runbondingTim" +
-      "e\022!\n\014unbonding_tx\030\014 \001(\014R\013unbondingTx\022\'\n\017" +
-      "unbonding_value\030\r \001(\003R\016unbondingValue\022E\n" +
-      "\025unbonding_slashing_tx\030\016 \001(\014B\021\332\336\037\rBTCSla" +
-      "shingTxR\023unbondingSlashingTx\022\204\001\n delegat" +
-      "or_unbonding_slashing_sig\030\017 \001(\014B;\332\336\0377git" +
-      "hub.com/babylonlabs-io/babylon/types.BIP" +
-      "340SignatureR\035delegatorUnbondingSlashing" +
-      "Sig:\020\202\347\260*\013staker_addr\" \n\036MsgCreateBTCDel" +
-      "egationResponse\"\324\001\n!MsgAddBTCDelegationI" +
-      "nclusionProof\022\026\n\006signer\030\001 \001(\tR\006signer\022&\n" +
-      "\017staking_tx_hash\030\002 \001(\tR\rstakingTxHash\022b\n" +
-      "\032staking_tx_inclusion_proof\030\003 \001(\0132%.baby" +
-      "lon.btcstaking.v1.InclusionProofR\027stakin" +
-      "gTxInclusionProof:\013\202\347\260*\006signer\"+\n)MsgAdd" +
-      "BTCDelegationInclusionProofResponse\"\371\002\n\022" +
-      "MsgAddCovenantSigs\022\026\n\006signer\030\001 \001(\tR\006sign" +
-      "er\022H\n\002pk\030\002 \001(\014B8\332\336\0374github.com/babylonla" +
-      "bs-io/babylon/types.BIP340PubKeyR\002pk\022&\n\017" +
-      "staking_tx_hash\030\003 \001(\tR\rstakingTxHash\022(\n\020" +
-      "slashing_tx_sigs\030\004 \003(\014R\016slashingTxSigs\022e" +
-      "\n\020unbonding_tx_sig\030\005 \001(\014B;\332\336\0377github.com" +
+      "P340SignatureR\024delegatorSlashingSig\022%\n\016u" +
+      "nbonding_time\030\013 \001(\rR\runbondingTime\022!\n\014un" +
+      "bonding_tx\030\014 \001(\014R\013unbondingTx\022\'\n\017unbondi" +
+      "ng_value\030\r \001(\003R\016unbondingValue\022E\n\025unbond" +
+      "ing_slashing_tx\030\016 \001(\014B\021\332\336\037\rBTCSlashingTx" +
+      "R\023unbondingSlashingTx\022\204\001\n delegator_unbo" +
+      "nding_slashing_sig\030\017 \001(\014B;\332\336\0377github.com" +
       "/babylonlabs-io/babylon/types.BIP340Sign" +
-      "atureR\016unbondingTxSig\022;\n\032slashing_unbond" +
-      "ing_tx_sigs\030\006 \003(\014R\027slashingUnbondingTxSi" +
-      "gs:\013\202\347\260*\006signer\"\034\n\032MsgAddCovenantSigsRes" +
-      "ponse\"\374\001\n\020MsgBTCUndelegate\022\026\n\006signer\030\001 \001" +
-      "(\tR\006signer\022&\n\017staking_tx_hash\030\002 \001(\tR\rsta" +
-      "kingTxHash\022*\n\021stake_spending_tx\030\003 \001(\014R\017s" +
-      "takeSpendingTx\022o\n!stake_spending_tx_incl" +
-      "usion_proof\030\004 \001(\0132%.babylon.btcstaking.v" +
-      "1.InclusionProofR\035stakeSpendingTxInclusi" +
-      "onProof:\013\202\347\260*\006signer\"\032\n\030MsgBTCUndelegate" +
-      "Response\"\232\001\n\034MsgSelectiveSlashingEvidenc" +
-      "e\022\026\n\006signer\030\001 \001(\tR\006signer\022&\n\017staking_tx_" +
-      "hash\030\002 \001(\tR\rstakingTxHash\022-\n\023recovered_f" +
-      "p_btc_sk\030\003 \001(\014R\020recoveredFpBtcSk:\013\202\347\260*\006s" +
-      "igner\"&\n$MsgSelectiveSlashingEvidenceRes" +
-      "ponse\"\226\001\n\017MsgUpdateParams\0226\n\tauthority\030\001" +
-      " \001(\tB\030\322\264-\024cosmos.AddressStringR\tauthorit" +
-      "y\022;\n\006params\030\002 \001(\0132\035.babylon.btcstaking.v" +
-      "1.ParamsB\004\310\336\037\000R\006params:\016\202\347\260*\tauthority\"\031" +
-      "\n\027MsgUpdateParamsResponse2\203\010\n\003Msg\022\204\001\n\026Cr" +
-      "eateFinalityProvider\0220.babylon.btcstakin" +
-      "g.v1.MsgCreateFinalityProvider\0328.babylon" +
-      ".btcstaking.v1.MsgCreateFinalityProvider" +
-      "Response\022~\n\024EditFinalityProvider\022..babyl" +
-      "on.btcstaking.v1.MsgEditFinalityProvider" +
-      "\0326.babylon.btcstaking.v1.MsgEditFinality" +
-      "ProviderResponse\022{\n\023CreateBTCDelegation\022" +
-      "-.babylon.btcstaking.v1.MsgCreateBTCDele" +
-      "gation\0325.babylon.btcstaking.v1.MsgCreate" +
-      "BTCDelegationResponse\022\234\001\n\036AddBTCDelegati" +
-      "onInclusionProof\0228.babylon.btcstaking.v1" +
-      ".MsgAddBTCDelegationInclusionProof\032@.bab" +
-      "ylon.btcstaking.v1.MsgAddBTCDelegationIn" +
-      "clusionProofResponse\022o\n\017AddCovenantSigs\022" +
-      ").babylon.btcstaking.v1.MsgAddCovenantSi" +
-      "gs\0321.babylon.btcstaking.v1.MsgAddCovenan" +
-      "tSigsResponse\022i\n\rBTCUndelegate\022\'.babylon" +
-      ".btcstaking.v1.MsgBTCUndelegate\032/.babylo" +
-      "n.btcstaking.v1.MsgBTCUndelegateResponse" +
-      "\022\215\001\n\031SelectiveSlashingEvidence\0223.babylon" +
-      ".btcstaking.v1.MsgSelectiveSlashingEvide" +
-      "nce\032;.babylon.btcstaking.v1.MsgSelective" +
-      "SlashingEvidenceResponse\022f\n\014UpdateParams" +
-      "\022&.babylon.btcstaking.v1.MsgUpdateParams" +
-      "\032..babylon.btcstaking.v1.MsgUpdateParams" +
-      "Response\032\005\200\347\260*\001B\316\001\n\031com.babylon.btcstaki" +
-      "ng.v1B\007TxProtoZ4github.com/babylonlabs-i" +
-      "o/babylon/x/btcstaking/types\242\002\003BBX\252\002\025Bab" +
-      "ylon.Btcstaking.V1\312\002\025Babylon\\Btcstaking\\" +
-      "V1\342\002!Babylon\\Btcstaking\\V1\\GPBMetadata\352\002" +
-      "\027Babylon::Btcstaking::V1b\006proto3"
+      "atureR\035delegatorUnbondingSlashingSig:\020\202\347" +
+      "\260*\013staker_addr\" \n\036MsgCreateBTCDelegation" +
+      "Response\"\324\001\n!MsgAddBTCDelegationInclusio" +
+      "nProof\022\026\n\006signer\030\001 \001(\tR\006signer\022&\n\017stakin" +
+      "g_tx_hash\030\002 \001(\tR\rstakingTxHash\022b\n\032stakin" +
+      "g_tx_inclusion_proof\030\003 \001(\0132%.babylon.btc" +
+      "staking.v1.InclusionProofR\027stakingTxIncl" +
+      "usionProof:\013\202\347\260*\006signer\"+\n)MsgAddBTCDele" +
+      "gationInclusionProofResponse\"\371\002\n\022MsgAddC" +
+      "ovenantSigs\022\026\n\006signer\030\001 \001(\tR\006signer\022H\n\002p" +
+      "k\030\002 \001(\014B8\332\336\0374github.com/babylonlabs-io/b" +
+      "abylon/types.BIP340PubKeyR\002pk\022&\n\017staking" +
+      "_tx_hash\030\003 \001(\tR\rstakingTxHash\022(\n\020slashin" +
+      "g_tx_sigs\030\004 \003(\014R\016slashingTxSigs\022e\n\020unbon" +
+      "ding_tx_sig\030\005 \001(\014B;\332\336\0377github.com/babylo" +
+      "nlabs-io/babylon/types.BIP340SignatureR\016" +
+      "unbondingTxSig\022;\n\032slashing_unbonding_tx_" +
+      "sigs\030\006 \003(\014R\027slashingUnbondingTxSigs:\013\202\347\260" +
+      "*\006signer\"\034\n\032MsgAddCovenantSigsResponse\"\374" +
+      "\001\n\020MsgBTCUndelegate\022\026\n\006signer\030\001 \001(\tR\006sig" +
+      "ner\022&\n\017staking_tx_hash\030\002 \001(\tR\rstakingTxH" +
+      "ash\022*\n\021stake_spending_tx\030\003 \001(\014R\017stakeSpe" +
+      "ndingTx\022o\n!stake_spending_tx_inclusion_p" +
+      "roof\030\004 \001(\0132%.babylon.btcstaking.v1.Inclu" +
+      "sionProofR\035stakeSpendingTxInclusionProof" +
+      ":\013\202\347\260*\006signer\"\032\n\030MsgBTCUndelegateRespons" +
+      "e\"\232\001\n\034MsgSelectiveSlashingEvidence\022\026\n\006si" +
+      "gner\030\001 \001(\tR\006signer\022&\n\017staking_tx_hash\030\002 " +
+      "\001(\tR\rstakingTxHash\022-\n\023recovered_fp_btc_s" +
+      "k\030\003 \001(\014R\020recoveredFpBtcSk:\013\202\347\260*\006signer\"&" +
+      "\n$MsgSelectiveSlashingEvidenceResponse\"\226" +
+      "\001\n\017MsgUpdateParams\0226\n\tauthority\030\001 \001(\tB\030\322" +
+      "\264-\024cosmos.AddressStringR\tauthority\022;\n\006pa" +
+      "rams\030\002 \001(\0132\035.babylon.btcstaking.v1.Param" +
+      "sB\004\310\336\037\000R\006params:\016\202\347\260*\tauthority\"\031\n\027MsgUp" +
+      "dateParamsResponse2\203\010\n\003Msg\022\204\001\n\026CreateFin" +
+      "alityProvider\0220.babylon.btcstaking.v1.Ms" +
+      "gCreateFinalityProvider\0328.babylon.btcsta" +
+      "king.v1.MsgCreateFinalityProviderRespons" +
+      "e\022~\n\024EditFinalityProvider\022..babylon.btcs" +
+      "taking.v1.MsgEditFinalityProvider\0326.baby" +
+      "lon.btcstaking.v1.MsgEditFinalityProvide" +
+      "rResponse\022{\n\023CreateBTCDelegation\022-.babyl" +
+      "on.btcstaking.v1.MsgCreateBTCDelegation\032" +
+      "5.babylon.btcstaking.v1.MsgCreateBTCDele" +
+      "gationResponse\022\234\001\n\036AddBTCDelegationInclu" +
+      "sionProof\0228.babylon.btcstaking.v1.MsgAdd" +
+      "BTCDelegationInclusionProof\032@.babylon.bt" +
+      "cstaking.v1.MsgAddBTCDelegationInclusion" +
+      "ProofResponse\022o\n\017AddCovenantSigs\022).babyl" +
+      "on.btcstaking.v1.MsgAddCovenantSigs\0321.ba" +
+      "bylon.btcstaking.v1.MsgAddCovenantSigsRe" +
+      "sponse\022i\n\rBTCUndelegate\022\'.babylon.btcsta" +
+      "king.v1.MsgBTCUndelegate\032/.babylon.btcst" +
+      "aking.v1.MsgBTCUndelegateResponse\022\215\001\n\031Se" +
+      "lectiveSlashingEvidence\0223.babylon.btcsta" +
+      "king.v1.MsgSelectiveSlashingEvidence\032;.b" +
+      "abylon.btcstaking.v1.MsgSelectiveSlashin" +
+      "gEvidenceResponse\022f\n\014UpdateParams\022&.baby" +
+      "lon.btcstaking.v1.MsgUpdateParams\032..baby" +
+      "lon.btcstaking.v1.MsgUpdateParamsRespons" +
+      "e\032\005\200\347\260*\001B\316\001\n\031com.babylon.btcstaking.v1B\007" +
+      "TxProtoZ4github.com/babylonlabs-io/babyl" +
+      "on/x/btcstaking/types\242\002\003BBX\252\002\025Babylon.Bt" +
+      "cstaking.V1\312\002\025Babylon\\Btcstaking\\V1\342\002!Ba" +
+      "bylon\\Btcstaking\\V1\\GPBMetadata\352\002\027Babylo" +
+      "n::Btcstaking::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13787,7 +13981,7 @@ public final class TxProto {
     internal_static_babylon_btcstaking_v1_MsgCreateFinalityProvider_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_MsgCreateFinalityProvider_descriptor,
-        new java.lang.String[] { "Addr", "Description", "Commission", "BtcPk", "Pop", });
+        new java.lang.String[] { "Addr", "Description", "Commission", "BtcPk", "Pop", "ConsumerId", });
     internal_static_babylon_btcstaking_v1_MsgCreateFinalityProviderResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_babylon_btcstaking_v1_MsgCreateFinalityProviderResponse_fieldAccessorTable = new

@@ -20,63 +20,25 @@ public final class ParamsProto {
 
     /**
      * <pre>
-     * submitter_portion is the portion of rewards that goes to submitter
+     * btc_staking_portion is the portion of rewards that goes to Finality
+     * Providers/delegations NOTE: the portion of each Finality
+     * Provider/delegation is calculated by using its voting power and finality
+     * provider's commission
      * </pre>
      *
-     * <code>string submitter_portion = 1 [json_name = "submitterPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-     * @return The submitterPortion.
-     */
-    java.lang.String getSubmitterPortion();
-    /**
-     * <pre>
-     * submitter_portion is the portion of rewards that goes to submitter
-     * </pre>
-     *
-     * <code>string submitter_portion = 1 [json_name = "submitterPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-     * @return The bytes for submitterPortion.
-     */
-    com.google.protobuf.ByteString
-        getSubmitterPortionBytes();
-
-    /**
-     * <pre>
-     * reporter_portion is the portion of rewards that goes to reporter
-     * </pre>
-     *
-     * <code>string reporter_portion = 2 [json_name = "reporterPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-     * @return The reporterPortion.
-     */
-    java.lang.String getReporterPortion();
-    /**
-     * <pre>
-     * reporter_portion is the portion of rewards that goes to reporter
-     * </pre>
-     *
-     * <code>string reporter_portion = 2 [json_name = "reporterPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-     * @return The bytes for reporterPortion.
-     */
-    com.google.protobuf.ByteString
-        getReporterPortionBytes();
-
-    /**
-     * <pre>
-     * btc_staking_portion is the portion of rewards that goes to Finality Providers/delegations
-     * NOTE: the portion of each Finality Provider/delegation is calculated by using its voting
-     * power and finality provider's commission
-     * </pre>
-     *
-     * <code>string btc_staking_portion = 3 [json_name = "btcStakingPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * <code>string btc_staking_portion = 1 [json_name = "btcStakingPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
      * @return The btcStakingPortion.
      */
     java.lang.String getBtcStakingPortion();
     /**
      * <pre>
-     * btc_staking_portion is the portion of rewards that goes to Finality Providers/delegations
-     * NOTE: the portion of each Finality Provider/delegation is calculated by using its voting
-     * power and finality provider's commission
+     * btc_staking_portion is the portion of rewards that goes to Finality
+     * Providers/delegations NOTE: the portion of each Finality
+     * Provider/delegation is calculated by using its voting power and finality
+     * provider's commission
      * </pre>
      *
-     * <code>string btc_staking_portion = 3 [json_name = "btcStakingPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * <code>string btc_staking_portion = 1 [json_name = "btcStakingPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
      * @return The bytes for btcStakingPortion.
      */
     com.google.protobuf.ByteString
@@ -86,8 +48,9 @@ public final class ParamsProto {
    * <pre>
    * Params defines the parameters for the module, including portions of rewards
    * distributed to each type of stakeholder. Note that sum of the portions should
-   * be strictly less than 1 so that the rest will go to Comet validators/delegations
-   * adapted from https://github.com/cosmos/cosmos-sdk/blob/release/v0.47.x/proto/cosmos/distribution/v1beta1/distribution.proto
+   * be strictly less than 1 so that the rest will go to Comet
+   * validators/delegations adapted from
+   * https://github.com/cosmos/cosmos-sdk/blob/release/v0.47.x/proto/cosmos/distribution/v1beta1/distribution.proto
    * </pre>
    *
    * Protobuf type {@code babylon.incentive.Params}
@@ -102,8 +65,6 @@ public final class ParamsProto {
       super(builder);
     }
     private Params() {
-      submitterPortion_ = "";
-      reporterPortion_ = "";
       btcStakingPortion_ = "";
     }
 
@@ -127,111 +88,18 @@ public final class ParamsProto {
               com.babylon.incentive.ParamsProto.Params.class, com.babylon.incentive.ParamsProto.Params.Builder.class);
     }
 
-    public static final int SUBMITTER_PORTION_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object submitterPortion_ = "";
-    /**
-     * <pre>
-     * submitter_portion is the portion of rewards that goes to submitter
-     * </pre>
-     *
-     * <code>string submitter_portion = 1 [json_name = "submitterPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-     * @return The submitterPortion.
-     */
-    @java.lang.Override
-    public java.lang.String getSubmitterPortion() {
-      java.lang.Object ref = submitterPortion_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        submitterPortion_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * submitter_portion is the portion of rewards that goes to submitter
-     * </pre>
-     *
-     * <code>string submitter_portion = 1 [json_name = "submitterPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-     * @return The bytes for submitterPortion.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getSubmitterPortionBytes() {
-      java.lang.Object ref = submitterPortion_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        submitterPortion_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int REPORTER_PORTION_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object reporterPortion_ = "";
-    /**
-     * <pre>
-     * reporter_portion is the portion of rewards that goes to reporter
-     * </pre>
-     *
-     * <code>string reporter_portion = 2 [json_name = "reporterPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-     * @return The reporterPortion.
-     */
-    @java.lang.Override
-    public java.lang.String getReporterPortion() {
-      java.lang.Object ref = reporterPortion_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        reporterPortion_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * reporter_portion is the portion of rewards that goes to reporter
-     * </pre>
-     *
-     * <code>string reporter_portion = 2 [json_name = "reporterPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-     * @return The bytes for reporterPortion.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getReporterPortionBytes() {
-      java.lang.Object ref = reporterPortion_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        reporterPortion_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int BTC_STAKING_PORTION_FIELD_NUMBER = 3;
+    public static final int BTC_STAKING_PORTION_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object btcStakingPortion_ = "";
     /**
      * <pre>
-     * btc_staking_portion is the portion of rewards that goes to Finality Providers/delegations
-     * NOTE: the portion of each Finality Provider/delegation is calculated by using its voting
-     * power and finality provider's commission
+     * btc_staking_portion is the portion of rewards that goes to Finality
+     * Providers/delegations NOTE: the portion of each Finality
+     * Provider/delegation is calculated by using its voting power and finality
+     * provider's commission
      * </pre>
      *
-     * <code>string btc_staking_portion = 3 [json_name = "btcStakingPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * <code>string btc_staking_portion = 1 [json_name = "btcStakingPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
      * @return The btcStakingPortion.
      */
     @java.lang.Override
@@ -249,12 +117,13 @@ public final class ParamsProto {
     }
     /**
      * <pre>
-     * btc_staking_portion is the portion of rewards that goes to Finality Providers/delegations
-     * NOTE: the portion of each Finality Provider/delegation is calculated by using its voting
-     * power and finality provider's commission
+     * btc_staking_portion is the portion of rewards that goes to Finality
+     * Providers/delegations NOTE: the portion of each Finality
+     * Provider/delegation is calculated by using its voting power and finality
+     * provider's commission
      * </pre>
      *
-     * <code>string btc_staking_portion = 3 [json_name = "btcStakingPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * <code>string btc_staking_portion = 1 [json_name = "btcStakingPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
      * @return The bytes for btcStakingPortion.
      */
     @java.lang.Override
@@ -286,14 +155,8 @@ public final class ParamsProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(submitterPortion_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, submitterPortion_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reporterPortion_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, reporterPortion_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(btcStakingPortion_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, btcStakingPortion_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, btcStakingPortion_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -304,14 +167,8 @@ public final class ParamsProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(submitterPortion_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, submitterPortion_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reporterPortion_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, reporterPortion_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(btcStakingPortion_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, btcStakingPortion_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, btcStakingPortion_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -328,10 +185,6 @@ public final class ParamsProto {
       }
       com.babylon.incentive.ParamsProto.Params other = (com.babylon.incentive.ParamsProto.Params) obj;
 
-      if (!getSubmitterPortion()
-          .equals(other.getSubmitterPortion())) return false;
-      if (!getReporterPortion()
-          .equals(other.getReporterPortion())) return false;
       if (!getBtcStakingPortion()
           .equals(other.getBtcStakingPortion())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -345,10 +198,6 @@ public final class ParamsProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SUBMITTER_PORTION_FIELD_NUMBER;
-      hash = (53 * hash) + getSubmitterPortion().hashCode();
-      hash = (37 * hash) + REPORTER_PORTION_FIELD_NUMBER;
-      hash = (53 * hash) + getReporterPortion().hashCode();
       hash = (37 * hash) + BTC_STAKING_PORTION_FIELD_NUMBER;
       hash = (53 * hash) + getBtcStakingPortion().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -452,8 +301,9 @@ public final class ParamsProto {
      * <pre>
      * Params defines the parameters for the module, including portions of rewards
      * distributed to each type of stakeholder. Note that sum of the portions should
-     * be strictly less than 1 so that the rest will go to Comet validators/delegations
-     * adapted from https://github.com/cosmos/cosmos-sdk/blob/release/v0.47.x/proto/cosmos/distribution/v1beta1/distribution.proto
+     * be strictly less than 1 so that the rest will go to Comet
+     * validators/delegations adapted from
+     * https://github.com/cosmos/cosmos-sdk/blob/release/v0.47.x/proto/cosmos/distribution/v1beta1/distribution.proto
      * </pre>
      *
      * Protobuf type {@code babylon.incentive.Params}
@@ -489,8 +339,6 @@ public final class ParamsProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        submitterPortion_ = "";
-        reporterPortion_ = "";
         btcStakingPortion_ = "";
         return this;
       }
@@ -526,12 +374,6 @@ public final class ParamsProto {
       private void buildPartial0(com.babylon.incentive.ParamsProto.Params result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.submitterPortion_ = submitterPortion_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.reporterPortion_ = reporterPortion_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.btcStakingPortion_ = btcStakingPortion_;
         }
       }
@@ -580,19 +422,9 @@ public final class ParamsProto {
 
       public Builder mergeFrom(com.babylon.incentive.ParamsProto.Params other) {
         if (other == com.babylon.incentive.ParamsProto.Params.getDefaultInstance()) return this;
-        if (!other.getSubmitterPortion().isEmpty()) {
-          submitterPortion_ = other.submitterPortion_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getReporterPortion().isEmpty()) {
-          reporterPortion_ = other.reporterPortion_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
         if (!other.getBtcStakingPortion().isEmpty()) {
           btcStakingPortion_ = other.btcStakingPortion_;
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -622,20 +454,10 @@ public final class ParamsProto {
                 done = true;
                 break;
               case 10: {
-                submitterPortion_ = input.readStringRequireUtf8();
+                btcStakingPortion_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
-              case 18: {
-                reporterPortion_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                btcStakingPortion_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -653,199 +475,16 @@ public final class ParamsProto {
       }
       private int bitField0_;
 
-      private java.lang.Object submitterPortion_ = "";
-      /**
-       * <pre>
-       * submitter_portion is the portion of rewards that goes to submitter
-       * </pre>
-       *
-       * <code>string submitter_portion = 1 [json_name = "submitterPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @return The submitterPortion.
-       */
-      public java.lang.String getSubmitterPortion() {
-        java.lang.Object ref = submitterPortion_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          submitterPortion_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * submitter_portion is the portion of rewards that goes to submitter
-       * </pre>
-       *
-       * <code>string submitter_portion = 1 [json_name = "submitterPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @return The bytes for submitterPortion.
-       */
-      public com.google.protobuf.ByteString
-          getSubmitterPortionBytes() {
-        java.lang.Object ref = submitterPortion_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          submitterPortion_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * submitter_portion is the portion of rewards that goes to submitter
-       * </pre>
-       *
-       * <code>string submitter_portion = 1 [json_name = "submitterPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @param value The submitterPortion to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSubmitterPortion(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        submitterPortion_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * submitter_portion is the portion of rewards that goes to submitter
-       * </pre>
-       *
-       * <code>string submitter_portion = 1 [json_name = "submitterPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSubmitterPortion() {
-        submitterPortion_ = getDefaultInstance().getSubmitterPortion();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * submitter_portion is the portion of rewards that goes to submitter
-       * </pre>
-       *
-       * <code>string submitter_portion = 1 [json_name = "submitterPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @param value The bytes for submitterPortion to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSubmitterPortionBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        submitterPortion_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object reporterPortion_ = "";
-      /**
-       * <pre>
-       * reporter_portion is the portion of rewards that goes to reporter
-       * </pre>
-       *
-       * <code>string reporter_portion = 2 [json_name = "reporterPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @return The reporterPortion.
-       */
-      public java.lang.String getReporterPortion() {
-        java.lang.Object ref = reporterPortion_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          reporterPortion_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * reporter_portion is the portion of rewards that goes to reporter
-       * </pre>
-       *
-       * <code>string reporter_portion = 2 [json_name = "reporterPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @return The bytes for reporterPortion.
-       */
-      public com.google.protobuf.ByteString
-          getReporterPortionBytes() {
-        java.lang.Object ref = reporterPortion_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          reporterPortion_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * reporter_portion is the portion of rewards that goes to reporter
-       * </pre>
-       *
-       * <code>string reporter_portion = 2 [json_name = "reporterPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @param value The reporterPortion to set.
-       * @return This builder for chaining.
-       */
-      public Builder setReporterPortion(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        reporterPortion_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * reporter_portion is the portion of rewards that goes to reporter
-       * </pre>
-       *
-       * <code>string reporter_portion = 2 [json_name = "reporterPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearReporterPortion() {
-        reporterPortion_ = getDefaultInstance().getReporterPortion();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * reporter_portion is the portion of rewards that goes to reporter
-       * </pre>
-       *
-       * <code>string reporter_portion = 2 [json_name = "reporterPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
-       * @param value The bytes for reporterPortion to set.
-       * @return This builder for chaining.
-       */
-      public Builder setReporterPortionBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        reporterPortion_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object btcStakingPortion_ = "";
       /**
        * <pre>
-       * btc_staking_portion is the portion of rewards that goes to Finality Providers/delegations
-       * NOTE: the portion of each Finality Provider/delegation is calculated by using its voting
-       * power and finality provider's commission
+       * btc_staking_portion is the portion of rewards that goes to Finality
+       * Providers/delegations NOTE: the portion of each Finality
+       * Provider/delegation is calculated by using its voting power and finality
+       * provider's commission
        * </pre>
        *
-       * <code>string btc_staking_portion = 3 [json_name = "btcStakingPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string btc_staking_portion = 1 [json_name = "btcStakingPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @return The btcStakingPortion.
        */
       public java.lang.String getBtcStakingPortion() {
@@ -862,12 +501,13 @@ public final class ParamsProto {
       }
       /**
        * <pre>
-       * btc_staking_portion is the portion of rewards that goes to Finality Providers/delegations
-       * NOTE: the portion of each Finality Provider/delegation is calculated by using its voting
-       * power and finality provider's commission
+       * btc_staking_portion is the portion of rewards that goes to Finality
+       * Providers/delegations NOTE: the portion of each Finality
+       * Provider/delegation is calculated by using its voting power and finality
+       * provider's commission
        * </pre>
        *
-       * <code>string btc_staking_portion = 3 [json_name = "btcStakingPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string btc_staking_portion = 1 [json_name = "btcStakingPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @return The bytes for btcStakingPortion.
        */
       public com.google.protobuf.ByteString
@@ -885,12 +525,13 @@ public final class ParamsProto {
       }
       /**
        * <pre>
-       * btc_staking_portion is the portion of rewards that goes to Finality Providers/delegations
-       * NOTE: the portion of each Finality Provider/delegation is calculated by using its voting
-       * power and finality provider's commission
+       * btc_staking_portion is the portion of rewards that goes to Finality
+       * Providers/delegations NOTE: the portion of each Finality
+       * Provider/delegation is calculated by using its voting power and finality
+       * provider's commission
        * </pre>
        *
-       * <code>string btc_staking_portion = 3 [json_name = "btcStakingPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string btc_staking_portion = 1 [json_name = "btcStakingPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @param value The btcStakingPortion to set.
        * @return This builder for chaining.
        */
@@ -898,34 +539,36 @@ public final class ParamsProto {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         btcStakingPortion_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * btc_staking_portion is the portion of rewards that goes to Finality Providers/delegations
-       * NOTE: the portion of each Finality Provider/delegation is calculated by using its voting
-       * power and finality provider's commission
+       * btc_staking_portion is the portion of rewards that goes to Finality
+       * Providers/delegations NOTE: the portion of each Finality
+       * Provider/delegation is calculated by using its voting power and finality
+       * provider's commission
        * </pre>
        *
-       * <code>string btc_staking_portion = 3 [json_name = "btcStakingPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string btc_staking_portion = 1 [json_name = "btcStakingPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @return This builder for chaining.
        */
       public Builder clearBtcStakingPortion() {
         btcStakingPortion_ = getDefaultInstance().getBtcStakingPortion();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * btc_staking_portion is the portion of rewards that goes to Finality Providers/delegations
-       * NOTE: the portion of each Finality Provider/delegation is calculated by using its voting
-       * power and finality provider's commission
+       * btc_staking_portion is the portion of rewards that goes to Finality
+       * Providers/delegations NOTE: the portion of each Finality
+       * Provider/delegation is calculated by using its voting power and finality
+       * provider's commission
        * </pre>
        *
-       * <code>string btc_staking_portion = 3 [json_name = "btcStakingPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string btc_staking_portion = 1 [json_name = "btcStakingPortion", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "cosmossdk.io/math.LegacyDec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
        * @param value The bytes for btcStakingPortion to set.
        * @return This builder for chaining.
        */
@@ -934,7 +577,7 @@ public final class ParamsProto {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         btcStakingPortion_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1018,20 +661,15 @@ public final class ParamsProto {
     java.lang.String[] descriptorData = {
       "\n\036babylon/incentive/params.proto\022\021babylo" +
       "n.incentive\032\024gogoproto/gogo.proto\032\031cosmo" +
-      "s_proto/cosmos.proto\"\257\002\n\006Params\022^\n\021submi" +
-      "tter_portion\030\001 \001(\tB1\310\336\037\000\332\336\037\033cosmossdk.io" +
-      "/math.LegacyDec\322\264-\ncosmos.DecR\020submitter" +
-      "Portion\022\\\n\020reporter_portion\030\002 \001(\tB1\310\336\037\000\332" +
-      "\336\037\033cosmossdk.io/math.LegacyDec\322\264-\ncosmos" +
-      ".DecR\017reporterPortion\022a\n\023btc_staking_por" +
-      "tion\030\003 \001(\tB1\310\336\037\000\332\336\037\033cosmossdk.io/math.Le" +
-      "gacyDec\322\264-\ncosmos.DecR\021btcStakingPortion" +
-      ":\004\230\240\037\000B\274\001\n\025com.babylon.incentiveB\013Params" +
-      "ProtoZ3github.com/babylonlabs-io/babylon" +
-      "/x/incentive/types\242\002\003BIX\252\002\021Babylon.Incen" +
-      "tive\312\002\021Babylon\\Incentive\342\002\035Babylon\\Incen" +
-      "tive\\GPBMetadata\352\002\022Babylon::Incentiveb\006p" +
-      "roto3"
+      "s_proto/cosmos.proto\"q\n\006Params\022a\n\023btc_st" +
+      "aking_portion\030\001 \001(\tB1\310\336\037\000\332\336\037\033cosmossdk.i" +
+      "o/math.LegacyDec\322\264-\ncosmos.DecR\021btcStaki" +
+      "ngPortion:\004\230\240\037\000B\274\001\n\025com.babylon.incentiv" +
+      "eB\013ParamsProtoZ3github.com/babylonlabs-i" +
+      "o/babylon/x/incentive/types\242\002\003BIX\252\002\021Baby" +
+      "lon.Incentive\312\002\021Babylon\\Incentive\342\002\035Baby" +
+      "lon\\Incentive\\GPBMetadata\352\002\022Babylon::Inc" +
+      "entiveb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1044,7 +682,7 @@ public final class ParamsProto {
     internal_static_babylon_incentive_Params_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_incentive_Params_descriptor,
-        new java.lang.String[] { "SubmitterPortion", "ReporterPortion", "BtcStakingPortion", });
+        new java.lang.String[] { "BtcStakingPortion", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.cosmos_proto.CosmosProto.scalar);

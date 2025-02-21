@@ -211,6 +211,22 @@ struct Babylon_Epoching_V1_QueuedMessage {
     set {_uniqueStorage()._msg = .msgCancelUnbondingDelegation(newValue)}
   }
 
+  var msgEditValidator: Cosmos_Staking_V1beta1_MsgEditValidator {
+    get {
+      if case .msgEditValidator(let v)? = _storage._msg {return v}
+      return Cosmos_Staking_V1beta1_MsgEditValidator()
+    }
+    set {_uniqueStorage()._msg = .msgEditValidator(newValue)}
+  }
+
+  var msgUpdateParams: Cosmos_Staking_V1beta1_MsgUpdateParams {
+    get {
+      if case .msgUpdateParams(let v)? = _storage._msg {return v}
+      return Cosmos_Staking_V1beta1_MsgUpdateParams()
+    }
+    set {_uniqueStorage()._msg = .msgUpdateParams(newValue)}
+  }
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   /// msg is the actual message that is sent by a user and is queued by the
@@ -221,6 +237,8 @@ struct Babylon_Epoching_V1_QueuedMessage {
     case msgUndelegate(Cosmos_Staking_V1beta1_MsgUndelegate)
     case msgBeginRedelegate(Cosmos_Staking_V1beta1_MsgBeginRedelegate)
     case msgCancelUnbondingDelegation(Cosmos_Staking_V1beta1_MsgCancelUnbondingDelegation)
+    case msgEditValidator(Cosmos_Staking_V1beta1_MsgEditValidator)
+    case msgUpdateParams(Cosmos_Staking_V1beta1_MsgUpdateParams)
 
   #if !swift(>=4.1)
     static func ==(lhs: Babylon_Epoching_V1_QueuedMessage.OneOf_Msg, rhs: Babylon_Epoching_V1_QueuedMessage.OneOf_Msg) -> Bool {
@@ -246,6 +264,14 @@ struct Babylon_Epoching_V1_QueuedMessage {
       }()
       case (.msgCancelUnbondingDelegation, .msgCancelUnbondingDelegation): return {
         guard case .msgCancelUnbondingDelegation(let l) = lhs, case .msgCancelUnbondingDelegation(let r) = rhs else { preconditionFailure() }
+        return l == r
+      }()
+      case (.msgEditValidator, .msgEditValidator): return {
+        guard case .msgEditValidator(let l) = lhs, case .msgEditValidator(let r) = rhs else { preconditionFailure() }
+        return l == r
+      }()
+      case (.msgUpdateParams, .msgUpdateParams): return {
+        guard case .msgUpdateParams(let l) = lhs, case .msgUpdateParams(let r) = rhs else { preconditionFailure() }
         return l == r
       }()
       default: return false
@@ -477,6 +503,8 @@ extension Babylon_Epoching_V1_QueuedMessage: SwiftProtobuf.Message, SwiftProtobu
     7: .standard(proto: "msg_undelegate"),
     8: .standard(proto: "msg_begin_redelegate"),
     9: .standard(proto: "msg_cancel_unbonding_delegation"),
+    10: .standard(proto: "msg_edit_validator"),
+    11: .standard(proto: "msg_update_params"),
   ]
 
   fileprivate class _StorageClass {
@@ -583,6 +611,32 @@ extension Babylon_Epoching_V1_QueuedMessage: SwiftProtobuf.Message, SwiftProtobu
             _storage._msg = .msgCancelUnbondingDelegation(v)
           }
         }()
+        case 10: try {
+          var v: Cosmos_Staking_V1beta1_MsgEditValidator?
+          var hadOneofValue = false
+          if let current = _storage._msg {
+            hadOneofValue = true
+            if case .msgEditValidator(let m) = current {v = m}
+          }
+          try decoder.decodeSingularMessageField(value: &v)
+          if let v = v {
+            if hadOneofValue {try decoder.handleConflictingOneOf()}
+            _storage._msg = .msgEditValidator(v)
+          }
+        }()
+        case 11: try {
+          var v: Cosmos_Staking_V1beta1_MsgUpdateParams?
+          var hadOneofValue = false
+          if let current = _storage._msg {
+            hadOneofValue = true
+            if case .msgUpdateParams(let m) = current {v = m}
+          }
+          try decoder.decodeSingularMessageField(value: &v)
+          if let v = v {
+            if hadOneofValue {try decoder.handleConflictingOneOf()}
+            _storage._msg = .msgUpdateParams(v)
+          }
+        }()
         default: break
         }
       }
@@ -627,6 +681,14 @@ extension Babylon_Epoching_V1_QueuedMessage: SwiftProtobuf.Message, SwiftProtobu
       case .msgCancelUnbondingDelegation?: try {
         guard case .msgCancelUnbondingDelegation(let v)? = _storage._msg else { preconditionFailure() }
         try visitor.visitSingularMessageField(value: v, fieldNumber: 9)
+      }()
+      case .msgEditValidator?: try {
+        guard case .msgEditValidator(let v)? = _storage._msg else { preconditionFailure() }
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 10)
+      }()
+      case .msgUpdateParams?: try {
+        guard case .msgUpdateParams(let v)? = _storage._msg else { preconditionFailure() }
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 11)
       }()
       case nil: break
       }

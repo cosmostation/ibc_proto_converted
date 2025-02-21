@@ -22,22 +22,18 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 
 /// Params defines the parameters for the module, including portions of rewards
 /// distributed to each type of stakeholder. Note that sum of the portions should
-/// be strictly less than 1 so that the rest will go to Comet validators/delegations
-/// adapted from https://github.com/cosmos/cosmos-sdk/blob/release/v0.47.x/proto/cosmos/distribution/v1beta1/distribution.proto
+/// be strictly less than 1 so that the rest will go to Comet
+/// validators/delegations adapted from
+/// https://github.com/cosmos/cosmos-sdk/blob/release/v0.47.x/proto/cosmos/distribution/v1beta1/distribution.proto
 struct Babylon_Incentive_Params {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// submitter_portion is the portion of rewards that goes to submitter
-  var submitterPortion: String = String()
-
-  /// reporter_portion is the portion of rewards that goes to reporter
-  var reporterPortion: String = String()
-
-  /// btc_staking_portion is the portion of rewards that goes to Finality Providers/delegations
-  /// NOTE: the portion of each Finality Provider/delegation is calculated by using its voting
-  /// power and finality provider's commission
+  /// btc_staking_portion is the portion of rewards that goes to Finality
+  /// Providers/delegations NOTE: the portion of each Finality
+  /// Provider/delegation is calculated by using its voting power and finality
+  /// provider's commission
   var btcStakingPortion: String = String()
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
@@ -56,9 +52,7 @@ fileprivate let _protobuf_package = "babylon.incentive"
 extension Babylon_Incentive_Params: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".Params"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "submitter_portion"),
-    2: .standard(proto: "reporter_portion"),
-    3: .standard(proto: "btc_staking_portion"),
+    1: .standard(proto: "btc_staking_portion"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -67,30 +61,20 @@ extension Babylon_Incentive_Params: SwiftProtobuf.Message, SwiftProtobuf._Messag
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.submitterPortion) }()
-      case 2: try { try decoder.decodeSingularStringField(value: &self.reporterPortion) }()
-      case 3: try { try decoder.decodeSingularStringField(value: &self.btcStakingPortion) }()
+      case 1: try { try decoder.decodeSingularStringField(value: &self.btcStakingPortion) }()
       default: break
       }
     }
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.submitterPortion.isEmpty {
-      try visitor.visitSingularStringField(value: self.submitterPortion, fieldNumber: 1)
-    }
-    if !self.reporterPortion.isEmpty {
-      try visitor.visitSingularStringField(value: self.reporterPortion, fieldNumber: 2)
-    }
     if !self.btcStakingPortion.isEmpty {
-      try visitor.visitSingularStringField(value: self.btcStakingPortion, fieldNumber: 3)
+      try visitor.visitSingularStringField(value: self.btcStakingPortion, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Babylon_Incentive_Params, rhs: Babylon_Incentive_Params) -> Bool {
-    if lhs.submitterPortion != rhs.submitterPortion {return false}
-    if lhs.reporterPortion != rhs.reporterPortion {return false}
     if lhs.btcStakingPortion != rhs.btcStakingPortion {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

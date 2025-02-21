@@ -1542,6 +1542,36 @@ public final class EpochingProto {
      */
     com.cosmos.staking.v1beta1.TxProto.MsgCancelUnbondingDelegationOrBuilder getMsgCancelUnbondingDelegationOrBuilder();
 
+    /**
+     * <code>.cosmos.staking.v1beta1.MsgEditValidator msg_edit_validator = 10 [json_name = "msgEditValidator"];</code>
+     * @return Whether the msgEditValidator field is set.
+     */
+    boolean hasMsgEditValidator();
+    /**
+     * <code>.cosmos.staking.v1beta1.MsgEditValidator msg_edit_validator = 10 [json_name = "msgEditValidator"];</code>
+     * @return The msgEditValidator.
+     */
+    com.cosmos.staking.v1beta1.TxProto.MsgEditValidator getMsgEditValidator();
+    /**
+     * <code>.cosmos.staking.v1beta1.MsgEditValidator msg_edit_validator = 10 [json_name = "msgEditValidator"];</code>
+     */
+    com.cosmos.staking.v1beta1.TxProto.MsgEditValidatorOrBuilder getMsgEditValidatorOrBuilder();
+
+    /**
+     * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg_update_params = 11 [json_name = "msgUpdateParams"];</code>
+     * @return Whether the msgUpdateParams field is set.
+     */
+    boolean hasMsgUpdateParams();
+    /**
+     * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg_update_params = 11 [json_name = "msgUpdateParams"];</code>
+     * @return The msgUpdateParams.
+     */
+    com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams getMsgUpdateParams();
+    /**
+     * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg_update_params = 11 [json_name = "msgUpdateParams"];</code>
+     */
+    com.cosmos.staking.v1beta1.TxProto.MsgUpdateParamsOrBuilder getMsgUpdateParamsOrBuilder();
+
     com.babylon.epoching.v1.EpochingProto.QueuedMessage.MsgCase getMsgCase();
   }
   /**
@@ -1597,6 +1627,8 @@ public final class EpochingProto {
       MSG_UNDELEGATE(7),
       MSG_BEGIN_REDELEGATE(8),
       MSG_CANCEL_UNBONDING_DELEGATION(9),
+      MSG_EDIT_VALIDATOR(10),
+      MSG_UPDATE_PARAMS(11),
       MSG_NOT_SET(0);
       private final int value;
       private MsgCase(int value) {
@@ -1619,6 +1651,8 @@ public final class EpochingProto {
           case 7: return MSG_UNDELEGATE;
           case 8: return MSG_BEGIN_REDELEGATE;
           case 9: return MSG_CANCEL_UNBONDING_DELEGATION;
+          case 10: return MSG_EDIT_VALIDATOR;
+          case 11: return MSG_UPDATE_PARAMS;
           case 0: return MSG_NOT_SET;
           default: return null;
         }
@@ -1872,6 +1906,68 @@ public final class EpochingProto {
       return com.cosmos.staking.v1beta1.TxProto.MsgCancelUnbondingDelegation.getDefaultInstance();
     }
 
+    public static final int MSG_EDIT_VALIDATOR_FIELD_NUMBER = 10;
+    /**
+     * <code>.cosmos.staking.v1beta1.MsgEditValidator msg_edit_validator = 10 [json_name = "msgEditValidator"];</code>
+     * @return Whether the msgEditValidator field is set.
+     */
+    @java.lang.Override
+    public boolean hasMsgEditValidator() {
+      return msgCase_ == 10;
+    }
+    /**
+     * <code>.cosmos.staking.v1beta1.MsgEditValidator msg_edit_validator = 10 [json_name = "msgEditValidator"];</code>
+     * @return The msgEditValidator.
+     */
+    @java.lang.Override
+    public com.cosmos.staking.v1beta1.TxProto.MsgEditValidator getMsgEditValidator() {
+      if (msgCase_ == 10) {
+         return (com.cosmos.staking.v1beta1.TxProto.MsgEditValidator) msg_;
+      }
+      return com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.getDefaultInstance();
+    }
+    /**
+     * <code>.cosmos.staking.v1beta1.MsgEditValidator msg_edit_validator = 10 [json_name = "msgEditValidator"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.staking.v1beta1.TxProto.MsgEditValidatorOrBuilder getMsgEditValidatorOrBuilder() {
+      if (msgCase_ == 10) {
+         return (com.cosmos.staking.v1beta1.TxProto.MsgEditValidator) msg_;
+      }
+      return com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.getDefaultInstance();
+    }
+
+    public static final int MSG_UPDATE_PARAMS_FIELD_NUMBER = 11;
+    /**
+     * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg_update_params = 11 [json_name = "msgUpdateParams"];</code>
+     * @return Whether the msgUpdateParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasMsgUpdateParams() {
+      return msgCase_ == 11;
+    }
+    /**
+     * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg_update_params = 11 [json_name = "msgUpdateParams"];</code>
+     * @return The msgUpdateParams.
+     */
+    @java.lang.Override
+    public com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams getMsgUpdateParams() {
+      if (msgCase_ == 11) {
+         return (com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams) msg_;
+      }
+      return com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.getDefaultInstance();
+    }
+    /**
+     * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg_update_params = 11 [json_name = "msgUpdateParams"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.staking.v1beta1.TxProto.MsgUpdateParamsOrBuilder getMsgUpdateParamsOrBuilder() {
+      if (msgCase_ == 11) {
+         return (com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams) msg_;
+      }
+      return com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1912,6 +2008,12 @@ public final class EpochingProto {
       }
       if (msgCase_ == 9) {
         output.writeMessage(9, (com.cosmos.staking.v1beta1.TxProto.MsgCancelUnbondingDelegation) msg_);
+      }
+      if (msgCase_ == 10) {
+        output.writeMessage(10, (com.cosmos.staking.v1beta1.TxProto.MsgEditValidator) msg_);
+      }
+      if (msgCase_ == 11) {
+        output.writeMessage(11, (com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams) msg_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1957,6 +2059,14 @@ public final class EpochingProto {
       if (msgCase_ == 9) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, (com.cosmos.staking.v1beta1.TxProto.MsgCancelUnbondingDelegation) msg_);
+      }
+      if (msgCase_ == 10) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, (com.cosmos.staking.v1beta1.TxProto.MsgEditValidator) msg_);
+      }
+      if (msgCase_ == 11) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, (com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams) msg_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2006,6 +2116,14 @@ public final class EpochingProto {
           if (!getMsgCancelUnbondingDelegation()
               .equals(other.getMsgCancelUnbondingDelegation())) return false;
           break;
+        case 10:
+          if (!getMsgEditValidator()
+              .equals(other.getMsgEditValidator())) return false;
+          break;
+        case 11:
+          if (!getMsgUpdateParams()
+              .equals(other.getMsgUpdateParams())) return false;
+          break;
         case 0:
         default:
       }
@@ -2051,6 +2169,14 @@ public final class EpochingProto {
         case 9:
           hash = (37 * hash) + MSG_CANCEL_UNBONDING_DELEGATION_FIELD_NUMBER;
           hash = (53 * hash) + getMsgCancelUnbondingDelegation().hashCode();
+          break;
+        case 10:
+          hash = (37 * hash) + MSG_EDIT_VALIDATOR_FIELD_NUMBER;
+          hash = (53 * hash) + getMsgEditValidator().hashCode();
+          break;
+        case 11:
+          hash = (37 * hash) + MSG_UPDATE_PARAMS_FIELD_NUMBER;
+          hash = (53 * hash) + getMsgUpdateParams().hashCode();
           break;
         case 0:
         default:
@@ -2214,6 +2340,12 @@ public final class EpochingProto {
         if (msgCancelUnbondingDelegationBuilder_ != null) {
           msgCancelUnbondingDelegationBuilder_.clear();
         }
+        if (msgEditValidatorBuilder_ != null) {
+          msgEditValidatorBuilder_.clear();
+        }
+        if (msgUpdateParamsBuilder_ != null) {
+          msgUpdateParamsBuilder_.clear();
+        }
         msgCase_ = 0;
         msg_ = null;
         return this;
@@ -2288,6 +2420,14 @@ public final class EpochingProto {
         if (msgCase_ == 9 &&
             msgCancelUnbondingDelegationBuilder_ != null) {
           result.msg_ = msgCancelUnbondingDelegationBuilder_.build();
+        }
+        if (msgCase_ == 10 &&
+            msgEditValidatorBuilder_ != null) {
+          result.msg_ = msgEditValidatorBuilder_.build();
+        }
+        if (msgCase_ == 11 &&
+            msgUpdateParamsBuilder_ != null) {
+          result.msg_ = msgUpdateParamsBuilder_.build();
         }
       }
 
@@ -2366,6 +2506,14 @@ public final class EpochingProto {
           }
           case MSG_CANCEL_UNBONDING_DELEGATION: {
             mergeMsgCancelUnbondingDelegation(other.getMsgCancelUnbondingDelegation());
+            break;
+          }
+          case MSG_EDIT_VALIDATOR: {
+            mergeMsgEditValidator(other.getMsgEditValidator());
+            break;
+          }
+          case MSG_UPDATE_PARAMS: {
+            mergeMsgUpdateParams(other.getMsgUpdateParams());
             break;
           }
           case MSG_NOT_SET: {
@@ -2455,6 +2603,20 @@ public final class EpochingProto {
                 msgCase_ = 9;
                 break;
               } // case 74
+              case 82: {
+                input.readMessage(
+                    getMsgEditValidatorFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                msgCase_ = 10;
+                break;
+              } // case 82
+              case 90: {
+                input.readMessage(
+                    getMsgUpdateParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                msgCase_ = 11;
+                break;
+              } // case 90
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3482,6 +3644,290 @@ public final class EpochingProto {
         msgCase_ = 9;
         onChanged();
         return msgCancelUnbondingDelegationBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.staking.v1beta1.TxProto.MsgEditValidator, com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.Builder, com.cosmos.staking.v1beta1.TxProto.MsgEditValidatorOrBuilder> msgEditValidatorBuilder_;
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgEditValidator msg_edit_validator = 10 [json_name = "msgEditValidator"];</code>
+       * @return Whether the msgEditValidator field is set.
+       */
+      @java.lang.Override
+      public boolean hasMsgEditValidator() {
+        return msgCase_ == 10;
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgEditValidator msg_edit_validator = 10 [json_name = "msgEditValidator"];</code>
+       * @return The msgEditValidator.
+       */
+      @java.lang.Override
+      public com.cosmos.staking.v1beta1.TxProto.MsgEditValidator getMsgEditValidator() {
+        if (msgEditValidatorBuilder_ == null) {
+          if (msgCase_ == 10) {
+            return (com.cosmos.staking.v1beta1.TxProto.MsgEditValidator) msg_;
+          }
+          return com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.getDefaultInstance();
+        } else {
+          if (msgCase_ == 10) {
+            return msgEditValidatorBuilder_.getMessage();
+          }
+          return com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgEditValidator msg_edit_validator = 10 [json_name = "msgEditValidator"];</code>
+       */
+      public Builder setMsgEditValidator(com.cosmos.staking.v1beta1.TxProto.MsgEditValidator value) {
+        if (msgEditValidatorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          msg_ = value;
+          onChanged();
+        } else {
+          msgEditValidatorBuilder_.setMessage(value);
+        }
+        msgCase_ = 10;
+        return this;
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgEditValidator msg_edit_validator = 10 [json_name = "msgEditValidator"];</code>
+       */
+      public Builder setMsgEditValidator(
+          com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.Builder builderForValue) {
+        if (msgEditValidatorBuilder_ == null) {
+          msg_ = builderForValue.build();
+          onChanged();
+        } else {
+          msgEditValidatorBuilder_.setMessage(builderForValue.build());
+        }
+        msgCase_ = 10;
+        return this;
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgEditValidator msg_edit_validator = 10 [json_name = "msgEditValidator"];</code>
+       */
+      public Builder mergeMsgEditValidator(com.cosmos.staking.v1beta1.TxProto.MsgEditValidator value) {
+        if (msgEditValidatorBuilder_ == null) {
+          if (msgCase_ == 10 &&
+              msg_ != com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.getDefaultInstance()) {
+            msg_ = com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.newBuilder((com.cosmos.staking.v1beta1.TxProto.MsgEditValidator) msg_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            msg_ = value;
+          }
+          onChanged();
+        } else {
+          if (msgCase_ == 10) {
+            msgEditValidatorBuilder_.mergeFrom(value);
+          } else {
+            msgEditValidatorBuilder_.setMessage(value);
+          }
+        }
+        msgCase_ = 10;
+        return this;
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgEditValidator msg_edit_validator = 10 [json_name = "msgEditValidator"];</code>
+       */
+      public Builder clearMsgEditValidator() {
+        if (msgEditValidatorBuilder_ == null) {
+          if (msgCase_ == 10) {
+            msgCase_ = 0;
+            msg_ = null;
+            onChanged();
+          }
+        } else {
+          if (msgCase_ == 10) {
+            msgCase_ = 0;
+            msg_ = null;
+          }
+          msgEditValidatorBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgEditValidator msg_edit_validator = 10 [json_name = "msgEditValidator"];</code>
+       */
+      public com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.Builder getMsgEditValidatorBuilder() {
+        return getMsgEditValidatorFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgEditValidator msg_edit_validator = 10 [json_name = "msgEditValidator"];</code>
+       */
+      @java.lang.Override
+      public com.cosmos.staking.v1beta1.TxProto.MsgEditValidatorOrBuilder getMsgEditValidatorOrBuilder() {
+        if ((msgCase_ == 10) && (msgEditValidatorBuilder_ != null)) {
+          return msgEditValidatorBuilder_.getMessageOrBuilder();
+        } else {
+          if (msgCase_ == 10) {
+            return (com.cosmos.staking.v1beta1.TxProto.MsgEditValidator) msg_;
+          }
+          return com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgEditValidator msg_edit_validator = 10 [json_name = "msgEditValidator"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.staking.v1beta1.TxProto.MsgEditValidator, com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.Builder, com.cosmos.staking.v1beta1.TxProto.MsgEditValidatorOrBuilder> 
+          getMsgEditValidatorFieldBuilder() {
+        if (msgEditValidatorBuilder_ == null) {
+          if (!(msgCase_ == 10)) {
+            msg_ = com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.getDefaultInstance();
+          }
+          msgEditValidatorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.staking.v1beta1.TxProto.MsgEditValidator, com.cosmos.staking.v1beta1.TxProto.MsgEditValidator.Builder, com.cosmos.staking.v1beta1.TxProto.MsgEditValidatorOrBuilder>(
+                  (com.cosmos.staking.v1beta1.TxProto.MsgEditValidator) msg_,
+                  getParentForChildren(),
+                  isClean());
+          msg_ = null;
+        }
+        msgCase_ = 10;
+        onChanged();
+        return msgEditValidatorBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams, com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.Builder, com.cosmos.staking.v1beta1.TxProto.MsgUpdateParamsOrBuilder> msgUpdateParamsBuilder_;
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg_update_params = 11 [json_name = "msgUpdateParams"];</code>
+       * @return Whether the msgUpdateParams field is set.
+       */
+      @java.lang.Override
+      public boolean hasMsgUpdateParams() {
+        return msgCase_ == 11;
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg_update_params = 11 [json_name = "msgUpdateParams"];</code>
+       * @return The msgUpdateParams.
+       */
+      @java.lang.Override
+      public com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams getMsgUpdateParams() {
+        if (msgUpdateParamsBuilder_ == null) {
+          if (msgCase_ == 11) {
+            return (com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams) msg_;
+          }
+          return com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.getDefaultInstance();
+        } else {
+          if (msgCase_ == 11) {
+            return msgUpdateParamsBuilder_.getMessage();
+          }
+          return com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg_update_params = 11 [json_name = "msgUpdateParams"];</code>
+       */
+      public Builder setMsgUpdateParams(com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams value) {
+        if (msgUpdateParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          msg_ = value;
+          onChanged();
+        } else {
+          msgUpdateParamsBuilder_.setMessage(value);
+        }
+        msgCase_ = 11;
+        return this;
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg_update_params = 11 [json_name = "msgUpdateParams"];</code>
+       */
+      public Builder setMsgUpdateParams(
+          com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.Builder builderForValue) {
+        if (msgUpdateParamsBuilder_ == null) {
+          msg_ = builderForValue.build();
+          onChanged();
+        } else {
+          msgUpdateParamsBuilder_.setMessage(builderForValue.build());
+        }
+        msgCase_ = 11;
+        return this;
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg_update_params = 11 [json_name = "msgUpdateParams"];</code>
+       */
+      public Builder mergeMsgUpdateParams(com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams value) {
+        if (msgUpdateParamsBuilder_ == null) {
+          if (msgCase_ == 11 &&
+              msg_ != com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.getDefaultInstance()) {
+            msg_ = com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.newBuilder((com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams) msg_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            msg_ = value;
+          }
+          onChanged();
+        } else {
+          if (msgCase_ == 11) {
+            msgUpdateParamsBuilder_.mergeFrom(value);
+          } else {
+            msgUpdateParamsBuilder_.setMessage(value);
+          }
+        }
+        msgCase_ = 11;
+        return this;
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg_update_params = 11 [json_name = "msgUpdateParams"];</code>
+       */
+      public Builder clearMsgUpdateParams() {
+        if (msgUpdateParamsBuilder_ == null) {
+          if (msgCase_ == 11) {
+            msgCase_ = 0;
+            msg_ = null;
+            onChanged();
+          }
+        } else {
+          if (msgCase_ == 11) {
+            msgCase_ = 0;
+            msg_ = null;
+          }
+          msgUpdateParamsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg_update_params = 11 [json_name = "msgUpdateParams"];</code>
+       */
+      public com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.Builder getMsgUpdateParamsBuilder() {
+        return getMsgUpdateParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg_update_params = 11 [json_name = "msgUpdateParams"];</code>
+       */
+      @java.lang.Override
+      public com.cosmos.staking.v1beta1.TxProto.MsgUpdateParamsOrBuilder getMsgUpdateParamsOrBuilder() {
+        if ((msgCase_ == 11) && (msgUpdateParamsBuilder_ != null)) {
+          return msgUpdateParamsBuilder_.getMessageOrBuilder();
+        } else {
+          if (msgCase_ == 11) {
+            return (com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams) msg_;
+          }
+          return com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.cosmos.staking.v1beta1.MsgUpdateParams msg_update_params = 11 [json_name = "msgUpdateParams"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams, com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.Builder, com.cosmos.staking.v1beta1.TxProto.MsgUpdateParamsOrBuilder> 
+          getMsgUpdateParamsFieldBuilder() {
+        if (msgUpdateParamsBuilder_ == null) {
+          if (!(msgCase_ == 11)) {
+            msg_ = com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.getDefaultInstance();
+          }
+          msgUpdateParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams, com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams.Builder, com.cosmos.staking.v1beta1.TxProto.MsgUpdateParamsOrBuilder>(
+                  (com.cosmos.staking.v1beta1.TxProto.MsgUpdateParams) msg_,
+                  getParentForChildren(),
+                  isClean());
+          msg_ = null;
+        }
+        msgCase_ = 11;
+        onChanged();
+        return msgUpdateParamsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7999,7 +8445,7 @@ public final class EpochingProto {
       "tobuf.TimestampB\004\220\337\037\001R\rlastBlockTime\022&\n\017" +
       "sealer_app_hash\030\005 \001(\014R\rsealerAppHash\022*\n\021" +
       "sealer_block_hash\030\006 \001(\014R\017sealerBlockHash" +
-      "\"\377\004\n\rQueuedMessage\022\023\n\005tx_id\030\001 \001(\014R\004txId\022" +
+      "\"\260\006\n\rQueuedMessage\022\023\n\005tx_id\030\001 \001(\014R\004txId\022" +
       "\025\n\006msg_id\030\002 \001(\014R\005msgId\022!\n\014block_height\030\003" +
       " \001(\004R\013blockHeight\022?\n\nblock_time\030\004 \001(\0132\032." +
       "google.protobuf.TimestampB\004\220\337\037\001R\tblockTi" +
@@ -8014,33 +8460,37 @@ public final class EpochingProto {
       "legateH\000R\022msgBeginRedelegate\022}\n\037msg_canc" +
       "el_unbonding_delegation\030\t \001(\01324.cosmos.s" +
       "taking.v1beta1.MsgCancelUnbondingDelegat" +
-      "ionH\000R\034msgCancelUnbondingDelegationB\005\n\003m" +
-      "sg\"\252\001\n\016ValStateUpdate\0224\n\005state\030\001 \001(\0162\036.b" +
-      "abylon.epoching.v1.BondStateR\005state\022!\n\014b" +
-      "lock_height\030\002 \001(\004R\013blockHeight\022?\n\nblock_" +
-      "time\030\003 \001(\0132\032.google.protobuf.TimestampB\004" +
-      "\220\337\037\001R\tblockTime\"o\n\022ValidatorLifecycle\022\031\n" +
-      "\010val_addr\030\001 \001(\tR\007valAddr\022>\n\010val_life\030\002 \003" +
-      "(\0132#.babylon.epoching.v1.ValStateUpdateR" +
-      "\007valLife\"\377\001\n\025DelegationStateUpdate\0224\n\005st" +
-      "ate\030\001 \001(\0162\036.babylon.epoching.v1.BondStat" +
-      "eR\005state\022\031\n\010val_addr\030\002 \001(\tR\007valAddr\0221\n\006a" +
-      "mount\030\003 \001(\0132\031.cosmos.base.v1beta1.CoinR\006" +
-      "amount\022!\n\014block_height\030\004 \001(\004R\013blockHeigh" +
-      "t\022?\n\nblock_time\030\005 \001(\0132\032.google.protobuf." +
-      "TimestampB\004\220\337\037\001R\tblockTime\"w\n\023Delegation" +
-      "Lifecycle\022\031\n\010del_addr\030\001 \001(\tR\007delAddr\022E\n\010" +
-      "del_life\030\002 \003(\0132*.babylon.epoching.v1.Del" +
-      "egationStateUpdateR\007delLife\"5\n\tValidator" +
-      "\022\022\n\004addr\030\001 \001(\014R\004addr\022\024\n\005power\030\002 \001(\003R\005pow" +
-      "er*N\n\tBondState\022\013\n\007CREATED\020\000\022\n\n\006BONDED\020\001" +
-      "\022\r\n\tUNBONDING\020\002\022\014\n\010UNBONDED\020\003\022\013\n\007REMOVED" +
-      "\020\004B\310\001\n\027com.babylon.epoching.v1B\rEpoching" +
-      "ProtoZ2github.com/babylonlabs-io/babylon" +
-      "/x/epoching/types\242\002\003BEX\252\002\023Babylon.Epochi" +
-      "ng.V1\312\002\023Babylon\\Epoching\\V1\342\002\037Babylon\\Ep" +
-      "oching\\V1\\GPBMetadata\352\002\025Babylon::Epochin" +
-      "g::V1b\006proto3"
+      "ionH\000R\034msgCancelUnbondingDelegation\022X\n\022m" +
+      "sg_edit_validator\030\n \001(\0132(.cosmos.staking" +
+      ".v1beta1.MsgEditValidatorH\000R\020msgEditVali" +
+      "dator\022U\n\021msg_update_params\030\013 \001(\0132\'.cosmo" +
+      "s.staking.v1beta1.MsgUpdateParamsH\000R\017msg" +
+      "UpdateParamsB\005\n\003msg\"\252\001\n\016ValStateUpdate\0224" +
+      "\n\005state\030\001 \001(\0162\036.babylon.epoching.v1.Bond" +
+      "StateR\005state\022!\n\014block_height\030\002 \001(\004R\013bloc" +
+      "kHeight\022?\n\nblock_time\030\003 \001(\0132\032.google.pro" +
+      "tobuf.TimestampB\004\220\337\037\001R\tblockTime\"o\n\022Vali" +
+      "datorLifecycle\022\031\n\010val_addr\030\001 \001(\tR\007valAdd" +
+      "r\022>\n\010val_life\030\002 \003(\0132#.babylon.epoching.v" +
+      "1.ValStateUpdateR\007valLife\"\377\001\n\025Delegation" +
+      "StateUpdate\0224\n\005state\030\001 \001(\0162\036.babylon.epo" +
+      "ching.v1.BondStateR\005state\022\031\n\010val_addr\030\002 " +
+      "\001(\tR\007valAddr\0221\n\006amount\030\003 \001(\0132\031.cosmos.ba" +
+      "se.v1beta1.CoinR\006amount\022!\n\014block_height\030" +
+      "\004 \001(\004R\013blockHeight\022?\n\nblock_time\030\005 \001(\0132\032" +
+      ".google.protobuf.TimestampB\004\220\337\037\001R\tblockT" +
+      "ime\"w\n\023DelegationLifecycle\022\031\n\010del_addr\030\001" +
+      " \001(\tR\007delAddr\022E\n\010del_life\030\002 \003(\0132*.babylo" +
+      "n.epoching.v1.DelegationStateUpdateR\007del" +
+      "Life\"5\n\tValidator\022\022\n\004addr\030\001 \001(\014R\004addr\022\024\n" +
+      "\005power\030\002 \001(\003R\005power*N\n\tBondState\022\013\n\007CREA" +
+      "TED\020\000\022\n\n\006BONDED\020\001\022\r\n\tUNBONDING\020\002\022\014\n\010UNBO" +
+      "NDED\020\003\022\013\n\007REMOVED\020\004B\310\001\n\027com.babylon.epoc" +
+      "hing.v1B\rEpochingProtoZ2github.com/babyl" +
+      "onlabs-io/babylon/x/epoching/types\242\002\003BEX" +
+      "\252\002\023Babylon.Epoching.V1\312\002\023Babylon\\Epochin" +
+      "g\\V1\342\002\037Babylon\\Epoching\\V1\\GPBMetadata\352\002" +
+      "\025Babylon::Epoching::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8061,7 +8511,7 @@ public final class EpochingProto {
     internal_static_babylon_epoching_v1_QueuedMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_epoching_v1_QueuedMessage_descriptor,
-        new java.lang.String[] { "TxId", "MsgId", "BlockHeight", "BlockTime", "MsgCreateValidator", "MsgDelegate", "MsgUndelegate", "MsgBeginRedelegate", "MsgCancelUnbondingDelegation", "Msg", });
+        new java.lang.String[] { "TxId", "MsgId", "BlockHeight", "BlockTime", "MsgCreateValidator", "MsgDelegate", "MsgUndelegate", "MsgBeginRedelegate", "MsgCancelUnbondingDelegation", "MsgEditValidator", "MsgUpdateParams", "Msg", });
     internal_static_babylon_epoching_v1_ValStateUpdate_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_babylon_epoching_v1_ValStateUpdate_fieldAccessorTable = new

@@ -14899,8 +14899,7 @@ public final class QueryProto {
       "\n$babylon/checkpointing/v1/query.proto\022\030" +
       "babylon.checkpointing.v1\032\024gogoproto/gogo" +
       ".proto\032\034google/api/annotations.proto\032\037go" +
-      "ogle/protobuf/timestamp.proto\032&babylon/c" +
-      "heckpointing/v1/bls_key.proto\032)babylon/c" +
+      "ogle/protobuf/timestamp.proto\032)babylon/c" +
       "heckpointing/v1/checkpoint.proto\032*cosmos" +
       "/base/query/v1beta1/pagination.proto\"\253\001\n" +
       "\035QueryRawCheckpointListRequest\022B\n\006status" +
@@ -15025,7 +15024,6 @@ public final class QueryProto {
           com.gogoproto.GogoProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
-          com.babylon.checkpointing.v1.BlsKeyProto.getDescriptor(),
           com.babylon.checkpointing.v1.CheckpointProto.getDescriptor(),
           com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor(),
         });
@@ -15153,7 +15151,6 @@ public final class QueryProto {
     com.gogoproto.GogoProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
-    com.babylon.checkpointing.v1.BlsKeyProto.getDescriptor();
     com.babylon.checkpointing.v1.CheckpointProto.getDescriptor();
     com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor();
   }

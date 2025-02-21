@@ -2239,6 +2239,1250 @@ public final class QueryProto {
 
   }
 
+  public interface QueryParamsByBTCHeightRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.QueryParamsByBTCHeightRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 btc_height = 1 [json_name = "btcHeight"];</code>
+     * @return The btcHeight.
+     */
+    int getBtcHeight();
+  }
+  /**
+   * <pre>
+   * QueryParamsByBTCHeightRequest is request type for the Query/ParamsByBTCHeight RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code babylon.btcstaking.v1.QueryParamsByBTCHeightRequest}
+   */
+  public static final class QueryParamsByBTCHeightRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.QueryParamsByBTCHeightRequest)
+      QueryParamsByBTCHeightRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsByBTCHeightRequest.newBuilder() to construct.
+    private QueryParamsByBTCHeightRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsByBTCHeightRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsByBTCHeightRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryParamsByBTCHeightRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryParamsByBTCHeightRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest.class, com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest.Builder.class);
+    }
+
+    public static final int BTC_HEIGHT_FIELD_NUMBER = 1;
+    private int btcHeight_ = 0;
+    /**
+     * <code>uint32 btc_height = 1 [json_name = "btcHeight"];</code>
+     * @return The btcHeight.
+     */
+    @java.lang.Override
+    public int getBtcHeight() {
+      return btcHeight_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (btcHeight_ != 0) {
+        output.writeUInt32(1, btcHeight_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (btcHeight_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, btcHeight_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest)) {
+        return super.equals(obj);
+      }
+      com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest other = (com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest) obj;
+
+      if (getBtcHeight()
+          != other.getBtcHeight()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BTC_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getBtcHeight();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsByBTCHeightRequest is request type for the Query/ParamsByBTCHeight RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code babylon.btcstaking.v1.QueryParamsByBTCHeightRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.QueryParamsByBTCHeightRequest)
+        com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryParamsByBTCHeightRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryParamsByBTCHeightRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest.class, com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest.Builder.class);
+      }
+
+      // Construct using com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        btcHeight_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryParamsByBTCHeightRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest getDefaultInstanceForType() {
+        return com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest build() {
+        com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest buildPartial() {
+        com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest result = new com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.btcHeight_ = btcHeight_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest) {
+          return mergeFrom((com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest other) {
+        if (other == com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest.getDefaultInstance()) return this;
+        if (other.getBtcHeight() != 0) {
+          setBtcHeight(other.getBtcHeight());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                btcHeight_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int btcHeight_ ;
+      /**
+       * <code>uint32 btc_height = 1 [json_name = "btcHeight"];</code>
+       * @return The btcHeight.
+       */
+      @java.lang.Override
+      public int getBtcHeight() {
+        return btcHeight_;
+      }
+      /**
+       * <code>uint32 btc_height = 1 [json_name = "btcHeight"];</code>
+       * @param value The btcHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBtcHeight(int value) {
+
+        btcHeight_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 btc_height = 1 [json_name = "btcHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBtcHeight() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        btcHeight_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.QueryParamsByBTCHeightRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.QueryParamsByBTCHeightRequest)
+    private static final com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest();
+    }
+
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsByBTCHeightRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsByBTCHeightRequest>() {
+      @java.lang.Override
+      public QueryParamsByBTCHeightRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsByBTCHeightRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsByBTCHeightRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsByBTCHeightResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.QueryParamsByBTCHeightResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.babylon.btcstaking.v1.ParamsProto.Params getParams();
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.babylon.btcstaking.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <pre>
+     * version is the version of the params for the given BTC height
+     * </pre>
+     *
+     * <code>uint32 version = 2 [json_name = "version"];</code>
+     * @return The version.
+     */
+    int getVersion();
+  }
+  /**
+   * <pre>
+   * QueryParamsByBTCHeightResponse is response type for the Query/QueryParamsByBTCHeightResponse RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code babylon.btcstaking.v1.QueryParamsByBTCHeightResponse}
+   */
+  public static final class QueryParamsByBTCHeightResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.QueryParamsByBTCHeightResponse)
+      QueryParamsByBTCHeightResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsByBTCHeightResponse.newBuilder() to construct.
+    private QueryParamsByBTCHeightResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsByBTCHeightResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsByBTCHeightResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryParamsByBTCHeightResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryParamsByBTCHeightResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse.class, com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.babylon.btcstaking.v1.ParamsProto.Params params_;
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.ParamsProto.Params getParams() {
+      return params_ == null ? com.babylon.btcstaking.v1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.babylon.btcstaking.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.babylon.btcstaking.v1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 2;
+    private int version_ = 0;
+    /**
+     * <pre>
+     * version is the version of the params for the given BTC height
+     * </pre>
+     *
+     * <code>uint32 version = 2 [json_name = "version"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public int getVersion() {
+      return version_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      if (version_ != 0) {
+        output.writeUInt32(2, version_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      if (version_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, version_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse)) {
+        return super.equals(obj);
+      }
+      com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse other = (com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (getVersion()
+          != other.getVersion()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (37 * hash) + VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getVersion();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsByBTCHeightResponse is response type for the Query/QueryParamsByBTCHeightResponse RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code babylon.btcstaking.v1.QueryParamsByBTCHeightResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.QueryParamsByBTCHeightResponse)
+        com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryParamsByBTCHeightResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryParamsByBTCHeightResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse.class, com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse.Builder.class);
+      }
+
+      // Construct using com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        version_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.btcstaking.v1.QueryProto.internal_static_babylon_btcstaking_v1_QueryParamsByBTCHeightResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse getDefaultInstanceForType() {
+        return com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse build() {
+        com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse buildPartial() {
+        com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse result = new com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.version_ = version_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse) {
+          return mergeFrom((com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse other) {
+        if (other == com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (other.getVersion() != 0) {
+          setVersion(other.getVersion());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                version_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.babylon.btcstaking.v1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.btcstaking.v1.ParamsProto.Params, com.babylon.btcstaking.v1.ParamsProto.Params.Builder, com.babylon.btcstaking.v1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.babylon.btcstaking.v1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.babylon.btcstaking.v1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.babylon.btcstaking.v1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.babylon.btcstaking.v1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.babylon.btcstaking.v1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.babylon.btcstaking.v1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.babylon.btcstaking.v1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.babylon.btcstaking.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.babylon.btcstaking.v1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.babylon.btcstaking.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.btcstaking.v1.ParamsProto.Params, com.babylon.btcstaking.v1.ParamsProto.Params.Builder, com.babylon.btcstaking.v1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.babylon.btcstaking.v1.ParamsProto.Params, com.babylon.btcstaking.v1.ParamsProto.Params.Builder, com.babylon.btcstaking.v1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private int version_ ;
+      /**
+       * <pre>
+       * version is the version of the params for the given BTC height
+       * </pre>
+       *
+       * <code>uint32 version = 2 [json_name = "version"];</code>
+       * @return The version.
+       */
+      @java.lang.Override
+      public int getVersion() {
+        return version_;
+      }
+      /**
+       * <pre>
+       * version is the version of the params for the given BTC height
+       * </pre>
+       *
+       * <code>uint32 version = 2 [json_name = "version"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(int value) {
+
+        version_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * version is the version of the params for the given BTC height
+       * </pre>
+       *
+       * <code>uint32 version = 2 [json_name = "version"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        version_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.QueryParamsByBTCHeightResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.QueryParamsByBTCHeightResponse)
+    private static final com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse();
+    }
+
+    public static com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsByBTCHeightResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsByBTCHeightResponse>() {
+      @java.lang.Override
+      public QueryParamsByBTCHeightResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsByBTCHeightResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsByBTCHeightResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.QueryProto.QueryParamsByBTCHeightResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface QueryFinalityProvidersRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.QueryFinalityProvidersRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -17736,6 +18980,17 @@ public final class QueryProto {
      * @return The jailed.
      */
     boolean getJailed();
+
+    /**
+     * <pre>
+     * highest_voted_height is the highest height for which the
+     * finality provider has voted
+     * </pre>
+     *
+     * <code>uint32 highest_voted_height = 10 [json_name = "highestVotedHeight"];</code>
+     * @return The highestVotedHeight.
+     */
+    int getHighestVotedHeight();
   }
   /**
    * <pre>
@@ -18032,6 +19287,22 @@ public final class QueryProto {
       return jailed_;
     }
 
+    public static final int HIGHEST_VOTED_HEIGHT_FIELD_NUMBER = 10;
+    private int highestVotedHeight_ = 0;
+    /**
+     * <pre>
+     * highest_voted_height is the highest height for which the
+     * finality provider has voted
+     * </pre>
+     *
+     * <code>uint32 highest_voted_height = 10 [json_name = "highestVotedHeight"];</code>
+     * @return The highestVotedHeight.
+     */
+    @java.lang.Override
+    public int getHighestVotedHeight() {
+      return highestVotedHeight_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -18072,6 +19343,9 @@ public final class QueryProto {
       }
       if (jailed_ != false) {
         output.writeBool(9, jailed_);
+      }
+      if (highestVotedHeight_ != 0) {
+        output.writeUInt32(10, highestVotedHeight_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -18116,6 +19390,10 @@ public final class QueryProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(9, jailed_);
       }
+      if (highestVotedHeight_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(10, highestVotedHeight_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -18155,6 +19433,8 @@ public final class QueryProto {
           != other.getHeight()) return false;
       if (getJailed()
           != other.getJailed()) return false;
+      if (getHighestVotedHeight()
+          != other.getHighestVotedHeight()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -18191,6 +19471,8 @@ public final class QueryProto {
       hash = (37 * hash) + JAILED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getJailed());
+      hash = (37 * hash) + HIGHEST_VOTED_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getHighestVotedHeight();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -18343,6 +19625,7 @@ public final class QueryProto {
         slashedBtcHeight_ = 0;
         height_ = 0L;
         jailed_ = false;
+        highestVotedHeight_ = 0;
         return this;
       }
 
@@ -18406,6 +19689,9 @@ public final class QueryProto {
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.jailed_ = jailed_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.highestVotedHeight_ = highestVotedHeight_;
         }
       }
 
@@ -18484,6 +19770,9 @@ public final class QueryProto {
         if (other.getJailed() != false) {
           setJailed(other.getJailed());
         }
+        if (other.getHighestVotedHeight() != 0) {
+          setHighestVotedHeight(other.getHighestVotedHeight());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -18559,6 +19848,11 @@ public final class QueryProto {
                 bitField0_ |= 0x00000100;
                 break;
               } // case 72
+              case 80: {
+                highestVotedHeight_ = input.readUInt32();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 80
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -19313,6 +20607,53 @@ public final class QueryProto {
         onChanged();
         return this;
       }
+
+      private int highestVotedHeight_ ;
+      /**
+       * <pre>
+       * highest_voted_height is the highest height for which the
+       * finality provider has voted
+       * </pre>
+       *
+       * <code>uint32 highest_voted_height = 10 [json_name = "highestVotedHeight"];</code>
+       * @return The highestVotedHeight.
+       */
+      @java.lang.Override
+      public int getHighestVotedHeight() {
+        return highestVotedHeight_;
+      }
+      /**
+       * <pre>
+       * highest_voted_height is the highest height for which the
+       * finality provider has voted
+       * </pre>
+       *
+       * <code>uint32 highest_voted_height = 10 [json_name = "highestVotedHeight"];</code>
+       * @param value The highestVotedHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHighestVotedHeight(int value) {
+
+        highestVotedHeight_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * highest_voted_height is the highest height for which the
+       * finality provider has voted
+       * </pre>
+       *
+       * <code>uint32 highest_voted_height = 10 [json_name = "highestVotedHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHighestVotedHeight() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        highestVotedHeight_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -19397,6 +20738,16 @@ public final class QueryProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_babylon_btcstaking_v1_QueryParamsByVersionResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_btcstaking_v1_QueryParamsByBTCHeightRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_btcstaking_v1_QueryParamsByBTCHeightRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_btcstaking_v1_QueryParamsByBTCHeightResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_btcstaking_v1_QueryParamsByBTCHeightResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_babylon_btcstaking_v1_QueryFinalityProvidersRequest_descriptor;
   private static final 
@@ -19495,134 +20846,145 @@ public final class QueryProto {
       "eryParamsByVersionRequest\022\030\n\007version\030\001 \001" +
       "(\rR\007version\"[\n\034QueryParamsByVersionRespo" +
       "nse\022;\n\006params\030\001 \001(\0132\035.babylon.btcstaking" +
-      ".v1.ParamsB\004\310\336\037\000R\006params\"g\n\035QueryFinalit" +
-      "yProvidersRequest\022F\n\npagination\030\001 \001(\0132&." +
-      "cosmos.base.query.v1beta1.PageRequestR\np" +
-      "agination\"\311\001\n\036QueryFinalityProvidersResp" +
-      "onse\022^\n\022finality_providers\030\001 \003(\0132/.babyl" +
-      "on.btcstaking.v1.FinalityProviderRespons" +
-      "eR\021finalityProviders\022G\n\npagination\030\002 \001(\013" +
-      "2\'.cosmos.base.query.v1beta1.PageRespons" +
-      "eR\npagination\"A\n\034QueryFinalityProviderRe" +
-      "quest\022!\n\rfp_btc_pk_hex\030\001 \001(\tR\nfpBtcPkHex" +
-      "\"}\n\035QueryFinalityProviderResponse\022\\\n\021fin" +
-      "ality_provider\030\001 \001(\0132/.babylon.btcstakin" +
-      "g.v1.FinalityProviderResponseR\020finalityP" +
-      "rovider\"\250\001\n\032QueryBTCDelegationsRequest\022B" +
-      "\n\006status\030\001 \001(\0162*.babylon.btcstaking.v1.B" +
-      "TCDelegationStatusR\006status\022F\n\npagination" +
-      "\030\002 \001(\0132&.cosmos.base.query.v1beta1.PageR" +
-      "equestR\npagination\"\275\001\n\033QueryBTCDelegatio" +
-      "nsResponse\022U\n\017btc_delegations\030\001 \003(\0132,.ba" +
-      "bylon.btcstaking.v1.BTCDelegationRespons" +
-      "eR\016btcDelegations\022G\n\npagination\030\002 \001(\0132\'." +
-      "cosmos.base.query.v1beta1.PageResponseR\n" +
-      "pagination\"\224\001\n\'QueryFinalityProviderDele" +
-      "gationsRequest\022!\n\rfp_btc_pk_hex\030\001 \001(\tR\nf" +
-      "pBtcPkHex\022F\n\npagination\030\002 \001(\0132&.cosmos.b" +
-      "ase.query.v1beta1.PageRequestR\npaginatio" +
-      "n\"\347\001\n(QueryFinalityProviderDelegationsRe" +
-      "sponse\022r\n\031btc_delegator_delegations\030\001 \003(" +
-      "\01326.babylon.btcstaking.v1.BTCDelegatorDe" +
-      "legationsResponseR\027btcDelegatorDelegatio" +
+      ".v1.ParamsB\004\310\336\037\000R\006params\">\n\035QueryParamsB" +
+      "yBTCHeightRequest\022\035\n\nbtc_height\030\001 \001(\rR\tb" +
+      "tcHeight\"w\n\036QueryParamsByBTCHeightRespon" +
+      "se\022;\n\006params\030\001 \001(\0132\035.babylon.btcstaking." +
+      "v1.ParamsB\004\310\336\037\000R\006params\022\030\n\007version\030\002 \001(\r" +
+      "R\007version\"g\n\035QueryFinalityProvidersReque" +
+      "st\022F\n\npagination\030\001 \001(\0132&.cosmos.base.que" +
+      "ry.v1beta1.PageRequestR\npagination\"\311\001\n\036Q" +
+      "ueryFinalityProvidersResponse\022^\n\022finalit" +
+      "y_providers\030\001 \003(\0132/.babylon.btcstaking.v" +
+      "1.FinalityProviderResponseR\021finalityProv" +
+      "iders\022G\n\npagination\030\002 \001(\0132\'.cosmos.base." +
+      "query.v1beta1.PageResponseR\npagination\"A" +
+      "\n\034QueryFinalityProviderRequest\022!\n\rfp_btc" +
+      "_pk_hex\030\001 \001(\tR\nfpBtcPkHex\"}\n\035QueryFinali" +
+      "tyProviderResponse\022\\\n\021finality_provider\030" +
+      "\001 \001(\0132/.babylon.btcstaking.v1.FinalityPr" +
+      "oviderResponseR\020finalityProvider\"\250\001\n\032Que" +
+      "ryBTCDelegationsRequest\022B\n\006status\030\001 \001(\0162" +
+      "*.babylon.btcstaking.v1.BTCDelegationSta" +
+      "tusR\006status\022F\n\npagination\030\002 \001(\0132&.cosmos" +
+      ".base.query.v1beta1.PageRequestR\npaginat" +
+      "ion\"\275\001\n\033QueryBTCDelegationsResponse\022U\n\017b" +
+      "tc_delegations\030\001 \003(\0132,.babylon.btcstakin" +
+      "g.v1.BTCDelegationResponseR\016btcDelegatio" +
       "ns\022G\n\npagination\030\002 \001(\0132\'.cosmos.base.que" +
-      "ry.v1beta1.PageResponseR\npagination\"J\n\031Q" +
-      "ueryBTCDelegationRequest\022-\n\023staking_tx_h" +
-      "ash_hex\030\001 \001(\tR\020stakingTxHashHex\"q\n\032Query" +
-      "BTCDelegationResponse\022S\n\016btc_delegation\030" +
-      "\001 \001(\0132,.babylon.btcstaking.v1.BTCDelegat" +
-      "ionResponseR\rbtcDelegation\"\372\006\n\025BTCDelega" +
-      "tionResponse\0229\n\013staker_addr\030\001 \001(\tB\030\322\264-\024c" +
-      "osmos.AddressStringR\nstakerAddr\022O\n\006btc_p" +
-      "k\030\002 \001(\014B8\332\336\0374github.com/babylonlabs-io/b" +
-      "abylon/types.BIP340PubKeyR\005btcPk\022]\n\016fp_b" +
-      "tc_pk_list\030\003 \003(\014B8\332\336\0374github.com/babylon" +
-      "labs-io/babylon/types.BIP340PubKeyR\013fpBt" +
-      "cPkList\022!\n\014staking_time\030\004 \001(\rR\013stakingTi" +
-      "me\022!\n\014start_height\030\005 \001(\rR\013startHeight\022\035\n" +
-      "\nend_height\030\006 \001(\rR\tendHeight\022\033\n\ttotal_sa" +
-      "t\030\007 \001(\004R\010totalSat\022$\n\016staking_tx_hex\030\010 \001(" +
-      "\tR\014stakingTxHex\022&\n\017slashing_tx_hex\030\t \001(\t" +
-      "R\rslashingTxHex\0225\n\027delegator_slash_sig_h" +
-      "ex\030\n \001(\tR\024delegatorSlashSigHex\022U\n\rcovena" +
-      "nt_sigs\030\013 \003(\01320.babylon.btcstaking.v1.Co" +
-      "venantAdaptorSignaturesR\014covenantSigs\022,\n" +
-      "\022staking_output_idx\030\014 \001(\rR\020stakingOutput" +
-      "Idx\022\026\n\006active\030\r \001(\010R\006active\022\037\n\013status_de" +
-      "sc\030\016 \001(\tR\nstatusDesc\022%\n\016unbonding_time\030\017" +
-      " \001(\rR\runbondingTime\022c\n\025undelegation_resp" +
-      "onse\030\020 \001(\0132..babylon.btcstaking.v1.BTCUn" +
-      "delegationResponseR\024undelegationResponse" +
-      "\022%\n\016params_version\030\021 \001(\rR\rparamsVersion\"" +
-      "M\n\036DelegatorUnbondingInfoResponse\022+\n\022spe" +
-      "nd_stake_tx_hex\030\001 \001(\tR\017spendStakeTxHex\"\370" +
-      "\003\n\027BTCUndelegationResponse\022(\n\020unbonding_" +
-      "tx_hex\030\001 \001(\tR\016unbondingTxHex\022c\n\033covenant" +
-      "_unbonding_sig_list\030\002 \003(\0132$.babylon.btcs" +
-      "taking.v1.SignatureInfoR\030covenantUnbondi" +
-      "ngSigList\022&\n\017slashing_tx_hex\030\003 \001(\tR\rslas" +
-      "hingTxHex\022;\n\032delegator_slashing_sig_hex\030" +
-      "\004 \001(\tR\027delegatorSlashingSigHex\022f\n\026covena" +
-      "nt_slashing_sigs\030\005 \003(\01320.babylon.btcstak" +
-      "ing.v1.CovenantAdaptorSignaturesR\024covena" +
-      "ntSlashingSigs\022\200\001\n!delegator_unbonding_i" +
-      "nfo_response\030\006 \001(\01325.babylon.btcstaking." +
-      "v1.DelegatorUnbondingInfoResponseR\036deleg" +
-      "atorUnbondingInfoResponse\"c\n\037BTCDelegato" +
-      "rDelegationsResponse\022@\n\004dels\030\001 \003(\0132,.bab" +
-      "ylon.btcstaking.v1.BTCDelegationResponse" +
-      "R\004dels\"\202\004\n\030FinalityProviderResponse\022E\n\013d" +
-      "escription\030\001 \001(\0132#.cosmos.staking.v1beta" +
-      "1.DescriptionR\013description\022M\n\ncommission" +
-      "\030\002 \001(\tB-\332\336\037\033cosmossdk.io/math.LegacyDec\322" +
-      "\264-\ncosmos.DecR\ncommission\022,\n\004addr\030\003 \001(\tB" +
-      "\030\322\264-\024cosmos.AddressStringR\004addr\022O\n\006btc_p" +
-      "k\030\004 \001(\014B8\332\336\0374github.com/babylonlabs-io/b" +
-      "abylon/types.BIP340PubKeyR\005btcPk\022=\n\003pop\030" +
-      "\005 \001(\0132+.babylon.btcstaking.v1.ProofOfPos" +
-      "sessionBTCR\003pop\0224\n\026slashed_babylon_heigh" +
-      "t\030\006 \001(\004R\024slashedBabylonHeight\022,\n\022slashed" +
-      "_btc_height\030\007 \001(\rR\020slashedBtcHeight\022\026\n\006h" +
-      "eight\030\010 \001(\004R\006height\022\026\n\006jailed\030\t \001(\010R\006jai" +
-      "led2\250\n\n\005Query\022\206\001\n\006Params\022).babylon.btcst" +
-      "aking.v1.QueryParamsRequest\032*.babylon.bt" +
-      "cstaking.v1.QueryParamsResponse\"%\202\323\344\223\002\037\022" +
-      "\035/babylon/btcstaking/v1/params\022\253\001\n\017Param" +
-      "sByVersion\0222.babylon.btcstaking.v1.Query" +
-      "ParamsByVersionRequest\0323.babylon.btcstak" +
-      "ing.v1.QueryParamsByVersionResponse\"/\202\323\344" +
-      "\223\002)\022\'/babylon/btcstaking/v1/params/{vers" +
-      "ion}\022\263\001\n\021FinalityProviders\0224.babylon.btc" +
-      "staking.v1.QueryFinalityProvidersRequest" +
-      "\0325.babylon.btcstaking.v1.QueryFinalityPr" +
-      "ovidersResponse\"1\202\323\344\223\002+\022)/babylon/btcsta" +
-      "king/v1/finality_providers\022\322\001\n\020FinalityP" +
-      "rovider\0223.babylon.btcstaking.v1.QueryFin" +
-      "alityProviderRequest\0324.babylon.btcstakin" +
-      "g.v1.QueryFinalityProviderResponse\"S\202\323\344\223" +
-      "\002M\022K/babylon/btcstaking/v1/finality_prov" +
-      "iders/{fp_btc_pk_hex}/finality_provider\022" +
-      "\260\001\n\016BTCDelegations\0221.babylon.btcstaking." +
-      "v1.QueryBTCDelegationsRequest\0322.babylon." +
-      "btcstaking.v1.QueryBTCDelegationsRespons" +
-      "e\"7\202\323\344\223\0021\022//babylon/btcstaking/v1/btc_de" +
-      "legations/{status}\022\355\001\n\033FinalityProviderD" +
-      "elegations\022>.babylon.btcstaking.v1.Query" +
-      "FinalityProviderDelegationsRequest\032?.bab" +
-      "ylon.btcstaking.v1.QueryFinalityProvider" +
-      "DelegationsResponse\"M\202\323\344\223\002G\022E/babylon/bt" +
-      "cstaking/v1/finality_providers/{fp_btc_p" +
-      "k_hex}/delegations\022\271\001\n\rBTCDelegation\0220.b" +
-      "abylon.btcstaking.v1.QueryBTCDelegationR" +
-      "equest\0321.babylon.btcstaking.v1.QueryBTCD" +
-      "elegationResponse\"C\202\323\344\223\002=\022;/babylon/btcs" +
-      "taking/v1/btc_delegation/{staking_tx_has" +
-      "h_hex}B\321\001\n\031com.babylon.btcstaking.v1B\nQu" +
-      "eryProtoZ4github.com/babylonlabs-io/baby" +
-      "lon/x/btcstaking/types\242\002\003BBX\252\002\025Babylon.B" +
-      "tcstaking.V1\312\002\025Babylon\\Btcstaking\\V1\342\002!B" +
-      "abylon\\Btcstaking\\V1\\GPBMetadata\352\002\027Babyl" +
-      "on::Btcstaking::V1b\006proto3"
+      "ry.v1beta1.PageResponseR\npagination\"\224\001\n\'" +
+      "QueryFinalityProviderDelegationsRequest\022" +
+      "!\n\rfp_btc_pk_hex\030\001 \001(\tR\nfpBtcPkHex\022F\n\npa" +
+      "gination\030\002 \001(\0132&.cosmos.base.query.v1bet" +
+      "a1.PageRequestR\npagination\"\347\001\n(QueryFina" +
+      "lityProviderDelegationsResponse\022r\n\031btc_d" +
+      "elegator_delegations\030\001 \003(\01326.babylon.btc" +
+      "staking.v1.BTCDelegatorDelegationsRespon" +
+      "seR\027btcDelegatorDelegations\022G\n\npaginatio" +
+      "n\030\002 \001(\0132\'.cosmos.base.query.v1beta1.Page" +
+      "ResponseR\npagination\"J\n\031QueryBTCDelegati" +
+      "onRequest\022-\n\023staking_tx_hash_hex\030\001 \001(\tR\020" +
+      "stakingTxHashHex\"q\n\032QueryBTCDelegationRe" +
+      "sponse\022S\n\016btc_delegation\030\001 \001(\0132,.babylon" +
+      ".btcstaking.v1.BTCDelegationResponseR\rbt" +
+      "cDelegation\"\372\006\n\025BTCDelegationResponse\0229\n" +
+      "\013staker_addr\030\001 \001(\tB\030\322\264-\024cosmos.AddressSt" +
+      "ringR\nstakerAddr\022O\n\006btc_pk\030\002 \001(\014B8\332\336\0374gi" +
+      "thub.com/babylonlabs-io/babylon/types.BI" +
+      "P340PubKeyR\005btcPk\022]\n\016fp_btc_pk_list\030\003 \003(" +
+      "\014B8\332\336\0374github.com/babylonlabs-io/babylon" +
+      "/types.BIP340PubKeyR\013fpBtcPkList\022!\n\014stak" +
+      "ing_time\030\004 \001(\rR\013stakingTime\022!\n\014start_hei" +
+      "ght\030\005 \001(\rR\013startHeight\022\035\n\nend_height\030\006 \001" +
+      "(\rR\tendHeight\022\033\n\ttotal_sat\030\007 \001(\004R\010totalS" +
+      "at\022$\n\016staking_tx_hex\030\010 \001(\tR\014stakingTxHex" +
+      "\022&\n\017slashing_tx_hex\030\t \001(\tR\rslashingTxHex" +
+      "\0225\n\027delegator_slash_sig_hex\030\n \001(\tR\024deleg" +
+      "atorSlashSigHex\022U\n\rcovenant_sigs\030\013 \003(\01320" +
+      ".babylon.btcstaking.v1.CovenantAdaptorSi" +
+      "gnaturesR\014covenantSigs\022,\n\022staking_output" +
+      "_idx\030\014 \001(\rR\020stakingOutputIdx\022\026\n\006active\030\r" +
+      " \001(\010R\006active\022\037\n\013status_desc\030\016 \001(\tR\nstatu" +
+      "sDesc\022%\n\016unbonding_time\030\017 \001(\rR\runbonding" +
+      "Time\022c\n\025undelegation_response\030\020 \001(\0132..ba" +
+      "bylon.btcstaking.v1.BTCUndelegationRespo" +
+      "nseR\024undelegationResponse\022%\n\016params_vers" +
+      "ion\030\021 \001(\rR\rparamsVersion\"M\n\036DelegatorUnb" +
+      "ondingInfoResponse\022+\n\022spend_stake_tx_hex" +
+      "\030\001 \001(\tR\017spendStakeTxHex\"\370\003\n\027BTCUndelegat" +
+      "ionResponse\022(\n\020unbonding_tx_hex\030\001 \001(\tR\016u" +
+      "nbondingTxHex\022c\n\033covenant_unbonding_sig_" +
+      "list\030\002 \003(\0132$.babylon.btcstaking.v1.Signa" +
+      "tureInfoR\030covenantUnbondingSigList\022&\n\017sl" +
+      "ashing_tx_hex\030\003 \001(\tR\rslashingTxHex\022;\n\032de" +
+      "legator_slashing_sig_hex\030\004 \001(\tR\027delegato" +
+      "rSlashingSigHex\022f\n\026covenant_slashing_sig" +
+      "s\030\005 \003(\01320.babylon.btcstaking.v1.Covenant" +
+      "AdaptorSignaturesR\024covenantSlashingSigs\022" +
+      "\200\001\n!delegator_unbonding_info_response\030\006 " +
+      "\001(\01325.babylon.btcstaking.v1.DelegatorUnb" +
+      "ondingInfoResponseR\036delegatorUnbondingIn" +
+      "foResponse\"c\n\037BTCDelegatorDelegationsRes" +
+      "ponse\022@\n\004dels\030\001 \003(\0132,.babylon.btcstaking" +
+      ".v1.BTCDelegationResponseR\004dels\"\264\004\n\030Fina" +
+      "lityProviderResponse\022E\n\013description\030\001 \001(" +
+      "\0132#.cosmos.staking.v1beta1.DescriptionR\013" +
+      "description\022M\n\ncommission\030\002 \001(\tB-\332\336\037\033cos" +
+      "mossdk.io/math.LegacyDec\322\264-\ncosmos.DecR\n" +
+      "commission\022,\n\004addr\030\003 \001(\tB\030\322\264-\024cosmos.Add" +
+      "ressStringR\004addr\022O\n\006btc_pk\030\004 \001(\014B8\332\336\0374gi" +
+      "thub.com/babylonlabs-io/babylon/types.BI" +
+      "P340PubKeyR\005btcPk\022=\n\003pop\030\005 \001(\0132+.babylon" +
+      ".btcstaking.v1.ProofOfPossessionBTCR\003pop" +
+      "\0224\n\026slashed_babylon_height\030\006 \001(\004R\024slashe" +
+      "dBabylonHeight\022,\n\022slashed_btc_height\030\007 \001" +
+      "(\rR\020slashedBtcHeight\022\026\n\006height\030\010 \001(\004R\006he" +
+      "ight\022\026\n\006jailed\030\t \001(\010R\006jailed\0220\n\024highest_" +
+      "voted_height\030\n \001(\rR\022highestVotedHeight2\352" +
+      "\013\n\005Query\022\206\001\n\006Params\022).babylon.btcstaking" +
+      ".v1.QueryParamsRequest\032*.babylon.btcstak" +
+      "ing.v1.QueryParamsResponse\"%\202\323\344\223\002\037\022\035/bab" +
+      "ylon/btcstaking/v1/params\022\253\001\n\017ParamsByVe" +
+      "rsion\0222.babylon.btcstaking.v1.QueryParam" +
+      "sByVersionRequest\0323.babylon.btcstaking.v" +
+      "1.QueryParamsByVersionResponse\"/\202\323\344\223\002)\022\'" +
+      "/babylon/btcstaking/v1/params/{version}\022" +
+      "\277\001\n\021ParamsByBTCHeight\0224.babylon.btcstaki" +
+      "ng.v1.QueryParamsByBTCHeightRequest\0325.ba" +
+      "bylon.btcstaking.v1.QueryParamsByBTCHeig" +
+      "htResponse\"=\202\323\344\223\0027\0225/babylon/btcstaking/" +
+      "v1/params/btc_height/{btc_height}\022\263\001\n\021Fi" +
+      "nalityProviders\0224.babylon.btcstaking.v1." +
+      "QueryFinalityProvidersRequest\0325.babylon." +
+      "btcstaking.v1.QueryFinalityProvidersResp" +
+      "onse\"1\202\323\344\223\002+\022)/babylon/btcstaking/v1/fin" +
+      "ality_providers\022\322\001\n\020FinalityProvider\0223.b" +
+      "abylon.btcstaking.v1.QueryFinalityProvid" +
+      "erRequest\0324.babylon.btcstaking.v1.QueryF" +
+      "inalityProviderResponse\"S\202\323\344\223\002M\022K/babylo" +
+      "n/btcstaking/v1/finality_providers/{fp_b" +
+      "tc_pk_hex}/finality_provider\022\260\001\n\016BTCDele" +
+      "gations\0221.babylon.btcstaking.v1.QueryBTC" +
+      "DelegationsRequest\0322.babylon.btcstaking." +
+      "v1.QueryBTCDelegationsResponse\"7\202\323\344\223\0021\022/" +
+      "/babylon/btcstaking/v1/btc_delegations/{" +
+      "status}\022\355\001\n\033FinalityProviderDelegations\022" +
+      ">.babylon.btcstaking.v1.QueryFinalityPro" +
+      "viderDelegationsRequest\032?.babylon.btcsta" +
+      "king.v1.QueryFinalityProviderDelegations" +
+      "Response\"M\202\323\344\223\002G\022E/babylon/btcstaking/v1" +
+      "/finality_providers/{fp_btc_pk_hex}/dele" +
+      "gations\022\271\001\n\rBTCDelegation\0220.babylon.btcs" +
+      "taking.v1.QueryBTCDelegationRequest\0321.ba" +
+      "bylon.btcstaking.v1.QueryBTCDelegationRe" +
+      "sponse\"C\202\323\344\223\002=\022;/babylon/btcstaking/v1/b" +
+      "tc_delegation/{staking_tx_hash_hex}B\321\001\n\031" +
+      "com.babylon.btcstaking.v1B\nQueryProtoZ4g" +
+      "ithub.com/babylonlabs-io/babylon/x/btcst" +
+      "aking/types\242\002\003BBX\252\002\025Babylon.Btcstaking.V" +
+      "1\312\002\025Babylon\\Btcstaking\\V1\342\002!Babylon\\Btcs" +
+      "taking\\V1\\GPBMetadata\352\002\027Babylon::Btcstak" +
+      "ing::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -19660,96 +21022,108 @@ public final class QueryProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_QueryParamsByVersionResponse_descriptor,
         new java.lang.String[] { "Params", });
-    internal_static_babylon_btcstaking_v1_QueryFinalityProvidersRequest_descriptor =
+    internal_static_babylon_btcstaking_v1_QueryParamsByBTCHeightRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
+    internal_static_babylon_btcstaking_v1_QueryParamsByBTCHeightRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_btcstaking_v1_QueryParamsByBTCHeightRequest_descriptor,
+        new java.lang.String[] { "BtcHeight", });
+    internal_static_babylon_btcstaking_v1_QueryParamsByBTCHeightResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_babylon_btcstaking_v1_QueryParamsByBTCHeightResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_btcstaking_v1_QueryParamsByBTCHeightResponse_descriptor,
+        new java.lang.String[] { "Params", "Version", });
+    internal_static_babylon_btcstaking_v1_QueryFinalityProvidersRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_babylon_btcstaking_v1_QueryFinalityProvidersRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_QueryFinalityProvidersRequest_descriptor,
         new java.lang.String[] { "Pagination", });
     internal_static_babylon_btcstaking_v1_QueryFinalityProvidersResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_babylon_btcstaking_v1_QueryFinalityProvidersResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_QueryFinalityProvidersResponse_descriptor,
         new java.lang.String[] { "FinalityProviders", "Pagination", });
     internal_static_babylon_btcstaking_v1_QueryFinalityProviderRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_babylon_btcstaking_v1_QueryFinalityProviderRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_QueryFinalityProviderRequest_descriptor,
         new java.lang.String[] { "FpBtcPkHex", });
     internal_static_babylon_btcstaking_v1_QueryFinalityProviderResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_babylon_btcstaking_v1_QueryFinalityProviderResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_QueryFinalityProviderResponse_descriptor,
         new java.lang.String[] { "FinalityProvider", });
     internal_static_babylon_btcstaking_v1_QueryBTCDelegationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_babylon_btcstaking_v1_QueryBTCDelegationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_QueryBTCDelegationsRequest_descriptor,
         new java.lang.String[] { "Status", "Pagination", });
     internal_static_babylon_btcstaking_v1_QueryBTCDelegationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_babylon_btcstaking_v1_QueryBTCDelegationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_QueryBTCDelegationsResponse_descriptor,
         new java.lang.String[] { "BtcDelegations", "Pagination", });
     internal_static_babylon_btcstaking_v1_QueryFinalityProviderDelegationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_babylon_btcstaking_v1_QueryFinalityProviderDelegationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_QueryFinalityProviderDelegationsRequest_descriptor,
         new java.lang.String[] { "FpBtcPkHex", "Pagination", });
     internal_static_babylon_btcstaking_v1_QueryFinalityProviderDelegationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_babylon_btcstaking_v1_QueryFinalityProviderDelegationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_QueryFinalityProviderDelegationsResponse_descriptor,
         new java.lang.String[] { "BtcDelegatorDelegations", "Pagination", });
     internal_static_babylon_btcstaking_v1_QueryBTCDelegationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_babylon_btcstaking_v1_QueryBTCDelegationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_QueryBTCDelegationRequest_descriptor,
         new java.lang.String[] { "StakingTxHashHex", });
     internal_static_babylon_btcstaking_v1_QueryBTCDelegationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_babylon_btcstaking_v1_QueryBTCDelegationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_QueryBTCDelegationResponse_descriptor,
         new java.lang.String[] { "BtcDelegation", });
     internal_static_babylon_btcstaking_v1_BTCDelegationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_babylon_btcstaking_v1_BTCDelegationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_BTCDelegationResponse_descriptor,
         new java.lang.String[] { "StakerAddr", "BtcPk", "FpBtcPkList", "StakingTime", "StartHeight", "EndHeight", "TotalSat", "StakingTxHex", "SlashingTxHex", "DelegatorSlashSigHex", "CovenantSigs", "StakingOutputIdx", "Active", "StatusDesc", "UnbondingTime", "UndelegationResponse", "ParamsVersion", });
     internal_static_babylon_btcstaking_v1_DelegatorUnbondingInfoResponse_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_babylon_btcstaking_v1_DelegatorUnbondingInfoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_DelegatorUnbondingInfoResponse_descriptor,
         new java.lang.String[] { "SpendStakeTxHex", });
     internal_static_babylon_btcstaking_v1_BTCUndelegationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_babylon_btcstaking_v1_BTCUndelegationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_BTCUndelegationResponse_descriptor,
         new java.lang.String[] { "UnbondingTxHex", "CovenantUnbondingSigList", "SlashingTxHex", "DelegatorSlashingSigHex", "CovenantSlashingSigs", "DelegatorUnbondingInfoResponse", });
     internal_static_babylon_btcstaking_v1_BTCDelegatorDelegationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_babylon_btcstaking_v1_BTCDelegatorDelegationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_BTCDelegatorDelegationsResponse_descriptor,
         new java.lang.String[] { "Dels", });
     internal_static_babylon_btcstaking_v1_FinalityProviderResponse_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_babylon_btcstaking_v1_FinalityProviderResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_FinalityProviderResponse_descriptor,
-        new java.lang.String[] { "Description", "Commission", "Addr", "BtcPk", "Pop", "SlashedBabylonHeight", "SlashedBtcHeight", "Height", "Jailed", });
+        new java.lang.String[] { "Description", "Commission", "Addr", "BtcPk", "Pop", "SlashedBabylonHeight", "SlashedBtcHeight", "Height", "Jailed", "HighestVotedHeight", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.cosmos_proto.CosmosProto.scalar);

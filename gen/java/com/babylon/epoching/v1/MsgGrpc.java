@@ -142,6 +142,68 @@ public final class MsgGrpc {
     return getWrappedCancelUnbondingDelegationMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator,
+      com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse> getWrappedEditValidatorMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "WrappedEditValidator",
+      requestType = com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator.class,
+      responseType = com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator,
+      com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse> getWrappedEditValidatorMethod() {
+    io.grpc.MethodDescriptor<com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator, com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse> getWrappedEditValidatorMethod;
+    if ((getWrappedEditValidatorMethod = MsgGrpc.getWrappedEditValidatorMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getWrappedEditValidatorMethod = MsgGrpc.getWrappedEditValidatorMethod) == null) {
+          MsgGrpc.getWrappedEditValidatorMethod = getWrappedEditValidatorMethod =
+              io.grpc.MethodDescriptor.<com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator, com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "WrappedEditValidator"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("WrappedEditValidator"))
+              .build();
+        }
+      }
+    }
+    return getWrappedEditValidatorMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams,
+      com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse> getWrappedStakingUpdateParamsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "WrappedStakingUpdateParams",
+      requestType = com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams.class,
+      responseType = com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams,
+      com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse> getWrappedStakingUpdateParamsMethod() {
+    io.grpc.MethodDescriptor<com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams, com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse> getWrappedStakingUpdateParamsMethod;
+    if ((getWrappedStakingUpdateParamsMethod = MsgGrpc.getWrappedStakingUpdateParamsMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getWrappedStakingUpdateParamsMethod = MsgGrpc.getWrappedStakingUpdateParamsMethod) == null) {
+          MsgGrpc.getWrappedStakingUpdateParamsMethod = getWrappedStakingUpdateParamsMethod =
+              io.grpc.MethodDescriptor.<com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams, com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "WrappedStakingUpdateParams"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("WrappedStakingUpdateParams"))
+              .build();
+        }
+      }
+    }
+    return getWrappedStakingUpdateParamsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.babylon.epoching.v1.TxProto.MsgUpdateParams,
       com.babylon.epoching.v1.TxProto.MsgUpdateParamsResponse> getUpdateParamsMethod;
 
@@ -270,6 +332,28 @@ public final class MsgGrpc {
 
     /**
      * <pre>
+     * WrappedEditValidator defines a method for editing the validator
+     * information.
+     * </pre>
+     */
+    default void wrappedEditValidator(com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator request,
+        io.grpc.stub.StreamObserver<com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getWrappedEditValidatorMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * WrappedStakingUpdateParams defines a method for update the parameters
+     * of the x/staking module.
+     * </pre>
+     */
+    default void wrappedStakingUpdateParams(com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams request,
+        io.grpc.stub.StreamObserver<com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getWrappedStakingUpdateParamsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * UpdateParams defines a method for updating epoching module parameters.
      * </pre>
      */
@@ -362,6 +446,30 @@ public final class MsgGrpc {
 
     /**
      * <pre>
+     * WrappedEditValidator defines a method for editing the validator
+     * information.
+     * </pre>
+     */
+    public void wrappedEditValidator(com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator request,
+        io.grpc.stub.StreamObserver<com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getWrappedEditValidatorMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * WrappedStakingUpdateParams defines a method for update the parameters
+     * of the x/staking module.
+     * </pre>
+     */
+    public void wrappedStakingUpdateParams(com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams request,
+        io.grpc.stub.StreamObserver<com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getWrappedStakingUpdateParamsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * UpdateParams defines a method for updating epoching module parameters.
      * </pre>
      */
@@ -433,6 +541,28 @@ public final class MsgGrpc {
     public com.babylon.epoching.v1.TxProto.MsgWrappedCancelUnbondingDelegationResponse wrappedCancelUnbondingDelegation(com.babylon.epoching.v1.TxProto.MsgWrappedCancelUnbondingDelegation request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getWrappedCancelUnbondingDelegationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * WrappedEditValidator defines a method for editing the validator
+     * information.
+     * </pre>
+     */
+    public com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse wrappedEditValidator(com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getWrappedEditValidatorMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * WrappedStakingUpdateParams defines a method for update the parameters
+     * of the x/staking module.
+     * </pre>
+     */
+    public com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse wrappedStakingUpdateParams(com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getWrappedStakingUpdateParamsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -515,6 +645,30 @@ public final class MsgGrpc {
 
     /**
      * <pre>
+     * WrappedEditValidator defines a method for editing the validator
+     * information.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse> wrappedEditValidator(
+        com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getWrappedEditValidatorMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * WrappedStakingUpdateParams defines a method for update the parameters
+     * of the x/staking module.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse> wrappedStakingUpdateParams(
+        com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getWrappedStakingUpdateParamsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * UpdateParams defines a method for updating epoching module parameters.
      * </pre>
      */
@@ -529,7 +683,9 @@ public final class MsgGrpc {
   private static final int METHODID_WRAPPED_UNDELEGATE = 1;
   private static final int METHODID_WRAPPED_BEGIN_REDELEGATE = 2;
   private static final int METHODID_WRAPPED_CANCEL_UNBONDING_DELEGATION = 3;
-  private static final int METHODID_UPDATE_PARAMS = 4;
+  private static final int METHODID_WRAPPED_EDIT_VALIDATOR = 4;
+  private static final int METHODID_WRAPPED_STAKING_UPDATE_PARAMS = 5;
+  private static final int METHODID_UPDATE_PARAMS = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -563,6 +719,14 @@ public final class MsgGrpc {
         case METHODID_WRAPPED_CANCEL_UNBONDING_DELEGATION:
           serviceImpl.wrappedCancelUnbondingDelegation((com.babylon.epoching.v1.TxProto.MsgWrappedCancelUnbondingDelegation) request,
               (io.grpc.stub.StreamObserver<com.babylon.epoching.v1.TxProto.MsgWrappedCancelUnbondingDelegationResponse>) responseObserver);
+          break;
+        case METHODID_WRAPPED_EDIT_VALIDATOR:
+          serviceImpl.wrappedEditValidator((com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator) request,
+              (io.grpc.stub.StreamObserver<com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse>) responseObserver);
+          break;
+        case METHODID_WRAPPED_STAKING_UPDATE_PARAMS:
+          serviceImpl.wrappedStakingUpdateParams((com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams) request,
+              (io.grpc.stub.StreamObserver<com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse>) responseObserver);
           break;
         case METHODID_UPDATE_PARAMS:
           serviceImpl.updateParams((com.babylon.epoching.v1.TxProto.MsgUpdateParams) request,
@@ -614,6 +778,20 @@ public final class MsgGrpc {
               com.babylon.epoching.v1.TxProto.MsgWrappedCancelUnbondingDelegation,
               com.babylon.epoching.v1.TxProto.MsgWrappedCancelUnbondingDelegationResponse>(
                 service, METHODID_WRAPPED_CANCEL_UNBONDING_DELEGATION)))
+        .addMethod(
+          getWrappedEditValidatorMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.babylon.epoching.v1.TxProto.MsgWrappedEditValidator,
+              com.babylon.epoching.v1.TxProto.MsgWrappedEditValidatorResponse>(
+                service, METHODID_WRAPPED_EDIT_VALIDATOR)))
+        .addMethod(
+          getWrappedStakingUpdateParamsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParams,
+              com.babylon.epoching.v1.TxProto.MsgWrappedStakingUpdateParamsResponse>(
+                service, METHODID_WRAPPED_STAKING_UPDATE_PARAMS)))
         .addMethod(
           getUpdateParamsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -673,6 +851,8 @@ public final class MsgGrpc {
               .addMethod(getWrappedUndelegateMethod())
               .addMethod(getWrappedBeginRedelegateMethod())
               .addMethod(getWrappedCancelUnbondingDelegationMethod())
+              .addMethod(getWrappedEditValidatorMethod())
+              .addMethod(getWrappedStakingUpdateParamsMethod())
               .addMethod(getUpdateParamsMethod())
               .build();
         }

@@ -26,7 +26,7 @@ struct Babylon_Incentive_MsgWithdrawReward {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// {submitter, reporter, finality_provider, btc_delegation}
+  /// {finality_provider, btc_delegation}
   var type: String = String()
 
   /// address is the address of the stakeholder in bech32 string
@@ -60,8 +60,8 @@ struct Babylon_Incentive_MsgUpdateParams {
 
   /// authority is the address of the governance account.
   /// just FYI: cosmos.AddressString marks that this field should use type alias
-  /// for AddressString instead of string, but the functionality is not yet implemented
-  /// in cosmos-proto
+  /// for AddressString instead of string, but the functionality is not yet
+  /// implemented in cosmos-proto
   var authority: String = String()
 
   /// params defines the incentive parameters to update.
@@ -94,11 +94,40 @@ struct Babylon_Incentive_MsgUpdateParamsResponse {
   init() {}
 }
 
+/// MsgSetWithdrawAddress sets the withdraw address
+struct Babylon_Incentive_MsgSetWithdrawAddress {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var delegatorAddress: String = String()
+
+  var withdrawAddress: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// MsgSetWithdrawAddressResponse defines the Msg/SetWithdrawAddress response
+/// type.
+struct Babylon_Incentive_MsgSetWithdrawAddressResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Babylon_Incentive_MsgWithdrawReward: @unchecked Sendable {}
 extension Babylon_Incentive_MsgWithdrawRewardResponse: @unchecked Sendable {}
 extension Babylon_Incentive_MsgUpdateParams: @unchecked Sendable {}
 extension Babylon_Incentive_MsgUpdateParamsResponse: @unchecked Sendable {}
+extension Babylon_Incentive_MsgSetWithdrawAddress: @unchecked Sendable {}
+extension Babylon_Incentive_MsgSetWithdrawAddressResponse: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -231,6 +260,63 @@ extension Babylon_Incentive_MsgUpdateParamsResponse: SwiftProtobuf.Message, Swif
   }
 
   static func ==(lhs: Babylon_Incentive_MsgUpdateParamsResponse, rhs: Babylon_Incentive_MsgUpdateParamsResponse) -> Bool {
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Incentive_MsgSetWithdrawAddress: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgSetWithdrawAddress"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "delegator_address"),
+    2: .standard(proto: "withdraw_address"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.delegatorAddress) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.withdrawAddress) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.delegatorAddress.isEmpty {
+      try visitor.visitSingularStringField(value: self.delegatorAddress, fieldNumber: 1)
+    }
+    if !self.withdrawAddress.isEmpty {
+      try visitor.visitSingularStringField(value: self.withdrawAddress, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Incentive_MsgSetWithdrawAddress, rhs: Babylon_Incentive_MsgSetWithdrawAddress) -> Bool {
+    if lhs.delegatorAddress != rhs.delegatorAddress {return false}
+    if lhs.withdrawAddress != rhs.withdrawAddress {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Incentive_MsgSetWithdrawAddressResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgSetWithdrawAddressResponse"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let _ = try decoder.nextFieldNumber() {
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Incentive_MsgSetWithdrawAddressResponse, rhs: Babylon_Incentive_MsgSetWithdrawAddressResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

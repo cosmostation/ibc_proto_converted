@@ -111,35 +111,35 @@ public final class QueryGrpc {
     return getBTCStakingGaugeMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.babylon.incentive.QueryProto.QueryBTCTimestampingGaugeRequest,
-      com.babylon.incentive.QueryProto.QueryBTCTimestampingGaugeResponse> getBTCTimestampingGaugeMethod;
+  private static volatile io.grpc.MethodDescriptor<com.babylon.incentive.QueryProto.QueryDelegatorWithdrawAddressRequest,
+      com.babylon.incentive.QueryProto.QueryDelegatorWithdrawAddressResponse> getDelegatorWithdrawAddressMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "BTCTimestampingGauge",
-      requestType = com.babylon.incentive.QueryProto.QueryBTCTimestampingGaugeRequest.class,
-      responseType = com.babylon.incentive.QueryProto.QueryBTCTimestampingGaugeResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "DelegatorWithdrawAddress",
+      requestType = com.babylon.incentive.QueryProto.QueryDelegatorWithdrawAddressRequest.class,
+      responseType = com.babylon.incentive.QueryProto.QueryDelegatorWithdrawAddressResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.babylon.incentive.QueryProto.QueryBTCTimestampingGaugeRequest,
-      com.babylon.incentive.QueryProto.QueryBTCTimestampingGaugeResponse> getBTCTimestampingGaugeMethod() {
-    io.grpc.MethodDescriptor<com.babylon.incentive.QueryProto.QueryBTCTimestampingGaugeRequest, com.babylon.incentive.QueryProto.QueryBTCTimestampingGaugeResponse> getBTCTimestampingGaugeMethod;
-    if ((getBTCTimestampingGaugeMethod = QueryGrpc.getBTCTimestampingGaugeMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.babylon.incentive.QueryProto.QueryDelegatorWithdrawAddressRequest,
+      com.babylon.incentive.QueryProto.QueryDelegatorWithdrawAddressResponse> getDelegatorWithdrawAddressMethod() {
+    io.grpc.MethodDescriptor<com.babylon.incentive.QueryProto.QueryDelegatorWithdrawAddressRequest, com.babylon.incentive.QueryProto.QueryDelegatorWithdrawAddressResponse> getDelegatorWithdrawAddressMethod;
+    if ((getDelegatorWithdrawAddressMethod = QueryGrpc.getDelegatorWithdrawAddressMethod) == null) {
       synchronized (QueryGrpc.class) {
-        if ((getBTCTimestampingGaugeMethod = QueryGrpc.getBTCTimestampingGaugeMethod) == null) {
-          QueryGrpc.getBTCTimestampingGaugeMethod = getBTCTimestampingGaugeMethod =
-              io.grpc.MethodDescriptor.<com.babylon.incentive.QueryProto.QueryBTCTimestampingGaugeRequest, com.babylon.incentive.QueryProto.QueryBTCTimestampingGaugeResponse>newBuilder()
+        if ((getDelegatorWithdrawAddressMethod = QueryGrpc.getDelegatorWithdrawAddressMethod) == null) {
+          QueryGrpc.getDelegatorWithdrawAddressMethod = getDelegatorWithdrawAddressMethod =
+              io.grpc.MethodDescriptor.<com.babylon.incentive.QueryProto.QueryDelegatorWithdrawAddressRequest, com.babylon.incentive.QueryProto.QueryDelegatorWithdrawAddressResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BTCTimestampingGauge"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DelegatorWithdrawAddress"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.babylon.incentive.QueryProto.QueryBTCTimestampingGaugeRequest.getDefaultInstance()))
+                  com.babylon.incentive.QueryProto.QueryDelegatorWithdrawAddressRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.babylon.incentive.QueryProto.QueryBTCTimestampingGaugeResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("BTCTimestampingGauge"))
+                  com.babylon.incentive.QueryProto.QueryDelegatorWithdrawAddressResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("DelegatorWithdrawAddress"))
               .build();
         }
       }
     }
-    return getBTCTimestampingGaugeMethod;
+    return getDelegatorWithdrawAddressMethod;
   }
 
   /**
@@ -225,12 +225,12 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * BTCTimestampingGauge queries the BTC timestamping gauge of a given epoch
+     * DelegatorWithdrawAddress queries withdraw address of a delegator.
      * </pre>
      */
-    default void bTCTimestampingGauge(com.babylon.incentive.QueryProto.QueryBTCTimestampingGaugeRequest request,
-        io.grpc.stub.StreamObserver<com.babylon.incentive.QueryProto.QueryBTCTimestampingGaugeResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBTCTimestampingGaugeMethod(), responseObserver);
+    default void delegatorWithdrawAddress(com.babylon.incentive.QueryProto.QueryDelegatorWithdrawAddressRequest request,
+        io.grpc.stub.StreamObserver<com.babylon.incentive.QueryProto.QueryDelegatorWithdrawAddressResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDelegatorWithdrawAddressMethod(), responseObserver);
     }
   }
 
@@ -302,13 +302,13 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * BTCTimestampingGauge queries the BTC timestamping gauge of a given epoch
+     * DelegatorWithdrawAddress queries withdraw address of a delegator.
      * </pre>
      */
-    public void bTCTimestampingGauge(com.babylon.incentive.QueryProto.QueryBTCTimestampingGaugeRequest request,
-        io.grpc.stub.StreamObserver<com.babylon.incentive.QueryProto.QueryBTCTimestampingGaugeResponse> responseObserver) {
+    public void delegatorWithdrawAddress(com.babylon.incentive.QueryProto.QueryDelegatorWithdrawAddressRequest request,
+        io.grpc.stub.StreamObserver<com.babylon.incentive.QueryProto.QueryDelegatorWithdrawAddressResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getBTCTimestampingGaugeMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getDelegatorWithdrawAddressMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -363,12 +363,12 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * BTCTimestampingGauge queries the BTC timestamping gauge of a given epoch
+     * DelegatorWithdrawAddress queries withdraw address of a delegator.
      * </pre>
      */
-    public com.babylon.incentive.QueryProto.QueryBTCTimestampingGaugeResponse bTCTimestampingGauge(com.babylon.incentive.QueryProto.QueryBTCTimestampingGaugeRequest request) {
+    public com.babylon.incentive.QueryProto.QueryDelegatorWithdrawAddressResponse delegatorWithdrawAddress(com.babylon.incentive.QueryProto.QueryDelegatorWithdrawAddressRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getBTCTimestampingGaugeMethod(), getCallOptions(), request);
+          getChannel(), getDelegatorWithdrawAddressMethod(), getCallOptions(), request);
     }
   }
 
@@ -426,20 +426,20 @@ public final class QueryGrpc {
 
     /**
      * <pre>
-     * BTCTimestampingGauge queries the BTC timestamping gauge of a given epoch
+     * DelegatorWithdrawAddress queries withdraw address of a delegator.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.babylon.incentive.QueryProto.QueryBTCTimestampingGaugeResponse> bTCTimestampingGauge(
-        com.babylon.incentive.QueryProto.QueryBTCTimestampingGaugeRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.babylon.incentive.QueryProto.QueryDelegatorWithdrawAddressResponse> delegatorWithdrawAddress(
+        com.babylon.incentive.QueryProto.QueryDelegatorWithdrawAddressRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getBTCTimestampingGaugeMethod(), getCallOptions()), request);
+          getChannel().newCall(getDelegatorWithdrawAddressMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_PARAMS = 0;
   private static final int METHODID_REWARD_GAUGES = 1;
   private static final int METHODID_BTCSTAKING_GAUGE = 2;
-  private static final int METHODID_BTCTIMESTAMPING_GAUGE = 3;
+  private static final int METHODID_DELEGATOR_WITHDRAW_ADDRESS = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -470,9 +470,9 @@ public final class QueryGrpc {
           serviceImpl.bTCStakingGauge((com.babylon.incentive.QueryProto.QueryBTCStakingGaugeRequest) request,
               (io.grpc.stub.StreamObserver<com.babylon.incentive.QueryProto.QueryBTCStakingGaugeResponse>) responseObserver);
           break;
-        case METHODID_BTCTIMESTAMPING_GAUGE:
-          serviceImpl.bTCTimestampingGauge((com.babylon.incentive.QueryProto.QueryBTCTimestampingGaugeRequest) request,
-              (io.grpc.stub.StreamObserver<com.babylon.incentive.QueryProto.QueryBTCTimestampingGaugeResponse>) responseObserver);
+        case METHODID_DELEGATOR_WITHDRAW_ADDRESS:
+          serviceImpl.delegatorWithdrawAddress((com.babylon.incentive.QueryProto.QueryDelegatorWithdrawAddressRequest) request,
+              (io.grpc.stub.StreamObserver<com.babylon.incentive.QueryProto.QueryDelegatorWithdrawAddressResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -514,12 +514,12 @@ public final class QueryGrpc {
               com.babylon.incentive.QueryProto.QueryBTCStakingGaugeResponse>(
                 service, METHODID_BTCSTAKING_GAUGE)))
         .addMethod(
-          getBTCTimestampingGaugeMethod(),
+          getDelegatorWithdrawAddressMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.babylon.incentive.QueryProto.QueryBTCTimestampingGaugeRequest,
-              com.babylon.incentive.QueryProto.QueryBTCTimestampingGaugeResponse>(
-                service, METHODID_BTCTIMESTAMPING_GAUGE)))
+              com.babylon.incentive.QueryProto.QueryDelegatorWithdrawAddressRequest,
+              com.babylon.incentive.QueryProto.QueryDelegatorWithdrawAddressResponse>(
+                service, METHODID_DELEGATOR_WITHDRAW_ADDRESS)))
         .build();
   }
 
@@ -571,7 +571,7 @@ public final class QueryGrpc {
               .addMethod(getParamsMethod())
               .addMethod(getRewardGaugesMethod())
               .addMethod(getBTCStakingGaugeMethod())
-              .addMethod(getBTCTimestampingGaugeMethod())
+              .addMethod(getDelegatorWithdrawAddressMethod())
               .build();
         }
       }

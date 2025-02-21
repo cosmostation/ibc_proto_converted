@@ -48,10 +48,10 @@ internal protocol Babylon_Incentive_QueryClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> UnaryCall<Babylon_Incentive_QueryBTCStakingGaugeRequest, Babylon_Incentive_QueryBTCStakingGaugeResponse>
 
-  func bTCTimestampingGauge(
-    _ request: Babylon_Incentive_QueryBTCTimestampingGaugeRequest,
+  func delegatorWithdrawAddress(
+    _ request: Babylon_Incentive_QueryDelegatorWithdrawAddressRequest,
     callOptions: CallOptions?
-  ) -> UnaryCall<Babylon_Incentive_QueryBTCTimestampingGaugeRequest, Babylon_Incentive_QueryBTCTimestampingGaugeResponse>
+  ) -> UnaryCall<Babylon_Incentive_QueryDelegatorWithdrawAddressRequest, Babylon_Incentive_QueryDelegatorWithdrawAddressResponse>
 }
 
 extension Babylon_Incentive_QueryClientProtocol {
@@ -113,21 +113,21 @@ extension Babylon_Incentive_QueryClientProtocol {
     )
   }
 
-  /// BTCTimestampingGauge queries the BTC timestamping gauge of a given epoch
+  /// DelegatorWithdrawAddress queries withdraw address of a delegator.
   ///
   /// - Parameters:
-  ///   - request: Request to send to BTCTimestampingGauge.
+  ///   - request: Request to send to DelegatorWithdrawAddress.
   ///   - callOptions: Call options.
   /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func bTCTimestampingGauge(
-    _ request: Babylon_Incentive_QueryBTCTimestampingGaugeRequest,
+  internal func delegatorWithdrawAddress(
+    _ request: Babylon_Incentive_QueryDelegatorWithdrawAddressRequest,
     callOptions: CallOptions? = nil
-  ) -> UnaryCall<Babylon_Incentive_QueryBTCTimestampingGaugeRequest, Babylon_Incentive_QueryBTCTimestampingGaugeResponse> {
+  ) -> UnaryCall<Babylon_Incentive_QueryDelegatorWithdrawAddressRequest, Babylon_Incentive_QueryDelegatorWithdrawAddressResponse> {
     return self.makeUnaryCall(
-      path: Babylon_Incentive_QueryClientMetadata.Methods.bTCTimestampingGauge.path,
+      path: Babylon_Incentive_QueryClientMetadata.Methods.delegatorWithdrawAddress.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeBTCTimestampingGaugeInterceptors() ?? []
+      interceptors: self.interceptors?.makeDelegatorWithdrawAddressInterceptors() ?? []
     )
   }
 }
@@ -210,10 +210,10 @@ internal protocol Babylon_Incentive_QueryAsyncClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Babylon_Incentive_QueryBTCStakingGaugeRequest, Babylon_Incentive_QueryBTCStakingGaugeResponse>
 
-  func makeBtctimestampingGaugeCall(
-    _ request: Babylon_Incentive_QueryBTCTimestampingGaugeRequest,
+  func makeDelegatorWithdrawAddressCall(
+    _ request: Babylon_Incentive_QueryDelegatorWithdrawAddressRequest,
     callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Babylon_Incentive_QueryBTCTimestampingGaugeRequest, Babylon_Incentive_QueryBTCTimestampingGaugeResponse>
+  ) -> GRPCAsyncUnaryCall<Babylon_Incentive_QueryDelegatorWithdrawAddressRequest, Babylon_Incentive_QueryDelegatorWithdrawAddressResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -262,15 +262,15 @@ extension Babylon_Incentive_QueryAsyncClientProtocol {
     )
   }
 
-  internal func makeBtctimestampingGaugeCall(
-    _ request: Babylon_Incentive_QueryBTCTimestampingGaugeRequest,
+  internal func makeDelegatorWithdrawAddressCall(
+    _ request: Babylon_Incentive_QueryDelegatorWithdrawAddressRequest,
     callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Babylon_Incentive_QueryBTCTimestampingGaugeRequest, Babylon_Incentive_QueryBTCTimestampingGaugeResponse> {
+  ) -> GRPCAsyncUnaryCall<Babylon_Incentive_QueryDelegatorWithdrawAddressRequest, Babylon_Incentive_QueryDelegatorWithdrawAddressResponse> {
     return self.makeAsyncUnaryCall(
-      path: Babylon_Incentive_QueryClientMetadata.Methods.bTCTimestampingGauge.path,
+      path: Babylon_Incentive_QueryClientMetadata.Methods.delegatorWithdrawAddress.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeBTCTimestampingGaugeInterceptors() ?? []
+      interceptors: self.interceptors?.makeDelegatorWithdrawAddressInterceptors() ?? []
     )
   }
 }
@@ -313,15 +313,15 @@ extension Babylon_Incentive_QueryAsyncClientProtocol {
     )
   }
 
-  internal func bTCTimestampingGauge(
-    _ request: Babylon_Incentive_QueryBTCTimestampingGaugeRequest,
+  internal func delegatorWithdrawAddress(
+    _ request: Babylon_Incentive_QueryDelegatorWithdrawAddressRequest,
     callOptions: CallOptions? = nil
-  ) async throws -> Babylon_Incentive_QueryBTCTimestampingGaugeResponse {
+  ) async throws -> Babylon_Incentive_QueryDelegatorWithdrawAddressResponse {
     return try await self.performAsyncUnaryCall(
-      path: Babylon_Incentive_QueryClientMetadata.Methods.bTCTimestampingGauge.path,
+      path: Babylon_Incentive_QueryClientMetadata.Methods.delegatorWithdrawAddress.path,
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeBTCTimestampingGaugeInterceptors() ?? []
+      interceptors: self.interceptors?.makeDelegatorWithdrawAddressInterceptors() ?? []
     )
   }
 }
@@ -354,8 +354,8 @@ internal protocol Babylon_Incentive_QueryClientInterceptorFactoryProtocol: Senda
   /// - Returns: Interceptors to use when invoking 'bTCStakingGauge'.
   func makeBTCStakingGaugeInterceptors() -> [ClientInterceptor<Babylon_Incentive_QueryBTCStakingGaugeRequest, Babylon_Incentive_QueryBTCStakingGaugeResponse>]
 
-  /// - Returns: Interceptors to use when invoking 'bTCTimestampingGauge'.
-  func makeBTCTimestampingGaugeInterceptors() -> [ClientInterceptor<Babylon_Incentive_QueryBTCTimestampingGaugeRequest, Babylon_Incentive_QueryBTCTimestampingGaugeResponse>]
+  /// - Returns: Interceptors to use when invoking 'delegatorWithdrawAddress'.
+  func makeDelegatorWithdrawAddressInterceptors() -> [ClientInterceptor<Babylon_Incentive_QueryDelegatorWithdrawAddressRequest, Babylon_Incentive_QueryDelegatorWithdrawAddressResponse>]
 }
 
 internal enum Babylon_Incentive_QueryClientMetadata {
@@ -366,7 +366,7 @@ internal enum Babylon_Incentive_QueryClientMetadata {
       Babylon_Incentive_QueryClientMetadata.Methods.params,
       Babylon_Incentive_QueryClientMetadata.Methods.rewardGauges,
       Babylon_Incentive_QueryClientMetadata.Methods.bTCStakingGauge,
-      Babylon_Incentive_QueryClientMetadata.Methods.bTCTimestampingGauge,
+      Babylon_Incentive_QueryClientMetadata.Methods.delegatorWithdrawAddress,
     ]
   )
 
@@ -389,9 +389,9 @@ internal enum Babylon_Incentive_QueryClientMetadata {
       type: GRPCCallType.unary
     )
 
-    internal static let bTCTimestampingGauge = GRPCMethodDescriptor(
-      name: "BTCTimestampingGauge",
-      path: "/babylon.incentive.Query/BTCTimestampingGauge",
+    internal static let delegatorWithdrawAddress = GRPCMethodDescriptor(
+      name: "DelegatorWithdrawAddress",
+      path: "/babylon.incentive.Query/DelegatorWithdrawAddress",
       type: GRPCCallType.unary
     )
   }
@@ -412,8 +412,8 @@ internal protocol Babylon_Incentive_QueryProvider: CallHandlerProvider {
   /// BTCStakingGauge queries the BTC staking gauge of a given height
   func bTCStakingGauge(request: Babylon_Incentive_QueryBTCStakingGaugeRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Incentive_QueryBTCStakingGaugeResponse>
 
-  /// BTCTimestampingGauge queries the BTC timestamping gauge of a given epoch
-  func bTCTimestampingGauge(request: Babylon_Incentive_QueryBTCTimestampingGaugeRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Incentive_QueryBTCTimestampingGaugeResponse>
+  /// DelegatorWithdrawAddress queries withdraw address of a delegator.
+  func delegatorWithdrawAddress(request: Babylon_Incentive_QueryDelegatorWithdrawAddressRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Incentive_QueryDelegatorWithdrawAddressResponse>
 }
 
 extension Babylon_Incentive_QueryProvider {
@@ -455,13 +455,13 @@ extension Babylon_Incentive_QueryProvider {
         userFunction: self.bTCStakingGauge(request:context:)
       )
 
-    case "BTCTimestampingGauge":
+    case "DelegatorWithdrawAddress":
       return UnaryServerHandler(
         context: context,
-        requestDeserializer: ProtobufDeserializer<Babylon_Incentive_QueryBTCTimestampingGaugeRequest>(),
-        responseSerializer: ProtobufSerializer<Babylon_Incentive_QueryBTCTimestampingGaugeResponse>(),
-        interceptors: self.interceptors?.makeBTCTimestampingGaugeInterceptors() ?? [],
-        userFunction: self.bTCTimestampingGauge(request:context:)
+        requestDeserializer: ProtobufDeserializer<Babylon_Incentive_QueryDelegatorWithdrawAddressRequest>(),
+        responseSerializer: ProtobufSerializer<Babylon_Incentive_QueryDelegatorWithdrawAddressResponse>(),
+        interceptors: self.interceptors?.makeDelegatorWithdrawAddressInterceptors() ?? [],
+        userFunction: self.delegatorWithdrawAddress(request:context:)
       )
 
     default:
@@ -496,11 +496,11 @@ internal protocol Babylon_Incentive_QueryAsyncProvider: CallHandlerProvider {
     context: GRPCAsyncServerCallContext
   ) async throws -> Babylon_Incentive_QueryBTCStakingGaugeResponse
 
-  /// BTCTimestampingGauge queries the BTC timestamping gauge of a given epoch
-  @Sendable func bTCTimestampingGauge(
-    request: Babylon_Incentive_QueryBTCTimestampingGaugeRequest,
+  /// DelegatorWithdrawAddress queries withdraw address of a delegator.
+  @Sendable func delegatorWithdrawAddress(
+    request: Babylon_Incentive_QueryDelegatorWithdrawAddressRequest,
     context: GRPCAsyncServerCallContext
-  ) async throws -> Babylon_Incentive_QueryBTCTimestampingGaugeResponse
+  ) async throws -> Babylon_Incentive_QueryDelegatorWithdrawAddressResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -549,13 +549,13 @@ extension Babylon_Incentive_QueryAsyncProvider {
         wrapping: self.bTCStakingGauge(request:context:)
       )
 
-    case "BTCTimestampingGauge":
+    case "DelegatorWithdrawAddress":
       return GRPCAsyncServerHandler(
         context: context,
-        requestDeserializer: ProtobufDeserializer<Babylon_Incentive_QueryBTCTimestampingGaugeRequest>(),
-        responseSerializer: ProtobufSerializer<Babylon_Incentive_QueryBTCTimestampingGaugeResponse>(),
-        interceptors: self.interceptors?.makeBTCTimestampingGaugeInterceptors() ?? [],
-        wrapping: self.bTCTimestampingGauge(request:context:)
+        requestDeserializer: ProtobufDeserializer<Babylon_Incentive_QueryDelegatorWithdrawAddressRequest>(),
+        responseSerializer: ProtobufSerializer<Babylon_Incentive_QueryDelegatorWithdrawAddressResponse>(),
+        interceptors: self.interceptors?.makeDelegatorWithdrawAddressInterceptors() ?? [],
+        wrapping: self.delegatorWithdrawAddress(request:context:)
       )
 
     default:
@@ -578,9 +578,9 @@ internal protocol Babylon_Incentive_QueryServerInterceptorFactoryProtocol {
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeBTCStakingGaugeInterceptors() -> [ServerInterceptor<Babylon_Incentive_QueryBTCStakingGaugeRequest, Babylon_Incentive_QueryBTCStakingGaugeResponse>]
 
-  /// - Returns: Interceptors to use when handling 'bTCTimestampingGauge'.
+  /// - Returns: Interceptors to use when handling 'delegatorWithdrawAddress'.
   ///   Defaults to calling `self.makeInterceptors()`.
-  func makeBTCTimestampingGaugeInterceptors() -> [ServerInterceptor<Babylon_Incentive_QueryBTCTimestampingGaugeRequest, Babylon_Incentive_QueryBTCTimestampingGaugeResponse>]
+  func makeDelegatorWithdrawAddressInterceptors() -> [ServerInterceptor<Babylon_Incentive_QueryDelegatorWithdrawAddressRequest, Babylon_Incentive_QueryDelegatorWithdrawAddressResponse>]
 }
 
 internal enum Babylon_Incentive_QueryServerMetadata {
@@ -591,7 +591,7 @@ internal enum Babylon_Incentive_QueryServerMetadata {
       Babylon_Incentive_QueryServerMetadata.Methods.params,
       Babylon_Incentive_QueryServerMetadata.Methods.rewardGauges,
       Babylon_Incentive_QueryServerMetadata.Methods.bTCStakingGauge,
-      Babylon_Incentive_QueryServerMetadata.Methods.bTCTimestampingGauge,
+      Babylon_Incentive_QueryServerMetadata.Methods.delegatorWithdrawAddress,
     ]
   )
 
@@ -614,9 +614,9 @@ internal enum Babylon_Incentive_QueryServerMetadata {
       type: GRPCCallType.unary
     )
 
-    internal static let bTCTimestampingGauge = GRPCMethodDescriptor(
-      name: "BTCTimestampingGauge",
-      path: "/babylon.incentive.Query/BTCTimestampingGauge",
+    internal static let delegatorWithdrawAddress = GRPCMethodDescriptor(
+      name: "DelegatorWithdrawAddress",
+      path: "/babylon.incentive.Query/DelegatorWithdrawAddress",
       type: GRPCCallType.unary
     )
   }

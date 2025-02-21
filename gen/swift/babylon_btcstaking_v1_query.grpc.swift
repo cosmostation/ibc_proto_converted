@@ -43,6 +43,11 @@ internal protocol Babylon_Btcstaking_V1_QueryClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> UnaryCall<Babylon_Btcstaking_V1_QueryParamsByVersionRequest, Babylon_Btcstaking_V1_QueryParamsByVersionResponse>
 
+  func paramsByBTCHeight(
+    _ request: Babylon_Btcstaking_V1_QueryParamsByBTCHeightRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Babylon_Btcstaking_V1_QueryParamsByBTCHeightRequest, Babylon_Btcstaking_V1_QueryParamsByBTCHeightResponse>
+
   func finalityProviders(
     _ request: Babylon_Btcstaking_V1_QueryFinalityProvidersRequest,
     callOptions: CallOptions?
@@ -107,6 +112,24 @@ extension Babylon_Btcstaking_V1_QueryClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeParamsByVersionInterceptors() ?? []
+    )
+  }
+
+  /// ParamsByBTCHeight queries the parameters of the module for a specific BTC height
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to ParamsByBTCHeight.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func paramsByBTCHeight(
+    _ request: Babylon_Btcstaking_V1_QueryParamsByBTCHeightRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Babylon_Btcstaking_V1_QueryParamsByBTCHeightRequest, Babylon_Btcstaking_V1_QueryParamsByBTCHeightResponse> {
+    return self.makeUnaryCall(
+      path: Babylon_Btcstaking_V1_QueryClientMetadata.Methods.paramsByBTCHeight.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeParamsByBTCHeightInterceptors() ?? []
     )
   }
 
@@ -274,6 +297,11 @@ internal protocol Babylon_Btcstaking_V1_QueryAsyncClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Babylon_Btcstaking_V1_QueryParamsByVersionRequest, Babylon_Btcstaking_V1_QueryParamsByVersionResponse>
 
+  func makeParamsByBtcheightCall(
+    _ request: Babylon_Btcstaking_V1_QueryParamsByBTCHeightRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Babylon_Btcstaking_V1_QueryParamsByBTCHeightRequest, Babylon_Btcstaking_V1_QueryParamsByBTCHeightResponse>
+
   func makeFinalityProvidersCall(
     _ request: Babylon_Btcstaking_V1_QueryFinalityProvidersRequest,
     callOptions: CallOptions?
@@ -331,6 +359,18 @@ extension Babylon_Btcstaking_V1_QueryAsyncClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeParamsByVersionInterceptors() ?? []
+    )
+  }
+
+  internal func makeParamsByBtcheightCall(
+    _ request: Babylon_Btcstaking_V1_QueryParamsByBTCHeightRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Babylon_Btcstaking_V1_QueryParamsByBTCHeightRequest, Babylon_Btcstaking_V1_QueryParamsByBTCHeightResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Babylon_Btcstaking_V1_QueryClientMetadata.Methods.paramsByBTCHeight.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeParamsByBTCHeightInterceptors() ?? []
     )
   }
 
@@ -421,6 +461,18 @@ extension Babylon_Btcstaking_V1_QueryAsyncClientProtocol {
     )
   }
 
+  internal func paramsByBTCHeight(
+    _ request: Babylon_Btcstaking_V1_QueryParamsByBTCHeightRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Babylon_Btcstaking_V1_QueryParamsByBTCHeightResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Babylon_Btcstaking_V1_QueryClientMetadata.Methods.paramsByBTCHeight.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeParamsByBTCHeightInterceptors() ?? []
+    )
+  }
+
   internal func finalityProviders(
     _ request: Babylon_Btcstaking_V1_QueryFinalityProvidersRequest,
     callOptions: CallOptions? = nil
@@ -507,6 +559,9 @@ internal protocol Babylon_Btcstaking_V1_QueryClientInterceptorFactoryProtocol: S
   /// - Returns: Interceptors to use when invoking 'paramsByVersion'.
   func makeParamsByVersionInterceptors() -> [ClientInterceptor<Babylon_Btcstaking_V1_QueryParamsByVersionRequest, Babylon_Btcstaking_V1_QueryParamsByVersionResponse>]
 
+  /// - Returns: Interceptors to use when invoking 'paramsByBTCHeight'.
+  func makeParamsByBTCHeightInterceptors() -> [ClientInterceptor<Babylon_Btcstaking_V1_QueryParamsByBTCHeightRequest, Babylon_Btcstaking_V1_QueryParamsByBTCHeightResponse>]
+
   /// - Returns: Interceptors to use when invoking 'finalityProviders'.
   func makeFinalityProvidersInterceptors() -> [ClientInterceptor<Babylon_Btcstaking_V1_QueryFinalityProvidersRequest, Babylon_Btcstaking_V1_QueryFinalityProvidersResponse>]
 
@@ -530,6 +585,7 @@ internal enum Babylon_Btcstaking_V1_QueryClientMetadata {
     methods: [
       Babylon_Btcstaking_V1_QueryClientMetadata.Methods.params,
       Babylon_Btcstaking_V1_QueryClientMetadata.Methods.paramsByVersion,
+      Babylon_Btcstaking_V1_QueryClientMetadata.Methods.paramsByBTCHeight,
       Babylon_Btcstaking_V1_QueryClientMetadata.Methods.finalityProviders,
       Babylon_Btcstaking_V1_QueryClientMetadata.Methods.finalityProvider,
       Babylon_Btcstaking_V1_QueryClientMetadata.Methods.bTCDelegations,
@@ -548,6 +604,12 @@ internal enum Babylon_Btcstaking_V1_QueryClientMetadata {
     internal static let paramsByVersion = GRPCMethodDescriptor(
       name: "ParamsByVersion",
       path: "/babylon.btcstaking.v1.Query/ParamsByVersion",
+      type: GRPCCallType.unary
+    )
+
+    internal static let paramsByBTCHeight = GRPCMethodDescriptor(
+      name: "ParamsByBTCHeight",
+      path: "/babylon.btcstaking.v1.Query/ParamsByBTCHeight",
       type: GRPCCallType.unary
     )
 
@@ -595,6 +657,9 @@ internal protocol Babylon_Btcstaking_V1_QueryProvider: CallHandlerProvider {
   /// ParamsByVersion queries the parameters of the module for a specific version of past params.
   func paramsByVersion(request: Babylon_Btcstaking_V1_QueryParamsByVersionRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Btcstaking_V1_QueryParamsByVersionResponse>
 
+  /// ParamsByBTCHeight queries the parameters of the module for a specific BTC height
+  func paramsByBTCHeight(request: Babylon_Btcstaking_V1_QueryParamsByBTCHeightRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Btcstaking_V1_QueryParamsByBTCHeightResponse>
+
   /// FinalityProviders queries all finality providers
   func finalityProviders(request: Babylon_Btcstaking_V1_QueryFinalityProvidersRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Babylon_Btcstaking_V1_QueryFinalityProvidersResponse>
 
@@ -639,6 +704,15 @@ extension Babylon_Btcstaking_V1_QueryProvider {
         responseSerializer: ProtobufSerializer<Babylon_Btcstaking_V1_QueryParamsByVersionResponse>(),
         interceptors: self.interceptors?.makeParamsByVersionInterceptors() ?? [],
         userFunction: self.paramsByVersion(request:context:)
+      )
+
+    case "ParamsByBTCHeight":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Babylon_Btcstaking_V1_QueryParamsByBTCHeightRequest>(),
+        responseSerializer: ProtobufSerializer<Babylon_Btcstaking_V1_QueryParamsByBTCHeightResponse>(),
+        interceptors: self.interceptors?.makeParamsByBTCHeightInterceptors() ?? [],
+        userFunction: self.paramsByBTCHeight(request:context:)
       )
 
     case "FinalityProviders":
@@ -712,6 +786,12 @@ internal protocol Babylon_Btcstaking_V1_QueryAsyncProvider: CallHandlerProvider 
     context: GRPCAsyncServerCallContext
   ) async throws -> Babylon_Btcstaking_V1_QueryParamsByVersionResponse
 
+  /// ParamsByBTCHeight queries the parameters of the module for a specific BTC height
+  @Sendable func paramsByBTCHeight(
+    request: Babylon_Btcstaking_V1_QueryParamsByBTCHeightRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Babylon_Btcstaking_V1_QueryParamsByBTCHeightResponse
+
   /// FinalityProviders queries all finality providers
   @Sendable func finalityProviders(
     request: Babylon_Btcstaking_V1_QueryFinalityProvidersRequest,
@@ -780,6 +860,15 @@ extension Babylon_Btcstaking_V1_QueryAsyncProvider {
         wrapping: self.paramsByVersion(request:context:)
       )
 
+    case "ParamsByBTCHeight":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Babylon_Btcstaking_V1_QueryParamsByBTCHeightRequest>(),
+        responseSerializer: ProtobufSerializer<Babylon_Btcstaking_V1_QueryParamsByBTCHeightResponse>(),
+        interceptors: self.interceptors?.makeParamsByBTCHeightInterceptors() ?? [],
+        wrapping: self.paramsByBTCHeight(request:context:)
+      )
+
     case "FinalityProviders":
       return GRPCAsyncServerHandler(
         context: context,
@@ -841,6 +930,10 @@ internal protocol Babylon_Btcstaking_V1_QueryServerInterceptorFactoryProtocol {
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeParamsByVersionInterceptors() -> [ServerInterceptor<Babylon_Btcstaking_V1_QueryParamsByVersionRequest, Babylon_Btcstaking_V1_QueryParamsByVersionResponse>]
 
+  /// - Returns: Interceptors to use when handling 'paramsByBTCHeight'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeParamsByBTCHeightInterceptors() -> [ServerInterceptor<Babylon_Btcstaking_V1_QueryParamsByBTCHeightRequest, Babylon_Btcstaking_V1_QueryParamsByBTCHeightResponse>]
+
   /// - Returns: Interceptors to use when handling 'finalityProviders'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeFinalityProvidersInterceptors() -> [ServerInterceptor<Babylon_Btcstaking_V1_QueryFinalityProvidersRequest, Babylon_Btcstaking_V1_QueryFinalityProvidersResponse>]
@@ -869,6 +962,7 @@ internal enum Babylon_Btcstaking_V1_QueryServerMetadata {
     methods: [
       Babylon_Btcstaking_V1_QueryServerMetadata.Methods.params,
       Babylon_Btcstaking_V1_QueryServerMetadata.Methods.paramsByVersion,
+      Babylon_Btcstaking_V1_QueryServerMetadata.Methods.paramsByBTCHeight,
       Babylon_Btcstaking_V1_QueryServerMetadata.Methods.finalityProviders,
       Babylon_Btcstaking_V1_QueryServerMetadata.Methods.finalityProvider,
       Babylon_Btcstaking_V1_QueryServerMetadata.Methods.bTCDelegations,
@@ -887,6 +981,12 @@ internal enum Babylon_Btcstaking_V1_QueryServerMetadata {
     internal static let paramsByVersion = GRPCMethodDescriptor(
       name: "ParamsByVersion",
       path: "/babylon.btcstaking.v1.Query/ParamsByVersion",
+      type: GRPCCallType.unary
+    )
+
+    internal static let paramsByBTCHeight = GRPCMethodDescriptor(
+      name: "ParamsByBTCHeight",
+      path: "/babylon.btcstaking.v1.Query/ParamsByBTCHeight",
       type: GRPCCallType.unary
     )
 

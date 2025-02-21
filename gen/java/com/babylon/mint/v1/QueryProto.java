@@ -2960,42 +2960,40 @@ public final class QueryProto {
     java.lang.String[] descriptorData = {
       "\n\033babylon/mint/v1/query.proto\022\017babylon.m" +
       "int.v1\032\024gogoproto/gogo.proto\032\034google/api" +
-      "/annotations.proto\032\032babylon/mint/v1/mint" +
-      ".proto\032\037google/protobuf/timestamp.proto\"" +
-      "\033\n\031QueryInflationRateRequest\"h\n\032QueryInf" +
-      "lationRateResponse\022J\n\016inflation_rate\030\001 \001" +
-      "(\014B#\310\336\037\000\332\336\037\033cosmossdk.io/math.LegacyDecR" +
-      "\rinflationRate\"\036\n\034QueryAnnualProvisionsR" +
-      "equest\"q\n\035QueryAnnualProvisionsResponse\022" +
-      "P\n\021annual_provisions\030\001 \001(\014B#\310\336\037\000\332\336\037\033cosm" +
-      "ossdk.io/math.LegacyDecR\020annualProvision" +
-      "s\"\031\n\027QueryGenesisTimeRequest\"_\n\030QueryGen" +
-      "esisTimeResponse\022C\n\014genesis_time\030\001 \001(\0132\032" +
-      ".google.protobuf.TimestampB\004\220\337\037\001R\013genesi" +
-      "sTime2\323\003\n\005Query\022\225\001\n\rInflationRate\022*.baby" +
-      "lon.mint.v1.QueryInflationRateRequest\032+." +
-      "babylon.mint.v1.QueryInflationRateRespon" +
-      "se\"+\202\323\344\223\002%\022#/cosmos/mint/v1beta1/inflati" +
-      "on_rate\022\241\001\n\020AnnualProvisions\022-.babylon.m" +
-      "int.v1.QueryAnnualProvisionsRequest\032..ba" +
-      "bylon.mint.v1.QueryAnnualProvisionsRespo" +
-      "nse\".\202\323\344\223\002(\022&/cosmos/mint/v1beta1/annual" +
-      "_provisions\022\215\001\n\013GenesisTime\022(.babylon.mi" +
-      "nt.v1.QueryGenesisTimeRequest\032).babylon." +
-      "mint.v1.QueryGenesisTimeResponse\")\202\323\344\223\002#" +
-      "\022!/cosmos/mint/v1beta1/genesis_timeB\255\001\n\023" +
-      "com.babylon.mint.v1B\nQueryProtoZ.github." +
-      "com/babylonlabs-io/babylon/x/mint/types\242" +
-      "\002\003BMX\252\002\017Babylon.Mint.V1\312\002\017Babylon\\Mint\\V" +
-      "1\342\002\033Babylon\\Mint\\V1\\GPBMetadata\352\002\021Babylo" +
-      "n::Mint::V1b\006proto3"
+      "/annotations.proto\032\037google/protobuf/time" +
+      "stamp.proto\"\033\n\031QueryInflationRateRequest" +
+      "\"h\n\032QueryInflationRateResponse\022J\n\016inflat" +
+      "ion_rate\030\001 \001(\014B#\310\336\037\000\332\336\037\033cosmossdk.io/mat" +
+      "h.LegacyDecR\rinflationRate\"\036\n\034QueryAnnua" +
+      "lProvisionsRequest\"q\n\035QueryAnnualProvisi" +
+      "onsResponse\022P\n\021annual_provisions\030\001 \001(\014B#" +
+      "\310\336\037\000\332\336\037\033cosmossdk.io/math.LegacyDecR\020ann" +
+      "ualProvisions\"\031\n\027QueryGenesisTimeRequest" +
+      "\"_\n\030QueryGenesisTimeResponse\022C\n\014genesis_" +
+      "time\030\001 \001(\0132\032.google.protobuf.TimestampB\004" +
+      "\220\337\037\001R\013genesisTime2\323\003\n\005Query\022\225\001\n\rInflatio" +
+      "nRate\022*.babylon.mint.v1.QueryInflationRa" +
+      "teRequest\032+.babylon.mint.v1.QueryInflati" +
+      "onRateResponse\"+\202\323\344\223\002%\022#/cosmos/mint/v1b" +
+      "eta1/inflation_rate\022\241\001\n\020AnnualProvisions" +
+      "\022-.babylon.mint.v1.QueryAnnualProvisions" +
+      "Request\032..babylon.mint.v1.QueryAnnualPro" +
+      "visionsResponse\".\202\323\344\223\002(\022&/cosmos/mint/v1" +
+      "beta1/annual_provisions\022\215\001\n\013GenesisTime\022" +
+      "(.babylon.mint.v1.QueryGenesisTimeReques" +
+      "t\032).babylon.mint.v1.QueryGenesisTimeResp" +
+      "onse\")\202\323\344\223\002#\022!/cosmos/mint/v1beta1/genes" +
+      "is_timeB\255\001\n\023com.babylon.mint.v1B\nQueryPr" +
+      "otoZ.github.com/babylonlabs-io/babylon/x" +
+      "/mint/types\242\002\003BMX\252\002\017Babylon.Mint.V1\312\002\017Ba" +
+      "bylon\\Mint\\V1\342\002\033Babylon\\Mint\\V1\\GPBMetad" +
+      "ata\352\002\021Babylon::Mint::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.gogoproto.GogoProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.babylon.mint.v1.MintProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_babylon_mint_v1_QueryInflationRateRequest_descriptor =
@@ -3044,7 +3042,6 @@ public final class QueryProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.gogoproto.GogoProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.babylon.mint.v1.MintProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

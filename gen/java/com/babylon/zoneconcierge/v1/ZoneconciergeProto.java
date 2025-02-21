@@ -20,23 +20,23 @@ public final class ZoneconciergeProto {
 
     /**
      * <pre>
-     * chain_id is the unique ID of the chain
+     * consumer_id is the unique ID of the consumer
      * </pre>
      *
-     * <code>string chain_id = 1 [json_name = "chainId"];</code>
-     * @return The chainId.
+     * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+     * @return The consumerId.
      */
-    java.lang.String getChainId();
+    java.lang.String getConsumerId();
     /**
      * <pre>
-     * chain_id is the unique ID of the chain
+     * consumer_id is the unique ID of the consumer
      * </pre>
      *
-     * <code>string chain_id = 1 [json_name = "chainId"];</code>
-     * @return The bytes for chainId.
+     * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+     * @return The bytes for consumerId.
      */
     com.google.protobuf.ByteString
-        getChainIdBytes();
+        getConsumerIdBytes();
 
     /**
      * <pre>
@@ -153,7 +153,7 @@ public final class ZoneconciergeProto {
       super(builder);
     }
     private IndexedHeader() {
-      chainId_ = "";
+      consumerId_ = "";
       hash_ = com.google.protobuf.ByteString.EMPTY;
       babylonHeaderHash_ = com.google.protobuf.ByteString.EMPTY;
       babylonTxHash_ = com.google.protobuf.ByteString.EMPTY;
@@ -179,47 +179,47 @@ public final class ZoneconciergeProto {
               com.babylon.zoneconcierge.v1.ZoneconciergeProto.IndexedHeader.class, com.babylon.zoneconcierge.v1.ZoneconciergeProto.IndexedHeader.Builder.class);
     }
 
-    public static final int CHAIN_ID_FIELD_NUMBER = 1;
+    public static final int CONSUMER_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object chainId_ = "";
+    private volatile java.lang.Object consumerId_ = "";
     /**
      * <pre>
-     * chain_id is the unique ID of the chain
+     * consumer_id is the unique ID of the consumer
      * </pre>
      *
-     * <code>string chain_id = 1 [json_name = "chainId"];</code>
-     * @return The chainId.
+     * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+     * @return The consumerId.
      */
     @java.lang.Override
-    public java.lang.String getChainId() {
-      java.lang.Object ref = chainId_;
+    public java.lang.String getConsumerId() {
+      java.lang.Object ref = consumerId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        chainId_ = s;
+        consumerId_ = s;
         return s;
       }
     }
     /**
      * <pre>
-     * chain_id is the unique ID of the chain
+     * consumer_id is the unique ID of the consumer
      * </pre>
      *
-     * <code>string chain_id = 1 [json_name = "chainId"];</code>
-     * @return The bytes for chainId.
+     * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+     * @return The bytes for consumerId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getChainIdBytes() {
-      java.lang.Object ref = chainId_;
+        getConsumerIdBytes() {
+      java.lang.Object ref = consumerId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        chainId_ = b;
+        consumerId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -379,8 +379,8 @@ public final class ZoneconciergeProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chainId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consumerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, consumerId_);
       }
       if (!hash_.isEmpty()) {
         output.writeBytes(2, hash_);
@@ -412,8 +412,8 @@ public final class ZoneconciergeProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, chainId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consumerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, consumerId_);
       }
       if (!hash_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
@@ -458,8 +458,8 @@ public final class ZoneconciergeProto {
       }
       com.babylon.zoneconcierge.v1.ZoneconciergeProto.IndexedHeader other = (com.babylon.zoneconcierge.v1.ZoneconciergeProto.IndexedHeader) obj;
 
-      if (!getChainId()
-          .equals(other.getChainId())) return false;
+      if (!getConsumerId()
+          .equals(other.getConsumerId())) return false;
       if (!getHash()
           .equals(other.getHash())) return false;
       if (getHeight()
@@ -488,8 +488,8 @@ public final class ZoneconciergeProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getChainId().hashCode();
+      hash = (37 * hash) + CONSUMER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConsumerId().hashCode();
       hash = (37 * hash) + HASH_FIELD_NUMBER;
       hash = (53 * hash) + getHash().hashCode();
       hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
@@ -644,7 +644,7 @@ public final class ZoneconciergeProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        chainId_ = "";
+        consumerId_ = "";
         hash_ = com.google.protobuf.ByteString.EMPTY;
         height_ = 0L;
         time_ = null;
@@ -690,7 +690,7 @@ public final class ZoneconciergeProto {
       private void buildPartial0(com.babylon.zoneconcierge.v1.ZoneconciergeProto.IndexedHeader result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.chainId_ = chainId_;
+          result.consumerId_ = consumerId_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.hash_ = hash_;
@@ -761,8 +761,8 @@ public final class ZoneconciergeProto {
 
       public Builder mergeFrom(com.babylon.zoneconcierge.v1.ZoneconciergeProto.IndexedHeader other) {
         if (other == com.babylon.zoneconcierge.v1.ZoneconciergeProto.IndexedHeader.getDefaultInstance()) return this;
-        if (!other.getChainId().isEmpty()) {
-          chainId_ = other.chainId_;
+        if (!other.getConsumerId().isEmpty()) {
+          consumerId_ = other.consumerId_;
           bitField0_ |= 0x00000001;
           onChanged();
         }
@@ -814,7 +814,7 @@ public final class ZoneconciergeProto {
                 done = true;
                 break;
               case 10: {
-                chainId_ = input.readStringRequireUtf8();
+                consumerId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
@@ -872,22 +872,22 @@ public final class ZoneconciergeProto {
       }
       private int bitField0_;
 
-      private java.lang.Object chainId_ = "";
+      private java.lang.Object consumerId_ = "";
       /**
        * <pre>
-       * chain_id is the unique ID of the chain
+       * consumer_id is the unique ID of the consumer
        * </pre>
        *
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
-       * @return The chainId.
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+       * @return The consumerId.
        */
-      public java.lang.String getChainId() {
-        java.lang.Object ref = chainId_;
+      public java.lang.String getConsumerId() {
+        java.lang.Object ref = consumerId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          chainId_ = s;
+          consumerId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -895,20 +895,20 @@ public final class ZoneconciergeProto {
       }
       /**
        * <pre>
-       * chain_id is the unique ID of the chain
+       * consumer_id is the unique ID of the consumer
        * </pre>
        *
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
-       * @return The bytes for chainId.
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+       * @return The bytes for consumerId.
        */
       public com.google.protobuf.ByteString
-          getChainIdBytes() {
-        java.lang.Object ref = chainId_;
+          getConsumerIdBytes() {
+        java.lang.Object ref = consumerId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          chainId_ = b;
+          consumerId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -916,49 +916,49 @@ public final class ZoneconciergeProto {
       }
       /**
        * <pre>
-       * chain_id is the unique ID of the chain
+       * consumer_id is the unique ID of the consumer
        * </pre>
        *
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
-       * @param value The chainId to set.
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+       * @param value The consumerId to set.
        * @return This builder for chaining.
        */
-      public Builder setChainId(
+      public Builder setConsumerId(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        chainId_ = value;
+        consumerId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * chain_id is the unique ID of the chain
+       * consumer_id is the unique ID of the consumer
        * </pre>
        *
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearChainId() {
-        chainId_ = getDefaultInstance().getChainId();
+      public Builder clearConsumerId() {
+        consumerId_ = getDefaultInstance().getConsumerId();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * chain_id is the unique ID of the chain
+       * consumer_id is the unique ID of the consumer
        * </pre>
        *
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
-       * @param value The bytes for chainId to set.
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+       * @param value The bytes for consumerId to set.
        * @return This builder for chaining.
        */
-      public Builder setChainIdBytes(
+      public Builder setConsumerIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        chainId_ = value;
+        consumerId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
@@ -2413,23 +2413,23 @@ public final class ZoneconciergeProto {
 
     /**
      * <pre>
-     * chain_id is the ID of the chain
+     * consumer_id is the ID of the consumer
      * </pre>
      *
-     * <code>string chain_id = 1 [json_name = "chainId"];</code>
-     * @return The chainId.
+     * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+     * @return The consumerId.
      */
-    java.lang.String getChainId();
+    java.lang.String getConsumerId();
     /**
      * <pre>
-     * chain_id is the ID of the chain
+     * consumer_id is the ID of the consumer
      * </pre>
      *
-     * <code>string chain_id = 1 [json_name = "chainId"];</code>
-     * @return The bytes for chainId.
+     * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+     * @return The bytes for consumerId.
      */
     com.google.protobuf.ByteString
-        getChainIdBytes();
+        getConsumerIdBytes();
 
     /**
      * <pre>
@@ -2516,7 +2516,7 @@ public final class ZoneconciergeProto {
       super(builder);
     }
     private ChainInfo() {
-      chainId_ = "";
+      consumerId_ = "";
     }
 
     @java.lang.Override
@@ -2539,47 +2539,47 @@ public final class ZoneconciergeProto {
               com.babylon.zoneconcierge.v1.ZoneconciergeProto.ChainInfo.class, com.babylon.zoneconcierge.v1.ZoneconciergeProto.ChainInfo.Builder.class);
     }
 
-    public static final int CHAIN_ID_FIELD_NUMBER = 1;
+    public static final int CONSUMER_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object chainId_ = "";
+    private volatile java.lang.Object consumerId_ = "";
     /**
      * <pre>
-     * chain_id is the ID of the chain
+     * consumer_id is the ID of the consumer
      * </pre>
      *
-     * <code>string chain_id = 1 [json_name = "chainId"];</code>
-     * @return The chainId.
+     * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+     * @return The consumerId.
      */
     @java.lang.Override
-    public java.lang.String getChainId() {
-      java.lang.Object ref = chainId_;
+    public java.lang.String getConsumerId() {
+      java.lang.Object ref = consumerId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        chainId_ = s;
+        consumerId_ = s;
         return s;
       }
     }
     /**
      * <pre>
-     * chain_id is the ID of the chain
+     * consumer_id is the ID of the consumer
      * </pre>
      *
-     * <code>string chain_id = 1 [json_name = "chainId"];</code>
-     * @return The bytes for chainId.
+     * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+     * @return The bytes for consumerId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getChainIdBytes() {
-      java.lang.Object ref = chainId_;
+        getConsumerIdBytes() {
+      java.lang.Object ref = consumerId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        chainId_ = b;
+        consumerId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -2695,8 +2695,8 @@ public final class ZoneconciergeProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chainId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consumerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, consumerId_);
       }
       if (latestHeader_ != null) {
         output.writeMessage(2, getLatestHeader());
@@ -2716,8 +2716,8 @@ public final class ZoneconciergeProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, chainId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consumerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, consumerId_);
       }
       if (latestHeader_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -2746,8 +2746,8 @@ public final class ZoneconciergeProto {
       }
       com.babylon.zoneconcierge.v1.ZoneconciergeProto.ChainInfo other = (com.babylon.zoneconcierge.v1.ZoneconciergeProto.ChainInfo) obj;
 
-      if (!getChainId()
-          .equals(other.getChainId())) return false;
+      if (!getConsumerId()
+          .equals(other.getConsumerId())) return false;
       if (hasLatestHeader() != other.hasLatestHeader()) return false;
       if (hasLatestHeader()) {
         if (!getLatestHeader()
@@ -2771,8 +2771,8 @@ public final class ZoneconciergeProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getChainId().hashCode();
+      hash = (37 * hash) + CONSUMER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConsumerId().hashCode();
       if (hasLatestHeader()) {
         hash = (37 * hash) + LATEST_HEADER_FIELD_NUMBER;
         hash = (53 * hash) + getLatestHeader().hashCode();
@@ -2919,7 +2919,7 @@ public final class ZoneconciergeProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        chainId_ = "";
+        consumerId_ = "";
         latestHeader_ = null;
         if (latestHeaderBuilder_ != null) {
           latestHeaderBuilder_.dispose();
@@ -2965,7 +2965,7 @@ public final class ZoneconciergeProto {
       private void buildPartial0(com.babylon.zoneconcierge.v1.ZoneconciergeProto.ChainInfo result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.chainId_ = chainId_;
+          result.consumerId_ = consumerId_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.latestHeader_ = latestHeaderBuilder_ == null
@@ -3026,8 +3026,8 @@ public final class ZoneconciergeProto {
 
       public Builder mergeFrom(com.babylon.zoneconcierge.v1.ZoneconciergeProto.ChainInfo other) {
         if (other == com.babylon.zoneconcierge.v1.ZoneconciergeProto.ChainInfo.getDefaultInstance()) return this;
-        if (!other.getChainId().isEmpty()) {
-          chainId_ = other.chainId_;
+        if (!other.getConsumerId().isEmpty()) {
+          consumerId_ = other.consumerId_;
           bitField0_ |= 0x00000001;
           onChanged();
         }
@@ -3067,7 +3067,7 @@ public final class ZoneconciergeProto {
                 done = true;
                 break;
               case 10: {
-                chainId_ = input.readStringRequireUtf8();
+                consumerId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
@@ -3107,22 +3107,22 @@ public final class ZoneconciergeProto {
       }
       private int bitField0_;
 
-      private java.lang.Object chainId_ = "";
+      private java.lang.Object consumerId_ = "";
       /**
        * <pre>
-       * chain_id is the ID of the chain
+       * consumer_id is the ID of the consumer
        * </pre>
        *
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
-       * @return The chainId.
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+       * @return The consumerId.
        */
-      public java.lang.String getChainId() {
-        java.lang.Object ref = chainId_;
+      public java.lang.String getConsumerId() {
+        java.lang.Object ref = consumerId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          chainId_ = s;
+          consumerId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -3130,20 +3130,20 @@ public final class ZoneconciergeProto {
       }
       /**
        * <pre>
-       * chain_id is the ID of the chain
+       * consumer_id is the ID of the consumer
        * </pre>
        *
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
-       * @return The bytes for chainId.
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+       * @return The bytes for consumerId.
        */
       public com.google.protobuf.ByteString
-          getChainIdBytes() {
-        java.lang.Object ref = chainId_;
+          getConsumerIdBytes() {
+        java.lang.Object ref = consumerId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          chainId_ = b;
+          consumerId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -3151,49 +3151,49 @@ public final class ZoneconciergeProto {
       }
       /**
        * <pre>
-       * chain_id is the ID of the chain
+       * consumer_id is the ID of the consumer
        * </pre>
        *
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
-       * @param value The chainId to set.
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+       * @param value The consumerId to set.
        * @return This builder for chaining.
        */
-      public Builder setChainId(
+      public Builder setConsumerId(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        chainId_ = value;
+        consumerId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * chain_id is the ID of the chain
+       * consumer_id is the ID of the consumer
        * </pre>
        *
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearChainId() {
-        chainId_ = getDefaultInstance().getChainId();
+      public Builder clearConsumerId() {
+        consumerId_ = getDefaultInstance().getConsumerId();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * chain_id is the ID of the chain
+       * consumer_id is the ID of the consumer
        * </pre>
        *
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
-       * @param value The bytes for chainId to set.
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+       * @param value The bytes for consumerId to set.
        * @return This builder for chaining.
        */
-      public Builder setChainIdBytes(
+      public Builder setConsumerIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        chainId_ = value;
+        consumerId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
@@ -4530,23 +4530,23 @@ public final class ZoneconciergeProto {
 
     /**
      * <pre>
-     * chain_id is the ID of the chain
+     * consumer_id is the ID of the consumer
      * </pre>
      *
-     * <code>string chain_id = 1 [json_name = "chainId"];</code>
-     * @return The chainId.
+     * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+     * @return The consumerId.
      */
-    java.lang.String getChainId();
+    java.lang.String getConsumerId();
     /**
      * <pre>
-     * chain_id is the ID of the chain
+     * consumer_id is the ID of the consumer
      * </pre>
      *
-     * <code>string chain_id = 1 [json_name = "chainId"];</code>
-     * @return The bytes for chainId.
+     * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+     * @return The bytes for consumerId.
      */
     com.google.protobuf.ByteString
-        getChainIdBytes();
+        getConsumerIdBytes();
 
     /**
      * <pre>
@@ -4703,7 +4703,7 @@ public final class ZoneconciergeProto {
       super(builder);
     }
     private FinalizedChainInfo() {
-      chainId_ = "";
+      consumerId_ = "";
     }
 
     @java.lang.Override
@@ -4726,47 +4726,47 @@ public final class ZoneconciergeProto {
               com.babylon.zoneconcierge.v1.ZoneconciergeProto.FinalizedChainInfo.class, com.babylon.zoneconcierge.v1.ZoneconciergeProto.FinalizedChainInfo.Builder.class);
     }
 
-    public static final int CHAIN_ID_FIELD_NUMBER = 1;
+    public static final int CONSUMER_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object chainId_ = "";
+    private volatile java.lang.Object consumerId_ = "";
     /**
      * <pre>
-     * chain_id is the ID of the chain
+     * consumer_id is the ID of the consumer
      * </pre>
      *
-     * <code>string chain_id = 1 [json_name = "chainId"];</code>
-     * @return The chainId.
+     * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+     * @return The consumerId.
      */
     @java.lang.Override
-    public java.lang.String getChainId() {
-      java.lang.Object ref = chainId_;
+    public java.lang.String getConsumerId() {
+      java.lang.Object ref = consumerId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        chainId_ = s;
+        consumerId_ = s;
         return s;
       }
     }
     /**
      * <pre>
-     * chain_id is the ID of the chain
+     * consumer_id is the ID of the consumer
      * </pre>
      *
-     * <code>string chain_id = 1 [json_name = "chainId"];</code>
-     * @return The bytes for chainId.
+     * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+     * @return The bytes for consumerId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getChainIdBytes() {
-      java.lang.Object ref = chainId_;
+        getConsumerIdBytes() {
+      java.lang.Object ref = consumerId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        chainId_ = b;
+        consumerId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -4980,8 +4980,8 @@ public final class ZoneconciergeProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chainId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consumerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, consumerId_);
       }
       if (finalizedChainInfo_ != null) {
         output.writeMessage(2, getFinalizedChainInfo());
@@ -5007,8 +5007,8 @@ public final class ZoneconciergeProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, chainId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consumerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, consumerId_);
       }
       if (finalizedChainInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -5045,8 +5045,8 @@ public final class ZoneconciergeProto {
       }
       com.babylon.zoneconcierge.v1.ZoneconciergeProto.FinalizedChainInfo other = (com.babylon.zoneconcierge.v1.ZoneconciergeProto.FinalizedChainInfo) obj;
 
-      if (!getChainId()
-          .equals(other.getChainId())) return false;
+      if (!getConsumerId()
+          .equals(other.getConsumerId())) return false;
       if (hasFinalizedChainInfo() != other.hasFinalizedChainInfo()) return false;
       if (hasFinalizedChainInfo()) {
         if (!getFinalizedChainInfo()
@@ -5083,8 +5083,8 @@ public final class ZoneconciergeProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getChainId().hashCode();
+      hash = (37 * hash) + CONSUMER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConsumerId().hashCode();
       if (hasFinalizedChainInfo()) {
         hash = (37 * hash) + FINALIZED_CHAIN_INFO_FIELD_NUMBER;
         hash = (53 * hash) + getFinalizedChainInfo().hashCode();
@@ -5240,7 +5240,7 @@ public final class ZoneconciergeProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        chainId_ = "";
+        consumerId_ = "";
         finalizedChainInfo_ = null;
         if (finalizedChainInfoBuilder_ != null) {
           finalizedChainInfoBuilder_.dispose();
@@ -5300,7 +5300,7 @@ public final class ZoneconciergeProto {
       private void buildPartial0(com.babylon.zoneconcierge.v1.ZoneconciergeProto.FinalizedChainInfo result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.chainId_ = chainId_;
+          result.consumerId_ = consumerId_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.finalizedChainInfo_ = finalizedChainInfoBuilder_ == null
@@ -5373,8 +5373,8 @@ public final class ZoneconciergeProto {
 
       public Builder mergeFrom(com.babylon.zoneconcierge.v1.ZoneconciergeProto.FinalizedChainInfo other) {
         if (other == com.babylon.zoneconcierge.v1.ZoneconciergeProto.FinalizedChainInfo.getDefaultInstance()) return this;
-        if (!other.getChainId().isEmpty()) {
-          chainId_ = other.chainId_;
+        if (!other.getConsumerId().isEmpty()) {
+          consumerId_ = other.consumerId_;
           bitField0_ |= 0x00000001;
           onChanged();
         }
@@ -5420,7 +5420,7 @@ public final class ZoneconciergeProto {
                 done = true;
                 break;
               case 10: {
-                chainId_ = input.readStringRequireUtf8();
+                consumerId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
@@ -5476,22 +5476,22 @@ public final class ZoneconciergeProto {
       }
       private int bitField0_;
 
-      private java.lang.Object chainId_ = "";
+      private java.lang.Object consumerId_ = "";
       /**
        * <pre>
-       * chain_id is the ID of the chain
+       * consumer_id is the ID of the consumer
        * </pre>
        *
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
-       * @return The chainId.
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+       * @return The consumerId.
        */
-      public java.lang.String getChainId() {
-        java.lang.Object ref = chainId_;
+      public java.lang.String getConsumerId() {
+        java.lang.Object ref = consumerId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          chainId_ = s;
+          consumerId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -5499,20 +5499,20 @@ public final class ZoneconciergeProto {
       }
       /**
        * <pre>
-       * chain_id is the ID of the chain
+       * consumer_id is the ID of the consumer
        * </pre>
        *
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
-       * @return The bytes for chainId.
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+       * @return The bytes for consumerId.
        */
       public com.google.protobuf.ByteString
-          getChainIdBytes() {
-        java.lang.Object ref = chainId_;
+          getConsumerIdBytes() {
+        java.lang.Object ref = consumerId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          chainId_ = b;
+          consumerId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -5520,49 +5520,49 @@ public final class ZoneconciergeProto {
       }
       /**
        * <pre>
-       * chain_id is the ID of the chain
+       * consumer_id is the ID of the consumer
        * </pre>
        *
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
-       * @param value The chainId to set.
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+       * @param value The consumerId to set.
        * @return This builder for chaining.
        */
-      public Builder setChainId(
+      public Builder setConsumerId(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        chainId_ = value;
+        consumerId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * chain_id is the ID of the chain
+       * consumer_id is the ID of the consumer
        * </pre>
        *
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearChainId() {
-        chainId_ = getDefaultInstance().getChainId();
+      public Builder clearConsumerId() {
+        consumerId_ = getDefaultInstance().getConsumerId();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * chain_id is the ID of the chain
+       * consumer_id is the ID of the consumer
        * </pre>
        *
-       * <code>string chain_id = 1 [json_name = "chainId"];</code>
-       * @param value The bytes for chainId to set.
+       * <code>string consumer_id = 1 [json_name = "consumerId"];</code>
+       * @param value The bytes for consumerId to set.
        * @return This builder for chaining.
        */
-      public Builder setChainIdBytes(
+      public Builder setConsumerIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        chainId_ = value;
+        consumerId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
@@ -10268,60 +10268,61 @@ public final class ZoneconciergeProto {
       "roto\032)babylon/checkpointing/v1/checkpoin" +
       "t.proto\032\"babylon/epoching/v1/epoching.pr" +
       "oto\032.babylon/btclightclient/v1/btclightc" +
-      "lient.proto\"\275\002\n\rIndexedHeader\022\031\n\010chain_i" +
-      "d\030\001 \001(\tR\007chainId\022\022\n\004hash\030\002 \001(\014R\004hash\022\026\n\006" +
-      "height\030\003 \001(\004R\006height\0224\n\004time\030\004 \001(\0132\032.goo" +
-      "gle.protobuf.TimestampB\004\220\337\037\001R\004time\022.\n\023ba" +
-      "bylon_header_hash\030\005 \001(\014R\021babylonHeaderHa" +
-      "sh\0222\n\025babylon_header_height\030\006 \001(\004R\023babyl" +
-      "onHeaderHeight\022#\n\rbabylon_epoch\030\007 \001(\004R\014b" +
-      "abylonEpoch\022&\n\017babylon_tx_hash\030\010 \001(\014R\rba" +
-      "bylonTxHash\"J\n\005Forks\022A\n\007headers\030\003 \003(\0132\'." +
-      "babylon.zoneconcierge.v1.IndexedHeaderR\007" +
-      "headers\"\364\001\n\tChainInfo\022\031\n\010chain_id\030\001 \001(\tR" +
-      "\007chainId\022L\n\rlatest_header\030\002 \001(\0132\'.babylo" +
-      "n.zoneconcierge.v1.IndexedHeaderR\014latest" +
-      "Header\022B\n\014latest_forks\030\003 \001(\0132\037.babylon.z" +
-      "oneconcierge.v1.ForksR\013latestForks\022:\n\031ti" +
-      "mestamped_headers_count\030\004 \001(\004R\027timestamp" +
-      "edHeadersCount\"\250\001\n\022ChainInfoWithProof\022B\n" +
-      "\nchain_info\030\001 \001(\0132#.babylon.zoneconcierg" +
-      "e.v1.ChainInfoR\tchainInfo\022N\n\025proof_heade" +
-      "r_in_epoch\030\002 \001(\0132\033.tendermint.crypto.Pro" +
-      "ofOpsR\022proofHeaderInEpoch\"\261\003\n\022FinalizedC" +
-      "hainInfo\022\031\n\010chain_id\030\001 \001(\tR\007chainId\022U\n\024f" +
-      "inalized_chain_info\030\002 \001(\0132#.babylon.zone" +
-      "concierge.v1.ChainInfoR\022finalizedChainIn" +
-      "fo\0229\n\nepoch_info\030\003 \001(\0132\032.babylon.epochin" +
-      "g.v1.EpochR\tepochInfo\022N\n\016raw_checkpoint\030" +
-      "\004 \001(\0132\'.babylon.checkpointing.v1.RawChec" +
-      "kpointR\rrawCheckpoint\022U\n\022btc_submission_" +
-      "key\030\005 \001(\0132\'.babylon.btccheckpoint.v1.Sub" +
-      "missionKeyR\020btcSubmissionKey\022G\n\005proof\030\006 " +
-      "\001(\01321.babylon.zoneconcierge.v1.ProofFina" +
-      "lizedChainInfoR\005proof\"\371\001\n\020ProofEpochSeal" +
-      "ed\022R\n\rvalidator_set\030\001 \003(\0132-.babylon.chec" +
-      "kpointing.v1.ValidatorWithBlsKeyR\014valida" +
-      "torSet\022E\n\020proof_epoch_info\030\002 \001(\0132\033.tende" +
-      "rmint.crypto.ProofOpsR\016proofEpochInfo\022J\n" +
-      "\023proof_epoch_val_set\030\003 \001(\0132\033.tendermint." +
-      "crypto.ProofOpsR\020proofEpochValSet\"\247\002\n\027Pr" +
-      "oofFinalizedChainInfo\022S\n\030proof_cz_header" +
-      "_in_epoch\030\001 \001(\0132\033.tendermint.crypto.Proo" +
-      "fOpsR\024proofCzHeaderInEpoch\022X\n\022proof_epoc" +
-      "h_sealed\030\002 \001(\0132*.babylon.zoneconcierge.v" +
-      "1.ProofEpochSealedR\020proofEpochSealed\022]\n\025" +
-      "proof_epoch_submitted\030\003 \003(\0132).babylon.bt" +
-      "ccheckpoint.v1.TransactionInfoR\023proofEpo" +
-      "chSubmitted\"\\\n\017BTCChainSegment\022I\n\013btc_he" +
-      "aders\030\001 \003(\0132(.babylon.btclightclient.v1." +
-      "BTCHeaderInfoR\nbtcHeadersB\351\001\n\034com.babylo" +
-      "n.zoneconcierge.v1B\022ZoneconciergeProtoZ5" +
-      "github.com/babylonchain/babylon/x/zoneco" +
-      "ncierge/types\242\002\003BZX\252\002\030Babylon.Zoneconcie" +
-      "rge.V1\312\002\030Babylon\\Zoneconcierge\\V1\342\002$Baby" +
-      "lon\\Zoneconcierge\\V1\\GPBMetadata\352\002\032Babyl" +
-      "on::Zoneconcierge::V1b\006proto3"
+      "lient.proto\"\303\002\n\rIndexedHeader\022\037\n\013consume" +
+      "r_id\030\001 \001(\tR\nconsumerId\022\022\n\004hash\030\002 \001(\014R\004ha" +
+      "sh\022\026\n\006height\030\003 \001(\004R\006height\0224\n\004time\030\004 \001(\013" +
+      "2\032.google.protobuf.TimestampB\004\220\337\037\001R\004time" +
+      "\022.\n\023babylon_header_hash\030\005 \001(\014R\021babylonHe" +
+      "aderHash\0222\n\025babylon_header_height\030\006 \001(\004R" +
+      "\023babylonHeaderHeight\022#\n\rbabylon_epoch\030\007 " +
+      "\001(\004R\014babylonEpoch\022&\n\017babylon_tx_hash\030\010 \001" +
+      "(\014R\rbabylonTxHash\"J\n\005Forks\022A\n\007headers\030\003 " +
+      "\003(\0132\'.babylon.zoneconcierge.v1.IndexedHe" +
+      "aderR\007headers\"\372\001\n\tChainInfo\022\037\n\013consumer_" +
+      "id\030\001 \001(\tR\nconsumerId\022L\n\rlatest_header\030\002 " +
+      "\001(\0132\'.babylon.zoneconcierge.v1.IndexedHe" +
+      "aderR\014latestHeader\022B\n\014latest_forks\030\003 \001(\013" +
+      "2\037.babylon.zoneconcierge.v1.ForksR\013lates" +
+      "tForks\022:\n\031timestamped_headers_count\030\004 \001(" +
+      "\004R\027timestampedHeadersCount\"\250\001\n\022ChainInfo" +
+      "WithProof\022B\n\nchain_info\030\001 \001(\0132#.babylon." +
+      "zoneconcierge.v1.ChainInfoR\tchainInfo\022N\n" +
+      "\025proof_header_in_epoch\030\002 \001(\0132\033.tendermin" +
+      "t.crypto.ProofOpsR\022proofHeaderInEpoch\"\267\003" +
+      "\n\022FinalizedChainInfo\022\037\n\013consumer_id\030\001 \001(" +
+      "\tR\nconsumerId\022U\n\024finalized_chain_info\030\002 " +
+      "\001(\0132#.babylon.zoneconcierge.v1.ChainInfo" +
+      "R\022finalizedChainInfo\0229\n\nepoch_info\030\003 \001(\013" +
+      "2\032.babylon.epoching.v1.EpochR\tepochInfo\022" +
+      "N\n\016raw_checkpoint\030\004 \001(\0132\'.babylon.checkp" +
+      "ointing.v1.RawCheckpointR\rrawCheckpoint\022" +
+      "U\n\022btc_submission_key\030\005 \001(\0132\'.babylon.bt" +
+      "ccheckpoint.v1.SubmissionKeyR\020btcSubmiss" +
+      "ionKey\022G\n\005proof\030\006 \001(\01321.babylon.zoneconc" +
+      "ierge.v1.ProofFinalizedChainInfoR\005proof\"" +
+      "\371\001\n\020ProofEpochSealed\022R\n\rvalidator_set\030\001 " +
+      "\003(\0132-.babylon.checkpointing.v1.Validator" +
+      "WithBlsKeyR\014validatorSet\022E\n\020proof_epoch_" +
+      "info\030\002 \001(\0132\033.tendermint.crypto.ProofOpsR" +
+      "\016proofEpochInfo\022J\n\023proof_epoch_val_set\030\003" +
+      " \001(\0132\033.tendermint.crypto.ProofOpsR\020proof" +
+      "EpochValSet\"\247\002\n\027ProofFinalizedChainInfo\022" +
+      "S\n\030proof_cz_header_in_epoch\030\001 \001(\0132\033.tend" +
+      "ermint.crypto.ProofOpsR\024proofCzHeaderInE" +
+      "poch\022X\n\022proof_epoch_sealed\030\002 \001(\0132*.babyl" +
+      "on.zoneconcierge.v1.ProofEpochSealedR\020pr" +
+      "oofEpochSealed\022]\n\025proof_epoch_submitted\030" +
+      "\003 \003(\0132).babylon.btccheckpoint.v1.Transac" +
+      "tionInfoR\023proofEpochSubmitted\"\\\n\017BTCChai" +
+      "nSegment\022I\n\013btc_headers\030\001 \003(\0132(.babylon." +
+      "btclightclient.v1.BTCHeaderInfoR\nbtcHead" +
+      "ersB\353\001\n\034com.babylon.zoneconcierge.v1B\022Zo" +
+      "neconciergeProtoZ7github.com/babylonlabs" +
+      "-io/babylon/x/zoneconcierge/types\242\002\003BZX\252" +
+      "\002\030Babylon.Zoneconcierge.V1\312\002\030Babylon\\Zon" +
+      "econcierge\\V1\342\002$Babylon\\Zoneconcierge\\V1" +
+      "\\GPBMetadata\352\002\032Babylon::Zoneconcierge::V" +
+      "1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10340,7 +10341,7 @@ public final class ZoneconciergeProto {
     internal_static_babylon_zoneconcierge_v1_IndexedHeader_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_zoneconcierge_v1_IndexedHeader_descriptor,
-        new java.lang.String[] { "ChainId", "Hash", "Height", "Time", "BabylonHeaderHash", "BabylonHeaderHeight", "BabylonEpoch", "BabylonTxHash", });
+        new java.lang.String[] { "ConsumerId", "Hash", "Height", "Time", "BabylonHeaderHash", "BabylonHeaderHeight", "BabylonEpoch", "BabylonTxHash", });
     internal_static_babylon_zoneconcierge_v1_Forks_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_babylon_zoneconcierge_v1_Forks_fieldAccessorTable = new
@@ -10352,7 +10353,7 @@ public final class ZoneconciergeProto {
     internal_static_babylon_zoneconcierge_v1_ChainInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_zoneconcierge_v1_ChainInfo_descriptor,
-        new java.lang.String[] { "ChainId", "LatestHeader", "LatestForks", "TimestampedHeadersCount", });
+        new java.lang.String[] { "ConsumerId", "LatestHeader", "LatestForks", "TimestampedHeadersCount", });
     internal_static_babylon_zoneconcierge_v1_ChainInfoWithProof_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_babylon_zoneconcierge_v1_ChainInfoWithProof_fieldAccessorTable = new
@@ -10364,7 +10365,7 @@ public final class ZoneconciergeProto {
     internal_static_babylon_zoneconcierge_v1_FinalizedChainInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_zoneconcierge_v1_FinalizedChainInfo_descriptor,
-        new java.lang.String[] { "ChainId", "FinalizedChainInfo", "EpochInfo", "RawCheckpoint", "BtcSubmissionKey", "Proof", });
+        new java.lang.String[] { "ConsumerId", "FinalizedChainInfo", "EpochInfo", "RawCheckpoint", "BtcSubmissionKey", "Proof", });
     internal_static_babylon_zoneconcierge_v1_ProofEpochSealed_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_babylon_zoneconcierge_v1_ProofEpochSealed_fieldAccessorTable = new

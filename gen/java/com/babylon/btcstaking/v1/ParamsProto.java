@@ -155,13 +155,14 @@ public final class ParamsProto {
     /**
      * <pre>
      * PARAMETERS COVERING UNBONDING
-     * min_unbonding_time is the minimum time for unbonding transaction timelock in BTC blocks
+     * unbonding_time is the exact unbonding time required from unbonding transaction
+     * it must be larger than `checkpoint_finalization_timeout` from `btccheckpoint` module
      * </pre>
      *
-     * <code>uint32 min_unbonding_time_blocks = 10 [json_name = "minUnbondingTimeBlocks"];</code>
-     * @return The minUnbondingTimeBlocks.
+     * <code>uint32 unbonding_time_blocks = 10 [json_name = "unbondingTimeBlocks"];</code>
+     * @return The unbondingTimeBlocks.
      */
-    int getMinUnbondingTimeBlocks();
+    int getUnbondingTimeBlocks();
 
     /**
      * <pre>
@@ -208,6 +209,28 @@ public final class ParamsProto {
      * @return The delegationCreationBaseGasFee.
      */
     long getDelegationCreationBaseGasFee();
+
+    /**
+     * <pre>
+     * allow_list_expiration_height is the height at which the allow list expires
+     * i.e all staking transactions are allowed to enter Babylon chain afterwards
+     * setting it to 0 means allow list is disabled
+     * </pre>
+     *
+     * <code>uint64 allow_list_expiration_height = 14 [json_name = "allowListExpirationHeight"];</code>
+     * @return The allowListExpirationHeight.
+     */
+    long getAllowListExpirationHeight();
+
+    /**
+     * <pre>
+     * btc_activation_height is the btc height from which parameters are activated (inclusive)
+     * </pre>
+     *
+     * <code>uint32 btc_activation_height = 15 [json_name = "btcActivationHeight"];</code>
+     * @return The btcActivationHeight.
+     */
+    int getBtcActivationHeight();
   }
   /**
    * <pre>
@@ -459,20 +482,21 @@ public final class ParamsProto {
       }
     }
 
-    public static final int MIN_UNBONDING_TIME_BLOCKS_FIELD_NUMBER = 10;
-    private int minUnbondingTimeBlocks_ = 0;
+    public static final int UNBONDING_TIME_BLOCKS_FIELD_NUMBER = 10;
+    private int unbondingTimeBlocks_ = 0;
     /**
      * <pre>
      * PARAMETERS COVERING UNBONDING
-     * min_unbonding_time is the minimum time for unbonding transaction timelock in BTC blocks
+     * unbonding_time is the exact unbonding time required from unbonding transaction
+     * it must be larger than `checkpoint_finalization_timeout` from `btccheckpoint` module
      * </pre>
      *
-     * <code>uint32 min_unbonding_time_blocks = 10 [json_name = "minUnbondingTimeBlocks"];</code>
-     * @return The minUnbondingTimeBlocks.
+     * <code>uint32 unbonding_time_blocks = 10 [json_name = "unbondingTimeBlocks"];</code>
+     * @return The unbondingTimeBlocks.
      */
     @java.lang.Override
-    public int getMinUnbondingTimeBlocks() {
-      return minUnbondingTimeBlocks_;
+    public int getUnbondingTimeBlocks() {
+      return unbondingTimeBlocks_;
     }
 
     public static final int UNBONDING_FEE_SAT_FIELD_NUMBER = 11;
@@ -558,6 +582,38 @@ public final class ParamsProto {
       return delegationCreationBaseGasFee_;
     }
 
+    public static final int ALLOW_LIST_EXPIRATION_HEIGHT_FIELD_NUMBER = 14;
+    private long allowListExpirationHeight_ = 0L;
+    /**
+     * <pre>
+     * allow_list_expiration_height is the height at which the allow list expires
+     * i.e all staking transactions are allowed to enter Babylon chain afterwards
+     * setting it to 0 means allow list is disabled
+     * </pre>
+     *
+     * <code>uint64 allow_list_expiration_height = 14 [json_name = "allowListExpirationHeight"];</code>
+     * @return The allowListExpirationHeight.
+     */
+    @java.lang.Override
+    public long getAllowListExpirationHeight() {
+      return allowListExpirationHeight_;
+    }
+
+    public static final int BTC_ACTIVATION_HEIGHT_FIELD_NUMBER = 15;
+    private int btcActivationHeight_ = 0;
+    /**
+     * <pre>
+     * btc_activation_height is the btc height from which parameters are activated (inclusive)
+     * </pre>
+     *
+     * <code>uint32 btc_activation_height = 15 [json_name = "btcActivationHeight"];</code>
+     * @return The btcActivationHeight.
+     */
+    @java.lang.Override
+    public int getBtcActivationHeight() {
+      return btcActivationHeight_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -599,8 +655,8 @@ public final class ParamsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(slashingRate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, slashingRate_);
       }
-      if (minUnbondingTimeBlocks_ != 0) {
-        output.writeUInt32(10, minUnbondingTimeBlocks_);
+      if (unbondingTimeBlocks_ != 0) {
+        output.writeUInt32(10, unbondingTimeBlocks_);
       }
       if (unbondingFeeSat_ != 0L) {
         output.writeInt64(11, unbondingFeeSat_);
@@ -610,6 +666,12 @@ public final class ParamsProto {
       }
       if (delegationCreationBaseGasFee_ != 0L) {
         output.writeUInt64(13, delegationCreationBaseGasFee_);
+      }
+      if (allowListExpirationHeight_ != 0L) {
+        output.writeUInt64(14, allowListExpirationHeight_);
+      }
+      if (btcActivationHeight_ != 0) {
+        output.writeUInt32(15, btcActivationHeight_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -660,9 +722,9 @@ public final class ParamsProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(slashingRate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, slashingRate_);
       }
-      if (minUnbondingTimeBlocks_ != 0) {
+      if (unbondingTimeBlocks_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, minUnbondingTimeBlocks_);
+          .computeUInt32Size(10, unbondingTimeBlocks_);
       }
       if (unbondingFeeSat_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -674,6 +736,14 @@ public final class ParamsProto {
       if (delegationCreationBaseGasFee_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(13, delegationCreationBaseGasFee_);
+      }
+      if (allowListExpirationHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(14, allowListExpirationHeight_);
+      }
+      if (btcActivationHeight_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(15, btcActivationHeight_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -708,14 +778,18 @@ public final class ParamsProto {
           != other.getMinSlashingTxFeeSat()) return false;
       if (!getSlashingRate()
           .equals(other.getSlashingRate())) return false;
-      if (getMinUnbondingTimeBlocks()
-          != other.getMinUnbondingTimeBlocks()) return false;
+      if (getUnbondingTimeBlocks()
+          != other.getUnbondingTimeBlocks()) return false;
       if (getUnbondingFeeSat()
           != other.getUnbondingFeeSat()) return false;
       if (!getMinCommissionRate()
           .equals(other.getMinCommissionRate())) return false;
       if (getDelegationCreationBaseGasFee()
           != other.getDelegationCreationBaseGasFee()) return false;
+      if (getAllowListExpirationHeight()
+          != other.getAllowListExpirationHeight()) return false;
+      if (getBtcActivationHeight()
+          != other.getBtcActivationHeight()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -750,8 +824,8 @@ public final class ParamsProto {
           getMinSlashingTxFeeSat());
       hash = (37 * hash) + SLASHING_RATE_FIELD_NUMBER;
       hash = (53 * hash) + getSlashingRate().hashCode();
-      hash = (37 * hash) + MIN_UNBONDING_TIME_BLOCKS_FIELD_NUMBER;
-      hash = (53 * hash) + getMinUnbondingTimeBlocks();
+      hash = (37 * hash) + UNBONDING_TIME_BLOCKS_FIELD_NUMBER;
+      hash = (53 * hash) + getUnbondingTimeBlocks();
       hash = (37 * hash) + UNBONDING_FEE_SAT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getUnbondingFeeSat());
@@ -760,6 +834,11 @@ public final class ParamsProto {
       hash = (37 * hash) + DELEGATION_CREATION_BASE_GAS_FEE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getDelegationCreationBaseGasFee());
+      hash = (37 * hash) + ALLOW_LIST_EXPIRATION_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAllowListExpirationHeight());
+      hash = (37 * hash) + BTC_ACTIVATION_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getBtcActivationHeight();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -904,10 +983,12 @@ public final class ParamsProto {
         slashingPkScript_ = com.google.protobuf.ByteString.EMPTY;
         minSlashingTxFeeSat_ = 0L;
         slashingRate_ = "";
-        minUnbondingTimeBlocks_ = 0;
+        unbondingTimeBlocks_ = 0;
         unbondingFeeSat_ = 0L;
         minCommissionRate_ = "";
         delegationCreationBaseGasFee_ = 0L;
+        allowListExpirationHeight_ = 0L;
+        btcActivationHeight_ = 0;
         return this;
       }
 
@@ -975,7 +1056,7 @@ public final class ParamsProto {
           result.slashingRate_ = slashingRate_;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
-          result.minUnbondingTimeBlocks_ = minUnbondingTimeBlocks_;
+          result.unbondingTimeBlocks_ = unbondingTimeBlocks_;
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.unbondingFeeSat_ = unbondingFeeSat_;
@@ -985,6 +1066,12 @@ public final class ParamsProto {
         }
         if (((from_bitField0_ & 0x00001000) != 0)) {
           result.delegationCreationBaseGasFee_ = delegationCreationBaseGasFee_;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.allowListExpirationHeight_ = allowListExpirationHeight_;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.btcActivationHeight_ = btcActivationHeight_;
         }
       }
 
@@ -1068,8 +1155,8 @@ public final class ParamsProto {
           bitField0_ |= 0x00000100;
           onChanged();
         }
-        if (other.getMinUnbondingTimeBlocks() != 0) {
-          setMinUnbondingTimeBlocks(other.getMinUnbondingTimeBlocks());
+        if (other.getUnbondingTimeBlocks() != 0) {
+          setUnbondingTimeBlocks(other.getUnbondingTimeBlocks());
         }
         if (other.getUnbondingFeeSat() != 0L) {
           setUnbondingFeeSat(other.getUnbondingFeeSat());
@@ -1081,6 +1168,12 @@ public final class ParamsProto {
         }
         if (other.getDelegationCreationBaseGasFee() != 0L) {
           setDelegationCreationBaseGasFee(other.getDelegationCreationBaseGasFee());
+        }
+        if (other.getAllowListExpirationHeight() != 0L) {
+          setAllowListExpirationHeight(other.getAllowListExpirationHeight());
+        }
+        if (other.getBtcActivationHeight() != 0) {
+          setBtcActivationHeight(other.getBtcActivationHeight());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -1155,7 +1248,7 @@ public final class ParamsProto {
                 break;
               } // case 74
               case 80: {
-                minUnbondingTimeBlocks_ = input.readUInt32();
+                unbondingTimeBlocks_ = input.readUInt32();
                 bitField0_ |= 0x00000200;
                 break;
               } // case 80
@@ -1174,6 +1267,16 @@ public final class ParamsProto {
                 bitField0_ |= 0x00001000;
                 break;
               } // case 104
+              case 112: {
+                allowListExpirationHeight_ = input.readUInt64();
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 112
+              case 120: {
+                btcActivationHeight_ = input.readUInt32();
+                bitField0_ |= 0x00004000;
+                break;
+              } // case 120
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1739,33 +1842,35 @@ public final class ParamsProto {
         return this;
       }
 
-      private int minUnbondingTimeBlocks_ ;
+      private int unbondingTimeBlocks_ ;
       /**
        * <pre>
        * PARAMETERS COVERING UNBONDING
-       * min_unbonding_time is the minimum time for unbonding transaction timelock in BTC blocks
+       * unbonding_time is the exact unbonding time required from unbonding transaction
+       * it must be larger than `checkpoint_finalization_timeout` from `btccheckpoint` module
        * </pre>
        *
-       * <code>uint32 min_unbonding_time_blocks = 10 [json_name = "minUnbondingTimeBlocks"];</code>
-       * @return The minUnbondingTimeBlocks.
+       * <code>uint32 unbonding_time_blocks = 10 [json_name = "unbondingTimeBlocks"];</code>
+       * @return The unbondingTimeBlocks.
        */
       @java.lang.Override
-      public int getMinUnbondingTimeBlocks() {
-        return minUnbondingTimeBlocks_;
+      public int getUnbondingTimeBlocks() {
+        return unbondingTimeBlocks_;
       }
       /**
        * <pre>
        * PARAMETERS COVERING UNBONDING
-       * min_unbonding_time is the minimum time for unbonding transaction timelock in BTC blocks
+       * unbonding_time is the exact unbonding time required from unbonding transaction
+       * it must be larger than `checkpoint_finalization_timeout` from `btccheckpoint` module
        * </pre>
        *
-       * <code>uint32 min_unbonding_time_blocks = 10 [json_name = "minUnbondingTimeBlocks"];</code>
-       * @param value The minUnbondingTimeBlocks to set.
+       * <code>uint32 unbonding_time_blocks = 10 [json_name = "unbondingTimeBlocks"];</code>
+       * @param value The unbondingTimeBlocks to set.
        * @return This builder for chaining.
        */
-      public Builder setMinUnbondingTimeBlocks(int value) {
+      public Builder setUnbondingTimeBlocks(int value) {
 
-        minUnbondingTimeBlocks_ = value;
+        unbondingTimeBlocks_ = value;
         bitField0_ |= 0x00000200;
         onChanged();
         return this;
@@ -1773,15 +1878,16 @@ public final class ParamsProto {
       /**
        * <pre>
        * PARAMETERS COVERING UNBONDING
-       * min_unbonding_time is the minimum time for unbonding transaction timelock in BTC blocks
+       * unbonding_time is the exact unbonding time required from unbonding transaction
+       * it must be larger than `checkpoint_finalization_timeout` from `btccheckpoint` module
        * </pre>
        *
-       * <code>uint32 min_unbonding_time_blocks = 10 [json_name = "minUnbondingTimeBlocks"];</code>
+       * <code>uint32 unbonding_time_blocks = 10 [json_name = "unbondingTimeBlocks"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearMinUnbondingTimeBlocks() {
+      public Builder clearUnbondingTimeBlocks() {
         bitField0_ = (bitField0_ & ~0x00000200);
-        minUnbondingTimeBlocks_ = 0;
+        unbondingTimeBlocks_ = 0;
         onChanged();
         return this;
       }
@@ -1980,6 +2086,100 @@ public final class ParamsProto {
         onChanged();
         return this;
       }
+
+      private long allowListExpirationHeight_ ;
+      /**
+       * <pre>
+       * allow_list_expiration_height is the height at which the allow list expires
+       * i.e all staking transactions are allowed to enter Babylon chain afterwards
+       * setting it to 0 means allow list is disabled
+       * </pre>
+       *
+       * <code>uint64 allow_list_expiration_height = 14 [json_name = "allowListExpirationHeight"];</code>
+       * @return The allowListExpirationHeight.
+       */
+      @java.lang.Override
+      public long getAllowListExpirationHeight() {
+        return allowListExpirationHeight_;
+      }
+      /**
+       * <pre>
+       * allow_list_expiration_height is the height at which the allow list expires
+       * i.e all staking transactions are allowed to enter Babylon chain afterwards
+       * setting it to 0 means allow list is disabled
+       * </pre>
+       *
+       * <code>uint64 allow_list_expiration_height = 14 [json_name = "allowListExpirationHeight"];</code>
+       * @param value The allowListExpirationHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowListExpirationHeight(long value) {
+
+        allowListExpirationHeight_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * allow_list_expiration_height is the height at which the allow list expires
+       * i.e all staking transactions are allowed to enter Babylon chain afterwards
+       * setting it to 0 means allow list is disabled
+       * </pre>
+       *
+       * <code>uint64 allow_list_expiration_height = 14 [json_name = "allowListExpirationHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowListExpirationHeight() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        allowListExpirationHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int btcActivationHeight_ ;
+      /**
+       * <pre>
+       * btc_activation_height is the btc height from which parameters are activated (inclusive)
+       * </pre>
+       *
+       * <code>uint32 btc_activation_height = 15 [json_name = "btcActivationHeight"];</code>
+       * @return The btcActivationHeight.
+       */
+      @java.lang.Override
+      public int getBtcActivationHeight() {
+        return btcActivationHeight_;
+      }
+      /**
+       * <pre>
+       * btc_activation_height is the btc height from which parameters are activated (inclusive)
+       * </pre>
+       *
+       * <code>uint32 btc_activation_height = 15 [json_name = "btcActivationHeight"];</code>
+       * @param value The btcActivationHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBtcActivationHeight(int value) {
+
+        btcActivationHeight_ = value;
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * btc_activation_height is the btc height from which parameters are activated (inclusive)
+       * </pre>
+       *
+       * <code>uint32 btc_activation_height = 15 [json_name = "btcActivationHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBtcActivationHeight() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        btcActivationHeight_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2039,6 +2239,1505 @@ public final class ParamsProto {
 
     @java.lang.Override
     public com.babylon.btcstaking.v1.ParamsProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface HeightVersionPairOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.HeightVersionPair)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * start_height is the height from which the parameters are activated (inclusive)
+     * </pre>
+     *
+     * <code>uint64 start_height = 1 [json_name = "startHeight"];</code>
+     * @return The startHeight.
+     */
+    long getStartHeight();
+
+    /**
+     * <pre>
+     * version is the version of the parameters
+     * </pre>
+     *
+     * <code>uint32 version = 2 [json_name = "version"];</code>
+     * @return The version.
+     */
+    int getVersion();
+  }
+  /**
+   * <pre>
+   * HeightVersionPair pairs a btc height with a version of the parameters
+   * </pre>
+   *
+   * Protobuf type {@code babylon.btcstaking.v1.HeightVersionPair}
+   */
+  public static final class HeightVersionPair extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.HeightVersionPair)
+      HeightVersionPairOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use HeightVersionPair.newBuilder() to construct.
+    private HeightVersionPair(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HeightVersionPair() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HeightVersionPair();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.btcstaking.v1.ParamsProto.internal_static_babylon_btcstaking_v1_HeightVersionPair_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.btcstaking.v1.ParamsProto.internal_static_babylon_btcstaking_v1_HeightVersionPair_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair.class, com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair.Builder.class);
+    }
+
+    public static final int START_HEIGHT_FIELD_NUMBER = 1;
+    private long startHeight_ = 0L;
+    /**
+     * <pre>
+     * start_height is the height from which the parameters are activated (inclusive)
+     * </pre>
+     *
+     * <code>uint64 start_height = 1 [json_name = "startHeight"];</code>
+     * @return The startHeight.
+     */
+    @java.lang.Override
+    public long getStartHeight() {
+      return startHeight_;
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 2;
+    private int version_ = 0;
+    /**
+     * <pre>
+     * version is the version of the parameters
+     * </pre>
+     *
+     * <code>uint32 version = 2 [json_name = "version"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public int getVersion() {
+      return version_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (startHeight_ != 0L) {
+        output.writeUInt64(1, startHeight_);
+      }
+      if (version_ != 0) {
+        output.writeUInt32(2, version_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (startHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, startHeight_);
+      }
+      if (version_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, version_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair)) {
+        return super.equals(obj);
+      }
+      com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair other = (com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair) obj;
+
+      if (getStartHeight()
+          != other.getStartHeight()) return false;
+      if (getVersion()
+          != other.getVersion()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + START_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getStartHeight());
+      hash = (37 * hash) + VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getVersion();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * HeightVersionPair pairs a btc height with a version of the parameters
+     * </pre>
+     *
+     * Protobuf type {@code babylon.btcstaking.v1.HeightVersionPair}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.HeightVersionPair)
+        com.babylon.btcstaking.v1.ParamsProto.HeightVersionPairOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.btcstaking.v1.ParamsProto.internal_static_babylon_btcstaking_v1_HeightVersionPair_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.btcstaking.v1.ParamsProto.internal_static_babylon_btcstaking_v1_HeightVersionPair_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair.class, com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair.Builder.class);
+      }
+
+      // Construct using com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        startHeight_ = 0L;
+        version_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.btcstaking.v1.ParamsProto.internal_static_babylon_btcstaking_v1_HeightVersionPair_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair getDefaultInstanceForType() {
+        return com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair build() {
+        com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair buildPartial() {
+        com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair result = new com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.startHeight_ = startHeight_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.version_ = version_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair) {
+          return mergeFrom((com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair other) {
+        if (other == com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair.getDefaultInstance()) return this;
+        if (other.getStartHeight() != 0L) {
+          setStartHeight(other.getStartHeight());
+        }
+        if (other.getVersion() != 0) {
+          setVersion(other.getVersion());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                startHeight_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                version_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long startHeight_ ;
+      /**
+       * <pre>
+       * start_height is the height from which the parameters are activated (inclusive)
+       * </pre>
+       *
+       * <code>uint64 start_height = 1 [json_name = "startHeight"];</code>
+       * @return The startHeight.
+       */
+      @java.lang.Override
+      public long getStartHeight() {
+        return startHeight_;
+      }
+      /**
+       * <pre>
+       * start_height is the height from which the parameters are activated (inclusive)
+       * </pre>
+       *
+       * <code>uint64 start_height = 1 [json_name = "startHeight"];</code>
+       * @param value The startHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartHeight(long value) {
+
+        startHeight_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_height is the height from which the parameters are activated (inclusive)
+       * </pre>
+       *
+       * <code>uint64 start_height = 1 [json_name = "startHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartHeight() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        startHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int version_ ;
+      /**
+       * <pre>
+       * version is the version of the parameters
+       * </pre>
+       *
+       * <code>uint32 version = 2 [json_name = "version"];</code>
+       * @return The version.
+       */
+      @java.lang.Override
+      public int getVersion() {
+        return version_;
+      }
+      /**
+       * <pre>
+       * version is the version of the parameters
+       * </pre>
+       *
+       * <code>uint32 version = 2 [json_name = "version"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(int value) {
+
+        version_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * version is the version of the parameters
+       * </pre>
+       *
+       * <code>uint32 version = 2 [json_name = "version"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        version_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.HeightVersionPair)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.HeightVersionPair)
+    private static final com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair();
+    }
+
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<HeightVersionPair>
+        PARSER = new com.google.protobuf.AbstractParser<HeightVersionPair>() {
+      @java.lang.Override
+      public HeightVersionPair parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<HeightVersionPair> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HeightVersionPair> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface HeightToVersionMapOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.btcstaking.v1.HeightToVersionMap)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Pairs must be sorted by `start_height` in ascending order, without duplicates
+     * </pre>
+     *
+     * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+     */
+    java.util.List<com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair> 
+        getPairsList();
+    /**
+     * <pre>
+     * Pairs must be sorted by `start_height` in ascending order, without duplicates
+     * </pre>
+     *
+     * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+     */
+    com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair getPairs(int index);
+    /**
+     * <pre>
+     * Pairs must be sorted by `start_height` in ascending order, without duplicates
+     * </pre>
+     *
+     * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+     */
+    int getPairsCount();
+    /**
+     * <pre>
+     * Pairs must be sorted by `start_height` in ascending order, without duplicates
+     * </pre>
+     *
+     * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+     */
+    java.util.List<? extends com.babylon.btcstaking.v1.ParamsProto.HeightVersionPairOrBuilder> 
+        getPairsOrBuilderList();
+    /**
+     * <pre>
+     * Pairs must be sorted by `start_height` in ascending order, without duplicates
+     * </pre>
+     *
+     * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+     */
+    com.babylon.btcstaking.v1.ParamsProto.HeightVersionPairOrBuilder getPairsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * HeightToVersionMap maps a btc height to a version of the parameters
+   * </pre>
+   *
+   * Protobuf type {@code babylon.btcstaking.v1.HeightToVersionMap}
+   */
+  public static final class HeightToVersionMap extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.btcstaking.v1.HeightToVersionMap)
+      HeightToVersionMapOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use HeightToVersionMap.newBuilder() to construct.
+    private HeightToVersionMap(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HeightToVersionMap() {
+      pairs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HeightToVersionMap();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.btcstaking.v1.ParamsProto.internal_static_babylon_btcstaking_v1_HeightToVersionMap_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.btcstaking.v1.ParamsProto.internal_static_babylon_btcstaking_v1_HeightToVersionMap_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap.class, com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap.Builder.class);
+    }
+
+    public static final int PAIRS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair> pairs_;
+    /**
+     * <pre>
+     * Pairs must be sorted by `start_height` in ascending order, without duplicates
+     * </pre>
+     *
+     * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair> getPairsList() {
+      return pairs_;
+    }
+    /**
+     * <pre>
+     * Pairs must be sorted by `start_height` in ascending order, without duplicates
+     * </pre>
+     *
+     * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.babylon.btcstaking.v1.ParamsProto.HeightVersionPairOrBuilder> 
+        getPairsOrBuilderList() {
+      return pairs_;
+    }
+    /**
+     * <pre>
+     * Pairs must be sorted by `start_height` in ascending order, without duplicates
+     * </pre>
+     *
+     * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+     */
+    @java.lang.Override
+    public int getPairsCount() {
+      return pairs_.size();
+    }
+    /**
+     * <pre>
+     * Pairs must be sorted by `start_height` in ascending order, without duplicates
+     * </pre>
+     *
+     * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+     */
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair getPairs(int index) {
+      return pairs_.get(index);
+    }
+    /**
+     * <pre>
+     * Pairs must be sorted by `start_height` in ascending order, without duplicates
+     * </pre>
+     *
+     * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+     */
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.ParamsProto.HeightVersionPairOrBuilder getPairsOrBuilder(
+        int index) {
+      return pairs_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < pairs_.size(); i++) {
+        output.writeMessage(1, pairs_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < pairs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, pairs_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap)) {
+        return super.equals(obj);
+      }
+      com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap other = (com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap) obj;
+
+      if (!getPairsList()
+          .equals(other.getPairsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPairsCount() > 0) {
+        hash = (37 * hash) + PAIRS_FIELD_NUMBER;
+        hash = (53 * hash) + getPairsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * HeightToVersionMap maps a btc height to a version of the parameters
+     * </pre>
+     *
+     * Protobuf type {@code babylon.btcstaking.v1.HeightToVersionMap}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.btcstaking.v1.HeightToVersionMap)
+        com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMapOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.btcstaking.v1.ParamsProto.internal_static_babylon_btcstaking_v1_HeightToVersionMap_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.btcstaking.v1.ParamsProto.internal_static_babylon_btcstaking_v1_HeightToVersionMap_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap.class, com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap.Builder.class);
+      }
+
+      // Construct using com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (pairsBuilder_ == null) {
+          pairs_ = java.util.Collections.emptyList();
+        } else {
+          pairs_ = null;
+          pairsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.btcstaking.v1.ParamsProto.internal_static_babylon_btcstaking_v1_HeightToVersionMap_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap getDefaultInstanceForType() {
+        return com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap build() {
+        com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap buildPartial() {
+        com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap result = new com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap result) {
+        if (pairsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            pairs_ = java.util.Collections.unmodifiableList(pairs_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.pairs_ = pairs_;
+        } else {
+          result.pairs_ = pairsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap) {
+          return mergeFrom((com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap other) {
+        if (other == com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap.getDefaultInstance()) return this;
+        if (pairsBuilder_ == null) {
+          if (!other.pairs_.isEmpty()) {
+            if (pairs_.isEmpty()) {
+              pairs_ = other.pairs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePairsIsMutable();
+              pairs_.addAll(other.pairs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.pairs_.isEmpty()) {
+            if (pairsBuilder_.isEmpty()) {
+              pairsBuilder_.dispose();
+              pairsBuilder_ = null;
+              pairs_ = other.pairs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              pairsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPairsFieldBuilder() : null;
+            } else {
+              pairsBuilder_.addAllMessages(other.pairs_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair m =
+                    input.readMessage(
+                        com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair.parser(),
+                        extensionRegistry);
+                if (pairsBuilder_ == null) {
+                  ensurePairsIsMutable();
+                  pairs_.add(m);
+                } else {
+                  pairsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair> pairs_ =
+        java.util.Collections.emptyList();
+      private void ensurePairsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          pairs_ = new java.util.ArrayList<com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair>(pairs_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair, com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair.Builder, com.babylon.btcstaking.v1.ParamsProto.HeightVersionPairOrBuilder> pairsBuilder_;
+
+      /**
+       * <pre>
+       * Pairs must be sorted by `start_height` in ascending order, without duplicates
+       * </pre>
+       *
+       * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+       */
+      public java.util.List<com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair> getPairsList() {
+        if (pairsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(pairs_);
+        } else {
+          return pairsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Pairs must be sorted by `start_height` in ascending order, without duplicates
+       * </pre>
+       *
+       * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+       */
+      public int getPairsCount() {
+        if (pairsBuilder_ == null) {
+          return pairs_.size();
+        } else {
+          return pairsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Pairs must be sorted by `start_height` in ascending order, without duplicates
+       * </pre>
+       *
+       * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+       */
+      public com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair getPairs(int index) {
+        if (pairsBuilder_ == null) {
+          return pairs_.get(index);
+        } else {
+          return pairsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Pairs must be sorted by `start_height` in ascending order, without duplicates
+       * </pre>
+       *
+       * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+       */
+      public Builder setPairs(
+          int index, com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair value) {
+        if (pairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePairsIsMutable();
+          pairs_.set(index, value);
+          onChanged();
+        } else {
+          pairsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Pairs must be sorted by `start_height` in ascending order, without duplicates
+       * </pre>
+       *
+       * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+       */
+      public Builder setPairs(
+          int index, com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair.Builder builderForValue) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          pairsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Pairs must be sorted by `start_height` in ascending order, without duplicates
+       * </pre>
+       *
+       * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+       */
+      public Builder addPairs(com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair value) {
+        if (pairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePairsIsMutable();
+          pairs_.add(value);
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Pairs must be sorted by `start_height` in ascending order, without duplicates
+       * </pre>
+       *
+       * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+       */
+      public Builder addPairs(
+          int index, com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair value) {
+        if (pairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePairsIsMutable();
+          pairs_.add(index, value);
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Pairs must be sorted by `start_height` in ascending order, without duplicates
+       * </pre>
+       *
+       * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+       */
+      public Builder addPairs(
+          com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair.Builder builderForValue) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Pairs must be sorted by `start_height` in ascending order, without duplicates
+       * </pre>
+       *
+       * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+       */
+      public Builder addPairs(
+          int index, com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair.Builder builderForValue) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Pairs must be sorted by `start_height` in ascending order, without duplicates
+       * </pre>
+       *
+       * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+       */
+      public Builder addAllPairs(
+          java.lang.Iterable<? extends com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair> values) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, pairs_);
+          onChanged();
+        } else {
+          pairsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Pairs must be sorted by `start_height` in ascending order, without duplicates
+       * </pre>
+       *
+       * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+       */
+      public Builder clearPairs() {
+        if (pairsBuilder_ == null) {
+          pairs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          pairsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Pairs must be sorted by `start_height` in ascending order, without duplicates
+       * </pre>
+       *
+       * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+       */
+      public Builder removePairs(int index) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.remove(index);
+          onChanged();
+        } else {
+          pairsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Pairs must be sorted by `start_height` in ascending order, without duplicates
+       * </pre>
+       *
+       * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+       */
+      public com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair.Builder getPairsBuilder(
+          int index) {
+        return getPairsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Pairs must be sorted by `start_height` in ascending order, without duplicates
+       * </pre>
+       *
+       * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+       */
+      public com.babylon.btcstaking.v1.ParamsProto.HeightVersionPairOrBuilder getPairsOrBuilder(
+          int index) {
+        if (pairsBuilder_ == null) {
+          return pairs_.get(index);  } else {
+          return pairsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Pairs must be sorted by `start_height` in ascending order, without duplicates
+       * </pre>
+       *
+       * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+       */
+      public java.util.List<? extends com.babylon.btcstaking.v1.ParamsProto.HeightVersionPairOrBuilder> 
+           getPairsOrBuilderList() {
+        if (pairsBuilder_ != null) {
+          return pairsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(pairs_);
+        }
+      }
+      /**
+       * <pre>
+       * Pairs must be sorted by `start_height` in ascending order, without duplicates
+       * </pre>
+       *
+       * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+       */
+      public com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair.Builder addPairsBuilder() {
+        return getPairsFieldBuilder().addBuilder(
+            com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Pairs must be sorted by `start_height` in ascending order, without duplicates
+       * </pre>
+       *
+       * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+       */
+      public com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair.Builder addPairsBuilder(
+          int index) {
+        return getPairsFieldBuilder().addBuilder(
+            index, com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Pairs must be sorted by `start_height` in ascending order, without duplicates
+       * </pre>
+       *
+       * <code>repeated .babylon.btcstaking.v1.HeightVersionPair pairs = 1 [json_name = "pairs"];</code>
+       */
+      public java.util.List<com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair.Builder> 
+           getPairsBuilderList() {
+        return getPairsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair, com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair.Builder, com.babylon.btcstaking.v1.ParamsProto.HeightVersionPairOrBuilder> 
+          getPairsFieldBuilder() {
+        if (pairsBuilder_ == null) {
+          pairsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair, com.babylon.btcstaking.v1.ParamsProto.HeightVersionPair.Builder, com.babylon.btcstaking.v1.ParamsProto.HeightVersionPairOrBuilder>(
+                  pairs_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          pairs_ = null;
+        }
+        return pairsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.btcstaking.v1.HeightToVersionMap)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.btcstaking.v1.HeightToVersionMap)
+    private static final com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap();
+    }
+
+    public static com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<HeightToVersionMap>
+        PARSER = new com.google.protobuf.AbstractParser<HeightToVersionMap>() {
+      @java.lang.Override
+      public HeightToVersionMap parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<HeightToVersionMap> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HeightToVersionMap> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.ParamsProto.HeightToVersionMap getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2815,6 +4514,16 @@ public final class ParamsProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_babylon_btcstaking_v1_Params_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_btcstaking_v1_HeightVersionPair_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_btcstaking_v1_HeightVersionPair_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_btcstaking_v1_HeightToVersionMap_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_btcstaking_v1_HeightToVersionMap_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_babylon_btcstaking_v1_StoredParams_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -2830,7 +4539,7 @@ public final class ParamsProto {
     java.lang.String[] descriptorData = {
       "\n\"babylon/btcstaking/v1/params.proto\022\025ba" +
       "bylon.btcstaking.v1\032\024gogoproto/gogo.prot" +
-      "o\032\031cosmos_proto/cosmos.proto\"\250\006\n\006Params\022" +
+      "o\032\031cosmos_proto/cosmos.proto\"\226\007\n\006Params\022" +
       "[\n\014covenant_pks\030\001 \003(\014B8\332\336\0374github.com/ba" +
       "bylonlabs-io/babylon/types.BIP340PubKeyR" +
       "\013covenantPks\022\'\n\017covenant_quorum\030\002 \001(\rR\016c" +
@@ -2844,22 +4553,29 @@ public final class ParamsProto {
       "lashing_tx_fee_sat\030\010 \001(\003R\023minSlashingTxF" +
       "eeSat\022V\n\rslashing_rate\030\t \001(\tB1\310\336\037\000\332\336\037\033co" +
       "smossdk.io/math.LegacyDec\322\264-\ncosmos.DecR" +
-      "\014slashingRate\0229\n\031min_unbonding_time_bloc" +
-      "ks\030\n \001(\rR\026minUnbondingTimeBlocks\022*\n\021unbo" +
-      "nding_fee_sat\030\013 \001(\003R\017unbondingFeeSat\022S\n\023" +
-      "min_commission_rate\030\014 \001(\tB#\310\336\037\000\332\336\037\033cosmo" +
-      "ssdk.io/math.LegacyDecR\021minCommissionRat" +
-      "e\022F\n delegation_creation_base_gas_fee\030\r " +
-      "\001(\004R\034delegationCreationBaseGasFee:\004\230\240\037\000\"" +
-      "e\n\014StoredParams\022\030\n\007version\030\001 \001(\rR\007versio" +
-      "n\022;\n\006params\030\002 \001(\0132\035.babylon.btcstaking.v" +
-      "1.ParamsB\004\310\336\037\000R\006paramsB\322\001\n\031com.babylon.b" +
-      "tcstaking.v1B\013ParamsProtoZ4github.com/ba" +
-      "bylonlabs-io/babylon/x/btcstaking/types\242" +
-      "\002\003BBX\252\002\025Babylon.Btcstaking.V1\312\002\025Babylon\\" +
-      "Btcstaking\\V1\342\002!Babylon\\Btcstaking\\V1\\GP" +
-      "BMetadata\352\002\027Babylon::Btcstaking::V1b\006pro" +
-      "to3"
+      "\014slashingRate\0222\n\025unbonding_time_blocks\030\n" +
+      " \001(\rR\023unbondingTimeBlocks\022*\n\021unbonding_f" +
+      "ee_sat\030\013 \001(\003R\017unbondingFeeSat\022S\n\023min_com" +
+      "mission_rate\030\014 \001(\tB#\310\336\037\000\332\336\037\033cosmossdk.io" +
+      "/math.LegacyDecR\021minCommissionRate\022F\n de" +
+      "legation_creation_base_gas_fee\030\r \001(\004R\034de" +
+      "legationCreationBaseGasFee\022?\n\034allow_list" +
+      "_expiration_height\030\016 \001(\004R\031allowListExpir" +
+      "ationHeight\0222\n\025btc_activation_height\030\017 \001" +
+      "(\rR\023btcActivationHeight:\004\230\240\037\000\"P\n\021HeightV" +
+      "ersionPair\022!\n\014start_height\030\001 \001(\004R\013startH" +
+      "eight\022\030\n\007version\030\002 \001(\rR\007version\"T\n\022Heigh" +
+      "tToVersionMap\022>\n\005pairs\030\001 \003(\0132(.babylon.b" +
+      "tcstaking.v1.HeightVersionPairR\005pairs\"e\n" +
+      "\014StoredParams\022\030\n\007version\030\001 \001(\rR\007version\022" +
+      ";\n\006params\030\002 \001(\0132\035.babylon.btcstaking.v1." +
+      "ParamsB\004\310\336\037\000R\006paramsB\322\001\n\031com.babylon.btc" +
+      "staking.v1B\013ParamsProtoZ4github.com/baby" +
+      "lonlabs-io/babylon/x/btcstaking/types\242\002\003" +
+      "BBX\252\002\025Babylon.Btcstaking.V1\312\002\025Babylon\\Bt" +
+      "cstaking\\V1\342\002!Babylon\\Btcstaking\\V1\\GPBM" +
+      "etadata\352\002\027Babylon::Btcstaking::V1b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2872,9 +4588,21 @@ public final class ParamsProto {
     internal_static_babylon_btcstaking_v1_Params_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_Params_descriptor,
-        new java.lang.String[] { "CovenantPks", "CovenantQuorum", "MinStakingValueSat", "MaxStakingValueSat", "MinStakingTimeBlocks", "MaxStakingTimeBlocks", "SlashingPkScript", "MinSlashingTxFeeSat", "SlashingRate", "MinUnbondingTimeBlocks", "UnbondingFeeSat", "MinCommissionRate", "DelegationCreationBaseGasFee", });
-    internal_static_babylon_btcstaking_v1_StoredParams_descriptor =
+        new java.lang.String[] { "CovenantPks", "CovenantQuorum", "MinStakingValueSat", "MaxStakingValueSat", "MinStakingTimeBlocks", "MaxStakingTimeBlocks", "SlashingPkScript", "MinSlashingTxFeeSat", "SlashingRate", "UnbondingTimeBlocks", "UnbondingFeeSat", "MinCommissionRate", "DelegationCreationBaseGasFee", "AllowListExpirationHeight", "BtcActivationHeight", });
+    internal_static_babylon_btcstaking_v1_HeightVersionPair_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_babylon_btcstaking_v1_HeightVersionPair_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_btcstaking_v1_HeightVersionPair_descriptor,
+        new java.lang.String[] { "StartHeight", "Version", });
+    internal_static_babylon_btcstaking_v1_HeightToVersionMap_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_babylon_btcstaking_v1_HeightToVersionMap_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_btcstaking_v1_HeightToVersionMap_descriptor,
+        new java.lang.String[] { "Pairs", });
+    internal_static_babylon_btcstaking_v1_StoredParams_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_babylon_btcstaking_v1_StoredParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_btcstaking_v1_StoredParams_descriptor,

@@ -27,9 +27,9 @@ struct Babylon_Finality_V1_VotingPowerDistCache {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// total_sat is the total amount of bonded BTC stake (in Satoshi) of all the finality providers
+  /// total_voting_power is the total voting power of all (active) finality providers
   /// in the cache
-  var totalBondedSat: UInt64 = 0
+  var totalVotingPower: UInt64 = 0
 
   /// finality_providers is a list of finality providers' voting power information
   var finalityProviders: [Babylon_Finality_V1_FinalityProviderDistInfo] = []
@@ -53,17 +53,14 @@ struct Babylon_Finality_V1_FinalityProviderDistInfo {
   /// the PK follows encoding in BIP-340 spec
   var btcPk: Data = Data()
 
-  /// addr is the address to receive commission from delegations.
-  var addr: String = String()
+  /// addr is the bytes of the address to receive commission from delegations.
+  var addr: Data = Data()
 
   /// commission defines the commission rate of finality provider
   var commission: String = String()
 
   /// total_bonded_sat is the total amount of bonded BTC stake (in Satoshi) of the finality provider
   var totalBondedSat: UInt64 = 0
-
-  /// btc_dels is a list of BTC delegations' voting power information under this finality provider
-  var btcDels: [Babylon_Finality_V1_BTCDelDistInfo] = []
 
   /// is_timestamped indicates whether the finality provider
   /// has timestamped public randomness committed
@@ -77,30 +74,6 @@ struct Babylon_Finality_V1_FinalityProviderDistInfo {
   /// is_slashed indicates whether the finality provider
   /// is slashed, if so, it should not be assigned voting power
   var isSlashed: Bool = false
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-}
-
-/// BTCDelDistInfo contains the information related to voting power distribution for a BTC delegation
-struct Babylon_Finality_V1_BTCDelDistInfo {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  /// btc_pk is the Bitcoin secp256k1 PK of this BTC delegation
-  /// the PK follows encoding in BIP-340 spec
-  var btcPk: Data = Data()
-
-  /// staker_addr is the address to receive rewards from BTC delegation.
-  var stakerAddr: String = String()
-
-  /// staking_tx_hash is the staking tx hash of the BTC delegation
-  var stakingTxHash: String = String()
-
-  /// total_sat is the amount of BTC stake (in Satoshi) of the BTC delegation
-  var totalSat: UInt64 = 0
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -228,7 +201,6 @@ struct Babylon_Finality_V1_FinalityProviderSigningInfo {
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Babylon_Finality_V1_VotingPowerDistCache: @unchecked Sendable {}
 extension Babylon_Finality_V1_FinalityProviderDistInfo: @unchecked Sendable {}
-extension Babylon_Finality_V1_BTCDelDistInfo: @unchecked Sendable {}
 extension Babylon_Finality_V1_IndexedBlock: @unchecked Sendable {}
 extension Babylon_Finality_V1_PubRandCommit: @unchecked Sendable {}
 extension Babylon_Finality_V1_Evidence: @unchecked Sendable {}
@@ -242,7 +214,7 @@ fileprivate let _protobuf_package = "babylon.finality.v1"
 extension Babylon_Finality_V1_VotingPowerDistCache: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".VotingPowerDistCache"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "total_bonded_sat"),
+    1: .standard(proto: "total_voting_power"),
     2: .standard(proto: "finality_providers"),
     3: .standard(proto: "num_active_fps"),
   ]
@@ -253,7 +225,7 @@ extension Babylon_Finality_V1_VotingPowerDistCache: SwiftProtobuf.Message, Swift
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.totalBondedSat) }()
+      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.totalVotingPower) }()
       case 2: try { try decoder.decodeRepeatedMessageField(value: &self.finalityProviders) }()
       case 3: try { try decoder.decodeSingularUInt32Field(value: &self.numActiveFps) }()
       default: break
@@ -262,8 +234,8 @@ extension Babylon_Finality_V1_VotingPowerDistCache: SwiftProtobuf.Message, Swift
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if self.totalBondedSat != 0 {
-      try visitor.visitSingularUInt64Field(value: self.totalBondedSat, fieldNumber: 1)
+    if self.totalVotingPower != 0 {
+      try visitor.visitSingularUInt64Field(value: self.totalVotingPower, fieldNumber: 1)
     }
     if !self.finalityProviders.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.finalityProviders, fieldNumber: 2)
@@ -275,7 +247,7 @@ extension Babylon_Finality_V1_VotingPowerDistCache: SwiftProtobuf.Message, Swift
   }
 
   static func ==(lhs: Babylon_Finality_V1_VotingPowerDistCache, rhs: Babylon_Finality_V1_VotingPowerDistCache) -> Bool {
-    if lhs.totalBondedSat != rhs.totalBondedSat {return false}
+    if lhs.totalVotingPower != rhs.totalVotingPower {return false}
     if lhs.finalityProviders != rhs.finalityProviders {return false}
     if lhs.numActiveFps != rhs.numActiveFps {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -290,10 +262,9 @@ extension Babylon_Finality_V1_FinalityProviderDistInfo: SwiftProtobuf.Message, S
     2: .same(proto: "addr"),
     3: .same(proto: "commission"),
     4: .standard(proto: "total_bonded_sat"),
-    5: .standard(proto: "btc_dels"),
-    6: .standard(proto: "is_timestamped"),
-    7: .standard(proto: "is_jailed"),
-    8: .standard(proto: "is_slashed"),
+    5: .standard(proto: "is_timestamped"),
+    6: .standard(proto: "is_jailed"),
+    7: .standard(proto: "is_slashed"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -303,13 +274,12 @@ extension Babylon_Finality_V1_FinalityProviderDistInfo: SwiftProtobuf.Message, S
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularBytesField(value: &self.btcPk) }()
-      case 2: try { try decoder.decodeSingularStringField(value: &self.addr) }()
+      case 2: try { try decoder.decodeSingularBytesField(value: &self.addr) }()
       case 3: try { try decoder.decodeSingularStringField(value: &self.commission) }()
       case 4: try { try decoder.decodeSingularUInt64Field(value: &self.totalBondedSat) }()
-      case 5: try { try decoder.decodeRepeatedMessageField(value: &self.btcDels) }()
-      case 6: try { try decoder.decodeSingularBoolField(value: &self.isTimestamped) }()
-      case 7: try { try decoder.decodeSingularBoolField(value: &self.isJailed) }()
-      case 8: try { try decoder.decodeSingularBoolField(value: &self.isSlashed) }()
+      case 5: try { try decoder.decodeSingularBoolField(value: &self.isTimestamped) }()
+      case 6: try { try decoder.decodeSingularBoolField(value: &self.isJailed) }()
+      case 7: try { try decoder.decodeSingularBoolField(value: &self.isSlashed) }()
       default: break
       }
     }
@@ -320,7 +290,7 @@ extension Babylon_Finality_V1_FinalityProviderDistInfo: SwiftProtobuf.Message, S
       try visitor.visitSingularBytesField(value: self.btcPk, fieldNumber: 1)
     }
     if !self.addr.isEmpty {
-      try visitor.visitSingularStringField(value: self.addr, fieldNumber: 2)
+      try visitor.visitSingularBytesField(value: self.addr, fieldNumber: 2)
     }
     if !self.commission.isEmpty {
       try visitor.visitSingularStringField(value: self.commission, fieldNumber: 3)
@@ -328,17 +298,14 @@ extension Babylon_Finality_V1_FinalityProviderDistInfo: SwiftProtobuf.Message, S
     if self.totalBondedSat != 0 {
       try visitor.visitSingularUInt64Field(value: self.totalBondedSat, fieldNumber: 4)
     }
-    if !self.btcDels.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.btcDels, fieldNumber: 5)
-    }
     if self.isTimestamped != false {
-      try visitor.visitSingularBoolField(value: self.isTimestamped, fieldNumber: 6)
+      try visitor.visitSingularBoolField(value: self.isTimestamped, fieldNumber: 5)
     }
     if self.isJailed != false {
-      try visitor.visitSingularBoolField(value: self.isJailed, fieldNumber: 7)
+      try visitor.visitSingularBoolField(value: self.isJailed, fieldNumber: 6)
     }
     if self.isSlashed != false {
-      try visitor.visitSingularBoolField(value: self.isSlashed, fieldNumber: 8)
+      try visitor.visitSingularBoolField(value: self.isSlashed, fieldNumber: 7)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -348,60 +315,9 @@ extension Babylon_Finality_V1_FinalityProviderDistInfo: SwiftProtobuf.Message, S
     if lhs.addr != rhs.addr {return false}
     if lhs.commission != rhs.commission {return false}
     if lhs.totalBondedSat != rhs.totalBondedSat {return false}
-    if lhs.btcDels != rhs.btcDels {return false}
     if lhs.isTimestamped != rhs.isTimestamped {return false}
     if lhs.isJailed != rhs.isJailed {return false}
     if lhs.isSlashed != rhs.isSlashed {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension Babylon_Finality_V1_BTCDelDistInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".BTCDelDistInfo"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "btc_pk"),
-    2: .standard(proto: "staker_addr"),
-    3: .standard(proto: "staking_tx_hash"),
-    4: .standard(proto: "total_sat"),
-  ]
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularBytesField(value: &self.btcPk) }()
-      case 2: try { try decoder.decodeSingularStringField(value: &self.stakerAddr) }()
-      case 3: try { try decoder.decodeSingularStringField(value: &self.stakingTxHash) }()
-      case 4: try { try decoder.decodeSingularUInt64Field(value: &self.totalSat) }()
-      default: break
-      }
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.btcPk.isEmpty {
-      try visitor.visitSingularBytesField(value: self.btcPk, fieldNumber: 1)
-    }
-    if !self.stakerAddr.isEmpty {
-      try visitor.visitSingularStringField(value: self.stakerAddr, fieldNumber: 2)
-    }
-    if !self.stakingTxHash.isEmpty {
-      try visitor.visitSingularStringField(value: self.stakingTxHash, fieldNumber: 3)
-    }
-    if self.totalSat != 0 {
-      try visitor.visitSingularUInt64Field(value: self.totalSat, fieldNumber: 4)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Babylon_Finality_V1_BTCDelDistInfo, rhs: Babylon_Finality_V1_BTCDelDistInfo) -> Bool {
-    if lhs.btcPk != rhs.btcPk {return false}
-    if lhs.stakerAddr != rhs.stakerAddr {return false}
-    if lhs.stakingTxHash != rhs.stakingTxHash {return false}
-    if lhs.totalSat != rhs.totalSat {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

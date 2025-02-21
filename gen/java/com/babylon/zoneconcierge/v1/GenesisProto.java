@@ -789,13 +789,13 @@ public final class GenesisProto {
       "go.proto\032%babylon/zoneconcierge/v1/param" +
       "s.proto\"g\n\014GenesisState\022\027\n\007port_id\030\001 \001(\t" +
       "R\006portId\022>\n\006params\030\002 \001(\0132 .babylon.zonec" +
-      "oncierge.v1.ParamsB\004\310\336\037\000R\006paramsB\343\001\n\034com" +
+      "oncierge.v1.ParamsB\004\310\336\037\000R\006paramsB\345\001\n\034com" +
       ".babylon.zoneconcierge.v1B\014GenesisProtoZ" +
-      "5github.com/babylonchain/babylon/x/zonec" +
-      "oncierge/types\242\002\003BZX\252\002\030Babylon.Zoneconci" +
-      "erge.V1\312\002\030Babylon\\Zoneconcierge\\V1\342\002$Bab" +
-      "ylon\\Zoneconcierge\\V1\\GPBMetadata\352\002\032Baby" +
-      "lon::Zoneconcierge::V1b\006proto3"
+      "7github.com/babylonlabs-io/babylon/x/zon" +
+      "econcierge/types\242\002\003BZX\252\002\030Babylon.Zonecon" +
+      "cierge.V1\312\002\030Babylon\\Zoneconcierge\\V1\342\002$B" +
+      "abylon\\Zoneconcierge\\V1\\GPBMetadata\352\002\032Ba" +
+      "bylon::Zoneconcierge::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,8 +14,8 @@ public final class PacketProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface ZoneconciergePacketDataOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:babylon.zoneconcierge.v1.ZoneconciergePacketData)
+  public interface OutboundPacketOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.zoneconcierge.v1.OutboundPacket)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -33,46 +33,75 @@ public final class PacketProto {
      */
     com.babylon.zoneconcierge.v1.PacketProto.BTCTimestampOrBuilder getBtcTimestampOrBuilder();
 
-    com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData.PacketCase getPacketCase();
+    /**
+     * <code>.babylon.btcstaking.v1.BTCStakingIBCPacket btc_staking = 2 [json_name = "btcStaking"];</code>
+     * @return Whether the btcStaking field is set.
+     */
+    boolean hasBtcStaking();
+    /**
+     * <code>.babylon.btcstaking.v1.BTCStakingIBCPacket btc_staking = 2 [json_name = "btcStaking"];</code>
+     * @return The btcStaking.
+     */
+    com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket getBtcStaking();
+    /**
+     * <code>.babylon.btcstaking.v1.BTCStakingIBCPacket btc_staking = 2 [json_name = "btcStaking"];</code>
+     */
+    com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacketOrBuilder getBtcStakingOrBuilder();
+
+    /**
+     * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 3 [json_name = "btcHeaders"];</code>
+     * @return Whether the btcHeaders field is set.
+     */
+    boolean hasBtcHeaders();
+    /**
+     * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 3 [json_name = "btcHeaders"];</code>
+     * @return The btcHeaders.
+     */
+    com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders getBtcHeaders();
+    /**
+     * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 3 [json_name = "btcHeaders"];</code>
+     */
+    com.babylon.zoneconcierge.v1.PacketProto.BTCHeadersOrBuilder getBtcHeadersOrBuilder();
+
+    com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket.PacketCase getPacketCase();
   }
   /**
    * <pre>
-   * ZoneconciergePacketData is the message that defines the IBC packets of
-   * ZoneConcierge
+   * OutboundPacket represents packets sent from Babylon to other chains
    * </pre>
    *
-   * Protobuf type {@code babylon.zoneconcierge.v1.ZoneconciergePacketData}
+   * Protobuf type {@code babylon.zoneconcierge.v1.OutboundPacket}
    */
-  public static final class ZoneconciergePacketData extends
+  public static final class OutboundPacket extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:babylon.zoneconcierge.v1.ZoneconciergePacketData)
-      ZoneconciergePacketDataOrBuilder {
+      // @@protoc_insertion_point(message_implements:babylon.zoneconcierge.v1.OutboundPacket)
+      OutboundPacketOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use ZoneconciergePacketData.newBuilder() to construct.
-    private ZoneconciergePacketData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use OutboundPacket.newBuilder() to construct.
+    private OutboundPacket(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private ZoneconciergePacketData() {
+    private OutboundPacket() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new ZoneconciergePacketData();
+      return new OutboundPacket();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.babylon.zoneconcierge.v1.PacketProto.internal_static_babylon_zoneconcierge_v1_ZoneconciergePacketData_descriptor;
+      return com.babylon.zoneconcierge.v1.PacketProto.internal_static_babylon_zoneconcierge_v1_OutboundPacket_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.babylon.zoneconcierge.v1.PacketProto.internal_static_babylon_zoneconcierge_v1_ZoneconciergePacketData_fieldAccessorTable
+      return com.babylon.zoneconcierge.v1.PacketProto.internal_static_babylon_zoneconcierge_v1_OutboundPacket_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData.class, com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData.Builder.class);
+              com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket.class, com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket.Builder.class);
     }
 
     private int packetCase_ = 0;
@@ -82,6 +111,8 @@ public final class PacketProto {
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       BTC_TIMESTAMP(1),
+      BTC_STAKING(2),
+      BTC_HEADERS(3),
       PACKET_NOT_SET(0);
       private final int value;
       private PacketCase(int value) {
@@ -100,6 +131,8 @@ public final class PacketProto {
       public static PacketCase forNumber(int value) {
         switch (value) {
           case 1: return BTC_TIMESTAMP;
+          case 2: return BTC_STAKING;
+          case 3: return BTC_HEADERS;
           case 0: return PACKET_NOT_SET;
           default: return null;
         }
@@ -146,6 +179,68 @@ public final class PacketProto {
       return com.babylon.zoneconcierge.v1.PacketProto.BTCTimestamp.getDefaultInstance();
     }
 
+    public static final int BTC_STAKING_FIELD_NUMBER = 2;
+    /**
+     * <code>.babylon.btcstaking.v1.BTCStakingIBCPacket btc_staking = 2 [json_name = "btcStaking"];</code>
+     * @return Whether the btcStaking field is set.
+     */
+    @java.lang.Override
+    public boolean hasBtcStaking() {
+      return packetCase_ == 2;
+    }
+    /**
+     * <code>.babylon.btcstaking.v1.BTCStakingIBCPacket btc_staking = 2 [json_name = "btcStaking"];</code>
+     * @return The btcStaking.
+     */
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket getBtcStaking() {
+      if (packetCase_ == 2) {
+         return (com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket) packet_;
+      }
+      return com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket.getDefaultInstance();
+    }
+    /**
+     * <code>.babylon.btcstaking.v1.BTCStakingIBCPacket btc_staking = 2 [json_name = "btcStaking"];</code>
+     */
+    @java.lang.Override
+    public com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacketOrBuilder getBtcStakingOrBuilder() {
+      if (packetCase_ == 2) {
+         return (com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket) packet_;
+      }
+      return com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket.getDefaultInstance();
+    }
+
+    public static final int BTC_HEADERS_FIELD_NUMBER = 3;
+    /**
+     * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 3 [json_name = "btcHeaders"];</code>
+     * @return Whether the btcHeaders field is set.
+     */
+    @java.lang.Override
+    public boolean hasBtcHeaders() {
+      return packetCase_ == 3;
+    }
+    /**
+     * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 3 [json_name = "btcHeaders"];</code>
+     * @return The btcHeaders.
+     */
+    @java.lang.Override
+    public com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders getBtcHeaders() {
+      if (packetCase_ == 3) {
+         return (com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders) packet_;
+      }
+      return com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.getDefaultInstance();
+    }
+    /**
+     * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 3 [json_name = "btcHeaders"];</code>
+     */
+    @java.lang.Override
+    public com.babylon.zoneconcierge.v1.PacketProto.BTCHeadersOrBuilder getBtcHeadersOrBuilder() {
+      if (packetCase_ == 3) {
+         return (com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders) packet_;
+      }
+      return com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -163,6 +258,12 @@ public final class PacketProto {
       if (packetCase_ == 1) {
         output.writeMessage(1, (com.babylon.zoneconcierge.v1.PacketProto.BTCTimestamp) packet_);
       }
+      if (packetCase_ == 2) {
+        output.writeMessage(2, (com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket) packet_);
+      }
+      if (packetCase_ == 3) {
+        output.writeMessage(3, (com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders) packet_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -176,6 +277,14 @@ public final class PacketProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, (com.babylon.zoneconcierge.v1.PacketProto.BTCTimestamp) packet_);
       }
+      if (packetCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket) packet_);
+      }
+      if (packetCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders) packet_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -186,16 +295,24 @@ public final class PacketProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData)) {
+      if (!(obj instanceof com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket)) {
         return super.equals(obj);
       }
-      com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData other = (com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData) obj;
+      com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket other = (com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket) obj;
 
       if (!getPacketCase().equals(other.getPacketCase())) return false;
       switch (packetCase_) {
         case 1:
           if (!getBtcTimestamp()
               .equals(other.getBtcTimestamp())) return false;
+          break;
+        case 2:
+          if (!getBtcStaking()
+              .equals(other.getBtcStaking())) return false;
+          break;
+        case 3:
+          if (!getBtcHeaders()
+              .equals(other.getBtcHeaders())) return false;
           break;
         case 0:
         default:
@@ -216,6 +333,14 @@ public final class PacketProto {
           hash = (37 * hash) + BTC_TIMESTAMP_FIELD_NUMBER;
           hash = (53 * hash) + getBtcTimestamp().hashCode();
           break;
+        case 2:
+          hash = (37 * hash) + BTC_STAKING_FIELD_NUMBER;
+          hash = (53 * hash) + getBtcStaking().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + BTC_HEADERS_FIELD_NUMBER;
+          hash = (53 * hash) + getBtcHeaders().hashCode();
+          break;
         case 0:
         default:
       }
@@ -224,44 +349,44 @@ public final class PacketProto {
       return hash;
     }
 
-    public static com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData parseFrom(
+    public static com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData parseFrom(
+    public static com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData parseFrom(
+    public static com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData parseFrom(
+    public static com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData parseFrom(byte[] data)
+    public static com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData parseFrom(
+    public static com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData parseFrom(java.io.InputStream input)
+    public static com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData parseFrom(
+    public static com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -269,26 +394,26 @@ public final class PacketProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData parseDelimitedFrom(java.io.InputStream input)
+    public static com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData parseDelimitedFrom(
+    public static com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData parseFrom(
+    public static com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData parseFrom(
+    public static com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -301,7 +426,7 @@ public final class PacketProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData prototype) {
+    public static Builder newBuilder(com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -318,30 +443,29 @@ public final class PacketProto {
     }
     /**
      * <pre>
-     * ZoneconciergePacketData is the message that defines the IBC packets of
-     * ZoneConcierge
+     * OutboundPacket represents packets sent from Babylon to other chains
      * </pre>
      *
-     * Protobuf type {@code babylon.zoneconcierge.v1.ZoneconciergePacketData}
+     * Protobuf type {@code babylon.zoneconcierge.v1.OutboundPacket}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:babylon.zoneconcierge.v1.ZoneconciergePacketData)
-        com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketDataOrBuilder {
+        // @@protoc_insertion_point(builder_implements:babylon.zoneconcierge.v1.OutboundPacket)
+        com.babylon.zoneconcierge.v1.PacketProto.OutboundPacketOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.babylon.zoneconcierge.v1.PacketProto.internal_static_babylon_zoneconcierge_v1_ZoneconciergePacketData_descriptor;
+        return com.babylon.zoneconcierge.v1.PacketProto.internal_static_babylon_zoneconcierge_v1_OutboundPacket_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.babylon.zoneconcierge.v1.PacketProto.internal_static_babylon_zoneconcierge_v1_ZoneconciergePacketData_fieldAccessorTable
+        return com.babylon.zoneconcierge.v1.PacketProto.internal_static_babylon_zoneconcierge_v1_OutboundPacket_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData.class, com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData.Builder.class);
+                com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket.class, com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket.Builder.class);
       }
 
-      // Construct using com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData.newBuilder()
+      // Construct using com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket.newBuilder()
       private Builder() {
 
       }
@@ -358,6 +482,12 @@ public final class PacketProto {
         if (btcTimestampBuilder_ != null) {
           btcTimestampBuilder_.clear();
         }
+        if (btcStakingBuilder_ != null) {
+          btcStakingBuilder_.clear();
+        }
+        if (btcHeadersBuilder_ != null) {
+          btcHeadersBuilder_.clear();
+        }
         packetCase_ = 0;
         packet_ = null;
         return this;
@@ -366,17 +496,17 @@ public final class PacketProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.babylon.zoneconcierge.v1.PacketProto.internal_static_babylon_zoneconcierge_v1_ZoneconciergePacketData_descriptor;
+        return com.babylon.zoneconcierge.v1.PacketProto.internal_static_babylon_zoneconcierge_v1_OutboundPacket_descriptor;
       }
 
       @java.lang.Override
-      public com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData getDefaultInstanceForType() {
-        return com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData.getDefaultInstance();
+      public com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket getDefaultInstanceForType() {
+        return com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData build() {
-        com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData result = buildPartial();
+      public com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket build() {
+        com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -384,24 +514,32 @@ public final class PacketProto {
       }
 
       @java.lang.Override
-      public com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData buildPartial() {
-        com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData result = new com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData(this);
+      public com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket buildPartial() {
+        com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket result = new com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         buildPartialOneofs(result);
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData result) {
+      private void buildPartial0(com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket result) {
         int from_bitField0_ = bitField0_;
       }
 
-      private void buildPartialOneofs(com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData result) {
+      private void buildPartialOneofs(com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket result) {
         result.packetCase_ = packetCase_;
         result.packet_ = this.packet_;
         if (packetCase_ == 1 &&
             btcTimestampBuilder_ != null) {
           result.packet_ = btcTimestampBuilder_.build();
+        }
+        if (packetCase_ == 2 &&
+            btcStakingBuilder_ != null) {
+          result.packet_ = btcStakingBuilder_.build();
+        }
+        if (packetCase_ == 3 &&
+            btcHeadersBuilder_ != null) {
+          result.packet_ = btcHeadersBuilder_.build();
         }
       }
 
@@ -439,19 +577,27 @@ public final class PacketProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData) {
-          return mergeFrom((com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData)other);
+        if (other instanceof com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket) {
+          return mergeFrom((com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData other) {
-        if (other == com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket other) {
+        if (other == com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket.getDefaultInstance()) return this;
         switch (other.getPacketCase()) {
           case BTC_TIMESTAMP: {
             mergeBtcTimestamp(other.getBtcTimestamp());
+            break;
+          }
+          case BTC_STAKING: {
+            mergeBtcStaking(other.getBtcStaking());
+            break;
+          }
+          case BTC_HEADERS: {
+            mergeBtcHeaders(other.getBtcHeaders());
             break;
           }
           case PACKET_NOT_SET: {
@@ -491,6 +637,20 @@ public final class PacketProto {
                 packetCase_ = 1;
                 break;
               } // case 10
+              case 18: {
+                input.readMessage(
+                    getBtcStakingFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                packetCase_ = 2;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getBtcHeadersFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                packetCase_ = 3;
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -664,6 +824,290 @@ public final class PacketProto {
         onChanged();
         return btcTimestampBuilder_;
       }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket, com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket.Builder, com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacketOrBuilder> btcStakingBuilder_;
+      /**
+       * <code>.babylon.btcstaking.v1.BTCStakingIBCPacket btc_staking = 2 [json_name = "btcStaking"];</code>
+       * @return Whether the btcStaking field is set.
+       */
+      @java.lang.Override
+      public boolean hasBtcStaking() {
+        return packetCase_ == 2;
+      }
+      /**
+       * <code>.babylon.btcstaking.v1.BTCStakingIBCPacket btc_staking = 2 [json_name = "btcStaking"];</code>
+       * @return The btcStaking.
+       */
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket getBtcStaking() {
+        if (btcStakingBuilder_ == null) {
+          if (packetCase_ == 2) {
+            return (com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket) packet_;
+          }
+          return com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket.getDefaultInstance();
+        } else {
+          if (packetCase_ == 2) {
+            return btcStakingBuilder_.getMessage();
+          }
+          return com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.babylon.btcstaking.v1.BTCStakingIBCPacket btc_staking = 2 [json_name = "btcStaking"];</code>
+       */
+      public Builder setBtcStaking(com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket value) {
+        if (btcStakingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          packet_ = value;
+          onChanged();
+        } else {
+          btcStakingBuilder_.setMessage(value);
+        }
+        packetCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.babylon.btcstaking.v1.BTCStakingIBCPacket btc_staking = 2 [json_name = "btcStaking"];</code>
+       */
+      public Builder setBtcStaking(
+          com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket.Builder builderForValue) {
+        if (btcStakingBuilder_ == null) {
+          packet_ = builderForValue.build();
+          onChanged();
+        } else {
+          btcStakingBuilder_.setMessage(builderForValue.build());
+        }
+        packetCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.babylon.btcstaking.v1.BTCStakingIBCPacket btc_staking = 2 [json_name = "btcStaking"];</code>
+       */
+      public Builder mergeBtcStaking(com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket value) {
+        if (btcStakingBuilder_ == null) {
+          if (packetCase_ == 2 &&
+              packet_ != com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket.getDefaultInstance()) {
+            packet_ = com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket.newBuilder((com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket) packet_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            packet_ = value;
+          }
+          onChanged();
+        } else {
+          if (packetCase_ == 2) {
+            btcStakingBuilder_.mergeFrom(value);
+          } else {
+            btcStakingBuilder_.setMessage(value);
+          }
+        }
+        packetCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.babylon.btcstaking.v1.BTCStakingIBCPacket btc_staking = 2 [json_name = "btcStaking"];</code>
+       */
+      public Builder clearBtcStaking() {
+        if (btcStakingBuilder_ == null) {
+          if (packetCase_ == 2) {
+            packetCase_ = 0;
+            packet_ = null;
+            onChanged();
+          }
+        } else {
+          if (packetCase_ == 2) {
+            packetCase_ = 0;
+            packet_ = null;
+          }
+          btcStakingBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.babylon.btcstaking.v1.BTCStakingIBCPacket btc_staking = 2 [json_name = "btcStaking"];</code>
+       */
+      public com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket.Builder getBtcStakingBuilder() {
+        return getBtcStakingFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.babylon.btcstaking.v1.BTCStakingIBCPacket btc_staking = 2 [json_name = "btcStaking"];</code>
+       */
+      @java.lang.Override
+      public com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacketOrBuilder getBtcStakingOrBuilder() {
+        if ((packetCase_ == 2) && (btcStakingBuilder_ != null)) {
+          return btcStakingBuilder_.getMessageOrBuilder();
+        } else {
+          if (packetCase_ == 2) {
+            return (com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket) packet_;
+          }
+          return com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.babylon.btcstaking.v1.BTCStakingIBCPacket btc_staking = 2 [json_name = "btcStaking"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket, com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket.Builder, com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacketOrBuilder> 
+          getBtcStakingFieldBuilder() {
+        if (btcStakingBuilder_ == null) {
+          if (!(packetCase_ == 2)) {
+            packet_ = com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket.getDefaultInstance();
+          }
+          btcStakingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket, com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket.Builder, com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacketOrBuilder>(
+                  (com.babylon.btcstaking.v1.PacketProto.BTCStakingIBCPacket) packet_,
+                  getParentForChildren(),
+                  isClean());
+          packet_ = null;
+        }
+        packetCase_ = 2;
+        onChanged();
+        return btcStakingBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders, com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.Builder, com.babylon.zoneconcierge.v1.PacketProto.BTCHeadersOrBuilder> btcHeadersBuilder_;
+      /**
+       * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 3 [json_name = "btcHeaders"];</code>
+       * @return Whether the btcHeaders field is set.
+       */
+      @java.lang.Override
+      public boolean hasBtcHeaders() {
+        return packetCase_ == 3;
+      }
+      /**
+       * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 3 [json_name = "btcHeaders"];</code>
+       * @return The btcHeaders.
+       */
+      @java.lang.Override
+      public com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders getBtcHeaders() {
+        if (btcHeadersBuilder_ == null) {
+          if (packetCase_ == 3) {
+            return (com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders) packet_;
+          }
+          return com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.getDefaultInstance();
+        } else {
+          if (packetCase_ == 3) {
+            return btcHeadersBuilder_.getMessage();
+          }
+          return com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 3 [json_name = "btcHeaders"];</code>
+       */
+      public Builder setBtcHeaders(com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders value) {
+        if (btcHeadersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          packet_ = value;
+          onChanged();
+        } else {
+          btcHeadersBuilder_.setMessage(value);
+        }
+        packetCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 3 [json_name = "btcHeaders"];</code>
+       */
+      public Builder setBtcHeaders(
+          com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.Builder builderForValue) {
+        if (btcHeadersBuilder_ == null) {
+          packet_ = builderForValue.build();
+          onChanged();
+        } else {
+          btcHeadersBuilder_.setMessage(builderForValue.build());
+        }
+        packetCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 3 [json_name = "btcHeaders"];</code>
+       */
+      public Builder mergeBtcHeaders(com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders value) {
+        if (btcHeadersBuilder_ == null) {
+          if (packetCase_ == 3 &&
+              packet_ != com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.getDefaultInstance()) {
+            packet_ = com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.newBuilder((com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders) packet_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            packet_ = value;
+          }
+          onChanged();
+        } else {
+          if (packetCase_ == 3) {
+            btcHeadersBuilder_.mergeFrom(value);
+          } else {
+            btcHeadersBuilder_.setMessage(value);
+          }
+        }
+        packetCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 3 [json_name = "btcHeaders"];</code>
+       */
+      public Builder clearBtcHeaders() {
+        if (btcHeadersBuilder_ == null) {
+          if (packetCase_ == 3) {
+            packetCase_ = 0;
+            packet_ = null;
+            onChanged();
+          }
+        } else {
+          if (packetCase_ == 3) {
+            packetCase_ = 0;
+            packet_ = null;
+          }
+          btcHeadersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 3 [json_name = "btcHeaders"];</code>
+       */
+      public com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.Builder getBtcHeadersBuilder() {
+        return getBtcHeadersFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 3 [json_name = "btcHeaders"];</code>
+       */
+      @java.lang.Override
+      public com.babylon.zoneconcierge.v1.PacketProto.BTCHeadersOrBuilder getBtcHeadersOrBuilder() {
+        if ((packetCase_ == 3) && (btcHeadersBuilder_ != null)) {
+          return btcHeadersBuilder_.getMessageOrBuilder();
+        } else {
+          if (packetCase_ == 3) {
+            return (com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders) packet_;
+          }
+          return com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 3 [json_name = "btcHeaders"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders, com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.Builder, com.babylon.zoneconcierge.v1.PacketProto.BTCHeadersOrBuilder> 
+          getBtcHeadersFieldBuilder() {
+        if (btcHeadersBuilder_ == null) {
+          if (!(packetCase_ == 3)) {
+            packet_ = com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.getDefaultInstance();
+          }
+          btcHeadersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders, com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.Builder, com.babylon.zoneconcierge.v1.PacketProto.BTCHeadersOrBuilder>(
+                  (com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders) packet_,
+                  getParentForChildren(),
+                  isClean());
+          packet_ = null;
+        }
+        packetCase_ = 3;
+        onChanged();
+        return btcHeadersBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -677,23 +1121,23 @@ public final class PacketProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:babylon.zoneconcierge.v1.ZoneconciergePacketData)
+      // @@protoc_insertion_point(builder_scope:babylon.zoneconcierge.v1.OutboundPacket)
     }
 
-    // @@protoc_insertion_point(class_scope:babylon.zoneconcierge.v1.ZoneconciergePacketData)
-    private static final com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:babylon.zoneconcierge.v1.OutboundPacket)
+    private static final com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData();
+      DEFAULT_INSTANCE = new com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket();
     }
 
-    public static com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData getDefaultInstance() {
+    public static com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ZoneconciergePacketData>
-        PARSER = new com.google.protobuf.AbstractParser<ZoneconciergePacketData>() {
+    private static final com.google.protobuf.Parser<OutboundPacket>
+        PARSER = new com.google.protobuf.AbstractParser<OutboundPacket>() {
       @java.lang.Override
-      public ZoneconciergePacketData parsePartialFrom(
+      public OutboundPacket parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -712,17 +1156,1521 @@ public final class PacketProto {
       }
     };
 
-    public static com.google.protobuf.Parser<ZoneconciergePacketData> parser() {
+    public static com.google.protobuf.Parser<OutboundPacket> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<ZoneconciergePacketData> getParserForType() {
+    public com.google.protobuf.Parser<OutboundPacket> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.babylon.zoneconcierge.v1.PacketProto.ZoneconciergePacketData getDefaultInstanceForType() {
+    public com.babylon.zoneconcierge.v1.PacketProto.OutboundPacket getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface InboundPacketOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.zoneconcierge.v1.InboundPacket)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.babylon.zoneconcierge.v1.ConsumerSlashingIBCPacket consumer_slashing = 1 [json_name = "consumerSlashing"];</code>
+     * @return Whether the consumerSlashing field is set.
+     */
+    boolean hasConsumerSlashing();
+    /**
+     * <code>.babylon.zoneconcierge.v1.ConsumerSlashingIBCPacket consumer_slashing = 1 [json_name = "consumerSlashing"];</code>
+     * @return The consumerSlashing.
+     */
+    com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket getConsumerSlashing();
+    /**
+     * <code>.babylon.zoneconcierge.v1.ConsumerSlashingIBCPacket consumer_slashing = 1 [json_name = "consumerSlashing"];</code>
+     */
+    com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacketOrBuilder getConsumerSlashingOrBuilder();
+
+    com.babylon.zoneconcierge.v1.PacketProto.InboundPacket.PacketCase getPacketCase();
+  }
+  /**
+   * <pre>
+   * InboundPacket represents packets received by Babylon from other chains
+   * </pre>
+   *
+   * Protobuf type {@code babylon.zoneconcierge.v1.InboundPacket}
+   */
+  public static final class InboundPacket extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.zoneconcierge.v1.InboundPacket)
+      InboundPacketOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use InboundPacket.newBuilder() to construct.
+    private InboundPacket(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private InboundPacket() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InboundPacket();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.zoneconcierge.v1.PacketProto.internal_static_babylon_zoneconcierge_v1_InboundPacket_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.zoneconcierge.v1.PacketProto.internal_static_babylon_zoneconcierge_v1_InboundPacket_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.zoneconcierge.v1.PacketProto.InboundPacket.class, com.babylon.zoneconcierge.v1.PacketProto.InboundPacket.Builder.class);
+    }
+
+    private int packetCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object packet_;
+    public enum PacketCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      CONSUMER_SLASHING(1),
+      PACKET_NOT_SET(0);
+      private final int value;
+      private PacketCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PacketCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static PacketCase forNumber(int value) {
+        switch (value) {
+          case 1: return CONSUMER_SLASHING;
+          case 0: return PACKET_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public PacketCase
+    getPacketCase() {
+      return PacketCase.forNumber(
+          packetCase_);
+    }
+
+    public static final int CONSUMER_SLASHING_FIELD_NUMBER = 1;
+    /**
+     * <code>.babylon.zoneconcierge.v1.ConsumerSlashingIBCPacket consumer_slashing = 1 [json_name = "consumerSlashing"];</code>
+     * @return Whether the consumerSlashing field is set.
+     */
+    @java.lang.Override
+    public boolean hasConsumerSlashing() {
+      return packetCase_ == 1;
+    }
+    /**
+     * <code>.babylon.zoneconcierge.v1.ConsumerSlashingIBCPacket consumer_slashing = 1 [json_name = "consumerSlashing"];</code>
+     * @return The consumerSlashing.
+     */
+    @java.lang.Override
+    public com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket getConsumerSlashing() {
+      if (packetCase_ == 1) {
+         return (com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket) packet_;
+      }
+      return com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket.getDefaultInstance();
+    }
+    /**
+     * <code>.babylon.zoneconcierge.v1.ConsumerSlashingIBCPacket consumer_slashing = 1 [json_name = "consumerSlashing"];</code>
+     */
+    @java.lang.Override
+    public com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacketOrBuilder getConsumerSlashingOrBuilder() {
+      if (packetCase_ == 1) {
+         return (com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket) packet_;
+      }
+      return com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (packetCase_ == 1) {
+        output.writeMessage(1, (com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket) packet_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (packetCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket) packet_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.zoneconcierge.v1.PacketProto.InboundPacket)) {
+        return super.equals(obj);
+      }
+      com.babylon.zoneconcierge.v1.PacketProto.InboundPacket other = (com.babylon.zoneconcierge.v1.PacketProto.InboundPacket) obj;
+
+      if (!getPacketCase().equals(other.getPacketCase())) return false;
+      switch (packetCase_) {
+        case 1:
+          if (!getConsumerSlashing()
+              .equals(other.getConsumerSlashing())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (packetCase_) {
+        case 1:
+          hash = (37 * hash) + CONSUMER_SLASHING_FIELD_NUMBER;
+          hash = (53 * hash) + getConsumerSlashing().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.zoneconcierge.v1.PacketProto.InboundPacket parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.InboundPacket parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.InboundPacket parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.InboundPacket parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.InboundPacket parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.InboundPacket parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.InboundPacket parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.InboundPacket parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.zoneconcierge.v1.PacketProto.InboundPacket parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.zoneconcierge.v1.PacketProto.InboundPacket parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.InboundPacket parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.InboundPacket parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.zoneconcierge.v1.PacketProto.InboundPacket prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * InboundPacket represents packets received by Babylon from other chains
+     * </pre>
+     *
+     * Protobuf type {@code babylon.zoneconcierge.v1.InboundPacket}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.zoneconcierge.v1.InboundPacket)
+        com.babylon.zoneconcierge.v1.PacketProto.InboundPacketOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.zoneconcierge.v1.PacketProto.internal_static_babylon_zoneconcierge_v1_InboundPacket_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.zoneconcierge.v1.PacketProto.internal_static_babylon_zoneconcierge_v1_InboundPacket_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.zoneconcierge.v1.PacketProto.InboundPacket.class, com.babylon.zoneconcierge.v1.PacketProto.InboundPacket.Builder.class);
+      }
+
+      // Construct using com.babylon.zoneconcierge.v1.PacketProto.InboundPacket.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (consumerSlashingBuilder_ != null) {
+          consumerSlashingBuilder_.clear();
+        }
+        packetCase_ = 0;
+        packet_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.zoneconcierge.v1.PacketProto.internal_static_babylon_zoneconcierge_v1_InboundPacket_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.zoneconcierge.v1.PacketProto.InboundPacket getDefaultInstanceForType() {
+        return com.babylon.zoneconcierge.v1.PacketProto.InboundPacket.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.zoneconcierge.v1.PacketProto.InboundPacket build() {
+        com.babylon.zoneconcierge.v1.PacketProto.InboundPacket result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.zoneconcierge.v1.PacketProto.InboundPacket buildPartial() {
+        com.babylon.zoneconcierge.v1.PacketProto.InboundPacket result = new com.babylon.zoneconcierge.v1.PacketProto.InboundPacket(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.zoneconcierge.v1.PacketProto.InboundPacket result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      private void buildPartialOneofs(com.babylon.zoneconcierge.v1.PacketProto.InboundPacket result) {
+        result.packetCase_ = packetCase_;
+        result.packet_ = this.packet_;
+        if (packetCase_ == 1 &&
+            consumerSlashingBuilder_ != null) {
+          result.packet_ = consumerSlashingBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.zoneconcierge.v1.PacketProto.InboundPacket) {
+          return mergeFrom((com.babylon.zoneconcierge.v1.PacketProto.InboundPacket)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.zoneconcierge.v1.PacketProto.InboundPacket other) {
+        if (other == com.babylon.zoneconcierge.v1.PacketProto.InboundPacket.getDefaultInstance()) return this;
+        switch (other.getPacketCase()) {
+          case CONSUMER_SLASHING: {
+            mergeConsumerSlashing(other.getConsumerSlashing());
+            break;
+          }
+          case PACKET_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getConsumerSlashingFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                packetCase_ = 1;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int packetCase_ = 0;
+      private java.lang.Object packet_;
+      public PacketCase
+          getPacketCase() {
+        return PacketCase.forNumber(
+            packetCase_);
+      }
+
+      public Builder clearPacket() {
+        packetCase_ = 0;
+        packet_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket, com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket.Builder, com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacketOrBuilder> consumerSlashingBuilder_;
+      /**
+       * <code>.babylon.zoneconcierge.v1.ConsumerSlashingIBCPacket consumer_slashing = 1 [json_name = "consumerSlashing"];</code>
+       * @return Whether the consumerSlashing field is set.
+       */
+      @java.lang.Override
+      public boolean hasConsumerSlashing() {
+        return packetCase_ == 1;
+      }
+      /**
+       * <code>.babylon.zoneconcierge.v1.ConsumerSlashingIBCPacket consumer_slashing = 1 [json_name = "consumerSlashing"];</code>
+       * @return The consumerSlashing.
+       */
+      @java.lang.Override
+      public com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket getConsumerSlashing() {
+        if (consumerSlashingBuilder_ == null) {
+          if (packetCase_ == 1) {
+            return (com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket) packet_;
+          }
+          return com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket.getDefaultInstance();
+        } else {
+          if (packetCase_ == 1) {
+            return consumerSlashingBuilder_.getMessage();
+          }
+          return com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.babylon.zoneconcierge.v1.ConsumerSlashingIBCPacket consumer_slashing = 1 [json_name = "consumerSlashing"];</code>
+       */
+      public Builder setConsumerSlashing(com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket value) {
+        if (consumerSlashingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          packet_ = value;
+          onChanged();
+        } else {
+          consumerSlashingBuilder_.setMessage(value);
+        }
+        packetCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.babylon.zoneconcierge.v1.ConsumerSlashingIBCPacket consumer_slashing = 1 [json_name = "consumerSlashing"];</code>
+       */
+      public Builder setConsumerSlashing(
+          com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket.Builder builderForValue) {
+        if (consumerSlashingBuilder_ == null) {
+          packet_ = builderForValue.build();
+          onChanged();
+        } else {
+          consumerSlashingBuilder_.setMessage(builderForValue.build());
+        }
+        packetCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.babylon.zoneconcierge.v1.ConsumerSlashingIBCPacket consumer_slashing = 1 [json_name = "consumerSlashing"];</code>
+       */
+      public Builder mergeConsumerSlashing(com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket value) {
+        if (consumerSlashingBuilder_ == null) {
+          if (packetCase_ == 1 &&
+              packet_ != com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket.getDefaultInstance()) {
+            packet_ = com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket.newBuilder((com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket) packet_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            packet_ = value;
+          }
+          onChanged();
+        } else {
+          if (packetCase_ == 1) {
+            consumerSlashingBuilder_.mergeFrom(value);
+          } else {
+            consumerSlashingBuilder_.setMessage(value);
+          }
+        }
+        packetCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.babylon.zoneconcierge.v1.ConsumerSlashingIBCPacket consumer_slashing = 1 [json_name = "consumerSlashing"];</code>
+       */
+      public Builder clearConsumerSlashing() {
+        if (consumerSlashingBuilder_ == null) {
+          if (packetCase_ == 1) {
+            packetCase_ = 0;
+            packet_ = null;
+            onChanged();
+          }
+        } else {
+          if (packetCase_ == 1) {
+            packetCase_ = 0;
+            packet_ = null;
+          }
+          consumerSlashingBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.babylon.zoneconcierge.v1.ConsumerSlashingIBCPacket consumer_slashing = 1 [json_name = "consumerSlashing"];</code>
+       */
+      public com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket.Builder getConsumerSlashingBuilder() {
+        return getConsumerSlashingFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.babylon.zoneconcierge.v1.ConsumerSlashingIBCPacket consumer_slashing = 1 [json_name = "consumerSlashing"];</code>
+       */
+      @java.lang.Override
+      public com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacketOrBuilder getConsumerSlashingOrBuilder() {
+        if ((packetCase_ == 1) && (consumerSlashingBuilder_ != null)) {
+          return consumerSlashingBuilder_.getMessageOrBuilder();
+        } else {
+          if (packetCase_ == 1) {
+            return (com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket) packet_;
+          }
+          return com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.babylon.zoneconcierge.v1.ConsumerSlashingIBCPacket consumer_slashing = 1 [json_name = "consumerSlashing"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket, com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket.Builder, com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacketOrBuilder> 
+          getConsumerSlashingFieldBuilder() {
+        if (consumerSlashingBuilder_ == null) {
+          if (!(packetCase_ == 1)) {
+            packet_ = com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket.getDefaultInstance();
+          }
+          consumerSlashingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket, com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket.Builder, com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacketOrBuilder>(
+                  (com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket) packet_,
+                  getParentForChildren(),
+                  isClean());
+          packet_ = null;
+        }
+        packetCase_ = 1;
+        onChanged();
+        return consumerSlashingBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.zoneconcierge.v1.InboundPacket)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.zoneconcierge.v1.InboundPacket)
+    private static final com.babylon.zoneconcierge.v1.PacketProto.InboundPacket DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.zoneconcierge.v1.PacketProto.InboundPacket();
+    }
+
+    public static com.babylon.zoneconcierge.v1.PacketProto.InboundPacket getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<InboundPacket>
+        PARSER = new com.google.protobuf.AbstractParser<InboundPacket>() {
+      @java.lang.Override
+      public InboundPacket parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<InboundPacket> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InboundPacket> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.zoneconcierge.v1.PacketProto.InboundPacket getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BTCHeadersOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.zoneconcierge.v1.BTCHeaders)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+     */
+    java.util.List<com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo> 
+        getHeadersList();
+    /**
+     * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+     */
+    com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo getHeaders(int index);
+    /**
+     * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+     */
+    int getHeadersCount();
+    /**
+     * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+     */
+    java.util.List<? extends com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfoOrBuilder> 
+        getHeadersOrBuilderList();
+    /**
+     * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+     */
+    com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfoOrBuilder getHeadersOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * BTCHeaders contains BTC headers that have been verified and inserted into Babylon's BTC light client
+   * These headers are forwarded to consumer chains to keep their light clients in sync with Babylon
+   * </pre>
+   *
+   * Protobuf type {@code babylon.zoneconcierge.v1.BTCHeaders}
+   */
+  public static final class BTCHeaders extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.zoneconcierge.v1.BTCHeaders)
+      BTCHeadersOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BTCHeaders.newBuilder() to construct.
+    private BTCHeaders(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BTCHeaders() {
+      headers_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BTCHeaders();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.zoneconcierge.v1.PacketProto.internal_static_babylon_zoneconcierge_v1_BTCHeaders_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.zoneconcierge.v1.PacketProto.internal_static_babylon_zoneconcierge_v1_BTCHeaders_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.class, com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.Builder.class);
+    }
+
+    public static final int HEADERS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo> headers_;
+    /**
+     * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo> getHeadersList() {
+      return headers_;
+    }
+    /**
+     * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfoOrBuilder> 
+        getHeadersOrBuilderList() {
+      return headers_;
+    }
+    /**
+     * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+     */
+    @java.lang.Override
+    public int getHeadersCount() {
+      return headers_.size();
+    }
+    /**
+     * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+     */
+    @java.lang.Override
+    public com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo getHeaders(int index) {
+      return headers_.get(index);
+    }
+    /**
+     * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+     */
+    @java.lang.Override
+    public com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfoOrBuilder getHeadersOrBuilder(
+        int index) {
+      return headers_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < headers_.size(); i++) {
+        output.writeMessage(1, headers_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < headers_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, headers_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders)) {
+        return super.equals(obj);
+      }
+      com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders other = (com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders) obj;
+
+      if (!getHeadersList()
+          .equals(other.getHeadersList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getHeadersCount() > 0) {
+        hash = (37 * hash) + HEADERS_FIELD_NUMBER;
+        hash = (53 * hash) + getHeadersList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * BTCHeaders contains BTC headers that have been verified and inserted into Babylon's BTC light client
+     * These headers are forwarded to consumer chains to keep their light clients in sync with Babylon
+     * </pre>
+     *
+     * Protobuf type {@code babylon.zoneconcierge.v1.BTCHeaders}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.zoneconcierge.v1.BTCHeaders)
+        com.babylon.zoneconcierge.v1.PacketProto.BTCHeadersOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.zoneconcierge.v1.PacketProto.internal_static_babylon_zoneconcierge_v1_BTCHeaders_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.zoneconcierge.v1.PacketProto.internal_static_babylon_zoneconcierge_v1_BTCHeaders_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.class, com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.Builder.class);
+      }
+
+      // Construct using com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (headersBuilder_ == null) {
+          headers_ = java.util.Collections.emptyList();
+        } else {
+          headers_ = null;
+          headersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.zoneconcierge.v1.PacketProto.internal_static_babylon_zoneconcierge_v1_BTCHeaders_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders getDefaultInstanceForType() {
+        return com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders build() {
+        com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders buildPartial() {
+        com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders result = new com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders result) {
+        if (headersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            headers_ = java.util.Collections.unmodifiableList(headers_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.headers_ = headers_;
+        } else {
+          result.headers_ = headersBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders) {
+          return mergeFrom((com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders other) {
+        if (other == com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.getDefaultInstance()) return this;
+        if (headersBuilder_ == null) {
+          if (!other.headers_.isEmpty()) {
+            if (headers_.isEmpty()) {
+              headers_ = other.headers_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureHeadersIsMutable();
+              headers_.addAll(other.headers_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.headers_.isEmpty()) {
+            if (headersBuilder_.isEmpty()) {
+              headersBuilder_.dispose();
+              headersBuilder_ = null;
+              headers_ = other.headers_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              headersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getHeadersFieldBuilder() : null;
+            } else {
+              headersBuilder_.addAllMessages(other.headers_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo m =
+                    input.readMessage(
+                        com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.parser(),
+                        extensionRegistry);
+                if (headersBuilder_ == null) {
+                  ensureHeadersIsMutable();
+                  headers_.add(m);
+                } else {
+                  headersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo> headers_ =
+        java.util.Collections.emptyList();
+      private void ensureHeadersIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          headers_ = new java.util.ArrayList<com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo>(headers_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo, com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.Builder, com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfoOrBuilder> headersBuilder_;
+
+      /**
+       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+       */
+      public java.util.List<com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo> getHeadersList() {
+        if (headersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(headers_);
+        } else {
+          return headersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+       */
+      public int getHeadersCount() {
+        if (headersBuilder_ == null) {
+          return headers_.size();
+        } else {
+          return headersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+       */
+      public com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo getHeaders(int index) {
+        if (headersBuilder_ == null) {
+          return headers_.get(index);
+        } else {
+          return headersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+       */
+      public Builder setHeaders(
+          int index, com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo value) {
+        if (headersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHeadersIsMutable();
+          headers_.set(index, value);
+          onChanged();
+        } else {
+          headersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+       */
+      public Builder setHeaders(
+          int index, com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.Builder builderForValue) {
+        if (headersBuilder_ == null) {
+          ensureHeadersIsMutable();
+          headers_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          headersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+       */
+      public Builder addHeaders(com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo value) {
+        if (headersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHeadersIsMutable();
+          headers_.add(value);
+          onChanged();
+        } else {
+          headersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+       */
+      public Builder addHeaders(
+          int index, com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo value) {
+        if (headersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHeadersIsMutable();
+          headers_.add(index, value);
+          onChanged();
+        } else {
+          headersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+       */
+      public Builder addHeaders(
+          com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.Builder builderForValue) {
+        if (headersBuilder_ == null) {
+          ensureHeadersIsMutable();
+          headers_.add(builderForValue.build());
+          onChanged();
+        } else {
+          headersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+       */
+      public Builder addHeaders(
+          int index, com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.Builder builderForValue) {
+        if (headersBuilder_ == null) {
+          ensureHeadersIsMutable();
+          headers_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          headersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+       */
+      public Builder addAllHeaders(
+          java.lang.Iterable<? extends com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo> values) {
+        if (headersBuilder_ == null) {
+          ensureHeadersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, headers_);
+          onChanged();
+        } else {
+          headersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+       */
+      public Builder clearHeaders() {
+        if (headersBuilder_ == null) {
+          headers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          headersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+       */
+      public Builder removeHeaders(int index) {
+        if (headersBuilder_ == null) {
+          ensureHeadersIsMutable();
+          headers_.remove(index);
+          onChanged();
+        } else {
+          headersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+       */
+      public com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.Builder getHeadersBuilder(
+          int index) {
+        return getHeadersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+       */
+      public com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfoOrBuilder getHeadersOrBuilder(
+          int index) {
+        if (headersBuilder_ == null) {
+          return headers_.get(index);  } else {
+          return headersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+       */
+      public java.util.List<? extends com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfoOrBuilder> 
+           getHeadersOrBuilderList() {
+        if (headersBuilder_ != null) {
+          return headersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(headers_);
+        }
+      }
+      /**
+       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+       */
+      public com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.Builder addHeadersBuilder() {
+        return getHeadersFieldBuilder().addBuilder(
+            com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+       */
+      public com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.Builder addHeadersBuilder(
+          int index) {
+        return getHeadersFieldBuilder().addBuilder(
+            index, com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo headers = 1 [json_name = "headers"];</code>
+       */
+      public java.util.List<com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.Builder> 
+           getHeadersBuilderList() {
+        return getHeadersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo, com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.Builder, com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfoOrBuilder> 
+          getHeadersFieldBuilder() {
+        if (headersBuilder_ == null) {
+          headersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo, com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.Builder, com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfoOrBuilder>(
+                  headers_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          headers_ = null;
+        }
+        return headersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.zoneconcierge.v1.BTCHeaders)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.zoneconcierge.v1.BTCHeaders)
+    private static final com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders();
+    }
+
+    public static com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BTCHeaders>
+        PARSER = new com.google.protobuf.AbstractParser<BTCHeaders>() {
+      @java.lang.Override
+      public BTCHeaders parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<BTCHeaders> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BTCHeaders> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -767,10 +2715,10 @@ public final class PacketProto {
      * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
      * </pre>
      *
-     * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
+     * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 2 [json_name = "btcHeaders"];</code>
+     * @return Whether the btcHeaders field is set.
      */
-    java.util.List<com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo> 
-        getBtcHeadersList();
+    boolean hasBtcHeaders();
     /**
      * <pre>
      * btc_headers is BTC headers between
@@ -779,9 +2727,10 @@ public final class PacketProto {
      * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
      * </pre>
      *
-     * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
+     * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 2 [json_name = "btcHeaders"];</code>
+     * @return The btcHeaders.
      */
-    com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo getBtcHeaders(int index);
+    com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders getBtcHeaders();
     /**
      * <pre>
      * btc_headers is BTC headers between
@@ -790,33 +2739,9 @@ public final class PacketProto {
      * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
      * </pre>
      *
-     * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
+     * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 2 [json_name = "btcHeaders"];</code>
      */
-    int getBtcHeadersCount();
-    /**
-     * <pre>
-     * btc_headers is BTC headers between
-     * - the block AFTER the common ancestor of BTC tip at epoch `lastFinalizedEpoch-1` and BTC tip at epoch `lastFinalizedEpoch`
-     * - BTC tip at epoch `lastFinalizedEpoch`
-     * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
-     * </pre>
-     *
-     * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
-     */
-    java.util.List<? extends com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfoOrBuilder> 
-        getBtcHeadersOrBuilderList();
-    /**
-     * <pre>
-     * btc_headers is BTC headers between
-     * - the block AFTER the common ancestor of BTC tip at epoch `lastFinalizedEpoch-1` and BTC tip at epoch `lastFinalizedEpoch`
-     * - BTC tip at epoch `lastFinalizedEpoch`
-     * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
-     * </pre>
-     *
-     * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
-     */
-    com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfoOrBuilder getBtcHeadersOrBuilder(
-        int index);
+    com.babylon.zoneconcierge.v1.PacketProto.BTCHeadersOrBuilder getBtcHeadersOrBuilder();
 
     /**
      * <pre>
@@ -901,7 +2826,7 @@ public final class PacketProto {
 
     /**
      * <pre>
-     * 
+     *
      *Proofs that the header is finalized
      * </pre>
      *
@@ -911,7 +2836,7 @@ public final class PacketProto {
     boolean hasProof();
     /**
      * <pre>
-     * 
+     *
      *Proofs that the header is finalized
      * </pre>
      *
@@ -921,7 +2846,7 @@ public final class PacketProto {
     com.babylon.zoneconcierge.v1.ZoneconciergeProto.ProofFinalizedChainInfo getProof();
     /**
      * <pre>
-     * 
+     *
      *Proofs that the header is finalized
      * </pre>
      *
@@ -932,7 +2857,7 @@ public final class PacketProto {
   /**
    * <pre>
    * BTCTimestamp is a BTC timestamp that carries information of a BTC-finalised epoch
-   * It includes a number of BTC headers, a raw checkpoint, an epoch metadata, and 
+   * It includes a number of BTC headers, a raw checkpoint, an epoch metadata, and
    * a CZ header if there exists CZ headers checkpointed to this epoch.
    * Upon a newly finalised epoch in Babylon, Babylon will send a BTC timestamp to each
    * Cosmos zone that has phase-2 integration with Babylon via IBC.
@@ -950,7 +2875,6 @@ public final class PacketProto {
       super(builder);
     }
     private BTCTimestamp() {
-      btcHeaders_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -1012,8 +2936,7 @@ public final class PacketProto {
     }
 
     public static final int BTC_HEADERS_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private java.util.List<com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo> btcHeaders_;
+    private com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders btcHeaders_;
     /**
      * <pre>
      * btc_headers is BTC headers between
@@ -1022,11 +2945,12 @@ public final class PacketProto {
      * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
      * </pre>
      *
-     * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
+     * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 2 [json_name = "btcHeaders"];</code>
+     * @return Whether the btcHeaders field is set.
      */
     @java.lang.Override
-    public java.util.List<com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo> getBtcHeadersList() {
-      return btcHeaders_;
+    public boolean hasBtcHeaders() {
+      return btcHeaders_ != null;
     }
     /**
      * <pre>
@@ -1036,12 +2960,12 @@ public final class PacketProto {
      * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
      * </pre>
      *
-     * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
+     * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 2 [json_name = "btcHeaders"];</code>
+     * @return The btcHeaders.
      */
     @java.lang.Override
-    public java.util.List<? extends com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfoOrBuilder> 
-        getBtcHeadersOrBuilderList() {
-      return btcHeaders_;
+    public com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders getBtcHeaders() {
+      return btcHeaders_ == null ? com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.getDefaultInstance() : btcHeaders_;
     }
     /**
      * <pre>
@@ -1051,40 +2975,11 @@ public final class PacketProto {
      * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
      * </pre>
      *
-     * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
+     * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 2 [json_name = "btcHeaders"];</code>
      */
     @java.lang.Override
-    public int getBtcHeadersCount() {
-      return btcHeaders_.size();
-    }
-    /**
-     * <pre>
-     * btc_headers is BTC headers between
-     * - the block AFTER the common ancestor of BTC tip at epoch `lastFinalizedEpoch-1` and BTC tip at epoch `lastFinalizedEpoch`
-     * - BTC tip at epoch `lastFinalizedEpoch`
-     * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
-     * </pre>
-     *
-     * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
-     */
-    @java.lang.Override
-    public com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo getBtcHeaders(int index) {
-      return btcHeaders_.get(index);
-    }
-    /**
-     * <pre>
-     * btc_headers is BTC headers between
-     * - the block AFTER the common ancestor of BTC tip at epoch `lastFinalizedEpoch-1` and BTC tip at epoch `lastFinalizedEpoch`
-     * - BTC tip at epoch `lastFinalizedEpoch`
-     * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
-     * </pre>
-     *
-     * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
-     */
-    @java.lang.Override
-    public com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfoOrBuilder getBtcHeadersOrBuilder(
-        int index) {
-      return btcHeaders_.get(index);
+    public com.babylon.zoneconcierge.v1.PacketProto.BTCHeadersOrBuilder getBtcHeadersOrBuilder() {
+      return btcHeaders_ == null ? com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.getDefaultInstance() : btcHeaders_;
     }
 
     public static final int EPOCH_INFO_FIELD_NUMBER = 3;
@@ -1205,7 +3100,7 @@ public final class PacketProto {
     private com.babylon.zoneconcierge.v1.ZoneconciergeProto.ProofFinalizedChainInfo proof_;
     /**
      * <pre>
-     * 
+     *
      *Proofs that the header is finalized
      * </pre>
      *
@@ -1218,7 +3113,7 @@ public final class PacketProto {
     }
     /**
      * <pre>
-     * 
+     *
      *Proofs that the header is finalized
      * </pre>
      *
@@ -1231,7 +3126,7 @@ public final class PacketProto {
     }
     /**
      * <pre>
-     * 
+     *
      *Proofs that the header is finalized
      * </pre>
      *
@@ -1259,8 +3154,8 @@ public final class PacketProto {
       if (header_ != null) {
         output.writeMessage(1, getHeader());
       }
-      for (int i = 0; i < btcHeaders_.size(); i++) {
-        output.writeMessage(2, btcHeaders_.get(i));
+      if (btcHeaders_ != null) {
+        output.writeMessage(2, getBtcHeaders());
       }
       if (epochInfo_ != null) {
         output.writeMessage(3, getEpochInfo());
@@ -1287,9 +3182,9 @@ public final class PacketProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getHeader());
       }
-      for (int i = 0; i < btcHeaders_.size(); i++) {
+      if (btcHeaders_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, btcHeaders_.get(i));
+          .computeMessageSize(2, getBtcHeaders());
       }
       if (epochInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -1327,8 +3222,11 @@ public final class PacketProto {
         if (!getHeader()
             .equals(other.getHeader())) return false;
       }
-      if (!getBtcHeadersList()
-          .equals(other.getBtcHeadersList())) return false;
+      if (hasBtcHeaders() != other.hasBtcHeaders()) return false;
+      if (hasBtcHeaders()) {
+        if (!getBtcHeaders()
+            .equals(other.getBtcHeaders())) return false;
+      }
       if (hasEpochInfo() != other.hasEpochInfo()) return false;
       if (hasEpochInfo()) {
         if (!getEpochInfo()
@@ -1364,9 +3262,9 @@ public final class PacketProto {
         hash = (37 * hash) + HEADER_FIELD_NUMBER;
         hash = (53 * hash) + getHeader().hashCode();
       }
-      if (getBtcHeadersCount() > 0) {
+      if (hasBtcHeaders()) {
         hash = (37 * hash) + BTC_HEADERS_FIELD_NUMBER;
-        hash = (53 * hash) + getBtcHeadersList().hashCode();
+        hash = (53 * hash) + getBtcHeaders().hashCode();
       }
       if (hasEpochInfo()) {
         hash = (37 * hash) + EPOCH_INFO_FIELD_NUMBER;
@@ -1484,7 +3382,7 @@ public final class PacketProto {
     /**
      * <pre>
      * BTCTimestamp is a BTC timestamp that carries information of a BTC-finalised epoch
-     * It includes a number of BTC headers, a raw checkpoint, an epoch metadata, and 
+     * It includes a number of BTC headers, a raw checkpoint, an epoch metadata, and
      * a CZ header if there exists CZ headers checkpointed to this epoch.
      * Upon a newly finalised epoch in Babylon, Babylon will send a BTC timestamp to each
      * Cosmos zone that has phase-2 integration with Babylon via IBC.
@@ -1528,13 +3426,11 @@ public final class PacketProto {
           headerBuilder_.dispose();
           headerBuilder_ = null;
         }
-        if (btcHeadersBuilder_ == null) {
-          btcHeaders_ = java.util.Collections.emptyList();
-        } else {
-          btcHeaders_ = null;
-          btcHeadersBuilder_.clear();
+        btcHeaders_ = null;
+        if (btcHeadersBuilder_ != null) {
+          btcHeadersBuilder_.dispose();
+          btcHeadersBuilder_ = null;
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         epochInfo_ = null;
         if (epochInfoBuilder_ != null) {
           epochInfoBuilder_.dispose();
@@ -1581,22 +3477,9 @@ public final class PacketProto {
       @java.lang.Override
       public com.babylon.zoneconcierge.v1.PacketProto.BTCTimestamp buildPartial() {
         com.babylon.zoneconcierge.v1.PacketProto.BTCTimestamp result = new com.babylon.zoneconcierge.v1.PacketProto.BTCTimestamp(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(com.babylon.zoneconcierge.v1.PacketProto.BTCTimestamp result) {
-        if (btcHeadersBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
-            btcHeaders_ = java.util.Collections.unmodifiableList(btcHeaders_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.btcHeaders_ = btcHeaders_;
-        } else {
-          result.btcHeaders_ = btcHeadersBuilder_.build();
-        }
       }
 
       private void buildPartial0(com.babylon.zoneconcierge.v1.PacketProto.BTCTimestamp result) {
@@ -1605,6 +3488,11 @@ public final class PacketProto {
           result.header_ = headerBuilder_ == null
               ? header_
               : headerBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.btcHeaders_ = btcHeadersBuilder_ == null
+              ? btcHeaders_
+              : btcHeadersBuilder_.build();
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.epochInfo_ = epochInfoBuilder_ == null
@@ -1675,31 +3563,8 @@ public final class PacketProto {
         if (other.hasHeader()) {
           mergeHeader(other.getHeader());
         }
-        if (btcHeadersBuilder_ == null) {
-          if (!other.btcHeaders_.isEmpty()) {
-            if (btcHeaders_.isEmpty()) {
-              btcHeaders_ = other.btcHeaders_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureBtcHeadersIsMutable();
-              btcHeaders_.addAll(other.btcHeaders_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.btcHeaders_.isEmpty()) {
-            if (btcHeadersBuilder_.isEmpty()) {
-              btcHeadersBuilder_.dispose();
-              btcHeadersBuilder_ = null;
-              btcHeaders_ = other.btcHeaders_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              btcHeadersBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getBtcHeadersFieldBuilder() : null;
-            } else {
-              btcHeadersBuilder_.addAllMessages(other.btcHeaders_);
-            }
-          }
+        if (other.hasBtcHeaders()) {
+          mergeBtcHeaders(other.getBtcHeaders());
         }
         if (other.hasEpochInfo()) {
           mergeEpochInfo(other.getEpochInfo());
@@ -1747,16 +3612,10 @@ public final class PacketProto {
                 break;
               } // case 10
               case 18: {
-                com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo m =
-                    input.readMessage(
-                        com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.parser(),
-                        extensionRegistry);
-                if (btcHeadersBuilder_ == null) {
-                  ensureBtcHeadersIsMutable();
-                  btcHeaders_.add(m);
-                } else {
-                  btcHeadersBuilder_.addMessage(m);
-                }
+                input.readMessage(
+                    getBtcHeadersFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
@@ -1959,18 +3818,9 @@ public final class PacketProto {
         return headerBuilder_;
       }
 
-      private java.util.List<com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo> btcHeaders_ =
-        java.util.Collections.emptyList();
-      private void ensureBtcHeadersIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          btcHeaders_ = new java.util.ArrayList<com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo>(btcHeaders_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo, com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.Builder, com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfoOrBuilder> btcHeadersBuilder_;
-
+      private com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders btcHeaders_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders, com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.Builder, com.babylon.zoneconcierge.v1.PacketProto.BTCHeadersOrBuilder> btcHeadersBuilder_;
       /**
        * <pre>
        * btc_headers is BTC headers between
@@ -1979,13 +3829,28 @@ public final class PacketProto {
        * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
        * </pre>
        *
-       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
+       * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 2 [json_name = "btcHeaders"];</code>
+       * @return Whether the btcHeaders field is set.
        */
-      public java.util.List<com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo> getBtcHeadersList() {
+      public boolean hasBtcHeaders() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * btc_headers is BTC headers between
+       * - the block AFTER the common ancestor of BTC tip at epoch `lastFinalizedEpoch-1` and BTC tip at epoch `lastFinalizedEpoch`
+       * - BTC tip at epoch `lastFinalizedEpoch`
+       * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
+       * </pre>
+       *
+       * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 2 [json_name = "btcHeaders"];</code>
+       * @return The btcHeaders.
+       */
+      public com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders getBtcHeaders() {
         if (btcHeadersBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(btcHeaders_);
+          return btcHeaders_ == null ? com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.getDefaultInstance() : btcHeaders_;
         } else {
-          return btcHeadersBuilder_.getMessageList();
+          return btcHeadersBuilder_.getMessage();
         }
       }
       /**
@@ -1996,14 +3861,20 @@ public final class PacketProto {
        * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
        * </pre>
        *
-       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
+       * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 2 [json_name = "btcHeaders"];</code>
        */
-      public int getBtcHeadersCount() {
+      public Builder setBtcHeaders(com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders value) {
         if (btcHeadersBuilder_ == null) {
-          return btcHeaders_.size();
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          btcHeaders_ = value;
         } else {
-          return btcHeadersBuilder_.getCount();
+          btcHeadersBuilder_.setMessage(value);
         }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
       }
       /**
        * <pre>
@@ -2013,37 +3884,43 @@ public final class PacketProto {
        * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
        * </pre>
        *
-       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
-       */
-      public com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo getBtcHeaders(int index) {
-        if (btcHeadersBuilder_ == null) {
-          return btcHeaders_.get(index);
-        } else {
-          return btcHeadersBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <pre>
-       * btc_headers is BTC headers between
-       * - the block AFTER the common ancestor of BTC tip at epoch `lastFinalizedEpoch-1` and BTC tip at epoch `lastFinalizedEpoch`
-       * - BTC tip at epoch `lastFinalizedEpoch`
-       * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
-       * </pre>
-       *
-       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
+       * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 2 [json_name = "btcHeaders"];</code>
        */
       public Builder setBtcHeaders(
-          int index, com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo value) {
+          com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.Builder builderForValue) {
         if (btcHeadersBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
+          btcHeaders_ = builderForValue.build();
+        } else {
+          btcHeadersBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * btc_headers is BTC headers between
+       * - the block AFTER the common ancestor of BTC tip at epoch `lastFinalizedEpoch-1` and BTC tip at epoch `lastFinalizedEpoch`
+       * - BTC tip at epoch `lastFinalizedEpoch`
+       * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
+       * </pre>
+       *
+       * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 2 [json_name = "btcHeaders"];</code>
+       */
+      public Builder mergeBtcHeaders(com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders value) {
+        if (btcHeadersBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            btcHeaders_ != null &&
+            btcHeaders_ != com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.getDefaultInstance()) {
+            getBtcHeadersBuilder().mergeFrom(value);
+          } else {
+            btcHeaders_ = value;
           }
-          ensureBtcHeadersIsMutable();
-          btcHeaders_.set(index, value);
-          onChanged();
         } else {
-          btcHeadersBuilder_.setMessage(index, value);
+          btcHeadersBuilder_.mergeFrom(value);
         }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -2054,217 +3931,49 @@ public final class PacketProto {
        * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
        * </pre>
        *
-       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
-       */
-      public Builder setBtcHeaders(
-          int index, com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.Builder builderForValue) {
-        if (btcHeadersBuilder_ == null) {
-          ensureBtcHeadersIsMutable();
-          btcHeaders_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          btcHeadersBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * btc_headers is BTC headers between
-       * - the block AFTER the common ancestor of BTC tip at epoch `lastFinalizedEpoch-1` and BTC tip at epoch `lastFinalizedEpoch`
-       * - BTC tip at epoch `lastFinalizedEpoch`
-       * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
-       * </pre>
-       *
-       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
-       */
-      public Builder addBtcHeaders(com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo value) {
-        if (btcHeadersBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureBtcHeadersIsMutable();
-          btcHeaders_.add(value);
-          onChanged();
-        } else {
-          btcHeadersBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * btc_headers is BTC headers between
-       * - the block AFTER the common ancestor of BTC tip at epoch `lastFinalizedEpoch-1` and BTC tip at epoch `lastFinalizedEpoch`
-       * - BTC tip at epoch `lastFinalizedEpoch`
-       * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
-       * </pre>
-       *
-       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
-       */
-      public Builder addBtcHeaders(
-          int index, com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo value) {
-        if (btcHeadersBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureBtcHeadersIsMutable();
-          btcHeaders_.add(index, value);
-          onChanged();
-        } else {
-          btcHeadersBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * btc_headers is BTC headers between
-       * - the block AFTER the common ancestor of BTC tip at epoch `lastFinalizedEpoch-1` and BTC tip at epoch `lastFinalizedEpoch`
-       * - BTC tip at epoch `lastFinalizedEpoch`
-       * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
-       * </pre>
-       *
-       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
-       */
-      public Builder addBtcHeaders(
-          com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.Builder builderForValue) {
-        if (btcHeadersBuilder_ == null) {
-          ensureBtcHeadersIsMutable();
-          btcHeaders_.add(builderForValue.build());
-          onChanged();
-        } else {
-          btcHeadersBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * btc_headers is BTC headers between
-       * - the block AFTER the common ancestor of BTC tip at epoch `lastFinalizedEpoch-1` and BTC tip at epoch `lastFinalizedEpoch`
-       * - BTC tip at epoch `lastFinalizedEpoch`
-       * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
-       * </pre>
-       *
-       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
-       */
-      public Builder addBtcHeaders(
-          int index, com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.Builder builderForValue) {
-        if (btcHeadersBuilder_ == null) {
-          ensureBtcHeadersIsMutable();
-          btcHeaders_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          btcHeadersBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * btc_headers is BTC headers between
-       * - the block AFTER the common ancestor of BTC tip at epoch `lastFinalizedEpoch-1` and BTC tip at epoch `lastFinalizedEpoch`
-       * - BTC tip at epoch `lastFinalizedEpoch`
-       * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
-       * </pre>
-       *
-       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
-       */
-      public Builder addAllBtcHeaders(
-          java.lang.Iterable<? extends com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo> values) {
-        if (btcHeadersBuilder_ == null) {
-          ensureBtcHeadersIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, btcHeaders_);
-          onChanged();
-        } else {
-          btcHeadersBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * btc_headers is BTC headers between
-       * - the block AFTER the common ancestor of BTC tip at epoch `lastFinalizedEpoch-1` and BTC tip at epoch `lastFinalizedEpoch`
-       * - BTC tip at epoch `lastFinalizedEpoch`
-       * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
-       * </pre>
-       *
-       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
+       * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 2 [json_name = "btcHeaders"];</code>
        */
       public Builder clearBtcHeaders() {
-        if (btcHeadersBuilder_ == null) {
-          btcHeaders_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          btcHeadersBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * btc_headers is BTC headers between
-       * - the block AFTER the common ancestor of BTC tip at epoch `lastFinalizedEpoch-1` and BTC tip at epoch `lastFinalizedEpoch`
-       * - BTC tip at epoch `lastFinalizedEpoch`
-       * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
-       * </pre>
-       *
-       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
-       */
-      public Builder removeBtcHeaders(int index) {
-        if (btcHeadersBuilder_ == null) {
-          ensureBtcHeadersIsMutable();
-          btcHeaders_.remove(index);
-          onChanged();
-        } else {
-          btcHeadersBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * btc_headers is BTC headers between
-       * - the block AFTER the common ancestor of BTC tip at epoch `lastFinalizedEpoch-1` and BTC tip at epoch `lastFinalizedEpoch`
-       * - BTC tip at epoch `lastFinalizedEpoch`
-       * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
-       * </pre>
-       *
-       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
-       */
-      public com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.Builder getBtcHeadersBuilder(
-          int index) {
-        return getBtcHeadersFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * btc_headers is BTC headers between
-       * - the block AFTER the common ancestor of BTC tip at epoch `lastFinalizedEpoch-1` and BTC tip at epoch `lastFinalizedEpoch`
-       * - BTC tip at epoch `lastFinalizedEpoch`
-       * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
-       * </pre>
-       *
-       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
-       */
-      public com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfoOrBuilder getBtcHeadersOrBuilder(
-          int index) {
-        if (btcHeadersBuilder_ == null) {
-          return btcHeaders_.get(index);  } else {
-          return btcHeadersBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * btc_headers is BTC headers between
-       * - the block AFTER the common ancestor of BTC tip at epoch `lastFinalizedEpoch-1` and BTC tip at epoch `lastFinalizedEpoch`
-       * - BTC tip at epoch `lastFinalizedEpoch`
-       * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
-       * </pre>
-       *
-       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
-       */
-      public java.util.List<? extends com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfoOrBuilder> 
-           getBtcHeadersOrBuilderList() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        btcHeaders_ = null;
         if (btcHeadersBuilder_ != null) {
-          return btcHeadersBuilder_.getMessageOrBuilderList();
+          btcHeadersBuilder_.dispose();
+          btcHeadersBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * btc_headers is BTC headers between
+       * - the block AFTER the common ancestor of BTC tip at epoch `lastFinalizedEpoch-1` and BTC tip at epoch `lastFinalizedEpoch`
+       * - BTC tip at epoch `lastFinalizedEpoch`
+       * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
+       * </pre>
+       *
+       * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 2 [json_name = "btcHeaders"];</code>
+       */
+      public com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.Builder getBtcHeadersBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getBtcHeadersFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * btc_headers is BTC headers between
+       * - the block AFTER the common ancestor of BTC tip at epoch `lastFinalizedEpoch-1` and BTC tip at epoch `lastFinalizedEpoch`
+       * - BTC tip at epoch `lastFinalizedEpoch`
+       * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
+       * </pre>
+       *
+       * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 2 [json_name = "btcHeaders"];</code>
+       */
+      public com.babylon.zoneconcierge.v1.PacketProto.BTCHeadersOrBuilder getBtcHeadersOrBuilder() {
+        if (btcHeadersBuilder_ != null) {
+          return btcHeadersBuilder_.getMessageOrBuilder();
         } else {
-          return java.util.Collections.unmodifiableList(btcHeaders_);
+          return btcHeaders_ == null ?
+              com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.getDefaultInstance() : btcHeaders_;
         }
       }
       /**
@@ -2275,49 +3984,15 @@ public final class PacketProto {
        * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
        * </pre>
        *
-       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
+       * <code>.babylon.zoneconcierge.v1.BTCHeaders btc_headers = 2 [json_name = "btcHeaders"];</code>
        */
-      public com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.Builder addBtcHeadersBuilder() {
-        return getBtcHeadersFieldBuilder().addBuilder(
-            com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * btc_headers is BTC headers between
-       * - the block AFTER the common ancestor of BTC tip at epoch `lastFinalizedEpoch-1` and BTC tip at epoch `lastFinalizedEpoch`
-       * - BTC tip at epoch `lastFinalizedEpoch`
-       * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
-       * </pre>
-       *
-       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
-       */
-      public com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.Builder addBtcHeadersBuilder(
-          int index) {
-        return getBtcHeadersFieldBuilder().addBuilder(
-            index, com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * btc_headers is BTC headers between
-       * - the block AFTER the common ancestor of BTC tip at epoch `lastFinalizedEpoch-1` and BTC tip at epoch `lastFinalizedEpoch`
-       * - BTC tip at epoch `lastFinalizedEpoch`
-       * where `lastFinalizedEpoch` is the last finalised epoch in Babylon
-       * </pre>
-       *
-       * <code>repeated .babylon.btclightclient.v1.BTCHeaderInfo btc_headers = 2 [json_name = "btcHeaders"];</code>
-       */
-      public java.util.List<com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.Builder> 
-           getBtcHeadersBuilderList() {
-        return getBtcHeadersFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo, com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.Builder, com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfoOrBuilder> 
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders, com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.Builder, com.babylon.zoneconcierge.v1.PacketProto.BTCHeadersOrBuilder> 
           getBtcHeadersFieldBuilder() {
         if (btcHeadersBuilder_ == null) {
-          btcHeadersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo, com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfo.Builder, com.babylon.btclightclient.v1.BtclightclientProto.BTCHeaderInfoOrBuilder>(
-                  btcHeaders_,
-                  ((bitField0_ & 0x00000002) != 0),
+          btcHeadersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders, com.babylon.zoneconcierge.v1.PacketProto.BTCHeaders.Builder, com.babylon.zoneconcierge.v1.PacketProto.BTCHeadersOrBuilder>(
+                  getBtcHeaders(),
                   getParentForChildren(),
                   isClean());
           btcHeaders_ = null;
@@ -2795,7 +4470,7 @@ public final class PacketProto {
           com.babylon.zoneconcierge.v1.ZoneconciergeProto.ProofFinalizedChainInfo, com.babylon.zoneconcierge.v1.ZoneconciergeProto.ProofFinalizedChainInfo.Builder, com.babylon.zoneconcierge.v1.ZoneconciergeProto.ProofFinalizedChainInfoOrBuilder> proofBuilder_;
       /**
        * <pre>
-       * 
+       *
        *Proofs that the header is finalized
        * </pre>
        *
@@ -2807,7 +4482,7 @@ public final class PacketProto {
       }
       /**
        * <pre>
-       * 
+       *
        *Proofs that the header is finalized
        * </pre>
        *
@@ -2823,7 +4498,7 @@ public final class PacketProto {
       }
       /**
        * <pre>
-       * 
+       *
        *Proofs that the header is finalized
        * </pre>
        *
@@ -2844,7 +4519,7 @@ public final class PacketProto {
       }
       /**
        * <pre>
-       * 
+       *
        *Proofs that the header is finalized
        * </pre>
        *
@@ -2863,7 +4538,7 @@ public final class PacketProto {
       }
       /**
        * <pre>
-       * 
+       *
        *Proofs that the header is finalized
        * </pre>
        *
@@ -2887,7 +4562,7 @@ public final class PacketProto {
       }
       /**
        * <pre>
-       * 
+       *
        *Proofs that the header is finalized
        * </pre>
        *
@@ -2905,7 +4580,7 @@ public final class PacketProto {
       }
       /**
        * <pre>
-       * 
+       *
        *Proofs that the header is finalized
        * </pre>
        *
@@ -2918,7 +4593,7 @@ public final class PacketProto {
       }
       /**
        * <pre>
-       * 
+       *
        *Proofs that the header is finalized
        * </pre>
        *
@@ -2934,7 +4609,7 @@ public final class PacketProto {
       }
       /**
        * <pre>
-       * 
+       *
        *Proofs that the header is finalized
        * </pre>
        *
@@ -3017,16 +4692,703 @@ public final class PacketProto {
 
   }
 
+  public interface ConsumerSlashingIBCPacketOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:babylon.zoneconcierge.v1.ConsumerSlashingIBCPacket)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     *&#47; evidence is the FP slashing evidence that the Consumer sends to Babylon
+     * </pre>
+     *
+     * <code>.babylon.finality.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+     * @return Whether the evidence field is set.
+     */
+    boolean hasEvidence();
+    /**
+     * <pre>
+     *&#47; evidence is the FP slashing evidence that the Consumer sends to Babylon
+     * </pre>
+     *
+     * <code>.babylon.finality.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+     * @return The evidence.
+     */
+    com.babylon.finality.v1.FinalityProto.Evidence getEvidence();
+    /**
+     * <pre>
+     *&#47; evidence is the FP slashing evidence that the Consumer sends to Babylon
+     * </pre>
+     *
+     * <code>.babylon.finality.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+     */
+    com.babylon.finality.v1.FinalityProto.EvidenceOrBuilder getEvidenceOrBuilder();
+  }
+  /**
+   * <pre>
+   * ConsumerSlashingIBCPacket defines the slashing information that a Consumer sends to Babylon's ZoneConcierge upon a
+   * Consumer slashing event.
+   * It includes the FP public key, the Consumer block height at the slashing event, and the double sign evidence.
+   * </pre>
+   *
+   * Protobuf type {@code babylon.zoneconcierge.v1.ConsumerSlashingIBCPacket}
+   */
+  public static final class ConsumerSlashingIBCPacket extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:babylon.zoneconcierge.v1.ConsumerSlashingIBCPacket)
+      ConsumerSlashingIBCPacketOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ConsumerSlashingIBCPacket.newBuilder() to construct.
+    private ConsumerSlashingIBCPacket(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ConsumerSlashingIBCPacket() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ConsumerSlashingIBCPacket();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.babylon.zoneconcierge.v1.PacketProto.internal_static_babylon_zoneconcierge_v1_ConsumerSlashingIBCPacket_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.babylon.zoneconcierge.v1.PacketProto.internal_static_babylon_zoneconcierge_v1_ConsumerSlashingIBCPacket_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket.class, com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket.Builder.class);
+    }
+
+    public static final int EVIDENCE_FIELD_NUMBER = 1;
+    private com.babylon.finality.v1.FinalityProto.Evidence evidence_;
+    /**
+     * <pre>
+     *&#47; evidence is the FP slashing evidence that the Consumer sends to Babylon
+     * </pre>
+     *
+     * <code>.babylon.finality.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+     * @return Whether the evidence field is set.
+     */
+    @java.lang.Override
+    public boolean hasEvidence() {
+      return evidence_ != null;
+    }
+    /**
+     * <pre>
+     *&#47; evidence is the FP slashing evidence that the Consumer sends to Babylon
+     * </pre>
+     *
+     * <code>.babylon.finality.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+     * @return The evidence.
+     */
+    @java.lang.Override
+    public com.babylon.finality.v1.FinalityProto.Evidence getEvidence() {
+      return evidence_ == null ? com.babylon.finality.v1.FinalityProto.Evidence.getDefaultInstance() : evidence_;
+    }
+    /**
+     * <pre>
+     *&#47; evidence is the FP slashing evidence that the Consumer sends to Babylon
+     * </pre>
+     *
+     * <code>.babylon.finality.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+     */
+    @java.lang.Override
+    public com.babylon.finality.v1.FinalityProto.EvidenceOrBuilder getEvidenceOrBuilder() {
+      return evidence_ == null ? com.babylon.finality.v1.FinalityProto.Evidence.getDefaultInstance() : evidence_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (evidence_ != null) {
+        output.writeMessage(1, getEvidence());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (evidence_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getEvidence());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket)) {
+        return super.equals(obj);
+      }
+      com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket other = (com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket) obj;
+
+      if (hasEvidence() != other.hasEvidence()) return false;
+      if (hasEvidence()) {
+        if (!getEvidence()
+            .equals(other.getEvidence())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasEvidence()) {
+        hash = (37 * hash) + EVIDENCE_FIELD_NUMBER;
+        hash = (53 * hash) + getEvidence().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ConsumerSlashingIBCPacket defines the slashing information that a Consumer sends to Babylon's ZoneConcierge upon a
+     * Consumer slashing event.
+     * It includes the FP public key, the Consumer block height at the slashing event, and the double sign evidence.
+     * </pre>
+     *
+     * Protobuf type {@code babylon.zoneconcierge.v1.ConsumerSlashingIBCPacket}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:babylon.zoneconcierge.v1.ConsumerSlashingIBCPacket)
+        com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacketOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.babylon.zoneconcierge.v1.PacketProto.internal_static_babylon_zoneconcierge_v1_ConsumerSlashingIBCPacket_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.babylon.zoneconcierge.v1.PacketProto.internal_static_babylon_zoneconcierge_v1_ConsumerSlashingIBCPacket_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket.class, com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket.Builder.class);
+      }
+
+      // Construct using com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        evidence_ = null;
+        if (evidenceBuilder_ != null) {
+          evidenceBuilder_.dispose();
+          evidenceBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.babylon.zoneconcierge.v1.PacketProto.internal_static_babylon_zoneconcierge_v1_ConsumerSlashingIBCPacket_descriptor;
+      }
+
+      @java.lang.Override
+      public com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket getDefaultInstanceForType() {
+        return com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket build() {
+        com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket buildPartial() {
+        com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket result = new com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.evidence_ = evidenceBuilder_ == null
+              ? evidence_
+              : evidenceBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket) {
+          return mergeFrom((com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket other) {
+        if (other == com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket.getDefaultInstance()) return this;
+        if (other.hasEvidence()) {
+          mergeEvidence(other.getEvidence());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getEvidenceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.babylon.finality.v1.FinalityProto.Evidence evidence_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.finality.v1.FinalityProto.Evidence, com.babylon.finality.v1.FinalityProto.Evidence.Builder, com.babylon.finality.v1.FinalityProto.EvidenceOrBuilder> evidenceBuilder_;
+      /**
+       * <pre>
+       *&#47; evidence is the FP slashing evidence that the Consumer sends to Babylon
+       * </pre>
+       *
+       * <code>.babylon.finality.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       * @return Whether the evidence field is set.
+       */
+      public boolean hasEvidence() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       *&#47; evidence is the FP slashing evidence that the Consumer sends to Babylon
+       * </pre>
+       *
+       * <code>.babylon.finality.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       * @return The evidence.
+       */
+      public com.babylon.finality.v1.FinalityProto.Evidence getEvidence() {
+        if (evidenceBuilder_ == null) {
+          return evidence_ == null ? com.babylon.finality.v1.FinalityProto.Evidence.getDefaultInstance() : evidence_;
+        } else {
+          return evidenceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       *&#47; evidence is the FP slashing evidence that the Consumer sends to Babylon
+       * </pre>
+       *
+       * <code>.babylon.finality.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       */
+      public Builder setEvidence(com.babylon.finality.v1.FinalityProto.Evidence value) {
+        if (evidenceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          evidence_ = value;
+        } else {
+          evidenceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *&#47; evidence is the FP slashing evidence that the Consumer sends to Babylon
+       * </pre>
+       *
+       * <code>.babylon.finality.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       */
+      public Builder setEvidence(
+          com.babylon.finality.v1.FinalityProto.Evidence.Builder builderForValue) {
+        if (evidenceBuilder_ == null) {
+          evidence_ = builderForValue.build();
+        } else {
+          evidenceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *&#47; evidence is the FP slashing evidence that the Consumer sends to Babylon
+       * </pre>
+       *
+       * <code>.babylon.finality.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       */
+      public Builder mergeEvidence(com.babylon.finality.v1.FinalityProto.Evidence value) {
+        if (evidenceBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            evidence_ != null &&
+            evidence_ != com.babylon.finality.v1.FinalityProto.Evidence.getDefaultInstance()) {
+            getEvidenceBuilder().mergeFrom(value);
+          } else {
+            evidence_ = value;
+          }
+        } else {
+          evidenceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *&#47; evidence is the FP slashing evidence that the Consumer sends to Babylon
+       * </pre>
+       *
+       * <code>.babylon.finality.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       */
+      public Builder clearEvidence() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        evidence_ = null;
+        if (evidenceBuilder_ != null) {
+          evidenceBuilder_.dispose();
+          evidenceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *&#47; evidence is the FP slashing evidence that the Consumer sends to Babylon
+       * </pre>
+       *
+       * <code>.babylon.finality.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       */
+      public com.babylon.finality.v1.FinalityProto.Evidence.Builder getEvidenceBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getEvidenceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       *&#47; evidence is the FP slashing evidence that the Consumer sends to Babylon
+       * </pre>
+       *
+       * <code>.babylon.finality.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       */
+      public com.babylon.finality.v1.FinalityProto.EvidenceOrBuilder getEvidenceOrBuilder() {
+        if (evidenceBuilder_ != null) {
+          return evidenceBuilder_.getMessageOrBuilder();
+        } else {
+          return evidence_ == null ?
+              com.babylon.finality.v1.FinalityProto.Evidence.getDefaultInstance() : evidence_;
+        }
+      }
+      /**
+       * <pre>
+       *&#47; evidence is the FP slashing evidence that the Consumer sends to Babylon
+       * </pre>
+       *
+       * <code>.babylon.finality.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.babylon.finality.v1.FinalityProto.Evidence, com.babylon.finality.v1.FinalityProto.Evidence.Builder, com.babylon.finality.v1.FinalityProto.EvidenceOrBuilder> 
+          getEvidenceFieldBuilder() {
+        if (evidenceBuilder_ == null) {
+          evidenceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.babylon.finality.v1.FinalityProto.Evidence, com.babylon.finality.v1.FinalityProto.Evidence.Builder, com.babylon.finality.v1.FinalityProto.EvidenceOrBuilder>(
+                  getEvidence(),
+                  getParentForChildren(),
+                  isClean());
+          evidence_ = null;
+        }
+        return evidenceBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:babylon.zoneconcierge.v1.ConsumerSlashingIBCPacket)
+    }
+
+    // @@protoc_insertion_point(class_scope:babylon.zoneconcierge.v1.ConsumerSlashingIBCPacket)
+    private static final com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket();
+    }
+
+    public static com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ConsumerSlashingIBCPacket>
+        PARSER = new com.google.protobuf.AbstractParser<ConsumerSlashingIBCPacket>() {
+      @java.lang.Override
+      public ConsumerSlashingIBCPacket parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ConsumerSlashingIBCPacket> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ConsumerSlashingIBCPacket> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.babylon.zoneconcierge.v1.PacketProto.ConsumerSlashingIBCPacket getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_babylon_zoneconcierge_v1_ZoneconciergePacketData_descriptor;
+    internal_static_babylon_zoneconcierge_v1_OutboundPacket_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_babylon_zoneconcierge_v1_ZoneconciergePacketData_fieldAccessorTable;
+      internal_static_babylon_zoneconcierge_v1_OutboundPacket_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_zoneconcierge_v1_InboundPacket_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_zoneconcierge_v1_InboundPacket_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_zoneconcierge_v1_BTCHeaders_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_zoneconcierge_v1_BTCHeaders_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_babylon_zoneconcierge_v1_BTCTimestamp_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_babylon_zoneconcierge_v1_BTCTimestamp_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_babylon_zoneconcierge_v1_ConsumerSlashingIBCPacket_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_babylon_zoneconcierge_v1_ConsumerSlashingIBCPacket_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3038,59 +5400,94 @@ public final class PacketProto {
     java.lang.String[] descriptorData = {
       "\n%babylon/zoneconcierge/v1/packet.proto\022" +
       "\030babylon.zoneconcierge.v1\032,babylon/btcch" +
-      "eckpoint/v1/btccheckpoint.proto\032)babylon" +
-      "/checkpointing/v1/checkpoint.proto\032.baby" +
-      "lon/btclightclient/v1/btclightclient.pro" +
-      "to\032\"babylon/epoching/v1/epoching.proto\032," +
-      "babylon/zoneconcierge/v1/zoneconcierge.p" +
-      "roto\"r\n\027ZoneconciergePacketData\022M\n\rbtc_t" +
-      "imestamp\030\001 \001(\0132&.babylon.zoneconcierge.v" +
-      "1.BTCTimestampH\000R\014btcTimestampB\010\n\006packet" +
-      "\"\305\003\n\014BTCTimestamp\022?\n\006header\030\001 \001(\0132\'.baby" +
-      "lon.zoneconcierge.v1.IndexedHeaderR\006head" +
-      "er\022I\n\013btc_headers\030\002 \003(\0132(.babylon.btclig" +
-      "htclient.v1.BTCHeaderInfoR\nbtcHeaders\0229\n" +
-      "\nepoch_info\030\003 \001(\0132\032.babylon.epoching.v1." +
-      "EpochR\tepochInfo\022N\n\016raw_checkpoint\030\004 \001(\013" +
-      "2\'.babylon.checkpointing.v1.RawCheckpoin" +
-      "tR\rrawCheckpoint\022U\n\022btc_submission_key\030\005" +
-      " \001(\0132\'.babylon.btccheckpoint.v1.Submissi" +
-      "onKeyR\020btcSubmissionKey\022G\n\005proof\030\006 \001(\01321" +
-      ".babylon.zoneconcierge.v1.ProofFinalized" +
-      "ChainInfoR\005proofB\342\001\n\034com.babylon.zonecon" +
-      "cierge.v1B\013PacketProtoZ5github.com/babyl" +
-      "onchain/babylon/x/zoneconcierge/types\242\002\003" +
-      "BZX\252\002\030Babylon.Zoneconcierge.V1\312\002\030Babylon" +
-      "\\Zoneconcierge\\V1\342\002$Babylon\\Zoneconcierg" +
-      "e\\V1\\GPBMetadata\352\002\032Babylon::Zoneconcierg" +
-      "e::V1b\006proto3"
+      "eckpoint/v1/btccheckpoint.proto\032.babylon" +
+      "/btclightclient/v1/btclightclient.proto\032" +
+      "\"babylon/btcstaking/v1/packet.proto\032)bab" +
+      "ylon/checkpointing/v1/checkpoint.proto\032\"" +
+      "babylon/epoching/v1/epoching.proto\032,baby" +
+      "lon/zoneconcierge/v1/zoneconcierge.proto" +
+      "\032\"babylon/finality/v1/finality.proto\"\201\002\n" +
+      "\016OutboundPacket\022M\n\rbtc_timestamp\030\001 \001(\0132&" +
+      ".babylon.zoneconcierge.v1.BTCTimestampH\000" +
+      "R\014btcTimestamp\022M\n\013btc_staking\030\002 \001(\0132*.ba" +
+      "bylon.btcstaking.v1.BTCStakingIBCPacketH" +
+      "\000R\nbtcStaking\022G\n\013btc_headers\030\003 \001(\0132$.bab" +
+      "ylon.zoneconcierge.v1.BTCHeadersH\000R\nbtcH" +
+      "eadersB\010\n\006packet\"}\n\rInboundPacket\022b\n\021con" +
+      "sumer_slashing\030\001 \001(\01323.babylon.zoneconci" +
+      "erge.v1.ConsumerSlashingIBCPacketH\000R\020con" +
+      "sumerSlashingB\010\n\006packet\"P\n\nBTCHeaders\022B\n" +
+      "\007headers\030\001 \003(\0132(.babylon.btclightclient." +
+      "v1.BTCHeaderInfoR\007headers\"\301\003\n\014BTCTimesta" +
+      "mp\022?\n\006header\030\001 \001(\0132\'.babylon.zoneconcier" +
+      "ge.v1.IndexedHeaderR\006header\022E\n\013btc_heade" +
+      "rs\030\002 \001(\0132$.babylon.zoneconcierge.v1.BTCH" +
+      "eadersR\nbtcHeaders\0229\n\nepoch_info\030\003 \001(\0132\032" +
+      ".babylon.epoching.v1.EpochR\tepochInfo\022N\n" +
+      "\016raw_checkpoint\030\004 \001(\0132\'.babylon.checkpoi" +
+      "nting.v1.RawCheckpointR\rrawCheckpoint\022U\n" +
+      "\022btc_submission_key\030\005 \001(\0132\'.babylon.btcc" +
+      "heckpoint.v1.SubmissionKeyR\020btcSubmissio" +
+      "nKey\022G\n\005proof\030\006 \001(\01321.babylon.zoneconcie" +
+      "rge.v1.ProofFinalizedChainInfoR\005proof\"V\n" +
+      "\031ConsumerSlashingIBCPacket\0229\n\010evidence\030\001" +
+      " \001(\0132\035.babylon.finality.v1.EvidenceR\010evi" +
+      "denceB\344\001\n\034com.babylon.zoneconcierge.v1B\013" +
+      "PacketProtoZ7github.com/babylonlabs-io/b" +
+      "abylon/x/zoneconcierge/types\242\002\003BZX\252\002\030Bab" +
+      "ylon.Zoneconcierge.V1\312\002\030Babylon\\Zoneconc" +
+      "ierge\\V1\342\002$Babylon\\Zoneconcierge\\V1\\GPBM" +
+      "etadata\352\002\032Babylon::Zoneconcierge::V1b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.babylon.btccheckpoint.v1.BtccheckpointProto.getDescriptor(),
-          com.babylon.checkpointing.v1.CheckpointProto.getDescriptor(),
           com.babylon.btclightclient.v1.BtclightclientProto.getDescriptor(),
+          com.babylon.btcstaking.v1.PacketProto.getDescriptor(),
+          com.babylon.checkpointing.v1.CheckpointProto.getDescriptor(),
           com.babylon.epoching.v1.EpochingProto.getDescriptor(),
           com.babylon.zoneconcierge.v1.ZoneconciergeProto.getDescriptor(),
+          com.babylon.finality.v1.FinalityProto.getDescriptor(),
         });
-    internal_static_babylon_zoneconcierge_v1_ZoneconciergePacketData_descriptor =
+    internal_static_babylon_zoneconcierge_v1_OutboundPacket_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_babylon_zoneconcierge_v1_ZoneconciergePacketData_fieldAccessorTable = new
+    internal_static_babylon_zoneconcierge_v1_OutboundPacket_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_babylon_zoneconcierge_v1_ZoneconciergePacketData_descriptor,
-        new java.lang.String[] { "BtcTimestamp", "Packet", });
-    internal_static_babylon_zoneconcierge_v1_BTCTimestamp_descriptor =
+        internal_static_babylon_zoneconcierge_v1_OutboundPacket_descriptor,
+        new java.lang.String[] { "BtcTimestamp", "BtcStaking", "BtcHeaders", "Packet", });
+    internal_static_babylon_zoneconcierge_v1_InboundPacket_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_babylon_zoneconcierge_v1_InboundPacket_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_zoneconcierge_v1_InboundPacket_descriptor,
+        new java.lang.String[] { "ConsumerSlashing", "Packet", });
+    internal_static_babylon_zoneconcierge_v1_BTCHeaders_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_babylon_zoneconcierge_v1_BTCHeaders_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_zoneconcierge_v1_BTCHeaders_descriptor,
+        new java.lang.String[] { "Headers", });
+    internal_static_babylon_zoneconcierge_v1_BTCTimestamp_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_babylon_zoneconcierge_v1_BTCTimestamp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_babylon_zoneconcierge_v1_BTCTimestamp_descriptor,
         new java.lang.String[] { "Header", "BtcHeaders", "EpochInfo", "RawCheckpoint", "BtcSubmissionKey", "Proof", });
+    internal_static_babylon_zoneconcierge_v1_ConsumerSlashingIBCPacket_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_babylon_zoneconcierge_v1_ConsumerSlashingIBCPacket_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_babylon_zoneconcierge_v1_ConsumerSlashingIBCPacket_descriptor,
+        new java.lang.String[] { "Evidence", });
     com.babylon.btccheckpoint.v1.BtccheckpointProto.getDescriptor();
-    com.babylon.checkpointing.v1.CheckpointProto.getDescriptor();
     com.babylon.btclightclient.v1.BtclightclientProto.getDescriptor();
+    com.babylon.btcstaking.v1.PacketProto.getDescriptor();
+    com.babylon.checkpointing.v1.CheckpointProto.getDescriptor();
     com.babylon.epoching.v1.EpochingProto.getDescriptor();
     com.babylon.zoneconcierge.v1.ZoneconciergeProto.getDescriptor();
+    com.babylon.finality.v1.FinalityProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -157,6 +157,73 @@ struct Babylon_Epoching_V1_MsgWrappedCancelUnbondingDelegationResponse {
   init() {}
 }
 
+/// MsgWrappedEditValidator defines a message for updating validator description
+/// and commission rate.
+struct Babylon_Epoching_V1_MsgWrappedEditValidator {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var msg: Cosmos_Staking_V1beta1_MsgEditValidator {
+    get {return _msg ?? Cosmos_Staking_V1beta1_MsgEditValidator()}
+    set {_msg = newValue}
+  }
+  /// Returns true if `msg` has been explicitly set.
+  var hasMsg: Bool {return self._msg != nil}
+  /// Clears the value of `msg`. Subsequent reads from it will return its default value.
+  mutating func clearMsg() {self._msg = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _msg: Cosmos_Staking_V1beta1_MsgEditValidator? = nil
+}
+
+/// MsgWrappedEditValidatorResponse is the response to the MsgWrappedEditValidator message.
+struct Babylon_Epoching_V1_MsgWrappedEditValidatorResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// MsgWrappedStakingUpdateParams defines a message for updating x/staking module parameters.
+struct Babylon_Epoching_V1_MsgWrappedStakingUpdateParams {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var msg: Cosmos_Staking_V1beta1_MsgUpdateParams {
+    get {return _msg ?? Cosmos_Staking_V1beta1_MsgUpdateParams()}
+    set {_msg = newValue}
+  }
+  /// Returns true if `msg` has been explicitly set.
+  var hasMsg: Bool {return self._msg != nil}
+  /// Clears the value of `msg`. Subsequent reads from it will return its default value.
+  mutating func clearMsg() {self._msg = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _msg: Cosmos_Staking_V1beta1_MsgUpdateParams? = nil
+}
+
+/// MsgWrappedStakingUpdateParamsResponse is the response to the MsgWrappedStakingUpdateParams message.
+struct Babylon_Epoching_V1_MsgWrappedStakingUpdateParamsResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 /// MsgUpdateParams defines a message for updating epoching module parameters.
 struct Babylon_Epoching_V1_MsgUpdateParams {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
@@ -208,6 +275,10 @@ extension Babylon_Epoching_V1_MsgWrappedBeginRedelegate: @unchecked Sendable {}
 extension Babylon_Epoching_V1_MsgWrappedBeginRedelegateResponse: @unchecked Sendable {}
 extension Babylon_Epoching_V1_MsgWrappedCancelUnbondingDelegation: @unchecked Sendable {}
 extension Babylon_Epoching_V1_MsgWrappedCancelUnbondingDelegationResponse: @unchecked Sendable {}
+extension Babylon_Epoching_V1_MsgWrappedEditValidator: @unchecked Sendable {}
+extension Babylon_Epoching_V1_MsgWrappedEditValidatorResponse: @unchecked Sendable {}
+extension Babylon_Epoching_V1_MsgWrappedStakingUpdateParams: @unchecked Sendable {}
+extension Babylon_Epoching_V1_MsgWrappedStakingUpdateParamsResponse: @unchecked Sendable {}
 extension Babylon_Epoching_V1_MsgUpdateParams: @unchecked Sendable {}
 extension Babylon_Epoching_V1_MsgUpdateParamsResponse: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
@@ -431,6 +502,116 @@ extension Babylon_Epoching_V1_MsgWrappedCancelUnbondingDelegationResponse: Swift
   }
 
   static func ==(lhs: Babylon_Epoching_V1_MsgWrappedCancelUnbondingDelegationResponse, rhs: Babylon_Epoching_V1_MsgWrappedCancelUnbondingDelegationResponse) -> Bool {
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Epoching_V1_MsgWrappedEditValidator: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgWrappedEditValidator"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "msg"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._msg) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._msg {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Epoching_V1_MsgWrappedEditValidator, rhs: Babylon_Epoching_V1_MsgWrappedEditValidator) -> Bool {
+    if lhs._msg != rhs._msg {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Epoching_V1_MsgWrappedEditValidatorResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgWrappedEditValidatorResponse"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let _ = try decoder.nextFieldNumber() {
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Epoching_V1_MsgWrappedEditValidatorResponse, rhs: Babylon_Epoching_V1_MsgWrappedEditValidatorResponse) -> Bool {
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Epoching_V1_MsgWrappedStakingUpdateParams: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgWrappedStakingUpdateParams"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "msg"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._msg) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._msg {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Epoching_V1_MsgWrappedStakingUpdateParams, rhs: Babylon_Epoching_V1_MsgWrappedStakingUpdateParams) -> Bool {
+    if lhs._msg != rhs._msg {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Epoching_V1_MsgWrappedStakingUpdateParamsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MsgWrappedStakingUpdateParamsResponse"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let _ = try decoder.nextFieldNumber() {
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Epoching_V1_MsgWrappedStakingUpdateParamsResponse, rhs: Babylon_Epoching_V1_MsgWrappedStakingUpdateParamsResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

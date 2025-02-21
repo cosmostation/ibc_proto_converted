@@ -80,6 +80,37 @@ public final class MsgGrpc {
     return getUpdateParamsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.babylon.incentive.TxProto.MsgSetWithdrawAddress,
+      com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse> getSetWithdrawAddressMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetWithdrawAddress",
+      requestType = com.babylon.incentive.TxProto.MsgSetWithdrawAddress.class,
+      responseType = com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.babylon.incentive.TxProto.MsgSetWithdrawAddress,
+      com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse> getSetWithdrawAddressMethod() {
+    io.grpc.MethodDescriptor<com.babylon.incentive.TxProto.MsgSetWithdrawAddress, com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse> getSetWithdrawAddressMethod;
+    if ((getSetWithdrawAddressMethod = MsgGrpc.getSetWithdrawAddressMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getSetWithdrawAddressMethod = MsgGrpc.getSetWithdrawAddressMethod) == null) {
+          MsgGrpc.getSetWithdrawAddressMethod = getSetWithdrawAddressMethod =
+              io.grpc.MethodDescriptor.<com.babylon.incentive.TxProto.MsgSetWithdrawAddress, com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetWithdrawAddress"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.babylon.incentive.TxProto.MsgSetWithdrawAddress.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("SetWithdrawAddress"))
+              .build();
+        }
+      }
+    }
+    return getSetWithdrawAddressMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -150,6 +181,17 @@ public final class MsgGrpc {
         io.grpc.stub.StreamObserver<com.babylon.incentive.TxProto.MsgUpdateParamsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateParamsMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * SetWithdrawAddress defines a method to change the withdraw address of a
+     * stakeholder
+     * </pre>
+     */
+    default void setWithdrawAddress(com.babylon.incentive.TxProto.MsgSetWithdrawAddress request,
+        io.grpc.stub.StreamObserver<com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetWithdrawAddressMethod(), responseObserver);
+    }
   }
 
   /**
@@ -206,6 +248,18 @@ public final class MsgGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateParamsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * SetWithdrawAddress defines a method to change the withdraw address of a
+     * stakeholder
+     * </pre>
+     */
+    public void setWithdrawAddress(com.babylon.incentive.TxProto.MsgSetWithdrawAddress request,
+        io.grpc.stub.StreamObserver<com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetWithdrawAddressMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -245,6 +299,17 @@ public final class MsgGrpc {
     public com.babylon.incentive.TxProto.MsgUpdateParamsResponse updateParams(com.babylon.incentive.TxProto.MsgUpdateParams request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateParamsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SetWithdrawAddress defines a method to change the withdraw address of a
+     * stakeholder
+     * </pre>
+     */
+    public com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse setWithdrawAddress(com.babylon.incentive.TxProto.MsgSetWithdrawAddress request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetWithdrawAddressMethod(), getCallOptions(), request);
     }
   }
 
@@ -288,10 +353,23 @@ public final class MsgGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateParamsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * SetWithdrawAddress defines a method to change the withdraw address of a
+     * stakeholder
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse> setWithdrawAddress(
+        com.babylon.incentive.TxProto.MsgSetWithdrawAddress request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetWithdrawAddressMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_WITHDRAW_REWARD = 0;
   private static final int METHODID_UPDATE_PARAMS = 1;
+  private static final int METHODID_SET_WITHDRAW_ADDRESS = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -317,6 +395,10 @@ public final class MsgGrpc {
         case METHODID_UPDATE_PARAMS:
           serviceImpl.updateParams((com.babylon.incentive.TxProto.MsgUpdateParams) request,
               (io.grpc.stub.StreamObserver<com.babylon.incentive.TxProto.MsgUpdateParamsResponse>) responseObserver);
+          break;
+        case METHODID_SET_WITHDRAW_ADDRESS:
+          serviceImpl.setWithdrawAddress((com.babylon.incentive.TxProto.MsgSetWithdrawAddress) request,
+              (io.grpc.stub.StreamObserver<com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -350,6 +432,13 @@ public final class MsgGrpc {
               com.babylon.incentive.TxProto.MsgUpdateParams,
               com.babylon.incentive.TxProto.MsgUpdateParamsResponse>(
                 service, METHODID_UPDATE_PARAMS)))
+        .addMethod(
+          getSetWithdrawAddressMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.babylon.incentive.TxProto.MsgSetWithdrawAddress,
+              com.babylon.incentive.TxProto.MsgSetWithdrawAddressResponse>(
+                service, METHODID_SET_WITHDRAW_ADDRESS)))
         .build();
   }
 
@@ -400,6 +489,7 @@ public final class MsgGrpc {
               .setSchemaDescriptor(new MsgFileDescriptorSupplier())
               .addMethod(getWithdrawRewardMethod())
               .addMethod(getUpdateParamsMethod())
+              .addMethod(getSetWithdrawAddressMethod())
               .build();
         }
       }

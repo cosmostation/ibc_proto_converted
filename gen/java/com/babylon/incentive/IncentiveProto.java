@@ -70,7 +70,8 @@ public final class IncentiveProto {
   /**
    * <pre>
    * Gauge is an object that stores rewards to be distributed
-   * code adapted from https://github.com/osmosis-labs/osmosis/blob/v18.0.0/proto/osmosis/incentives/gauge.proto
+   * code adapted from
+   * https://github.com/osmosis-labs/osmosis/blob/v18.0.0/proto/osmosis/incentives/gauge.proto
    * </pre>
    *
    * Protobuf type {@code babylon.incentive.Gauge}
@@ -336,7 +337,8 @@ public final class IncentiveProto {
     /**
      * <pre>
      * Gauge is an object that stores rewards to be distributed
-     * code adapted from https://github.com/osmosis-labs/osmosis/blob/v18.0.0/proto/osmosis/incentives/gauge.proto
+     * code adapted from
+     * https://github.com/osmosis-labs/osmosis/blob/v18.0.0/proto/osmosis/incentives/gauge.proto
      * </pre>
      *
      * Protobuf type {@code babylon.incentive.Gauge}
@@ -1001,7 +1003,8 @@ public final class IncentiveProto {
 
     /**
      * <pre>
-     * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+     * withdrawn_coins are coins that have been withdrawn by the stakeholder
+     * already
      * </pre>
      *
      * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -1010,7 +1013,8 @@ public final class IncentiveProto {
         getWithdrawnCoinsList();
     /**
      * <pre>
-     * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+     * withdrawn_coins are coins that have been withdrawn by the stakeholder
+     * already
      * </pre>
      *
      * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -1018,7 +1022,8 @@ public final class IncentiveProto {
     com.cosmos.base.v1beta1.CoinProto.Coin getWithdrawnCoins(int index);
     /**
      * <pre>
-     * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+     * withdrawn_coins are coins that have been withdrawn by the stakeholder
+     * already
      * </pre>
      *
      * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -1026,7 +1031,8 @@ public final class IncentiveProto {
     int getWithdrawnCoinsCount();
     /**
      * <pre>
-     * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+     * withdrawn_coins are coins that have been withdrawn by the stakeholder
+     * already
      * </pre>
      *
      * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -1035,7 +1041,8 @@ public final class IncentiveProto {
         getWithdrawnCoinsOrBuilderList();
     /**
      * <pre>
-     * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+     * withdrawn_coins are coins that have been withdrawn by the stakeholder
+     * already
      * </pre>
      *
      * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -1045,8 +1052,9 @@ public final class IncentiveProto {
   }
   /**
    * <pre>
-   * RewardGauge is an object that stores rewards distributed to a BTC staking/timestamping stakeholder
-   * code adapted from https://github.com/osmosis-labs/osmosis/blob/v18.0.0/proto/osmosis/incentives/gauge.proto
+   * RewardGauge is an object that stores rewards distributed to a BTC staking
+   * stakeholder code adapted from
+   * https://github.com/osmosis-labs/osmosis/blob/v18.0.0/proto/osmosis/incentives/gauge.proto
    * </pre>
    *
    * Protobuf type {@code babylon.incentive.RewardGauge}
@@ -1156,7 +1164,8 @@ public final class IncentiveProto {
     private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> withdrawnCoins_;
     /**
      * <pre>
-     * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+     * withdrawn_coins are coins that have been withdrawn by the stakeholder
+     * already
      * </pre>
      *
      * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -1167,7 +1176,8 @@ public final class IncentiveProto {
     }
     /**
      * <pre>
-     * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+     * withdrawn_coins are coins that have been withdrawn by the stakeholder
+     * already
      * </pre>
      *
      * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -1179,7 +1189,8 @@ public final class IncentiveProto {
     }
     /**
      * <pre>
-     * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+     * withdrawn_coins are coins that have been withdrawn by the stakeholder
+     * already
      * </pre>
      *
      * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -1190,7 +1201,8 @@ public final class IncentiveProto {
     }
     /**
      * <pre>
-     * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+     * withdrawn_coins are coins that have been withdrawn by the stakeholder
+     * already
      * </pre>
      *
      * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -1201,7 +1213,8 @@ public final class IncentiveProto {
     }
     /**
      * <pre>
-     * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+     * withdrawn_coins are coins that have been withdrawn by the stakeholder
+     * already
      * </pre>
      *
      * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -1386,8 +1399,9 @@ public final class IncentiveProto {
     }
     /**
      * <pre>
-     * RewardGauge is an object that stores rewards distributed to a BTC staking/timestamping stakeholder
-     * code adapted from https://github.com/osmosis-labs/osmosis/blob/v18.0.0/proto/osmosis/incentives/gauge.proto
+     * RewardGauge is an object that stores rewards distributed to a BTC staking
+     * stakeholder code adapted from
+     * https://github.com/osmosis-labs/osmosis/blob/v18.0.0/proto/osmosis/incentives/gauge.proto
      * </pre>
      *
      * Protobuf type {@code babylon.incentive.RewardGauge}
@@ -2003,7 +2017,8 @@ public final class IncentiveProto {
 
       /**
        * <pre>
-       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder
+       * already
        * </pre>
        *
        * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -2017,7 +2032,8 @@ public final class IncentiveProto {
       }
       /**
        * <pre>
-       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder
+       * already
        * </pre>
        *
        * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -2031,7 +2047,8 @@ public final class IncentiveProto {
       }
       /**
        * <pre>
-       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder
+       * already
        * </pre>
        *
        * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -2045,7 +2062,8 @@ public final class IncentiveProto {
       }
       /**
        * <pre>
-       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder
+       * already
        * </pre>
        *
        * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -2066,7 +2084,8 @@ public final class IncentiveProto {
       }
       /**
        * <pre>
-       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder
+       * already
        * </pre>
        *
        * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -2084,7 +2103,8 @@ public final class IncentiveProto {
       }
       /**
        * <pre>
-       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder
+       * already
        * </pre>
        *
        * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -2104,7 +2124,8 @@ public final class IncentiveProto {
       }
       /**
        * <pre>
-       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder
+       * already
        * </pre>
        *
        * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -2125,7 +2146,8 @@ public final class IncentiveProto {
       }
       /**
        * <pre>
-       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder
+       * already
        * </pre>
        *
        * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -2143,7 +2165,8 @@ public final class IncentiveProto {
       }
       /**
        * <pre>
-       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder
+       * already
        * </pre>
        *
        * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -2161,7 +2184,8 @@ public final class IncentiveProto {
       }
       /**
        * <pre>
-       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder
+       * already
        * </pre>
        *
        * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -2180,7 +2204,8 @@ public final class IncentiveProto {
       }
       /**
        * <pre>
-       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder
+       * already
        * </pre>
        *
        * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -2197,7 +2222,8 @@ public final class IncentiveProto {
       }
       /**
        * <pre>
-       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder
+       * already
        * </pre>
        *
        * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -2214,7 +2240,8 @@ public final class IncentiveProto {
       }
       /**
        * <pre>
-       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder
+       * already
        * </pre>
        *
        * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -2225,7 +2252,8 @@ public final class IncentiveProto {
       }
       /**
        * <pre>
-       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder
+       * already
        * </pre>
        *
        * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -2239,7 +2267,8 @@ public final class IncentiveProto {
       }
       /**
        * <pre>
-       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder
+       * already
        * </pre>
        *
        * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -2254,7 +2283,8 @@ public final class IncentiveProto {
       }
       /**
        * <pre>
-       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder
+       * already
        * </pre>
        *
        * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -2265,7 +2295,8 @@ public final class IncentiveProto {
       }
       /**
        * <pre>
-       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder
+       * already
        * </pre>
        *
        * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
@@ -2277,7 +2308,8 @@ public final class IncentiveProto {
       }
       /**
        * <pre>
-       * withdrawn_coins are coins that have been withdrawn by the stakeholder already
+       * withdrawn_coins are coins that have been withdrawn by the stakeholder
+       * already
        * </pre>
        *
        * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 2 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>

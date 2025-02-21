@@ -79,6 +79,28 @@ extension Babylon_Btcstaking_V1_FinalityProviderStatus: CaseIterable {
 
 #endif  // swift(>=4.2)
 
+/// EventNewFinalityProvider is the event emitted when new finality provider is created
+struct Babylon_Btcstaking_V1_EventNewFinalityProvider {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var fp: Babylon_Btcstaking_V1_FinalityProvider {
+    get {return _fp ?? Babylon_Btcstaking_V1_FinalityProvider()}
+    set {_fp = newValue}
+  }
+  /// Returns true if `fp` has been explicitly set.
+  var hasFp: Bool {return self._fp != nil}
+  /// Clears the value of `fp`. Subsequent reads from it will return its default value.
+  mutating func clearFp() {self._fp = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _fp: Babylon_Btcstaking_V1_FinalityProvider? = nil
+}
+
 /// EventFinalityProviderCreated is the event emitted when a finality provider is created
 struct Babylon_Btcstaking_V1_EventFinalityProviderCreated {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
@@ -239,6 +261,15 @@ struct Babylon_Btcstaking_V1_EventPowerDistUpdate {
     set {ev = .btcDelStateUpdate(newValue)}
   }
 
+  /// slashed_btc_delegation represents the affected BTC delegation when a consumer FP is slashed
+  var slashedBtcDelegation: Babylon_Btcstaking_V1_EventPowerDistUpdate.EventSlashedBTCDelegation {
+    get {
+      if case .slashedBtcDelegation(let v)? = ev {return v}
+      return Babylon_Btcstaking_V1_EventPowerDistUpdate.EventSlashedBTCDelegation()
+    }
+    set {ev = .slashedBtcDelegation(newValue)}
+  }
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   /// ev is the event that affects voting power distribution
@@ -251,6 +282,8 @@ struct Babylon_Btcstaking_V1_EventPowerDistUpdate {
     case unjailedFp(Babylon_Btcstaking_V1_EventPowerDistUpdate.EventUnjailedFinalityProvider)
     /// btc_del_state_update means a BTC delegation's state is updated
     case btcDelStateUpdate(Babylon_Btcstaking_V1_EventBTCDelegationStateUpdate)
+    /// slashed_btc_delegation represents the affected BTC delegation when a consumer FP is slashed
+    case slashedBtcDelegation(Babylon_Btcstaking_V1_EventPowerDistUpdate.EventSlashedBTCDelegation)
 
   #if !swift(>=4.1)
     static func ==(lhs: Babylon_Btcstaking_V1_EventPowerDistUpdate.OneOf_Ev, rhs: Babylon_Btcstaking_V1_EventPowerDistUpdate.OneOf_Ev) -> Bool {
@@ -274,6 +307,10 @@ struct Babylon_Btcstaking_V1_EventPowerDistUpdate {
         guard case .btcDelStateUpdate(let l) = lhs, case .btcDelStateUpdate(let r) = rhs else { preconditionFailure() }
         return l == r
       }()
+      case (.slashedBtcDelegation, .slashedBtcDelegation): return {
+        guard case .slashedBtcDelegation(let l) = lhs, case .slashedBtcDelegation(let r) = rhs else { preconditionFailure() }
+        return l == r
+      }()
       default: return false
       }
     }
@@ -289,6 +326,22 @@ struct Babylon_Btcstaking_V1_EventPowerDistUpdate {
     // methods supported on all messages.
 
     var pk: Data = Data()
+
+    var unknownFields = SwiftProtobuf.UnknownStorage()
+
+    init() {}
+  }
+
+  /// EventSlashedBTCDelegation is emitted for each BTC delegation that restakes to a slashed consumer finality provider.
+  /// It indicates that the voting power of affected Babylon finality providers will be discounted for this delegation.
+  struct EventSlashedBTCDelegation {
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+
+    /// staking_tx_hash is the hash of the staking tx.
+    /// It uniquely identifies a BTC delegation
+    var stakingTxHash: String = String()
 
     var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -366,12 +419,8 @@ struct Babylon_Btcstaking_V1_EventBTCDelegationCreated {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// staking_tx_hash is the hash of the staking tx.
-  /// It uniquely identifies a BTC delegation
-  var stakingTxHash: String = String()
-
-  /// staking_output_pk_script is the hex encoded PK script of the staking output
-  var stakingOutputPkScript: String = String()
+  /// staking_tx_hex is the hex encoded staking tx
+  var stakingTxHex: String = String()
 
   /// staking_output_index is the index of the staking output in the staking tx
   var stakingOutputIndex: String = String()
@@ -391,10 +440,6 @@ struct Babylon_Btcstaking_V1_EventBTCDelegationCreated {
   /// staking_time is the timelock of the staking tx specified in the BTC script
   var stakingTime: String = String()
 
-  /// staking_amount is the total amount of BTC stake in this delegation
-  /// quantified in satoshi
-  var stakingAmount: String = String()
-
   /// unbonding_time is the time is timelock on unbonding tx chosen by the staker
   var unbondingTime: String = String()
 
@@ -403,6 +448,9 @@ struct Babylon_Btcstaking_V1_EventBTCDelegationCreated {
 
   /// new_state of the BTC delegation
   var newState: String = String()
+
+  /// staker Babylon address
+  var stakerAddr: String = String()
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -547,6 +595,7 @@ struct Babylon_Btcstaking_V1_EventUnexpectedUnbondingTx {
 
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Babylon_Btcstaking_V1_FinalityProviderStatus: @unchecked Sendable {}
+extension Babylon_Btcstaking_V1_EventNewFinalityProvider: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_EventFinalityProviderCreated: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_EventFinalityProviderEdited: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_EventBTCDelegationStateUpdate: @unchecked Sendable {}
@@ -554,6 +603,7 @@ extension Babylon_Btcstaking_V1_EventSelectiveSlashing: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_EventPowerDistUpdate: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_EventPowerDistUpdate.OneOf_Ev: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_EventPowerDistUpdate.EventSlashedFinalityProvider: @unchecked Sendable {}
+extension Babylon_Btcstaking_V1_EventPowerDistUpdate.EventSlashedBTCDelegation: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_EventPowerDistUpdate.EventJailedFinalityProvider: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_EventPowerDistUpdate.EventUnjailedFinalityProvider: @unchecked Sendable {}
 extension Babylon_Btcstaking_V1_EventFinalityProviderStatusChange: @unchecked Sendable {}
@@ -577,6 +627,42 @@ extension Babylon_Btcstaking_V1_FinalityProviderStatus: SwiftProtobuf._ProtoName
     2: .same(proto: "FINALITY_PROVIDER_STATUS_JAILED"),
     3: .same(proto: "FINALITY_PROVIDER_STATUS_SLASHED"),
   ]
+}
+
+extension Babylon_Btcstaking_V1_EventNewFinalityProvider: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".EventNewFinalityProvider"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "fp"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._fp) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._fp {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Btcstaking_V1_EventNewFinalityProvider, rhs: Babylon_Btcstaking_V1_EventNewFinalityProvider) -> Bool {
+    if lhs._fp != rhs._fp {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
 }
 
 extension Babylon_Btcstaking_V1_EventFinalityProviderCreated: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
@@ -802,6 +888,7 @@ extension Babylon_Btcstaking_V1_EventPowerDistUpdate: SwiftProtobuf.Message, Swi
     2: .standard(proto: "jailed_fp"),
     3: .standard(proto: "unjailed_fp"),
     4: .standard(proto: "btc_del_state_update"),
+    5: .standard(proto: "slashed_btc_delegation"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -862,6 +949,19 @@ extension Babylon_Btcstaking_V1_EventPowerDistUpdate: SwiftProtobuf.Message, Swi
           self.ev = .btcDelStateUpdate(v)
         }
       }()
+      case 5: try {
+        var v: Babylon_Btcstaking_V1_EventPowerDistUpdate.EventSlashedBTCDelegation?
+        var hadOneofValue = false
+        if let current = self.ev {
+          hadOneofValue = true
+          if case .slashedBtcDelegation(let m) = current {v = m}
+        }
+        try decoder.decodeSingularMessageField(value: &v)
+        if let v = v {
+          if hadOneofValue {try decoder.handleConflictingOneOf()}
+          self.ev = .slashedBtcDelegation(v)
+        }
+      }()
       default: break
       }
     }
@@ -888,6 +988,10 @@ extension Babylon_Btcstaking_V1_EventPowerDistUpdate: SwiftProtobuf.Message, Swi
     case .btcDelStateUpdate?: try {
       guard case .btcDelStateUpdate(let v)? = self.ev else { preconditionFailure() }
       try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
+    }()
+    case .slashedBtcDelegation?: try {
+      guard case .slashedBtcDelegation(let v)? = self.ev else { preconditionFailure() }
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
     }()
     case nil: break
     }
@@ -928,6 +1032,38 @@ extension Babylon_Btcstaking_V1_EventPowerDistUpdate.EventSlashedFinalityProvide
 
   static func ==(lhs: Babylon_Btcstaking_V1_EventPowerDistUpdate.EventSlashedFinalityProvider, rhs: Babylon_Btcstaking_V1_EventPowerDistUpdate.EventSlashedFinalityProvider) -> Bool {
     if lhs.pk != rhs.pk {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Babylon_Btcstaking_V1_EventPowerDistUpdate.EventSlashedBTCDelegation: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = Babylon_Btcstaking_V1_EventPowerDistUpdate.protoMessageName + ".EventSlashedBTCDelegation"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "staking_tx_hash"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.stakingTxHash) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.stakingTxHash.isEmpty {
+      try visitor.visitSingularStringField(value: self.stakingTxHash, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Babylon_Btcstaking_V1_EventPowerDistUpdate.EventSlashedBTCDelegation, rhs: Babylon_Btcstaking_V1_EventPowerDistUpdate.EventSlashedBTCDelegation) -> Bool {
+    if lhs.stakingTxHash != rhs.stakingTxHash {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -1038,17 +1174,16 @@ extension Babylon_Btcstaking_V1_EventFinalityProviderStatusChange: SwiftProtobuf
 extension Babylon_Btcstaking_V1_EventBTCDelegationCreated: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".EventBTCDelegationCreated"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "staking_tx_hash"),
-    2: .standard(proto: "staking_output_pk_script"),
-    3: .standard(proto: "staking_output_index"),
-    4: .standard(proto: "params_version"),
-    5: .standard(proto: "finality_provider_btc_pks_hex"),
-    6: .standard(proto: "staker_btc_pk_hex"),
-    7: .standard(proto: "staking_time"),
-    8: .standard(proto: "staking_amount"),
-    9: .standard(proto: "unbonding_time"),
-    10: .standard(proto: "unbonding_tx"),
-    11: .standard(proto: "new_state"),
+    1: .standard(proto: "staking_tx_hex"),
+    2: .standard(proto: "staking_output_index"),
+    3: .standard(proto: "params_version"),
+    4: .standard(proto: "finality_provider_btc_pks_hex"),
+    5: .standard(proto: "staker_btc_pk_hex"),
+    6: .standard(proto: "staking_time"),
+    7: .standard(proto: "unbonding_time"),
+    8: .standard(proto: "unbonding_tx"),
+    9: .standard(proto: "new_state"),
+    10: .standard(proto: "staker_addr"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -1057,71 +1192,66 @@ extension Babylon_Btcstaking_V1_EventBTCDelegationCreated: SwiftProtobuf.Message
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.stakingTxHash) }()
-      case 2: try { try decoder.decodeSingularStringField(value: &self.stakingOutputPkScript) }()
-      case 3: try { try decoder.decodeSingularStringField(value: &self.stakingOutputIndex) }()
-      case 4: try { try decoder.decodeSingularStringField(value: &self.paramsVersion) }()
-      case 5: try { try decoder.decodeRepeatedStringField(value: &self.finalityProviderBtcPksHex) }()
-      case 6: try { try decoder.decodeSingularStringField(value: &self.stakerBtcPkHex) }()
-      case 7: try { try decoder.decodeSingularStringField(value: &self.stakingTime) }()
-      case 8: try { try decoder.decodeSingularStringField(value: &self.stakingAmount) }()
-      case 9: try { try decoder.decodeSingularStringField(value: &self.unbondingTime) }()
-      case 10: try { try decoder.decodeSingularStringField(value: &self.unbondingTx) }()
-      case 11: try { try decoder.decodeSingularStringField(value: &self.newState) }()
+      case 1: try { try decoder.decodeSingularStringField(value: &self.stakingTxHex) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.stakingOutputIndex) }()
+      case 3: try { try decoder.decodeSingularStringField(value: &self.paramsVersion) }()
+      case 4: try { try decoder.decodeRepeatedStringField(value: &self.finalityProviderBtcPksHex) }()
+      case 5: try { try decoder.decodeSingularStringField(value: &self.stakerBtcPkHex) }()
+      case 6: try { try decoder.decodeSingularStringField(value: &self.stakingTime) }()
+      case 7: try { try decoder.decodeSingularStringField(value: &self.unbondingTime) }()
+      case 8: try { try decoder.decodeSingularStringField(value: &self.unbondingTx) }()
+      case 9: try { try decoder.decodeSingularStringField(value: &self.newState) }()
+      case 10: try { try decoder.decodeSingularStringField(value: &self.stakerAddr) }()
       default: break
       }
     }
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.stakingTxHash.isEmpty {
-      try visitor.visitSingularStringField(value: self.stakingTxHash, fieldNumber: 1)
-    }
-    if !self.stakingOutputPkScript.isEmpty {
-      try visitor.visitSingularStringField(value: self.stakingOutputPkScript, fieldNumber: 2)
+    if !self.stakingTxHex.isEmpty {
+      try visitor.visitSingularStringField(value: self.stakingTxHex, fieldNumber: 1)
     }
     if !self.stakingOutputIndex.isEmpty {
-      try visitor.visitSingularStringField(value: self.stakingOutputIndex, fieldNumber: 3)
+      try visitor.visitSingularStringField(value: self.stakingOutputIndex, fieldNumber: 2)
     }
     if !self.paramsVersion.isEmpty {
-      try visitor.visitSingularStringField(value: self.paramsVersion, fieldNumber: 4)
+      try visitor.visitSingularStringField(value: self.paramsVersion, fieldNumber: 3)
     }
     if !self.finalityProviderBtcPksHex.isEmpty {
-      try visitor.visitRepeatedStringField(value: self.finalityProviderBtcPksHex, fieldNumber: 5)
+      try visitor.visitRepeatedStringField(value: self.finalityProviderBtcPksHex, fieldNumber: 4)
     }
     if !self.stakerBtcPkHex.isEmpty {
-      try visitor.visitSingularStringField(value: self.stakerBtcPkHex, fieldNumber: 6)
+      try visitor.visitSingularStringField(value: self.stakerBtcPkHex, fieldNumber: 5)
     }
     if !self.stakingTime.isEmpty {
-      try visitor.visitSingularStringField(value: self.stakingTime, fieldNumber: 7)
-    }
-    if !self.stakingAmount.isEmpty {
-      try visitor.visitSingularStringField(value: self.stakingAmount, fieldNumber: 8)
+      try visitor.visitSingularStringField(value: self.stakingTime, fieldNumber: 6)
     }
     if !self.unbondingTime.isEmpty {
-      try visitor.visitSingularStringField(value: self.unbondingTime, fieldNumber: 9)
+      try visitor.visitSingularStringField(value: self.unbondingTime, fieldNumber: 7)
     }
     if !self.unbondingTx.isEmpty {
-      try visitor.visitSingularStringField(value: self.unbondingTx, fieldNumber: 10)
+      try visitor.visitSingularStringField(value: self.unbondingTx, fieldNumber: 8)
     }
     if !self.newState.isEmpty {
-      try visitor.visitSingularStringField(value: self.newState, fieldNumber: 11)
+      try visitor.visitSingularStringField(value: self.newState, fieldNumber: 9)
+    }
+    if !self.stakerAddr.isEmpty {
+      try visitor.visitSingularStringField(value: self.stakerAddr, fieldNumber: 10)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Babylon_Btcstaking_V1_EventBTCDelegationCreated, rhs: Babylon_Btcstaking_V1_EventBTCDelegationCreated) -> Bool {
-    if lhs.stakingTxHash != rhs.stakingTxHash {return false}
-    if lhs.stakingOutputPkScript != rhs.stakingOutputPkScript {return false}
+    if lhs.stakingTxHex != rhs.stakingTxHex {return false}
     if lhs.stakingOutputIndex != rhs.stakingOutputIndex {return false}
     if lhs.paramsVersion != rhs.paramsVersion {return false}
     if lhs.finalityProviderBtcPksHex != rhs.finalityProviderBtcPksHex {return false}
     if lhs.stakerBtcPkHex != rhs.stakerBtcPkHex {return false}
     if lhs.stakingTime != rhs.stakingTime {return false}
-    if lhs.stakingAmount != rhs.stakingAmount {return false}
     if lhs.unbondingTime != rhs.unbondingTime {return false}
     if lhs.unbondingTx != rhs.unbondingTx {return false}
     if lhs.newState != rhs.newState {return false}
+    if lhs.stakerAddr != rhs.stakerAddr {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

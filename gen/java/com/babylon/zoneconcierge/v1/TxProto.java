@@ -1359,12 +1359,12 @@ public final class TxProto {
       "\003Msg\022l\n\014UpdateParams\022).babylon.zoneconci" +
       "erge.v1.MsgUpdateParams\0321.babylon.zoneco" +
       "ncierge.v1.MsgUpdateParamsResponse\032\005\200\347\260*" +
-      "\001B\336\001\n\034com.babylon.zoneconcierge.v1B\007TxPr" +
-      "otoZ5github.com/babylonchain/babylon/x/z" +
-      "oneconcierge/types\242\002\003BZX\252\002\030Babylon.Zonec" +
-      "oncierge.V1\312\002\030Babylon\\Zoneconcierge\\V1\342\002" +
-      "$Babylon\\Zoneconcierge\\V1\\GPBMetadata\352\002\032" +
-      "Babylon::Zoneconcierge::V1b\006proto3"
+      "\001B\340\001\n\034com.babylon.zoneconcierge.v1B\007TxPr" +
+      "otoZ7github.com/babylonlabs-io/babylon/x" +
+      "/zoneconcierge/types\242\002\003BZX\252\002\030Babylon.Zon" +
+      "econcierge.V1\312\002\030Babylon\\Zoneconcierge\\V1" +
+      "\342\002$Babylon\\Zoneconcierge\\V1\\GPBMetadata\352" +
+      "\002\032Babylon::Zoneconcierge::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
