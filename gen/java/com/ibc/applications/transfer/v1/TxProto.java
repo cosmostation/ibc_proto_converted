@@ -60,7 +60,7 @@ public final class TxProto {
 
     /**
      * <pre>
-     * the tokens to be transferred
+     * token to be transferred
      * </pre>
      *
      * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -69,7 +69,7 @@ public final class TxProto {
     boolean hasToken();
     /**
      * <pre>
-     * the tokens to be transferred
+     * token to be transferred
      * </pre>
      *
      * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -78,7 +78,7 @@ public final class TxProto {
     com.cosmos.base.v1beta1.CoinProto.Coin getToken();
     /**
      * <pre>
-     * the tokens to be transferred
+     * token to be transferred
      * </pre>
      *
      * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -128,7 +128,8 @@ public final class TxProto {
     /**
      * <pre>
      * Timeout height relative to the current block height.
-     * The timeout is disabled when set to 0.
+     * If you are sending with IBC v1 protocol, either timeout_height or timeout_timestamp must be set.
+     * If you are sending with IBC v2 protocol, timeout_timestamp must be set, and timeout_height must be omitted.
      * </pre>
      *
      * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -138,7 +139,8 @@ public final class TxProto {
     /**
      * <pre>
      * Timeout height relative to the current block height.
-     * The timeout is disabled when set to 0.
+     * If you are sending with IBC v1 protocol, either timeout_height or timeout_timestamp must be set.
+     * If you are sending with IBC v2 protocol, timeout_timestamp must be set, and timeout_height must be omitted.
      * </pre>
      *
      * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -148,7 +150,8 @@ public final class TxProto {
     /**
      * <pre>
      * Timeout height relative to the current block height.
-     * The timeout is disabled when set to 0.
+     * If you are sending with IBC v1 protocol, either timeout_height or timeout_timestamp must be set.
+     * If you are sending with IBC v2 protocol, timeout_timestamp must be set, and timeout_height must be omitted.
      * </pre>
      *
      * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -158,7 +161,8 @@ public final class TxProto {
     /**
      * <pre>
      * Timeout timestamp in absolute nanoseconds since unix epoch.
-     * The timeout is disabled when set to 0.
+     * If you are sending with IBC v1 protocol, either timeout_height or timeout_timestamp must be set.
+     * If you are sending with IBC v2 protocol, timeout_timestamp must be set.
      * </pre>
      *
      * <code>uint64 timeout_timestamp = 7 [json_name = "timeoutTimestamp"];</code>
@@ -185,6 +189,26 @@ public final class TxProto {
      */
     com.google.protobuf.ByteString
         getMemoBytes();
+
+    /**
+     * <pre>
+     * optional encoding
+     * </pre>
+     *
+     * <code>string encoding = 9 [json_name = "encoding"];</code>
+     * @return The encoding.
+     */
+    java.lang.String getEncoding();
+    /**
+     * <pre>
+     * optional encoding
+     * </pre>
+     *
+     * <code>string encoding = 9 [json_name = "encoding"];</code>
+     * @return The bytes for encoding.
+     */
+    com.google.protobuf.ByteString
+        getEncodingBytes();
   }
   /**
    * <pre>
@@ -210,6 +234,7 @@ public final class TxProto {
       sender_ = "";
       receiver_ = "";
       memo_ = "";
+      encoding_ = "";
     }
 
     @java.lang.Override
@@ -330,7 +355,7 @@ public final class TxProto {
     private com.cosmos.base.v1beta1.CoinProto.Coin token_;
     /**
      * <pre>
-     * the tokens to be transferred
+     * token to be transferred
      * </pre>
      *
      * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -342,7 +367,7 @@ public final class TxProto {
     }
     /**
      * <pre>
-     * the tokens to be transferred
+     * token to be transferred
      * </pre>
      *
      * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -354,7 +379,7 @@ public final class TxProto {
     }
     /**
      * <pre>
-     * the tokens to be transferred
+     * token to be transferred
      * </pre>
      *
      * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -463,7 +488,8 @@ public final class TxProto {
     /**
      * <pre>
      * Timeout height relative to the current block height.
-     * The timeout is disabled when set to 0.
+     * If you are sending with IBC v1 protocol, either timeout_height or timeout_timestamp must be set.
+     * If you are sending with IBC v2 protocol, timeout_timestamp must be set, and timeout_height must be omitted.
      * </pre>
      *
      * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -476,7 +502,8 @@ public final class TxProto {
     /**
      * <pre>
      * Timeout height relative to the current block height.
-     * The timeout is disabled when set to 0.
+     * If you are sending with IBC v1 protocol, either timeout_height or timeout_timestamp must be set.
+     * If you are sending with IBC v2 protocol, timeout_timestamp must be set, and timeout_height must be omitted.
      * </pre>
      *
      * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -489,7 +516,8 @@ public final class TxProto {
     /**
      * <pre>
      * Timeout height relative to the current block height.
-     * The timeout is disabled when set to 0.
+     * If you are sending with IBC v1 protocol, either timeout_height or timeout_timestamp must be set.
+     * If you are sending with IBC v2 protocol, timeout_timestamp must be set, and timeout_height must be omitted.
      * </pre>
      *
      * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -504,7 +532,8 @@ public final class TxProto {
     /**
      * <pre>
      * Timeout timestamp in absolute nanoseconds since unix epoch.
-     * The timeout is disabled when set to 0.
+     * If you are sending with IBC v1 protocol, either timeout_height or timeout_timestamp must be set.
+     * If you are sending with IBC v2 protocol, timeout_timestamp must be set.
      * </pre>
      *
      * <code>uint64 timeout_timestamp = 7 [json_name = "timeoutTimestamp"];</code>
@@ -562,6 +591,53 @@ public final class TxProto {
       }
     }
 
+    public static final int ENCODING_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object encoding_ = "";
+    /**
+     * <pre>
+     * optional encoding
+     * </pre>
+     *
+     * <code>string encoding = 9 [json_name = "encoding"];</code>
+     * @return The encoding.
+     */
+    @java.lang.Override
+    public java.lang.String getEncoding() {
+      java.lang.Object ref = encoding_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        encoding_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * optional encoding
+     * </pre>
+     *
+     * <code>string encoding = 9 [json_name = "encoding"];</code>
+     * @return The bytes for encoding.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEncodingBytes() {
+      java.lang.Object ref = encoding_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        encoding_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -600,6 +676,9 @@ public final class TxProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(memo_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, memo_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(encoding_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, encoding_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -635,6 +714,9 @@ public final class TxProto {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(memo_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, memo_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(encoding_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, encoding_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -673,6 +755,8 @@ public final class TxProto {
           != other.getTimeoutTimestamp()) return false;
       if (!getMemo()
           .equals(other.getMemo())) return false;
+      if (!getEncoding()
+          .equals(other.getEncoding())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -705,6 +789,8 @@ public final class TxProto {
           getTimeoutTimestamp());
       hash = (37 * hash) + MEMO_FIELD_NUMBER;
       hash = (53 * hash) + getMemo().hashCode();
+      hash = (37 * hash) + ENCODING_FIELD_NUMBER;
+      hash = (53 * hash) + getEncoding().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -858,6 +944,7 @@ public final class TxProto {
         }
         timeoutTimestamp_ = 0L;
         memo_ = "";
+        encoding_ = "";
         return this;
       }
 
@@ -918,6 +1005,9 @@ public final class TxProto {
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.memo_ = memo_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.encoding_ = encoding_;
         }
       }
 
@@ -999,6 +1089,11 @@ public final class TxProto {
           bitField0_ |= 0x00000080;
           onChanged();
         }
+        if (!other.getEncoding().isEmpty()) {
+          encoding_ = other.encoding_;
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1069,6 +1164,11 @@ public final class TxProto {
                 bitField0_ |= 0x00000080;
                 break;
               } // case 66
+              case 74: {
+                encoding_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1275,7 +1375,7 @@ public final class TxProto {
           com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> tokenBuilder_;
       /**
        * <pre>
-       * the tokens to be transferred
+       * token to be transferred
        * </pre>
        *
        * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -1286,7 +1386,7 @@ public final class TxProto {
       }
       /**
        * <pre>
-       * the tokens to be transferred
+       * token to be transferred
        * </pre>
        *
        * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -1301,7 +1401,7 @@ public final class TxProto {
       }
       /**
        * <pre>
-       * the tokens to be transferred
+       * token to be transferred
        * </pre>
        *
        * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -1321,7 +1421,7 @@ public final class TxProto {
       }
       /**
        * <pre>
-       * the tokens to be transferred
+       * token to be transferred
        * </pre>
        *
        * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -1339,7 +1439,7 @@ public final class TxProto {
       }
       /**
        * <pre>
-       * the tokens to be transferred
+       * token to be transferred
        * </pre>
        *
        * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -1362,7 +1462,7 @@ public final class TxProto {
       }
       /**
        * <pre>
-       * the tokens to be transferred
+       * token to be transferred
        * </pre>
        *
        * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -1379,7 +1479,7 @@ public final class TxProto {
       }
       /**
        * <pre>
-       * the tokens to be transferred
+       * token to be transferred
        * </pre>
        *
        * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -1391,7 +1491,7 @@ public final class TxProto {
       }
       /**
        * <pre>
-       * the tokens to be transferred
+       * token to be transferred
        * </pre>
        *
        * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -1406,7 +1506,7 @@ public final class TxProto {
       }
       /**
        * <pre>
-       * the tokens to be transferred
+       * token to be transferred
        * </pre>
        *
        * <code>.cosmos.base.v1beta1.Coin token = 3 [json_name = "token", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -1615,7 +1715,8 @@ public final class TxProto {
       /**
        * <pre>
        * Timeout height relative to the current block height.
-       * The timeout is disabled when set to 0.
+       * If you are sending with IBC v1 protocol, either timeout_height or timeout_timestamp must be set.
+       * If you are sending with IBC v2 protocol, timeout_timestamp must be set, and timeout_height must be omitted.
        * </pre>
        *
        * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -1627,7 +1728,8 @@ public final class TxProto {
       /**
        * <pre>
        * Timeout height relative to the current block height.
-       * The timeout is disabled when set to 0.
+       * If you are sending with IBC v1 protocol, either timeout_height or timeout_timestamp must be set.
+       * If you are sending with IBC v2 protocol, timeout_timestamp must be set, and timeout_height must be omitted.
        * </pre>
        *
        * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -1643,7 +1745,8 @@ public final class TxProto {
       /**
        * <pre>
        * Timeout height relative to the current block height.
-       * The timeout is disabled when set to 0.
+       * If you are sending with IBC v1 protocol, either timeout_height or timeout_timestamp must be set.
+       * If you are sending with IBC v2 protocol, timeout_timestamp must be set, and timeout_height must be omitted.
        * </pre>
        *
        * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -1664,7 +1767,8 @@ public final class TxProto {
       /**
        * <pre>
        * Timeout height relative to the current block height.
-       * The timeout is disabled when set to 0.
+       * If you are sending with IBC v1 protocol, either timeout_height or timeout_timestamp must be set.
+       * If you are sending with IBC v2 protocol, timeout_timestamp must be set, and timeout_height must be omitted.
        * </pre>
        *
        * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -1683,7 +1787,8 @@ public final class TxProto {
       /**
        * <pre>
        * Timeout height relative to the current block height.
-       * The timeout is disabled when set to 0.
+       * If you are sending with IBC v1 protocol, either timeout_height or timeout_timestamp must be set.
+       * If you are sending with IBC v2 protocol, timeout_timestamp must be set, and timeout_height must be omitted.
        * </pre>
        *
        * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -1707,7 +1812,8 @@ public final class TxProto {
       /**
        * <pre>
        * Timeout height relative to the current block height.
-       * The timeout is disabled when set to 0.
+       * If you are sending with IBC v1 protocol, either timeout_height or timeout_timestamp must be set.
+       * If you are sending with IBC v2 protocol, timeout_timestamp must be set, and timeout_height must be omitted.
        * </pre>
        *
        * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -1725,7 +1831,8 @@ public final class TxProto {
       /**
        * <pre>
        * Timeout height relative to the current block height.
-       * The timeout is disabled when set to 0.
+       * If you are sending with IBC v1 protocol, either timeout_height or timeout_timestamp must be set.
+       * If you are sending with IBC v2 protocol, timeout_timestamp must be set, and timeout_height must be omitted.
        * </pre>
        *
        * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -1738,7 +1845,8 @@ public final class TxProto {
       /**
        * <pre>
        * Timeout height relative to the current block height.
-       * The timeout is disabled when set to 0.
+       * If you are sending with IBC v1 protocol, either timeout_height or timeout_timestamp must be set.
+       * If you are sending with IBC v2 protocol, timeout_timestamp must be set, and timeout_height must be omitted.
        * </pre>
        *
        * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -1754,7 +1862,8 @@ public final class TxProto {
       /**
        * <pre>
        * Timeout height relative to the current block height.
-       * The timeout is disabled when set to 0.
+       * If you are sending with IBC v1 protocol, either timeout_height or timeout_timestamp must be set.
+       * If you are sending with IBC v2 protocol, timeout_timestamp must be set, and timeout_height must be omitted.
        * </pre>
        *
        * <code>.ibc.core.client.v1.Height timeout_height = 6 [json_name = "timeoutHeight", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
@@ -1777,7 +1886,8 @@ public final class TxProto {
       /**
        * <pre>
        * Timeout timestamp in absolute nanoseconds since unix epoch.
-       * The timeout is disabled when set to 0.
+       * If you are sending with IBC v1 protocol, either timeout_height or timeout_timestamp must be set.
+       * If you are sending with IBC v2 protocol, timeout_timestamp must be set.
        * </pre>
        *
        * <code>uint64 timeout_timestamp = 7 [json_name = "timeoutTimestamp"];</code>
@@ -1790,7 +1900,8 @@ public final class TxProto {
       /**
        * <pre>
        * Timeout timestamp in absolute nanoseconds since unix epoch.
-       * The timeout is disabled when set to 0.
+       * If you are sending with IBC v1 protocol, either timeout_height or timeout_timestamp must be set.
+       * If you are sending with IBC v2 protocol, timeout_timestamp must be set.
        * </pre>
        *
        * <code>uint64 timeout_timestamp = 7 [json_name = "timeoutTimestamp"];</code>
@@ -1807,7 +1918,8 @@ public final class TxProto {
       /**
        * <pre>
        * Timeout timestamp in absolute nanoseconds since unix epoch.
-       * The timeout is disabled when set to 0.
+       * If you are sending with IBC v1 protocol, either timeout_height or timeout_timestamp must be set.
+       * If you are sending with IBC v2 protocol, timeout_timestamp must be set.
        * </pre>
        *
        * <code>uint64 timeout_timestamp = 7 [json_name = "timeoutTimestamp"];</code>
@@ -1908,6 +2020,98 @@ public final class TxProto {
         checkByteStringIsUtf8(value);
         memo_ = value;
         bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object encoding_ = "";
+      /**
+       * <pre>
+       * optional encoding
+       * </pre>
+       *
+       * <code>string encoding = 9 [json_name = "encoding"];</code>
+       * @return The encoding.
+       */
+      public java.lang.String getEncoding() {
+        java.lang.Object ref = encoding_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          encoding_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * optional encoding
+       * </pre>
+       *
+       * <code>string encoding = 9 [json_name = "encoding"];</code>
+       * @return The bytes for encoding.
+       */
+      public com.google.protobuf.ByteString
+          getEncodingBytes() {
+        java.lang.Object ref = encoding_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          encoding_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * optional encoding
+       * </pre>
+       *
+       * <code>string encoding = 9 [json_name = "encoding"];</code>
+       * @param value The encoding to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEncoding(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        encoding_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * optional encoding
+       * </pre>
+       *
+       * <code>string encoding = 9 [json_name = "encoding"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEncoding() {
+        encoding_ = getDefaultInstance().getEncoding();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * optional encoding
+       * </pre>
+       *
+       * <code>string encoding = 9 [json_name = "encoding"];</code>
+       * @param value The bytes for encoding to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEncodingBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        encoding_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -3804,7 +4008,7 @@ public final class TxProto {
       "sg/v1/msg.proto\032\036cosmos/base/v1beta1/coi" +
       "n.proto\032\037ibc/core/client/v1/client.proto" +
       "\032+ibc/applications/transfer/v1/transfer." +
-      "proto\"\200\003\n\013MsgTransfer\022\037\n\013source_port\030\001 \001" +
+      "proto\"\234\003\n\013MsgTransfer\022\037\n\013source_port\030\001 \001" +
       "(\tR\nsourcePort\022%\n\016source_channel\030\002 \001(\tR\r" +
       "sourceChannel\022:\n\005token\030\003 \001(\0132\031.cosmos.ba" +
       "se.v1beta1.CoinB\t\310\336\037\000\250\347\260*\001R\005token\022\026\n\006sen" +
@@ -3812,26 +4016,27 @@ public final class TxProto {
       "eiver\022L\n\016timeout_height\030\006 \001(\0132\032.ibc.core" +
       ".client.v1.HeightB\t\310\336\037\000\250\347\260*\001R\rtimeoutHei" +
       "ght\022+\n\021timeout_timestamp\030\007 \001(\004R\020timeoutT" +
-      "imestamp\022\022\n\004memo\030\010 \001(\tR\004memo:*\210\240\037\000\202\347\260*\006s" +
-      "ender\212\347\260*\026cosmos-sdk/MsgTransfer\"7\n\023MsgT" +
-      "ransferResponse\022\032\n\010sequence\030\001 \001(\004R\010seque" +
-      "nce:\004\210\240\037\000\"~\n\017MsgUpdateParams\022\026\n\006signer\030\001" +
-      " \001(\tR\006signer\022B\n\006params\030\002 \001(\0132$.ibc.appli" +
-      "cations.transfer.v1.ParamsB\004\310\336\037\000R\006params" +
-      ":\017\210\240\037\000\202\347\260*\006signer\"\031\n\027MsgUpdateParamsResp" +
-      "onse2\354\001\n\003Msg\022h\n\010Transfer\022).ibc.applicati" +
-      "ons.transfer.v1.MsgTransfer\0321.ibc.applic" +
-      "ations.transfer.v1.MsgTransferResponse\022t" +
-      "\n\014UpdateParams\022-.ibc.applications.transf" +
-      "er.v1.MsgUpdateParams\0325.ibc.applications" +
-      ".transfer.v1.MsgUpdateParamsResponse\032\005\200\347" +
-      "\260*\001B\365\001\n com.ibc.applications.transfer.v1" +
-      "B\007TxProtoZ7github.com/cosmos/ibc-go/v8/m" +
-      "odules/apps/transfer/types\242\002\003IAT\252\002\034Ibc.A" +
-      "pplications.Transfer.V1\312\002\034Ibc\\Applicatio" +
-      "ns\\Transfer\\V1\342\002(Ibc\\Applications\\Transf" +
-      "er\\V1\\GPBMetadata\352\002\037Ibc::Applications::T" +
-      "ransfer::V1b\006proto3"
+      "imestamp\022\022\n\004memo\030\010 \001(\tR\004memo\022\032\n\010encoding" +
+      "\030\t \001(\tR\010encoding:*\210\240\037\000\202\347\260*\006sender\212\347\260*\026co" +
+      "smos-sdk/MsgTransfer\"7\n\023MsgTransferRespo" +
+      "nse\022\032\n\010sequence\030\001 \001(\004R\010sequence:\004\210\240\037\000\"~\n" +
+      "\017MsgUpdateParams\022\026\n\006signer\030\001 \001(\tR\006signer" +
+      "\022B\n\006params\030\002 \001(\0132$.ibc.applications.tran" +
+      "sfer.v1.ParamsB\004\310\336\037\000R\006params:\017\210\240\037\000\202\347\260*\006s" +
+      "igner\"\031\n\027MsgUpdateParamsResponse2\354\001\n\003Msg" +
+      "\022h\n\010Transfer\022).ibc.applications.transfer" +
+      ".v1.MsgTransfer\0321.ibc.applications.trans" +
+      "fer.v1.MsgTransferResponse\022t\n\014UpdatePara" +
+      "ms\022-.ibc.applications.transfer.v1.MsgUpd" +
+      "ateParams\0325.ibc.applications.transfer.v1" +
+      ".MsgUpdateParamsResponse\032\005\200\347\260*\001B\366\001\n com." +
+      "ibc.applications.transfer.v1B\007TxProtoZ8g" +
+      "ithub.com/cosmos/ibc-go/v10/modules/apps" +
+      "/transfer/types\242\002\003IAT\252\002\034Ibc.Applications" +
+      ".Transfer.V1\312\002\034Ibc\\Applications\\Transfer" +
+      "\\V1\342\002(Ibc\\Applications\\Transfer\\V1\\GPBMe" +
+      "tadata\352\002\037Ibc::Applications::Transfer::V1" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3848,7 +4053,7 @@ public final class TxProto {
     internal_static_ibc_applications_transfer_v1_MsgTransfer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ibc_applications_transfer_v1_MsgTransfer_descriptor,
-        new java.lang.String[] { "SourcePort", "SourceChannel", "Token", "Sender", "Receiver", "TimeoutHeight", "TimeoutTimestamp", "Memo", });
+        new java.lang.String[] { "SourcePort", "SourceChannel", "Token", "Sender", "Receiver", "TimeoutHeight", "TimeoutTimestamp", "Memo", "Encoding", });
     internal_static_ibc_applications_transfer_v1_MsgTransferResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_ibc_applications_transfer_v1_MsgTransferResponse_fieldAccessorTable = new

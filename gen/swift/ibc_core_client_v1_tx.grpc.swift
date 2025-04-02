@@ -67,6 +67,11 @@ internal protocol Ibc_Core_Client_V1_MsgClientProtocol: GRPCClient {
     _ request: Ibc_Core_Client_V1_MsgUpdateParams,
     callOptions: CallOptions?
   ) -> UnaryCall<Ibc_Core_Client_V1_MsgUpdateParams, Ibc_Core_Client_V1_MsgUpdateParamsResponse>
+
+  func deleteClientCreator(
+    _ request: Ibc_Core_Client_V1_MsgDeleteClientCreator,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Ibc_Core_Client_V1_MsgDeleteClientCreator, Ibc_Core_Client_V1_MsgDeleteClientCreatorResponse>
 }
 
 extension Ibc_Core_Client_V1_MsgClientProtocol {
@@ -199,6 +204,24 @@ extension Ibc_Core_Client_V1_MsgClientProtocol {
       interceptors: self.interceptors?.makeUpdateClientParamsInterceptors() ?? []
     )
   }
+
+  /// DeleteClientCreator defines a rpc handler method for MsgDeleteClientCreator.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to DeleteClientCreator.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func deleteClientCreator(
+    _ request: Ibc_Core_Client_V1_MsgDeleteClientCreator,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Ibc_Core_Client_V1_MsgDeleteClientCreator, Ibc_Core_Client_V1_MsgDeleteClientCreatorResponse> {
+    return self.makeUnaryCall(
+      path: Ibc_Core_Client_V1_MsgClientMetadata.Methods.deleteClientCreator.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeDeleteClientCreatorInterceptors() ?? []
+    )
+  }
 }
 
 @available(*, deprecated)
@@ -298,6 +321,11 @@ internal protocol Ibc_Core_Client_V1_MsgAsyncClientProtocol: GRPCClient {
     _ request: Ibc_Core_Client_V1_MsgUpdateParams,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Ibc_Core_Client_V1_MsgUpdateParams, Ibc_Core_Client_V1_MsgUpdateParamsResponse>
+
+  func makeDeleteClientCreatorCall(
+    _ request: Ibc_Core_Client_V1_MsgDeleteClientCreator,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Ibc_Core_Client_V1_MsgDeleteClientCreator, Ibc_Core_Client_V1_MsgDeleteClientCreatorResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -393,6 +421,18 @@ extension Ibc_Core_Client_V1_MsgAsyncClientProtocol {
       interceptors: self.interceptors?.makeUpdateClientParamsInterceptors() ?? []
     )
   }
+
+  internal func makeDeleteClientCreatorCall(
+    _ request: Ibc_Core_Client_V1_MsgDeleteClientCreator,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Ibc_Core_Client_V1_MsgDeleteClientCreator, Ibc_Core_Client_V1_MsgDeleteClientCreatorResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Ibc_Core_Client_V1_MsgClientMetadata.Methods.deleteClientCreator.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeDeleteClientCreatorInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -480,6 +520,18 @@ extension Ibc_Core_Client_V1_MsgAsyncClientProtocol {
       interceptors: self.interceptors?.makeUpdateClientParamsInterceptors() ?? []
     )
   }
+
+  internal func deleteClientCreator(
+    _ request: Ibc_Core_Client_V1_MsgDeleteClientCreator,
+    callOptions: CallOptions? = nil
+  ) async throws -> Ibc_Core_Client_V1_MsgDeleteClientCreatorResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Ibc_Core_Client_V1_MsgClientMetadata.Methods.deleteClientCreator.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeDeleteClientCreatorInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -521,6 +573,9 @@ internal protocol Ibc_Core_Client_V1_MsgClientInterceptorFactoryProtocol: Sendab
 
   /// - Returns: Interceptors to use when invoking 'updateClientParams'.
   func makeUpdateClientParamsInterceptors() -> [ClientInterceptor<Ibc_Core_Client_V1_MsgUpdateParams, Ibc_Core_Client_V1_MsgUpdateParamsResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'deleteClientCreator'.
+  func makeDeleteClientCreatorInterceptors() -> [ClientInterceptor<Ibc_Core_Client_V1_MsgDeleteClientCreator, Ibc_Core_Client_V1_MsgDeleteClientCreatorResponse>]
 }
 
 internal enum Ibc_Core_Client_V1_MsgClientMetadata {
@@ -535,6 +590,7 @@ internal enum Ibc_Core_Client_V1_MsgClientMetadata {
       Ibc_Core_Client_V1_MsgClientMetadata.Methods.recoverClient,
       Ibc_Core_Client_V1_MsgClientMetadata.Methods.iBCSoftwareUpgrade,
       Ibc_Core_Client_V1_MsgClientMetadata.Methods.updateClientParams,
+      Ibc_Core_Client_V1_MsgClientMetadata.Methods.deleteClientCreator,
     ]
   )
 
@@ -580,6 +636,12 @@ internal enum Ibc_Core_Client_V1_MsgClientMetadata {
       path: "/ibc.core.client.v1.Msg/UpdateClientParams",
       type: GRPCCallType.unary
     )
+
+    internal static let deleteClientCreator = GRPCMethodDescriptor(
+      name: "DeleteClientCreator",
+      path: "/ibc.core.client.v1.Msg/DeleteClientCreator",
+      type: GRPCCallType.unary
+    )
   }
 }
 
@@ -609,6 +671,9 @@ internal protocol Ibc_Core_Client_V1_MsgProvider: CallHandlerProvider {
 
   /// UpdateClientParams defines a rpc handler method for MsgUpdateParams.
   func updateClientParams(request: Ibc_Core_Client_V1_MsgUpdateParams, context: StatusOnlyCallContext) -> EventLoopFuture<Ibc_Core_Client_V1_MsgUpdateParamsResponse>
+
+  /// DeleteClientCreator defines a rpc handler method for MsgDeleteClientCreator.
+  func deleteClientCreator(request: Ibc_Core_Client_V1_MsgDeleteClientCreator, context: StatusOnlyCallContext) -> EventLoopFuture<Ibc_Core_Client_V1_MsgDeleteClientCreatorResponse>
 }
 
 extension Ibc_Core_Client_V1_MsgProvider {
@@ -686,6 +751,15 @@ extension Ibc_Core_Client_V1_MsgProvider {
         userFunction: self.updateClientParams(request:context:)
       )
 
+    case "DeleteClientCreator":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Ibc_Core_Client_V1_MsgDeleteClientCreator>(),
+        responseSerializer: ProtobufSerializer<Ibc_Core_Client_V1_MsgDeleteClientCreatorResponse>(),
+        interceptors: self.interceptors?.makeDeleteClientCreatorInterceptors() ?? [],
+        userFunction: self.deleteClientCreator(request:context:)
+      )
+
     default:
       return nil
     }
@@ -741,6 +815,12 @@ internal protocol Ibc_Core_Client_V1_MsgAsyncProvider: CallHandlerProvider {
     request: Ibc_Core_Client_V1_MsgUpdateParams,
     context: GRPCAsyncServerCallContext
   ) async throws -> Ibc_Core_Client_V1_MsgUpdateParamsResponse
+
+  /// DeleteClientCreator defines a rpc handler method for MsgDeleteClientCreator.
+  @Sendable func deleteClientCreator(
+    request: Ibc_Core_Client_V1_MsgDeleteClientCreator,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Ibc_Core_Client_V1_MsgDeleteClientCreatorResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -825,6 +905,15 @@ extension Ibc_Core_Client_V1_MsgAsyncProvider {
         wrapping: self.updateClientParams(request:context:)
       )
 
+    case "DeleteClientCreator":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Ibc_Core_Client_V1_MsgDeleteClientCreator>(),
+        responseSerializer: ProtobufSerializer<Ibc_Core_Client_V1_MsgDeleteClientCreatorResponse>(),
+        interceptors: self.interceptors?.makeDeleteClientCreatorInterceptors() ?? [],
+        wrapping: self.deleteClientCreator(request:context:)
+      )
+
     default:
       return nil
     }
@@ -860,6 +949,10 @@ internal protocol Ibc_Core_Client_V1_MsgServerInterceptorFactoryProtocol {
   /// - Returns: Interceptors to use when handling 'updateClientParams'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeUpdateClientParamsInterceptors() -> [ServerInterceptor<Ibc_Core_Client_V1_MsgUpdateParams, Ibc_Core_Client_V1_MsgUpdateParamsResponse>]
+
+  /// - Returns: Interceptors to use when handling 'deleteClientCreator'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeDeleteClientCreatorInterceptors() -> [ServerInterceptor<Ibc_Core_Client_V1_MsgDeleteClientCreator, Ibc_Core_Client_V1_MsgDeleteClientCreatorResponse>]
 }
 
 internal enum Ibc_Core_Client_V1_MsgServerMetadata {
@@ -874,6 +967,7 @@ internal enum Ibc_Core_Client_V1_MsgServerMetadata {
       Ibc_Core_Client_V1_MsgServerMetadata.Methods.recoverClient,
       Ibc_Core_Client_V1_MsgServerMetadata.Methods.iBCSoftwareUpgrade,
       Ibc_Core_Client_V1_MsgServerMetadata.Methods.updateClientParams,
+      Ibc_Core_Client_V1_MsgServerMetadata.Methods.deleteClientCreator,
     ]
   )
 
@@ -917,6 +1011,12 @@ internal enum Ibc_Core_Client_V1_MsgServerMetadata {
     internal static let updateClientParams = GRPCMethodDescriptor(
       name: "UpdateClientParams",
       path: "/ibc.core.client.v1.Msg/UpdateClientParams",
+      type: GRPCCallType.unary
+    )
+
+    internal static let deleteClientCreator = GRPCMethodDescriptor(
+      name: "DeleteClientCreator",
+      path: "/ibc.core.client.v1.Msg/DeleteClientCreator",
       type: GRPCCallType.unary
     )
   }

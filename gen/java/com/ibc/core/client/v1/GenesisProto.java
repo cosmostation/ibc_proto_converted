@@ -2311,8 +2311,8 @@ public final class GenesisProto {
   }
   /**
    * <pre>
-   * GenesisMetadata defines the genesis type for metadata that clients may return
-   * with ExportMetadata
+   * GenesisMetadata defines the genesis type for metadata that will be used
+   * to export all client store keys that are not client or consensus states.
    * </pre>
    *
    * Protobuf type {@code ibc.core.client.v1.GenesisMetadata}
@@ -2551,8 +2551,8 @@ public final class GenesisProto {
     }
     /**
      * <pre>
-     * GenesisMetadata defines the genesis type for metadata that clients may return
-     * with ExportMetadata
+     * GenesisMetadata defines the genesis type for metadata that will be used
+     * to export all client store keys that are not client or consensus states.
      * </pre>
      *
      * Protobuf type {@code ibc.core.client.v1.GenesisMetadata}
@@ -3869,12 +3869,12 @@ public final class GenesisProto {
       "nesisMetadata\022\033\n\tclient_id\030\001 \001(\tR\010client" +
       "Id\022R\n\017client_metadata\030\002 \003(\0132#.ibc.core.c" +
       "lient.v1.GenesisMetadataB\004\310\336\037\000R\016clientMe" +
-      "tadataB\311\001\n\026com.ibc.core.client.v1B\014Genes" +
-      "isProtoZ8github.com/cosmos/ibc-go/v8/mod" +
-      "ules/core/02-client/types\242\002\003ICC\252\002\022Ibc.Co" +
-      "re.Client.V1\312\002\022Ibc\\Core\\Client\\V1\342\002\036Ibc\\" +
-      "Core\\Client\\V1\\GPBMetadata\352\002\025Ibc::Core::" +
-      "Client::V1b\006proto3"
+      "tadataB\312\001\n\026com.ibc.core.client.v1B\014Genes" +
+      "isProtoZ9github.com/cosmos/ibc-go/v10/mo" +
+      "dules/core/02-client/types\242\002\003ICC\252\002\022Ibc.C" +
+      "ore.Client.V1\312\002\022Ibc\\Core\\Client\\V1\342\002\036Ibc" +
+      "\\Core\\Client\\V1\\GPBMetadata\352\002\025Ibc::Core:" +
+      ":Client::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

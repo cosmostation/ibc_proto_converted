@@ -235,6 +235,37 @@ public final class MsgGrpc {
     return getUpdateClientParamsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.ibc.core.client.v1.TxProto.MsgDeleteClientCreator,
+      com.ibc.core.client.v1.TxProto.MsgDeleteClientCreatorResponse> getDeleteClientCreatorMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteClientCreator",
+      requestType = com.ibc.core.client.v1.TxProto.MsgDeleteClientCreator.class,
+      responseType = com.ibc.core.client.v1.TxProto.MsgDeleteClientCreatorResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.ibc.core.client.v1.TxProto.MsgDeleteClientCreator,
+      com.ibc.core.client.v1.TxProto.MsgDeleteClientCreatorResponse> getDeleteClientCreatorMethod() {
+    io.grpc.MethodDescriptor<com.ibc.core.client.v1.TxProto.MsgDeleteClientCreator, com.ibc.core.client.v1.TxProto.MsgDeleteClientCreatorResponse> getDeleteClientCreatorMethod;
+    if ((getDeleteClientCreatorMethod = MsgGrpc.getDeleteClientCreatorMethod) == null) {
+      synchronized (MsgGrpc.class) {
+        if ((getDeleteClientCreatorMethod = MsgGrpc.getDeleteClientCreatorMethod) == null) {
+          MsgGrpc.getDeleteClientCreatorMethod = getDeleteClientCreatorMethod =
+              io.grpc.MethodDescriptor.<com.ibc.core.client.v1.TxProto.MsgDeleteClientCreator, com.ibc.core.client.v1.TxProto.MsgDeleteClientCreatorResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteClientCreator"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.ibc.core.client.v1.TxProto.MsgDeleteClientCreator.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.ibc.core.client.v1.TxProto.MsgDeleteClientCreatorResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MsgMethodDescriptorSupplier("DeleteClientCreator"))
+              .build();
+        }
+      }
+    }
+    return getDeleteClientCreatorMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -355,6 +386,16 @@ public final class MsgGrpc {
         io.grpc.stub.StreamObserver<com.ibc.core.client.v1.TxProto.MsgUpdateParamsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateClientParamsMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * DeleteClientCreator defines a rpc handler method for MsgDeleteClientCreator.
+     * </pre>
+     */
+    default void deleteClientCreator(com.ibc.core.client.v1.TxProto.MsgDeleteClientCreator request,
+        io.grpc.stub.StreamObserver<com.ibc.core.client.v1.TxProto.MsgDeleteClientCreatorResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteClientCreatorMethod(), responseObserver);
+    }
   }
 
   /**
@@ -466,6 +507,17 @@ public final class MsgGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateClientParamsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * DeleteClientCreator defines a rpc handler method for MsgDeleteClientCreator.
+     * </pre>
+     */
+    public void deleteClientCreator(com.ibc.core.client.v1.TxProto.MsgDeleteClientCreator request,
+        io.grpc.stub.StreamObserver<com.ibc.core.client.v1.TxProto.MsgDeleteClientCreatorResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteClientCreatorMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -555,6 +607,16 @@ public final class MsgGrpc {
     public com.ibc.core.client.v1.TxProto.MsgUpdateParamsResponse updateClientParams(com.ibc.core.client.v1.TxProto.MsgUpdateParams request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateClientParamsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteClientCreator defines a rpc handler method for MsgDeleteClientCreator.
+     * </pre>
+     */
+    public com.ibc.core.client.v1.TxProto.MsgDeleteClientCreatorResponse deleteClientCreator(com.ibc.core.client.v1.TxProto.MsgDeleteClientCreator request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteClientCreatorMethod(), getCallOptions(), request);
     }
   }
 
@@ -653,6 +715,17 @@ public final class MsgGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateClientParamsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * DeleteClientCreator defines a rpc handler method for MsgDeleteClientCreator.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.ibc.core.client.v1.TxProto.MsgDeleteClientCreatorResponse> deleteClientCreator(
+        com.ibc.core.client.v1.TxProto.MsgDeleteClientCreator request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteClientCreatorMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_CLIENT = 0;
@@ -662,6 +735,7 @@ public final class MsgGrpc {
   private static final int METHODID_RECOVER_CLIENT = 4;
   private static final int METHODID_IBCSOFTWARE_UPGRADE = 5;
   private static final int METHODID_UPDATE_CLIENT_PARAMS = 6;
+  private static final int METHODID_DELETE_CLIENT_CREATOR = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -707,6 +781,10 @@ public final class MsgGrpc {
         case METHODID_UPDATE_CLIENT_PARAMS:
           serviceImpl.updateClientParams((com.ibc.core.client.v1.TxProto.MsgUpdateParams) request,
               (io.grpc.stub.StreamObserver<com.ibc.core.client.v1.TxProto.MsgUpdateParamsResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_CLIENT_CREATOR:
+          serviceImpl.deleteClientCreator((com.ibc.core.client.v1.TxProto.MsgDeleteClientCreator) request,
+              (io.grpc.stub.StreamObserver<com.ibc.core.client.v1.TxProto.MsgDeleteClientCreatorResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -775,6 +853,13 @@ public final class MsgGrpc {
               com.ibc.core.client.v1.TxProto.MsgUpdateParams,
               com.ibc.core.client.v1.TxProto.MsgUpdateParamsResponse>(
                 service, METHODID_UPDATE_CLIENT_PARAMS)))
+        .addMethod(
+          getDeleteClientCreatorMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.ibc.core.client.v1.TxProto.MsgDeleteClientCreator,
+              com.ibc.core.client.v1.TxProto.MsgDeleteClientCreatorResponse>(
+                service, METHODID_DELETE_CLIENT_CREATOR)))
         .build();
   }
 
@@ -830,6 +915,7 @@ public final class MsgGrpc {
               .addMethod(getRecoverClientMethod())
               .addMethod(getIBCSoftwareUpgradeMethod())
               .addMethod(getUpdateClientParamsMethod())
+              .addMethod(getDeleteClientCreatorMethod())
               .build();
         }
       }

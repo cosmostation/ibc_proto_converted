@@ -47,6 +47,14 @@ public final class TxProto {
      * <code>RESPONSE_RESULT_TYPE_SUCCESS = 2 [(.gogoproto.enumvalue_customname) = "SUCCESS"];</code>
      */
     RESPONSE_RESULT_TYPE_SUCCESS(2),
+    /**
+     * <pre>
+     * The message was executed unsuccessfully
+     * </pre>
+     *
+     * <code>RESPONSE_RESULT_TYPE_FAILURE = 3 [(.gogoproto.enumvalue_customname) = "FAILURE"];</code>
+     */
+    RESPONSE_RESULT_TYPE_FAILURE(3),
     UNRECOGNIZED(-1),
     ;
 
@@ -74,6 +82,14 @@ public final class TxProto {
      * <code>RESPONSE_RESULT_TYPE_SUCCESS = 2 [(.gogoproto.enumvalue_customname) = "SUCCESS"];</code>
      */
     public static final int RESPONSE_RESULT_TYPE_SUCCESS_VALUE = 2;
+    /**
+     * <pre>
+     * The message was executed unsuccessfully
+     * </pre>
+     *
+     * <code>RESPONSE_RESULT_TYPE_FAILURE = 3 [(.gogoproto.enumvalue_customname) = "FAILURE"];</code>
+     */
+    public static final int RESPONSE_RESULT_TYPE_FAILURE_VALUE = 3;
 
 
     public final int getNumber() {
@@ -103,6 +119,7 @@ public final class TxProto {
         case 0: return RESPONSE_RESULT_TYPE_UNSPECIFIED;
         case 1: return RESPONSE_RESULT_TYPE_NOOP;
         case 2: return RESPONSE_RESULT_TYPE_SUCCESS;
+        case 3: return RESPONSE_RESULT_TYPE_FAILURE;
         default: return null;
       }
     }
@@ -1796,7 +1813,7 @@ public final class TxProto {
      *
      * <code>string previous_channel_id = 2 [json_name = "previousChannelId", deprecated = true];</code>
      * @deprecated ibc.core.channel.v1.MsgChannelOpenTry.previous_channel_id is deprecated.
-     *     See ibc/core/channel/v1/tx.proto;l=89
+     *     See ibc/core/channel/v1/tx.proto;l=91
      * @return The previousChannelId.
      */
     @java.lang.Deprecated java.lang.String getPreviousChannelId();
@@ -1807,7 +1824,7 @@ public final class TxProto {
      *
      * <code>string previous_channel_id = 2 [json_name = "previousChannelId", deprecated = true];</code>
      * @deprecated ibc.core.channel.v1.MsgChannelOpenTry.previous_channel_id is deprecated.
-     *     See ibc/core/channel/v1/tx.proto;l=89
+     *     See ibc/core/channel/v1/tx.proto;l=91
      * @return The bytes for previousChannelId.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -1980,7 +1997,7 @@ public final class TxProto {
      *
      * <code>string previous_channel_id = 2 [json_name = "previousChannelId", deprecated = true];</code>
      * @deprecated ibc.core.channel.v1.MsgChannelOpenTry.previous_channel_id is deprecated.
-     *     See ibc/core/channel/v1/tx.proto;l=89
+     *     See ibc/core/channel/v1/tx.proto;l=91
      * @return The previousChannelId.
      */
     @java.lang.Override
@@ -2003,7 +2020,7 @@ public final class TxProto {
      *
      * <code>string previous_channel_id = 2 [json_name = "previousChannelId", deprecated = true];</code>
      * @deprecated ibc.core.channel.v1.MsgChannelOpenTry.previous_channel_id is deprecated.
-     *     See ibc/core/channel/v1/tx.proto;l=89
+     *     See ibc/core/channel/v1/tx.proto;l=91
      * @return The bytes for previousChannelId.
      */
     @java.lang.Override
@@ -2753,7 +2770,7 @@ public final class TxProto {
        *
        * <code>string previous_channel_id = 2 [json_name = "previousChannelId", deprecated = true];</code>
        * @deprecated ibc.core.channel.v1.MsgChannelOpenTry.previous_channel_id is deprecated.
-       *     See ibc/core/channel/v1/tx.proto;l=89
+       *     See ibc/core/channel/v1/tx.proto;l=91
        * @return The previousChannelId.
        */
       @java.lang.Deprecated public java.lang.String getPreviousChannelId() {
@@ -2775,7 +2792,7 @@ public final class TxProto {
        *
        * <code>string previous_channel_id = 2 [json_name = "previousChannelId", deprecated = true];</code>
        * @deprecated ibc.core.channel.v1.MsgChannelOpenTry.previous_channel_id is deprecated.
-       *     See ibc/core/channel/v1/tx.proto;l=89
+       *     See ibc/core/channel/v1/tx.proto;l=91
        * @return The bytes for previousChannelId.
        */
       @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -2798,7 +2815,7 @@ public final class TxProto {
        *
        * <code>string previous_channel_id = 2 [json_name = "previousChannelId", deprecated = true];</code>
        * @deprecated ibc.core.channel.v1.MsgChannelOpenTry.previous_channel_id is deprecated.
-       *     See ibc/core/channel/v1/tx.proto;l=89
+       *     See ibc/core/channel/v1/tx.proto;l=91
        * @param value The previousChannelId to set.
        * @return This builder for chaining.
        */
@@ -2817,7 +2834,7 @@ public final class TxProto {
        *
        * <code>string previous_channel_id = 2 [json_name = "previousChannelId", deprecated = true];</code>
        * @deprecated ibc.core.channel.v1.MsgChannelOpenTry.previous_channel_id is deprecated.
-       *     See ibc/core/channel/v1/tx.proto;l=89
+       *     See ibc/core/channel/v1/tx.proto;l=91
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearPreviousChannelId() {
@@ -2833,7 +2850,7 @@ public final class TxProto {
        *
        * <code>string previous_channel_id = 2 [json_name = "previousChannelId", deprecated = true];</code>
        * @deprecated ibc.core.channel.v1.MsgChannelOpenTry.previous_channel_id is deprecated.
-       *     See ibc/core/channel/v1/tx.proto;l=89
+       *     See ibc/core/channel/v1/tx.proto;l=91
        * @param value The bytes for previousChannelId to set.
        * @return This builder for chaining.
        */
@@ -16797,9 +16814,9 @@ public final class TxProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\034ibc/core/channel/v1/tx.proto\022\023ibc.core" +
-      ".channel.v1\032\024gogoproto/gogo.proto\032\037ibc/c" +
-      "ore/client/v1/client.proto\032!ibc/core/cha" +
-      "nnel/v1/channel.proto\032\027cosmos/msg/v1/msg" +
+      ".channel.v1\032\024gogoproto/gogo.proto\032\027cosmo" +
+      "s/msg/v1/msg.proto\032\037ibc/core/client/v1/c" +
+      "lient.proto\032!ibc/core/channel/v1/channel" +
       ".proto\"\224\001\n\022MsgChannelOpenInit\022\027\n\007port_id" +
       "\030\001 \001(\tR\006portId\022<\n\007channel\030\002 \001(\0132\034.ibc.co" +
       "re.channel.v1.ChannelB\004\310\336\037\000R\007channel\022\026\n\006" +
@@ -16879,52 +16896,53 @@ public final class TxProto {
       "ht\022\026\n\006signer\030\005 \001(\tR\006signer:\017\210\240\037\000\202\347\260*\006sig" +
       "ner\"c\n\032MsgAcknowledgementResponse\022?\n\006res" +
       "ult\030\001 \001(\0162\'.ibc.core.channel.v1.Response" +
-      "ResultTypeR\006result:\004\210\240\037\000*\251\001\n\022ResponseRes" +
+      "ResultTypeR\006result:\004\210\240\037\000*\330\001\n\022ResponseRes" +
       "ultType\0225\n RESPONSE_RESULT_TYPE_UNSPECIF" +
       "IED\020\000\032\017\212\235 \013UNSPECIFIED\022\'\n\031RESPONSE_RESUL" +
       "T_TYPE_NOOP\020\001\032\010\212\235 \004NOOP\022-\n\034RESPONSE_RESU" +
-      "LT_TYPE_SUCCESS\020\002\032\013\212\235 \007SUCCESS\032\004\210\243\036\0002\266\010\n" +
-      "\003Msg\022k\n\017ChannelOpenInit\022\'.ibc.core.chann" +
-      "el.v1.MsgChannelOpenInit\032/.ibc.core.chan" +
-      "nel.v1.MsgChannelOpenInitResponse\022h\n\016Cha" +
-      "nnelOpenTry\022&.ibc.core.channel.v1.MsgCha" +
-      "nnelOpenTry\032..ibc.core.channel.v1.MsgCha" +
-      "nnelOpenTryResponse\022h\n\016ChannelOpenAck\022&." +
-      "ibc.core.channel.v1.MsgChannelOpenAck\032.." +
-      "ibc.core.channel.v1.MsgChannelOpenAckRes" +
-      "ponse\022t\n\022ChannelOpenConfirm\022*.ibc.core.c" +
-      "hannel.v1.MsgChannelOpenConfirm\0322.ibc.co" +
-      "re.channel.v1.MsgChannelOpenConfirmRespo" +
-      "nse\022n\n\020ChannelCloseInit\022(.ibc.core.chann" +
-      "el.v1.MsgChannelCloseInit\0320.ibc.core.cha" +
-      "nnel.v1.MsgChannelCloseInitResponse\022w\n\023C" +
-      "hannelCloseConfirm\022+.ibc.core.channel.v1" +
-      ".MsgChannelCloseConfirm\0323.ibc.core.chann" +
-      "el.v1.MsgChannelCloseConfirmResponse\022\\\n\n" +
-      "RecvPacket\022\".ibc.core.channel.v1.MsgRecv" +
-      "Packet\032*.ibc.core.channel.v1.MsgRecvPack" +
-      "etResponse\022S\n\007Timeout\022\037.ibc.core.channel" +
-      ".v1.MsgTimeout\032\'.ibc.core.channel.v1.Msg" +
-      "TimeoutResponse\022h\n\016TimeoutOnClose\022&.ibc." +
-      "core.channel.v1.MsgTimeoutOnClose\032..ibc." +
-      "core.channel.v1.MsgTimeoutOnCloseRespons" +
-      "e\022k\n\017Acknowledgement\022\'.ibc.core.channel." +
-      "v1.MsgAcknowledgement\032/.ibc.core.channel" +
-      ".v1.MsgAcknowledgementResponse\032\005\200\347\260*\001B\312\001" +
-      "\n\027com.ibc.core.channel.v1B\007TxProtoZ9gith" +
-      "ub.com/cosmos/ibc-go/v8/modules/core/04-" +
-      "channel/types\242\002\003ICC\252\002\023Ibc.Core.Channel.V" +
-      "1\312\002\023Ibc\\Core\\Channel\\V1\342\002\037Ibc\\Core\\Chann" +
-      "el\\V1\\GPBMetadata\352\002\026Ibc::Core::Channel::" +
-      "V1b\006proto3"
+      "LT_TYPE_SUCCESS\020\002\032\013\212\235 \007SUCCESS\022-\n\034RESPON" +
+      "SE_RESULT_TYPE_FAILURE\020\003\032\013\212\235 \007FAILURE\032\004\210" +
+      "\243\036\0002\266\010\n\003Msg\022k\n\017ChannelOpenInit\022\'.ibc.cor" +
+      "e.channel.v1.MsgChannelOpenInit\032/.ibc.co" +
+      "re.channel.v1.MsgChannelOpenInitResponse" +
+      "\022h\n\016ChannelOpenTry\022&.ibc.core.channel.v1" +
+      ".MsgChannelOpenTry\032..ibc.core.channel.v1" +
+      ".MsgChannelOpenTryResponse\022h\n\016ChannelOpe" +
+      "nAck\022&.ibc.core.channel.v1.MsgChannelOpe" +
+      "nAck\032..ibc.core.channel.v1.MsgChannelOpe" +
+      "nAckResponse\022t\n\022ChannelOpenConfirm\022*.ibc" +
+      ".core.channel.v1.MsgChannelOpenConfirm\0322" +
+      ".ibc.core.channel.v1.MsgChannelOpenConfi" +
+      "rmResponse\022n\n\020ChannelCloseInit\022(.ibc.cor" +
+      "e.channel.v1.MsgChannelCloseInit\0320.ibc.c" +
+      "ore.channel.v1.MsgChannelCloseInitRespon" +
+      "se\022w\n\023ChannelCloseConfirm\022+.ibc.core.cha" +
+      "nnel.v1.MsgChannelCloseConfirm\0323.ibc.cor" +
+      "e.channel.v1.MsgChannelCloseConfirmRespo" +
+      "nse\022\\\n\nRecvPacket\022\".ibc.core.channel.v1." +
+      "MsgRecvPacket\032*.ibc.core.channel.v1.MsgR" +
+      "ecvPacketResponse\022S\n\007Timeout\022\037.ibc.core." +
+      "channel.v1.MsgTimeout\032\'.ibc.core.channel" +
+      ".v1.MsgTimeoutResponse\022h\n\016TimeoutOnClose" +
+      "\022&.ibc.core.channel.v1.MsgTimeoutOnClose" +
+      "\032..ibc.core.channel.v1.MsgTimeoutOnClose" +
+      "Response\022k\n\017Acknowledgement\022\'.ibc.core.c" +
+      "hannel.v1.MsgAcknowledgement\032/.ibc.core." +
+      "channel.v1.MsgAcknowledgementResponse\032\005\200" +
+      "\347\260*\001B\313\001\n\027com.ibc.core.channel.v1B\007TxProt" +
+      "oZ:github.com/cosmos/ibc-go/v10/modules/" +
+      "core/04-channel/types\242\002\003ICC\252\002\023Ibc.Core.C" +
+      "hannel.V1\312\002\023Ibc\\Core\\Channel\\V1\342\002\037Ibc\\Co" +
+      "re\\Channel\\V1\\GPBMetadata\352\002\026Ibc::Core::C" +
+      "hannel::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.gogoproto.GogoProto.getDescriptor(),
+          com.cosmos.msg.v1.MsgProto.getDescriptor(),
           com.ibc.core.client.v1.ClientProto.getDescriptor(),
           com.ibc.core.channel.v1.ChannelProto.getDescriptor(),
-          com.cosmos.msg.v1.MsgProto.getDescriptor(),
         });
     internal_static_ibc_core_channel_v1_MsgChannelOpenInit_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -17057,9 +17075,9 @@ public final class TxProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.gogoproto.GogoProto.getDescriptor();
+    com.cosmos.msg.v1.MsgProto.getDescriptor();
     com.ibc.core.client.v1.ClientProto.getDescriptor();
     com.ibc.core.channel.v1.ChannelProto.getDescriptor();
-    com.cosmos.msg.v1.MsgProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
