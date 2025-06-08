@@ -192,6 +192,33 @@ struct Atomone_Gov_V1_Deposit {
   init() {}
 }
 
+/// LastMinDeposit is a record of the last time the minimum deposit
+/// was updated in the store, both its value and a timestamp
+struct Atomone_Gov_V1_LastMinDeposit {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// value is the value of the minimum deposit
+  var value: [Cosmos_Base_V1beta1_Coin] = []
+
+  /// time is the time the minimum deposit was last updated
+  var time: SwiftProtobuf.Google_Protobuf_Timestamp {
+    get {return _time ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+    set {_time = newValue}
+  }
+  /// Returns true if `time` has been explicitly set.
+  var hasTime: Bool {return self._time != nil}
+  /// Clears the value of `time`. Subsequent reads from it will return its default value.
+  mutating func clearTime() {self._time = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _time: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+}
+
 /// Proposal defines the core field members of a governance proposal.
 struct Atomone_Gov_V1_Proposal {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
@@ -467,6 +494,92 @@ struct Atomone_Gov_V1_TallyParams {
   init() {}
 }
 
+struct Atomone_Gov_V1_MinDepositThrottler {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// Floor value for the minimum deposit required for a proposal to enter the voting period.
+  var floorValue: [Cosmos_Base_V1beta1_Coin] = []
+
+  /// Duration that dictates after how long the dynamic minimum deposit should be recalculated
+  /// for time-based decreases.
+  var updatePeriod: SwiftProtobuf.Google_Protobuf_Duration {
+    get {return _updatePeriod ?? SwiftProtobuf.Google_Protobuf_Duration()}
+    set {_updatePeriod = newValue}
+  }
+  /// Returns true if `updatePeriod` has been explicitly set.
+  var hasUpdatePeriod: Bool {return self._updatePeriod != nil}
+  /// Clears the value of `updatePeriod`. Subsequent reads from it will return its default value.
+  mutating func clearUpdatePeriod() {self._updatePeriod = nil}
+
+  /// The number of active proposals the dynamic minimum deposit should target.
+  var targetActiveProposals: UInt64 = 0
+
+  /// The ratio of increase for the minimum deposit when the number of active proposals
+  /// is at or above the target.
+  var increaseRatio: String = String()
+
+  /// The ratio of decrease for the minimum deposit when the number of active proposals
+  /// is 1 less than the target.
+  var decreaseRatio: String = String()
+
+  /// A positive integer representing the sensitivity of dynamic minimum deposit 
+  /// decreases to the distance from the target number of active proposals.
+  /// The higher the number, the lower the sensitivity. A value of 1 represents the
+  /// highest sensitivity.
+  var decreaseSensitivityTargetDistance: UInt64 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _updatePeriod: SwiftProtobuf.Google_Protobuf_Duration? = nil
+}
+
+struct Atomone_Gov_V1_MinInitialDepositThrottler {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+  var floorValue: [Cosmos_Base_V1beta1_Coin] = []
+
+  /// Duration that dictates after how long the dynamic minimum deposit should be recalculated
+  /// for time-based decreases.
+  var updatePeriod: SwiftProtobuf.Google_Protobuf_Duration {
+    get {return _updatePeriod ?? SwiftProtobuf.Google_Protobuf_Duration()}
+    set {_updatePeriod = newValue}
+  }
+  /// Returns true if `updatePeriod` has been explicitly set.
+  var hasUpdatePeriod: Bool {return self._updatePeriod != nil}
+  /// Clears the value of `updatePeriod`. Subsequent reads from it will return its default value.
+  mutating func clearUpdatePeriod() {self._updatePeriod = nil}
+
+  /// The number of proposals in deposit period the dynamic minimum initial deposit should target.
+  var targetProposals: UInt64 = 0
+
+  /// The ratio of increase for the minimum initial deposit when the number of proposals
+  /// in deposit period is at or above the target.
+  var increaseRatio: String = String()
+
+  /// The ratio of decrease for the minimum initial deposit when the number of proposals
+  /// in deposit period is 1 less than the target.
+  var decreaseRatio: String = String()
+
+  /// A positive integer representing the sensitivity of dynamic minimum initial 
+  /// deposit decreases to the distance from the target number of proposals
+  /// in deposit period. The higher the number, the lower the sensitivity. A value 
+  /// of 1 represents the highest sensitivity.
+  var decreaseSensitivityTargetDistance: UInt64 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _updatePeriod: SwiftProtobuf.Google_Protobuf_Duration? = nil
+}
+
 /// Params defines the parameters for the x/gov module.
 ///
 /// Since: cosmos-sdk 0.47
@@ -476,6 +589,11 @@ struct Atomone_Gov_V1_Params {
   // methods supported on all messages.
 
   /// Minimum deposit for a proposal to enter voting period.
+  /// Deprecated: a dynamic system now determines the minimum deposit,
+  /// see the other params inside the min_deposit_throttler field.
+  /// While setting this value returns an error, when queried it is set to the
+  /// value of the current minimum deposit value as determined by the dynamic
+  /// system for backward compatibility.
   var minDeposit: [Cosmos_Base_V1beta1_Coin] {
     get {return _storage._minDeposit}
     set {_uniqueStorage()._minDeposit = newValue}
@@ -598,6 +716,30 @@ struct Atomone_Gov_V1_Params {
     set {_uniqueStorage()._quorumCheckCount = newValue}
   }
 
+  var minDepositThrottler: Atomone_Gov_V1_MinDepositThrottler {
+    get {return _storage._minDepositThrottler ?? Atomone_Gov_V1_MinDepositThrottler()}
+    set {_uniqueStorage()._minDepositThrottler = newValue}
+  }
+  /// Returns true if `minDepositThrottler` has been explicitly set.
+  var hasMinDepositThrottler: Bool {return _storage._minDepositThrottler != nil}
+  /// Clears the value of `minDepositThrottler`. Subsequent reads from it will return its default value.
+  mutating func clearMinDepositThrottler() {_uniqueStorage()._minDepositThrottler = nil}
+
+  var minInitialDepositThrottler: Atomone_Gov_V1_MinInitialDepositThrottler {
+    get {return _storage._minInitialDepositThrottler ?? Atomone_Gov_V1_MinInitialDepositThrottler()}
+    set {_uniqueStorage()._minInitialDepositThrottler = newValue}
+  }
+  /// Returns true if `minInitialDepositThrottler` has been explicitly set.
+  var hasMinInitialDepositThrottler: Bool {return _storage._minInitialDepositThrottler != nil}
+  /// Clears the value of `minInitialDepositThrottler`. Subsequent reads from it will return its default value.
+  mutating func clearMinInitialDepositThrottler() {_uniqueStorage()._minInitialDepositThrottler = nil}
+
+  /// Minimum proportion of No Votes for a proposal deposit to be burnt.
+  var burnDepositNoThreshold: String {
+    get {return _storage._burnDepositNoThreshold}
+    set {_uniqueStorage()._burnDepositNoThreshold = newValue}
+  }
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -610,6 +752,7 @@ extension Atomone_Gov_V1_VoteOption: @unchecked Sendable {}
 extension Atomone_Gov_V1_ProposalStatus: @unchecked Sendable {}
 extension Atomone_Gov_V1_WeightedVoteOption: @unchecked Sendable {}
 extension Atomone_Gov_V1_Deposit: @unchecked Sendable {}
+extension Atomone_Gov_V1_LastMinDeposit: @unchecked Sendable {}
 extension Atomone_Gov_V1_Proposal: @unchecked Sendable {}
 extension Atomone_Gov_V1_TallyResult: @unchecked Sendable {}
 extension Atomone_Gov_V1_Vote: @unchecked Sendable {}
@@ -617,6 +760,8 @@ extension Atomone_Gov_V1_QuorumCheckQueueEntry: @unchecked Sendable {}
 extension Atomone_Gov_V1_DepositParams: @unchecked Sendable {}
 extension Atomone_Gov_V1_VotingParams: @unchecked Sendable {}
 extension Atomone_Gov_V1_TallyParams: @unchecked Sendable {}
+extension Atomone_Gov_V1_MinDepositThrottler: @unchecked Sendable {}
+extension Atomone_Gov_V1_MinInitialDepositThrottler: @unchecked Sendable {}
 extension Atomone_Gov_V1_Params: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
@@ -721,6 +866,48 @@ extension Atomone_Gov_V1_Deposit: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     if lhs.proposalID != rhs.proposalID {return false}
     if lhs.depositor != rhs.depositor {return false}
     if lhs.amount != rhs.amount {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Atomone_Gov_V1_LastMinDeposit: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".LastMinDeposit"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "value"),
+    2: .same(proto: "time"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.value) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._time) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if !self.value.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.value, fieldNumber: 1)
+    }
+    try { if let v = self._time {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Atomone_Gov_V1_LastMinDeposit, rhs: Atomone_Gov_V1_LastMinDeposit) -> Bool {
+    if lhs.value != rhs.value {return false}
+    if lhs._time != rhs._time {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -1172,6 +1359,138 @@ extension Atomone_Gov_V1_TallyParams: SwiftProtobuf.Message, SwiftProtobuf._Mess
   }
 }
 
+extension Atomone_Gov_V1_MinDepositThrottler: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MinDepositThrottler"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "floor_value"),
+    2: .standard(proto: "update_period"),
+    3: .standard(proto: "target_active_proposals"),
+    4: .standard(proto: "increase_ratio"),
+    5: .standard(proto: "decrease_ratio"),
+    6: .standard(proto: "decrease_sensitivity_target_distance"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.floorValue) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._updatePeriod) }()
+      case 3: try { try decoder.decodeSingularUInt64Field(value: &self.targetActiveProposals) }()
+      case 4: try { try decoder.decodeSingularStringField(value: &self.increaseRatio) }()
+      case 5: try { try decoder.decodeSingularStringField(value: &self.decreaseRatio) }()
+      case 6: try { try decoder.decodeSingularUInt64Field(value: &self.decreaseSensitivityTargetDistance) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if !self.floorValue.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.floorValue, fieldNumber: 1)
+    }
+    try { if let v = self._updatePeriod {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
+    if self.targetActiveProposals != 0 {
+      try visitor.visitSingularUInt64Field(value: self.targetActiveProposals, fieldNumber: 3)
+    }
+    if !self.increaseRatio.isEmpty {
+      try visitor.visitSingularStringField(value: self.increaseRatio, fieldNumber: 4)
+    }
+    if !self.decreaseRatio.isEmpty {
+      try visitor.visitSingularStringField(value: self.decreaseRatio, fieldNumber: 5)
+    }
+    if self.decreaseSensitivityTargetDistance != 0 {
+      try visitor.visitSingularUInt64Field(value: self.decreaseSensitivityTargetDistance, fieldNumber: 6)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Atomone_Gov_V1_MinDepositThrottler, rhs: Atomone_Gov_V1_MinDepositThrottler) -> Bool {
+    if lhs.floorValue != rhs.floorValue {return false}
+    if lhs._updatePeriod != rhs._updatePeriod {return false}
+    if lhs.targetActiveProposals != rhs.targetActiveProposals {return false}
+    if lhs.increaseRatio != rhs.increaseRatio {return false}
+    if lhs.decreaseRatio != rhs.decreaseRatio {return false}
+    if lhs.decreaseSensitivityTargetDistance != rhs.decreaseSensitivityTargetDistance {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Atomone_Gov_V1_MinInitialDepositThrottler: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MinInitialDepositThrottler"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "floor_value"),
+    2: .standard(proto: "update_period"),
+    3: .standard(proto: "target_proposals"),
+    4: .standard(proto: "increase_ratio"),
+    5: .standard(proto: "decrease_ratio"),
+    6: .standard(proto: "decrease_sensitivity_target_distance"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.floorValue) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._updatePeriod) }()
+      case 3: try { try decoder.decodeSingularUInt64Field(value: &self.targetProposals) }()
+      case 4: try { try decoder.decodeSingularStringField(value: &self.increaseRatio) }()
+      case 5: try { try decoder.decodeSingularStringField(value: &self.decreaseRatio) }()
+      case 6: try { try decoder.decodeSingularUInt64Field(value: &self.decreaseSensitivityTargetDistance) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if !self.floorValue.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.floorValue, fieldNumber: 1)
+    }
+    try { if let v = self._updatePeriod {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
+    if self.targetProposals != 0 {
+      try visitor.visitSingularUInt64Field(value: self.targetProposals, fieldNumber: 3)
+    }
+    if !self.increaseRatio.isEmpty {
+      try visitor.visitSingularStringField(value: self.increaseRatio, fieldNumber: 4)
+    }
+    if !self.decreaseRatio.isEmpty {
+      try visitor.visitSingularStringField(value: self.decreaseRatio, fieldNumber: 5)
+    }
+    if self.decreaseSensitivityTargetDistance != 0 {
+      try visitor.visitSingularUInt64Field(value: self.decreaseSensitivityTargetDistance, fieldNumber: 6)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Atomone_Gov_V1_MinInitialDepositThrottler, rhs: Atomone_Gov_V1_MinInitialDepositThrottler) -> Bool {
+    if lhs.floorValue != rhs.floorValue {return false}
+    if lhs._updatePeriod != rhs._updatePeriod {return false}
+    if lhs.targetProposals != rhs.targetProposals {return false}
+    if lhs.increaseRatio != rhs.increaseRatio {return false}
+    if lhs.decreaseRatio != rhs.decreaseRatio {return false}
+    if lhs.decreaseSensitivityTargetDistance != rhs.decreaseSensitivityTargetDistance {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
 extension Atomone_Gov_V1_Params: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".Params"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
@@ -1191,6 +1510,9 @@ extension Atomone_Gov_V1_Params: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     20: .standard(proto: "quorum_timeout"),
     21: .standard(proto: "max_voting_period_extension"),
     22: .standard(proto: "quorum_check_count"),
+    23: .standard(proto: "min_deposit_throttler"),
+    24: .standard(proto: "min_initial_deposit_throttler"),
+    25: .standard(proto: "burn_deposit_no_threshold"),
   ]
 
   fileprivate class _StorageClass {
@@ -1210,6 +1532,9 @@ extension Atomone_Gov_V1_Params: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     var _quorumTimeout: SwiftProtobuf.Google_Protobuf_Duration? = nil
     var _maxVotingPeriodExtension: SwiftProtobuf.Google_Protobuf_Duration? = nil
     var _quorumCheckCount: UInt64 = 0
+    var _minDepositThrottler: Atomone_Gov_V1_MinDepositThrottler? = nil
+    var _minInitialDepositThrottler: Atomone_Gov_V1_MinInitialDepositThrottler? = nil
+    var _burnDepositNoThreshold: String = String()
 
     static let defaultInstance = _StorageClass()
 
@@ -1232,6 +1557,9 @@ extension Atomone_Gov_V1_Params: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
       _quorumTimeout = source._quorumTimeout
       _maxVotingPeriodExtension = source._maxVotingPeriodExtension
       _quorumCheckCount = source._quorumCheckCount
+      _minDepositThrottler = source._minDepositThrottler
+      _minInitialDepositThrottler = source._minInitialDepositThrottler
+      _burnDepositNoThreshold = source._burnDepositNoThreshold
     }
   }
 
@@ -1266,6 +1594,9 @@ extension Atomone_Gov_V1_Params: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
         case 20: try { try decoder.decodeSingularMessageField(value: &_storage._quorumTimeout) }()
         case 21: try { try decoder.decodeSingularMessageField(value: &_storage._maxVotingPeriodExtension) }()
         case 22: try { try decoder.decodeSingularUInt64Field(value: &_storage._quorumCheckCount) }()
+        case 23: try { try decoder.decodeSingularMessageField(value: &_storage._minDepositThrottler) }()
+        case 24: try { try decoder.decodeSingularMessageField(value: &_storage._minInitialDepositThrottler) }()
+        case 25: try { try decoder.decodeSingularStringField(value: &_storage._burnDepositNoThreshold) }()
         default: break
         }
       }
@@ -1326,6 +1657,15 @@ extension Atomone_Gov_V1_Params: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
       if _storage._quorumCheckCount != 0 {
         try visitor.visitSingularUInt64Field(value: _storage._quorumCheckCount, fieldNumber: 22)
       }
+      try { if let v = _storage._minDepositThrottler {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 23)
+      } }()
+      try { if let v = _storage._minInitialDepositThrottler {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 24)
+      } }()
+      if !_storage._burnDepositNoThreshold.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._burnDepositNoThreshold, fieldNumber: 25)
+      }
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -1351,6 +1691,9 @@ extension Atomone_Gov_V1_Params: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
         if _storage._quorumTimeout != rhs_storage._quorumTimeout {return false}
         if _storage._maxVotingPeriodExtension != rhs_storage._maxVotingPeriodExtension {return false}
         if _storage._quorumCheckCount != rhs_storage._quorumCheckCount {return false}
+        if _storage._minDepositThrottler != rhs_storage._minDepositThrottler {return false}
+        if _storage._minInitialDepositThrottler != rhs_storage._minInitialDepositThrottler {return false}
+        if _storage._burnDepositNoThreshold != rhs_storage._burnDepositNoThreshold {return false}
         return true
       }
       if !storagesAreEqual {return false}

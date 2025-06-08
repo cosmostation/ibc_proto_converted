@@ -8382,7 +8382,7 @@ public final class QueryProto {
      *
      * <code>.atomone.gov.v1.VotingParams voting_params = 1 [json_name = "votingParams", deprecated = true];</code>
      * @deprecated atomone.gov.v1.QueryParamsResponse.voting_params is deprecated.
-     *     See atomone/gov/v1/query.proto;l=154
+     *     See atomone/gov/v1/query.proto;l=168
      * @return Whether the votingParams field is set.
      */
     @java.lang.Deprecated boolean hasVotingParams();
@@ -8394,7 +8394,7 @@ public final class QueryProto {
      *
      * <code>.atomone.gov.v1.VotingParams voting_params = 1 [json_name = "votingParams", deprecated = true];</code>
      * @deprecated atomone.gov.v1.QueryParamsResponse.voting_params is deprecated.
-     *     See atomone/gov/v1/query.proto;l=154
+     *     See atomone/gov/v1/query.proto;l=168
      * @return The votingParams.
      */
     @java.lang.Deprecated com.atomone.gov.v1.GovProto.VotingParams getVotingParams();
@@ -8416,7 +8416,7 @@ public final class QueryProto {
      *
      * <code>.atomone.gov.v1.DepositParams deposit_params = 2 [json_name = "depositParams", deprecated = true];</code>
      * @deprecated atomone.gov.v1.QueryParamsResponse.deposit_params is deprecated.
-     *     See atomone/gov/v1/query.proto;l=157
+     *     See atomone/gov/v1/query.proto;l=171
      * @return Whether the depositParams field is set.
      */
     @java.lang.Deprecated boolean hasDepositParams();
@@ -8428,7 +8428,7 @@ public final class QueryProto {
      *
      * <code>.atomone.gov.v1.DepositParams deposit_params = 2 [json_name = "depositParams", deprecated = true];</code>
      * @deprecated atomone.gov.v1.QueryParamsResponse.deposit_params is deprecated.
-     *     See atomone/gov/v1/query.proto;l=157
+     *     See atomone/gov/v1/query.proto;l=171
      * @return The depositParams.
      */
     @java.lang.Deprecated com.atomone.gov.v1.GovProto.DepositParams getDepositParams();
@@ -8450,7 +8450,7 @@ public final class QueryProto {
      *
      * <code>.atomone.gov.v1.TallyParams tally_params = 3 [json_name = "tallyParams", deprecated = true];</code>
      * @deprecated atomone.gov.v1.QueryParamsResponse.tally_params is deprecated.
-     *     See atomone/gov/v1/query.proto;l=160
+     *     See atomone/gov/v1/query.proto;l=174
      * @return Whether the tallyParams field is set.
      */
     @java.lang.Deprecated boolean hasTallyParams();
@@ -8462,7 +8462,7 @@ public final class QueryProto {
      *
      * <code>.atomone.gov.v1.TallyParams tally_params = 3 [json_name = "tallyParams", deprecated = true];</code>
      * @deprecated atomone.gov.v1.QueryParamsResponse.tally_params is deprecated.
-     *     See atomone/gov/v1/query.proto;l=160
+     *     See atomone/gov/v1/query.proto;l=174
      * @return The tallyParams.
      */
     @java.lang.Deprecated com.atomone.gov.v1.GovProto.TallyParams getTallyParams();
@@ -8558,7 +8558,7 @@ public final class QueryProto {
      *
      * <code>.atomone.gov.v1.VotingParams voting_params = 1 [json_name = "votingParams", deprecated = true];</code>
      * @deprecated atomone.gov.v1.QueryParamsResponse.voting_params is deprecated.
-     *     See atomone/gov/v1/query.proto;l=154
+     *     See atomone/gov/v1/query.proto;l=168
      * @return Whether the votingParams field is set.
      */
     @java.lang.Override
@@ -8573,7 +8573,7 @@ public final class QueryProto {
      *
      * <code>.atomone.gov.v1.VotingParams voting_params = 1 [json_name = "votingParams", deprecated = true];</code>
      * @deprecated atomone.gov.v1.QueryParamsResponse.voting_params is deprecated.
-     *     See atomone/gov/v1/query.proto;l=154
+     *     See atomone/gov/v1/query.proto;l=168
      * @return The votingParams.
      */
     @java.lang.Override
@@ -8603,7 +8603,7 @@ public final class QueryProto {
      *
      * <code>.atomone.gov.v1.DepositParams deposit_params = 2 [json_name = "depositParams", deprecated = true];</code>
      * @deprecated atomone.gov.v1.QueryParamsResponse.deposit_params is deprecated.
-     *     See atomone/gov/v1/query.proto;l=157
+     *     See atomone/gov/v1/query.proto;l=171
      * @return Whether the depositParams field is set.
      */
     @java.lang.Override
@@ -8618,7 +8618,7 @@ public final class QueryProto {
      *
      * <code>.atomone.gov.v1.DepositParams deposit_params = 2 [json_name = "depositParams", deprecated = true];</code>
      * @deprecated atomone.gov.v1.QueryParamsResponse.deposit_params is deprecated.
-     *     See atomone/gov/v1/query.proto;l=157
+     *     See atomone/gov/v1/query.proto;l=171
      * @return The depositParams.
      */
     @java.lang.Override
@@ -8648,7 +8648,7 @@ public final class QueryProto {
      *
      * <code>.atomone.gov.v1.TallyParams tally_params = 3 [json_name = "tallyParams", deprecated = true];</code>
      * @deprecated atomone.gov.v1.QueryParamsResponse.tally_params is deprecated.
-     *     See atomone/gov/v1/query.proto;l=160
+     *     See atomone/gov/v1/query.proto;l=174
      * @return Whether the tallyParams field is set.
      */
     @java.lang.Override
@@ -8663,7 +8663,7 @@ public final class QueryProto {
      *
      * <code>.atomone.gov.v1.TallyParams tally_params = 3 [json_name = "tallyParams", deprecated = true];</code>
      * @deprecated atomone.gov.v1.QueryParamsResponse.tally_params is deprecated.
-     *     See atomone/gov/v1/query.proto;l=160
+     *     See atomone/gov/v1/query.proto;l=174
      * @return The tallyParams.
      */
     @java.lang.Override
@@ -9188,7 +9188,7 @@ public final class QueryProto {
        *
        * <code>.atomone.gov.v1.VotingParams voting_params = 1 [json_name = "votingParams", deprecated = true];</code>
        * @deprecated atomone.gov.v1.QueryParamsResponse.voting_params is deprecated.
-       *     See atomone/gov/v1/query.proto;l=154
+       *     See atomone/gov/v1/query.proto;l=168
        * @return Whether the votingParams field is set.
        */
       @java.lang.Deprecated public boolean hasVotingParams() {
@@ -9202,7 +9202,7 @@ public final class QueryProto {
        *
        * <code>.atomone.gov.v1.VotingParams voting_params = 1 [json_name = "votingParams", deprecated = true];</code>
        * @deprecated atomone.gov.v1.QueryParamsResponse.voting_params is deprecated.
-       *     See atomone/gov/v1/query.proto;l=154
+       *     See atomone/gov/v1/query.proto;l=168
        * @return The votingParams.
        */
       @java.lang.Deprecated public com.atomone.gov.v1.GovProto.VotingParams getVotingParams() {
@@ -9356,7 +9356,7 @@ public final class QueryProto {
        *
        * <code>.atomone.gov.v1.DepositParams deposit_params = 2 [json_name = "depositParams", deprecated = true];</code>
        * @deprecated atomone.gov.v1.QueryParamsResponse.deposit_params is deprecated.
-       *     See atomone/gov/v1/query.proto;l=157
+       *     See atomone/gov/v1/query.proto;l=171
        * @return Whether the depositParams field is set.
        */
       @java.lang.Deprecated public boolean hasDepositParams() {
@@ -9370,7 +9370,7 @@ public final class QueryProto {
        *
        * <code>.atomone.gov.v1.DepositParams deposit_params = 2 [json_name = "depositParams", deprecated = true];</code>
        * @deprecated atomone.gov.v1.QueryParamsResponse.deposit_params is deprecated.
-       *     See atomone/gov/v1/query.proto;l=157
+       *     See atomone/gov/v1/query.proto;l=171
        * @return The depositParams.
        */
       @java.lang.Deprecated public com.atomone.gov.v1.GovProto.DepositParams getDepositParams() {
@@ -9524,7 +9524,7 @@ public final class QueryProto {
        *
        * <code>.atomone.gov.v1.TallyParams tally_params = 3 [json_name = "tallyParams", deprecated = true];</code>
        * @deprecated atomone.gov.v1.QueryParamsResponse.tally_params is deprecated.
-       *     See atomone/gov/v1/query.proto;l=160
+       *     See atomone/gov/v1/query.proto;l=174
        * @return Whether the tallyParams field is set.
        */
       @java.lang.Deprecated public boolean hasTallyParams() {
@@ -9538,7 +9538,7 @@ public final class QueryProto {
        *
        * <code>.atomone.gov.v1.TallyParams tally_params = 3 [json_name = "tallyParams", deprecated = true];</code>
        * @deprecated atomone.gov.v1.QueryParamsResponse.tally_params is deprecated.
-       *     See atomone/gov/v1/query.proto;l=160
+       *     See atomone/gov/v1/query.proto;l=174
        * @return The tallyParams.
        */
       @java.lang.Deprecated public com.atomone.gov.v1.GovProto.TallyParams getTallyParams() {
@@ -14366,6 +14366,2620 @@ public final class QueryProto {
 
   }
 
+  public interface QueryMinDepositRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:atomone.gov.v1.QueryMinDepositRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryMinDepositRequest is the request type for the Query/MinDeposit RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code atomone.gov.v1.QueryMinDepositRequest}
+   */
+  public static final class QueryMinDepositRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:atomone.gov.v1.QueryMinDepositRequest)
+      QueryMinDepositRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryMinDepositRequest.newBuilder() to construct.
+    private QueryMinDepositRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryMinDepositRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryMinDepositRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.atomone.gov.v1.QueryProto.internal_static_atomone_gov_v1_QueryMinDepositRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.atomone.gov.v1.QueryProto.internal_static_atomone_gov_v1_QueryMinDepositRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.atomone.gov.v1.QueryProto.QueryMinDepositRequest.class, com.atomone.gov.v1.QueryProto.QueryMinDepositRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.atomone.gov.v1.QueryProto.QueryMinDepositRequest)) {
+        return super.equals(obj);
+      }
+      com.atomone.gov.v1.QueryProto.QueryMinDepositRequest other = (com.atomone.gov.v1.QueryProto.QueryMinDepositRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.atomone.gov.v1.QueryProto.QueryMinDepositRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryMinDepositRequest is the request type for the Query/MinDeposit RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code atomone.gov.v1.QueryMinDepositRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:atomone.gov.v1.QueryMinDepositRequest)
+        com.atomone.gov.v1.QueryProto.QueryMinDepositRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.atomone.gov.v1.QueryProto.internal_static_atomone_gov_v1_QueryMinDepositRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.atomone.gov.v1.QueryProto.internal_static_atomone_gov_v1_QueryMinDepositRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.atomone.gov.v1.QueryProto.QueryMinDepositRequest.class, com.atomone.gov.v1.QueryProto.QueryMinDepositRequest.Builder.class);
+      }
+
+      // Construct using com.atomone.gov.v1.QueryProto.QueryMinDepositRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.atomone.gov.v1.QueryProto.internal_static_atomone_gov_v1_QueryMinDepositRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.atomone.gov.v1.QueryProto.QueryMinDepositRequest getDefaultInstanceForType() {
+        return com.atomone.gov.v1.QueryProto.QueryMinDepositRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.atomone.gov.v1.QueryProto.QueryMinDepositRequest build() {
+        com.atomone.gov.v1.QueryProto.QueryMinDepositRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.atomone.gov.v1.QueryProto.QueryMinDepositRequest buildPartial() {
+        com.atomone.gov.v1.QueryProto.QueryMinDepositRequest result = new com.atomone.gov.v1.QueryProto.QueryMinDepositRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.atomone.gov.v1.QueryProto.QueryMinDepositRequest) {
+          return mergeFrom((com.atomone.gov.v1.QueryProto.QueryMinDepositRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.atomone.gov.v1.QueryProto.QueryMinDepositRequest other) {
+        if (other == com.atomone.gov.v1.QueryProto.QueryMinDepositRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:atomone.gov.v1.QueryMinDepositRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:atomone.gov.v1.QueryMinDepositRequest)
+    private static final com.atomone.gov.v1.QueryProto.QueryMinDepositRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.atomone.gov.v1.QueryProto.QueryMinDepositRequest();
+    }
+
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryMinDepositRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryMinDepositRequest>() {
+      @java.lang.Override
+      public QueryMinDepositRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryMinDepositRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryMinDepositRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.atomone.gov.v1.QueryProto.QueryMinDepositRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryMinDepositResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:atomone.gov.v1.QueryMinDepositResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getMinDepositList();
+    /**
+     * <pre>
+     * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getMinDeposit(int index);
+    /**
+     * <pre>
+     * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+     */
+    int getMinDepositCount();
+    /**
+     * <pre>
+     * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getMinDepositOrBuilderList();
+    /**
+     * <pre>
+     * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getMinDepositOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryMinDepositResponse is the response type for the Query/MinDeposit RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code atomone.gov.v1.QueryMinDepositResponse}
+   */
+  public static final class QueryMinDepositResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:atomone.gov.v1.QueryMinDepositResponse)
+      QueryMinDepositResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryMinDepositResponse.newBuilder() to construct.
+    private QueryMinDepositResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryMinDepositResponse() {
+      minDeposit_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryMinDepositResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.atomone.gov.v1.QueryProto.internal_static_atomone_gov_v1_QueryMinDepositResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.atomone.gov.v1.QueryProto.internal_static_atomone_gov_v1_QueryMinDepositResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.atomone.gov.v1.QueryProto.QueryMinDepositResponse.class, com.atomone.gov.v1.QueryProto.QueryMinDepositResponse.Builder.class);
+    }
+
+    public static final int MIN_DEPOSIT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> minDeposit_;
+    /**
+     * <pre>
+     * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getMinDepositList() {
+      return minDeposit_;
+    }
+    /**
+     * <pre>
+     * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getMinDepositOrBuilderList() {
+      return minDeposit_;
+    }
+    /**
+     * <pre>
+     * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getMinDepositCount() {
+      return minDeposit_.size();
+    }
+    /**
+     * <pre>
+     * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getMinDeposit(int index) {
+      return minDeposit_.get(index);
+    }
+    /**
+     * <pre>
+     * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getMinDepositOrBuilder(
+        int index) {
+      return minDeposit_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < minDeposit_.size(); i++) {
+        output.writeMessage(1, minDeposit_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < minDeposit_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, minDeposit_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.atomone.gov.v1.QueryProto.QueryMinDepositResponse)) {
+        return super.equals(obj);
+      }
+      com.atomone.gov.v1.QueryProto.QueryMinDepositResponse other = (com.atomone.gov.v1.QueryProto.QueryMinDepositResponse) obj;
+
+      if (!getMinDepositList()
+          .equals(other.getMinDepositList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getMinDepositCount() > 0) {
+        hash = (37 * hash) + MIN_DEPOSIT_FIELD_NUMBER;
+        hash = (53 * hash) + getMinDepositList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.atomone.gov.v1.QueryProto.QueryMinDepositResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryMinDepositResponse is the response type for the Query/MinDeposit RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code atomone.gov.v1.QueryMinDepositResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:atomone.gov.v1.QueryMinDepositResponse)
+        com.atomone.gov.v1.QueryProto.QueryMinDepositResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.atomone.gov.v1.QueryProto.internal_static_atomone_gov_v1_QueryMinDepositResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.atomone.gov.v1.QueryProto.internal_static_atomone_gov_v1_QueryMinDepositResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.atomone.gov.v1.QueryProto.QueryMinDepositResponse.class, com.atomone.gov.v1.QueryProto.QueryMinDepositResponse.Builder.class);
+      }
+
+      // Construct using com.atomone.gov.v1.QueryProto.QueryMinDepositResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (minDepositBuilder_ == null) {
+          minDeposit_ = java.util.Collections.emptyList();
+        } else {
+          minDeposit_ = null;
+          minDepositBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.atomone.gov.v1.QueryProto.internal_static_atomone_gov_v1_QueryMinDepositResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.atomone.gov.v1.QueryProto.QueryMinDepositResponse getDefaultInstanceForType() {
+        return com.atomone.gov.v1.QueryProto.QueryMinDepositResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.atomone.gov.v1.QueryProto.QueryMinDepositResponse build() {
+        com.atomone.gov.v1.QueryProto.QueryMinDepositResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.atomone.gov.v1.QueryProto.QueryMinDepositResponse buildPartial() {
+        com.atomone.gov.v1.QueryProto.QueryMinDepositResponse result = new com.atomone.gov.v1.QueryProto.QueryMinDepositResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.atomone.gov.v1.QueryProto.QueryMinDepositResponse result) {
+        if (minDepositBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            minDeposit_ = java.util.Collections.unmodifiableList(minDeposit_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.minDeposit_ = minDeposit_;
+        } else {
+          result.minDeposit_ = minDepositBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.atomone.gov.v1.QueryProto.QueryMinDepositResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.atomone.gov.v1.QueryProto.QueryMinDepositResponse) {
+          return mergeFrom((com.atomone.gov.v1.QueryProto.QueryMinDepositResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.atomone.gov.v1.QueryProto.QueryMinDepositResponse other) {
+        if (other == com.atomone.gov.v1.QueryProto.QueryMinDepositResponse.getDefaultInstance()) return this;
+        if (minDepositBuilder_ == null) {
+          if (!other.minDeposit_.isEmpty()) {
+            if (minDeposit_.isEmpty()) {
+              minDeposit_ = other.minDeposit_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureMinDepositIsMutable();
+              minDeposit_.addAll(other.minDeposit_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.minDeposit_.isEmpty()) {
+            if (minDepositBuilder_.isEmpty()) {
+              minDepositBuilder_.dispose();
+              minDepositBuilder_ = null;
+              minDeposit_ = other.minDeposit_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              minDepositBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMinDepositFieldBuilder() : null;
+            } else {
+              minDepositBuilder_.addAllMessages(other.minDeposit_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (minDepositBuilder_ == null) {
+                  ensureMinDepositIsMutable();
+                  minDeposit_.add(m);
+                } else {
+                  minDepositBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> minDeposit_ =
+        java.util.Collections.emptyList();
+      private void ensureMinDepositIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          minDeposit_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(minDeposit_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> minDepositBuilder_;
+
+      /**
+       * <pre>
+       * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getMinDepositList() {
+        if (minDepositBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(minDeposit_);
+        } else {
+          return minDepositBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public int getMinDepositCount() {
+        if (minDepositBuilder_ == null) {
+          return minDeposit_.size();
+        } else {
+          return minDepositBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getMinDeposit(int index) {
+        if (minDepositBuilder_ == null) {
+          return minDeposit_.get(index);
+        } else {
+          return minDepositBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinDeposit(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (minDepositBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMinDepositIsMutable();
+          minDeposit_.set(index, value);
+          onChanged();
+        } else {
+          minDepositBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinDeposit(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (minDepositBuilder_ == null) {
+          ensureMinDepositIsMutable();
+          minDeposit_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          minDepositBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMinDeposit(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (minDepositBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMinDepositIsMutable();
+          minDeposit_.add(value);
+          onChanged();
+        } else {
+          minDepositBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMinDeposit(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (minDepositBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMinDepositIsMutable();
+          minDeposit_.add(index, value);
+          onChanged();
+        } else {
+          minDepositBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMinDeposit(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (minDepositBuilder_ == null) {
+          ensureMinDepositIsMutable();
+          minDeposit_.add(builderForValue.build());
+          onChanged();
+        } else {
+          minDepositBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMinDeposit(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (minDepositBuilder_ == null) {
+          ensureMinDepositIsMutable();
+          minDeposit_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          minDepositBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllMinDeposit(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (minDepositBuilder_ == null) {
+          ensureMinDepositIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, minDeposit_);
+          onChanged();
+        } else {
+          minDepositBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMinDeposit() {
+        if (minDepositBuilder_ == null) {
+          minDeposit_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          minDepositBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeMinDeposit(int index) {
+        if (minDepositBuilder_ == null) {
+          ensureMinDepositIsMutable();
+          minDeposit_.remove(index);
+          onChanged();
+        } else {
+          minDepositBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getMinDepositBuilder(
+          int index) {
+        return getMinDepositFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getMinDepositOrBuilder(
+          int index) {
+        if (minDepositBuilder_ == null) {
+          return minDeposit_.get(index);  } else {
+          return minDepositBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getMinDepositOrBuilderList() {
+        if (minDepositBuilder_ != null) {
+          return minDepositBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(minDeposit_);
+        }
+      }
+      /**
+       * <pre>
+       * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addMinDepositBuilder() {
+        return getMinDepositFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addMinDepositBuilder(
+          int index) {
+        return getMinDepositFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * min_deposit defines the minimum deposit required for a proposal to enter voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getMinDepositBuilderList() {
+        return getMinDepositFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getMinDepositFieldBuilder() {
+        if (minDepositBuilder_ == null) {
+          minDepositBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  minDeposit_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          minDeposit_ = null;
+        }
+        return minDepositBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:atomone.gov.v1.QueryMinDepositResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:atomone.gov.v1.QueryMinDepositResponse)
+    private static final com.atomone.gov.v1.QueryProto.QueryMinDepositResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.atomone.gov.v1.QueryProto.QueryMinDepositResponse();
+    }
+
+    public static com.atomone.gov.v1.QueryProto.QueryMinDepositResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryMinDepositResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryMinDepositResponse>() {
+      @java.lang.Override
+      public QueryMinDepositResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryMinDepositResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryMinDepositResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.atomone.gov.v1.QueryProto.QueryMinDepositResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryMinInitialDepositRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:atomone.gov.v1.QueryMinInitialDepositRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryMinInitialDepositRequest is the request type for the Query/MinInitialDeposit RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code atomone.gov.v1.QueryMinInitialDepositRequest}
+   */
+  public static final class QueryMinInitialDepositRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:atomone.gov.v1.QueryMinInitialDepositRequest)
+      QueryMinInitialDepositRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryMinInitialDepositRequest.newBuilder() to construct.
+    private QueryMinInitialDepositRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryMinInitialDepositRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryMinInitialDepositRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.atomone.gov.v1.QueryProto.internal_static_atomone_gov_v1_QueryMinInitialDepositRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.atomone.gov.v1.QueryProto.internal_static_atomone_gov_v1_QueryMinInitialDepositRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest.class, com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest)) {
+        return super.equals(obj);
+      }
+      com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest other = (com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryMinInitialDepositRequest is the request type for the Query/MinInitialDeposit RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code atomone.gov.v1.QueryMinInitialDepositRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:atomone.gov.v1.QueryMinInitialDepositRequest)
+        com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.atomone.gov.v1.QueryProto.internal_static_atomone_gov_v1_QueryMinInitialDepositRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.atomone.gov.v1.QueryProto.internal_static_atomone_gov_v1_QueryMinInitialDepositRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest.class, com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest.Builder.class);
+      }
+
+      // Construct using com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.atomone.gov.v1.QueryProto.internal_static_atomone_gov_v1_QueryMinInitialDepositRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest getDefaultInstanceForType() {
+        return com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest build() {
+        com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest buildPartial() {
+        com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest result = new com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest) {
+          return mergeFrom((com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest other) {
+        if (other == com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:atomone.gov.v1.QueryMinInitialDepositRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:atomone.gov.v1.QueryMinInitialDepositRequest)
+    private static final com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest();
+    }
+
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryMinInitialDepositRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryMinInitialDepositRequest>() {
+      @java.lang.Override
+      public QueryMinInitialDepositRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryMinInitialDepositRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryMinInitialDepositRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryMinInitialDepositResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:atomone.gov.v1.QueryMinInitialDepositResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getMinInitialDepositList();
+    /**
+     * <pre>
+     * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getMinInitialDeposit(int index);
+    /**
+     * <pre>
+     * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+     */
+    int getMinInitialDepositCount();
+    /**
+     * <pre>
+     * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getMinInitialDepositOrBuilderList();
+    /**
+     * <pre>
+     * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getMinInitialDepositOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryMinInitialDepositResponse is the response type for the Query/MinInitialDeposit RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code atomone.gov.v1.QueryMinInitialDepositResponse}
+   */
+  public static final class QueryMinInitialDepositResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:atomone.gov.v1.QueryMinInitialDepositResponse)
+      QueryMinInitialDepositResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryMinInitialDepositResponse.newBuilder() to construct.
+    private QueryMinInitialDepositResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryMinInitialDepositResponse() {
+      minInitialDeposit_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryMinInitialDepositResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.atomone.gov.v1.QueryProto.internal_static_atomone_gov_v1_QueryMinInitialDepositResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.atomone.gov.v1.QueryProto.internal_static_atomone_gov_v1_QueryMinInitialDepositResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse.class, com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse.Builder.class);
+    }
+
+    public static final int MIN_INITIAL_DEPOSIT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> minInitialDeposit_;
+    /**
+     * <pre>
+     * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getMinInitialDepositList() {
+      return minInitialDeposit_;
+    }
+    /**
+     * <pre>
+     * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getMinInitialDepositOrBuilderList() {
+      return minInitialDeposit_;
+    }
+    /**
+     * <pre>
+     * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getMinInitialDepositCount() {
+      return minInitialDeposit_.size();
+    }
+    /**
+     * <pre>
+     * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getMinInitialDeposit(int index) {
+      return minInitialDeposit_.get(index);
+    }
+    /**
+     * <pre>
+     * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getMinInitialDepositOrBuilder(
+        int index) {
+      return minInitialDeposit_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < minInitialDeposit_.size(); i++) {
+        output.writeMessage(1, minInitialDeposit_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < minInitialDeposit_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, minInitialDeposit_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse)) {
+        return super.equals(obj);
+      }
+      com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse other = (com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse) obj;
+
+      if (!getMinInitialDepositList()
+          .equals(other.getMinInitialDepositList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getMinInitialDepositCount() > 0) {
+        hash = (37 * hash) + MIN_INITIAL_DEPOSIT_FIELD_NUMBER;
+        hash = (53 * hash) + getMinInitialDepositList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryMinInitialDepositResponse is the response type for the Query/MinInitialDeposit RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code atomone.gov.v1.QueryMinInitialDepositResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:atomone.gov.v1.QueryMinInitialDepositResponse)
+        com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.atomone.gov.v1.QueryProto.internal_static_atomone_gov_v1_QueryMinInitialDepositResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.atomone.gov.v1.QueryProto.internal_static_atomone_gov_v1_QueryMinInitialDepositResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse.class, com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse.Builder.class);
+      }
+
+      // Construct using com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (minInitialDepositBuilder_ == null) {
+          minInitialDeposit_ = java.util.Collections.emptyList();
+        } else {
+          minInitialDeposit_ = null;
+          minInitialDepositBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.atomone.gov.v1.QueryProto.internal_static_atomone_gov_v1_QueryMinInitialDepositResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse getDefaultInstanceForType() {
+        return com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse build() {
+        com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse buildPartial() {
+        com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse result = new com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse result) {
+        if (minInitialDepositBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            minInitialDeposit_ = java.util.Collections.unmodifiableList(minInitialDeposit_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.minInitialDeposit_ = minInitialDeposit_;
+        } else {
+          result.minInitialDeposit_ = minInitialDepositBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse) {
+          return mergeFrom((com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse other) {
+        if (other == com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse.getDefaultInstance()) return this;
+        if (minInitialDepositBuilder_ == null) {
+          if (!other.minInitialDeposit_.isEmpty()) {
+            if (minInitialDeposit_.isEmpty()) {
+              minInitialDeposit_ = other.minInitialDeposit_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureMinInitialDepositIsMutable();
+              minInitialDeposit_.addAll(other.minInitialDeposit_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.minInitialDeposit_.isEmpty()) {
+            if (minInitialDepositBuilder_.isEmpty()) {
+              minInitialDepositBuilder_.dispose();
+              minInitialDepositBuilder_ = null;
+              minInitialDeposit_ = other.minInitialDeposit_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              minInitialDepositBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMinInitialDepositFieldBuilder() : null;
+            } else {
+              minInitialDepositBuilder_.addAllMessages(other.minInitialDeposit_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (minInitialDepositBuilder_ == null) {
+                  ensureMinInitialDepositIsMutable();
+                  minInitialDeposit_.add(m);
+                } else {
+                  minInitialDepositBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> minInitialDeposit_ =
+        java.util.Collections.emptyList();
+      private void ensureMinInitialDepositIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          minInitialDeposit_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(minInitialDeposit_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> minInitialDepositBuilder_;
+
+      /**
+       * <pre>
+       * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getMinInitialDepositList() {
+        if (minInitialDepositBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(minInitialDeposit_);
+        } else {
+          return minInitialDepositBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public int getMinInitialDepositCount() {
+        if (minInitialDepositBuilder_ == null) {
+          return minInitialDeposit_.size();
+        } else {
+          return minInitialDepositBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getMinInitialDeposit(int index) {
+        if (minInitialDepositBuilder_ == null) {
+          return minInitialDeposit_.get(index);
+        } else {
+          return minInitialDepositBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinInitialDeposit(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (minInitialDepositBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMinInitialDepositIsMutable();
+          minInitialDeposit_.set(index, value);
+          onChanged();
+        } else {
+          minInitialDepositBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinInitialDeposit(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (minInitialDepositBuilder_ == null) {
+          ensureMinInitialDepositIsMutable();
+          minInitialDeposit_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          minInitialDepositBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMinInitialDeposit(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (minInitialDepositBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMinInitialDepositIsMutable();
+          minInitialDeposit_.add(value);
+          onChanged();
+        } else {
+          minInitialDepositBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMinInitialDeposit(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (minInitialDepositBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMinInitialDepositIsMutable();
+          minInitialDeposit_.add(index, value);
+          onChanged();
+        } else {
+          minInitialDepositBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMinInitialDeposit(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (minInitialDepositBuilder_ == null) {
+          ensureMinInitialDepositIsMutable();
+          minInitialDeposit_.add(builderForValue.build());
+          onChanged();
+        } else {
+          minInitialDepositBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMinInitialDeposit(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (minInitialDepositBuilder_ == null) {
+          ensureMinInitialDepositIsMutable();
+          minInitialDeposit_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          minInitialDepositBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllMinInitialDeposit(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (minInitialDepositBuilder_ == null) {
+          ensureMinInitialDepositIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, minInitialDeposit_);
+          onChanged();
+        } else {
+          minInitialDepositBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMinInitialDeposit() {
+        if (minInitialDepositBuilder_ == null) {
+          minInitialDeposit_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          minInitialDepositBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeMinInitialDeposit(int index) {
+        if (minInitialDepositBuilder_ == null) {
+          ensureMinInitialDepositIsMutable();
+          minInitialDeposit_.remove(index);
+          onChanged();
+        } else {
+          minInitialDepositBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getMinInitialDepositBuilder(
+          int index) {
+        return getMinInitialDepositFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getMinInitialDepositOrBuilder(
+          int index) {
+        if (minInitialDepositBuilder_ == null) {
+          return minInitialDeposit_.get(index);  } else {
+          return minInitialDepositBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getMinInitialDepositOrBuilderList() {
+        if (minInitialDepositBuilder_ != null) {
+          return minInitialDepositBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(minInitialDeposit_);
+        }
+      }
+      /**
+       * <pre>
+       * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addMinInitialDepositBuilder() {
+        return getMinInitialDepositFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addMinInitialDepositBuilder(
+          int index) {
+        return getMinInitialDepositFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin min_initial_deposit = 1 [json_name = "minInitialDeposit", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getMinInitialDepositBuilderList() {
+        return getMinInitialDepositFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getMinInitialDepositFieldBuilder() {
+        if (minInitialDepositBuilder_ == null) {
+          minInitialDepositBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  minInitialDeposit_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          minInitialDeposit_ = null;
+        }
+        return minInitialDepositBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:atomone.gov.v1.QueryMinInitialDepositResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:atomone.gov.v1.QueryMinInitialDepositResponse)
+    private static final com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse();
+    }
+
+    public static com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryMinInitialDepositResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryMinInitialDepositResponse>() {
+      @java.lang.Override
+      public QueryMinInitialDepositResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryMinInitialDepositResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryMinInitialDepositResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_atomone_gov_v1_QueryConstitutionRequest_descriptor;
   private static final 
@@ -14456,6 +17070,26 @@ public final class QueryProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_atomone_gov_v1_QueryTallyResultResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_atomone_gov_v1_QueryMinDepositRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_atomone_gov_v1_QueryMinDepositRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_atomone_gov_v1_QueryMinDepositResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_atomone_gov_v1_QueryMinDepositResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_atomone_gov_v1_QueryMinInitialDepositRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_atomone_gov_v1_QueryMinInitialDepositRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_atomone_gov_v1_QueryMinInitialDepositResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_atomone_gov_v1_QueryMinInitialDepositResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -14466,101 +17100,118 @@ public final class QueryProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\032atomone/gov/v1/query.proto\022\016atomone.go" +
-      "v.v1\032*cosmos/base/query/v1beta1/paginati" +
-      "on.proto\032\034google/api/annotations.proto\032\030" +
-      "atomone/gov/v1/gov.proto\032\031cosmos_proto/c" +
-      "osmos.proto\"\032\n\030QueryConstitutionRequest\"" +
-      "?\n\031QueryConstitutionResponse\022\"\n\014constitu" +
-      "tion\030\001 \001(\tR\014constitution\"7\n\024QueryProposa" +
-      "lRequest\022\037\n\013proposal_id\030\001 \001(\004R\nproposalI" +
-      "d\"M\n\025QueryProposalResponse\0224\n\010proposal\030\001" +
-      " \001(\0132\030.atomone.gov.v1.ProposalR\010proposal" +
-      "\"\220\002\n\025QueryProposalsRequest\022G\n\017proposal_s" +
-      "tatus\030\001 \001(\0162\036.atomone.gov.v1.ProposalSta" +
-      "tusR\016proposalStatus\022.\n\005voter\030\002 \001(\tB\030\322\264-\024" +
-      "cosmos.AddressStringR\005voter\0226\n\tdepositor" +
-      "\030\003 \001(\tB\030\322\264-\024cosmos.AddressStringR\tdeposi" +
-      "tor\022F\n\npagination\030\004 \001(\0132&.cosmos.base.qu" +
-      "ery.v1beta1.PageRequestR\npagination\"\231\001\n\026" +
-      "QueryProposalsResponse\0226\n\tproposals\030\001 \003(" +
-      "\0132\030.atomone.gov.v1.ProposalR\tproposals\022G" +
-      "\n\npagination\030\002 \001(\0132\'.cosmos.base.query.v" +
-      "1beta1.PageResponseR\npagination\"c\n\020Query" +
-      "VoteRequest\022\037\n\013proposal_id\030\001 \001(\004R\npropos" +
-      "alId\022.\n\005voter\030\002 \001(\tB\030\322\264-\024cosmos.AddressS" +
-      "tringR\005voter\"=\n\021QueryVoteResponse\022(\n\004vot" +
-      "e\030\001 \001(\0132\024.atomone.gov.v1.VoteR\004vote\"|\n\021Q" +
-      "ueryVotesRequest\022\037\n\013proposal_id\030\001 \001(\004R\np" +
-      "roposalId\022F\n\npagination\030\002 \001(\0132&.cosmos.b" +
-      "ase.query.v1beta1.PageRequestR\npaginatio" +
-      "n\"\211\001\n\022QueryVotesResponse\022*\n\005votes\030\001 \003(\0132" +
-      "\024.atomone.gov.v1.VoteR\005votes\022G\n\npaginati" +
-      "on\030\002 \001(\0132\'.cosmos.base.query.v1beta1.Pag" +
-      "eResponseR\npagination\"5\n\022QueryParamsRequ" +
-      "est\022\037\n\013params_type\030\001 \001(\tR\nparamsType\"\232\002\n" +
-      "\023QueryParamsResponse\022E\n\rvoting_params\030\001 " +
-      "\001(\0132\034.atomone.gov.v1.VotingParamsB\002\030\001R\014v" +
-      "otingParams\022H\n\016deposit_params\030\002 \001(\0132\035.at" +
-      "omone.gov.v1.DepositParamsB\002\030\001R\rdepositP" +
-      "arams\022B\n\014tally_params\030\003 \001(\0132\033.atomone.go" +
-      "v.v1.TallyParamsB\002\030\001R\013tallyParams\022.\n\006par" +
-      "ams\030\004 \001(\0132\026.atomone.gov.v1.ParamsR\006param" +
-      "s\"n\n\023QueryDepositRequest\022\037\n\013proposal_id\030" +
-      "\001 \001(\004R\nproposalId\0226\n\tdepositor\030\002 \001(\tB\030\322\264" +
-      "-\024cosmos.AddressStringR\tdepositor\"I\n\024Que" +
-      "ryDepositResponse\0221\n\007deposit\030\001 \001(\0132\027.ato" +
-      "mone.gov.v1.DepositR\007deposit\"\177\n\024QueryDep" +
-      "ositsRequest\022\037\n\013proposal_id\030\001 \001(\004R\npropo" +
-      "salId\022F\n\npagination\030\002 \001(\0132&.cosmos.base." +
-      "query.v1beta1.PageRequestR\npagination\"\225\001" +
-      "\n\025QueryDepositsResponse\0223\n\010deposits\030\001 \003(" +
-      "\0132\027.atomone.gov.v1.DepositR\010deposits\022G\n\n" +
-      "pagination\030\002 \001(\0132\'.cosmos.base.query.v1b" +
-      "eta1.PageResponseR\npagination\":\n\027QueryTa" +
-      "llyResultRequest\022\037\n\013proposal_id\030\001 \001(\004R\np" +
-      "roposalId\"M\n\030QueryTallyResultResponse\0221\n" +
-      "\005tally\030\001 \001(\0132\033.atomone.gov.v1.TallyResul" +
-      "tR\005tally2\376\t\n\005Query\022\211\001\n\014Constitution\022(.at" +
-      "omone.gov.v1.QueryConstitutionRequest\032)." +
-      "atomone.gov.v1.QueryConstitutionResponse" +
-      "\"$\202\323\344\223\002\036\022\034/atomone/gov/v1/constitution\022\210" +
-      "\001\n\010Proposal\022$.atomone.gov.v1.QueryPropos" +
-      "alRequest\032%.atomone.gov.v1.QueryProposal" +
-      "Response\"/\202\323\344\223\002)\022\'/atomone/gov/v1/propos" +
-      "als/{proposal_id}\022}\n\tProposals\022%.atomone" +
-      ".gov.v1.QueryProposalsRequest\032&.atomone." +
-      "gov.v1.QueryProposalsResponse\"!\202\323\344\223\002\033\022\031/" +
-      "atomone/gov/v1/proposals\022\212\001\n\004Vote\022 .atom" +
-      "one.gov.v1.QueryVoteRequest\032!.atomone.go" +
-      "v.v1.QueryVoteResponse\"=\202\323\344\223\0027\0225/atomone" +
-      "/gov/v1/proposals/{proposal_id}/votes/{v" +
-      "oter}\022\205\001\n\005Votes\022!.atomone.gov.v1.QueryVo" +
-      "tesRequest\032\".atomone.gov.v1.QueryVotesRe" +
-      "sponse\"5\202\323\344\223\002/\022-/atomone/gov/v1/proposal" +
-      "s/{proposal_id}/votes\022\177\n\006Params\022\".atomon" +
-      "e.gov.v1.QueryParamsRequest\032#.atomone.go" +
-      "v.v1.QueryParamsResponse\",\202\323\344\223\002&\022$/atomo" +
-      "ne/gov/v1/params/{params_type}\022\232\001\n\007Depos" +
-      "it\022#.atomone.gov.v1.QueryDepositRequest\032" +
-      "$.atomone.gov.v1.QueryDepositResponse\"D\202" +
-      "\323\344\223\002>\022</atomone/gov/v1/proposals/{propos" +
-      "al_id}/deposits/{depositor}\022\221\001\n\010Deposits" +
-      "\022$.atomone.gov.v1.QueryDepositsRequest\032%" +
-      ".atomone.gov.v1.QueryDepositsResponse\"8\202" +
-      "\323\344\223\0022\0220/atomone/gov/v1/proposals/{propos" +
-      "al_id}/deposits\022\227\001\n\013TallyResult\022\'.atomon" +
-      "e.gov.v1.QueryTallyResultRequest\032(.atomo" +
-      "ne.gov.v1.QueryTallyResultResponse\"5\202\323\344\223" +
-      "\002/\022-/atomone/gov/v1/proposals/{proposal_" +
-      "id}/tallyB\247\001\n\022com.atomone.gov.v1B\nQueryP" +
-      "rotoZ-github.com/atomone-hub/atomone/x/g" +
-      "ov/types/v1\242\002\003AGX\252\002\016Atomone.Gov.V1\312\002\016Ato" +
-      "mone\\Gov\\V1\342\002\032Atomone\\Gov\\V1\\GPBMetadata" +
-      "\352\002\020Atomone::Gov::V1b\006proto3"
+      "v.v1\032\036cosmos/base/v1beta1/coin.proto\032\024go" +
+      "goproto/gogo.proto\032*cosmos/base/query/v1" +
+      "beta1/pagination.proto\032\034google/api/annot" +
+      "ations.proto\032\030atomone/gov/v1/gov.proto\032\031" +
+      "cosmos_proto/cosmos.proto\"\032\n\030QueryConsti" +
+      "tutionRequest\"?\n\031QueryConstitutionRespon" +
+      "se\022\"\n\014constitution\030\001 \001(\tR\014constitution\"7" +
+      "\n\024QueryProposalRequest\022\037\n\013proposal_id\030\001 " +
+      "\001(\004R\nproposalId\"M\n\025QueryProposalResponse" +
+      "\0224\n\010proposal\030\001 \001(\0132\030.atomone.gov.v1.Prop" +
+      "osalR\010proposal\"\220\002\n\025QueryProposalsRequest" +
+      "\022G\n\017proposal_status\030\001 \001(\0162\036.atomone.gov." +
+      "v1.ProposalStatusR\016proposalStatus\022.\n\005vot" +
+      "er\030\002 \001(\tB\030\322\264-\024cosmos.AddressStringR\005vote" +
+      "r\0226\n\tdepositor\030\003 \001(\tB\030\322\264-\024cosmos.Address" +
+      "StringR\tdepositor\022F\n\npagination\030\004 \001(\0132&." +
+      "cosmos.base.query.v1beta1.PageRequestR\np" +
+      "agination\"\231\001\n\026QueryProposalsResponse\0226\n\t" +
+      "proposals\030\001 \003(\0132\030.atomone.gov.v1.Proposa" +
+      "lR\tproposals\022G\n\npagination\030\002 \001(\0132\'.cosmo" +
+      "s.base.query.v1beta1.PageResponseR\npagin" +
+      "ation\"c\n\020QueryVoteRequest\022\037\n\013proposal_id" +
+      "\030\001 \001(\004R\nproposalId\022.\n\005voter\030\002 \001(\tB\030\322\264-\024c" +
+      "osmos.AddressStringR\005voter\"=\n\021QueryVoteR" +
+      "esponse\022(\n\004vote\030\001 \001(\0132\024.atomone.gov.v1.V" +
+      "oteR\004vote\"|\n\021QueryVotesRequest\022\037\n\013propos" +
+      "al_id\030\001 \001(\004R\nproposalId\022F\n\npagination\030\002 " +
+      "\001(\0132&.cosmos.base.query.v1beta1.PageRequ" +
+      "estR\npagination\"\211\001\n\022QueryVotesResponse\022*" +
+      "\n\005votes\030\001 \003(\0132\024.atomone.gov.v1.VoteR\005vot" +
+      "es\022G\n\npagination\030\002 \001(\0132\'.cosmos.base.que" +
+      "ry.v1beta1.PageResponseR\npagination\"5\n\022Q" +
+      "ueryParamsRequest\022\037\n\013params_type\030\001 \001(\tR\n" +
+      "paramsType\"\232\002\n\023QueryParamsResponse\022E\n\rvo" +
+      "ting_params\030\001 \001(\0132\034.atomone.gov.v1.Votin" +
+      "gParamsB\002\030\001R\014votingParams\022H\n\016deposit_par" +
+      "ams\030\002 \001(\0132\035.atomone.gov.v1.DepositParams" +
+      "B\002\030\001R\rdepositParams\022B\n\014tally_params\030\003 \001(" +
+      "\0132\033.atomone.gov.v1.TallyParamsB\002\030\001R\013tall" +
+      "yParams\022.\n\006params\030\004 \001(\0132\026.atomone.gov.v1" +
+      ".ParamsR\006params\"n\n\023QueryDepositRequest\022\037" +
+      "\n\013proposal_id\030\001 \001(\004R\nproposalId\0226\n\tdepos" +
+      "itor\030\002 \001(\tB\030\322\264-\024cosmos.AddressStringR\tde" +
+      "positor\"I\n\024QueryDepositResponse\0221\n\007depos" +
+      "it\030\001 \001(\0132\027.atomone.gov.v1.DepositR\007depos" +
+      "it\"\177\n\024QueryDepositsRequest\022\037\n\013proposal_i" +
+      "d\030\001 \001(\004R\nproposalId\022F\n\npagination\030\002 \001(\0132" +
+      "&.cosmos.base.query.v1beta1.PageRequestR" +
+      "\npagination\"\225\001\n\025QueryDepositsResponse\0223\n" +
+      "\010deposits\030\001 \003(\0132\027.atomone.gov.v1.Deposit" +
+      "R\010deposits\022G\n\npagination\030\002 \001(\0132\'.cosmos." +
+      "base.query.v1beta1.PageResponseR\npaginat" +
+      "ion\":\n\027QueryTallyResultRequest\022\037\n\013propos" +
+      "al_id\030\001 \001(\004R\nproposalId\"M\n\030QueryTallyRes" +
+      "ultResponse\0221\n\005tally\030\001 \001(\0132\033.atomone.gov" +
+      ".v1.TallyResultR\005tally\"\030\n\026QueryMinDeposi" +
+      "tRequest\"[\n\027QueryMinDepositResponse\022@\n\013m" +
+      "in_deposit\030\001 \003(\0132\031.cosmos.base.v1beta1.C" +
+      "oinB\004\310\336\037\000R\nminDeposit\"\037\n\035QueryMinInitial" +
+      "DepositRequest\"q\n\036QueryMinInitialDeposit" +
+      "Response\022O\n\023min_initial_deposit\030\001 \003(\0132\031." +
+      "cosmos.base.v1beta1.CoinB\004\310\336\037\000R\021minIniti" +
+      "alDeposit2\242\014\n\005Query\022\211\001\n\014Constitution\022(.a" +
+      "tomone.gov.v1.QueryConstitutionRequest\032)" +
+      ".atomone.gov.v1.QueryConstitutionRespons" +
+      "e\"$\202\323\344\223\002\036\022\034/atomone/gov/v1/constitution\022" +
+      "\210\001\n\010Proposal\022$.atomone.gov.v1.QueryPropo" +
+      "salRequest\032%.atomone.gov.v1.QueryProposa" +
+      "lResponse\"/\202\323\344\223\002)\022\'/atomone/gov/v1/propo" +
+      "sals/{proposal_id}\022}\n\tProposals\022%.atomon" +
+      "e.gov.v1.QueryProposalsRequest\032&.atomone" +
+      ".gov.v1.QueryProposalsResponse\"!\202\323\344\223\002\033\022\031" +
+      "/atomone/gov/v1/proposals\022\212\001\n\004Vote\022 .ato" +
+      "mone.gov.v1.QueryVoteRequest\032!.atomone.g" +
+      "ov.v1.QueryVoteResponse\"=\202\323\344\223\0027\0225/atomon" +
+      "e/gov/v1/proposals/{proposal_id}/votes/{" +
+      "voter}\022\205\001\n\005Votes\022!.atomone.gov.v1.QueryV" +
+      "otesRequest\032\".atomone.gov.v1.QueryVotesR" +
+      "esponse\"5\202\323\344\223\002/\022-/atomone/gov/v1/proposa" +
+      "ls/{proposal_id}/votes\022\177\n\006Params\022\".atomo" +
+      "ne.gov.v1.QueryParamsRequest\032#.atomone.g" +
+      "ov.v1.QueryParamsResponse\",\202\323\344\223\002&\022$/atom" +
+      "one/gov/v1/params/{params_type}\022\232\001\n\007Depo" +
+      "sit\022#.atomone.gov.v1.QueryDepositRequest" +
+      "\032$.atomone.gov.v1.QueryDepositResponse\"D" +
+      "\202\323\344\223\002>\022</atomone/gov/v1/proposals/{propo" +
+      "sal_id}/deposits/{depositor}\022\221\001\n\010Deposit" +
+      "s\022$.atomone.gov.v1.QueryDepositsRequest\032" +
+      "%.atomone.gov.v1.QueryDepositsResponse\"8" +
+      "\202\323\344\223\0022\0220/atomone/gov/v1/proposals/{propo" +
+      "sal_id}/deposits\022\227\001\n\013TallyResult\022\'.atomo" +
+      "ne.gov.v1.QueryTallyResultRequest\032(.atom" +
+      "one.gov.v1.QueryTallyResultResponse\"5\202\323\344" +
+      "\223\002/\022-/atomone/gov/v1/proposals/{proposal" +
+      "_id}/tally\022\201\001\n\nMinDeposit\022&.atomone.gov." +
+      "v1.QueryMinDepositRequest\032\'.atomone.gov." +
+      "v1.QueryMinDepositResponse\"\"\202\323\344\223\002\034\022\032/ato" +
+      "mone/gov/v1/mindeposit\022\235\001\n\021MinInitialDep" +
+      "osit\022-.atomone.gov.v1.QueryMinInitialDep" +
+      "ositRequest\032..atomone.gov.v1.QueryMinIni" +
+      "tialDepositResponse\")\202\323\344\223\002#\022!/atomone/go" +
+      "v/v1/mininitialdepositB\247\001\n\022com.atomone.g" +
+      "ov.v1B\nQueryProtoZ-github.com/atomone-hu" +
+      "b/atomone/x/gov/types/v1\242\002\003AGX\252\002\016Atomone" +
+      ".Gov.V1\312\002\016Atomone\\Gov\\V1\342\002\032Atomone\\Gov\\V" +
+      "1\\GPBMetadata\352\002\020Atomone::Gov::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.cosmos.base.v1beta1.CoinProto.getDescriptor(),
+          com.gogoproto.GogoProto.getDescriptor(),
           com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.atomone.gov.v1.GovProto.getDescriptor(),
@@ -14674,12 +17325,39 @@ public final class QueryProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_atomone_gov_v1_QueryTallyResultResponse_descriptor,
         new java.lang.String[] { "Tally", });
+    internal_static_atomone_gov_v1_QueryMinDepositRequest_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_atomone_gov_v1_QueryMinDepositRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_atomone_gov_v1_QueryMinDepositRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_atomone_gov_v1_QueryMinDepositResponse_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_atomone_gov_v1_QueryMinDepositResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_atomone_gov_v1_QueryMinDepositResponse_descriptor,
+        new java.lang.String[] { "MinDeposit", });
+    internal_static_atomone_gov_v1_QueryMinInitialDepositRequest_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_atomone_gov_v1_QueryMinInitialDepositRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_atomone_gov_v1_QueryMinInitialDepositRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_atomone_gov_v1_QueryMinInitialDepositResponse_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_atomone_gov_v1_QueryMinInitialDepositResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_atomone_gov_v1_QueryMinInitialDepositResponse_descriptor,
+        new java.lang.String[] { "MinInitialDeposit", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.cosmos_proto.CosmosProto.scalar);
+    registry.add(com.gogoproto.GogoProto.nullable);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.cosmos.base.v1beta1.CoinProto.getDescriptor();
+    com.gogoproto.GogoProto.getDescriptor();
     com.cosmos.base.query.v1beta1.PaginationProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.atomone.gov.v1.GovProto.getDescriptor();

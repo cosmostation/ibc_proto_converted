@@ -105,6 +105,26 @@ struct Atomone_Gov_V1_GenesisState {
     set {_uniqueStorage()._constitution = newValue}
   }
 
+  /// last updated value for the dynamic min deposit
+  var lastMinDeposit: Atomone_Gov_V1_LastMinDeposit {
+    get {return _storage._lastMinDeposit ?? Atomone_Gov_V1_LastMinDeposit()}
+    set {_uniqueStorage()._lastMinDeposit = newValue}
+  }
+  /// Returns true if `lastMinDeposit` has been explicitly set.
+  var hasLastMinDeposit: Bool {return _storage._lastMinDeposit != nil}
+  /// Clears the value of `lastMinDeposit`. Subsequent reads from it will return its default value.
+  mutating func clearLastMinDeposit() {_uniqueStorage()._lastMinDeposit = nil}
+
+  /// last updated value for the dynamic min initial deposit
+  var lastMinInitialDeposit: Atomone_Gov_V1_LastMinDeposit {
+    get {return _storage._lastMinInitialDeposit ?? Atomone_Gov_V1_LastMinDeposit()}
+    set {_uniqueStorage()._lastMinInitialDeposit = newValue}
+  }
+  /// Returns true if `lastMinInitialDeposit` has been explicitly set.
+  var hasLastMinInitialDeposit: Bool {return _storage._lastMinInitialDeposit != nil}
+  /// Clears the value of `lastMinInitialDeposit`. Subsequent reads from it will return its default value.
+  mutating func clearLastMinInitialDeposit() {_uniqueStorage()._lastMinInitialDeposit = nil}
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -132,6 +152,8 @@ extension Atomone_Gov_V1_GenesisState: SwiftProtobuf.Message, SwiftProtobuf._Mes
     7: .standard(proto: "tally_params"),
     8: .same(proto: "params"),
     9: .same(proto: "constitution"),
+    10: .standard(proto: "last_min_deposit"),
+    11: .standard(proto: "last_min_initial_deposit"),
   ]
 
   fileprivate class _StorageClass {
@@ -144,6 +166,8 @@ extension Atomone_Gov_V1_GenesisState: SwiftProtobuf.Message, SwiftProtobuf._Mes
     var _tallyParams: Atomone_Gov_V1_TallyParams? = nil
     var _params: Atomone_Gov_V1_Params? = nil
     var _constitution: String = String()
+    var _lastMinDeposit: Atomone_Gov_V1_LastMinDeposit? = nil
+    var _lastMinInitialDeposit: Atomone_Gov_V1_LastMinDeposit? = nil
 
     static let defaultInstance = _StorageClass()
 
@@ -159,6 +183,8 @@ extension Atomone_Gov_V1_GenesisState: SwiftProtobuf.Message, SwiftProtobuf._Mes
       _tallyParams = source._tallyParams
       _params = source._params
       _constitution = source._constitution
+      _lastMinDeposit = source._lastMinDeposit
+      _lastMinInitialDeposit = source._lastMinInitialDeposit
     }
   }
 
@@ -186,6 +212,8 @@ extension Atomone_Gov_V1_GenesisState: SwiftProtobuf.Message, SwiftProtobuf._Mes
         case 7: try { try decoder.decodeSingularMessageField(value: &_storage._tallyParams) }()
         case 8: try { try decoder.decodeSingularMessageField(value: &_storage._params) }()
         case 9: try { try decoder.decodeSingularStringField(value: &_storage._constitution) }()
+        case 10: try { try decoder.decodeSingularMessageField(value: &_storage._lastMinDeposit) }()
+        case 11: try { try decoder.decodeSingularMessageField(value: &_storage._lastMinInitialDeposit) }()
         default: break
         }
       }
@@ -225,6 +253,12 @@ extension Atomone_Gov_V1_GenesisState: SwiftProtobuf.Message, SwiftProtobuf._Mes
       if !_storage._constitution.isEmpty {
         try visitor.visitSingularStringField(value: _storage._constitution, fieldNumber: 9)
       }
+      try { if let v = _storage._lastMinDeposit {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 10)
+      } }()
+      try { if let v = _storage._lastMinInitialDeposit {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 11)
+      } }()
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -243,6 +277,8 @@ extension Atomone_Gov_V1_GenesisState: SwiftProtobuf.Message, SwiftProtobuf._Mes
         if _storage._tallyParams != rhs_storage._tallyParams {return false}
         if _storage._params != rhs_storage._params {return false}
         if _storage._constitution != rhs_storage._constitution {return false}
+        if _storage._lastMinDeposit != rhs_storage._lastMinDeposit {return false}
+        if _storage._lastMinInitialDeposit != rhs_storage._lastMinInitialDeposit {return false}
         return true
       }
       if !storagesAreEqual {return false}

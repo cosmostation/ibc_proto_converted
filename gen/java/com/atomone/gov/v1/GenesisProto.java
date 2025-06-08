@@ -318,6 +318,60 @@ public final class GenesisProto {
      */
     com.google.protobuf.ByteString
         getConstitutionBytes();
+
+    /**
+     * <pre>
+     * last updated value for the dynamic min deposit
+     * </pre>
+     *
+     * <code>.atomone.gov.v1.LastMinDeposit last_min_deposit = 10 [json_name = "lastMinDeposit"];</code>
+     * @return Whether the lastMinDeposit field is set.
+     */
+    boolean hasLastMinDeposit();
+    /**
+     * <pre>
+     * last updated value for the dynamic min deposit
+     * </pre>
+     *
+     * <code>.atomone.gov.v1.LastMinDeposit last_min_deposit = 10 [json_name = "lastMinDeposit"];</code>
+     * @return The lastMinDeposit.
+     */
+    com.atomone.gov.v1.GovProto.LastMinDeposit getLastMinDeposit();
+    /**
+     * <pre>
+     * last updated value for the dynamic min deposit
+     * </pre>
+     *
+     * <code>.atomone.gov.v1.LastMinDeposit last_min_deposit = 10 [json_name = "lastMinDeposit"];</code>
+     */
+    com.atomone.gov.v1.GovProto.LastMinDepositOrBuilder getLastMinDepositOrBuilder();
+
+    /**
+     * <pre>
+     * last updated value for the dynamic min initial deposit
+     * </pre>
+     *
+     * <code>.atomone.gov.v1.LastMinDeposit last_min_initial_deposit = 11 [json_name = "lastMinInitialDeposit"];</code>
+     * @return Whether the lastMinInitialDeposit field is set.
+     */
+    boolean hasLastMinInitialDeposit();
+    /**
+     * <pre>
+     * last updated value for the dynamic min initial deposit
+     * </pre>
+     *
+     * <code>.atomone.gov.v1.LastMinDeposit last_min_initial_deposit = 11 [json_name = "lastMinInitialDeposit"];</code>
+     * @return The lastMinInitialDeposit.
+     */
+    com.atomone.gov.v1.GovProto.LastMinDeposit getLastMinInitialDeposit();
+    /**
+     * <pre>
+     * last updated value for the dynamic min initial deposit
+     * </pre>
+     *
+     * <code>.atomone.gov.v1.LastMinDeposit last_min_initial_deposit = 11 [json_name = "lastMinInitialDeposit"];</code>
+     */
+    com.atomone.gov.v1.GovProto.LastMinDepositOrBuilder getLastMinInitialDepositOrBuilder();
   }
   /**
    * <pre>
@@ -790,6 +844,82 @@ public final class GenesisProto {
       }
     }
 
+    public static final int LAST_MIN_DEPOSIT_FIELD_NUMBER = 10;
+    private com.atomone.gov.v1.GovProto.LastMinDeposit lastMinDeposit_;
+    /**
+     * <pre>
+     * last updated value for the dynamic min deposit
+     * </pre>
+     *
+     * <code>.atomone.gov.v1.LastMinDeposit last_min_deposit = 10 [json_name = "lastMinDeposit"];</code>
+     * @return Whether the lastMinDeposit field is set.
+     */
+    @java.lang.Override
+    public boolean hasLastMinDeposit() {
+      return lastMinDeposit_ != null;
+    }
+    /**
+     * <pre>
+     * last updated value for the dynamic min deposit
+     * </pre>
+     *
+     * <code>.atomone.gov.v1.LastMinDeposit last_min_deposit = 10 [json_name = "lastMinDeposit"];</code>
+     * @return The lastMinDeposit.
+     */
+    @java.lang.Override
+    public com.atomone.gov.v1.GovProto.LastMinDeposit getLastMinDeposit() {
+      return lastMinDeposit_ == null ? com.atomone.gov.v1.GovProto.LastMinDeposit.getDefaultInstance() : lastMinDeposit_;
+    }
+    /**
+     * <pre>
+     * last updated value for the dynamic min deposit
+     * </pre>
+     *
+     * <code>.atomone.gov.v1.LastMinDeposit last_min_deposit = 10 [json_name = "lastMinDeposit"];</code>
+     */
+    @java.lang.Override
+    public com.atomone.gov.v1.GovProto.LastMinDepositOrBuilder getLastMinDepositOrBuilder() {
+      return lastMinDeposit_ == null ? com.atomone.gov.v1.GovProto.LastMinDeposit.getDefaultInstance() : lastMinDeposit_;
+    }
+
+    public static final int LAST_MIN_INITIAL_DEPOSIT_FIELD_NUMBER = 11;
+    private com.atomone.gov.v1.GovProto.LastMinDeposit lastMinInitialDeposit_;
+    /**
+     * <pre>
+     * last updated value for the dynamic min initial deposit
+     * </pre>
+     *
+     * <code>.atomone.gov.v1.LastMinDeposit last_min_initial_deposit = 11 [json_name = "lastMinInitialDeposit"];</code>
+     * @return Whether the lastMinInitialDeposit field is set.
+     */
+    @java.lang.Override
+    public boolean hasLastMinInitialDeposit() {
+      return lastMinInitialDeposit_ != null;
+    }
+    /**
+     * <pre>
+     * last updated value for the dynamic min initial deposit
+     * </pre>
+     *
+     * <code>.atomone.gov.v1.LastMinDeposit last_min_initial_deposit = 11 [json_name = "lastMinInitialDeposit"];</code>
+     * @return The lastMinInitialDeposit.
+     */
+    @java.lang.Override
+    public com.atomone.gov.v1.GovProto.LastMinDeposit getLastMinInitialDeposit() {
+      return lastMinInitialDeposit_ == null ? com.atomone.gov.v1.GovProto.LastMinDeposit.getDefaultInstance() : lastMinInitialDeposit_;
+    }
+    /**
+     * <pre>
+     * last updated value for the dynamic min initial deposit
+     * </pre>
+     *
+     * <code>.atomone.gov.v1.LastMinDeposit last_min_initial_deposit = 11 [json_name = "lastMinInitialDeposit"];</code>
+     */
+    @java.lang.Override
+    public com.atomone.gov.v1.GovProto.LastMinDepositOrBuilder getLastMinInitialDepositOrBuilder() {
+      return lastMinInitialDeposit_ == null ? com.atomone.gov.v1.GovProto.LastMinDeposit.getDefaultInstance() : lastMinInitialDeposit_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -830,6 +960,12 @@ public final class GenesisProto {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(constitution_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, constitution_);
+      }
+      if (lastMinDeposit_ != null) {
+        output.writeMessage(10, getLastMinDeposit());
+      }
+      if (lastMinInitialDeposit_ != null) {
+        output.writeMessage(11, getLastMinInitialDeposit());
       }
       getUnknownFields().writeTo(output);
     }
@@ -874,6 +1010,14 @@ public final class GenesisProto {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(constitution_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, constitution_);
+      }
+      if (lastMinDeposit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getLastMinDeposit());
+      }
+      if (lastMinInitialDeposit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getLastMinInitialDeposit());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -920,6 +1064,16 @@ public final class GenesisProto {
       }
       if (!getConstitution()
           .equals(other.getConstitution())) return false;
+      if (hasLastMinDeposit() != other.hasLastMinDeposit()) return false;
+      if (hasLastMinDeposit()) {
+        if (!getLastMinDeposit()
+            .equals(other.getLastMinDeposit())) return false;
+      }
+      if (hasLastMinInitialDeposit() != other.hasLastMinInitialDeposit()) return false;
+      if (hasLastMinInitialDeposit()) {
+        if (!getLastMinInitialDeposit()
+            .equals(other.getLastMinInitialDeposit())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -964,6 +1118,14 @@ public final class GenesisProto {
       }
       hash = (37 * hash) + CONSTITUTION_FIELD_NUMBER;
       hash = (53 * hash) + getConstitution().hashCode();
+      if (hasLastMinDeposit()) {
+        hash = (37 * hash) + LAST_MIN_DEPOSIT_FIELD_NUMBER;
+        hash = (53 * hash) + getLastMinDeposit().hashCode();
+      }
+      if (hasLastMinInitialDeposit()) {
+        hash = (37 * hash) + LAST_MIN_INITIAL_DEPOSIT_FIELD_NUMBER;
+        hash = (53 * hash) + getLastMinInitialDeposit().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1142,6 +1304,16 @@ public final class GenesisProto {
           paramsBuilder_ = null;
         }
         constitution_ = "";
+        lastMinDeposit_ = null;
+        if (lastMinDepositBuilder_ != null) {
+          lastMinDepositBuilder_.dispose();
+          lastMinDepositBuilder_ = null;
+        }
+        lastMinInitialDeposit_ = null;
+        if (lastMinInitialDepositBuilder_ != null) {
+          lastMinInitialDepositBuilder_.dispose();
+          lastMinInitialDepositBuilder_ = null;
+        }
         return this;
       }
 
@@ -1231,6 +1403,16 @@ public final class GenesisProto {
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.constitution_ = constitution_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.lastMinDeposit_ = lastMinDepositBuilder_ == null
+              ? lastMinDeposit_
+              : lastMinDepositBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.lastMinInitialDeposit_ = lastMinInitialDepositBuilder_ == null
+              ? lastMinInitialDeposit_
+              : lastMinInitialDepositBuilder_.build();
         }
       }
 
@@ -1376,6 +1558,12 @@ public final class GenesisProto {
           bitField0_ |= 0x00000100;
           onChanged();
         }
+        if (other.hasLastMinDeposit()) {
+          mergeLastMinDeposit(other.getLastMinDeposit());
+        }
+        if (other.hasLastMinInitialDeposit()) {
+          mergeLastMinInitialDeposit(other.getLastMinInitialDeposit());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1479,6 +1667,20 @@ public final class GenesisProto {
                 bitField0_ |= 0x00000100;
                 break;
               } // case 74
+              case 82: {
+                input.readMessage(
+                    getLastMinDepositFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              case 90: {
+                input.readMessage(
+                    getLastMinInitialDepositFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3254,6 +3456,316 @@ public final class GenesisProto {
         onChanged();
         return this;
       }
+
+      private com.atomone.gov.v1.GovProto.LastMinDeposit lastMinDeposit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.atomone.gov.v1.GovProto.LastMinDeposit, com.atomone.gov.v1.GovProto.LastMinDeposit.Builder, com.atomone.gov.v1.GovProto.LastMinDepositOrBuilder> lastMinDepositBuilder_;
+      /**
+       * <pre>
+       * last updated value for the dynamic min deposit
+       * </pre>
+       *
+       * <code>.atomone.gov.v1.LastMinDeposit last_min_deposit = 10 [json_name = "lastMinDeposit"];</code>
+       * @return Whether the lastMinDeposit field is set.
+       */
+      public boolean hasLastMinDeposit() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <pre>
+       * last updated value for the dynamic min deposit
+       * </pre>
+       *
+       * <code>.atomone.gov.v1.LastMinDeposit last_min_deposit = 10 [json_name = "lastMinDeposit"];</code>
+       * @return The lastMinDeposit.
+       */
+      public com.atomone.gov.v1.GovProto.LastMinDeposit getLastMinDeposit() {
+        if (lastMinDepositBuilder_ == null) {
+          return lastMinDeposit_ == null ? com.atomone.gov.v1.GovProto.LastMinDeposit.getDefaultInstance() : lastMinDeposit_;
+        } else {
+          return lastMinDepositBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * last updated value for the dynamic min deposit
+       * </pre>
+       *
+       * <code>.atomone.gov.v1.LastMinDeposit last_min_deposit = 10 [json_name = "lastMinDeposit"];</code>
+       */
+      public Builder setLastMinDeposit(com.atomone.gov.v1.GovProto.LastMinDeposit value) {
+        if (lastMinDepositBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lastMinDeposit_ = value;
+        } else {
+          lastMinDepositBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * last updated value for the dynamic min deposit
+       * </pre>
+       *
+       * <code>.atomone.gov.v1.LastMinDeposit last_min_deposit = 10 [json_name = "lastMinDeposit"];</code>
+       */
+      public Builder setLastMinDeposit(
+          com.atomone.gov.v1.GovProto.LastMinDeposit.Builder builderForValue) {
+        if (lastMinDepositBuilder_ == null) {
+          lastMinDeposit_ = builderForValue.build();
+        } else {
+          lastMinDepositBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * last updated value for the dynamic min deposit
+       * </pre>
+       *
+       * <code>.atomone.gov.v1.LastMinDeposit last_min_deposit = 10 [json_name = "lastMinDeposit"];</code>
+       */
+      public Builder mergeLastMinDeposit(com.atomone.gov.v1.GovProto.LastMinDeposit value) {
+        if (lastMinDepositBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0) &&
+            lastMinDeposit_ != null &&
+            lastMinDeposit_ != com.atomone.gov.v1.GovProto.LastMinDeposit.getDefaultInstance()) {
+            getLastMinDepositBuilder().mergeFrom(value);
+          } else {
+            lastMinDeposit_ = value;
+          }
+        } else {
+          lastMinDepositBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * last updated value for the dynamic min deposit
+       * </pre>
+       *
+       * <code>.atomone.gov.v1.LastMinDeposit last_min_deposit = 10 [json_name = "lastMinDeposit"];</code>
+       */
+      public Builder clearLastMinDeposit() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        lastMinDeposit_ = null;
+        if (lastMinDepositBuilder_ != null) {
+          lastMinDepositBuilder_.dispose();
+          lastMinDepositBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * last updated value for the dynamic min deposit
+       * </pre>
+       *
+       * <code>.atomone.gov.v1.LastMinDeposit last_min_deposit = 10 [json_name = "lastMinDeposit"];</code>
+       */
+      public com.atomone.gov.v1.GovProto.LastMinDeposit.Builder getLastMinDepositBuilder() {
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return getLastMinDepositFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * last updated value for the dynamic min deposit
+       * </pre>
+       *
+       * <code>.atomone.gov.v1.LastMinDeposit last_min_deposit = 10 [json_name = "lastMinDeposit"];</code>
+       */
+      public com.atomone.gov.v1.GovProto.LastMinDepositOrBuilder getLastMinDepositOrBuilder() {
+        if (lastMinDepositBuilder_ != null) {
+          return lastMinDepositBuilder_.getMessageOrBuilder();
+        } else {
+          return lastMinDeposit_ == null ?
+              com.atomone.gov.v1.GovProto.LastMinDeposit.getDefaultInstance() : lastMinDeposit_;
+        }
+      }
+      /**
+       * <pre>
+       * last updated value for the dynamic min deposit
+       * </pre>
+       *
+       * <code>.atomone.gov.v1.LastMinDeposit last_min_deposit = 10 [json_name = "lastMinDeposit"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.atomone.gov.v1.GovProto.LastMinDeposit, com.atomone.gov.v1.GovProto.LastMinDeposit.Builder, com.atomone.gov.v1.GovProto.LastMinDepositOrBuilder> 
+          getLastMinDepositFieldBuilder() {
+        if (lastMinDepositBuilder_ == null) {
+          lastMinDepositBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.atomone.gov.v1.GovProto.LastMinDeposit, com.atomone.gov.v1.GovProto.LastMinDeposit.Builder, com.atomone.gov.v1.GovProto.LastMinDepositOrBuilder>(
+                  getLastMinDeposit(),
+                  getParentForChildren(),
+                  isClean());
+          lastMinDeposit_ = null;
+        }
+        return lastMinDepositBuilder_;
+      }
+
+      private com.atomone.gov.v1.GovProto.LastMinDeposit lastMinInitialDeposit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.atomone.gov.v1.GovProto.LastMinDeposit, com.atomone.gov.v1.GovProto.LastMinDeposit.Builder, com.atomone.gov.v1.GovProto.LastMinDepositOrBuilder> lastMinInitialDepositBuilder_;
+      /**
+       * <pre>
+       * last updated value for the dynamic min initial deposit
+       * </pre>
+       *
+       * <code>.atomone.gov.v1.LastMinDeposit last_min_initial_deposit = 11 [json_name = "lastMinInitialDeposit"];</code>
+       * @return Whether the lastMinInitialDeposit field is set.
+       */
+      public boolean hasLastMinInitialDeposit() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <pre>
+       * last updated value for the dynamic min initial deposit
+       * </pre>
+       *
+       * <code>.atomone.gov.v1.LastMinDeposit last_min_initial_deposit = 11 [json_name = "lastMinInitialDeposit"];</code>
+       * @return The lastMinInitialDeposit.
+       */
+      public com.atomone.gov.v1.GovProto.LastMinDeposit getLastMinInitialDeposit() {
+        if (lastMinInitialDepositBuilder_ == null) {
+          return lastMinInitialDeposit_ == null ? com.atomone.gov.v1.GovProto.LastMinDeposit.getDefaultInstance() : lastMinInitialDeposit_;
+        } else {
+          return lastMinInitialDepositBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * last updated value for the dynamic min initial deposit
+       * </pre>
+       *
+       * <code>.atomone.gov.v1.LastMinDeposit last_min_initial_deposit = 11 [json_name = "lastMinInitialDeposit"];</code>
+       */
+      public Builder setLastMinInitialDeposit(com.atomone.gov.v1.GovProto.LastMinDeposit value) {
+        if (lastMinInitialDepositBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lastMinInitialDeposit_ = value;
+        } else {
+          lastMinInitialDepositBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * last updated value for the dynamic min initial deposit
+       * </pre>
+       *
+       * <code>.atomone.gov.v1.LastMinDeposit last_min_initial_deposit = 11 [json_name = "lastMinInitialDeposit"];</code>
+       */
+      public Builder setLastMinInitialDeposit(
+          com.atomone.gov.v1.GovProto.LastMinDeposit.Builder builderForValue) {
+        if (lastMinInitialDepositBuilder_ == null) {
+          lastMinInitialDeposit_ = builderForValue.build();
+        } else {
+          lastMinInitialDepositBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * last updated value for the dynamic min initial deposit
+       * </pre>
+       *
+       * <code>.atomone.gov.v1.LastMinDeposit last_min_initial_deposit = 11 [json_name = "lastMinInitialDeposit"];</code>
+       */
+      public Builder mergeLastMinInitialDeposit(com.atomone.gov.v1.GovProto.LastMinDeposit value) {
+        if (lastMinInitialDepositBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) != 0) &&
+            lastMinInitialDeposit_ != null &&
+            lastMinInitialDeposit_ != com.atomone.gov.v1.GovProto.LastMinDeposit.getDefaultInstance()) {
+            getLastMinInitialDepositBuilder().mergeFrom(value);
+          } else {
+            lastMinInitialDeposit_ = value;
+          }
+        } else {
+          lastMinInitialDepositBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * last updated value for the dynamic min initial deposit
+       * </pre>
+       *
+       * <code>.atomone.gov.v1.LastMinDeposit last_min_initial_deposit = 11 [json_name = "lastMinInitialDeposit"];</code>
+       */
+      public Builder clearLastMinInitialDeposit() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        lastMinInitialDeposit_ = null;
+        if (lastMinInitialDepositBuilder_ != null) {
+          lastMinInitialDepositBuilder_.dispose();
+          lastMinInitialDepositBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * last updated value for the dynamic min initial deposit
+       * </pre>
+       *
+       * <code>.atomone.gov.v1.LastMinDeposit last_min_initial_deposit = 11 [json_name = "lastMinInitialDeposit"];</code>
+       */
+      public com.atomone.gov.v1.GovProto.LastMinDeposit.Builder getLastMinInitialDepositBuilder() {
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return getLastMinInitialDepositFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * last updated value for the dynamic min initial deposit
+       * </pre>
+       *
+       * <code>.atomone.gov.v1.LastMinDeposit last_min_initial_deposit = 11 [json_name = "lastMinInitialDeposit"];</code>
+       */
+      public com.atomone.gov.v1.GovProto.LastMinDepositOrBuilder getLastMinInitialDepositOrBuilder() {
+        if (lastMinInitialDepositBuilder_ != null) {
+          return lastMinInitialDepositBuilder_.getMessageOrBuilder();
+        } else {
+          return lastMinInitialDeposit_ == null ?
+              com.atomone.gov.v1.GovProto.LastMinDeposit.getDefaultInstance() : lastMinInitialDeposit_;
+        }
+      }
+      /**
+       * <pre>
+       * last updated value for the dynamic min initial deposit
+       * </pre>
+       *
+       * <code>.atomone.gov.v1.LastMinDeposit last_min_initial_deposit = 11 [json_name = "lastMinInitialDeposit"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.atomone.gov.v1.GovProto.LastMinDeposit, com.atomone.gov.v1.GovProto.LastMinDeposit.Builder, com.atomone.gov.v1.GovProto.LastMinDepositOrBuilder> 
+          getLastMinInitialDepositFieldBuilder() {
+        if (lastMinInitialDepositBuilder_ == null) {
+          lastMinInitialDepositBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.atomone.gov.v1.GovProto.LastMinDeposit, com.atomone.gov.v1.GovProto.LastMinDeposit.Builder, com.atomone.gov.v1.GovProto.LastMinDepositOrBuilder>(
+                  getLastMinInitialDeposit(),
+                  getParentForChildren(),
+                  isClean());
+          lastMinInitialDeposit_ = null;
+        }
+        return lastMinInitialDepositBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3333,7 +3845,7 @@ public final class GenesisProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\034atomone/gov/v1/genesis.proto\022\016atomone." +
-      "gov.v1\032\030atomone/gov/v1/gov.proto\"\202\004\n\014Gen" +
+      "gov.v1\032\030atomone/gov/v1/gov.proto\"\245\005\n\014Gen" +
       "esisState\0220\n\024starting_proposal_id\030\001 \001(\004R" +
       "\022startingProposalId\0223\n\010deposits\030\002 \003(\0132\027." +
       "atomone.gov.v1.DepositR\010deposits\022*\n\005vote" +
@@ -3346,12 +3858,16 @@ public final class GenesisProto {
       "\014tally_params\030\007 \001(\0132\033.atomone.gov.v1.Tal" +
       "lyParamsB\002\030\001R\013tallyParams\022.\n\006params\030\010 \001(" +
       "\0132\026.atomone.gov.v1.ParamsR\006params\022\"\n\014con" +
-      "stitution\030\t \001(\tR\014constitutionB\251\001\n\022com.at" +
-      "omone.gov.v1B\014GenesisProtoZ-github.com/a" +
-      "tomone-hub/atomone/x/gov/types/v1\242\002\003AGX\252" +
-      "\002\016Atomone.Gov.V1\312\002\016Atomone\\Gov\\V1\342\002\032Atom" +
-      "one\\Gov\\V1\\GPBMetadata\352\002\020Atomone::Gov::V" +
-      "1b\006proto3"
+      "stitution\030\t \001(\tR\014constitution\022H\n\020last_mi" +
+      "n_deposit\030\n \001(\0132\036.atomone.gov.v1.LastMin" +
+      "DepositR\016lastMinDeposit\022W\n\030last_min_init" +
+      "ial_deposit\030\013 \001(\0132\036.atomone.gov.v1.LastM" +
+      "inDepositR\025lastMinInitialDepositB\251\001\n\022com" +
+      ".atomone.gov.v1B\014GenesisProtoZ-github.co" +
+      "m/atomone-hub/atomone/x/gov/types/v1\242\002\003A" +
+      "GX\252\002\016Atomone.Gov.V1\312\002\016Atomone\\Gov\\V1\342\002\032A" +
+      "tomone\\Gov\\V1\\GPBMetadata\352\002\020Atomone::Gov" +
+      "::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3363,7 +3879,7 @@ public final class GenesisProto {
     internal_static_atomone_gov_v1_GenesisState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_atomone_gov_v1_GenesisState_descriptor,
-        new java.lang.String[] { "StartingProposalId", "Deposits", "Votes", "Proposals", "DepositParams", "VotingParams", "TallyParams", "Params", "Constitution", });
+        new java.lang.String[] { "StartingProposalId", "Deposits", "Votes", "Proposals", "DepositParams", "VotingParams", "TallyParams", "Params", "Constitution", "LastMinDeposit", "LastMinInitialDeposit", });
     com.atomone.gov.v1.GovProto.getDescriptor();
   }
 

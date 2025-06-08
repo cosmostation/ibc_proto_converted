@@ -439,6 +439,56 @@ struct Atomone_Gov_V1_QueryTallyResultResponse {
   fileprivate var _tally: Atomone_Gov_V1_TallyResult? = nil
 }
 
+/// QueryMinDepositRequest is the request type for the Query/MinDeposit RPC method.
+struct Atomone_Gov_V1_QueryMinDepositRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// QueryMinDepositResponse is the response type for the Query/MinDeposit RPC method.
+struct Atomone_Gov_V1_QueryMinDepositResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// min_deposit defines the minimum deposit required for a proposal to enter voting period.
+  var minDeposit: [Cosmos_Base_V1beta1_Coin] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// QueryMinInitialDepositRequest is the request type for the Query/MinInitialDeposit RPC method.
+struct Atomone_Gov_V1_QueryMinInitialDepositRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// QueryMinInitialDepositResponse is the response type for the Query/MinInitialDeposit RPC method.
+struct Atomone_Gov_V1_QueryMinInitialDepositResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// min_initial_deposit defines the minimum initial deposit required for a proposal to be submitted.
+  var minInitialDeposit: [Cosmos_Base_V1beta1_Coin] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Atomone_Gov_V1_QueryConstitutionRequest: @unchecked Sendable {}
 extension Atomone_Gov_V1_QueryConstitutionResponse: @unchecked Sendable {}
@@ -458,6 +508,10 @@ extension Atomone_Gov_V1_QueryDepositsRequest: @unchecked Sendable {}
 extension Atomone_Gov_V1_QueryDepositsResponse: @unchecked Sendable {}
 extension Atomone_Gov_V1_QueryTallyResultRequest: @unchecked Sendable {}
 extension Atomone_Gov_V1_QueryTallyResultResponse: @unchecked Sendable {}
+extension Atomone_Gov_V1_QueryMinDepositRequest: @unchecked Sendable {}
+extension Atomone_Gov_V1_QueryMinDepositResponse: @unchecked Sendable {}
+extension Atomone_Gov_V1_QueryMinInitialDepositRequest: @unchecked Sendable {}
+extension Atomone_Gov_V1_QueryMinInitialDepositResponse: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -1144,6 +1198,108 @@ extension Atomone_Gov_V1_QueryTallyResultResponse: SwiftProtobuf.Message, SwiftP
 
   static func ==(lhs: Atomone_Gov_V1_QueryTallyResultResponse, rhs: Atomone_Gov_V1_QueryTallyResultResponse) -> Bool {
     if lhs._tally != rhs._tally {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Atomone_Gov_V1_QueryMinDepositRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".QueryMinDepositRequest"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let _ = try decoder.nextFieldNumber() {
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Atomone_Gov_V1_QueryMinDepositRequest, rhs: Atomone_Gov_V1_QueryMinDepositRequest) -> Bool {
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Atomone_Gov_V1_QueryMinDepositResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".QueryMinDepositResponse"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "min_deposit"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.minDeposit) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.minDeposit.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.minDeposit, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Atomone_Gov_V1_QueryMinDepositResponse, rhs: Atomone_Gov_V1_QueryMinDepositResponse) -> Bool {
+    if lhs.minDeposit != rhs.minDeposit {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Atomone_Gov_V1_QueryMinInitialDepositRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".QueryMinInitialDepositRequest"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let _ = try decoder.nextFieldNumber() {
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Atomone_Gov_V1_QueryMinInitialDepositRequest, rhs: Atomone_Gov_V1_QueryMinInitialDepositRequest) -> Bool {
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Atomone_Gov_V1_QueryMinInitialDepositResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".QueryMinInitialDepositResponse"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "min_initial_deposit"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.minInitialDeposit) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.minInitialDeposit.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.minInitialDeposit, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Atomone_Gov_V1_QueryMinInitialDepositResponse, rhs: Atomone_Gov_V1_QueryMinInitialDepositResponse) -> Bool {
+    if lhs.minInitialDeposit != rhs.minInitialDeposit {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

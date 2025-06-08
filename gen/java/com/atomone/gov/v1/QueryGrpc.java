@@ -297,6 +297,68 @@ public final class QueryGrpc {
     return getTallyResultMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.atomone.gov.v1.QueryProto.QueryMinDepositRequest,
+      com.atomone.gov.v1.QueryProto.QueryMinDepositResponse> getMinDepositMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MinDeposit",
+      requestType = com.atomone.gov.v1.QueryProto.QueryMinDepositRequest.class,
+      responseType = com.atomone.gov.v1.QueryProto.QueryMinDepositResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.atomone.gov.v1.QueryProto.QueryMinDepositRequest,
+      com.atomone.gov.v1.QueryProto.QueryMinDepositResponse> getMinDepositMethod() {
+    io.grpc.MethodDescriptor<com.atomone.gov.v1.QueryProto.QueryMinDepositRequest, com.atomone.gov.v1.QueryProto.QueryMinDepositResponse> getMinDepositMethod;
+    if ((getMinDepositMethod = QueryGrpc.getMinDepositMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getMinDepositMethod = QueryGrpc.getMinDepositMethod) == null) {
+          QueryGrpc.getMinDepositMethod = getMinDepositMethod =
+              io.grpc.MethodDescriptor.<com.atomone.gov.v1.QueryProto.QueryMinDepositRequest, com.atomone.gov.v1.QueryProto.QueryMinDepositResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MinDeposit"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.atomone.gov.v1.QueryProto.QueryMinDepositRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.atomone.gov.v1.QueryProto.QueryMinDepositResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("MinDeposit"))
+              .build();
+        }
+      }
+    }
+    return getMinDepositMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest,
+      com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse> getMinInitialDepositMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MinInitialDeposit",
+      requestType = com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest.class,
+      responseType = com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest,
+      com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse> getMinInitialDepositMethod() {
+    io.grpc.MethodDescriptor<com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest, com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse> getMinInitialDepositMethod;
+    if ((getMinInitialDepositMethod = QueryGrpc.getMinInitialDepositMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getMinInitialDepositMethod = QueryGrpc.getMinInitialDepositMethod) == null) {
+          QueryGrpc.getMinInitialDepositMethod = getMinInitialDepositMethod =
+              io.grpc.MethodDescriptor.<com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest, com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MinInitialDeposit"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("MinInitialDeposit"))
+              .build();
+        }
+      }
+    }
+    return getMinInitialDepositMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -437,6 +499,28 @@ public final class QueryGrpc {
         io.grpc.stub.StreamObserver<com.atomone.gov.v1.QueryProto.QueryTallyResultResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTallyResultMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * MinDeposit queries the minimum deposit currently
+     * required for a proposal to enter voting period.
+     * </pre>
+     */
+    default void minDeposit(com.atomone.gov.v1.QueryProto.QueryMinDepositRequest request,
+        io.grpc.stub.StreamObserver<com.atomone.gov.v1.QueryProto.QueryMinDepositResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMinDepositMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * MinInitialDeposit queries the minimum initial deposit
+     * currently required for a proposal to be submitted.
+     * </pre>
+     */
+    default void minInitialDeposit(com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest request,
+        io.grpc.stub.StreamObserver<com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMinInitialDepositMethod(), responseObserver);
+    }
   }
 
   /**
@@ -570,6 +654,30 @@ public final class QueryGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getTallyResultMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * MinDeposit queries the minimum deposit currently
+     * required for a proposal to enter voting period.
+     * </pre>
+     */
+    public void minDeposit(com.atomone.gov.v1.QueryProto.QueryMinDepositRequest request,
+        io.grpc.stub.StreamObserver<com.atomone.gov.v1.QueryProto.QueryMinDepositResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getMinDepositMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * MinInitialDeposit queries the minimum initial deposit
+     * currently required for a proposal to be submitted.
+     * </pre>
+     */
+    public void minInitialDeposit(com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest request,
+        io.grpc.stub.StreamObserver<com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getMinInitialDepositMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -679,6 +787,28 @@ public final class QueryGrpc {
     public com.atomone.gov.v1.QueryProto.QueryTallyResultResponse tallyResult(com.atomone.gov.v1.QueryProto.QueryTallyResultRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getTallyResultMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * MinDeposit queries the minimum deposit currently
+     * required for a proposal to enter voting period.
+     * </pre>
+     */
+    public com.atomone.gov.v1.QueryProto.QueryMinDepositResponse minDeposit(com.atomone.gov.v1.QueryProto.QueryMinDepositRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMinDepositMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * MinInitialDeposit queries the minimum initial deposit
+     * currently required for a proposal to be submitted.
+     * </pre>
+     */
+    public com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse minInitialDeposit(com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMinInitialDepositMethod(), getCallOptions(), request);
     }
   }
 
@@ -799,6 +929,30 @@ public final class QueryGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getTallyResultMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * MinDeposit queries the minimum deposit currently
+     * required for a proposal to enter voting period.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.atomone.gov.v1.QueryProto.QueryMinDepositResponse> minDeposit(
+        com.atomone.gov.v1.QueryProto.QueryMinDepositRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getMinDepositMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * MinInitialDeposit queries the minimum initial deposit
+     * currently required for a proposal to be submitted.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse> minInitialDeposit(
+        com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getMinInitialDepositMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CONSTITUTION = 0;
@@ -810,6 +964,8 @@ public final class QueryGrpc {
   private static final int METHODID_DEPOSIT = 6;
   private static final int METHODID_DEPOSITS = 7;
   private static final int METHODID_TALLY_RESULT = 8;
+  private static final int METHODID_MIN_DEPOSIT = 9;
+  private static final int METHODID_MIN_INITIAL_DEPOSIT = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -863,6 +1019,14 @@ public final class QueryGrpc {
         case METHODID_TALLY_RESULT:
           serviceImpl.tallyResult((com.atomone.gov.v1.QueryProto.QueryTallyResultRequest) request,
               (io.grpc.stub.StreamObserver<com.atomone.gov.v1.QueryProto.QueryTallyResultResponse>) responseObserver);
+          break;
+        case METHODID_MIN_DEPOSIT:
+          serviceImpl.minDeposit((com.atomone.gov.v1.QueryProto.QueryMinDepositRequest) request,
+              (io.grpc.stub.StreamObserver<com.atomone.gov.v1.QueryProto.QueryMinDepositResponse>) responseObserver);
+          break;
+        case METHODID_MIN_INITIAL_DEPOSIT:
+          serviceImpl.minInitialDeposit((com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest) request,
+              (io.grpc.stub.StreamObserver<com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -945,6 +1109,20 @@ public final class QueryGrpc {
               com.atomone.gov.v1.QueryProto.QueryTallyResultRequest,
               com.atomone.gov.v1.QueryProto.QueryTallyResultResponse>(
                 service, METHODID_TALLY_RESULT)))
+        .addMethod(
+          getMinDepositMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.atomone.gov.v1.QueryProto.QueryMinDepositRequest,
+              com.atomone.gov.v1.QueryProto.QueryMinDepositResponse>(
+                service, METHODID_MIN_DEPOSIT)))
+        .addMethod(
+          getMinInitialDepositMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.atomone.gov.v1.QueryProto.QueryMinInitialDepositRequest,
+              com.atomone.gov.v1.QueryProto.QueryMinInitialDepositResponse>(
+                service, METHODID_MIN_INITIAL_DEPOSIT)))
         .build();
   }
 
@@ -1002,6 +1180,8 @@ public final class QueryGrpc {
               .addMethod(getDepositMethod())
               .addMethod(getDepositsMethod())
               .addMethod(getTallyResultMethod())
+              .addMethod(getMinDepositMethod())
+              .addMethod(getMinInitialDepositMethod())
               .build();
         }
       }

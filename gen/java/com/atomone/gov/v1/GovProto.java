@@ -2309,6 +2309,1166 @@ public final class GovProto {
 
   }
 
+  public interface LastMinDepositOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:atomone.gov.v1.LastMinDeposit)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * value is the value of the minimum deposit
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getValueList();
+    /**
+     * <pre>
+     * value is the value of the minimum deposit
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getValue(int index);
+    /**
+     * <pre>
+     * value is the value of the minimum deposit
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    int getValueCount();
+    /**
+     * <pre>
+     * value is the value of the minimum deposit
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getValueOrBuilderList();
+    /**
+     * <pre>
+     * value is the value of the minimum deposit
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getValueOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * time is the time the minimum deposit was last updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the time field is set.
+     */
+    boolean hasTime();
+    /**
+     * <pre>
+     * time is the time the minimum deposit was last updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.gogoproto.stdtime) = true];</code>
+     * @return The time.
+     */
+    com.google.protobuf.Timestamp getTime();
+    /**
+     * <pre>
+     * time is the time the minimum deposit was last updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getTimeOrBuilder();
+  }
+  /**
+   * <pre>
+   * LastMinDeposit is a record of the last time the minimum deposit
+   * was updated in the store, both its value and a timestamp
+   * </pre>
+   *
+   * Protobuf type {@code atomone.gov.v1.LastMinDeposit}
+   */
+  public static final class LastMinDeposit extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:atomone.gov.v1.LastMinDeposit)
+      LastMinDepositOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LastMinDeposit.newBuilder() to construct.
+    private LastMinDeposit(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LastMinDeposit() {
+      value_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LastMinDeposit();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.atomone.gov.v1.GovProto.internal_static_atomone_gov_v1_LastMinDeposit_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.atomone.gov.v1.GovProto.internal_static_atomone_gov_v1_LastMinDeposit_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.atomone.gov.v1.GovProto.LastMinDeposit.class, com.atomone.gov.v1.GovProto.LastMinDeposit.Builder.class);
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> value_;
+    /**
+     * <pre>
+     * value is the value of the minimum deposit
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getValueList() {
+      return value_;
+    }
+    /**
+     * <pre>
+     * value is the value of the minimum deposit
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getValueOrBuilderList() {
+      return value_;
+    }
+    /**
+     * <pre>
+     * value is the value of the minimum deposit
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    @java.lang.Override
+    public int getValueCount() {
+      return value_.size();
+    }
+    /**
+     * <pre>
+     * value is the value of the minimum deposit
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getValue(int index) {
+      return value_.get(index);
+    }
+    /**
+     * <pre>
+     * value is the value of the minimum deposit
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getValueOrBuilder(
+        int index) {
+      return value_.get(index);
+    }
+
+    public static final int TIME_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp time_;
+    /**
+     * <pre>
+     * time is the time the minimum deposit was last updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the time field is set.
+     */
+    @java.lang.Override
+    public boolean hasTime() {
+      return time_ != null;
+    }
+    /**
+     * <pre>
+     * time is the time the minimum deposit was last updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.gogoproto.stdtime) = true];</code>
+     * @return The time.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getTime() {
+      return time_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : time_;
+    }
+    /**
+     * <pre>
+     * time is the time the minimum deposit was last updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getTimeOrBuilder() {
+      return time_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : time_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < value_.size(); i++) {
+        output.writeMessage(1, value_.get(i));
+      }
+      if (time_ != null) {
+        output.writeMessage(2, getTime());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < value_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, value_.get(i));
+      }
+      if (time_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getTime());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.atomone.gov.v1.GovProto.LastMinDeposit)) {
+        return super.equals(obj);
+      }
+      com.atomone.gov.v1.GovProto.LastMinDeposit other = (com.atomone.gov.v1.GovProto.LastMinDeposit) obj;
+
+      if (!getValueList()
+          .equals(other.getValueList())) return false;
+      if (hasTime() != other.hasTime()) return false;
+      if (hasTime()) {
+        if (!getTime()
+            .equals(other.getTime())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getValueCount() > 0) {
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getValueList().hashCode();
+      }
+      if (hasTime()) {
+        hash = (37 * hash) + TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getTime().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.atomone.gov.v1.GovProto.LastMinDeposit parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.atomone.gov.v1.GovProto.LastMinDeposit parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.GovProto.LastMinDeposit parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.atomone.gov.v1.GovProto.LastMinDeposit parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.GovProto.LastMinDeposit parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.atomone.gov.v1.GovProto.LastMinDeposit parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.GovProto.LastMinDeposit parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.atomone.gov.v1.GovProto.LastMinDeposit parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.atomone.gov.v1.GovProto.LastMinDeposit parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.atomone.gov.v1.GovProto.LastMinDeposit parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.GovProto.LastMinDeposit parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.atomone.gov.v1.GovProto.LastMinDeposit parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.atomone.gov.v1.GovProto.LastMinDeposit prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * LastMinDeposit is a record of the last time the minimum deposit
+     * was updated in the store, both its value and a timestamp
+     * </pre>
+     *
+     * Protobuf type {@code atomone.gov.v1.LastMinDeposit}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:atomone.gov.v1.LastMinDeposit)
+        com.atomone.gov.v1.GovProto.LastMinDepositOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.atomone.gov.v1.GovProto.internal_static_atomone_gov_v1_LastMinDeposit_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.atomone.gov.v1.GovProto.internal_static_atomone_gov_v1_LastMinDeposit_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.atomone.gov.v1.GovProto.LastMinDeposit.class, com.atomone.gov.v1.GovProto.LastMinDeposit.Builder.class);
+      }
+
+      // Construct using com.atomone.gov.v1.GovProto.LastMinDeposit.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (valueBuilder_ == null) {
+          value_ = java.util.Collections.emptyList();
+        } else {
+          value_ = null;
+          valueBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        time_ = null;
+        if (timeBuilder_ != null) {
+          timeBuilder_.dispose();
+          timeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.atomone.gov.v1.GovProto.internal_static_atomone_gov_v1_LastMinDeposit_descriptor;
+      }
+
+      @java.lang.Override
+      public com.atomone.gov.v1.GovProto.LastMinDeposit getDefaultInstanceForType() {
+        return com.atomone.gov.v1.GovProto.LastMinDeposit.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.atomone.gov.v1.GovProto.LastMinDeposit build() {
+        com.atomone.gov.v1.GovProto.LastMinDeposit result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.atomone.gov.v1.GovProto.LastMinDeposit buildPartial() {
+        com.atomone.gov.v1.GovProto.LastMinDeposit result = new com.atomone.gov.v1.GovProto.LastMinDeposit(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.atomone.gov.v1.GovProto.LastMinDeposit result) {
+        if (valueBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            value_ = java.util.Collections.unmodifiableList(value_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.value_ = value_;
+        } else {
+          result.value_ = valueBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.atomone.gov.v1.GovProto.LastMinDeposit result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.time_ = timeBuilder_ == null
+              ? time_
+              : timeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.atomone.gov.v1.GovProto.LastMinDeposit) {
+          return mergeFrom((com.atomone.gov.v1.GovProto.LastMinDeposit)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.atomone.gov.v1.GovProto.LastMinDeposit other) {
+        if (other == com.atomone.gov.v1.GovProto.LastMinDeposit.getDefaultInstance()) return this;
+        if (valueBuilder_ == null) {
+          if (!other.value_.isEmpty()) {
+            if (value_.isEmpty()) {
+              value_ = other.value_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureValueIsMutable();
+              value_.addAll(other.value_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.value_.isEmpty()) {
+            if (valueBuilder_.isEmpty()) {
+              valueBuilder_.dispose();
+              valueBuilder_ = null;
+              value_ = other.value_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              valueBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getValueFieldBuilder() : null;
+            } else {
+              valueBuilder_.addAllMessages(other.value_);
+            }
+          }
+        }
+        if (other.hasTime()) {
+          mergeTime(other.getTime());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (valueBuilder_ == null) {
+                  ensureValueIsMutable();
+                  value_.add(m);
+                } else {
+                  valueBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> value_ =
+        java.util.Collections.emptyList();
+      private void ensureValueIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          value_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(value_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> valueBuilder_;
+
+      /**
+       * <pre>
+       * value is the value of the minimum deposit
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getValueList() {
+        if (valueBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(value_);
+        } else {
+          return valueBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * value is the value of the minimum deposit
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public int getValueCount() {
+        if (valueBuilder_ == null) {
+          return value_.size();
+        } else {
+          return valueBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * value is the value of the minimum deposit
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getValue(int index) {
+        if (valueBuilder_ == null) {
+          return value_.get(index);
+        } else {
+          return valueBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * value is the value of the minimum deposit
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder setValue(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (valueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValueIsMutable();
+          value_.set(index, value);
+          onChanged();
+        } else {
+          valueBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * value is the value of the minimum deposit
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder setValue(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (valueBuilder_ == null) {
+          ensureValueIsMutable();
+          value_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          valueBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * value is the value of the minimum deposit
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder addValue(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (valueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValueIsMutable();
+          value_.add(value);
+          onChanged();
+        } else {
+          valueBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * value is the value of the minimum deposit
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder addValue(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (valueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValueIsMutable();
+          value_.add(index, value);
+          onChanged();
+        } else {
+          valueBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * value is the value of the minimum deposit
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder addValue(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (valueBuilder_ == null) {
+          ensureValueIsMutable();
+          value_.add(builderForValue.build());
+          onChanged();
+        } else {
+          valueBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * value is the value of the minimum deposit
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder addValue(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (valueBuilder_ == null) {
+          ensureValueIsMutable();
+          value_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          valueBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * value is the value of the minimum deposit
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder addAllValue(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (valueBuilder_ == null) {
+          ensureValueIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, value_);
+          onChanged();
+        } else {
+          valueBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * value is the value of the minimum deposit
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder clearValue() {
+        if (valueBuilder_ == null) {
+          value_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          valueBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * value is the value of the minimum deposit
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder removeValue(int index) {
+        if (valueBuilder_ == null) {
+          ensureValueIsMutable();
+          value_.remove(index);
+          onChanged();
+        } else {
+          valueBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * value is the value of the minimum deposit
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getValueBuilder(
+          int index) {
+        return getValueFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * value is the value of the minimum deposit
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getValueOrBuilder(
+          int index) {
+        if (valueBuilder_ == null) {
+          return value_.get(index);  } else {
+          return valueBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * value is the value of the minimum deposit
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getValueOrBuilderList() {
+        if (valueBuilder_ != null) {
+          return valueBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(value_);
+        }
+      }
+      /**
+       * <pre>
+       * value is the value of the minimum deposit
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addValueBuilder() {
+        return getValueFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * value is the value of the minimum deposit
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addValueBuilder(
+          int index) {
+        return getValueFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * value is the value of the minimum deposit
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getValueBuilderList() {
+        return getValueFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getValueFieldBuilder() {
+        if (valueBuilder_ == null) {
+          valueBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  value_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          value_ = null;
+        }
+        return valueBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp time_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timeBuilder_;
+      /**
+       * <pre>
+       * time is the time the minimum deposit was last updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the time field is set.
+       */
+      public boolean hasTime() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * time is the time the minimum deposit was last updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.gogoproto.stdtime) = true];</code>
+       * @return The time.
+       */
+      public com.google.protobuf.Timestamp getTime() {
+        if (timeBuilder_ == null) {
+          return time_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : time_;
+        } else {
+          return timeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * time is the time the minimum deposit was last updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setTime(com.google.protobuf.Timestamp value) {
+        if (timeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          time_ = value;
+        } else {
+          timeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * time is the time the minimum deposit was last updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (timeBuilder_ == null) {
+          time_ = builderForValue.build();
+        } else {
+          timeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * time is the time the minimum deposit was last updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeTime(com.google.protobuf.Timestamp value) {
+        if (timeBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            time_ != null &&
+            time_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getTimeBuilder().mergeFrom(value);
+          } else {
+            time_ = value;
+          }
+        } else {
+          timeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * time is the time the minimum deposit was last updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearTime() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        time_ = null;
+        if (timeBuilder_ != null) {
+          timeBuilder_.dispose();
+          timeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * time is the time the minimum deposit was last updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getTimeBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * time is the time the minimum deposit was last updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getTimeOrBuilder() {
+        if (timeBuilder_ != null) {
+          return timeBuilder_.getMessageOrBuilder();
+        } else {
+          return time_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : time_;
+        }
+      }
+      /**
+       * <pre>
+       * time is the time the minimum deposit was last updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getTimeFieldBuilder() {
+        if (timeBuilder_ == null) {
+          timeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getTime(),
+                  getParentForChildren(),
+                  isClean());
+          time_ = null;
+        }
+        return timeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:atomone.gov.v1.LastMinDeposit)
+    }
+
+    // @@protoc_insertion_point(class_scope:atomone.gov.v1.LastMinDeposit)
+    private static final com.atomone.gov.v1.GovProto.LastMinDeposit DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.atomone.gov.v1.GovProto.LastMinDeposit();
+    }
+
+    public static com.atomone.gov.v1.GovProto.LastMinDeposit getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LastMinDeposit>
+        PARSER = new com.google.protobuf.AbstractParser<LastMinDeposit>() {
+      @java.lang.Override
+      public LastMinDeposit parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<LastMinDeposit> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LastMinDeposit> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.atomone.gov.v1.GovProto.LastMinDeposit getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ProposalOrBuilder extends
       // @@protoc_insertion_point(interface_extends:atomone.gov.v1.Proposal)
       com.google.protobuf.MessageOrBuilder {
@@ -12605,6 +13765,3510 @@ public final class GovProto {
 
   }
 
+  public interface MinDepositThrottlerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:atomone.gov.v1.MinDepositThrottler)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Floor value for the minimum deposit required for a proposal to enter the voting period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getFloorValueList();
+    /**
+     * <pre>
+     * Floor value for the minimum deposit required for a proposal to enter the voting period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getFloorValue(int index);
+    /**
+     * <pre>
+     * Floor value for the minimum deposit required for a proposal to enter the voting period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    int getFloorValueCount();
+    /**
+     * <pre>
+     * Floor value for the minimum deposit required for a proposal to enter the voting period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getFloorValueOrBuilderList();
+    /**
+     * <pre>
+     * Floor value for the minimum deposit required for a proposal to enter the voting period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFloorValueOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+     * for time-based decreases.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the updatePeriod field is set.
+     */
+    boolean hasUpdatePeriod();
+    /**
+     * <pre>
+     * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+     * for time-based decreases.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+     * @return The updatePeriod.
+     */
+    com.google.protobuf.Duration getUpdatePeriod();
+    /**
+     * <pre>
+     * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+     * for time-based decreases.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getUpdatePeriodOrBuilder();
+
+    /**
+     * <pre>
+     * The number of active proposals the dynamic minimum deposit should target.
+     * </pre>
+     *
+     * <code>uint64 target_active_proposals = 3 [json_name = "targetActiveProposals"];</code>
+     * @return The targetActiveProposals.
+     */
+    long getTargetActiveProposals();
+
+    /**
+     * <pre>
+     * The ratio of increase for the minimum deposit when the number of active proposals
+     * is at or above the target.
+     * </pre>
+     *
+     * <code>string increase_ratio = 4 [json_name = "increaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The increaseRatio.
+     */
+    java.lang.String getIncreaseRatio();
+    /**
+     * <pre>
+     * The ratio of increase for the minimum deposit when the number of active proposals
+     * is at or above the target.
+     * </pre>
+     *
+     * <code>string increase_ratio = 4 [json_name = "increaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for increaseRatio.
+     */
+    com.google.protobuf.ByteString
+        getIncreaseRatioBytes();
+
+    /**
+     * <pre>
+     * The ratio of decrease for the minimum deposit when the number of active proposals
+     * is 1 less than the target.
+     * </pre>
+     *
+     * <code>string decrease_ratio = 5 [json_name = "decreaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The decreaseRatio.
+     */
+    java.lang.String getDecreaseRatio();
+    /**
+     * <pre>
+     * The ratio of decrease for the minimum deposit when the number of active proposals
+     * is 1 less than the target.
+     * </pre>
+     *
+     * <code>string decrease_ratio = 5 [json_name = "decreaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for decreaseRatio.
+     */
+    com.google.protobuf.ByteString
+        getDecreaseRatioBytes();
+
+    /**
+     * <pre>
+     * A positive integer representing the sensitivity of dynamic minimum deposit 
+     * decreases to the distance from the target number of active proposals.
+     * The higher the number, the lower the sensitivity. A value of 1 represents the
+     * highest sensitivity.
+     * </pre>
+     *
+     * <code>uint64 decrease_sensitivity_target_distance = 6 [json_name = "decreaseSensitivityTargetDistance"];</code>
+     * @return The decreaseSensitivityTargetDistance.
+     */
+    long getDecreaseSensitivityTargetDistance();
+  }
+  /**
+   * Protobuf type {@code atomone.gov.v1.MinDepositThrottler}
+   */
+  public static final class MinDepositThrottler extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:atomone.gov.v1.MinDepositThrottler)
+      MinDepositThrottlerOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MinDepositThrottler.newBuilder() to construct.
+    private MinDepositThrottler(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MinDepositThrottler() {
+      floorValue_ = java.util.Collections.emptyList();
+      increaseRatio_ = "";
+      decreaseRatio_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MinDepositThrottler();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.atomone.gov.v1.GovProto.internal_static_atomone_gov_v1_MinDepositThrottler_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.atomone.gov.v1.GovProto.internal_static_atomone_gov_v1_MinDepositThrottler_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.atomone.gov.v1.GovProto.MinDepositThrottler.class, com.atomone.gov.v1.GovProto.MinDepositThrottler.Builder.class);
+    }
+
+    public static final int FLOOR_VALUE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> floorValue_;
+    /**
+     * <pre>
+     * Floor value for the minimum deposit required for a proposal to enter the voting period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getFloorValueList() {
+      return floorValue_;
+    }
+    /**
+     * <pre>
+     * Floor value for the minimum deposit required for a proposal to enter the voting period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getFloorValueOrBuilderList() {
+      return floorValue_;
+    }
+    /**
+     * <pre>
+     * Floor value for the minimum deposit required for a proposal to enter the voting period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    @java.lang.Override
+    public int getFloorValueCount() {
+      return floorValue_.size();
+    }
+    /**
+     * <pre>
+     * Floor value for the minimum deposit required for a proposal to enter the voting period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getFloorValue(int index) {
+      return floorValue_.get(index);
+    }
+    /**
+     * <pre>
+     * Floor value for the minimum deposit required for a proposal to enter the voting period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFloorValueOrBuilder(
+        int index) {
+      return floorValue_.get(index);
+    }
+
+    public static final int UPDATE_PERIOD_FIELD_NUMBER = 2;
+    private com.google.protobuf.Duration updatePeriod_;
+    /**
+     * <pre>
+     * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+     * for time-based decreases.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the updatePeriod field is set.
+     */
+    @java.lang.Override
+    public boolean hasUpdatePeriod() {
+      return updatePeriod_ != null;
+    }
+    /**
+     * <pre>
+     * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+     * for time-based decreases.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+     * @return The updatePeriod.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getUpdatePeriod() {
+      return updatePeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : updatePeriod_;
+    }
+    /**
+     * <pre>
+     * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+     * for time-based decreases.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getUpdatePeriodOrBuilder() {
+      return updatePeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : updatePeriod_;
+    }
+
+    public static final int TARGET_ACTIVE_PROPOSALS_FIELD_NUMBER = 3;
+    private long targetActiveProposals_ = 0L;
+    /**
+     * <pre>
+     * The number of active proposals the dynamic minimum deposit should target.
+     * </pre>
+     *
+     * <code>uint64 target_active_proposals = 3 [json_name = "targetActiveProposals"];</code>
+     * @return The targetActiveProposals.
+     */
+    @java.lang.Override
+    public long getTargetActiveProposals() {
+      return targetActiveProposals_;
+    }
+
+    public static final int INCREASE_RATIO_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object increaseRatio_ = "";
+    /**
+     * <pre>
+     * The ratio of increase for the minimum deposit when the number of active proposals
+     * is at or above the target.
+     * </pre>
+     *
+     * <code>string increase_ratio = 4 [json_name = "increaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The increaseRatio.
+     */
+    @java.lang.Override
+    public java.lang.String getIncreaseRatio() {
+      java.lang.Object ref = increaseRatio_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        increaseRatio_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The ratio of increase for the minimum deposit when the number of active proposals
+     * is at or above the target.
+     * </pre>
+     *
+     * <code>string increase_ratio = 4 [json_name = "increaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for increaseRatio.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIncreaseRatioBytes() {
+      java.lang.Object ref = increaseRatio_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        increaseRatio_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DECREASE_RATIO_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object decreaseRatio_ = "";
+    /**
+     * <pre>
+     * The ratio of decrease for the minimum deposit when the number of active proposals
+     * is 1 less than the target.
+     * </pre>
+     *
+     * <code>string decrease_ratio = 5 [json_name = "decreaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The decreaseRatio.
+     */
+    @java.lang.Override
+    public java.lang.String getDecreaseRatio() {
+      java.lang.Object ref = decreaseRatio_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        decreaseRatio_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The ratio of decrease for the minimum deposit when the number of active proposals
+     * is 1 less than the target.
+     * </pre>
+     *
+     * <code>string decrease_ratio = 5 [json_name = "decreaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for decreaseRatio.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDecreaseRatioBytes() {
+      java.lang.Object ref = decreaseRatio_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        decreaseRatio_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DECREASE_SENSITIVITY_TARGET_DISTANCE_FIELD_NUMBER = 6;
+    private long decreaseSensitivityTargetDistance_ = 0L;
+    /**
+     * <pre>
+     * A positive integer representing the sensitivity of dynamic minimum deposit 
+     * decreases to the distance from the target number of active proposals.
+     * The higher the number, the lower the sensitivity. A value of 1 represents the
+     * highest sensitivity.
+     * </pre>
+     *
+     * <code>uint64 decrease_sensitivity_target_distance = 6 [json_name = "decreaseSensitivityTargetDistance"];</code>
+     * @return The decreaseSensitivityTargetDistance.
+     */
+    @java.lang.Override
+    public long getDecreaseSensitivityTargetDistance() {
+      return decreaseSensitivityTargetDistance_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < floorValue_.size(); i++) {
+        output.writeMessage(1, floorValue_.get(i));
+      }
+      if (updatePeriod_ != null) {
+        output.writeMessage(2, getUpdatePeriod());
+      }
+      if (targetActiveProposals_ != 0L) {
+        output.writeUInt64(3, targetActiveProposals_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(increaseRatio_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, increaseRatio_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(decreaseRatio_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, decreaseRatio_);
+      }
+      if (decreaseSensitivityTargetDistance_ != 0L) {
+        output.writeUInt64(6, decreaseSensitivityTargetDistance_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < floorValue_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, floorValue_.get(i));
+      }
+      if (updatePeriod_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getUpdatePeriod());
+      }
+      if (targetActiveProposals_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, targetActiveProposals_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(increaseRatio_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, increaseRatio_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(decreaseRatio_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, decreaseRatio_);
+      }
+      if (decreaseSensitivityTargetDistance_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(6, decreaseSensitivityTargetDistance_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.atomone.gov.v1.GovProto.MinDepositThrottler)) {
+        return super.equals(obj);
+      }
+      com.atomone.gov.v1.GovProto.MinDepositThrottler other = (com.atomone.gov.v1.GovProto.MinDepositThrottler) obj;
+
+      if (!getFloorValueList()
+          .equals(other.getFloorValueList())) return false;
+      if (hasUpdatePeriod() != other.hasUpdatePeriod()) return false;
+      if (hasUpdatePeriod()) {
+        if (!getUpdatePeriod()
+            .equals(other.getUpdatePeriod())) return false;
+      }
+      if (getTargetActiveProposals()
+          != other.getTargetActiveProposals()) return false;
+      if (!getIncreaseRatio()
+          .equals(other.getIncreaseRatio())) return false;
+      if (!getDecreaseRatio()
+          .equals(other.getDecreaseRatio())) return false;
+      if (getDecreaseSensitivityTargetDistance()
+          != other.getDecreaseSensitivityTargetDistance()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getFloorValueCount() > 0) {
+        hash = (37 * hash) + FLOOR_VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getFloorValueList().hashCode();
+      }
+      if (hasUpdatePeriod()) {
+        hash = (37 * hash) + UPDATE_PERIOD_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdatePeriod().hashCode();
+      }
+      hash = (37 * hash) + TARGET_ACTIVE_PROPOSALS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTargetActiveProposals());
+      hash = (37 * hash) + INCREASE_RATIO_FIELD_NUMBER;
+      hash = (53 * hash) + getIncreaseRatio().hashCode();
+      hash = (37 * hash) + DECREASE_RATIO_FIELD_NUMBER;
+      hash = (53 * hash) + getDecreaseRatio().hashCode();
+      hash = (37 * hash) + DECREASE_SENSITIVITY_TARGET_DISTANCE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDecreaseSensitivityTargetDistance());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.atomone.gov.v1.GovProto.MinDepositThrottler parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.atomone.gov.v1.GovProto.MinDepositThrottler parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.GovProto.MinDepositThrottler parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.atomone.gov.v1.GovProto.MinDepositThrottler parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.GovProto.MinDepositThrottler parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.atomone.gov.v1.GovProto.MinDepositThrottler parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.GovProto.MinDepositThrottler parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.atomone.gov.v1.GovProto.MinDepositThrottler parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.atomone.gov.v1.GovProto.MinDepositThrottler parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.atomone.gov.v1.GovProto.MinDepositThrottler parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.GovProto.MinDepositThrottler parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.atomone.gov.v1.GovProto.MinDepositThrottler parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.atomone.gov.v1.GovProto.MinDepositThrottler prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code atomone.gov.v1.MinDepositThrottler}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:atomone.gov.v1.MinDepositThrottler)
+        com.atomone.gov.v1.GovProto.MinDepositThrottlerOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.atomone.gov.v1.GovProto.internal_static_atomone_gov_v1_MinDepositThrottler_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.atomone.gov.v1.GovProto.internal_static_atomone_gov_v1_MinDepositThrottler_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.atomone.gov.v1.GovProto.MinDepositThrottler.class, com.atomone.gov.v1.GovProto.MinDepositThrottler.Builder.class);
+      }
+
+      // Construct using com.atomone.gov.v1.GovProto.MinDepositThrottler.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (floorValueBuilder_ == null) {
+          floorValue_ = java.util.Collections.emptyList();
+        } else {
+          floorValue_ = null;
+          floorValueBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        updatePeriod_ = null;
+        if (updatePeriodBuilder_ != null) {
+          updatePeriodBuilder_.dispose();
+          updatePeriodBuilder_ = null;
+        }
+        targetActiveProposals_ = 0L;
+        increaseRatio_ = "";
+        decreaseRatio_ = "";
+        decreaseSensitivityTargetDistance_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.atomone.gov.v1.GovProto.internal_static_atomone_gov_v1_MinDepositThrottler_descriptor;
+      }
+
+      @java.lang.Override
+      public com.atomone.gov.v1.GovProto.MinDepositThrottler getDefaultInstanceForType() {
+        return com.atomone.gov.v1.GovProto.MinDepositThrottler.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.atomone.gov.v1.GovProto.MinDepositThrottler build() {
+        com.atomone.gov.v1.GovProto.MinDepositThrottler result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.atomone.gov.v1.GovProto.MinDepositThrottler buildPartial() {
+        com.atomone.gov.v1.GovProto.MinDepositThrottler result = new com.atomone.gov.v1.GovProto.MinDepositThrottler(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.atomone.gov.v1.GovProto.MinDepositThrottler result) {
+        if (floorValueBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            floorValue_ = java.util.Collections.unmodifiableList(floorValue_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.floorValue_ = floorValue_;
+        } else {
+          result.floorValue_ = floorValueBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.atomone.gov.v1.GovProto.MinDepositThrottler result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.updatePeriod_ = updatePeriodBuilder_ == null
+              ? updatePeriod_
+              : updatePeriodBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.targetActiveProposals_ = targetActiveProposals_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.increaseRatio_ = increaseRatio_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.decreaseRatio_ = decreaseRatio_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.decreaseSensitivityTargetDistance_ = decreaseSensitivityTargetDistance_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.atomone.gov.v1.GovProto.MinDepositThrottler) {
+          return mergeFrom((com.atomone.gov.v1.GovProto.MinDepositThrottler)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.atomone.gov.v1.GovProto.MinDepositThrottler other) {
+        if (other == com.atomone.gov.v1.GovProto.MinDepositThrottler.getDefaultInstance()) return this;
+        if (floorValueBuilder_ == null) {
+          if (!other.floorValue_.isEmpty()) {
+            if (floorValue_.isEmpty()) {
+              floorValue_ = other.floorValue_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureFloorValueIsMutable();
+              floorValue_.addAll(other.floorValue_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.floorValue_.isEmpty()) {
+            if (floorValueBuilder_.isEmpty()) {
+              floorValueBuilder_.dispose();
+              floorValueBuilder_ = null;
+              floorValue_ = other.floorValue_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              floorValueBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFloorValueFieldBuilder() : null;
+            } else {
+              floorValueBuilder_.addAllMessages(other.floorValue_);
+            }
+          }
+        }
+        if (other.hasUpdatePeriod()) {
+          mergeUpdatePeriod(other.getUpdatePeriod());
+        }
+        if (other.getTargetActiveProposals() != 0L) {
+          setTargetActiveProposals(other.getTargetActiveProposals());
+        }
+        if (!other.getIncreaseRatio().isEmpty()) {
+          increaseRatio_ = other.increaseRatio_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getDecreaseRatio().isEmpty()) {
+          decreaseRatio_ = other.decreaseRatio_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.getDecreaseSensitivityTargetDistance() != 0L) {
+          setDecreaseSensitivityTargetDistance(other.getDecreaseSensitivityTargetDistance());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (floorValueBuilder_ == null) {
+                  ensureFloorValueIsMutable();
+                  floorValue_.add(m);
+                } else {
+                  floorValueBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getUpdatePeriodFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                targetActiveProposals_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                increaseRatio_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                decreaseRatio_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 48: {
+                decreaseSensitivityTargetDistance_ = input.readUInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> floorValue_ =
+        java.util.Collections.emptyList();
+      private void ensureFloorValueIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          floorValue_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(floorValue_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> floorValueBuilder_;
+
+      /**
+       * <pre>
+       * Floor value for the minimum deposit required for a proposal to enter the voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getFloorValueList() {
+        if (floorValueBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(floorValue_);
+        } else {
+          return floorValueBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum deposit required for a proposal to enter the voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public int getFloorValueCount() {
+        if (floorValueBuilder_ == null) {
+          return floorValue_.size();
+        } else {
+          return floorValueBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum deposit required for a proposal to enter the voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getFloorValue(int index) {
+        if (floorValueBuilder_ == null) {
+          return floorValue_.get(index);
+        } else {
+          return floorValueBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum deposit required for a proposal to enter the voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder setFloorValue(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (floorValueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFloorValueIsMutable();
+          floorValue_.set(index, value);
+          onChanged();
+        } else {
+          floorValueBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum deposit required for a proposal to enter the voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder setFloorValue(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (floorValueBuilder_ == null) {
+          ensureFloorValueIsMutable();
+          floorValue_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          floorValueBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum deposit required for a proposal to enter the voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder addFloorValue(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (floorValueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFloorValueIsMutable();
+          floorValue_.add(value);
+          onChanged();
+        } else {
+          floorValueBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum deposit required for a proposal to enter the voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder addFloorValue(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (floorValueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFloorValueIsMutable();
+          floorValue_.add(index, value);
+          onChanged();
+        } else {
+          floorValueBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum deposit required for a proposal to enter the voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder addFloorValue(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (floorValueBuilder_ == null) {
+          ensureFloorValueIsMutable();
+          floorValue_.add(builderForValue.build());
+          onChanged();
+        } else {
+          floorValueBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum deposit required for a proposal to enter the voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder addFloorValue(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (floorValueBuilder_ == null) {
+          ensureFloorValueIsMutable();
+          floorValue_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          floorValueBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum deposit required for a proposal to enter the voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder addAllFloorValue(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (floorValueBuilder_ == null) {
+          ensureFloorValueIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, floorValue_);
+          onChanged();
+        } else {
+          floorValueBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum deposit required for a proposal to enter the voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder clearFloorValue() {
+        if (floorValueBuilder_ == null) {
+          floorValue_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          floorValueBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum deposit required for a proposal to enter the voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder removeFloorValue(int index) {
+        if (floorValueBuilder_ == null) {
+          ensureFloorValueIsMutable();
+          floorValue_.remove(index);
+          onChanged();
+        } else {
+          floorValueBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum deposit required for a proposal to enter the voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getFloorValueBuilder(
+          int index) {
+        return getFloorValueFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum deposit required for a proposal to enter the voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFloorValueOrBuilder(
+          int index) {
+        if (floorValueBuilder_ == null) {
+          return floorValue_.get(index);  } else {
+          return floorValueBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum deposit required for a proposal to enter the voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getFloorValueOrBuilderList() {
+        if (floorValueBuilder_ != null) {
+          return floorValueBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(floorValue_);
+        }
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum deposit required for a proposal to enter the voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addFloorValueBuilder() {
+        return getFloorValueFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum deposit required for a proposal to enter the voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addFloorValueBuilder(
+          int index) {
+        return getFloorValueFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum deposit required for a proposal to enter the voting period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getFloorValueBuilderList() {
+        return getFloorValueFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getFloorValueFieldBuilder() {
+        if (floorValueBuilder_ == null) {
+          floorValueBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  floorValue_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          floorValue_ = null;
+        }
+        return floorValueBuilder_;
+      }
+
+      private com.google.protobuf.Duration updatePeriod_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> updatePeriodBuilder_;
+      /**
+       * <pre>
+       * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+       * for time-based decreases.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+       * @return Whether the updatePeriod field is set.
+       */
+      public boolean hasUpdatePeriod() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+       * for time-based decreases.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+       * @return The updatePeriod.
+       */
+      public com.google.protobuf.Duration getUpdatePeriod() {
+        if (updatePeriodBuilder_ == null) {
+          return updatePeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : updatePeriod_;
+        } else {
+          return updatePeriodBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+       * for time-based decreases.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setUpdatePeriod(com.google.protobuf.Duration value) {
+        if (updatePeriodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updatePeriod_ = value;
+        } else {
+          updatePeriodBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+       * for time-based decreases.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setUpdatePeriod(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (updatePeriodBuilder_ == null) {
+          updatePeriod_ = builderForValue.build();
+        } else {
+          updatePeriodBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+       * for time-based decreases.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeUpdatePeriod(com.google.protobuf.Duration value) {
+        if (updatePeriodBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            updatePeriod_ != null &&
+            updatePeriod_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getUpdatePeriodBuilder().mergeFrom(value);
+          } else {
+            updatePeriod_ = value;
+          }
+        } else {
+          updatePeriodBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+       * for time-based decreases.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearUpdatePeriod() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        updatePeriod_ = null;
+        if (updatePeriodBuilder_ != null) {
+          updatePeriodBuilder_.dispose();
+          updatePeriodBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+       * for time-based decreases.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getUpdatePeriodBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getUpdatePeriodFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+       * for time-based decreases.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getUpdatePeriodOrBuilder() {
+        if (updatePeriodBuilder_ != null) {
+          return updatePeriodBuilder_.getMessageOrBuilder();
+        } else {
+          return updatePeriod_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : updatePeriod_;
+        }
+      }
+      /**
+       * <pre>
+       * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+       * for time-based decreases.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getUpdatePeriodFieldBuilder() {
+        if (updatePeriodBuilder_ == null) {
+          updatePeriodBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getUpdatePeriod(),
+                  getParentForChildren(),
+                  isClean());
+          updatePeriod_ = null;
+        }
+        return updatePeriodBuilder_;
+      }
+
+      private long targetActiveProposals_ ;
+      /**
+       * <pre>
+       * The number of active proposals the dynamic minimum deposit should target.
+       * </pre>
+       *
+       * <code>uint64 target_active_proposals = 3 [json_name = "targetActiveProposals"];</code>
+       * @return The targetActiveProposals.
+       */
+      @java.lang.Override
+      public long getTargetActiveProposals() {
+        return targetActiveProposals_;
+      }
+      /**
+       * <pre>
+       * The number of active proposals the dynamic minimum deposit should target.
+       * </pre>
+       *
+       * <code>uint64 target_active_proposals = 3 [json_name = "targetActiveProposals"];</code>
+       * @param value The targetActiveProposals to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargetActiveProposals(long value) {
+
+        targetActiveProposals_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of active proposals the dynamic minimum deposit should target.
+       * </pre>
+       *
+       * <code>uint64 target_active_proposals = 3 [json_name = "targetActiveProposals"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTargetActiveProposals() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        targetActiveProposals_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object increaseRatio_ = "";
+      /**
+       * <pre>
+       * The ratio of increase for the minimum deposit when the number of active proposals
+       * is at or above the target.
+       * </pre>
+       *
+       * <code>string increase_ratio = 4 [json_name = "increaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The increaseRatio.
+       */
+      public java.lang.String getIncreaseRatio() {
+        java.lang.Object ref = increaseRatio_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          increaseRatio_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ratio of increase for the minimum deposit when the number of active proposals
+       * is at or above the target.
+       * </pre>
+       *
+       * <code>string increase_ratio = 4 [json_name = "increaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The bytes for increaseRatio.
+       */
+      public com.google.protobuf.ByteString
+          getIncreaseRatioBytes() {
+        java.lang.Object ref = increaseRatio_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          increaseRatio_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ratio of increase for the minimum deposit when the number of active proposals
+       * is at or above the target.
+       * </pre>
+       *
+       * <code>string increase_ratio = 4 [json_name = "increaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The increaseRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncreaseRatio(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        increaseRatio_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ratio of increase for the minimum deposit when the number of active proposals
+       * is at or above the target.
+       * </pre>
+       *
+       * <code>string increase_ratio = 4 [json_name = "increaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIncreaseRatio() {
+        increaseRatio_ = getDefaultInstance().getIncreaseRatio();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ratio of increase for the minimum deposit when the number of active proposals
+       * is at or above the target.
+       * </pre>
+       *
+       * <code>string increase_ratio = 4 [json_name = "increaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The bytes for increaseRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncreaseRatioBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        increaseRatio_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object decreaseRatio_ = "";
+      /**
+       * <pre>
+       * The ratio of decrease for the minimum deposit when the number of active proposals
+       * is 1 less than the target.
+       * </pre>
+       *
+       * <code>string decrease_ratio = 5 [json_name = "decreaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The decreaseRatio.
+       */
+      public java.lang.String getDecreaseRatio() {
+        java.lang.Object ref = decreaseRatio_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          decreaseRatio_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ratio of decrease for the minimum deposit when the number of active proposals
+       * is 1 less than the target.
+       * </pre>
+       *
+       * <code>string decrease_ratio = 5 [json_name = "decreaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The bytes for decreaseRatio.
+       */
+      public com.google.protobuf.ByteString
+          getDecreaseRatioBytes() {
+        java.lang.Object ref = decreaseRatio_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          decreaseRatio_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ratio of decrease for the minimum deposit when the number of active proposals
+       * is 1 less than the target.
+       * </pre>
+       *
+       * <code>string decrease_ratio = 5 [json_name = "decreaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The decreaseRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDecreaseRatio(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        decreaseRatio_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ratio of decrease for the minimum deposit when the number of active proposals
+       * is 1 less than the target.
+       * </pre>
+       *
+       * <code>string decrease_ratio = 5 [json_name = "decreaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDecreaseRatio() {
+        decreaseRatio_ = getDefaultInstance().getDecreaseRatio();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ratio of decrease for the minimum deposit when the number of active proposals
+       * is 1 less than the target.
+       * </pre>
+       *
+       * <code>string decrease_ratio = 5 [json_name = "decreaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The bytes for decreaseRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDecreaseRatioBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        decreaseRatio_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private long decreaseSensitivityTargetDistance_ ;
+      /**
+       * <pre>
+       * A positive integer representing the sensitivity of dynamic minimum deposit 
+       * decreases to the distance from the target number of active proposals.
+       * The higher the number, the lower the sensitivity. A value of 1 represents the
+       * highest sensitivity.
+       * </pre>
+       *
+       * <code>uint64 decrease_sensitivity_target_distance = 6 [json_name = "decreaseSensitivityTargetDistance"];</code>
+       * @return The decreaseSensitivityTargetDistance.
+       */
+      @java.lang.Override
+      public long getDecreaseSensitivityTargetDistance() {
+        return decreaseSensitivityTargetDistance_;
+      }
+      /**
+       * <pre>
+       * A positive integer representing the sensitivity of dynamic minimum deposit 
+       * decreases to the distance from the target number of active proposals.
+       * The higher the number, the lower the sensitivity. A value of 1 represents the
+       * highest sensitivity.
+       * </pre>
+       *
+       * <code>uint64 decrease_sensitivity_target_distance = 6 [json_name = "decreaseSensitivityTargetDistance"];</code>
+       * @param value The decreaseSensitivityTargetDistance to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDecreaseSensitivityTargetDistance(long value) {
+
+        decreaseSensitivityTargetDistance_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A positive integer representing the sensitivity of dynamic minimum deposit 
+       * decreases to the distance from the target number of active proposals.
+       * The higher the number, the lower the sensitivity. A value of 1 represents the
+       * highest sensitivity.
+       * </pre>
+       *
+       * <code>uint64 decrease_sensitivity_target_distance = 6 [json_name = "decreaseSensitivityTargetDistance"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDecreaseSensitivityTargetDistance() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        decreaseSensitivityTargetDistance_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:atomone.gov.v1.MinDepositThrottler)
+    }
+
+    // @@protoc_insertion_point(class_scope:atomone.gov.v1.MinDepositThrottler)
+    private static final com.atomone.gov.v1.GovProto.MinDepositThrottler DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.atomone.gov.v1.GovProto.MinDepositThrottler();
+    }
+
+    public static com.atomone.gov.v1.GovProto.MinDepositThrottler getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MinDepositThrottler>
+        PARSER = new com.google.protobuf.AbstractParser<MinDepositThrottler>() {
+      @java.lang.Override
+      public MinDepositThrottler parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MinDepositThrottler> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MinDepositThrottler> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.atomone.gov.v1.GovProto.MinDepositThrottler getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MinInitialDepositThrottlerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:atomone.gov.v1.MinInitialDepositThrottler)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getFloorValueList();
+    /**
+     * <pre>
+     * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getFloorValue(int index);
+    /**
+     * <pre>
+     * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    int getFloorValueCount();
+    /**
+     * <pre>
+     * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getFloorValueOrBuilderList();
+    /**
+     * <pre>
+     * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFloorValueOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+     * for time-based decreases.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the updatePeriod field is set.
+     */
+    boolean hasUpdatePeriod();
+    /**
+     * <pre>
+     * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+     * for time-based decreases.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+     * @return The updatePeriod.
+     */
+    com.google.protobuf.Duration getUpdatePeriod();
+    /**
+     * <pre>
+     * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+     * for time-based decreases.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getUpdatePeriodOrBuilder();
+
+    /**
+     * <pre>
+     * The number of proposals in deposit period the dynamic minimum initial deposit should target.
+     * </pre>
+     *
+     * <code>uint64 target_proposals = 3 [json_name = "targetProposals"];</code>
+     * @return The targetProposals.
+     */
+    long getTargetProposals();
+
+    /**
+     * <pre>
+     * The ratio of increase for the minimum initial deposit when the number of proposals
+     * in deposit period is at or above the target.
+     * </pre>
+     *
+     * <code>string increase_ratio = 4 [json_name = "increaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The increaseRatio.
+     */
+    java.lang.String getIncreaseRatio();
+    /**
+     * <pre>
+     * The ratio of increase for the minimum initial deposit when the number of proposals
+     * in deposit period is at or above the target.
+     * </pre>
+     *
+     * <code>string increase_ratio = 4 [json_name = "increaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for increaseRatio.
+     */
+    com.google.protobuf.ByteString
+        getIncreaseRatioBytes();
+
+    /**
+     * <pre>
+     * The ratio of decrease for the minimum initial deposit when the number of proposals
+     * in deposit period is 1 less than the target.
+     * </pre>
+     *
+     * <code>string decrease_ratio = 5 [json_name = "decreaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The decreaseRatio.
+     */
+    java.lang.String getDecreaseRatio();
+    /**
+     * <pre>
+     * The ratio of decrease for the minimum initial deposit when the number of proposals
+     * in deposit period is 1 less than the target.
+     * </pre>
+     *
+     * <code>string decrease_ratio = 5 [json_name = "decreaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for decreaseRatio.
+     */
+    com.google.protobuf.ByteString
+        getDecreaseRatioBytes();
+
+    /**
+     * <pre>
+     * A positive integer representing the sensitivity of dynamic minimum initial 
+     * deposit decreases to the distance from the target number of proposals
+     * in deposit period. The higher the number, the lower the sensitivity. A value 
+     * of 1 represents the highest sensitivity.
+     * </pre>
+     *
+     * <code>uint64 decrease_sensitivity_target_distance = 6 [json_name = "decreaseSensitivityTargetDistance"];</code>
+     * @return The decreaseSensitivityTargetDistance.
+     */
+    long getDecreaseSensitivityTargetDistance();
+  }
+  /**
+   * Protobuf type {@code atomone.gov.v1.MinInitialDepositThrottler}
+   */
+  public static final class MinInitialDepositThrottler extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:atomone.gov.v1.MinInitialDepositThrottler)
+      MinInitialDepositThrottlerOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MinInitialDepositThrottler.newBuilder() to construct.
+    private MinInitialDepositThrottler(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MinInitialDepositThrottler() {
+      floorValue_ = java.util.Collections.emptyList();
+      increaseRatio_ = "";
+      decreaseRatio_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MinInitialDepositThrottler();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.atomone.gov.v1.GovProto.internal_static_atomone_gov_v1_MinInitialDepositThrottler_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.atomone.gov.v1.GovProto.internal_static_atomone_gov_v1_MinInitialDepositThrottler_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.atomone.gov.v1.GovProto.MinInitialDepositThrottler.class, com.atomone.gov.v1.GovProto.MinInitialDepositThrottler.Builder.class);
+    }
+
+    public static final int FLOOR_VALUE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> floorValue_;
+    /**
+     * <pre>
+     * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getFloorValueList() {
+      return floorValue_;
+    }
+    /**
+     * <pre>
+     * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getFloorValueOrBuilderList() {
+      return floorValue_;
+    }
+    /**
+     * <pre>
+     * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    @java.lang.Override
+    public int getFloorValueCount() {
+      return floorValue_.size();
+    }
+    /**
+     * <pre>
+     * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getFloorValue(int index) {
+      return floorValue_.get(index);
+    }
+    /**
+     * <pre>
+     * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFloorValueOrBuilder(
+        int index) {
+      return floorValue_.get(index);
+    }
+
+    public static final int UPDATE_PERIOD_FIELD_NUMBER = 2;
+    private com.google.protobuf.Duration updatePeriod_;
+    /**
+     * <pre>
+     * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+     * for time-based decreases.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the updatePeriod field is set.
+     */
+    @java.lang.Override
+    public boolean hasUpdatePeriod() {
+      return updatePeriod_ != null;
+    }
+    /**
+     * <pre>
+     * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+     * for time-based decreases.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+     * @return The updatePeriod.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getUpdatePeriod() {
+      return updatePeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : updatePeriod_;
+    }
+    /**
+     * <pre>
+     * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+     * for time-based decreases.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getUpdatePeriodOrBuilder() {
+      return updatePeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : updatePeriod_;
+    }
+
+    public static final int TARGET_PROPOSALS_FIELD_NUMBER = 3;
+    private long targetProposals_ = 0L;
+    /**
+     * <pre>
+     * The number of proposals in deposit period the dynamic minimum initial deposit should target.
+     * </pre>
+     *
+     * <code>uint64 target_proposals = 3 [json_name = "targetProposals"];</code>
+     * @return The targetProposals.
+     */
+    @java.lang.Override
+    public long getTargetProposals() {
+      return targetProposals_;
+    }
+
+    public static final int INCREASE_RATIO_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object increaseRatio_ = "";
+    /**
+     * <pre>
+     * The ratio of increase for the minimum initial deposit when the number of proposals
+     * in deposit period is at or above the target.
+     * </pre>
+     *
+     * <code>string increase_ratio = 4 [json_name = "increaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The increaseRatio.
+     */
+    @java.lang.Override
+    public java.lang.String getIncreaseRatio() {
+      java.lang.Object ref = increaseRatio_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        increaseRatio_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The ratio of increase for the minimum initial deposit when the number of proposals
+     * in deposit period is at or above the target.
+     * </pre>
+     *
+     * <code>string increase_ratio = 4 [json_name = "increaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for increaseRatio.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIncreaseRatioBytes() {
+      java.lang.Object ref = increaseRatio_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        increaseRatio_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DECREASE_RATIO_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object decreaseRatio_ = "";
+    /**
+     * <pre>
+     * The ratio of decrease for the minimum initial deposit when the number of proposals
+     * in deposit period is 1 less than the target.
+     * </pre>
+     *
+     * <code>string decrease_ratio = 5 [json_name = "decreaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The decreaseRatio.
+     */
+    @java.lang.Override
+    public java.lang.String getDecreaseRatio() {
+      java.lang.Object ref = decreaseRatio_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        decreaseRatio_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The ratio of decrease for the minimum initial deposit when the number of proposals
+     * in deposit period is 1 less than the target.
+     * </pre>
+     *
+     * <code>string decrease_ratio = 5 [json_name = "decreaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for decreaseRatio.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDecreaseRatioBytes() {
+      java.lang.Object ref = decreaseRatio_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        decreaseRatio_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DECREASE_SENSITIVITY_TARGET_DISTANCE_FIELD_NUMBER = 6;
+    private long decreaseSensitivityTargetDistance_ = 0L;
+    /**
+     * <pre>
+     * A positive integer representing the sensitivity of dynamic minimum initial 
+     * deposit decreases to the distance from the target number of proposals
+     * in deposit period. The higher the number, the lower the sensitivity. A value 
+     * of 1 represents the highest sensitivity.
+     * </pre>
+     *
+     * <code>uint64 decrease_sensitivity_target_distance = 6 [json_name = "decreaseSensitivityTargetDistance"];</code>
+     * @return The decreaseSensitivityTargetDistance.
+     */
+    @java.lang.Override
+    public long getDecreaseSensitivityTargetDistance() {
+      return decreaseSensitivityTargetDistance_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < floorValue_.size(); i++) {
+        output.writeMessage(1, floorValue_.get(i));
+      }
+      if (updatePeriod_ != null) {
+        output.writeMessage(2, getUpdatePeriod());
+      }
+      if (targetProposals_ != 0L) {
+        output.writeUInt64(3, targetProposals_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(increaseRatio_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, increaseRatio_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(decreaseRatio_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, decreaseRatio_);
+      }
+      if (decreaseSensitivityTargetDistance_ != 0L) {
+        output.writeUInt64(6, decreaseSensitivityTargetDistance_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < floorValue_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, floorValue_.get(i));
+      }
+      if (updatePeriod_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getUpdatePeriod());
+      }
+      if (targetProposals_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, targetProposals_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(increaseRatio_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, increaseRatio_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(decreaseRatio_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, decreaseRatio_);
+      }
+      if (decreaseSensitivityTargetDistance_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(6, decreaseSensitivityTargetDistance_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.atomone.gov.v1.GovProto.MinInitialDepositThrottler)) {
+        return super.equals(obj);
+      }
+      com.atomone.gov.v1.GovProto.MinInitialDepositThrottler other = (com.atomone.gov.v1.GovProto.MinInitialDepositThrottler) obj;
+
+      if (!getFloorValueList()
+          .equals(other.getFloorValueList())) return false;
+      if (hasUpdatePeriod() != other.hasUpdatePeriod()) return false;
+      if (hasUpdatePeriod()) {
+        if (!getUpdatePeriod()
+            .equals(other.getUpdatePeriod())) return false;
+      }
+      if (getTargetProposals()
+          != other.getTargetProposals()) return false;
+      if (!getIncreaseRatio()
+          .equals(other.getIncreaseRatio())) return false;
+      if (!getDecreaseRatio()
+          .equals(other.getDecreaseRatio())) return false;
+      if (getDecreaseSensitivityTargetDistance()
+          != other.getDecreaseSensitivityTargetDistance()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getFloorValueCount() > 0) {
+        hash = (37 * hash) + FLOOR_VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getFloorValueList().hashCode();
+      }
+      if (hasUpdatePeriod()) {
+        hash = (37 * hash) + UPDATE_PERIOD_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdatePeriod().hashCode();
+      }
+      hash = (37 * hash) + TARGET_PROPOSALS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTargetProposals());
+      hash = (37 * hash) + INCREASE_RATIO_FIELD_NUMBER;
+      hash = (53 * hash) + getIncreaseRatio().hashCode();
+      hash = (37 * hash) + DECREASE_RATIO_FIELD_NUMBER;
+      hash = (53 * hash) + getDecreaseRatio().hashCode();
+      hash = (37 * hash) + DECREASE_SENSITIVITY_TARGET_DISTANCE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDecreaseSensitivityTargetDistance());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.atomone.gov.v1.GovProto.MinInitialDepositThrottler parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.atomone.gov.v1.GovProto.MinInitialDepositThrottler parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.GovProto.MinInitialDepositThrottler parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.atomone.gov.v1.GovProto.MinInitialDepositThrottler parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.GovProto.MinInitialDepositThrottler parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.atomone.gov.v1.GovProto.MinInitialDepositThrottler parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.GovProto.MinInitialDepositThrottler parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.atomone.gov.v1.GovProto.MinInitialDepositThrottler parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.atomone.gov.v1.GovProto.MinInitialDepositThrottler parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.atomone.gov.v1.GovProto.MinInitialDepositThrottler parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.atomone.gov.v1.GovProto.MinInitialDepositThrottler parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.atomone.gov.v1.GovProto.MinInitialDepositThrottler parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.atomone.gov.v1.GovProto.MinInitialDepositThrottler prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code atomone.gov.v1.MinInitialDepositThrottler}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:atomone.gov.v1.MinInitialDepositThrottler)
+        com.atomone.gov.v1.GovProto.MinInitialDepositThrottlerOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.atomone.gov.v1.GovProto.internal_static_atomone_gov_v1_MinInitialDepositThrottler_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.atomone.gov.v1.GovProto.internal_static_atomone_gov_v1_MinInitialDepositThrottler_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.atomone.gov.v1.GovProto.MinInitialDepositThrottler.class, com.atomone.gov.v1.GovProto.MinInitialDepositThrottler.Builder.class);
+      }
+
+      // Construct using com.atomone.gov.v1.GovProto.MinInitialDepositThrottler.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (floorValueBuilder_ == null) {
+          floorValue_ = java.util.Collections.emptyList();
+        } else {
+          floorValue_ = null;
+          floorValueBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        updatePeriod_ = null;
+        if (updatePeriodBuilder_ != null) {
+          updatePeriodBuilder_.dispose();
+          updatePeriodBuilder_ = null;
+        }
+        targetProposals_ = 0L;
+        increaseRatio_ = "";
+        decreaseRatio_ = "";
+        decreaseSensitivityTargetDistance_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.atomone.gov.v1.GovProto.internal_static_atomone_gov_v1_MinInitialDepositThrottler_descriptor;
+      }
+
+      @java.lang.Override
+      public com.atomone.gov.v1.GovProto.MinInitialDepositThrottler getDefaultInstanceForType() {
+        return com.atomone.gov.v1.GovProto.MinInitialDepositThrottler.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.atomone.gov.v1.GovProto.MinInitialDepositThrottler build() {
+        com.atomone.gov.v1.GovProto.MinInitialDepositThrottler result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.atomone.gov.v1.GovProto.MinInitialDepositThrottler buildPartial() {
+        com.atomone.gov.v1.GovProto.MinInitialDepositThrottler result = new com.atomone.gov.v1.GovProto.MinInitialDepositThrottler(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.atomone.gov.v1.GovProto.MinInitialDepositThrottler result) {
+        if (floorValueBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            floorValue_ = java.util.Collections.unmodifiableList(floorValue_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.floorValue_ = floorValue_;
+        } else {
+          result.floorValue_ = floorValueBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.atomone.gov.v1.GovProto.MinInitialDepositThrottler result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.updatePeriod_ = updatePeriodBuilder_ == null
+              ? updatePeriod_
+              : updatePeriodBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.targetProposals_ = targetProposals_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.increaseRatio_ = increaseRatio_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.decreaseRatio_ = decreaseRatio_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.decreaseSensitivityTargetDistance_ = decreaseSensitivityTargetDistance_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.atomone.gov.v1.GovProto.MinInitialDepositThrottler) {
+          return mergeFrom((com.atomone.gov.v1.GovProto.MinInitialDepositThrottler)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.atomone.gov.v1.GovProto.MinInitialDepositThrottler other) {
+        if (other == com.atomone.gov.v1.GovProto.MinInitialDepositThrottler.getDefaultInstance()) return this;
+        if (floorValueBuilder_ == null) {
+          if (!other.floorValue_.isEmpty()) {
+            if (floorValue_.isEmpty()) {
+              floorValue_ = other.floorValue_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureFloorValueIsMutable();
+              floorValue_.addAll(other.floorValue_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.floorValue_.isEmpty()) {
+            if (floorValueBuilder_.isEmpty()) {
+              floorValueBuilder_.dispose();
+              floorValueBuilder_ = null;
+              floorValue_ = other.floorValue_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              floorValueBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFloorValueFieldBuilder() : null;
+            } else {
+              floorValueBuilder_.addAllMessages(other.floorValue_);
+            }
+          }
+        }
+        if (other.hasUpdatePeriod()) {
+          mergeUpdatePeriod(other.getUpdatePeriod());
+        }
+        if (other.getTargetProposals() != 0L) {
+          setTargetProposals(other.getTargetProposals());
+        }
+        if (!other.getIncreaseRatio().isEmpty()) {
+          increaseRatio_ = other.increaseRatio_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getDecreaseRatio().isEmpty()) {
+          decreaseRatio_ = other.decreaseRatio_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.getDecreaseSensitivityTargetDistance() != 0L) {
+          setDecreaseSensitivityTargetDistance(other.getDecreaseSensitivityTargetDistance());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (floorValueBuilder_ == null) {
+                  ensureFloorValueIsMutable();
+                  floorValue_.add(m);
+                } else {
+                  floorValueBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getUpdatePeriodFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                targetProposals_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                increaseRatio_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                decreaseRatio_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 48: {
+                decreaseSensitivityTargetDistance_ = input.readUInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> floorValue_ =
+        java.util.Collections.emptyList();
+      private void ensureFloorValueIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          floorValue_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(floorValue_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> floorValueBuilder_;
+
+      /**
+       * <pre>
+       * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getFloorValueList() {
+        if (floorValueBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(floorValue_);
+        } else {
+          return floorValueBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public int getFloorValueCount() {
+        if (floorValueBuilder_ == null) {
+          return floorValue_.size();
+        } else {
+          return floorValueBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getFloorValue(int index) {
+        if (floorValueBuilder_ == null) {
+          return floorValue_.get(index);
+        } else {
+          return floorValueBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder setFloorValue(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (floorValueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFloorValueIsMutable();
+          floorValue_.set(index, value);
+          onChanged();
+        } else {
+          floorValueBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder setFloorValue(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (floorValueBuilder_ == null) {
+          ensureFloorValueIsMutable();
+          floorValue_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          floorValueBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder addFloorValue(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (floorValueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFloorValueIsMutable();
+          floorValue_.add(value);
+          onChanged();
+        } else {
+          floorValueBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder addFloorValue(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (floorValueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFloorValueIsMutable();
+          floorValue_.add(index, value);
+          onChanged();
+        } else {
+          floorValueBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder addFloorValue(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (floorValueBuilder_ == null) {
+          ensureFloorValueIsMutable();
+          floorValue_.add(builderForValue.build());
+          onChanged();
+        } else {
+          floorValueBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder addFloorValue(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (floorValueBuilder_ == null) {
+          ensureFloorValueIsMutable();
+          floorValue_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          floorValueBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder addAllFloorValue(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (floorValueBuilder_ == null) {
+          ensureFloorValueIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, floorValue_);
+          onChanged();
+        } else {
+          floorValueBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder clearFloorValue() {
+        if (floorValueBuilder_ == null) {
+          floorValue_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          floorValueBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public Builder removeFloorValue(int index) {
+        if (floorValueBuilder_ == null) {
+          ensureFloorValueIsMutable();
+          floorValue_.remove(index);
+          onChanged();
+        } else {
+          floorValueBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getFloorValueBuilder(
+          int index) {
+        return getFloorValueFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFloorValueOrBuilder(
+          int index) {
+        if (floorValueBuilder_ == null) {
+          return floorValue_.get(index);  } else {
+          return floorValueBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getFloorValueOrBuilderList() {
+        if (floorValueBuilder_ != null) {
+          return floorValueBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(floorValue_);
+        }
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addFloorValueBuilder() {
+        return getFloorValueFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addFloorValueBuilder(
+          int index) {
+        return getFloorValueFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Floor value for the minimum initial deposit required for a proposal to enter the deposit period.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin floor_value = 1 [json_name = "floorValue", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getFloorValueBuilderList() {
+        return getFloorValueFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getFloorValueFieldBuilder() {
+        if (floorValueBuilder_ == null) {
+          floorValueBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  floorValue_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          floorValue_ = null;
+        }
+        return floorValueBuilder_;
+      }
+
+      private com.google.protobuf.Duration updatePeriod_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> updatePeriodBuilder_;
+      /**
+       * <pre>
+       * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+       * for time-based decreases.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+       * @return Whether the updatePeriod field is set.
+       */
+      public boolean hasUpdatePeriod() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+       * for time-based decreases.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+       * @return The updatePeriod.
+       */
+      public com.google.protobuf.Duration getUpdatePeriod() {
+        if (updatePeriodBuilder_ == null) {
+          return updatePeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : updatePeriod_;
+        } else {
+          return updatePeriodBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+       * for time-based decreases.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setUpdatePeriod(com.google.protobuf.Duration value) {
+        if (updatePeriodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updatePeriod_ = value;
+        } else {
+          updatePeriodBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+       * for time-based decreases.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setUpdatePeriod(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (updatePeriodBuilder_ == null) {
+          updatePeriod_ = builderForValue.build();
+        } else {
+          updatePeriodBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+       * for time-based decreases.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeUpdatePeriod(com.google.protobuf.Duration value) {
+        if (updatePeriodBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            updatePeriod_ != null &&
+            updatePeriod_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getUpdatePeriodBuilder().mergeFrom(value);
+          } else {
+            updatePeriod_ = value;
+          }
+        } else {
+          updatePeriodBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+       * for time-based decreases.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearUpdatePeriod() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        updatePeriod_ = null;
+        if (updatePeriodBuilder_ != null) {
+          updatePeriodBuilder_.dispose();
+          updatePeriodBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+       * for time-based decreases.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getUpdatePeriodBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getUpdatePeriodFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+       * for time-based decreases.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getUpdatePeriodOrBuilder() {
+        if (updatePeriodBuilder_ != null) {
+          return updatePeriodBuilder_.getMessageOrBuilder();
+        } else {
+          return updatePeriod_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : updatePeriod_;
+        }
+      }
+      /**
+       * <pre>
+       * Duration that dictates after how long the dynamic minimum deposit should be recalculated
+       * for time-based decreases.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration update_period = 2 [json_name = "updatePeriod", (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getUpdatePeriodFieldBuilder() {
+        if (updatePeriodBuilder_ == null) {
+          updatePeriodBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getUpdatePeriod(),
+                  getParentForChildren(),
+                  isClean());
+          updatePeriod_ = null;
+        }
+        return updatePeriodBuilder_;
+      }
+
+      private long targetProposals_ ;
+      /**
+       * <pre>
+       * The number of proposals in deposit period the dynamic minimum initial deposit should target.
+       * </pre>
+       *
+       * <code>uint64 target_proposals = 3 [json_name = "targetProposals"];</code>
+       * @return The targetProposals.
+       */
+      @java.lang.Override
+      public long getTargetProposals() {
+        return targetProposals_;
+      }
+      /**
+       * <pre>
+       * The number of proposals in deposit period the dynamic minimum initial deposit should target.
+       * </pre>
+       *
+       * <code>uint64 target_proposals = 3 [json_name = "targetProposals"];</code>
+       * @param value The targetProposals to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargetProposals(long value) {
+
+        targetProposals_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of proposals in deposit period the dynamic minimum initial deposit should target.
+       * </pre>
+       *
+       * <code>uint64 target_proposals = 3 [json_name = "targetProposals"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTargetProposals() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        targetProposals_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object increaseRatio_ = "";
+      /**
+       * <pre>
+       * The ratio of increase for the minimum initial deposit when the number of proposals
+       * in deposit period is at or above the target.
+       * </pre>
+       *
+       * <code>string increase_ratio = 4 [json_name = "increaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The increaseRatio.
+       */
+      public java.lang.String getIncreaseRatio() {
+        java.lang.Object ref = increaseRatio_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          increaseRatio_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ratio of increase for the minimum initial deposit when the number of proposals
+       * in deposit period is at or above the target.
+       * </pre>
+       *
+       * <code>string increase_ratio = 4 [json_name = "increaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The bytes for increaseRatio.
+       */
+      public com.google.protobuf.ByteString
+          getIncreaseRatioBytes() {
+        java.lang.Object ref = increaseRatio_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          increaseRatio_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ratio of increase for the minimum initial deposit when the number of proposals
+       * in deposit period is at or above the target.
+       * </pre>
+       *
+       * <code>string increase_ratio = 4 [json_name = "increaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The increaseRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncreaseRatio(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        increaseRatio_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ratio of increase for the minimum initial deposit when the number of proposals
+       * in deposit period is at or above the target.
+       * </pre>
+       *
+       * <code>string increase_ratio = 4 [json_name = "increaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIncreaseRatio() {
+        increaseRatio_ = getDefaultInstance().getIncreaseRatio();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ratio of increase for the minimum initial deposit when the number of proposals
+       * in deposit period is at or above the target.
+       * </pre>
+       *
+       * <code>string increase_ratio = 4 [json_name = "increaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The bytes for increaseRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncreaseRatioBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        increaseRatio_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object decreaseRatio_ = "";
+      /**
+       * <pre>
+       * The ratio of decrease for the minimum initial deposit when the number of proposals
+       * in deposit period is 1 less than the target.
+       * </pre>
+       *
+       * <code>string decrease_ratio = 5 [json_name = "decreaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The decreaseRatio.
+       */
+      public java.lang.String getDecreaseRatio() {
+        java.lang.Object ref = decreaseRatio_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          decreaseRatio_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ratio of decrease for the minimum initial deposit when the number of proposals
+       * in deposit period is 1 less than the target.
+       * </pre>
+       *
+       * <code>string decrease_ratio = 5 [json_name = "decreaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The bytes for decreaseRatio.
+       */
+      public com.google.protobuf.ByteString
+          getDecreaseRatioBytes() {
+        java.lang.Object ref = decreaseRatio_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          decreaseRatio_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ratio of decrease for the minimum initial deposit when the number of proposals
+       * in deposit period is 1 less than the target.
+       * </pre>
+       *
+       * <code>string decrease_ratio = 5 [json_name = "decreaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The decreaseRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDecreaseRatio(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        decreaseRatio_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ratio of decrease for the minimum initial deposit when the number of proposals
+       * in deposit period is 1 less than the target.
+       * </pre>
+       *
+       * <code>string decrease_ratio = 5 [json_name = "decreaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDecreaseRatio() {
+        decreaseRatio_ = getDefaultInstance().getDecreaseRatio();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ratio of decrease for the minimum initial deposit when the number of proposals
+       * in deposit period is 1 less than the target.
+       * </pre>
+       *
+       * <code>string decrease_ratio = 5 [json_name = "decreaseRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The bytes for decreaseRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDecreaseRatioBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        decreaseRatio_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private long decreaseSensitivityTargetDistance_ ;
+      /**
+       * <pre>
+       * A positive integer representing the sensitivity of dynamic minimum initial 
+       * deposit decreases to the distance from the target number of proposals
+       * in deposit period. The higher the number, the lower the sensitivity. A value 
+       * of 1 represents the highest sensitivity.
+       * </pre>
+       *
+       * <code>uint64 decrease_sensitivity_target_distance = 6 [json_name = "decreaseSensitivityTargetDistance"];</code>
+       * @return The decreaseSensitivityTargetDistance.
+       */
+      @java.lang.Override
+      public long getDecreaseSensitivityTargetDistance() {
+        return decreaseSensitivityTargetDistance_;
+      }
+      /**
+       * <pre>
+       * A positive integer representing the sensitivity of dynamic minimum initial 
+       * deposit decreases to the distance from the target number of proposals
+       * in deposit period. The higher the number, the lower the sensitivity. A value 
+       * of 1 represents the highest sensitivity.
+       * </pre>
+       *
+       * <code>uint64 decrease_sensitivity_target_distance = 6 [json_name = "decreaseSensitivityTargetDistance"];</code>
+       * @param value The decreaseSensitivityTargetDistance to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDecreaseSensitivityTargetDistance(long value) {
+
+        decreaseSensitivityTargetDistance_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A positive integer representing the sensitivity of dynamic minimum initial 
+       * deposit decreases to the distance from the target number of proposals
+       * in deposit period. The higher the number, the lower the sensitivity. A value 
+       * of 1 represents the highest sensitivity.
+       * </pre>
+       *
+       * <code>uint64 decrease_sensitivity_target_distance = 6 [json_name = "decreaseSensitivityTargetDistance"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDecreaseSensitivityTargetDistance() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        decreaseSensitivityTargetDistance_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:atomone.gov.v1.MinInitialDepositThrottler)
+    }
+
+    // @@protoc_insertion_point(class_scope:atomone.gov.v1.MinInitialDepositThrottler)
+    private static final com.atomone.gov.v1.GovProto.MinInitialDepositThrottler DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.atomone.gov.v1.GovProto.MinInitialDepositThrottler();
+    }
+
+    public static com.atomone.gov.v1.GovProto.MinInitialDepositThrottler getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MinInitialDepositThrottler>
+        PARSER = new com.google.protobuf.AbstractParser<MinInitialDepositThrottler>() {
+      @java.lang.Override
+      public MinInitialDepositThrottler parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MinInitialDepositThrottler> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MinInitialDepositThrottler> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.atomone.gov.v1.GovProto.MinInitialDepositThrottler getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ParamsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:atomone.gov.v1.Params)
       com.google.protobuf.MessageOrBuilder {
@@ -12612,45 +17276,70 @@ public final class GovProto {
     /**
      * <pre>
      * Minimum deposit for a proposal to enter voting period.
+     * Deprecated: a dynamic system now determines the minimum deposit,
+     * see the other params inside the min_deposit_throttler field.
+     * While setting this value returns an error, when queried it is set to the
+     * value of the current minimum deposit value as determined by the dynamic
+     * system for backward compatibility.
      * </pre>
      *
-     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      */
-    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+    @java.lang.Deprecated java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
         getMinDepositList();
     /**
      * <pre>
      * Minimum deposit for a proposal to enter voting period.
+     * Deprecated: a dynamic system now determines the minimum deposit,
+     * see the other params inside the min_deposit_throttler field.
+     * While setting this value returns an error, when queried it is set to the
+     * value of the current minimum deposit value as determined by the dynamic
+     * system for backward compatibility.
      * </pre>
      *
-     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      */
-    com.cosmos.base.v1beta1.CoinProto.Coin getMinDeposit(int index);
+    @java.lang.Deprecated com.cosmos.base.v1beta1.CoinProto.Coin getMinDeposit(int index);
     /**
      * <pre>
      * Minimum deposit for a proposal to enter voting period.
+     * Deprecated: a dynamic system now determines the minimum deposit,
+     * see the other params inside the min_deposit_throttler field.
+     * While setting this value returns an error, when queried it is set to the
+     * value of the current minimum deposit value as determined by the dynamic
+     * system for backward compatibility.
      * </pre>
      *
-     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      */
-    int getMinDepositCount();
+    @java.lang.Deprecated int getMinDepositCount();
     /**
      * <pre>
      * Minimum deposit for a proposal to enter voting period.
+     * Deprecated: a dynamic system now determines the minimum deposit,
+     * see the other params inside the min_deposit_throttler field.
+     * While setting this value returns an error, when queried it is set to the
+     * value of the current minimum deposit value as determined by the dynamic
+     * system for backward compatibility.
      * </pre>
      *
-     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      */
-    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
         getMinDepositOrBuilderList();
     /**
      * <pre>
      * Minimum deposit for a proposal to enter voting period.
+     * Deprecated: a dynamic system now determines the minimum deposit,
+     * see the other params inside the min_deposit_throttler field.
+     * While setting this value returns an error, when queried it is set to the
+     * value of the current minimum deposit value as determined by the dynamic
+     * system for backward compatibility.
      * </pre>
      *
-     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      */
-    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getMinDepositOrBuilder(
+    @java.lang.Deprecated com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getMinDepositOrBuilder(
         int index);
 
     /**
@@ -12757,19 +17446,23 @@ public final class GovProto {
      *  The ratio representing the proportion of the deposit value that must be paid at proposal submission.
      * </pre>
      *
-     * <code>string min_initial_deposit_ratio = 7 [json_name = "minInitialDepositRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * <code>string min_initial_deposit_ratio = 7 [json_name = "minInitialDepositRatio", deprecated = true, (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @deprecated atomone.gov.v1.Params.min_initial_deposit_ratio is deprecated.
+     *     See atomone/gov/v1/gov.proto;l=304
      * @return The minInitialDepositRatio.
      */
-    java.lang.String getMinInitialDepositRatio();
+    @java.lang.Deprecated java.lang.String getMinInitialDepositRatio();
     /**
      * <pre>
      *  The ratio representing the proportion of the deposit value that must be paid at proposal submission.
      * </pre>
      *
-     * <code>string min_initial_deposit_ratio = 7 [json_name = "minInitialDepositRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * <code>string min_initial_deposit_ratio = 7 [json_name = "minInitialDepositRatio", deprecated = true, (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @deprecated atomone.gov.v1.Params.min_initial_deposit_ratio is deprecated.
+     *     See atomone/gov/v1/gov.proto;l=304
      * @return The bytes for minInitialDepositRatio.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getMinInitialDepositRatioBytes();
 
     /**
@@ -12974,6 +17667,56 @@ public final class GovProto {
      * @return The quorumCheckCount.
      */
     long getQuorumCheckCount();
+
+    /**
+     * <code>.atomone.gov.v1.MinDepositThrottler min_deposit_throttler = 23 [json_name = "minDepositThrottler"];</code>
+     * @return Whether the minDepositThrottler field is set.
+     */
+    boolean hasMinDepositThrottler();
+    /**
+     * <code>.atomone.gov.v1.MinDepositThrottler min_deposit_throttler = 23 [json_name = "minDepositThrottler"];</code>
+     * @return The minDepositThrottler.
+     */
+    com.atomone.gov.v1.GovProto.MinDepositThrottler getMinDepositThrottler();
+    /**
+     * <code>.atomone.gov.v1.MinDepositThrottler min_deposit_throttler = 23 [json_name = "minDepositThrottler"];</code>
+     */
+    com.atomone.gov.v1.GovProto.MinDepositThrottlerOrBuilder getMinDepositThrottlerOrBuilder();
+
+    /**
+     * <code>.atomone.gov.v1.MinInitialDepositThrottler min_initial_deposit_throttler = 24 [json_name = "minInitialDepositThrottler"];</code>
+     * @return Whether the minInitialDepositThrottler field is set.
+     */
+    boolean hasMinInitialDepositThrottler();
+    /**
+     * <code>.atomone.gov.v1.MinInitialDepositThrottler min_initial_deposit_throttler = 24 [json_name = "minInitialDepositThrottler"];</code>
+     * @return The minInitialDepositThrottler.
+     */
+    com.atomone.gov.v1.GovProto.MinInitialDepositThrottler getMinInitialDepositThrottler();
+    /**
+     * <code>.atomone.gov.v1.MinInitialDepositThrottler min_initial_deposit_throttler = 24 [json_name = "minInitialDepositThrottler"];</code>
+     */
+    com.atomone.gov.v1.GovProto.MinInitialDepositThrottlerOrBuilder getMinInitialDepositThrottlerOrBuilder();
+
+    /**
+     * <pre>
+     * Minimum proportion of No Votes for a proposal deposit to be burnt.
+     * </pre>
+     *
+     * <code>string burn_deposit_no_threshold = 25 [json_name = "burnDepositNoThreshold", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The burnDepositNoThreshold.
+     */
+    java.lang.String getBurnDepositNoThreshold();
+    /**
+     * <pre>
+     * Minimum proportion of No Votes for a proposal deposit to be burnt.
+     * </pre>
+     *
+     * <code>string burn_deposit_no_threshold = 25 [json_name = "burnDepositNoThreshold", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for burnDepositNoThreshold.
+     */
+    com.google.protobuf.ByteString
+        getBurnDepositNoThresholdBytes();
   }
   /**
    * <pre>
@@ -13003,6 +17746,7 @@ public final class GovProto {
       constitutionAmendmentThreshold_ = "";
       lawQuorum_ = "";
       lawThreshold_ = "";
+      burnDepositNoThreshold_ = "";
     }
 
     @java.lang.Override
@@ -13031,57 +17775,82 @@ public final class GovProto {
     /**
      * <pre>
      * Minimum deposit for a proposal to enter voting period.
+     * Deprecated: a dynamic system now determines the minimum deposit,
+     * see the other params inside the min_deposit_throttler field.
+     * While setting this value returns an error, when queried it is set to the
+     * value of the current minimum deposit value as determined by the dynamic
+     * system for backward compatibility.
      * </pre>
      *
-     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
-    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getMinDepositList() {
+    @java.lang.Deprecated public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getMinDepositList() {
       return minDeposit_;
     }
     /**
      * <pre>
      * Minimum deposit for a proposal to enter voting period.
+     * Deprecated: a dynamic system now determines the minimum deposit,
+     * see the other params inside the min_deposit_throttler field.
+     * While setting this value returns an error, when queried it is set to the
+     * value of the current minimum deposit value as determined by the dynamic
+     * system for backward compatibility.
      * </pre>
      *
-     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
         getMinDepositOrBuilderList() {
       return minDeposit_;
     }
     /**
      * <pre>
      * Minimum deposit for a proposal to enter voting period.
+     * Deprecated: a dynamic system now determines the minimum deposit,
+     * see the other params inside the min_deposit_throttler field.
+     * While setting this value returns an error, when queried it is set to the
+     * value of the current minimum deposit value as determined by the dynamic
+     * system for backward compatibility.
      * </pre>
      *
-     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
-    public int getMinDepositCount() {
+    @java.lang.Deprecated public int getMinDepositCount() {
       return minDeposit_.size();
     }
     /**
      * <pre>
      * Minimum deposit for a proposal to enter voting period.
+     * Deprecated: a dynamic system now determines the minimum deposit,
+     * see the other params inside the min_deposit_throttler field.
+     * While setting this value returns an error, when queried it is set to the
+     * value of the current minimum deposit value as determined by the dynamic
+     * system for backward compatibility.
      * </pre>
      *
-     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
-    public com.cosmos.base.v1beta1.CoinProto.Coin getMinDeposit(int index) {
+    @java.lang.Deprecated public com.cosmos.base.v1beta1.CoinProto.Coin getMinDeposit(int index) {
       return minDeposit_.get(index);
     }
     /**
      * <pre>
      * Minimum deposit for a proposal to enter voting period.
+     * Deprecated: a dynamic system now determines the minimum deposit,
+     * see the other params inside the min_deposit_throttler field.
+     * While setting this value returns an error, when queried it is set to the
+     * value of the current minimum deposit value as determined by the dynamic
+     * system for backward compatibility.
      * </pre>
      *
-     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+     * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
      */
     @java.lang.Override
-    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getMinDepositOrBuilder(
+    @java.lang.Deprecated public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getMinDepositOrBuilder(
         int index) {
       return minDeposit_.get(index);
     }
@@ -13269,11 +18038,13 @@ public final class GovProto {
      *  The ratio representing the proportion of the deposit value that must be paid at proposal submission.
      * </pre>
      *
-     * <code>string min_initial_deposit_ratio = 7 [json_name = "minInitialDepositRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * <code>string min_initial_deposit_ratio = 7 [json_name = "minInitialDepositRatio", deprecated = true, (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @deprecated atomone.gov.v1.Params.min_initial_deposit_ratio is deprecated.
+     *     See atomone/gov/v1/gov.proto;l=304
      * @return The minInitialDepositRatio.
      */
     @java.lang.Override
-    public java.lang.String getMinInitialDepositRatio() {
+    @java.lang.Deprecated public java.lang.String getMinInitialDepositRatio() {
       java.lang.Object ref = minInitialDepositRatio_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -13290,11 +18061,13 @@ public final class GovProto {
      *  The ratio representing the proportion of the deposit value that must be paid at proposal submission.
      * </pre>
      *
-     * <code>string min_initial_deposit_ratio = 7 [json_name = "minInitialDepositRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * <code>string min_initial_deposit_ratio = 7 [json_name = "minInitialDepositRatio", deprecated = true, (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @deprecated atomone.gov.v1.Params.min_initial_deposit_ratio is deprecated.
+     *     See atomone/gov/v1/gov.proto;l=304
      * @return The bytes for minInitialDepositRatio.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getMinInitialDepositRatioBytes() {
       java.lang.Object ref = minInitialDepositRatio_;
       if (ref instanceof java.lang.String) {
@@ -13683,6 +18456,105 @@ public final class GovProto {
       return quorumCheckCount_;
     }
 
+    public static final int MIN_DEPOSIT_THROTTLER_FIELD_NUMBER = 23;
+    private com.atomone.gov.v1.GovProto.MinDepositThrottler minDepositThrottler_;
+    /**
+     * <code>.atomone.gov.v1.MinDepositThrottler min_deposit_throttler = 23 [json_name = "minDepositThrottler"];</code>
+     * @return Whether the minDepositThrottler field is set.
+     */
+    @java.lang.Override
+    public boolean hasMinDepositThrottler() {
+      return minDepositThrottler_ != null;
+    }
+    /**
+     * <code>.atomone.gov.v1.MinDepositThrottler min_deposit_throttler = 23 [json_name = "minDepositThrottler"];</code>
+     * @return The minDepositThrottler.
+     */
+    @java.lang.Override
+    public com.atomone.gov.v1.GovProto.MinDepositThrottler getMinDepositThrottler() {
+      return minDepositThrottler_ == null ? com.atomone.gov.v1.GovProto.MinDepositThrottler.getDefaultInstance() : minDepositThrottler_;
+    }
+    /**
+     * <code>.atomone.gov.v1.MinDepositThrottler min_deposit_throttler = 23 [json_name = "minDepositThrottler"];</code>
+     */
+    @java.lang.Override
+    public com.atomone.gov.v1.GovProto.MinDepositThrottlerOrBuilder getMinDepositThrottlerOrBuilder() {
+      return minDepositThrottler_ == null ? com.atomone.gov.v1.GovProto.MinDepositThrottler.getDefaultInstance() : minDepositThrottler_;
+    }
+
+    public static final int MIN_INITIAL_DEPOSIT_THROTTLER_FIELD_NUMBER = 24;
+    private com.atomone.gov.v1.GovProto.MinInitialDepositThrottler minInitialDepositThrottler_;
+    /**
+     * <code>.atomone.gov.v1.MinInitialDepositThrottler min_initial_deposit_throttler = 24 [json_name = "minInitialDepositThrottler"];</code>
+     * @return Whether the minInitialDepositThrottler field is set.
+     */
+    @java.lang.Override
+    public boolean hasMinInitialDepositThrottler() {
+      return minInitialDepositThrottler_ != null;
+    }
+    /**
+     * <code>.atomone.gov.v1.MinInitialDepositThrottler min_initial_deposit_throttler = 24 [json_name = "minInitialDepositThrottler"];</code>
+     * @return The minInitialDepositThrottler.
+     */
+    @java.lang.Override
+    public com.atomone.gov.v1.GovProto.MinInitialDepositThrottler getMinInitialDepositThrottler() {
+      return minInitialDepositThrottler_ == null ? com.atomone.gov.v1.GovProto.MinInitialDepositThrottler.getDefaultInstance() : minInitialDepositThrottler_;
+    }
+    /**
+     * <code>.atomone.gov.v1.MinInitialDepositThrottler min_initial_deposit_throttler = 24 [json_name = "minInitialDepositThrottler"];</code>
+     */
+    @java.lang.Override
+    public com.atomone.gov.v1.GovProto.MinInitialDepositThrottlerOrBuilder getMinInitialDepositThrottlerOrBuilder() {
+      return minInitialDepositThrottler_ == null ? com.atomone.gov.v1.GovProto.MinInitialDepositThrottler.getDefaultInstance() : minInitialDepositThrottler_;
+    }
+
+    public static final int BURN_DEPOSIT_NO_THRESHOLD_FIELD_NUMBER = 25;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object burnDepositNoThreshold_ = "";
+    /**
+     * <pre>
+     * Minimum proportion of No Votes for a proposal deposit to be burnt.
+     * </pre>
+     *
+     * <code>string burn_deposit_no_threshold = 25 [json_name = "burnDepositNoThreshold", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The burnDepositNoThreshold.
+     */
+    @java.lang.Override
+    public java.lang.String getBurnDepositNoThreshold() {
+      java.lang.Object ref = burnDepositNoThreshold_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        burnDepositNoThreshold_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Minimum proportion of No Votes for a proposal deposit to be burnt.
+     * </pre>
+     *
+     * <code>string burn_deposit_no_threshold = 25 [json_name = "burnDepositNoThreshold", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for burnDepositNoThreshold.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBurnDepositNoThresholdBytes() {
+      java.lang.Object ref = burnDepositNoThreshold_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        burnDepositNoThreshold_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13744,6 +18616,15 @@ public final class GovProto {
       }
       if (quorumCheckCount_ != 0L) {
         output.writeUInt64(22, quorumCheckCount_);
+      }
+      if (minDepositThrottler_ != null) {
+        output.writeMessage(23, getMinDepositThrottler());
+      }
+      if (minInitialDepositThrottler_ != null) {
+        output.writeMessage(24, getMinInitialDepositThrottler());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(burnDepositNoThreshold_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 25, burnDepositNoThreshold_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -13810,6 +18691,17 @@ public final class GovProto {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(22, quorumCheckCount_);
       }
+      if (minDepositThrottler_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(23, getMinDepositThrottler());
+      }
+      if (minInitialDepositThrottler_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(24, getMinInitialDepositThrottler());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(burnDepositNoThreshold_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(25, burnDepositNoThreshold_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -13869,6 +18761,18 @@ public final class GovProto {
       }
       if (getQuorumCheckCount()
           != other.getQuorumCheckCount()) return false;
+      if (hasMinDepositThrottler() != other.hasMinDepositThrottler()) return false;
+      if (hasMinDepositThrottler()) {
+        if (!getMinDepositThrottler()
+            .equals(other.getMinDepositThrottler())) return false;
+      }
+      if (hasMinInitialDepositThrottler() != other.hasMinInitialDepositThrottler()) return false;
+      if (hasMinInitialDepositThrottler()) {
+        if (!getMinInitialDepositThrottler()
+            .equals(other.getMinInitialDepositThrottler())) return false;
+      }
+      if (!getBurnDepositNoThreshold()
+          .equals(other.getBurnDepositNoThreshold())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -13925,6 +18829,16 @@ public final class GovProto {
       hash = (37 * hash) + QUORUM_CHECK_COUNT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getQuorumCheckCount());
+      if (hasMinDepositThrottler()) {
+        hash = (37 * hash) + MIN_DEPOSIT_THROTTLER_FIELD_NUMBER;
+        hash = (53 * hash) + getMinDepositThrottler().hashCode();
+      }
+      if (hasMinInitialDepositThrottler()) {
+        hash = (37 * hash) + MIN_INITIAL_DEPOSIT_THROTTLER_FIELD_NUMBER;
+        hash = (53 * hash) + getMinInitialDepositThrottler().hashCode();
+      }
+      hash = (37 * hash) + BURN_DEPOSIT_NO_THRESHOLD_FIELD_NUMBER;
+      hash = (53 * hash) + getBurnDepositNoThreshold().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -14100,6 +19014,17 @@ public final class GovProto {
           maxVotingPeriodExtensionBuilder_ = null;
         }
         quorumCheckCount_ = 0L;
+        minDepositThrottler_ = null;
+        if (minDepositThrottlerBuilder_ != null) {
+          minDepositThrottlerBuilder_.dispose();
+          minDepositThrottlerBuilder_ = null;
+        }
+        minInitialDepositThrottler_ = null;
+        if (minInitialDepositThrottlerBuilder_ != null) {
+          minInitialDepositThrottlerBuilder_.dispose();
+          minInitialDepositThrottlerBuilder_ = null;
+        }
+        burnDepositNoThreshold_ = "";
         return this;
       }
 
@@ -14198,6 +19123,19 @@ public final class GovProto {
         }
         if (((from_bitField0_ & 0x00008000) != 0)) {
           result.quorumCheckCount_ = quorumCheckCount_;
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.minDepositThrottler_ = minDepositThrottlerBuilder_ == null
+              ? minDepositThrottler_
+              : minDepositThrottlerBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00020000) != 0)) {
+          result.minInitialDepositThrottler_ = minInitialDepositThrottlerBuilder_ == null
+              ? minInitialDepositThrottler_
+              : minInitialDepositThrottlerBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00040000) != 0)) {
+          result.burnDepositNoThreshold_ = burnDepositNoThreshold_;
         }
       }
 
@@ -14332,6 +19270,17 @@ public final class GovProto {
         if (other.getQuorumCheckCount() != 0L) {
           setQuorumCheckCount(other.getQuorumCheckCount());
         }
+        if (other.hasMinDepositThrottler()) {
+          mergeMinDepositThrottler(other.getMinDepositThrottler());
+        }
+        if (other.hasMinInitialDepositThrottler()) {
+          mergeMinInitialDepositThrottler(other.getMinInitialDepositThrottler());
+        }
+        if (!other.getBurnDepositNoThreshold().isEmpty()) {
+          burnDepositNoThreshold_ = other.burnDepositNoThreshold_;
+          bitField0_ |= 0x00040000;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -14454,6 +19403,25 @@ public final class GovProto {
                 bitField0_ |= 0x00008000;
                 break;
               } // case 176
+              case 186: {
+                input.readMessage(
+                    getMinDepositThrottlerFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00010000;
+                break;
+              } // case 186
+              case 194: {
+                input.readMessage(
+                    getMinInitialDepositThrottlerFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00020000;
+                break;
+              } // case 194
+              case 202: {
+                burnDepositNoThreshold_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00040000;
+                break;
+              } // case 202
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -14486,11 +19454,16 @@ public final class GovProto {
       /**
        * <pre>
        * Minimum deposit for a proposal to enter voting period.
+       * Deprecated: a dynamic system now determines the minimum deposit,
+       * see the other params inside the min_deposit_throttler field.
+       * While setting this value returns an error, when queried it is set to the
+       * value of the current minimum deposit value as determined by the dynamic
+       * system for backward compatibility.
        * </pre>
        *
-       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
-      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getMinDepositList() {
+      @java.lang.Deprecated public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getMinDepositList() {
         if (minDepositBuilder_ == null) {
           return java.util.Collections.unmodifiableList(minDeposit_);
         } else {
@@ -14500,11 +19473,16 @@ public final class GovProto {
       /**
        * <pre>
        * Minimum deposit for a proposal to enter voting period.
+       * Deprecated: a dynamic system now determines the minimum deposit,
+       * see the other params inside the min_deposit_throttler field.
+       * While setting this value returns an error, when queried it is set to the
+       * value of the current minimum deposit value as determined by the dynamic
+       * system for backward compatibility.
        * </pre>
        *
-       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
-      public int getMinDepositCount() {
+      @java.lang.Deprecated public int getMinDepositCount() {
         if (minDepositBuilder_ == null) {
           return minDeposit_.size();
         } else {
@@ -14514,11 +19492,16 @@ public final class GovProto {
       /**
        * <pre>
        * Minimum deposit for a proposal to enter voting period.
+       * Deprecated: a dynamic system now determines the minimum deposit,
+       * see the other params inside the min_deposit_throttler field.
+       * While setting this value returns an error, when queried it is set to the
+       * value of the current minimum deposit value as determined by the dynamic
+       * system for backward compatibility.
        * </pre>
        *
-       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
-      public com.cosmos.base.v1beta1.CoinProto.Coin getMinDeposit(int index) {
+      @java.lang.Deprecated public com.cosmos.base.v1beta1.CoinProto.Coin getMinDeposit(int index) {
         if (minDepositBuilder_ == null) {
           return minDeposit_.get(index);
         } else {
@@ -14528,11 +19511,16 @@ public final class GovProto {
       /**
        * <pre>
        * Minimum deposit for a proposal to enter voting period.
+       * Deprecated: a dynamic system now determines the minimum deposit,
+       * see the other params inside the min_deposit_throttler field.
+       * While setting this value returns an error, when queried it is set to the
+       * value of the current minimum deposit value as determined by the dynamic
+       * system for backward compatibility.
        * </pre>
        *
-       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
-      public Builder setMinDeposit(
+      @java.lang.Deprecated public Builder setMinDeposit(
           int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
         if (minDepositBuilder_ == null) {
           if (value == null) {
@@ -14549,11 +19537,16 @@ public final class GovProto {
       /**
        * <pre>
        * Minimum deposit for a proposal to enter voting period.
+       * Deprecated: a dynamic system now determines the minimum deposit,
+       * see the other params inside the min_deposit_throttler field.
+       * While setting this value returns an error, when queried it is set to the
+       * value of the current minimum deposit value as determined by the dynamic
+       * system for backward compatibility.
        * </pre>
        *
-       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
-      public Builder setMinDeposit(
+      @java.lang.Deprecated public Builder setMinDeposit(
           int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
         if (minDepositBuilder_ == null) {
           ensureMinDepositIsMutable();
@@ -14567,11 +19560,16 @@ public final class GovProto {
       /**
        * <pre>
        * Minimum deposit for a proposal to enter voting period.
+       * Deprecated: a dynamic system now determines the minimum deposit,
+       * see the other params inside the min_deposit_throttler field.
+       * While setting this value returns an error, when queried it is set to the
+       * value of the current minimum deposit value as determined by the dynamic
+       * system for backward compatibility.
        * </pre>
        *
-       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
-      public Builder addMinDeposit(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+      @java.lang.Deprecated public Builder addMinDeposit(com.cosmos.base.v1beta1.CoinProto.Coin value) {
         if (minDepositBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -14587,11 +19585,16 @@ public final class GovProto {
       /**
        * <pre>
        * Minimum deposit for a proposal to enter voting period.
+       * Deprecated: a dynamic system now determines the minimum deposit,
+       * see the other params inside the min_deposit_throttler field.
+       * While setting this value returns an error, when queried it is set to the
+       * value of the current minimum deposit value as determined by the dynamic
+       * system for backward compatibility.
        * </pre>
        *
-       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
-      public Builder addMinDeposit(
+      @java.lang.Deprecated public Builder addMinDeposit(
           int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
         if (minDepositBuilder_ == null) {
           if (value == null) {
@@ -14608,11 +19611,16 @@ public final class GovProto {
       /**
        * <pre>
        * Minimum deposit for a proposal to enter voting period.
+       * Deprecated: a dynamic system now determines the minimum deposit,
+       * see the other params inside the min_deposit_throttler field.
+       * While setting this value returns an error, when queried it is set to the
+       * value of the current minimum deposit value as determined by the dynamic
+       * system for backward compatibility.
        * </pre>
        *
-       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
-      public Builder addMinDeposit(
+      @java.lang.Deprecated public Builder addMinDeposit(
           com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
         if (minDepositBuilder_ == null) {
           ensureMinDepositIsMutable();
@@ -14626,11 +19634,16 @@ public final class GovProto {
       /**
        * <pre>
        * Minimum deposit for a proposal to enter voting period.
+       * Deprecated: a dynamic system now determines the minimum deposit,
+       * see the other params inside the min_deposit_throttler field.
+       * While setting this value returns an error, when queried it is set to the
+       * value of the current minimum deposit value as determined by the dynamic
+       * system for backward compatibility.
        * </pre>
        *
-       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
-      public Builder addMinDeposit(
+      @java.lang.Deprecated public Builder addMinDeposit(
           int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
         if (minDepositBuilder_ == null) {
           ensureMinDepositIsMutable();
@@ -14644,11 +19657,16 @@ public final class GovProto {
       /**
        * <pre>
        * Minimum deposit for a proposal to enter voting period.
+       * Deprecated: a dynamic system now determines the minimum deposit,
+       * see the other params inside the min_deposit_throttler field.
+       * While setting this value returns an error, when queried it is set to the
+       * value of the current minimum deposit value as determined by the dynamic
+       * system for backward compatibility.
        * </pre>
        *
-       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
-      public Builder addAllMinDeposit(
+      @java.lang.Deprecated public Builder addAllMinDeposit(
           java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
         if (minDepositBuilder_ == null) {
           ensureMinDepositIsMutable();
@@ -14663,11 +19681,16 @@ public final class GovProto {
       /**
        * <pre>
        * Minimum deposit for a proposal to enter voting period.
+       * Deprecated: a dynamic system now determines the minimum deposit,
+       * see the other params inside the min_deposit_throttler field.
+       * While setting this value returns an error, when queried it is set to the
+       * value of the current minimum deposit value as determined by the dynamic
+       * system for backward compatibility.
        * </pre>
        *
-       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
-      public Builder clearMinDeposit() {
+      @java.lang.Deprecated public Builder clearMinDeposit() {
         if (minDepositBuilder_ == null) {
           minDeposit_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -14680,11 +19703,16 @@ public final class GovProto {
       /**
        * <pre>
        * Minimum deposit for a proposal to enter voting period.
+       * Deprecated: a dynamic system now determines the minimum deposit,
+       * see the other params inside the min_deposit_throttler field.
+       * While setting this value returns an error, when queried it is set to the
+       * value of the current minimum deposit value as determined by the dynamic
+       * system for backward compatibility.
        * </pre>
        *
-       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
-      public Builder removeMinDeposit(int index) {
+      @java.lang.Deprecated public Builder removeMinDeposit(int index) {
         if (minDepositBuilder_ == null) {
           ensureMinDepositIsMutable();
           minDeposit_.remove(index);
@@ -14697,22 +19725,32 @@ public final class GovProto {
       /**
        * <pre>
        * Minimum deposit for a proposal to enter voting period.
+       * Deprecated: a dynamic system now determines the minimum deposit,
+       * see the other params inside the min_deposit_throttler field.
+       * While setting this value returns an error, when queried it is set to the
+       * value of the current minimum deposit value as determined by the dynamic
+       * system for backward compatibility.
        * </pre>
        *
-       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
-      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getMinDepositBuilder(
+      @java.lang.Deprecated public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getMinDepositBuilder(
           int index) {
         return getMinDepositFieldBuilder().getBuilder(index);
       }
       /**
        * <pre>
        * Minimum deposit for a proposal to enter voting period.
+       * Deprecated: a dynamic system now determines the minimum deposit,
+       * see the other params inside the min_deposit_throttler field.
+       * While setting this value returns an error, when queried it is set to the
+       * value of the current minimum deposit value as determined by the dynamic
+       * system for backward compatibility.
        * </pre>
        *
-       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
-      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getMinDepositOrBuilder(
+      @java.lang.Deprecated public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getMinDepositOrBuilder(
           int index) {
         if (minDepositBuilder_ == null) {
           return minDeposit_.get(index);  } else {
@@ -14722,11 +19760,16 @@ public final class GovProto {
       /**
        * <pre>
        * Minimum deposit for a proposal to enter voting period.
+       * Deprecated: a dynamic system now determines the minimum deposit,
+       * see the other params inside the min_deposit_throttler field.
+       * While setting this value returns an error, when queried it is set to the
+       * value of the current minimum deposit value as determined by the dynamic
+       * system for backward compatibility.
        * </pre>
        *
-       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
-      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+      @java.lang.Deprecated public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
            getMinDepositOrBuilderList() {
         if (minDepositBuilder_ != null) {
           return minDepositBuilder_.getMessageOrBuilderList();
@@ -14737,22 +19780,32 @@ public final class GovProto {
       /**
        * <pre>
        * Minimum deposit for a proposal to enter voting period.
+       * Deprecated: a dynamic system now determines the minimum deposit,
+       * see the other params inside the min_deposit_throttler field.
+       * While setting this value returns an error, when queried it is set to the
+       * value of the current minimum deposit value as determined by the dynamic
+       * system for backward compatibility.
        * </pre>
        *
-       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
-      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addMinDepositBuilder() {
+      @java.lang.Deprecated public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addMinDepositBuilder() {
         return getMinDepositFieldBuilder().addBuilder(
             com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
       }
       /**
        * <pre>
        * Minimum deposit for a proposal to enter voting period.
+       * Deprecated: a dynamic system now determines the minimum deposit,
+       * see the other params inside the min_deposit_throttler field.
+       * While setting this value returns an error, when queried it is set to the
+       * value of the current minimum deposit value as determined by the dynamic
+       * system for backward compatibility.
        * </pre>
        *
-       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
-      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addMinDepositBuilder(
+      @java.lang.Deprecated public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addMinDepositBuilder(
           int index) {
         return getMinDepositFieldBuilder().addBuilder(
             index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
@@ -14760,11 +19813,16 @@ public final class GovProto {
       /**
        * <pre>
        * Minimum deposit for a proposal to enter voting period.
+       * Deprecated: a dynamic system now determines the minimum deposit,
+       * see the other params inside the min_deposit_throttler field.
+       * While setting this value returns an error, when queried it is set to the
+       * value of the current minimum deposit value as determined by the dynamic
+       * system for backward compatibility.
        * </pre>
        *
-       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
+       * <code>repeated .cosmos.base.v1beta1.Coin min_deposit = 1 [json_name = "minDeposit", deprecated = true, (.gogoproto.nullable) = false, (.amino.dont_omitempty) = true];</code>
        */
-      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+      @java.lang.Deprecated public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
            getMinDepositBuilderList() {
         return getMinDepositFieldBuilder().getBuilderList();
       }
@@ -15297,10 +20355,12 @@ public final class GovProto {
        *  The ratio representing the proportion of the deposit value that must be paid at proposal submission.
        * </pre>
        *
-       * <code>string min_initial_deposit_ratio = 7 [json_name = "minInitialDepositRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string min_initial_deposit_ratio = 7 [json_name = "minInitialDepositRatio", deprecated = true, (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @deprecated atomone.gov.v1.Params.min_initial_deposit_ratio is deprecated.
+       *     See atomone/gov/v1/gov.proto;l=304
        * @return The minInitialDepositRatio.
        */
-      public java.lang.String getMinInitialDepositRatio() {
+      @java.lang.Deprecated public java.lang.String getMinInitialDepositRatio() {
         java.lang.Object ref = minInitialDepositRatio_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -15317,10 +20377,12 @@ public final class GovProto {
        *  The ratio representing the proportion of the deposit value that must be paid at proposal submission.
        * </pre>
        *
-       * <code>string min_initial_deposit_ratio = 7 [json_name = "minInitialDepositRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string min_initial_deposit_ratio = 7 [json_name = "minInitialDepositRatio", deprecated = true, (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @deprecated atomone.gov.v1.Params.min_initial_deposit_ratio is deprecated.
+       *     See atomone/gov/v1/gov.proto;l=304
        * @return The bytes for minInitialDepositRatio.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getMinInitialDepositRatioBytes() {
         java.lang.Object ref = minInitialDepositRatio_;
         if (ref instanceof String) {
@@ -15338,11 +20400,13 @@ public final class GovProto {
        *  The ratio representing the proportion of the deposit value that must be paid at proposal submission.
        * </pre>
        *
-       * <code>string min_initial_deposit_ratio = 7 [json_name = "minInitialDepositRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string min_initial_deposit_ratio = 7 [json_name = "minInitialDepositRatio", deprecated = true, (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @deprecated atomone.gov.v1.Params.min_initial_deposit_ratio is deprecated.
+       *     See atomone/gov/v1/gov.proto;l=304
        * @param value The minInitialDepositRatio to set.
        * @return This builder for chaining.
        */
-      public Builder setMinInitialDepositRatio(
+      @java.lang.Deprecated public Builder setMinInitialDepositRatio(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         minInitialDepositRatio_ = value;
@@ -15355,10 +20419,12 @@ public final class GovProto {
        *  The ratio representing the proportion of the deposit value that must be paid at proposal submission.
        * </pre>
        *
-       * <code>string min_initial_deposit_ratio = 7 [json_name = "minInitialDepositRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string min_initial_deposit_ratio = 7 [json_name = "minInitialDepositRatio", deprecated = true, (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @deprecated atomone.gov.v1.Params.min_initial_deposit_ratio is deprecated.
+       *     See atomone/gov/v1/gov.proto;l=304
        * @return This builder for chaining.
        */
-      public Builder clearMinInitialDepositRatio() {
+      @java.lang.Deprecated public Builder clearMinInitialDepositRatio() {
         minInitialDepositRatio_ = getDefaultInstance().getMinInitialDepositRatio();
         bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
@@ -15369,11 +20435,13 @@ public final class GovProto {
        *  The ratio representing the proportion of the deposit value that must be paid at proposal submission.
        * </pre>
        *
-       * <code>string min_initial_deposit_ratio = 7 [json_name = "minInitialDepositRatio", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * <code>string min_initial_deposit_ratio = 7 [json_name = "minInitialDepositRatio", deprecated = true, (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @deprecated atomone.gov.v1.Params.min_initial_deposit_ratio is deprecated.
+       *     See atomone/gov/v1/gov.proto;l=304
        * @param value The bytes for minInitialDepositRatio to set.
        * @return This builder for chaining.
        */
-      public Builder setMinInitialDepositRatioBytes(
+      @java.lang.Deprecated public Builder setMinInitialDepositRatioBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
@@ -16335,6 +21403,336 @@ public final class GovProto {
         onChanged();
         return this;
       }
+
+      private com.atomone.gov.v1.GovProto.MinDepositThrottler minDepositThrottler_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.atomone.gov.v1.GovProto.MinDepositThrottler, com.atomone.gov.v1.GovProto.MinDepositThrottler.Builder, com.atomone.gov.v1.GovProto.MinDepositThrottlerOrBuilder> minDepositThrottlerBuilder_;
+      /**
+       * <code>.atomone.gov.v1.MinDepositThrottler min_deposit_throttler = 23 [json_name = "minDepositThrottler"];</code>
+       * @return Whether the minDepositThrottler field is set.
+       */
+      public boolean hasMinDepositThrottler() {
+        return ((bitField0_ & 0x00010000) != 0);
+      }
+      /**
+       * <code>.atomone.gov.v1.MinDepositThrottler min_deposit_throttler = 23 [json_name = "minDepositThrottler"];</code>
+       * @return The minDepositThrottler.
+       */
+      public com.atomone.gov.v1.GovProto.MinDepositThrottler getMinDepositThrottler() {
+        if (minDepositThrottlerBuilder_ == null) {
+          return minDepositThrottler_ == null ? com.atomone.gov.v1.GovProto.MinDepositThrottler.getDefaultInstance() : minDepositThrottler_;
+        } else {
+          return minDepositThrottlerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.atomone.gov.v1.MinDepositThrottler min_deposit_throttler = 23 [json_name = "minDepositThrottler"];</code>
+       */
+      public Builder setMinDepositThrottler(com.atomone.gov.v1.GovProto.MinDepositThrottler value) {
+        if (minDepositThrottlerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          minDepositThrottler_ = value;
+        } else {
+          minDepositThrottlerBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00010000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.atomone.gov.v1.MinDepositThrottler min_deposit_throttler = 23 [json_name = "minDepositThrottler"];</code>
+       */
+      public Builder setMinDepositThrottler(
+          com.atomone.gov.v1.GovProto.MinDepositThrottler.Builder builderForValue) {
+        if (minDepositThrottlerBuilder_ == null) {
+          minDepositThrottler_ = builderForValue.build();
+        } else {
+          minDepositThrottlerBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00010000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.atomone.gov.v1.MinDepositThrottler min_deposit_throttler = 23 [json_name = "minDepositThrottler"];</code>
+       */
+      public Builder mergeMinDepositThrottler(com.atomone.gov.v1.GovProto.MinDepositThrottler value) {
+        if (minDepositThrottlerBuilder_ == null) {
+          if (((bitField0_ & 0x00010000) != 0) &&
+            minDepositThrottler_ != null &&
+            minDepositThrottler_ != com.atomone.gov.v1.GovProto.MinDepositThrottler.getDefaultInstance()) {
+            getMinDepositThrottlerBuilder().mergeFrom(value);
+          } else {
+            minDepositThrottler_ = value;
+          }
+        } else {
+          minDepositThrottlerBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00010000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.atomone.gov.v1.MinDepositThrottler min_deposit_throttler = 23 [json_name = "minDepositThrottler"];</code>
+       */
+      public Builder clearMinDepositThrottler() {
+        bitField0_ = (bitField0_ & ~0x00010000);
+        minDepositThrottler_ = null;
+        if (minDepositThrottlerBuilder_ != null) {
+          minDepositThrottlerBuilder_.dispose();
+          minDepositThrottlerBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.atomone.gov.v1.MinDepositThrottler min_deposit_throttler = 23 [json_name = "minDepositThrottler"];</code>
+       */
+      public com.atomone.gov.v1.GovProto.MinDepositThrottler.Builder getMinDepositThrottlerBuilder() {
+        bitField0_ |= 0x00010000;
+        onChanged();
+        return getMinDepositThrottlerFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.atomone.gov.v1.MinDepositThrottler min_deposit_throttler = 23 [json_name = "minDepositThrottler"];</code>
+       */
+      public com.atomone.gov.v1.GovProto.MinDepositThrottlerOrBuilder getMinDepositThrottlerOrBuilder() {
+        if (minDepositThrottlerBuilder_ != null) {
+          return minDepositThrottlerBuilder_.getMessageOrBuilder();
+        } else {
+          return minDepositThrottler_ == null ?
+              com.atomone.gov.v1.GovProto.MinDepositThrottler.getDefaultInstance() : minDepositThrottler_;
+        }
+      }
+      /**
+       * <code>.atomone.gov.v1.MinDepositThrottler min_deposit_throttler = 23 [json_name = "minDepositThrottler"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.atomone.gov.v1.GovProto.MinDepositThrottler, com.atomone.gov.v1.GovProto.MinDepositThrottler.Builder, com.atomone.gov.v1.GovProto.MinDepositThrottlerOrBuilder> 
+          getMinDepositThrottlerFieldBuilder() {
+        if (minDepositThrottlerBuilder_ == null) {
+          minDepositThrottlerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.atomone.gov.v1.GovProto.MinDepositThrottler, com.atomone.gov.v1.GovProto.MinDepositThrottler.Builder, com.atomone.gov.v1.GovProto.MinDepositThrottlerOrBuilder>(
+                  getMinDepositThrottler(),
+                  getParentForChildren(),
+                  isClean());
+          minDepositThrottler_ = null;
+        }
+        return minDepositThrottlerBuilder_;
+      }
+
+      private com.atomone.gov.v1.GovProto.MinInitialDepositThrottler minInitialDepositThrottler_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.atomone.gov.v1.GovProto.MinInitialDepositThrottler, com.atomone.gov.v1.GovProto.MinInitialDepositThrottler.Builder, com.atomone.gov.v1.GovProto.MinInitialDepositThrottlerOrBuilder> minInitialDepositThrottlerBuilder_;
+      /**
+       * <code>.atomone.gov.v1.MinInitialDepositThrottler min_initial_deposit_throttler = 24 [json_name = "minInitialDepositThrottler"];</code>
+       * @return Whether the minInitialDepositThrottler field is set.
+       */
+      public boolean hasMinInitialDepositThrottler() {
+        return ((bitField0_ & 0x00020000) != 0);
+      }
+      /**
+       * <code>.atomone.gov.v1.MinInitialDepositThrottler min_initial_deposit_throttler = 24 [json_name = "minInitialDepositThrottler"];</code>
+       * @return The minInitialDepositThrottler.
+       */
+      public com.atomone.gov.v1.GovProto.MinInitialDepositThrottler getMinInitialDepositThrottler() {
+        if (minInitialDepositThrottlerBuilder_ == null) {
+          return minInitialDepositThrottler_ == null ? com.atomone.gov.v1.GovProto.MinInitialDepositThrottler.getDefaultInstance() : minInitialDepositThrottler_;
+        } else {
+          return minInitialDepositThrottlerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.atomone.gov.v1.MinInitialDepositThrottler min_initial_deposit_throttler = 24 [json_name = "minInitialDepositThrottler"];</code>
+       */
+      public Builder setMinInitialDepositThrottler(com.atomone.gov.v1.GovProto.MinInitialDepositThrottler value) {
+        if (minInitialDepositThrottlerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          minInitialDepositThrottler_ = value;
+        } else {
+          minInitialDepositThrottlerBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00020000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.atomone.gov.v1.MinInitialDepositThrottler min_initial_deposit_throttler = 24 [json_name = "minInitialDepositThrottler"];</code>
+       */
+      public Builder setMinInitialDepositThrottler(
+          com.atomone.gov.v1.GovProto.MinInitialDepositThrottler.Builder builderForValue) {
+        if (minInitialDepositThrottlerBuilder_ == null) {
+          minInitialDepositThrottler_ = builderForValue.build();
+        } else {
+          minInitialDepositThrottlerBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00020000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.atomone.gov.v1.MinInitialDepositThrottler min_initial_deposit_throttler = 24 [json_name = "minInitialDepositThrottler"];</code>
+       */
+      public Builder mergeMinInitialDepositThrottler(com.atomone.gov.v1.GovProto.MinInitialDepositThrottler value) {
+        if (minInitialDepositThrottlerBuilder_ == null) {
+          if (((bitField0_ & 0x00020000) != 0) &&
+            minInitialDepositThrottler_ != null &&
+            minInitialDepositThrottler_ != com.atomone.gov.v1.GovProto.MinInitialDepositThrottler.getDefaultInstance()) {
+            getMinInitialDepositThrottlerBuilder().mergeFrom(value);
+          } else {
+            minInitialDepositThrottler_ = value;
+          }
+        } else {
+          minInitialDepositThrottlerBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00020000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.atomone.gov.v1.MinInitialDepositThrottler min_initial_deposit_throttler = 24 [json_name = "minInitialDepositThrottler"];</code>
+       */
+      public Builder clearMinInitialDepositThrottler() {
+        bitField0_ = (bitField0_ & ~0x00020000);
+        minInitialDepositThrottler_ = null;
+        if (minInitialDepositThrottlerBuilder_ != null) {
+          minInitialDepositThrottlerBuilder_.dispose();
+          minInitialDepositThrottlerBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.atomone.gov.v1.MinInitialDepositThrottler min_initial_deposit_throttler = 24 [json_name = "minInitialDepositThrottler"];</code>
+       */
+      public com.atomone.gov.v1.GovProto.MinInitialDepositThrottler.Builder getMinInitialDepositThrottlerBuilder() {
+        bitField0_ |= 0x00020000;
+        onChanged();
+        return getMinInitialDepositThrottlerFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.atomone.gov.v1.MinInitialDepositThrottler min_initial_deposit_throttler = 24 [json_name = "minInitialDepositThrottler"];</code>
+       */
+      public com.atomone.gov.v1.GovProto.MinInitialDepositThrottlerOrBuilder getMinInitialDepositThrottlerOrBuilder() {
+        if (minInitialDepositThrottlerBuilder_ != null) {
+          return minInitialDepositThrottlerBuilder_.getMessageOrBuilder();
+        } else {
+          return minInitialDepositThrottler_ == null ?
+              com.atomone.gov.v1.GovProto.MinInitialDepositThrottler.getDefaultInstance() : minInitialDepositThrottler_;
+        }
+      }
+      /**
+       * <code>.atomone.gov.v1.MinInitialDepositThrottler min_initial_deposit_throttler = 24 [json_name = "minInitialDepositThrottler"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.atomone.gov.v1.GovProto.MinInitialDepositThrottler, com.atomone.gov.v1.GovProto.MinInitialDepositThrottler.Builder, com.atomone.gov.v1.GovProto.MinInitialDepositThrottlerOrBuilder> 
+          getMinInitialDepositThrottlerFieldBuilder() {
+        if (minInitialDepositThrottlerBuilder_ == null) {
+          minInitialDepositThrottlerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.atomone.gov.v1.GovProto.MinInitialDepositThrottler, com.atomone.gov.v1.GovProto.MinInitialDepositThrottler.Builder, com.atomone.gov.v1.GovProto.MinInitialDepositThrottlerOrBuilder>(
+                  getMinInitialDepositThrottler(),
+                  getParentForChildren(),
+                  isClean());
+          minInitialDepositThrottler_ = null;
+        }
+        return minInitialDepositThrottlerBuilder_;
+      }
+
+      private java.lang.Object burnDepositNoThreshold_ = "";
+      /**
+       * <pre>
+       * Minimum proportion of No Votes for a proposal deposit to be burnt.
+       * </pre>
+       *
+       * <code>string burn_deposit_no_threshold = 25 [json_name = "burnDepositNoThreshold", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The burnDepositNoThreshold.
+       */
+      public java.lang.String getBurnDepositNoThreshold() {
+        java.lang.Object ref = burnDepositNoThreshold_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          burnDepositNoThreshold_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Minimum proportion of No Votes for a proposal deposit to be burnt.
+       * </pre>
+       *
+       * <code>string burn_deposit_no_threshold = 25 [json_name = "burnDepositNoThreshold", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The bytes for burnDepositNoThreshold.
+       */
+      public com.google.protobuf.ByteString
+          getBurnDepositNoThresholdBytes() {
+        java.lang.Object ref = burnDepositNoThreshold_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          burnDepositNoThreshold_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Minimum proportion of No Votes for a proposal deposit to be burnt.
+       * </pre>
+       *
+       * <code>string burn_deposit_no_threshold = 25 [json_name = "burnDepositNoThreshold", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The burnDepositNoThreshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBurnDepositNoThreshold(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        burnDepositNoThreshold_ = value;
+        bitField0_ |= 0x00040000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum proportion of No Votes for a proposal deposit to be burnt.
+       * </pre>
+       *
+       * <code>string burn_deposit_no_threshold = 25 [json_name = "burnDepositNoThreshold", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBurnDepositNoThreshold() {
+        burnDepositNoThreshold_ = getDefaultInstance().getBurnDepositNoThreshold();
+        bitField0_ = (bitField0_ & ~0x00040000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum proportion of No Votes for a proposal deposit to be burnt.
+       * </pre>
+       *
+       * <code>string burn_deposit_no_threshold = 25 [json_name = "burnDepositNoThreshold", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The bytes for burnDepositNoThreshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBurnDepositNoThresholdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        burnDepositNoThreshold_ = value;
+        bitField0_ |= 0x00040000;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -16410,6 +21808,11 @@ public final class GovProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_atomone_gov_v1_Deposit_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_atomone_gov_v1_LastMinDeposit_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_atomone_gov_v1_LastMinDeposit_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_atomone_gov_v1_Proposal_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -16445,6 +21848,16 @@ public final class GovProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_atomone_gov_v1_TallyParams_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_atomone_gov_v1_MinDepositThrottler_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_atomone_gov_v1_MinDepositThrottler_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_atomone_gov_v1_MinInitialDepositThrottler_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_atomone_gov_v1_MinInitialDepositThrottler_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_atomone_gov_v1_Params_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -16470,94 +21883,125 @@ public final class GovProto {
       "\022\037\n\013proposal_id\030\001 \001(\004R\nproposalId\0226\n\tdep" +
       "ositor\030\002 \001(\tB\030\322\264-\024cosmos.AddressStringR\t" +
       "depositor\022<\n\006amount\030\003 \003(\0132\031.cosmos.base." +
-      "v1beta1.CoinB\t\310\336\037\000\250\347\260*\001R\006amount\"\303\005\n\010Prop" +
-      "osal\022\016\n\002id\030\001 \001(\004R\002id\0220\n\010messages\030\002 \003(\0132\024" +
-      ".google.protobuf.AnyR\010messages\0226\n\006status" +
-      "\030\003 \001(\0162\036.atomone.gov.v1.ProposalStatusR\006" +
-      "status\022I\n\022final_tally_result\030\004 \001(\0132\033.ato" +
-      "mone.gov.v1.TallyResultR\020finalTallyResul" +
-      "t\022A\n\013submit_time\030\005 \001(\0132\032.google.protobuf" +
-      ".TimestampB\004\220\337\037\001R\nsubmitTime\022J\n\020deposit_" +
-      "end_time\030\006 \001(\0132\032.google.protobuf.Timesta" +
-      "mpB\004\220\337\037\001R\016depositEndTime\022I\n\rtotal_deposi" +
-      "t\030\007 \003(\0132\031.cosmos.base.v1beta1.CoinB\t\310\336\037\000" +
-      "\250\347\260*\001R\014totalDeposit\022L\n\021voting_start_time" +
-      "\030\010 \001(\0132\032.google.protobuf.TimestampB\004\220\337\037\001" +
-      "R\017votingStartTime\022H\n\017voting_end_time\030\t \001" +
-      "(\0132\032.google.protobuf.TimestampB\004\220\337\037\001R\rvo" +
-      "tingEndTime\022\032\n\010metadata\030\n \001(\tR\010metadata\022" +
-      "\024\n\005title\030\013 \001(\tR\005title\022\030\n\007summary\030\014 \001(\tR\007" +
-      "summary\0224\n\010proposer\030\r \001(\tB\030\322\264-\024cosmos.Ad" +
-      "dressStringR\010proposer\"\232\001\n\013TallyResult\022+\n" +
-      "\tyes_count\030\001 \001(\tB\016\322\264-\ncosmos.IntR\010yesCou" +
-      "nt\0223\n\rabstain_count\030\002 \001(\tB\016\322\264-\ncosmos.In" +
-      "tR\014abstainCount\022)\n\010no_count\030\003 \001(\tB\016\322\264-\nc" +
-      "osmos.IntR\007noCount\"\267\001\n\004Vote\022\037\n\013proposal_" +
-      "id\030\001 \001(\004R\nproposalId\022.\n\005voter\030\002 \001(\tB\030\322\264-" +
-      "\024cosmos.AddressStringR\005voter\022<\n\007options\030" +
-      "\004 \003(\0132\".atomone.gov.v1.WeightedVoteOptio" +
-      "nR\007options\022\032\n\010metadata\030\005 \001(\tR\010metadataJ\004" +
-      "\010\003\020\004\"\305\001\n\025QuorumCheckQueueEntry\022P\n\023quorum" +
-      "_timeout_time\030\001 \001(\0132\032.google.protobuf.Ti" +
-      "mestampB\004\220\337\037\001R\021quorumTimeoutTime\022,\n\022quor" +
-      "um_check_count\030\002 \001(\004R\020quorumCheckCount\022," +
-      "\n\022quorum_checks_done\030\003 \001(\004R\020quorumChecks" +
-      "Done\"\331\001\n\rDepositParams\022Y\n\013min_deposit\030\001 " +
-      "\003(\0132\031.cosmos.base.v1beta1.CoinB\035\310\336\037\000\352\336\037\025" +
-      "min_deposit,omitemptyR\nminDeposit\022m\n\022max" +
-      "_deposit_period\030\002 \001(\0132\031.google.protobuf." +
-      "DurationB$\352\336\037\034max_deposit_period,omitemp" +
-      "ty\230\337\037\001R\020maxDepositPeriod\"T\n\014VotingParams" +
-      "\022D\n\rvoting_period\030\001 \001(\0132\031.google.protobu" +
-      "f.DurationB\004\230\337\037\001R\014votingPeriod\"\365\002\n\013Tally" +
-      "Params\022&\n\006quorum\030\001 \001(\tB\016\322\264-\ncosmos.DecR\006" +
-      "quorum\022,\n\tthreshold\030\002 \001(\tB\016\322\264-\ncosmos.De" +
-      "cR\tthreshold\022R\n\035constitution_amendment_q" +
-      "uorum\030\003 \001(\tB\016\322\264-\ncosmos.DecR\033constitutio" +
-      "nAmendmentQuorum\022X\n constitution_amendme" +
-      "nt_threshold\030\004 \001(\tB\016\322\264-\ncosmos.DecR\036cons" +
-      "titutionAmendmentThreshold\022-\n\nlaw_quorum" +
-      "\030\005 \001(\tB\016\322\264-\ncosmos.DecR\tlawQuorum\0223\n\rlaw" +
-      "_threshold\030\006 \001(\tB\016\322\264-\ncosmos.DecR\014lawThr" +
-      "eshold\"\226\010\n\006Params\022E\n\013min_deposit\030\001 \003(\0132\031" +
-      ".cosmos.base.v1beta1.CoinB\t\310\336\037\000\250\347\260*\001R\nmi" +
-      "nDeposit\022M\n\022max_deposit_period\030\002 \001(\0132\031.g" +
-      "oogle.protobuf.DurationB\004\230\337\037\001R\020maxDeposi" +
-      "tPeriod\022D\n\rvoting_period\030\003 \001(\0132\031.google." +
-      "protobuf.DurationB\004\230\337\037\001R\014votingPeriod\022&\n" +
-      "\006quorum\030\004 \001(\tB\016\322\264-\ncosmos.DecR\006quorum\022,\n" +
-      "\tthreshold\030\005 \001(\tB\016\322\264-\ncosmos.DecR\tthresh" +
-      "old\022I\n\031min_initial_deposit_ratio\030\007 \001(\tB\016" +
-      "\322\264-\ncosmos.DecR\026minInitialDepositRatio\022(" +
-      "\n\020burn_vote_quorum\030\r \001(\010R\016burnVoteQuorum" +
-      "\022A\n\035burn_proposal_deposit_prevote\030\016 \001(\010R" +
-      "\032burnProposalDepositPrevote\022:\n\021min_depos" +
-      "it_ratio\030\017 \001(\tB\016\322\264-\ncosmos.DecR\017minDepos" +
-      "itRatio\022R\n\035constitution_amendment_quorum" +
-      "\030\020 \001(\tB\016\322\264-\ncosmos.DecR\033constitutionAmen" +
-      "dmentQuorum\022X\n constitution_amendment_th" +
-      "reshold\030\021 \001(\tB\016\322\264-\ncosmos.DecR\036constitut" +
-      "ionAmendmentThreshold\022-\n\nlaw_quorum\030\022 \001(" +
-      "\tB\016\322\264-\ncosmos.DecR\tlawQuorum\0223\n\rlaw_thre" +
-      "shold\030\023 \001(\tB\016\322\264-\ncosmos.DecR\014lawThreshol" +
-      "d\022F\n\016quorum_timeout\030\024 \001(\0132\031.google.proto" +
-      "buf.DurationB\004\230\337\037\001R\rquorumTimeout\022^\n\033max" +
-      "_voting_period_extension\030\025 \001(\0132\031.google." +
-      "protobuf.DurationB\004\230\337\037\001R\030maxVotingPeriod" +
-      "Extension\022,\n\022quorum_check_count\030\026 \001(\004R\020q" +
-      "uorumCheckCount*k\n\nVoteOption\022\033\n\027VOTE_OP" +
-      "TION_UNSPECIFIED\020\000\022\023\n\017VOTE_OPTION_YES\020\001\022" +
-      "\027\n\023VOTE_OPTION_ABSTAIN\020\002\022\022\n\016VOTE_OPTION_" +
-      "NO\020\003*\316\001\n\016ProposalStatus\022\037\n\033PROPOSAL_STAT" +
-      "US_UNSPECIFIED\020\000\022\"\n\036PROPOSAL_STATUS_DEPO" +
-      "SIT_PERIOD\020\001\022!\n\035PROPOSAL_STATUS_VOTING_P" +
-      "ERIOD\020\002\022\032\n\026PROPOSAL_STATUS_PASSED\020\003\022\034\n\030P" +
-      "ROPOSAL_STATUS_REJECTED\020\004\022\032\n\026PROPOSAL_ST" +
-      "ATUS_FAILED\020\005B\245\001\n\022com.atomone.gov.v1B\010Go" +
-      "vProtoZ-github.com/atomone-hub/atomone/x" +
-      "/gov/types/v1\242\002\003AGX\252\002\016Atomone.Gov.V1\312\002\016A" +
-      "tomone\\Gov\\V1\342\002\032Atomone\\Gov\\V1\\GPBMetada" +
-      "ta\352\002\020Atomone::Gov::V1b\006proto3"
+      "v1beta1.CoinB\t\310\336\037\000\250\347\260*\001R\006amount\"\202\001\n\016Last" +
+      "MinDeposit\022:\n\005value\030\001 \003(\0132\031.cosmos.base." +
+      "v1beta1.CoinB\t\310\336\037\000\250\347\260*\001R\005value\0224\n\004time\030\002" +
+      " \001(\0132\032.google.protobuf.TimestampB\004\220\337\037\001R\004" +
+      "time\"\303\005\n\010Proposal\022\016\n\002id\030\001 \001(\004R\002id\0220\n\010mes" +
+      "sages\030\002 \003(\0132\024.google.protobuf.AnyR\010messa" +
+      "ges\0226\n\006status\030\003 \001(\0162\036.atomone.gov.v1.Pro" +
+      "posalStatusR\006status\022I\n\022final_tally_resul" +
+      "t\030\004 \001(\0132\033.atomone.gov.v1.TallyResultR\020fi" +
+      "nalTallyResult\022A\n\013submit_time\030\005 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampB\004\220\337\037\001R\nsubmitTim" +
+      "e\022J\n\020deposit_end_time\030\006 \001(\0132\032.google.pro" +
+      "tobuf.TimestampB\004\220\337\037\001R\016depositEndTime\022I\n" +
+      "\rtotal_deposit\030\007 \003(\0132\031.cosmos.base.v1bet" +
+      "a1.CoinB\t\310\336\037\000\250\347\260*\001R\014totalDeposit\022L\n\021voti" +
+      "ng_start_time\030\010 \001(\0132\032.google.protobuf.Ti" +
+      "mestampB\004\220\337\037\001R\017votingStartTime\022H\n\017voting" +
+      "_end_time\030\t \001(\0132\032.google.protobuf.Timest" +
+      "ampB\004\220\337\037\001R\rvotingEndTime\022\032\n\010metadata\030\n \001" +
+      "(\tR\010metadata\022\024\n\005title\030\013 \001(\tR\005title\022\030\n\007su" +
+      "mmary\030\014 \001(\tR\007summary\0224\n\010proposer\030\r \001(\tB\030" +
+      "\322\264-\024cosmos.AddressStringR\010proposer\"\232\001\n\013T" +
+      "allyResult\022+\n\tyes_count\030\001 \001(\tB\016\322\264-\ncosmo" +
+      "s.IntR\010yesCount\0223\n\rabstain_count\030\002 \001(\tB\016" +
+      "\322\264-\ncosmos.IntR\014abstainCount\022)\n\010no_count" +
+      "\030\003 \001(\tB\016\322\264-\ncosmos.IntR\007noCount\"\267\001\n\004Vote" +
+      "\022\037\n\013proposal_id\030\001 \001(\004R\nproposalId\022.\n\005vot" +
+      "er\030\002 \001(\tB\030\322\264-\024cosmos.AddressStringR\005vote" +
+      "r\022<\n\007options\030\004 \003(\0132\".atomone.gov.v1.Weig" +
+      "htedVoteOptionR\007options\022\032\n\010metadata\030\005 \001(" +
+      "\tR\010metadataJ\004\010\003\020\004\"\305\001\n\025QuorumCheckQueueEn" +
+      "try\022P\n\023quorum_timeout_time\030\001 \001(\0132\032.googl" +
+      "e.protobuf.TimestampB\004\220\337\037\001R\021quorumTimeou" +
+      "tTime\022,\n\022quorum_check_count\030\002 \001(\004R\020quoru" +
+      "mCheckCount\022,\n\022quorum_checks_done\030\003 \001(\004R" +
+      "\020quorumChecksDone\"\331\001\n\rDepositParams\022Y\n\013m" +
+      "in_deposit\030\001 \003(\0132\031.cosmos.base.v1beta1.C" +
+      "oinB\035\310\336\037\000\352\336\037\025min_deposit,omitemptyR\nminD" +
+      "eposit\022m\n\022max_deposit_period\030\002 \001(\0132\031.goo" +
+      "gle.protobuf.DurationB$\352\336\037\034max_deposit_p" +
+      "eriod,omitempty\230\337\037\001R\020maxDepositPeriod\"T\n" +
+      "\014VotingParams\022D\n\rvoting_period\030\001 \001(\0132\031.g" +
+      "oogle.protobuf.DurationB\004\230\337\037\001R\014votingPer" +
+      "iod\"\365\002\n\013TallyParams\022&\n\006quorum\030\001 \001(\tB\016\322\264-" +
+      "\ncosmos.DecR\006quorum\022,\n\tthreshold\030\002 \001(\tB\016" +
+      "\322\264-\ncosmos.DecR\tthreshold\022R\n\035constitutio" +
+      "n_amendment_quorum\030\003 \001(\tB\016\322\264-\ncosmos.Dec" +
+      "R\033constitutionAmendmentQuorum\022X\n constit" +
+      "ution_amendment_threshold\030\004 \001(\tB\016\322\264-\ncos" +
+      "mos.DecR\036constitutionAmendmentThreshold\022" +
+      "-\n\nlaw_quorum\030\005 \001(\tB\016\322\264-\ncosmos.DecR\tlaw" +
+      "Quorum\0223\n\rlaw_threshold\030\006 \001(\tB\016\322\264-\ncosmo" +
+      "s.DecR\014lawThreshold\"\231\003\n\023MinDepositThrott" +
+      "ler\022E\n\013floor_value\030\001 \003(\0132\031.cosmos.base.v" +
+      "1beta1.CoinB\t\310\336\037\000\250\347\260*\001R\nfloorValue\022D\n\rup" +
+      "date_period\030\002 \001(\0132\031.google.protobuf.Dura" +
+      "tionB\004\230\337\037\001R\014updatePeriod\0226\n\027target_activ" +
+      "e_proposals\030\003 \001(\004R\025targetActiveProposals" +
+      "\0225\n\016increase_ratio\030\004 \001(\tB\016\322\264-\ncosmos.Dec" +
+      "R\rincreaseRatio\0225\n\016decrease_ratio\030\005 \001(\tB" +
+      "\016\322\264-\ncosmos.DecR\rdecreaseRatio\022O\n$decrea" +
+      "se_sensitivity_target_distance\030\006 \001(\004R!de" +
+      "creaseSensitivityTargetDistance\"\223\003\n\032MinI" +
+      "nitialDepositThrottler\022E\n\013floor_value\030\001 " +
+      "\003(\0132\031.cosmos.base.v1beta1.CoinB\t\310\336\037\000\250\347\260*" +
+      "\001R\nfloorValue\022D\n\rupdate_period\030\002 \001(\0132\031.g" +
+      "oogle.protobuf.DurationB\004\230\337\037\001R\014updatePer" +
+      "iod\022)\n\020target_proposals\030\003 \001(\004R\017targetPro" +
+      "posals\0225\n\016increase_ratio\030\004 \001(\tB\016\322\264-\ncosm" +
+      "os.DecR\rincreaseRatio\0225\n\016decrease_ratio\030" +
+      "\005 \001(\tB\016\322\264-\ncosmos.DecR\rdecreaseRatio\022O\n$" +
+      "decrease_sensitivity_target_distance\030\006 \001" +
+      "(\004R!decreaseSensitivityTargetDistance\"\255\n" +
+      "\n\006Params\022G\n\013min_deposit\030\001 \003(\0132\031.cosmos.b" +
+      "ase.v1beta1.CoinB\013\030\001\310\336\037\000\250\347\260*\001R\nminDeposi" +
+      "t\022M\n\022max_deposit_period\030\002 \001(\0132\031.google.p" +
+      "rotobuf.DurationB\004\230\337\037\001R\020maxDepositPeriod" +
+      "\022D\n\rvoting_period\030\003 \001(\0132\031.google.protobu" +
+      "f.DurationB\004\230\337\037\001R\014votingPeriod\022&\n\006quorum" +
+      "\030\004 \001(\tB\016\322\264-\ncosmos.DecR\006quorum\022,\n\tthresh" +
+      "old\030\005 \001(\tB\016\322\264-\ncosmos.DecR\tthreshold\022K\n\031" +
+      "min_initial_deposit_ratio\030\007 \001(\tB\020\030\001\322\264-\nc" +
+      "osmos.DecR\026minInitialDepositRatio\022(\n\020bur" +
+      "n_vote_quorum\030\r \001(\010R\016burnVoteQuorum\022A\n\035b" +
+      "urn_proposal_deposit_prevote\030\016 \001(\010R\032burn" +
+      "ProposalDepositPrevote\022:\n\021min_deposit_ra" +
+      "tio\030\017 \001(\tB\016\322\264-\ncosmos.DecR\017minDepositRat" +
+      "io\022R\n\035constitution_amendment_quorum\030\020 \001(" +
+      "\tB\016\322\264-\ncosmos.DecR\033constitutionAmendment" +
+      "Quorum\022X\n constitution_amendment_thresho" +
+      "ld\030\021 \001(\tB\016\322\264-\ncosmos.DecR\036constitutionAm" +
+      "endmentThreshold\022-\n\nlaw_quorum\030\022 \001(\tB\016\322\264" +
+      "-\ncosmos.DecR\tlawQuorum\0223\n\rlaw_threshold" +
+      "\030\023 \001(\tB\016\322\264-\ncosmos.DecR\014lawThreshold\022F\n\016" +
+      "quorum_timeout\030\024 \001(\0132\031.google.protobuf.D" +
+      "urationB\004\230\337\037\001R\rquorumTimeout\022^\n\033max_voti" +
+      "ng_period_extension\030\025 \001(\0132\031.google.proto" +
+      "buf.DurationB\004\230\337\037\001R\030maxVotingPeriodExten" +
+      "sion\022,\n\022quorum_check_count\030\026 \001(\004R\020quorum" +
+      "CheckCount\022W\n\025min_deposit_throttler\030\027 \001(" +
+      "\0132#.atomone.gov.v1.MinDepositThrottlerR\023" +
+      "minDepositThrottler\022m\n\035min_initial_depos" +
+      "it_throttler\030\030 \001(\0132*.atomone.gov.v1.MinI" +
+      "nitialDepositThrottlerR\032minInitialDeposi" +
+      "tThrottler\022I\n\031burn_deposit_no_threshold\030" +
+      "\031 \001(\tB\016\322\264-\ncosmos.DecR\026burnDepositNoThre" +
+      "shold*k\n\nVoteOption\022\033\n\027VOTE_OPTION_UNSPE" +
+      "CIFIED\020\000\022\023\n\017VOTE_OPTION_YES\020\001\022\027\n\023VOTE_OP" +
+      "TION_ABSTAIN\020\002\022\022\n\016VOTE_OPTION_NO\020\003*\316\001\n\016P" +
+      "roposalStatus\022\037\n\033PROPOSAL_STATUS_UNSPECI" +
+      "FIED\020\000\022\"\n\036PROPOSAL_STATUS_DEPOSIT_PERIOD" +
+      "\020\001\022!\n\035PROPOSAL_STATUS_VOTING_PERIOD\020\002\022\032\n" +
+      "\026PROPOSAL_STATUS_PASSED\020\003\022\034\n\030PROPOSAL_ST" +
+      "ATUS_REJECTED\020\004\022\032\n\026PROPOSAL_STATUS_FAILE" +
+      "D\020\005B\245\001\n\022com.atomone.gov.v1B\010GovProtoZ-gi" +
+      "thub.com/atomone-hub/atomone/x/gov/types" +
+      "/v1\242\002\003AGX\252\002\016Atomone.Gov.V1\312\002\016Atomone\\Gov" +
+      "\\V1\342\002\032Atomone\\Gov\\V1\\GPBMetadata\352\002\020Atomo" +
+      "ne::Gov::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -16582,54 +22026,72 @@ public final class GovProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_atomone_gov_v1_Deposit_descriptor,
         new java.lang.String[] { "ProposalId", "Depositor", "Amount", });
-    internal_static_atomone_gov_v1_Proposal_descriptor =
+    internal_static_atomone_gov_v1_LastMinDeposit_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_atomone_gov_v1_LastMinDeposit_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_atomone_gov_v1_LastMinDeposit_descriptor,
+        new java.lang.String[] { "Value", "Time", });
+    internal_static_atomone_gov_v1_Proposal_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_atomone_gov_v1_Proposal_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_atomone_gov_v1_Proposal_descriptor,
         new java.lang.String[] { "Id", "Messages", "Status", "FinalTallyResult", "SubmitTime", "DepositEndTime", "TotalDeposit", "VotingStartTime", "VotingEndTime", "Metadata", "Title", "Summary", "Proposer", });
     internal_static_atomone_gov_v1_TallyResult_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_atomone_gov_v1_TallyResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_atomone_gov_v1_TallyResult_descriptor,
         new java.lang.String[] { "YesCount", "AbstainCount", "NoCount", });
     internal_static_atomone_gov_v1_Vote_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_atomone_gov_v1_Vote_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_atomone_gov_v1_Vote_descriptor,
         new java.lang.String[] { "ProposalId", "Voter", "Options", "Metadata", });
     internal_static_atomone_gov_v1_QuorumCheckQueueEntry_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_atomone_gov_v1_QuorumCheckQueueEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_atomone_gov_v1_QuorumCheckQueueEntry_descriptor,
         new java.lang.String[] { "QuorumTimeoutTime", "QuorumCheckCount", "QuorumChecksDone", });
     internal_static_atomone_gov_v1_DepositParams_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_atomone_gov_v1_DepositParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_atomone_gov_v1_DepositParams_descriptor,
         new java.lang.String[] { "MinDeposit", "MaxDepositPeriod", });
     internal_static_atomone_gov_v1_VotingParams_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_atomone_gov_v1_VotingParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_atomone_gov_v1_VotingParams_descriptor,
         new java.lang.String[] { "VotingPeriod", });
     internal_static_atomone_gov_v1_TallyParams_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_atomone_gov_v1_TallyParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_atomone_gov_v1_TallyParams_descriptor,
         new java.lang.String[] { "Quorum", "Threshold", "ConstitutionAmendmentQuorum", "ConstitutionAmendmentThreshold", "LawQuorum", "LawThreshold", });
+    internal_static_atomone_gov_v1_MinDepositThrottler_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_atomone_gov_v1_MinDepositThrottler_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_atomone_gov_v1_MinDepositThrottler_descriptor,
+        new java.lang.String[] { "FloorValue", "UpdatePeriod", "TargetActiveProposals", "IncreaseRatio", "DecreaseRatio", "DecreaseSensitivityTargetDistance", });
+    internal_static_atomone_gov_v1_MinInitialDepositThrottler_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_atomone_gov_v1_MinInitialDepositThrottler_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_atomone_gov_v1_MinInitialDepositThrottler_descriptor,
+        new java.lang.String[] { "FloorValue", "UpdatePeriod", "TargetProposals", "IncreaseRatio", "DecreaseRatio", "DecreaseSensitivityTargetDistance", });
     internal_static_atomone_gov_v1_Params_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_atomone_gov_v1_Params_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_atomone_gov_v1_Params_descriptor,
-        new java.lang.String[] { "MinDeposit", "MaxDepositPeriod", "VotingPeriod", "Quorum", "Threshold", "MinInitialDepositRatio", "BurnVoteQuorum", "BurnProposalDepositPrevote", "MinDepositRatio", "ConstitutionAmendmentQuorum", "ConstitutionAmendmentThreshold", "LawQuorum", "LawThreshold", "QuorumTimeout", "MaxVotingPeriodExtension", "QuorumCheckCount", });
+        new java.lang.String[] { "MinDeposit", "MaxDepositPeriod", "VotingPeriod", "Quorum", "Threshold", "MinInitialDepositRatio", "BurnVoteQuorum", "BurnProposalDepositPrevote", "MinDepositRatio", "ConstitutionAmendmentQuorum", "ConstitutionAmendmentThreshold", "LawQuorum", "LawThreshold", "QuorumTimeout", "MaxVotingPeriodExtension", "QuorumCheckCount", "MinDepositThrottler", "MinInitialDepositThrottler", "BurnDepositNoThreshold", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.amino.AminoProto.dontOmitempty);

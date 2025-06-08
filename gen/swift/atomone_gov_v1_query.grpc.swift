@@ -77,6 +77,16 @@ internal protocol Atomone_Gov_V1_QueryClientProtocol: GRPCClient {
     _ request: Atomone_Gov_V1_QueryTallyResultRequest,
     callOptions: CallOptions?
   ) -> UnaryCall<Atomone_Gov_V1_QueryTallyResultRequest, Atomone_Gov_V1_QueryTallyResultResponse>
+
+  func minDeposit(
+    _ request: Atomone_Gov_V1_QueryMinDepositRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Atomone_Gov_V1_QueryMinDepositRequest, Atomone_Gov_V1_QueryMinDepositResponse>
+
+  func minInitialDeposit(
+    _ request: Atomone_Gov_V1_QueryMinInitialDepositRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Atomone_Gov_V1_QueryMinInitialDepositRequest, Atomone_Gov_V1_QueryMinInitialDepositResponse>
 }
 
 extension Atomone_Gov_V1_QueryClientProtocol {
@@ -245,6 +255,44 @@ extension Atomone_Gov_V1_QueryClientProtocol {
       interceptors: self.interceptors?.makeTallyResultInterceptors() ?? []
     )
   }
+
+  /// MinDeposit queries the minimum deposit currently
+  /// required for a proposal to enter voting period.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to MinDeposit.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func minDeposit(
+    _ request: Atomone_Gov_V1_QueryMinDepositRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Atomone_Gov_V1_QueryMinDepositRequest, Atomone_Gov_V1_QueryMinDepositResponse> {
+    return self.makeUnaryCall(
+      path: Atomone_Gov_V1_QueryClientMetadata.Methods.minDeposit.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeMinDepositInterceptors() ?? []
+    )
+  }
+
+  /// MinInitialDeposit queries the minimum initial deposit
+  /// currently required for a proposal to be submitted.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to MinInitialDeposit.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  internal func minInitialDeposit(
+    _ request: Atomone_Gov_V1_QueryMinInitialDepositRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Atomone_Gov_V1_QueryMinInitialDepositRequest, Atomone_Gov_V1_QueryMinInitialDepositResponse> {
+    return self.makeUnaryCall(
+      path: Atomone_Gov_V1_QueryClientMetadata.Methods.minInitialDeposit.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeMinInitialDepositInterceptors() ?? []
+    )
+  }
 }
 
 @available(*, deprecated)
@@ -354,6 +402,16 @@ internal protocol Atomone_Gov_V1_QueryAsyncClientProtocol: GRPCClient {
     _ request: Atomone_Gov_V1_QueryTallyResultRequest,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Atomone_Gov_V1_QueryTallyResultRequest, Atomone_Gov_V1_QueryTallyResultResponse>
+
+  func makeMinDepositCall(
+    _ request: Atomone_Gov_V1_QueryMinDepositRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Atomone_Gov_V1_QueryMinDepositRequest, Atomone_Gov_V1_QueryMinDepositResponse>
+
+  func makeMinInitialDepositCall(
+    _ request: Atomone_Gov_V1_QueryMinInitialDepositRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Atomone_Gov_V1_QueryMinInitialDepositRequest, Atomone_Gov_V1_QueryMinInitialDepositResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -473,6 +531,30 @@ extension Atomone_Gov_V1_QueryAsyncClientProtocol {
       interceptors: self.interceptors?.makeTallyResultInterceptors() ?? []
     )
   }
+
+  internal func makeMinDepositCall(
+    _ request: Atomone_Gov_V1_QueryMinDepositRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Atomone_Gov_V1_QueryMinDepositRequest, Atomone_Gov_V1_QueryMinDepositResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Atomone_Gov_V1_QueryClientMetadata.Methods.minDeposit.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeMinDepositInterceptors() ?? []
+    )
+  }
+
+  internal func makeMinInitialDepositCall(
+    _ request: Atomone_Gov_V1_QueryMinInitialDepositRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Atomone_Gov_V1_QueryMinInitialDepositRequest, Atomone_Gov_V1_QueryMinInitialDepositResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Atomone_Gov_V1_QueryClientMetadata.Methods.minInitialDeposit.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeMinInitialDepositInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -584,6 +666,30 @@ extension Atomone_Gov_V1_QueryAsyncClientProtocol {
       interceptors: self.interceptors?.makeTallyResultInterceptors() ?? []
     )
   }
+
+  internal func minDeposit(
+    _ request: Atomone_Gov_V1_QueryMinDepositRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Atomone_Gov_V1_QueryMinDepositResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Atomone_Gov_V1_QueryClientMetadata.Methods.minDeposit.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeMinDepositInterceptors() ?? []
+    )
+  }
+
+  internal func minInitialDeposit(
+    _ request: Atomone_Gov_V1_QueryMinInitialDepositRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Atomone_Gov_V1_QueryMinInitialDepositResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Atomone_Gov_V1_QueryClientMetadata.Methods.minInitialDeposit.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeMinInitialDepositInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -631,6 +737,12 @@ internal protocol Atomone_Gov_V1_QueryClientInterceptorFactoryProtocol: Sendable
 
   /// - Returns: Interceptors to use when invoking 'tallyResult'.
   func makeTallyResultInterceptors() -> [ClientInterceptor<Atomone_Gov_V1_QueryTallyResultRequest, Atomone_Gov_V1_QueryTallyResultResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'minDeposit'.
+  func makeMinDepositInterceptors() -> [ClientInterceptor<Atomone_Gov_V1_QueryMinDepositRequest, Atomone_Gov_V1_QueryMinDepositResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'minInitialDeposit'.
+  func makeMinInitialDepositInterceptors() -> [ClientInterceptor<Atomone_Gov_V1_QueryMinInitialDepositRequest, Atomone_Gov_V1_QueryMinInitialDepositResponse>]
 }
 
 internal enum Atomone_Gov_V1_QueryClientMetadata {
@@ -647,6 +759,8 @@ internal enum Atomone_Gov_V1_QueryClientMetadata {
       Atomone_Gov_V1_QueryClientMetadata.Methods.deposit,
       Atomone_Gov_V1_QueryClientMetadata.Methods.deposits,
       Atomone_Gov_V1_QueryClientMetadata.Methods.tallyResult,
+      Atomone_Gov_V1_QueryClientMetadata.Methods.minDeposit,
+      Atomone_Gov_V1_QueryClientMetadata.Methods.minInitialDeposit,
     ]
   )
 
@@ -704,6 +818,18 @@ internal enum Atomone_Gov_V1_QueryClientMetadata {
       path: "/atomone.gov.v1.Query/TallyResult",
       type: GRPCCallType.unary
     )
+
+    internal static let minDeposit = GRPCMethodDescriptor(
+      name: "MinDeposit",
+      path: "/atomone.gov.v1.Query/MinDeposit",
+      type: GRPCCallType.unary
+    )
+
+    internal static let minInitialDeposit = GRPCMethodDescriptor(
+      name: "MinInitialDeposit",
+      path: "/atomone.gov.v1.Query/MinInitialDeposit",
+      type: GRPCCallType.unary
+    )
   }
 }
 
@@ -739,6 +865,14 @@ internal protocol Atomone_Gov_V1_QueryProvider: CallHandlerProvider {
 
   /// TallyResult queries the tally of a proposal vote.
   func tallyResult(request: Atomone_Gov_V1_QueryTallyResultRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Atomone_Gov_V1_QueryTallyResultResponse>
+
+  /// MinDeposit queries the minimum deposit currently
+  /// required for a proposal to enter voting period.
+  func minDeposit(request: Atomone_Gov_V1_QueryMinDepositRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Atomone_Gov_V1_QueryMinDepositResponse>
+
+  /// MinInitialDeposit queries the minimum initial deposit
+  /// currently required for a proposal to be submitted.
+  func minInitialDeposit(request: Atomone_Gov_V1_QueryMinInitialDepositRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Atomone_Gov_V1_QueryMinInitialDepositResponse>
 }
 
 extension Atomone_Gov_V1_QueryProvider {
@@ -834,6 +968,24 @@ extension Atomone_Gov_V1_QueryProvider {
         userFunction: self.tallyResult(request:context:)
       )
 
+    case "MinDeposit":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Atomone_Gov_V1_QueryMinDepositRequest>(),
+        responseSerializer: ProtobufSerializer<Atomone_Gov_V1_QueryMinDepositResponse>(),
+        interceptors: self.interceptors?.makeMinDepositInterceptors() ?? [],
+        userFunction: self.minDeposit(request:context:)
+      )
+
+    case "MinInitialDeposit":
+      return UnaryServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Atomone_Gov_V1_QueryMinInitialDepositRequest>(),
+        responseSerializer: ProtobufSerializer<Atomone_Gov_V1_QueryMinInitialDepositResponse>(),
+        interceptors: self.interceptors?.makeMinInitialDepositInterceptors() ?? [],
+        userFunction: self.minInitialDeposit(request:context:)
+      )
+
     default:
       return nil
     }
@@ -901,6 +1053,20 @@ internal protocol Atomone_Gov_V1_QueryAsyncProvider: CallHandlerProvider {
     request: Atomone_Gov_V1_QueryTallyResultRequest,
     context: GRPCAsyncServerCallContext
   ) async throws -> Atomone_Gov_V1_QueryTallyResultResponse
+
+  /// MinDeposit queries the minimum deposit currently
+  /// required for a proposal to enter voting period.
+  @Sendable func minDeposit(
+    request: Atomone_Gov_V1_QueryMinDepositRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Atomone_Gov_V1_QueryMinDepositResponse
+
+  /// MinInitialDeposit queries the minimum initial deposit
+  /// currently required for a proposal to be submitted.
+  @Sendable func minInitialDeposit(
+    request: Atomone_Gov_V1_QueryMinInitialDepositRequest,
+    context: GRPCAsyncServerCallContext
+  ) async throws -> Atomone_Gov_V1_QueryMinInitialDepositResponse
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -1003,6 +1169,24 @@ extension Atomone_Gov_V1_QueryAsyncProvider {
         wrapping: self.tallyResult(request:context:)
       )
 
+    case "MinDeposit":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Atomone_Gov_V1_QueryMinDepositRequest>(),
+        responseSerializer: ProtobufSerializer<Atomone_Gov_V1_QueryMinDepositResponse>(),
+        interceptors: self.interceptors?.makeMinDepositInterceptors() ?? [],
+        wrapping: self.minDeposit(request:context:)
+      )
+
+    case "MinInitialDeposit":
+      return GRPCAsyncServerHandler(
+        context: context,
+        requestDeserializer: ProtobufDeserializer<Atomone_Gov_V1_QueryMinInitialDepositRequest>(),
+        responseSerializer: ProtobufSerializer<Atomone_Gov_V1_QueryMinInitialDepositResponse>(),
+        interceptors: self.interceptors?.makeMinInitialDepositInterceptors() ?? [],
+        wrapping: self.minInitialDeposit(request:context:)
+      )
+
     default:
       return nil
     }
@@ -1046,6 +1230,14 @@ internal protocol Atomone_Gov_V1_QueryServerInterceptorFactoryProtocol {
   /// - Returns: Interceptors to use when handling 'tallyResult'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeTallyResultInterceptors() -> [ServerInterceptor<Atomone_Gov_V1_QueryTallyResultRequest, Atomone_Gov_V1_QueryTallyResultResponse>]
+
+  /// - Returns: Interceptors to use when handling 'minDeposit'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeMinDepositInterceptors() -> [ServerInterceptor<Atomone_Gov_V1_QueryMinDepositRequest, Atomone_Gov_V1_QueryMinDepositResponse>]
+
+  /// - Returns: Interceptors to use when handling 'minInitialDeposit'.
+  ///   Defaults to calling `self.makeInterceptors()`.
+  func makeMinInitialDepositInterceptors() -> [ServerInterceptor<Atomone_Gov_V1_QueryMinInitialDepositRequest, Atomone_Gov_V1_QueryMinInitialDepositResponse>]
 }
 
 internal enum Atomone_Gov_V1_QueryServerMetadata {
@@ -1062,6 +1254,8 @@ internal enum Atomone_Gov_V1_QueryServerMetadata {
       Atomone_Gov_V1_QueryServerMetadata.Methods.deposit,
       Atomone_Gov_V1_QueryServerMetadata.Methods.deposits,
       Atomone_Gov_V1_QueryServerMetadata.Methods.tallyResult,
+      Atomone_Gov_V1_QueryServerMetadata.Methods.minDeposit,
+      Atomone_Gov_V1_QueryServerMetadata.Methods.minInitialDeposit,
     ]
   )
 
@@ -1117,6 +1311,18 @@ internal enum Atomone_Gov_V1_QueryServerMetadata {
     internal static let tallyResult = GRPCMethodDescriptor(
       name: "TallyResult",
       path: "/atomone.gov.v1.Query/TallyResult",
+      type: GRPCCallType.unary
+    )
+
+    internal static let minDeposit = GRPCMethodDescriptor(
+      name: "MinDeposit",
+      path: "/atomone.gov.v1.Query/MinDeposit",
+      type: GRPCCallType.unary
+    )
+
+    internal static let minInitialDeposit = GRPCMethodDescriptor(
+      name: "MinInitialDeposit",
+      path: "/atomone.gov.v1.Query/MinInitialDeposit",
       type: GRPCCallType.unary
     )
   }
